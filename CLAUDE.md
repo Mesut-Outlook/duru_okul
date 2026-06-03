@@ -69,6 +69,18 @@ Een nieuwe `kleur` vereist bijbehorende CSS-variabelen + `.vak-kaart--<kleur>` /
 
 Links zijn altijd **relatief** (`./nask/`, `./wiskunde/`, `./economi/`, `./nederlands/begrijpend-lezen/`) zodat ze zowel lokaal (`http://localhost:8125/`) als vanaf het LAN (`http://<mac-ip>:8125/`) werken.
 
+## Navigatie — iframe-shell (terug naar de vakken)
+
+De hub is een **iframe-shell**: een vak opent NIET als volledige paginanavigatie maar binnen een iframe, met een vaste terugbalk bovenaan. Zo kan Duru altijd terug naar het vakkenrooster zonder dat de sub-sites (submodules + `wiskunde/`) zelf aangepast hoeven te worden. Alle logica zit in `js/landing.js` + `#iframe-shell` in `index.html` + de `#terugbalk`/`#iframe-shell`-stijlen in `css/style.css`.
+
+- **Openen**: `maakDirecteKaart` / de onderwerp-links onderscheppen de klik (`e.preventDefault()`) en roepen `openInIframe(href, icoon, titel)` aan → zet `#vak-frame` `src`, voegt `body.iframe-actief` toe, en doet `history.pushState`. **Nieuwe vakken werken automatisch mee** — gewoon een entry aan `VAKKEN` toevoegen, geen extra navigatiecode nodig.
+- **Terug naar het rooster** kan op 3 manieren, alle via `sluitIframe()`:
+  1. de knop **"← Terug naar de vakken"** (`#terug-knop`),
+  2. de **Escape**-toets,
+  3. de **browser-terugknop** (`popstate`-handler; de `viaPop`-vlag voorkomt een dubbele `history.back()`).
+- Bij sluiten wordt `#vak-frame.src` op **`about:blank`** gezet (sub-site stopt + voorkomt dat de iframe per ongeluk de hub zelf herlaadt). De begin-`src` in `index.html` is óók `about:blank` (nooit een lege `src=""`).
+- localStorage werkt in de iframe (same-origin op poort 8125); de sleutels per site zijn uniek (`duru_nask_*`, `duru_wiskunde_*`, `duru_economi_*`, begrijpend-lezen eigen sleutel) dus geen conflict.
+
 ## Submodules bijwerken
 
 ```bash
