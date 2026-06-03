@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(//Users/mesutozdemir/**)",
-      "Read(//Users/mesutozdemir/_PROJELER/**)"
-    ]
-  }
-}

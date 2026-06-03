@@ -8,3 +8,6 @@ node_modules/
 
 # Tijdelijke PDF-extractie (bron-render voor wiskunde-content)
 _math_extract/
+
+# Lokale Claude Code-instellingen (machine-specifiek)
+.claude/
