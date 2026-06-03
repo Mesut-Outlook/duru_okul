@@ -21,11 +21,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository (with submodules)
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0
+          # Submodule'ları burada çekme ve repo-token'ını git config'e yazma.
+          # Submodule'lar BAŞKA (public) repolar; token onlara geçersiz → 403.
+          submodules: false
+          persist-credentials: false
+
+      - name: Fetch public submodules (anoniem, geen token)
+        run: git submodule update --init --recursive
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
