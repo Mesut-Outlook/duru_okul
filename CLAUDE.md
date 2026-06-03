@@ -1,127 +1,47 @@
 # CLAUDE.md — Duru_Okul
 
-Guidance voor toekomstige Claude Code-sessies op deze repo.
+Hub die Duru's oefensites (MAVO 2) samenvoegt. **Pure static, geen build, geen ES-modules** (werkt op `file://` / `http.server`).
 
-## Wat is dit project?
-
-**Duru's School** is een pure-statische, buildloze landing hub die drie oefensites voor Duru (MAVO 2) samenvoegt. Er is geen bundler, geen ES-modules (`type="module"` wordt NIET gebruikt), en er is geen server nodig voor productie — alles draait via `file://` of een eenvoudige `http.server`.
-
-- Geen build-stap
-- Geen npm/node_modules in deze root
-- Geen ES-module-imports over bestanden heen (CORS-beperking op `file://`)
-
-## Architectuur
-
+## Structuur
 ```
-Duru_Okul/
-├── index.html               ← landing page (niet aanpassen zonder overleg)
-├── css/style.css            ← landing styles (vak-kleuren: blauw/groen/oranje/teal)
-├── js/landing.js            ← landing logic + VAKKEN-array (zie hieronder)
-├── nask/                    ← submodule: duru_nask (DURU-engine, natuurkunde)
-├── economi/                 ← submodule: duru_economi (DURU-engine, economie)
-├── nederlands/
-│   └── begrijpend-lezen/    ← submodule: duru_begrijpen_lezen ("Meester Max"-engine)
-├── wiskunde/                ← GEEN submodule — gewone map in deze repo (DURU-engine, H8)
-├── .gitignore
-├── README.md
-├── CLAUDE.md
-├── Duru_Okul_Baslat.command ← start lokale server (poort 8125)
-└── Guncelle.command         ← werkt submodule-content bij + pusht backup
+index.html        landing (iframe-shell)
+css/style.css     vak-kleuren: blauw/groen/oranje/teal
+js/landing.js     VAKKEN-array + render + iframe-shell
+nask/             submodule duru_nask        (DURU-engine, natuurkunde, H4 & H6)
+economi/          submodule duru_economi     (DURU-engine, economie, H6)
+nederlands/begrijpend-lezen/  submodule duru_begrijpen_lezen ("Meester Max")
+wiskunde/         GEEN submodule — gewone map (DURU-engine, H8 Vergelijkingen)
+Duru_Okul_Baslat.command   start server (poort 8125)
+Guncelle.command           werkt submodules bij + pusht backup
 ```
 
-## Submodules
+Submodule-repo's: `github.com/Mesut-Outlook/duru_{nask,economi,begrijpen_lezen}`.
+**Wijzig nooit bestanden in submodule-mappen via deze repo** — commit in de bronrepo, update daarna de pointer.
 
-| Pad | GitHub-repo | Engine / beschrijving |
-|-----|-------------|----------------------|
-| `nask/` | https://github.com/Mesut-Outlook/duru_nask | DURU-engine — hoofdstuk 4 (Snelheid) & 6 (Elektriciteit), theorie + quiz + proeftoets |
-| `economi/` | https://github.com/Mesut-Outlook/duru_economi | DURU-engine — hoofdstuk 6 (De overheid), theorie + quiz + proeftoets |
-| `nederlands/begrijpend-lezen/` | https://github.com/Mesut-Outlook/duru_begrijpen_lezen | "Meester Max"-engine — begrijpend lezen, leesteksten & vragen |
+## Wiskunde (in-repo, wél hier bewerken)
+Eigen DURU-engine-site, **Hoofdstuk 8** (8.1 gelijksoortige termen · 8.2 de balans · 8.3 vergelijkingen oplossen · 8.4 het snijpunt). Thema teal. localStorage `duru_wiskunde_v1` + `duru_wiskunde_examens_v1` (apart van de andere sites). Data: `wiskunde/js/data/h8_*.js` + `examen_*.js`; contract in `wiskunde/SPEC.md`. Script-volgorde in `wiskunde/index.html`: bootstrap → exams → data/examen_* → data/h8_* → engine.js (laatst).
 
-Wijzig NOOIT bestanden binnen de submodule-mappen via deze repo. Commit altijd via de bronrepo en update daarna de submodule-pointer hier.
-
-### Wiskunde — GEEN submodule
-`wiskunde/` is **geen submodule** maar een gewone map binnen deze repo (op verzoek: geen aparte GitHub-repo aanmaken). Het is een eigen DURU-engine-site (zoals NASK/Economie) over **Hoofdstuk 8 — Vergelijkingen** (8.1 Gelijksoortige termen · 8.2 De balans · 8.3 Vergelijkingen oplossen · 8.4 Het snijpunt). Bewerk deze map dus gewoon hier in `Duru_Okul`.
-
-- Engine geadapteerd van `nask/`; thema-accent = **teal** (`#0d9488`).
-- localStorage-sleutels: `duru_wiskunde_v1` (oefenen) + `duru_wiskunde_examens_v1` (proeftoetsen) — APART van nask/economi.
-- Data: `wiskunde/js/data/h8_*.js` (4 onderwerpen) + `examen_*.js` (2 proeftoetsen); contract in `wiskunde/SPEC.md`.
-- Script-volgorde in `wiskunde/index.html`: bootstrap → exams → data/examen_* → data/h8_* → engine.js (laatst). Niet breken.
-- Bron: gescande `Duru Matematik 8.1 to 8.4.pdf` (iCloud `2. DURU DERSLER/MATEMATIK`), via PyMuPDF naar PNG gerenderd en visueel gelezen (`_math_extract/`, staat in `.gitignore`).
-
-## Vakken toevoegen of aanpassen
-
-De landing wordt aangestuurd door de `VAKKEN`-array in `js/landing.js`. Om een nieuw vak of onderwerp toe te voegen, pas die array aan:
-
+## Vak toevoegen
+Voeg een entry toe aan `VAKKEN` in `js/landing.js`:
 ```js
-// Echte velden van een direct-vak in VAKKEN (zie js/landing.js):
-{
-  id: 'wiskunde',
-  titel: 'Wiskunde',
-  icoon: '⚖️',
-  kleur: 'teal',            // moet matchen met een kleur in css/style.css
-  beschrijving: 'Hoofdstuk 8 — Vergelijkingen: termen, de balans en het snijpunt.',
-  href: './wiskunde/'       // relatief pad
-}
-// Een categorie-vak (zoals Nederlands) heeft GEEN href maar een `onderwerpen: [...]`-array.
+{ id:'wiskunde', titel:'Wiskunde', icoon:'⚖️', kleur:'teal',
+  beschrijving:'…', href:'./wiskunde/' }   // categorie = geen href maar onderwerpen:[…]
 ```
+Links altijd **relatief** (`./wiskunde/` …). Een nieuwe `kleur` heeft bijbehorende CSS-vars + `.vak-kaart--<kleur>`/`.vak-badge--<kleur>` nodig (zie `teal`). Navigatie werkt automatisch mee (zie hieronder).
 
-Een nieuwe `kleur` vereist bijbehorende CSS-variabelen + `.vak-kaart--<kleur>` / `.vak-badge--<kleur>` regels in `css/style.css` (zie hoe `teal` is toegevoegd).
+## Navigatie (iframe-shell)
+Een vak opent in `#vak-frame` met een vaste "← Terug naar de vakken"-balk, zodat sub-sites onaangeroerd blijven. Terug = knop / Escape / browser-back (`history.pushState` + `popstate`). iframe-`src` is `about:blank` als gesloten (nooit lege `src=""`, dat herlaadt de hub). Alle logica in `js/landing.js`.
 
-Links zijn altijd **relatief** (`./nask/`, `./wiskunde/`, `./economi/`, `./nederlands/begrijpend-lezen/`) zodat ze zowel lokaal (`http://localhost:8125/`) als vanaf het LAN (`http://<mac-ip>:8125/`) werken.
-
-## Navigatie — iframe-shell (terug naar de vakken)
-
-De hub is een **iframe-shell**: een vak opent NIET als volledige paginanavigatie maar binnen een iframe, met een vaste terugbalk bovenaan. Zo kan Duru altijd terug naar het vakkenrooster zonder dat de sub-sites (submodules + `wiskunde/`) zelf aangepast hoeven te worden. Alle logica zit in `js/landing.js` + `#iframe-shell` in `index.html` + de `#terugbalk`/`#iframe-shell`-stijlen in `css/style.css`.
-
-- **Openen**: `maakDirecteKaart` / de onderwerp-links onderscheppen de klik (`e.preventDefault()`) en roepen `openInIframe(href, icoon, titel)` aan → zet `#vak-frame` `src`, voegt `body.iframe-actief` toe, en doet `history.pushState`. **Nieuwe vakken werken automatisch mee** — gewoon een entry aan `VAKKEN` toevoegen, geen extra navigatiecode nodig.
-- **Terug naar het rooster** kan op 3 manieren, alle via `sluitIframe()`:
-  1. de knop **"← Terug naar de vakken"** (`#terug-knop`),
-  2. de **Escape**-toets,
-  3. de **browser-terugknop** (`popstate`-handler; de `viaPop`-vlag voorkomt een dubbele `history.back()`).
-- Bij sluiten wordt `#vak-frame.src` op **`about:blank`** gezet (sub-site stopt + voorkomt dat de iframe per ongeluk de hub zelf herlaadt). De begin-`src` in `index.html` is óók `about:blank` (nooit een lege `src=""`).
-- localStorage werkt in de iframe (same-origin op poort 8125); de sleutels per site zijn uniek (`duru_nask_*`, `duru_wiskunde_*`, `duru_economi_*`, begrijpend-lezen eigen sleutel) dus geen conflict.
-
-## Submodules bijwerken
-
+## Draaien & bijwerken
 ```bash
-git submodule update --remote --merge   # haal nieuwste commits op uit bronrepo's
-git add nask economi nederlands/begrijpend-lezen
-git commit -m "Submodules bijgewerkt naar nieuwste versie"
-git push
+open Duru_Okul_Baslat.command          # of: python3 -m http.server 8125
+git submodule update --remote --merge  # nieuwste content uit bronrepo's (of: Guncelle.command)
 ```
+Lokaal: `http://localhost:8125/` · thuisnetwerk: `http://<mac-ip>:8125/` (`ipconfig getifaddr en0`).
 
-## Lokaal draaien
+## Hosting & werkwijze
+**Lokaal-only — geen GitHub Pages** (op verzoek). De GitHub-repo is **alleen backup** (`git push origin main`). Pages niet opnieuw toevoegen tenzij gevraagd.
 
-Port: **8125**
+Conventie (zoals Duru_Nask/Duru_Economi): **planning met Opus 4.8, code door Sonnet sub-agents**; commit-trailer `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`.
 
-```bash
-# Via launcher (aanbevolen):
-open Duru_Okul_Baslat.command
-
-# Of handmatig:
-git submodule update --init --recursive
-python3 -m http.server 8125
-# Ga naar http://localhost:8125/
-```
-
-## Hosting — LOKAAL, geen GitHub Pages
-
-Op verzoek van de gebruiker (2026-06-03): **GitHub Pages is NIET gewenst.** Het project draait lokaal / op het thuisnetwerk; de GitHub-repo dient **alleen als backup**. De `.github/workflows/pages.yml` is verwijderd (faalde op cross-repo submodule-fetch én Pages was ongewenst). **Voeg Pages niet opnieuw toe tenzij erom gevraagd wordt.**
-
-- Lokaal: `Duru_Okul_Baslat.command` → `http://localhost:8125/`
-- Thuisnetwerk (bv. Duru's telefoon, zelfde wifi): `http://<mac-LAN-ip>:8125/` (vind ip met `ipconfig getifaddr en0`)
-- Backup pushen: gewoon `git push origin main` (repo is public, alleen als backup).
-
-## Werkwijze / Convention
-
-**"Planning met Opus 4.8, alle code geschreven door Sonnet sub-agents"**
-
-Zoals bij de zustersites Duru_Nask en Duru_Economi: architectuurbeslissingen en taakplanning worden gedaan door het Opus-model; de daadwerkelijke code wordt geschreven door Sonnet sub-agents. Vermeld dit in commit-trailers als `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`.
-
-## Git-configuratie (lokaal)
-
-```
-user.name  = Mesut-Outlook
-user.email = ozdemirmesut@gmail.com
-remote     = git@github.com:Mesut-Outlook/duru_okul.git
-```
+Git lokaal: `user.name=Mesut-Outlook`, `user.email=ozdemirmesut@gmail.com`, `remote=git@github.com:Mesut-Outlook/duru_okul.git`.
