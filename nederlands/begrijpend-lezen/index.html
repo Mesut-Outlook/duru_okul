@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Best Practices -->
+  <title>Begrijpend Lezen Trainer - Mavo 2 | Meester Max</title>
+  <meta name="description" content="Stap-voor-stap begrijpend lezen oefenen voor niveau 2 mavo met directe feedback, een interactief spiekbriefje en motiverende uitleg door Meester Max.">
+  
+  <!-- Fonts and Styling links -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="logo-section">
+      <div class="logo-icon">M</div>
+      <div class="logo-title">
+        <h1>Meester Max</h1>
+        <span>BEGRIJPEND LEZEN TRAINER • MAVO 2</span>
+      </div>
+    </div>
+    
+    <div class="header-actions">
+      <!-- Toggle Spiekbriefje Mobile Drawer -->
+      <button id="spiek-toggle" class="icon-btn" title="Spiekbriefje openen/sluiten" aria-label="Spiekbriefje tonen">📝</button>
+      <!-- Dark/Light Theme Button -->
+      <button id="theme-toggle" class="icon-btn" title="Licht/Donker thema" aria-label="Verander thema">🌙</button>
+    </div>
+  </header>
+
+  <!-- App Main Layout Grid -->
+  <div class="app-container">
+    
+    <!-- Sidebar: Spiekbriefje & Meester Max -->
+    <aside id="sidebar" class="sidebar-panel">
+      
+      <!-- Teacher Avatar Widget -->
+      <div class="teacher-widget">
+        <div id="teacher-avatar" class="teacher-avatar-container">👨‍🏫</div>
+        <div class="teacher-speech">
+          <h4>Meester Max</h4>
+          <p id="teacher-speech-text">Hoi! Ik ben jouw docent vandaag. Zodra je klaar bent, klikken we samen op start om te oefenen!</p>
+        </div>
+        <div class="teacher-status"></div>
+      </div>
+
+      <!-- Spiekbriefje Card -->
+      <div class="spiekbriefje-card">
+        <div class="spiekbriefje-title">
+          <span>📝</span> Het Spiekbriefje
+        </div>
+        
+        <div class="spiek-section">
+          <h3>📂 Opbouw Tekst</h3>
+          <ul>
+            <li><strong>Inleiding:</strong> onderwerp + uitleg</li>
+            <li><strong>Middenstuk:</strong> belangrijkste informatie</li>
+            <li><strong>Slot:</strong> samenvatting of conclusie</li>
+          </ul>
+        </div>
+        
+        <div class="spiek-section">
+          <h3>🔎 Leesstrategieën</h3>
+          <ul>
+            <li><strong>Oriënterend:</strong> titel, plaatjes, bron, inleiding bekijken</li>
+            <li><strong>Globaal:</strong> 1e + laatste alinea lezen</li>
+            <li><strong>Intensief:</strong> hele tekst goed lezen</li>
+          </ul>
+        </div>
+        
+        <div class="spiek-section">
+          <h3>🎯 Tekstdoelen</h3>
+          <ul>
+            <li><strong>Informeren:</strong> uitleg / feiten</li>
+            <li><strong>Overtuigen:</strong> mening + argumenten</li>
+            <li><strong>Activeren:</strong> je iets laten doen</li>
+            <li><strong>Amuseren:</strong> verhaal / vermaken</li>
+          </ul>
+        </div>
+        
+        <div class="spiek-section">
+          <h3>🔗 Tekstverbanden</h3>
+          <ul>
+            <li><strong>Opsomming:</strong> ook, en, ten eerste, bovendien</li>
+            <li><strong>Tegenstelling:</strong> maar, toch, echter, hoewel</li>
+            <li><strong>Reden/oorzaak:</strong> omdat, daardoor, daarom</li>
+            <li><strong>Gevolg:</strong> dus, daardoor, daarom</li>
+            <li><strong>Tijd:</strong> eerst, daarna, voordat, wanneer</li>
+            <li><strong>Vergelijking:</strong> zoals, evenals</li>
+          </ul>
+        </div>
+        
+        <div class="spiek-section">
+          <h3>💡 Begrippen</h3>
+          <ul>
+            <li><strong>Onderwerp:</strong> Waar tekst over gaat (max. 4 woorden!)</li>
+            <li><strong>Kernzin:</strong> Belangrijkste zin alinea (1e of laatste)</li>
+            <li><strong>Hoofdgedachte:</strong> Boodschap van de tekst ("Wat wil de schrijver dat ik onthoud?")</li>
+          </ul>
+        </div>
+
+        <div class="spiek-section">
+          <h3>🗣️ Citeren</h3>
+          <ul>
+            <li>Letterlijk woorden overschrijven met aanhalingstekens: <strong>“...”</strong></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Area -->
+    <main class="main-panel">
+      
+      <!-- Top Progress bar timeline -->
+      <section id="progress-container" class="progress-container" style="display: none;">
+        <div class="progress-header">
+          <span id="current-round-name">Tekst 1 van 5</span>
+          <span id="total-score-badge">Score: 0 / 0</span>
+        </div>
+        <div class="progress-bar-glow">
+          <div id="progress-fill" class="progress-bar-fill"></div>
+        </div>
+        
+        <!-- Interactive timeline dots -->
+        <div class="progress-nodes">
+        </div>
+      </section>
+
+      <!-- Main Content area (swapped via JS) -->
+      <section id="main-content">
+        <!-- Start screen will render here -->
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Float Motivation Button -->
+  <button id="float-motivation" style="position: fixed; bottom: 20px; right: 20px; background-color: var(--color-primary); color: white; border: none; border-radius: 50px; padding: 12px 20px; font-weight: 700; box-shadow: var(--shadow-lg); cursor: pointer; display: flex; align-items: center; gap: 8px; z-index: 100; transition: transform 0.2s;" title="Motivatie Boost!">
+    ✨ Meester Max Tip
+  </button>
+
+  <!-- Mobile drawer slide styling override -->
+  <style>
+    @media (max-width: 1023px) {
+      .sidebar-panel {
+        position: fixed;
+        top: 70px;
+        right: -340px;
+        width: 320px;
+        height: calc(100vh - 70px);
+        z-index: 99;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 20px 0 0 20px;
+        border-right: none;
+      }
+      .sidebar-panel.open {
+        right: 0;
+      }
+    }
+  </style>
+
+  <!-- Load Scripts -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

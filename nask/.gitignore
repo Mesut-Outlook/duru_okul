@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Taranmış telifli ders materyali (kodda kullanılmıyor; repoya yüklenmez)
+extracted_pages/
+Deneme_Sinavi/
+
+# Geçici / build
+node_modules/
+*.log
+_klein/

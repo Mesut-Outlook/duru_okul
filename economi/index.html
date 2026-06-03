@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duru's Economie Academie 🏛️ — De overheid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand" onclick="DURU.gaNaar('home')">
+        <div class="logo">🏛️</div>
+        <div>
+          <h1>Duru's Economie Academie</h1>
+          <small>Economie voor MAVO 2 · De overheid</small>
+        </div>
+      </div>
+      <div class="stats">
+        <span class="chip xp" title="Jouw punten">💎 <span id="stat-xp">0</span> <span class="lbl">XP</span></span>
+        <span class="chip streak" title="Hoeveel vragen achter elkaar goed">🔥 <span id="stat-streak">0</span></span>
+        <span class="chip medal" title="Behaalde medailles">🏅 <span id="stat-badges">0</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app" id="app"><!-- views worden hier gerenderd --></main>
+
+  <div id="toast"></div>
+  <canvas id="confetti"></canvas>
+
+  <!-- ====== Bootstrap (maakt DURU.register klaar voor de data) ====== -->
+  <script src="js/bootstrap.js"></script>
+
+  <!-- ====== Examen-motor + oefentoetsen (eigen opslag, los van de oefen-XP) ====== -->
+  <script src="js/exams.js"></script>
+  <script src="js/data/examen_1_overheid.js"></script>
+  <script src="js/data/examen_2_belasting.js"></script>
+  <script src="js/data/examen_3_rekenen.js"></script>
+  <script src="js/data/examen_4_begrippen.js"></script>
+  <script src="js/data/examen_5_eindtoets.js"></script>
+
+  <!-- ====== Data (per onderwerp; door sub-agents gegenereerd) ====== -->
+  <!-- Elk bestand roept DURU.register({...}) aan -->
+  <script src="js/data/h6_1_wie.js"></script>
+  <script src="js/data/h6_2_waarvoor.js"></script>
+  <script src="js/data/h6_3_betalen.js"></script>
+  <script src="js/data/h6_4_schatkist.js"></script>
+
+  <!-- ====== Engine ====== -->
+  <script src="js/engine.js"></script>
+</body>
+</html>
