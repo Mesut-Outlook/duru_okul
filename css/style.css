@@ -535,6 +535,101 @@ footer strong {
   color: var(--grijs);
 }
 
+/* ── Iframe-shell ────────────────────────────────────────── */
+
+/* De shell is standaard onzichtbaar */
+#iframe-shell {
+  display: none;
+  position: fixed;
+  inset: 0;          /* top/right/bottom/left: 0 */
+  z-index: 200;
+  flex-direction: column;
+  background: var(--hub-achter);
+}
+
+/* Actieve toestand: body krijgt klasse .iframe-actief */
+body.iframe-actief .topbar,
+body.iframe-actief .pagina,
+body.iframe-actief footer {
+  display: none;
+}
+
+body.iframe-actief #iframe-shell {
+  display: flex;
+}
+
+/* ── Terugbalk ───────────────────────────────────────────── */
+#terugbalk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, .88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--lijn);
+  flex-shrink: 0;
+  box-shadow: var(--schaduw-sm);
+}
+
+@media (prefers-color-scheme: dark) {
+  #terugbalk {
+    background: rgba(19, 16, 31, .88);
+  }
+}
+
+#terug-knop {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--hub-hoofd), #ec4899);
+  color: #fff;
+  font-family: var(--font-tekst);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 3px 10px rgba(124, 58, 237, .30);
+  transition: transform .13s ease, box-shadow .13s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+#terug-knop:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(124, 58, 237, .38);
+}
+
+#terug-knop:active {
+  transform: translateY(0);
+}
+
+#terug-knop:focus-visible {
+  outline: 3px solid var(--hub-hoofd);
+  outline-offset: 3px;
+}
+
+#terugbalk-vak {
+  font-family: var(--font-titel);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--inkt);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Vak-iframe ──────────────────────────────────────────── */
+#vak-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  display: block;
+  /* Vult de hoogte onder de terugbalk */
+  min-height: 0;
+}
+
 /* ── Kleine schermen (<400px) ────────────────────────────── */
 @media (max-width: 400px) {
   .hero {

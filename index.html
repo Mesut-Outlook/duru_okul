@@ -73,6 +73,29 @@
     <p style="margin-top:4px;font-size:12px;">Klik op een vak om te beginnen 🚀</p>
   </footer>
 
+  <!-- ══ Iframe-shell (verborgen totdat een vak wordt geopend) ══ -->
+  <div id="iframe-shell" aria-hidden="true">
+
+    <!-- Terugbalk: altijd bovenaan, alleen zichtbaar in iframe-modus -->
+    <div id="terugbalk" role="navigation" aria-label="Navigatie terug">
+      <button id="terug-knop" type="button" aria-label="Terug naar de vakken">
+        <span aria-hidden="true">←</span>
+        <span>Terug naar de vakken</span>
+      </button>
+      <div id="terugbalk-vak" aria-live="polite"></div>
+    </div>
+
+    <!-- De iframe vult de rest van de viewport -->
+    <iframe
+      id="vak-frame"
+      title="Vak-oefensite"
+      src="about:blank"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+
+  </div><!-- /#iframe-shell -->
+
   <!-- ══ Script ══════════════════════════════════════════════
        Gewone <script> tag — geen ES modules, werkt op file://  -->
   <script src="js/landing.js"></script>
