@@ -1,0 +1,9 @@
+[submodule "nask"]
+	path = nask
+	url = https://github.com/Mesut-Outlook/duru_nask.git
+[submodule "economi"]
+	path = economi
+	url = https://github.com/Mesut-Outlook/duru_economi.git
+[submodule "nederlands/begrijpend-lezen"]
+	path = nederlands/begrijpend-lezen
+	url = https://github.com/Mesut-Outlook/duru_begrijpen_lezen.git

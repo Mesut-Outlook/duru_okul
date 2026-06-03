@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duru's Schoolhub 🎒 — Mijn Vakken MAVO 2</title>
+  <meta name="description" content="Duru's persoonlijke schoolhub voor MAVO 2 — Natuurkunde, Economie en Nederlands oefenen." />
+
+  <!-- Favicon: schooltas emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
+
+  <!-- Google Fonts worden geladen vanuit style.css via @import -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══ Topbar ══════════════════════════════════════════════ -->
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="merk">
+        <div class="merk-logo" aria-hidden="true">🎒</div>
+        <div>
+          <h1>Duru's Schoolhub</h1>
+          <small>Mijn vakken · MAVO 2</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ Pagina-inhoud ════════════════════════════════════════ -->
+  <div class="pagina">
+
+    <!-- ── Hero-banner ───────────────────────────────────────── -->
+    <section class="hero" aria-label="Welkom">
+      <div class="hero-inner">
+        <span class="hero-emoji" aria-hidden="true">👩‍🎓</span>
+        <h2>Hallo Duru, klaar om te oefenen?</h2>
+        <p>
+          Kies hieronder een vak en ga aan de slag.
+          Elke dag een beetje oefenen maakt je een stuk slimmer — succes! 💪
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Sectie-kop ─────────────────────────────────────────── -->
+    <div class="sectie-kop">
+      <h3>📚 Mijn vakken</h3>
+      <div class="sectie-kop-lijn" aria-hidden="true"></div>
+    </div>
+
+    <!-- ── Vakken grid — wordt gevuld door landing.js ─────────── -->
+    <main id="vakken-grid" aria-label="Vakken-overzicht">
+      <!-- JavaScript rendert hier de vak-kaarten -->
+    </main>
+
+    <!-- ── Motivatie-tip ──────────────────────────────────────── -->
+    <aside class="tip-banner" aria-label="Studeer-tip">
+      <span class="tip-banner__icoon" aria-hidden="true">💡</span>
+      <div class="tip-banner__tekst">
+        <strong>Studeer-tip</strong>
+        <p>
+          Oefen liever 15 minuten per dag dan één keer per week een uur.
+          Kleine stapjes, groot resultaat! ✨
+        </p>
+      </div>
+    </aside>
+
+  </div><!-- /.pagina -->
+
+  <!-- ══ Footer ══════════════════════════════════════════════ -->
+  <footer>
+    <p>Gemaakt met ❤️ voor <strong>Duru</strong> · MAVO 2 · 2025–2026</p>
+    <p style="margin-top:4px;font-size:12px;">Klik op een vak om te beginnen 🚀</p>
+  </footer>
+
+  <!-- ══ Script ══════════════════════════════════════════════
+       Gewone <script> tag — geen ES modules, werkt op file://  -->
+  <script src="js/landing.js"></script>
+
+</body>
+</html>
