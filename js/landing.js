@@ -17,6 +17,14 @@ var VAKKEN = [
     href: './nask/'
   },
   {
+    id: 'wiskunde',
+    titel: 'Wiskunde',
+    icoon: '⚖️',
+    kleur: 'teal',           // teal/turquoise accent
+    beschrijving: 'Hoofdstuk 8 — Vergelijkingen: termen, de balans en het snijpunt.',
+    href: './wiskunde/'
+  },
+  {
     id: 'economie',
     titel: 'Economie',
     icoon: '💶',

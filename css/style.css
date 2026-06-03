@@ -32,6 +32,11 @@
   --oranje-zacht:#ffedd5;
   --oranje-donker:#7c2d12;
 
+  --teal:        #0d9488;
+  --teal-licht:  #14b8a6;
+  --teal-zacht:  #ccfbf1;
+  --teal-donker: #134e4a;
+
   /* Neutrale tokens */
   --inkt:        #1e1b4b;
   --grijs:       #64748b;
@@ -46,6 +51,7 @@
   --schaduw-kleur-blauw:  0 8px 28px rgba(37, 99, 235, .20);
   --schaduw-kleur-groen:  0 8px 28px rgba(21, 128, 61, .20);
   --schaduw-kleur-oranje: 0 8px 28px rgba(234, 88, 12, .20);
+  --schaduw-kleur-teal:   0 8px 28px rgba(13, 148, 136, .20);
 
   /* Afronding */
   --radius:      18px;
@@ -70,6 +76,7 @@
     --blauw-zacht: #1e2d4a;
     --groen-zacht: #0f2318;
     --oranje-zacht:#2a1608;
+    --teal-zacht:  #0c2a27;
 
     --schaduw-sm:  0 1px 4px rgba(0,0,0,.25);
     --schaduw:     0 6px 22px rgba(0,0,0,.35);
@@ -77,6 +84,7 @@
     --schaduw-kleur-blauw:  0 8px 28px rgba(59,130,246,.15);
     --schaduw-kleur-groen:  0 8px 28px rgba(22,163,74,.15);
     --schaduw-kleur-oranje: 0 8px 28px rgba(249,115,22,.15);
+    --schaduw-kleur-teal:   0 8px 28px rgba(20,184,166,.15);
   }
 }
 
@@ -315,11 +323,13 @@ body {
 .vak-kaart--blauw  { border-left-color: var(--blauw);  box-shadow: var(--schaduw-kleur-blauw); }
 .vak-kaart--groen  { border-left-color: var(--groen);  box-shadow: var(--schaduw-kleur-groen); }
 .vak-kaart--oranje { border-left-color: var(--oranje); box-shadow: var(--schaduw-kleur-oranje); }
+.vak-kaart--teal   { border-left-color: var(--teal);   box-shadow: var(--schaduw-kleur-teal); }
 
 /* Hover kleurt schaduw iets sterker */
 .vak-kaart--blauw:hover  { box-shadow: var(--schaduw-kleur-blauw),  var(--schaduw-lg); }
 .vak-kaart--groen:hover  { box-shadow: var(--schaduw-kleur-groen),  var(--schaduw-lg); }
 .vak-kaart--oranje:hover { box-shadow: var(--schaduw-kleur-oranje), var(--schaduw-lg); }
+.vak-kaart--teal:hover   { box-shadow: var(--schaduw-kleur-teal),   var(--schaduw-lg); }
 
 /* ── Kaart-onderdelen ────────────────────────────────────── */
 .vak-kaart__top {
@@ -367,6 +377,7 @@ body {
 .vak-badge--blauw  { background: var(--blauw-zacht);  color: var(--blauw-donker); }
 .vak-badge--groen  { background: var(--groen-zacht);  color: var(--groen-donker); }
 .vak-badge--oranje { background: var(--oranje-zacht); color: var(--oranje-donker); }
+.vak-badge--teal   { background: var(--teal-zacht);   color: var(--teal-donker); }
 
 /* Pijl rotatie bij uitklappen */
 .vak-kaart[aria-expanded="true"] .vak-kaart__pijl {
