@@ -20,8 +20,14 @@
   /* ---------- Eigen opslag (raakt de oefen-voortgang NIET) ---------- */
   var EX_SLEUTEL = "duru_nask_examens_v1";
   function laadEx() {
-    try { var d = JSON.parse(localStorage.getItem(EX_SLEUTEL)); if (d) return d; } catch (e) {}
-    return { beste: {}, laatste: {} };
+    try {
+      var d = JSON.parse(localStorage.getItem(EX_SLEUTEL));
+      if (d) {
+        d.history = d.history || [];
+        return d;
+      }
+    } catch (e) {}
+    return { beste: {}, laatste: {}, history: [] };
   }
   function bewaarEx() { try { localStorage.setItem(EX_SLEUTEL, JSON.stringify(EX)); } catch (e) {} }
   var EX = laadEx();
@@ -53,6 +59,30 @@
         '</div>';
     });
     h += '</div>';
+
+    // Toetshistorie & Foutanalyse sectie
+    EX.history = EX.history || [];
+    if (EX.history.length > 0) {
+      h += '<div class="sectie-titel" style="margin-top:40px"><h3>📜 Jouw toetshistorie & foutanalyse</h3><div class="lijn"></div></div>';
+      h += '<p style="margin:0 4px 16px;color:var(--grijs)">Bekijk hier je gemaakte proeftoetsen terug. Je kunt precies zien welke vragen je fout had en de uitleg opnieuw doorlezen!</p>';
+      h += '<div class="history-table-wrapper" style="overflow-x:auto; background:var(--wit); border-radius:18px; box-shadow:var(--schaduw); border:1px solid var(--lijn); padding:16px;">';
+      h += '<table class="nask" style="width:100%; border-collapse:collapse;">';
+      h += '<thead><tr style="border-bottom:2px solid var(--lijn);"><th>Datum</th><th>Toets</th><th>Goed</th><th>Cijfer</th><th style="text-align:right;">Actie</th></tr></thead>';
+      h += '<tbody>';
+      EX.history.forEach(function (att) {
+        var c = cijfer(att.pct);
+        var cls = att.pct >= 55 ? 'color:var(--groen); font-weight:800;' : 'color:var(--oranje); font-weight:800;';
+        h += '<tr style="border-bottom:1px solid var(--lijn);">';
+        h += '<td>' + att.datum + '</td>';
+        h += '<td style="text-align:left;"><b>' + esc(att.examTitel) + '</b></td>';
+        h += '<td>' + att.goed + ' / ' + att.totaal + '</td>';
+        h += '<td style="' + cls + '">' + c + ' (' + att.pct + '%)</td>';
+        h += '<td style="text-align:right;"><button class="btn klein" style="padding:6px 12px; font-size:12px;" onclick="DURU.renderPastAttemptReview(\'' + att.attemptId + '\')">🔍 Review</button></td>';
+        h += '</tr>';
+      });
+      h += '</tbody></table></div>';
+    }
+
     app().innerHTML = h;
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -224,6 +254,25 @@
     var pct = Math.round((goed / n) * 100);
     if (EX.beste[ex.id] == null || pct > EX.beste[ex.id]) EX.beste[ex.id] = pct;
     EX.laatste[ex.id] = pct;
+
+    // Sla de poging op in de geschiedenis
+    var attemptId = "att_" + Date.now();
+    var datumStr = new Date().toLocaleString("nl-NL", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+    
+    var historyEntry = {
+      attemptId: attemptId,
+      examId: ex.id,
+      examTitel: ex.titel,
+      datum: datumStr,
+      goed: goed,
+      totaal: n,
+      pct: pct,
+      antwoorden: JSON.parse(JSON.stringify(T.antwoorden)),
+      beoordelingen: JSON.parse(JSON.stringify(beoordelingen))
+    };
+    EX.history = EX.history || [];
+    EX.history.unshift(historyEntry); // Poging toevoegen aan het begin
+
     bewaarEx();
     renderResultaat(pct, goed, n, beoordelingen, autoTijd);
   }
@@ -245,7 +294,7 @@
     h += '<div class="score-ring"><svg width="170" height="170">' +
       '<circle cx="85" cy="85" r="70" fill="none" stroke="#e2e8f0" stroke-width="14"/>' +
       '<circle cx="85" cy="85" r="70" fill="none" stroke="url(#g2)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
-      '<defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d28d9"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>' +
+      '<defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>' +
       '</svg><div class="pct">' + c + '</div></div>';
     h += '<div class="samenvatting"><b>' + goed + ' van de ' + n + '</b> goed · ' + pct + '% · cijfer <b>' + c + '</b></div>';
     h += '<div class="acties">' +
@@ -321,5 +370,56 @@
       p.forEach(function (q) { q.x += q.vx; q.y += q.vy; q.vy += 0.08; q.rot += q.vr; ctx.save(); ctx.translate(q.x, q.y); ctx.rotate(q.rot); ctx.fillStyle = q.k; ctx.fillRect(-q.r / 2, -q.r / 2, q.r, q.r * 1.6); ctx.restore(); });
       if (++f < 150) requestAnimationFrame(teken); else ctx.clearRect(0, 0, c.width, c.height);
     })();
+  };
+
+  /* ---------- Bekijk eerdere pogingen (Review uit geschiedenis) ---------- */
+  DURU.renderPastAttemptReview = function (attemptId) {
+    var att = EX.history.find(function (h) { return h.attemptId === attemptId; });
+    if (!att) return DURU.renderExamenLijst();
+
+    var ex = DURU._examenById[att.examId];
+    if (!ex) {
+      alert("Fout: Toetsgegevens konden niet worden geladen.");
+      return DURU.renderExamenLijst();
+    }
+
+    var c = cijfer(att.pct);
+    var emoji, kop;
+    if (att.pct >= 80) { emoji = "🏆"; kop = "Uitmuntend!"; }
+    else if (att.pct >= 55) { emoji = "🎉"; kop = "Geslaagd!"; }
+    else if (att.pct >= 40) { emoji = "💪"; kop = "Bijna! Nog even oefenen."; }
+    else { emoji = "📚"; kop = "Eerst nog wat oefenen."; }
+
+    var omtrek = 2 * Math.PI * 70, vol = omtrek * (1 - att.pct / 100);
+    
+    var h = '<div class="terug" onclick="DURU.renderExamenLijst()">← Terug naar toetshistorie</div>';
+    h += '<div class="kaart view"><div class="resultaat">';
+    h += '<div style="font-size:12px; font-weight:800; color:var(--grijs-licht); margin-bottom:8px; letter-spacing:0.5px;">RESULTAAT VAN ' + att.datum.toUpperCase() + '</div>';
+    h += '<div class="emoji">' + emoji + '</div><h2>' + kop + '</h2>';
+    h += '<div class="score-ring"><svg width="170" height="170">' +
+      '<circle cx="85" cy="85" r="70" fill="none" stroke="#e2e8f0" stroke-width="14"/>' +
+      '<circle cx="85" cy="85" r="70" fill="none" stroke="url(#g3)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
+      '<defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>' +
+      '</svg><div class="pct">' + c + '</div></div>';
+    h += '<div class="samenvatting"><b>' + att.goed + ' van de ' + att.totaal + '</b> goed · ' + att.pct + '% · cijfer <b>' + c + '</b></div>';
+    h += '<div class="acties">' +
+      '<button class="btn groen" onclick="DURU.examenStart(\'' + ex.id + '\')">🔁 Opnieuw proberen</button>' +
+      '<button class="btn ghost" onclick="DURU.renderExamenLijst()">📝 Toetshistorie</button>' +
+      '</div></div></div>';
+
+    // Review
+    h += '<div class="sectie-titel" style="margin-top:30px"><h3>🔎 Nakijken — foutanalyse & uitleg</h3><div class="lijn"></div></div>';
+    h += '<p style="margin:0 4px 8px;color:var(--grijs)">Bekijk bij elke vraag het goede antwoord en de uitleg. Leer van de fouten die je destijds hebt gemaakt.</p>';
+    h += '<div class="filter-rij">' +
+      '<button class="btn ghost klein" onclick="DURU.reviewFilter(\'alle\')">Alles</button>' +
+      '<button class="btn ghost klein" onclick="DURU.reviewFilter(\'fout\')">Alleen fout/deels</button></div>';
+    h += '<div id="review-lijst">';
+    ex.vragen.forEach(function (v, i) {
+      h += reviewItem(v, i, att.antwoorden[i], att.beoordelingen[i]);
+    });
+    h += '</div>';
+
+    app().innerHTML = h;
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 })();

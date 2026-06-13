@@ -92,7 +92,10 @@
     if (route === "theorie") return renderTheorie(arg);
     if (route === "quiz") return renderQuizStart(arg);
     if (route === "badges") return renderBadges();
-    if (route === "examens") return DURU.renderExamenLijst();
+    if (route === "examens") {
+      if (arg) return DURU.examenStart(arg);
+      return DURU.renderExamenLijst();
+    }
     renderHome();
   };
 
@@ -118,7 +121,7 @@
       html += '<p style="margin:0 4px 14px;color:var(--grijs)">Doe een echte proeftoets met een klok. Aan het eind krijg je je cijfer én bij elke vraag <b>hoe je het moet doen</b>.</p>';
       html += '<div class="grid cols-3">';
       DURU.examens.forEach(function (ex) {
-        html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\')">' +
+        html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
           '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
           '<h4>' + ex.titel + '</h4>' +
           '<p>' + (ex.vragen.length) + ' vragen · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +

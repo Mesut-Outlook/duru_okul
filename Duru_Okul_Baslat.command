@@ -11,7 +11,20 @@ echo "Submodules bijwerken..."
 git submodule update --init --recursive
 
 # Lokaal IP-adres opzoeken (voor andere computers in hetzelfde netwerk)
-LANIP=$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null)
+if command -v ipconfig >/dev/null 2>&1; then
+  LANIP=$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null)
+else
+  LANIP=$(ip route get 1.0.0.0 2>/dev/null | awk '{print $7}')
+fi
+
+# Zoek geschikte tool om browser te openen (macOS: open, Linux: xdg-open)
+if command -v open >/dev/null 2>&1; then
+  OPEN_CMD="open"
+elif command -v xdg-open >/dev/null 2>&1; then
+  OPEN_CMD="xdg-open"
+else
+  OPEN_CMD="echo"
+fi
 
 LOCAL_URL="http://localhost:$PORT/"
 
@@ -33,7 +46,7 @@ echo "  Stoppen? Klik hier en druk op Ctrl + C."
 echo "======================================================"
 
 # Open de browser op deze computer na een korte pauze
-( sleep 1; open "$LOCAL_URL" ) &
+( sleep 1; "$OPEN_CMD" "$LOCAL_URL" ) &
 
 # Start een eenvoudige lokale webserver (luistert op alle netwerk-adressen)
 if command -v python3 >/dev/null 2>&1; then
@@ -42,5 +55,5 @@ elif command -v python >/dev/null 2>&1; then
   python -m SimpleHTTPServer $PORT
 else
   echo "Python niet gevonden. Open anders index.html direct in je browser."
-  open "index.html"
+  "$OPEN_CMD" "index.html"
 fi

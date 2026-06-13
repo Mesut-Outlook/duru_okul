@@ -1,20 +1,25 @@
 /* =========================================================
    Duru's Schoolhub — Design System
    Welkomspagina die de drie leer-sites bij elkaar brengt.
-   Dezelfde familie als NASK / Economie / Begrijpend Lezen,
-   maar met een eigen warm "hub" thema.
+   Premium, ecologische ve handgemaakte vormgeving.
    ========================================================= */
 
 /* ── Google Fonts ─────────────────────────────────────────
-   Baloo 2 (titels) + Inter (tekst) — zelfde als de zuster-sites */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+   Plus Jakarta Sans (titels) + Inter (tekst) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 /* ── Design Tokens — Light Mode ──────────────────────────── */
 :root {
-  /* Hub-kleuren: warm perzik/violet als hoofdthema */
-  --hub-hoofd:   #7c3aed;   /* diep violet  */
-  --hub-zacht:   #8b5cf6;   /* violet licht */
-  --hub-achter:  #faf5ff;   /* lavendel wit */
+  /* Hub-kleuren: premium organic forest & mint theme */
+  --hub-hoofd:   #064e3b;   /* Deep forest green */
+  --hub-zacht:   #10b981;   /* Emerald green accent */
+  --hub-accent:  #34d399;   /* Bright mint green */
+  --hub-cream:   #f4fbf7;   /* Extremely soft, warm sage-cream */
+  --hub-achter:  #e6f4ea;   /* Warm organic sage-white */
+
+  /* Gradient for hero and key elements */
+  --hub-gradient: linear-gradient(135deg, #064e3b 0%, #0d9488 50%, #10b981 100%);
+  --hub-glass-border: rgba(255, 255, 255, 0.4);
 
   /* Vak-accenten */
   --blauw:       #2563eb;
@@ -38,40 +43,41 @@
   --teal-donker: #134e4a;
 
   /* Neutrale tokens */
-  --inkt:        #1e1b4b;
-  --grijs:       #64748b;
-  --grijs-licht: #94a3b8;
-  --lijn:        #e2e8f0;
+  --inkt:        #062f21;
+  --grijs:       #4b5563;
+  --grijs-licht: #9ca3af;
+  --lijn:        #d1fae5;
   --wit:         #ffffff;
 
-  /* Schaduwen */
-  --schaduw-sm:  0 1px 4px rgba(124, 58, 237, .07);
-  --schaduw:     0 6px 22px rgba(124, 58, 237, .11);
-  --schaduw-lg:  0 18px 44px rgba(124, 58, 237, .18);
-  --schaduw-kleur-blauw:  0 8px 28px rgba(37, 99, 235, .20);
-  --schaduw-kleur-groen:  0 8px 28px rgba(21, 128, 61, .20);
-  --schaduw-kleur-oranje: 0 8px 28px rgba(234, 88, 12, .20);
-  --schaduw-kleur-teal:   0 8px 28px rgba(13, 148, 136, .20);
+  /* Premium organic soft shadows */
+  --schaduw-sm:  0 2px 8px rgba(6, 78, 59, 0.04);
+  --schaduw:     0 8px 30px rgba(6, 78, 59, 0.08);
+  --schaduw-lg:  0 20px 50px rgba(6, 78, 59, 0.12);
+  --schaduw-kleur-blauw:  0 8px 28px rgba(37, 99, 235, 0.12);
+  --schaduw-kleur-groen:  0 8px 28px rgba(6, 78, 59, 0.12);
+  --schaduw-kleur-oranje: 0 8px 28px rgba(234, 88, 12, 0.12);
+  --schaduw-kleur-teal:   0 8px 28px rgba(13, 148, 136, 0.12);
 
   /* Afronding */
-  --radius:      18px;
-  --radius-sm:   12px;
-  --radius-lg:   28px;
+  --radius:      24px;
+  --radius-sm:   16px;
+  --radius-lg:   36px;
 
   /* Typografie */
-  --font-titel: "Baloo 2", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --font-titel: "Plus Jakarta Sans", "Inter", "Segoe UI", system-ui, sans-serif;
   --font-tekst: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
 /* ── Donkere modus ───────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --hub-achter:  #13101f;
-    --wit:         #1e1b31;
-    --inkt:        #e9e4ff;
+    --hub-achter:  #061a12;
+    --hub-gradient: linear-gradient(135deg, #065f46 0%, #34d399 100%);
+    --wit:         #0a2e22;
+    --inkt:        #ecfdf5;
     --grijs:       #94a3b8;
-    --grijs-licht: #64748b;
-    --lijn:        #2d2649;
+    --grijs-licht: #475569;
+    --lijn:        #104030;
 
     --blauw-zacht: #1e2d4a;
     --groen-zacht: #0f2318;
@@ -100,13 +106,23 @@ body {
   font-family: var(--font-tekst);
   color: var(--inkt);
   background:
-    radial-gradient(ellipse 1200px 500px at 110%  -5%, #ede9fe 0, transparent 55%),
-    radial-gradient(ellipse  800px 500px at  -5% 15%, #fce7f3 0, transparent 55%),
-    radial-gradient(ellipse  700px 400px at  50% 95%, #e0f2fe 0, transparent 60%),
+    radial-gradient(circle at 10% 20%, rgba(52, 211, 153, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(209, 250, 229, 0.5) 0%, transparent 60%),
     var(--hub-achter);
   min-height: 100vh;
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:
+      radial-gradient(ellipse 1200px 500px at 110%  -5%, #042f1a 0, transparent 55%),
+      radial-gradient(ellipse  800px 500px at  -5% 15%, #022c22 0, transparent 55%),
+      radial-gradient(ellipse  700px 400px at  50% 95%, #064e3b 0, transparent 60%),
+      var(--hub-achter);
+  }
 }
 
 /* ── Page Wrapper ────────────────────────────────────────── */
@@ -129,7 +145,7 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  .topbar { background: rgba(19, 16, 31, .82); }
+  .topbar { background: rgba(10, 46, 34, .82); }
 }
 
 .topbar-in {
@@ -151,7 +167,7 @@ body {
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--hub-hoofd), #ec4899);
+  background: var(--hub-gradient);
   display: grid;
   place-items: center;
   font-size: 26px;
@@ -177,13 +193,14 @@ body {
 /* ── Hero-banner ─────────────────────────────────────────── */
 .hero {
   margin-top: 32px;
-  background: linear-gradient(135deg, var(--hub-hoofd) 0%, #ec4899 100%);
+  background: var(--hub-gradient);
   color: #fff;
   border-radius: var(--radius-lg);
-  padding: 36px 36px 34px;
+  padding: 40px 44px;
   box-shadow: var(--schaduw-lg);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Decoratieve cirkel rechtsbovenin */
@@ -215,14 +232,27 @@ body {
 .hero-inner {
   position: relative;
   z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  padding: 28px;
 }
 
 .hero-emoji {
-  font-size: 52px;
-  line-height: 1;
-  margin-bottom: 12px;
-  display: block;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,.15));
+  font-size: 32px;
+  width: 58px;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .hero h2 {
@@ -231,12 +261,13 @@ body {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
   font-size: 15px;
-  opacity: .9;
-  max-width: 460px;
+  opacity: .95;
+  max-width: 480px;
   line-height: 1.6;
 }
 
@@ -280,24 +311,26 @@ body {
   background: var(--wit);
   border-radius: var(--radius);
   box-shadow: var(--schaduw);
-  padding: 24px;
+  padding: 28px;
   position: relative;
   overflow: hidden;
-  transition: transform .15s ease, box-shadow .15s ease;
-  /* Gekleurde linker-balk als accent */
-  border-left: 5px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid var(--lijn);
+  border-left: 6px solid transparent;
 }
 
 /* ── Hover / focus state ─────────────────────────────────── */
 .vak-kaart--direct:hover,
 .vak-kaart--direct:focus-within {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--schaduw-lg);
+  border-color: var(--hub-hoofd);
 }
 
 .vak-kaart--categorie:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--schaduw-lg);
+  border-color: var(--hub-hoofd);
 }
 
 .vak-kaart--categorie {
@@ -340,9 +373,16 @@ body {
 }
 
 .vak-kaart__icoon {
-  font-size: 40px;
-  line-height: 1;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,.12));
+  font-size: 28px;
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hub-achter);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .vak-kaart__titel {
@@ -436,9 +476,16 @@ body {
 }
 
 .onderwerp-link__icoon {
-  font-size: 28px;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--wit);
+  border-radius: 12px;
   flex-shrink: 0;
-  line-height: 1;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .onderwerp-link__tekst {
@@ -574,7 +621,7 @@ body.iframe-actief #iframe-shell {
 
 @media (prefers-color-scheme: dark) {
   #terugbalk {
-    background: rgba(19, 16, 31, .88);
+    background: rgba(10, 46, 34, .88);
   }
 }
 
@@ -584,13 +631,13 @@ body.iframe-actief #iframe-shell {
   gap: 7px;
   padding: 8px 16px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--hub-hoofd), #ec4899);
+  background: var(--hub-gradient);
   color: #fff;
   font-family: var(--font-tekst);
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  box-shadow: 0 3px 10px rgba(124, 58, 237, .30);
+  box-shadow: 0 3px 10px rgba(5, 150, 105, .30);
   transition: transform .13s ease, box-shadow .13s ease;
   flex-shrink: 0;
   cursor: pointer;
@@ -598,7 +645,7 @@ body.iframe-actief #iframe-shell {
 
 #terug-knop:hover {
   transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(124, 58, 237, .38);
+  box-shadow: 0 5px 16px rgba(5, 150, 105, .38);
 }
 
 #terug-knop:active {
