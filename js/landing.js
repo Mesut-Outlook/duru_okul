@@ -271,6 +271,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
   renderVakken();
 
+  // Intercept local storage writes inside the iframe to sync them back to the server
+  var frame = document.getElementById('vak-frame');
+  if (frame) {
+    frame.addEventListener('load', function() {
+      try {
+        var win = frame.contentWindow;
+        if (!win) return;
+        
+        // Save references to original function
+        var originalSetItem = win.localStorage.setItem;
+        
+        win.localStorage.setItem = function(key, value) {
+          // Call original
+          originalSetItem.apply(this, arguments);
+          
+          // Only send if it's one of Duru's school progress items
+          if (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0) {
+            var parsedVal = null;
+            try {
+              parsedVal = JSON.parse(value);
+            } catch (e) {
+              parsedVal = value;
+            }
+            
+            fetch('/api/score', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                key: key,
+                val: parsedVal,
+                timestamp: new Date().toISOString()
+              })
+            }).catch(function(err) {
+              console.warn('Could not sync performance score with local server:', err);
+            });
+          }
+        };
+      } catch (e) {
+        console.warn('Iframe storage interception bypassed or same-origin security blocked:', e);
+      }
+    });
+  }
+
   // ── Terugknop ─────────────────────────────────────────
   var terugKnop = document.getElementById('terug-knop');
   if (terugKnop) {

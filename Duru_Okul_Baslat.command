@@ -49,7 +49,13 @@ echo "======================================================"
 ( sleep 1; "$OPEN_CMD" "$LOCAL_URL" ) &
 
 # Start een eenvoudige lokale webserver (luistert op alle netwerk-adressen)
-if command -v python3 >/dev/null 2>&1; then
+if [ -f "server.py" ]; then
+  if command -v python3 >/dev/null 2>&1; then
+    python3 -u server.py $PORT
+  elif command -v python >/dev/null 2>&1; then
+    python -u server.py $PORT
+  fi
+elif command -v python3 >/dev/null 2>&1; then
   python3 -m http.server $PORT --bind 0.0.0.0
 elif command -v python >/dev/null 2>&1; then
   python -m SimpleHTTPServer $PORT
