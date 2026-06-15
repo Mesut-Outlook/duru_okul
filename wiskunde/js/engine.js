@@ -15,7 +15,7 @@
       var d = JSON.parse(localStorage.getItem(SLEUTEL));
       if (d) return d;
     } catch (e) {}
-    return { xp: 0, streak: 0, badges: {}, beste: {}, gedaan: {} };
+    return { xp: 0, streak: 0, badges: {}, beste: {}, gedaan: {}, pogingen: {}, titels: {} };
   }
   function bewaar() { try { localStorage.setItem(SLEUTEL, JSON.stringify(P)); } catch (e) {} }
 
@@ -326,6 +326,10 @@
     var totaal = Q.vragen.length;
     var pct = Math.round((Q.goed / totaal) * 100);
     if (pct >= (P.beste[o.id] || 0)) P.beste[o.id] = pct;
+    P.pogingen = P.pogingen || {};
+    P.pogingen[o.id] = (P.pogingen[o.id] || 0) + 1;
+    P.titels = P.titels || {};
+    P.titels[o.id] = o.titel;
     if (pct === 100) P.perfect = true;
     bewaar();
 
@@ -381,7 +385,7 @@
 
   DURU.reset = function () {
     if (confirm("Weet je zeker dat je alle voortgang wilt wissen?")) {
-      P = { xp: 0, streak: 0, badges: {}, beste: {}, gedaan: {} };
+      P = { xp: 0, streak: 0, badges: {}, beste: {}, gedaan: {}, pogingen: {}, titels: {} };
       bewaar(); updateStats(); DURU.gaNaar("home");
     }
   };

@@ -1090,3 +1090,268 @@ body.iframe-actief #iframe-shell {
 .subject-badge.groen { background: var(--groen-zacht); color: var(--groen-donker); }
 .subject-badge.teal { background: var(--teal-zacht); color: var(--teal-donker); }
 .subject-badge.oranje { background: var(--oranje-zacht); color: var(--oranje-donker); }
+
+/* =========================================================
+   Per-vak statistieken sectie (v2.3)
+   ========================================================= */
+
+.vak-stats-sectie {
+  margin-bottom: 32px;
+}
+
+.vak-stats-sectie__titel {
+  font-family: var(--font-titel);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--hub-hoofd);
+  margin-bottom: 16px;
+}
+
+/* Responsive grid: 1 col on mobile, 2 col on wider screens */
+.vak-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .vak-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Vak stat card ───────────────────────────────────────── */
+.vak-stat-card {
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--schaduw-sm);
+  border-left: 5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.2s ease;
+}
+
+.vak-stat-card:hover {
+  box-shadow: var(--schaduw);
+}
+
+/* Color accents */
+.vak-stat-card--blauw  { border-left-color: var(--blauw);  box-shadow: var(--schaduw-kleur-blauw); }
+.vak-stat-card--groen  { border-left-color: var(--groen);  box-shadow: var(--schaduw-kleur-groen); }
+.vak-stat-card--oranje { border-left-color: var(--oranje); box-shadow: var(--schaduw-kleur-oranje); }
+.vak-stat-card--teal   { border-left-color: var(--teal);   box-shadow: var(--schaduw-kleur-teal); }
+
+.vak-stat-card--blauw:hover  { box-shadow: var(--schaduw-kleur-blauw),  var(--schaduw); }
+.vak-stat-card--groen:hover  { box-shadow: var(--schaduw-kleur-groen),  var(--schaduw); }
+.vak-stat-card--oranje:hover { box-shadow: var(--schaduw-kleur-oranje), var(--schaduw); }
+.vak-stat-card--teal:hover   { box-shadow: var(--schaduw-kleur-teal),   var(--schaduw); }
+
+/* Card header: icon + subject name */
+.vak-stat-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vak-stat-card__icoon {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hub-achter);
+  border-radius: 12px;
+}
+
+.vak-stat-card__naam {
+  font-family: var(--font-titel);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--inkt);
+  line-height: 1.2;
+}
+
+/* Empty state */
+.vak-stat-card__leeg {
+  font-size: 14px;
+  color: var(--grijs-licht);
+  font-style: italic;
+  padding: 8px 0 4px;
+}
+
+/* Big cijfer row */
+.vak-stat-card__cijfer-rij {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vak-cijfer {
+  font-family: var(--font-titel);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--hub-hoofd);
+}
+
+.vak-cijfer--geslaagd { color: var(--groen); }
+.vak-cijfer--gezakt   { color: var(--oranje); }
+
+.vak-stat-card__hoogste {
+  font-family: var(--font-tekst);
+  font-size: 13px;
+  color: var(--grijs);
+  font-weight: 600;
+}
+
+/* Metric list */
+.vak-metrics {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vak-metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-tekst);
+  font-size: 14px;
+  color: var(--grijs);
+}
+
+.vak-metric__icoon {
+  font-size: 16px;
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+}
+
+/* Details toggle button */
+.detail-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--hub-cream);
+  border: 1px solid var(--lijn);
+  color: var(--hub-hoofd);
+  font-family: var(--font-tekst);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  align-self: flex-start;
+  min-height: 36px;       /* touch-friendly */
+  touch-action: manipulation;
+}
+
+.detail-toggle:hover {
+  background: var(--hub-hoofd);
+  color: var(--wit);
+}
+
+.detail-toggle:focus-visible {
+  outline: 3px solid var(--hub-hoofd);
+  outline-offset: 2px;
+}
+
+.detail-toggle__arrow {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Detail panel: hidden by default, shown with .open */
+.vak-detail {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--lijn);
+  padding-top: 16px;
+}
+
+.vak-detail.open {
+  display: flex;
+}
+
+.vak-detail__kop {
+  font-family: var(--font-titel);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hub-hoofd);
+  margin-bottom: 8px;
+}
+
+.vak-detail__leeg {
+  font-size: 13px;
+  color: var(--grijs-licht);
+  font-style: italic;
+  padding: 4px 0;
+}
+
+/* Compact sub-table inside the detail panel */
+.vak-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-tekst);
+  font-size: 13px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--lijn);
+}
+
+.vak-detail-table th {
+  background: var(--hub-cream);
+  color: var(--hub-hoofd);
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--lijn);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.vak-detail-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--lijn);
+  color: var(--inkt);
+  vertical-align: middle;
+}
+
+.vak-detail-table tr:last-child td {
+  border-bottom: none;
+}
+
+.vak-detail-table tr:hover td {
+  background: var(--hub-cream);
+}
+
+/* Practice score badge (percentage) */
+.vak-score-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  background: var(--blauw-zacht);
+  color: var(--blauw-donker);
+}
+
+/* Mobile: allow detail table to scroll horizontally */
+@media (max-width: 480px) {
+  .vak-detail-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .vak-cijfer {
+    font-size: 34px;
+  }
+}

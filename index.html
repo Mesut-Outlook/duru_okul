@@ -10,7 +10,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
 
   <!-- Google Fonts worden geladen vanuit style.css via @import -->
-  <link rel="stylesheet" href="css/style.css?v=2.2" />
+  <link rel="stylesheet" href="css/style.css?v=2.3" />
 </head>
 <body>
 
@@ -76,7 +76,8 @@
 
     <!-- ── Statistieken view ───────────────────────────────────── -->
     <div id="statistieken-view" class="hub-view">
-      <!-- Overview counters -->
+
+      <!-- 1. Overview summary strip -->
       <div class="stats-summary-grid">
         <div class="stats-card">
           <span class="stats-card__label">⚡ Totaal XP</span>
@@ -89,43 +90,40 @@
           <span class="stats-card__desc">Verdiende badges in totaal</span>
         </div>
         <div class="stats-card">
-          <span class="stats-card__label">📝 Gemaakte Examens</span>
+          <span class="stats-card__label">📝 Gemaakte proeftoetsen</span>
           <span class="stats-card__value" id="stat-exams">0</span>
           <span class="stats-card__desc">Voltooide proeftoetsen</span>
         </div>
         <div class="stats-card">
-          <span class="stats-card__label">🎯 Gemiddeld Cijfer</span>
+          <span class="stats-card__label">🎯 Gemiddeld cijfer</span>
           <span class="stats-card__value" id="stat-gemiddelde">-</span>
           <span class="stats-card__desc">Gemiddelde van alle pogingen</span>
         </div>
       </div>
 
-      <!-- Charts layout row -->
-      <div class="dashboard-row">
-        <!-- Main Line Chart: timeline of all scores -->
-        <div class="chart-card">
-          <h3 class="chart-card__title">
-            <span>📈 Score Verloop</span>
-            <small style="font-size:12px;font-weight:normal;color:var(--grijs-licht);">Laatste 15 proeftoetsen</small>
-          </h3>
-          <div class="svg-container" id="line-chart-container">
-            <!-- Will be drawn dynamically via SVG in JS -->
-          </div>
+      <!-- 2. Per-subject cards (filled by JS) -->
+      <section class="vak-stats-sectie" aria-label="Overzicht per vak">
+        <h3 class="vak-stats-sectie__titel">📚 Overzicht per vak</h3>
+        <div class="vak-stats-grid" id="vak-stats-grid">
+          <!-- Filled via renderVakKaarten() in dashboard.js -->
         </div>
+      </section>
 
-        <!-- Subject Performance Bars -->
-        <div class="chart-card">
-          <h3 class="chart-card__title">📊 Prestatie per vak</h3>
-          <div class="subject-analytics-grid" id="subject-progress-grid">
-            <!-- Filled via JS -->
-          </div>
+      <!-- 3. Score verloop chart -->
+      <div class="chart-card" style="margin-bottom:32px;">
+        <h3 class="chart-card__title">
+          <span>📈 Score Verloop</span>
+          <small style="font-size:12px;font-weight:normal;color:var(--grijs-licht);">Laatste 15 proeftoetsen</small>
+        </h3>
+        <div class="svg-container" id="line-chart-container">
+          <!-- Will be drawn dynamically via SVG in JS -->
         </div>
       </div>
 
-      <!-- Detailed Exam attempts list -->
+      <!-- 4. Volledig logboek -->
       <section class="exam-log-section">
         <h3 class="chart-card__title">📋 Overzicht Gemaakte Toetsen & Spelling-spelen</h3>
-        
+
         <!-- Filter bar -->
         <div class="filter-bar" id="table-filter-bar">
           <button class="filter-btn active" data-filter="all" type="button">Alles</button>
@@ -147,7 +145,7 @@
           <table class="exam-table" id="exam-attempts-table">
             <thead>
               <tr>
-                <th>Datum & Tijd</th>
+                <th>Datum &amp; Tijd</th>
                 <th>Vak</th>
                 <th>Onderwerp / Examen</th>
                 <th>Score / Vragen</th>

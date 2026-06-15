@@ -18,10 +18,16 @@ Duru_Okul_Baslat.command   start server (poort 8125)
 Elke vak-map is een zelfstandige site (eigen `index.html`, `js/`, `css/`). Bewerk ze gewoon hier.
 
 ## Dashboard & Statistieken
-Het dashboard is in `index.html` geïntegreerd via twee views ("Mijn vakken" en "Mijn prestaties & statistieken"). De logica in `js/dashboard.js` leest de localStorage uit, aggregeert data over alle vakken en tekent responsive SVG-grafieken (score verloop en voortgang per vak).
+Het dashboard is in `index.html` geïntegreerd via twee views ("Mijn vakken" en "Mijn prestaties & statistieken"). De logica in `js/dashboard.js` leest de localStorage uit en aggregeert data over alle vakken. Opbouw van de statistieken-view (sinds 2026-06-15 herontworpen, **vak/onderwerp-gericht**):
+1. **Samenvattingsstrip** — 4 hero-kaarten: ⚡ XP · 🏆 badges · 📝 gemaakte proeftoetsen · 🎯 gemiddeld cijfer.
+2. **Per-vak kaarten** (`#vak-stats-grid`, `renderVakKaarten()`) — per vak in één oogopslag: gemiddeld + hoogste cijfer, 🧪 aantal proeftoetsen, 🔁 aantal keer geoefend, 📚 aantal onderwerpen. Een **"Details ▾"**-knop (gedelegeerde click-listener) klapt een drill-down open: proeftoetsen gegroepeerd per `examId` (titel · aantal keer · beste/laatste cijfer · datum) + oefenen per onderwerp (titel · aantal keer · beste score %).
+3. **Score verloop** — responsive SVG-lijnchart (`renderScoreTimeline`, laatste 15 pogingen, tooltips).
+4. **Volledig logboek** — doorzoekbare/filterbare tabel met alle pogingen (`renderAttemptsTable`).
+
+`renderVakKaarten` leest per vak de oefen-sleutel (`pogingen{}`/`titels{}`/`beste{}`) + de examen-sleutel (`history` per `examId`). Begrijpend Lezen heeft geen oefen-data → toont alleen examen-achtige geschiedenis. Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **Let op cache-versie**: bij CSS/JS-wijzigingen `style.css?v=` in `index.html` bumpen (nu `v=2.3`).
 
 ## DURU-engine sites (nask / economi / wiskunde / spelling)
-Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`, `duru_nederlands_spelling_*`, en begrijpend lezen `begrijpend_lezen_history`) — niet door elkaar halen. Script-volgorde in elke `index.html`: bootstrap → exams → data/examen_* → data/h*_* / sp_* → engine.js (laatst). Begrijpend-lezen is een aparte engine (`app.js` + `questions.js`).
+Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`, `duru_nederlands_spelling_*`, en begrijpend lezen `begrijpend_lezen_history`) — niet door elkaar halen. Het oefen-voortgangsobject (`duru_<vak>_v1`) bevat `{ xp, streak, badges{}, beste{id:pct}, gedaan{}, pogingen{id:count}, titels{id:titel} }` — `pogingen`/`titels` worden in `engine.js`'s `renderResultaat()` bijgewerkt en voeden de per-vak dashboard-kaarten (gebruik altijd `|| {}`-guards; oude data mist deze velden). Script-volgorde in elke `index.html`: bootstrap → exams → data/examen_* → data/h*_* / sp_* → engine.js (laatst). Begrijpend-lezen is een aparte engine (`app.js` + `questions.js`).
 
 ## Vak toevoegen
 Voeg een entry toe aan `VAKKEN` in `js/landing.js`:

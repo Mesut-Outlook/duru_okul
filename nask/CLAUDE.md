@@ -73,7 +73,7 @@ DURU.registerExamen({
 kaç tanesinin bulunması gerektiği. Tümü bulunursa "goed", `minTreffers`–tümü arası "deels" (yine puan).
 
 ## localStorage anahtarları (DİKKAT — karıştırma!)
-- `duru_nask_v1`          → oefen-ilerlemesi: XP, streak, rozetler, en iyi quiz skorları.
+- `duru_nask_v1`          → oefen-ilerlemesi: XP, streak, rozetler (`badges{}`), en iyi quiz skorları (`beste{id:pct}`), ayrıca konu başına tekrar sayacı `pogingen{id:count}` ve konu başlığı `titels{id:titel}` (her oefen bitişinde `renderResultaat()` günceller — hub dashboard'u bunları okur; eski kayıtlarda olmayabilir, `|| {}` ile koru).
 - `duru_nask_examens_v1`  → sınav skorları (ayrı!). Sınav motoru oefen-XP'ye **dokunmaz**.
 - İkisini ayrı tut. "Voortgang wissen" dışında hiçbir akış bunları silmemeli.
 
