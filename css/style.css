@@ -1355,3 +1355,66 @@ body.iframe-actief #iframe-shell {
     font-size: 34px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Dark mode — volledige statistieken-view (v2.4)
+   --hub-hoofd (donkergroen) en --hub-cream (lichtcrème) worden in
+   donkere modus NIET overschreven; als tekstkleur/achtergrond op
+   donkere kaarten zijn ze onleesbaar. Hier mappen we ze (en de
+   *-donker badge-teksten) naar licht-op-donker varianten zodat de
+   hele dashboard leesbaar blijft.
+   ═══════════════════════════════════════════════════════════ */
+@media (prefers-color-scheme: dark) {
+  /* Donkergroene tekst → helder mintgroen */
+  .stats-card__value,
+  .chart-card__title,
+  .exam-table th,
+  .vak-stats-sectie__titel,
+  .vak-cijfer,
+  .vak-detail__kop {
+    color: var(--hub-accent);
+  }
+
+  /* Lichtcrème achtergronden → donker groen paneel */
+  .svg-container,
+  .filter-btn,
+  .search-input,
+  .exam-table th,
+  .exam-table tr:hover td,
+  .vak-stat-card__icoon,
+  .detail-toggle,
+  .vak-detail-table th,
+  .vak-detail-table tr:hover td {
+    background: #0f3a2b;
+  }
+
+  .filter-btn,
+  .detail-toggle {
+    color: var(--hub-accent);
+    border-color: #1c5240;
+  }
+  .filter-btn:hover, .filter-btn.active,
+  .detail-toggle:hover {
+    background: var(--hub-accent);
+    color: #062f21;                    /* donkere tekst op heldere knop */
+    border-color: var(--hub-accent);
+  }
+  .search-input:focus { background: #0a2e22; border-color: var(--hub-accent); }
+  .detail-toggle:focus-visible { outline-color: var(--hub-accent); }
+
+  /* Geslaagd/gezakt + badge-cijfers helderder voor contrast op donker */
+  .vak-cijfer--geslaagd,
+  .badge-grade.pass { color: #4ade80; }
+  .vak-cijfer--gezakt,
+  .badge-grade.fail { color: #fb923c; }
+
+  /* Vak-badges: lichte tekst (donker-token is anders onleesbaar) */
+  .subject-badge.blauw,
+  .vak-score-badge      { color: #93c5fd; }
+  .subject-badge.groen  { color: #86efac; }
+  .subject-badge.oranje { color: #fdba74; }
+  .subject-badge.teal   { color: #5eead4; }
+
+  /* SVG-lijnchart: verhelder de lijn + vulling (scoped, raakt rest niet) */
+  #line-chart-container { --hub-hoofd: #34d399; }
+}
