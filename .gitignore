@@ -11,3 +11,7 @@ _math_extract/
 
 # Lokale Claude Code-instellingen (machine-specifiek)
 .claude/
+
+# Lokale scores en logs
+scores.json
+scores_log.txt

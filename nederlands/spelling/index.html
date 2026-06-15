@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duru's Spelling & Grammatica Academie ✍️ — Nederlands MAVO 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand" onclick="DURU.gaNaar('home')">
+        <div class="logo">✍️</div>
+        <div>
+          <h1>Duru's Spelling Academie</h1>
+          <small>Nederlands voor MAVO 2 · Spelling & Grammatica</small>
+        </div>
+      </div>
+      <div class="stats">
+        <span class="chip xp" title="Jouw punten">💎 <span id="stat-xp">0</span> <span class="lbl">XP</span></span>
+        <span class="chip streak" title="Hoeveel vragen achter elkaar goed">🔥 <span id="stat-streak">0</span></span>
+        <span class="chip medal" title="Behaalde medailles">🏅 <span id="stat-badges">0</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app" id="app"><!-- views worden hier gerenderd --></main>
+
+  <div id="toast"></div>
+  <canvas id="confetti"></canvas>
+
+  <!-- ====== Bootstrap (maakt DURU.register klaar voor de data) ====== -->
+  <script src="js/bootstrap.js"></script>
+
+  <!-- ====== Examen-motor + oefentoetsen (eigen opslag, los van de oefen-XP) ====== -->
+  <script src="js/exams.js"></script>
+  <script src="js/data/examen_1_werkwoordspelling.js"></script>
+  <script src="js/data/examen_2_gemengd_ontleden.js"></script>
+  <script src="js/data/examen_3_voegwoorden_interpunctie.js"></script>
+  <script src="js/data/examen_4_zinsdelen_ontleden.js"></script>
+  <script src="js/data/examen_5_hoofdletters_leestekens.js"></script>
+  <script src="js/data/examen_6_woordbenoemen.js"></script>
+  <script src="js/data/examen_7_tegenwoordige_tijd.js"></script>
+  <script src="js/data/examen_8_verleden_tijd.js"></script>
+  <script src="js/data/examen_9_voltooid_deelwoord.js"></script>
+  <script src="js/data/examen_10_sterke_zwakke_ww.js"></script>
+  <script src="js/data/examen_11_gemengde_spelling.js"></script>
+  <script src="js/data/examen_12_eindtoets.js"></script>
+
+  <!-- ====== Data (per onderwerp) ====== -->
+  <!-- Elk bestand roept DURU.register({...}) aan -->
+  <script src="js/data/sp_1_tegenwoordige_tijd.js"></script>
+  <script src="js/data/sp_2_verleden_tijd.js"></script>
+  <script src="js/data/sp_3_voltooid_deelwoord.js"></script>
+  <script src="js/data/sp_4_voegwoorden_interpunctie.js"></script>
+  <script src="js/data/sp_5_zinsdelen_ontleden.js"></script>
+
+  <!-- ====== Engine ====== -->
+  <script src="js/engine.js"></script>
+</body>
+</html>

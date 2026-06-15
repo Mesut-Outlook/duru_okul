@@ -293,8 +293,7 @@
     h += '<div class="emoji">' + emoji + '</div><h2>' + kop + '</h2>';
     h += '<div class="score-ring"><svg width="170" height="170">' +
       '<circle cx="85" cy="85" r="70" fill="none" stroke="#e2e8f0" stroke-width="14"/>' +
-      '<circle cx="85" cy="85" r="70" fill="none" stroke="url(#g2)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
-      '<defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>' +
+      '<circle cx="85" cy="85" r="70" fill="none" stroke="var(--paars)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
       '</svg><div class="pct">' + c + '</div></div>';
     h += '<div class="samenvatting"><b>' + goed + ' van de ' + n + '</b> goed · ' + pct + '% · cijfer <b>' + c + '</b></div>';
     h += '<div class="acties">' +
@@ -398,8 +397,7 @@
     h += '<div class="emoji">' + emoji + '</div><h2>' + kop + '</h2>';
     h += '<div class="score-ring"><svg width="170" height="170">' +
       '<circle cx="85" cy="85" r="70" fill="none" stroke="#e2e8f0" stroke-width="14"/>' +
-      '<circle cx="85" cy="85" r="70" fill="none" stroke="url(#g3)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
-      '<defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>' +
+      '<circle cx="85" cy="85" r="70" fill="none" stroke="var(--paars)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
       '</svg><div class="pct">' + c + '</div></div>';
     h += '<div class="samenvatting"><b>' + att.goed + ' van de ' + att.totaal + '</b> goed · ' + att.pct + '% · cijfer <b>' + c + '</b></div>';
     h += '<div class="acties">' +

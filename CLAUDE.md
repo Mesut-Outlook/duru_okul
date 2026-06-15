@@ -6,17 +6,18 @@ Hub die Duru's oefensites (MAVO 2) samenvoegt onder één link. **Pure static, g
 ```
 index.html        landing (iframe-shell)
 css/style.css     vak-kleuren: blauw/groen/oranje/teal
-js/landing.js     VAKKEN-array + render + iframe-shell
+js/landing.js     VAKKEN-array + render + iframe-shell + storage-interceptor
 nask/             DURU-engine, natuurkunde (H4 Snelheid & H6 Elektriciteit)
 economi/          DURU-engine, economie (H6 De overheid)
 nederlands/begrijpend-lezen/   "Meester Max"-engine (begrijpend lezen)
+nederlands/spelling/           DURU-engine, Spelling & Grammatica
 wiskunde/         DURU-engine, H8 Vergelijkingen
 Duru_Okul_Baslat.command   start server (poort 8125)
 ```
 Elke vak-map is een zelfstandige site (eigen `index.html`, `js/`, `css/`). Bewerk ze gewoon hier.
 
-## DURU-engine sites (nask / economi / wiskunde)
-Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`) — niet door elkaar halen. Script-volgorde in elke `index.html`: bootstrap → exams → data/examen_* → data/h*_* → engine.js (laatst). Begrijpend-lezen is een aparte engine (`app.js` + `questions.js`).
+## DURU-engine sites (nask / economi / wiskunde / spelling)
+Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`, `duru_nederlands_spelling_*`) — niet door elkaar halen. Script-volgorde in elke `index.html`: bootstrap → exams → data/examen_* → data/h*_* / sp_* → engine.js (laatst). Begrijpend-lezen is een aparte engine (`app.js` + `questions.js`).
 
 ## Vak toevoegen
 Voeg een entry toe aan `VAKKEN` in `js/landing.js`:
@@ -29,8 +30,12 @@ Links altijd **relatief** (`./wiskunde/` …). Een nieuwe `kleur` heeft bijbehor
 ## Navigatie (iframe-shell)
 Een vak opent in `#vak-frame` met een vaste "← Terug naar de vakken"-balk. Terug = knop / Escape / browser-back (`history.pushState` + `popstate`). iframe-`src` is `about:blank` als gesloten (nooit lege `src=""`, dat herlaadt de hub). Logica in `js/landing.js`.
 
+## Storage & SVG Iframe Bugfixes (Crucial)
+1. **Storage Interception**: In `js/landing.js` wordt `win.Storage.prototype.setItem` overschreven om resultaten van `duru_*` te synchroniseren met de lokale python server (`POST /api/score`). Het overschrijven gebeurt op het prototype niveau met een `try-catch` wrapper om `Illegal invocation` type errors (met name in Safari/Chrome) te voorkomen.
+2. **SVG Ring Render**: Vanwege weergave-fouten met SVG `<linearGradient>` (`url(#g2)`) binnen iframes in Safari, gebruiken alle voortgangscirkels in `engine.js` en `exams.js` een solide themakleur (`stroke="var(--paars)"`) in plaats van ID-referenties.
+
 ## Draaien & hosting
-`open Duru_Okul_Baslat.command` (of `python3 -m http.server 8125`) → `http://localhost:8125/`. Thuisnetwerk: `http://<mac-ip>:8125/` (`ipconfig getifaddr en0`).
+`open Duru_Okul_Baslat.command` (of `python3 -m http.server 8125`) → `http://localhost:8125/`. Thuisnetwerk: `http://<mac-ip>:8125/`. UFW firewall openen via `sudo ufw allow 8125/tcp`.
 
 **Lokaal-only — geen GitHub Pages** (op verzoek). De GitHub-repo `git@github.com:Mesut-Outlook/duru_okul.git` is **alleen backup** (`git push origin main`). Pages niet toevoegen tenzij gevraagd.
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   Duru's Wiskunde Academie — Oefentoetsen (Examen-modus)
+   Duru's Spelling Academie — Oefentoetsen (Examen-modus)
    Apart van de oefenquiz. Gebruikt een EIGEN opslag-sleutel,
    dus de XP/medailles/scores van de gewone oefeningen blijven
    altijd onaangeroerd.
@@ -18,7 +18,7 @@
   };
 
   /* ---------- Eigen opslag (raakt de oefen-voortgang NIET) ---------- */
-  var EX_SLEUTEL = "duru_wiskunde_examens_v1";
+  var EX_SLEUTEL = "duru_nederlands_spelling_examens_v1";
   function laadEx() {
     try {
       var d = JSON.parse(localStorage.getItem(EX_SLEUTEL));
@@ -51,7 +51,7 @@
       h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
         '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
         '<h4>' + esc(ex.titel) + '</h4>' +
-        '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
+        '<div class="ex-meta">' + esc(ex.vak || "Nederlands Spelling") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
         (best != null
           ? '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>'
           : '<div class="ex-best" style="color:var(--grijs-licht)">Nog niet gemaakt</div>') +
@@ -88,7 +88,6 @@
   };
 
   function cijfer(pct) {
-    // Nederlands schoolcijfer 1–10 (10% = 1, 100% = 10), 1 decimaal
     var c = 1 + (pct / 100) * 9;
     return (Math.round(c * 10) / 10).toString().replace(".", ",");
   }
@@ -210,7 +209,6 @@
       .replace(/\s+/g, " ").trim();
   }
   function beoordeel(v, antw) {
-    // geeft "goed" | "fout" | "deels" + of het meetelt als goed
     if (v.type === "mc") {
       return { status: antw === v.antwoord ? "goed" : "fout", punt: antw === v.antwoord ? 1 : 0 };
     }
@@ -231,7 +229,6 @@
     var nodig = v.minTreffers || Math.max(1, Math.ceil(sleutels.length / 2));
     var treffers = 0;
     sleutels.forEach(function (woordgroep) {
-      // een "sleutel" mag meerdere alternatieven hebben gescheiden door /
       var alt = woordgroep.split("/").map(function (x) { return x.trim(); });
       if (alt.some(function (a) { return a && tekst.indexOf(a) !== -1; })) treffers++;
     });
@@ -255,7 +252,6 @@
     if (EX.beste[ex.id] == null || pct > EX.beste[ex.id]) EX.beste[ex.id] = pct;
     EX.laatste[ex.id] = pct;
 
-    // Sla de poging op in de geschiedenis
     var attemptId = "att_" + Date.now();
     var datumStr = new Date().toLocaleString("nl-NL", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
     
@@ -271,13 +267,13 @@
       beoordelingen: JSON.parse(JSON.stringify(beoordelingen))
     };
     EX.history = EX.history || [];
-    EX.history.unshift(historyEntry); // Poging toevoegen aan het begin
+    EX.history.unshift(historyEntry);
 
     bewaarEx();
     renderResultaat(pct, goed, n, beoordelingen, autoTijd);
   }
 
-  /* ---------- Resultaat + review (hoe doe je het) ---------- */
+  /* ---------- Resultaat + review ---------- */
   function renderResultaat(pct, goed, n, beoord, autoTijd) {
     var ex = T.ex;
     var c = cijfer(pct);
@@ -302,7 +298,6 @@
       '<button class="btn oranje" onclick="DURU.gaNaar(\'home\')">🏠 Home</button>' +
       '</div></div></div>';
 
-    // Review
     h += '<div class="sectie-titel" style="margin-top:30px"><h3>🔎 Nakijken — zo doe je het</h3><div class="lijn"></div></div>';
     h += '<p style="margin:0 4px 8px;color:var(--grijs)">Bekijk bij elke vraag het goede antwoord en de uitleg. Zo leer je het voor de échte toets!</p>';
     h += '<div class="filter-rij">' +
@@ -356,12 +351,11 @@
     });
   };
 
-  /* ---------- simpele confetti (eigen, los van engine) ---------- */
   DURU._confettiExam = function () {
     var c = document.getElementById("confetti"); if (!c) return;
     c.width = innerWidth; c.height = innerHeight;
     var ctx = c.getContext("2d");
-    var kl = ["#0d9488", "#14b8a6", "#ec4899", "#f97316", "#fbbf24", "#2563eb"], p = [];
+    var kl = ["#ea580c", "#f97316", "#ffedd5", "#ec4899", "#fbbf24", "#2563eb"], p = [];
     for (var i = 0; i < 120; i++) p.push({ x: Math.random() * c.width, y: -20 - Math.random() * 300, r: 4 + Math.random() * 6, k: kl[(Math.random() * kl.length) | 0], vx: -2 + Math.random() * 4, vy: 2 + Math.random() * 4, rot: Math.random() * 6, vr: -0.2 + Math.random() * 0.4 });
     var f = 0;
     (function teken() {
@@ -371,7 +365,6 @@
     })();
   };
 
-  /* ---------- Bekijk eerdere pogingen (Review uit geschiedenis) ---------- */
   DURU.renderPastAttemptReview = function (attemptId) {
     var att = EX.history.find(function (h) { return h.attemptId === attemptId; });
     if (!att) return DURU.renderExamenLijst();
@@ -405,7 +398,6 @@
       '<button class="btn ghost" onclick="DURU.renderExamenLijst()">📝 Toetshistorie</button>' +
       '</div></div></div>';
 
-    // Review
     h += '<div class="sectie-titel" style="margin-top:30px"><h3>🔎 Nakijken — foutanalyse & uitleg</h3><div class="lijn"></div></div>';
     h += '<p style="margin:0 4px 8px;color:var(--grijs)">Bekijk bij elke vraag het goede antwoord en de uitleg. Leer van de fouten die je destijds hebt gemaakt.</p>';
     h += '<div class="filter-rij">' +

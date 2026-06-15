@@ -343,9 +343,8 @@
     html += '<h2>' + kop + '</h2>';
     html += '<div class="score-ring"><svg width="170" height="170">' +
       '<circle cx="85" cy="85" r="70" fill="none" stroke="#e2e8f0" stroke-width="14"/>' +
-      '<circle cx="85" cy="85" r="70" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round" ' +
+      '<circle cx="85" cy="85" r="70" fill="none" stroke="var(--paars)" stroke-width="14" stroke-linecap="round" ' +
       'stroke-dasharray="' + omtrek + '" stroke-dashoffset="' + vol + '" transform="rotate(-90 85 85)"/>' +
-      '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d28d9"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>' +
       '</svg><div class="pct">' + pct + '%</div></div>';
     html += '<div class="samenvatting">Je had <b>' + Q.goed + ' van de ' + totaal + '</b> vragen goed.<br>' + msg + '</div>';
     html += '<div class="acties">' +

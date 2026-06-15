@@ -46,8 +46,13 @@ var VAKKEN = [
         icoon: '🧠',
         beschrijving: 'Teksten analyseren en vragen beantwoorden met Meester Max.',
         href: './nederlands/begrijpend-lezen/'
+      },
+      {
+        titel: 'Spelling & Grammatica',
+        icoon: '✍️',
+        beschrijving: 'Werkwoordspelling, voegwoorden, interpunctie en zinsdelen ontleden.',
+        href: './nederlands/spelling/'
       }
-      // Voeg hier straks meer onderwerpen toe, bv. spelling, grammatica …
     ]
   }
 ];
@@ -277,37 +282,41 @@ document.addEventListener('DOMContentLoaded', function() {
     frame.addEventListener('load', function() {
       try {
         var win = frame.contentWindow;
-        if (!win) return;
+        if (!win || !win.Storage) return;
         
-        // Save references to original function
-        var originalSetItem = win.localStorage.setItem;
+        // Save references to original prototype function (much safer than instance overrides)
+        var originalSetItem = win.Storage.prototype.setItem;
         
-        win.localStorage.setItem = function(key, value) {
-          // Call original
-          originalSetItem.apply(this, arguments);
+        win.Storage.prototype.setItem = function(key, value) {
+          // Always execute original native method first with correct context
+          originalSetItem.call(this, key, value);
           
-          // Only send if it's one of Duru's school progress items
-          if (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0) {
-            var parsedVal = null;
-            try {
-              parsedVal = JSON.parse(value);
-            } catch (e) {
-              parsedVal = value;
+          // Wrap sync logic in try-catch to guarantee it never crashes the calling app
+          try {
+            if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
+              var parsedVal = null;
+              try {
+                parsedVal = JSON.parse(value);
+              } catch (e) {
+                parsedVal = value;
+              }
+              
+              fetch('/api/score', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  key: key,
+                  val: parsedVal,
+                  timestamp: new Date().toISOString()
+                })
+              }).catch(function(err) {
+                console.warn('Could not sync performance score with local server:', err);
+              });
             }
-            
-            fetch('/api/score', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                key: key,
-                val: parsedVal,
-                timestamp: new Date().toISOString()
-              })
-            }).catch(function(err) {
-              console.warn('Could not sync performance score with local server:', err);
-            });
+          } catch (syncErr) {
+            console.warn('Error in localStorage interception sync:', syncErr);
           }
         };
       } catch (e) {
