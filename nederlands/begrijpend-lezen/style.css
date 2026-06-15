@@ -1205,6 +1205,68 @@ header {
   transform: scale(0.97);
 }
 
+/* Dashboard summary cards inside history panel */
+.history-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .history-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.history-summary .stat-card {
+  background-color: var(--bg-sidebar);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.history-summary .stat-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.history-summary .stat-card__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.history-summary .stat-card__value {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.history-summary .stat-card__value--primary {
+  color: var(--color-primary);
+}
+
+.history-summary .stat-card__value--success {
+  color: var(--color-success);
+}
+
+.history-summary .stat-card__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .history-empty {
   font-size: 0.95rem;
   color: var(--text-muted);

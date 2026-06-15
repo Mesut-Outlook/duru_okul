@@ -92,6 +92,7 @@
     if (route === "theorie") return renderTheorie(arg);
     if (route === "quiz") return renderQuizStart(arg);
     if (route === "badges") return renderBadges();
+    if (route === "dashboard") return renderDashboard();
     if (route === "examens") {
       if (arg) return DURU.examenStart(arg);
       return DURU.renderExamenLijst();
@@ -113,6 +114,7 @@
       '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'examens\')">📝 Oefentoetsen</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'badges\')">🏅 Mijn medailles</button>' +
+      '<button class="btn ghost" onclick="DURU.gaNaar(\'dashboard\')">📊 Mijn dashboard</button>' +
       '</div></div></section>';
 
     // Oefentoetsen-sectie (op tijd, met cijfer en uitleg)
@@ -359,6 +361,140 @@
     app.innerHTML = html;
     if (pct >= 80) confetti();
     checkBadges();
+  }
+
+  /* ---------------- Dashboard ---------------- */
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function cijferStr(pct) { return (Math.round((1 + pct / 100 * 9) * 10) / 10).toFixed(1).replace(".", ","); }
+
+  function renderDashboard() {
+    var EX_SLEUTEL = SLEUTEL.replace(/_v1$/, "_examens_v1");
+    var exData;
+    try { exData = JSON.parse(localStorage.getItem(EX_SLEUTEL)) || { history: [] }; } catch (e) { exData = { history: [] }; }
+    exData.history = exData.history || [];
+
+    var pogingen = P.pogingen || {};
+    var beste = P.beste || {};
+
+    // Samenvatting statistieken
+    var totaalOefenSessies = Object.keys(pogingen).reduce(function (s, k) { return s + (pogingen[k] || 0); }, 0);
+    var geoefendOnderwerpen = DURU.onderwerpen.filter(function (o) { return (pogingen[o.id] || 0) > 0 || (beste[o.id] || 0) > 0; }).length;
+    var totaalOnderwerpen = DURU.onderwerpen.length;
+    var aantalExamens = exData.history.length;
+
+    var gemiddeldCijfer = "-";
+    var hoogsteCijfer = "-";
+    if (aantalExamens > 0) {
+      var pcts = exData.history.map(function (h) { return h.pct || 0; });
+      var gem = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
+      var max = Math.max.apply(null, pcts);
+      gemiddeldCijfer = cijferStr(gem);
+      hoogsteCijfer = cijferStr(max);
+    }
+
+    var leeg = aantalExamens === 0 && totaalOefenSessies === 0;
+
+    var html = '<div class="terug" onclick="DURU.gaNaar(\'home\')">← Terug naar overzicht</div>';
+    html += '<div class="sectie-titel"><h3>📊 Mijn dashboard</h3><div class="lijn"></div></div>';
+
+    if (leeg) {
+      html += '<div class="kaart view" style="padding:36px;text-align:center;">';
+      html += '<div style="font-size:64px;margin-bottom:16px;">🚀</div>';
+      html += '<h3 style="margin-bottom:10px;">Nog niets te zien hier!</h3>';
+      html += '<p style="color:var(--grijs);margin-bottom:24px;">Begin met oefenen of doe een proeftoets — dan zie je hier jouw voortgang en cijfers.</p>';
+      html += '<button class="btn oranje" onclick="DURU.gaNaar(\'home\')">▶️ Ga aan de slag</button>';
+      html += '</div>';
+      app.innerHTML = html;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // Samenvatting kaartjes
+    html += '<div class="grid cols-3" style="margin-bottom:28px;">';
+    html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
+      '<div style="font-size:32px;">🎯</div>' +
+      '<div style="font-size:13px;color:var(--grijs);font-weight:700;margin:4px 0;">Gemiddeld cijfer</div>' +
+      '<div style="font-size:28px;font-weight:800;color:var(--groen);">' + gemiddeldCijfer + '</div></div>';
+    html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
+      '<div style="font-size:32px;">🏆</div>' +
+      '<div style="font-size:13px;color:var(--grijs);font-weight:700;margin:4px 0;">Hoogste cijfer</div>' +
+      '<div style="font-size:28px;font-weight:800;color:var(--groen);">' + hoogsteCijfer + '</div></div>';
+    html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
+      '<div style="font-size:32px;">🧪</div>' +
+      '<div style="font-size:13px;color:var(--grijs);font-weight:700;margin:4px 0;">Proeftoetsen gemaakt</div>' +
+      '<div style="font-size:28px;font-weight:800;">' + aantalExamens + '</div></div>';
+    html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
+      '<div style="font-size:32px;">🔁</div>' +
+      '<div style="font-size:13px;color:var(--grijs);font-weight:700;margin:4px 0;">Keer geoefend</div>' +
+      '<div style="font-size:28px;font-weight:800;">' + totaalOefenSessies + '</div></div>';
+    html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
+      '<div style="font-size:32px;">📚</div>' +
+      '<div style="font-size:13px;color:var(--grijs);font-weight:700;margin:4px 0;">Onderwerpen geoefend</div>' +
+      '<div style="font-size:28px;font-weight:800;">' + geoefendOnderwerpen + '<span style="font-size:16px;font-weight:600;color:var(--grijs);">/' + totaalOnderwerpen + '</span></div></div>';
+    html += '</div>';
+
+    // Oefenen per onderwerp
+    html += '<div class="sectie-titel"><h3>📖 Oefenen per onderwerp</h3><div class="lijn"></div></div>';
+    DURU.hoofdstukken.forEach(function (h) {
+      var ow = DURU.onderwerpenVan(h.nr);
+      if (!ow.length) return;
+      html += '<p style="margin:16px 4px 8px;font-weight:800;font-size:16px;">' + h.icoon + ' Hoofdstuk ' + h.nr + ' — ' + h.titel + '</p>';
+      html += '<table class="nask" style="margin-bottom:18px;">';
+      html += '<thead><tr><th style="text-align:left;">Onderwerp</th><th>Geoefend</th><th>Beste score</th><th>Voortgang</th></tr></thead><tbody>';
+      ow.forEach(function (o) {
+        var keer = pogingen[o.id] || 0;
+        var b = beste[o.id] || 0;
+        html += '<tr>';
+        html += '<td style="text-align:left;">' + esc(o.titel) + '</td>';
+        html += '<td>' + (keer > 0 ? '🔁 ' + keer + 'x' : '<span style="color:var(--grijs-licht);">Nog niet gedaan</span>') + '</td>';
+        html += '<td>' + (b > 0 ? '<span style="color:var(--groen);font-weight:800;">' + b + '%</span>' : '—') + '</td>';
+        html += '<td style="min-width:100px;"><div class="mini-progress"><span style="width:' + b + '%"></span></div></td>';
+        html += '</tr>';
+      });
+      html += '</tbody></table>';
+    });
+
+    // Proeftoetsen per examId
+    html += '<div class="sectie-titel"><h3>🧪 Proeftoetsen</h3><div class="lijn"></div></div>';
+    if (aantalExamens === 0) {
+      html += '<p style="color:var(--grijs-licht);margin:8px 4px 24px;">Nog geen proeftoetsen gemaakt. Doe een proeftoets om je voortgang hier te zien!</p>';
+    } else {
+      // Groepeer per examId
+      var groepen = {};
+      var volgorde = [];
+      exData.history.forEach(function (att) {
+        var key = att.examId || att.examTitel || "onbekend";
+        if (!groepen[key]) { groepen[key] = []; volgorde.push(key); }
+        groepen[key].push(att);
+      });
+      html += '<table class="nask">';
+      html += '<thead><tr><th style="text-align:left;">Proeftoets</th><th>Keer gemaakt</th><th>Beste cijfer</th><th>Laatste cijfer</th><th>Laatste datum</th></tr></thead><tbody>';
+      volgorde.forEach(function (key) {
+        var atts = groepen[key];
+        var titel = esc(atts[0].examTitel || key);
+        var pcts = atts.map(function (a) { return a.pct || 0; });
+        var maxPct = Math.max.apply(null, pcts);
+        var laatstePct = atts[0].pct || 0; // history is newest-first
+        var lastDatum = atts[0].datum || "—";
+        var bestC = cijferStr(maxPct);
+        var lastC = cijferStr(laatstePct);
+        html += '<tr>';
+        html += '<td style="text-align:left;font-weight:700;">' + titel + '</td>';
+        html += '<td>' + atts.length + 'x</td>';
+        html += '<td style="color:var(--groen);font-weight:800;">' + bestC + '</td>';
+        html += '<td>' + lastC + '</td>';
+        html += '<td style="color:var(--grijs);font-size:13px;">' + esc(lastDatum) + '</td>';
+        html += '</tr>';
+      });
+      html += '</tbody></table>';
+    }
+
+    html += '<div style="margin-top:28px;text-align:center;">' +
+      '<button class="btn ghost klein" onclick="DURU.gaNaar(\'examens\')">📝 Naar oefentoetsen</button>' +
+      '</div>';
+
+    app.innerHTML = html;
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   /* ---------------- Badges-pagina ---------------- */

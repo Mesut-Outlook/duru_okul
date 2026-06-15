@@ -869,6 +869,34 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
     } else {
+      // --- Summary block ---
+      const grades = history.map(item => parseFloat(String(item.grade).replace(",", ".")));
+      const avgGrade = grades.reduce((sum, g) => sum + g, 0) / grades.length;
+      const highGrade = Math.max(...grades);
+      const fmtGrade = val => val.toFixed(1).replace(".", ",");
+
+      const summary = document.createElement("div");
+      summary.className = "history-summary";
+      summary.innerHTML = `
+        <div class="stat-card stat-card--avg">
+          <div class="stat-card__icon">🎯</div>
+          <div class="stat-card__value stat-card__value--primary">${fmtGrade(avgGrade)}</div>
+          <div class="stat-card__label">Gemiddeld cijfer</div>
+        </div>
+        <div class="stat-card stat-card--high">
+          <div class="stat-card__icon">🏆</div>
+          <div class="stat-card__value stat-card__value--success">${fmtGrade(highGrade)}</div>
+          <div class="stat-card__label">Hoogste cijfer</div>
+        </div>
+        <div class="stat-card stat-card--count">
+          <div class="stat-card__icon">📝</div>
+          <div class="stat-card__value">${history.length}</div>
+          <div class="stat-card__label">Toetsen gemaakt</div>
+        </div>
+      `;
+      content.appendChild(summary);
+      // --- End summary block ---
+
       const list = document.createElement("div");
       list.className = "history-list";
       
