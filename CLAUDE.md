@@ -4,9 +4,10 @@ Hub die Duru's oefensites (MAVO 2) samenvoegt onder één link. **Pure static, g
 
 ## Structuur
 ```
-index.html        landing (iframe-shell)
-css/style.css     vak-kleuren: blauw/groen/oranje/teal
+index.html        landing (iframe-shell & dashboard container)
+css/style.css     vak-kleuren: blauw/groen/oranje/teal + dashboard styles
 js/landing.js     VAKKEN-array + render + iframe-shell + storage-interceptor
+js/dashboard.js   statistieken dashboard logica + SVG charts + examens log
 nask/             DURU-engine, natuurkunde (H4 Snelheid & H6 Elektriciteit)
 economi/          DURU-engine, economie (H6 De overheid)
 nederlands/begrijpend-lezen/   "Meester Max"-engine (begrijpend lezen)
@@ -16,8 +17,11 @@ Duru_Okul_Baslat.command   start server (poort 8125)
 ```
 Elke vak-map is een zelfstandige site (eigen `index.html`, `js/`, `css/`). Bewerk ze gewoon hier.
 
+## Dashboard & Statistieken
+Het dashboard is in `index.html` geïntegreerd via twee views ("Mijn vakken" en "Mijn prestaties & statistieken"). De logica in `js/dashboard.js` leest de localStorage uit, aggregeert data over alle vakken en tekent responsive SVG-grafieken (score verloop en voortgang per vak).
+
 ## DURU-engine sites (nask / economi / wiskunde / spelling)
-Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`, `duru_nederlands_spelling_*`) — niet door elkaar halen. Script-volgorde in elke `index.html`: bootstrap → exams → data/examen_* → data/h*_* / sp_* → engine.js (laatst). Begrijpend-lezen is een aparte engine (`app.js` + `questions.js`).
+Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`, `duru_nederlands_spelling_*`, en begrijpend lezen `begrijpend_lezen_history`) — niet door elkaar halen. Script-volgorde in elke `index.html`: bootstrap → exams → data/examen_* → data/h*_* / sp_* → engine.js (laatst). Begrijpend-lezen is een aparte engine (`app.js` + `questions.js`).
 
 ## Vak toevoegen
 Voeg een entry toe aan `VAKKEN` in `js/landing.js`:

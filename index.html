@@ -44,28 +44,128 @@
       </div>
     </section>
 
-    <!-- ── Sectie-kop ─────────────────────────────────────────── -->
-    <div class="sectie-kop">
-      <h3>📚 Mijn vakken</h3>
-      <div class="sectie-kop-lijn" aria-hidden="true"></div>
+    <!-- ── Tab-selector ─────────────────────────────────────────── -->
+    <nav class="hub-tabs" aria-label="Pagina navigatie">
+      <button class="hub-tab active" data-target="vakken-view" type="button">
+        <span>📚 Mijn vakken</span>
+      </button>
+      <button class="hub-tab" data-target="statistieken-view" type="button">
+        <span>📈 Mijn prestaties & statistieken</span>
+      </button>
+    </nav>
+
+    <!-- ── Vakken view ─────────────────────────────────────────── -->
+    <div id="vakken-view" class="hub-view active">
+      <!-- ── Vakken grid — wordt gevuld door landing.js ─────────── -->
+      <main id="vakken-grid" aria-label="Vakken-overzicht">
+        <!-- JavaScript rendert hier de vak-kaarten -->
+      </main>
+
+      <!-- ── Motivatie-tip ──────────────────────────────────────── -->
+      <aside class="tip-banner" aria-label="Studeer-tip">
+        <span class="tip-banner__icoon" aria-hidden="true">💡</span>
+        <div class="tip-banner__tekst">
+          <strong>Studeer-tip</strong>
+          <p>
+            Oefen liever 15 minuten per dag dan één keer per week een uur.
+            Kleine stapjes, groot resultaat! ✨
+          </p>
+        </div>
+      </aside>
     </div>
 
-    <!-- ── Vakken grid — wordt gevuld door landing.js ─────────── -->
-    <main id="vakken-grid" aria-label="Vakken-overzicht">
-      <!-- JavaScript rendert hier de vak-kaarten -->
-    </main>
-
-    <!-- ── Motivatie-tip ──────────────────────────────────────── -->
-    <aside class="tip-banner" aria-label="Studeer-tip">
-      <span class="tip-banner__icoon" aria-hidden="true">💡</span>
-      <div class="tip-banner__tekst">
-        <strong>Studeer-tip</strong>
-        <p>
-          Oefen liever 15 minuten per dag dan één keer per week een uur.
-          Kleine stapjes, groot resultaat! ✨
-        </p>
+    <!-- ── Statistieken view ───────────────────────────────────── -->
+    <div id="statistieken-view" class="hub-view">
+      <!-- Overview counters -->
+      <div class="stats-summary-grid">
+        <div class="stats-card">
+          <span class="stats-card__label">⚡ Totaal XP</span>
+          <span class="stats-card__value" id="stat-xp">0</span>
+          <span class="stats-card__desc">Verdiend met oefenen</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-card__label">🏆 Badges</span>
+          <span class="stats-card__value" id="stat-badges">0</span>
+          <span class="stats-card__desc">Verdiende badges in totaal</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-card__label">📝 Gemaakte Examens</span>
+          <span class="stats-card__value" id="stat-exams">0</span>
+          <span class="stats-card__desc">Voltooide proeftoetsen</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-card__label">🎯 Gemiddeld Cijfer</span>
+          <span class="stats-card__value" id="stat-gemiddelde">-</span>
+          <span class="stats-card__desc">Gemiddelde van alle pogingen</span>
+        </div>
       </div>
-    </aside>
+
+      <!-- Charts layout row -->
+      <div class="dashboard-row">
+        <!-- Main Line Chart: timeline of all scores -->
+        <div class="chart-card">
+          <h3 class="chart-card__title">
+            <span>📈 Score Verloop</span>
+            <small style="font-size:12px;font-weight:normal;color:var(--grijs-licht);">Laatste 15 proeftoetsen</small>
+          </h3>
+          <div class="svg-container" id="line-chart-container">
+            <!-- Will be drawn dynamically via SVG in JS -->
+          </div>
+        </div>
+
+        <!-- Subject Performance Bars -->
+        <div class="chart-card">
+          <h3 class="chart-card__title">📊 Prestatie per vak</h3>
+          <div class="subject-analytics-grid" id="subject-progress-grid">
+            <!-- Filled via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Exam attempts list -->
+      <section class="exam-log-section">
+        <h3 class="chart-card__title">📋 Overzicht Gemaakte Toetsen & Spelling-spelen</h3>
+        
+        <!-- Filter bar -->
+        <div class="filter-bar" id="table-filter-bar">
+          <button class="filter-btn active" data-filter="all" type="button">Alles</button>
+          <button class="filter-btn" data-filter="natuurkunde" type="button">Natuurkunde</button>
+          <button class="filter-btn" data-filter="wiskunde" type="button">Wiskunde</button>
+          <button class="filter-btn" data-filter="economie" type="button">Economie</button>
+          <button class="filter-btn" data-filter="nederlands-spelling" type="button">Spelling</button>
+          <button class="filter-btn" data-filter="nederlands-begrijpend" type="button">Begrijpend Lezen</button>
+        </div>
+
+        <!-- Search input -->
+        <div class="search-input-wrapper">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input class="search-input" id="exam-search" type="text" placeholder="Zoek op onderwerp..." aria-label="Zoek in gemaakte toetsen" />
+        </div>
+
+        <!-- Attempts Table -->
+        <div class="exam-table-wrapper">
+          <table class="exam-table" id="exam-attempts-table">
+            <thead>
+              <tr>
+                <th>Datum & Tijd</th>
+                <th>Vak</th>
+                <th>Onderwerp / Examen</th>
+                <th>Score / Vragen</th>
+                <th>Resultaat (Cijfer)</th>
+              </tr>
+            </thead>
+            <tbody id="exam-attempts-tbody">
+              <!-- Filled via JS -->
+              <tr>
+                <td colspan="5" style="text-align:center;padding:24px;color:var(--grijs-licht);">
+                  Nog geen resultaten gevonden in localStorage.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
 
   </div><!-- /.pagina -->
 
@@ -101,6 +201,7 @@
   <!-- ══ Script ══════════════════════════════════════════════
        Gewone <script> tag — geen ES modules, werkt op file://  -->
   <script src="js/landing.js"></script>
+  <script src="js/dashboard.js"></script>
 
 </body>
 </html>
