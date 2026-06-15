@@ -58,10 +58,10 @@ DURU.registerExamen({
       opties: [
         "Zij woord elke dag beter in voetbal.",
         "Zij wordt elke dag beter in voetbal.",
-        "Zij wordt elke dag beter in voetbal."
+        "Zij word elke dag beter in voetbal."
       ],
       antwoord: 1,
-      uitleg: "3e persoon enkelvoud (zij-vorm) &rarr; stam + t: word + t = <b>wordt</b>. 'Woord' is fout (dubbele klinker) en 'wordt' bestaat niet."
+      uitleg: "3e persoon enkelvoud (zij-vorm) &rarr; stam + t: word + t = <b>wordt</b>. 'Woord' is fout (dubbele klinker) en 'word' mist de -t."
     },
     {
       type: "invul",
@@ -80,11 +80,11 @@ DURU.registerExamen({
       vraag: "Welke zin is correct gespeld?",
       opties: [
         "Wat denkt u van mijn idee?",
-        "Wat denkt u van mijn idee? (met -dt)",
-        "Wat denkt u van mijn idee? (met alleen -d)"
+        "Wat denk u van mijn idee?",
+        "Wat denktd u van mijn idee?"
       ],
       antwoord: 0,
-      uitleg: "De stam van <i>denken</i> is <i>denk</i>. 3e persoon / u-vorm: denk + t = <b>denkt</b>. Hier is geen -d in de stam, dus gewoon -t (geen -dt)."
+      uitleg: "De stam van <i>denken</i> is <i>denk</i>. 3e persoon / u-vorm: denk + t = <b>denkt</b>. Geen -d in de stam, dus gewoon -t (geen -dt)."
     },
     {
       type: "waaronwaar",
