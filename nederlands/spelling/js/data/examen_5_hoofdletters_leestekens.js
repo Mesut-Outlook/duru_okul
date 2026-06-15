@@ -20,7 +20,7 @@ DURU.registerExamen({
     {
       type: "invul",
       vraag: "Vul de ontbrekende leestekens in aan het einde van de zin (directe rede): 'De leraar riep: \"Let goed op___\"'",
-      antwoord: "!\"",
+      antwoord: "!\"|!",
       uitleg: "Bij een uitroep schrijf je een uitroepteken binnen de aanhalingstekens: <b>!\"</b>."
     },
     {

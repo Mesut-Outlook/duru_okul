@@ -217,9 +217,20 @@
       return { status: antw === juist ? "goed" : "fout", punt: antw === juist ? 1 : 0 };
     }
     if (v.type === "invul") {
+      var rawAntw = String(antw == null ? "" : antw).trim().toLowerCase();
+      var rawAlts = String(v.antwoord).split("|").map(function(x) { return x.trim().toLowerCase(); });
+      
       var inv = normaliseer(antw);
       var alts = String(v.antwoord).split("|").map(normaliseer);
-      var ok = inv !== "" && alts.some(function (a) { return inv === a || inv.indexOf(a) !== -1; });
+      
+      var hasPunctuationOnly = alts.some(function(a) { return a === ""; });
+      var ok;
+      
+      if (hasPunctuationOnly) {
+        ok = rawAntw !== "" && rawAlts.some(function(a) { return rawAntw === a; });
+      } else {
+        ok = inv !== "" && alts.some(function (a) { return inv === a || inv.indexOf(a) !== -1; });
+      }
       return { status: ok ? "goed" : "fout", punt: ok ? 1 : 0 };
     }
     // open: tel sleutelwoorden

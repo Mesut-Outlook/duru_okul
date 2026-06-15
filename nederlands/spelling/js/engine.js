@@ -253,7 +253,15 @@
     
     var goed = false;
     var opties = String(v.antwoord).split("|").map(normaliseer);
-    goed = opties.indexOf(normaliseer(ruw)) !== -1;
+    var hasPunctuationOnly = opties.some(function(o) { return o === ""; });
+    
+    if (hasPunctuationOnly) {
+      var rawRuw = ruw.trim().toLowerCase();
+      var rawOpties = String(v.antwoord).split("|").map(function(x) { return x.trim().toLowerCase(); });
+      goed = rawOpties.indexOf(rawRuw) !== -1;
+    } else {
+      goed = opties.indexOf(normaliseer(ruw)) !== -1;
+    }
     
     inp.disabled = true;
     verwerk(goed, v);
