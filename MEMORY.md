@@ -40,6 +40,7 @@ This document serves as the project's global memory log, preserving all overall 
   - Fallback logic checks raw log history if `EX.laatste` is missing for old stored objects.
   - Begrijpend Lezen checks `begrijpend_lezen_history` to show best and latest grades dynamically with contrast styles on selected cards.
   - Updated the subject-specific dashboards (NASK, Wiskunde, Economie, Spelling) to display all registered exams (both completed and uncompleted ones) sorted in numerical order.
+  - Updated the main landing dashboard's subject details tables (`js/dashboard.js`) to sort the listed prooftests in numerical order.
 
 ---
 

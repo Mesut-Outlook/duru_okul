@@ -483,7 +483,15 @@
           html +=   '</tr></thead>';
           html +=   '<tbody>';
 
-          Object.keys(examGroups).forEach(function (gKey) {
+          var sortedKeys = Object.keys(examGroups).sort(function (a, b) {
+            var nA = 0, nB = 0;
+            var mA = a.match(/\d+/), mB = b.match(/\d+/);
+            if (mA) nA = parseInt(mA[0], 10);
+            if (mB) nB = parseInt(mB[0], 10);
+            return nA - nB;
+          });
+
+          sortedKeys.forEach(function (gKey) {
             var grp = examGroups[gKey];
             var grpAttempts = grp.attempts;
 
