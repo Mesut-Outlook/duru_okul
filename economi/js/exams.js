@@ -20,14 +20,21 @@
   /* ---------- Eigen opslag (raakt de oefen-voortgang NIET) ---------- */
   var EX_SLEUTEL = "duru_economi_examens_v1";
   function laadEx() {
-    try {
-      var d = JSON.parse(localStorage.getItem(EX_SLEUTEL));
-      if (d) {
-        d.history = d.history || [];
-        return d;
-      }
-    } catch (e) {}
-    return { beste: {}, laatste: {}, history: [] };
+    var d = null;
+    try { d = JSON.parse(localStorage.getItem(EX_SLEUTEL)); } catch (e) {}
+    if (!d || typeof d !== "object") d = {};
+    d.beste   = d.beste   || {};
+    d.laatste = d.laatste || {};
+    d.history = d.history || [];
+    // Herstel 'beste' en 'laatste' uit de history (history is leidend, nieuwste vooraan)
+    // zodat de resultaten op de kaarten nooit verloren gaan.
+    for (var i = 0; i < d.history.length; i++) {
+      var a = d.history[i];
+      if (!a || !a.examId || a.pct == null) continue;
+      if (d.beste[a.examId] == null || a.pct > d.beste[a.examId]) d.beste[a.examId] = a.pct;
+      if (d.laatste[a.examId] == null) d.laatste[a.examId] = a.pct; // eerste = nieuwste poging
+    }
+    return d;
   }
   function bewaarEx() { try { localStorage.setItem(EX_SLEUTEL, JSON.stringify(EX)); } catch (e) {} }
   var EX = laadEx();
