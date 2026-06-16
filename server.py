@@ -84,7 +84,32 @@ class CustomHandler(SimpleHTTPRequestHandler):
         # If not /api/score, do regular post 404
         self.send_response(404)
         self.end_headers()
-        
+
+    def do_GET(self):
+        if self.path == '/api/score':
+            scores_file = os.path.join(os.path.dirname(__file__), 'scores.json')
+            if os.path.exists(scores_file):
+                try:
+                    with open(scores_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    self.send_response(200)
+                    self.send_header('Content-type', 'application/json')
+                    self.end_headers()
+                    self.wfile.write(json.dumps(data).encode('utf-8'))
+                    return
+                except Exception as e:
+                    print(f"Error reading scores: {e}", flush=True)
+                    self.send_response(500)
+                    self.end_headers()
+                    return
+            else:
+                self.send_response(200)
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(b"[]")
+                return
+        super().do_GET()
+
     def end_headers(self):
         # Enable CORS
         self.send_header('Access-Control-Allow-Origin', '*')

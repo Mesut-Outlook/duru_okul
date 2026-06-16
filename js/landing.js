@@ -274,6 +274,37 @@ function renderVakken() {
 // ── Init bij DOM-gereed ───────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Restore scores from server database on load
+  fetch('/api/score')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (Array.isArray(data)) {
+        var latestValues = {};
+        data.forEach(function(item) {
+          if (item && item.key && item.val !== undefined) {
+            latestValues[item.key] = item.val;
+          }
+        });
+        
+        var restoredCount = 0;
+        Object.keys(latestValues).forEach(function(key) {
+          var localVal = localStorage.getItem(key);
+          var newValStr = JSON.stringify(latestValues[key]);
+          if (localVal !== newValStr) {
+            localStorage.setItem(key, newValStr);
+            restoredCount++;
+          }
+        });
+        
+        if (restoredCount > 0) {
+          window.location.reload();
+        }
+      }
+    })
+    .catch(function(err) {
+      console.warn('Could not restore scores from server:', err);
+    });
+
   renderVakken();
 
   // Intercept local storage writes inside the iframe to sync them back to the server
