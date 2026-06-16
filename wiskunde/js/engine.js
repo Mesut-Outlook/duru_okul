@@ -452,31 +452,45 @@
     });
 
     html += '<div class="sectie-titel"><h3>🧪 Proeftoetsen</h3><div class="lijn"></div></div>';
-    if (aantalExamens === 0) {
-      html += '<p style="color:var(--grijs-licht);margin:8px 4px 24px;">Nog geen proeftoetsen gemaakt. Doe een proeftoets om je voortgang hier te zien!</p>';
+    
+    // Sort all registered Wiskunde exams by their numerical ID
+    var sortedExamens = (DURU.examens || []).slice().sort(function (a, b) {
+      var nA = 0, nB = 0;
+      var mA = a.id.match(/\d+/), mB = b.id.match(/\d+/);
+      if (mA) nA = parseInt(mA[0], 10);
+      if (mB) nB = parseInt(mB[0], 10);
+      return nA - nB;
+    });
+
+    if (sortedExamens.length === 0) {
+      html += '<p style="color:var(--grijs-licht);margin:8px 4px 24px;">Geen proeftoetsen beschikbaar.</p>';
     } else {
-      var groepen = {};
-      var volgorde = [];
-      exData.history.forEach(function (att) {
-        var key = att.examId || att.examTitel || "onbekend";
-        if (!groepen[key]) { groepen[key] = []; volgorde.push(key); }
-        groepen[key].push(att);
-      });
       html += '<table class="nask">';
       html += '<thead><tr><th style="text-align:left;">Proeftoets</th><th>Keer gemaakt</th><th>Beste cijfer</th><th>Laatste cijfer</th><th>Laatste datum</th></tr></thead><tbody>';
-      volgorde.forEach(function (key) {
-        var atts = groepen[key];
-        var titel = esc(atts[0].examTitel || key);
-        var pcts = atts.map(function (a) { return a.pct || 0; });
-        var maxPct = Math.max.apply(null, pcts);
-        var laatstePct = atts[0].pct || 0;
-        var lastDatum = atts[0].datum || "—";
-        var bestC = cijferStr(maxPct);
-        var lastC = cijferStr(laatstePct);
+      sortedExamens.forEach(function (ex) {
+        var atts = (exData.history || []).filter(function (a) { return a.examId === ex.id; });
+        var titel = esc(ex.titel);
+        var keerGemaakt = "";
+        var bestC = "—";
+        var lastC = "—";
+        var lastDatum = "—";
+
+        if (atts.length > 0) {
+          keerGemaakt = atts.length + 'x';
+          var pcts = atts.map(function (a) { return a.pct || 0; });
+          var maxPct = Math.max.apply(null, pcts);
+          var laatstePct = atts[0].pct || 0;
+          lastDatum = atts[0].datum || "—";
+          bestC = '<span style="color:var(--groen);font-weight:800;">' + cijferStr(maxPct) + '</span>';
+          lastC = cijferStr(laatstePct);
+        } else {
+          keerGemaakt = '<span style="color:var(--grijs-licht);">Niet gemaakt</span>';
+        }
+
         html += '<tr>';
-        html += '<td style="text-align:left;font-weight:700;">' + titel + '</td>';
-        html += '<td>' + atts.length + 'x</td>';
-        html += '<td style="color:var(--groen);font-weight:800;">' + bestC + '</td>';
+        html += '<td style="text-align:left;font-weight:700;">' + (ex.icoon || "📝") + ' ' + titel + '</td>';
+        html += '<td>' + keerGemaakt + '</td>';
+        html += '<td>' + bestC + '</td>';
         html += '<td>' + lastC + '</td>';
         html += '<td style="color:var(--grijs);font-size:13px;">' + esc(lastDatum) + '</td>';
         html += '</tr>';

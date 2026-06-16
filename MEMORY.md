@@ -39,7 +39,7 @@ This document serves as the project's global memory log, preserving all overall 
   - Display both `🏆 Beste cijfer` and `⏱️ Laatste cijfer` on each card.
   - Fallback logic checks raw log history if `EX.laatste` is missing for old stored objects.
   - Begrijpend Lezen checks `begrijpend_lezen_history` to show best and latest grades dynamically with contrast styles on selected cards.
-  - Updated the Spelling dashboard (`nederlands/spelling/js/engine.js`) to display all 32 registered spelling exams (both completed and uncompleted ones) sorted in numerical order.
+  - Updated the subject-specific dashboards (NASK, Wiskunde, Economie, Spelling) to display all registered exams (both completed and uncompleted ones) sorted in numerical order.
 
 ---
 
