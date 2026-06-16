@@ -1433,5 +1433,18 @@ header {
   margin-top: 0.5rem;
 }
 
+/* Style overrides for exam cards when selected */
+.test-card.selected .test-card-status .score-details-row {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+.test-card.selected .test-card-status .gemaakt-status-label {
+  color: #a7f3d0 !important; /* brighter green for high contrast */
+}
+.test-card.selected .test-card-status strong.history-grade-tag {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
 
 

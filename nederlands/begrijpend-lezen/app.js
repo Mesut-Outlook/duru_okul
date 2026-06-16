@@ -714,6 +714,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const grid = document.getElementById("test-selector-grid");
     let chosenExamIndex = 0;
+    const history = JSON.parse(localStorage.getItem("begrijpend_lezen_history") || "[]");
 
     quizData.forEach((exam, index) => {
       const card = document.createElement("div");
@@ -721,10 +722,60 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index === 0) card.classList.add("selected");
       card.dataset.index = index;
 
+      // Find all attempts for this exam
+      const examAttempts = history.filter(item => item.startingText === exam.examTitle);
+      
+      let statusHtml = '';
+      if (examAttempts.length > 0) {
+        // Find latest attempt (first in the unshifted history list)
+        const latestAttempt = examAttempts[0];
+        const latestGradeStr = latestAttempt.grade;
+
+        // Find best attempt
+        let bestGradeNum = 0;
+        let bestGradeStr = "";
+        examAttempts.forEach(item => {
+          const gNum = parseFloat(String(item.grade).replace(",", "."));
+          if (gNum > bestGradeNum) {
+            bestGradeNum = gNum;
+            bestGradeStr = item.grade;
+          }
+        });
+
+        // Determine classes/colors for grade badges
+        const getGradeClass = (gStr) => {
+          const gNum = parseFloat(String(gStr).replace(",", "."));
+          if (gNum >= 7.5) return "grade-high";
+          if (gNum >= 5.5) return "grade-medium";
+          return "grade-low";
+        };
+
+        statusHtml = `
+          <div class="test-card-status" style="margin-top: 8px; display: flex; flex-direction: column; gap: 4px; font-size: 0.8rem; text-align: left; width: 100%;">
+            <div class="gemaakt-status-label" style="font-size: 0.75rem; font-weight: 700; color: #16a34a; display: inline-flex; align-items: center; gap: 4px;">
+              <span>✓ Gemaakt</span>
+            </div>
+            <div class="score-details-row" style="display: flex; flex-direction: column; gap: 2px; color: var(--text-muted);">
+              <span>🏆 Beste: <strong class="history-grade-tag ${getGradeClass(bestGradeStr)}" style="font-size: 0.75rem; padding: 1px 4px; min-width: auto; border-radius: 4px; display: inline-block; font-weight: 800; font-family: sans-serif;">${bestGradeStr}</strong></span>
+              <span>⏱️ Laatste: <strong class="history-grade-tag ${getGradeClass(latestGradeStr)}" style="font-size: 0.75rem; padding: 1px 4px; min-width: auto; border-radius: 4px; display: inline-block; font-weight: 800; font-family: sans-serif;">${latestGradeStr}</strong></span>
+            </div>
+          </div>
+        `;
+      } else {
+        statusHtml = `
+          <div class="test-card-status" style="margin-top: 8px; display: flex; flex-direction: column; gap: 4px; font-size: 0.8rem; text-align: left; width: 100%;">
+            <div class="gemaakt-status-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 4px;">
+              <span>Nog niet gemaakt</span>
+            </div>
+          </div>
+        `;
+      }
+
       card.innerHTML = `
         <span class="test-card-title">${exam.examTitle}</span>
         <span class="test-card-goal" title="Examenomvang">4 Teksten</span>
         <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;" title="16 Vragen">16 Vragen</span>
+        ${statusHtml}
       `;
 
       card.addEventListener("click", () => {

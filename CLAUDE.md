@@ -24,7 +24,10 @@ Het dashboard is in `index.html` geïntegreerd via twee views ("Mijn vakken" en 
 3. **Score verloop** — responsive SVG-lijnchart (`renderScoreTimeline`, laatste 15 pogingen, tooltips).
 4. **Volledig logboek** — doorzoekbare/filterbare tabel met alle pogingen (`renderAttemptsTable`).
 
-`renderVakKaarten` leest per vak de oefen-sleutel (`pogingen{}`/`titels{}`/`beste{}`) + de examen-sleutel (`history` per `examId`). Begrijpend Lezen heeft geen oefen-data → toont alleen examen-achtige geschiedenis. Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **Let op cache-versie**: bij CSS/JS-wijzigingen `style.css?v=` in `index.html` bumpen (nu `v=2.3`).
+`renderVakKaarten` leest per vak de oefen-sleutel (`pogingen{}`/`titels{}`/`beste{}`) + de examen-sleutel (`history` per `examId`). Begrijpend Lezen heeft geen oefen-data → toont alleen examen-achtige geschiedenis. Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **Let op cache-versie**: bij CSS/JS-wijzigingen `style.css?v=` in `index.html` bumpen (nu `v=2.4`).
+
+**Proeftoetskaarten Status**: De selectiekaarten van de proeftoetsen tonen direct of een examen al is gemaakt (`✓ Gemaakt` / `Nog niet gemaakt`) en laten zowel het beste (`🏆 Beste cijfer`) als het meest recente cijfer (`⏱️ Laatste cijfer`) zien.
+
 
 ## DURU-engine sites (nask / economi / wiskunde / spelling)
 Zelfde motor: `bootstrap.js` (register/registerExamen) → `engine.js` (oefenen) → `exams.js` (proeftoets). Data in `<vak>/js/data/*.js`; contract in `<vak>/SPEC.md`. **localStorage-sleutels zijn per site uniek** (`duru_nask_*`, `duru_economi_*`, `duru_wiskunde_*`, `duru_nederlands_spelling_*`, en begrijpend lezen `begrijpend_lezen_history`) — niet door elkaar halen. Het oefen-voortgangsobject (`duru_<vak>_v1`) bevat `{ xp, streak, badges{}, beste{id:pct}, gedaan{}, pogingen{id:count}, titels{id:titel} }` — `pogingen`/`titels` worden in `engine.js`'s `renderResultaat()` bijgewerkt en voeden de per-vak dashboard-kaarten (gebruik altijd `|| {}`-guards; oude data mist deze velden).

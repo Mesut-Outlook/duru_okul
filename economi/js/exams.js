@@ -48,13 +48,39 @@
     h += '<div class="examen-lijst">';
     DURU.examens.forEach(function (ex) {
       var best = EX.beste[ex.id];
+      var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
+      if (laatste == null && EX.history) {
+        var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
+        if (attempts.length > 0) {
+          laatste = attempts[0].pct;
+        }
+      }
+
+      var statusHtml = '';
+      if (best != null) {
+        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+            '<span>✓</span> Gemaakt' +
+          '</div>' +
+          '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
+        if (laatste != null) {
+          statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
+        }
+        statusHtml += '</div>';
+      } else {
+        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+            'Nog niet gemaakt' +
+          '</div>' +
+          '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
+        '</div>';
+      }
+
       h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
         '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
         '<h4>' + esc(ex.titel) + '</h4>' +
         '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
-        (best != null
-          ? '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>'
-          : '<div class="ex-best" style="color:var(--grijs-licht)">Nog niet gemaakt</div>') +
+        statusHtml +
         '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
         '</div>';
     });

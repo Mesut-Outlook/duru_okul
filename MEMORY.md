@@ -32,6 +32,14 @@ This document serves as the project's global memory log, preserving all overall 
   4. **Subject Analytics Card Grid**: Computes individual course statistics: number of tests, average grade, max grade, and displays interactive themed progress bars.
   5. **Logs & Attempts Table**: Detailed list of all attempts. Features instant client-side keyword search (by subject or test title) and filter buttons.
 
+### Milestone 6: Proeftoets Card Enhancements (2026-06-16)
+* **Goal**: Show completion status (done/not done) and the latest score on each proeftoets card across all subjects (NASK, Wiskunde, Economie, Spelling & Grammatica, Begrijpend Lezen).
+* **Implementation Details**:
+  - Render a status badge (`✓ Gemaakt` or `Nog niet gemaakt`) on each card inside the subject exam lists.
+  - Display both `🏆 Beste cijfer` and `⏱️ Laatste cijfer` on each card.
+  - Fallback logic checks raw log history if `EX.laatste` is missing for old stored objects.
+  - Begrijpend Lezen checks `begrijpend_lezen_history` to show best and latest grades dynamically with contrast styles on selected cards.
+
 ---
 
 ## 🛠️ Storage & Data Structures
