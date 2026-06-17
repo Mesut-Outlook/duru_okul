@@ -274,25 +274,138 @@ function renderVakken() {
 // ── Init bij DOM-gereed ───────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Restore scores from server database on load
+  // Restore scores from server database on load (merging all historical logs)
   fetch('/api/score')
     .then(function(res) { return res.json(); })
     .then(function(data) {
       if (Array.isArray(data)) {
-        var latestValues = {};
+        var allKeys = {};
         data.forEach(function(item) {
-          if (item && item.key && item.val !== undefined) {
-            latestValues[item.key] = item.val;
+          if (item && item.key) {
+            allKeys[item.key] = true;
           }
         });
         
         var restoredCount = 0;
-        Object.keys(latestValues).forEach(function(key) {
-          var localVal = localStorage.getItem(key);
-          var newValStr = JSON.stringify(latestValues[key]);
-          if (localVal !== newValStr) {
-            localStorage.setItem(key, newValStr);
-            restoredCount++;
+        
+        Object.keys(allKeys).forEach(function(key) {
+          var newVal = null;
+          
+          if (key === 'begrijpend_lezen_history') {
+            var uniqueAttemptsBL = {};
+            data.forEach(function(item) {
+              if (item && item.key === key && Array.isArray(item.val)) {
+                item.val.forEach(function(att) {
+                  var uniqId = att.timestamp || (att.startingText + '_' + att.grade + '_' + att.score);
+                  uniqueAttemptsBL[uniqId] = att;
+                });
+              }
+            });
+            var mergedBL = Object.keys(uniqueAttemptsBL).map(function(k) { return uniqueAttemptsBL[k]; });
+            mergedBL.sort(function(a, b) {
+              return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+            });
+            newVal = mergedBL;
+          } 
+          else if (key.indexOf('_examens_v1') !== -1) {
+            var uniqueAttempts = {};
+            data.forEach(function(item) {
+              if (item && item.key === key && item.val && Array.isArray(item.val.history)) {
+                item.val.history.forEach(function(att) {
+                  var uniqId = att.attemptId || (att.examId + '_' + att.datum + '_' + att.pct);
+                  uniqueAttempts[uniqId] = att;
+                });
+              }
+            });
+            var mergedHistory = Object.keys(uniqueAttempts).map(function(k) { return uniqueAttempts[k]; });
+            mergedHistory.sort(function(a, b) {
+              return parseAttemptDate(b) - parseAttemptDate(a);
+            });
+            
+            var beste = {};
+            var laatste = {};
+            mergedHistory.forEach(function(att) {
+              if (att.examId) {
+                if (laatste[att.examId] === undefined) {
+                  laatste[att.examId] = att.pct;
+                }
+                if (beste[att.examId] === undefined || att.pct > beste[att.examId]) {
+                  beste[att.examId] = att.pct;
+                }
+              }
+            });
+            
+            newVal = {
+              beste: beste,
+              laatste: laatste,
+              history: mergedHistory
+            };
+          } 
+          else if (key.indexOf('_v1') !== -1) {
+            var xp = 0;
+            var maxStreak = 0;
+            var badges = {};
+            var besteTopic = {};
+            var gedaan = {};
+            var pogingen = {};
+            var titels = {};
+            
+            data.forEach(function(item) {
+              if (item && item.key === key && item.val) {
+                var val = item.val;
+                if (val.xp && val.xp > xp) xp = val.xp;
+                if (val.streak && val.streak > maxStreak) maxStreak = val.streak;
+                if (val.maxStreak && val.maxStreak > maxStreak) maxStreak = val.maxStreak;
+                if (val.badges) {
+                  Object.keys(val.badges).forEach(function(bid) {
+                    badges[bid] = val.badges[bid];
+                  });
+                }
+                if (val.beste) {
+                  Object.keys(val.beste).forEach(function(tid) {
+                    if (besteTopic[tid] === undefined || val.beste[tid] > besteTopic[tid]) {
+                      besteTopic[tid] = val.beste[tid];
+                    }
+                  });
+                }
+                if (val.gedaan) {
+                  Object.keys(val.gedaan).forEach(function(tid) {
+                    gedaan[tid] = val.gedaan[tid];
+                  });
+                }
+                if (val.pogingen) {
+                  Object.keys(val.pogingen).forEach(function(tid) {
+                    if (pogingen[tid] === undefined || val.pogingen[tid] > pogingen[tid]) {
+                      pogingen[tid] = val.pogingen[tid];
+                    }
+                  });
+                }
+                if (val.titels) {
+                  Object.keys(val.titels).forEach(function(tid) {
+                    titels[tid] = val.titels[tid];
+                  });
+                }
+              }
+            });
+            
+            newVal = {
+              xp: xp,
+              streak: maxStreak,
+              badges: badges,
+              beste: besteTopic,
+              gedaan: gedaan,
+              pogingen: pogingen,
+              titels: titels
+            };
+          }
+          
+          if (newVal) {
+            var localVal = localStorage.getItem(key);
+            var newValStr = JSON.stringify(newVal);
+            if (localVal !== newValStr) {
+              localStorage.setItem(key, newValStr);
+              restoredCount++;
+            }
           }
         });
         
@@ -304,6 +417,25 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(function(err) {
       console.warn('Could not restore scores from server:', err);
     });
+
+  function parseAttemptDate(att) {
+    if (att.attemptId && att.attemptId.indexOf('att_') === 0) {
+      var ts = parseInt(att.attemptId.replace('att_', ''), 10);
+      if (!isNaN(ts)) return ts;
+    }
+    if (att.datum) {
+      var clean = att.datum.replace(',', '');
+      var parts = clean.split(' ');
+      if (parts.length >= 2) {
+        var dParts = parts[0].split('-');
+        var tParts = parts[1].split(':');
+        if (dParts.length === 3 && tParts.length >= 2) {
+          return new Date(dParts[2], dParts[1] - 1, dParts[0], tParts[0], tParts[1]).getTime();
+        }
+      }
+    }
+    return 0;
+  }
 
   renderVakken();
 
