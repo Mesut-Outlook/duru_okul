@@ -453,10 +453,10 @@
 
     html += '<div class="sectie-titel"><h3>🧪 Proeftoetsen</h3><div class="lijn"></div></div>';
     
-    // Sort all registered Economie exams by their numerical ID
+    // Sort all registered Economie exams by their numerical title
     var sortedExamens = (DURU.examens || []).slice().sort(function (a, b) {
       var nA = 0, nB = 0;
-      var mA = a.id.match(/\d+/), mB = b.id.match(/\d+/);
+      var mA = a.titel.match(/\d+/), mB = b.titel.match(/\d+/);
       if (mA) nA = parseInt(mA[0], 10);
       if (mB) nB = parseInt(mB[0], 10);
       return nA - nB;

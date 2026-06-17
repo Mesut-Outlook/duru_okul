@@ -485,7 +485,9 @@
 
           var sortedKeys = Object.keys(examGroups).sort(function (a, b) {
             var nA = 0, nB = 0;
-            var mA = a.match(/\d+/), mB = b.match(/\d+/);
+            var titleA = examGroups[a] ? examGroups[a].titel : a;
+            var titleB = examGroups[b] ? examGroups[b].titel : b;
+            var mA = titleA.match(/\d+/), mB = titleB.match(/\d+/);
             if (mA) nA = parseInt(mA[0], 10);
             if (mB) nB = parseInt(mB[0], 10);
             return nA - nB;
