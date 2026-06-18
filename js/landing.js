@@ -34,6 +34,14 @@ var VAKKEN = [
     href: './economi/'
   },
   {
+    id: 'geschiedenis',
+    titel: 'Geschiedenis',
+    icoon: '🕰️',
+    kleur: 'oranje',         // warm oranje/historisch accent
+    beschrijving: 'De Eerste en Tweede Wereldoorlog, het interbellum en Nederland in de oorlog.',
+    href: './geschiedenis/'
+  },
+  {
     id: 'nederlands',
     titel: 'Nederlands',
     icoon: '📖',

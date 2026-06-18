@@ -114,6 +114,7 @@
       { key: "duru_nask_v1" },
       { key: "duru_wiskunde_v1" },
       { key: "duru_economi_v1" },
+      { key: "duru_geschiedenis_v1" },
       { key: "duru_nederlands_spelling_v1" }
     ];
 
@@ -154,6 +155,8 @@
     loadDuruAttempts(attempts, "duru_wiskunde_examens_v1", "wiskunde", "Wiskunde", "teal");
     // Economie
     loadDuruAttempts(attempts, "duru_economi_examens_v1", "economie", "Economie", "groen");
+    // Geschiedenis
+    loadDuruAttempts(attempts, "duru_geschiedenis_examens_v1", "geschiedenis", "Geschiedenis", "oranje");
     // Spelling
     loadDuruAttempts(attempts, "duru_nederlands_spelling_examens_v1", "nederlands-spelling", "Spelling", "oranje");
     // Begrijpend Lezen
@@ -348,6 +351,14 @@
         icoon: "💶",
         kleur: "groen",
         practiceKey: "duru_economi_v1",
+        hasPractice: true
+      },
+      {
+        id: "geschiedenis",
+        titel: "Geschiedenis",
+        icoon: "🕰️",
+        kleur: "oranje",
+        practiceKey: "duru_geschiedenis_v1",
         hasPractice: true
       },
       {
