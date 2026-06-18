@@ -64,6 +64,17 @@ Ayrıntı **SPEC.md**'de. Özet:
 - Hızlı doğrulama: `node` ile `register`/`registerExamen` stub'layıp dosyaları `eval` ederek
   söz dizimi + alan kontrolü yap.
 
+### Kapsam disiplini (ÖNEMLİ)
+- **Tüm proeftoetsen YALNIZCA Hoofdstuk 6 — De overheid (§6.1–6.4) kapsamında olmalı.** Müfredat
+  dışı ekonomi konuları YASAK: ECB/monetair beleid, inflatie/deflatie/koopkracht, marktstructuren
+  (monopolie/kartel), internationale handel/globalisering, arbeidsmarkt, privatisering,
+  consumentenrecht, circulaire economie. (2026-06-18'de bu konulardaki 11 "extra" sınav kaldırılıp
+  yerlerine H6-içi sınavlar yazıldı.)
+- Toplam **35 proeftoets** (`examen_1..35`); dosya-numarası slot'ları sabit, "Extra Proeftoets N"
+  görünen numarası = dosya no − 5 (boşluksuz 1–30). `ex-*` ID'leri kayıtlı skor geçmişinin anahtarı —
+  mevcut bir sınavın ID'sini ASLA değiştirme; sadece dosya içeriğini değiştir veya slot'u yeni ID ile
+  yeniden kullan. Her "extra" sınav = 15 soru (6 mc / 4 waaronwaar / 3 invul / 2 open).
+
 ## Bu proje nasıl üretildi (bağlam)
 - Kaynak: iCloud'daki taranmış `Economi 6.pdf` (12 sayfa, metin katmanı yok). PyMuPDF ile
   PNG'ye render edilip görsel okundu (`extracted_pages/h6_p01..12.png`).
