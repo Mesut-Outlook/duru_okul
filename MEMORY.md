@@ -43,6 +43,15 @@ This document serves as the project's global memory log, preserving all overall 
   - Updated the main landing dashboard's subject details tables (`js/dashboard.js`) to sort the listed prooftests in numerical order.
   - Implemented automatic progress restoration by creating a `GET /api/score` endpoint in `server.py` and a fetch loader in `js/landing.js` that pulls synced scores on load and populates `localStorage`.
 
+### Milestone 7: Spelling and Economy Expansions, Server Synchronization, and Geschiedenis Module (2026-06-20)
+* **Goal**: Expand content libraries for Spelling and Economy, ensure robust local server synchronization, and introduce a brand new course module for History.
+* **Implementation Details**:
+  - **Spelling Module Expansion**: Added 5 new prooftests (ex-sp-33 to ex-sp-37) with 15 questions each.
+  - **Recovery Engine**: Standardized recovery logic (`laadEx`) in all subject engines to correctly fall back and restore missing `beste` and `laatste` scores from history.
+  - **Server Synchronization & Recovery**: Implemented a `GET /api/score` endpoint on `server.py` to retrieve all scores. Expanded `js/landing.js` to automatically fetch and merge historical scores on page load, ensuring complete progress restoration across different sessions/devices.
+  - **Economy Module Content Redesign**: Added 15 new extra exams (ex-21 to ex-35). Replaced 11 existing extra exams containing out-of-scope chapters with questions strictly targeting Sections 6.1-6.4 (De overheid), maintaining a clean, localized curriculum scope.
+  - **Geschiedenis Module Integration**: Created and embedded a completely new "Geschiedenis" (History) subject focusing on WO I & II. Configured its 4 core study subchapters, 30 practice exams, and integrated it into the landing page dashboard and stats views.
+
 ---
 
 ## 🛠️ Storage & Data Structures
@@ -52,6 +61,7 @@ This document serves as the project's global memory log, preserving all overall 
   - Wiskunde: `duru_wiskunde_v1`
   - Economie: `duru_economi_v1`
   - Spelling: `duru_nederlands_spelling_v1`
+  - Geschiedenis: `duru_geschiedenis_v1`
   - *Data Format*: `{ xp: Number, streak: Number, badges: Object }` (badges object keys are badge IDs).
 
 * **Subject Exam Attempts Keys**:
@@ -59,6 +69,7 @@ This document serves as the project's global memory log, preserving all overall 
   - Wiskunde: `duru_wiskunde_examens_v1`
   - Economie: `duru_economi_examens_v1`
   - Spelling: `duru_nederlands_spelling_examens_v1`
+  - Geschiedenis: `duru_geschiedenis_examens_v1`
   - *Data Format*: `{ history: [ { examTitel: String, datum: String, goed: Number, totaal: Number, pct: Number } ] }`
   
 * **Reading Comprehension Key**:
