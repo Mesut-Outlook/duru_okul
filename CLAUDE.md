@@ -51,9 +51,8 @@ Een vak opent in `#vak-frame` met een vaste "← Terug naar de vakken"-balk. Ter
 2. **SVG Ring Render**: Vanwege weergave-fouten met SVG `<linearGradient>` (`url(#g2)`) binnen iframes in Safari, gebruiken alle voortgangscirkels in `engine.js` en `exams.js` een solide themakleur (`stroke="var(--paars)"`) in plaats van ID-referenties.
 
 ## Draaien & hosting
-`open Duru_Okul_Baslat.command` (of `python3 -m http.server 8125`) → `http://localhost:8125/`. Thuisnetwerk: `http://<mac-ip>:8125/`. UFW firewall openen via `sudo ufw allow 8125/tcp`.
-
-**Lokaal-only — geen GitHub Pages** (op verzoek). De GitHub-repo `git@github.com:Mesut-Outlook/duru_okul.git` is **alleen backup** (`git push origin main`). Pages niet toevoegen tenzij gevraagd.
+- **Lokaal**: `open Duru_Okul_Baslat.command` (of `python3 -m http.server 8125`) → `http://localhost:8125/`. Thuisnetwerk: `http://<mac-ip>:8125/`. UFW firewall openen via `sudo ufw allow 8125/tcp`.
+- **GitHub Pages**: Automatisch ingeschakeld en gehost op GitHub Pages via GitHub Actions bij elke push naar `main`. Er is een `.nojekyll` bestand aanwezig en de client-zijde detecteert dit om server score synchronization (`/api/score`) over te slaan.
 
 ## Werkwijze
 Conventie (zoals de oude zustersites): **planning met Opus 4.8, code door Sonnet sub-agents**; commit-trailer `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`. Git lokaal: `user.name=Mesut-Outlook`, `user.email=ozdemirmesut@gmail.com`.

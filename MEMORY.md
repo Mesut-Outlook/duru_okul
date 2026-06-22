@@ -67,6 +67,13 @@ This document serves as the project's global memory log, preserving all overall 
   - **Question Types**: Balanced mix of Multiple Choice ('mc'), True/False ('waaronwaar'), and Fill-in-the-blank ('invul') types.
   - **Integration**: Loaded all 10 scripts in the Geschiedenis `index.html` file and updated CLAUDE.md.
 
+### Milestone 10: GitHub Pages Support and Auto-Deployment (2026-06-22)
+* **Goal**: Support running the application on GitHub Pages dynamically, configure automatic deploy on git pushes, and upload to remote repository.
+* **Implementation Details**:
+  - **Environment Detection**: Updated `js/landing.js` to detect if the app is hosted on `github.io` (`isGitHubPages`).
+  - **Graceful Degrade**: Bypassed local network API calls (`/api/score` POST and GET) when running on GitHub Pages to prevent useless 404 network warnings, while preserving full client-side local storage features.
+  - **Deploy Configuration**: Added a `.nojekyll` file at the root to prevent Jekyll processing of folders. Created `.github/workflows/deploy.yml` to automatically build and deploy the project to GitHub Pages via GitHub Actions on every push to the `main` branch.
+
 ---
 
 ## 🛠️ Storage & Data Structures

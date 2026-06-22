@@ -282,9 +282,15 @@ function renderVakken() {
 // ── Init bij DOM-gereed ───────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Restore scores from server database on load (merging all historical logs)
-  fetch('/api/score')
-    .then(function(res) { return res.json(); })
+  var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
+
+  if (!isGitHubPages) {
+    // Restore scores from server database on load (merging all historical logs)
+    fetch('/api/score')
+      .then(function(res) {
+        if (!res.ok) throw new Error('HTTP status ' + res.status);
+        return res.json();
+      })
     .then(function(data) {
       if (Array.isArray(data)) {
         var allKeys = {};
@@ -425,6 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(function(err) {
       console.warn('Could not restore scores from server:', err);
     });
+  }
 
   function parseAttemptDate(att) {
     if (att.attemptId && att.attemptId.indexOf('att_') === 0) {
@@ -461,6 +468,8 @@ document.addEventListener('DOMContentLoaded', function() {
         win.Storage.prototype.setItem = function(key, value) {
           // Always execute original native method first with correct context
           originalSetItem.call(this, key, value);
+          
+          if (isGitHubPages) return;
           
           // Wrap sync logic in try-catch to guarantee it never crashes the calling app
           try {
