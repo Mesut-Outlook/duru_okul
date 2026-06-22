@@ -44,15 +44,15 @@ DURU.registerExamen({
     },
     {
       type: "mc",
-      vraag: "Bij welke marktvorm is er slechts één aanbieder van een product of dienst?",
+      vraag: "Welke sector bestaat uit private bedrijven die gericht zijn op het maken van winst?",
       opties: [
-        "Oligopolie",
-        "Volkomen concurrentie",
-        "Monopolistische concurrentie",
-        "Monopolie"
+        "De collectieve sector",
+        "De particuliere sector",
+        "De publieke sector",
+        "De semi-overheid"
       ],
-      antwoord: 3,
-      uitleg: "Een **monopolie** (zoals de NS op het spoor) heeft geen concurrenten, waardoor de prijszetting makkelijker is."
+      antwoord: 1,
+      uitleg: "De **particuliere sector** (of private sector) bestaat uit bedrijven die winst willen maken. De collectieve sector bestaat uit de overheid en sociale verzekeringsinstellingen."
     },
     {
       type: "mc",
@@ -94,11 +94,11 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit waarom prijsafspraken (kartels) verboden zijn en wie toezicht houdt op de naleving hiervan.",
-      sleutelwoorden: ["ACM/Autoriteit Consument & Markt", "concurrentie uitschakelen/beperken", "nadelig/consument benadeeld/te veel betalen", "hoge prijzen"],
+      vraag: "Duru, leg uit wat de staatsschuld is, hoe deze ontstaat, en waarom een te hoge staatsschuld een probleem kan zijn voor de overheid.",
+      sleutelwoorden: ["begrotingstekort/tekort", "lenen/geld lenen/lening", "rente/rente betalen", "minder geld voor voorzieningen/toekomst"],
       minTreffers: 2,
-      modelantwoord: "Kartels schakelen de concurrentie uit, waardoor prijzen kunstmatig hoog blijven en consumenten te veel betalen. Dit is verboden door de Mededingingswet. De ACM (Autoriteit Consument & Markt) houdt toezicht en legt boetes op aan overtreders.",
-      uitleg: "Kartels benadelen de consument. Toezichthouder = ACM."
+      modelantwoord: "De staatsschuld is de totale schuld die de rijksoverheid heeft opgebouwd door geld te lenen om begrotingstekorten te financieren. Een te hoge staatsschuld is een probleem omdat de overheid veel rente moet betalen. Dit kost geld dat niet meer aan voorzieningen (zoals zorg of onderwijs) kan worden besteed.",
+      uitleg: "Staatsschuld stijgt door begrotingstekorten en kost jaarlijks veel rente."
     }
   ]
 });

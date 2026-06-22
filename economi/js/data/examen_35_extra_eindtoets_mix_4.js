@@ -50,9 +50,9 @@ DURU.registerExamen({
     },
     {
       type: "invul",
-      vraag: "Welke wet beschermt consumenten die online aankopen doen door ze een wettelijke bedenktijd van 14 dagen te geven? De Wet koop op _______.",
-      antwoord: "afstand",
-      uitleg: "De **Wet koop op afstand** beschermt consumenten omdat ze het product bij aankoop niet fysiek kunnen zien."
+      vraag: "Welke persoon is de voorzitter van zowel de gemeenteraad als het college van burgemeester en wethouders?",
+      antwoord: "burgemeester|de burgemeester",
+      uitleg: "De **burgemeester** is de voorzitter van het gemeentebestuur en wordt benoemd door de regering."
     },
     {
       type: "mc",
@@ -104,9 +104,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "De Autoriteit Consument & Markt (ACM) is de toezichthouder die boetes oplegt aan bedrijven die geheime prijsafspraken (kartels) maken.",
-      antwoord: true,
-      uitleg: "Waar. De **ACM** beschermt de marktwerking door kartels en misbruik van marktmacht op te sporen en te beboeten."
+      vraag: "Een begrotingstekort van de overheid leidt direct tot een afname van de staatsschuld.",
+      antwoord: false,
+      uitleg: "Onwaar. Een **begrotingstekort** betekent dat de overheid geld moet lenen, waardoor de staatsschuld juist **stijgt**."
     },
     {
       type: "mc",

@@ -1,92 +1,92 @@
-/* Extra Proeftoets 4C — Consument & Overheid */
+/* Extra Proeftoets 37 — Provincie & Lokale Besturen */
 DURU.registerExamen({
   id: "ex-extra-consument-overheid-3",
-  titel: "Extra Proeftoets 4C — Consument & Overheid",
-  vak: "Economie · Consumenten",
-  icoon: "🛒",
+  titel: "Extra Proeftoets 37 — Provincie & Lokale Besturen",
+  vak: "Economie · Lokale overheid",
+  icoon: "🌍",
   duurMin: 15,
   vragen: [
     {
       type: "mc",
-      vraag: "Wat verstaat de Nederlandse wet onder 'misleidende reclame'?",
+      vraag: "Hoeveel provincies telt Nederland?",
       opties: [
-        "Reclame die onjuiste informatie geeft of belangrijke feiten weglaat, waardoor de consument een aankoopbeslissing neemt die hij anders niet had genomen.",
-        "Reclame die door de meeste consumenten als buitengewoon irritant of saai wordt ervaren.",
-        "Reclame waarin geen bekende Nederlanders of influencers worden ingezet.",
-        "Reclame die uitsluitend via sociale mediakanalen zoals TikTok of Instagram wordt verspreid."
+        "10 provincies.",
+        "12 provincies.",
+        "15 provincies.",
+        "340 provincies."
       ],
-      antwoord: 0,
-      uitleg: "Reclame is wettelijk <b>misleidend</b> als het essentiële informatie verzwijgt of verdraait, waardoor je als consument op het verkeerde been wordt gezet."
+      antwoord: 1,
+      uitleg: "Nederland is verdeeld in **12 provincies**, die elk hun eigen provinciebestuur hebben."
     },
     {
       type: "waaronwaar",
-      vraag: "Als je via internet een gepersonaliseerde trui koopt met je eigen naam erop geborduurd, heb je nog steeds recht op de wettelijke 14 dagen bedenktijd.",
-      antwoord: false,
-      uitleg: "Onwaar. Gepersonaliseerde of op maat gemaakte producten zijn wettelijk **uitgezonderd** van het herroepend recht (de bedenktijd), omdat de verkoper ze niet aan iemand anders kan doorverkopen."
-    },
-    {
-      type: "invul",
-      vraag: "Als een winkelier een product met korting verkoopt in de uitverkoop (sale), heb je nog steeds recht op een deugdelijk product. Dit recht noemen we de wettelijke ________.",
-      antwoord: "garantie",
-      uitleg: "Ook op afgeprijsde artikelen geldt de volledige wettelijke <b>garantie</b>. Een winkelier mag dit recht niet uitsluiten."
-    },
-    {
-      type: "mc",
-      vraag: "Wat is de belangrijkste rol van de Consumentenbond?",
-      opties: [
-        "Het onafhankelijk testen van producten en diensten, en het bieden van advies en juridische hulp aan haar leden.",
-        "Het opsporen en arresteren van malafide winkeliers die zich niet aan de wet houden.",
-        "Het rechtstreeks bepalen en wijzigen van de btw-tarieven in Nederland.",
-        "Het verstrekken van leningen aan consumenten die geldtekort hebben."
-      ],
-      antwoord: 0,
-      uitleg: "De <b>Consumentenbond</b> is een onafhankelijke vereniging die opkomt voor de belangen van alle consumenten in Nederland."
-    },
-    {
-      type: "waaronwaar",
-      vraag: "Winkels en supermarkten zijn wettelijk verplicht om naast de verkoopprijs ook de prijs per standaardhoeveelheid (zoals per kilo of per liter) op het schap te vermelden.",
+      vraag: "De provincie bestuurt het gebied dat tussen het Rijk en de gemeenten in ligt.",
       antwoord: true,
-      uitleg: "Waar. Dit is verplicht om consumenten te helpen verschillende verpakkingen en merken makkelijker met elkaar te vergelijken op prijs."
+      uitleg: "Waar. De provincie regelt zaken die te groot zijn voor een enkele gemeente, maar te specifiek voor de landelijke rijksoverheid."
     },
     {
       type: "invul",
-      vraag: "Een extra belasting op milieuvervuilende grondstoffen (zoals kolen of aardgas) waarmee de overheid milieubewust gedrag wil stimuleren, heet een milieu_________.",
-      antwoord: "heffing|belasting",
-      uitleg: "Milieuheffingen maken vervuilende keuzes duurder, waardoor consumenten en bedrijven worden gestimuleerd groenere alternatieven te kiezen."
+      vraag: "Hoe heet het dagelijks bestuur van de provincie, dat de besluiten van de Provinciale Staten uitvoert? Gedeputeerde ________.",
+      antwoord: "Staten|staten",
+      uitleg: "Het dagelijks bestuur van de provincie heet de **Gedeputeerde Staten**."
     },
     {
       type: "mc",
-      vraag: "Wat is in de economie een 'meritorisch goed'?",
+      vraag: "Wie is de voorzitter van het provinciebestuur en wordt benoemd door de regering?",
       opties: [
-        "Een goed of dienst waarvan de overheid het gebruik wil stimuleren (zoals onderwijs, sport of biologisch eten) omdat het goed is voor de maatschappij.",
-        "Een goed dat door de overheid volledig is verboden omdat het te gevaarlijk is.",
-        "Een luxeproduct dat alleen door mensen met de allerhoogste inkomens kan worden gekocht.",
-        "Een product dat schadelijk is voor de gezondheid en extra zwaar wordt belast."
+        "De burgemeester.",
+        "De Commissaris van de Koning.",
+        "De wethouder.",
+        "De minister-president."
       ],
-      antwoord: 0,
-      uitleg: "Meritorische goederen (bemoeigoederen) worden door de overheid gestimuleerd via bijvoorbeeld subsidies, voorlichting of een verlaagd btw-tarief (9%)."
+      antwoord: 1,
+      uitleg: "De **Commissaris van de Koning** is de voorzitter van zowel de Provinciale Staten als de Gedeputeerde Staten."
     },
     {
       type: "waaronwaar",
-      vraag: "Als een product binnen de garantietermijn kapot gaat en de winkelier stuurt je door naar de fabrikant omdat hij zegt 'dat is de schuld van de fabriek', dan handelt de winkelier wettelijk juist.",
-      antwoord: false,
-      uitleg: "Onwaar. Jouw koopovereenkomst is met de **winkelier** (de verkoper). De winkelier is wettelijk verplicht het probleem voor jou op te lossen en mag je niet zomaar afschepen naar de fabrikant."
+      vraag: "De Provinciale Staten zijn de gekozen volksvertegenwoordigers op provinciaal niveau, vergelijkbaar met de gemeenteraad.",
+      antwoord: true,
+      uitleg: "Waar. Burgers stemmen eens in de vier jaar voor de **Provinciale Staten**, die de regels voor de provincie bepalen."
+    },
+    {
+      type: "invul",
+      vraag: "Wie vormen samen met de burgemeester het dagelijks bestuur van een gemeente? De burgemeester en ________.",
+      antwoord: "wethouders|de wethouders",
+      uitleg: "Het college van **Burgemeester en Wethouders** (B&W) vormt het dagelijks bestuur van de gemeente."
+    },
+    {
+      type: "mc",
+      vraag: "Welke taak behoort typisch tot de verantwoordelijkheid van de provincie en niet van de gemeente?",
+      opties: [
+        "Het ophalen van huisvuil.",
+        "De ruimtelijke ordening (waar provinciale wegen en natuurgebieden komen).",
+        "Het uitgeven van paspoorten en identiteitskaarten.",
+        "Het onderhouden van lokale speeltuinen."
+      ],
+      antwoord: 1,
+      uitleg: "**Ruimtelijke ordening** op grotere schaal en de aanleg van provinciale fielen en fietspaden zijn taken van de provincie."
+    },
+    {
+      type: "waaronwaar",
+      vraag: "De gemeente is de laag van de overheid die het dichtst bij de burger staat.",
+      antwoord: true,
+      uitleg: "Waar. De **gemeente** regelt dagelijkse, lokale zaken zoals afvalverwerking, paspoorten en onderhoud van de buurt."
     },
     {
       type: "open",
-      vraag: "Leg uit waarom de overheid accijns heft op autobrandstoffen zoals benzine en diesel, en wat het effect hiervan is op consumentengedrag.",
-      sleutelwoorden: ["ontmoedigen/milieu/vervuiling/schadelijk", "minder/duurder/rijden", "schonere/alternatieven/elektrisch/ov"],
+      vraag: "Leg uit waarom de provincie gaat over streekbussen (openbaar vervoer) en niet de afzonderlijke gemeenten zelf.",
+      sleutelwoorden: ["gemeentegrenzen/gemeente overschrijden", "streekbussen rijden tussen steden/dorpen", "te groot/schaal/gebied", "samenhang/provinciaal"],
       minTreffers: 2,
-      modelantwoord: "De overheid heft accijns op benzine en diesel omdat de verbranding hiervan schadelijk is voor het milieu en het klimaat. Door de accijns worden deze brandstoffen duurder, wat consumenten stimuleert om minder met de auto te reizen, zuiniger te rijden of te kiezen voor schonere alternatieven zoals het openbaar vervoer of elektrische auto's.",
-      uitleg: "Accijns verhoogt de prijs om schadelijk gedrag af te remmen en milieuvriendelijke alternatieven aantrekkelijker te maken."
+      modelantwoord: "Streekbussen rijden vaak door meerdere gemeenten heen om verschillende dorpen en steden met elkaar te verbinden. Omdat dit de grenzen van een enkele gemeente overschrijdt, is het logischer dat de provincie (die over een groter gebied gaat) dit openbaar vervoer regelt.",
+      uitleg: "Bovenlokale infrastructuur wordt door een hogere bestuurslaag (de provincie) gecoördineerd."
     },
     {
       type: "open",
-      vraag: "Wat regelt de wet 'Wet koop op afstand' met betrekking tot de oorspronkelijke verzendkosten als een consument een online bestelling binnen de 14 dagen bedenktijd volledig annuleert en retourneert?",
-      sleutelwoorden: ["verzendkosten/heenzending/oorspronkelijke/terugkrijgen/vergoeden", "retourkosten/terugsturen/zelf/consument/betalen"],
+      vraag: "Duru, leg uit wat het college van B&W doet en hoe dit verschilt van de rol van de gemeenteraad.",
+      sleutelwoorden: ["B&W dagelijks bestuur/uitvoeren", "gemeenteraad beslist/stemmen/volksvertegenwoordiging", "controleert/controleren", "burgemeester wethouders"],
       minTreffers: 2,
-      modelantwoord: "Als de consument de hele bestelling retourneert, moet de webshop de oorspronkelijke verzendkosten (de kosten voor het opsturen naar de consument) volledig terugbetalen. De kosten voor het terugsturen (de retourkosten) van de consument naar de webshop moet de consument daarentegen vaak zelf betalen, mits de webshop dit vooraf duidelijk heeft gemeld.",
-      uitleg: "De verkoper vergoedt de heenzending bij volledige retour; retourkosten zijn voor de consument."
+      modelantwoord: "Het college van B&W (burgemeester en wethouders) is het dagelijks bestuur en voert de plannen uit. De gemeenteraad is de gekozen volksvertegenwoordiging: zij stemmen over regels en plannen en controleren het college van B&W.",
+      uitleg: "Gemeenteraad = wetgevende/controlerende macht lokaal. College van B&W = uitvoerende macht lokaal."
     }
   ]
 });

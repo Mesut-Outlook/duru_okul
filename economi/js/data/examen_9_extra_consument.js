@@ -1,46 +1,40 @@
-/* Extra Proeftoets 4 — Consument & Overheid */
+/* Extra Proeftoets 4 — Collectieve Voorzieningen & Overheidstaken */
 DURU.registerExamen({
   id: "ex-extra-consument-overheid",
-  titel: "Extra Proeftoets 4 — Consument & Overheid",
-  vak: "Economie · Consumenten",
-  icoon: "🛒",
+  titel: "Extra Proeftoets 4 — Collectieve Voorzieningen & Overheidstaken",
+  vak: "Economie · Overheidstaken",
+  icoon: "🏛️",
   duurMin: 15,
   vragen: [
     {
       type: "mc",
-      vraag: "Welke instantie in Nederland houdt toezicht op consumentenrechten en eerlijke concurrentie tussen bedrijven?",
+      vraag: "Wat zijn collectieve voorzieningen?",
       opties: [
-        "De Consumentenbond",
-        "De Belastingdienst",
-        "De Autoriteit Consument & Markt (ACM)",
-        "De Eerste Kamer"
-      ],
-      antwoord: 2,
-      uitleg: "De <b>ACM</b> is een overheidsinstantie die toeziet op eerlijke concurrentie en consumentenbelangen beschermt tegen bijvoorbeeld kartels."
-    },
-    {
-      type: "mc",
-      vraag: "Wat is het belangrijkste doel van invoerrechten op buitenlandse goederen?",
-      opties: [
-        "Het stimuleren van vliegverkeer.",
-        "Eigen producenten beschermen door buitenlandse producten kunstmatig duurder te maken.",
-        "De btw automatisch verlagen naar 9%.",
-        "Het verkorten van de levertijd van pakketjes."
+        "Producten die je alleen in de supermarkt kunt kopen.",
+        "Voorzieningen die door de overheid worden betaald en geregeld, omdat iedereen er belang bij heeft.",
+        "Diensten die alleen voor ambtenaren bedoeld zijn.",
+        "Leningen die particuliere banken verstrekken."
       ],
       antwoord: 1,
-      uitleg: "<b>Invoerrechten</b> zijn belastingen op importproducten. Hierdoor worden buitenlandse goederen duurder, wat consumenten stimuleert om producten uit eigen land/regio te kopen."
+      uitleg: "**Collectieve voorzieningen** zijn diensten en goederen die de overheid regelt en betaalt met belastinggeld, zoals politie, brandweer en wegen."
     },
     {
       type: "mc",
-      vraag: "Wat houdt de 'Wet koop op afstand' (bedenktijd) wettelijk in voor online aankopen?",
+      vraag: "Welke van de volgende voorzieningen is een voorbeeld van een collectieve voorziening?",
       opties: [
-        "De consument mag het product binnen 14 dagen zonder reden terugsturen en krijgt zijn geld terug.",
-        "De consument moet minimaal 10 kilometer van de winkel wonen om te mogen bestellen.",
-        "Winkels hoeven online bestellingen nooit retour te nemen.",
-        "De bezorgtijd mag maximaal 24 uur bedragen."
+        "Een pretparkbezoek.",
+        "De straatverlichting en het onderhoud van wegen.",
+        "Een abonnement op een streamingdienst.",
+        "De aankoop van een nieuwe fiets."
       ],
-      antwoord: 0,
-      uitleg: "Bij online aankopen heeft een consument wettelijk recht op <b>14 dagen bedenktijd</b> (herroepingsrecht) omdat hij het product niet fysiek kon beoordelen voor de aankoop."
+      antwoord: 1,
+      uitleg: "**Straatverlichting** en wegen zijn openbaar en voor iedereen toegankelijk. De overheid regelt dit collectief."
+    },
+    {
+      type: "waaronwaar",
+      vraag: "De overheid levert collectieve voorzieningen vooral omdat commerciële bedrijven hier vaak geen winst op kunnen maken.",
+      antwoord: true,
+      uitleg: "Waar. Omdat je mensen niet gemakkelijk kunt uitsluiten van het gebruik (zoals bij dijken), willen bedrijven deze goederen niet produceren. De overheid doet dit dus."
     },
     {
       type: "mc",
@@ -52,45 +46,51 @@ DURU.registerExamen({
         "Om te zorgen dat er minder winkels in Nederland komen."
       ],
       antwoord: 1,
-      uitleg: "Accijns is een **accijnsheffing** bedoeld om de consumptie van ongezonde of schadelijke goederen (demeritorische goederen) te ontmoedigen."
+      uitleg: "**Accijns** is een extra belasting bedoeld om het gedrag te beïnvloeden en de consumptie van ongezonde of schadelijke goederen te ontmoedigen."
     },
     {
       type: "mc",
-      vraag: "Wat is een kartel?",
+      vraag: "Wat is meeliftgedrag (free-ridergedrag) in de economie?",
       opties: [
-        "Een vereniging van consumenten die samen korting vragen.",
-        "Een verboden afspraak tussen bedrijven om onderling niet te concurreren en de prijzen hoog te houden.",
-        "Een speciaal soort belasting op luxe auto's.",
-        "Een ministerie dat wetten maakt over landbouw."
+        "Gratis meereizen met het openbaar vervoer zonder kaartje.",
+        "Profiteren van een collectieve voorziening zonder er zelf aan mee te betalen via belastingen.",
+        "Samen met je vrienden op één fiets rijden om kosten te sparen.",
+        "Het importeren van goedkope goederen uit het buitenland."
       ],
       antwoord: 1,
-      uitleg: "In een <b>kartel</b> maken concurrenten verboden prijsafspraken. Dit benadeelt de consument en is verboden door de Mededingingswet."
+      uitleg: "**Meeliftgedrag** betekent dat iemand geniet van voorzieningen (zoals straatverlichting of veiligheid) zonder hieraan bij te dragen (bijvoorbeeld door belasting te ontwijken)."
     },
     {
       type: "waaronwaar",
-      vraag: "Als je een jas koopt in een gewone fysieke kledingwinkel, heb je volgens de wet altijd recht op geld terug als je spijt hebt van de aankoop.",
+      vraag: "De particuliere sector bestaat uit alle organisaties en bedrijven die eigendom zijn van de overheid.",
       antwoord: false,
-      uitleg: "Onwaar. 'Ruilen is een gunst' in fysieke winkels. De winkelier bepaalt zelf de regels (bijv. alleen een tegoedbon). Alleen bij online aankopen is geld terug wettelijk verplicht."
+      uitleg: "Onwaar. De **particuliere sector** bestaat uit private bedrijven die gericht zijn op het maken van winst. De overheid behoort tot de collectieve sector."
     },
     {
-      type: "waaronwaar",
-      vraag: "De Consumentenbond is een onafhankelijke vereniging en maakt geen wetten namens de overheid.",
-      antwoord: true,
-      uitleg: "Waar. De <b>Consumentenbond</b> komt op voor consumenten en geeft advies, maar de wetgeving ligt volledig bij de overheid en het parlement."
+      type: "mc",
+      vraag: "Waarom kan een voorziening zoals een dijk die ons beschermt tegen overstromingen niet via de vrije markt verkocht worden?",
+      opties: [
+        "Omdat een dijk te duur is om te bouwen voor de overheid.",
+        "Omdat je mensen die niet betalen niet kunt uitsluiten van de bescherming die de dijk biedt.",
+        "Omdat dijken alleen in de provincie Utrecht nodig zijn.",
+        "Omdat burgers dijken liever zelf bouwen."
+      ],
+      antwoord: 1,
+      uitleg: "Een dijk biedt bescherming aan het hele gebied. Omdat je niet-betalers niet kunt uitsluiten, gaat niemand er vrijwillig voor betalen op de markt. Dit is een **zuiver collectief goed**."
     },
     {
       type: "invul",
-      vraag: "Als de overheid de verkoop van een product (zoals vuurwerk of bepaalde medicijnen) verbiedt, noemen we dat een verkoop____.",
-      antwoord: "verbod|verboden",
-      uitleg: "Een <b>verkoopverbod</b> beschermt consumenten tegen gevaarlijke of schadelijke producten."
+      vraag: "Hoe noemen we iemand die profiteert van een collectieve voorziening (zoals een veilige straat) zonder daarvoor belasting te betalen? Een meelif____.",
+      antwoord: "ter|ters|tergedrag|ter gedrag",
+      uitleg: "Deze persoon noemen we een **meelifter** (free-rider)."
     },
     {
       type: "open",
-      vraag: "Leg uit waarom de overheid wetten maakt die de consument beschermen, en geef een voorbeeld.",
-      sleutelwoorden: ["machtspositie/zwakker/beschermen", "informatie/misleiding/misleiden", "veiligheid/kwaliteit/bedenktijd/wet/garantie"],
+      vraag: "Leg uit waarom de overheid straatverlichting zelf moet regelen en betalen, in plaats van dit over te laten aan private bedrijven op de markt.",
+      sleutelwoorden: ["niet uitsluiten/iedereen profiteert/profiteren", "geen prijs bepalen/onmogelijk individueel betalen", "meeliftgedrag/meelifters/gratis", "geen winst te maken/bedrijven willen dit niet"],
       minTreffers: 2,
-      modelantwoord: "De overheid beschermt consumenten omdat zij een zwakkere positie hebben ten opzichte van grote winkeliers en producenten. Wetten voorkomen misleiding, zorgen voor veilige producten en geven rechten zoals de wettelijke bedenktijd bij online aankopen.",
-      uitleg: "Wetgeving herstelt de balans tussen de machtige producent/verkoper en de individuele consument."
+      modelantwoord: "Straatverlichting is een collectief goed. Je kunt mensen die niet betalen niet uitsluiten van het licht op straat. Hierdoor ontstaat meeliftgedrag: mensen gaan niet vrijwillig betalen. Omdat een private onderneming hierdoor geen winst kan maken, moet de overheid dit met belastinggeld financieren.",
+      uitleg: "Niet-uitsluitbaarheid maakt marktwerking onmogelijk en dwingt collectieve financiering af."
     },
     {
       type: "open",
@@ -98,7 +98,7 @@ DURU.registerExamen({
       sleutelwoorden: ["accijns/specifiek/bepaald", "btw/algemeen/percentage", "remmen/gezondheid/schadelijk"],
       minTreffers: 2,
       modelantwoord: "Btw is een algemene omzetbelasting die op bijna elk product en elke dienst zit als percentage van de prijs (9% of 21%). Accijns is een extra, specifieke belasting die per volume (bijvoorbeeld per liter of per pakje) wordt geheven op geselecteerde schadelijke goederen zoals tabak en alcohol om het gebruik te remmen.",
-      uitleg: "Btw = algemeen percentage. Accijns = vast bedrag per hoeveelheid op schadelijke goederen."
+      uitleg: "Btw is een algemeen percentage op consumptie. Accijns is een vast bedrag per volume op schadelijke goederen."
     }
   ]
 });

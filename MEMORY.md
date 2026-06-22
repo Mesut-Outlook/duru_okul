@@ -97,6 +97,14 @@ This document serves as the project's global memory log, preserving all overall 
   - **Duru Decryption Restore**: Logging in as `"duru"` with `"12341234"` triggers a one-time fetch and decryption of `scores_backup.json`, restoring her historical grades into her specific account prefix `user_duru_`.
   - **Log Out UI**: Added a user status badge and a logout button in the header topbar.
 
+### Milestone 14: Economics Out-of-Scope Question Cleanup (2026-06-22)
+* **Goal**: Audit and align all 44 economics exams to ensure no questions test topics outside of the official Chapter 6 theory (Sections 6.1-6.4).
+* **Implementation Details**:
+  - **Auditing**: Wrote a scanning script to detect out-of-scope keywords (ACM, cartels, consumer rights/protection, price elasticity, marktvormen, trade barriers). Identified 19 violating questions across 6 exam files.
+  - **Rewriting Exams**: Entirely rewrote `examen_9_extra_consument.js`, `examen_41_extra_consument_overheid_2.js`, and `examen_42_extra_consument_overheid_3.js` to target in-scope topics: "Collectieve Voorzieningen", "De Overheid als Bestuurder (Rijksoverheid)", and "Provincie & Lokale Besturen".
+  - **Replacing Questions**: Replaced individual out-of-scope questions in `examen_20_extra_mix_2.js` (Q4 and Q10), `examen_25_extra_eindtoets_mix_3.js` (Q13), and `examen_35_extra_eindtoets_mix_4.js` (Q6 and Q12) with in-scope concepts (private sector, public debt, municipal structures, non-tax revenues).
+  - **Validation**: Verified all modified files have valid JavaScript syntax and confirm 0 violations remain.
+
 ---
 
 ## 🛠️ Storage & Data Structures

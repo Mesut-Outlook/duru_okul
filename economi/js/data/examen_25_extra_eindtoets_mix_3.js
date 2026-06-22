@@ -110,15 +110,15 @@ DURU.registerExamen({
     },
     {
       type: "mc",
-      vraag: "Welke Nederlandse instantie houdt toezicht op eerlijke marktwerking en kartelafspraken tussen bedrijven?",
+      vraag: "Welke van de volgende inkomsten van de overheid is een niet-belastingontvangst?",
       opties: [
-        "Het UWV",
-        "De Belastingdienst",
-        "De ACM (Autoriteit Consument & Markt)",
-        "De Sociale Verzekeringsbank (SVB)"
+        "De inkomsten uit de inkomstenbelasting.",
+        "De opbrengst van de btw op producten.",
+        "De inkomsten uit verkeersboetes.",
+        "De premies voor de AOW."
       ],
       antwoord: 2,
-      uitleg: "De **ACM** straft kartelafspraken en beschermt consumenten tegen oneerlijke concurrentie."
+      uitleg: "Boetes, aardgasbaten en winst uit staatsdeelnemingen zijn voorbeelden van **niet-belastingontvangsten**. Btw en inkomstenbelasting zijn gewone belastingen."
     },
     {
       type: "open",
