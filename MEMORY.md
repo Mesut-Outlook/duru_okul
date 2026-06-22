@@ -81,6 +81,13 @@ This document serves as the project's global memory log, preserving all overall 
   - **Topics Covered**: Gross/net salaries, roles of employee/employer/Belastingdienst, loonheffingskorting rules for multiple jobs, tax bracket (schijventarief) math, DigiD, draagkrachtbeginsel, solidarity, and tax refunds vs additional payments.
   - **Integration**: Loaded all 5 scripts in the `economi/index.html` file.
 
+### Milestone 12: Consument & Sociale Zekerheid Exam Expansions (2026-06-22)
+* **Goal**: Add 4 new extra practice exams for the Economie module to cover "Consument & Overheid" and "Sociale Zekerheid & Zorg".
+* **Implementation Details**:
+  - **Exams Created**: Created `examen_41_extra_consument_overheid_2.js` through `examen_44_extra_sociale_zekerheid_4.js` (Extra Proeftoets 4B, 4C, 5B, and 5C) containing 10 questions each with answers, model open answers, and detailed explanations.
+  - **Topics Covered**: Consumentenbescherming, Wet koop op afstand (bedenktijd), Autoriteit Consument & Markt (ACM), mededinging, warranties, UWV/SVB functions, omslagstelsel vs kapitaaldekkingstelsel, eigen risico logic, and Participatiewet/Bijstand criteria.
+  - **Integration**: Loaded all 4 scripts in the `economi/index.html` file.
+
 ---
 
 ## 🛠️ Storage & Data Structures
