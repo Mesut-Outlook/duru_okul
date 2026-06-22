@@ -88,6 +88,15 @@ This document serves as the project's global memory log, preserving all overall 
   - **Topics Covered**: Consumentenbescherming, Wet koop op afstand (bedenktijd), Autoriteit Consument & Markt (ACM), mededinging, warranties, UWV/SVB functions, omslagstelsel vs kapitaaldekkingstelsel, eigen risico logic, and Participatiewet/Bijstand criteria.
   - **Integration**: Loaded all 4 scripts in the `economi/index.html` file.
 
+### Milestone 13: Client-side User Authentication & Backup Encryption (2026-06-22)
+* **Goal**: Protect student progress privacy when hosted publicly on GitHub, and allow separate progress accounts on the same browser.
+* **Implementation Details**:
+  - **Symmetric Encryption**: Encrypted the main progress backup file (`scores_backup.json`) using a custom symmetric XOR cipher with a key derived from Duru's password (`12341234`), rendering the repository backup unreadable to public viewers.
+  - **Active User Storage Prefixes**: Intercepted the browser's `Storage.prototype` (`getItem`, `setItem`, `removeItem`) for both the main window and same-origin subfolders within the `iframe`. If a user is logged in, all application progress keys (beginning with `duru_` or `begrijpend_lezen_`) are transparently prefixed with `user_<username>_`.
+  - **Authentication Screen**: Designed a responsive login/register overlay in `index.html` styled with the dark theme. Added support for password hashing (`simpleHash`), "Remember Me" sessions, and a new user registration workflow.
+  - **Duru Decryption Restore**: Logging in as `"duru"` with `"12341234"` triggers a one-time fetch and decryption of `scores_backup.json`, restoring her historical grades into her specific account prefix `user_duru_`.
+  - **Log Out UI**: Added a user status badge and a logout button in the header topbar.
+
 ---
 
 ## 🛠️ Storage & Data Structures

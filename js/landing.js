@@ -4,6 +4,99 @@
           iframe-shell (terugbalk + history-integratie)
    ========================================================= */
 
+// ── User Management & Storage Interception ─────────────────
+function getActiveUser() {
+  return localStorage.getItem('duru_active_user') || sessionStorage.getItem('duru_active_user');
+}
+
+function setActiveUser(username, rememberMe) {
+  if (rememberMe) {
+    localStorage.setItem('duru_active_user', username);
+  } else {
+    sessionStorage.setItem('duru_active_user', username);
+  }
+}
+
+function clearActiveUser() {
+  localStorage.removeItem('duru_active_user');
+  sessionStorage.removeItem('duru_active_user');
+}
+
+function simpleHash(str) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0; // Convert to 32bit integer
+  }
+  return Math.abs(hash).toString(16);
+}
+
+function getUsers() {
+  try {
+    return JSON.parse(localStorage.getItem('duru_users')) || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function registerLocalUser(username, password) {
+  var users = getUsers();
+  users[username.toLowerCase()] = simpleHash(password);
+  localStorage.setItem('duru_users', JSON.stringify(users));
+}
+
+function validateLocalUser(username, password) {
+  var users = getUsers();
+  var uLower = username.toLowerCase();
+  if (users[uLower]) {
+    return users[uLower] === simpleHash(password);
+  }
+  return false;
+}
+
+function xorCipher(text, key) {
+  var result = '';
+  for (var i = 0; i < text.length; i++) {
+    result += String.fromCharCode(text.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+  }
+  return result;
+}
+
+function getPrefixedKey(key) {
+  if (!key) return key;
+  // Exclude system keys
+  if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+    return key;
+  }
+  if (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0) {
+    var activeUser = getActiveUser();
+    if (activeUser) {
+      return 'user_' + activeUser + '_' + key;
+    }
+  }
+  return key;
+}
+
+// Override prototype for main window
+var originalGetItem = window.Storage.prototype.getItem;
+var originalSetItem = window.Storage.prototype.setItem;
+var originalRemoveItem = window.Storage.prototype.removeItem;
+
+window.Storage.prototype.getItem = function(key) {
+  var prefixedKey = getPrefixedKey(key);
+  return originalGetItem.call(this, prefixedKey);
+};
+
+window.Storage.prototype.setItem = function(key, value) {
+  var prefixedKey = getPrefixedKey(key);
+  originalSetItem.call(this, prefixedKey, value);
+};
+
+window.Storage.prototype.removeItem = function(key) {
+  var prefixedKey = getPrefixedKey(key);
+  originalRemoveItem.call(this, prefixedKey);
+};
+
 // ── Vakken-data ───────────────────────────────────────────
 // Elk vak heeft: id, titel, icoon, kleur (CSS-variabele-naam),
 // beschrijving en ofwel een href (directe link) ofwel een
@@ -419,29 +512,11 @@ document.addEventListener('DOMContentLoaded', function() {
     return restoredCount;
   }
 
-  // Restore scores from static backup on GitHub Pages once
-  if (isGitHubPages && localStorage.getItem('duru_backup_imported') !== 'true') {
-    fetch('./scores_backup.json')
-      .then(function(res) {
-        if (!res.ok) throw new Error('HTTP status ' + res.status);
-        return res.json();
-      })
-      .then(function(data) {
-        var count = restoreScores(data);
-        localStorage.setItem('duru_backup_imported', 'true');
-        if (count > 0) {
-          window.location.reload();
-        }
-      })
-      .catch(function(err) {
-        console.warn('Could not restore scores from backup file:', err);
-        // Set it anyway to prevent infinite loop of failed fetch attempts
-        localStorage.setItem('duru_backup_imported', 'true');
-      });
-  }
+  // We initialize the User Authentication interface
+  initUserAuth();
 
-  if (!isGitHubPages) {
-    // Restore scores from server database on load (merging all historical logs)
+  if (!isGitHubPages && getActiveUser()) {
+    // Restore scores from server database on load if logged in (merging all historical logs)
     fetch('/api/score')
       .then(function(res) {
         if (!res.ok) throw new Error('HTTP status ' + res.status);
@@ -477,9 +552,204 @@ document.addEventListener('DOMContentLoaded', function() {
     return 0;
   }
 
+  function initUserAuth() {
+    var overlay = document.getElementById('login-overlay');
+    var userStatus = document.getElementById('user-status-container');
+    var userDisplay = document.getElementById('user-display-name-text');
+    var logoutBtn = document.getElementById('logout-btn');
+
+    var tabLogin = document.getElementById('auth-tab-login');
+    var tabRegister = document.getElementById('auth-tab-register');
+    var confirmContainer = document.getElementById('auth-confirm-container');
+    var rememberContainer = document.getElementById('auth-remember-container');
+    var submitBtn = document.getElementById('auth-submit-btn');
+    var errorEl = document.getElementById('auth-error');
+
+    var form = document.getElementById('auth-form');
+    var usernameInput = document.getElementById('auth-username');
+    var passwordInput = document.getElementById('auth-password');
+    var confirmInput = document.getElementById('auth-password-confirm');
+    var rememberInput = document.getElementById('auth-remember');
+
+    var isRegisterMode = false;
+
+    // 1. Check if user is logged in
+    var activeUser = getActiveUser();
+    if (activeUser) {
+      if (overlay) overlay.style.display = 'none';
+      if (userStatus) userStatus.style.display = 'flex';
+      if (userDisplay) userDisplay.textContent = activeUser;
+    } else {
+      if (overlay) overlay.style.display = 'flex';
+      if (userStatus) userStatus.style.display = 'none';
+    }
+
+    // 2. Tab switching
+    if (tabLogin && tabRegister) {
+      tabLogin.addEventListener('click', function() {
+        isRegisterMode = false;
+        tabLogin.style.borderBottom = '2px solid var(--hub-hoofd)';
+        tabLogin.style.color = 'var(--wit)';
+        tabLogin.style.fontWeight = 'bold';
+        tabRegister.style.borderBottom = '2px solid transparent';
+        tabRegister.style.color = 'var(--grijs-licht)';
+        tabRegister.style.fontWeight = 'normal';
+        if (confirmContainer) confirmContainer.style.display = 'none';
+        if (rememberContainer) rememberContainer.style.display = 'flex';
+        if (submitBtn) submitBtn.textContent = 'Giriş Yap';
+        if (errorEl) errorEl.style.display = 'none';
+        if (confirmInput) confirmInput.required = false;
+      });
+
+      tabRegister.addEventListener('click', function() {
+        isRegisterMode = true;
+        tabRegister.style.borderBottom = '2px solid var(--hub-hoofd)';
+        tabRegister.style.color = 'var(--wit)';
+        tabRegister.style.fontWeight = 'bold';
+        tabLogin.style.borderBottom = '2px solid transparent';
+        tabLogin.style.color = 'var(--grijs-licht)';
+        tabLogin.style.fontWeight = 'normal';
+        if (confirmContainer) confirmContainer.style.display = 'flex';
+        if (rememberContainer) rememberContainer.style.display = 'none';
+        if (submitBtn) submitBtn.textContent = 'Kayıt Ol';
+        if (errorEl) errorEl.style.display = 'none';
+        if (confirmInput) confirmInput.required = true;
+      });
+    }
+
+    // 3. Form submit
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (errorEl) errorEl.style.display = 'none';
+
+        var username = usernameInput.value.trim();
+        var password = passwordInput.value;
+        var rememberMe = rememberInput.checked;
+
+        if (!username || !password) {
+          showError('Vul alle velden in.');
+          return;
+        }
+
+        if (isRegisterMode) {
+          // Register mode
+          if (password.length < 8) {
+            showError('Wachtwoord moet minimaal 8 tekens lang zijn.');
+            return;
+          }
+
+          if (password !== confirmInput.value) {
+            showError('Wachtwoorden komen niet overeen.');
+            return;
+          }
+
+          var uLower = username.toLowerCase();
+          if (uLower === 'duru') {
+            showError('Deze gebruikersnaam is al gereserveerd.');
+            return;
+          }
+
+          var users = getUsers();
+          if (users[uLower]) {
+            showError('Deze gebruikersnaam bestaat al.');
+            return;
+          }
+
+          // Save new user
+          registerLocalUser(username, password);
+          setActiveUser(username, true); // auto-remember on register
+          window.location.reload();
+        } else {
+          // Login mode
+          var uLower = username.toLowerCase();
+          if (uLower === 'duru') {
+            // Special login for duru
+            if (password === '12341234') {
+              // Check if already registered locally
+              var users = getUsers();
+              if (users['duru']) {
+                // Log in locally
+                setActiveUser('duru', rememberMe);
+                window.location.reload();
+              } else {
+                // First time login - try to decrypt scores_backup.json
+                if (submitBtn) submitBtn.textContent = 'Voortgang laden...';
+                fetch('./scores_backup.json')
+                  .then(function(res) {
+                    if (!res.ok) throw new Error('Yedek dosyası bulunamadı.');
+                    return res.json();
+                  })
+                  .then(function(data) {
+                    if (data && data.encrypted && data.data) {
+                      try {
+                        // Decrypt
+                        var decryptedText = xorCipher(atob(data.data), 'duru:12341234');
+                        var parsedScores = JSON.parse(decryptedText);
+                        
+                        // Temporarily set active user so restoreScores writes to prefixed keys
+                        setActiveUser('duru', rememberMe);
+                        
+                        // Restore
+                        restoreScores(parsedScores);
+                        
+                        // Register locally
+                        registerLocalUser('duru', '12341234');
+                        localStorage.setItem('duru_backup_imported', 'true');
+                        
+                        window.location.reload();
+                      } catch (decErr) {
+                        console.error(decErr);
+                        showError('Fout bij het ontcijferen van de gegevens.');
+                        clearActiveUser();
+                        if (submitBtn) submitBtn.textContent = 'Giriş Yap';
+                      }
+                    } else {
+                      showError('Ongeldig backup bestand.');
+                      if (submitBtn) submitBtn.textContent = 'Giriş Yap';
+                    }
+                  })
+                  .catch(function(err) {
+                    console.error(err);
+                    showError('Kan voortgangsbestand niet ophalen. Controleer je internetverbinding.');
+                    if (submitBtn) submitBtn.textContent = 'Giriş Yap';
+                  });
+              }
+            } else {
+              showError('Gebruikersnaam of wachtwoord onjuist.');
+            }
+          } else {
+            // Regular user login
+            if (validateLocalUser(username, password)) {
+              setActiveUser(username, rememberMe);
+              window.location.reload();
+            } else {
+              showError('Gebruikersnaam of wachtwoord onjuist.');
+            }
+          }
+        }
+      });
+    }
+
+    // 4. Logout action
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', function() {
+        clearActiveUser();
+        window.location.reload();
+      });
+    }
+
+    function showError(msg) {
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.style.display = 'block';
+      }
+    }
+  }
+
   renderVakken();
 
-  // Intercept local storage writes inside the iframe to sync them back to the server
+  // Intercept local storage writes, reads, and deletes inside the iframe
   var frame = document.getElementById('vak-frame');
   if (frame) {
     frame.addEventListener('load', function() {
@@ -487,12 +757,22 @@ document.addEventListener('DOMContentLoaded', function() {
         var win = frame.contentWindow;
         if (!win || !win.Storage) return;
         
-        // Save references to original prototype function (much safer than instance overrides)
-        var originalSetItem = win.Storage.prototype.setItem;
+        // Override getItem
+        win.Storage.prototype.getItem = function(key) {
+          var prefixedKey = getPrefixedKey(key);
+          return originalGetItem.call(this, prefixedKey);
+        };
         
+        // Override removeItem
+        win.Storage.prototype.removeItem = function(key) {
+          var prefixedKey = getPrefixedKey(key);
+          originalRemoveItem.call(this, prefixedKey);
+        };
+        
+        // Override setItem with sync logic
         win.Storage.prototype.setItem = function(key, value) {
-          // Always execute original native method first with correct context
-          originalSetItem.call(this, key, value);
+          var prefixedKey = getPrefixedKey(key);
+          originalSetItem.call(this, prefixedKey, value);
           
           if (isGitHubPages) return;
           

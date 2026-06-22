@@ -24,6 +24,12 @@
           <small>Mijn vakken · MAVO 2</small>
         </div>
       </div>
+      <div id="user-status-container" style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
+        <span id="user-display-name" style="color: var(--wit); font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--lijn);">
+          👤 <span id="user-display-name-text">...</span>
+        </span>
+        <button id="logout-btn" class="filter-btn" style="padding: 6px 12px; font-size: 12px; margin: 0;" type="button">Çıkış Yap</button>
+      </div>
     </div>
   </header>
 
@@ -213,6 +219,61 @@
     ></iframe>
 
   </div><!-- /#iframe-shell -->
+
+  <!-- ══ Login & Registratie Overlay ══════════════════════════ -->
+  <div id="login-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #121813; z-index: 100000; display: none; align-items: center; justify-content: center; font-family: var(--font-tekst); overflow-y: auto; padding: 20px; box-sizing: border-box;">
+    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--lijn); padding: 32px; border-radius: 16px; width: 100%; max-width: 400px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); backdrop-filter: blur(10px); box-sizing: border-box;">
+      
+      <!-- Logo / Kop -->
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span style="font-size: 48px;" aria-hidden="true">🎒</span>
+        <h2 style="margin: 12px 0 4px 0; color: var(--wit); font-family: var(--font-kop); font-size: 24px;">Duru's Schoolhub</h2>
+        <p style="margin: 0; color: var(--grijs-licht); font-size: 14px;">Giriş yapın veya yeni bir kullanıcı oluşturun</p>
+      </div>
+
+      <!-- Tab selectors -->
+      <div style="display: flex; border-bottom: 1px solid var(--lijn); margin-bottom: 20px;">
+        <button id="auth-tab-login" style="flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid var(--hub-hoofd); color: var(--wit); font-weight: bold; cursor: pointer; font-size: 14px;" type="button">Giriş Yap</button>
+        <button id="auth-tab-register" style="flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid transparent; color: var(--grijs-licht); cursor: pointer; font-size: 14px;" type="button">Kayıt Ol</button>
+      </div>
+
+      <!-- Form Container -->
+      <form id="auth-form" onsubmit="return false;" style="display: flex; flex-direction: column; gap: 16px;">
+        <!-- Username -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="auth-username" style="color: var(--wit); font-size: 13px; font-weight: 600;">Kullanıcı Adı (İsim):</label>
+          <input type="text" id="auth-username" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--lijn); background: rgba(255,255,255,0.05); color: var(--wit); font-size: 14px; outline: none; transition: border-color 0.2s;" />
+        </div>
+
+        <!-- Password -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label id="auth-pass-label" for="auth-password" style="color: var(--wit); font-size: 13px; font-weight: 600;">Şifre (Min. 8 rakam/karakter):</label>
+          <input type="password" id="auth-password" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--lijn); background: rgba(255,255,255,0.05); color: var(--wit); font-size: 14px; outline: none;" />
+        </div>
+
+        <!-- Password Confirm (only shown on Register) -->
+        <div id="auth-confirm-container" style="display: none; flex-direction: column; gap: 6px;">
+          <label for="auth-password-confirm" style="color: var(--wit); font-size: 13px; font-weight: 600;">Şifre Tekrar:</label>
+          <input type="password" id="auth-password-confirm" style="padding: 10px; border-radius: 8px; border: 1px solid var(--lijn); background: rgba(255,255,255,0.05); color: var(--wit); font-size: 14px; outline: none;" />
+        </div>
+
+        <!-- Remember Me (only shown on Login) -->
+        <div id="auth-remember-container" style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+          <input type="checkbox" id="auth-remember" checked style="cursor: pointer; width: 16px; height: 16px;" />
+          <label for="auth-remember" style="color: var(--grijs-licht); font-size: 13px; cursor: pointer; user-select: none;">Beni Hatırla</label>
+        </div>
+
+        <!-- Error Message -->
+        <div id="auth-error" style="color: #ff6b6b; font-size: 13px; font-weight: bold; text-align: center; display: none;"></div>
+
+        <!-- Submit Button -->
+        <button id="auth-submit-btn" type="submit" class="btn" style="padding: 12px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; margin-top: 8px;">
+          Giriş Yap
+        </button>
+      </form>
+
+    </div>
+  </div>
 
   <!-- ══ Script ══════════════════════════════════════════════
        Gewone <script> tag — geen ES modules, werkt op file://  -->
