@@ -13,7 +13,7 @@ economi/          DURU-engine, economie (H6 De overheid)
 nederlands/begrijpend-lezen/   "Meester Max"-engine (begrijpend lezen)
 nederlands/spelling/           DURU-engine, Spelling & Grammatica
 wiskunde/         DURU-engine, H8 Vergelijkingen
-geschiedenis/     DURU-engine, geschiedenis (WO I & II)
+geschiedenis/     DURU-engine, geschiedenis (WO I & II) + begrippen-trainers (h4_*_begrippen) + 35 begrippen-proeftoetsen (ex-31..65)
 Duru_Okul_Baslat.command   start server (poort 8125)
 ```
 Elke vak-map is een zelfstandige site (eigen `index.html`, `js/`, `css/`). Bewerk ze gewoon hier.

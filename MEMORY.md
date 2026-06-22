@@ -52,6 +52,21 @@ This document serves as the project's global memory log, preserving all overall 
   - **Economy Module Content Redesign**: Added 15 new extra exams (ex-21 to ex-35). Replaced 11 existing extra exams containing out-of-scope chapters with questions strictly targeting Sections 6.1-6.4 (De overheid), maintaining a clean, localized curriculum scope.
   - **Geschiedenis Module Integration**: Created and embedded a completely new "Geschiedenis" (History) subject focusing on WO I & II. Configured its 4 core study subchapters, 30 practice exams, and integrated it into the landing page dashboard and stats views.
 
+### Milestone 8: Geschiedenis Vocabulary Exam Expansion (2026-06-21)
+* **Goal**: Expand the History module with 15 new vocabulary-focused exams (ex-41 to ex-55) to enhance definition learning and word retention.
+* **Implementation Details**:
+  - **Exams Created**: Added exactly 15 new exams (`examen_41.js` to `examen_55.js`) with 15 questions each.
+  - **Question Types**: Excluded the True/False ('waaronwaar') type. All questions consist purely of Multiple Choice ('mc') and Fill-in-the-blank ('invul') question types (8 mc, 7 invul each) to test definitions.
+  - **Integration**: Loaded all 15 scripts in the Geschiedenis `index.html` file and updated CLAUDE.md.
+
+### Milestone 9: History Exam Expansion for Definitions and Important Figures (2026-06-21)
+* **Goal**: Create 10 new exams (ex-56 to ex-65) with 15 questions each targeting definitions, expressions, key terms, and important historical figures of Chapter 4.
+* **Implementation Details**:
+  - **Exams Created**: Created `examen_56.js` through `examen_65.js` with 15 questions each.
+  - **Topics Covered**: Systematically covers W-B-M-N, Franz Ferdinand, Sarajevo, loopgraven, Weimarrepubliek, hyperinflatie, Beurskrach, stempelen, dictators (Hitler, Stalin, Mussolini, Colijn), appeasement, Blitzkrieg, keerpunten (Stalingrad, Pearl Harbor), Holocaust (Rassenwetten, Kristallnacht, Wannsee, kampen), bezet Nederland (Seyss-Inquart, NSB, Mussert, Arbeitseinsatz, Februaristaking), Hongerwinter, Jappenkampen, and the atomic bombs.
+  - **Question Types**: Balanced mix of Multiple Choice ('mc'), True/False ('waaronwaar'), and Fill-in-the-blank ('invul') types.
+  - **Integration**: Loaded all 10 scripts in the Geschiedenis `index.html` file and updated CLAUDE.md.
+
 ---
 
 ## 🛠️ Storage & Data Structures
