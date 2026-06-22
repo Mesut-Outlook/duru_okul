@@ -163,6 +163,24 @@
           </table>
         </div>
       </section>
+
+      <!-- 5. Backup & Restore section -->
+      <section class="backup-section" style="margin-top: 32px; padding: 20px; border-radius: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--lijn); text-align: center;">
+        <h4 style="margin: 0 0 8px 0; font-size: 16px; color: var(--wit); font-family: var(--font-kop);">💾 Voortgang Beheer</h4>
+        <p style="margin: 0 0 16px 0; font-size: 13px; color: var(--grijs-licht);">
+          Exporteer je behaalde resultaten om ze op bir başka cihaza (bijv. tablet) te overdragen, of importeer een eerder opgeslagen bestand.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button id="backup-export-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px;" type="button">
+            📥 Voortgang Opslaan (Exporteren)
+          </button>
+          <button id="backup-import-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px;" type="button">
+            📤 Voortgang Laden (Importeren)
+          </button>
+          <input type="file" id="backup-file-input" accept=".json" style="display: none;" />
+        </div>
+      </section>
+
     </div>
 
   </div><!-- /.pagina -->

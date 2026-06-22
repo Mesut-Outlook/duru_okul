@@ -1,0 +1,7340 @@
+[
+  {
+    "key": "duru_economi_examens_v1",
+    "val": {
+      "beste": {
+        "ex-rekenen": 60,
+        "ex-extra-directe-indirecte": 80,
+        "ex-extra-overheid-voorzieningen": 70,
+        "ex-extra-collectieve-voorzieningen": 73,
+        "ex-extra-overheidslagen": 93,
+        "ex-begrippen": 85,
+        "ex-extra-sectoren": 73,
+        "ex-overheid": 92,
+        "ex-extra-subsidies-accijns": 67,
+        "ex-belasting": 89,
+        "ex-extra-begroting-schuld": 90,
+        "ex-extra-belastingen-subsidies": 80,
+        "ex-extra-gemeente-lokaal": 60,
+        "ex-extra-eindtoets-mix-4": 87,
+        "ex-extra-consument-overheid": 60,
+        "ex-extra-sociale-zekerheid": 60,
+        "ex-eindtoets": 75,
+        "ex-extra-provincie-ruimte": 80,
+        "ex-extra-belastingen-berekeningen": 70,
+        "ex-extra-rijksoverheid-denhaag": 87,
+        "ex-extra-rijksbegroting-detail": 80,
+        "ex-extra-verzorgingsstaat": 53,
+        "ex-extra-eindtoets-mix": 80,
+        "ex-extra-milieu-beleid": 80,
+        "ex-extra-eindtoets-mix-2": 70,
+        "ex-extra-begrotingspolitiek": 73,
+        "ex-extra-eindtoets-mix-3": 73,
+        "ex-extra-inkomsten-loonbelasting": 53
+      },
+      "laatste": {
+        "ex-rekenen": 60,
+        "ex-extra-directe-indirecte": 80,
+        "ex-extra-overheid-voorzieningen": 70,
+        "ex-extra-collectieve-voorzieningen": 73,
+        "ex-extra-overheidslagen": 93,
+        "ex-begrippen": 85,
+        "ex-extra-sectoren": 73,
+        "ex-overheid": 88,
+        "ex-extra-subsidies-accijns": 67,
+        "ex-belasting": 89,
+        "ex-extra-begroting-schuld": 90,
+        "ex-extra-belastingen-subsidies": 80,
+        "ex-extra-gemeente-lokaal": 60,
+        "ex-extra-eindtoets-mix-4": 73,
+        "ex-extra-consument-overheid": 60,
+        "ex-extra-sociale-zekerheid": 60,
+        "ex-eindtoets": 75,
+        "ex-extra-provincie-ruimte": 80,
+        "ex-extra-belastingen-berekeningen": 70,
+        "ex-extra-rijksoverheid-denhaag": 87,
+        "ex-extra-rijksbegroting-detail": 80,
+        "ex-extra-verzorgingsstaat": 53,
+        "ex-extra-eindtoets-mix": 80,
+        "ex-extra-milieu-beleid": 80,
+        "ex-extra-eindtoets-mix-2": 70,
+        "ex-extra-begrotingspolitiek": 73,
+        "ex-extra-eindtoets-mix-3": 73,
+        "ex-extra-inkomsten-loonbelasting": 53
+      },
+      "history": [
+        {
+          "attemptId": "att_1781985869967",
+          "examId": "ex-extra-eindtoets-mix-4",
+          "examTitel": "Extra Proeftoets 30 — De Grote Finaletoets IV (Mix)",
+          "datum": "20-06-2026, 22:04",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            1,
+            1,
+            "gemeente",
+            1,
+            1,
+            "afstand",
+            0,
+            0,
+            1,
+            "BBP",
+            1,
+            1,
+            1,
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781985727982",
+          "examId": "ex-extra-inkomsten-loonbelasting",
+          "examTitel": "Extra Proeftoets 22 — Inkomstenbelasting & Loonbelasting",
+          "datum": "20-06-2026, 22:02",
+          "goed": 8,
+          "totaal": 15,
+          "pct": 53,
+          "antwoorden": [
+            1,
+            3,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            "brutoloon",
+            1,
+            "loonbelasting",
+            "loonbelasting",
+            0,
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781985656541",
+          "examId": "ex-extra-inkomsten-loonbelasting",
+          "examTitel": "Extra Proeftoets 22 — Inkomstenbelasting & Loonbelasting",
+          "datum": "20-06-2026, 22:00",
+          "goed": 7,
+          "totaal": 15,
+          "pct": 47,
+          "antwoorden": [
+            1,
+            2,
+            3,
+            0,
+            0,
+            1,
+            1,
+            1,
+            "brutoloon",
+            0,
+            "loonbelasting",
+            "loonbelasting",
+            0,
+            "loonbelastinf is alvast betalen en inkomstenbelasting is eindafrekening",
+            "loonbelasting is een voorheffing. Aan het eind van het jaar wordt het precies berekend, daarom kan er verschil ontstaan"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781985262355",
+          "examId": "ex-extra-eindtoets-mix-3",
+          "examTitel": "Extra Proeftoets 20 — De Grote Finaletoets III (Mix)",
+          "datum": "20-06-2026, 21:54",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            2,
+            1,
+            "97 ",
+            0,
+            0,
+            "accijns",
+            1,
+            0,
+            2,
+            "staats",
+            1,
+            0,
+            2,
+            "het is niet mogelijk want vrije markt kan geen winst maken en het is een collectieve voorziening en het is niet winstgevend en iedereen gebruikt het ",
+            "nivellering is dat het verschil tussen hoge en lage inkomens kleiner wordt en de progressief belastingstelsel moeten niet alleen meer belasting betalen maar ze moeten ook hogere percentage belasting betalen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781984858032",
+          "examId": "ex-extra-begrotingspolitiek",
+          "examTitel": "Extra Proeftoets 18 — Begrotingspolitiek & Staatsschuld",
+          "datum": "20-06-2026, 21:47",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            1,
+            1,
+            "3",
+            1,
+            0,
+            "staatsschuld",
+            0,
+            0,
+            0,
+            "BBP",
+            0,
+            0,
+            0,
+            null,
+            "begrotingstekort is wanneer de uitgaven kleiner zijn dan inkomsten en financieringstekort is dat de uitgaven hoger zijn dan de inkomsten plus de aflossingen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781958092009",
+          "examId": "ex-extra-eindtoets-mix-2",
+          "examTitel": "Extra Proeftoets 15 — De Grote Finaletoets II (Mix)",
+          "datum": "20-06-2026, 14:21",
+          "goed": 7,
+          "totaal": 10,
+          "pct": 70,
+          "antwoorden": [
+            0,
+            1,
+            2,
+            3,
+            1,
+            0,
+            1,
+            "Financiën ",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957938202",
+          "examId": "ex-extra-milieu-beleid",
+          "examTitel": "Extra Proeftoets 7 — Milieu & Overheidsbeleid",
+          "datum": "20-06-2026, 14:18",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            1,
+            "heffing",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957898079",
+          "examId": "ex-extra-milieu-beleid",
+          "examTitel": "Extra Proeftoets 7 — Milieu & Overheidsbeleid",
+          "datum": "20-06-2026, 14:18",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            0,
+            "heffing",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957863864",
+          "examId": "ex-extra-milieu-beleid",
+          "examTitel": "Extra Proeftoets 7 — Milieu & Overheidsbeleid",
+          "datum": "20-06-2026, 14:17",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            "vervuiling",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957778290",
+          "examId": "ex-extra-eindtoets-mix",
+          "examTitel": "Extra Proeftoets 8 — Grote Eindtoets Economie Mix",
+          "datum": "20-06-2026, 14:16",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            2,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            "prinsjesdag",
+            null,
+            "2 collectieve voorzieningen zijn: scholen en wegen en waarom de vrije markt dit niet zelfstandig doet is omdat het eerlijk moet zijn en geen winst en iedereen gelijk behandeld"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957476188",
+          "examId": "ex-extra-verzorgingsstaat",
+          "examTitel": "Extra Proeftoets 16 — De Verzorgingsstaat & Sociale Zekerheid",
+          "datum": "20-06-2026, 14:11",
+          "goed": 8,
+          "totaal": 15,
+          "pct": 53,
+          "antwoorden": [
+            1,
+            0,
+            "AOW",
+            1,
+            1,
+            "UWV",
+            0,
+            0,
+            2,
+            "WIA",
+            0,
+            0,
+            0,
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957293474",
+          "examId": "ex-extra-rijksbegroting-detail",
+          "examTitel": "Extra Proeftoets 11 — De Rijksbegroting in Detail",
+          "datum": "20-06-2026, 14:08",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            0,
+            1,
+            "miljoenennota",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781957214686",
+          "examId": "ex-extra-rijksoverheid-denhaag",
+          "examTitel": "Extra Proeftoets 6 — De Rijksoverheid: Den Haag regeert",
+          "datum": "20-06-2026, 14:06",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            "ministers",
+            "premier",
+            "kamer",
+            "de regering is koning en ministers de eerste en de tweede kamer controleert hun beslissingen",
+            "defensie en onderwijsregels"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781956993353",
+          "examId": "ex-extra-belastingen-berekeningen",
+          "examTitel": "Extra Proeftoets 12 — Belastingen & Berekeningen",
+          "datum": "20-06-2026, 14:03",
+          "goed": 7,
+          "totaal": 10,
+          "pct": 70,
+          "antwoorden": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            "300",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781956776507",
+          "examId": "ex-extra-provincie-ruimte",
+          "examTitel": "Extra Proeftoets 10 — De Provincie & Ruimtelijke Ordening",
+          "datum": "20-06-2026, 13:59",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            "koning",
+            "de gemeente regelt alles bij jouw in de buurt terwijl provincie dingen in de provincie regelt, zij regelen de streekvervoer en openbaar vervoer",
+            "krijgt geld van de rijksoverheid "
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781956650043",
+          "examId": "ex-extra-provincie-ruimte",
+          "examTitel": "Extra Proeftoets 10 — De Provincie & Ruimtelijke Ordening",
+          "datum": "20-06-2026, 13:57",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            1,
+            0,
+            "koning",
+            "omdat gemeente dingen regelt in de buurt en de provincie op 1 plek ",
+            "door belasting van mensen "
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781950120887",
+          "examId": "ex-eindtoets",
+          "examTitel": "Gemengde Eindtoets — Hoofdstuk 6",
+          "datum": "20-06-2026, 12:08",
+          "goed": 18,
+          "totaal": 24,
+          "pct": 75,
+          "antwoorden": [
+            0,
+            0,
+            1,
+            "burgemeester",
+            0,
+            0,
+            null,
+            "particuliere",
+            0,
+            0,
+            0,
+            "belastingsdienst",
+            null,
+            0,
+            0,
+            0,
+            "prinsjesdag",
+            null,
+            0,
+            "0,54",
+            0,
+            0,
+            0,
+            "staatsschuld"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781949942001",
+          "examId": "ex-extra-sociale-zekerheid",
+          "examTitel": "Extra Proeftoets 5 — Sociale Zekerheid & Zorg",
+          "datum": "20-06-2026, 12:05",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            0,
+            2,
+            0,
+            2,
+            1,
+            0,
+            1,
+            "premies",
+            null,
+            "sociale verzekering= je betaalt premie en hebt recht op uitkering\nsociale voorziening= overheid helpt uit belastinggeld als je het nodig hebt "
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781949808368",
+          "examId": "ex-extra-consument-overheid",
+          "examTitel": "Extra Proeftoets 4 — Consument & Overheid",
+          "datum": "20-06-2026, 12:03",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            "subsidie",
+            null,
+            "btw is een indirecte belasting en accijns is extra belasting op alcohol,tabak en brandstof"
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781949666531",
+          "examId": "ex-extra-eindtoets-mix-4",
+          "examTitel": "Extra Proeftoets 30 — De Grote Finaletoets IV (Mix)",
+          "datum": "20-06-2026, 12:01",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            1,
+            1,
+            "gemeente",
+            1,
+            1,
+            "afstand",
+            1,
+            0,
+            1,
+            "BBP",
+            1,
+            0,
+            1,
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781949502972",
+          "examId": "ex-extra-overheidslagen",
+          "examTitel": "Extra Proeftoets 13 — Ambtenaren & de Drie Overheidslagen",
+          "datum": "20-06-2026, 11:58",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            1,
+            3,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            "ambtenaar",
+            "W",
+            "rijksoverheid",
+            "gemeenteraad controleert de beslissingen van het college van B&W en het college van B&W maakt beslissingen",
+            "defensie:rijksoverheid\ndrinkwatervoorziening:provincie\njeugdzorg:gemeente\nopenbaar vervoer:provincie\nophalen huisvuil:gemeente\npolitie:rijksoverheid"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781949340066",
+          "examId": "ex-extra-gemeente-lokaal",
+          "examTitel": "Extra Proeftoets 9 — De Gemeente & Lokale Overheid",
+          "datum": "20-06-2026, 11:55",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            "APV",
+            "gemeenteraad controleert de beslissingen en keurt het goed en B&W voert het uit en bestuurt het",
+            "parken en jeugdzorg"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781883069887",
+          "examId": "ex-rekenen",
+          "examTitel": "Proeftoets — Rekenen aan Btw & Begroting",
+          "datum": "19-06-2026, 17:31",
+          "goed": 12,
+          "totaal": 20,
+          "pct": 60,
+          "antwoorden": [
+            0,
+            "7,20",
+            2,
+            "43,60",
+            0,
+            0,
+            "20,00",
+            1,
+            0,
+            0,
+            "4 miljard euro ",
+            0,
+            0,
+            1,
+            "6000 euro",
+            1,
+            1,
+            1,
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781881952825",
+          "examId": "ex-extra-directe-indirecte",
+          "examTitel": "Extra Proeftoets 21 — Directe & Indirecte Belastingen",
+          "datum": "19-06-2026, 17:12",
+          "goed": 12,
+          "totaal": 15,
+          "pct": 80,
+          "antwoorden": [
+            1,
+            0,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0,
+            "9",
+            2,
+            0,
+            "sociale premies",
+            "indirecte belasting",
+            "directe belasting is rechtstreeks betalen zoals inkomstenbelasting\nindirecte belasting zit in de prijs",
+            "omdat er anders geen genoeg geld is aan de collectieve voorzieningen en bovendien collectieve voorzieningen zijn grote dingen zoals parken en scholen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781881666897",
+          "examId": "ex-extra-overheid-voorzieningen",
+          "examTitel": "Extra Proeftoets 1 — Overheid & Voorzieningen",
+          "datum": "19-06-2026, 17:07",
+          "goed": 7,
+          "totaal": 10,
+          "pct": 70,
+          "antwoorden": [
+            1,
+            1,
+            2,
+            0,
+            2,
+            1,
+            0,
+            "4",
+            null,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781880843229",
+          "examId": "ex-extra-collectieve-voorzieningen",
+          "examTitel": "Extra Proeftoets 14 — Collectieve Voorzieningen",
+          "datum": "19-06-2026, 16:54",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            1,
+            0,
+            2,
+            "collectieve",
+            1,
+            2,
+            "wegens",
+            0,
+            0,
+            0,
+            1,
+            "vervoer",
+            1,
+            "collectieve voorziening is voorzieningen die de overheid voor iedereen betaalt zoals parken en wegens ",
+            "omdat het een particuliere sector is en winst moet maken om te blijven bestaan terwijl een park voor iedereen toegankelijk is omdat het door de overheid wordt betaald en voor iedereen gratis is"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781880324259",
+          "examId": "ex-extra-overheidslagen",
+          "examTitel": "Extra Proeftoets 13 — Ambtenaren & de Drie Overheidslagen",
+          "datum": "19-06-2026, 16:45",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            1,
+            3,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            "ambtenaar",
+            "W",
+            "rijksoverheid",
+            "gemeenteraad controleert en keurt plannen goed en het college van B en W maken plannen",
+            "voor defensie is de rijksoverheid verantwoordelijk voor en jeugdzorg is de gemeente verantwoordelijk en openbaar vervoer is de provincie verantwoordelijk voor, voor het ophalen van huisvuil is de gemeente verantwoordelijk voor, voor de politie is de rijksoverheid verantwoordelijk ervoor"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781880155355",
+          "examId": "ex-begrippen",
+          "examTitel": "Proeftoets — Begrippen & Definities",
+          "datum": "19-06-2026, 16:42",
+          "goed": 17,
+          "totaal": 20,
+          "pct": 85,
+          "antwoorden": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            "Staten",
+            0,
+            0,
+            0,
+            "subsidie",
+            0,
+            0,
+            0,
+            0,
+            "gemeenteraad",
+            "profijtbeginsel is je betaalt omdat je iets gebruikt bijvoorbeeld paspoort aanvragen \ndraagkrachtbeginsel is je betaalt naar hoeveel geld je hebt bijvoorbeeld inkomstenbelasting",
+            "regering is koning+ministers \nkabinet is ministers+staatssecretarissen",
+            "de overheid houdt monopolies op politie en rechtspraak, omdat deze taken eerlijk, veilig en voor iedereen gelijk moeten zijn",
+            "motorrijtuigenbelasting"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781879058902",
+          "examId": "ex-extra-sectoren",
+          "examTitel": "Extra Proeftoets 17 — Collectieve vs Particuliere Sector",
+          "datum": "19-06-2026, 16:24",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            0,
+            0,
+            "collectieve",
+            1,
+            1,
+            0,
+            "premies",
+            0,
+            1,
+            1,
+            "ouderdomwet",
+            1,
+            2,
+            "collectieve sector:voorzieningen voor iedereen, betaald door overheid \nparticuliere sector:bedrijven moeten winst maken om te kunnen blijven bestaan anders gaan ze failliet",
+            "het zijn beide uitkeringen ene is voor werkloosheidswet en de ene is algemene ouderdomwet "
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781878873773",
+          "examId": "ex-extra-sectoren",
+          "examTitel": "Extra Proeftoets 17 — Collectieve vs Particuliere Sector",
+          "datum": "19-06-2026, 16:21",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            0,
+            0,
+            "collectieve",
+            1,
+            1,
+            1,
+            "premies",
+            0,
+            1,
+            1,
+            "ouderdomwet",
+            0,
+            2,
+            "collectieve sector wordt gezamenlijk betaalt en iedereen maakt er gebruik van \nparticuliere sector een sector die winst moet maken om te blijven bestaan anders gaan ze failliet",
+            "WW en AOW de overheid betaalt hun"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781878647149",
+          "examId": "ex-extra-sectoren",
+          "examTitel": "Extra Proeftoets 17 — Collectieve vs Particuliere Sector",
+          "datum": "19-06-2026, 16:17",
+          "goed": 9,
+          "totaal": 15,
+          "pct": 60,
+          "antwoorden": [
+            0,
+            0,
+            "collectieve",
+            1,
+            1,
+            0,
+            "premies",
+            0,
+            1,
+            0,
+            "ouderdomswet",
+            0,
+            1,
+            "collectieve sector wordt gezamenlijk betaalt met de geld van de overheid bijvoorbeeld parken \nparticuliere sector een sector die winst moet maken om te blijven bestaan anders gaan ze failliet",
+            "het zijn beide uitkering de ww uitkering is voor de werklozen en de ene is AOW is voor algemene oudersdomwet en er wordt van je brutoloon afgehaald"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781878450138",
+          "examId": "ex-overheid",
+          "examTitel": "Proeftoets — Wie is de overheid?",
+          "datum": "19-06-2026, 16:14",
+          "goed": 22,
+          "totaal": 25,
+          "pct": 88,
+          "antwoorden": [
+            2,
+            2,
+            3,
+            1,
+            2,
+            2,
+            0,
+            2,
+            1,
+            1,
+            0,
+            1,
+            "provincie",
+            "wethouders",
+            "gemeente:regelt afval ophalen \nprovincie:openbaar vervoer en streekvervoer regelen\nrijksoverheid:onderwijsregels ",
+            "gemeenteraad controleert de beslissingen van het college van B&W en het college van B&W maakt beslissingen",
+            1,
+            1,
+            2,
+            1,
+            1,
+            0,
+            0,
+            "doordat er misschien armere gezinnen zijn en iedereen moet gelijkere kansen hebben ",
+            "collectieve"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781811005957",
+          "examId": "ex-extra-subsidies-accijns",
+          "examTitel": "Extra Proeftoets 19 — Subsidies, Accijnzen & Gedrag",
+          "datum": "18-06-2026, 21:30",
+          "goed": 10,
+          "totaal": 15,
+          "pct": 67,
+          "antwoorden": [
+            1,
+            0,
+            "accijns",
+            2,
+            1,
+            "ontmoedigen",
+            1,
+            1,
+            1,
+            "ontmoediging",
+            2,
+            1,
+            1,
+            "omdat het duurder is",
+            "omdat mensen het blijven kopen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781810794371",
+          "examId": "ex-extra-subsidies-accijns",
+          "examTitel": "Extra Proeftoets 19 — Subsidies, Accijnzen & Gedrag",
+          "datum": "18-06-2026, 21:26",
+          "goed": 9,
+          "totaal": 15,
+          "pct": 60,
+          "antwoorden": [
+            1,
+            0,
+            "accijns",
+            2,
+            1,
+            "verminderen",
+            1,
+            1,
+            1,
+            "accijns",
+            2,
+            0,
+            1,
+            "omdat dat nog belangrijker zijn",
+            "om te kunnen gebruiken"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781462204985",
+          "examId": "ex-belasting",
+          "examTitel": "Proeftoets — Belasting & begroting",
+          "datum": "14-06-2026, 20:36",
+          "goed": 24,
+          "totaal": 27,
+          "pct": 89,
+          "antwoorden": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            "directe belasting gaat van je salaris en indirecte belasting zit in de prijs van een goederen of dienst",
+            "het is de derde dinsdag van september daarna gaat de koning een speech geven van de verwachte inkomsten ",
+            "voor de collectieve voorzieningen",
+            "10,5",
+            "0,09",
+            "63",
+            "-20",
+            "toegevoegde",
+            "prinsjesdag",
+            "staatsschuld"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781461427564",
+          "examId": "ex-overheid",
+          "examTitel": "Proeftoets — Wie is de overheid?",
+          "datum": "14-06-2026, 20:23",
+          "goed": 23,
+          "totaal": 25,
+          "pct": 92,
+          "antwoorden": [
+            2,
+            2,
+            3,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1,
+            "provincie",
+            "wethouders",
+            "gemeente afval ophalen \nprovincie openbaar vervoer regelen en streekbussen\nrijksoverheid leger regelen",
+            "gemeenteraad controleert de plannen en keurt goed en het college van B&W maakt plannen",
+            1,
+            1,
+            2,
+            1,
+            1,
+            0,
+            0,
+            "omdat er misschien mensen zijn die niet genoeg inkomen hebben en mensen moeten gelijke rechten hebben",
+            "collectieve"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451819309",
+          "examId": "ex-extra-begroting-schuld",
+          "examTitel": "Extra Proeftoets 3 — Rijksbegroting & Staatsschuld",
+          "datum": "14-06-2026, 17:43",
+          "goed": 9,
+          "totaal": 10,
+          "pct": 90,
+          "antwoorden": [
+            2,
+            1,
+            1,
+            2,
+            1,
+            0,
+            0,
+            "Financiën ",
+            "begrotingstekort wanneer de uitgaven groter zijn dan inkomsten en staatsschuld is het totale bedrag dat de overheid nog moet terugbetalen aan leningen uit het verlegen",
+            "de troonrede is een toespraak waarin de regering vertelt wat haar plannen zijn voor het komende jaar"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451558604",
+          "examId": "ex-extra-belastingen-subsidies",
+          "examTitel": "Extra Proeftoets 2 — Belastingen & Subsidies",
+          "datum": "14-06-2026, 17:39",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            0,
+            "subsidie",
+            "door hoge inkomens",
+            "omdat voor de sociale zekerheid en collectieve voorzieningen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451491162",
+          "examId": "ex-extra-belastingen-subsidies",
+          "examTitel": "Extra Proeftoets 2 — Belastingen & Subsidies",
+          "datum": "14-06-2026, 17:38",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            0,
+            "subsidie",
+            "door hoge inkomen",
+            "door de hoge inkomens"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451401264",
+          "examId": "ex-extra-belastingen-subsidies",
+          "examTitel": "Extra Proeftoets 2 — Belastingen & Subsidies",
+          "datum": "14-06-2026, 17:36",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            0,
+            "subsidie",
+            "het gaat omhoog",
+            "voor sociale zekerheid en alles in de plek te kunnen regelen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451292467",
+          "examId": "ex-extra-overheid-voorzieningen",
+          "examTitel": "Extra Proeftoets 1 — Overheid & Voorzieningen",
+          "datum": "14-06-2026, 17:34",
+          "goed": 7,
+          "totaal": 10,
+          "pct": 70,
+          "antwoorden": [
+            0,
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            "4",
+            "omdat de politie is bedoeld voor collectief gezamenlijk en iedereen heeft gelijke kansen",
+            "burgemeester en wethouders zij maken plannen en laten het controleren aan de gemeenteraad"
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451148289",
+          "examId": "ex-extra-overheid-voorzieningen",
+          "examTitel": "Extra Proeftoets 1 — Overheid & Voorzieningen",
+          "datum": "14-06-2026, 17:32",
+          "goed": 7,
+          "totaal": 10,
+          "pct": 70,
+          "antwoorden": [
+            0,
+            1,
+            2,
+            1,
+            2,
+            1,
+            0,
+            "5",
+            "omdat iedereen gelijke kansen moet hebben en politie is voor gezamenlijk bedoeld",
+            "burgemeester en wethouders en zij maken hun plannen en de gemeenteraad controleert het"
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781451053889",
+          "examId": "ex-extra-overheid-voorzieningen",
+          "examTitel": "Extra Proeftoets 1 — Overheid & Voorzieningen",
+          "datum": "14-06-2026, 17:30",
+          "goed": 6,
+          "totaal": 10,
+          "pct": 60,
+          "antwoorden": [
+            0,
+            1,
+            2,
+            0,
+            2,
+            0,
+            0,
+            "4",
+            "omdat iedereen gelijke rechten en kansen hebben en politie is voor iedereen bedoeld",
+            "burgemeester en wethouders ze maken plannen en de gemeenteraad controleert het"
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            }
+          ]
+        }
+      ]
+    },
+    "timestamp": "2026-06-20T20:04:29.967Z",
+    "client_ip": "192.168.68.107",
+    "received_at": "2026-06-20 22:04:30"
+  },
+  {
+    "key": "duru_economi_v1",
+    "val": {
+      "xp": 1985,
+      "streak": 1,
+      "badges": {
+        "start": 1781452325296,
+        "belastingbaas": 1781452325296,
+        "vlam": 1781452382665,
+        "prof": 1781452382665,
+        "staatskenner": 1781452922786
+      },
+      "beste": {
+        "h6-1": 94,
+        "h6-2": 94,
+        "h6-3": 88,
+        "h6-4": 78
+      },
+      "gedaan": {},
+      "maxStreak": 21
+    },
+    "timestamp": "2026-06-14T16:04:00.870Z",
+    "client_ip": "192.168.68.120",
+    "received_at": "2026-06-14 18:04:00"
+  },
+  {
+    "key": "duru_nederlands_spelling_v1",
+    "val": {
+      "xp": 3930,
+      "streak": 12,
+      "badges": {
+        "start": 1781543154858,
+        "vlam": 1781543154858,
+        "ster": 1781543154858,
+        "prof": 1781543154858,
+        "taalwonder": 1781543154858,
+        "kofschip": 1781543515515,
+        "grammatica": 1781543984264
+      },
+      "beste": {
+        "sp-1": 100,
+        "sp-2": 100,
+        "sp-3": 100,
+        "sp-4": 93,
+        "sp-5": 87
+      },
+      "gedaan": {},
+      "maxStreak": 26,
+      "perfect": true,
+      "pogingen": {
+        "sp-1": 1
+      },
+      "titels": {
+        "sp-1": "Tegenwoordige tijd (tt)"
+      }
+    },
+    "timestamp": "2026-06-16T11:40:55.460Z",
+    "client_ip": "192.168.68.120",
+    "received_at": "2026-06-16 13:40:55"
+  },
+  {
+    "key": "duru_nederlands_spelling_examens_v1",
+    "val": {
+      "beste": {
+        "ex-sp-8": 30
+      },
+      "laatste": {
+        "ex-sp-8": 30
+      },
+      "history": [
+        {
+          "attemptId": "att_1781637971378",
+          "examId": "ex-sp-8",
+          "examTitel": "Proeftoets 8 — Werkwoordspelling: Verleden Tijd",
+          "datum": "16-06-2026, 21:26",
+          "goed": 3,
+          "totaal": 10,
+          "pct": 30,
+          "antwoorden": [
+            null,
+            null,
+            1,
+            null,
+            null,
+            null,
+            0,
+            0,
+            null,
+            2
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        }
+      ]
+    },
+    "timestamp": "2026-06-16T19:26:11.390Z",
+    "client_ip": "192.168.68.120",
+    "received_at": "2026-06-16 21:26:11"
+  },
+  {
+    "key": "duru_nask_examens_v1",
+    "val": {
+      "beste": {
+        "ex-sp-1": 80
+      },
+      "laatste": {
+        "ex-sp-1": 80
+      },
+      "history": [
+        {
+          "examId": "ex-sp-1",
+          "examTitel": "Proeftoets 1 — Werkwoordspelling (tt, vt, vd)",
+          "datum": "16-06-2026 21:00",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80
+        }
+      ]
+    },
+    "client_ip": "127.0.0.1",
+    "received_at": "2026-06-16 21:26:56"
+  },
+  {
+    "key": "duru_geschiedenis_v1",
+    "val": {
+      "xp": 1385,
+      "streak": 1,
+      "badges": {
+        "start": 1781811305217,
+        "geschiedkundige": 1781811305217,
+        "vlam": 1781811305217,
+        "prof": 1781811625835
+      },
+      "beste": {
+        "h4-4": 94,
+        "h4-3": 83
+      },
+      "gedaan": {},
+      "pogingen": {
+        "h4-4": 2,
+        "h4-3": 2
+      },
+      "titels": {
+        "h4-4": "Nederland in de wereldoorlog",
+        "h4-3": "De Tweede Wereldoorlog in Europa"
+      },
+      "maxStreak": 15
+    },
+    "timestamp": "2026-06-18T19:47:15.728Z",
+    "client_ip": "192.168.68.120",
+    "received_at": "2026-06-18 21:47:17"
+  },
+  {
+    "key": "duru_geschiedenis_examens_v1",
+    "val": {
+      "beste": {
+        "ex-geschiedenis-40": 100,
+        "ex-geschiedenis-39": 90,
+        "ex-geschiedenis-38": 100,
+        "ex-geschiedenis-37": 100,
+        "ex-geschiedenis-36": 100,
+        "ex-geschiedenis-35": 100,
+        "ex-geschiedenis-34": 80,
+        "ex-geschiedenis-33": 90,
+        "ex-geschiedenis-32": 100,
+        "ex-geschiedenis-31": 100,
+        "ex-geschiedenis-30": 73,
+        "ex-geschiedenis-29": 73,
+        "ex-geschiedenis-28": 93,
+        "ex-geschiedenis-27": 93,
+        "ex-geschiedenis-26": 67,
+        "ex-geschiedenis-18": 87,
+        "ex-geschiedenis-23": 80,
+        "ex-geschiedenis-25": 80,
+        "ex-geschiedenis-22": 100,
+        "ex-geschiedenis-24": 100,
+        "ex-geschiedenis-7": 60,
+        "ex-geschiedenis-1": 67,
+        "ex-geschiedenis-21": 100,
+        "ex-geschiedenis-17": 80,
+        "ex-geschiedenis-13": 87,
+        "ex-geschiedenis-19": 93,
+        "ex-geschiedenis-20": 93,
+        "ex-geschiedenis-41": 100,
+        "ex-geschiedenis-42": 87,
+        "ex-geschiedenis-43": 100,
+        "ex-geschiedenis-44": 93,
+        "ex-geschiedenis-45": 73
+      },
+      "laatste": {
+        "ex-geschiedenis-40": 100,
+        "ex-geschiedenis-39": 90,
+        "ex-geschiedenis-38": 100,
+        "ex-geschiedenis-37": 100,
+        "ex-geschiedenis-36": 100,
+        "ex-geschiedenis-35": 100,
+        "ex-geschiedenis-34": 80,
+        "ex-geschiedenis-33": 90,
+        "ex-geschiedenis-32": 100,
+        "ex-geschiedenis-31": 100,
+        "ex-geschiedenis-30": 73,
+        "ex-geschiedenis-29": 73,
+        "ex-geschiedenis-28": 93,
+        "ex-geschiedenis-27": 93,
+        "ex-geschiedenis-26": 67,
+        "ex-geschiedenis-18": 87,
+        "ex-geschiedenis-23": 80,
+        "ex-geschiedenis-25": 80,
+        "ex-geschiedenis-22": 100,
+        "ex-geschiedenis-24": 100,
+        "ex-geschiedenis-7": 60,
+        "ex-geschiedenis-1": 67,
+        "ex-geschiedenis-21": 100,
+        "ex-geschiedenis-17": 80,
+        "ex-geschiedenis-13": 80,
+        "ex-geschiedenis-19": 87,
+        "ex-geschiedenis-20": 93,
+        "ex-geschiedenis-41": 100,
+        "ex-geschiedenis-42": 87,
+        "ex-geschiedenis-43": 100,
+        "ex-geschiedenis-44": 93,
+        "ex-geschiedenis-45": 73
+      },
+      "history": [
+        {
+          "attemptId": "att_1782042711632",
+          "examId": "ex-geschiedenis-45",
+          "examTitel": "Begrippen-proeftoets 15 — Mix van alle H4 begrippen",
+          "datum": "21-06-2026, 13:51",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "vernietingskamp",
+            "deportatie",
+            "razzia",
+            "censuur",
+            "dictator",
+            "militarisme",
+            "indoctrinatie"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782042538558",
+          "examId": "ex-geschiedenis-44",
+          "examTitel": "Begrippen-proeftoets 14 — Nederland in de oorlog",
+          "datum": "21-06-2026, 13:48",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "collaboratie",
+            "onderduiker",
+            "razzia",
+            "censuur",
+            "indoctrinatie",
+            "atoombom",
+            "gelijkschakeling"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782042454784",
+          "examId": "ex-geschiedenis-44",
+          "examTitel": "Begrippen-proeftoets 14 — Nederland in de oorlog",
+          "datum": "21-06-2026, 13:47",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "collaboratie",
+            "onderduiker",
+            "razzia",
+            "censuur",
+            "indoctrinatie",
+            "atoombom",
+            "totalitair systeem"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782042377397",
+          "examId": "ex-geschiedenis-43",
+          "examTitel": "Begrippen-proeftoets 13 — De Tweede Wereldoorlog",
+          "datum": "21-06-2026, 13:46",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "holocaust",
+            "capituleren",
+            "deporteren",
+            "rassenleer",
+            "illegaal",
+            "argument",
+            "concentratiekamp"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782042257302",
+          "examId": "ex-geschiedenis-42",
+          "examTitel": "Begrippen-proeftoets 12 — Het Interbellum",
+          "datum": "21-06-2026, 13:44",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "indoctrinatie",
+            "planeconomie",
+            "totalitair",
+            "terreur",
+            "totalitair",
+            "dictatuur",
+            "fascisme"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782042127244",
+          "examId": "ex-geschiedenis-41",
+          "examTitel": "Begrippen-proeftoets 11 — Eerste Wereldoorlog",
+          "datum": "21-06-2026, 13:42",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "wapenwedloop",
+            "tweefrontenoorlog",
+            "neutraal",
+            "front",
+            "nationalisme",
+            "centralen",
+            "militarisme"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782042055324",
+          "examId": "ex-geschiedenis-41",
+          "examTitel": "Begrippen-proeftoets 11 — Eerste Wereldoorlog",
+          "datum": "21-06-2026, 13:40",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "wapenwedloop",
+            "tweefrontenoorlog",
+            "neutraal",
+            "front",
+            "nationalisme",
+            "Centralen",
+            "militarisme"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782041261295",
+          "examId": "ex-geschiedenis-40",
+          "examTitel": "Begrippen-proeftoets 10 — Eindtoets alle begrippen ★",
+          "datum": "21-06-2026, 13:27",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            "rassenleer",
+            "atoombom"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782041209450",
+          "examId": "ex-geschiedenis-39",
+          "examTitel": "Begrippen-proeftoets 9 — Alle begrippen (uitdaging ★)",
+          "datum": "21-06-2026, 13:26",
+          "goed": 9,
+          "totaal": 10,
+          "pct": 90,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "totalitair",
+            "collaboratie"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782041147192",
+          "examId": "ex-geschiedenis-39",
+          "examTitel": "Begrippen-proeftoets 9 — Alle begrippen (uitdaging ★)",
+          "datum": "21-06-2026, 13:25",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            null,
+            "collaboratie"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782041093481",
+          "examId": "ex-geschiedenis-38",
+          "examTitel": "Begrippen-proeftoets 8 — Alle begrippen gemengd",
+          "datum": "21-06-2026, 13:24",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            "communist",
+            "jappenkampen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782041054021",
+          "examId": "ex-geschiedenis-38",
+          "examTitel": "Begrippen-proeftoets 8 — Alle begrippen gemengd",
+          "datum": "21-06-2026, 13:24",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            null,
+            "jappenkampen"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782041006158",
+          "examId": "ex-geschiedenis-37",
+          "examTitel": "Begrippen-proeftoets 7 — 4.3 & 4.4 gemengd",
+          "datum": "21-06-2026, 13:23",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            "holocaust",
+            "seksslaaf"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040942276",
+          "examId": "ex-geschiedenis-36",
+          "examTitel": "Begrippen-proeftoets 6 — 4.1 & 4.2 gemengd",
+          "datum": "21-06-2026, 13:22",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            "wereldoorlog",
+            "indoctrinatie"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040893462",
+          "examId": "ex-geschiedenis-35",
+          "examTitel": "Begrippen-proeftoets 5 — Alle begrippen gemengd (makkelijk)",
+          "datum": "21-06-2026, 13:21",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            1,
+            "holocaust",
+            0,
+            0,
+            0,
+            "razzia",
+            1
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040844664",
+          "examId": "ex-geschiedenis-34",
+          "examTitel": "Begrippen-proeftoets 4 — Nederland in de oorlog (4.4)",
+          "datum": "21-06-2026, 13:20",
+          "goed": 8,
+          "totaal": 10,
+          "pct": 80,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            "atoombom",
+            0,
+            0,
+            null,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040791313",
+          "examId": "ex-geschiedenis-33",
+          "examTitel": "Begrippen-proeftoets 3 — De Tweede Wereldoorlog (4.3)",
+          "datum": "21-06-2026, 13:19",
+          "goed": 9,
+          "totaal": 10,
+          "pct": 90,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            "holocaust",
+            0,
+            0,
+            0,
+            "planeconomie",
+            1,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040721824",
+          "examId": "ex-geschiedenis-32",
+          "examTitel": "Begrippen-proeftoets 2 — Tussen de wereldoorlogen (4.2)",
+          "datum": "21-06-2026, 13:18",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            "economische crisis",
+            0,
+            0,
+            0,
+            "terreur",
+            1,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040674673",
+          "examId": "ex-geschiedenis-32",
+          "examTitel": "Begrippen-proeftoets 2 — Tussen de wereldoorlogen (4.2)",
+          "datum": "21-06-2026, 13:17",
+          "goed": 9,
+          "totaal": 10,
+          "pct": 90,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            "economische crisis",
+            0,
+            0,
+            0,
+            "indoctrinatie",
+            1,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1782040619860",
+          "examId": "ex-geschiedenis-31",
+          "examTitel": "Begrippen-proeftoets 1 — De Eerste Wereldoorlog (4.1)",
+          "datum": "21-06-2026, 13:16",
+          "goed": 10,
+          "totaal": 10,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            "nationalisme",
+            0,
+            1,
+            0,
+            "wapenwedloop",
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781959531713",
+          "examId": "ex-geschiedenis-30",
+          "examTitel": "Proeftoets — Mixed Eindexamen H4 (Deel F)",
+          "datum": "20-06-2026, 14:45",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            0,
+            0,
+            "Bergen Belsen",
+            1,
+            0,
+            "tijd van de wereldoorlogen",
+            0,
+            0,
+            "Verenigde Staten",
+            "Holocaust",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781959266969",
+          "examId": "ex-geschiedenis-29",
+          "examTitel": "Proeftoets — Mixed Eindexamen H4 (Deel E)",
+          "datum": "20-06-2026, 14:41",
+          "goed": 11,
+          "totaal": 15,
+          "pct": 73,
+          "antwoorden": [
+            0,
+            "Mein Kampf",
+            "Bergen Belsen",
+            0,
+            "concentratiekamp is een tussenstop alle joden worden daar bij elkaar gebracht en de vernietigingskamp is de kamp waar de joden op een systematische manier vermoord zijn",
+            0,
+            0,
+            1,
+            0,
+            1,
+            "wapenwedloop is een race om de sterkste bewapening en het leidde tot grotere spanningen landen vertrouwden elkaar niet meer",
+            0,
+            0,
+            0,
+            1
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781958952394",
+          "examId": "ex-geschiedenis-28",
+          "examTitel": "Proeftoets — Mixed Eindexamen H4 (Deel D)",
+          "datum": "20-06-2026, 14:35",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            "wapenwedloop=landen steeds meer en steeds betere wapens gaan maken om sterker te zijn dan andere landen en het leidde tot grotere spanningen omdat landen niet meer elkaar vertrouwden",
+            0,
+            0,
+            1,
+            "Gestapo",
+            0,
+            0,
+            0,
+            0,
+            "nationalisme",
+            "concentratiekamp is een tussenstop alle joden werden daar bij elkaar gebracht en de vernietigingskamp was een kamp om de joden op een systematische manier te vermoorden",
+            "Mussolini",
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781958642890",
+          "examId": "ex-geschiedenis-27",
+          "examTitel": "Proeftoets — Mixed Eindexamen H4 (Deel C)",
+          "datum": "20-06-2026, 14:30",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            "de Duitsers hadden eten afgepikt en hield niks over aan de Nederlanders ze deden dit om de voedsel eerlijk te kunnen verdelen",
+            0,
+            "Polen",
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781958487747",
+          "examId": "ex-geschiedenis-26",
+          "examTitel": "Proeftoets — Mixed Eindexamen H4 (Deel B)",
+          "datum": "20-06-2026, 14:28",
+          "goed": 10,
+          "totaal": 15,
+          "pct": 67,
+          "antwoorden": [
+            1,
+            0,
+            "hongerwinter",
+            0,
+            1,
+            1,
+            0,
+            0,
+            "militarisme",
+            "stempelen",
+            0,
+            0,
+            "ze wouden mensen vooral jongeren opdringen met ideen met censuur",
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781958338773",
+          "examId": "ex-geschiedenis-18",
+          "examTitel": "Proeftoets — De Tweede Wereldoorlog in Europa (Deel F)",
+          "datum": "20-06-2026, 14:25",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            null,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "Bergen-Belsen",
+            "concentratiekamp is een tijdelijke tussenstop alle joden worden daarbij elkaar gebracht en wachten op de deportatie naar de vernietigingskamp dat is een plek waar de joden werden vermoord meer dood dan levend",
+            0,
+            1,
+            "Hitler wou Sudetenland bezittten ",
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781958187370",
+          "examId": "ex-geschiedenis-23",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel E)",
+          "datum": "20-06-2026, 14:23",
+          "goed": 12,
+          "totaal": 15,
+          "pct": 80,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "omdat de Nazi-Duitsland alles meenam de eten en er niks overbleef",
+            0,
+            "Westerbork",
+            0,
+            0,
+            1,
+            null,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899983553",
+          "examId": "ex-geschiedenis-25",
+          "examTitel": "Proeftoets — Mixed Eindexamen H4 (Deel A)",
+          "datum": "19-06-2026, 22:13",
+          "goed": 12,
+          "totaal": 15,
+          "pct": 80,
+          "antwoorden": [
+            0,
+            "Shoah",
+            0,
+            "concentratiekamp was een kamp waarbij de joden bij elkaar werden gebracht en een vernietigingskamp was het kamp van het vermoorden van de joden op een systematische en een extreme moord",
+            "rassenleer",
+            "westerbork",
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            "Mein kampf"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899851987",
+          "examId": "ex-geschiedenis-22",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel D)",
+          "datum": "19-06-2026, 22:10",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            "atoombom",
+            0,
+            "verzet",
+            0,
+            0,
+            0,
+            "NSB",
+            "Azië ",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899783686",
+          "examId": "ex-geschiedenis-24",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel F)",
+          "datum": "19-06-2026, 22:09",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            1,
+            "Azië ",
+            0,
+            0,
+            0,
+            0,
+            "hongerwinter",
+            0,
+            0,
+            0,
+            0,
+            0,
+            "Westerbork",
+            1,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899337571",
+          "examId": "ex-geschiedenis-7",
+          "examTitel": "Proeftoets — Tussen de wereldoorlogen (Deel A)",
+          "datum": "19-06-2026, 22:02",
+          "goed": 9,
+          "totaal": 15,
+          "pct": 60,
+          "antwoorden": [
+            0,
+            0,
+            2,
+            0,
+            "Mussolini ",
+            "planeconomie",
+            0,
+            0,
+            null,
+            0,
+            "jodenvervolging",
+            0,
+            0,
+            0,
+            null
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899205415",
+          "examId": "ex-geschiedenis-1",
+          "examTitel": "Proeftoets — De Eerste Wereldoorlog (Deel A)",
+          "datum": "19-06-2026, 22:00",
+          "goed": 10,
+          "totaal": 15,
+          "pct": 67,
+          "antwoorden": [
+            0,
+            0,
+            "nationalisme",
+            0,
+            0,
+            0,
+            0,
+            "de tijd van de wereldoorlogen",
+            0,
+            0,
+            "Ottomaanse rijk",
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899099635",
+          "examId": "ex-geschiedenis-22",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel D)",
+          "datum": "19-06-2026, 21:58",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            0,
+            "atoombom",
+            0,
+            "verzet",
+            0,
+            0,
+            0,
+            "NSB",
+            "Azië ",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781899020708",
+          "examId": "ex-geschiedenis-21",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel C)",
+          "datum": "19-06-2026, 21:57",
+          "goed": 15,
+          "totaal": 15,
+          "pct": 100,
+          "antwoorden": [
+            1,
+            0,
+            0,
+            0,
+            "atoombom",
+            0,
+            1,
+            "NSB",
+            0,
+            0,
+            0,
+            0,
+            "hongerwinter",
+            0,
+            "westerbork"
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781898887549",
+          "examId": "ex-geschiedenis-17",
+          "examTitel": "Proeftoets — De Tweede Wereldoorlog in Europa (Deel E)",
+          "datum": "19-06-2026, 21:54",
+          "goed": 12,
+          "totaal": 15,
+          "pct": 80,
+          "antwoorden": [
+            0,
+            "Normandië ",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "omdat ze sterk waren",
+            "holocaust",
+            3,
+            0,
+            "polen",
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781898794436",
+          "examId": "ex-geschiedenis-13",
+          "examTitel": "Proeftoets — De Tweede Wereldoorlog in Europa (Deel A)",
+          "datum": "19-06-2026, 21:53",
+          "goed": 12,
+          "totaal": 15,
+          "pct": 80,
+          "antwoorden": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            "Sovjet-Unie",
+            2,
+            0,
+            0,
+            0,
+            "Pearl Harbor",
+            0,
+            0,
+            0,
+            1
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781898637554",
+          "examId": "ex-geschiedenis-19",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel A)",
+          "datum": "19-06-2026, 21:50",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            "verzet",
+            0,
+            0,
+            "omdat de Duitsers alles meenam en niets over hield aan de Nederlanders",
+            0,
+            "NSB",
+            0,
+            0,
+            0,
+            "atoombom",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781812600270",
+          "examId": "ex-geschiedenis-1",
+          "examTitel": "Proeftoets — De Eerste Wereldoorlog (Deel A)",
+          "datum": "18-06-2026, 21:56",
+          "goed": 8,
+          "totaal": 15,
+          "pct": 53,
+          "antwoorden": [
+            0,
+            0,
+            "nationalisme",
+            0,
+            1,
+            0,
+            3,
+            "tijd van de wereldoorlogen",
+            0,
+            0,
+            "Verenigde Staten",
+            2,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781812529148",
+          "examId": "ex-geschiedenis-1",
+          "examTitel": "Proeftoets — De Eerste Wereldoorlog (Deel A)",
+          "datum": "18-06-2026, 21:55",
+          "goed": 10,
+          "totaal": 15,
+          "pct": 67,
+          "antwoorden": [
+            0,
+            0,
+            "nationalisme",
+            0,
+            0,
+            0,
+            0,
+            "tijd van de wereldoorlogen",
+            3,
+            0,
+            "Verenigde Staten",
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781812433122",
+          "examId": "ex-geschiedenis-20",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel B)",
+          "datum": "18-06-2026, 21:53",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            "Pearl Harbor",
+            "atoombom",
+            0,
+            0,
+            "doordat er geen eten was en de Duitsers veel eten had en iedereen kreeg bonnen om iets te kopen",
+            "Amsterdam",
+            0,
+            0,
+            0,
+            0,
+            "Westerbork",
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781812330184",
+          "examId": "ex-geschiedenis-21",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel C)",
+          "datum": "18-06-2026, 21:52",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            0,
+            0,
+            0,
+            0,
+            "atoombom",
+            0,
+            1,
+            "NSB",
+            0,
+            0,
+            0,
+            0,
+            "hongerwinter",
+            0,
+            "Westerbork"
+          ],
+          "beoordelingen": [
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781812253412",
+          "examId": "ex-geschiedenis-13",
+          "examTitel": "Proeftoets — De Tweede Wereldoorlog in Europa (Deel A)",
+          "datum": "18-06-2026, 21:50",
+          "goed": 13,
+          "totaal": 15,
+          "pct": 87,
+          "antwoorden": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            "Sovjet Unie",
+            2,
+            0,
+            0,
+            1,
+            "Pearl Harbor",
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        },
+        {
+          "attemptId": "att_1781812143423",
+          "examId": "ex-geschiedenis-19",
+          "examTitel": "Proeftoets — Nederland in de wereldoorlog (Deel A)",
+          "datum": "18-06-2026, 21:49",
+          "goed": 14,
+          "totaal": 15,
+          "pct": 93,
+          "antwoorden": [
+            "verzet",
+            0,
+            0,
+            "je kreeg bonnen en daar moest je gebruik van maken als je iets ging kopen",
+            0,
+            "NSB",
+            0,
+            0,
+            0,
+            "atoombom",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "beoordelingen": [
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "fout",
+              "punt": 0
+            },
+            {
+              "status": "deels",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            },
+            {
+              "status": "goed",
+              "punt": 1
+            }
+          ]
+        }
+      ]
+    },
+    "timestamp": "2026-06-21T11:51:51.633Z",
+    "client_ip": "192.168.68.107",
+    "received_at": "2026-06-21 13:51:52"
+  }
+]

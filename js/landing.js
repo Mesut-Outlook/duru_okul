@@ -284,6 +284,162 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
 
+  function restoreScores(data) {
+    if (!Array.isArray(data)) return 0;
+    var allKeys = {};
+    data.forEach(function(item) {
+      if (item && item.key) {
+        allKeys[item.key] = true;
+      }
+    });
+    
+    var restoredCount = 0;
+    
+    Object.keys(allKeys).forEach(function(key) {
+      var newVal = null;
+      
+      if (key === 'begrijpend_lezen_history') {
+        var uniqueAttemptsBL = {};
+        data.forEach(function(item) {
+          if (item && item.key === key && Array.isArray(item.val)) {
+            item.val.forEach(function(att) {
+              var uniqId = att.timestamp || (att.startingText + '_' + att.grade + '_' + att.score);
+              uniqueAttemptsBL[uniqId] = att;
+            });
+          }
+        });
+        var mergedBL = Object.keys(uniqueAttemptsBL).map(function(k) { return uniqueAttemptsBL[k]; });
+        mergedBL.sort(function(a, b) {
+          return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+        });
+        newVal = mergedBL;
+      } 
+      else if (key.indexOf('_examens_v1') !== -1) {
+        var uniqueAttempts = {};
+        data.forEach(function(item) {
+          if (item && item.key === key && item.val && Array.isArray(item.val.history)) {
+            item.val.history.forEach(function(att) {
+              var uniqId = att.attemptId || (att.examId + '_' + att.datum + '_' + att.pct);
+              uniqueAttempts[uniqId] = att;
+            });
+          }
+        });
+        var mergedHistory = Object.keys(uniqueAttempts).map(function(k) { return uniqueAttempts[k]; });
+        mergedHistory.sort(function(a, b) {
+          return parseAttemptDate(b) - parseAttemptDate(a);
+        });
+        
+        var beste = {};
+        var laatste = {};
+        mergedHistory.forEach(function(att) {
+          if (att.examId) {
+            if (laatste[att.examId] === undefined) {
+              laatste[att.examId] = att.pct;
+            }
+            if (beste[att.examId] === undefined || att.pct > beste[att.examId]) {
+              beste[att.examId] = att.pct;
+            }
+          }
+        });
+        
+        newVal = {
+          beste: beste,
+          laatste: laatste,
+          history: mergedHistory
+        };
+      } 
+      else if (key.indexOf('_v1') !== -1) {
+        var xp = 0;
+        var maxStreak = 0;
+        var badges = {};
+        var besteTopic = {};
+        var gedaan = {};
+        var pogingen = {};
+        var titels = {};
+        
+        data.forEach(function(item) {
+          if (item && item.key === key && item.val) {
+            var val = item.val;
+            if (val.xp && val.xp > xp) xp = val.xp;
+            if (val.streak && val.streak > maxStreak) maxStreak = val.streak;
+            if (val.maxStreak && val.maxStreak > maxStreak) maxStreak = val.maxStreak;
+            if (val.badges) {
+              Object.keys(val.badges).forEach(function(bid) {
+                badges[bid] = val.badges[bid];
+              });
+            }
+            if (val.beste) {
+              Object.keys(val.beste).forEach(function(tid) {
+                if (besteTopic[tid] === undefined || val.beste[tid] > besteTopic[tid]) {
+                  besteTopic[tid] = val.beste[tid];
+                }
+              });
+            }
+            if (val.gedaan) {
+              Object.keys(val.gedaan).forEach(function(tid) {
+                gedaan[tid] = val.gedaan[tid];
+              });
+            }
+            if (val.pogingen) {
+              Object.keys(val.pogingen).forEach(function(tid) {
+                if (pogingen[tid] === undefined || val.pogingen[tid] > pogingen[tid]) {
+                  pogingen[tid] = val.pogingen[tid];
+                }
+              });
+            }
+            if (val.titels) {
+              Object.keys(val.titels).forEach(function(tid) {
+                titels[tid] = val.titels[tid];
+              });
+            }
+          }
+        });
+        
+        newVal = {
+          xp: xp,
+          streak: maxStreak,
+          badges: badges,
+          beste: besteTopic,
+          gedaan: gedaan,
+          pogingen: pogingen,
+          titels: titels
+        };
+      }
+      
+      if (newVal) {
+        var localVal = localStorage.getItem(key);
+        var newValStr = JSON.stringify(newVal);
+        if (localVal !== newValStr) {
+          localStorage.setItem(key, newValStr);
+          restoredCount++;
+        }
+      }
+    });
+    
+    return restoredCount;
+  }
+
+  // Restore scores from static backup on GitHub Pages once
+  if (isGitHubPages && localStorage.getItem('duru_backup_imported') !== 'true') {
+    fetch('./scores_backup.json')
+      .then(function(res) {
+        if (!res.ok) throw new Error('HTTP status ' + res.status);
+        return res.json();
+      })
+      .then(function(data) {
+        var count = restoreScores(data);
+        localStorage.setItem('duru_backup_imported', 'true');
+        if (count > 0) {
+          window.location.reload();
+        }
+      })
+      .catch(function(err) {
+        console.warn('Could not restore scores from backup file:', err);
+        // Set it anyway to prevent infinite loop of failed fetch attempts
+        localStorage.setItem('duru_backup_imported', 'true');
+      });
+  }
+
   if (!isGitHubPages) {
     // Restore scores from server database on load (merging all historical logs)
     fetch('/api/score')
@@ -291,146 +447,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!res.ok) throw new Error('HTTP status ' + res.status);
         return res.json();
       })
-    .then(function(data) {
-      if (Array.isArray(data)) {
-        var allKeys = {};
-        data.forEach(function(item) {
-          if (item && item.key) {
-            allKeys[item.key] = true;
-          }
-        });
-        
-        var restoredCount = 0;
-        
-        Object.keys(allKeys).forEach(function(key) {
-          var newVal = null;
-          
-          if (key === 'begrijpend_lezen_history') {
-            var uniqueAttemptsBL = {};
-            data.forEach(function(item) {
-              if (item && item.key === key && Array.isArray(item.val)) {
-                item.val.forEach(function(att) {
-                  var uniqId = att.timestamp || (att.startingText + '_' + att.grade + '_' + att.score);
-                  uniqueAttemptsBL[uniqId] = att;
-                });
-              }
-            });
-            var mergedBL = Object.keys(uniqueAttemptsBL).map(function(k) { return uniqueAttemptsBL[k]; });
-            mergedBL.sort(function(a, b) {
-              return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
-            });
-            newVal = mergedBL;
-          } 
-          else if (key.indexOf('_examens_v1') !== -1) {
-            var uniqueAttempts = {};
-            data.forEach(function(item) {
-              if (item && item.key === key && item.val && Array.isArray(item.val.history)) {
-                item.val.history.forEach(function(att) {
-                  var uniqId = att.attemptId || (att.examId + '_' + att.datum + '_' + att.pct);
-                  uniqueAttempts[uniqId] = att;
-                });
-              }
-            });
-            var mergedHistory = Object.keys(uniqueAttempts).map(function(k) { return uniqueAttempts[k]; });
-            mergedHistory.sort(function(a, b) {
-              return parseAttemptDate(b) - parseAttemptDate(a);
-            });
-            
-            var beste = {};
-            var laatste = {};
-            mergedHistory.forEach(function(att) {
-              if (att.examId) {
-                if (laatste[att.examId] === undefined) {
-                  laatste[att.examId] = att.pct;
-                }
-                if (beste[att.examId] === undefined || att.pct > beste[att.examId]) {
-                  beste[att.examId] = att.pct;
-                }
-              }
-            });
-            
-            newVal = {
-              beste: beste,
-              laatste: laatste,
-              history: mergedHistory
-            };
-          } 
-          else if (key.indexOf('_v1') !== -1) {
-            var xp = 0;
-            var maxStreak = 0;
-            var badges = {};
-            var besteTopic = {};
-            var gedaan = {};
-            var pogingen = {};
-            var titels = {};
-            
-            data.forEach(function(item) {
-              if (item && item.key === key && item.val) {
-                var val = item.val;
-                if (val.xp && val.xp > xp) xp = val.xp;
-                if (val.streak && val.streak > maxStreak) maxStreak = val.streak;
-                if (val.maxStreak && val.maxStreak > maxStreak) maxStreak = val.maxStreak;
-                if (val.badges) {
-                  Object.keys(val.badges).forEach(function(bid) {
-                    badges[bid] = val.badges[bid];
-                  });
-                }
-                if (val.beste) {
-                  Object.keys(val.beste).forEach(function(tid) {
-                    if (besteTopic[tid] === undefined || val.beste[tid] > besteTopic[tid]) {
-                      besteTopic[tid] = val.beste[tid];
-                    }
-                  });
-                }
-                if (val.gedaan) {
-                  Object.keys(val.gedaan).forEach(function(tid) {
-                    gedaan[tid] = val.gedaan[tid];
-                  });
-                }
-                if (val.pogingen) {
-                  Object.keys(val.pogingen).forEach(function(tid) {
-                    if (pogingen[tid] === undefined || val.pogingen[tid] > pogingen[tid]) {
-                      pogingen[tid] = val.pogingen[tid];
-                    }
-                  });
-                }
-                if (val.titels) {
-                  Object.keys(val.titels).forEach(function(tid) {
-                    titels[tid] = val.titels[tid];
-                  });
-                }
-              }
-            });
-            
-            newVal = {
-              xp: xp,
-              streak: maxStreak,
-              badges: badges,
-              beste: besteTopic,
-              gedaan: gedaan,
-              pogingen: pogingen,
-              titels: titels
-            };
-          }
-          
-          if (newVal) {
-            var localVal = localStorage.getItem(key);
-            var newValStr = JSON.stringify(newVal);
-            if (localVal !== newValStr) {
-              localStorage.setItem(key, newValStr);
-              restoredCount++;
-            }
-          }
-        });
-        
-        if (restoredCount > 0) {
+      .then(function(data) {
+        var count = restoreScores(data);
+        if (count > 0) {
           window.location.reload();
         }
-      }
-    })
-    .catch(function(err) {
-      console.warn('Could not restore scores from server:', err);
-    });
+      })
+      .catch(function(err) {
+        console.warn('Could not restore scores from server:', err);
+      });
   }
 
   function parseAttemptDate(att) {

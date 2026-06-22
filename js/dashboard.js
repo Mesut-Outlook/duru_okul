@@ -18,6 +18,7 @@
     initTabs();
     initFiltersAndSearch();
     initVakKaartenToggle();
+    initBackupRestore();
     loadDashboardData();
 
     // Listen for storage events (e.g. if student completes quiz in an iframe)
@@ -860,6 +861,92 @@
       searchInput.addEventListener("input", function () {
         window.currentTableSearch = searchInput.value;
         renderAttemptsTable();
+      });
+    }
+  }
+
+  // ── Backup & Restore Logic ──────────────────────────────
+  function initBackupRestore() {
+    var exportBtn = document.getElementById("backup-export-btn");
+    var importBtn = document.getElementById("backup-import-btn");
+    var fileInput = document.getElementById("backup-file-input");
+
+    if (exportBtn) {
+      exportBtn.addEventListener("click", function () {
+        var backup = [];
+        for (var i = 0; i < localStorage.length; i++) {
+          var key = localStorage.key(i);
+          if (key && (key.indexOf("duru_") === 0 || key.indexOf("begrijpend_lezen_") === 0)) {
+            var value = localStorage.getItem(key);
+            try {
+              backup.push({
+                key: key,
+                val: JSON.parse(value)
+              });
+            } catch (e) {
+              backup.push({
+                key: key,
+                val: value
+              });
+            }
+          }
+        }
+
+        if (backup.length === 0) {
+          alert("Er is geen voortgang gevonden om te exporteren.");
+          return;
+        }
+
+        var blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "duru_okul_voortgang_" + new Date().toISOString().split('T')[0] + ".json";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    if (importBtn && fileInput) {
+      importBtn.addEventListener("click", function () {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener("change", function (e) {
+        var file = e.target.files[0];
+        if (!file) return;
+
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+          try {
+            var data = JSON.parse(evt.target.result);
+            if (!Array.isArray(data)) {
+              throw new Error("Ongeldig bestandsformaat. Verwacht een lijst met gegevens.");
+            }
+
+            var importedCount = 0;
+            data.forEach(function (item) {
+              if (item && item.key) {
+                var valueStr = typeof item.val === "object" ? JSON.stringify(item.val) : String(item.val);
+                localStorage.setItem(item.key, valueStr);
+                importedCount++;
+              }
+            });
+
+            if (importedCount > 0) {
+              localStorage.setItem("duru_backup_imported", "true");
+              alert("Succesvol " + importedCount + " onderdelen geïmporteerd! De pagina wordt nu herladen.");
+              window.location.reload();
+            } else {
+              alert("Geen geldige gegevens gevonden in het bestand.");
+            }
+          } catch (err) {
+            alert("Fout bij het laden van het bestand: " + err.message);
+          }
+        };
+        reader.readAsText(file);
       });
     }
   }
