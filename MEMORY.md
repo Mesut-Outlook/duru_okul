@@ -74,6 +74,13 @@ This document serves as the project's global memory log, preserving all overall 
   - **Graceful Degrade**: Bypassed local network API calls (`/api/score` POST and GET) when running on GitHub Pages to prevent useless 404 network warnings, while preserving full client-side local storage features.
   - **Deploy Configuration**: Added a `.nojekyll` file at the root to prevent Jekyll processing of folders. Created `.github/workflows/deploy.yml` to automatically build and deploy the project to GitHub Pages via GitHub Actions on every push to the `main` branch.
 
+### Milestone 11: Inkomstenbelasting & Loonbelasting Exam Expansion (2026-06-22)
+* **Goal**: Expand the Economy module with 5 new exam files focusing on "Inkomstenbelasting & Loonbelasting" to strengthen understanding of direct taxes, gross/net salary calculations, loonheffingskorting rules, and progressive tax brackets.
+* **Implementation Details**:
+  - **Exams Created**: Added `examen_36_extra_inkomsten_loonbelasting_2.js` through `examen_40_extra_inkomsten_loonbelasting_6.js` (Extra Proeftoets 31 to 35) with exactly 15 questions each.
+  - **Topics Covered**: Gross/net salaries, roles of employee/employer/Belastingdienst, loonheffingskorting rules for multiple jobs, tax bracket (schijventarief) math, DigiD, draagkrachtbeginsel, solidarity, and tax refunds vs additional payments.
+  - **Integration**: Loaded all 5 scripts in the `economi/index.html` file.
+
 ---
 
 ## 🛠️ Storage & Data Structures
