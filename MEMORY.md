@@ -125,7 +125,15 @@ This document serves as the project's global memory log, preserving all overall 
   - **Schema Conformance**: Verified that all 17 files conform to the 15-question structure (6 mc, 4 waaronwaar, 3 invul, 2 open), use comma decimal notation, and have fully translated Dutch explanations.
   - **Syntax Validation**: Checked all generated files using `node -c` and resolved all syntax issues.
 
+### Milestone 18: Five More General Exams (2026-06-23)
+* **Goal**: Add 5 more general exams covering the entire Chapter 6 to further build up the exam database.
+* **Implementation Details**:
+  - **Exams Created**: Added `examen_64_extra_algemeen_6.js` to `examen_68_extra_algemeen_10.js` (Extra Proeftoets 57 - 61) with exactly 15 questions each.
+  - **Schema Conformance**: Verified that all 5 files conform to the 15-question structure (6 mc, 4 waaronwaar, 3 invul, 2 open), use comma decimal notation, and have fully translated Dutch explanations.
+  - **Syntax Validation**: Checked all files using `node -c` and confirmed no errors.
+
 ---
+
 
 
 ## 🛠️ Storage & Data Structures
