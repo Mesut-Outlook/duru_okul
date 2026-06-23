@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <script>
+    if (window.parent && window.parent !== window && window.parent.localStorage) {
+      Storage.prototype.getItem = function(key) { return window.parent.localStorage.getItem(key); };
+      Storage.prototype.setItem = function(key, value) { window.parent.localStorage.setItem(key, value); };
+      Storage.prototype.removeItem = function(key) { window.parent.localStorage.removeItem(key); };
+    }
+  </script>
+  
   <!-- SEO Best Practices -->
   <title>Begrijpend Lezen Trainer - Mavo 2 | Meester Max</title>
   <meta name="description" content="Stap-voor-stap begrijpend lezen oefenen voor niveau 2 mavo met directe feedback, een interactief spiekbriefje en motiverende uitleg door Meester Max.">

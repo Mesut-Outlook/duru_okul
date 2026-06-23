@@ -105,7 +105,28 @@ This document serves as the project's global memory log, preserving all overall 
   - **Replacing Questions**: Replaced individual out-of-scope questions in `examen_20_extra_mix_2.js` (Q4 and Q10), `examen_25_extra_eindtoets_mix_3.js` (Q13), and `examen_35_extra_eindtoets_mix_4.js` (Q6 and Q12) with in-scope concepts (private sector, public debt, municipal structures, non-tax revenues).
   - **Validation**: Verified all modified files have valid JavaScript syntax and confirm 0 violations remain.
 
+### Milestone 15: Economics Exam Additions for Duru's Notes (2026-06-23)
+* **Goal**: Add two new 15-question exams (Extra Proeftoets 38 & 39) targeting important Chapter 6 topics/notes specified by Duru.
+* **Implementation Details**:
+  - **Exams Created**: Added `examen_45_extra_belangrijke_notities_1.js` (Extra Proeftoets 38, Paragraphs 6.1 & 6.2) and `examen_46_extra_belangrijke_notities_2.js` (Extra Proeftoets 39, Paragraphs 6.3 & 6.4) with exactly 15 questions each.
+  - **Question Distribution**: 6 mc, 4 waaronwaar, 3 invul, and 2 open questions per exam.
+
+### Milestone 16: Local Storage Data Migration (2026-06-23)
+* **Goal**: Ensure Duru's local progress completed before logging in/registering is not lost and is successfully migrated to her prefixed user account profile.
+* **Implementation Details**:
+  - **Migration Function**: Created `migratePreExistingLocalScores(username)` in `js/landing.js` that scans `localStorage` for any unprefixed keys (e.g. starting with `duru_` or `begrijpend_lezen_`), merges them with any existing prefixed data using the native `restoreScores` logic, and removes the old plain keys.
+  - **Login Integration**: Integrated migration during user registration, regular login, and first-time decrypt backup logins (where local data is merged into `parsedScores` before being restored to prefixed keys).
+
+### Milestone 17: Multi-Agent Exam Expansion (2026-06-23)
+* **Goal**: Expand Chapter 6 exam database by 17 new high-quality exams (5 general exams, 12 subtopic-specific exams).
+* **Implementation Details**:
+  - **Coordinated Approach**: Wrote `coordination.md` and spawned 3 parallel `self` subagents to divide the work: General Writer (5 general exams covering all H6), Political Writer (6 subtopic exams covering 6.1 and 6.2), and Financial Writer (6 subtopic exams covering 6.3 and 6.4).
+  - **Exams Created**: Added `examen_47` to `examen_51` (general) and `examen_52` to `examen_63` (subtopic).
+  - **Schema Conformance**: Verified that all 17 files conform to the 15-question structure (6 mc, 4 waaronwaar, 3 invul, 2 open), use comma decimal notation, and have fully translated Dutch explanations.
+  - **Syntax Validation**: Checked all generated files using `node -c` and resolved all syntax issues.
+
 ---
+
 
 ## 🛠️ Storage & Data Structures
 

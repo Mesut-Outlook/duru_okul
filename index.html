@@ -220,54 +220,63 @@
 
   </div><!-- /#iframe-shell -->
 
-  <!-- ══ Login & Registratie Overlay ══════════════════════════ -->
-  <div id="login-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #121813; z-index: 100000; display: none; align-items: center; justify-content: center; font-family: var(--font-tekst); overflow-y: auto; padding: 20px; box-sizing: border-box;">
-    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--lijn); padding: 32px; border-radius: 16px; width: 100%; max-width: 400px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); backdrop-filter: blur(10px); box-sizing: border-box;">
-      
+  <!-- ══ Login & Registratie Overlay ══════════════════════════
+       Vaste, neutrale kleuren (geen var(--wit)/var(--lijn)) zodat dit
+       scherm niet meegroent met de dark-mode tokens van de rest van de site. -->
+  <style>
+    #login-overlay input:focus { border-color: #064e3b !important; box-shadow: 0 0 0 3px rgba(6,78,59,0.12); }
+    #login-overlay input::placeholder { color: #aeaeb2; }
+    #auth-submit-btn:hover { background: #053c2c !important; }
+    #auth-submit-btn:active { background: #042b20 !important; }
+    #auth-tab-login:hover, #auth-tab-register:hover { color: #1d1d1f; }
+  </style>
+  <div id="login-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.45); backdrop-filter: blur(6px); z-index: 100000; display: none; align-items: center; justify-content: center; font-family: var(--font-tekst); overflow-y: auto; padding: 20px; box-sizing: border-box;">
+    <div style="background: #ffffff; padding: 36px 32px; border-radius: 20px; width: 100%; max-width: 380px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); box-sizing: border-box;">
+
       <!-- Logo / Kop -->
-      <div style="text-align: center; margin-bottom: 24px;">
-        <span style="font-size: 48px;" aria-hidden="true">🎒</span>
-        <h2 style="margin: 12px 0 4px 0; color: var(--wit); font-family: var(--font-kop); font-size: 24px;">Duru's Schoolhub</h2>
-        <p style="margin: 0; color: var(--grijs-licht); font-size: 14px;">Giriş yapın veya yeni bir kullanıcı oluşturun</p>
+      <div style="text-align: center; margin-bottom: 28px;">
+        <span style="font-size: 40px;" aria-hidden="true">🎒</span>
+        <h2 style="margin: 14px 0 4px 0; color: #1d1d1f; font-family: var(--font-kop); font-weight: 700; font-size: 21px; letter-spacing: -0.02em;">Duru's Schoolhub</h2>
+        <p style="margin: 0; color: #6e6e73; font-size: 13px;">Giriş yapın veya yeni bir kullanıcı oluşturun</p>
       </div>
 
       <!-- Tab selectors -->
-      <div style="display: flex; border-bottom: 1px solid var(--lijn); margin-bottom: 20px;">
-        <button id="auth-tab-login" style="flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid var(--hub-hoofd); color: var(--wit); font-weight: bold; cursor: pointer; font-size: 14px;" type="button">Giriş Yap</button>
-        <button id="auth-tab-register" style="flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid transparent; color: var(--grijs-licht); cursor: pointer; font-size: 14px;" type="button">Kayıt Ol</button>
+      <div style="display: flex; border-bottom: 1px solid #e5e5e7; margin-bottom: 22px;">
+        <button id="auth-tab-login" style="flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid #064e3b; color: #1d1d1f; font-weight: 600; cursor: pointer; font-size: 14px;" type="button">Giriş Yap</button>
+        <button id="auth-tab-register" style="flex: 1; padding: 10px; background: none; border: none; border-bottom: 2px solid transparent; color: #6e6e73; font-weight: 400; cursor: pointer; font-size: 14px;" type="button">Kayıt Ol</button>
       </div>
 
       <!-- Form Container -->
-      <form id="auth-form" onsubmit="return false;" style="display: flex; flex-direction: column; gap: 16px;">
+      <form id="auth-form" onsubmit="return false;" style="display: flex; flex-direction: column; gap: 14px;">
         <!-- Username -->
         <div style="display: flex; flex-direction: column; gap: 6px;">
-          <label for="auth-username" style="color: var(--wit); font-size: 13px; font-weight: 600;">Kullanıcı Adı (İsim):</label>
-          <input type="text" id="auth-username" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--lijn); background: rgba(255,255,255,0.05); color: var(--wit); font-size: 14px; outline: none; transition: border-color 0.2s;" />
+          <label for="auth-username" style="color: #1d1d1f; font-size: 13px; font-weight: 500;">Kullanıcı Adı (İsim):</label>
+          <input type="text" id="auth-username" required autocomplete="username" style="padding: 11px 12px; border-radius: 10px; border: 1px solid #d2d2d7; background: #fafafa; color: #1d1d1f; font-size: 15px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;" />
         </div>
 
         <!-- Password -->
         <div style="display: flex; flex-direction: column; gap: 6px;">
-          <label id="auth-pass-label" for="auth-password" style="color: var(--wit); font-size: 13px; font-weight: 600;">Şifre (Min. 8 rakam/karakter):</label>
-          <input type="password" id="auth-password" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--lijn); background: rgba(255,255,255,0.05); color: var(--wit); font-size: 14px; outline: none;" />
+          <label id="auth-pass-label" for="auth-password" style="color: #1d1d1f; font-size: 13px; font-weight: 500;">Şifre (Min. 8 rakam/karakter):</label>
+          <input type="password" id="auth-password" required autocomplete="current-password" style="padding: 11px 12px; border-radius: 10px; border: 1px solid #d2d2d7; background: #fafafa; color: #1d1d1f; font-size: 15px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;" />
         </div>
 
         <!-- Password Confirm (only shown on Register) -->
         <div id="auth-confirm-container" style="display: none; flex-direction: column; gap: 6px;">
-          <label for="auth-password-confirm" style="color: var(--wit); font-size: 13px; font-weight: 600;">Şifre Tekrar:</label>
-          <input type="password" id="auth-password-confirm" style="padding: 10px; border-radius: 8px; border: 1px solid var(--lijn); background: rgba(255,255,255,0.05); color: var(--wit); font-size: 14px; outline: none;" />
+          <label for="auth-password-confirm" style="color: #1d1d1f; font-size: 13px; font-weight: 500;">Şifre Tekrar:</label>
+          <input type="password" id="auth-password-confirm" autocomplete="new-password" style="padding: 11px 12px; border-radius: 10px; border: 1px solid #d2d2d7; background: #fafafa; color: #1d1d1f; font-size: 15px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;" />
         </div>
 
         <!-- Remember Me (only shown on Login) -->
-        <div id="auth-remember-container" style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
-          <input type="checkbox" id="auth-remember" checked style="cursor: pointer; width: 16px; height: 16px;" />
-          <label for="auth-remember" style="color: var(--grijs-licht); font-size: 13px; cursor: pointer; user-select: none;">Beni Hatırla</label>
+        <div id="auth-remember-container" style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+          <input type="checkbox" id="auth-remember" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #064e3b;" />
+          <label for="auth-remember" style="color: #6e6e73; font-size: 13px; cursor: pointer; user-select: none;">Beni Hatırla</label>
         </div>
 
         <!-- Error Message -->
-        <div id="auth-error" style="color: #ff6b6b; font-size: 13px; font-weight: bold; text-align: center; display: none;"></div>
+        <div id="auth-error" style="color: #ff3b30; font-size: 13px; font-weight: 600; text-align: center; display: none;"></div>
 
         <!-- Submit Button -->
-        <button id="auth-submit-btn" type="submit" class="btn" style="padding: 12px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; margin-top: 8px;">
+        <button id="auth-submit-btn" type="submit" style="padding: 13px; border-radius: 10px; border: none; background: #064e3b; color: #ffffff; font-weight: 600; font-size: 15px; cursor: pointer; margin-top: 6px; transition: background-color 0.15s;">
           Giriş Yap
         </button>
       </form>

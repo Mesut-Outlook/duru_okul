@@ -35,3 +35,16 @@
     return DURU.onderwerpen.filter(function (o) { return o.hoofdstuk === nr; });
   };
 })();
+
+// Storage delegation to parent window (if running in iframe) to prevent early storage read issues
+if (window.parent && window.parent !== window && window.parent.localStorage) {
+  Storage.prototype.getItem = function(key) {
+    return window.parent.localStorage.getItem(key);
+  };
+  Storage.prototype.setItem = function(key, value) {
+    window.parent.localStorage.setItem(key, value);
+  };
+  Storage.prototype.removeItem = function(key) {
+    window.parent.localStorage.removeItem(key);
+  };
+}

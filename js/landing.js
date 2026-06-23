@@ -512,12 +512,56 @@ document.addEventListener('DOMContentLoaded', function() {
     return restoredCount;
   }
 
+  function migratePreExistingLocalScores(username) {
+    var unprefixedData = [];
+    var originalGetItem = window.Storage.prototype.getItem;
+    var originalSetItem = window.Storage.prototype.setItem;
+    
+    for (var i = 0; i < localStorage.length; i++) {
+      var key = localStorage.key(i);
+      if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
+        if (key.indexOf('user_') !== 0) {
+          if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+            continue;
+          }
+          var valStr = originalGetItem.call(localStorage, key);
+          if (valStr) {
+            try {
+              var val = JSON.parse(valStr);
+              unprefixedData.push({ key: key, val: val });
+            } catch (e) {
+              console.warn('Failed to parse local unprefixed key:', key, e);
+            }
+          }
+        }
+      }
+    }
+    
+    if (unprefixedData.length > 0) {
+      var prevActiveUser = originalGetItem.call(localStorage, 'duru_active_user');
+      originalSetItem.call(localStorage, 'duru_active_user', username);
+      
+      restoreScores(unprefixedData);
+      
+      var originalRemoveItem = window.Storage.prototype.removeItem;
+      unprefixedData.forEach(function(item) {
+        originalRemoveItem.call(localStorage, item.key);
+      });
+      
+      if (prevActiveUser) {
+        originalSetItem.call(localStorage, 'duru_active_user', prevActiveUser);
+      } else {
+        originalRemoveItem.call(localStorage, 'duru_active_user');
+      }
+    }
+  }
+
   // We initialize the User Authentication interface
   initUserAuth();
 
   if (!isGitHubPages && getActiveUser()) {
     // Restore scores from server database on load if logged in (merging all historical logs)
-    fetch('/api/score')
+    fetch('/api/score?t=' + new Date().getTime())
       .then(function(res) {
         if (!res.ok) throw new Error('HTTP status ' + res.status);
         return res.json();
@@ -588,12 +632,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (tabLogin && tabRegister) {
       tabLogin.addEventListener('click', function() {
         isRegisterMode = false;
-        tabLogin.style.borderBottom = '2px solid var(--hub-hoofd)';
-        tabLogin.style.color = 'var(--wit)';
-        tabLogin.style.fontWeight = 'bold';
+        tabLogin.style.borderBottom = '2px solid #064e3b';
+        tabLogin.style.color = '#1d1d1f';
+        tabLogin.style.fontWeight = '600';
         tabRegister.style.borderBottom = '2px solid transparent';
-        tabRegister.style.color = 'var(--grijs-licht)';
-        tabRegister.style.fontWeight = 'normal';
+        tabRegister.style.color = '#6e6e73';
+        tabRegister.style.fontWeight = '400';
         if (confirmContainer) confirmContainer.style.display = 'none';
         if (rememberContainer) rememberContainer.style.display = 'flex';
         if (submitBtn) submitBtn.textContent = 'Giriş Yap';
@@ -603,12 +647,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
       tabRegister.addEventListener('click', function() {
         isRegisterMode = true;
-        tabRegister.style.borderBottom = '2px solid var(--hub-hoofd)';
-        tabRegister.style.color = 'var(--wit)';
-        tabRegister.style.fontWeight = 'bold';
+        tabRegister.style.borderBottom = '2px solid #064e3b';
+        tabRegister.style.color = '#1d1d1f';
+        tabRegister.style.fontWeight = '600';
         tabLogin.style.borderBottom = '2px solid transparent';
-        tabLogin.style.color = 'var(--grijs-licht)';
-        tabLogin.style.fontWeight = 'normal';
+        tabLogin.style.color = '#6e6e73';
+        tabLogin.style.fontWeight = '400';
         if (confirmContainer) confirmContainer.style.display = 'flex';
         if (rememberContainer) rememberContainer.style.display = 'none';
         if (submitBtn) submitBtn.textContent = 'Kayıt Ol';
@@ -658,6 +702,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // Save new user
           registerLocalUser(username, password);
+          migratePreExistingLocalScores(username);
           setActiveUser(username, true); // auto-remember on register
           window.location.reload();
         } else {
@@ -670,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function() {
               var users = getUsers();
               if (users['duru']) {
                 // Log in locally
+                migratePreExistingLocalScores('duru');
                 setActiveUser('duru', rememberMe);
                 window.location.reload();
               } else {
@@ -685,13 +731,58 @@ document.addEventListener('DOMContentLoaded', function() {
                       try {
                         // Decrypt
                         var decryptedText = xorCipher(atob(data.data), 'duru:12341234');
+                        // Oudere backup-export verloor niet-Latin1 tekens (bv. een "–" in
+                        // examtitels) door een lossy Latin1-omzetting; die bytes komen terug
+                        // als ongeldige controle-tekens die JSON.parse() laten crashen.
+                        decryptedText = decryptedText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, '–');
                         var parsedScores = JSON.parse(decryptedText);
+                        if (!parsedScores || !Array.isArray(parsedScores)) parsedScores = [];
+
+                        // Import local pre-existing unprefixed keys
+                        var originalGetItem = window.Storage.prototype.getItem;
+                        for (var i = 0; i < localStorage.length; i++) {
+                          var key = localStorage.key(i);
+                          if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
+                            if (key.indexOf('user_') !== 0) {
+                              if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+                                continue;
+                              }
+                              var valStr = originalGetItem.call(localStorage, key);
+                              if (valStr) {
+                                try {
+                                  var val = JSON.parse(valStr);
+                                  parsedScores.push({ key: key, val: val });
+                                } catch (e) {
+                                  console.warn('Failed to parse local unprefixed key:', key, e);
+                                }
+                              }
+                            }
+                          }
+                        }
                         
                         // Temporarily set active user so restoreScores writes to prefixed keys
                         setActiveUser('duru', rememberMe);
                         
-                        // Restore
+                        // Restore (this will automatically merge the backup and the local unprefixed scores!)
                         restoreScores(parsedScores);
+
+                        // Clean up the local unprefixed keys
+                        var originalRemoveItem = window.Storage.prototype.removeItem;
+                        var keysToRemove = [];
+                        for (var i = 0; i < localStorage.length; i++) {
+                          var key = localStorage.key(i);
+                          if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
+                            if (key.indexOf('user_') !== 0) {
+                              if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+                                continue;
+                              }
+                              keysToRemove.push(key);
+                            }
+                          }
+                        }
+                        keysToRemove.forEach(function(k) {
+                          originalRemoveItem.call(localStorage, k);
+                        });
                         
                         // Register locally
                         registerLocalUser('duru', '12341234');
@@ -721,6 +812,7 @@ document.addEventListener('DOMContentLoaded', function() {
           } else {
             // Regular user login
             if (validateLocalUser(username, password)) {
+              migratePreExistingLocalScores(username);
               setActiveUser(username, rememberMe);
               window.location.reload();
             } else {

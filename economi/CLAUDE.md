@@ -70,10 +70,11 @@ Ayrıntı **SPEC.md**'de. Özet:
   (monopolie/kartel), internationale handel/globalisering, arbeidsmarkt, privatisering,
   consumentenrecht, circulaire economie. (2026-06-18'de bu konulardaki 11 "extra" sınav kaldırılıp
   yerlerine H6-içi sınavlar yazıldı.)
-- Toplam **35 proeftoets** (`examen_1..35`); dosya-numarası slot'ları sabit, "Extra Proeftoets N"
-  görünen numarası = dosya no − 5 (boşluksuz 1–30). `ex-*` ID'leri kayıtlı skor geçmişinin anahtarı —
-  mevcut bir sınavın ID'sini ASLA değiştirme; sadece dosya içeriğini değiştir veya slot'u yeni ID ile
+- Toplam **63 proeftoets** (`examen_1..63`); dosya-numarası slot'ları sabit. `ex-*` ID'leri kayıtlı skor geçmişinin anahtarı —
+  mevcut bir sınavın ID'sini ASLA değiştirme; sadece dosya içeriğini değiştir of slot'u yeni ID ile
   yeniden kullan. Her "extra" sınav = 15 soru (6 mc / 4 waaronwaar / 3 invul / 2 open).
+  En yeni eklenenler: `examen_47..51` (General Herhaling I-V) ve `examen_52..63` (Paragraph-specific exams, 3 per paragraph).
+
 
 ## Bu proje nasıl üretildi (bağlam)
 - Kaynak: iCloud'daki taranmış `Economi 6.pdf` (12 sayfa, metin katmanı yok). PyMuPDF ile

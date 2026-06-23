@@ -86,7 +86,7 @@ class CustomHandler(SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        if self.path == '/api/score':
+        if self.path.startswith('/api/score'):
             scores_file = os.path.join(os.path.dirname(__file__), 'scores.json')
             if os.path.exists(scores_file):
                 try:
@@ -94,6 +94,9 @@ class CustomHandler(SimpleHTTPRequestHandler):
                         data = json.load(f)
                     self.send_response(200)
                     self.send_header('Content-type', 'application/json')
+                    self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+                    self.send_header('Pragma', 'no-cache')
+                    self.send_header('Expires', '0')
                     self.end_headers()
                     self.wfile.write(json.dumps(data).encode('utf-8'))
                     return
@@ -105,9 +108,13 @@ class CustomHandler(SimpleHTTPRequestHandler):
             else:
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json')
+                self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+                self.send_header('Pragma', 'no-cache')
+                self.send_header('Expires', '0')
                 self.end_headers()
                 self.wfile.write(b"[]")
                 return
+
         super().do_GET()
 
     def end_headers(self):
