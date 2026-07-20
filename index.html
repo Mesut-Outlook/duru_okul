@@ -10,7 +10,22 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
 
   <!-- Google Fonts worden geladen vanuit style.css via @import -->
-  <link rel="stylesheet" href="css/style.css?v=2.4" />
+  <link rel="stylesheet" href="css/style.css?v=2.7" />
+
+  <!-- Thema vroeg toepassen (voorkomt flits van verkeerde modus).
+       Keuze in localStorage 'duru_hub_theme' ('light'/'dark'); zonder
+       keuze volgt de site het OS (prefers-color-scheme). -->
+  <script>
+    (function () {
+      try {
+        var keuze = localStorage.getItem('duru_hub_theme');
+        var donker = keuze
+          ? keuze === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', donker);
+      } catch (e) { /* localStorage kan geblokkeerd zijn */ }
+    })();
+  </script>
 </head>
 <body>
 
@@ -25,6 +40,7 @@
         </div>
       </div>
       <div id="user-status-container" style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
+        <button id="theme-toggle" type="button" aria-label="Wissel tussen lichte en donkere modus" title="Licht / donker">🌙</button>
         <span id="user-display-name" style="color: var(--wit); font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--lijn);">
           👤 <span id="user-display-name-text">...</span>
         </span>
@@ -41,10 +57,10 @@
       <div class="hero-inner">
         <span class="hero-emoji" aria-hidden="true">👩‍🎓</span>
         <div class="hero-tekst">
-          <h2>Hallo Duru, klaar om te oefenen?</h2>
+          <h2>Hoi Duru 👋 Klaar voor HAVO 3?</h2>
           <p>
-            Kies hieronder een vak en ga aan de slag.
-            Elke dag een beetje oefenen maakt je een stuk slimmer — succes! 💪
+            Kies een vakgebied en ga aan de slag. Kleine stapjes, groot resultaat —
+            elke dag een beetje oefenen maakt je een stuk slimmer! ✨
           </p>
         </div>
       </div>

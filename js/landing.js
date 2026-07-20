@@ -102,13 +102,29 @@ window.Storage.prototype.removeItem = function(key) {
 // beschrijving en ofwel een href (directe link) ofwel een
 // onderwerpen-array (uitklapbare categorie).
 var VAKKEN = [
+  // ── HAVO 3 vakken (nog in opbouw — vervang met Duru's echte pakket) ──
+  // domein: 'talen' | 'exact' | 'mens'. binnenkort:true = nog geen site/data.
+  { id:'h3-nederlands',      titel:'Nederlands',      icoon:'📖', domein:'talen', beschrijving:'Lezen, schrijven & taal',        binnenkort:true },
+  { id:'h3-engels',          titel:'Engels',          icoon:'🇬🇧', domein:'talen', beschrijving:'Reading, grammar & words',        binnenkort:true },
+  { id:'h3-frans',           titel:'Frans',           icoon:'🇫🇷', domein:'talen', beschrijving:'Grammaire & vocabulaire',         binnenkort:true },
+  { id:'h3-duits',           titel:'Duits',           icoon:'🇩🇪', domein:'talen', beschrijving:'Grammatik & Wörter',              binnenkort:true },
+  { id:'h3-wiskunde',        titel:'Wiskunde',        icoon:'⚖️', domein:'exact', beschrijving:'Algebra, meetkunde & meer',       binnenkort:true },
+  { id:'h3-natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', domein:'exact', beschrijving:'Krachten, energie & meer',        binnenkort:true },
+  { id:'h3-scheikunde',      titel:'Scheikunde',      icoon:'🧪', domein:'exact', beschrijving:'Stoffen & reacties',              binnenkort:true },
+  { id:'h3-biologie',        titel:'Biologie',        icoon:'🧬', domein:'exact', beschrijving:'Cellen, organen & natuur',        binnenkort:true },
+  { id:'h3-geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', domein:'mens',  beschrijving:'Tijd, bronnen & gebeurtenissen',  binnenkort:true },
+  { id:'h3-aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', domein:'mens',  beschrijving:'Aarde, klimaat & mensen',         binnenkort:true },
+  { id:'h3-economie',        titel:'Economie',        icoon:'💶', domein:'mens',  beschrijving:'Geld, markt & keuzes',           binnenkort:true },
+  { id:'h3-maatschappijleer',titel:'Maatschappijleer',icoon:'🏛️', domein:'mens',  beschrijving:'Samenleven & rechten',           binnenkort:true },
+
   {
     id: 'natuurkunde',
     titel: 'Natuurkunde (NASK)',
     icoon: '⚛️',
     kleur: 'blauw',          // indigo/blauw accent
     beschrijving: 'Snelheid, elektriciteit en meer — oefen theorie en sommen.',
-    href: './nask/'
+    href: './archief/mavo2/nask/',
+    archief: true
   },
   {
     id: 'wiskunde',
@@ -116,7 +132,8 @@ var VAKKEN = [
     icoon: '⚖️',
     kleur: 'teal',           // teal/turquoise accent
     beschrijving: 'Hoofdstuk 8 — Vergelijkingen: termen, de balans en het snijpunt.',
-    href: './wiskunde/'
+    href: './archief/mavo2/wiskunde/',
+    archief: true
   },
   {
     id: 'economie',
@@ -124,7 +141,8 @@ var VAKKEN = [
     icoon: '💶',
     kleur: 'groen',          // groen/goud accent (past bij de Economie-site)
     beschrijving: 'De overheid, belasting en de schatkist — alles over economie.',
-    href: './economi/'
+    href: './archief/mavo2/economi/',
+    archief: true
   },
   {
     id: 'geschiedenis',
@@ -132,7 +150,8 @@ var VAKKEN = [
     icoon: '🕰️',
     kleur: 'oranje',         // warm oranje/historisch accent
     beschrijving: 'De Eerste en Tweede Wereldoorlog, het interbellum en Nederland in de oorlog.',
-    href: './geschiedenis/'
+    href: './archief/mavo2/geschiedenis/',
+    archief: true
   },
   {
     id: 'nederlands',
@@ -140,19 +159,20 @@ var VAKKEN = [
     icoon: '📖',
     kleur: 'oranje',         // warm oranje/rood accent
     beschrijving: 'Taal en leesvaardigheid — klik om de onderwerpen te zien.',
+    archief: true,
     // Geen href: dit is een uitklapbare categorie
     onderwerpen: [
       {
         titel: 'Begrijpend Lezen',
         icoon: '🧠',
         beschrijving: 'Teksten analyseren en vragen beantwoorden met Meester Max.',
-        href: './nederlands/begrijpend-lezen/'
+        href: './archief/mavo2/nederlands/begrijpend-lezen/'
       },
       {
         titel: 'Spelling & Grammatica',
         icoon: '✍️',
         beschrijving: 'Werkwoordspelling, voegwoorden, interpunctie en zinsdelen ontleden.',
-        href: './nederlands/spelling/'
+        href: './archief/mavo2/nederlands/spelling/'
       }
     ]
   }
@@ -357,23 +377,228 @@ function maakCategorieKaart(vak) {
 /**
  * Rendert alle vakken in het #vakken-grid element.
  */
+function bouwKaart(vak) {
+  return (vak.onderwerpen && vak.onderwerpen.length > 0)
+    ? maakCategorieKaart(vak)
+    : maakDirecteKaart(vak);
+}
+
+// Vakgebieden — bepaalt de logische groepering + volgorde op de landing.
+var DOMEINEN = [
+  { id: 'talen', titel: '🗣️ Talen',                 sub: 'lezen, schrijven & spreken' },
+  { id: 'exact', titel: '🔬 Exact & Natuur',         sub: 'rekenen, meten & onderzoeken' },
+  { id: 'mens',  titel: '🌍 Mens & Maatschappij',    sub: 'de wereld om je heen' }
+];
+
+/**
+ * Leest voortgang (pct + gemiddeld cijfer) van een actief HAVO 3-vak uit
+ * localStorage. Zwaar gutted met guards; ontbrekende data → nullen.
+ * @param {Object} vak  - moet vak.sleutel hebben (bv. 'duru_h3_wiskunde')
+ * @returns {{pct:number, cijfer:(string|null)}}
+ */
+function leesVakData(vak) {
+  var uit = { pct: 0, cijfer: null };
+  if (!vak.sleutel) return uit;
+  try {
+    var P = JSON.parse(localStorage.getItem(vak.sleutel + '_v1') || '{}') || {};
+    var beste = P.beste || {};
+    var vals = Object.keys(beste).map(function (k) { return Number(beste[k]) || 0; });
+    if (vals.length) {
+      uit.pct = Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / vals.length);
+    }
+    var EX = JSON.parse(localStorage.getItem(vak.sleutel + '_examens_v1') || '{}') || {};
+    var hist = (EX.history || []).filter(function (h) { return h && typeof h.pct === 'number'; });
+    if (hist.length) {
+      var beentjes = hist.map(function (h) { return 1 + (h.pct / 100) * 9; });
+      var gem = beentjes.reduce(function (a, b) { return a + b; }, 0) / beentjes.length;
+      uit.cijfer = gem.toFixed(1).replace('.', ',');
+    }
+  } catch (e) { /* corrupt/leeg → nullen */ }
+  return uit;
+}
+
+/**
+ * Bouwt een warme HAVO 3-vakkaart (of "binnenkort"-kaart als er nog geen
+ * site/data is). Actieve kaarten openen het vak in de iframe-shell.
+ * @param {Object} vak
+ * @returns {HTMLElement}
+ */
+function maakVakKaartHavo3(vak) {
+  var binnenkort = !!vak.binnenkort;
+  var el = document.createElement(binnenkort ? 'div' : 'a');
+  el.className = 'havo3-kaart havo3-kaart--' + (vak.domein || 'exact') +
+                 (binnenkort ? ' havo3-kaart--binnenkort' : '');
+
+  var rechtsboven, balk, voet;
+  if (binnenkort) {
+    rechtsboven = '<span class="havo3-chip">Binnenkort</span>';
+    balk = '';
+    voet = '<span class="havo3-kaart__cijfer"><small>nog niet beschikbaar</small></span>';
+  } else {
+    el.href = vak.href;
+    var d = leesVakData(vak);
+    rechtsboven = '<span class="havo3-pct">' + d.pct + '%</span>';
+    balk = '<div class="havo3-balk"><div class="havo3-balk__vul" style="width:' + d.pct + '%"></div></div>';
+    voet =
+      '<span class="havo3-kaart__cijfer">' +
+        (d.cijfer ? d.cijfer + ' <small>gem.</small>' : '<small>nog geen cijfer</small>') +
+      '</span>' +
+      '<span class="havo3-kaart__ga">Verder →</span>';
+  }
+
+  el.innerHTML =
+    '<div class="havo3-kaart__top">' +
+      '<span class="havo3-kaart__icoon">' + vak.icoon + '</span>' + rechtsboven +
+    '</div>' +
+    '<div><p class="havo3-kaart__naam">' + vak.titel + '</p>' +
+      '<p class="havo3-kaart__hfd">' + (vak.beschrijving || '') + '</p></div>' +
+    balk +
+    '<div class="havo3-kaart__voet">' + voet + '</div>';
+
+  if (!binnenkort) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openInIframe(vak.href, vak.icoon, vak.titel);
+    });
+  }
+  return el;
+}
+
 function renderVakken() {
   var grid = document.getElementById('vakken-grid');
   if (!grid) return;
+  grid.innerHTML = '';
 
-  VAKKEN.forEach(function(vak) {
-    var kaart;
-    if (vak.onderwerpen && vak.onderwerpen.length > 0) {
-      kaart = maakCategorieKaart(vak);
-    } else {
-      kaart = maakDirecteKaart(vak);
-    }
-    grid.appendChild(kaart);
+  // Splits actieve (HAVO 3) vakken en gearchiveerde (MAVO 2) vakken.
+  var actief = [];
+  var archief = [];
+  VAKKEN.forEach(function (vak) {
+    (vak.archief ? archief : actief).push(vak);
   });
+
+  if (actief.length === 0) {
+    // Nog geen enkel HAVO 3-vak: vriendelijke placeholder.
+    grid.classList.remove('heeft-domeinen');
+    var ph = document.createElement('div');
+    ph.className = 'havo3-placeholder';
+    ph.innerHTML =
+      '<span class="havo3-placeholder__icoon" aria-hidden="true">📘</span>' +
+      '<strong>HAVO 3 vakken komen eraan</strong>' +
+      '<span>Zodra Duru een hoofdstuk af heeft, voegen we het materiaal toe en maken we de toetsen klaar.</span>';
+    grid.appendChild(ph);
+  } else {
+    // Groepeer actieve vakken per vakgebied (domein) in aparte secties.
+    grid.classList.add('heeft-domeinen');
+    DOMEINEN.forEach(function (dom) {
+      var vakken = actief.filter(function (v) { return (v.domein || 'exact') === dom.id; });
+      if (vakken.length === 0) return;
+
+      var sectie = document.createElement('section');
+      sectie.className = 'havo3-domein d-' + dom.id;
+      sectie.innerHTML =
+        '<div class="havo3-domein__kop">' +
+          '<span class="havo3-domein__streep" aria-hidden="true"></span>' +
+          '<h2>' + dom.titel + '</h2><span>' + dom.sub + '</span>' +
+        '</div>';
+
+      var g = document.createElement('div');
+      g.className = 'havo3-grid';
+      vakken.forEach(function (v) { g.appendChild(maakVakKaartHavo3(v)); });
+      sectie.appendChild(g);
+      grid.appendChild(sectie);
+    });
+  }
+
+  // Arşiv (MAVO 2) — inklapbare sectie onder het grid.
+  if (archief.length > 0) renderArchief(archief);
+}
+
+/**
+ * Rendert de inklapbare "Arşiv (MAVO 2)"-sectie met de gearchiveerde vakken.
+ * @param {Array} archief
+ */
+function renderArchief(archief) {
+  var grid = document.getElementById('vakken-grid');
+  if (!grid || !grid.parentNode) return;
+  if (document.getElementById('archief-sectie')) return; // niet dubbel renderen
+
+  var sectie = document.createElement('section');
+  sectie.className = 'archief-sectie';
+  sectie.id = 'archief-sectie';
+  sectie.setAttribute('aria-label', 'Archief MAVO 2');
+
+  var toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'archief-toggle';
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-controls', 'archief-grid');
+  toggle.innerHTML =
+    '<span class="archief-toggle__label">🗄️ Archief (MAVO 2) — vorig jaar</span>' +
+    '<span class="archief-pijl" aria-hidden="true">▾</span>';
+
+  var box = document.createElement('div');
+  box.className = 'archief-grid';
+  box.id = 'archief-grid';
+  box.hidden = true;
+  archief.forEach(function(vak) { box.appendChild(bouwKaart(vak)); });
+
+  toggle.addEventListener('click', function() {
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+    box.hidden = open;
+    var pijl = toggle.querySelector('.archief-pijl');
+    if (pijl) pijl.textContent = open ? '▾' : '▴';
+  });
+
+  sectie.appendChild(toggle);
+  sectie.appendChild(box);
+  // Direct na het grid plaatsen, vóór de tip-banner.
+  grid.parentNode.insertBefore(sectie, grid.nextSibling);
 }
 
 // ── Init bij DOM-gereed ───────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
+
+  // ── Thema-schakelaar (licht/donker) ─────────────────────────
+  // Keuze in localStorage 'duru_hub_theme' ('light'/'dark'). Zonder
+  // keuze volgt de site het OS. Het <head>-script heeft de .dark-klasse
+  // al gezet vóór het renderen; hier houden we knop-icoon + klik bij.
+  (function initTheme() {
+    var THEME_KEY = 'duru_hub_theme';
+    var btn = document.getElementById('theme-toggle');
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function opgeslagen() {
+      try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
+    }
+    function isDonker() {
+      var k = opgeslagen();
+      return k ? k === 'dark' : mq.matches;
+    }
+    function pasToe(donker) {
+      document.documentElement.classList.toggle('dark', donker);
+      if (btn) {
+        // Toon het icoon van de modus waar je NAARTOE schakelt.
+        btn.textContent = donker ? '☀️' : '🌙';
+        btn.setAttribute('aria-pressed', String(donker));
+      }
+    }
+
+    pasToe(isDonker());
+
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var nieuwDonker = !document.documentElement.classList.contains('dark');
+        try { localStorage.setItem(THEME_KEY, nieuwDonker ? 'dark' : 'light'); } catch (e) {}
+        pasToe(nieuwDonker);
+      });
+    }
+
+    // Volg live het OS-thema zolang de gebruiker zelf niets koos.
+    var onSysteem = function() { if (!opgeslagen()) pasToe(mq.matches); };
+    if (mq.addEventListener) mq.addEventListener('change', onSysteem);
+    else if (mq.addListener) mq.addListener(onSysteem);
+  })();
 
   var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
 

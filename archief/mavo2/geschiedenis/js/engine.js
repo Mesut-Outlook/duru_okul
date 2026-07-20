@@ -1,5 +1,5 @@
 /* =========================================================
-   Duru's Economie Academie — Engine
+   Duru's Geschiedenis Academie — Engine
    Routing · voortgang (XP/streak/badges) · quizmotor · effecten
    ========================================================= */
 (function () {
@@ -7,7 +7,7 @@
   var app = document.getElementById("app");
 
   /* ---------------- Voortgang (localStorage) ---------------- */
-  var SLEUTEL = "duru_economi_v1";
+  var SLEUTEL = "duru_geschiedenis_v1";
   var P = laad();
 
   function laad() {
@@ -28,11 +28,11 @@
   /* ---------------- Badges ---------------- */
   var BADGES = [
     { id: "start", ico: "🚀", naam: "Eerste stap", check: function () { return P.xp >= 10; } },
-    { id: "staatskenner", ico: "🏛️", naam: "Staatskenner", check: function () { return klaarHoofdstuk(6); } },
-    { id: "belastingbaas", ico: "💶", naam: "Belastingbaas", check: function () { return P.xp >= 250; } },
+    { id: "tijdreiziger", ico: "🕰️", naam: "Tijdreiziger", check: function () { return klaarHoofdstuk(4); } },
+    { id: "geschiedkundige", ico: "📚", naam: "Geschiedkundige", check: function () { return P.xp >= 250; } },
     { id: "vlam", ico: "🔥", naam: "10 op rij", check: function () { return (P.maxStreak || 0) >= 10; } },
     { id: "ster", ico: "⭐", naam: "Perfecte toets", check: function () { return P.perfect; } },
-    { id: "prof", ico: "🎓", naam: "Economie-professor", check: function () { return P.xp >= 500; } },
+    { id: "prof", ico: "🎓", naam: "Geschiedenis-historicus", check: function () { return P.xp >= 500; } },
   ];
   function klaarHoofdstuk(nr) {
     var ow = DURU.onderwerpenVan(nr);
@@ -119,15 +119,42 @@
 
     // Oefentoetsen-sectie (op tijd, met cijfer en uitleg)
     if (DURU.examens && DURU.examens.length) {
+      // Lees de examen-geschiedenis (zelfde sleutel als het dashboard) zodat de
+      // kaarten tonen of een toets al gemaakt is, het laatste cijfer en — bij
+      // meerdere pogingen — het gemiddelde cijfer.
+      var exDataHome;
+      try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
+      exDataHome.history = exDataHome.history || [];
+
       html += '<div class="sectie-titel"><h3>📝 Oefentoetsen — test jezelf op tijd!</h3><div class="lijn"></div></div>';
       html += '<p style="margin:0 4px 14px;color:var(--grijs)">Doe een echte proeftoets met een klok. Aan het eind krijg je je cijfer én bij elke vraag <b>hoe je het moet doen</b>.</p>';
       html += '<div class="grid cols-3">';
       DURU.examens.forEach(function (ex) {
+        var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
+        var statusHtml;
+        if (atts.length > 0) {
+          // history staat nieuwste vooraan → atts[0] = laatste poging
+          var pcts = atts.map(function (a) { return a.pct || 0; });
+          var laatstePct = pcts[0];
+          var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
+          statusHtml =
+            '<div class="ex-status">' +
+              '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
+              '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste cijfer: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
+              (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld cijfer: ' + cijferStr(gemPct) + '</div>' : '') +
+            '</div>';
+        } else {
+          statusHtml =
+            '<div class="ex-status">' +
+              '<span class="tag">Proeftoets</span>' +
+              '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
+            '</div>';
+        }
         html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
           '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
           '<h4>' + ex.titel + '</h4>' +
           '<p>' + (ex.vragen.length) + ' vragen · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
-          '<span class="tag">Proeftoets</span></div>';
+          statusHtml + '</div>';
       });
       html += '</div>';
     }

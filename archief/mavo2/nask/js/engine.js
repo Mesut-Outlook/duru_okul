@@ -1,5 +1,5 @@
 /* =========================================================
-   Duru's Wiskunde Academie — Engine
+   Duru's NASK Academie — Engine
    Routing · voortgang (XP/streak/badges) · quizmotor · effecten
    ========================================================= */
 (function () {
@@ -7,7 +7,7 @@
   var app = document.getElementById("app");
 
   /* ---------------- Voortgang (localStorage) ---------------- */
-  var SLEUTEL = "duru_wiskunde_v1";
+  var SLEUTEL = "duru_nask_v1";
   var P = laad();
 
   function laad() {
@@ -27,12 +27,12 @@
 
   /* ---------------- Badges ---------------- */
   var BADGES = [
-    { id: "start",    ico: "🚀", naam: "Eerste stap",         check: function () { return P.xp >= 10; } },
-    { id: "vergelijk",ico: "⚖️", naam: "Vergelijkingsmeester", check: function () { return klaarHoofdstuk(8); } },
-    { id: "vlam",     ico: "🔥", naam: "10 op rij",           check: function () { return (P.maxStreak || 0) >= 10; } },
-    { id: "ster",     ico: "⭐", naam: "Perfecte test",        check: function () { return P.perfect; } },
-    { id: "prof",     ico: "🎓", naam: "Wiskunde-professor",   check: function () { return P.xp >= 500; } },
-    { id: "rekenwonder", ico: "🧮", naam: "Rekenwonder",       check: function () { return P.xp >= 200; } },
+    { id: "start", ico: "🚀", naam: "Eerste stap", check: function () { return P.xp >= 10; } },
+    { id: "snel50", ico: "🏎️", naam: "Snelheidsduivel", check: function () { return klaarHoofdstuk(4); } },
+    { id: "stroom", ico: "⚡", naam: "Stroombaas", check: function () { return klaarHoofdstuk(6); } },
+    { id: "vlam", ico: "🔥", naam: "10 op rij", check: function () { return (P.maxStreak || 0) >= 10; } },
+    { id: "ster", ico: "⭐", naam: "Perfecte test", check: function () { return P.perfect; } },
+    { id: "prof", ico: "🎓", naam: "NASK-professor", check: function () { return P.xp >= 500; } },
   ];
   function klaarHoofdstuk(nr) {
     var ow = DURU.onderwerpenVan(nr);
@@ -60,7 +60,7 @@
     var c = document.getElementById("confetti");
     c.width = innerWidth; c.height = innerHeight;
     var ctx = c.getContext("2d");
-    var kleuren = ["#0d9488", "#14b8a6", "#ec4899", "#f97316", "#fbbf24", "#2563eb"];
+    var kleuren = ["#6d28d9", "#ec4899", "#f97316", "#fbbf24", "#16a34a", "#2563eb"];
     var deeltjes = [];
     for (var i = 0; i < 140; i++) {
       deeltjes.push({
@@ -106,12 +106,12 @@
     var html = "";
 
     html += '<section class="hero view">' +
-      '<div class="mascotte">🧮</div>' +
-      '<div><h2>Hoi Duru! Klaar om te rekenen? 🔢</h2>' +
-      '<p>Welkom in jouw eigen Wiskunde-academie. Leer alles over <b>vergelijkingen</b>, ' +
+      '<div class="mascotte">👩‍🔬</div>' +
+      '<div><h2>Hoi Duru! Klaar om te scoren? ⚡</h2>' +
+      '<p>Welkom in jouw eigen NASK-academie. Leer alles over <b>snelheid</b> en <b>elektriciteit</b>, ' +
       'oefen met ' + totaalVragen + ' vragen en verzamel medailles. Jij gaat die toets máken! 💪</p>' +
       '<div class="hero-cta">' +
-      '<button class="btn teal" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
+      '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'examens\')">📝 Oefentoetsen</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'badges\')">🏅 Mijn medailles</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'dashboard\')">📊 Mijn dashboard</button>' +
@@ -121,13 +121,38 @@
     if (DURU.examens && DURU.examens.length) {
       html += '<div class="sectie-titel"><h3>📝 Oefentoetsen — test jezelf op tijd!</h3><div class="lijn"></div></div>';
       html += '<p style="margin:0 4px 14px;color:var(--grijs)">Doe een echte proeftoets met een klok. Aan het eind krijg je je cijfer én bij elke vraag <b>hoe je het moet doen</b>.</p>';
+      // Lees de examen-geschiedenis (zelfde sleutel als het dashboard) zodat de
+      // kaarten tonen of een toets al gemaakt is, het laatste cijfer en — bij
+      // meerdere pogingen — het gemiddelde cijfer.
+      var exDataHome;
+      try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
+      exDataHome.history = exDataHome.history || [];
       html += '<div class="grid cols-3">';
       DURU.examens.forEach(function (ex) {
+        var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
+        var statusHtml;
+        if (atts.length > 0) {
+          var pcts = atts.map(function (a) { return a.pct || 0; });
+          var laatstePct = pcts[0];
+          var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
+          statusHtml =
+            '<div class="ex-status">' +
+              '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
+              '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste cijfer: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
+              (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld cijfer: ' + cijferStr(gemPct) + '</div>' : '') +
+            '</div>';
+        } else {
+          statusHtml =
+            '<div class="ex-status">' +
+              '<span class="tag">Proeftoets</span>' +
+              '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
+            '</div>';
+        }
         html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
-          '<div class="ico" style="background:var(--teal-zacht)">' + (ex.icoon || "📝") + '</div>' +
+          '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
           '<h4>' + ex.titel + '</h4>' +
           '<p>' + (ex.vragen.length) + ' vragen · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
-          '<span class="tag">Proeftoets</span></div>';
+          statusHtml + '</div>';
       });
       html += '</div>';
     }
@@ -153,7 +178,7 @@
       html += '</div>';
     });
 
-    html += '<div class="footer">Gemaakt met 🔢 en 💙 voor Duru · Wiskunde MAVO 2</div>';
+    html += '<div class="footer">Gemaakt met ⚡ en 💜 voor Duru · NASK MAVO 2</div>';
     app.innerHTML = html;
     updateStats();
   }
@@ -168,7 +193,7 @@
     html += (o.theorie || "<p>(Nog geen theorie.)</p>");
     html += '</div></div>';
     html += '<div style="margin-top:22px;text-align:center">' +
-      '<button class="btn teal" onclick="DURU.gaNaar(\'quiz\',\'' + o.id + '\')">✅ Start de oefentoets (' + o.vragen.length + ' vragen)</button>' +
+      '<button class="btn groen" onclick="DURU.gaNaar(\'quiz\',\'' + o.id + '\')">✅ Start de oefentoets (' + o.vragen.length + ' vragen)</button>' +
       '</div>';
     // navigatie volgende/vorige
     var idx = DURU.onderwerpen.indexOf(o);
@@ -354,7 +379,7 @@
       '</svg><div class="pct">' + pct + '%</div></div>';
     html += '<div class="samenvatting">Je had <b>' + Q.goed + ' van de ' + totaal + '</b> vragen goed.<br>' + msg + '</div>';
     html += '<div class="acties">' +
-      '<button class="btn teal" onclick="DURU.gaNaar(\'quiz\',\'' + o.id + '\')">🔁 Opnieuw oefenen</button>' +
+      '<button class="btn groen" onclick="DURU.gaNaar(\'quiz\',\'' + o.id + '\')">🔁 Opnieuw oefenen</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'theorie\',\'' + o.id + '\')">📖 Lees theorie</button>' +
       '<button class="btn oranje" onclick="DURU.gaNaar(\'home\')">🏠 Naar overzicht</button>' +
       '</div></div></div>';
@@ -376,6 +401,7 @@
     var pogingen = P.pogingen || {};
     var beste = P.beste || {};
 
+    // Samenvatting statistieken
     var totaalOefenSessies = Object.keys(pogingen).reduce(function (s, k) { return s + (pogingen[k] || 0); }, 0);
     var geoefendOnderwerpen = DURU.onderwerpen.filter(function (o) { return (pogingen[o.id] || 0) > 0 || (beste[o.id] || 0) > 0; }).length;
     var totaalOnderwerpen = DURU.onderwerpen.length;
@@ -401,13 +427,14 @@
       html += '<div style="font-size:64px;margin-bottom:16px;">🚀</div>';
       html += '<h3 style="margin-bottom:10px;">Nog niets te zien hier!</h3>';
       html += '<p style="color:var(--grijs);margin-bottom:24px;">Begin met oefenen of doe een proeftoets — dan zie je hier jouw voortgang en cijfers.</p>';
-      html += '<button class="btn teal" onclick="DURU.gaNaar(\'home\')">▶️ Ga aan de slag</button>';
+      html += '<button class="btn oranje" onclick="DURU.gaNaar(\'home\')">▶️ Ga aan de slag</button>';
       html += '</div>';
       app.innerHTML = html;
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
+    // Samenvatting kaartjes
     html += '<div class="grid cols-3" style="margin-bottom:28px;">';
     html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
       '<div style="font-size:32px;">🎯</div>' +
@@ -431,6 +458,7 @@
       '<div style="font-size:28px;font-weight:800;">' + geoefendOnderwerpen + '<span style="font-size:16px;font-weight:600;color:var(--grijs);">/' + totaalOnderwerpen + '</span></div></div>';
     html += '</div>';
 
+    // Oefenen per onderwerp
     html += '<div class="sectie-titel"><h3>📖 Oefenen per onderwerp</h3><div class="lijn"></div></div>';
     DURU.hoofdstukken.forEach(function (h) {
       var ow = DURU.onderwerpenVan(h.nr);
@@ -453,7 +481,7 @@
 
     html += '<div class="sectie-titel"><h3>🧪 Proeftoetsen</h3><div class="lijn"></div></div>';
     
-    // Sort all registered Wiskunde exams by their numerical ID
+    // Sort all registered NASK exams by their numerical ID
     var sortedExamens = (DURU.examens || []).slice().sort(function (a, b) {
       var nA = 0, nB = 0;
       var mA = a.id.match(/\d+/), mB = b.id.match(/\d+/);

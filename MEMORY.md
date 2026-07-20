@@ -165,3 +165,35 @@ This document serves as the project's global memory log, preserving all overall 
 * **Reading Comprehension Key**:
   - Key: `begrijpend_lezen_history`
   - *Data Format*: Flat array of attempts: `[ { timestamp: ISOString, score: Number, total: Number, grade: String, startingText: String } ]`
+
+---
+
+## 📅 Milestone 7: MAVO 2 → HAVO 3 geçişi + ortak dokümantasyon yapısı (2026-07-20)
+* **Hedef**: Duru HAVO 3'e geçti. MAVO 2 içeriğini arşivleyip, yeni HAVO 3 dönemi için altyapı
+  (ortak dokümantasyon + belge→sınav üretim hattı + Opus↔agy koordinasyonu) kurmak.
+* **Sonuç**:
+  1. **Kanonik `docs/`** oluşturuldu: `ENGINE_SPEC.md` (DURU veri sözleşmesinin tek doğru kaynağı,
+     4 SPEC.md'deki tekrarı toplar), `DOC_STANDARD.md` (tüm CLAUDE.md/MEMORY.md için ortak iskelet +
+     dil kuralı: dev-dokümanları Türkçe, öğrenci-içeriği Flamanca), `PIPELINE.md` (belge→sınav hattı
+     + model/agent politikası).
+  2. **Kök `CLAUDE.md`** HAVO 3 dönemine göre yeniden yazıldı: arşiv, `docs/` işaretçileri, model
+     politikası (planlama=Opus, üretim=Sonnet/Haiku alt-agent veya agy), ders-ekleme 6 dokunma noktası.
+  3. **`coordination.md`** Opus↔agy protokolüne oturtuldu (görev şeması + durum döngüsü). agy'nin
+     canlı olduğu doğrulandı (16:15'te yokladı). agy = Google Antigravity SDK; mevcut kullanım
+     `nederlands/begrijpend-lezen/generate_exam_agy.py`.
+  4. **`inbox/`** açıldı (ders materyali bırakma alanı; PDF/Word/görsel).
+* **Kim**: Opus (plan + tüm altyapı dosyaları).
+* **TASK-01 tamamlandı (2026-07-20)**: 5 MAVO 2 dersi `git mv` ile `archief/mavo2/`'ye taşındı;
+  `js/landing.js` `renderVakken` aktif/arşiv ayrımı + açılır "Archief (MAVO 2)" bölümü + HAVO 3
+  placeholder; `css/style.css` tema-güvenli `.archief-*`/`.havo3-placeholder`; `index.html` `?v=2.6`.
+  Global localStorage anahtarları değişmedi → eski skorlar/dashboard korunuyor.
+* **TASK-02 tamamlandı (2026-07-20)**: HAVO 3 landing yeniden tasarlandı — sıcak-arkadaşça tarz,
+  alan-gruplu düzen (Talen / Exact & Natuur / Mens & Maatschappij). `js/landing.js`'e `domein` alanı
+  + 12 tipik HAVO 3 dersi (`binnenkort:true`); `renderVakken` alanlara göre gruplar, `maakVakKaartHavo3`
+  sıcak kartlar basar, `leesVakData` ilerlemeyi `duru_h3_<vak>_v1`'den okur; `css/style.css` scoped
+  `.havo3-*` (tema-güvenli); `index.html` `?v=2.7` + yeni hero. Dersler tipik pakket (Duru'nun gerçek
+  listesi gelince güncellenecek).
+* **Sıradaki**: (1) Duru'nun gerçek HAVO 3 pakketini `VAKKEN`'e işle. (2) İlk ders içeriği gelince
+  `havo3/<vak>/` sitesini `duru_h3_<vak>_v1` slug'ıyla kur, kartı `binnenkort:false` + `href` yap,
+  `sleutel:'duru_h3_<vak>'` ekle (kart ilerleme/cijfer gösterir). (3) Dashboard/statistieken view'ını
+  da HAVO 3 sıcak temaya uyarlamak (henüz yapılmadı; ayrı iş).

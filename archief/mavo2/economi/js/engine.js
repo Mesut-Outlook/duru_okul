@@ -1,5 +1,5 @@
 /* =========================================================
-   Duru's NASK Academie — Engine
+   Duru's Economie Academie — Engine
    Routing · voortgang (XP/streak/badges) · quizmotor · effecten
    ========================================================= */
 (function () {
@@ -7,7 +7,7 @@
   var app = document.getElementById("app");
 
   /* ---------------- Voortgang (localStorage) ---------------- */
-  var SLEUTEL = "duru_nask_v1";
+  var SLEUTEL = "duru_economi_v1";
   var P = laad();
 
   function laad() {
@@ -28,11 +28,11 @@
   /* ---------------- Badges ---------------- */
   var BADGES = [
     { id: "start", ico: "🚀", naam: "Eerste stap", check: function () { return P.xp >= 10; } },
-    { id: "snel50", ico: "🏎️", naam: "Snelheidsduivel", check: function () { return klaarHoofdstuk(4); } },
-    { id: "stroom", ico: "⚡", naam: "Stroombaas", check: function () { return klaarHoofdstuk(6); } },
+    { id: "staatskenner", ico: "🏛️", naam: "Staatskenner", check: function () { return klaarHoofdstuk(6); } },
+    { id: "belastingbaas", ico: "💶", naam: "Belastingbaas", check: function () { return P.xp >= 250; } },
     { id: "vlam", ico: "🔥", naam: "10 op rij", check: function () { return (P.maxStreak || 0) >= 10; } },
-    { id: "ster", ico: "⭐", naam: "Perfecte test", check: function () { return P.perfect; } },
-    { id: "prof", ico: "🎓", naam: "NASK-professor", check: function () { return P.xp >= 500; } },
+    { id: "ster", ico: "⭐", naam: "Perfecte toets", check: function () { return P.perfect; } },
+    { id: "prof", ico: "🎓", naam: "Economie-professor", check: function () { return P.xp >= 500; } },
   ];
   function klaarHoofdstuk(nr) {
     var ow = DURU.onderwerpenVan(nr);
@@ -107,8 +107,8 @@
 
     html += '<section class="hero view">' +
       '<div class="mascotte">👩‍🔬</div>' +
-      '<div><h2>Hoi Duru! Klaar om te scoren? ⚡</h2>' +
-      '<p>Welkom in jouw eigen NASK-academie. Leer alles over <b>snelheid</b> en <b>elektriciteit</b>, ' +
+      '<div><h2>Hoi Duru! Klaar om te scoren? 🏛️</h2>' +
+      '<p>Welkom in jouw eigen economie-academie. Leer alles over <b>de overheid</b> en <b>economie</b>, ' +
       'oefen met ' + totaalVragen + ' vragen en verzamel medailles. Jij gaat die toets máken! 💪</p>' +
       '<div class="hero-cta">' +
       '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
@@ -121,13 +121,38 @@
     if (DURU.examens && DURU.examens.length) {
       html += '<div class="sectie-titel"><h3>📝 Oefentoetsen — test jezelf op tijd!</h3><div class="lijn"></div></div>';
       html += '<p style="margin:0 4px 14px;color:var(--grijs)">Doe een echte proeftoets met een klok. Aan het eind krijg je je cijfer én bij elke vraag <b>hoe je het moet doen</b>.</p>';
+      // Lees de examen-geschiedenis (zelfde sleutel als het dashboard) zodat de
+      // kaarten tonen of een toets al gemaakt is, het laatste cijfer en — bij
+      // meerdere pogingen — het gemiddelde cijfer.
+      var exDataHome;
+      try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
+      exDataHome.history = exDataHome.history || [];
       html += '<div class="grid cols-3">';
       DURU.examens.forEach(function (ex) {
+        var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
+        var statusHtml;
+        if (atts.length > 0) {
+          var pcts = atts.map(function (a) { return a.pct || 0; });
+          var laatstePct = pcts[0];
+          var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
+          statusHtml =
+            '<div class="ex-status">' +
+              '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
+              '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste cijfer: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
+              (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld cijfer: ' + cijferStr(gemPct) + '</div>' : '') +
+            '</div>';
+        } else {
+          statusHtml =
+            '<div class="ex-status">' +
+              '<span class="tag">Proeftoets</span>' +
+              '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
+            '</div>';
+        }
         html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
           '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
           '<h4>' + ex.titel + '</h4>' +
           '<p>' + (ex.vragen.length) + ' vragen · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
-          '<span class="tag">Proeftoets</span></div>';
+          statusHtml + '</div>';
       });
       html += '</div>';
     }
@@ -153,7 +178,7 @@
       html += '</div>';
     });
 
-    html += '<div class="footer">Gemaakt met ⚡ en 💜 voor Duru · NASK MAVO 2</div>';
+    html += '<div class="footer">Gemaakt met 🏛️ en 💜 voor Duru · Economie MAVO 2</div>';
     app.innerHTML = html;
     updateStats();
   }
@@ -376,7 +401,6 @@
     var pogingen = P.pogingen || {};
     var beste = P.beste || {};
 
-    // Samenvatting statistieken
     var totaalOefenSessies = Object.keys(pogingen).reduce(function (s, k) { return s + (pogingen[k] || 0); }, 0);
     var geoefendOnderwerpen = DURU.onderwerpen.filter(function (o) { return (pogingen[o.id] || 0) > 0 || (beste[o.id] || 0) > 0; }).length;
     var totaalOnderwerpen = DURU.onderwerpen.length;
@@ -409,7 +433,6 @@
       return;
     }
 
-    // Samenvatting kaartjes
     html += '<div class="grid cols-3" style="margin-bottom:28px;">';
     html += '<div class="topic-card" style="cursor:default;text-align:center;padding:18px 12px;">' +
       '<div style="font-size:32px;">🎯</div>' +
@@ -433,7 +456,6 @@
       '<div style="font-size:28px;font-weight:800;">' + geoefendOnderwerpen + '<span style="font-size:16px;font-weight:600;color:var(--grijs);">/' + totaalOnderwerpen + '</span></div></div>';
     html += '</div>';
 
-    // Oefenen per onderwerp
     html += '<div class="sectie-titel"><h3>📖 Oefenen per onderwerp</h3><div class="lijn"></div></div>';
     DURU.hoofdstukken.forEach(function (h) {
       var ow = DURU.onderwerpenVan(h.nr);
@@ -456,10 +478,10 @@
 
     html += '<div class="sectie-titel"><h3>🧪 Proeftoetsen</h3><div class="lijn"></div></div>';
     
-    // Sort all registered NASK exams by their numerical ID
+    // Sort all registered Economie exams by their numerical title
     var sortedExamens = (DURU.examens || []).slice().sort(function (a, b) {
       var nA = 0, nB = 0;
-      var mA = a.id.match(/\d+/), mB = b.id.match(/\d+/);
+      var mA = a.titel.match(/\d+/), mB = b.titel.match(/\d+/);
       if (mA) nA = parseInt(mA[0], 10);
       if (mB) nB = parseInt(mB[0], 10);
       return nA - nB;

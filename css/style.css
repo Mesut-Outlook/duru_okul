@@ -68,30 +68,61 @@
   --font-tekst: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
-/* ── Donkere modus ───────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --hub-achter:  #061a12;
-    --hub-gradient: linear-gradient(135deg, #065f46 0%, #34d399 100%);
-    --wit:         #0a2e22;
-    --inkt:        #ecfdf5;
-    --grijs:       #94a3b8;
-    --grijs-licht: #475569;
-    --lijn:        #104030;
+/* ── Donkere modus ───────────────────────────────────────────
+   Handmatig geregeld via de klasse .dark op <html>. js/landing.js
+   zet deze klasse op basis van de opgeslagen keuze (duru_hub_theme)
+   of — als er geen keuze is — op basis van het OS (prefers-color-scheme).
+   Eén bron van waarheid: alle donkere regels hangen aan html.dark. */
+html.dark {
+  --hub-achter:  #061a12;
+  --hub-gradient: linear-gradient(135deg, #065f46 0%, #34d399 100%);
+  --wit:         #0a2e22;
+  --inkt:        #ecfdf5;
+  --grijs:       #94a3b8;
+  --grijs-licht: #475569;
+  --lijn:        #104030;
 
-    --blauw-zacht: #1e2d4a;
-    --groen-zacht: #0f2318;
-    --oranje-zacht:#2a1608;
-    --teal-zacht:  #0c2a27;
+  --blauw-zacht: #1e2d4a;
+  --groen-zacht: #0f2318;
+  --oranje-zacht:#2a1608;
+  --teal-zacht:  #0c2a27;
 
-    --schaduw-sm:  0 1px 4px rgba(0,0,0,.25);
-    --schaduw:     0 6px 22px rgba(0,0,0,.35);
-    --schaduw-lg:  0 18px 44px rgba(0,0,0,.55);
-    --schaduw-kleur-blauw:  0 8px 28px rgba(59,130,246,.15);
-    --schaduw-kleur-groen:  0 8px 28px rgba(22,163,74,.15);
-    --schaduw-kleur-oranje: 0 8px 28px rgba(249,115,22,.15);
-    --schaduw-kleur-teal:   0 8px 28px rgba(20,184,166,.15);
-  }
+  --schaduw-sm:  0 1px 4px rgba(0,0,0,.25);
+  --schaduw:     0 6px 22px rgba(0,0,0,.35);
+  --schaduw-lg:  0 18px 44px rgba(0,0,0,.55);
+  --schaduw-kleur-blauw:  0 8px 28px rgba(59,130,246,.15);
+  --schaduw-kleur-groen:  0 8px 28px rgba(22,163,74,.15);
+  --schaduw-kleur-oranje: 0 8px 28px rgba(249,115,22,.15);
+  --schaduw-kleur-teal:   0 8px 28px rgba(20,184,166,.15);
+}
+
+html.dark .vak-kaart--blauw {
+  --card-bg: var(--blauw-zacht);
+  --card-border: rgba(59, 130, 246, 0.2);
+  --card-border-left: var(--blauw-licht);
+  --card-text-title: #ffffff;
+  --card-text-desc: rgba(219, 234, 254, 0.85);
+}
+html.dark .vak-kaart--teal {
+  --card-bg: var(--teal-zacht);
+  --card-border: rgba(20, 184, 166, 0.2);
+  --card-border-left: var(--teal-licht);
+  --card-text-title: #ffffff;
+  --card-text-desc: rgba(204, 251, 241, 0.85);
+}
+html.dark .vak-kaart--groen {
+  --card-bg: var(--groen-zacht);
+  --card-border: rgba(22, 163, 74, 0.2);
+  --card-border-left: var(--groen-licht);
+  --card-text-title: #ffffff;
+  --card-text-desc: rgba(220, 252, 231, 0.85);
+}
+html.dark .vak-kaart--oranje {
+  --card-bg: var(--oranje-zacht);
+  --card-border: rgba(249, 115, 22, 0.2);
+  --card-border-left: var(--oranje-licht);
+  --card-text-title: #ffffff;
+  --card-text-desc: rgba(255, 237, 213, 0.85);
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
@@ -115,14 +146,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background:
-      radial-gradient(ellipse 1200px 500px at 110%  -5%, #042f1a 0, transparent 55%),
-      radial-gradient(ellipse  800px 500px at  -5% 15%, #022c22 0, transparent 55%),
-      radial-gradient(ellipse  700px 400px at  50% 95%, #064e3b 0, transparent 60%),
-      var(--hub-achter);
-  }
+html.dark body {
+  background:
+    radial-gradient(ellipse 1200px 500px at 110%  -5%, #042f1a 0, transparent 55%),
+    radial-gradient(ellipse  800px 500px at  -5% 15%, #022c22 0, transparent 55%),
+    radial-gradient(ellipse  700px 400px at  50% 95%, #064e3b 0, transparent 60%),
+    var(--hub-achter);
 }
 
 /* ── Page Wrapper ────────────────────────────────────────── */
@@ -144,9 +173,7 @@ body {
   transition: background .3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .topbar { background: rgba(10, 46, 34, .82); }
-}
+html.dark .topbar { background: rgba(10, 46, 34, .82); }
 
 .topbar-in {
   max-width: 900px;
@@ -161,6 +188,37 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* ── Thema-schakelaar (licht/donker) ─────────────────────── */
+#theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  color: var(--inkt);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--schaduw-sm);
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+}
+
+#theme-toggle:hover {
+  transform: translateY(-1px) rotate(-8deg);
+  box-shadow: var(--schaduw);
+}
+
+#theme-toggle:active { transform: translateY(0); }
+
+#theme-toggle:focus-visible {
+  outline: 3px solid var(--hub-hoofd);
+  outline-offset: 2px;
 }
 
 .merk-logo {
@@ -192,12 +250,12 @@ body {
 
 /* ── Hero-banner ─────────────────────────────────────────── */
 .hero {
-  margin-top: 20px;
+  margin-top: 14px;
   background: var(--hub-gradient);
   color: #fff;
-  border-radius: var(--radius-lg);
-  padding: 20px 24px;
-  box-shadow: var(--schaduw-lg);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  box-shadow: var(--schaduw);
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -236,25 +294,25 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius);
-  padding: 20px 24px;
+  border-radius: 12px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
 @media (max-width: 600px) {
   .hero-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
 }
 
 .hero-emoji {
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: inline-flex;
@@ -272,7 +330,7 @@ body {
 
 .hero h2 {
   font-family: var(--font-titel);
-  font-size: clamp(20px, 4.5vw, 26px);
+  font-size: 18px;
   font-weight: 800;
   line-height: 1.25;
   margin-bottom: 4px;
@@ -280,10 +338,10 @@ body {
 }
 
 .hero p {
-  font-size: 14px;
+  font-size: 13px;
   opacity: .95;
   max-width: 540px;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* ── Sectie-kop ──────────────────────────────────────────── */
@@ -312,40 +370,50 @@ body {
 #vakken-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 12px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   #vakken-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (min-width: 768px) {
+  #vakken-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* ── Basis vak-kaart ─────────────────────────────────────── */
 .vak-kaart {
-  background: var(--wit);
-  border-radius: var(--radius);
-  box-shadow: var(--schaduw);
-  padding: 28px;
+  --card-bg: var(--wit);
+  --card-border: var(--lijn);
+  --card-border-left: transparent;
+  --card-text-title: var(--inkt);
+  --card-text-desc: var(--grijs);
+
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--schaduw-sm);
+  padding: 16px 20px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid var(--lijn);
-  border-left: 6px solid transparent;
+  border: 1px solid var(--card-border);
+  border-left: 6px solid var(--card-border-left);
 }
 
 /* ── Hover / focus state ─────────────────────────────────── */
 .vak-kaart--direct:hover,
 .vak-kaart--direct:focus-within {
-  transform: translateY(-6px);
-  box-shadow: var(--schaduw-lg);
-  border-color: var(--hub-hoofd);
+  transform: translateY(-4px);
+  box-shadow: var(--schaduw);
 }
 
 .vak-kaart--categorie:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--schaduw-lg);
-  border-color: var(--hub-hoofd);
+  transform: translateY(-2px);
+  box-shadow: var(--schaduw);
 }
 
 .vak-kaart--categorie {
@@ -368,51 +436,74 @@ body {
 }
 
 /* ── Kleur-varianten ─────────────────────────────────────── */
-.vak-kaart--blauw  { border-left-color: var(--blauw);  box-shadow: var(--schaduw-kleur-blauw); }
-.vak-kaart--groen  { border-left-color: var(--groen);  box-shadow: var(--schaduw-kleur-groen); }
-.vak-kaart--oranje { border-left-color: var(--oranje); box-shadow: var(--schaduw-kleur-oranje); }
-.vak-kaart--teal   { border-left-color: var(--teal);   box-shadow: var(--schaduw-kleur-teal); }
-
-/* Hover kleurt schaduw iets sterker */
-.vak-kaart--blauw:hover  { box-shadow: var(--schaduw-kleur-blauw),  var(--schaduw-lg); }
-.vak-kaart--groen:hover  { box-shadow: var(--schaduw-kleur-groen),  var(--schaduw-lg); }
-.vak-kaart--oranje:hover { box-shadow: var(--schaduw-kleur-oranje), var(--schaduw-lg); }
-.vak-kaart--teal:hover   { box-shadow: var(--schaduw-kleur-teal),   var(--schaduw-lg); }
+.vak-kaart--blauw {
+  --card-bg: var(--blauw-zacht);
+  --card-border: rgba(37, 99, 235, 0.15);
+  --card-border-left: var(--blauw);
+  --card-text-title: var(--blauw-donker);
+  --card-text-desc: rgba(30, 58, 138, 0.85);
+}
+.vak-kaart--teal {
+  --card-bg: var(--teal-zacht);
+  --card-border: rgba(13, 148, 136, 0.15);
+  --card-border-left: var(--teal);
+  --card-text-title: var(--teal-donker);
+  --card-text-desc: rgba(19, 78, 74, 0.85);
+}
+.vak-kaart--groen {
+  --card-bg: var(--groen-zacht);
+  --card-border: rgba(21, 128, 61, 0.15);
+  --card-border-left: var(--groen);
+  --card-text-title: var(--groen-donker);
+  --card-text-desc: rgba(20, 83, 45, 0.85);
+}
+.vak-kaart--oranje {
+  --card-bg: var(--oranje-zacht);
+  --card-border: rgba(234, 88, 12, 0.15);
+  --card-border-left: var(--oranje);
+  --card-text-title: var(--oranje-donker);
+  --card-text-desc: rgba(124, 45, 18, 0.85);
+}
 
 /* ── Kaart-onderdelen ────────────────────────────────────── */
 .vak-kaart__top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .vak-kaart__icoon {
-  font-size: 28px;
-  width: 52px;
-  height: 52px;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--hub-achter);
+  background: rgba(255, 255, 255, 0.45);
   border-radius: var(--radius-sm);
   flex-shrink: 0;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 6px rgba(6, 78, 59, 0.03);
+}
+
+html.dark .vak-kaart__icoon {
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: none;
 }
 
 .vak-kaart__titel {
   font-family: var(--font-titel);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 6px;
-  color: var(--inkt);
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: var(--card-text-title);
 }
 
 .vak-kaart__beschrijving {
-  font-size: 14px;
-  color: var(--grijs);
-  line-height: 1.55;
+  font-size: 13px;
+  color: var(--card-text-desc);
+  line-height: 1.45;
 }
 
 /* ── Badge / pijl ────────────────────────────────────────── */
@@ -420,19 +511,30 @@ body {
 .vak-kaart__pijl {
   display: inline-flex;
   align-items: center;
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
   transition: transform .15s ease;
+  background: var(--wit);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Kleur per vak */
-.vak-badge--blauw  { background: var(--blauw-zacht);  color: var(--blauw-donker); }
-.vak-badge--groen  { background: var(--groen-zacht);  color: var(--groen-donker); }
-.vak-badge--oranje { background: var(--oranje-zacht); color: var(--oranje-donker); }
-.vak-badge--teal   { background: var(--teal-zacht);   color: var(--teal-donker); }
+.vak-badge--blauw  { color: var(--blauw); }
+.vak-badge--groen  { color: var(--groen); }
+.vak-badge--oranje { color: var(--oranje); }
+.vak-badge--teal   { color: var(--teal); }
+
+html.dark .vak-kaart__badge,
+html.dark .vak-kaart__pijl {
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: none;
+}
+html.dark .vak-badge--blauw  { color: var(--blauw-licht); }
+html.dark .vak-badge--groen  { color: var(--groen-licht); }
+html.dark .vak-badge--oranje { color: var(--oranje-licht); }
+html.dark .vak-badge--teal   { color: var(--teal-licht); }
 
 /* Pijl rotatie bij uitklappen */
 .vak-kaart[aria-expanded="true"] .vak-kaart__pijl {
@@ -447,18 +549,23 @@ body {
 }
 
 .vak-kaart__klap-binnen {
-  padding-top: 16px;
-  border-top: 1px solid var(--lijn);
-  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 12px;
+}
+
+html.dark .vak-kaart__klap-binnen {
+  border-top-color: rgba(0, 0, 0, 0.15);
 }
 
 .vak-kaart__klap-kop {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .06em;
-  color: var(--grijs-licht);
-  margin-bottom: 10px;
+  color: var(--card-text-title);
+  opacity: 0.8;
+  margin-bottom: 8px;
 }
 
 /* ── Onderwerp-link (sub-kaart in uitklap) ───────────────── */
@@ -537,50 +644,44 @@ body {
 
 /* ── Tip-banner ──────────────────────────────────────────── */
 .tip-banner {
-  margin-top: 24px;
+  margin-top: 16px;
   background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
   border: 1px solid #fde68a;
-  border-radius: var(--radius);
-  padding: 20px 24px;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tip-banner {
-    background: linear-gradient(135deg, #1c1a08 0%, #23200a 100%);
-    border-color: #3d3408;
-  }
+html.dark .tip-banner {
+  background: linear-gradient(135deg, #1c1a08 0%, #23200a 100%);
+  border-color: #3d3408;
 }
 
 .tip-banner__icoon {
-  font-size: 28px;
+  font-size: 22px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .tip-banner__tekst strong {
   display: block;
   font-family: var(--font-titel);
-  font-size: 15px;
-  margin-bottom: 4px;
+  font-size: 14px;
+  margin-bottom: 2px;
   color: #92400e;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tip-banner__tekst strong { color: #fbbf24; }
-}
+html.dark .tip-banner__tekst strong { color: #fbbf24; }
 
 .tip-banner__tekst p {
-  font-size: 14px;
+  font-size: 13px;
   color: #a16207;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tip-banner__tekst p { color: #d97706; }
-}
+html.dark .tip-banner__tekst p { color: #d97706; }
 
 /* ── Footer ──────────────────────────────────────────────── */
 footer {
@@ -634,10 +735,8 @@ body.iframe-actief #iframe-shell {
   box-shadow: var(--schaduw-sm);
 }
 
-@media (prefers-color-scheme: dark) {
-  #terugbalk {
-    background: rgba(10, 46, 34, .88);
-  }
+html.dark #terugbalk {
+  background: rgba(10, 46, 34, .88);
 }
 
 #terug-knop {
@@ -711,10 +810,10 @@ body.iframe-actief #iframe-shell {
 
 .hub-tabs {
   display: flex;
-  gap: 12px;
-  margin: 32px 0 24px;
+  gap: 10px;
+  margin: 18px 0 14px;
   border-bottom: 2px solid var(--lijn);
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   overflow-x: auto;
 }
 
@@ -722,16 +821,16 @@ body.iframe-actief #iframe-shell {
   background: none;
   border: none;
   font-family: var(--font-titel);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--grijs-licht);
-  padding: 8px 16px;
+  padding: 6px 12px;
   cursor: pointer;
   position: relative;
   transition: color 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   white-space: nowrap;
 }
 
@@ -746,7 +845,7 @@ body.iframe-actief #iframe-shell {
 .hub-tab.active::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 0;
   right: 0;
   height: 4px;
@@ -771,20 +870,19 @@ body.iframe-actief #iframe-shell {
 /* Overview stats grid */
 .stats-summary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-bottom: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .stats-card {
   background: var(--wit);
   border: 1px solid var(--lijn);
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: var(--schaduw-sm);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -795,7 +893,7 @@ body.iframe-actief #iframe-shell {
 
 .stats-card__label {
   font-family: var(--font-tekst);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--grijs);
   display: flex;
@@ -805,7 +903,7 @@ body.iframe-actief #iframe-shell {
 
 .stats-card__value {
   font-family: var(--font-titel);
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--hub-hoofd);
   line-height: 1.1;
@@ -813,7 +911,7 @@ body.iframe-actief #iframe-shell {
 
 .stats-card__desc {
   font-family: var(--font-tekst);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--grijs-licht);
 }
 
@@ -1364,57 +1462,162 @@ body.iframe-actief #iframe-shell {
    *-donker badge-teksten) naar licht-op-donker varianten zodat de
    hele dashboard leesbaar blijft.
    ═══════════════════════════════════════════════════════════ */
-@media (prefers-color-scheme: dark) {
-  /* Donkergroene tekst → helder mintgroen */
-  .stats-card__value,
-  .chart-card__title,
-  .exam-table th,
-  .vak-stats-sectie__titel,
-  .vak-cijfer,
-  .vak-detail__kop {
-    color: var(--hub-accent);
-  }
-
-  /* Lichtcrème achtergronden → donker groen paneel */
-  .svg-container,
-  .filter-btn,
-  .search-input,
-  .exam-table th,
-  .exam-table tr:hover td,
-  .vak-stat-card__icoon,
-  .detail-toggle,
-  .vak-detail-table th,
-  .vak-detail-table tr:hover td {
-    background: #0f3a2b;
-  }
-
-  .filter-btn,
-  .detail-toggle {
-    color: var(--hub-accent);
-    border-color: #1c5240;
-  }
-  .filter-btn:hover, .filter-btn.active,
-  .detail-toggle:hover {
-    background: var(--hub-accent);
-    color: #062f21;                    /* donkere tekst op heldere knop */
-    border-color: var(--hub-accent);
-  }
-  .search-input:focus { background: #0a2e22; border-color: var(--hub-accent); }
-  .detail-toggle:focus-visible { outline-color: var(--hub-accent); }
-
-  /* Geslaagd/gezakt + badge-cijfers helderder voor contrast op donker */
-  .vak-cijfer--geslaagd,
-  .badge-grade.pass { color: #4ade80; }
-  .vak-cijfer--gezakt,
-  .badge-grade.fail { color: #fb923c; }
-
-  /* Vak-badges: lichte tekst (donker-token is anders onleesbaar) */
-  .subject-badge.blauw,
-  .vak-score-badge      { color: #93c5fd; }
-  .subject-badge.groen  { color: #86efac; }
-  .subject-badge.oranje { color: #fdba74; }
-  .subject-badge.teal   { color: #5eead4; }
-
-  /* SVG-lijnchart: verhelder de lijn + vulling (scoped, raakt rest niet) */
-  #line-chart-container { --hub-hoofd: #34d399; }
+/* Donkergroene tekst → helder mintgroen */
+html.dark .stats-card__value,
+html.dark .chart-card__title,
+html.dark .exam-table th,
+html.dark .vak-stats-sectie__titel,
+html.dark .vak-cijfer,
+html.dark .vak-detail__kop {
+  color: var(--hub-accent);
 }
+
+/* Lichtcrème achtergronden → donker groen paneel */
+html.dark .svg-container,
+html.dark .filter-btn,
+html.dark .search-input,
+html.dark .exam-table th,
+html.dark .exam-table tr:hover td,
+html.dark .vak-stat-card__icoon,
+html.dark .detail-toggle,
+html.dark .vak-detail-table th,
+html.dark .vak-detail-table tr:hover td {
+  background: #0f3a2b;
+}
+
+html.dark .filter-btn,
+html.dark .detail-toggle {
+  color: var(--hub-accent);
+  border-color: #1c5240;
+}
+html.dark .filter-btn:hover, html.dark .filter-btn.active,
+html.dark .detail-toggle:hover {
+  background: var(--hub-accent);
+  color: #062f21;                    /* donkere tekst op heldere knop */
+  border-color: var(--hub-accent);
+}
+html.dark .search-input:focus { background: #0a2e22; border-color: var(--hub-accent); }
+html.dark .detail-toggle:focus-visible { outline-color: var(--hub-accent); }
+
+/* Geslaagd/gezakt + badge-cijfers helderder voor contrast op donker */
+html.dark .vak-cijfer--geslaagd,
+html.dark .badge-grade.pass { color: #4ade80; }
+html.dark .vak-cijfer--gezakt,
+html.dark .badge-grade.fail { color: #fb923c; }
+
+/* Vak-badges: lichte tekst (donker-token is anders onleesbaar) */
+html.dark .subject-badge.blauw,
+html.dark .vak-score-badge      { color: #93c5fd; }
+html.dark .subject-badge.groen  { color: #86efac; }
+html.dark .subject-badge.oranje { color: #fdba74; }
+html.dark .subject-badge.teal   { color: #5eead4; }
+
+/* SVG-lijnchart: verhelder de lijn + vulling (scoped, raakt rest niet) */
+html.dark #line-chart-container { --hub-hoofd: #34d399; }
+
+/* ── HAVO 3 placeholder + Archief (MAVO 2) sectie ──────────────────
+   Thema-veilig: transparant + currentColor, werkt in licht én donker. */
+.havo3-placeholder {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  padding: 48px 24px;
+  border: 2px dashed currentColor;
+  border-radius: 18px;
+  opacity: .6;
+}
+.havo3-placeholder__icoon { font-size: 40px; opacity: .9; }
+.havo3-placeholder strong { font-size: 18px; }
+.havo3-placeholder span   { max-width: 40ch; font-size: 14px; }
+
+.archief-sectie { margin: 28px 0 8px; }
+.archief-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  border: 1px dashed currentColor;
+  border-radius: 14px;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  color: inherit;
+  cursor: pointer;
+  opacity: .7;
+  transition: opacity .15s ease;
+}
+.archief-toggle:hover,
+.archief-toggle[aria-expanded="true"] { opacity: 1; }
+.archief-pijl { font-size: 14px; }
+.archief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 18px;
+}
+.archief-grid[hidden] { display: none; }
+
+/* ══ HAVO 3 landing — warm, domein-gegroepeerd (scoped) ══════════════
+   Eigen tokens zodat de rest van de hub (dashboard/login) ongemoeid blijft. */
+:root {
+  --talen:#ec6a52; --exact:#3f86c9; --mens:#3fa06a;
+  --talen-zacht:#fdeeea; --exact-zacht:#eaf2fb; --mens-zacht:#e9f6ee;
+  --h3-kaart:#ffffff; --h3-rand:#ece2d7; --h3-zacht:#7a7080;
+  --h3-schaduw:0 6px 18px rgba(80,60,40,.10);
+}
+html.dark {
+  --talen:#f2836e; --exact:#5aa0e0; --mens:#57c187;
+  --talen-zacht:#3a2620; --exact-zacht:#1e2c3c; --mens-zacht:#1d3327;
+  --h3-kaart:#241f2c; --h3-rand:#352e40; --h3-zacht:#a99fb4;
+  --h3-schaduw:0 6px 20px rgba(0,0,0,.35);
+}
+
+/* Als er domein-secties zijn, is het grid een blok-container (secties erin). */
+#vakken-grid.heeft-domeinen { display:block; }
+
+.havo3-domein { margin-top:26px; }
+.havo3-domein:first-child { margin-top:6px; }
+.havo3-domein__kop { display:flex; align-items:baseline; gap:10px; margin:0 2px 14px; flex-wrap:wrap; }
+.havo3-domein__kop h2 { margin:0; font-size:18px; }
+.havo3-domein__kop > span:last-child { color:var(--h3-zacht); font-weight:600; font-size:13px; }
+.havo3-domein__streep { width:34px; height:5px; border-radius:999px; display:inline-block; align-self:center; }
+.d-talen .havo3-domein__streep { background:var(--talen); }
+.d-exact .havo3-domein__streep { background:var(--exact); }
+.d-mens  .havo3-domein__streep { background:var(--mens); }
+
+.havo3-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(232px, 1fr)); gap:16px; }
+
+.havo3-kaart {
+  position:relative; display:flex; flex-direction:column; gap:10px;
+  background:var(--h3-kaart); border:1px solid var(--h3-rand); border-radius:20px;
+  padding:18px 18px 16px; box-shadow:var(--h3-schaduw); overflow:hidden; text-decoration:none;
+  color:inherit; cursor:pointer; transition:transform .16s ease, box-shadow .16s ease;
+}
+.havo3-kaart::before { content:""; position:absolute; inset:0 0 auto 0; height:5px; background:var(--k); }
+.havo3-kaart:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgba(80,60,40,.16); }
+.d-talen .havo3-kaart { --k:var(--talen); --kz:var(--talen-zacht); }
+.d-exact .havo3-kaart { --k:var(--exact); --kz:var(--exact-zacht); }
+.d-mens  .havo3-kaart { --k:var(--mens);  --kz:var(--mens-zacht); }
+
+.havo3-kaart--binnenkort { cursor:default; opacity:.72; }
+.havo3-kaart--binnenkort:hover { transform:none; box-shadow:var(--h3-schaduw); }
+
+.havo3-kaart__top { display:flex; align-items:center; justify-content:space-between; }
+.havo3-kaart__icoon { width:42px; height:42px; border-radius:12px; background:var(--kz);
+  color:var(--k); display:grid; place-items:center; font-size:22px; }
+.havo3-chip { font-size:12px; font-weight:800; color:var(--h3-zacht);
+  border:1px dashed var(--h3-rand); padding:3px 9px; border-radius:999px; }
+.havo3-pct { font-size:12px; font-weight:800; color:var(--h3-zacht); font-variant-numeric:tabular-nums; }
+.havo3-kaart__naam { font-size:17px; font-weight:800; margin:0; }
+.havo3-kaart__hfd { font-size:13px; color:var(--h3-zacht); font-weight:600; margin:-4px 0 0; }
+.havo3-balk { height:8px; border-radius:999px; background:var(--kz); overflow:hidden; }
+.havo3-balk__vul { height:100%; border-radius:999px; background:var(--k); }
+.havo3-kaart__voet { display:flex; align-items:center; justify-content:space-between; margin-top:2px; }
+.havo3-kaart__cijfer { font-weight:800; font-size:14px; font-variant-numeric:tabular-nums; }
+.havo3-kaart__cijfer small { color:var(--h3-zacht); font-weight:700; }
+.havo3-kaart__ga { font-weight:800; font-size:13px; color:var(--k); }
