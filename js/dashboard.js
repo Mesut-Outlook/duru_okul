@@ -12,6 +12,32 @@
   window.allAttempts = [];
   window.currentTableFilter = "all";
   window.currentTableSearch = "";
+  window.currentJaar = null;
+
+  // ── Schooljaar-register ───────────────────────────────────
+  var HUIDIG_SCHOOLJAAR = '2026-2027';
+  var JAAR_NIVEAU = { '2025-2026': 'MAVO 2', '2026-2027': 'HAVO 3' };
+  // Tek doğru kaynak: her satır = (yıl, ders) + localStorage anahtarları. Ders/yıl eklemek = satır eklemek.
+  // 2025-2026 = LEGACY yılsız anahtarlar (MAVO 2, donmuş — DEĞİŞTİRME). Yeni yıllar duru_<jaarcode>_<slug>_*.
+  var VAK_REGISTER = [
+    { jaar:'2025-2026', id:'natuurkunde',          titel:'Natuurkunde (NASK)',    icoon:'⚛️', kleur:'blauw',  practiceKey:'duru_nask_v1',                examKey:'duru_nask_examens_v1' },
+    { jaar:'2025-2026', id:'wiskunde',             titel:'Wiskunde',              icoon:'⚖️', kleur:'teal',   practiceKey:'duru_wiskunde_v1',            examKey:'duru_wiskunde_examens_v1' },
+    { jaar:'2025-2026', id:'economie',             titel:'Economie',              icoon:'💶', kleur:'groen',  practiceKey:'duru_economi_v1',             examKey:'duru_economi_examens_v1' },
+    { jaar:'2025-2026', id:'geschiedenis',         titel:'Geschiedenis',          icoon:'🕰️', kleur:'oranje', practiceKey:'duru_geschiedenis_v1',        examKey:'duru_geschiedenis_examens_v1' },
+    { jaar:'2025-2026', id:'nederlands-spelling',  titel:'Spelling & Grammatica', icoon:'✍️', kleur:'oranje', practiceKey:'duru_nederlands_spelling_v1', examKey:'duru_nederlands_spelling_examens_v1' },
+    { jaar:'2025-2026', id:'nederlands-begrijpend',titel:'Begrijpend Lezen',      icoon:'🧠', kleur:'oranje', practiceKey:null,                          examKey:'begrijpend_lezen_history', special:'begrijpend' },
+    // ── 2026-2027 (HAVO 3) — 10 vakken (duru_2627_<slug>_*). Smoke-test-sites: nu alleen proeftoetsen. ──
+    { jaar:'2026-2027', id:'nederlands',      titel:'Nederlands',      icoon:'📖', kleur:'oranje', practiceKey:'duru_2627_nederlands_v1',      examKey:'duru_2627_nederlands_examens_v1' },
+    { jaar:'2026-2027', id:'engels',          titel:'Engels',          icoon:'🇬🇧', kleur:'oranje', practiceKey:'duru_2627_engels_v1',          examKey:'duru_2627_engels_examens_v1' },
+    { jaar:'2026-2027', id:'frans',           titel:'Frans',           icoon:'🇫🇷', kleur:'oranje', practiceKey:'duru_2627_frans_v1',           examKey:'duru_2627_frans_examens_v1' },
+    { jaar:'2026-2027', id:'wiskunde',        titel:'Wiskunde',        icoon:'⚖️', kleur:'teal',   practiceKey:'duru_2627_wiskunde_v1',        examKey:'duru_2627_wiskunde_examens_v1' },
+    { jaar:'2026-2027', id:'natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', kleur:'blauw',  practiceKey:'duru_2627_natuurkunde_v1',     examKey:'duru_2627_natuurkunde_examens_v1' },
+    { jaar:'2026-2027', id:'biologie',        titel:'Biologie',        icoon:'🧬', kleur:'groen',  practiceKey:'duru_2627_biologie_v1',        examKey:'duru_2627_biologie_examens_v1' },
+    { jaar:'2026-2027', id:'geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', kleur:'oranje', practiceKey:'duru_2627_geschiedenis_v1',    examKey:'duru_2627_geschiedenis_examens_v1' },
+    { jaar:'2026-2027', id:'aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', kleur:'teal',   practiceKey:'duru_2627_aardrijkskunde_v1',  examKey:'duru_2627_aardrijkskunde_examens_v1' },
+    { jaar:'2026-2027', id:'economie',        titel:'Economie',        icoon:'🏛️', kleur:'groen',  practiceKey:'duru_2627_economie_v1',        examKey:'duru_2627_economie_examens_v1' },
+    { jaar:'2026-2027', id:'maatschappijleer',titel:'Maatschappijleer',icoon:'🏛️', kleur:'blauw',  practiceKey:'duru_2627_maatschappijleer_v1',examKey:'duru_2627_maatschappijleer_examens_v1' }
+  ];
 
   // ── Initialization on DOM Ready ──────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
@@ -108,37 +134,125 @@
     });
   }
 
+  // ── Schooljaar helpers ─────────────────────────────────────
+
+  // Heeft dit schooljaar ergens échte data (XP, badges, beste score, of
+  // examen-geschiedenis)? Gebruikt om het jaar-kiezer/fallback te vullen.
+  function jaarHeeftData(jaar) {
+    var rows = VAK_REGISTER.filter(function (v) { return v.jaar === jaar; });
+    for (var i = 0; i < rows.length; i++) {
+      var vak = rows[i];
+
+      if (vak.special === "begrijpend") {
+        try {
+          var hist = JSON.parse(localStorage.getItem(vak.examKey));
+          if (hist && Array.isArray(hist) && hist.length > 0) return true;
+        } catch (e) { /* corrupt/leeg */ }
+        continue;
+      }
+
+      if (vak.practiceKey) {
+        var prac = loadPracticeData(vak.practiceKey);
+        if (prac) {
+          if (prac.xp) return true;
+          var badges = prac.badges || {};
+          var badgeCount = Array.isArray(badges) ? badges.length : Object.keys(badges).length;
+          if (badgeCount > 0) return true;
+          if (prac.beste && Object.keys(prac.beste).length > 0) return true;
+        }
+      }
+
+      if (vak.examKey) {
+        try {
+          var data = JSON.parse(localStorage.getItem(vak.examKey));
+          if (data && data.history && Array.isArray(data.history) && data.history.length > 0) return true;
+        } catch (e2) { /* corrupt/leeg */ }
+      }
+    }
+    return false;
+  }
+
+  // Distinct jaren uit VAK_REGISTER met data + altijd HUIDIG_SCHOOLJAAR
+  // (ook leeg, zodat het huidige jaar altijd in de kiezer staat). Nieuwste eerst.
+  function beschikbareJaren() {
+    var alleJaren = {};
+    VAK_REGISTER.forEach(function (v) { alleJaren[v.jaar] = true; });
+    alleJaren[HUIDIG_SCHOOLJAAR] = true;
+
+    var lijst = Object.keys(alleJaren).filter(function (j) {
+      return j === HUIDIG_SCHOOLJAAR || jaarHeeftData(j);
+    });
+    lijst.sort();
+    lijst.reverse(); // nieuwste eerst
+    return lijst;
+  }
+
+  // Bepaalt welk schooljaar getoond wordt: opgeslagen keuze > huidig jaar
+  // (als het data heeft) > nieuwste jaar met data > huidig jaar (leeg).
+  function bepaalCurrentJaar() {
+    var jaren = beschikbareJaren();
+    var opgeslagen = null;
+    try {
+      opgeslagen = localStorage.getItem("duru_dashboard_jaar");
+    } catch (e) { /* localStorage kan geblokkeerd zijn */ }
+
+    if (opgeslagen && jaren.indexOf(opgeslagen) !== -1) return opgeslagen;
+    if (jaarHeeftData(HUIDIG_SCHOOLJAAR)) return HUIDIG_SCHOOLJAAR;
+
+    for (var i = 0; i < jaren.length; i++) {
+      if (jaarHeeftData(jaren[i])) return jaren[i];
+    }
+    return HUIDIG_SCHOOLJAAR;
+  }
+
+  // ── Render jaar-kiezer (chips boven de hero-kaarten) ──────
+  function renderJaarSelector(jaren, actief) {
+    var container = document.getElementById("jaar-selector");
+    if (!container) return;
+
+    var html = "";
+    jaren.forEach(function (jaar) {
+      var isActief = jaar === actief;
+      var niveau = JAAR_NIVEAU[jaar] || "";
+      html += '<button type="button" class="jaar-chip' + (isActief ? " jaar-chip--actief" : "") + '" ' +
+                'role="tab" aria-selected="' + (isActief ? "true" : "false") + '" data-jaar="' + escHtml(jaar) + '">' +
+                "📅 " + escHtml(jaar) + (niveau ? " · " + escHtml(niveau) : "") +
+              "</button>";
+    });
+    container.innerHTML = html;
+
+    var chips = container.querySelectorAll(".jaar-chip");
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var jaar = chip.getAttribute("data-jaar");
+        window.currentJaar = jaar;
+        try {
+          localStorage.setItem("duru_dashboard_jaar", jaar);
+        } catch (e) { /* localStorage kan geblokkeerd zijn */ }
+        loadDashboardData();
+      });
+    });
+  }
+
   // ── Load & Parse Data ─────────────────────────────────────
   function loadDashboardData() {
-    // 1. Calculate Practice XP and Badges
-    var practiceKeys = [
-      { key: "duru_nask_v1" },
-      { key: "duru_wiskunde_v1" },
-      { key: "duru_economi_v1" },
-      { key: "duru_geschiedenis_v1" },
-      { key: "duru_nederlands_spelling_v1" }
-    ];
+    window.currentJaar = bepaalCurrentJaar();
+    var jaren = beschikbareJaren();
+    renderJaarSelector(jaren, window.currentJaar);
 
+    var vakkenVanJaar = VAK_REGISTER.filter(function (v) { return v.jaar === window.currentJaar; });
+
+    // 1. Calculate Practice XP and Badges (alleen dit schooljaar)
     var totalXP = 0;
     var totalBadges = 0;
 
-    practiceKeys.forEach(function (sub) {
-      try {
-        var data = JSON.parse(localStorage.getItem(sub.key));
-        if (data) {
-          if (data.xp) totalXP += data.xp;
-          if (data.badges) {
-            // Badges is either object or array
-            if (Array.isArray(data.badges)) {
-              totalBadges += data.badges.length;
-            } else {
-              totalBadges += Object.keys(data.badges).length;
-            }
-          }
-        }
-      } catch (e) {
-        console.warn("Could not parse key: " + sub.key, e);
-      }
+    vakkenVanJaar.forEach(function (vak) {
+      if (!vak.practiceKey) return;
+      var prac = loadPracticeData(vak.practiceKey);
+      if (!prac) return;
+      totalXP += prac.xp || 0;
+      var badges = prac.badges || {};
+      totalBadges += Array.isArray(badges) ? badges.length : Object.keys(badges).length;
     });
 
     // Populate Overview Card Values
@@ -147,21 +261,16 @@
     if (xpEl) xpEl.textContent = totalXP;
     if (badgesEl) badgesEl.textContent = totalBadges;
 
-    // 2. Aggregate exam attempts from all subjects
+    // 2. Aggregate exam attempts from all subjects van dit schooljaar
     var attempts = [];
 
-    // NASK
-    loadDuruAttempts(attempts, "duru_nask_examens_v1", "natuurkunde", "Natuurkunde", "blauw");
-    // Wiskunde
-    loadDuruAttempts(attempts, "duru_wiskunde_examens_v1", "wiskunde", "Wiskunde", "teal");
-    // Economie
-    loadDuruAttempts(attempts, "duru_economi_examens_v1", "economie", "Economie", "groen");
-    // Geschiedenis
-    loadDuruAttempts(attempts, "duru_geschiedenis_examens_v1", "geschiedenis", "Geschiedenis", "oranje");
-    // Spelling
-    loadDuruAttempts(attempts, "duru_nederlands_spelling_examens_v1", "nederlands-spelling", "Spelling", "oranje");
-    // Begrijpend Lezen
-    loadBegrijpendLezenAttempts(attempts);
+    vakkenVanJaar.forEach(function (vak) {
+      if (vak.special === "begrijpend") {
+        loadBegrijpendLezenAttempts(attempts, vak.examKey);
+      } else {
+        loadDuruAttempts(attempts, vak.examKey, vak.id, vak.titel, vak.kleur);
+      }
+    });
 
     // Sort by timestamp descending (newest first)
     attempts.sort(function (a, b) {
@@ -186,8 +295,9 @@
     }
 
     // Render Components
-    renderVakKaarten(attempts);
+    renderVakKaarten(attempts, vakkenVanJaar);
     renderScoreTimeline(attempts);
+    renderFilterBar(vakkenVanJaar);
     renderAttemptsTable();
   }
 
@@ -245,9 +355,9 @@
   }
 
   // Parses Begrijpend Lezen attempts
-  function loadBegrijpendLezenAttempts(attemptsList) {
+  function loadBegrijpendLezenAttempts(attemptsList, key) {
     try {
-      var history = JSON.parse(localStorage.getItem("begrijpend_lezen_history"));
+      var history = JSON.parse(localStorage.getItem(key || "begrijpend_lezen_history"));
       if (history && Array.isArray(history)) {
         history.forEach(function (att) {
           var ts = new Date(att.timestamp || new Date());
@@ -324,61 +434,29 @@
   }
 
   // ── Render per-subject cards ──────────────────────────────
-  function renderVakKaarten(attempts) {
+  function renderVakKaarten(attempts, vakkenVanJaar) {
     var grid = document.getElementById("vak-stats-grid");
     if (!grid) return;
 
-    // Subject definitions (practice subjects + begrijpend lezen)
-    var vakken = [
-      {
-        id: "natuurkunde",
-        titel: "Natuurkunde (NASK)",
-        icoon: "⚛️",
-        kleur: "blauw",
-        practiceKey: "duru_nask_v1",
-        hasPractice: true
-      },
-      {
-        id: "wiskunde",
-        titel: "Wiskunde",
-        icoon: "⚖️",
-        kleur: "teal",
-        practiceKey: "duru_wiskunde_v1",
-        hasPractice: true
-      },
-      {
-        id: "economie",
-        titel: "Economie",
-        icoon: "💶",
-        kleur: "groen",
-        practiceKey: "duru_economi_v1",
-        hasPractice: true
-      },
-      {
-        id: "geschiedenis",
-        titel: "Geschiedenis",
-        icoon: "🕰️",
-        kleur: "oranje",
-        practiceKey: "duru_geschiedenis_v1",
-        hasPractice: true
-      },
-      {
-        id: "nederlands-spelling",
-        titel: "Spelling & Grammatica",
-        icoon: "✍️",
-        kleur: "oranje",
-        practiceKey: "duru_nederlands_spelling_v1",
-        hasPractice: true
-      },
-      {
-        id: "nederlands-begrijpend",
-        titel: "Begrijpend Lezen",
-        icoon: "🧠",
-        kleur: "oranje",
-        practiceKey: null,
-        hasPractice: false
-      }
-    ];
+    // Geen enkel vak geregistreerd voor dit schooljaar → vriendelijke lege staat
+    if (!vakkenVanJaar || vakkenVanJaar.length === 0) {
+      grid.innerHTML = '<p class="vak-stats-leeg">Nog geen gegevens voor schooljaar ' +
+        escHtml(window.currentJaar || "") +
+        '. Zodra Duru begint, verschijnt het hier! 🚀</p>';
+      return;
+    }
+
+    // Subject definitions komen uit VAK_REGISTER (per schooljaar gefilterd)
+    var vakken = vakkenVanJaar.map(function (v) {
+      return {
+        id: v.id,
+        titel: v.titel,
+        icoon: v.icoon,
+        kleur: v.kleur,
+        practiceKey: v.practiceKey,
+        hasPractice: !!v.practiceKey
+      };
+    });
 
     var html = "";
 
@@ -841,9 +919,23 @@
     tbody.innerHTML = html;
   }
 
-  // ── Bind search and filter events ─────────────────────────
-  function initFiltersAndSearch() {
-    // 1. Category Filter Buttons
+  // ── Render + bind category filter buttons (jaar-afhankelijk) ──
+  function renderFilterBar(vakkenVanJaar) {
+    var bar = document.getElementById("table-filter-bar");
+    if (!bar) return;
+
+    window.currentTableFilter = "all";
+
+    var html = '<button class="filter-btn active" data-filter="all" type="button">Alles</button>';
+    (vakkenVanJaar || []).forEach(function (vak) {
+      html += '<button class="filter-btn" data-filter="' + escHtml(vak.id) + '" type="button">' + escHtml(vak.titel) + '</button>';
+    });
+    bar.innerHTML = html;
+
+    bindFilterButtons();
+  }
+
+  function bindFilterButtons() {
     var filterButtons = document.querySelectorAll("#table-filter-bar .filter-btn");
     filterButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -854,8 +946,11 @@
         renderAttemptsTable();
       });
     });
+  }
 
-    // 2. Search Input box
+  // ── Bind search box (filter-knoppen worden per schooljaar
+  //    opnieuw opgebouwd in renderFilterBar) ─────────────────
+  function initFiltersAndSearch() {
     var searchInput = document.getElementById("exam-search");
     if (searchInput) {
       searchInput.addEventListener("input", function () {

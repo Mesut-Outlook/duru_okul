@@ -77,13 +77,26 @@ Oefen soruları ek `niveau` (zorluk 1–3) taşır; sınav soruları taşımaz. 
 `info-box` (+ `let-op` / `tip` varyantları), `table class="nask"`, `figure class="bron"`.
 Görseller tercihen **inline SVG**.
 
-## localStorage anahtarları (per-site benzersiz — KARIŞTIRMA)
-- Oefen-ilerleme: `duru_<slug>_v1` → `{ xp, streak, badges{}, beste{id:pct}, gedaan{}, pogingen{id:count}, titels{id:titel} }`
-- Sınav skorları: `duru_<slug>_examens_v1` → `{ history:[ { examId, ... } ] }`
-- İkisi ayrı; sınav motoru oefen-XP'ye **dokunmaz**. `slug` klasör adı olmayabilir (economi → `economi`).
-- **HAVO 3 çakışma kuralı:** Arşivlenen MAVO 2 dersleri eski anahtarlarını korur (`duru_nask_v1`).
-  Yeni HAVO 3 dersleri **yeni slug** kullanmalı, ör. `duru_h3_natuurkunde_v1` — aksi halde eski
-  skorlarla çakışır. Yeni ders kurarken bunu `engine.js`/`exams.js` başındaki `SLEUTEL`/`EX_SLEUTEL`'de ayarla.
+## localStorage anahtarları — **okul yılı = birinci sınıf boyut** (KARIŞTIRMA)
+Puanlama/istatistik **eğitim yılına göre** bölümlenir. Anahtar biçimi:
+- Oefen-ilerleme: `duru_<jaarcode>_<slug>_v1` → `{ xp, streak, badges{}, beste{id:pct}, gedaan{}, pogingen{id:count}, titels{id:titel} }`
+- Sınav skorları: `duru_<jaarcode>_<slug>_examens_v1` → `{ history:[ { examId, ... } ] }`
+- İkisi ayrı; sınav motoru oefen-XP'ye **dokunmaz**. `_v1` / `_examens_v1` son ekleri **yapısal işaret**
+  (sync + `restoreScores` + `leesVakData` bunlara göre ayırır) — **asla değiştirme**.
+
+**`<jaarcode>` = okul yılının iki yılının son iki hanesi:** `2025-2026 → 2526`, `2026-2027 → 2627`.
+Örn. HAVO 3 (2026-2027) ekonomi → `duru_2627_economi_v1` / `duru_2627_economi_examens_v1`.
+Yeni ders kurarken `engine.js`/`exams.js` başındaki `SLEUTEL`/`EX_SLEUTEL`'i bu biçimde ayarla.
+
+**Aynı ders, farklı yıl, ayrı istatistik:** Ders adı yıllar boyu aynı kalabilir ama her yıl farklı
+konu/içerik → **ayrı anahtar → ayrı XP/rozet/cijfer-ortalaması**. Yeni yıl **sıfırdan** başlar;
+geçen yıl arşivde salt-okunur olarak durur (skorları çalışmaya devam eder).
+
+**Legacy istisna (DOKUNMA):** 2025-2026 (MAVO 2) dersleri kurulduğunda yıl-kodu yoktu; anahtarları
+**yılsız** (`duru_nask_v1`, `duru_economi_v1`, …, `begrijpend_lezen_history`). MAVO 2 donmuştur →
+bu anahtarlar asla değişmez. **Göç YAPMA.** Bunun yerine dashboard sabit bir **KEY→YIL haritasıyla**
+tüm yılsız legacy anahtarları `2025-2026`'ya etiketler. Yalnızca **yeni** yıllar `duru_<jaarcode>_*`
+biçimini kullanır. (Bkz. `js/dashboard.js` → `VAK_REGISTER`.)
 
 ## Yeni ders (site) oluşturma — özet
 `bootstrap.js` (+ `DURU.hoofdstukken`/intro düzenle), `exams.js`, `engine.js` (`SLEUTEL`/`EX_SLEUTEL`

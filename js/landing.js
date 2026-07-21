@@ -102,20 +102,18 @@ window.Storage.prototype.removeItem = function(key) {
 // beschrijving en ofwel een href (directe link) ofwel een
 // onderwerpen-array (uitklapbare categorie).
 var VAKKEN = [
-  // ── HAVO 3 vakken (nog in opbouw — vervang met Duru's echte pakket) ──
+  // ── HAVO 3 vakken (nog in opbouw — Duru's echte pakket, 10 vakken) ──
   // domein: 'talen' | 'exact' | 'mens'. binnenkort:true = nog geen site/data.
-  { id:'h3-nederlands',      titel:'Nederlands',      icoon:'📖', domein:'talen', beschrijving:'Lezen, schrijven & taal',        binnenkort:true },
-  { id:'h3-engels',          titel:'Engels',          icoon:'🇬🇧', domein:'talen', beschrijving:'Reading, grammar & words',        binnenkort:true },
-  { id:'h3-frans',           titel:'Frans',           icoon:'🇫🇷', domein:'talen', beschrijving:'Grammaire & vocabulaire',         binnenkort:true },
-  { id:'h3-duits',           titel:'Duits',           icoon:'🇩🇪', domein:'talen', beschrijving:'Grammatik & Wörter',              binnenkort:true },
-  { id:'h3-wiskunde',        titel:'Wiskunde',        icoon:'⚖️', domein:'exact', beschrijving:'Algebra, meetkunde & meer',       binnenkort:true },
-  { id:'h3-natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', domein:'exact', beschrijving:'Krachten, energie & meer',        binnenkort:true },
-  { id:'h3-scheikunde',      titel:'Scheikunde',      icoon:'🧪', domein:'exact', beschrijving:'Stoffen & reacties',              binnenkort:true },
-  { id:'h3-biologie',        titel:'Biologie',        icoon:'🧬', domein:'exact', beschrijving:'Cellen, organen & natuur',        binnenkort:true },
-  { id:'h3-geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', domein:'mens',  beschrijving:'Tijd, bronnen & gebeurtenissen',  binnenkort:true },
-  { id:'h3-aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', domein:'mens',  beschrijving:'Aarde, klimaat & mensen',         binnenkort:true },
-  { id:'h3-economie',        titel:'Economie',        icoon:'💶', domein:'mens',  beschrijving:'Geld, markt & keuzes',           binnenkort:true },
-  { id:'h3-maatschappijleer',titel:'Maatschappijleer',icoon:'🏛️', domein:'mens',  beschrijving:'Samenleven & rechten',           binnenkort:true },
+  { id:'h3-nederlands',      titel:'Nederlands',      icoon:'📖', domein:'talen', beschrijving:'Lezen, schrijven & taal',        href:'./havo3/nederlands/', sleutel:'duru_2627_nederlands' },
+  { id:'h3-engels',          titel:'Engels',          icoon:'🇬🇧', domein:'talen', beschrijving:'Reading, grammar & words',        href:'./havo3/engels/', sleutel:'duru_2627_engels' },
+  { id:'h3-frans',           titel:'Frans',           icoon:'🇫🇷', domein:'talen', beschrijving:'Grammaire & vocabulaire',         href:'./havo3/frans/', sleutel:'duru_2627_frans' },
+  { id:'h3-wiskunde',        titel:'Wiskunde',        icoon:'⚖️', domein:'exact', beschrijving:'Algebra, meetkunde & meer',       href:'./havo3/wiskunde/', sleutel:'duru_2627_wiskunde' },
+  { id:'h3-natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', domein:'exact', beschrijving:'Krachten, energie & meer',        href:'./havo3/natuurkunde/', sleutel:'duru_2627_natuurkunde' },
+  { id:'h3-biologie',        titel:'Biologie',        icoon:'🧬', domein:'exact', beschrijving:'Cellen, organen & natuur',        href:'./havo3/biologie/', sleutel:'duru_2627_biologie' },
+  { id:'h3-geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', domein:'mens',  beschrijving:'Tijd, bronnen & gebeurtenissen',  href:'./havo3/geschiedenis/', sleutel:'duru_2627_geschiedenis' },
+  { id:'h3-aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', domein:'mens',  beschrijving:'Aarde, klimaat & mensen',         href:'./havo3/aardrijkskunde/', sleutel:'duru_2627_aardrijkskunde' },
+  { id:'h3-economie',        titel:'Economie',        icoon:'💶', domein:'mens',  beschrijving:'Geld, markt & keuzes',           href:'./havo3/economie/', sleutel:'duru_2627_economie' },
+  { id:'h3-maatschappijleer',titel:'Maatschappijleer',icoon:'🏛️', domein:'mens',  beschrijving:'Samenleven & rechten',           href:'./havo3/maatschappijleer/', sleutel:'duru_2627_maatschappijleer' },
 
   {
     id: 'natuurkunde',
@@ -123,7 +121,8 @@ var VAKKEN = [
     icoon: '⚛️',
     kleur: 'blauw',          // indigo/blauw accent
     beschrijving: 'Snelheid, elektriciteit en meer — oefen theorie en sommen.',
-    href: './archief/mavo2/nask/',
+    href: './archief/2025-2026/nask/',
+    jaar: '2025-2026',
     archief: true
   },
   {
@@ -132,7 +131,8 @@ var VAKKEN = [
     icoon: '⚖️',
     kleur: 'teal',           // teal/turquoise accent
     beschrijving: 'Hoofdstuk 8 — Vergelijkingen: termen, de balans en het snijpunt.',
-    href: './archief/mavo2/wiskunde/',
+    href: './archief/2025-2026/wiskunde/',
+    jaar: '2025-2026',
     archief: true
   },
   {
@@ -141,7 +141,8 @@ var VAKKEN = [
     icoon: '💶',
     kleur: 'groen',          // groen/goud accent (past bij de Economie-site)
     beschrijving: 'De overheid, belasting en de schatkist — alles over economie.',
-    href: './archief/mavo2/economi/',
+    href: './archief/2025-2026/economi/',
+    jaar: '2025-2026',
     archief: true
   },
   {
@@ -150,7 +151,8 @@ var VAKKEN = [
     icoon: '🕰️',
     kleur: 'oranje',         // warm oranje/historisch accent
     beschrijving: 'De Eerste en Tweede Wereldoorlog, het interbellum en Nederland in de oorlog.',
-    href: './archief/mavo2/geschiedenis/',
+    href: './archief/2025-2026/geschiedenis/',
+    jaar: '2025-2026',
     archief: true
   },
   {
@@ -160,19 +162,20 @@ var VAKKEN = [
     kleur: 'oranje',         // warm oranje/rood accent
     beschrijving: 'Taal en leesvaardigheid — klik om de onderwerpen te zien.',
     archief: true,
+    jaar: '2025-2026',
     // Geen href: dit is een uitklapbare categorie
     onderwerpen: [
       {
         titel: 'Begrijpend Lezen',
         icoon: '🧠',
         beschrijving: 'Teksten analyseren en vragen beantwoorden met Meester Max.',
-        href: './archief/mavo2/nederlands/begrijpend-lezen/'
+        href: './archief/2025-2026/nederlands/begrijpend-lezen/'
       },
       {
         titel: 'Spelling & Grammatica',
         icoon: '✍️',
         beschrijving: 'Werkwoordspelling, voegwoorden, interpunctie en zinsdelen ontleden.',
-        href: './archief/mavo2/nederlands/spelling/'
+        href: './archief/2025-2026/nederlands/spelling/'
       }
     ]
   }
@@ -513,8 +516,15 @@ function renderVakken() {
   if (archief.length > 0) renderArchief(archief);
 }
 
+// Schooljaar → niveau-label (voor de archief-koppen). Vul aan bij nieuw jaar.
+var JAAR_NIVEAU = {
+  '2025-2026': 'MAVO 2',
+  '2026-2027': 'HAVO 3'
+};
+
 /**
- * Rendert de inklapbare "Arşiv (MAVO 2)"-sectie met de gearchiveerde vakken.
+ * Rendert de inklapbare "Archief"-sectie, gegroepeerd PER SCHOOLJAAR
+ * (nieuwste jaar bovenaan). Elk vak valt onder zijn `jaar` (default 2025-2026).
  * @param {Array} archief
  */
 function renderArchief(archief) {
@@ -522,36 +532,56 @@ function renderArchief(archief) {
   if (!grid || !grid.parentNode) return;
   if (document.getElementById('archief-sectie')) return; // niet dubbel renderen
 
+  // Groepeer per schooljaar.
+  var perJaar = {};
+  archief.forEach(function(vak) {
+    var j = vak.jaar || '2025-2026';
+    (perJaar[j] = perJaar[j] || []).push(vak);
+  });
+  var jaren = Object.keys(perJaar).sort().reverse(); // nieuwste eerst
+
   var sectie = document.createElement('section');
   sectie.className = 'archief-sectie';
   sectie.id = 'archief-sectie';
-  sectie.setAttribute('aria-label', 'Archief MAVO 2');
+  sectie.setAttribute('aria-label', 'Archief vorige schooljaren');
 
   var toggle = document.createElement('button');
   toggle.type = 'button';
   toggle.className = 'archief-toggle';
   toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-controls', 'archief-grid');
+  toggle.setAttribute('aria-controls', 'archief-inhoud');
   toggle.innerHTML =
-    '<span class="archief-toggle__label">🗄️ Archief (MAVO 2) — vorig jaar</span>' +
+    '<span class="archief-toggle__label">🗄️ Archief — vorige schooljaren</span>' +
     '<span class="archief-pijl" aria-hidden="true">▾</span>';
 
-  var box = document.createElement('div');
-  box.className = 'archief-grid';
-  box.id = 'archief-grid';
-  box.hidden = true;
-  archief.forEach(function(vak) { box.appendChild(bouwKaart(vak)); });
+  var inhoud = document.createElement('div');
+  inhoud.className = 'archief-inhoud';
+  inhoud.id = 'archief-inhoud';
+  inhoud.hidden = true;
+
+  jaren.forEach(function(j) {
+    var groep = document.createElement('div');
+    groep.className = 'archief-jaar';
+    var niveau = JAAR_NIVEAU[j] ? ' · ' + JAAR_NIVEAU[j] : '';
+    groep.innerHTML = '<h3 class="archief-jaar__kop">📚 ' + j + niveau + '</h3>';
+
+    var g = document.createElement('div');
+    g.className = 'archief-grid';
+    perJaar[j].forEach(function(vak) { g.appendChild(bouwKaart(vak)); });
+    groep.appendChild(g);
+    inhoud.appendChild(groep);
+  });
 
   toggle.addEventListener('click', function() {
     var open = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-    box.hidden = open;
+    inhoud.hidden = open;
     var pijl = toggle.querySelector('.archief-pijl');
     if (pijl) pijl.textContent = open ? '▾' : '▴';
   });
 
   sectie.appendChild(toggle);
-  sectie.appendChild(box);
+  sectie.appendChild(inhoud);
   // Direct na het grid plaatsen, vóór de tip-banner.
   grid.parentNode.insertBefore(sectie, grid.nextSibling);
 }

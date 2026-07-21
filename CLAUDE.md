@@ -4,8 +4,9 @@ Duru'nun oefensites'lerini tek link altında toplayan hub. **Saf statik, build y
 (`file://` / `http.server` üzerinde çalışır). **Self-contained**: tüm siteler bu repoda gerçek
 klasörler olarak gömülü (submodule yok; 2026-06-03'ten beri gömülü).
 
-> **Dönem:** Duru **MAVO 2 → HAVO 3**'e geçti (2026-07-20). MAVO 2 içeriği arşivlendi (aşağı bak);
-> yeni içerik HAVO 3 derslerinde toplanır. Yeni dersler henüz **kurulmadı** — önce altyapı.
+> **Dönem:** Güncel ders yılı **2026-2027 · HAVO 3**. Duru MAVO 2 → HAVO 3'e geçti (2026-07-20).
+> **Arşiv ders yılına göre**: `archief/<schooljaar>/` (ör. `archief/2025-2026/` = MAVO 2). Bir yıl
+> bitince o yılın dersleri `archief/<o-yıl>/`'e taşınır. Yeni HAVO 3 dersleri henüz kurulmadı — önce altyapı.
 >
 > **Dil kuralı:** Geliştirici/koordinasyon dokümanları **Türkçe**; öğrenci-içeriği **Flamanca**.
 > Ondalık ayraç metinlerde **virgül**. Bkz. `docs/DOC_STANDARD.md`.
@@ -25,8 +26,8 @@ js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (vak listeler
 server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
 inbox/            ders materyali bırakma alanı (PDF/Word/görsel)
-archief/mavo2/    ARŞİV: MAVO 2 dersleri (nask, economi, wiskunde, geschiedenis, nederlands)
-havo3/            (henüz boş) HAVO 3 dersleri buraya kurulacak
+archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = MAVO 2 dersleri)
+havo3/<vak>/      HAVO 3 ders-siteleri (10 vak, smoke-test: şimdilik 1 proeftoets/5 soru). Anahtar: duru_2627_<slug>_*
 ```
 
 ## Model & agent politikası (ÖNEMLİ)
@@ -38,35 +39,51 @@ havo3/            (henüz boş) HAVO 3 dersleri buraya kurulacak
 - **Güncelleme disiplini:** her geliştirmeden sonra ilgili `MEMORY.md` + gerekiyorsa `CLAUDE.md`
   güncellenir, `coordination.md` görevi "Done"a taşınır. Kim uygularsa güncellemeyi de o yapar.
 
-## Arşiv (MAVO 2)
-MAVO 2 dersleri `archief/mavo2/` altında; skorları/istatistikleri **çalışmaya devam eder**
-(localStorage anahtarları global, yol-bağımsız). Landing'de ayrı bir "Arşiv (MAVO 2)" bölümünden
-erişilir. Arşiv dersleri eski slug'larını korur (`duru_nask_v1` …). Yeni HAVO 3 dersleri **yeni
-slug** kullanmalı (`duru_h3_<vak>_v1`) — çakışmayı önlemek için (bkz. `docs/ENGINE_SPEC.md`).
+## Arşiv (ders yılına göre)
+Eski dersler `archief/<schooljaar>/<vak>/` altında (ör. `archief/2025-2026/nask/` = MAVO 2).
+Skorları/istatistikleri **çalışmaya devam eder** (localStorage anahtarları global, yol-bağımsız).
+Landing'de açılır **"Archief — vorige schooljaren"** bölümünden erişilir; içeride **yıla göre gruplu**
+(en yeni yıl üstte, başlık "2025-2026 · MAVO 2"). Yıl→niveau etiketi `landing.js`'teki `JAAR_NIVEAU`
+tablosunda; yeni yıl eklerken oraya bir satır ekle. Arşiv dersleri eski slug'larını korur
+(`duru_nask_v1` …). Yeni yıl dersleri **yıl-kodlu anahtar** kullanmalı (`duru_<jaarcode>_<slug>_v1`,
+ör. HAVO 3 → `duru_2627_<slug>_v1`) — çakışmayı önlemek + yıla göre istatistik için (bkz. `docs/ENGINE_SPEC.md`).
+
+**Bir ders yılını arşivleme (yıl sonunda):** `git mv <vak> archief/<schooljaar>/<vak>` → `VAKKEN`
+entry'sine `archief:true` + `jaar:'<schooljaar>'` + href `./archief/<schooljaar>/<vak>/` → `JAAR_NIVEAU`'ye
+yıl→niveau ekle → `?v=` bump.
 
 ## Dashboard & istatistik
 `index.html` iki view içerir ("Mijn vakken" / "Mijn prestaties & statistieken"). `js/dashboard.js`
-localStorage'ı okuyup tüm vaklar üzerinden toplar: 4 hero-kart (XP/badges/proeftoetsen/gemiddeld
-cijfer) + per-vak kartlar (`renderVakKaarten`) + SVG score-timeline + doorzoekbaar logboek.
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=2.5`).
+**yıl-farkında**: tüm ders/yıl kombinasyonları `VAK_REGISTER` dizisinde tek satırda tanımlı (jaar,
+id, titel, icoon, kleur, practiceKey, examKey; begrijpend lezen `special:'begrijpend'`). Üstte bir
+**yıl-seçici** (`#jaar-selector`, `renderJaarSelector`) var; seçim `localStorage.duru_dashboard_jaar`'da
+kalıcı. Seçili yıla göre filtrelenmiş satırlardan: 4 hero-kart (XP/badges/proeftoetsen/gemiddeld
+cijfer, o yıla özel) + per-vak kartlar (`renderVakKaarten`) + SVG score-timeline + filtre çubuğu
+(`renderFilterBar`, yıla göre yeniden kurulur) + doorzoekbaar logboek. 2025-2026 (MAVO 2) anahtarları
+**yılsız ve donmuş** (`duru_nask_v1` …) — `VAK_REGISTER`'da sabit `jaar:'2025-2026'` ile etiketli,
+asla değiştirilmez. Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=2.9`).
 
 ## Landing düzeni (HAVO 3 — sıcak, alan-gruplu)
 "Mijn vakken" görünümü `js/landing.js`'te `renderVakken` ile kurulur. Aktif (HAVO 3) dersler
 **vakgebied'e göre** gruplanır (`DOMEINEN`: talen / exact / mens) ve `maakVakKaartHavo3` ile sıcak
-kartlar (`.havo3-*` stilleri, `css/style.css` sonunda, scoped + tema-güvenli) basılır. Arşiv (MAVO 2)
-dersleri altta açılır "Archief (MAVO 2)" bölümünde (`renderArchief`, eski kart stili). `VAKKEN` entry
-alanları: `id, titel, icoon, domein('talen'|'exact'|'mens'), beschrijving, binnenkort?, href?, sleutel?, archief?`.
+kartlar (`.havo3-*` stilleri, `css/style.css` sonunda, scoped + tema-güvenli) basılır. Arşiv
+dersleri altta açılır "Archief — vorige schooljaren" bölümünde **yıla göre gruplu** (`renderArchief`,
+eski kart stili). `VAKKEN` entry alanları: `id, titel, icoon, domein('talen'|'exact'|'mens'),
+beschrijving, binnenkort?, href?, sleutel?, archief?, jaar?`.
 `binnenkort:true` = henüz site/data yok (tıklanmaz, "Binnenkort"). Aktif ders: `binnenkort` kaldır +
-`href:'./havo3/<vak>/'` + `sleutel:'duru_h3_<vak>'` ekle → kart ilerleme/cijfer'i `leesVakData` ile gösterir.
-Dashboard (statistieken view) henüz eski temada; HAVO 3'e uyarlama ayrı iş.
+`href:'./havo3/<vak>/'` + `sleutel:'duru_2627_<vak>'` ekle → kart ilerleme/cijfer'i `leesVakData` ile gösterir.
+**Şu an 10 HAVO 3 dersi aktif** (`havo3/<vak>/`, her biri 1 proeftoets/5 soru = smoke-test); Duru materyal
+verdikçe onderwerpen + daha çok proeftoets eklenecek. Dashboard **yıl-farkında** (yukarı bak); HAVO 3
+dersleri `VAK_REGISTER`'da 2026-2027 satırları olarak kayıtlı.
 
-## Ders ekleme/arşivleme — 6 dokunma noktası (çapraz-referanssız!)
+## Ders ekleme/arşivleme — dokunma noktaları (çapraz-referanssız!)
 Bir ders şu yerlerde tanımlı; birini unutma:
-1. `js/landing.js` → `VAKKEN` dizisi (kart + `domein` + href). Arşiv için: `archief:true` + href `./archief/mavo2/<klasör>/`.
-2–4. `js/dashboard.js` → **üç ayrı hard-coded liste**: `practiceKeys`, `loadDuruAttempts(...)` çağrıları, `renderVakKaarten()` `vakken` dizisi.
-5. `index.html` → log tablosu filtre çubuğu butonları (`data-filter`).
-6. `css/style.css` → yalnızca YENİ renk eklerken `.vak-kaart--` / `.vak-badge--` / `.subject-badge.` / `.vak-stat-card--` / `.onderwerp-link--<renk>` (mevcut 4 renk hazır).
-+ fiziksel klasör + `duru_<slug>_v1` / `_examens_v1` anahtarları. Linkler **her zaman göreli** (`./...`).
+1. `js/landing.js` → `VAKKEN` dizisi (kart + `domein` + href). Arşiv için: `archief:true` + `jaar:'<schooljaar>'` + href `./archief/<schooljaar>/<klasör>/`. Aktif HAVO 3 dersi: `sleutel:'duru_2627_<slug>'` zaten var, `binnenkort` kaldır.
+2. `js/dashboard.js` → **tek kaynak** `VAK_REGISTER`'a bir satır ekle (jaar, id, titel, icoon, kleur, practiceKey, examKey). Hero-kartlar, `renderVakKaarten`, filtre çubuğu (`renderFilterBar`) ve yıl-seçici otomatik türer — ayrı hard-coded liste YOK.
+3. `index.html` → log tablosu filtre çubuğu artık JS ile dolduruluyor (`#table-filter-bar` boş `<div>`), dokunmaya gerek yok.
+4. `css/style.css` → yalnızca YENİ renk eklerken `.vak-kaart--` / `.vak-badge--` / `.subject-badge.` / `.vak-stat-card--` / `.onderwerp-link--<renk>` (mevcut 4 renk hazır).
++ fiziksel klasör + `duru_<slug>_v1` / `_examens_v1` anahtarları (legacy 2025-2026 yılsız, yeni yıllar `duru_<jaarcode>_<slug>_v1`). Linkler **her zaman göreli** (`./...`).
 
 ## Navigasyon (iframe-shell)
 Ders `#vak-frame`'de açılır; sabit "← Terug naar de vakken" balığı. Geri = knop / Escape /

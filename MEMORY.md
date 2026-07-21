@@ -197,3 +197,18 @@ This document serves as the project's global memory log, preserving all overall 
   `havo3/<vak>/` sitesini `duru_h3_<vak>_v1` slug'ıyla kur, kartı `binnenkort:false` + `href` yap,
   `sleutel:'duru_h3_<vak>'` ekle (kart ilerleme/cijfer gösterir). (3) Dashboard/statistieken view'ını
   da HAVO 3 sıcak temaya uyarlamak (henüz yapılmadı; ayrı iş).
+
+### Milestone 8: Ders yılı bazlı arşivleme (2026-07-20)
+* **Hedef**: Arşivi seviye ("mavo2") yerine **ders yılına** göre düzenlemek (2025-2026, 2026-2027…).
+* **Sonuç**: `git mv archief/mavo2 → archief/2025-2026`. `js/landing.js` href'leri güncellendi;
+  arşiv entry'lerine `jaar` alanı; `renderArchief` **yıla göre gruplar** (`JAAR_NIVEAU` tablosu:
+  2025-2026→MAVO 2, 2026-2027→HAVO 3); landing'de "Archief — vorige schooljaren" başlığı altında
+  yıl grupları. `index.html` hero'ya güncel ders yılı (2026-2027); `?v=2.8`.
+* **Kural**: Bir ders yılı bitince o yılın dersleri `archief/<schooljaar>/<vak>/`'e taşınır +
+  `VAKKEN`'de `jaar` işaretlenir + `JAAR_NIVEAU`'ye satır eklenir.
+* **Kim**: Opus.
+
+### Pipeline testi (2026-07-20)
+* `inbox/geschiedenis/test/Tarih 4. Bolum.pdf` (Flamanca geschiedenis H4) → `examen_87.js`
+  (`ex-geschiedenis-87`, 20 soru) üretilip `archief/2025-2026/geschiedenis/`'e eklendi. Belge→toets
+  hattının ilk uçtan uca denemesi başarılı.

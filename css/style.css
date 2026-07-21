@@ -1561,6 +1561,16 @@ html.dark #line-chart-container { --hub-hoofd: #34d399; }
   margin-top: 18px;
 }
 .archief-grid[hidden] { display: none; }
+.archief-inhoud[hidden] { display: none; }
+.archief-jaar { margin-top: 18px; }
+.archief-jaar:first-child { margin-top: 4px; }
+.archief-jaar__kop {
+  margin: 0 2px 12px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .01em;
+  opacity: .75;
+}
 
 /* ══ HAVO 3 landing — warm, domein-gegroepeerd (scoped) ══════════════
    Eigen tokens zodat de rest van de hub (dashboard/login) ongemoeid blijft. */
@@ -1621,3 +1631,69 @@ html.dark {
 .havo3-kaart__cijfer { font-weight:800; font-size:14px; font-variant-numeric:tabular-nums; }
 .havo3-kaart__cijfer small { color:var(--h3-zacht); font-weight:700; }
 .havo3-kaart__ga { font-weight:800; font-size:13px; color:var(--k); }
+
+/* ═══════════════════════════════════════════════════════════
+   Schooljaar-kiezer (dashboard, boven de hero-stat-kaarten)
+   Scoped + thema-veilig: gebruikt bestaande --hub-* tokens.
+   ═══════════════════════════════════════════════════════════ */
+.jaar-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.jaar-chip {
+  background: var(--hub-cream);
+  border: 1px solid var(--lijn);
+  padding: 7px 16px;
+  font-family: var(--font-tekst);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--hub-hoofd);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.jaar-chip:hover {
+  border-color: var(--hub-hoofd);
+}
+
+.jaar-chip--actief {
+  background: var(--hub-hoofd);
+  color: var(--wit);
+  border-color: var(--hub-hoofd);
+}
+
+@media (max-width: 480px) {
+  .jaar-chip { padding: 6px 12px; font-size: 12px; }
+}
+
+html.dark .jaar-chip {
+  background: #0f3a2b;
+  color: var(--hub-accent);
+  border-color: #1c5240;
+}
+
+html.dark .jaar-chip:hover {
+  border-color: var(--hub-accent);
+}
+
+html.dark .jaar-chip--actief {
+  background: var(--hub-accent);
+  color: #062f21;
+  border-color: var(--hub-accent);
+}
+
+/* Vriendelijke lege-staat wanneer een schooljaar nog geen enkel vak heeft */
+.vak-stats-leeg {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--grijs-licht);
+  font-family: var(--font-tekst);
+  font-size: 14px;
+}
+
+html.dark .vak-stats-leeg { color: #7db99e; }

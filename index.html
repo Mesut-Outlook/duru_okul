@@ -10,7 +10,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
 
   <!-- Google Fonts worden geladen vanuit style.css via @import -->
-  <link rel="stylesheet" href="css/style.css?v=2.7" />
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
 
   <!-- Thema vroeg toepassen (voorkomt flits van verkeerde modus).
        Keuze in localStorage 'duru_hub_theme' ('light'/'dark'); zonder
@@ -59,8 +59,8 @@
         <div class="hero-tekst">
           <h2>Hoi Duru 👋 Klaar voor HAVO 3?</h2>
           <p>
-            Kies een vakgebied en ga aan de slag. Kleine stapjes, groot resultaat —
-            elke dag een beetje oefenen maakt je een stuk slimmer! ✨
+            Schooljaar <strong>2026-2027 · HAVO 3</strong>. Kies een vakgebied en ga aan de slag —
+            kleine stapjes, groot resultaat, elke dag een beetje! ✨
           </p>
         </div>
       </div>
@@ -98,6 +98,9 @@
 
     <!-- ── Statistieken view ───────────────────────────────────── -->
     <div id="statistieken-view" class="hub-view">
+
+      <!-- 0. Schooljaar-kiezer — gevuld door renderJaarSelector() in dashboard.js -->
+      <div id="jaar-selector" class="jaar-selector" role="tablist" aria-label="Schooljaar"></div>
 
       <!-- 1. Overview summary strip -->
       <div class="stats-summary-grid">
@@ -146,15 +149,8 @@
       <section class="exam-log-section">
         <h3 class="chart-card__title">📋 Overzicht Gemaakte Toetsen & Spelling-spelen</h3>
 
-        <!-- Filter bar -->
-        <div class="filter-bar" id="table-filter-bar">
-          <button class="filter-btn active" data-filter="all" type="button">Alles</button>
-          <button class="filter-btn" data-filter="natuurkunde" type="button">Natuurkunde</button>
-          <button class="filter-btn" data-filter="wiskunde" type="button">Wiskunde</button>
-          <button class="filter-btn" data-filter="economie" type="button">Economie</button>
-          <button class="filter-btn" data-filter="nederlands-spelling" type="button">Spelling</button>
-          <button class="filter-btn" data-filter="nederlands-begrijpend" type="button">Begrijpend Lezen</button>
-        </div>
+        <!-- Filter bar — gevuld door renderFilterBar() in dashboard.js (jaar-afhankelijk) -->
+        <div class="filter-bar" id="table-filter-bar"></div>
 
         <!-- Search input -->
         <div class="search-input-wrapper">
