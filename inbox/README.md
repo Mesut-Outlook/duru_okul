@@ -1,20 +1,29 @@
-# inbox/ — Ders materyali bırakma alanı
+# Inbox — Lesmateriaal inleveren
 
-Duru bir hoofdstuk/paragraaf bittiğinde okul materyalini (PDF / Word / görsel) buraya koy;
-ben (Opus) okuyup planlar, uygun modelle sınav/oefen üretiriz. Ayrıntı: `../docs/PIPELINE.md`.
+Plaats hier je schoolmateriaal (PDF, Word of foto's van lesboeken/aantekeningen). Wij lezen het materiaal en maken er oefenmateriaal en proeftoetsen van!
 
-## Nasıl kullanılır
-Dosyayı ders + hoofdstuk'a göre bir alt klasöre koy:
+## Waar plaats je je bestanden?
+
+Zet je bestand in de juiste map voor het **schooljaar** en het **vak**:
+
 ```
-inbox/<vak>/<hoofdstuk>/   ör. inbox/geschiedenis/h1/  ·  inbox/nask/h2-krachten/
+inbox/<schooljaar>/<vak>/
 ```
-İstersen dosyayı doğrudan sohbete de yükleyebilirsin — ikisi de çalışır.
 
-## İpuçları
-- Dosya adına kapsamı yaz: `h1_par1-3_hoorcollege.pdf`, `toets-info_h2.jpg`.
-- Birden fazla bölümden sorumlu bir sınav varsa hepsini aynı klasöre koyup not düş.
-- Buradaki dosyalar **kaynak**tır; üretilen sınavlar ilgili `havo3/<vak>/js/data/` altına yazılır.
-- İşlenen materyali `inbox/_verwerkt/` altına taşıyıp izini `coordination.md`'de tutarım.
+### Voorbeelden:
+- **Geschiedenis (HAVO 3)**: `inbox/2026-2027/geschiedenis/`
+- **Wiskunde (HAVO 3)**: `inbox/2026-2027/wiskunde/`
+- **Economie (MAVO 2 - archief)**: `inbox/2025-2026/economi/`
 
-> Not: Bu klasör git'e commit edilebilir (kaynak arşivi) ya da `.gitignore`'a alınabilir —
-> telif/boyut durumuna göre karar `coordination.md`'de not edilir.
+## Ondersteunde bestandsformaten
+- 📄 **PDF-bestanden** (bijv. digitale hoofdstukken of samenvattingen)
+- 📝 **Word-documenten** (`.docx` of `.doc`)
+- 📸 **Afbeeldingen & Foto's** (`.jpg`, `.png` - duidelijke foto's van je boek of aantekeningen)
+
+## Hoe het werkt
+1. **Plaats het bestand** in de juiste vak-map.
+2. **Geef het een duidelijke naam** (bijv. `H4_par1-3_samenvatting.pdf` of `toets_hoofdstuk2.jpg`).
+3. **Verwerking**: Nadat de oefensite is aangemaakt, wordt het bronbestand verplaatst naar `_verwerkt/`.
+
+---
+*Zie `../docs/PIPELINE.md` voor technische details over het verwerkingsproces.*
