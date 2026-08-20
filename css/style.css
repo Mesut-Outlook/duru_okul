@@ -184,10 +184,30 @@ html.dark .topbar { background: rgba(10, 46, 34, .82); }
   gap: 14px;
 }
 
+/* Merk = klikbare link naar de startpagina (vakken-overzicht). */
 .merk {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 4px;
+  margin: -4px;
+  transition: background .2s ease, transform .15s ease;
+}
+
+.merk:hover {
+  background: rgba(127, 127, 127, .10);
+  transform: translateY(-1px);
+}
+
+.merk:active { transform: translateY(0); }
+
+.merk:focus-visible {
+  outline: 3px solid var(--hub-hoofd);
+  outline-offset: 2px;
 }
 
 /* ── Thema-schakelaar (licht/donker) ─────────────────────── */

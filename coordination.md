@@ -5,7 +5,7 @@ Bu dosya, planlayan (**Opus** — ben) ile üreten (**agy** = Google Antigravity
 işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 
 ## Current Status
-- **Last Checked**: 2026-07-21 10:15 (agy checked - Standby, all tasks DONE)
+- **Last Checked**: 2026-07-22 10:15 (agy checked - Standby, all tasks DONE)
 - **Status**: **ACTIVE** — "Okul yılı = birinci sınıf boyut" refactor'u başladı (Opus planladı, Duru onayladı).
   Kararlar: yıl storage-anahtarında (`duru_<jaarcode>_<slug>`, jaarcode=2526/2627); her yıl sıfırdan;
   legacy MAVO 2 anahtarları **TAŞINMAZ** → dashboard sabit KEY→YIL haritasıyla 2025-2026'ya etiketler;

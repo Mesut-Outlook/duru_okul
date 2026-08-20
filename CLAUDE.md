@@ -27,7 +27,7 @@ server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
 inbox/            ders materyali bırakma alanı (PDF/Word/görsel)
 archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = MAVO 2 dersleri)
-havo3/<vak>/      HAVO 3 ders-siteleri (10 vak, smoke-test: şimdilik 1 proeftoets/5 soru). Anahtar: duru_2627_<slug>_*
+havo3/<vak>/      HAVO 3 ders-siteleri (12 vak, smoke-test: şimdilik 1 proeftoets/5 soru). Anahtar: duru_2627_<slug>_*
 ```
 
 ## Model & agent politikası (ÖNEMLİ)
@@ -62,7 +62,7 @@ cijfer, o yıla özel) + per-vak kartlar (`renderVakKaarten`) + SVG score-timeli
 (`renderFilterBar`, yıla göre yeniden kurulur) + doorzoekbaar logboek. 2025-2026 (MAVO 2) anahtarları
 **yılsız ve donmuş** (`duru_nask_v1` …) — `VAK_REGISTER`'da sabit `jaar:'2025-2026'` ile etiketli,
 asla değiştirilmez. Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=2.9`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=3.2`).
 
 ## Landing düzeni (HAVO 3 — sıcak, alan-gruplu)
 "Mijn vakken" görünümü `js/landing.js`'te `renderVakken` ile kurulur. Aktif (HAVO 3) dersler
@@ -73,7 +73,7 @@ eski kart stili). `VAKKEN` entry alanları: `id, titel, icoon, domein('talen'|'e
 beschrijving, binnenkort?, href?, sleutel?, archief?, jaar?`.
 `binnenkort:true` = henüz site/data yok (tıklanmaz, "Binnenkort"). Aktif ders: `binnenkort` kaldır +
 `href:'./havo3/<vak>/'` + `sleutel:'duru_2627_<vak>'` ekle → kart ilerleme/cijfer'i `leesVakData` ile gösterir.
-**Şu an 10 HAVO 3 dersi aktif** (`havo3/<vak>/`, her biri 1 proeftoets/5 soru = smoke-test); Duru materyal
+**Şu an 12 HAVO 3 dersi aktif** (`havo3/<vak>/`, her biri 1 proeftoets/5 soru = smoke-test); Duru materyal
 verdikçe onderwerpen + daha çok proeftoets eklenecek. Dashboard **yıl-farkında** (yukarı bak); HAVO 3
 dersleri `VAK_REGISTER`'da 2026-2027 satırları olarak kayıtlı.
 
