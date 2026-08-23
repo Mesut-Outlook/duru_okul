@@ -97,7 +97,22 @@ This document serves as the project's global memory log, preserving all overall 
   - **Duru Decryption Restore**: Logging in as `"duru"` with `"12341234"` triggers a one-time fetch and decryption of `scores_backup.json`, restoring her historical grades into her specific account prefix `user_duru_`.
   - **Log Out UI**: Added a user status badge and a logout button in the header topbar.
 
-### Milestone 14: Economics Out-of-Scope Question Cleanup (2026-06-22)
+### Milestone 15: Geschiedenis HAVO 3 — Hoofdstuk 1: De Eerste Wereldoorlog (2026-08-23)
+* **Goal**: Build complete theory, practice quizzes (onderwerpen), and full proeftoetsen (exams) for HAVO 3 History Hoofdstuk 1 (De Eerste Wereldoorlog) based on the official Geschiedeniswerkplaats 3 HAVO textbook chapter.
+* **Implementation Details**:
+  - **Source Material**: Processed 10-page textbook PDF (`Geschiedeniswerkplaats 3 havo - Hoofdstuk 1 De Eerste Wereldoorlog.pdf`) via PyMuPDF + macOS Vision OCR.
+  - **Bootstrap Setup**: Updated `havo3/geschiedenis/js/bootstrap.js` with Hoofdstuk 1 metadata (De Eerste Wereldoorlog 1900–1920).
+  - **Practice Quizzes (Onderwerpen)**: Created 5 detailed Javascript data modules in `havo3/geschiedenis/js/data/`:
+    1. `h1_1_tijd.js`: Paragraaf 1.1 — De moderne beleving van tijd (Greenwich-tijd, spoorwegen, la belle époque, vooruitgangsgeloof, Olympische Spelen 1896, 8 vragen).
+    2. `h1_2_grote_oorlog.js`: Paragraaf 1.2 — De Grote Oorlog (Centralen vs Geallieerden, nationalisme/militarisme/wapenwedloop/bondgenootschappen, moord op Frans Ferdinand in Sarajevo 28 juni 1914, Schlieffenplan, loopgraven, Armeense genocide, 11-11-1918 11u, 8 vragen).
+    3. `h1_3_rusland.js`: Paragraaf 1.3 — Revolutie in Rusland (Tsarenrijk Nicolaas II, Bloedige Zondag 1905, Februarirevolutie 1917, Lenin, Oktoberrevolutie 1917, bolsjewieken, hamer en sikkel, Rode Leger, Tsjeka, stichting Sovjet-Unie 1922, 8 vragen).
+    4. `h1_4_nieuwe_kaart.js`: Paragraaf 1.4 — De nieuwe kaart van Europa (Vrede van Versailles 1919, alleenschuld Duitsland, herstelbetalingen, Volkenbond, zelfbeschikkingsrecht Wilson, nieuwe staten, stichting Republiek Turkije 1923 o.l.v. Atatürk, volkenruil, 8 vragen).
+    5. `h1_5_neutraal_nederland.js`: Paragraaf 1.5 — Neutraal Nederland (mobilisatie, 1 miljoen Belgische vluchtelingen, Draad des Doods, schaarste & distributie 'op de bon', Grondwetsherziening 1917: algemeen mannenkiesrecht + vrouwenkiesrecht 1919 + schoolstrijd, vergissing van Troelstra, De Stijl & Mondriaan, 8 vragen).
+  - **Proeftoetsen (Exams)**:
+    - Updated `examen_1.js`: Proeftoets 1 — De Grote Oorlog & Oorzaken (12 exam vragen).
+    - Created `examen_2.js`: Proeftoets 2 — Revolutie, Nieuwe Kaart & Neutraal NL (12 exam vragen).
+  - **Integration & Validation**: Updated `havo3/geschiedenis/index.html` loading order. Validated all JavaScript modules using Node.js stub execution (`SUCCESS! Registered onderwerpen: 5 and examens: 2`).
+
 * **Goal**: Audit and align all 44 economics exams to ensure no questions test topics outside of the official Chapter 6 theory (Sections 6.1-6.4).
 * **Implementation Details**:
   - **Auditing**: Wrote a scanning script to detect out-of-scope keywords (ACM, cartels, consumer rights/protection, price elasticity, marktvormen, trade barriers). Identified 19 violating questions across 6 exam files.

@@ -1,14 +1,21 @@
 /* =========================================================
-   Duru's geschiedenis (HAVO 3) — Bootstrap
+   Duru's Geschiedenis (HAVO 3) — Bootstrap
    Maakt het globale DURU-object klaar VOORDAT de databestanden laden.
    Elk databestand roept DURU.register({...}) / DURU.registerExamen({...}) aan.
-   Smoke-test-site: nog geen onderwerpen (oefenquizzes), alleen een proeftoets.
    ========================================================= */
 (function () {
+  "use strict";
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  DURU.hoofdstukken = [
+    {
+      nummer: 1,
+      titel: "De Eerste Wereldoorlog (1900–1920)",
+      periode: "1900–1920",
+      beschrijving: "De beleving van tijd, de Grote Oorlog, de Russische Revolutie, de nieuwe kaart van Europa en Neutraal Nederland."
+    }
+  ];
+
   DURU.onderwerpen = [];
   DURU._byId = {};
 
