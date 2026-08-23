@@ -1,140 +1,223 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 1: De Grote Oorlog & Oorzaken
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 1 (20 vragen)
+   Hoofdstuk 1: De Eerste Wereldoorlog — 1.1 Beleving van tijd & 1.2 De Grote Oorlog
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-1",
-    titel: "Proeftoets 1 — De Grote Oorlog & Oorzaken (1.1 & 1.2)",
-    vak: "Geschiedenis · HAVO 3",
-    icoon: "🕰️",
-    duurMin: 15,
+    titel: "Proeftoets 1 — 1.1 Beleving van tijd & 1.2 De Grote Oorlog (Oorzaken)",
+    vak: "Geschiedenis · Hoofdstuk 1",
+    hoofdstuk: 1,
+    hoofdstukTitel: "Hoofdstuk 1 — De Eerste Wereldoorlog (1900–1920)",
+    icoon: "⏱️",
+    duurMin: 20,
     vragen: [
       {
-        id: "ges1_v1",
+        id: "ex1_v1",
         type: "mc",
-        vraag: "Wat voor soort bron is een dagboek geschreven door een soldaat in een Britse loopgraaf in 1916?",
+        vraag: "Waarom werd in de 19e eeuw de invoering van een landelijke standaardtijd noodzakelijk?",
         opties: [
-          "Een primaire bron",
-          "Een secundaire bron",
-          "Een tertiaire bron",
-          "Een niet-historische bron"
-        ],
-        antwoord: 0,
-        uitleg: "Een primaire bron stamt rechtstreeks uit de tijd zelf en is gemaakt door een ooggetuige of betrokken persoon."
-      },
-      {
-        id: "ges1_v2",
-        type: "mc",
-        vraag: "Waarom voerden Duitsland en Oostenrijk in april 1916 tijdens de oorlog voor het eerst de zomertijd in?",
-        opties: [
-          "Om de klokken gelijk te zetten met de sterrenwacht van Greenwich.",
-          "Om energie en steenkool te besparen voor de oorlogsindustrie.",
-          "Om het Franse leger in verwarring te brengen.",
-          "Op bevel van de Volkenbond."
+          "Omdat dorpen en steden anders geen markt konden houden.",
+          "Omdat de spoorwegen een strakke en betrouwbare dienstregeling nodig hadden.",
+          "Omdat de fabrieksarbeiders te laat op hun werk kwamen.",
+          "Omdat de kerken hun klokken niet meer luidden."
         ],
         antwoord: 1,
-        uitleg: "Door de klok een uur vooruit te zetten bleef het 's avonds langer licht, waardoor er minder steenkool werd verstookt voor verlichting."
+        uitleg: "Met de komst van de trein en spoorwegen was het onmogelijk om een dienstregeling te maken als elke plaats een eigen zonne-tijd aanhield."
       },
       {
-        id: "ges1_v3",
+        id: "ex1_v2",
+        type: "invoer",
+        vraag: "Bij welke bekende Engelse plaats staat de sterrenwacht waarop de internationale nulmeridiaan en standaardtijd werden gebaseerd?",
+        antwoord: "Greenwich|greenwich",
+        uitleg: "De standaardtijd werd afgesteld op de Royal Observatory in Greenwich bij Londen."
+      },
+      {
+        id: "ex1_v3",
         type: "waaronwaar",
-        vraag: "De periode 1890-1914 staat bekend als 'la belle époque' omdat het een tijd van vrede, welvaart en optimistisch vooruitgangsgeloof was.",
+        vraag: "In 1891 werd Europa verdeeld in drie internationale tijdzones: West-Europese, Midden-Europese en Oost-Europese tijd.",
         antwoord: true,
-        uitleg: "Waar! Fransen noemden de periode voor de oorlog 'la belle époque' (het mooie tijdperk) vanwege de stijgende welvaart en uitvindingen."
+        uitleg: "Waar! Om het toenemende internationale treinverkeer te stroomlijnen werd Europa in drie tijdzones verdeeld."
       },
       {
-        id: "ges1_v4",
+        id: "ex1_v4",
         type: "mc",
-        vraag: "Wie was de Franse initiator van de moderne Olympische Spelen die in 1896 in Athene van start gingen?",
+        vraag: "Hoe noemden de Fransen de periode 1890–1914 achteraf, gekenmerkt door vrede, welvaart en vernieuwing?",
         opties: [
-          "Pierre de Coubertin",
-          "Georges Clemenceau",
+          "La belle époque",
+          "Le grand siècle",
+          "L'âge d'or",
+          "La grande guerre"
+        ],
+        antwoord: 0,
+        uitleg: "'La belle époque' betekent 'het mooie tijdperk' en verwijst naar de periode van vrede en bloei voor 1914."
+      },
+      {
+        id: "ex1_v5",
+        type: "mc",
+        vraag: "Wat wordt bedoeld met het 'vooruitgangsgeloof' rond 1900?",
+        opties: [
+          "Het geloof dat de kerk alle wetenschap zou vervangen.",
+          "Het optimistische idee dat de mensheid door wetenschap, techniek en industrie steeds beter zou worden.",
+          "Het idee dat de Eerste Wereldoorlog snel gewonnen zou worden.",
+          "Het geloof dat de economie alleen in Frankrijk kon groeien."
+        ],
+        antwoord: 1,
+        uitleg: "Het vooruitgangsgeloof was het rotsvaste vertrouwen dat de maatschappij door technologische vernieuwingen steeds verder ging."
+      },
+      {
+        id: "ex1_v6",
+        type: "waaronwaar",
+        vraag: "Duitsland en Oostenrijk voerden in april 1916 voor het eerst de zomertijd in om steenkool te besparen voor de oorlogsvoering.",
+        antwoord: true,
+        uitleg: "Waar! Door de klok een uur vooruit te zetten bleef het langer licht, waardoor er minder steenkool voor verlichting nodig was."
+      },
+      {
+        id: "ex1_v7",
+        type: "mc",
+        vraag: "Wie blies in 1896 in Athene de klassieke Olympische Spelen nieuw leven in als de moderne Olympische Spelen?",
+        opties: [
           "Victor Hugo",
-          "Woodrow Wilson"
-        ],
-        antwoord: 0,
-        uitleg: "Baron Pierre de Coubertin blies de klassieke Olympische Spelen in 1896 in Athene nieuw leven in."
-      },
-      {
-        id: "ges1_v5",
-        type: "mc",
-        vraag: "Welke vier mogendheden vormden de oorspronkelijke kern van de Geallieerden bij het uitbreken van WO1 in 1914?",
-        opties: [
-          "Duitsland, Oostenrijk-Hongarije, Italië en Spanje",
-          "Groot-Brittannië, Frankrijk, Rusland en Servië",
-          "Verenigde Staten, Japan, Duitsland en Nederland",
-          "Rusland, Turkije, België en Griekenland"
+          "Pierre de Coubertin",
+          "Woodrow Wilson",
+          "Koning Willem III"
         ],
         antwoord: 1,
-        uitleg: "Groot-Brittannië, Frankrijk en Rusland (de Triple Entente) vormden samen met Servië het hart van de Geallieerden."
+        uitleg: "Baron Pierre de Coubertin was de Franse oprichter van de moderne Olympische Spelen."
       },
       {
-        id: "ges1_v6",
-        type: "invul",
-        vraag: "Op 28 juni 1914 werd de Oostenrijkse kroonprins Frans Ferdinand neergeschoten in de stad ____.",
-        antwoord: "Sarajevo|sarajevo",
-        uitleg: "De moord op Frans Ferdinand in Sarajevo (Bosnië) was de directe aanleiding (vonk) voor het uitbreken van WO1."
+        id: "ex1_v8",
+        type: "invoer",
+        vraag: "Welk pas uitgevonden hulpmiddel maakte tijdens de Olympische Spelen van 1896 nauwkeurige tijdmeting in tienden van seconden mogelijk?",
+        antwoord: "stopwatch|de stopwatch",
+        uitleg: "De net uitgevonden stopwatch paste bij de moderne beleving van tijd en prestatiemeting."
       },
       {
-        id: "ges1_v7",
+        id: "ex1_v9",
         type: "mc",
-        vraag: "Wat hield het Duitse 'Schlieffenplan' in?",
+        vraag: "Welke landen vormden bij de uitbraak van WO1 in 1914 de kern van de Geallieerden?",
         opties: [
-          "Frankrijk snel verslaan via een omtrekkende beweging door neutraal België, om daarna troepen naar Rusland te sturen.",
-          "Direct een zee-aanval uitvoeren op Londen met duikboten.",
-          "Een bondgenootschap sluiten met de VS om Frankrijk te bezetten.",
-          "Nederland bezetten om de Rotterdamse haven te gebruiken."
-        ],
-        antwoord: 0,
-        uitleg: "Duitsland wilde een tweefrontenoorlog voorkomen door Frankrijk binnen 7 weken via België uit te schakelen."
-      },
-      {
-        id: "ges1_v8",
-        type: "waaronwaar",
-        vraag: "Het Westfront kenmerkte zich vanaf eind 1914 door een beweeglijke oorlog waarin maandelijks honderden kilometers terrein werden gewonnen.",
-        antwoord: false,
-        uitleg: "Onwaar! Het Westfront liep vast in een uitputtende loopgravenoorlog langs een 700 km lang front waarin de linies nauwelijks verschoven."
-      },
-      {
-        id: "ges1_v9",
-        type: "invul",
-        vraag: "Het verheerlijken van het leger, soldaten en militaire waarden noemen we ____.",
-        antwoord: "militarisme|het militarisme",
-        uitleg: "Militarisme is de verheerlijking van alles wat met het leger en de militaire macht te maken heeft."
-      },
-      {
-        id: "ges1_v10",
-        type: "mc",
-        vraag: "Welke grote mogendheid sloot zich in april 1917 aan bij de Geallieerden, wat de beslissende wending gaf aan de oorlog?",
-        opties: [
-          "Het Ottomaanse Rijk",
-          "De Verenigde Staten",
-          "Spanje",
-          "Zweden"
+          "Duitsland, Oostenrijk-Hongarije en Italië",
+          "Groot-Brittannië, Frankrijk en Rusland",
+          "Verenigde Staten, Japan en Duitsland",
+          "Nederland, België en Luxemburg"
         ],
         antwoord: 1,
-        uitleg: "De deelname van de VS bracht enorme industriële ondersteuning en maandelijks een kwart miljoen verse soldaten naar Europa."
+        uitleg: "Groot-Brittannië, Frankrijk en Rusland (de Triple Entente) vormden de kern van de Geallieerden."
       },
       {
-        id: "ges1_v11",
+        id: "ex1_v10",
+        type: "mc",
+        vraag: "Wat verstaan we onder het begrip 'militarisme'?",
+        opties: [
+          "Het afschaffen van alle legers in Europa.",
+          "Het verheerlijken van soldaten, het leger en militaire waarden.",
+          "Een geheim verbond tussen handelaren.",
+          "Het recht van volkeren op een eigen staat."
+        ],
+        antwoord: 1,
+        uitleg: "Militarisme is de verheerlijking van alles wat met het leger en militaire macht te maken heeft."
+      },
+      {
+        id: "ex1_v11",
         type: "waaronwaar",
-        vraag: "Op 11 november 1918 om 11:00 uur ging de wapenstilstand in die een einde maakte aan de Eerste Wereldoorlog.",
+        vraag: "Een wapenwedloop is een race tussen landen om het sterkste en modernst bewapende leger en vloot op te bouwen.",
         antwoord: true,
-        uitleg: "Waar! Op de 11e van de 11e maand om 11:00 uur stopten de gevechten aan de fronten."
+        uitleg: "Waar! Voor 1914 voerden Europese mogendheden een felle wapenwedloop om de grootste voorraden en krachtigste wapens te krijgen."
       },
       {
-        id: "ges1_v12",
+        id: "ex1_v12",
+        type: "invoer",
+        vraag: "Op welke datum (dag-maand-jaar) werd de Oostenrijkse kroonprins Frans Ferdinand in Sarajevo vermoord?",
+        antwoord: "28 juni 1914|28-06-1914|28 juni 1914",
+        uitleg: "De moord op Frans Ferdinand vond plaats op 28 juni 1914."
+      },
+      {
+        id: "ex1_v13",
+        type: "mc",
+        vraag: "Wie voerde de moord op Frans Ferdinand en zijn vrouw Sophie in Sarajevo uit?",
+        opties: [
+          "Gavrilo Princip",
+          "Vladimir Lenin",
+          "Mustafa Kemal",
+          "Pieter Jelles Troelstra"
+        ],
+        antwoord: 0,
+        uitleg: "Gavrilo Princip, een 19-jarige Servische nationalist van de terreurgroep De Zwarte Hand, schoot de kroonprins neer."
+      },
+      {
+        id: "ex1_v14",
+        type: "mc",
+        vraag: "Wat was het voornaamste doel van het Duitse 'Schlieffenplan'?",
+        opties: [
+          "Het veroveren van de Nederlandse zeehavens.",
+          "Frankrijk snel in 7 weken verslaan via neutraal België om een tweefrontenoorlog te voorkomen.",
+          "Direct een invasie in Groot-Brittannië uitvoeren.",
+          "Een bondgenootschap sluiten met het Russische tsarenrijk."
+        ],
+        antwoord: 1,
+        uitleg: "Het Schlieffenplan wilde Frankrijk snel uitschakelen om daarna alle troepen naar het oostfront tegen Rusland te sturen."
+      },
+      {
+        id: "ex1_v15",
+        type: "waaronwaar",
+        vraag: "Groot-Brittannië verklaarde Duitsland de oorlog nadat het Duitse leger de neutraliteit van België geschonden had.",
+        antwoord: true,
+        uitleg: "Waar! Groot-Brittannië garandeerde de Belgische neutraliteit en verklaarde Duitsland de oorlog toen het Duitse leger België binnenviel."
+      },
+      {
+        id: "ex1_v16",
+        type: "mc",
+        vraag: "Bij welke Franse rivier werd de Duitse opmars in september 1914 definitief tot staan gebracht?",
+        opties: [
+          "De Seine",
+          "De Marne",
+          "De Rijn",
+          "De Donau"
+        ],
+        antwoord: 1,
+        uitleg: "Bij de Slag bij de Marne stootten de Geallieerden de Duitse troepen terug en begon de uitputtende loopgravenoorlog."
+      },
+      {
+        id: "ex1_v17",
+        type: "invoer",
+        vraag: "Hoe noemen we een uitgegraven gang waarin soldaten zich beschermen tegen granaten en kogels van de vijand?",
+        antwoord: "loopgraaf|een loopgraaf|loopgraven",
+        uitleg: "Aan het Westfront ontstond een 700 kilometer lang netwerk van loopgraven."
+      },
+      {
+        id: "ex1_v18",
+        type: "waaronwaar",
+        vraag: "Tijdens de Eerste Wereldoorlog werden voor het eerst industrieel geproduceerde massawapens zoals machinegeweren, gifgas en granaten gebruikt.",
+        antwoord: true,
+        uitleg: "Waar! De industriële productie zorgde voor ongekende dodelijkheid en verwoesting aan de fronten."
+      },
+      {
+        id: "ex1_v19",
+        type: "mc",
+        vraag: "Welke burgerbevolking in het Ottomaanse Rijk werd vanaf april 1915 slachtoffer van massale deportaties en genocide?",
+        opties: [
+          "De Grieken",
+          "De Armeniërs",
+          "De Bulgaren",
+          "De Arabieren"
+        ],
+        antwoord: 1,
+        uitleg: "Meer dan één miljoen christelijke Armeniërs kwamen om door dodenmarsen in de woestijn en executies door de Ottomaanse overheid."
+      },
+      {
+        id: "ex1_v20",
         type: "open",
-        vraag: "Leg in je eigen woorden uit wat het verschil is tussen een dieper liggende 'oorzaak' en de 'aanleiding' van de Eerste Wereldoorlog.",
+        vraag: "Leg in je eigen woorden het verschil uit tussen de diepere 'oorzaken' van de Eerste Wereldoorlog en de directe 'aanleiding'.",
         sleutelwoorden: [
-          "oorzaak/dieper/langere tijd/spanning",
-          "aanleiding/vonk/moord/Sarajevo/druppel"
+          "oorzaak/dieper/langere tijd/militarisme/nationalisme",
+          "aanleiding/vonk/moord/Sarajevo/Frans Ferdinand"
         ],
         minTreffers: 1,
-        modelantwoord: "Een oorzaak is een dieper liggende reden die al langer spanning opbouwt (zoals militarisme en wapenwedloop), terwijl de aanleiding de directe gebeurtenis (de 'vonk', namelijk de moord op Frans Ferdinand) is die de oorlog doet uitbreken.",
-        uitleg: "Oorzaken zorgen dat het kruitvat vol raakt; de aanleiding is de specifieke vonk die het kruitvat laat ontploffen."
+        modelantwoord: "Oorzaken zijn dieper liggende spanningen die al tientallen jaren opbouwden (zoals militarisme, wapenwedloop en bondgenootschappen). De aanleiding is de specifieke gebeurtenis die het conflict direct deed ontbranden (de moord op Frans Ferdinand in Sarajevo op 28 juni 1914).",
+        uitleg: "Oorzaken vullen het kruitvat met spanning; de aanleiding is de vonk die de bom laat ontploffen."
       }
     ]
   });

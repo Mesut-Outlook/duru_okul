@@ -50,10 +50,21 @@
   DURU.renderExamenLijst = function () {
     DURU._stopExamTimer();
     var h = '<div class="terug" onclick="DURU.gaNaar(\'home\')">← Terug naar overzicht</div>';
-    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen</h3><div class="lijn"></div></div>';
-    h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Je krijgt aan het eind je cijfer én bij elke vraag te zien <b>hoe je het moet doen</b>. Deze toetsen tellen los van je oefen-punten — daar gebeurt niets mee.</p>';
-    h += '<div class="examen-lijst">';
+    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen per Hoofdstuk</h3><div class="lijn"></div></div>';
+    h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Elke toets heeft <b>20 vragen</b>. Je krijgt aan het eind je cijfer én bij elke vraag te zien <b>hoe je het moet doen</b>.</p>';
+
+    // Groepeer op hoofdstuk
+    var groepen = {};
     DURU.examens.forEach(function (ex) {
+      var hfKey = ex.hoofdstukTitel || ex.hoofdstuk || "Hoofdstuk 1 — De Eerste Wereldoorlog (1900–1920)";
+      if (!groepen[hfKey]) groepen[hfKey] = [];
+      groepen[hfKey].push(ex);
+    });
+
+    Object.keys(groepen).forEach(function (hfTitel) {
+      h += '<div class="sectie-titel" style="margin-top:24px"><h4>🪖 ' + esc(hfTitel) + '</h4><div class="lijn"></div></div>';
+      h += '<div class="examen-lijst">';
+      groepen[hfTitel].forEach(function (ex) {
       var best = EX.beste[ex.id];
       var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
       if (laatste == null && EX.history) {
@@ -92,6 +103,7 @@
         '</div>';
     });
     h += '</div>';
+    });
 
     // Toetshistorie & Foutanalyse sectie
     EX.history = EX.history || [];

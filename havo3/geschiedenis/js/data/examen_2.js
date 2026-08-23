@@ -1,134 +1,217 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 2: Revolutie, Kaart van Europa & Neutraal NL
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 2 (20 vragen)
+   Hoofdstuk 1: De Eerste Wereldoorlog — 1.2 Het verloop van de strijd & Wapenstilstand
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-2",
-    titel: "Proeftoets 2 — Revolutie, Nieuwe Kaart & Neutraal NL (1.3 - 1.5)",
-    vak: "Geschiedenis · HAVO 3",
-    icoon: "📜",
-    duurMin: 15,
+    titel: "Proeftoets 2 — 1.2 Westfront, Oostfront & De Wapenstilstand",
+    vak: "Geschiedenis · Hoofdstuk 1",
+    hoofdstuk: 1,
+    hoofdstukTitel: "Hoofdstuk 1 — De Eerste Wereldoorlog (1900–1920)",
+    icoon: "⚔️",
+    duurMin: 20,
     vragen: [
       {
-        id: "ges2_v1",
+        id: "ex2_v1",
         type: "mc",
-        vraag: "Wat gebeurde er tijdens de Februarirevolutie van 1917 in Rusland?",
+        vraag: "Wat is een 'tweefrontenoorlog'?",
         opties: [
-          "Tsaar Nicolaas II trad af en Rusland werd een republiek met een voorlopige regering.",
-          "Lenin greep direct de macht en stichtte de Sovjet-Unie.",
-          "Rusland won de Eerste Wereldoorlog van Duitsland.",
-          "De tsaar schafte de Doema definitief af."
-        ],
-        antwoord: 0,
-        uitleg: "In februari 1917 leidde honger en muiterij tot het aftreden van tsaar Nicolaas II; Rusland werd een republiek."
-      },
-      {
-        id: "ges2_v2",
-        type: "invul",
-        vraag: "De communistische raden van arbeiders en soldaten die in Rusland ontstonden, werden ____ genoemd.",
-        antwoord: "sovjets|sovjet|raden",
-        uitleg: "Het woord 'sovjet' betekent letterlijk raad."
-      },
-      {
-        id: "ges2_v3",
-        type: "waaronwaar",
-        vraag: "Tijdens de Oktoberrevolutie van 1917 pleegden Lenin en de bolsjewieken een staatsgreep en maakten ze van Rusland een communistische eenpartijstaat.",
-        antwoord: true,
-        uitleg: "Waar! Lenin verbood alle andere politieke partijen en vestigde de 'dictatuur van het proletariaat'."
-      },
-      {
-        id: "ges2_v4",
-        type: "mc",
-        vraag: "In welk jaar werd de Sovjet-Unie (USSR) officieel gesticht?",
-        opties: [
-          "1914",
-          "1917",
-          "1922",
-          "1939"
-        ],
-        antwoord: 2,
-        uitleg: "In 1922 verenigde communistisch Rusland zich met omliggende republieken tot de Sovjet-Unie."
-      },
-      {
-        id: "ges2_v5",
-        type: "mc",
-        vraag: "Wat verstaan we onder het 'zelfbeschikkingsrecht' zoals voorgesteld door president Wilson?",
-        opties: [
-          "Het recht van een volk om zelf hun staatsgrenzen en bestuur te kiezen.",
-          "Het recht van keizers om eigen wetten te maken.",
-          "Het recht van grote staten om kleine buren te annexeren.",
-          "Het recht van soldaten om dienst te weigeren."
-        ],
-        antwoord: 0,
-        uitleg: "Zelfbeschikkingsrecht geeft volkeren de vrijheid om over hun eigen politieke toekomst en land te beslissen."
-      },
-      {
-        id: "ges2_v6",
-        type: "waaronwaar",
-        vraag: "In de Vrede van Versailles (1919) werd afgesproken dat de schuld voor WO1 eerlijk verdeeld werd over alle Europese landen.",
-        antwoord: false,
-        uitleg: "Onwaar! In Versailles kreeg Duitsland de 'alleenschuld' opgelegd, plus gigantische herstelbetalingen en zwaar verlies van grondgebied en leger."
-      },
-      {
-        id: "ges2_v7",
-        type: "invul",
-        vraag: "Welke erenaam kreeg de Turkse leider Mustafa Kemal nadat hij in 1923 de Republiek Turkije stichtte?",
-        antwoord: "Atatürk|Ataturk|ataturk|atatürk",
-        uitleg: "Mustafa Kemal kreeg de erenaam Atatürk ('Vader der Turken')."
-      },
-      {
-        id: "ges2_v8",
-        type: "mc",
-        vraag: "Waarom sloten de Duitsers eind 1914 de Belgisch-Nederlandse grens af met de 'Draad des Doods'?",
-        opties: [
-          "Om te voorkomen dat Belgen naar het neutrale Nederland vluchtten of dat spionnen en brieven de grens overstaken.",
-          "Om elektriciteit te leveren aan Nederlandse steden.",
-          "Om de Rotterdamse haven af te sluiten.",
-          "Om Nederlandse militairen gevangen te nemen."
-        ],
-        antwoord: 0,
-        uitleg: "Het hek onder hoogspanning moest vluchtelingen, spionnen en illegale grens-overgangen verhinderen."
-      },
-      {
-        id: "ges2_v9",
-        type: "mc",
-        vraag: "Wat hield het 'distributiestelsel' in Nederland in tijdens de Eerste Wereldoorlog?",
-        opties: [
-          "Iedereen kreeg gratis eten van de koningin.",
-          "Schaarse basisproducten ging 'op de bon'; je had bonnen nodig én geld om eten en brandstof te kopen.",
-          "Producten werden uitsluitend via de marine verdeeld.",
-          "Al het voedsel werd geëxporteerd naar Duitsland."
+          "Een oorlog waarbij soldaten alleen met messen en geweren vechten.",
+          "Een oorlog waarbij een land tegelijkertijd aan twee verschillende grenzen tegen twee vijanden moet vechten.",
+          "Een strijd tussen twee steden in hetzelfde land.",
+          "Een oorlog die na twee weken voorbij is."
         ],
         antwoord: 1,
-        uitleg: "Omdat er tekorten ontstonden, verdeelde de overheid voedsel en steenkool eerlijk via distributiebonnen."
+        uitleg: "Duitsland moest tegelijk aan de westgrens (tegen Frankrijk/Groot-Brittannië) en aan de oostgrens (tegen Rusland) vechten."
       },
       {
-        id: "ges2_v10",
+        id: "ex2_v2",
         type: "waaronwaar",
-        vraag: "Bij de Grondwetsherziening van 1917 kregen zowel mannen als vrouwen in Nederland direct algemeen kiesrecht.",
+        vraag: "De Duitse legerleiding had verwacht dat de Russen pas na weken konden aanvallen, maar Rusland viel al in augustus 1915 Oost-Pruisen binnen.",
+        antwoord: true,
+        uitleg: "Waar! De snelle Russische inval dwong Duitsland troepen van het Westfront naar het Oostfront te verplaatsen."
+      },
+      {
+        id: "ex2_v3",
+        type: "invoer",
+        vraag: "Welke Oostenrijkse grensstad (tegenwoordig Lviv in Oekraïne) werd al vroeg in de oorlog door het Russische leger veroverd?",
+        antwoord: "Lemberg|lemberg",
+        uitleg: "Lemberg (nu Lviv) lag in de provincie Galicië en werd in 1914 veroverd door Rusland."
+      },
+      {
+        id: "ex2_v4",
+        type: "mc",
+        vraag: "Wat gebeurde er aan het Russische Oostfront in het voorjaar van 1917?",
+        opties: [
+          "Het Russische leger veroverde Berlijn.",
+          "Tsaar Nicolaas II trad af na opstanden en soldaten begonnen te muiten en desertieren.",
+          "Duitsland gaf zich over aan Rusland.",
+          "De VS stuurt 1 miljoen soldaten naar Rusland."
+        ],
+        antwoord: 1,
+        uitleg: "De ineenstorting van het tsarenrijk en de uitputting van het leger leidden tot het einde van de Russische gevechtskracht."
+      },
+      {
+        id: "ex2_v5",
+        type: "invoer",
+        vraag: "Hoe heet het vredesverdrag dat de nieuwe communistische regering van Rusland in maart 1918 met Duitsland sloot?",
+        antwoord: "Vrede van Brest-Litovsk|Brest-Litovsk|brest-litovsk",
+        uitleg: "Met de Vrede van Brest-Litovsk stapte Rusland uit de Eerste Wereldoorlog en afstond het grote gebieden af."
+      },
+      {
+        id: "ex2_v6",
+        type: "waaronwaar",
+        vraag: "Bij de Vrede van Brest-Litovsk moest Rusland grote delen van Polen, de Baltische landen en Oekraïne afstaan aan Duitsland.",
+        antwoord: true,
+        uitleg: "Waar! Duitsland stelde keiharde vredesvoorwaarden aan het verzwakte communistische Rusland."
+      },
+      {
+        id: "ex2_v7",
+        type: "mc",
+        vraag: "Welke beslissende gebeurtenis in april 1917 veranderde de verhoudingen aan het Westfront ten gunste van de Geallieerden?",
+        opties: [
+          "De deelname van de Verenigde Staten aan de Eerste Wereldoorlog.",
+          "De overgave van de Franse regering aan Duitsland.",
+          "De uitvinding van de telegraaf.",
+          "De sluiting van het Panamakanaal."
+        ],
+        antwoord: 0,
+        uitleg: "De oorlogsverklaring van de VS bracht enorme industriële middelen en honderdduizenden verse troepen naar Frankrijk."
+      },
+      {
+        id: "ex2_v8",
+        type: "mc",
+        vraag: "Hoeveel verse Amerikaanse soldaten verschenen vanaf voorjaar 1918 elke maand in Frankrijk?",
+        opties: [
+          "10.000",
+          "50.000",
+          "250.000 (een kwart miljoen)",
+          "1.000.000"
+        ],
+        antwoord: 2,
+        uitleg: "Vanaf 1918 kwamen maandelijks 250.000 verse Amerikaanse militairen de Geallieerden versterken."
+      },
+      {
+        id: "ex2_v9",
+        type: "invoer",
+        vraag: "Welk nieuw meedogenloos pantservoertuig werd door de Britten vanaf 1916 ingezet om door de loopgraven en prikkeldraad te breken?",
+        antwoord: "tank|de tank|tanks",
+        uitleg: "De tank werd ontwikkeld om de patstelling in de loopgraven te doorbreken."
+      },
+      {
+        id: "ex2_v10",
+        type: "waaronwaar",
+        vraag: "Vliegtuigen werden in de Eerste Wereldoorlog alleen gebruikt voor verkenning en nooit om vijandelijke stellingen te bombarderen.",
         antwoord: false,
-        uitleg: "Onwaar! In 1917 kregen alleen mannen algemeen kiesrecht. Vrouwen kregen pas twee jaar later (in 1919) algemeen kiesrecht."
+        uitleg: "Onwaar! Tegen het einde van de oorlog bombardeerden vliegtuigen ook vijandelijke troepen en stellingen vanuit de lucht."
       },
       {
-        id: "ges2_v11",
-        type: "invul",
-        vraag: "Welke beroemde Nederlandse kunstbeweging werd in 1917 opgericht door onder meer Piet Mondriaan en Gerrit Rietveld?",
-        antwoord: "De Stijl|de stijl|De stijl",
-        uitleg: "De Stijl was een invloedrijke artistieke beweging gericht op strakke vormen, abstractie en primaire kleuren."
+        id: "ex2_v11",
+        type: "mc",
+        vraag: "Wanneer lanceerde het Duitse leger zijn laatste grote wanhoopsoffensief aan het Westfront?",
+        opties: [
+          "In augustus 1914",
+          "In maart 1918",
+          "In november 1919",
+          "In juli 1916"
+        ],
+        antwoord: 1,
+        uitleg: "Na de vrede met Rusland verplaatste Duitsland al zijn troepen naar het Westfront voor een offensief in maart 1918."
       },
       {
-        id: "ges2_v12",
+        id: "ex2_v12",
+        type: "mc",
+        vraag: "Wat gebeurde er vanaf augustus 1918 aan het Westfront?",
+        opties: [
+          "Een geallieerd tegenoffensief drong de uitgeputte Duitse troepen steeds verder terug.",
+          "Duitsland veroverde Parijs.",
+          "Engeland trok al zijn troepen terug naar Londen.",
+          "De strijd verplaatste zich naar Spanje."
+        ],
+        antwoord: 0,
+        uitleg: "Het geallieerde tegenoffensief met Amerikaanse steun brak de Duitse linies definitief."
+      },
+      {
+        id: "ex2_v13",
+        type: "invoer",
+        vraag: "Op welke bekende datum en tijdstip ging de Wapenstilstand van de Eerste Wereldoorlog in? (Format: DD-MM-JJJJ 11:00)",
+        antwoord: "11-11-1918|11 november 1918|11-11-1918 om 11:00|11 november 1918 om 11 uur",
+        uitleg: "De wapenstilstand ging in op 11 november 1918 om 11:00 uur (11-11-11u)."
+      },
+      {
+        id: "ex2_v14",
+        type: "waaronwaar",
+        vraag: "De Eerste Wereldoorlog kostte aan ongeveer 10 miljoen militairen het leven.",
+        antwoord: true,
+        uitleg: "Waar! Naast de 10 miljoen gesneuvelde soldaten raakten nog eens miljoenen mannen verminkt."
+      },
+      {
+        id: "ex2_v15",
+        type: "mc",
+        vraag: "In welk gebergte vochten Oostenrijk-Hongarije en Italië een bloedige gebergte-oorlog uit?",
+        opties: [
+          "De Pyreneeën",
+          "De Alpen",
+          "De Karpaten",
+          "De Oeral"
+        ],
+        antwoord: 1,
+        uitleg: "In de Alpen voerden Italiaanse en Oostenrijkse troepen een verschrikkelijke strijd in de bergen."
+      },
+      {
+        id: "ex2_v16",
+        type: "mc",
+        vraag: "Wat gebeurde er met de burgerbevolking in Belgische en Franse steden nabij het front?",
+        opties: [
+          "Zij merkten niets van de oorlog.",
+          "Steden en dorpen werden verwoest, burgers werden gedood, verjaagd of op de vlucht gedwongen.",
+          "Zij verhuisden allemaal naar Engeland.",
+          "Zij kregen gratis voedsel van het Duitse leger."
+        ],
+        antwoord: 1,
+        uitleg: "De frontgebieden werden volledig verwoest en miljoenen burgers sloegen op de vlucht."
+      },
+      {
+        id: "ex2_v17",
+        type: "waaronwaar",
+        vraag: "Het Russische leger dwong in het tsarenrijk miljoenen burgers uit steden als Warschau en Vilnius te vertrekken uit angst voor pro-Duitse spionage.",
+        antwoord: true,
+        uitleg: "Waar! Het tsaristische regime vertrouwde de eigen bevolking in grensgebieden niet."
+      },
+      {
+        id: "ex2_v18",
+        type: "invoer",
+        vraag: "In welke bekende Belgische stad in Vlaanderen vonden hevige verwoestingen plaats tijdens de loopgravenoorlog?",
+        antwoord: "Ieper|ieper",
+        uitleg: "Ieper werd in de Eerste Wereldoorlog vrijwel volledig met de grond gelijkgemaakt."
+      },
+      {
+        id: "ex2_v19",
+        type: "mc",
+        vraag: "Wat was de voornaamste reden dat Duitsland in november 1918 de strijd opgaf?",
+        opties: [
+          "Het Duitse leger was uitgeput, het thuisfront leed honger en er dreigde een revolutie in Duitsland.",
+          "De Duitse keizer wilde vakantie nemen.",
+          "Frankrijk bood Duitsland miljarden goudstukken aan.",
+          "De Sovjet-Unie viel Duitsland aan."
+        ],
+        antwoord: 0,
+        uitleg: "Militair uitgeput, afgesneden van aanvoeren en bedreigd door opstanden in eigen land capituleerde Duitsland."
+      },
+      {
+        id: "ex2_v20",
         type: "open",
-        vraag: "Leg uit waarom de Grondwetsherziening van 1917 wordt gezien als een grote doorbraak in de Nederlandse politiek.",
+        vraag: "Noem twee belangrijke redenen waarom de Geallieerden vanaf 1918 uiteindelijk sterker bleken dan de Centralen.",
         sleutelwoorden: [
-          "kiesrecht/mannenkiesrecht/democratie",
-          "schoolstrijd/gelijke financiering/bijzonder onderwijs"
+          "Verenigde Staten/VS/Amerikaanse troepen",
+          "tanks/nieuwe wapens/vliegtuigen/artillerie/uitputtende"
         ],
         minTreffers: 1,
-        modelantwoord: "In de Grondwetsherziening van 1917 werden twee langlopende conflicten opgelost: mannen kregen algemeen kiesrecht (kiesrechtkwestie) en bijzondere (gelovige) scholen kregen voortaan evenveel overheidsgeld als openbare scholen (schoolstrijd).",
-        uitleg: "Door de kiesrechtkwestie en de schoolstrijd tegelijk op te lossen kwam er politieke vrede en een volwaardige democratie tot stand."
+        modelantwoord: "1. De versnelling door de deelname van de Verenigde Staten (maandelijks 250.000 verse Amerikaanse soldaten). 2. De superieure inzet van nieuwe technologische wapens zoals tanks, vliegtuigen en zware artillerie.",
+        uitleg: "Verse Amerikaanse reservetroepen gecombineerd met overmacht aan materiaal braken het uitgeputte Duitse leger."
       }
     ]
   });
