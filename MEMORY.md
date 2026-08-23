@@ -223,7 +223,12 @@ This document serves as the project's global memory log, preserving all overall 
   `VAKKEN`'de `jaar` işaretlenir + `JAAR_NIVEAU`'ye satır eklenir.
 * **Kim**: Opus.
 
-### Pipeline testi (2026-07-20)
-* `inbox/geschiedenis/test/Tarih 4. Bolum.pdf` (Flamanca geschiedenis H4) → `examen_87.js`
-  (`ex-geschiedenis-87`, 20 soru) üretilip `archief/2025-2026/geschiedenis/`'e eklendi. Belge→toets
-  hattının ilk uçtan uca denemesi başarılı.
+### Milestone 16: Geschiedeniswerkplaats 3 HAVO — Complete Integration of Chapters 1 to 6 (2026-08-23)
+* **Goal**: Expand Geschiedenis HAVO 3 to fully cover all 6 chapters of the *Geschiedeniswerkplaats 3 HAVO* textbook (De Eerste Wereldoorlog, Tussen de oorlogen, De Tweede Wereldoorlog, De wereld na 1945, Nederland na 1945, and Naar de wereld van nu).
+* **Implementation Details**:
+  - **OCR Text Extraction**: Processed scanned PDF textbooks for Hoofdstuk 1 through 6 using PyMuPDF and macOS Vision OCR (`VNRecognizeTextRequest`), extracting ~300,000 characters of full curriculum text into `inbox/`.
+  - **Chapter Structure & Metadata**: Configured `DURU.hoofdstukken` in `havo3/geschiedenis/js/bootstrap.js` to define all 6 chapters with custom icons, color themes, and introductory descriptions.
+  - **Practice Modules**: Generated 30 practice subchapter JS files (`h1_1_tijd.js` through `h6_5_klimaat.js`) with comprehensive theory summaries (`<h3>/<h4>`, `info-box`, `formule-box`) and 240 interactive practice questions with explanations.
+  - **20-Question Proeftoetsen**: Created 30 full proeftoets files (`examen_1.js` through `examen_30.js`), with exactly 5 20-question proeftoetsen per chapter (600 exam questions total, 840 questions combined across all modules).
+  - **Interactive Chapter Accordion UI**: Redesigned `havo3/geschiedenis/js/engine.js` and `exams.js` to render each chapter as an interactive, collapsible Chapter Card (`.hf-accordion-card`), allowing students to expand/collapse any chapter with a single click.
+  - **Cache Control & Deployment**: Added `?v=3.7` cache-busting query strings to all 60 script tags in `index.html` and root `index.html`. Validated full Node execution (840 questions registered clean), committed, and deployed to GitHub Pages (`main`).

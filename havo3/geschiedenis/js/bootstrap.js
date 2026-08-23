@@ -14,6 +14,41 @@
       icoon: "🪖",
       intro: "De beleving van tijd, de Grote Oorlog, de Russische Revolutie, de nieuwe kaart van Europa en Neutraal Nederland.",
       kleur: "oranje"
+    },
+    {
+      nr: 2,
+      titel: "Tussen de oorlogen (1919–1939)",
+      icoon: "📻",
+      intro: "De roerige jaren 20, het fascisme in Italië, het nationaalsocialisme in Duitsland, Stalin en de crisis in Nederland.",
+      kleur: "blauw"
+    },
+    {
+      nr: 3,
+      titel: "De Tweede Wereldoorlog (1939–1945)",
+      icoon: "✈️",
+      intro: "Het uitbreken van de oorlog, bezet Nederland, de Jodenvervolging en Holocaust, keerpunten en de oorlog in Azië.",
+      kleur: "rood"
+    },
+    {
+      nr: 4,
+      titel: "De wereld na 1945 (1945–1990)",
+      icoon: "🕊️",
+      intro: "De Koude Oorlog, spanningen en crises, de Vietnamoorlog, het einde van de Koude Oorlog en de dekolonisatie.",
+      kleur: "paars"
+    },
+    {
+      nr: 5,
+      titel: "Nederland na 1945 (1945–heden)",
+      icoon: "🇳🇱",
+      intro: "Wederopbouw en verzorgingsstaat, Europese samenwerking, ontzuiling en veranderende cultuur, en de pluriforme samenleving.",
+      kleur: "groen"
+    },
+    {
+      nr: 6,
+      titel: "Naar de wereld van nu (1990–heden)",
+      icoon: "🌐",
+      intro: "Een nieuwe wereldorde, conflicten in het Midden-Oosten, terrorisme en veiligheid, globalisering en klimaat.",
+      kleur: "teal"
     }
   ];
 
