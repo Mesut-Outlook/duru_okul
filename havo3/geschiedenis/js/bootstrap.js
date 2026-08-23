@@ -9,10 +9,11 @@
 
   DURU.hoofdstukken = [
     {
-      nummer: 1,
+      nr: 1,
       titel: "De Eerste Wereldoorlog (1900–1920)",
-      periode: "1900–1920",
-      beschrijving: "De beleving van tijd, de Grote Oorlog, de Russische Revolutie, de nieuwe kaart van Europa en Neutraal Nederland."
+      icoon: "🪖",
+      intro: "De beleving van tijd, de Grote Oorlog, de Russische Revolutie, de nieuwe kaart van Europa en Neutraal Nederland.",
+      kleur: "oranje"
     }
   ];
 
