@@ -101,6 +101,21 @@
   };
 
   /* ---------------- Home ---------------- */
+  DURU.toggleHoofdstuk = function (nr) {
+    var card = document.getElementById("hf-card-" + nr);
+    var content = document.getElementById("hf-content-" + nr);
+    var label = document.getElementById("hf-label-" + nr);
+    if (!content) return;
+    var isHidden = content.style.display === "none";
+    content.style.display = isHidden ? "block" : "none";
+    if (card) {
+      if (isHidden) card.classList.add("open");
+      else card.classList.remove("open");
+    }
+    if (label) label.textContent = isHidden ? "▲ Klap in" : "▼ Open Hoofdstuk";
+  };
+
+  /* ---------------- Home ---------------- */
   function renderHome() {
     var totaalVragen = DURU.onderwerpen.reduce(function (s, o) { return s + o.vragen.length; }, 0);
     var html = "";
@@ -108,7 +123,7 @@
     html += '<section class="hero view">' +
       '<div class="mascotte">🕰️</div>' +
       '<div><h2>Hoi Duru! Klaar voor Geschiedenis? 🕰️</h2>' +
-      '<p>Welkom bij Geschiedenis HAVO 3. Oefen per hoofdstuk met <b>theorie, oefenquizzes en proeftoetsen van 20 vragen</b>.</p>' +
+      '<p>Welkom bij Geschiedenis HAVO 3. Klik op een <b>Hoofdstuk-kaart</b> hieronder om direct de oefenquizzes en 20-vragige proeftoetsen te openen!</p>' +
       '<div class="hero-cta">' +
       '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'examens\')">📝 Alle Oefentoetsen</button>' +
@@ -121,21 +136,30 @@
     try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
     exDataHome.history = exDataHome.history || [];
 
-    // Render hoofdstukken met daaronder hun specifieke Oefenquizzes EN Proeftoetsen
-    DURU.hoofdstukken.forEach(function (h) {
+    // Render interactieve Hoofdstuk-kaarten (Accordion Boxes)
+    DURU.hoofdstukken.forEach(function (h, index) {
       var ow = DURU.onderwerpenVan(h.nr);
       var exLijst = DURU.examens.filter(function(ex) { return ex.hoofdstuk === h.nr || !ex.hoofdstuk; });
+      var isOpen = index === 0; // Eerste hoofdstuk staat standaard open
 
-      html += '<div class="sectie-titel" style="margin-top:28px;">' +
-        '<h3>' + (h.icoon || "🪖") + ' Hoofdstuk ' + h.nr + ' — ' + esc(h.titel) + '</h3>' +
-        '<div class="lijn"></div></div>';
-      if (h.intro) {
-        html += '<p style="margin:0 4px 16px;color:var(--grijs);font-size:15px;">' + esc(h.intro) + '</p>';
-      }
+      html += '<div class="hf-accordion-card ' + (isOpen ? 'open' : '') + '" id="hf-card-' + h.nr + '">' +
+        '<div class="hf-header" onclick="DURU.toggleHoofdstuk(' + h.nr + ')">' +
+          '<div class="hf-ico">' + (h.icoon || "🪖") + '</div>' +
+          '<div class="hf-info">' +
+            '<h3>Hoofdstuk ' + h.nr + ' — ' + esc(h.titel) + '</h3>' +
+            '<p>' + esc(h.intro || "") + '</p>' +
+            '<div class="hf-meta-badges">' +
+              '<span class="hf-badge oranje">📖 ' + ow.length + ' Paragrafen</span>' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (100 vragen)</span>' +
+            '</div>' +
+          '</div>' +
+          '<button class="hf-toggle-btn" id="hf-label-' + h.nr + '">' + (isOpen ? '▲ Klap in' : '▼ Open Hoofdstuk') + '</button>' +
+        '</div>' +
+        '<div class="hf-body" id="hf-content-' + h.nr + '" style="display:' + (isOpen ? 'block' : 'none') + ';">';
 
       // 1. Oefenquizzes per Paragraaf
       if (ow.length) {
-        html += '<h4 style="margin: 16px 4px 10px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📖 Oefenquizzes per Paragraaf</h4>';
+        html += '<h4 style="margin: 0 0 12px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📖 Oefenquizzes per Paragraaf</h4>';
         html += '<div class="grid cols-3">';
         ow.forEach(function (o, i) {
           var beste = P.beste[o.id] || 0;
@@ -154,7 +178,7 @@
 
       // 2. Proeftoetsen (20 vragen per toets)
       if (exLijst.length) {
-        html += '<h4 style="margin: 24px 4px 10px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📝 Proeftoetsen (20 vragen per toets)</h4>';
+        html += '<h4 style="margin: 24px 0 12px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📝 Proeftoetsen voor Hoofdstuk ' + h.nr + ' (20 vragen per toets)</h4>';
         html += '<div class="grid cols-3">';
         exLijst.forEach(function (ex) {
           var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
@@ -184,6 +208,8 @@
         });
         html += '</div>';
       }
+
+      html += '</div></div>'; // Einde hf-body en hf-accordion-card
     });
 
     html += '<div class="footer" style="margin-top:40px;">Gemaakt met 🕰️ en 💜 voor Duru · Geschiedenis HAVO 3</div>';
