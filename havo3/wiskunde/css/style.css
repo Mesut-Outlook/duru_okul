@@ -406,3 +406,101 @@ figure.bron figcaption { color: var(--grijs); font-size: 13px; margin-top: 6px; 
 .review-item .r-uitleg { background: var(--paars-zacht); border-radius:10px; padding:10px 14px; margin-top:8px; font-size:14px; }
 .review-item .r-uitleg b { color: var(--paars); }
 .filter-rij { display:flex; gap:8px; justify-content:center; margin:10px 0 4px; flex-wrap:wrap; }
+
+/* ---------- Hoofdstuk Accordion Box ---------- */
+.hf-accordion-card {
+  background: var(--wit);
+  border: 2px solid var(--lijn);
+  border-radius: var(--radius);
+  margin-top: 24px;
+  overflow: hidden;
+  box-shadow: var(--schaduw);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.hf-accordion-card.open {
+  border-color: var(--paars-licht);
+  box-shadow: var(--schaduw-lg);
+}
+.hf-header {
+  padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(204, 251, 241, 0.4), rgba(255, 255, 255, 0.95));
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s ease;
+}
+.hf-header:hover {
+  background: linear-gradient(135deg, rgba(204, 251, 241, 0.8), rgba(255, 255, 255, 1));
+}
+.hf-ico {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--paars-zacht);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  box-shadow: var(--schaduw-sm);
+}
+.hf-info {
+  flex-grow: 1;
+}
+.hf-info h3 {
+  font-size: 20px;
+  color: var(--inkt);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hf-info p {
+  color: var(--grijs);
+  font-size: 14px;
+  line-height: 1.35;
+}
+.hf-meta-badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.hf-badge {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  color: var(--inkt);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.hf-badge.oranje { color: var(--roze); background: #fff7ed; border-color: #ffedd5; }
+.hf-badge.groen { color: var(--groen); background: var(--groen-zacht); border-color: #bbf7d0; }
+.hf-toggle-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--paars), var(--paars-licht));
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  box-shadow: var(--schaduw-sm);
+  transition: transform 0.15s ease;
+}
+.hf-header:hover .hf-toggle-btn {
+  transform: scale(1.04);
+}
+.hf-body {
+  padding: 22px;
+  border-top: 1px solid var(--lijn);
+  background: #fafcfb;
+}

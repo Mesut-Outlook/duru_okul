@@ -100,6 +100,20 @@
     renderHome();
   };
 
+  DURU.toggleHoofdstuk = function (nr) {
+    var card = document.getElementById("hf-card-" + nr);
+    var content = document.getElementById("hf-content-" + nr);
+    var label = document.getElementById("hf-label-" + nr);
+    if (!content) return;
+    var isHidden = content.style.display === "none";
+    content.style.display = isHidden ? "block" : "none";
+    if (card) {
+      if (isHidden) card.classList.add("open");
+      else card.classList.remove("open");
+    }
+    if (label) label.textContent = isHidden ? "▲ Klap in" : "▼ Open Hoofdstuk";
+  };
+
   /* ---------------- Home ---------------- */
   function renderHome() {
     var totaalVragen = DURU.onderwerpen.reduce(function (s, o) { return s + o.vragen.length; }, 0);
@@ -108,7 +122,7 @@
     html += '<section class="hero view">' +
       '<div class="mascotte">🧮</div>' +
       '<div><h2>Hoi Duru! Klaar om te scoren? ⚖️</h2>' +
-      '<p>Welkom in jouw eigen wiskunde-academie. Leer alles over <b>algebra</b> en <b>rekenen</b>, ' +
+      '<p>Welkom in jouw eigen wiskunde-academie. Leer alles over <b>statistiek</b> en <b>rekenen</b>, ' +
       'oefen met ' + totaalVragen + ' vragen en verzamel medailles. Jij gaat die toets máken! 💪</p>' +
       '<div class="hero-cta">' +
       '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
@@ -117,68 +131,87 @@
       '<button class="btn ghost" onclick="DURU.gaNaar(\'dashboard\')">📊 Mijn dashboard</button>' +
       '</div></div></section>';
 
-    // Oefentoetsen-sectie (op tijd, met cijfer en uitleg)
-    if (DURU.examens && DURU.examens.length) {
-      html += '<div class="sectie-titel"><h3>📝 Oefentoetsen — test jezelf op tijd!</h3><div class="lijn"></div></div>';
-      html += '<p style="margin:0 4px 14px;color:var(--grijs)">Doe een echte proeftoets met een klok. Aan het eind krijg je je cijfer én bij elke vraag <b>hoe je het moet doen</b>.</p>';
-      // Lees de examen-geschiedenis (zelfde sleutel als het dashboard) zodat de
-      // kaarten tonen of een toets al gemaakt is, het laatste cijfer en — bij
-      // meerdere pogingen — het gemiddelde cijfer.
-      var exDataHome;
-      try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
-      exDataHome.history = exDataHome.history || [];
-      html += '<div class="grid cols-3">';
-      DURU.examens.forEach(function (ex) {
-        var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
-        var statusHtml;
-        if (atts.length > 0) {
-          var pcts = atts.map(function (a) { return a.pct || 0; });
-          var laatstePct = pcts[0];
-          var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
-          statusHtml =
-            '<div class="ex-status">' +
-              '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
-              '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste cijfer: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
-              (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld cijfer: ' + cijferStr(gemPct) + '</div>' : '') +
-            '</div>';
-        } else {
-          statusHtml =
-            '<div class="ex-status">' +
-              '<span class="tag">Proeftoets</span>' +
-              '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
-            '</div>';
-        }
-        html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
-          '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
-          '<h4>' + ex.titel + '</h4>' +
-          '<p>' + (ex.vragen.length) + ' vragen · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
-          statusHtml + '</div>';
-      });
-      html += '</div>';
-    }
+    var exDataHome;
+    try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
+    exDataHome.history = exDataHome.history || [];
 
-    DURU.hoofdstukken.forEach(function (h) {
+    // Render interactieve Hoofdstuk-kaarten (Accordion Boxes)
+    DURU.hoofdstukken.forEach(function (h, index) {
       var ow = DURU.onderwerpenVan(h.nr);
-      if (!ow.length) return;
-      html += '<div class="sectie-titel"><h3>' + h.icoon + ' Hoofdstuk ' + h.nr + ' — ' + h.titel + '</h3><div class="lijn"></div></div>';
-      html += '<p style="margin:0 4px 14px;color:var(--grijs)">' + h.intro + '</p>';
-      html += '<div class="grid cols-3">';
-      ow.forEach(function (o, i) {
-        var beste = P.beste[o.id] || 0;
-        html += '<div class="topic-card ' + h.kleur + '" onclick="DURU.gaNaar(\'theorie\',\'' + o.id + '\')">' +
-          '<span class="badge-num">' + (o.paragraaf || (h.nr + "." + (i + 1))) + '</span>' +
-          '<div class="ico">' + (o.icoon || h.icoon) + '</div>' +
-          '<h4>' + o.titel + '</h4>' +
-          '<p>' + (o.korteUitleg || "") + '</p>' +
-          '<span class="tag">' + o.vragen.length + ' vragen</span>' +
-          '<div class="mini-progress"><span style="width:' + beste + '%"></span></div>' +
-          (beste ? '<small style="color:var(--groen);font-weight:800">Beste score: ' + beste + '%</small>' : '<small style="color:var(--grijs-licht)">Nog niet gedaan</small>') +
-          '</div>';
-      });
-      html += '</div>';
+      var exLijst = DURU.examens.filter(function(ex) { return ex.hoofdstuk === h.nr || !ex.hoofdstuk; });
+      var isOpen = index === 0; // Eerste hoofdstuk staat standaard open
+
+      html += '<div class="hf-accordion-card ' + (isOpen ? 'open' : '') + '" id="hf-card-' + h.nr + '">' +
+        '<div class="hf-header" onclick="DURU.toggleHoofdstuk(' + h.nr + ')">' +
+          '<div class="hf-ico">' + (h.icoon || "📊") + '</div>' +
+          '<div class="hf-info">' +
+            '<h3>Hoofdstuk ' + h.nr + ' — ' + esc(h.titel) + '</h3>' +
+            '<p>' + esc(h.beschrijving || h.intro || "") + '</p>' +
+            '<div class="hf-meta-badges">' +
+              '<span class="hf-badge oranje">📖 ' + ow.length + ' Paragrafen</span>' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + (exLijst.reduce(function(s, e){ return s + e.vragen.length; }, 0)) + ' vragen)</span>' +
+            '</div>' +
+          '</div>' +
+          '<button class="hf-toggle-btn" id="hf-label-' + h.nr + '">' + (isOpen ? '▲ Klap in' : '▼ Open Hoofdstuk') + '</button>' +
+        '</div>' +
+        '<div class="hf-body" id="hf-content-' + h.nr + '" style="display:' + (isOpen ? 'block' : 'none') + ';">';
+
+      // 1. Oefenquizzes per Paragraaf
+      if (ow.length) {
+        html += '<h4 style="margin: 0 0 12px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📖 Oefenquizzes per Paragraaf</h4>';
+        html += '<div class="grid cols-3">';
+        ow.forEach(function (o, i) {
+          var beste = P.beste[o.id] || 0;
+          html += '<div class="topic-card ' + (h.kleur || "oranje") + '" onclick="DURU.gaNaar(\'theorie\',\'' + o.id + '\')">' +
+            '<span class="badge-num">' + (o.paragraaf || (h.nr + "." + (i + 1))) + '</span>' +
+            '<div class="ico">' + (o.icoon || h.icoon || "📖") + '</div>' +
+            '<h4>' + esc(o.titel) + '</h4>' +
+            '<p>' + esc(o.korteUitleg || "") + '</p>' +
+            '<span class="tag">' + o.vragen.length + ' vragen</span>' +
+            '<div class="mini-progress"><span style="width:' + beste + '%"></span></div>' +
+            (beste ? '<small style="color:var(--groen);font-weight:800">Beste score: ' + beste + '%</small>' : '<small style="color:var(--grijs-licht)">Nog niet gedaan</small>') +
+            '</div>';
+        });
+        html += '</div>';
+      }
+
+      // 2. Proeftoetsen
+      if (exLijst.length) {
+        html += '<h4 style="margin: 24px 0 12px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📝 Proeftoetsen voor Hoofdstuk ' + h.nr + '</h4>';
+        html += '<div class="grid cols-3">';
+        exLijst.forEach(function (ex) {
+          var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
+          var statusHtml;
+          if (atts.length > 0) {
+            var pcts = atts.map(function (a) { return a.pct || 0; });
+            var laatstePct = pcts[0];
+            var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
+            statusHtml =
+              '<div class="ex-status">' +
+                '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
+                '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
+                (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld: ' + cijferStr(gemPct) + '</div>' : '') +
+              '</div>';
+          } else {
+            statusHtml =
+              '<div class="ex-status">' +
+                '<span class="tag">Proeftoets</span>' +
+                '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
+              '</div>';
+          }
+          html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
+            '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
+            '<h4>' + esc(ex.titel) + '</h4>' +
+            '<p><b>' + (ex.vragen.length) + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
+            statusHtml + '</div>';
+        });
+        html += '</div>';
+      }
+
+      html += '</div></div>'; // Einde hf-body en hf-accordion-card
     });
 
-    html += '<div class="footer">Gemaakt met 🏛️ en 💜 voor Duru · Wiskunde HAVO 3</div>';
+    html += '<div class="footer" style="margin-top:40px;">Gemaakt met ⚖️ en 💜 voor Duru · Wiskunde HAVO 3</div>';
     app.innerHTML = html;
     updateStats();
   }
