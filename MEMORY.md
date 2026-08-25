@@ -232,3 +232,17 @@ This document serves as the project's global memory log, preserving all overall 
   - **20-Question Proeftoetsen**: Created 30 full proeftoets files (`examen_1.js` through `examen_30.js`), with exactly 5 20-question proeftoetsen per chapter (600 exam questions total, 840 questions combined across all modules).
   - **Interactive Chapter Accordion UI**: Redesigned `havo3/geschiedenis/js/engine.js` and `exams.js` to render each chapter as an interactive, collapsible Chapter Card (`.hf-accordion-card`), allowing students to expand/collapse any chapter with a single click.
   - **Cache Control & Deployment**: Added `?v=3.7` cache-busting query strings to all 60 script tags in `index.html` and root `index.html`. Validated full Node execution (840 questions registered clean), committed, and deployed to GitHub Pages (`main`).
+
+### Milestone 17: Moderne Wiskunde 2 HAVO/VWO — Hoofdstuk 2: Statistiek Integration (2026-08-25)
+* **Goal**: Convert Duru's *Moderne Wiskunde 2 havo-vwo - Hoofdstuk 2 Statistiek.pdf* into complete interactive practice modules and exam proeftoetsen targeting school exams.
+* **Implementation Details**:
+  - **OCR Extraction**: Rendered 19 PDF pages to PNG (`pdftoppm`) and extracted 57,431 characters of full textbook text (`tesseract nld+eng`).
+  - **Bootstrap Setup**: Configured `DURU.hoofdstukken` in `havo3/wiskunde/js/bootstrap.js` for Hoofdstuk 2 (Statistiek).
+  - **5 Practice Subchapters**:
+    1. `h2_1_verhoudingstabel.js`: Paragraaf 2.1 — Verhoudingstabel & Percentages (berekeningen via 1, korting, totaal vs 100%, stijging).
+    2. `h2_2_cirkeldiagram.js`: Paragraaf 2.2 — Cirkeldiagram (sectoren, 100% = 360°, hoek berekenen `(deel/totaal)*360°`, diagram aflezen/tekenen).
+    3. `h2_3_frequentietabel.js`: Paragraaf 2.3 — Frequentietabel, staafdiagram en lijndiagram (frequentie, staaf- en lijndiagrammen, tijdverloop).
+    4. `h2_4_centrummaten.js`: Paragraaf 2.4 — Gemiddelde, modus en mediaan (centrummaten berekenen bij getallenrijen en frequentietabellen).
+    5. `h2_5_steelbladdiagram.js`: Paragraaf 2.5 — Steelbladdiagram (steel en bladeren, geordende data, centrummaten en waarden aflezen).
+  - **5 Proeftoetsen**: Created 5 full 15-question exam files (`examen_1.js` through `examen_5.js`) with 75 total exam questions (109 questions combined across all modules).
+  - **Validation & HTML Integration**: Added script tags to `havo3/wiskunde/index.html` (`?v=2.0`), bumped root `index.html` (`?v=3.8`), and validated clean execution with Node.js stub test.

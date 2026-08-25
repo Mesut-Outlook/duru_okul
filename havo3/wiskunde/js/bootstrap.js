@@ -8,7 +8,15 @@
   window.DURU = window.DURU || {};
 
   // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  DURU.hoofdstukken = [
+    {
+      nr: 2,
+      titel: "Hoofdstuk 2 — Statistiek",
+      icoon: "📊",
+      kleur: "#0d9488",
+      beschrijving: "Verhoudingstabellen, cirkeldiagrammen, frequentietabellen, staaf- en lijndiagrammen, gemiddelde, modus, mediaan en steelbladdiagrammen."
+    }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 
