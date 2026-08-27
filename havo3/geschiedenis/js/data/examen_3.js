@@ -49,7 +49,7 @@
       },
       {
         id: "ex3_v4",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe heette het Russische parlement dat door tsaar Nicolaas II in 1905 werd ingesteld, maar amper macht kreeg?",
         antwoord: "Doema|de Doema|doema",
         uitleg: "De Doema was het parlement, maar de tsaar hield alle echte macht zelf."
@@ -69,7 +69,7 @@
       },
       {
         id: "ex3_v6",
-        type: "invoer",
+        type: "invul",
         vraag: "Wat betekent het Russische woord 'sovjet'?",
         antwoord: "raad|raden",
         uitleg: "Een sovjet is een raad van gekozen arbeiders, boeren of soldaten."
@@ -96,7 +96,7 @@
       },
       {
         id: "ex3_v9",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe noemde Lenin zijn radicale communistische aanhangers, wat 'zij die de meerderheid hebben' betekent?",
         antwoord: "bolsjewieken|bolsjewiek",
         uitleg: "Lenin noemde zijn volgers bolsjewieken."
@@ -149,7 +149,7 @@
       },
       {
         id: "ex3_v14",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe heette de meedogenloze communistische geheime dienst die door Lenin werd opgericht (later bekend als KGB)?",
         antwoord: "Tsjeka|de Tsjeka|tsjeka",
         uitleg: "De Tsjeka spoorde tegenstanders op en vermoordde of verbanne hen."
@@ -176,7 +176,7 @@
       },
       {
         id: "ex3_v17",
-        type: "invoer",
+        type: "invul",
         vraag: "In welk jaar werd het verbond van sovjetrepublieken, de Sovjet-Unie (USSR), officieel gesticht?",
         antwoord: "1922",
         uitleg: "In 1922 werd de Sovjet-Unie officieel opgericht."

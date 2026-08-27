@@ -1,278 +1,223 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 15 — Hoofdstuk 3 (De Tweede Wereldoorlog (1939–1945))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 15 (20 vragen)
+   Hoofdstuk 3: De Tweede Wereldoorlog — 3.5 Lessen van de oorlog
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-15",
-    titel: "Proeftoets 15 — Hoofdstuk 3 (De Tweede Wereldoorlog (1939–1945))",
+    titel: "Proeftoets 15 — 3.5 Lessen van de oorlog",
     vak: "Geschiedenis · Hoofdstuk 3",
     hoofdstuk: 3,
     hoofdstukTitel: "Hoofdstuk 3 — De Tweede Wereldoorlog (1939–1945)",
-    icoon: "✈️",
+    icoon: "🕊️",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wanneer begon de Tweede Wereldoorlog met de Duitse inval in Polen?",
-            "opties": [
-                  "1 september 1939",
-                  "10 mei 1940",
-                  "6 juni 1944",
-                  "8 mei 1945"
-            ],
-            "antwoord": 0,
-            "uitleg": "WO2 begon op 1 september 1939."
+        id: "ex15_v1",
+        type: "mc",
+        vraag: "Waar en wanneer stelden Churchill en Roosevelt het Atlantisch Handvest op, de basis voor de latere Verenigde Naties?",
+        opties: [
+          "Op een oorlogsschip voor de Canadese oostkust, op 14 augustus 1941.",
+          "In Londen, op 1 januari 1942.",
+          "In Jalta, in februari 1945.",
+          "In New York, in oktober 1945."
+        ],
+        antwoord: 0,
+        uitleg: "Churchill en Roosevelt ontmoetten elkaar op 14 augustus 1941 op een oorlogsschip voor de Canadese oostkust."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat typeerde de Duitse Blitzkrieg-tactiek?",
-            "opties": [
-                  "Snelle gecombineerde aanvallen van vliegtuigen, tanks en gemotoriseerde troepen",
-                  "Langdurige loopgravenoorlog",
-                  "Blokkades op zee",
-                  "Oorlog zonder leger"
-            ],
-            "antwoord": 0,
-            "uitleg": "Blitzkrieg beoogde een snelle overwinning."
+        id: "ex15_v2",
+        type: "invul",
+        vraag: "Hoeveel geallieerde landen ondertekenden op 1 januari 1942 de 'Verklaring van de Verenigde Naties'?",
+        antwoord: "26",
+        uitleg: "26 geallieerde landen ondertekenden op 1 januari 1942 deze verklaring, waaronder Nederland namens de regering in ballingschap."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Op welke datum verwoestte het nazi-bombardement de binnenstad van Rotterdam?",
-            "opties": [
-                  "14 mei 1940",
-                  "10 mei 1940",
-                  "5 mei 1945",
-                  "15 augustus 1945"
-            ],
-            "antwoord": 0,
-            "uitleg": "Rotterdam werd op 14 mei 1940 gebombardeerd."
+        id: "ex15_v3",
+        type: "waaronwaar",
+        vraag: "Nederland ondertekende de Verklaring van de Verenigde Naties namens de regering in ballingschap in Londen.",
+        antwoord: true,
+        uitleg: "Waar! Omdat Nederland bezet was, tekende de Nederlandse regering in ballingschap namens het land."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wie leidde bezet Nederland als Rijkscommissaris?",
-            "opties": [
-                  "Arthur Seyss-Inquart",
-                  "Anton Mussert",
-                  "Heinrich Himmler",
-                  "Joseph Goebbels"
-            ],
-            "antwoord": 0,
-            "uitleg": "Seyss-Inquart bestuurde bezet Nederland."
+        id: "ex15_v4",
+        type: "mc",
+        vraag: "Van wie kwam het begrip 'Verenigde Naties' als naam voor de nieuwe volkenorganisatie na de oorlog?",
+        opties: [
+          "Stalin",
+          "Roosevelt",
+          "Churchill",
+          "Chamberlain"
+        ],
+        antwoord: 1,
+        uitleg: "President Roosevelt bedacht de naam 'Verenigde Naties' voor de nieuwe, sterkere opvolger van de Volkenbond."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Waarom staakten Nederlanders tijdens de Februaristaking van 1941?",
-            "opties": [
-                  "Uit protest tegen de eerste Jodenrazzia's in Amsterdam",
-                  "Voor meer loon",
-                  "Tegen het gebrek aan eten",
-                  "Voor de koningin"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Februaristaking was openlijk protest tegen Jodenvervolging."
+        id: "ex15_v5",
+        type: "mc",
+        vraag: "Welke vier landen noemde Roosevelt de 'four policemen', die samen vrede en veiligheid in de wereld moesten handhaven?",
+        opties: [
+          "Duitsland, Japan, Italië en Spanje",
+          "Nederland, België, Frankrijk en Polen",
+          "De VS, de Sovjet-Unie, Groot-Brittannië en China",
+          "De VS, Canada, Australië en Nieuw-Zeeland"
+        ],
+        antwoord: 2,
+        uitleg: "Roosevelt dacht bij de leiding van de nieuwe VN aan de VS, de Sovjet-Unie, Groot-Brittannië en China als 'four policemen'."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat moesten mannen doen tijdens de Arbeitseinsatz?",
-            "opties": [
-                  "Verplicht werken in Duitse fabrieken en oorlogsindustrie",
-                  "Dienen in het leger",
-                  "Werken in de polder",
-                  "Studeren in Duitsland"
-            ],
-            "antwoord": 0,
-            "uitleg": "Arbeitseinsatz was verplichte tewerkstelling."
+        id: "ex15_v6",
+        type: "waaronwaar",
+        vraag: "Churchill probeerde te voorkomen dat Frankrijk een plek kreeg in de leiding van de Verenigde Naties.",
+        antwoord: false,
+        uitleg: "Onwaar. Churchill zorgde er juist voor dat ook Frankrijk werd opgenomen in de leiding van de VN."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. In welke periode vond de Hongerwinter plaats in West-Nederland?",
-            "opties": [
-                  "Winter 1944-1945",
-                  "Winter 1939-1940",
-                  "Winter 1941-1942",
-                  "Winter 1945-1946"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Hongerwinter eiste circa 20.000 doden."
+        id: "ex15_v7",
+        type: "invul",
+        vraag: "Hoeveel stemmen heeft elke lidstaat in de Algemene Vergadering van de Verenigde Naties?",
+        antwoord: "één stem|1 stem|een stem",
+        uitleg: "In de Algemene Vergadering heeft elke lidstaat, groot of klein, precies één stem."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wat was de rol van Kamp Westerbork?",
-            "opties": [
-                  "Doorgangskamp voor deportatie van Joden naar vernietigingskampen",
-                  "Kazerne voor militairen",
-                  "Gevangenis voor nazi's",
-                  "Fabriek"
-            ],
-            "antwoord": 0,
-            "uitleg": "Westerbork was het doorgangskamp naar Auschwitz en Sobibor."
+        id: "ex15_v8",
+        type: "mc",
+        vraag: "Uit hoeveel lidstaten bestaat de Veiligheidsraad van de VN in totaal?",
+        opties: [
+          "Vijf",
+          "Tien",
+          "Twintig",
+          "Vijftien"
+        ],
+        antwoord: 3,
+        uitleg: "De Veiligheidsraad telt vijftien lidstaten, waarvan er vijf permanent lid zijn met vetorecht."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat werd besloten op de Wannsee-conferentie (1942)?",
-            "opties": [
-                  "De \"Endlösung\": de industriële vernietiging van 11 miljoen Europese Joden",
-                  "Vrede met Engeland",
-                  "De bouw van de Muur",
-                  "Het starten van de oorlog"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op Wannsee werd de genocide georganiseerd."
+        id: "ex15_v9",
+        type: "open",
+        vraag: "Leg uit wat de Veiligheidsraad van de VN kan doen als een land zich niet aan internationale afspraken houdt.",
+        sleutelwoorden: [
+          "strafmaatregelen/sancties",
+          "vredestroepen/soldaten sturen"
+        ],
+        minTreffers: 1,
+        modelantwoord: "De Veiligheidsraad kan bindende besluiten nemen, bijvoorbeeld door strafmaatregelen (sancties) op te leggen aan het betreffende land, of door vredestroepen te sturen.",
+        uitleg: "Anders dan de machteloze Volkenbond kan de Veiligheidsraad bindende besluiten afdwingen, met sancties of vredestroepen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Wat gebeurde er op 7 december 1941 bij Pearl Harbor?",
-            "opties": [
-                  "Japan viel de Amerikaanse vloot aan",
-                  "Duitsland capituleerde",
-                  "De atoombom viel",
-                  "Italië gaf zich over"
-            ],
-            "antwoord": 0,
-            "uitleg": "Pearl Harbor bracht de VS in de oorlog."
+        id: "ex15_v10",
+        type: "waaronwaar",
+        vraag: "Vóór 1943 waren hoge staatsleiders al eerder internationaal berecht voor oorlogsmisdaden.",
+        antwoord: false,
+        uitleg: "Onwaar. Het berechten van hoge leiders voor oorlogsmisdaden door internationale rechters was in 1943 volledig nieuw."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Waarom was de Slag bij Stalingrad het keerpunt aan het Oostfront?",
-            "opties": [
-                  "Het Duitse leger leed een vernietigende nederlaag tegen het Rode Leger",
-                  "Duitsland veroverde Moskou",
-                  "De geallieerden landden er",
-                  "Japan viel Rusland aan"
-            ],
-            "antwoord": 0,
-            "uitleg": "Stalingrad bracht de ommekeer in Oost-Europa."
+        id: "ex15_v11",
+        type: "mc",
+        vraag: "Welke twee nieuwe soorten misdaden stelden de geallieerden strafbaar om nazileiders te kunnen berechten?",
+        opties: [
+          "Misdaden tegen de menselijkheid en misdaden tegen de vrede",
+          "Landverraad en spionage",
+          "Oorlogswinst maken en zwarthandel",
+          "Censuur en propaganda"
+        ],
+        antwoord: 0,
+        uitleg: "Naast bestaande regels tegen oorlogsmisdaden voegden de geallieerden 'misdaden tegen de menselijkheid' en 'misdaden tegen de vrede' toe."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat gebeurde er op D-Day (6 juni 1944)?",
-            "opties": [
-                  "Geallieerde landing in Normandië om West-Europa te bevrijden",
-                  "Het einde van WO2",
-                  "Inval in Polen",
-                  "Slag om Engeland"
-            ],
-            "antwoord": 0,
-            "uitleg": "D-Day opende het Westfront."
+        id: "ex15_v12",
+        type: "invul",
+        vraag: "Uit hoeveel landen kwamen de rechters die het Neurenbergproces tegen de nazileiders leidden?",
+        antwoord: "vier|4",
+        uitleg: "De rechters bij het Neurenbergproces waren Amerikanen, Britten, Russen en Fransen: rechters uit vier landen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Op welke steden vielen de eerste atoombommen in augustus 1945?",
-            "opties": [
-                  "Hiroshima en Nagasaki",
-                  "Tokio en Kyoto",
-                  "Berlin en Hamburg",
-                  "Seoul en Osaka"
-            ],
-            "antwoord": 0,
-            "uitleg": "Hiroshima en Nagasaki leidden tot de overgave van Japan."
+        id: "ex15_v13",
+        type: "mc",
+        vraag: "Hoeveel rechters uit elf geallieerde landen deden mee aan het Tokioproces tegen de Japanse leiders?",
+        opties: [
+          "Zeven",
+          "Elf",
+          "Twintig",
+          "Tweeëntwintig"
+        ],
+        antwoord: 1,
+        uitleg: "Aan het Tokioproces deden elf rechters mee, uit elf verschillende geallieerde landen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Wat deed de NSB van Mussert tijdens de Duitse bezetting?",
-            "opties": [
-                  "De NSB collaboreerde (werkte samen) met de Duitse bezetter",
-                  "Ging in het verzet",
-                  "Vluchtte naar Londen",
-                  "Bleef neutraal"
-            ],
-            "antwoord": 0,
-            "uitleg": "De NSB steunde de nazi-bezetter."
+        id: "ex15_v14",
+        type: "waaronwaar",
+        vraag: "Bij het Tokioproces tegen de Japanse leiders zat ook een Nederlandse rechter.",
+        antwoord: true,
+        uitleg: "Waar! Onder de elf rechters die in Tokio meededen, was ook een Nederlander."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wat was Operatie Barbarossa?",
-            "opties": [
-                  "De Duitse inval in de Sovjet-Unie in juni 1941",
-                  "Het bevrijdingsplan voor Nederland",
-                  "De geallieerde luchtbrug",
-                  "De gevechten in Azië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Barbarossa was de Duitse aanval op de Sovjet-Unie."
+        id: "ex15_v15",
+        type: "mc",
+        vraag: "Hoeveel doodvonnissen werden er in totaal in Nederland na de oorlog voltrokken tegen collaborateurs?",
+        opties: [
+          "Elf",
+          "40",
+          "100",
+          "427"
+        ],
+        antwoord: 1,
+        uitleg: "In Nederland werden na de oorlog 40 doodvonnissen tegen collaborateurs voltrokken, onder wie NSB-leider Mussert."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat mislukte bij Operatie Market Garden (sep 1944)?",
-            "opties": [
-                  "Het veroveren van de brug bij Arnhem",
-                  "De landing op Normandië",
-                  "Het bombardement op Berlijn",
-                  "De bevrijding van Parijs"
-            ],
-            "antwoord": 0,
-            "uitleg": "Arnhem bleek \"een brug te ver\"."
+        id: "ex15_v16",
+        type: "open",
+        vraag: "Leg uit waarom de plek waar NSB-leider Mussert in 1946 werd geëxecuteerd, de Scheveningse duinen, een symbolische betekenis had.",
+        sleutelwoorden: [
+          "verzet/verzetsmensen/verzetsvrouwen",
+          "geëxecuteerd/gefusilleerd door de Duitsers"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Op diezelfde plek in de Scheveningse duinen hadden de Duitsers tijdens de bezetting juist veel Nederlandse verzetsmannen en -vrouwen geëxecuteerd, waardoor het symbolisch was dat de landverrader Mussert er nu zelf werd terechtgesteld.",
+        uitleg: "De plek symboliseerde de omkering van de rollen: waar eerst het verzet werd gefusilleerd, werd nu de collaborateur terechtgesteld."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat waren de Jappenkampen in Nederlands-Indië?",
-            "opties": [
-                  "Interneringskampen voor Nederlandse burgers en militairen onder de Japanse bezetting",
-                  "Scholen voor de jeugd",
-                  "Militairekazernes",
-                  "Werkkampen in Japan"
-            ],
-            "antwoord": 0,
-            "uitleg": "In Jappenkampen heersten gruwelijke omstandigheden."
+        id: "ex15_v17",
+        type: "invul",
+        vraag: "Hoeveel verschillende pamfletten drukte en verspreidde de Duitse verzetsgroep Weisse Rose in totaal?",
+        antwoord: "zes|6",
+        uitleg: "De Weisse Rose drukte en verspreidde in totaal zes verschillende pamfletten tegen het naziregime."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Hoeveel Joodse mensen werden vermoord tijdens de Holocaust?",
-            "opties": [
-                  "Ongeveer 6 miljoen",
-                  "Ongeveer 100.000",
-                  "Ongeveer 20 miljoen",
-                  "Ongeveer 1 miljoen"
-            ],
-            "antwoord": 0,
-            "uitleg": "De genocide eiste 6 miljoen Joodse levens."
+        id: "ex15_v18",
+        type: "mc",
+        vraag: "Wat gebeurde er met het laatste pamflet van de Weisse Rose?",
+        opties: [
+          "Het werd naar Groot-Brittannië gesmokkeld en later in miljoenen exemplaren boven Duitsland uitgestrooid.",
+          "Het werd door de Gestapo vernietigd voordat het werd verspreid.",
+          "Het werd omgezet in een radio-uitzending vanuit Zwitserland.",
+          "Het werd nooit buiten München verspreid."
+        ],
+        antwoord: 0,
+        uitleg: "Het laatste pamflet werd naar Groot-Brittannië gesmokkeld, waarna Britse vliegtuigen er 1,5 miljoen exemplaren van boven Duitsland uitwierpen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat was de Slag om Engeland (1940)?",
-            "opties": [
-                  "Luchtoorlog tussen de Duitse Luftwaffe en de Britse RAF",
-                  "Een zeeslag op het Kanaal",
-                  "Een invasie van Britse troepen",
-                  "Een tankslag"
-            ],
-            "antwoord": 0,
-            "uitleg": "Engeland behield het overwicht in de lucht."
+        id: "ex15_v19",
+        type: "mc",
+        vraag: "Wat gebeurt er in Nederland kort voor 20.00 uur op 4 mei tijdens de Nationale Dodenherdenking?",
+        opties: [
+          "De koning legt een krans en er volgen twee minuten stilte, afgesloten met het Wilhelmus.",
+          "Er wordt een minuut stilte gehouden gevolgd door het volkslied van de Verenigde Naties.",
+          "Alle winkels in Nederland gaan die avond dicht als eerbetoon.",
+          "Er klinkt een sirene die de bevrijding aankondigt."
+        ],
+        antwoord: 0,
+        uitleg: "Kort voor 20.00 uur legt de koning een krans bij het Nationaal Monument, gevolgd door acht klokslagen en twee minuten stilte, afgesloten met het Wilhelmus."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer gaf nazi-Duitsland zich definitief over?",
-            "opties": [
-                  "8 mei 1945",
-                  "5 mei 1940",
-                  "15 augustus 1945",
-                  "11 november 1918"
-            ],
-            "antwoord": 0,
-            "uitleg": "Duitsland capituleerde op 8 mei 1945."
+        id: "ex15_v20",
+        type: "waaronwaar",
+        vraag: "Op 15 augustus vindt in Nederland de Nationale Indië-herdenking plaats bij het Indisch Monument in Den Haag.",
+        antwoord: true,
+        uitleg: "Waar! Op 15 augustus, de datum van de Japanse capitulatie, wordt bij het Indisch Monument in Den Haag herdacht."
       }
-]
+    ]
   });
 })();

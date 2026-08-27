@@ -15,3 +15,11 @@ _math_extract/
 # Lokale scores en logs
 scores.json
 scores_log.txt
+
+# Scratch and temporary OCR artifacts
+scratch/
+inbox/tessdata/
+inbox/wiskunde_h2_img/
+inbox/wiskunde_h2_txt/
+inbox/wiskunde_h2_ocr.txt
+

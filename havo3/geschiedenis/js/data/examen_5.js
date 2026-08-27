@@ -29,7 +29,7 @@
       },
       {
         id: "ex5_v2",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoeveel Nederlandse militairen hield de regering tijdens de mobilisatie in juli 1914 paraat aan de grenzen?",
         antwoord: "200.000|200000|200.000 militairen",
         uitleg: "Er werden 200.000 militairen gemobiliseerd om de grenzen te bewaken."
@@ -49,7 +49,7 @@
       },
       {
         id: "ex5_v4",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe noemden de mensen het levensgevaarlijke elektrische grenshek onder hoogspanning dat Duitsland eind 1914 tussen België en Nederland aanlegde?",
         antwoord: "Draad des Doods|de draad des doods|draden des doods",
         uitleg: "De 'Draad des Doods' hield vluchtelingen en spionnen tegen via een hek onder hoogspanning."
@@ -89,7 +89,7 @@
       },
       {
         id: "ex5_v8",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe noemen we de illegale plek waar mensen die het konden betalen stiekem voedsel en goederen kochten zonder bonnen?",
         antwoord: "zwarte markt|de zwarte markt",
         uitleg: "Op de zwarte markt werden schaarse spullen tegen woekerprijzen verhandeld."
@@ -116,7 +116,7 @@
       },
       {
         id: "ex5_v11",
-        type: "invoer",
+        type: "invul",
         vraag: "In welk jaar kregen ook vrouwen in Nederland definitief algemeen kiesrecht (actief vrouwenkiesrecht)?",
         antwoord: "1919",
         uitleg: "Twee jaar na het mannenkiesrecht (1917) kregen vrouwen in 1919 kiesrecht."
@@ -169,7 +169,7 @@
       },
       {
         id: "ex5_v16",
-        type: "invoer",
+        type: "invul",
         vraag: "Wie was de beroemdste Nederlandse schilder van De Stijl, bekend van strakke zwarte lijnen en het schilderij 'Victory Boogie Woogie'?",
         antwoord: "Piet Mondriaan|Mondriaan|piet mondriaan",
         uitleg: "Piet Mondriaan was de bekendste schilder van De Stijl."

@@ -62,7 +62,7 @@
       },
       {
         id: "ex4_v5",
-        type: "invoer",
+        type: "invul",
         vraag: "Welk grensgebied moest Duitsland in 1919 teruggeven aan Frankrijk?",
         antwoord: "Elzas-Lotharingen|Elzas Lotharingen",
         uitleg: "Elzas-Lotharingen, dat Duitsland in 1871 had veroverd, ging terug naar Frankrijk."
@@ -89,7 +89,7 @@
       },
       {
         id: "ex4_v8",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe heette de internationale organisatie die in 1919 werd opgericht om toekomstige oorlogen te voorkomen?",
         antwoord: "Volkenbond|De Volkenbond|volkenbond",
         uitleg: "De Volkenbond werd op initiatief van president Wilson opgericht."
@@ -130,7 +130,7 @@
       {
         id: "ex4_v12",
         type: "mc",
-        vraag: "Welke van de volgende nieuwe staten ontstond NlET op de kaart van Europa na WO1?",
+        vraag: "Welke van de volgende nieuwe staten ontstond NIET op de kaart van Europa na WO1?",
         opties: [
           "Tsjecho-Slowakije",
           "Joegoslavië",
@@ -155,7 +155,7 @@
       },
       {
         id: "ex4_v14",
-        type: "invoer",
+        type: "invul",
         vraag: "In welke grote Turkse havenstad in West-Anatolië (Smyrna) landde in 1919 een Grieks veroveringsleger?",
         antwoord: "Izmir|Smyrna|izmir|smyrna",
         uitleg: "Smyrna (het huidige Izmir) werd in 1919 bezet door Griekse troepen."
@@ -175,7 +175,7 @@
       },
       {
         id: "ex4_v16",
-        type: "invoer",
+        type: "invul",
         vraag: "Welke erenaam, die 'Vader der Turken' betekent, gaf het Turkse parlement aan Mustafa Kemal?",
         antwoord: "Atatürk|Ataturk|ataturk|atatürk",
         uitleg: "Mustafa Kemal kreeg de achternaam Atatürk."

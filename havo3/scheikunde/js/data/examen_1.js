@@ -1,59 +1,190 @@
-/* Proeftoets 1 — Scheikunde HAVO 3: stoffen, atomen & reacties.
-   Smoke-test: 5 vragen (2 mc / 1 waaronwaar / 1 invul / 1 open). */
+/* Proeftoets 1 — Scheikunde HAVO 3: Hoofdstuk 2 (Bouwstenen van stoffen - Deel 1)
+   Focus: Paragraaf 2.1 — Macro- en microniveau, fasen op microniveau, zuivere stoffen en mengsels.
+   20 vragen conform DURU ENGINE_SPEC. */
 DURU.registerExamen({
   id: "ex-h3-scheikunde-1",
-  titel: "Proeftoets 1 — Scheikunde: stoffen, atomen & reacties",
-  vak: "Scheikunde · HAVO 3",
-  icoon: "🧪",
-  duurMin: 10,
+  titel: "Toets 1 — Macro & Micro, Fasen en Mengsels",
+  vak: "Scheikunde · HAVO 3 (H2)",
+  icoon: "🔍",
+  duurMin: 30,
   vragen: [
     {
       type: "mc",
-      vraag: "Welke formule hoort bij <b>water</b>?",
+      vraag: "Wat is het verschil tussen het <b>macroniveau</b> en het <b>microniveau</b> in de scheikunde?",
       opties: [
-        "CO<sub>2</sub>",
-        "H<sub>2</sub>O",
-        "O<sub>2</sub>",
-        "NaCl"
+        "Macroniveau is wat je met je zintuigen kunt waarnemen (kleur, fase, geur); microniveau is de onzichtbare wereld van moleculen en atomen",
+        "Macroniveau gaat over gassen, microniveau over vaste stoffen",
+        "Macroniveau is altijd koud, microniveau is altijd heet",
+        "Er is geen verschil"
       ],
-      antwoord: 1,
-      uitleg: "Water is H<sub>2</sub>O: één watermolecuul bestaat uit 2 waterstofatomen en 1 zuurstofatoom."
+      antwoord: 0,
+      uitleg: "Macroniveau = waarnemingen aan stoffen (groot). Microniveau = verklaringen met moleculen en atomen (klein)."
     },
     {
       type: "mc",
-      vraag: "Uit welke deeltjes bestaat de <b>kern</b> van een atoom?",
+      vraag: "Hoe zijn de moleculen gerangschikt in een <b>vaste stof (s)</b> op microniveau?",
       opties: [
-        "alleen elektronen",
-        "protonen en elektronen",
-        "protonen en neutronen",
-        "alleen neutronen"
+        "Ze zitten dicht op elkaar op vaste plaatsen in een kristalrooster en trillen alleen om hun plaats",
+        "Ze bewegen met hoge snelheid kriskras door de hele ruimte",
+        "Ze glijden willekeurig langs elkaar heen zonder vaste vorm",
+        "Ze zijn helemaal verdwenen"
       ],
-      antwoord: 2,
-      uitleg: "In de kern zitten protonen (positief) en neutronen (neutraal). De elektronen (negatief) draaien daaromheen in schillen."
+      antwoord: 0,
+      uitleg: "In een vaste stof zitten de moleculen netjes gerangschikt op vaste posities in een rooster."
+    },
+    {
+      type: "mc",
+      vraag: "Wat gebeurt er met de moleculen in een <b>gas (g)</b>?",
+      opties: [
+        "Ze zitten dicht op elkaar in een vast rooster",
+        "Ze bewegen met grote tussenruimtes en hoge snelheden kriskras door elkaar",
+        "Ze smelten aan elkaar vast",
+        "Ze staan volkomen stil"
+      ],
+      antwoord: 1,
+      uitleg: "In een gas is de afstand tussen de moleculen enorm groot en bewegen ze vrij en snel."
     },
     {
       type: "waaronwaar",
-      vraag: "Bij een chemische reactie ontstaan er nieuwe stoffen.",
+      vraag: "Als vloeibaar water verdampt tot waterdamp, veranderen de watermoleculen (H₂O) in andere moleculen zoals waterstofgas en zuurstofgas.",
+      antwoord: false,
+      uitleg: "Niet waar. Bij een faseovergang (zoals verdampen) blijven de moleculen precies hetzelfde (H₂O); alleen de afstand en beweging verandert."
+    },
+    {
+      type: "mc",
+      vraag: "Wat is een <b>zuivere stof</b> op microniveau?",
+      opties: [
+        "Een stof die bestaat uit slechts één soort moleculen (of één atoomsoort)",
+        "Een stof zonder bacteriën",
+        "Een mengsel van water en suiker",
+        "Kraanwater uit de bergen"
+      ],
+      antwoord: 0,
+      uitleg: "Een zuivere stof bevat maar 1 soort bouwstenen (bijv. alleen H₂O-moleculen)."
+    },
+    {
+      type: "mc",
+      vraag: "Wat is een <b>mengsel</b> op microniveau?",
+      opties: [
+        "Een stof die bestaat uit twee of meer verschillende soorten moleculen door elkaar",
+        "Een stof met alleen goudatomen",
+        "Een vloeistof die kookt bij precies 100 °C",
+        "Gedestilleerd water"
+      ],
+      antwoord: 0,
+      uitleg: "In een mengsel zitten verschillende soorten moleculen gemengd (zoals suikerwater of lucht)."
+    },
+    {
+      type: "waaronwaar",
+      vraag: "Een zuivere stof heeft een vast kookpunt en smeltpunt (kook- en smeltpunt), terwijl een mengsel een kooktraject en smelttraject heeft.",
       antwoord: true,
-      uitleg: "Waar. Bij een chemische reactie verdwijnen de beginstoffen en ontstaan er nieuwe stoffen (reactieproducten) met andere eigenschappen. Bij een faseovergang, zoals smelten, blijft het dezelfde stof."
+      uitleg: "Waar. Zuiver water kookt op 100 °C; zeewater kookt over een temperatuurgebied (traject)."
     },
     {
       type: "invul",
-      vraag: "Een stof die uit maar één soort atomen bestaat, noem je een … .",
-      antwoord: "element|elementen|enkelvoudige stof",
-      uitleg: "Een element (enkelvoudige stof) bestaat uit één soort atomen, bijvoorbeeld ijzer (Fe) of zuurstof (O<sub>2</sub>). Bestaat een stof uit meerdere soorten atomen, dan is het een verbinding."
+      vraag: "Welke fase-aanduiding (toestandsaanduiding) zet je tussen haakjes achter een stof in vloeibare toestand?",
+      antwoord: "(l)|l|liquid",
+      uitleg: "(s) = solid (vast), (l) = liquid (vloeibaar), (g) = gas (gasvormig), (aq) = aqueous (opgelost in water)."
+    },
+    {
+      type: "invul",
+      vraag: "Welke fase-aanduiding gebruik je voor een stof die is <b>opgelost in water</b> (zoals zout in water)?",
+      antwoord: "(aq)|aq|aqueous",
+      uitleg: "aq staat voor 'aqua' (opgelost in water), bijv. NaCl(aq)."
+    },
+    {
+      type: "mc",
+      vraag: "Waarom gebruiken scheikundigen <b>modellen</b> (zoals het bolletjesmodel) voor moleculen?",
+      opties: [
+        "Omdat moleculen te klein zijn om met het blote oog of gewone microscoop te zien, en een model helpt processen te visualiseren en begrijpen",
+        "Omdat moleculen van plastic gemaakt zijn",
+        "Omdat de echte atomen te zwaar zijn om te tekenen",
+        "Om computervirussen te bestrijden"
+      ],
+      antwoord: 0,
+      uitleg: "Modellen zijn vereenvoudigde voorstellingen van de werkelijkheid om onzichtbare deeltjesprocessen inzichtelijk te maken."
+    },
+    {
+      type: "waaronwaar",
+      vraag: "In een vloeistof (l) zitten moleculen nog steeds dicht bij elkaar, maar ze kunnen kriskras langs elkaar heen bewegen.",
+      antwoord: true,
+      uitleg: "Waar. Daarom heeft een vloeistof een vast volume, maar neemt het de vorm van het vat aan."
+    },
+    {
+      type: "mc",
+      vraag: "Wat gebeurt er met de suikermoleculen als je een schep suiker oplost in een beker warm water?",
+      opties: [
+        "De suikermoleculen verdwijnen en worden omgezet in water",
+        "De suikerkorrel valt uiteen en de losse suikermoleculen verspreiden zich gelijkmatig tussen de watermoleculen",
+        "De suikermoleculen gaan chemisch reageren en vormen zout",
+        "De suikermoleculen zinken allemaal als één grote klomp"
+      ],
+      antwoord: 1,
+      uitleg: "Bij oplossen worden de onderlinge bindingen tussen suikermoleculen verbroken en mengen de losse suikermoleculen zich tussen de watermoleculen."
+    },
+    {
+      type: "invul",
+      vraag: "Hoe noem je de faseovergang van vloeistof naar gas?",
+      antwoord: "verdampen|verdamping",
+      uitleg: "Vloeistof -> gas = verdampen. Gas -> vloeistof = condenseren."
+    },
+    {
+      type: "invul",
+      vraag: "Hoe noem je de directe overgang van vaste stof naar gas (zonder eerst vloeibaar te worden, zoals bij droogijs)?",
+      antwoord: "sublimeren|vervluchtigen|sublimatie",
+      uitleg: "Vast -> gas = sublimeren (of vervluchtigen). Gas -> vast = rijpen (of desublimeren)."
+    },
+    {
+      type: "mc",
+      vraag: "Welke van de volgende voorbeelden is een <b>mengsel</b>?",
+      opties: [
+        "Lucht (stikstof, zuurstof, argon, CO₂)",
+        "Zuiver gedestilleerd water (H₂O)",
+        "Zuiver zuurstofgas (O₂)",
+        "Zuiver vloeibaar kwik (Hg)"
+      ],
+      antwoord: 0,
+      uitleg: "Lucht is een gasmengsel bestaande uit ca. 78% N₂, 21% O₂, 1% Ar en 0,04% CO₂."
+    },
+    {
+      type: "waaronwaar",
+      vraag: "Wanneer je water verwarmt, gaan de watermoleculen sneller bewegen en trillen.",
+      antwoord: true,
+      uitleg: "Waar. Temperatuur is een maat voor de gemiddelde bewegingssnelheid van de moleculen."
+    },
+    {
+      type: "mc",
+      vraag: "Wat is <b>diffusie</b> in de scheikunde?",
+      opties: [
+        "Het spontaan mengen van stoffen doordat moleculen door hun eigen willekeurige beweging door elkaar heen bewegen",
+        "Het koken van een stof onder hoge druk",
+        "Het bevriezen van een oplossing",
+        "Het filtreren van een troebele vloeistof"
+      ],
+      antwoord: 0,
+      uitleg: "Diffusie is het zelfstandig verspreiden van moleculen (bijv. parfumgeur in een kamer of theekleur in heet water)."
+    },
+    {
+      type: "invul",
+      vraag: "Wat gebeurt er met het volume van een gas als je de temperatuur verhoogt (bij constante druk)? Het volume wordt … .",
+      antwoord: "groter|groter / neemt toe|neemt toe",
+      uitleg: "Bij hogere temperatuur bewegen gasmoleculen sneller en botsen harder, waardoor het gas uitzet (groter volume)."
     },
     {
       type: "open",
-      vraag: "Leg uit wat de <b>wet van behoud van massa</b> betekent bij een chemische reactie, en waarom je een reactievergelijking daarom moet <b>kloppend maken</b>.",
-      sleutelwoorden: [
-        "massa blijft gelijk/even zwaar/niets verdwijnt",
-        "atomen/aantal atomen/zelfde atomen",
-        "links en rechts/voor en na/beide kanten"
-      ],
+      vraag: "Leg uit wat het verschil is tussen een <b>chemische reactie</b> en een <b>faseovergang</b> op microniveau.",
+      sleutelwoorden: ["bij reactie veranderen moleculen / nieuwe stoffen", "bij faseovergang blijven moleculen hetzelfde / alleen afstand/beweging verandert"],
       minTreffers: 2,
-      modelantwoord: "De totale massa van de beginstoffen is precies even groot als de totale massa van de reactieproducten: er verdwijnen geen atomen en er komen er ook geen bij, ze worden alleen anders gerangschikt. Daarom moet in een reactievergelijking links en rechts van de pijl van elke atoomsoort hetzelfde aantal staan — dat noem je kloppend maken.",
-      uitleg: "De kern is: atomen gaan niet verloren, dus links en rechts van de pijl moeten evenveel atomen van elke soort staan. Daarom zet je coëfficiënten vóór de formules."
+      modelantwoord: "Bij een faseovergang (zoals smelten of verdampen) blijven de moleculen zelf volledig intact en onveranderd; alleen de afstand tussen de moleculen en hun onderlinge bewegingssnelheid verandert. Bij een chemische reactie worden de atoombindingen in de beginmoleculen verbroken en hergroeperen de atomen zich tot compleet nieuwe soorten moleculen (reactieproducten met andere stofeigenschappen).",
+      uitleg: "Moleculen behouden vs. moleculen worden hergegroepeerd tot nieuwe stoffen."
+    },
+    {
+      type: "open",
+      vraag: "Beschrijf de drie fasen van een stof (vast, vloeibaar, gas) op microniveau aan de hand van: 1) de afstand tussen de moleculen, 2) de beweging van de moleculen.",
+      sleutelwoorden: ["vast: dicht op elkaar, vaste plaats / trillen", "vloeibaar: dicht op elkaar, bewegen langs elkaar", "gas: grote afstand, vrij en snel kriskras bewegen"],
+      minTreffers: 3,
+      modelantwoord: "1. Vast (s): De moleculen zitten heel dicht op elkaar op vaste roosterplaatsen en kunnen alleen trillen om hun evenwichtsstand. 2. Vloeibaar (l): De moleculen zitten nog steeds dicht bij elkaar, maar hebben geen vaste positie en kunnen kriskras langs elkaar heen glijden. 3. Gas (g): De afstand tussen de moleculen is zeer groot (veel lege ruimte) en de moleculen bewegen met hoge snelheden volkomen vrij kriskras door de ruimte.",
+      uitleg: "Microniveau beschrijving van vast, vloeibaar en gas."
     }
   ]
 });

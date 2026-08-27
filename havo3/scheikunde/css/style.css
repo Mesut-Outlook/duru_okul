@@ -163,6 +163,7 @@ a { color: var(--paars); text-decoration: none; }
 }
 .topic-card .badge-num { position: absolute; top: 16px; right: 16px; font-weight: 800; color: var(--grijs-licht); }
 
+.h2-thema .ico { background: #fef3c7; }
 .h4-thema .ico { background: var(--blauw-zacht); }
 .h6-thema .ico { background: #dcfce7; }
 

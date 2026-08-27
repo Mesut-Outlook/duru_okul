@@ -1,278 +1,223 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 14 — Hoofdstuk 3 (De Tweede Wereldoorlog (1939–1945))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 14 (20 vragen)
+   Hoofdstuk 3: De Tweede Wereldoorlog — 3.4 De Holocaust
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-14",
-    titel: "Proeftoets 14 — Hoofdstuk 3 (De Tweede Wereldoorlog (1939–1945))",
+    titel: "Proeftoets 14 — 3.4 De Holocaust",
     vak: "Geschiedenis · Hoofdstuk 3",
     hoofdstuk: 3,
     hoofdstukTitel: "Hoofdstuk 3 — De Tweede Wereldoorlog (1939–1945)",
-    icoon: "✈️",
+    icoon: "🕯️",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wanneer begon de Tweede Wereldoorlog met de Duitse inval in Polen?",
-            "opties": [
-                  "1 september 1939",
-                  "10 mei 1940",
-                  "6 juni 1944",
-                  "8 mei 1945"
-            ],
-            "antwoord": 0,
-            "uitleg": "WO2 begon op 1 september 1939."
+        id: "ex14_v1",
+        type: "mc",
+        vraag: "Welk eeuwenoud vooroordeel tegen joden gebruikten de nazi's om haat tegen hen aan te wakkeren?",
+        opties: [
+          "Dat joden slechte boeren waren.",
+          "Dat joden woekeraars (hebzuchtige geldschieters) waren.",
+          "Dat joden geen belasting betaalden.",
+          "Dat joden geen eigen taal hadden."
+        ],
+        antwoord: 1,
+        uitleg: "Het eeuwenoude vooroordeel dat joden 'woekeraars' waren, kwam voort uit het middeleeuwse verbod voor christenen om rente te vragen, waardoor bankieren vaak in joodse handen kwam."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat typeerde de Duitse Blitzkrieg-tactiek?",
-            "opties": [
-                  "Snelle gecombineerde aanvallen van vliegtuigen, tanks en gemotoriseerde troepen",
-                  "Langdurige loopgravenoorlog",
-                  "Blokkades op zee",
-                  "Oorlog zonder leger"
-            ],
-            "antwoord": 0,
-            "uitleg": "Blitzkrieg beoogde een snelle overwinning."
+        id: "ex14_v2",
+        type: "waaronwaar",
+        vraag: "In 1933 hielden SA'ers klanten tegen voor joodse winkels om zo een boycot van joodse ondernemers af te dwingen.",
+        antwoord: true,
+        uitleg: "Waar! Het Duitse volk werd opgeroepen niets bij joden te kopen, en SA'ers hielden klanten actief tegen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Op welke datum verwoestte het nazi-bombardement de binnenstad van Rotterdam?",
-            "opties": [
-                  "14 mei 1940",
-                  "10 mei 1940",
-                  "5 mei 1945",
-                  "15 augustus 1945"
-            ],
-            "antwoord": 0,
-            "uitleg": "Rotterdam werd op 14 mei 1940 gebombardeerd."
+        id: "ex14_v3",
+        type: "invul",
+        vraag: "Hoeveel joden woonden er rond 1939 in bezet Polen, meer dan in enig ander land?",
+        antwoord: "3,5 miljoen|3.5 miljoen",
+        uitleg: "In Polen woonden 3,5 miljoen joden, veruit de grootste joodse gemeenschap van Europa."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wie leidde bezet Nederland als Rijkscommissaris?",
-            "opties": [
-                  "Arthur Seyss-Inquart",
-                  "Anton Mussert",
-                  "Heinrich Himmler",
-                  "Joseph Goebbels"
-            ],
-            "antwoord": 0,
-            "uitleg": "Seyss-Inquart bestuurde bezet Nederland."
+        id: "ex14_v4",
+        type: "mc",
+        vraag: "Wat gebeurde er met joodse Polen in West-Polen na de Duitse verovering?",
+        opties: [
+          "Zij mochten in hun eigen huizen blijven wonen.",
+          "Zij kregen extra rantsoenen van de bezetter.",
+          "Zij moesten verhuizen naar overvolle getto's, waar velen stierven door gebrek en ziekte.",
+          "Zij werden meteen naar Nederland gedeporteerd."
+        ],
+        antwoord: 2,
+        uitleg: "Joodse Polen in West-Polen moesten verhuizen naar afgesloten, overvolle getto's, waar velen al snel stierven."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Waarom staakten Nederlanders tijdens de Februaristaking van 1941?",
-            "opties": [
-                  "Uit protest tegen de eerste Jodenrazzia's in Amsterdam",
-                  "Voor meer loon",
-                  "Tegen het gebrek aan eten",
-                  "Voor de koningin"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Februaristaking was openlijk protest tegen Jodenvervolging."
+        id: "ex14_v5",
+        type: "waaronwaar",
+        vraag: "Vanaf 1941 moesten joden in Duitsland en Polen een davidster op hun kleding dragen.",
+        antwoord: true,
+        uitleg: "Waar! De verplichte zespuntige davidster maakte joden voor de nazi's herkenbaar."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat moesten mannen doen tijdens de Arbeitseinsatz?",
-            "opties": [
-                  "Verplicht werken in Duitse fabrieken en oorlogsindustrie",
-                  "Dienen in het leger",
-                  "Werken in de polder",
-                  "Studeren in Duitsland"
-            ],
-            "antwoord": 0,
-            "uitleg": "Arbeitseinsatz was verplichte tewerkstelling."
+        id: "ex14_v6",
+        type: "mc",
+        vraag: "Wie voerden vanaf 1941 de massa-executies van joden uit in Oost-Polen, de Baltische staten en Oekraïne?",
+        opties: [
+          "Duitse leraren en ambtenaren",
+          "Lokale politie zonder Duitse betrokkenheid",
+          "Het reguliere Duitse leger alleen",
+          "SS-moordcommando's"
+        ],
+        antwoord: 3,
+        uitleg: "SS-moordcommando's voerden, met steun van het Duitse leger en lokale antisemieten, massa-executies uit in deze gebieden."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. In welke periode vond de Hongerwinter plaats in West-Nederland?",
-            "opties": [
-                  "Winter 1944-1945",
-                  "Winter 1939-1940",
-                  "Winter 1941-1942",
-                  "Winter 1945-1946"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Hongerwinter eiste circa 20.000 doden."
+        id: "ex14_v7",
+        type: "open",
+        vraag: "Leg uit waarom de nazi's vanaf 1942 vernietigingskampen gingen bouwen in plaats van alleen massa-executies uit te blijven voeren.",
+        sleutelwoorden: [
+          "efficiënt/sneller/meer mensen tegelijk",
+          "heel Europa/overal joden ophalen"
+        ],
+        minTreffers: 1,
+        modelantwoord: "De massa-executies door moordcommando's waren voor de nazi's te langzaam en te omslachtig. Door vernietigingskampen te bouwen, konden zij het moorden efficiënter organiseren en joden uit heel Europa er per trein naartoe brengen.",
+        uitleg: "De nazi's wilden het moorden industrialiseren om zoveel mogelijk mensen zo snel mogelijk te kunnen vermoorden."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wat was de rol van Kamp Westerbork?",
-            "opties": [
-                  "Doorgangskamp voor deportatie van Joden naar vernietigingskampen",
-                  "Kazerne voor militairen",
-                  "Gevangenis voor nazi's",
-                  "Fabriek"
-            ],
-            "antwoord": 0,
-            "uitleg": "Westerbork was het doorgangskamp naar Auschwitz en Sobibor."
+        id: "ex14_v8",
+        type: "invul",
+        vraag: "Hoeveel joodse Nederlanders woonden er ongeveer in Nederland vóór de oorlog?",
+        antwoord: "140.000|140000|140 000",
+        uitleg: "Nederland telde ongeveer 140.000 joodse inwoners, van wie 60 procent in Amsterdam woonde."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat werd besloten op de Wannsee-conferentie (1942)?",
-            "opties": [
-                  "De \"Endlösung\": de industriële vernietiging van 11 miljoen Europese Joden",
-                  "Vrede met Engeland",
-                  "De bouw van de Muur",
-                  "Het starten van de oorlog"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op Wannsee werd de genocide georganiseerd."
+        id: "ex14_v9",
+        type: "mc",
+        vraag: "Wat moesten Nederlandse ambtenaren en leraren in oktober 1940 invullen om te verklaren dat zij geen joodse voorouders hadden?",
+        opties: [
+          "Een ariërverklaring",
+          "Een loyaliteitseed aan de koningin",
+          "Een lidmaatschapsformulier van de NSB",
+          "Een belastingaangifte"
+        ],
+        antwoord: 0,
+        uitleg: "Met de ariërverklaring moesten ambtenaren en leraren bevestigen geen joodse voorouders te hebben; wie dat niet deed, werd ontslagen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Wat gebeurde er op 7 december 1941 bij Pearl Harbor?",
-            "opties": [
-                  "Japan viel de Amerikaanse vloot aan",
-                  "Duitsland capituleerde",
-                  "De atoombom viel",
-                  "Italië gaf zich over"
-            ],
-            "antwoord": 0,
-            "uitleg": "Pearl Harbor bracht de VS in de oorlog."
+        id: "ex14_v10",
+        type: "waaronwaar",
+        vraag: "Na de Februaristaking van 1941 moesten joden in Nederland hun fietsen, radio's en geld boven de 250 gulden inleveren.",
+        antwoord: true,
+        uitleg: "Waar! Na de Februaristaking volgden steeds meer discriminerende maatregelen tegen joodse Nederlanders."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Waarom was de Slag bij Stalingrad het keerpunt aan het Oostfront?",
-            "opties": [
-                  "Het Duitse leger leed een vernietigende nederlaag tegen het Rode Leger",
-                  "Duitsland veroverde Moskou",
-                  "De geallieerden landden er",
-                  "Japan viel Rusland aan"
-            ],
-            "antwoord": 0,
-            "uitleg": "Stalingrad bracht de ommekeer in Oost-Europa."
+        id: "ex14_v11",
+        type: "mc",
+        vraag: "Vanaf welke maand in 1942 moesten joden in Nederland een gele davidster met het woord 'Jood' zichtbaar op hun kleding dragen?",
+        opties: [
+          "Januari 1942",
+          "September 1942",
+          "Mei 1942",
+          "December 1942"
+        ],
+        antwoord: 2,
+        uitleg: "Vanaf mei 1942 moesten joden in Nederland op straat een gele davidster dragen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat gebeurde er op D-Day (6 juni 1944)?",
-            "opties": [
-                  "Geallieerde landing in Normandië om West-Europa te bevrijden",
-                  "Het einde van WO2",
-                  "Inval in Polen",
-                  "Slag om Engeland"
-            ],
-            "antwoord": 0,
-            "uitleg": "D-Day opende het Westfront."
+        id: "ex14_v12",
+        type: "invul",
+        vraag: "In welke Nederlandse provincie lag doorgangskamp Westerbork, vanwaar joden werden gedeporteerd?",
+        antwoord: "Drenthe",
+        uitleg: "Westerbork lag in Drenthe en was het belangrijkste doorgangskamp voor joodse Nederlanders."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Op welke steden vielen de eerste atoombommen in augustus 1945?",
-            "opties": [
-                  "Hiroshima en Nagasaki",
-                  "Tokio en Kyoto",
-                  "Berlin en Hamburg",
-                  "Seoul en Osaka"
-            ],
-            "antwoord": 0,
-            "uitleg": "Hiroshima en Nagasaki leidden tot de overgave van Japan."
+        id: "ex14_v13",
+        type: "mc",
+        vraag: "Naar welke twee vernietigingskampen werden joodse Nederlanders vanuit Westerbork vooral gedeporteerd?",
+        opties: [
+          "Auschwitz en Sobibor",
+          "Dachau en Buchenwald",
+          "Mauthausen en Bergen-Belsen",
+          "Treblinka en Majdanek"
+        ],
+        antwoord: 0,
+        uitleg: "Vanuit Westerbork gingen de meeste transporten naar de vernietigingskampen Auschwitz en Sobibor."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Wat deed de NSB van Mussert tijdens de Duitse bezetting?",
-            "opties": [
-                  "De NSB collaboreerde (werkte samen) met de Duitse bezetter",
-                  "Ging in het verzet",
-                  "Vluchtte naar Londen",
-                  "Bleef neutraal"
-            ],
-            "antwoord": 0,
-            "uitleg": "De NSB steunde de nazi-bezetter."
+        id: "ex14_v14",
+        type: "waaronwaar",
+        vraag: "Speciale politieafdelingen kregen een boete opgelegd wanneer zij ondergedoken joden opspoorden.",
+        antwoord: false,
+        uitleg: "Onwaar. Deze afdelingen kregen juist een beloning, het zogenoemde 'kopgeld', voor elke arrestant die zij opspoorden."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wat was Operatie Barbarossa?",
-            "opties": [
-                  "De Duitse inval in de Sovjet-Unie in juni 1941",
-                  "Het bevrijdingsplan voor Nederland",
-                  "De geallieerde luchtbrug",
-                  "De gevechten in Azië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Barbarossa was de Duitse aanval op de Sovjet-Unie."
+        id: "ex14_v15",
+        type: "open",
+        vraag: "Wat gebeurde er met de kinderen van David Sanders, nadat hij mishandeld was om hun onderduikadressen te achterhalen?",
+        sleutelwoorden: [
+          "opgepakt/gearresteerd",
+          "vermoord/gedood/omgekomen"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Zijn jongste twee kinderen, Marleentje en Bertje, werden dezelfde dag nog gearresteerd, en ook zijn dochter Elly werd opgepakt. Kort daarna werd het hele gezin in Auschwitz vermoord.",
+        uitleg: "Door grof geweld van jodenjagers werden de onderduikadressen van de kinderen prijsgegeven, waarna het hele gezin in Auschwitz werd vermoord."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat mislukte bij Operatie Market Garden (sep 1944)?",
-            "opties": [
-                  "Het veroveren van de brug bij Arnhem",
-                  "De landing op Normandië",
-                  "Het bombardement op Berlijn",
-                  "De bevrijding van Parijs"
-            ],
-            "antwoord": 0,
-            "uitleg": "Arnhem bleek \"een brug te ver\"."
+        id: "ex14_v16",
+        type: "mc",
+        vraag: "Hoeveel joodse Nederlanders overleefden de oorlog ongeveer door onder te duiken?",
+        opties: [
+          "Minder dan 20.000",
+          "Precies 50.000",
+          "Meer dan 100.000",
+          "Alle 140.000"
+        ],
+        antwoord: 0,
+        uitleg: "Minder dan 20.000 joden in Nederland overleefden de oorlog door onder te duiken."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat waren de Jappenkampen in Nederlands-Indië?",
-            "opties": [
-                  "Interneringskampen voor Nederlandse burgers en militairen onder de Japanse bezetting",
-                  "Scholen voor de jeugd",
-                  "Militairekazernes",
-                  "Werkkampen in Japan"
-            ],
-            "antwoord": 0,
-            "uitleg": "In Jappenkampen heersten gruwelijke omstandigheden."
+        id: "ex14_v17",
+        type: "invul",
+        vraag: "Van de 107.000 gedeporteerde joodse Nederlanders keerden er na de oorlog ongeveer hoeveel terug?",
+        antwoord: "5.000|5000|5 000",
+        uitleg: "Van de 107.000 gedeporteerde joodse Nederlanders overleefden en keerden slechts ongeveer 5.000 terug."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Hoeveel Joodse mensen werden vermoord tijdens de Holocaust?",
-            "opties": [
-                  "Ongeveer 6 miljoen",
-                  "Ongeveer 100.000",
-                  "Ongeveer 20 miljoen",
-                  "Ongeveer 1 miljoen"
-            ],
-            "antwoord": 0,
-            "uitleg": "De genocide eiste 6 miljoen Joodse levens."
+        id: "ex14_v18",
+        type: "mc",
+        vraag: "In welke stad werd Anne Frank geboren, voordat haar familie naar Amsterdam verhuisde?",
+        opties: [
+          "Berlijn",
+          "Frankfurt",
+          "München",
+          "Hamburg"
+        ],
+        antwoord: 1,
+        uitleg: "Anne Frank werd in 1929 geboren in Frankfurt en verhuisde later met haar joods-Duitse gezin naar Amsterdam."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat was de Slag om Engeland (1940)?",
-            "opties": [
-                  "Luchtoorlog tussen de Duitse Luftwaffe en de Britse RAF",
-                  "Een zeeslag op het Kanaal",
-                  "Een invasie van Britse troepen",
-                  "Een tankslag"
-            ],
-            "antwoord": 0,
-            "uitleg": "Engeland behield het overwicht in de lucht."
+        id: "ex14_v19",
+        type: "waaronwaar",
+        vraag: "Anne Frank publiceerde haar dagboek zelf, direct na de bevrijding in 1945.",
+        antwoord: false,
+        uitleg: "Onwaar. Anne overleefde de oorlog niet; haar vader Otto, de enige overlevende van het gezin, publiceerde het dagboek in 1947."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer gaf nazi-Duitsland zich definitief over?",
-            "opties": [
-                  "8 mei 1945",
-                  "5 mei 1940",
-                  "15 augustus 1945",
-                  "11 november 1918"
-            ],
-            "antwoord": 0,
-            "uitleg": "Duitsland capituleerde op 8 mei 1945."
+        id: "ex14_v20",
+        type: "mc",
+        vraag: "Hoeveel exemplaren van Anne Franks dagboek 'Het Achterhuis' werden er wereldwijd ongeveer verkocht?",
+        opties: [
+          "1 miljoen",
+          "5 miljoen",
+          "25 miljoen",
+          "50 miljoen"
+        ],
+        antwoord: 2,
+        uitleg: "Het Achterhuis werd wereldwijd ongeveer 25 miljoen keer verkocht, in 70 talen, waardoor Anne het beroemdste holocaustslachtoffer werd."
       }
-]
+    ]
   });
 })();

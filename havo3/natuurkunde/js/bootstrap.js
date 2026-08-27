@@ -2,20 +2,45 @@
    Duru's Natuurkunde (HAVO 3) — Bootstrap
    Maakt het globale DURU-object klaar VOORDAT de databestanden laden.
    Elk databestand roept DURU.register({...}) / DURU.registerExamen({...}) aan.
-   Smoke-test-site: nog geen onderwerpen (oefenquizzes), alleen een proeftoets.
    ========================================================= */
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstukken overzicht
+  DURU.hoofdstukken = [
+    {
+      nr: 1,
+      titel: "Kracht en beweging",
+      icoon: "🏎️",
+      kleur: "h1-thema",
+      intro: "Krachten, soorten bewegingen, (v,t)- en (s,t)-diagrammen, de tweede wet van Newton (Fres = m·a), verkeersveiligheid en arbeid (W = F·s).",
+    },
+    {
+      nr: 2,
+      titel: "Elektriciteit",
+      icoon: "⚡",
+      kleur: "h2-thema",
+      intro: "Lading, spanning, stroomsterkte, wet van Ohm (R = U/I), serie- en parallelschakelingen, vermogen (P = U·I), kWh-energie en elektromagnetisme.",
+    },
+    {
+      nr: 3,
+      titel: "Straling",
+      icoon: "☢️",
+      kleur: "h3-thema",
+      intro: "Elektromagnetisch spectrum (IR, UV, röntgen), atoombouw, kernstraling (alfa, bèta, gamma), halveringstijd, medische toepassingen en kernenergie.",
+    },
+    {
+      nr: 4,
+      titel: "Stoffen en materialen",
+      icoon: "🧱",
+      kleur: "h4-thema",
+      intro: "Stofeigenschappen, dichtheid (ρ = m/V), drijven en zinken, soortelijke warmte (Q = m·c·ΔT), warmtetransport (geleiding, stroming, straling), soortelijke weerstand (R = ρ·l/A) en sensoren (NTC, PTC, LDR).",
+    }
+  ];
+
   DURU.onderwerpen = [];
   DURU._byId = {};
 
-  /**
-   * Registreer een onderwerp.
-   * Verwacht: { id, hoofdstuk, paragraaf, titel, korteUitleg, icoon, kleur, theorie, vragen:[...] }
-   */
   DURU.register = function (onderwerp) {
     if (!onderwerp || !onderwerp.id) {
       console.warn("DURU.register: onderwerp zonder id genegeerd", onderwerp);
@@ -32,7 +57,7 @@
   };
 })();
 
-// Storage delegation to parent window (if running in iframe) to prevent early storage read issues
+// Storage delegation to parent window
 if (window.parent && window.parent !== window && window.parent.localStorage) {
   Storage.prototype.getItem = function(key) {
     return window.parent.localStorage.getItem(key);

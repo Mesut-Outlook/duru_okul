@@ -1,278 +1,229 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 18 — Hoofdstuk 4 (De wereld na 1945 (1945–1990))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 18 (20 vragen)
+   Hoofdstuk 4: De wereld na 1945 — 4.3 De VS vanaf de Tweede Wereldoorlog
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-18",
-    titel: "Proeftoets 18 — Hoofdstuk 4 (De wereld na 1945 (1945–1990))",
+    titel: "Proeftoets 18 — 4.3 De VS vanaf de Tweede Wereldoorlog",
     vak: "Geschiedenis · Hoofdstuk 4",
     hoofdstuk: 4,
     hoofdstukTitel: "Hoofdstuk 4 — De wereld na 1945 (1945–1990)",
-    icoon: "🕊️",
+    icoon: "🗽",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Welke twee blokken stonden tegenover elkaar in de Koude Oorlog?",
-            "opties": [
-                  "Het kapitalistische Westblok (VS) en het communistische Oostblok (Sovjet-Unie)",
-                  "Duitsland en Japan",
-                  "Engeland en Frankrijk",
-                  "China en India"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Koude Oorlog was een ideologische strijd tussen VS en SU."
+        id: "ex18_v1",
+        type: "mc",
+        vraag: "Voor welke groepen Amerikanen die voorheen weinig kans op een baan hadden, ontstond tijdens de Tweede Wereldoorlog volop werk?",
+        opties: [
+          "Kinderen en bejaarden",
+          "Vrouwen en zwarten",
+          "Alleen gepensioneerde militairen",
+          "Buitenlandse toeristen"
+        ],
+        antwoord: 1,
+        uitleg: "Door de oorlogsproductie was er ook volop werk voor groepen die eerst weinig kans op een baan hadden, zoals vrouwen en zwarten."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat was het IJzeren Gordijn?",
-            "opties": [
-                  "De streng bewaakte grens tussen het communistische Oost-Europa en het democratische West-Europa",
-                  "Een muur om Moskou",
-                  "Een spoorlijn",
-                  "Een verdedigingslinie in Azië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het IJzeren Gordijn scheidde Oost en West."
+        id: "ex18_v2",
+        type: "mc",
+        vraag: "Wat gebeurde er met de Amerikaanse productie nadat de Tweede Wereldoorlog was afgelopen?",
+        opties: [
+          "De productie bleef groeien doordat Amerikanen massaal consumptiegoederen kochten",
+          "De productie stortte meteen in door nieuwe werkloosheid",
+          "De productie werd volledig overgenomen door de overheid",
+          "De productie verplaatste zich naar Europa"
+        ],
+        antwoord: 0,
+        uitleg: "Doordat Amerikanen na de oorlog geld hadden, kochten ze massaal voedsel, kleding en andere goederen, waardoor de productie bleef groeien."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wat was de kern van de Amerikaanse Trumandoctrine (1947)?",
-            "opties": [
-                  "Het indammen van de verspreiding van het communisme wereldwijd (containment)",
-                  "Het verlenen van leningen aan Duitsland",
-                  "Het afschaffen van atoombommen",
-                  "Het stichten van de EU"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Trumandoctrine wilde uitbreiding van communisme voorkomen."
+        id: "ex18_v3",
+        type: "mc",
+        vraag: "Waarheen trokken miljoenen Amerikanen dankzij hun stijgende welvaart, naar vrijstaande huizen met tuin?",
+        opties: [
+          "Naar de binnensteden",
+          "Naar de voorsteden",
+          "Naar Europa",
+          "Naar het platteland zonder wegen"
+        ],
+        antwoord: 1,
+        uitleg: "Miljoenen Amerikanen kochten een eigen huis, waardoor uitgestrekte voorsteden ontstonden met vrijstaande huizen, tuinen en auto's."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wat hield het Marshallplan (1947) in?",
-            "opties": [
-                  "Omvangrijke Amerikaanse economische hulp voor de wederopbouw van West-Europa",
-                  "Een legerovereenkomst",
-                  "Het oprichten van de NAVO",
-                  "Een ruimteprogramma"
-            ],
-            "antwoord": 0,
-            "uitleg": "Marshallhulp stimuleerde het economisch herstel van Europa."
+        id: "ex18_v4",
+        type: "mc",
+        vraag: "Hoe verdienden de Amerikaanse commerciële televisiezenders in de jaren 1950 hun geld?",
+        opties: [
+          "Aan belasting die de federale overheid hief",
+          "Aan kijkgeld dat elk huishouden betaalde",
+          "Aan bedrijven die reclamezendtijd kochten en programma's sponsorden",
+          "Aan verkoop van televisietoestellen"
+        ],
+        antwoord: 2,
+        uitleg: "Commerciële zenders verdienden geld aan bedrijven die reclamezendtijd kochten en programma's sponsorden, zoals sigarettenmerk Camel."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wanneer werd het westerse militaire bondgenootschap de NAVO opgericht?",
-            "opties": [
-                  "1949",
-                  "1945",
-                  "1961",
-                  "1989"
-            ],
-            "antwoord": 0,
-            "uitleg": "De NAVO werd in 1949 opgericht."
+        id: "ex18_v5",
+        type: "mc",
+        vraag: "Wat maakte het voor jongeren in de jaren 1950 mogelijk om een eigen smaak en levensstijl te ontwikkelen?",
+        opties: [
+          "Ze kregen zakgeld of hoefden hun loon niet meer af te staan aan hun ouders",
+          "Ze mochten van school stoppen",
+          "De overheid gaf hun gratis auto's",
+          "Scholen schaften uniformen af"
+        ],
+        antwoord: 0,
+        uitleg: "Dankzij de welvaart kregen scholieren zakgeld en hoefden werkende jongeren hun loon niet meer af te staan aan hun ouders."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Hoe werd West-Berlijn door de westerse geallieerden gered tijdens de Sovjet-blokkade van 1948?",
-            "opties": [
-                  "Met een constante Luchtbrug via vliegtuigen",
-                  "Met tanks door Oost-Duitsland",
-                  "Door West-Berlijn af te staan",
-                  "Via schepen"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Luchtbrug bevoorraadde West-Berlijn 11 maanden lang."
+        id: "ex18_v6",
+        type: "mc",
+        vraag: "Sinds welk jaar was de slavernij in de VS door de federale overheid afgeschaft?",
+        opties: [
+          "1865",
+          "1900",
+          "1945",
+          "1964"
+        ],
+        antwoord: 0,
+        uitleg: "Sinds de afschaffing van de slavernij door de federale overheid in 1865 voerden deelstaten en steden alsnog eigen segregatiewetten in."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Wanneer werd de Berlijnse Muur door de DDR gebouwd?",
-            "opties": [
-                  "13 augustus 1961",
-                  "9 november 1989",
-                  "5 mei 1945",
-                  "25 december 1991"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Muur werd in augustus 1961 gebouwd."
+        id: "ex18_v7",
+        type: "mc",
+        vraag: "Wie hield in 1963 in Washington een beroemde toespraak over zijn droom van gelijkheid tussen wit en zwart?",
+        opties: [
+          "Martin Luther King",
+          "President Kennedy",
+          "President Johnson",
+          "Elvis Presley"
+        ],
+        antwoord: 0,
+        uitleg: "Martin Luther King hield tijdens een massale demonstratie in Washington zijn beroemde toespraak over zijn droom van gelijkheid."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wanneer bracht de opstelling van Sovjet-raketten op Cuba de wereld bijna tot atoomoorlog?",
-            "opties": [
-                  "Oktober 1962",
-                  "Juli 1945",
-                  "November 1989",
-                  "Augustus 1973"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Cubacrisis in 1962 was de gevaarlijkste confrontatie."
+        id: "ex18_v8",
+        type: "mc",
+        vraag: "Wie werd na de moord op Kennedy president en zette diens beleid tegen rassendiscriminatie voort?",
+        opties: [
+          "Johnson",
+          "Nixon",
+          "Reagan",
+          "Truman"
+        ],
+        antwoord: 0,
+        uitleg: "Na de moord op Kennedy zette zijn opvolger Johnson het beleid tegen rassendiscriminatie voort."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat beweerde de Amerikaanse Dominotheorie?",
-            "opties": [
-                  "Als één land communistisch wordt, vallen omliggende landen als dominostenen ook voor het communisme",
-                  "Dat de VS alle oorlogen zouden winnen",
-                  "Dat economieën op elkaar lijken",
-                  "Een spelregel"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Dominotheorie verklaarde de Amerikaanse inmenging in Vietnam."
+        id: "ex18_v9",
+        type: "mc",
+        vraag: "Wat gebeurde er nadat het Congres in 1964 de Burgerrechtenwet aannam?",
+        opties: [
+          "Discriminerende wetten en regels verloren hun wettigheid",
+          "Alle televisiezenders werden verboden",
+          "De segregatie werd juist wettelijk vastgelegd",
+          "Er kwam een nieuwe grondwet"
+        ],
+        antwoord: 0,
+        uitleg: "Door de Burgerrechtenwet van 1964 verloren alle discriminerende wetten en regels hun legitimiteit, al bleef racisme in de mentaliteit bestaan."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Op welke datum viel de Berlijnse Muur?",
-            "opties": [
-                  "9 november 1989",
-                  "5 mei 1945",
-                  "11 september 2001",
-                  "27 december 1949"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Muur viel op 9 november 1989."
+        id: "ex18_v10",
+        type: "mc",
+        vraag: "Waarom nam het bioscoopbezoek in de VS na 1950 af, terwijl het in Europa juist toenam?",
+        opties: [
+          "Door de opkomst van de televisie in de VS",
+          "Doordat er in de VS geen nieuwe films meer werden gemaakt",
+          "Doordat Europa geen televisie had",
+          "Doordat Hollywood failliet ging"
+        ],
+        antwoord: 0,
+        uitleg: "Door de opkomst van de televisie bleven Amerikanen vaker thuis, terwijl Europeanen juist massaal naar Amerikaanse films in de bioscoop gingen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wie voerde in de Sovjet-Unie de hervormingen Glasnost en Perestroika in?",
-            "opties": [
-                  "Michail Gorbatsjov",
-                  "Jozef Stalin",
-                  "Nikita Chroesjtsjov",
-                  "Vladimir Poetin"
-            ],
-            "antwoord": 0,
-            "uitleg": "Gorbatsjov wilde de Sovjet-Unie hervormen."
+        id: "ex18_v11",
+        type: "waaronwaar",
+        vraag: "Na de Tweede Wereldoorlog leidde het einde van de oorlogsproductie meteen tot grote werkloosheid in de VS.",
+        antwoord: false,
+        uitleg: "Niet waar. Doordat Amerikanen massaal consumptiegoederen kochten, bleef de productie groeien en ontstond er geen nieuwe werkloosheid."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wie riep op 17 augustus 1945 de onafhankelijkheid van Indonesië uit?",
-            "opties": [
-                  "Soekarno",
-                  "Suharto",
-                  "Colijn",
-                  "Drees"
-            ],
-            "antwoord": 0,
-            "uitleg": "Soekarno roep de Republik Indonesia uit."
+        id: "ex18_v12",
+        type: "waaronwaar",
+        vraag: "In 1955 had al twee derde van de Amerikaanse huishoudens een televisietoestel.",
+        antwoord: true,
+        uitleg: "Waar. In 1955 had al twee derde van de Amerikaanse huishoudens een tv-toestel, mede dankzij de groeiende welvaart."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Hoe noemde de Nederlandse regering haar militaire optreden in Indonesië?",
-            "opties": [
-                  "Politionele Acties",
-                  "Wederopbouw",
-                  "Operatie Barbarossa",
-                  "Vredesmissie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Politionele Acties was de verhullende naam voor de kolonisatie-oorlog."
+        id: "ex18_v13",
+        type: "waaronwaar",
+        vraag: "Na 1955 gingen ook Europeanen massaal auto's en televisietoestellen kopen, geïnspireerd door de Amerikaanse levensstijl.",
+        antwoord: true,
+        uitleg: "Waar. Door amerikanisering namen Europeanen elementen van de American way of life over zodra ze zich dat konden veroorloven."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Op welke datum droeg Nederland de soevereiniteit over aan Indonesië?",
-            "opties": [
-                  "27 december 1949",
-                  "17 augustus 1945",
-                  "5 mei 1945",
-                  "9 november 1989"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op 27 december 1949 werd Indonesië formeel onafhankelijk."
+        id: "ex18_v14",
+        type: "waaronwaar",
+        vraag: "Alle Amerikanen hadden na de Burgerrechtenwet van 1964 in de praktijk meteen evenveel kansen, omdat racistische denkbeelden direct verdwenen.",
+        antwoord: false,
+        uitleg: "Niet waar. Formeel hadden alle Amerikanen dezelfde burgerrechten, maar in de mentaliteit van velen was het racisme nog niet weg."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wanneer vond de Koreaoorlog plaats?",
-            "opties": [
-                  "1950 - 1953",
-                  "1965 - 1975",
-                  "1939 - 1945",
-                  "1980 - 1988"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Koreaoorlog woedde van 1950 tot 1953."
+        id: "ex18_v15",
+        type: "invul",
+        vraag: "Hoe noemt men de geboortegolf die na de Tweede Wereldoorlog in de VS plaatsvond?",
+        antwoord: "babyboom|de babyboom",
+        uitleg: "Onder invloed van het naoorlogse optimisme werden veel kinderen geboren: de babyboom."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat betekent het begrip \"wapenwedloop\"?",
-            "opties": [
-                  "De competitie tussen grootmachten om het sterkste en meeste (kern)wapenarsenaal te bouwen",
-                  "Een atletiekwedstrijd",
-                  "Handel in wapens",
-                  "De uitvinding van het kruit"
-            ],
-            "antwoord": 0,
-            "uitleg": "Wapenwedloop leidde tot duizenden kernkoppen."
+        id: "ex18_v16",
+        type: "invul",
+        vraag: "Welke term staat voor de verspreiding van de Amerikaanse cultuur naar andere landen, bijvoorbeeld via Elvis Presley?",
+        antwoord: "amerikanisering",
+        uitleg: "Amerikanisering is de verspreiding van de Amerikaanse cultuur en levensstijl naar andere landen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wie waren de strijders van de Vietcong in de Vietnamoorlog?",
-            "opties": [
-                  "Zuid-Vietnamese communistische guerrilla-strijders",
-                  "Het Amerikaanse leger",
-                  "Franse militairen",
-                  "Chinese invallers"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Vietcong vocht in de jungle tegen de VS."
+        id: "ex18_v17",
+        type: "invul",
+        vraag: "Welke muziekstijl, die in de jaren 1950 ontstond, luisterden jongeren via hun eigen radio's en platenspelers?",
+        antwoord: "rock-'n-roll|rock and roll|rock-n-roll|rock'n'roll",
+        uitleg: "Jongeren kochten radio's en platenspelers om te luisteren naar hun eigen muziek, zoals de nieuwe rock-'n-roll."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Wat hield het SDI-plan van president Reagan in?",
-            "opties": [
-                  "Een schild van ruimtesatellieten en lasers tegen Sovjet-raketten",
-                  "Een nieuwe filmreeks",
-                  "Reizen naar de maan",
-                  "Een landmachtversterking"
-            ],
-            "antwoord": 0,
-            "uitleg": "SDI zette de Sovjet-economie onder zware druk."
+        id: "ex18_v18",
+        type: "invul",
+        vraag: "Hoe wordt de wettelijke scheiding tussen bevolkingsgroepen genoemd die in delen van de VS bestond tot 1964?",
+        antwoord: "segregatie",
+        uitleg: "Segregatie hield onder meer in dat zwarten niet naar 'witte' scholen mochten of op bepaalde plaatsen in bussen mochten zitten."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. In welk jaar hield de Sovjet-Unie definitief op te bestaan?",
-            "opties": [
-                  "1991",
-                  "1989",
-                  "1945",
-                  "2000"
-            ],
-            "antwoord": 0,
-            "uitleg": "Eind 1991 viel de Sovjet-Unie uiteen."
+        id: "ex18_v19",
+        type: "open",
+        vraag: "Leg uit hoe de auto het dagelijks leven van Amerikaanse gezinnen in de jaren 1950 veranderde.",
+        sleutelwoorden: [
+          "voorsteden/wonen",
+          "fastfoodrestaurants/pretparken/uitstapjes"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Doordat het openbaar vervoer werd verwaarloosd, werd de auto onmisbaar om naar het werk te gaan en verhuisden veel gezinnen naar voorsteden; ook gebruikten gezinnen de auto voor uitstapjes naar zee, pretparken en fastfoodrestaurants.",
+        uitleg: "De auto maakte het leven in de voorsteden mogelijk en werd ook gebruikt voor gezinsuitstapjes naar pretparken en fastfoodrestaurants."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer werden de Verenigde Naties (VN) opgericht?",
-            "opties": [
-                  "1945",
-                  "1919",
-                  "1961",
-                  "1992"
-            ],
-            "antwoord": 0,
-            "uitleg": "De VN werd in 1945 opgericht om vrede te bewaren."
+        id: "ex18_v20",
+        type: "open",
+        vraag: "Beschrijf hoe de burgerrechtenbeweging in de jaren 1950 en 1960 uiteindelijk zorgde voor een wettelijk einde aan de segregatie.",
+        sleutelwoorden: [
+          "demonstraties/massale acties/King",
+          "Burgerrechtenwet/wet van 1964"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Door massale demonstraties en de toespraken van leiders zoals Martin Luther King groeide de druk op de federale overheid, waardoor het Congres in 1964 de Burgerrechtenwet aannam die alle discriminerende wetten ongeldig maakte.",
+        uitleg: "Massale demonstraties en de druk van de burgerrechtenbeweging leidden ertoe dat het Congres in 1964 de Burgerrechtenwet aannam."
       }
-]
+    ]
   });
 })();

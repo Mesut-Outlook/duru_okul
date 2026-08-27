@@ -1,278 +1,194 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 27 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 27 (20 vragen)
+   Hoofdstuk 6: Naar de wereld van nu — 6.2 Eenheid en verdeeldheid in Europa
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-27",
-    titel: "Proeftoets 27 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))",
+    titel: "Proeftoets 27 — 6.2 Eenheid en verdeeldheid in Europa",
     vak: "Geschiedenis · Hoofdstuk 6",
     hoofdstuk: 6,
     hoofdstukTitel: "Hoofdstuk 6 — Naar de wereld van nu (1990–heden)",
-    icoon: "🌐",
+    icoon: "🇪🇺",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wat gebeurde er in de jaren 90 na het uiteenvallen van Joegoslavië?",
-            "opties": [
-                  "Er ontstond een hevige etnische burgeroorlog in de Balkan",
-                  "Er werd een vredesunie gevormd",
-                  "Oostenrijk bezette het land",
-                  "Er gebeurde niets"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het uiteenvallen van Joegoslavië veroorzaakte bloedige strijd."
+        id: "ex27_v1",
+        type: "mc",
+        vraag: "Wanneer viel de Berlijnse Muur, het startpunt van de Duitse hereniging?",
+        opties: ["1989", "1990", "1991", "1993"],
+        antwoord: 0,
+        uitleg: "De Berlijnse Muur viel in 1989; op 3 oktober 1990 volgde de daadwerkelijke Duitse hereniging."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat vond er plaats in Srebrenica in juli 1995?",
-            "opties": [
-                  "De genocide op meer dan 8.000 moslimmannen en -jongens door Bosnisch-Serwische troepen",
-                  "Een vredesconferentie",
-                  "Een geallieerde overwinning",
-                  "Een bevrijdingsfeest"
-            ],
-            "antwoord": 0,
-            "uitleg": "Srebrenica is de ergste genocide in Europa sinds WO2."
+        id: "ex27_v2",
+        type: "mc",
+        vraag: "Welk land hield tijdens de Koude Oorlog een eigen koers aan en hoorde daardoor niet bij het Oostblok?",
+        opties: ["Polen", "Joegoslavië", "Hongarije", "Roemenië"],
+        antwoord: 1,
+        uitleg: "Onder leider Tito weigerde Joegoslavië zich aan Stalin te onderwerpen en hoorde het niet bij het Oostblok."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wanneer werd de staat Israël gesticht?",
-            "opties": [
-                  "14 mei 1948",
-                  "1 september 1939",
-                  "6 juni 1944",
-                  "11 september 2001"
-            ],
-            "antwoord": 0,
-            "uitleg": "Israël werd in mei 1948 gesticht."
+        id: "ex27_v3",
+        type: "mc",
+        vraag: "Wat gebeurde er in 1993 met Tsjecho-Slowakije?",
+        opties: [
+          "Het werd een EU-lidstaat",
+          "Het bleef één land onder een nieuwe naam",
+          "Het viel vreedzaam uiteen in Tsjechië en Slowakije",
+          "Het werd bezet door Rusland"
+        ],
+        antwoord: 2,
+        uitleg: "Tsjecho-Slowakije viel in 1993 vreedzaam uiteen in twee zelfstandige staten: Tsjechië en Slowakije."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wat vormt de kern van het Arabisch-Israëlische conflict?",
-            "opties": [
-                  "De strijd om land, grenzen en zelfbeschikking tussen de staat Israël en de Palestijnen",
-                  "Strijd om olie in Europa",
-                  "Een ruzie over geld",
-                  "Een meningsverschil in de VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het conflict draait om territorium en status van Jeruzalem."
+        id: "ex27_v4",
+        type: "mc",
+        vraag: "Wie stelde als Duitse bondskanselier voor om de Europese integratie te versterken, met de woorden dat hij 'geen Duits Europa, maar een Europees Duitsland' wilde?",
+        opties: ["Merkel", "Adenauer", "Schröder", "Kohl"],
+        antwoord: 3,
+        uitleg: "Bondskanselier Kohl wilde de vrees voor een verenigd Duitsland wegnemen door zich in te zetten voor méér Europese eenheid."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat veroorzaakte de autoloze zondagen in Nederland in 1973?",
-            "opties": [
-                  "De olieboycot door Arabische olielanden (OPEC) vanwege Nederlandse steun aan Israël",
-                  "Een staking van de pompmedewerkers",
-                  "Een milieuramp",
-                  "Het instorten van de dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Oliecrisis van 1973 leidde tot schaarste en autoloze zondagen."
+        id: "ex27_v5",
+        type: "mc",
+        vraag: "In welk verdrag spraken de EEG-landen in 1992 af om vanaf 1993 als Europese Unie nauwer samen te werken?",
+        opties: ["Het Verdrag van Maastricht", "Het Verdrag van Rome", "Het Verdrag van Lissabon", "Het Verdrag van Schengen"],
+        antwoord: 0,
+        uitleg: "In het Verdrag van Maastricht van 1992 spraken de EEG-landen af om vanaf 1993 als Europese Unie nauwer samen te werken."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat gebeurde er op 11 september 2001 in New York en Washington?",
-            "opties": [
-                  "Al Qaida kaperste 4 vliegtuigen en boorde deze in het WTC en Pentagon",
-                  "De Berlijnse Muur viel",
-                  "De euro werd ingevoerd",
-                  "Een Beurskrach vond plaats"
-            ],
-            "antwoord": 0,
-            "uitleg": "9/11 schokte de wereld op 11 september 2001."
+        id: "ex27_v6",
+        type: "mc",
+        vraag: "Welke munt verving in 2002 de nationale munten van veel EU-landen?",
+        opties: ["Het ecu", "De euro", "De frank", "De mark"],
+        antwoord: 1,
+        uitleg: "De euro verving in 2002 de nationale munten van de landen in de eurozone."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Wie leidde het terreurnetwerk Al Qaida tijdens 9/11?",
-            "opties": [
-                  "Osama bin Laden",
-                  "Saddam Hoessein",
-                  "Yasser Arafat",
-                  "Muammar Gaddafi"
-            ],
-            "antwoord": 0,
-            "uitleg": "Osama bin Laden gaf leiding aan Al Qaida."
+        id: "ex27_v7",
+        type: "mc",
+        vraag: "Hoeveel lidstaten telde de EU na de toetreding van Kroatië in 2013?",
+        opties: ["12", "20", "28", "33"],
+        antwoord: 2,
+        uitleg: "Met de toetreding van Kroatië in 2013 telde de EU 28 lidstaten."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Welke Amerikaanse president begon de War on Terror?",
-            "opties": [
-                  "George W. Bush",
-                  "Bill Clinton",
-                  "Barack Obama",
-                  "Ronald Reagan"
-            ],
-            "antwoord": 0,
-            "uitleg": "George W. Bush verklaarde de War on Terror."
+        id: "ex27_v8",
+        type: "mc",
+        vraag: "Wat gebeurde er in 2015 waardoor de groeiende openheid binnen de EU werd doorbroken?",
+        opties: [
+          "De invoering van de euro",
+          "De uittreding van Groot-Brittannië",
+          "De toetreding van Kroatië",
+          "De grote vluchtelingenstroom door de burgeroorlog in Syrië"
+        ],
+        antwoord: 3,
+        uitleg: "In 2015 leidde de burgeroorlog in Syrië tot een enorme vluchtelingenstroom, waarna enkele EU-landen weer grenscontroles invoerden."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat houdt globalisering in?",
-            "opties": [
-                  "De toenemende wereldwijde verbondenheid van economies, culturen en mensen",
-                  "Het bouwen van muren rond landen",
-                  "Het stoppen van internationale handel",
-                  "Het verbieden van internet"
-            ],
-            "antwoord": 0,
-            "uitleg": "Globalisering maakt de wereld tot één markt."
+        id: "ex27_v9",
+        type: "mc",
+        vraag: "Welk EU-orgaan vormt samen met de Raad van Ministers de wetgevende macht van de EU en wordt sinds 1979 rechtstreeks gekozen?",
+        opties: ["Het Europees Parlement", "De Europese Raad", "De Europese Commissie", "Het Europees Hof"],
+        antwoord: 0,
+        uitleg: "Het Europees Parlement wordt sinds 1979 elke vijf jaar rechtstreeks gekozen en deelt de wetgevende macht met de Raad van Ministers."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Welke landen zijn opkomende economische wereldmachten sinds 1990?",
-            "opties": [
-                  "China en India",
-                  "Engeland en Frankrijk",
-                  "Griekenland en Spanje",
-                  "Canada en Mexico"
-            ],
-            "antwoord": 0,
-            "uitleg": "China en India groeiden uit tot economische giganten."
+        id: "ex27_v10",
+        type: "mc",
+        vraag: "Wat deed Rusland in 2014 met het Oekraïense schiereiland de Krim?",
+        opties: [
+          "Het gaf het bestuur terug aan Oekraïne",
+          "Het bezette en lijfde het in",
+          "Het droeg het over aan de NAVO",
+          "Het riep er een onafhankelijke, neutrale staat uit"
+        ],
+        antwoord: 1,
+        uitleg: "Rusland bezette in 2014 de Krim en lijfde het schiereiland in bij Rusland."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat veroorzaakt de opwarming van de aarde?",
-            "opties": [
-                  "Het versterkte broeikaseffect door menselijke CO2-uitstoot",
-                  "Veranderingen in het getij",
-                  "De stand van de maan",
-                  "Zonnevlekken alleen"
-            ],
-            "antwoord": 0,
-            "uitleg": "CO2-uitstoot door fossiele brandstoffen leidt tot klimaatverandering."
+        id: "ex27_v11",
+        type: "waaronwaar",
+        vraag: "Na het uiteenvallen van de Sovjet-Unie ontstonden in 1991 vijftien staten.",
+        antwoord: true,
+        uitleg: "Waar! Door een opleving van het nationalisme viel de Sovjet-Unie in 1991 uiteen in vijftien staten."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat is het hoofddoel van het Klimaatakkoord van Parijs (2015)?",
-            "opties": [
-                  "De opwarming van de aarde beperken tot ruim onder 2°C",
-                  "Het stoppen van alle scheepvaart",
-                  "Het afschaffen van de auto",
-                  "Het bouwen van dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "Parijs 2015 stelt wereldwijde klimaatdoelen."
+        id: "ex27_v12",
+        type: "waaronwaar",
+        vraag: "Joegoslavië viel net als Tsjecho-Slowakije vreedzaam uiteen, zonder geweld.",
+        antwoord: false,
+        uitleg: "Niet waar. Joegoslavië viel tussen 1991 en 2006 met veel geweld uiteen in zeven staten, anders dan het vreedzame uiteenvallen van Tsjecho-Slowakije."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wat betekent energietransitie?",
-            "opties": [
-                  "De overgang van fossiele brandstoffen naar duurzame schone energie (zon, wind)",
-                  "Het verhogen van de gasprijzen",
-                  "Het gratis maken van stroom",
-                  "Het bouwen van meer kolencentrales"
-            ],
-            "antwoord": 0,
-            "uitleg": "De energietransitie vervangt olie, gas en kolen."
+        id: "ex27_v13",
+        type: "waaronwaar",
+        vraag: "In 2004 werden onder meer Polen, Malta en Cyprus lid van de Europese Unie.",
+        antwoord: true,
+        uitleg: "Waar! In 2004 traden tien landen toe tot de EU, waaronder Polen, Malta en Cyprus."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Waarom vocht de VN-coalitie tegen Irak in de Eerste Golfoorlog (1991)?",
-            "opties": [
-                  "Omdat Irak het buurland Koeweit had binnengevallen en bezet",
-                  "Omdat Irak de VS bombardeerde",
-                  "Omdat Koeweit de VN aanviel",
-                  "Om olie te stelen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Saddam Hoessein werd uit Koeweit verdreven."
+        id: "ex27_v14",
+        type: "waaronwaar",
+        vraag: "In het Brexit-referendum van 2016 stemde een ruime meerderheid van de Britten vóór het EU-lidmaatschap.",
+        antwoord: false,
+        uitleg: "Niet waar. In 2016 stemde juist 52 procent van de Britten vóór uittreding uit de EU."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Welke uitvinding bracht vanaf de jaren 90 een digitale informatierevolutie?",
-            "opties": [
-                  "Het Internet en World Wide Web",
-                  "De telegraaf",
-                  "De radio",
-                  "De televisie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het internet verbond de hele wereld digitaal."
+        id: "ex27_v15",
+        type: "invul",
+        vraag: "Hoeveel staten ontstonden er tussen 1991 en 2006 uit het uiteenvallen van Joegoslavië?",
+        antwoord: "zeven|7",
+        uitleg: "Joegoslavië viel tussen 1991 en 2006 met veel geweld uiteen in zeven staten."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat hield de grote EU-uitbreiding van 2004 in?",
-            "opties": [
-                  "Tien nieuwe landen (hoofdzakelijk uit Oost-Europa) traden toe tot de EU",
-                  "Engeland verliet de EU",
-                  "De EU werd ontbonden",
-                  "De euro werd afgeschaft"
-            ],
-            "antwoord": 0,
-            "uitleg": "In 2004 traden 10 nieuwe lidstaten toe."
+        id: "ex27_v16",
+        type: "invul",
+        vraag: "Welk verdrag regelt het vrije verkeer van personen tussen (bijna) alle EU-landen en enkele niet-EU-landen?",
+        antwoord: "Schengen|het Verdrag van Schengen|Schengenverdrag",
+        uitleg: "Het Verdrag van Schengen regelt het vrije verkeer van personen, ook met sommige niet-EU-landen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat gebeurde er tijdens de Arabische Lente in 2011?",
-            "opties": [
-                  "Volksopstanden tegen dictaturen in het Midden-Oosten en Noord-Afrika",
-                  "Een grote droogte",
-                  "Een sportevenement",
-                  "Een handelsakkoord"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Arabische Lente eiste vrijheid en democratie."
+        id: "ex27_v17",
+        type: "invul",
+        vraag: "Hoe wordt het dagelijks bestuur van de EU genoemd, dat wetsvoorstellen indient en de EU in de wereld vertegenwoordigt?",
+        antwoord: "Europese Commissie|de Europese Commissie",
+        uitleg: "De Europese Commissie is het dagelijks bestuur van de EU en dient wetsvoorstellen in bij het Parlement en de Raad van Ministers."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Tot welk menselijk drama leidde de burgeroorlog in Syrië?",
-            "opties": [
-                  "Een enorme vluchtelingencrisis naar omliggende landen en Europa",
-                  "Een snelle democratische staat",
-                  "Een overwinning van de VN",
-                  "Geen enkel gevolg"
-            ],
-            "antwoord": 0,
-            "uitleg": "Miljoenen Syriërs sloegen op de vlucht."
+        id: "ex27_v18",
+        type: "invul",
+        vraag: "Sinds welk jaar traden (voormalige) Oostbloklanden toe tot de NAVO, waardoor de machtsverhoudingen in Europa veranderden?",
+        antwoord: "1999",
+        uitleg: "Vanaf 1999 werden Oost-Europese landen lid van de NAVO, wat de machtsverhoudingen in Europa grondig veranderde."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat voor dreiging is cybercriminaliteit?",
-            "opties": [
-                  "Digitale aanvallen op netwerken, overheden en bedrijven via internet",
-                  "Aanvallen met tanks",
-                  "Luchtaanvallen",
-                  "Zee-piraterij"
-            ],
-            "antwoord": 0,
-            "uitleg": "Cyberdreigingen vragen om digitale beveiliging."
+        id: "ex27_v19",
+        type: "open",
+        vraag: "Leg uit waarom bondskanselier Kohl na de val van de Berlijnse Muur juist méér Europese integratie voorstelde in plaats van minder.",
+        sleutelwoorden: [
+          "angst/vrees voor een sterk of te machtig Duitsland",
+          "Duitsland verankeren/binden aan Europa"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Andere Europese landen waren bang voor een te machtig herenigd Duitsland. Door de Europese samenwerking te versterken, liet Kohl zien dat een groter Duitsland geen bedreiging vormde, maar juist stevig verankerd bleef in een sterker Europa.",
+        uitleg: "Kohl wilde de vrees voor Duitse dominantie wegnemen door zich actief in te zetten voor méér Europese eenheid."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wat regelt de Schengenzone in Europa?",
-            "opties": [
-                  "Vrij reizen zonder grenscontroles tussen de aangesloten Europese landen",
-                  "Een gezamenlijk leger",
-                  "Gelijke belastingen",
-                  "Eén Europese krant"
-            ],
-            "antwoord": 0,
-            "uitleg": "Schengen schafte de grenscontroles binnenslands af."
+        id: "ex27_v20",
+        type: "open",
+        vraag: "Leg uit hoe de machtspositie van Rusland in Europa veranderde tussen de jaren negentig en het beleid onder Poetin vanaf 2000.",
+        sleutelwoorden: [
+          "verzwakt/verarmd in de jaren negentig",
+          "herstel/versterkte leger onder Poetin"
+        ],
+        minTreffers: 1,
+        modelantwoord: "In de jaren negentig was Rusland verarmd en verzwakt en kon het weinig doen tegen de uitbreiding van NAVO en EU naar het oosten. Vanaf 2000 herstelde het land zich economisch onder Poetin, die het leger versterkte en probeerde voormalige Sovjetgebieden weer onder Russische invloed te krijgen.",
+        uitleg: "Poetins Rusland trad vanaf 2000 veel assertiever op dan het verzwakte Rusland van de jaren negentig."
       }
-]
+    ]
   });
 })();

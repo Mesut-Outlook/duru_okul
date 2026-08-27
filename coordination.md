@@ -5,7 +5,7 @@ Bu dosya, planlayan (**Opus** — ben) ile üreten (**agy** = Google Antigravity
 işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 
 ## Current Status
-- **Last Checked**: 2026-07-22 10:15 (agy checked - Standby, all tasks DONE)
+- **Last Checked**: 2026-08-27 19:55 (Opus — geschiedenis kalite denetimi + H2-H6 yeniden üretimi başlatıldı)
 - **Status**: **ACTIVE** — "Okul yılı = birinci sınıf boyut" refactor'u başladı (Opus planladı, Duru onayladı).
   Kararlar: yıl storage-anahtarında (`duru_<jaarcode>_<slug>`, jaarcode=2526/2627); her yıl sıfırdan;
   legacy MAVO 2 anahtarları **TAŞINMAZ** → dashboard sabit KEY→YIL haritasıyla 2025-2026'ya etiketler;
@@ -15,7 +15,22 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 - **2026-07-21 sonuç**: ✅ Okul-yılı refactor + inbox (TASK-05) + **10 HAVO 3 smoke-test dersi** (TASK-06) bitti.
   economie=Opus referans, 5 ders=Sonnet, 4 ders=agy. Hepsi node/serve/yapı doğrulandı, landing'de aktif, `?v=3.0`.
   **Sıradaki** (Duru materyal verince): her derse onderwerpen (oefenquiz) + daha çok proeftoets.
-- **Schedule**: Standby (açık görev yok; agy boş turlarda bekleyebilir)
+- **Schedule**: agy → natuurkunde/scheikunde üretimi sürüyor (H1–H3 teslim). Opus → geschiedenis H2–H6 onarımı.
+
+## 2026-08-27 · Geschiedenis kalite denetimi (Opus) — ÖNEMLİ DERS
+`havo3/geschiedenis` (commit e8c8a66, "840 soru") denetlendi. Bulgular:
+1. **Paragraf yapısı uydurma** — H2–H6'daki 25 paragraf başlığının hiçbiri Geschiedeniswerkplaats
+   3 HAVO ile eşleşmiyordu (kaynak `inbox/h2..h6_ocr.txt` elde olmasına rağmen kullanılmamış).
+2. **133/240 oefen sorusu şablon dolgusu** — `scratch/generate_full_dataset.py:143-150`'deki 7 kalıp
+   19 onderwerp'te tekrarlanmış ("Wat is het hoofdonderwerp van Paragraaf X.X?").
+3. **30 proeftoetsin 25'i birebir kopya** — 5'er kopya hâlinde; 600 soru değil 200 benzersiz soru.
+4. **Cevap anahtarı ele veriyor** — proeftoets 6–30'da 500 mc sorusunun 500'ünde doğru cevap A;
+   waaronwaar 99 "Waar" / 8 "Onwaar". Bilmeden ~%95 alınabiliyordu.
+5. **23 soru cevaplanamıyor** — sınavda `type:"invoer"` kullanılmış; `exams.js` bu tip için
+   girdi alanı render etmiyor. → Opus düzeltti (`invul`).
+**Kural (bundan sonra herkes için):** üretim şablonla değil, kaynak metin okunarak yapılır; kabul
+kriterlerine "şablon soru yasak + dosya başına mc cevap dağılımı ≤%40 + waaronwaar ≥%35 onwaar +
+sınavda invoer yasak" maddeleri eklenir. Denetim scripti: `scratchpad/gate.js` (11 kural).
 
 ## Görev şeması (her görev böyle yazılır)
 ```
@@ -33,6 +48,18 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
 
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
+
+### TASK-07 · Geschiedenis H2–H6 gerçek içerikle yeniden üretim  [status: IN_PROGRESS]
+- **Atanan**: Sonnet alt-agent × 5 (bölüm başına bir tane) — Opus brief'i + doğrulaması.
+- **Amaç**: Uydurma paragraf yapısını ve şablon soruları kitabın gerçek içeriğiyle değiştirmek.
+- **Girdi**: `inbox/h2_ocr.txt` … `inbox/h6_ocr.txt` (gerçek kitap taraması).
+- **Çıktı**: bölüm başına 10 dosya → `h<N>_1.js`…`h<N>_5.js` (id `h<N>-<P>`, 8 soru, theorie ≥1500 krk)
+  + o bölümün 5 proeftoets'i (id'ler `ex-h3-geschiedenis-6..30` KORUNUYOR, her biri tek paragrafı
+  kapsayacak şekilde, 20 soru). Toplam 50 dosya / 700 soru.
+- **Kabul kriterleri**: `scratchpad/gate.js` 11 kuralı da geçmeli; paragraf başlıkları OCR'daki
+  kitapla birebir; hiçbir soru iki dosyada geçmeyecek.
+- **Opus üstlendi**: `index.html` yeniden bağlama, eski slug-adlı dosyaların silinmesi,
+  `bootstrap.js` bölüm intro'ları (✅ yapıldı), `?v=` bump.
 
 ### TASK-06 · HAVO 3 smoke-test siteleri (4 ders)  [status: DONE]
 - **Atanan**: agy (Antigravity)

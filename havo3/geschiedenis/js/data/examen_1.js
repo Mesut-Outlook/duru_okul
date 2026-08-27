@@ -29,7 +29,7 @@
       },
       {
         id: "ex1_v2",
-        type: "invoer",
+        type: "invul",
         vraag: "Bij welke bekende Engelse plaats staat de sterrenwacht waarop de internationale nulmeridiaan en standaardtijd werden gebaseerd?",
         antwoord: "Greenwich|greenwich",
         uitleg: "De standaardtijd werd afgesteld op de Royal Observatory in Greenwich bij Londen."
@@ -89,7 +89,7 @@
       },
       {
         id: "ex1_v8",
-        type: "invoer",
+        type: "invul",
         vraag: "Welk pas uitgevonden hulpmiddel maakte tijdens de Olympische Spelen van 1896 nauwkeurige tijdmeting in tienden van seconden mogelijk?",
         antwoord: "stopwatch|de stopwatch",
         uitleg: "De net uitgevonden stopwatch paste bij de moderne beleving van tijd en prestatiemeting."
@@ -129,7 +129,7 @@
       },
       {
         id: "ex1_v12",
-        type: "invoer",
+        type: "invul",
         vraag: "Op welke datum (dag-maand-jaar) werd de Oostenrijkse kroonprins Frans Ferdinand in Sarajevo vermoord?",
         antwoord: "28 juni 1914|28-06-1914|28 juni 1914",
         uitleg: "De moord op Frans Ferdinand vond plaats op 28 juni 1914."
@@ -182,7 +182,7 @@
       },
       {
         id: "ex1_v17",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe noemen we een uitgegraven gang waarin soldaten zich beschermen tegen granaten en kogels van de vijand?",
         antwoord: "loopgraaf|een loopgraaf|loopgraven",
         uitleg: "Aan het Westfront ontstond een 700 kilometer lang netwerk van loopgraven."

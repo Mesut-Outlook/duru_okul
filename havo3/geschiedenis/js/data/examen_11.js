@@ -1,278 +1,223 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 11 — Hoofdstuk 3 (De Tweede Wereldoorlog (1939–1945))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 11 (20 vragen)
+   Hoofdstuk 3: De Tweede Wereldoorlog — 3.1 Oorlog in Europa
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-11",
-    titel: "Proeftoets 11 — Hoofdstuk 3 (De Tweede Wereldoorlog (1939–1945))",
+    titel: "Proeftoets 11 — 3.1 Oorlog in Europa",
     vak: "Geschiedenis · Hoofdstuk 3",
     hoofdstuk: 3,
     hoofdstukTitel: "Hoofdstuk 3 — De Tweede Wereldoorlog (1939–1945)",
-    icoon: "✈️",
+    icoon: "⚔️",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wanneer begon de Tweede Wereldoorlog met de Duitse inval in Polen?",
-            "opties": [
-                  "1 september 1939",
-                  "10 mei 1940",
-                  "6 juni 1944",
-                  "8 mei 1945"
-            ],
-            "antwoord": 0,
-            "uitleg": "WO2 begon op 1 september 1939."
+        id: "ex11_v1",
+        type: "mc",
+        vraag: "Waarom haalde de Oostenrijkse kanselier Schuschnigg in 1938 de nazi Seyss-Inquart in zijn regering?",
+        opties: [
+          "Omdat Hitler dreigde Oostenrijk binnen te vallen als hij dat niet deed.",
+          "Omdat het Oostenrijkse volk daarom vroeg in een referendum.",
+          "Omdat Frankrijk hem daartoe adviseerde.",
+          "Omdat de Volkenbond dit verplicht stelde."
+        ],
+        antwoord: 0,
+        uitleg: "Door Hitlers dreigement en intimidatie voelde Schuschnigg zich gedwongen de nazi Seyss-Inquart een plek in de regering te geven."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat typeerde de Duitse Blitzkrieg-tactiek?",
-            "opties": [
-                  "Snelle gecombineerde aanvallen van vliegtuigen, tanks en gemotoriseerde troepen",
-                  "Langdurige loopgravenoorlog",
-                  "Blokkades op zee",
-                  "Oorlog zonder leger"
-            ],
-            "antwoord": 0,
-            "uitleg": "Blitzkrieg beoogde een snelle overwinning."
+        id: "ex11_v2",
+        type: "invul",
+        vraag: "Hoeveel etnische Duitsers woonden er ongeveer in het Sudetenland, dat Hitler in 1938 van Tsjecho-Slowakije opeiste?",
+        antwoord: "drie miljoen|3 miljoen",
+        uitleg: "In het Sudetenland woonden ongeveer drie miljoen etnische Duitsers, die volgens de nazi's 'heim ins Reich' moesten komen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Op welke datum verwoestte het nazi-bombardement de binnenstad van Rotterdam?",
-            "opties": [
-                  "14 mei 1940",
-                  "10 mei 1940",
-                  "5 mei 1945",
-                  "15 augustus 1945"
-            ],
-            "antwoord": 0,
-            "uitleg": "Rotterdam werd op 14 mei 1940 gebombardeerd."
+        id: "ex11_v3",
+        type: "waaronwaar",
+        vraag: "Op 1 september 1939 viel het Duitse leger Polen binnen.",
+        antwoord: true,
+        uitleg: "Waar! Deze inval markeert het begin van de Tweede Wereldoorlog in Europa."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wie leidde bezet Nederland als Rijkscommissaris?",
-            "opties": [
-                  "Arthur Seyss-Inquart",
-                  "Anton Mussert",
-                  "Heinrich Himmler",
-                  "Joseph Goebbels"
-            ],
-            "antwoord": 0,
-            "uitleg": "Seyss-Inquart bestuurde bezet Nederland."
+        id: "ex11_v4",
+        type: "mc",
+        vraag: "Wat deed het Sovjetleger twee weken na de Duitse inval in Polen?",
+        opties: [
+          "Het viel Oost-Polen binnen, zoals in het niet-aanvalsverdrag was afgesproken.",
+          "Het viel Duitsland aan om Polen te helpen.",
+          "Het trok zich terug uit de regio.",
+          "Het bezette samen met Frankrijk West-Polen."
+        ],
+        antwoord: 0,
+        uitleg: "Volgens de geheime afspraak in het niet-aanvalsverdrag viel het Sovjetleger Oost-Polen binnen, waarna de strijd snel beslist was."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Waarom staakten Nederlanders tijdens de Februaristaking van 1941?",
-            "opties": [
-                  "Uit protest tegen de eerste Jodenrazzia's in Amsterdam",
-                  "Voor meer loon",
-                  "Tegen het gebrek aan eten",
-                  "Voor de koningin"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Februaristaking was openlijk protest tegen Jodenvervolging."
+        id: "ex11_v5",
+        type: "mc",
+        vraag: "Na hoeveel dagen capituleerde België in mei 1940 tegen de Duitse blitzkrieg?",
+        opties: [
+          "Na drie dagen",
+          "Na een week",
+          "Na achttien dagen",
+          "Na drie maanden"
+        ],
+        antwoord: 2,
+        uitleg: "België hield achttien dagen stand voordat het capituleerde, terwijl Frankrijk pas na zes weken capituleerde."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat moesten mannen doen tijdens de Arbeitseinsatz?",
-            "opties": [
-                  "Verplicht werken in Duitse fabrieken en oorlogsindustrie",
-                  "Dienen in het leger",
-                  "Werken in de polder",
-                  "Studeren in Duitsland"
-            ],
-            "antwoord": 0,
-            "uitleg": "Arbeitseinsatz was verplichte tewerkstelling."
+        id: "ex11_v6",
+        type: "invul",
+        vraag: "Na hoeveel weken capituleerde Frankrijk in 1940 tegen het Duitse leger?",
+        antwoord: "zes weken|6 weken",
+        uitleg: "Frankrijk hield het zes weken vol tegen de Duitse blitzkrieg voordat het zich overgaf."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. In welke periode vond de Hongerwinter plaats in West-Nederland?",
-            "opties": [
-                  "Winter 1944-1945",
-                  "Winter 1939-1940",
-                  "Winter 1941-1942",
-                  "Winter 1945-1946"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Hongerwinter eiste circa 20.000 doden."
+        id: "ex11_v7",
+        type: "waaronwaar",
+        vraag: "Na de luchtoorlog boven Groot-Brittannië sloot Churchill een wapenstilstand met Duitsland.",
+        antwoord: false,
+        uitleg: "Onwaar. Groot-Brittannië hield onder Churchill juist stand en vocht als enige door tegen Duitsland."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wat was de rol van Kamp Westerbork?",
-            "opties": [
-                  "Doorgangskamp voor deportatie van Joden naar vernietigingskampen",
-                  "Kazerne voor militairen",
-                  "Gevangenis voor nazi's",
-                  "Fabriek"
-            ],
-            "antwoord": 0,
-            "uitleg": "Westerbork was het doorgangskamp naar Auschwitz en Sobibor."
+        id: "ex11_v8",
+        type: "mc",
+        vraag: "Wie leidde Groot-Brittannië als premier tijdens de luchtoorlog boven het land in 1940?",
+        opties: [
+          "Neville Chamberlain",
+          "Clement Attlee",
+          "Franklin Roosevelt",
+          "Winston Churchill"
+        ],
+        antwoord: 3,
+        uitleg: "Winston Churchill werd premier en leidde Groot-Brittannië door de zwaarste jaren van de oorlog."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat werd besloten op de Wannsee-conferentie (1942)?",
-            "opties": [
-                  "De \"Endlösung\": de industriële vernietiging van 11 miljoen Europese Joden",
-                  "Vrede met Engeland",
-                  "De bouw van de Muur",
-                  "Het starten van de oorlog"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op Wannsee werd de genocide georganiseerd."
+        id: "ex11_v9",
+        type: "open",
+        vraag: "Leg uit wat Hitler met 'Lebensraum' bedoelde en in welke richting hij dit wilde veroveren.",
+        sleutelwoorden: [
+          "leefruimte/ruimte/grondgebied",
+          "oosten/Sovjet-Unie/Oost-Europa"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Hitler vond dat het Duitse volk meer leefruimte nodig had om zich te voeden en over Europa te heersen. Deze extra ruimte wilde hij in het oosten veroveren, vooral ten koste van de Sovjet-Unie.",
+        uitleg: "Lebensraum betekende dat Duitsland volgens Hitler grondgebied in het oosten nodig had, wat een belangrijke reden was voor de aanval op de Sovjet-Unie."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Wat gebeurde er op 7 december 1941 bij Pearl Harbor?",
-            "opties": [
-                  "Japan viel de Amerikaanse vloot aan",
-                  "Duitsland capituleerde",
-                  "De atoombom viel",
-                  "Italië gaf zich over"
-            ],
-            "antwoord": 0,
-            "uitleg": "Pearl Harbor bracht de VS in de oorlog."
+        id: "ex11_v10",
+        type: "mc",
+        vraag: "Wat deden Duitse soldaten volgens het boek in West-Polen met de Poolse bevolking?",
+        opties: [
+          "Ze voerden etnische zuiveringen uit: Polen werden verdreven en vervangen door etnische Duitsers.",
+          "Ze gaven de Poolse bevolking extra grond.",
+          "Ze lieten de Poolse bevolking ongemoeid.",
+          "Ze verhuisden de Poolse bevolking naar Duitsland voor scholing."
+        ],
+        antwoord: 0,
+        uitleg: "In West-Polen werden Poolse bewoners verdreven en vervangen door etnische Duitsers uit onder meer de Baltische staten en Roemenië."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Waarom was de Slag bij Stalingrad het keerpunt aan het Oostfront?",
-            "opties": [
-                  "Het Duitse leger leed een vernietigende nederlaag tegen het Rode Leger",
-                  "Duitsland veroverde Moskou",
-                  "De geallieerden landden er",
-                  "Japan viel Rusland aan"
-            ],
-            "antwoord": 0,
-            "uitleg": "Stalingrad bracht de ommekeer in Oost-Europa."
+        id: "ex11_v11",
+        type: "waaronwaar",
+        vraag: "Nadat de VS Japan de oorlog verklaarde, bleef Duitsland neutraal ten opzichte van de Verenigde Staten.",
+        antwoord: false,
+        uitleg: "Onwaar. Hitler verklaarde juist zelf de oorlog aan de Verenigde Staten, kort na de Amerikaanse oorlogsverklaring aan Japan."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat gebeurde er op D-Day (6 juni 1944)?",
-            "opties": [
-                  "Geallieerde landing in Normandië om West-Europa te bevrijden",
-                  "Het einde van WO2",
-                  "Inval in Polen",
-                  "Slag om Engeland"
-            ],
-            "antwoord": 0,
-            "uitleg": "D-Day opende het Westfront."
+        id: "ex11_v12",
+        type: "invul",
+        vraag: "Hoe noemen we de groep Duitsland, Italië en Japan samen tijdens de Tweede Wereldoorlog?",
+        antwoord: "asmogendheden|de asmogendheden",
+        uitleg: "Duitsland, Italië en Japan werden samen de asmogendheden genoemd, tegenover de geallieerden."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Op welke steden vielen de eerste atoombommen in augustus 1945?",
-            "opties": [
-                  "Hiroshima en Nagasaki",
-                  "Tokio en Kyoto",
-                  "Berlin en Hamburg",
-                  "Seoul en Osaka"
-            ],
-            "antwoord": 0,
-            "uitleg": "Hiroshima en Nagasaki leidden tot de overgave van Japan."
+        id: "ex11_v13",
+        type: "mc",
+        vraag: "Wat gebeurde er bij Koersk in de zomer van 1943?",
+        opties: [
+          "De grootste tankslag uit de geschiedenis, die de Duitsers verloren.",
+          "De ondertekening van een nieuw niet-aanvalsverdrag.",
+          "De eerste Duitse landing in Engeland.",
+          "De bevrijding van Parijs."
+        ],
+        antwoord: 0,
+        uitleg: "Bij Koersk verloren de Duitsers de grootste tankslag uit de geschiedenis, kort na hun nederlaag bij Stalingrad."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Wat deed de NSB van Mussert tijdens de Duitse bezetting?",
-            "opties": [
-                  "De NSB collaboreerde (werkte samen) met de Duitse bezetter",
-                  "Ging in het verzet",
-                  "Vluchtte naar Londen",
-                  "Bleef neutraal"
-            ],
-            "antwoord": 0,
-            "uitleg": "De NSB steunde de nazi-bezetter."
+        id: "ex11_v14",
+        type: "mc",
+        vraag: "Wat was de Atlantikwall die Hitler langs de kust van West-Europa liet bouwen?",
+        opties: [
+          "Een 5000 kilometer lang verdedigingsstelsel tegen een geallieerde invasie.",
+          "Een spoorlijn tussen Duitsland en Spanje.",
+          "Een muur om Berlijn te beschermen tegen het Rode Leger.",
+          "Een dijk om Nederland te beschermen tegen overstromingen."
+        ],
+        antwoord: 0,
+        uitleg: "De Atlantikwall was een langgerekt systeem van bunkers, mijnenvelden en versperringen tussen Noorwegen en de Spaanse grens."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wat was Operatie Barbarossa?",
-            "opties": [
-                  "De Duitse inval in de Sovjet-Unie in juni 1941",
-                  "Het bevrijdingsplan voor Nederland",
-                  "De geallieerde luchtbrug",
-                  "De gevechten in Azië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Barbarossa was de Duitse aanval op de Sovjet-Unie."
+        id: "ex11_v15",
+        type: "waaronwaar",
+        vraag: "Toen het Rode Leger in januari 1944 een einde maakte aan de belegering van Leningrad, had die belegering al 900 dagen geduurd.",
+        antwoord: true,
+        uitleg: "Waar! Tijdens de bijna 900 dagen durende belegering kwam een miljoen burgers om door honger en kou."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat mislukte bij Operatie Market Garden (sep 1944)?",
-            "opties": [
-                  "Het veroveren van de brug bij Arnhem",
-                  "De landing op Normandië",
-                  "Het bombardement op Berlijn",
-                  "De bevrijding van Parijs"
-            ],
-            "antwoord": 0,
-            "uitleg": "Arnhem bleek \"een brug te ver\"."
+        id: "ex11_v16",
+        type: "mc",
+        vraag: "Hoe gedroegen Sovjetsoldaten zich bij hun opmars door Oost-Pruisen in januari 1945?",
+        opties: [
+          "Gedisciplineerd en terughoudend tegenover de burgerbevolking.",
+          "Moordend, plunderend, verkrachtend en brandstichtend als wraak.",
+          "Ze deelden voedsel uit aan de gevluchte Duitse burgers.",
+          "Ze trokken zich direct terug naar de Sovjet-Unie."
+        ],
+        antwoord: 1,
+        uitleg: "De wraak van de Sovjetsoldaten in Oost-Pruisen was gruwelijk; miljoenen Duitsers vluchtten daardoor naar het westen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat waren de Jappenkampen in Nederlands-Indië?",
-            "opties": [
-                  "Interneringskampen voor Nederlandse burgers en militairen onder de Japanse bezetting",
-                  "Scholen voor de jeugd",
-                  "Militairekazernes",
-                  "Werkkampen in Japan"
-            ],
-            "antwoord": 0,
-            "uitleg": "In Jappenkampen heersten gruwelijke omstandigheden."
+        id: "ex11_v17",
+        type: "invul",
+        vraag: "Hoeveel Britse, Amerikaanse en Canadese militairen gingen op D-Day (6 juni 1944) aan land op de stranden van Normandië?",
+        antwoord: "130.000|130000|130 000",
+        uitleg: "Op D-Day gingen 130.000 militairen aan land, aangevuld met 24.000 parachutisten achter de Duitse kustverdediging."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Hoeveel Joodse mensen werden vermoord tijdens de Holocaust?",
-            "opties": [
-                  "Ongeveer 6 miljoen",
-                  "Ongeveer 100.000",
-                  "Ongeveer 20 miljoen",
-                  "Ongeveer 1 miljoen"
-            ],
-            "antwoord": 0,
-            "uitleg": "De genocide eiste 6 miljoen Joodse levens."
+        id: "ex11_v18",
+        type: "mc",
+        vraag: "Wat gebeurde er nadat de westerse geallieerden in juni 1943 in Zuid-Italië landden?",
+        opties: [
+          "Mussolini werd afgezet en Italië gaf zich over, waarna Duitse soldaten hem bevrijdden.",
+          "Italië trad direct toe tot de geallieerden zonder gevechten.",
+          "Mussolini vluchtte meteen naar Duitsland.",
+          "Italië werd een neutraal land, zoals Zwitserland."
+        ],
+        antwoord: 0,
+        uitleg: "Na de afzetting van Mussolini gaf Italië zich over, maar Duitse soldaten bevrijdden Mussolini en bezetten Italië alsnog."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat was de Slag om Engeland (1940)?",
-            "opties": [
-                  "Luchtoorlog tussen de Duitse Luftwaffe en de Britse RAF",
-                  "Een zeeslag op het Kanaal",
-                  "Een invasie van Britse troepen",
-                  "Een tankslag"
-            ],
-            "antwoord": 0,
-            "uitleg": "Engeland behield het overwicht in de lucht."
+        id: "ex11_v19",
+        type: "open",
+        vraag: "Leg uit waarom de westerse geallieerden vanaf 1943 op zee en in de lucht sterker waren dan Duitsland, en wat dit betekende voor Duitse steden.",
+        sleutelwoorden: [
+          "materieel/industrie/overmacht/productie",
+          "bombardementen/gebombardeerd/verwoest"
+        ],
+        minTreffers: 1,
+        modelantwoord: "De Amerikaanse en Britse industrie produceerde veel meer vliegtuigen en schepen dan Duitsland kon bijhouden. Daardoor konden Amerikaanse en Britse vliegtuigen vanaf 1943 ongehinderd Duitse militaire doelen én steden bombarderen.",
+        uitleg: "Door hun industriële overmacht konden de geallieerden vanaf 1943 vrijwel ongestoord bommenwerpers boven Duitsland inzetten."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer gaf nazi-Duitsland zich definitief over?",
-            "opties": [
-                  "8 mei 1945",
-                  "5 mei 1940",
-                  "15 augustus 1945",
-                  "11 november 1918"
-            ],
-            "antwoord": 0,
-            "uitleg": "Duitsland capituleerde op 8 mei 1945."
+        id: "ex11_v20",
+        type: "waaronwaar",
+        vraag: "Tijdens de conferentie van Jalta in februari 1945 ontmoetten Churchill, Roosevelt en Stalin elkaar om de naoorlogse orde te bespreken.",
+        antwoord: true,
+        uitleg: "Waar! De drie geallieerde regeringsleiders bespraken in Jalta onder meer de toekomst van Europa na de oorlog."
       }
-]
+    ]
   });
 })();

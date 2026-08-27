@@ -1,278 +1,229 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 19 — Hoofdstuk 4 (De wereld na 1945 (1945–1990))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 19 (20 vragen)
+   Hoofdstuk 4: De wereld na 1945 — 4.4 Samenwerking en democratie
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-19",
-    titel: "Proeftoets 19 — Hoofdstuk 4 (De wereld na 1945 (1945–1990))",
+    titel: "Proeftoets 19 — 4.4 Samenwerking en democratie",
     vak: "Geschiedenis · Hoofdstuk 4",
     hoofdstuk: 4,
     hoofdstukTitel: "Hoofdstuk 4 — De wereld na 1945 (1945–1990)",
-    icoon: "🕊️",
+    icoon: "🤝",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Welke twee blokken stonden tegenover elkaar in de Koude Oorlog?",
-            "opties": [
-                  "Het kapitalistische Westblok (VS) en het communistische Oostblok (Sovjet-Unie)",
-                  "Duitsland en Japan",
-                  "Engeland en Frankrijk",
-                  "China en India"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Koude Oorlog was een ideologische strijd tussen VS en SU."
+        id: "ex19_v1",
+        type: "mc",
+        vraag: "Wat leerden Europese landen van de economische crisis van de jaren 1930, die aanleiding gaf tot samenwerking na 1945?",
+        opties: [
+          "Dat het beter was samen te werken dan elkaars economie te beconcurreren",
+          "Dat protectionisme de beste oplossing was",
+          "Dat elk land zijn eigen munt moest behouden",
+          "Dat samenwerking met de Sovjet-Unie nodig was"
+        ],
+        antwoord: 0,
+        uitleg: "Landen hadden geleerd dat de crisis van de jaren 1930 erger werd doordat elk land zijn economie ten koste van andere landen probeerde te versterken."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat was het IJzeren Gordijn?",
-            "opties": [
-                  "De streng bewaakte grens tussen het communistische Oost-Europa en het democratische West-Europa",
-                  "Een muur om Moskou",
-                  "Een spoorlijn",
-                  "Een verdedigingslinie in Azië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het IJzeren Gordijn scheidde Oost en West."
+        id: "ex19_v2",
+        type: "mc",
+        vraag: "Wie drong er via de Marshallhulp op aan dat Europese landen gingen samenwerken?",
+        opties: [
+          "De Sovjet-Unie",
+          "De Verenigde Staten",
+          "De Verenigde Naties",
+          "Groot-Brittannië"
+        ],
+        antwoord: 1,
+        uitleg: "De VS drongen aan op Europese samenwerking, omdat ze wilden dat de Europese landen afspraken maakten over de verdeling van de Marshallhulp."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wat was de kern van de Amerikaanse Trumandoctrine (1947)?",
-            "opties": [
-                  "Het indammen van de verspreiding van het communisme wereldwijd (containment)",
-                  "Het verlenen van leningen aan Duitsland",
-                  "Het afschaffen van atoombommen",
-                  "Het stichten van de EU"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Trumandoctrine wilde uitbreiding van communisme voorkomen."
+        id: "ex19_v3",
+        type: "mc",
+        vraag: "Vanaf welk jaar werkten zes landen samen in de EGKS?",
+        opties: [
+          "1948",
+          "1950",
+          "1952",
+          "1958"
+        ],
+        antwoord: 2,
+        uitleg: "Vanaf 1952 werkten Frankrijk, de Bondsrepubliek, Italië en de Beneluxlanden samen in de EGKS."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wat hield het Marshallplan (1947) in?",
-            "opties": [
-                  "Omvangrijke Amerikaanse economische hulp voor de wederopbouw van West-Europa",
-                  "Een legerovereenkomst",
-                  "Het oprichten van de NAVO",
-                  "Een ruimteprogramma"
-            ],
-            "antwoord": 0,
-            "uitleg": "Marshallhulp stimuleerde het economisch herstel van Europa."
+        id: "ex19_v4",
+        type: "mc",
+        vraag: "Welke twee instellingen kreeg de EEG die nog steeds belangrijk zijn in de huidige EU?",
+        opties: [
+          "De NAVO en het Warschaupact",
+          "De Raad van Europa en het Europees Hof voor de Rechten van de Mens",
+          "De Europese Commissie en het Europese Hof van Justitie",
+          "Het Europees Parlement en de Europese Centrale Bank"
+        ],
+        antwoord: 2,
+        uitleg: "De EEG kreeg een dagelijks bestuur, de Europese Commissie, en een rechtbank, het Europese Hof van Justitie."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wanneer werd het westerse militaire bondgenootschap de NAVO opgericht?",
-            "opties": [
-                  "1949",
-                  "1945",
-                  "1961",
-                  "1989"
-            ],
-            "antwoord": 0,
-            "uitleg": "De NAVO werd in 1949 opgericht."
+        id: "ex19_v5",
+        type: "mc",
+        vraag: "Wie speelden een belangrijke rol bij het herstel van de Frans-Duitse vriendschap na de oorlog?",
+        opties: [
+          "Churchill en Stalin",
+          "Truman en Chroesjtsjov",
+          "De Gaulle en Adenauer",
+          "Kennedy en Johnson"
+        ],
+        antwoord: 2,
+        uitleg: "De Franse president De Gaulle en de Duitse bondskanselier Adenauer bouwden een warme vriendschap op tussen hun landen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Hoe werd West-Berlijn door de westerse geallieerden gered tijdens de Sovjet-blokkade van 1948?",
-            "opties": [
-                  "Met een constante Luchtbrug via vliegtuigen",
-                  "Met tanks door Oost-Duitsland",
-                  "Door West-Berlijn af te staan",
-                  "Via schepen"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Luchtbrug bevoorraadde West-Berlijn 11 maanden lang."
+        id: "ex19_v6",
+        type: "mc",
+        vraag: "In welk jaar sloten Frankrijk en de Bondsrepubliek een vriendschapsverdrag?",
+        opties: [
+          "1950",
+          "1958",
+          "1963",
+          "1973"
+        ],
+        antwoord: 2,
+        uitleg: "In 1963 sloten De Gaulle en Adenauer een Frans-Duits vriendschapsverdrag, waarmee een einde kwam aan de eeuwenoude vijandschap."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Wanneer werd de Berlijnse Muur door de DDR gebouwd?",
-            "opties": [
-                  "13 augustus 1961",
-                  "9 november 1989",
-                  "5 mei 1945",
-                  "25 december 1991"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Muur werd in augustus 1961 gebouwd."
+        id: "ex19_v7",
+        type: "mc",
+        vraag: "Welke landen werden in 1981 en 1986 lid van de EEG, nadat ze van militaire dictatuur naar democratie waren veranderd?",
+        opties: [
+          "Groot-Brittannië, Ierland en Denemarken",
+          "Griekenland, en Spanje en Portugal",
+          "Zweden en Finland",
+          "Polen en Hongarije"
+        ],
+        antwoord: 1,
+        uitleg: "Griekenland (1981) en Spanje en Portugal (1986) werden lid van de EEG nadat ze democratieën waren geworden."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wanneer bracht de opstelling van Sovjet-raketten op Cuba de wereld bijna tot atoomoorlog?",
-            "opties": [
-                  "Oktober 1962",
-                  "Juli 1945",
-                  "November 1989",
-                  "Augustus 1973"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Cubacrisis in 1962 was de gevaarlijkste confrontatie."
+        id: "ex19_v8",
+        type: "mc",
+        vraag: "Wat wordt bedoeld met het 'Wirtschaftswunder' in West-Duitsland?",
+        opties: [
+          "De invoering van de deutsche mark",
+          "De snelle economische groei (het economische wonder) in West-Duitsland",
+          "De bouw van de Berlijnse Muur",
+          "De hereniging van Oost- en West-Duitsland"
+        ],
+        antwoord: 1,
+        uitleg: "Het Wirtschaftswunder was de razendsnelle economische groei in West-Duitsland, waardoor de meeste Duitsers in de jaren 1960 een televisie en een auto kregen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat beweerde de Amerikaanse Dominotheorie?",
-            "opties": [
-                  "Als één land communistisch wordt, vallen omliggende landen als dominostenen ook voor het communisme",
-                  "Dat de VS alle oorlogen zouden winnen",
-                  "Dat economieën op elkaar lijken",
-                  "Een spelregel"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Dominotheorie verklaarde de Amerikaanse inmenging in Vietnam."
+        id: "ex19_v9",
+        type: "mc",
+        vraag: "Wanneer werd de Raad van Europa opgericht?",
+        opties: [
+          "1945",
+          "1949",
+          "1957",
+          "1993"
+        ],
+        antwoord: 1,
+        uitleg: "In 1949 richtten tien landen de Raad van Europa op, met als doel de democratie en mensenrechten te verdedigen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Op welke datum viel de Berlijnse Muur?",
-            "opties": [
-                  "9 november 1989",
-                  "5 mei 1945",
-                  "11 september 2001",
-                  "27 december 1949"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Muur viel op 9 november 1989."
+        id: "ex19_v10",
+        type: "mc",
+        vraag: "Waar kunnen burgers een klacht indienen als ze vinden dat hun mensenrechten door hun eigen regering worden geschonden?",
+        opties: [
+          "Bij de Europese Commissie in Brussel",
+          "Bij de NAVO",
+          "Bij het Europese Hof voor de Rechten van de Mens in Straatsburg",
+          "Bij de Verenigde Naties in New York"
+        ],
+        antwoord: 2,
+        uitleg: "Bij het Europese Hof voor de Rechten van de Mens in Straatsburg kunnen mensen een klacht tegen hun eigen regering indienen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wie voerde in de Sovjet-Unie de hervormingen Glasnost en Perestroika in?",
-            "opties": [
-                  "Michail Gorbatsjov",
-                  "Jozef Stalin",
-                  "Nikita Chroesjtsjov",
-                  "Vladimir Poetin"
-            ],
-            "antwoord": 0,
-            "uitleg": "Gorbatsjov wilde de Sovjet-Unie hervormen."
+        id: "ex19_v11",
+        type: "waaronwaar",
+        vraag: "De Europese Commissie doet voorstellen voor nieuwe Europese wetten en regels.",
+        antwoord: true,
+        uitleg: "Waar. De Europese Commissie is het dagelijks bestuur van de EEG en later de EU en doet voorstellen voor nieuwe wetgeving."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wie riep op 17 augustus 1945 de onafhankelijkheid van Indonesië uit?",
-            "opties": [
-                  "Soekarno",
-                  "Suharto",
-                  "Colijn",
-                  "Drees"
-            ],
-            "antwoord": 0,
-            "uitleg": "Soekarno roep de Republik Indonesia uit."
+        id: "ex19_v12",
+        type: "waaronwaar",
+        vraag: "Van de 48 huidige Europese staten is alleen Wit-Rusland geen lid van de Raad van Europa.",
+        antwoord: true,
+        uitleg: "Waar. Bijna alle Europese staten zijn lid van de Raad van Europa; alleen Wit-Rusland niet."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Hoe noemde de Nederlandse regering haar militaire optreden in Indonesië?",
-            "opties": [
-                  "Politionele Acties",
-                  "Wederopbouw",
-                  "Operatie Barbarossa",
-                  "Vredesmissie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Politionele Acties was de verhullende naam voor de kolonisatie-oorlog."
+        id: "ex19_v13",
+        type: "waaronwaar",
+        vraag: "West-Duitsland werd na de oorlog meteen enthousiast een stabiele democratie, zonder enige twijfel bij de bevolking.",
+        antwoord: false,
+        uitleg: "Niet waar. De meeste Duitsers voelden eerst niet voor de democratie, maar veranderden geleidelijk mede door de groeiende welvaart."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Op welke datum droeg Nederland de soevereiniteit over aan Indonesië?",
-            "opties": [
-                  "27 december 1949",
-                  "17 augustus 1945",
-                  "5 mei 1945",
-                  "9 november 1989"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op 27 december 1949 werd Indonesië formeel onafhankelijk."
+        id: "ex19_v14",
+        type: "waaronwaar",
+        vraag: "Alle lidstaten houden zich altijd zonder uitzondering aan de uitspraken van het Europese Hof voor de Rechten van de Mens.",
+        antwoord: false,
+        uitleg: "Niet waar. Sommige landen houden zich niet altijd aan uitspraken van het Hof, ook al moeten regeringen deze in principe gehoorzamen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wanneer vond de Koreaoorlog plaats?",
-            "opties": [
-                  "1950 - 1953",
-                  "1965 - 1975",
-                  "1939 - 1945",
-                  "1980 - 1988"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Koreaoorlog woedde van 1950 tot 1953."
+        id: "ex19_v15",
+        type: "invul",
+        vraag: "Hoe heet de organisatie waarin sinds 1993 de Europese landen samenwerken, als opvolger van de EEG?",
+        antwoord: "Europese Unie|EU|de Europese Unie",
+        uitleg: "Sinds 1993 heet de organisatie van samenwerkende Europese landen de Europese Unie (EU)."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat betekent het begrip \"wapenwedloop\"?",
-            "opties": [
-                  "De competitie tussen grootmachten om het sterkste en meeste (kern)wapenarsenaal te bouwen",
-                  "Een atletiekwedstrijd",
-                  "Handel in wapens",
-                  "De uitvinding van het kruit"
-            ],
-            "antwoord": 0,
-            "uitleg": "Wapenwedloop leidde tot duizenden kernkoppen."
+        id: "ex19_v16",
+        type: "invul",
+        vraag: "Hoe heet het proces waarbij landen verder opgaan in een groter geheel, zoals bij de overgang van de EGKS naar de EEG?",
+        antwoord: "integratie",
+        uitleg: "Integratie betekent het opgaan in een groter geheel, zoals de Europese landen deden bij de vorming van de EEG."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wie waren de strijders van de Vietcong in de Vietnamoorlog?",
-            "opties": [
-                  "Zuid-Vietnamese communistische guerrilla-strijders",
-                  "Het Amerikaanse leger",
-                  "Franse militairen",
-                  "Chinese invallers"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Vietcong vocht in de jungle tegen de VS."
+        id: "ex19_v17",
+        type: "invul",
+        vraag: "Welk verdrag sloten de lidstaten van de Raad van Europa in 1950, waaraan hun wetten moeten voldoen?",
+        antwoord: "Europees Verdrag voor de Rechten van de Mens|EVRM",
+        uitleg: "In 1950 sloten de lidstaten het Europees Verdrag voor de Rechten van de Mens, waaraan hun nationale wetten moeten voldoen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Wat hield het SDI-plan van president Reagan in?",
-            "opties": [
-                  "Een schild van ruimtesatellieten en lasers tegen Sovjet-raketten",
-                  "Een nieuwe filmreeks",
-                  "Reizen naar de maan",
-                  "Een landmachtversterking"
-            ],
-            "antwoord": 0,
-            "uitleg": "SDI zette de Sovjet-economie onder zware druk."
+        id: "ex19_v18",
+        type: "invul",
+        vraag: "Hoe wordt een gebied van meerdere landen genoemd waarbinnen vrije handel bestaat zonder importtarieven?",
+        antwoord: "gemeenschappelijke markt|interne markt",
+        uitleg: "In een gemeenschappelijke (of interne) markt is er vrije handel tussen de lidstaten zonder onderlinge importtarieven."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. In welk jaar hield de Sovjet-Unie definitief op te bestaan?",
-            "opties": [
-                  "1991",
-                  "1989",
-                  "1945",
-                  "2000"
-            ],
-            "antwoord": 0,
-            "uitleg": "Eind 1991 viel de Sovjet-Unie uiteen."
+        id: "ex19_v19",
+        type: "open",
+        vraag: "Leg uit waarom de samenwerking tussen Frankrijk en de Bondsrepubliek Duitsland na 1945 zo bijzonder was, gezien de geschiedenis van beide landen.",
+        sleutelwoorden: [
+          "vijandschap/oorlogen sinds 1870",
+          "vrede/vriendschap"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Frankrijk en Duitsland hadden sinds 1870 drie verwoestende oorlogen tegen elkaar gevoerd, maar na 1945 kozen hun leiders bewust voor samenwerking en vriendschap in plaats van vijandschap, wat leidde tot het vriendschapsverdrag van 1963.",
+        uitleg: "Na eeuwenlange vijandschap en drie oorlogen sinds 1870 kozen beide landen na 1945 juist voor nauwe samenwerking en vriendschap."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer werden de Verenigde Naties (VN) opgericht?",
-            "opties": [
-                  "1945",
-                  "1919",
-                  "1961",
-                  "1992"
-            ],
-            "antwoord": 0,
-            "uitleg": "De VN werd in 1945 opgericht om vrede te bewaren."
+        id: "ex19_v20",
+        type: "open",
+        vraag: "Beschrijf het verband tussen democratie en welvaart in West-Europa na 1945, zoals dat in West-Duitsland te zien was.",
+        sleutelwoorden: [
+          "welvaart/wirtschaftswunder",
+          "stabiel/rust"
+        ],
+        minTreffers: 1,
+        modelantwoord: "In West-Duitsland ging de democratie samen met snelle economische groei en welvaart (het Wirtschaftswunder) in plaats van met chaos en verarming zoals in de Weimarrepubliek, waardoor de democratie stabiel bleef.",
+        uitleg: "Doordat de democratie samenging met groeiende welvaart in plaats van chaos, bleef de democratie in West-Duitsland stabiel."
       }
-]
+    ]
   });
 })();

@@ -36,7 +36,7 @@
       },
       {
         id: "ex2_v3",
-        type: "invoer",
+        type: "invul",
         vraag: "Welke Oostenrijkse grensstad (tegenwoordig Lviv in Oekraïne) werd al vroeg in de oorlog door het Russische leger veroverd?",
         antwoord: "Lemberg|lemberg",
         uitleg: "Lemberg (nu Lviv) lag in de provincie Galicië en werd in 1914 veroverd door Rusland."
@@ -56,7 +56,7 @@
       },
       {
         id: "ex2_v5",
-        type: "invoer",
+        type: "invul",
         vraag: "Hoe heet het vredesverdrag dat de nieuwe communistische regering van Rusland in maart 1918 met Duitsland sloot?",
         antwoord: "Vrede van Brest-Litovsk|Brest-Litovsk|brest-litovsk",
         uitleg: "Met de Vrede van Brest-Litovsk stapte Rusland uit de Eerste Wereldoorlog en afstond het grote gebieden af."
@@ -96,7 +96,7 @@
       },
       {
         id: "ex2_v9",
-        type: "invoer",
+        type: "invul",
         vraag: "Welk nieuw meedogenloos pantservoertuig werd door de Britten vanaf 1916 ingezet om door de loopgraven en prikkeldraad te breken?",
         antwoord: "tank|de tank|tanks",
         uitleg: "De tank werd ontwikkeld om de patstelling in de loopgraven te doorbreken."
@@ -136,7 +136,7 @@
       },
       {
         id: "ex2_v13",
-        type: "invoer",
+        type: "invul",
         vraag: "Op welke bekende datum en tijdstip ging de Wapenstilstand van de Eerste Wereldoorlog in? (Format: DD-MM-JJJJ 11:00)",
         antwoord: "11-11-1918|11 november 1918|11-11-1918 om 11:00|11 november 1918 om 11 uur",
         uitleg: "De wapenstilstand ging in op 11 november 1918 om 11:00 uur (11-11-11u)."
@@ -183,7 +183,7 @@
       },
       {
         id: "ex2_v18",
-        type: "invoer",
+        type: "invul",
         vraag: "In welke bekende Belgische stad in Vlaanderen vonden hevige verwoestingen plaats tijdens de loopgravenoorlog?",
         antwoord: "Ieper|ieper",
         uitleg: "Ieper werd in de Eerste Wereldoorlog vrijwel volledig met de grond gelijkgemaakt."

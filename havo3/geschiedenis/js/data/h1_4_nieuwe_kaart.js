@@ -123,7 +123,7 @@
         id: "h1_4_v7",
         niveau: 3,
         type: "mc",
-        vraag: "Welke van de onderstaande nieuwe staten ontstond NlET op de kaart van Europa na het uiteenvallen van Oostenrijk-Hongarije of het Russische Rijk?",
+        vraag: "Welke van de onderstaande nieuwe staten ontstond NIET op de kaart van Europa na het uiteenvallen van Oostenrijk-Hongarije of het Russische Rijk?",
         opties: [
           "Tsjecho-Slowakije",
           "Joegoslavië",

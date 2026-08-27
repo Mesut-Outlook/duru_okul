@@ -1,12 +1,13 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 22 — Hoofdstuk 5 (Nederland na 1945 (1945–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 22 (20 vragen)
+   Hoofdstuk 5: Nederland na 1945 — 5.2 Besluiten en besturen
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-22",
-    titel: "Proeftoets 22 — Hoofdstuk 5 (Nederland na 1945 (1945–heden))",
+    titel: "Proeftoets 22 — 5.2 Besluiten en besturen",
     vak: "Geschiedenis · Hoofdstuk 5",
     hoofdstuk: 5,
     hoofdstukTitel: "Hoofdstuk 5 — Nederland na 1945 (1945–heden)",
@@ -14,265 +15,215 @@
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Hoe heette de periode van herstel van Nederland na WO2?",
-            "opties": [
-                  "De Wederopbouw",
-                  "De Roaring Twenties",
-                  "De Grote Depressie",
-                  "De Ontzuiling"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Wederopbouw herstelde Nederland na de verwoestingen."
+        id: "ex22_v1",
+        type: "mc",
+        vraag: "Op welke datum in 1953 braken door een zware storm en hoge vloed tientallen dijken door in Zuidwest-Nederland?",
+        opties: [
+          "1 februari 1953",
+          "4 mei 1945",
+          "15 augustus 1953",
+          "31 december 1952"
+        ],
+        antwoord: 0,
+        uitleg: "Op 1 februari 1953 braken door een zware noordwesterstorm en extreem hoge vloed tientallen dijken door."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Welke premier voerde in 1957 de AOW in?",
-            "opties": [
-                  "Willem Drees",
-                  "Ruud Lubbers",
-                  "Joop den Uyl",
-                  "Jan Peter Balkenende"
-            ],
-            "antwoord": 0,
-            "uitleg": "Willem Drees legde de basis voor de AOW."
+        id: "ex22_v2",
+        type: "mc",
+        vraag: "Wie diende in november 1955 het wetsvoorstel voor de Deltawet in bij de Tweede Kamer?",
+        opties: [
+          "De koningin",
+          "De regering",
+          "De Provinciale Staten",
+          "De Eerste Kamer"
+        ],
+        antwoord: 1,
+        uitleg: "In november 1955 diende de regering het wetsvoorstel voor de Deltawet in bij de Tweede Kamer."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wat is de definitie van een verzorgingsstaat?",
-            "opties": [
-                  "Een maatschappij waarin de overheid zorgt voor het welzijn van burgers via sociale voorzieningen",
-                  "Een staat zonder belastingen",
-                  "Een militaire dictatuur",
-                  "Een markt zonder regels"
-            ],
-            "antwoord": 0,
-            "uitleg": "In een verzorgingsstaat heeft de overheid een zorgplicht."
+        id: "ex22_v3",
+        type: "mc",
+        vraag: "Welk D66-Kamerlid overtuigde zijn fractie om te strijden voor het behoud van de Oosterschelde?",
+        opties: [
+          "Willem Drees",
+          "Wim Kok",
+          "Jan Terlouw",
+          "Pim Fortuyn"
+        ],
+        antwoord: 2,
+        uitleg: "D66-Kamerlid Jan Terlouw overtuigde zijn fractie om zich in te zetten voor het behoud van de Oosterschelde."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Met welke organisatie begon de Europese integratie in 1951?",
-            "opties": [
-                  "EGKS (Europese Gemeenschap voor Kolen en Staal)",
-                  "EU",
-                  "NAVO",
-                  "VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "EGKS was het begin van Europese samenwerking."
+        id: "ex22_v4",
+        type: "mc",
+        vraag: "In welk jaar werd de stormvloedkering in de Oosterschelde door koningin Beatrix in gebruik genomen?",
+        opties: [
+          "1953",
+          "1958",
+          "1970",
+          "1986"
+        ],
+        antwoord: 3,
+        uitleg: "In 1986 nam koningin Beatrix de stormvloedkering in de Oosterschelde in gebruik."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat werd afgesproken bij het Verdrag van Maastricht (1992)?",
-            "opties": [
-                  "Oprichting van de Europese Unie en de beslissing tot de euro",
-                  "Het einde van WO2",
-                  "Het Marshallplan",
-                  "De NAVO oprichting"
-            ],
-            "antwoord": 0,
-            "uitleg": "In Maastricht ontstond de EU."
+        id: "ex22_v5",
+        type: "mc",
+        vraag: "Wat wordt bedoeld met 'parlementaire onschendbaarheid'?",
+        opties: [
+          "Dat Kamerleden niet vervolgd kunnen worden voor uitspraken in het parlement",
+          "Dat ministers nooit hoeven af te treden",
+          "Dat de koning boven de wet staat",
+          "Dat burgers nooit een wet mogen aanvechten"
+        ],
+        antwoord: 0,
+        uitleg: "Parlementsleden hebben parlementaire onschendbaarheid: ze kunnen niet worden vervolgd voor uitspraken tijdens een parlementsvergadering."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat hield de \"ontzuiling\" in de jaren 60 in?",
-            "opties": [
-                  "Het afbrokkelen van de strakke scheiding tussen katholieken, protestanten, socialisten en liberalen",
-                  "Het sluiten van de kerken",
-                  "Het afschaffen van partijen",
-                  "Het afbreken van huizen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Ontzuiling maakte burgers onafhankelijker van hun zuil."
+        id: "ex22_v6",
+        type: "mc",
+        vraag: "Hoeveel handtekeningen moeten burgers verzamelen om de Tweede Kamer via het burgerinitiatief te dwingen over een onderwerp te vergaderen?",
+        opties: [
+          "4.000",
+          "40.000",
+          "400.000",
+          "4.000.000"
+        ],
+        antwoord: 1,
+        uitleg: "Met 40 000 handtekeningen kunnen burgers de Tweede Kamer dwingen over een onderwerp te vergaderen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Welke jeugdgroepeen kwamen in de jaren 50 en 60 op?",
-            "opties": [
-                  "Nozems en Provo's",
-                  "Punks en Goths",
-                  "Hippies en Yuppies",
-                  "Zwarthemden"
-            ],
-            "antwoord": 0,
-            "uitleg": "Nozems en Provo's stonden voor een nieuwe jeugdcultuur."
+        id: "ex22_v7",
+        type: "mc",
+        vraag: "Wie kiest de leden van de Provinciale Staten?",
+        opties: [
+          "De regering",
+          "De commissaris van de Koning",
+          "De inwoners van de provincie",
+          "De Tweede Kamer"
+        ],
+        antwoord: 2,
+        uitleg: "De inwoners van een provincie kiezen zelf de leden van de Provinciale Staten."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wat eiste de actiegroep \"Dolle Mina\" tijdens de tweede feministische golf?",
-            "opties": [
-                  "Gelijke rechten en kansen voor vrouwen in werk, studie en maatschappij",
-                  "Vrouwenkiesrecht",
-                  "Het afschaffen van huwelijken",
-                  "Dienstplicht voor vrouwen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Dolle Mina streed voor gelijke vrouwenrechten."
+        id: "ex22_v8",
+        type: "mc",
+        vraag: "Wie benoemt de dijkgraven, de voorzitters van de waterschappen?",
+        opties: [
+          "De gemeenteraad",
+          "De inwoners van het waterschap",
+          "De koning persoonlijk",
+          "De regering"
+        ],
+        antwoord: 3,
+        uitleg: "De regering benoemt de dijkgraven, de voorzitters van de waterschappen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Uit welke landen kwamen veel gastarbeiders in de jaren 60 naar Nederland?",
-            "opties": [
-                  "Onder meer Turkije en Marokko",
-                  "Verenigde Staten",
-                  "Rusland",
-                  "Indonesië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Gastarbeiders vulden het tekort aan arbeidskrachten op."
+        id: "ex22_v9",
+        type: "mc",
+        vraag: "Wat gebeurt er tijdens Prinsjesdag met de rijksbegroting?",
+        opties: [
+          "De minister van Financiën presenteert die als miljoenennota aan de Tweede Kamer",
+          "De koning leest die zelf helemaal voor",
+          "De Provinciale Staten stellen die vast",
+          "De Eerste Kamer schrijft die"
+        ],
+        antwoord: 0,
+        uitleg: "De minister van Financiën presenteert de rijksbegroting met toelichting als miljoenennota aan de Tweede Kamer."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Wanneer werd Suriname een onafhankelijke republiek?",
-            "opties": [
-                  "25 november 1975",
-                  "17 augustus 1945",
-                  "5 mei 1945",
-                  "1 januari 2002"
-            ],
-            "antwoord": 0,
-            "uitleg": "Suriname werd in 1975 onafhankelijk."
+        id: "ex22_v10",
+        type: "mc",
+        vraag: "Sinds welk jaar gaat de koning(in) op Prinsjesdag met de Gouden Koets naar de Ridderzaal?",
+        opties: [
+          "1814",
+          "1903",
+          "1946",
+          "1987"
+        ],
+        antwoord: 1,
+        uitleg: "Sinds 1903 gaat de koning(in) met de Gouden Koets naar de Ridderzaal op Prinsjesdag."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat kenmerkt het Nederlandse Poldermodel?",
-            "opties": [
-                  "Samenwerking en overleg tussen werkgevers, vakbonden en overheid",
-                  "Het bouwen van dijken",
-                  "Het staken van arbeiders",
-                  "Het heffen van hoge tarieven"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het Poldermodel streeft naar consensus."
+        id: "ex22_v11",
+        type: "waaronwaar",
+        vraag: "Het koffertje met de miljoenennota werd voor het eerst gebruikt in 1946.",
+        antwoord: true,
+        uitleg: "Waar! Het koffertje met de rijksbegroting werd voor het eerst gebruikt in 1946."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat werd afgesproken in het Akkoord van Wassenaar (1982)?",
-            "opties": [
-                  "Loonmatiging door vakbonden in ruil voor kortere werktijden",
-                  "De invoering van de euro",
-                  "De sluiting van havens",
-                  "De AOW-invoering"
-            ],
-            "antwoord": 0,
-            "uitleg": "Wassenaar herstelde de Nederlandse concurrentiepositie."
+        id: "ex22_v12",
+        type: "waaronwaar",
+        vraag: "De regeringspartijen die samen een kabinet vormen, worden de oppositie genoemd.",
+        antwoord: false,
+        uitleg: "Onwaar. De samenwerking van regeringspartijen heet een coalitie; partijen die niet meeregeren vormen de oppositie."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wanneer werd het baar geld van de euro ingevoerd in Nederland?",
-            "opties": [
-                  "1 januari 2002",
-                  "1992",
-                  "1989",
-                  "2010"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op 1 januari 2002 kwam het contante eurogeld."
+        id: "ex22_v13",
+        type: "waaronwaar",
+        vraag: "Waterschappen zorgen in hun gebied voor de dijken en de waterkwaliteit.",
+        antwoord: true,
+        uitleg: "Waar! Waterschappen zijn de lagere overheid die de dijken en de waterkwaliteit in hun gebied beheert."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Wat was het doel van de geleide loonpolitiek na 1945?",
-            "opties": [
-                  "De lonen bewust laag houden om goedkoop te kunnen exporteren",
-                  "Lonen vervijfvoudigen",
-                  "Lonen afschaffen",
-                  "Alleen hoge inkomens belasten"
-            ],
-            "antwoord": 0,
-            "uitleg": "Lage lonen hielpen de wederopbouw van exportbedrijven."
+        id: "ex22_v14",
+        type: "waaronwaar",
+        vraag: "Provincies gaan over zaken die alleen in één dorp of stad spelen, zoals een gemeentelijke parkeervergunning.",
+        antwoord: false,
+        uitleg: "Onwaar. Zulke lokale zaken zijn de taak van de gemeente; provincies besluiten over zaken die te groot zijn voor gemeenten maar niet landelijk geregeld worden."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wat betekent een pluriforme samenleving?",
-            "opties": [
-                  "Een samenleving waarin mensen met diverse achtergronden en leefstijlen samenleven",
-                  "Een eentonige maatschappij",
-                  "Een maatschappij zonder cultuur",
-                  "Een militaire staat"
-            ],
-            "antwoord": 0,
-            "uitleg": "Nederland werd veelkleurig en pluriform."
+        id: "ex22_v15",
+        type: "invul",
+        vraag: "Hoe noemen we de afspraken over het te voeren beleid die regeringspartijen tijdens de kabinetsformatie vastleggen?",
+        antwoord: "regeerakkoord",
+        uitleg: "Tijdens de kabinetsformatie leggen regeringspartijen hun afspraken vast in een regeerakkoord."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Welk effect had de televisie op de Nederlandse maatschappij?",
-            "opties": [
-                  "Het bevorderde de ontzuiling en verbreedde de horizon van de burger",
-                  "Het deed alle radio's verdwijnen",
-                  "Het veroorzaakte oorlog",
-                  "Het stopte de economie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Televisie bracht de wereld in de huiskamer."
+        id: "ex22_v16",
+        type: "invul",
+        vraag: "Hoe heet het orgaan waarin gekozen leden van één politieke partij in de Tweede Kamer samen zitten?",
+        antwoord: "fractie",
+        uitleg: "De Kamerleden van één partij vormen samen een fractie."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat voor acties voerde de Amsterdamse Provo-beweging uit?",
-            "opties": [
-                  "Ludieke, geweldloze acties tegen de gevestigde orde (zoals het Witte Fietsenplan)",
-                  "Gewelddadige overvallen",
-                  "Stakingen in mijnen",
-                  "Revoluties op straat"
-            ],
-            "antwoord": 0,
-            "uitleg": "Provo daagde de autoriteiten ludiek uit."
+        id: "ex22_v17",
+        type: "invul",
+        vraag: "Op welke dag van de week en in welke maand is jaarlijks Prinsjesdag?",
+        antwoord: "derde dinsdag van september|derde dinsdag september",
+        uitleg: "Prinsjesdag is elk jaar op de derde dinsdag van september."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Wie waren de Indische repatrianten na 1945?",
-            "opties": [
-                  "Mensen van Nederlandse en Nederlands-Indische afkomst die uit Indonesië naar Nederland verhuisden",
-                  "Duitse vluchtelingen",
-                  "Amerikaanse soldaten",
-                  "Franse arbeiders"
-            ],
-            "antwoord": 0,
-            "uitleg": "Repatrianten vestigden zich in Nederland na de dekolonisatie."
+        id: "ex22_v18",
+        type: "invul",
+        vraag: "Hoe heet het gekozen provinciebestuur dat wordt gekozen door de Provinciale Staten?",
+        antwoord: "Gedeputeerde Staten|gedeputeerde staten",
+        uitleg: "De Provinciale Staten kiezen uit hun midden het provinciebestuur: de Gedeputeerde Staten."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Tot welke grote Deltawerken leidde de ramp van februari 1953?",
-            "opties": [
-                  "Tot de bouw van de Deltawerken ter bescherming tegen de zee",
-                  "Tot het afsluiten van het IJsselmeer",
-                  "Tot het dempen van grachten",
-                  "Tot de bouw van Schiphol"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Deltawerken beschermen Zuidwest-Nederland."
+        id: "ex22_v19",
+        type: "open",
+        vraag: "Leg uit waarom het parlement een wetsvoorstel van de regering moet goedkeuren voordat het een wet wordt.",
+        sleutelwoorden: [
+          "controleert/controle",
+          "Tweede en Eerste Kamer/beide kamers"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Het parlement (Tweede en Eerste Kamer) controleert de regering en moet een wetsvoorstel goedkeuren, zodat wetten niet alleen door de regering worden bepaald maar ook democratisch worden gecontroleerd.",
+        uitleg: "De goedkeuring door het parlement zorgt voor democratische controle op wetgeving van de regering."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer ontstond de moderne milieubeweging in Nederland?",
-            "opties": [
-                  "In de jaren 1970 (mede door het rapport van de Club van Rome)",
-                  "In de jaren 1920",
-                  "In 1945",
-                  "In 2010"
-            ],
-            "antwoord": 0,
-            "uitleg": "De jaren 70 brachten milieubewustzijn."
+        id: "ex22_v20",
+        type: "open",
+        vraag: "Leg uit welk compromis het kabinet-Den Uyl sloot over de Oosterschelde en waarom.",
+        sleutelwoorden: [
+          "dam met schuiven/stormvloedkering",
+          "milieu/open houden"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Het kabinet besloot de Oosterschelde niet helemaal af te sluiten en ook niet helemaal open te houden: er kwam een stormvloedkering met schuiven die normaal open staan maar bij hoogwater dichtgaan, zodat het milieu beschermd bleef.",
+        uitleg: "Zo bleef zowel de veiligheid tegen overstromingen als het milieu van de Oosterschelde behouden."
       }
-]
+    ]
   });
 })();

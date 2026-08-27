@@ -1,278 +1,219 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 28 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 28 (20 vragen)
+   Hoofdstuk 6: Naar de wereld van nu — 6.3 De wereld na de Koude Oorlog
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-28",
-    titel: "Proeftoets 28 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))",
+    titel: "Proeftoets 28 — 6.3 De wereld na de Koude Oorlog",
     vak: "Geschiedenis · Hoofdstuk 6",
     hoofdstuk: 6,
     hoofdstukTitel: "Hoofdstuk 6 — Naar de wereld van nu (1990–heden)",
-    icoon: "🌐",
+    icoon: "🕊️",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wat gebeurde er in de jaren 90 na het uiteenvallen van Joegoslavië?",
-            "opties": [
-                  "Er ontstond een hevige etnische burgeroorlog in de Balkan",
-                  "Er werd een vredesunie gevormd",
-                  "Oostenrijk bezette het land",
-                  "Er gebeurde niets"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het uiteenvallen van Joegoslavië veroorzaakte bloedige strijd."
+        id: "ex28_v1",
+        type: "mc",
+        vraag: "Waarvoor werden de Verenigde Naties in 1945 opgericht?",
+        opties: [
+          "Om door internationale samenwerking oorlogen te voorkomen of te beëindigen",
+          "Om alleen handelsverdragen te sluiten",
+          "Om een wereldregering te vormen",
+          "Om enkel humanitaire hulp te bieden bij natuurrampen"
+        ],
+        antwoord: 0,
+        uitleg: "De VN werden in 1945 opgericht om door internationale samenwerking oorlogen te voorkomen of te beëindigen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat vond er plaats in Srebrenica in juli 1995?",
-            "opties": [
-                  "De genocide op meer dan 8.000 moslimmannen en -jongens door Bosnisch-Serwische troepen",
-                  "Een vredesconferentie",
-                  "Een geallieerde overwinning",
-                  "Een bevrijdingsfeest"
-            ],
-            "antwoord": 0,
-            "uitleg": "Srebrenica is de ergste genocide in Europa sinds WO2."
+        id: "ex28_v2",
+        type: "mc",
+        vraag: "Hoeveel Nederlandse militairen kwamen om bij de NAVO-missie in de Afghaanse provincie Uruzgan?",
+        opties: ["9", "19", "90", "190"],
+        antwoord: 1,
+        uitleg: "Bij aanslagen en gevechten met de taliban sneuvelden negentien Nederlandse militairen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wanneer werd de staat Israël gesticht?",
-            "opties": [
-                  "14 mei 1948",
-                  "1 september 1939",
-                  "6 juni 1944",
-                  "11 september 2001"
-            ],
-            "antwoord": 0,
-            "uitleg": "Israël werd in mei 1948 gesticht."
+        id: "ex28_v3",
+        type: "mc",
+        vraag: "Wat deed de NAVO in 2011 in Libië, na toestemming van de VN-Veiligheidsraad?",
+        opties: [
+          "Grondtroepen sturen om Tripoli te bezetten",
+          "Alleen humanitaire hulp bieden aan vluchtelingen",
+          "Luchtaanvallen uitvoeren om de burgers tegen Kadhafi te beschermen",
+          "Een vredesakkoord tussen Kadhafi en de opstandelingen bemiddelen"
+        ],
+        antwoord: 2,
+        uitleg: "De Veiligheidsraad machtigde de NAVO om alle middelen te gebruiken om Libische burgers te beschermen; de NAVO bombardeerde de Libische luchtmacht en troepen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wat vormt de kern van het Arabisch-Israëlische conflict?",
-            "opties": [
-                  "De strijd om land, grenzen en zelfbeschikking tussen de staat Israël en de Palestijnen",
-                  "Strijd om olie in Europa",
-                  "Een ruzie over geld",
-                  "Een meningsverschil in de VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het conflict draait om territorium en status van Jeruzalem."
+        id: "ex28_v4",
+        type: "mc",
+        vraag: "Wat hield de term 'pax Americana' in?",
+        opties: [
+          "Een handelsverdrag tussen de VS en Mexico",
+          "De naam van het Amerikaanse leger na 1945",
+          "Vredesbesprekingen tussen de VS en de Sovjet-Unie",
+          "De langdurige vrede en stabiliteit die de Amerikaanse invloed na 1945 in grote delen van de wereld bracht"
+        ],
+        antwoord: 3,
+        uitleg: "Net als de pax Romana zorgde de Amerikaanse invloed na 1945 voor langdurige vrede en stabiliteit in grote delen van de wereld: de pax Americana."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat veroorzaakte de autoloze zondagen in Nederland in 1973?",
-            "opties": [
-                  "De olieboycot door Arabische olielanden (OPEC) vanwege Nederlandse steun aan Israël",
-                  "Een staking van de pompmedewerkers",
-                  "Een milieuramp",
-                  "Het instorten van de dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Oliecrisis van 1973 leidde tot schaarste en autoloze zondagen."
+        id: "ex28_v5",
+        type: "mc",
+        vraag: "Wat beloofde Israël in het akkoord van 1993 met de PLO, tot stand gekomen onder bemiddeling van Clinton?",
+        opties: [
+          "Zich terug te trekken uit Gaza en de Westelijke Jordaanoever en de Palestijnen zelfbestuur te geven",
+          "De Golan-hoogvlakte terug te geven aan Syrië",
+          "Onmiddellijk een Palestijnse staat te erkennen",
+          "Alle nederzettingen direct te ontruimen"
+        ],
+        antwoord: 0,
+        uitleg: "Israël beloofde zich terug te trekken uit de Gazastrook en de Westelijke Jordaanoever, waarna de Palestijnen daar zelfbestuur zouden krijgen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat gebeurde er op 11 september 2001 in New York en Washington?",
-            "opties": [
-                  "Al Qaida kaperste 4 vliegtuigen en boorde deze in het WTC en Pentagon",
-                  "De Berlijnse Muur viel",
-                  "De euro werd ingevoerd",
-                  "Een Beurskrach vond plaats"
-            ],
-            "antwoord": 0,
-            "uitleg": "9/11 schokte de wereld op 11 september 2001."
+        id: "ex28_v6",
+        type: "mc",
+        vraag: "Waarom verklaarde president Bush jr. na de aanslagen van 2001 de oorlog aan het terrorisme?",
+        opties: [
+          "Om olie uit Irak te veroveren",
+          "Omdat hij vond dat Al Qaida gesteund werd door de regimes van Afghanistan en Irak",
+          "Om de Sovjet-Unie te bestrijden",
+          "Om de Verenigde Naties te versterken"
+        ],
+        antwoord: 1,
+        uitleg: "Bush vond dat Al Qaida gesteund werd door de regimes van Afghanistan en Irak en verdreef die regimes daarom met een aantal bondgenoten."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Wie leidde het terreurnetwerk Al Qaida tijdens 9/11?",
-            "opties": [
-                  "Osama bin Laden",
-                  "Saddam Hoessein",
-                  "Yasser Arafat",
-                  "Muammar Gaddafi"
-            ],
-            "antwoord": 0,
-            "uitleg": "Osama bin Laden gaf leiding aan Al Qaida."
+        id: "ex28_v7",
+        type: "mc",
+        vraag: "Wat veranderde er vanaf 2009 in het buitenlands beleid van de VS onder president Obama?",
+        opties: [
+          "De VS breidden hun leger fors uit",
+          "De VS kozen voor een minder leidende rol en trokken troepen terug uit Afghanistan en Irak",
+          "De VS verklaarden Rusland de oorlog",
+          "De VS traden toe tot de Europese Unie"
+        ],
+        antwoord: 1,
+        uitleg: "Obama koos vanaf 2009 voor een minder leidende rol van de VS in de wereld en trok het leger grotendeels terug uit Afghanistan en Irak."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Welke Amerikaanse president begon de War on Terror?",
-            "opties": [
-                  "George W. Bush",
-                  "Bill Clinton",
-                  "Barack Obama",
-                  "Ronald Reagan"
-            ],
-            "antwoord": 0,
-            "uitleg": "George W. Bush verklaarde de War on Terror."
+        id: "ex28_v8",
+        type: "mc",
+        vraag: "Wat gebeurde er in Zuid-Afrika na de eerste verkiezingen met algemeen kiesrecht in 1994?",
+        opties: [
+          "De apartheid werd uitgebreid",
+          "Er brak een burgeroorlog uit tussen zwart en wit",
+          "Het land werd internationaal geïsoleerd",
+          "Nelson Mandela werd president en vormde een regering van nationale eenheid"
+        ],
+        antwoord: 3,
+        uitleg: "Na de eerste algemene verkiezingen werd Mandela president en vormde hij met de grootste witte partij een regering van nationale eenheid."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat houdt globalisering in?",
-            "opties": [
-                  "De toenemende wereldwijde verbondenheid van economies, culturen en mensen",
-                  "Het bouwen van muren rond landen",
-                  "Het stoppen van internationale handel",
-                  "Het verbieden van internet"
-            ],
-            "antwoord": 0,
-            "uitleg": "Globalisering maakt de wereld tot één markt."
+        id: "ex28_v9",
+        type: "mc",
+        vraag: "Wat deden Poetin in Rusland en Erdoğan in Turkije vanaf de jaren 2000, waardoor hun democratieën onder druk kwamen te staan?",
+        opties: [
+          "Zij vergrootten hun presidentiële macht en beperkten de persvrijheid",
+          "Zij voerden meer verkiezingen in dan voorheen",
+          "Zij gaven hun parlement juist meer macht",
+          "Zij traden vrijwillig af na één termijn"
+        ],
+        antwoord: 0,
+        uitleg: "Beide leiders vergrootten hun presidentiële bevoegdheden ten koste van het parlement en beperkten de persvrijheid."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Welke landen zijn opkomende economische wereldmachten sinds 1990?",
-            "opties": [
-                  "China en India",
-                  "Engeland en Frankrijk",
-                  "Griekenland en Spanje",
-                  "Canada en Mexico"
-            ],
-            "antwoord": 0,
-            "uitleg": "China en India groeiden uit tot economische giganten."
+        id: "ex28_v10",
+        type: "mc",
+        vraag: "Wat was volgens de VN-vluchtelingenorganisatie in 2018 het aantal mensen wereldwijd dat gedwongen ontheemd was?",
+        opties: ["7 miljoen", "meer dan 70 miljoen", "700.000", "7 miljard"],
+        antwoord: 1,
+        uitleg: "In 2018 waren er volgens de VN-vluchtelingenorganisatie meer dan 70 miljoen gedwongen ontheemde mensen wereldwijd."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat veroorzaakt de opwarming van de aarde?",
-            "opties": [
-                  "Het versterkte broeikaseffect door menselijke CO2-uitstoot",
-                  "Veranderingen in het getij",
-                  "De stand van de maan",
-                  "Zonnevlekken alleen"
-            ],
-            "antwoord": 0,
-            "uitleg": "CO2-uitstoot door fossiele brandstoffen leidt tot klimaatverandering."
+        id: "ex28_v11",
+        type: "waaronwaar",
+        vraag: "De rol van de Verenigde Naties werd na de Koude Oorlog groter dan tijdens de Koude Oorlog.",
+        antwoord: true,
+        uitleg: "Waar! Tijdens de Koude Oorlog kon de Veiligheidsraad door de tegenstelling tussen de VS en de Sovjet-Unie weinig doen; daarna groeide de rol van de VN."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat is het hoofddoel van het Klimaatakkoord van Parijs (2015)?",
-            "opties": [
-                  "De opwarming van de aarde beperken tot ruim onder 2°C",
-                  "Het stoppen van alle scheepvaart",
-                  "Het afschaffen van de auto",
-                  "Het bouwen van dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "Parijs 2015 stelt wereldwijde klimaatdoelen."
+        id: "ex28_v12",
+        type: "waaronwaar",
+        vraag: "Na de aanslagen van 2001 koos president Bush voor een terughoudend buitenlands beleid en greep hij nergens meer militair in.",
+        antwoord: false,
+        uitleg: "Niet waar. Bush riep juist een wereldwijde oorlog tegen het terrorisme uit en verdreef met bondgenoten de regimes van Afghanistan en Irak."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wat betekent energietransitie?",
-            "opties": [
-                  "De overgang van fossiele brandstoffen naar duurzame schone energie (zon, wind)",
-                  "Het verhogen van de gasprijzen",
-                  "Het gratis maken van stroom",
-                  "Het bouwen van meer kolencentrales"
-            ],
-            "antwoord": 0,
-            "uitleg": "De energietransitie vervangt olie, gas en kolen."
+        id: "ex28_v13",
+        type: "waaronwaar",
+        vraag: "In Hongarije, Roemenië en Polen kwamen wetten die de onafhankelijkheid van rechters en de persvrijheid juist vergrootten.",
+        antwoord: false,
+        uitleg: "Niet waar. In deze landen kwamen juist wetten en regels die de onafhankelijkheid van rechters en de persvrijheid verkleinden."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Waarom vocht de VN-coalitie tegen Irak in de Eerste Golfoorlog (1991)?",
-            "opties": [
-                  "Omdat Irak het buurland Koeweit had binnengevallen en bezet",
-                  "Omdat Irak de VS bombardeerde",
-                  "Omdat Koeweit de VN aanviel",
-                  "Om olie te stelen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Saddam Hoessein werd uit Koeweit verdreven."
+        id: "ex28_v14",
+        type: "waaronwaar",
+        vraag: "Door de burgeroorlog in Syrië sloeg ongeveer de helft van de bevolking op de vlucht.",
+        antwoord: true,
+        uitleg: "Waar! Zeven miljoen Syriërs vluchtten binnen het eigen land en vijf miljoen naar het buitenland, samen ongeveer de helft van de bevolking."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Welke uitvinding bracht vanaf de jaren 90 een digitale informatierevolutie?",
-            "opties": [
-                  "Het Internet en World Wide Web",
-                  "De telegraaf",
-                  "De radio",
-                  "De televisie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het internet verbond de hele wereld digitaal."
+        id: "ex28_v15",
+        type: "invul",
+        vraag: "Hoeveel Amerikaanse militairen sneuvelden bij de NAVO-missie in Afghanistan?",
+        antwoord: "3000|bijna 3000|ongeveer 3000",
+        uitleg: "Bij aanslagen en gevechten met de taliban sneuvelden bijna 3000 Amerikaanse militairen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat hield de grote EU-uitbreiding van 2004 in?",
-            "opties": [
-                  "Tien nieuwe landen (hoofdzakelijk uit Oost-Europa) traden toe tot de EU",
-                  "Engeland verliet de EU",
-                  "De EU werd ontbonden",
-                  "De euro werd afgeschaft"
-            ],
-            "antwoord": 0,
-            "uitleg": "In 2004 traden 10 nieuwe lidstaten toe."
+        id: "ex28_v16",
+        type: "invul",
+        vraag: "Hoe heette de tweede grote Palestijnse opstand die in 2000 uitbrak, met veel zelfmoordaanslagen?",
+        antwoord: "intifada|tweede intifada|de tweede intifada",
+        uitleg: "In 2000 brak een nieuwe intifada uit, met veel zelfmoordaanslagen op Israëlische burgers en militairen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat gebeurde er tijdens de Arabische Lente in 2011?",
-            "opties": [
-                  "Volksopstanden tegen dictaturen in het Midden-Oosten en Noord-Afrika",
-                  "Een grote droogte",
-                  "Een sportevenement",
-                  "Een handelsakkoord"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Arabische Lente eiste vrijheid en democratie."
+        id: "ex28_v17",
+        type: "invul",
+        vraag: "Welk begrip gebruiken we voor een bestuursvorm met een door het volk gekozen parlement en een grondwet die de vrijheden van burgers beschermt?",
+        antwoord: "liberale democratie|een liberale democratie",
+        uitleg: "Dit is de definitie van een liberale democratie, kenmerkend voor westerse landen tijdens en na de Koude Oorlog."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Tot welk menselijk drama leidde de burgeroorlog in Syrië?",
-            "opties": [
-                  "Een enorme vluchtelingencrisis naar omliggende landen en Europa",
-                  "Een snelle democratische staat",
-                  "Een overwinning van de VN",
-                  "Geen enkel gevolg"
-            ],
-            "antwoord": 0,
-            "uitleg": "Miljoenen Syriërs sloegen op de vlucht."
+        id: "ex28_v18",
+        type: "invul",
+        vraag: "Wie werd vanaf 2013 de autocratische leider van China die de macht binnen de communistische partij naar zich toetrok?",
+        antwoord: "Xi Jinping|Xi",
+        uitleg: "Xi Jinping trok vanaf 2013 de onbeperkte macht naar zich toe en werd een autocraat."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat voor dreiging is cybercriminaliteit?",
-            "opties": [
-                  "Digitale aanvallen op netwerken, overheden en bedrijven via internet",
-                  "Aanvallen met tanks",
-                  "Luchtaanvallen",
-                  "Zee-piraterij"
-            ],
-            "antwoord": 0,
-            "uitleg": "Cyberdreigingen vragen om digitale beveiliging."
+        id: "ex28_v19",
+        type: "open",
+        vraag: "Leg uit waarom stabiliteit in het Midden-Oosten na de Koude Oorlog belangrijk bleef voor het buitenlands beleid van de VS.",
+        sleutelwoorden: [
+          "olie/olie-import",
+          "veiligheid/eigen (economisch) belang"
+        ],
+        minTreffers: 1,
+        modelantwoord: "De VS waren voor een groot deel van hun energievoorziening afhankelijk van olie-import uit het Midden-Oosten, dus stabiliteit in die regio was belangrijk voor de Amerikaanse economie en veiligheid; daarom bemoeiden Amerikaanse presidenten zich actief met vrede in het gebied.",
+        uitleg: "Olie-belangen waren een belangrijke reden voor de actieve Amerikaanse bemoeienis met vrede in het Midden-Oosten."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wat regelt de Schengenzone in Europa?",
-            "opties": [
-                  "Vrij reizen zonder grenscontroles tussen de aangesloten Europese landen",
-                  "Een gezamenlijk leger",
-                  "Gelijke belastingen",
-                  "Eén Europese krant"
-            ],
-            "antwoord": 0,
-            "uitleg": "Schengen schafte de grenscontroles binnenslands af."
+        id: "ex28_v20",
+        type: "open",
+        vraag: "Leg uit wat het verschil is tussen vluchtelingen en economische migranten.",
+        sleutelwoorden: [
+          "vervolging/oorlog/geweld/gedwongen",
+          "levensstandaard verbeteren/vrijwillig"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Vluchtelingen zijn gedwongen hun land te verlaten door vervolging, oorlog of geweld, terwijl economische migranten vrijwillig vertrekken om hun levensstandaard in een ander land te verbeteren.",
+        uitleg: "Het kernverschil is dwang: vluchtelingen hebben geen keuze, economische migranten wel."
       }
-]
+    ]
   });
 })();

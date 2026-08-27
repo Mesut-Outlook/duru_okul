@@ -7,8 +7,16 @@
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstukken overzicht
+  DURU.hoofdstukken = [
+    {
+      nr: 2,
+      titel: "Bouwstenen van stoffen",
+      icoon: "⚛️",
+      kleur: "h2-thema",
+      intro: "Macro- en microniveau, fasen, het periodiek systeem der elementen, metalen en niet-metalen, chemische formuletaal en atoombouw met protonen, neutronen en elektronen.",
+    }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 
