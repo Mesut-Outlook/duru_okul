@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe een takel (katrolstelsel) werkt aan de hand van: 1) de verdeling van de lastkracht over de touwen, 2) de lengte van het touw dat je moet binnenhalen (de Gouden Regel).",
-      sleutelwoorden: ["last wordt gelijk verdeeld over n dragende touwen", "spierkracht is n keer kleiner (F = F_last / n)", "touwlengte is n keer groter (s = n * s_last) / gouden regel"],
+      sleutelwoorden: ["verdeeld/dragende touwen", "spierkracht kleiner", "touwlengte/afstand groter/gouden regel"],
       minTreffers: 2,
       modelantwoord: "1. Bij een takel met n dragende touwdelen wordt het gewicht van de last gelijkmatig verdeeld over alle dragende touwen. Daardoor is de benodigde trekkracht n keer zo klein als het gewicht van de last ({\text{spier}} = F_{\text{last}} / n$). 2. Volgens de Gouden Regel van de Mechanica (behoud van arbeid) moet je echter n keer zoveel touw binnenhalen om de last omhoog te bewegen ({\text{touw}} = n \times s_{\text{last}}$). Wat je aan spierkracht wint, moet je compenseren in trekafstand.",
       uitleg: "Krachtverdeling en touwverplaatsing bij takels."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Op een stadsfiets heeft het voortandwiel (bij de trappers) 44 tanden en het achtertandwiel (bij het achterwiel) 22 tanden. Bereken hoeveel omwentelingen het achterwiel maakt als de fietser de trappers 10 keer ronddraait. Leg uit of het trappen zwaarder of lichter is dan wanneer beide tandwielen even groot zouden zijn.",
-      sleutelwoorden: ["20 omwentelingen / 2x zo snel", "trappen is zwaarder omdat het achterwiel sneller draait"],
+      sleutelwoorden: ["20", "zwaarder"],
       minTreffers: 2,
       modelantwoord: "Berekening: Overbrengingsverhouding = 44 / 22 = 2. Bij 1 pedaalomwenteling draait het achterwiel 2 keer rond. Bij 10 omwentelingen van de trappers maakt het achterwiel dus 0 \times 2 = 20\text{ omwentelingen}$. Uitleg: Omdat het achterwiel twee keer zo snel draait als de trappers, is de benodigde trapkracht twee keer zo groot (zwaarder trappen), maar leg je per pedaalslag een dubbele afstand af.",
       uitleg: "Overbrenging bij fietsversnelling."

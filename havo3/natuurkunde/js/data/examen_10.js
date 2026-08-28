@@ -161,7 +161,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe een <b>relais</b> (automatische schakelaar met elektromagneet) werkt en waarom dit gebruikt wordt om met een kleine veilige stroomkring een zware machine met hoge stroom in te schakelen.",
-      sleutelwoorden: ["elektromagneet trekt anker/schakelaar aan", "stuurstroomkring gescheiden van hoofdstroomkring", "veiligheid/geen zware schakelaar met hoge stroom in handen"],
+      sleutelwoorden: ["elektromagneet trekt anker/schakelaar aan", "stuurstroomkring gescheiden van hoofdstroomkring", "veiligheid/geen hoge stroom"],
       minTreffers: 2,
       modelantwoord: "In een relais loopt een kleine stuurstroom door een spoel. Deze wordt daardoor magnetisch en trekt een ijzeren hefboom (het anker) aan. Hierdoor sluit een zware schakelaar in een tweede, gescheiden stroomkring met hoge spanning/stroom. Dit zorgt ervoor dat de gebruiker alleen de veilige laagspanningsknop hoeft te bedienen en beschermd blijft tegen gevaarlijk hoge stromen.",
       uitleg: "Kern: stuurkring bekrachtigt elektromagneet -> sluit fysieke schakelaar in de zware werkkring."
@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Vergelijk een <b>serieschakeling</b> en een <b>parallelschakeling</b> op de volgende drie punten: 1) stroomverdeling, 2) spanningsverdeling, 3) wat er gebeurt als één lampje kapotgaat.",
-      sleutelwoorden: ["serie stroom gelijk / parallel stroom telt op", "serie spanning verdeelt / parallel spanning overal gelijk", "serie alles uit / parallel andere blijven branden"],
+      sleutelwoorden: ["stroom gelijk/stroom verdeelt", "spanning gelijk/spanning verdeelt", "blijven branden/onafhankelijk"],
       minTreffers: 3,
       modelantwoord: "1. Stroomsterkte: Bij serie is de stroom overal gelijk (I_tot = I_1 = I_2); bij parallel verdeelt de hoofdstroom zich over de takken (I_tot = I_1 + I_2).\n2. Spanning: Bij serie verdeelt de bronspanning zich over de weerstanden (U_tot = U_1 + U_2); bij parallel staat over elke tak de volle bronspanning (U_tot = U_1 = U_2).\n3. Defect: Bij serie gaat bij één kapot lampje de hele kring open en alles uit; bij parallel blijft de rest gewoon onafhankelijk doordraaien.",
       uitleg: "Volledige vergelijking op stroom, spanning en stroomonderbreking."

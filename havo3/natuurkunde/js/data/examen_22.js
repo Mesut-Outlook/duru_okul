@@ -162,7 +162,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Een liniaal van 100 cm ligt uitgebalanceerd op een draaipunt in het midden bij 50 cm. Links hangt bij 20 cm (arm 30 cm) een massa van 200 gram. Rechts hangt bij 70 cm (arm 20 cm) een massa van 150 gram. Toon met een berekening aan of de liniaal in evenwicht is, of naar welke kant hij zal kantelen. (neem g = 10 N/kg)",
-      sleutelwoorden: ["M_links = 0,60 Nm / 60 Ncm", "M_rechts = 0,30 Nm / 30 Ncm", "liniaal kantelt naar links / niet in evenwicht"],
+      sleutelwoorden: ["0,6/0,60/60", "0,3/0,30/30", "links/kantelt links"],
       minTreffers: 2,
       modelantwoord: "Berekening links: - Massa links: m₁ = 0,20 kg -> F₁ = 2,0 N; arm r₁ = 50 - 20 = 30 cm = 0,30 m. - Moment linksom: M_links = 2,0 N × 0,30 m = 0,60 Nm. Berekening rechts: - Massa rechts: m₂ = 0,15 kg -> F₂ = 1,5 N; arm r₂ = 70 - 50 = 20 cm = 0,20 m. - Moment rechtsom: M_rechts = 1,5 N × 0,20 m = 0,30 Nm. Conclusie: M_links (0,60 Nm) > M_rechts (0,30 Nm), dus de liniaal is niet in evenwicht en zal naar links kantelen.",
       uitleg: "Vergelijking van links- en rechtsdraaiende momenten."
@@ -170,7 +170,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom een torenkraan op een bouwplaats zware betonnen contragewichten aan de achterkant heeft en waarom deze gewichten soms verder naar achteren of voren worden geschoven.",
-      sleutelwoorden: ["tegengesteld moment creëren / M_contra compenseert M_last", "voorkomen dat de kraan omvalt / evenwicht", "bij zwaardere last of grotere reikwijdte moet het tegenmoment groter zijn"],
+      sleutelwoorden: ["tegenmoment/tegengesteld moment", "evenwicht/omvallen", "contragewicht"],
       minTreffers: 2,
       modelantwoord: "De contragewichten leveren een tegenmoment aan de achterkant van de kraan om het moment van de gehesen last (aan de voorkant) te compenseren. Hierdoor blijft de totale som van de momenten in balans en kantelt of bezwijkt de kraan niet. Wanneer een zwaardere last of een last op grotere afstand van de mast wordt gehesen, kan het contragewicht naar achteren worden verplaatst om de arm te vergroten, zodat het tegenmoment precies overeenkomt met de belasting.",
       uitleg: "Stabiliteit en momentenbalans bij torenkranen."

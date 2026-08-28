@@ -161,7 +161,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom de eigenschappen van een chemische verbinding (zoals keukenzout, NaCl) totaal anders zijn dan de eigenschappen van de elementen waaruit het is opgebouwd (het zachte, giftige metaal natrium en het giftige chloorgas).",
-      sleutelwoorden: ["chemische reactie vormt nieuwe stof", "nieuwe bindingen / andere rangschikking", "nieuwe stofeigenschappen"],
+      sleutelwoorden: ["binding/bindingen/reactie", "stofeigenschappen/nieuwe stof", "stabiel/rooster/edelgasconfiguratie"],
       minTreffers: 2,
       modelantwoord: "Bij de chemische reactie tussen natrium (een zacht, zilverkleurig en zeer reactief metaal) en chloorgas (een giftig geelgroen gas) gaan de atomen een chemische binding aan en ontstaat de verbinding natriumchloride (NaCl). Doordat de atomen nu in een ionrooster aan elkaar gebonden zijn en een stabiele edelgasconfiguratie hebben gekregen, zijn de stofeigenschappen volledig veranderd in een ongevaarlijk, wit, kristallijn zout dat wij veilig kunnen eten.",
       uitleg: "Verbindingen hebben compleet andere eigenschappen dan de losse elementen."
@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Geef voor het isotoop Koolstof-14 (¹⁴₆C) en het isotoop Stikstof-14 (¹⁴₇N) het aantal protonen, neutronen en elektronen. Leg uit waarom dit twee verschillende elementen zijn ondanks hetzelfde massagetal.",
-      sleutelwoorden: ["C-14: 6 p, 8 n, 6 e", "N-14: 7 p, 7 n, 7 e", "atoomnummer / aantal protonen bepaalt de atoomsoort"],
+      sleutelwoorden: ["6 p/8 n", "7 p/7 n", "protonen/atoomnummer"],
       minTreffers: 3,
       modelantwoord: "Koolstof-14 (¹⁴₆C): Protonen: 6, Neutronen: 14 - 6 = 8, Elektronen: 6. Stikstof-14 (¹⁴₇N): Protonen: 7, Neutronen: 14 - 7 = 7, Elektronen: 7. Verklaring: De chemische identiteit (het element) wordt uitsluitend bepaald door het atoomnummer (het aantal protonen in de kern). Omdat koolstof 6 protonen heeft en stikstof 7 protonen, zijn het twee fundamenteel verschillende elementen met totaal andere chemische eigenschappen, ook al is hun massagetal toevallig allebei 14.",
       uitleg: "Aantal protonen (atoomnummer) definieert het element."

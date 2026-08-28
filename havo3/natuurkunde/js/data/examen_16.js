@@ -167,7 +167,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe je in het natuurkundelokaal met een weegschaal en een maatcilinder met water de dichtheid van een onbekend steentje bepaalt. Noem de metingen, de berekening en de formule.",
-      sleutelwoorden: ["massa wegen op weegschaal", "volume bepalen met onderdompelmethode / V = V_eind - V_begin", "dichtheid berekenen met rho = m / V"],
+      sleutelwoorden: ["massa wegen op weegschaal", "onderdompelmethode/maatcilinder", "dichtheid/massa delen door volume"],
       minTreffers: 3,
       modelantwoord: "1. Weeg het droge steentje op de weegschaal om de massa (m in gram) te bepalen. 2. Vul een maatcilinder met water en lees het beginvolume af (V_begin). Dompel het steentje onder en lees het nieuwe niveau af (V_eind). Het volume van het steentje is V = V_eind - V_begin (in cm³ of mL). 3. Bereken de dichtheid met de formule ρ = m / V (in g/cm³).",
       uitleg: "Massa meten + onderdompelmethode + dichtheidsformule."
@@ -175,7 +175,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Een zwemmer kan blijven drijven in water wanneer hij zijn longen vol lucht zuigt, maar zinkt langzaam wanneer hij helemaal uitblaast. Verklaar dit met behulp van het begrip <b>gemiddelde dichtheid</b>.",
-      sleutelwoorden: ["longen vol lucht vergroot volume", "gemiddelde dichtheid kleiner dan water / drijven", "uitblazen verkleint volume / dichtheid groter dan water / zinken"],
+      sleutelwoorden: ["longen vol/volume groter", "dichtheid kleiner/drijven", "dichtheid groter/zinken"],
       minTreffers: 2,
       modelantwoord: "Met ingeademde longen zet de borstkas uit en neemt het totale volume van het lichaam toe terwijl de massa nauwelijks verandert. Hierdoor wordt de gemiddelde dichtheid van het lichaam kleiner dan die van water (ρ < 1,0 g/cm³), waardoor je drijft. Bij uitademen neemt het volume af, waardoor de gemiddelde dichtheid boven 1,0 g/cm³ stijgt en het lichaam naar beneden zinkt.",
       uitleg: "Verandering van lichaamsvolume beïnvloedt de gemiddelde dichtheid t.o.v. water."

@@ -156,7 +156,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg aan de hand van stroom en spanning uit waarom apparaten in huis parallel worden aangesloten en niet in serie.",
-      sleutelwoorden: ["elk apparaat 230 V / gelijke spanning", "onafhankelijk aan/uit zetten", "bij serie gaat alles uit / spanning verdeelt"],
+      sleutelwoorden: ["230 V/gelijke spanning/volledige spanning", "onafhankelijk aan/uit zetten", "onafhankelijk/alles uit/serie verdeelt"],
       minTreffers: 2,
       modelantwoord: "1. Spanning: In een parallelschakeling staat over elk apparaat de volle 230 V netspanning, zodat elk apparaat op zijn ontwerpspanning werkt. (In serie zou de 230 V zich verdelen en krijgen apparaten te weinig spanning).\n2. Onafhankelijkheid: Elk apparaat heeft een eigen stroomtak. Als je één apparaat uitschakelt of als een lamp kapotgaat, blijven alle andere apparaten gewoon werken.",
       uitleg: "Twee hoofdredenen: constante 230 V spanning overal + onafhankelijke bediening per apparaat."
@@ -164,7 +164,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "In een stekkerdoos sluit iemand tegelijkertijd een waterkoker (9 A), een broodrooster (4 A) en een frituurpan (8 A) aan op dezelfde 16 A groep. Beredeneer of de zekering uitschakelt.",
-      sleutelwoorden: ["totale stroom optellen / I_tot = 9 + 4 + 8 = 21 A", "21 A is groter dan 16 A", "overbelasting / zekering slaat door/schakelt uit"],
+      sleutelwoorden: ["21 A/21", "groter dan 16/overstijgt 16", "overbelasting/zekering/uitschakelen"],
       minTreffers: 2,
       modelantwoord: "Omdat de apparaten parallel staan op de groep, tellen de stromen bij elkaar op: I_tot = 9 A + 4 A + 8 A = 21 A. De zekering van de groep is berekend op maximaal 16 A. Omdat 21 A > 16 A is er sprake van overbelasting en zal de zekering (groepsschakelaar) direct uitschakelen om oververhitting van de bedrading te voorkomen.",
       uitleg: "Totale stroom = 21 A; dit overschrijdt de 16 A grens van de zekering."

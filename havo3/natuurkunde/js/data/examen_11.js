@@ -173,7 +173,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Plaats de volgende vier soorten elektromagnetische straling in volgorde van <b>laagste naar hoogste energie</b> (langste naar kortste golflengte): <i>Röntgenstraling, Infrarood, Radiogolven, Zichtbaar licht</i>. Licht je keuze kort toe.",
-      sleutelwoorden: ["hoe korter de golflengte/kortere golflengte/kleinere golflengte", "hoe hoger de energie/meer energie/hogere energie/energierijker", "radiogolven laagste/radiogolven eerst/radiogolven de langste", "röntgenstraling hoogste/röntgenstraling laatst/röntgenstraling de kortste"],
+      sleutelwoorden: ["korte golflengte/korter", "hogere energie/meer energie", "radiogolven", "röntgen/gammastraling"],
       minTreffers: 3,
       modelantwoord: "Volgorde (van laagste naar hoogste energie / langste naar kortste golflengte):\n1. Radiogolven (laagste frequentie, langste golflengte)\n2. Infrarood\n3. Zichtbaar licht\n4. Röntgenstraling (hoogste frequentie, kortste golflengte, meest energierijk/ioniserend).",
       uitleg: "In het elektromagnetisch spectrum geldt: hoe korter de golflengte, hoe hoger de frequentie en dus hoe meer energie. Radiogolven hebben de langste golflengte en de laagste energie, röntgenstraling de kortste golflengte en de hoogste energie."
@@ -181,7 +181,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom de tandartsassistente de behandelkamer verlaat of achter een loden wand gaat staan wanneer er een röntgenfoto van jouw gebit gemaakt wordt, terwijl jij als patiënt gewoon in de stoel mag blijven zitten.",
-      sleutelwoorden: ["cumulatieve dosis/dagelijks blootgesteld", "patiënt slechts één keer / heel lage dosis", "gezondheidsrisico/stralingsdosis beperken"],
+      sleutelwoorden: ["cumulatieve dosis/dagelijks blootgesteld", "één keer/lage dosis/zelden", "gezondheidsrisico/stralingsdosis beperken"],
       minTreffers: 2,
       modelantwoord: "Als patiënt krijg je slechts af en toe één foto (een verwaarloosbaar kleine stralingsdosis zonder gezondheidsrisico). De assistente maakt echter dagelijks tientallen foto's. Als zij telkens in de ruimte zou blijven, telt de totale opgetelde stralingsdosis (cumulatieve dosis) op tot een gevaarlijk niveau. Daarom moet zij zich beroepsmatig beschermen achter lood.",
       uitleg: "Verschil tussen eenmalige lage dosis voor patiënt en herhaalde beroepsmatige blootstelling."

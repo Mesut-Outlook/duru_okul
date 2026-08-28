@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Vergelijk een <b>vaste katrol</b>, een <b>losse katrol</b> en een <b>takel met 4 touwen</b> op het gebied van: 1) de benodigde spierkracht om een last van 800 N op te tillen, 2) de benodigde touwlengte om de last 1,0 m op te tillen.",
-      sleutelwoorden: ["vaste katrol: F = 800 N, s = 1,0 m", "losse katrol: F = 400 N, s = 2,0 m", "takel met 4 touwen: F = 200 N, s = 4,0 m"],
+      sleutelwoorden: ["800", "400", "200"],
       minTreffers: 3,
       modelantwoord: "1. Vaste katrol: - Spierkracht:  = 800\text{ N}$ (geen krachtwinst, alleen richtingsverandering). - Touwlengte:  = 1{,}0\text{ m}$. 2. Losse katrol (2 dragende touwdelen): - Spierkracht:  = 800 / 2 = 400\text{ N}$ (kracht gehalveerd). - Touwlengte:  = 2 \times 1{,}0 = 2{,}0\text{ m}$. 3. Takel met 4 touwdelen: - Spierkracht:  = 800 / 4 = 200\text{ N}$ (kracht 4× kleiner). - Touwlengte:  = 4 \times 1{,}0 = 4{,}0\text{ m}$.",
       uitleg: "Vergelijking van hefwerktuigen."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Een olifant van 36.000 N staat op 4 poten (elk 50\text{ cm}^2$). Een circusartieste van 540 N balanceert op de punt van één stilettohak (bash{,}30\text{ cm}^2$). Bereken voor beide de druk in N/cm² en leg uit wie van de twee de grootste kans heeft om een houten parketvloer te beschadigen (deukjes te maken).",
-      sleutelwoorden: ["olifant: 36000 / (4 * 450) = 20 N/cm²", "artieste: 540 / 0,30 = 1800 N/cm²", "artieste heeft 90x grotere druk / beschadigt de vloer"],
+      sleutelwoorden: ["20", "1800", "artieste/stiletto"],
       minTreffers: 3,
       modelantwoord: "Berekening olifant: - Totaal oppervlak =  \times 450 = 1800\text{ cm}^2$. - Druk =  / A = 36.000\text{ N} / 1800\text{ cm}^2 = 20\text{ N/cm}^2$. Berekening artieste op stilettohak: - Oppervlak = bash{,}30\text{ cm}^2$. - Druk =  / A = 540\text{ N} / 0{,}30\text{ cm}^2 = 1800\text{ N/cm}^2$. Conclusie: De druk onder de stilettohak (800\text{ N/cm}^2$) is maar liefst 90 keer zo groot als de druk onder de poten van de olifant (0\text{ N/cm}^2$). De artieste op de stilettohak zal dus veel eerder deukjes en putjes in het houten parket drukken.",
       uitleg: "Drukvergelijking tussen grote kracht / groot oppervlak en kleine kracht / miniem oppervlak."

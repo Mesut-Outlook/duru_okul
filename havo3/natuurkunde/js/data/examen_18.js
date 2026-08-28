@@ -173,7 +173,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Benoem de drie vormen van warmtetransport die optreden bij een pannetje soep dat op een gasfornuis warm wordt gemaakt, en leg bij elk uit waar dit in de pan gebeurt.",
-      sleutelwoorden: ["geleiding door de metalen panbodem", "stroming / convectie in de vloeibare soep", "straling van de gasvlam naar de pan / warmtestraling"],
+      sleutelwoorden: ["geleiding", "stroming/convectie", "straling/warmtestraling"],
       minTreffers: 3,
       modelantwoord: "1. Geleiding: De hitte van de vlam trekt via trillende metaalatomen door de stalen panbodem naar de binnenkant van de pan. 2. Stroming (convectie): De soep onderin wordt heet, zet uit, krijgt een lagere dichtheid en stijgt op, terwijl koudere soep naar beneden zakt (circulatie in de vloeistof). 3. Straling: De hete vlam en de hete buitenkant van de pan zenden infrarode warmtestraling uit naar de omgeving.",
       uitleg: "Geleiding door de bodem, stroming in de soep en straling van de vlam/pan."
@@ -181,7 +181,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom het dak van een woning vaak als eerste geïsoleerd wordt bij een energiebesparende renovatie. Betrek daarin de eigenschappen van <b>warme lucht</b>.",
-      sleutelwoorden: ["warme lucht stijgt op / convectie", "hoogste temperatuur onder het dak", "grootste warmteverlies via het dak"],
+      sleutelwoorden: ["warme lucht stijgt op/convectie", "onder het dak/bovenin", "warmteverlies via dak/dakisolatie"],
       minTreffers: 2,
       modelantwoord: "Doordat warme lucht uitzet en een lagere dichtheid heeft dan koude lucht, stijgt warme lucht in het hele huis van nature op naar de bovenste verdieping (stroming/convectie). Hierdoor is de temperatuur direct onder het dak het allerhoogst, waardoor het temperatuurverschil met de buitenlucht en dus het warmteverlies door het ongeïsoleerde dak het grootst is (tot wel 30% van het totale verlies).",
       uitleg: "Opstijgende warme lucht veroorzaakt het grootste temperatuurverschil en warmteverlies bij het dak."

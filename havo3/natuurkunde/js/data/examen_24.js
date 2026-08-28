@@ -175,7 +175,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg het werkingsprincipe van een <b>hydraulisch remsysteem</b> in een auto uit. Vertel wat er gebeurt vanaf het intrappen van het rempedaal tot het klemmen van de remblokken op de wielen.",
-      sleutelwoorden: ["rempedaal duwt kleine zuiger in de hoofdremcilinder", "druk plant zich via de remvloeistof gelijkmatig voort", "grotere zuigers bij de wielen drukken met grote kracht de remblokken vast"],
+      sleutelwoorden: ["hoofdremcilinder/kleine zuiger", "remvloeistof/remolie/druk", "grotere zuiger/remblokken"],
       minTreffers: 2,
       modelantwoord: "1. Wanneer de bestuurder op het rempedaal trapt, duwt een hefboom een kleine zuiger in de hoofdremcilinder naar binnen. 2. De remvloeistof (remolie) wordt samengeperst; omdat vloeistoffen niet samendrukbaar zijn, plant deze druk zich ogenblikkelijk en gelijkmatig door alle remleidingen voort naar de wielen. 3. Bij de wielen duwt de vloeistofdruk tegen grotere wielremcilinders (remklauwen). Doordat deze zuigers een groter oppervlak hebben, ontstaat er een sterk vergrote klemkracht waarmee de remblokken tegen de remschijven worden gedrukt om de auto af te remmen.",
       uitleg: "Hydraulische krachtvergroting in voertuigremmen."
@@ -183,7 +183,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Een bergwandelaar van 80 kg zakt met zijn wandelschoenen (totaal oppervlak  = 400\text{ cm}^2$) diep weg in het zachte ijs. Hij besluit sneeuwschoenen onder te binden (totaal oppervlak  = 2000\text{ cm}^2$). Bereken voor beide situaties de druk in N/cm² en leg uit waarom hij nu niet meer wegzakt. (neem g = 10 N/kg)",
-      sleutelwoorden: ["F = 800 N", "p_schoenen = 800 / 400 = 2,0 N/cm²", "p_sneeuwschoenen = 800 / 2000 = 0,4 N/cm²", "druk is 5x zo klein geworden"],
+      sleutelwoorden: ["800", "2/2,0", "0,4", "kleiner/5x"],
       minTreffers: 3,
       modelantwoord: "Gewicht wandelaar:  = m \times g = 80\text{ kg} \times 10\text{ N/kg} = 800\text{ N}$. 1. Met gewone wandelschoenen:  = F / A = 800\text{ N} / 400\text{ cm}^2 = 2{,}0\text{ N/cm}^2$ (oftewel 0.000\text{ Pa}$). 2. Met sneeuwschoenen:  = F / A = 800\text{ N} / 2000\text{ cm}^2 = 0{,}4\text{ N/cm}^2$ (oftewel 000\text{ Pa}$). Verklaring: Doordat het oppervlak met een factor 5 is vergroot, is de druk op de sneeuw met een factor 5 gedaald van 2,0 naar 0,4 N/cm². Deze druk is lager dan de draagkracht van het sneeuwdek, waardoor hij niet meer wegzakt.",
       uitleg: "Drukberekening en vergelijking bij sneeuwschoenen."

@@ -167,7 +167,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom water uitermate geschikt is als transportmiddel in een centrale verwarmingsinstallatie (cv) in woonhuizen. Betrek daarin de <b>soortelijke warmte</b> van water.",
-      sleutelwoorden: ["zeer hoge soortelijke warmte", "veel warmte opnemen en vasthouden bij kleine volumestroom", "langzaam afkoelen / efficiënt warmtetransport"],
+      sleutelwoorden: ["zeer hoge soortelijke warmte", "hoge soortelijke warmte/veel warmte", "warmtetransport/langzaam afkoelen"],
       minTreffers: 2,
       modelantwoord: "Water heeft een uitzonderlijk hoge soortelijke warmte (4180 J/kg·K). Dit betekent dat een relatief kleine hoeveelheid rondgepompt water in de cv-ketel een enorme hoeveelheid warmte-energie kan opnemen en transporteren naar de radiatoren in de kamers zonder snel drastisch af te koelen. Bovendien is water goedkoop, vloeibaar en veilig.",
       uitleg: "Hoge warmtecapaciteit maakt water ideaal voor efficiënt warmtetransport."
@@ -175,7 +175,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Een warm stuk koper van 200 gram met een temperatuur van 90 °C wordt in een bekerglas met 300 gram water van 20 °C gelegd. Leg uit wat er gebeurt met de warmte en de eindtemperatuur van het mengsel.",
-      sleutelwoorden: ["warmte stroomt van koper naar water", "koper koelt af, water warmt op", "thermisch evenwicht / zelfde eindtemperatuur"],
+      sleutelwoorden: ["warmte stroomt/koper naar water", "koper koelt af, water warmt op", "thermisch evenwicht/eindtemperatuur"],
       minTreffers: 2,
       modelantwoord: "Het hete koper staat warmte af aan het koudere water. Omdat energie behouden blijft (Q_afgestaan = Q_opgenomen), koelt het koper af en stijgt de temperatuur van het water totdat beide stoffen dezelfde eindtemperatuur bereiken (thermisch evenwicht). Omdat water een veel grotere soortelijke warmte en massa heeft, ligt de eindtemperatuur veel dichter bij de 20 °C van het water dan bij de 90 °C van het koper.",
       uitleg: "Warmteoverdracht tot thermisch evenwicht; water bepaalt grotendeels de eindtemperatuur door hoge c."

@@ -167,7 +167,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe een <b>automatische brandmelder</b> met een <b>NTC-weerstand</b> werkt wanneer er brand uitbreekt in een kamer.",
-      sleutelwoorden: ["temperatuur stijgt door vuur/brand", "weerstand van NTC daalt", "stroom neemt toe / spanning verandert", "schakeling activeert sirene/alarm"],
+      sleutelwoorden: ["temperatuur stijgt door vuur/brand", "weerstand van NTC daalt", "weerstand daalt/stroom stijgt", "schakeling activeert sirene/alarm"],
       minTreffers: 3,
       modelantwoord: "Wanneer er brand uitbreekt, stijgt de kamertemperatuur snel. Door de hitte daalt de weerstand van de NTC-sensor sterk. Hierdoor neemt de stroomsterkte in de sensorserieketen toe (of verandert de deelspanning over de sensor). Een elektronische schakeling detecteert dat de grenswaarde wordt overschreden en stuurt direct een stroom naar de alarmsirene.",
       uitleg: "Hitte -> weerstand NTC daalt -> stroom stijgt / spanning kantelt -> sirene gaat af."
@@ -175,7 +175,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Vergelijk een koperen kookpan met een dikke aluminium kookpan op het gebied van <b>warmtegeleiding</b>, <b>massa</b> en <b>warmtecapaciteit</b>.",
-      sleutelwoorden: ["koper geleidt warmte beter dan aluminium", "aluminium is lichter / lagere dichtheid", "aluminium heeft hogere soortelijke warmte"],
+      sleutelwoorden: ["koper betere geleider/sneller warm", "aluminium lichter/goedkoper", "soortelijke warmte"],
       minTreffers: 2,
       modelantwoord: "1. Warmtegeleiding: Koper heeft een hogere warmtegeleidingscoëfficiënt dan aluminium en verdeelt de warmte vanaf de vlam nog sneller en gelijkmatiger over de panbodem. 2. Massa: Aluminium heeft een veel lagere dichtheid (2,7 g/cm³ vs. 8,9 g/cm³), waardoor een aluminium pan veel lichter en handzamer is. 3. Warmtecapaciteit: Aluminium heeft een hogere soortelijke warmte (880 J/kg·K vs. 390 J/kg·K), waardoor het relatief veel warmte vasthoudt.",
       uitleg: "Vergelijking op geleiding (λ), dichtheid (massa) en soortelijke warmte (c)."

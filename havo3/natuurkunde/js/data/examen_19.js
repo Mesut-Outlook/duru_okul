@@ -161,7 +161,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beredeneer met behulp van de formule R = (ρ · l) / A wat er gebeurt met de weerstand van een draad als je: 1) de lengte verdrievoudigt, 2) de doorsnede verdubbelt, 3) beide tegelijk doet.",
-      sleutelwoorden: ["1) lengte 3x zo lang -> weerstand 3x zo groot", "2) doorsnede 2x zo groot -> weerstand gehalveerd / 0,5x", "3) beide -> factor 3/2 = 1,5x zo groot"],
+      sleutelwoorden: ["3x zo groot/3x groter", "2) doorsnede 2x zo groot -> weerstand gehalveerd / 0,5x", "3) beide -> factor 3/2 = 1,5x zo groot"],
       minTreffers: 3,
       modelantwoord: "1. Lengte verdrievoudigen: Omdat R ~ l, wordt de weerstand 3 keer zo groot (3×). 2. Doorsnede verdubbelen: Omdat R ~ 1/A, wordt de weerstand gehalveerd (0,5×). 3. Beide tegelijk: De nieuwe weerstand wordt 3 / 2 = 1,5 keer zo groot als de oorspronkelijke weerstand.",
       uitleg: "Evenredigheden in de draadweerstandsformule."
@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom hoogspanningskabels vaak van aluminium met een stalen kern gemaakt worden in plaats van massief koper, ondanks dat koper een iets betere geleider is.",
-      sleutelwoorden: ["aluminium is veel lichter / lagere dichtheid", "stalen kern geeft treksterkte", "koper is te zwaar en te duur voor lange overspanningen"],
+      sleutelwoorden: ["lichter/lage dichtheid", "stalen kern geeft treksterkte", "koper te zwaar/duur"],
       minTreffers: 2,
       modelantwoord: "Koper heeft een hoge dichtheid (8,9 g/cm³) en is erg zwaar en duur. Aluminium heeft een veel lagere dichtheid (2,7 g/cm³) en is ruim drie keer zo licht. Hierdoor kunnen hoogspanningsmasten veel verder uit elkaar staan zonder dat de kabels door hun eigen gewicht breken. De stalen binnenkern zorgt voor de nodige mechanische treksterkte, terwijl het aluminium de stroom geleidt.",
       uitleg: "Afweging tussen elektrische geleidbaarheid, gewicht (dichtheid), mechanische sterkte en kosten."

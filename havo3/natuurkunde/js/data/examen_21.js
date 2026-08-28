@@ -173,7 +173,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe je met behulp van een geodriehoek de <b>arm van een kracht</b> correct opmeet in een natuurkundige tekening.",
-      sleutelwoorden: ["werklijn van de kracht doortrekken / tekenen", "loodlijn tekenen vanuit het draaipunt op de werklijn", "afstand van draaipunt tot snijpunt opmeten"],
+      sleutelwoorden: ["werklijn", "loodlijn/loodrecht", "afstand"],
       minTreffers: 2,
       modelantwoord: "1. Teken of verleng de werklijn van de kracht met een stippellijn in beide richtingen. 2. Leg de nullijn van de geodriehoek langs de werklijn en schuif totdat de liniaal door het draaipunt (D) gaat. 3. Teken een loodrechte lijn (hoek van 90°) vanuit het draaipunt naar de werklijn. 4. Meet de lengte van deze loodlijn op; dat is de arm van de kracht (r).",
       uitleg: "De arm is altijd de loodrechte afstand van draaipunt tot werklijn."
@@ -181,7 +181,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Noem twee voorbeelden van een <b>dubbelzijdige hefboom</b> en twee voorbeelden van een <b>enkelzijdige hefboom</b> uit het dagelijks leven.",
-      sleutelwoorden: ["dubbelzijdig: schaar / wipwap / koevoet / combinatietang", "enkelzijdig: kruiwagen / notenkraker / flesopener / pincet / nagelknipper"],
+      sleutelwoorden: ["schaar/wipwap/koevoet", "kruiwagen/notenkraker/flesopener/pincet"],
       minTreffers: 2,
       modelantwoord: "Dubbelzijdige hefbomen (draaipunt ligt tussen de twee krachten): 1. Schaar (of snoeischaar), 2. Wipwap (of koevoet/combinatietang). Enkelzijdige hefbomen (beide krachten liggen aan dezelfde kant van het draaipunt): 1. Kruiwagen, 2. Notenkraker (of flesopener/pincet).",
       uitleg: "Classificatie van hefbomen in het dagelijks leven."

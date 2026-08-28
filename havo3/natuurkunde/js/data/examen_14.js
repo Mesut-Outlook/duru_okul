@@ -181,7 +181,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Waarom is een <b>MRI-scan</b> voor het onderzoeken van zachte weefsels (zoals hersenen en spieren) vaak veiliger en geschikter dan een CT-scan?",
-      sleutelwoorden: ["geen ioniserende straling / werkt met magneten", "beter contrast voor zacht weefsel", "geen stralingsbelasting"],
+      sleutelwoorden: ["geen ioniserende straling/magneetveld/onschadelijk", "zacht weefsel/contrast/hersenen", "geen stralingsbelasting"],
       minTreffers: 2,
       modelantwoord: "Een MRI-scan maakt gebruik van een sterk magneetveld en radiogolven (geen ioniserende straling), waardoor er geen stralingsbelasting of risico op DNA-schade is. Bovendien geeft MRI een veel scherper contrast en meer detail bij zachte weefsels (zoals hersenen, pezen, kraakbeen en spieren) vergeleken met röntgen- of CT-scans.",
       uitleg: "Geen stralingsrisico + superieur contrast bij weke delen."

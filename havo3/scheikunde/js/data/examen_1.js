@@ -173,7 +173,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit wat het verschil is tussen een <b>chemische reactie</b> en een <b>faseovergang</b> op microniveau.",
-      sleutelwoorden: ["bij reactie veranderen moleculen / nieuwe stoffen", "bij faseovergang blijven moleculen hetzelfde / alleen afstand/beweging verandert"],
+      sleutelwoorden: ["faseovergang/moleculen hetzelfde", "reactie/nieuwe stoffen/hergroeperen"],
       minTreffers: 2,
       modelantwoord: "Bij een faseovergang (zoals smelten of verdampen) blijven de moleculen zelf volledig intact en onveranderd; alleen de afstand tussen de moleculen en hun onderlinge bewegingssnelheid verandert. Bij een chemische reactie worden de atoombindingen in de beginmoleculen verbroken en hergroeperen de atomen zich tot compleet nieuwe soorten moleculen (reactieproducten met andere stofeigenschappen).",
       uitleg: "Moleculen behouden vs. moleculen worden hergegroepeerd tot nieuwe stoffen."
@@ -181,7 +181,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beschrijf de drie fasen van een stof (vast, vloeibaar, gas) op microniveau aan de hand van: 1) de afstand tussen de moleculen, 2) de beweging van de moleculen.",
-      sleutelwoorden: ["vast: dicht op elkaar, vaste plaats / trillen", "vloeibaar: dicht op elkaar, bewegen langs elkaar", "gas: grote afstand, vrij en snel kriskras bewegen"],
+      sleutelwoorden: ["vast/trillen/rooster", "vloeibaar/langs elkaar", "gas/vrij/afstand"],
       minTreffers: 3,
       modelantwoord: "1. Vast (s): De moleculen zitten heel dicht op elkaar op vaste roosterplaatsen en kunnen alleen trillen om hun evenwichtsstand. 2. Vloeibaar (l): De moleculen zitten nog steeds dicht bij elkaar, maar hebben geen vaste positie en kunnen kriskras langs elkaar heen glijden. 3. Gas (g): De afstand tussen de moleculen is zeer groot (veel lege ruimte) en de moleculen bewegen met hoge snelheden volkomen vrij kriskras door de ruimte.",
       uitleg: "Microniveau beschrijving van vast, vloeibaar en gas."

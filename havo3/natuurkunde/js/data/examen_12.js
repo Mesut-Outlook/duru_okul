@@ -187,7 +187,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "In een laboratorium wordt de activiteit van een onbekende radioactieve stof gemeten. Op $t = 0$ is de activiteit 1200 Bq. Na 45 minuten is de activiteit gedaald naar 150 Bq. Bereken de <b>halveringstijd</b> van deze stof.",
-      sleutelwoorden: ["3 halveringstijden", "1200 -> 600 -> 300 -> 150", "45 / 3 = 15 minuten"],
+      sleutelwoorden: ["3 halveringstijden", "150/drie halveringstijden", "15 minuten/15 min/15"],
       minTreffers: 2,
       modelantwoord: "De activiteit halveert van 1200 -> 600 (1x) -> 300 (2x) -> 150 Bq (3x). Er zijn dus 3 halveringstijden verstreken in 45 minuten. De halveringstijd is dus: t₁/₂ = 45 minuten / 3 = 15 minuten.",
       uitleg: "Drie opeenvolgende halveringen in 45 min -> halveringstijd is 15 minuten."

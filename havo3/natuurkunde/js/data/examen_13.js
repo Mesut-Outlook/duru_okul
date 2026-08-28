@@ -173,7 +173,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom het opruimen van radioactief stof na een kernongeval veel gevaarlijker is dan het passeren van een röntgenapparaat. Gebruik de begrippen <b>besmetting</b>, <b>bestraling</b> en <b>stralingsduur</b>.",
-      sleutelwoorden: ["röntgen is alleen kortstondige bestraling", "radioactief stof veroorzaakt besmetting", "blijft continu van binnenuit stralen"],
+      sleutelwoorden: ["kortstondig/foto/buitenaf", "radioactief stof veroorzaakt besmetting", "van binnenuit/in het lichaam/tracer"],
       minTreffers: 2,
       modelantwoord: "Bij een röntgenapparaat is er slechts sprake van kortstondige bestraling van buitenaf; zodra het apparaat uit staat is er geen straling meer. Radioactief stof veroorzaakt echter besmetting: als de deeltjes op je kleding/huid komen of worden ingeademd/ingeslikt, blijven ze 24 uur per dag van binnenuit je organen bestralen (zeer lange stralingsduur), wat leidt tot ernstige DNA- en weefselschade.",
       uitleg: "Kortstondige externe bestraling vs. continue langdurige inwendige besmetting."

@@ -186,7 +186,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Geef voor een atoom van Fosfor-31 (³¹₁₅P) het aantal: 1) protonen, 2) neutronen, 3) elektronen, 4) de elektronenverdeling over de schillen (K, L, M).",
-      sleutelwoorden: ["15 protonen", "16 neutronen", "15 elektronen", "elektronenverdeling: 2, 8, 5"],
+      sleutelwoorden: ["15 protonen/15 p", "16 neutronen/16 n", "15 elektronen/15 e", "2, 8, 5/2,8,5"],
       minTreffers: 3,
       modelantwoord: "Voor Fosfor-31 (³¹₁₅P): 1. Aantal protonen = atoomnummer = 15, 2. Aantal neutronen = massagetal - atoomnummer = 31 - 15 = 16, 3. Aantal elektronen = aantal protonen = 15, 4. Elektronenverdeling: K-schil: 2, L-schil: 8, M-schil: 5 (notatie: 2, 8, 5).",
       uitleg: "Bepaling van kernsamenstelling en schillenverdeling."
@@ -194,7 +194,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beschrijf in grote lijnen de historische ontwikkeling van het atoommodel van <b>Dalton</b> via <b>Thomson</b> en <b>Rutherford</b> naar <b>Bohr</b>.",
-      sleutelwoorden: ["Dalton: massieve ondeelbare bol", "Thomson: krentenbol met elektronen", "Rutherford: kleine positieve kern + lege ruimte", "Bohr: elektronen in schillen"],
+      sleutelwoorden: ["Dalton/massief/bol", "Thomson/krentenbol/elektron", "Rutherford/kern/leeg", "Bohr/schillen"],
       minTreffers: 3,
       modelantwoord: "1. Dalton (1803): Het atoom is een massief en ondeelbaar bolletje per element. 2. Thomson (1897): Ontdekte het elektron; het atoom is een positieve bol waarin negatieve elektronen zitten als krenten in een krentenbol. 3. Rutherford (1911): Ontdekte via goudfolie dat het atoom grotendeels leeg is, met een extreem kleine, zware positieve atoomkern en elektronen eromheen. 4. Bohr (1913): Verfijnde dit door aan te tonen dat elektronen in vaste schillen (K, L, M) om de kern draaien.",
       uitleg: "De 4 klassieke atoommodellen in chronologische volgorde."

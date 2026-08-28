@@ -151,7 +151,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom het vervangen van oude 50 W halogeenspots door 5 W LED-lampen op jaarbasis veel geld bespaart, terwijl de lichtopbrengst hetzelfde blijft.",
-      sleutelwoorden: ["lager vermogen / 10x minder Watt", "E = P * t dus 10x minder kWh energie", "minder warmteverlies / hoger rendement"],
+      sleutelwoorden: ["lager vermogen/minder Watt", "minder energie/minder kWh", "rendement/minder warmte"],
       minTreffers: 2,
       modelantwoord: "Een 5 W LED levert evenveel nuttig licht als een 50 W halogeenlamp omdat LED-verlichting een veel hoger rendement heeft (verliest nauwelijks energie aan warmte). Omdat het vermogen 10 keer zo laag is (5 W i.p.v. 50 W), verbruikt de lamp volgens E = P × t tien keer minder kilowattuur (kWh) aan energie over dezelfde branduren, waardoor de elektriciteitskosten met 90% dalen.",
       uitleg: "Hoger rendement -> lager elektrisch vermogen voor zelfde licht -> drastisch minder kWh-verbruik."
