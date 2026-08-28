@@ -172,7 +172,7 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit waarom een passagier in een bus naar voren schiet als de bus plotseling heel hard moet remmen. Gebruik het begrip <b>traagheid</b> (of eerste wet van Newton).",
+      vraag: "Leg uit waarom een passagier in een bus naar voren schiet als de bus plotseling heel hard moet remmen. Gebruik in je antwoord de <b>eerste wet van Newton</b>.",
       sleutelwoorden: ["traagheid/massa", "snelheid behouden/doorbewegen/vooruit blijven gaan"],
       minTreffers: 2,
       modelantwoord: "Door de traagheid (massa) van de passagier wil het lichaam zijn voorwaartse snelheid behouden. De bus remt af door de remmen, maar op de passagier werkt op dat moment nog geen achterwaartse kracht, waardoor de passagier met zijn oorspronkelijke snelheid naar voren doorglijdt/doorschiet.",

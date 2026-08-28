@@ -76,8 +76,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Als twee tandwielen direct in elkaar grijpen, draaien ze in tegengestelde richting van elkaar.",
-      antwoord: true,
+      vraag: "Als twee tandwielen direct in elkaar grijpen, draaien ze altijd in precies dezelfde richting.",
+      antwoord: false,
+      uitleg: "Niet waar. Twee in elkaar grijpende tandwielen draaien altijd in tegengestelde richting van elkaar (tandwiel 1 rechtsom -> tandwiel 2 linksom).",
       uitleg: "Waar. Tandwiel 1 draait met de klok mee -> tandwiel 2 draait tegen de klok in."
     },
     {
@@ -112,8 +113,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Bij een racefiets kies je bij het beklimmen van een steile berg een klein voortandwiel (bij de trappers) en een groot achtertandwiel (bij het achterwiel) om lichter te kunnen trappen.",
-      antwoord: true,
+      vraag: "Bij een racefiets kies je bij het beklimmen van een steile berg juist het allergrootste voortandwiel en kleinste achtertandwiel om lichter te kunnen trappen.",
+      antwoord: false,
+      uitleg: "Niet waar. Bergop schakel je juist naar een klein voortandwiel en groot achtertandwiel; groot voor en klein achter is voor maximale eindsnelheid bergaf.",
       uitleg: "Waar. Hierdoor hoef je minder spierkracht te zetten, maar moet je vaker trappen (meer omwentelingen maken)."
     },
     {

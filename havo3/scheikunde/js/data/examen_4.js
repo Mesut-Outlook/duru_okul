@@ -148,8 +148,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Volgens het atoommodel van Bohr bewegen elektronen zich in vaste <b>elektronenschillen</b> (K, L, M) op specifieke afstanden rond de kern.",
-      antwoord: true,
+      vraag: "Volgens het atoommodel van Bohr bevinden de protonen en elektronen zich samen vast in de atoomkern en zweven de neutronen in schillen eromheen.",
+      antwoord: false,
+      uitleg: "Niet waar. In de kern zitten protonen en neutronen; de elektronen bewegen in de elektronenschillen (K, L, M) rond de kern.",
       uitleg: "Waar. De K-schil kan max 2 elektronen bevatten, de L-schil max 8, de M-schil max 18 (of 8 bij de eerste perioden)."
     },
     {

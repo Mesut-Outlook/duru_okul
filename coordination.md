@@ -60,9 +60,28 @@ kusurlardan türetildi. **Her yeni soru dosyasında bunlara uy; üretimi bitirin
 8. **Her soruda dolu `uitleg`.** Yalnız "Waar." yeterli değil — neden doğru olduğunu bir cümleyle yaz.
 9. **Soru metnine numara koyma.** Arayüz zaten "Vraag 3 van 20" yazıyor; `vraag: "3. ..."` çift numara üretir.
 10. **Teslimden önce `node --check`.** Aşağıdaki hata bunun atlandığını gösteriyor.
+11. **`open` sorularda `sleutelwoorden` = KISA ANAHTAR, cümle değil.** Motor (`exams.js:269`)
+    `tekst.indexOf(alternatif)` ile **birebir alt-dizi** arar. `"1200 -> 600 -> 300 -> 150"` ya da
+    `"koper is te zwaar en te duur voor lange overspanningen"` gibi 6–12 kelimelik bir anahtar,
+    öğrencinin o cümleyi kelimesi kelimesine yazmasını şart koşar → doğru cevap bile **0 puan** alır.
+    Kural: her `sleutelwoord` **1–3 kelimelik** bir terim olsun (`"kernafval"`, `"turbine"`,
+    `"geen CO2"`), alternatifleri `/` ile ver (`"kernafval/radioactief afval"`). Uzun açıklama
+    `modelantwoord`'a yazılır, `sleutelwoorden`'e değil. Ayrıca **`minTreffers` ≤ sleutelwoord sayısı**
+    olmalı (aksi hâlde soru asla "goed" olamaz) ve anahtara `"voordeel:"` gibi önek koyma.
 
 **Kendi kendini denetleme:** `node /path/to/scratchpad/gate.js <vak>` bu kuralların 11'ini birden
 ölçer. Opus her teslimi bu kapıdan geçiriyor; sen de geçir ki iş geri dönmesin.
+
+### 🔴 agy — TEKRARLAYAN HATA: çok satırlı string (2026-08-28)
+**Aynı hatayı üçüncü kez yaptın.** JS'te çift tırnaklı string **gerçek satır sonu içeremez**.
+`modelantwoord`/`uitleg` alanına maddeli liste yazarken satır sonu bırakınca dosya söz dizimi
+hatası veriyor ve o dosyadaki hiçbir soru yüklenmiyor.
+- 10:54'te `natuurkunde/examen_21..25` (sen düzelttin ✅)
+- 11:19'da `economie/js/data/examen_1.js` — **Opus düzeltti**. Bu ders `havo3/economie/` idi:
+  TASK-06'da "referans, salt-oku" denmişti. Genişletmen iyi oldu ama **bozuk bıraktın** ve ders
+  tamamen çalışmaz hâldeydi.
+**Çözüm:** satır sonu gerekiyorsa `\n` kaçışı kullan (`"1. ...\n2. ..."`) ya da backtick
+template string'e geç. **Her dosyada `node --check`** çalıştırmadan commit etme.
 
 ### 🔴 agy — ACİL: 5 bozuk dosya (2026-08-28 10:54)
 `havo3/natuurkunde/js/data/examen_21.js`, `examen_22.js`, `examen_23.js`, `examen_24.js`,
@@ -111,6 +130,11 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
      Geschiedenis'te ölçü **≥1500 karakter** (orada 2764–4641 oldu). Duru bu sayfadan çalışacak;
      tanım + örnek + formül kutusu içerecek kadar doldur.
   3. **onderwerp başına soru sayısı** 6–7; hedef **8**.
+  4. **`open` sorularda anahtar-cümle sorunu (ACİL — 15 soru)** — yukarıdaki 11. kural. Etkilenen:
+     natuurkunde `ex-h3-natuurkunde-8#20, 9#19, 9#20, 12#20, 17#19, 17#20, 19#19, 19#20, 20#20,
+     21#19, 22#20, 23#19, 23#20, 24#19, 24#20, 25#19`; scheikunde `ex-h3-scheikunde-1#20, 4#20, 5#20`.
+     Bu sorular şu an doğru cevaplansa bile 0 puan veriyor. `sleutelwoorden`'i kısa terimlere indir,
+     soru metnine ve `modelantwoord`'a dokunma. (`ex-h3-natuurkunde-15#20`'yi Opus düzeltti — örnek al.)
 - **Kabul kriterleri**: yukarıdaki "agy'YE: SORU ÜRETİM KURALLARI" bloğunun 10 maddesi +
   `gate.js <vak>` 12 kuralı. Teslimden önce **her dosyada `node --check`** (geçen sefer 5 dosya
   bozuk gelmişti). `index.html`'e doğru grupta ekle, `?v=` bump et.

@@ -82,8 +82,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Bij een vaste katrol moet je precies evenveel meter touw binnenhalen als de hoogte waarover de last stijgt ({\text{touw}} = s_{\text{last}}$).",
-      antwoord: true,
+      vraag: "Bij een vaste katrol hoef je slechts de helft van de touwlengte binnen te halen vergeleken met de hoogte waarover de last stijgt.",
+      antwoord: false,
+      uitleg: "Niet waar. Een vaste katrol verandert alleen de richting; s_touw is exact gelijk aan s_last (geen afstandswinst en geen krachtwinst).",
       uitleg: "Waar. Een vaste katrol verandert alleen de richting, niet de kracht en niet de afstand."
     },
     {
@@ -142,8 +143,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Als je een schroef losdraait met een schroevendraaier met een dikker handvat, kun je met dezelfde handkracht een groter draaimoment uitoefenen.",
-      antwoord: true,
+      vraag: "Een schroevendraaier met een dunner handvat levert bij dezelfde handkracht een groter draaimoment dan een met een dik handvat.",
+      antwoord: false,
+      uitleg: "Niet waar. Een dikker handvat heeft een grotere straal (arm r), waardoor het moment M = F × r juist groter is.",
       uitleg: "Waar. De straal (arm r) van het dikke handvat is groter, waardoor M = F × r toeneemt."
     },
     {

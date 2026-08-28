@@ -173,10 +173,10 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Plaats de volgende vier soorten elektromagnetische straling in volgorde van <b>laagste naar hoogste energie</b> (langste naar kortste golflengte): <i>Röntgenstraling, Infrarood, Radiogolven, Zichtbaar licht</i>. Licht je keuze kort toe.",
-      sleutelwoorden: ["radiogolven", "infrarood", "zichtbaar licht", "röntgenstraling"],
-      minTreffers: 4,
+      sleutelwoorden: ["hoe korter de golflengte/kortere golflengte/kleinere golflengte", "hoe hoger de energie/meer energie/hogere energie/energierijker", "radiogolven laagste/radiogolven eerst/radiogolven de langste", "röntgenstraling hoogste/röntgenstraling laatst/röntgenstraling de kortste"],
+      minTreffers: 3,
       modelantwoord: "Volgorde (van laagste naar hoogste energie / langste naar kortste golflengte):\n1. Radiogolven (laagste frequentie, langste golflengte)\n2. Infrarood\n3. Zichtbaar licht\n4. Röntgenstraling (hoogste frequentie, kortste golflengte, meest energierijk/ioniserend).",
-      uitleg: "Correcte volgorde in het elektromagnetisch spectrum."
+      uitleg: "In het elektromagnetisch spectrum geldt: hoe korter de golflengte, hoe hoger de frequentie en dus hoe meer energie. Radiogolven hebben de langste golflengte en de laagste energie, röntgenstraling de kortste golflengte en de hoogste energie."
     },
     {
       type: "open",

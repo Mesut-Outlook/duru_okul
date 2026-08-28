@@ -100,8 +100,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Elementen die in dezelfde <b>verticale groep (kolom)</b> van het Periodiek Systeem staan, vertonen vergelijkbare chemische eigenschappen.",
-      antwoord: true,
+      vraag: "Elementen die in dezelfde <b>horizontale periode (rij)</b> staan, hebben altijd exact dezelfde chemische eigenschappen.",
+      antwoord: false,
+      uitleg: "Niet waar. Juist elementen in dezelfde VERTICALE GROEP (kolom) hebben vergelijkbare eigenschappen (zoals de edelgassen of alkalimetalen), niet de horizontale perioden.",
       uitleg: "Waar. Omdat ze hetzelfde aantal elektronen in hun buitenste schil hebben, reageren ze op vergelijkbare wijze."
     },
     {

@@ -166,7 +166,7 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit hoe de energieomzetting verloopt van een skateboarder die van een helling (halfpipe) naar beneden rijdt en aan de overkant weer omhoog gaat. Gebruik de begrippen <b>zwaarte-energie</b>, <b>bewegingsenergie</b> en <b>warmte/wrijving</b>.",
+      vraag: "Leg uit hoe de energieomzetting verloopt bij een skateboarder die van een helling (halfpipe) naar beneden rijdt en aan de overkant weer omhoog gaat. <b>Benoem zelf de energiesoorten</b> die daarbij een rol spelen, en verklaar waarom hij zonder bijsteppen telkens iets minder hoog komt.",
       sleutelwoorden: ["zwaarte-energie/potentiële energie", "bewegingsenergie/kinetische energie", "omgezet in warmte/wrijving/energieverlies"],
       minTreffers: 2,
       modelantwoord: "Bovenaan de helling heeft de skateboarder maximale zwaarte-energie en geen bewegingsenergie. Tijdens het naar beneden rijden wordt zwaarte-energie omgezet in bewegingsenergie (hoogste snelheid onderaan). Als hij weer omhoog rijdt, wordt bewegingsenergie weer omgezet in zwaarte-energie. Door wrijving wordt een klein deel van de energie omgezet in warmte, waardoor hij zonder bijsteppen telkens iets minder hoog komt.",

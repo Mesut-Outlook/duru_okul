@@ -175,7 +175,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Bespreek de voor- en nadelen van kernenergie in het kader van het klimaat en de energievoorziening. Noem minimaal twee duidelijke voordelen en twee duidelijke nadelen/risico's.",
-      sleutelwoorden: ["voordeel: geen CO2 / betrouwbaar / hoge opbrengst", "nadeel: radioactief kernafval / risico op ongevallen / hoge kosten bouw"],
+      sleutelwoorden: ["geen CO2/geen CO₂/CO2-vrij/geen uitstoot/niet bij aan het broeikaseffect", "betrouwbaar/continu/leveringszekerheid/weersonafhankelijk/hoge opbrengst", "kernafval/radioactief afval/opslag van afval", "ongeluk/ongeval/meltdown/ramp/veiligheidsrisico/hoge bouwkosten/dure bouw"],
       minTreffers: 3,
       modelantwoord: "Voordelen:\n1. Geen directe CO₂-uitstoot tijdens energieproductie (draagt niet bij aan het broeikaseffect).\n2. Hoge leveringszekerheid: levert continu en weersonafhankelijk grote hoeveelheden basislast-stroom.\n\nNadelen:\n1. Hoogradioactief kernafval dat duizenden jaren extreem veilig opgeslagen moet worden.\n2. Kans op catastrofale kernongevallen (meltdown, vrijkomen van straling) en zeer hoge kosten/lange bouwtijd voor nieuwe reactoren.",
       uitleg: "Evenwichtige bespreking van CO2-vrije betrouwbare stroom vs. kernafval, veiligheidsrisico's en bouwkosten."

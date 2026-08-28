@@ -112,8 +112,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "De formule <b>2 O₂</b> betekent 2 losse zuurstofmoleculen, die samen bestaan uit in totaal 4 zuurstofatomen.",
-      antwoord: true,
+      vraag: "De formule <b>2 O₂</b> stelt in totaal 2 losse zuurstofatomen voor.",
+      antwoord: false,
+      uitleg: "Niet waar. 2 O₂ betekent 2 moleculen O₂, die elk uit 2 atomen bestaan; in totaal zijn er dus 2 × 2 = 4 zuurstofatomen.",
       uitleg: "Waar. 2 × 2 = 4 atomen."
     },
     {

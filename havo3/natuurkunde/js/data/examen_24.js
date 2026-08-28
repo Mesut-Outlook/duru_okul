@@ -70,8 +70,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Om iets makkelijk door te snijden, moet een mes een zo dun mogelijk snijvlak (klein oppervlak) hebben, zodat de druk heel groot wordt bij een kleine spierkracht.",
-      antwoord: true,
+      vraag: "Om een taart makkelijk door te snijden, moet het mes een zo breed en stomp mogelijk lemmet (groot oppervlak) hebben.",
+      antwoord: false,
+      uitleg: "Niet waar. Een stomp mes heeft een groot oppervlak waardoor de druk te klein is; een mes moet juist vlijmscherp (miniem oppervlak) zijn voor maximale druk.",
       uitleg: "Waar. Klein oppervlak A -> zeer hoge druk p."
     },
     {
@@ -166,8 +167,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Als je een rechthoekige baksteen op zijn smalle kant zet in plaats van op zijn platte kant, wordt de druk op de tafel groter.",
-      antwoord: true,
+      vraag: "Als je een rechthoekige baksteen op zijn smalle kant zet in plaats van op zijn platte kant, wordt de druk op de tafel kleiner omdat het gewicht gelijk blijft.",
+      antwoord: false,
+      uitleg: "Niet waar. Het gewicht blijft gelijk, maar het contactoppervlak A is veel kleiner op de smalle kant. Daardoor wordt de druk (p = F/A) juist groter!",
       uitleg: "Waar. Het gewicht F blijft gelijk, maar het contactoppervlak A is kleiner, dus p = F / A neemt toe."
     },
     {

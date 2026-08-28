@@ -180,7 +180,7 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Een parachutist springt uit een vliegtuig. Na enige tijd bereikt hij een constante eindsnelheid (nog vóór hij zijn parachute opent). Leg aan de hand van de <b>krachten</b> (zwaartekracht en luchtweerstand) uit waarom zijn snelheid niet meer toeneemt.",
+      vraag: "Een parachutist springt uit een vliegtuig. Na enige tijd bereikt hij een constante eindsnelheid (nog vóór hij zijn parachute opent). Leg uit welke <b>krachten</b> er op hem werken en waarom zijn snelheid niet meer toeneemt.",
       sleutelwoorden: ["zwaartekracht", "luchtweerstand", "gelijk/opheffen/nul/resulterende kracht 0"],
       minTreffers: 2,
       modelantwoord: "Tijdens het vallen neemt door de toenemende snelheid de luchtweerstand steeds verder toe, totdat de omhooggerichte luchtweerstand precies even groot is als de omlaaggerichte zwaartekracht. De resulterende kracht wordt dan 0 N, waardoor de snelheid constant blijft en niet meer toeneemt.",

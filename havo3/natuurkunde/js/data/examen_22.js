@@ -82,8 +82,9 @@ DURU.registerExamen({
     },
     {
       type: "waaronwaar",
-      vraag: "Een hefboom is stabiel in evenwicht als het zwaartepunt zich recht onder het draaipunt bevindt.",
-      antwoord: true,
+      vraag: "Een hefboom is stabiel in evenwicht als het zwaartepunt zich recht BOVEN het draaipunt bevindt.",
+      antwoord: false,
+      uitleg: "Niet waar. Als het zwaartepunt boven het draaipunt ligt is het evenwicht labiel (wankel); het zwaartepunt moet juist recht ONDER het draaipunt liggen voor stabiel evenwicht.",
       uitleg: "Waar. Als het zwaartepunt onder het ophangpunt ligt, keert het bij verstoring vanzelf terug naar evenwicht (stabiel evenwicht)."
     },
     {

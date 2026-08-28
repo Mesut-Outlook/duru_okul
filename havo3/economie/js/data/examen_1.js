@@ -24,24 +24,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is <b>zelfvoorziening</b>?",
       opties: [
-        "Wanneer consumenten goederen of diensten voor zichzelf maken zonder tussenkomst van bedrijven (bijv. zelf groenten verbouwen of zelf koken)",
         "Alleen geld uitgeven aan luxegoederen",
+        "Wanneer consumenten goederen of diensten voor zichzelf maken zonder tussenkomst van bedrijven (bijv. zelf groenten verbouwen of zelf koken)",
         "Werken voor de overheid",
         "Geld lenen van vrienden"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Zelfvoorziening = voor jezelf produceren (geen ruil met geld)."
     },
     {
       type: "mc",
       vraag: "Welke <b>vier productiefactoren</b> worden in de economie onderscheiden?",
       opties: [
-        "Kapitaal, Arbeid, Natuur en Ondernemerschap (KANO)",
-        "Geld, Goud, Aandelen en Vastgoed",
         "Consumenten, Winkels, Fabrieken en Banken",
+        "Geld, Goud, Aandelen en Vastgoed",
+        "Kapitaal, Arbeid, Natuur en Ondernemerschap (KANO)",
         "Import, Export, Belasting en Subsidie"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "De 4 productiefactoren zijn: Kapitaal (machines/gebouwen), Arbeid (werknemers), Natuur (grond/grondstoffen), Ondernemerschap (organisatie/risico). Ezelsbruggetje: KANO."
     },
     {
@@ -66,12 +66,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Onder welke productiefactor valt een vrachtwagen die door een transportbedrijf wordt gekocht?",
       opties: [
-        "Kapitaal (kapitaalgoederen)",
+        "Consumptie",
         "Natuur",
         "Arbeid",
-        "Consumptie"
+        "Kapitaal (kapitaalgoederen)"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Een vrachtwagen is een kapitaalgoed (vast productiemiddel om mee te produceren)."
     },
     {
@@ -108,36 +108,36 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een stoffenfabrikant koopt katoen in voor € 3,00 per meter en verkoopt de geweven stof voor € 8,00 per meter aan de kledingfabriek. Hoeveel waarde voegt de stoffenfabrikant toe per meter?",
       opties: [
-        "€ 5,00",
         "€ 11,00",
+        "€ 5,00",
         "€ 8,00",
         "€ 3,00"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Toegevoegde waarde = € 8,00 - € 3,00 = € 5,00."
     },
     {
       type: "mc",
       vraag: "Wat is het verschil tussen een <b>handelsonderneming</b> en een <b>productieonderneming</b>?",
       opties: [
-        "Een handelsonderneming verandert niets aan het product (koopt in en verkoopt door); een productieonderneming maakt van grondstoffen nieuwe producten",
-        "Een handelsonderneming maakt geen winst",
         "Een productieonderneming heeft geen machines",
+        "Een handelsonderneming maakt geen winst",
+        "Een handelsonderneming verandert niets aan het product (koopt in en verkoopt door); een productieonderneming maakt van grondstoffen nieuwe producten",
         "Er is geen verschil"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Handelsonderneming = winkels/groothandels (doorverkoop). Productieonderneming = fabrieken/boerderijen (bewerken/maken)."
     },
     {
       type: "mc",
       vraag: "Welk bedrijf is een voorbeeld van een <b>dienstverlenend bedrijf</b>?",
       opties: [
-        "Een kapper",
+        "Een bakkerij die brood bakt",
         "Een schoenenfabriek",
         "Een olieraffinaderij",
-        "Een bakkerij die brood bakt"
+        "Een kapper"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Een kapper verleent een dienst (handeling) en verkoopt geen zelfgemaakt tastbaar product."
     },
     {
@@ -175,11 +175,7 @@ DURU.registerExamen({
       vraag: "Noem de <b>vier productiefactoren</b> en geef bij elke factor een concreet voorbeeld van een middel dat een bakkerij nodig heeft om brood te bakken.",
       sleutelwoorden: ["1. Kapitaal: deegmachine / oven / bestelbus / winkelpand", "2. Arbeid: bakkersknecht / verkoopster", "3. Natuur: graan / water / zout / aardgas", "4. Ondernemerschap: bakker / eigenaar die het bedrijf leidt"],
       minTreffers: 3,
-      modelantwoord: "De vier productiefactoren bij een bakkerij:
-1. Kapitaal: De deegmengmachine, de bakovens, het winkelpand en de bestelbus.
-2. Arbeid: De bakker en het winkelpersoneel die het werk uitvoeren.
-3. Natuur: Het meel/graan, water, zout en de energie (gas/stroom voor de oven).
-4. Ondernemerschap: De bakkerseigenaar die de grondstoffen inkoopt, personeel aanstuurt en financieel risico draagt.",
+      modelantwoord: "De vier productiefactoren bij een bakkerij:\n1. Kapitaal: De deegmengmachine, de bakovens, het winkelpand en de bestelbus.\n2. Arbeid: De bakker en het winkelpersoneel die het werk uitvoeren.\n3. Natuur: Het meel/graan, water, zout en de energie (gas/stroom voor de oven).\n4. Ondernemerschap: De bakkerseigenaar die de grondstoffen inkoopt, personeel aanstuurt en financieel risico draagt.",
       uitleg: "Toepassing van de productiefactoren op een concrete onderneming."
     },
     {
@@ -187,12 +183,7 @@ DURU.registerExamen({
       vraag: "Leg uit hoe een <b>bedrijfskolom</b> werkt aan de hand van de productie van een katoenen spijkerbroek. Noem minstens vier schakels in deze keten.",
       sleutelwoorden: ["katoenplantage (oerteler)", "weverij / stoffenfabriek", "kledingfabriek (confectie)", "groothandel / kledingwinkel (detailhandel)"],
       minTreffers: 3,
-      modelantwoord: "Een bedrijfskolom toont de route van grondstof tot eindproduct:
-1. Katoenplantage: Verbouwt en oogst ruwe katoen.
-2. Spinnerij / Weverij: Spint draden en weeft spijkerstof (denim).
-3. Kledingfabriek: Knipt en naait de stof tot spijkerbroeken.
-4. Groothandel / Kledingwinkel: Koopt de broeken in partijen in en verkoopt ze in de winkel aan de consument.
-(De consument staat aan het eind buiten de bedrijfskolom).",
+      modelantwoord: "Een bedrijfskolom toont de route van grondstof tot eindproduct:\n1. Katoenplantage: Verbouwt en oogst ruwe katoen.\n2. Spinnerij / Weverij: Spint draden en weeft spijkerstof (denim).\n3. Kledingfabriek: Knipt en naait de stof tot spijkerbroeken.\n4. Groothandel / Kledingwinkel: Koopt de broeken in partijen in en verkoopt ze in de winkel aan de consument.\n(De consument staat aan het eind buiten de bedrijfskolom).",
       uitleg: "Opbouw van een bedrijfskolom."
     }
   ]
