@@ -1,278 +1,214 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 30 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 30 (20 vragen)
+   Hoofdstuk 6: Naar de wereld van nu — 6.5 Mens en milieu
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-30",
-    titel: "Proeftoets 30 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))",
+    titel: "Proeftoets 30 — 6.5 Mens en milieu",
     vak: "Geschiedenis · Hoofdstuk 6",
     hoofdstuk: 6,
     hoofdstukTitel: "Hoofdstuk 6 — Naar de wereld van nu (1990–heden)",
-    icoon: "🌐",
+    icoon: "🌍",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wat gebeurde er in de jaren 90 na het uiteenvallen van Joegoslavië?",
-            "opties": [
-                  "Er ontstond een hevige etnische burgeroorlog in de Balkan",
-                  "Er werd een vredesunie gevormd",
-                  "Oostenrijk bezette het land",
-                  "Er gebeurde niets"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het uiteenvallen van Joegoslavië veroorzaakte bloedige strijd."
+        id: "ex30_v1",
+        type: "mc",
+        vraag: "Waaruit haalden mensen eeuwenlang hun energie, voordat de industrialisatie op gang kwam?",
+        opties: ["Wind, water en spierkracht", "Steenkool en aardolie", "Kernenergie", "Aardgas"],
+        antwoord: 0,
+        uitleg: "Eeuwenlang haalden mensen energie uit wind, water en spierkracht, tot de industrialisatie het gebruik van fossiele brandstoffen deed toenemen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat vond er plaats in Srebrenica in juli 1995?",
-            "opties": [
-                  "De genocide op meer dan 8.000 moslimmannen en -jongens door Bosnisch-Serwische troepen",
-                  "Een vredesconferentie",
-                  "Een geallieerde overwinning",
-                  "Een bevrijdingsfeest"
-            ],
-            "antwoord": 0,
-            "uitleg": "Srebrenica is de ergste genocide in Europa sinds WO2."
+        id: "ex30_v2",
+        type: "mc",
+        vraag: "Wat werd in de jaren 1970 gezien als grote bedreiging voor de energievoorziening?",
+        opties: [
+          "Een tekort aan kernenergie",
+          "Het opraken van de fossiele energievoorraden",
+          "Een tekort aan windenergie",
+          "Een teveel aan aardgas"
+        ],
+        antwoord: 1,
+        uitleg: "In de jaren 1970 werd gevreesd dat de mensheid in hoog tempo de fossiele brandstoffen opmaakte die de natuur in miljoenen jaren had gevormd."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wanneer werd de staat Israël gesticht?",
-            "opties": [
-                  "14 mei 1948",
-                  "1 september 1939",
-                  "6 juni 1944",
-                  "11 september 2001"
-            ],
-            "antwoord": 0,
-            "uitleg": "Israël werd in mei 1948 gesticht."
+        id: "ex30_v3",
+        type: "mc",
+        vraag: "Wat gebeurde er in 2011 in Japan, waardoor veel landen opnieuw het gebruik van kernenergie beperkten?",
+        opties: [
+          "Een aardbeving zonder gevolgen voor de energievoorziening",
+          "De sluiting van alle kolencentrales",
+          "De kernramp bij Fukushima",
+          "Het einde van alle gaswinning"
+        ],
+        antwoord: 2,
+        uitleg: "Net toen kernenergie weer in opkomst was, vond in 2011 een kernramp plaats in Japan, waarna veel landen het gebruik van kernenergie opnieuw beperkten."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wat vormt de kern van het Arabisch-Israëlische conflict?",
-            "opties": [
-                  "De strijd om land, grenzen en zelfbeschikking tussen de staat Israël en de Palestijnen",
-                  "Strijd om olie in Europa",
-                  "Een ruzie over geld",
-                  "Een meningsverschil in de VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het conflict draait om territorium en status van Jeruzalem."
+        id: "ex30_v4",
+        type: "mc",
+        vraag: "Waarvoor wilde Amsterdam het Naardermeer rond 1900 gebruiken, voordat de Vereniging Natuurmonumenten het gebied kocht?",
+        opties: ["Als drinkwaterbron", "Als woonwijk", "Als spoorwegemplacement", "Als vuilnisbelt"],
+        antwoord: 3,
+        uitleg: "Amsterdam wilde het 'waardeloze' Naardermeer als vuilnisbelt gebruiken; de nieuwe Vereniging Natuurmonumenten kocht het gebied en redde het."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat veroorzaakte de autoloze zondagen in Nederland in 1973?",
-            "opties": [
-                  "De olieboycot door Arabische olielanden (OPEC) vanwege Nederlandse steun aan Israël",
-                  "Een staking van de pompmedewerkers",
-                  "Een milieuramp",
-                  "Het instorten van de dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Oliecrisis van 1973 leidde tot schaarste en autoloze zondagen."
+        id: "ex30_v5",
+        type: "mc",
+        vraag: "Op welke diepte werd in 1959 de gasbel van Slochteren ontdekt?",
+        opties: ["2,6 kilometer", "260 meter", "26 kilometer", "0,6 kilometer"],
+        antwoord: 0,
+        uitleg: "Onder een bietenveld bij Slochteren werd op 2,6 kilometer diepte het grootste Europese aardgasveld buiten Rusland ontdekt."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat gebeurde er op 11 september 2001 in New York en Washington?",
-            "opties": [
-                  "Al Qaida kaperste 4 vliegtuigen en boorde deze in het WTC en Pentagon",
-                  "De Berlijnse Muur viel",
-                  "De euro werd ingevoerd",
-                  "Een Beurskrach vond plaats"
-            ],
-            "antwoord": 0,
-            "uitleg": "9/11 schokte de wereld op 11 september 2001."
+        id: "ex30_v6",
+        type: "mc",
+        vraag: "Welk record behaalde Nederland in 1966 dankzij de vondst van de Groningse gasbel?",
+        opties: [
+          "Het werd het eerste land met kernenergie",
+          "Het sloot als eerste land ter wereld al zijn kolenmijnen",
+          "Het werd de grootste olie-exporteur van Europa",
+          "Het bouwde het eerste windmolenpark ter wereld"
+        ],
+        antwoord: 1,
+        uitleg: "Dankzij het schone aardgas sloot Nederland in 1966 als eerste land ter wereld al zijn kolenmijnen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Wie leidde het terreurnetwerk Al Qaida tijdens 9/11?",
-            "opties": [
-                  "Osama bin Laden",
-                  "Saddam Hoessein",
-                  "Yasser Arafat",
-                  "Muammar Gaddafi"
-            ],
-            "antwoord": 0,
-            "uitleg": "Osama bin Laden gaf leiding aan Al Qaida."
+        id: "ex30_v7",
+        type: "mc",
+        vraag: "Wat was, naast bodemdaling, een belangrijk gevolg van de Groningse gaswinning waardoor de winning vanaf 2014 werd beperkt?",
+        opties: [
+          "Een tekort aan drinkwater",
+          "Een stijging van de energieprijzen in heel Europa",
+          "Honderden aardbevingen die huizen beschadigden",
+          "Het opraken van al het aardgas al in de jaren 1970"
+        ],
+        antwoord: 2,
+        uitleg: "De gaswinning veroorzaakte bodemdaling en honderden aardbevingen die huizen beschadigden; daarom werd de winning vanaf 2014 beperkt."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Welke Amerikaanse president begon de War on Terror?",
-            "opties": [
-                  "George W. Bush",
-                  "Bill Clinton",
-                  "Barack Obama",
-                  "Ronald Reagan"
-            ],
-            "antwoord": 0,
-            "uitleg": "George W. Bush verklaarde de War on Terror."
+        id: "ex30_v8",
+        type: "mc",
+        vraag: "Waartegen verzetten jongeren zich mede toen de milieubeweging in de jaren 1970 massale aanhang kreeg?",
+        opties: [
+          "Tegen de invoering van de auto",
+          "Tegen de gasexport",
+          "Tegen kernenergie alleen",
+          "Tegen het naoorlogse materialisme van oudere generaties"
+        ],
+        antwoord: 3,
+        uitleg: "De milieubeweging van de jaren 1970 was mede een vorm van verzet van jongeren tegen het naoorlogse materialisme van oudere generaties."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat houdt globalisering in?",
-            "opties": [
-                  "De toenemende wereldwijde verbondenheid van economies, culturen en mensen",
-                  "Het bouwen van muren rond landen",
-                  "Het stoppen van internationale handel",
-                  "Het verbieden van internet"
-            ],
-            "antwoord": 0,
-            "uitleg": "Globalisering maakt de wereld tot één markt."
+        id: "ex30_v9",
+        type: "mc",
+        vraag: "Wat stelden wetenschappers in de jaren 2000 voor het eerst vast over het klimaat?",
+        opties: [
+          "Dat de mens voor het eerst zelf het klimaat veranderde",
+          "Dat het klimaat niet meer kon veranderen",
+          "Dat CO2 geen broeikasgas is",
+          "Dat de temperatuur op aarde al honderd jaar stabiel was"
+        ],
+        antwoord: 0,
+        uitleg: "Wetenschappers stelden in de jaren 2000 vast dat de mens voor het eerst zelf het klimaat veranderde, door de uitstoot van broeikasgassen."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Welke landen zijn opkomende economische wereldmachten sinds 1990?",
-            "opties": [
-                  "China en India",
-                  "Engeland en Frankrijk",
-                  "Griekenland en Spanje",
-                  "Canada en Mexico"
-            ],
-            "antwoord": 0,
-            "uitleg": "China en India groeiden uit tot economische giganten."
+        id: "ex30_v10",
+        type: "mc",
+        vraag: "Wat noemde Al Gore in zijn film uit 2006, naast een gevaarlijke stijging van de zeespiegel, als gevolg van klimaatverandering?",
+        opties: [
+          "Meer sneeuwval in de tropen",
+          "Verdroging van vruchtbare gebieden",
+          "Een daling van de zeespiegel",
+          "Minder CO2-uitstoot wereldwijd"
+        ],
+        antwoord: 1,
+        uitleg: "Al Gore legde uit dat door klimaatverandering ook vruchtbare gebieden verdrogen, naast het gevaar van een stijgende zeespiegel."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat veroorzaakt de opwarming van de aarde?",
-            "opties": [
-                  "Het versterkte broeikaseffect door menselijke CO2-uitstoot",
-                  "Veranderingen in het getij",
-                  "De stand van de maan",
-                  "Zonnevlekken alleen"
-            ],
-            "antwoord": 0,
-            "uitleg": "CO2-uitstoot door fossiele brandstoffen leidt tot klimaatverandering."
+        id: "ex30_v11",
+        type: "waaronwaar",
+        vraag: "Kernenergie werd in de jaren 1970 gezien als een schoon alternatief voor fossiele brandstoffen, maar tegenstanders wezen op de risico's.",
+        antwoord: true,
+        uitleg: "Waar! Kernenergie leek schoon, maar tegenstanders waarschuwden al vroeg voor de risico's van een ongeluk."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat is het hoofddoel van het Klimaatakkoord van Parijs (2015)?",
-            "opties": [
-                  "De opwarming van de aarde beperken tot ruim onder 2°C",
-                  "Het stoppen van alle scheepvaart",
-                  "Het afschaffen van de auto",
-                  "Het bouwen van dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "Parijs 2015 stelt wereldwijde klimaatdoelen."
+        id: "ex30_v12",
+        type: "waaronwaar",
+        vraag: "Na de kernramp in Tsjernobyl in 1986 bouwden de meeste landen juist meer kerncentrales dan daarvoor.",
+        antwoord: false,
+        uitleg: "Niet waar. Na de kernramp in Tsjernobyl stopten juist veel landen met de bouw van nieuwe kerncentrales."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wat betekent energietransitie?",
-            "opties": [
-                  "De overgang van fossiele brandstoffen naar duurzame schone energie (zon, wind)",
-                  "Het verhogen van de gasprijzen",
-                  "Het gratis maken van stroom",
-                  "Het bouwen van meer kolencentrales"
-            ],
-            "antwoord": 0,
-            "uitleg": "De energietransitie vervangt olie, gas en kolen."
+        id: "ex30_v13",
+        type: "waaronwaar",
+        vraag: "De Vereniging Natuurmonumenten maakte van het Naardermeer het eerste Nederlandse natuurreservaat.",
+        antwoord: true,
+        uitleg: "Waar! Natuurmonumenten kocht het Naardermeer in 1905 en maakte er het eerste Nederlandse natuurreservaat van."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Waarom vocht de VN-coalitie tegen Irak in de Eerste Golfoorlog (1991)?",
-            "opties": [
-                  "Omdat Irak het buurland Koeweit had binnengevallen en bezet",
-                  "Omdat Irak de VS bombardeerde",
-                  "Omdat Koeweit de VN aanviel",
-                  "Om olie te stelen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Saddam Hoessein werd uit Koeweit verdreven."
+        id: "ex30_v14",
+        type: "waaronwaar",
+        vraag: "Sinds het begin van de industrialisatie stijgen de temperaturen op aarde, en vanaf 1990 gingen ze juist trager stijgen dan daarvoor.",
+        antwoord: false,
+        uitleg: "Niet waar. De temperaturen stegen sinds het begin van de industrialisatie, en vanaf 1990 juist sneller, niet trager."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Welke uitvinding bracht vanaf de jaren 90 een digitale informatierevolutie?",
-            "opties": [
-                  "Het Internet en World Wide Web",
-                  "De telegraaf",
-                  "De radio",
-                  "De televisie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het internet verbond de hele wereld digitaal."
+        id: "ex30_v15",
+        type: "invul",
+        vraag: "Hoe noemen we de overgang van fossiele brandstoffen naar duurzame energie zoals wind- en zonne-energie, afgesproken op de klimaatconferentie van Parijs in 2015?",
+        antwoord: "energietransitie|de energietransitie",
+        uitleg: "Bijna alle landen spraken in Parijs in 2015 af te streven naar een energietransitie: van fossiele naar duurzame energie."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat hield de grote EU-uitbreiding van 2004 in?",
-            "opties": [
-                  "Tien nieuwe landen (hoofdzakelijk uit Oost-Europa) traden toe tot de EU",
-                  "Engeland verliet de EU",
-                  "De EU werd ontbonden",
-                  "De euro werd afgeschaft"
-            ],
-            "antwoord": 0,
-            "uitleg": "In 2004 traden 10 nieuwe lidstaten toe."
+        id: "ex30_v16",
+        type: "invul",
+        vraag: "In welke eeuw ontstonden door verstedelijking en industrialisatie de eerste zorgen over de volksgezondheid, wat later tot de milieubeweging leidde?",
+        antwoord: "19e eeuw|de 19e eeuw|negentiende eeuw|de negentiende eeuw",
+        uitleg: "Al in de 19e eeuw leidden verstedelijking en industrialisatie tot zorgen over de volksgezondheid in verband met het milieu."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat gebeurde er tijdens de Arabische Lente in 2011?",
-            "opties": [
-                  "Volksopstanden tegen dictaturen in het Midden-Oosten en Noord-Afrika",
-                  "Een grote droogte",
-                  "Een sportevenement",
-                  "Een handelsakkoord"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Arabische Lente eiste vrijheid en democratie."
+        id: "ex30_v17",
+        type: "invul",
+        vraag: "Welk gas komt vrij bij de verbranding van fossiele brandstoffen en houdt als broeikasgas warmte vast bij het aardoppervlak?",
+        antwoord: "CO2|koolstofdioxide|kooldioxide",
+        uitleg: "Bij de verbranding van fossiele brandstoffen komt CO2 vrij, dat als broeikasgas warmte vasthoudt bij het aardoppervlak."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Tot welk menselijk drama leidde de burgeroorlog in Syrië?",
-            "opties": [
-                  "Een enorme vluchtelingencrisis naar omliggende landen en Europa",
-                  "Een snelle democratische staat",
-                  "Een overwinning van de VN",
-                  "Geen enkel gevolg"
-            ],
-            "antwoord": 0,
-            "uitleg": "Miljoenen Syriërs sloegen op de vlucht."
+        id: "ex30_v18",
+        type: "invul",
+        vraag: "Welke fossiele brandstof veroorzaakte door verbranding in industriesteden een dikke laag smog?",
+        antwoord: "steenkool|kolen",
+        uitleg: "De verbranding van steenkool veroorzaakte in industriesteden een dikke laag smog."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat voor dreiging is cybercriminaliteit?",
-            "opties": [
-                  "Digitale aanvallen op netwerken, overheden en bedrijven via internet",
-                  "Aanvallen met tanks",
-                  "Luchtaanvallen",
-                  "Zee-piraterij"
-            ],
-            "antwoord": 0,
-            "uitleg": "Cyberdreigingen vragen om digitale beveiliging."
+        id: "ex30_v19",
+        type: "open",
+        vraag: "Leg uit waarom veel landen na de kernramp in Tsjernobyl in 1986 stopten met het bouwen van nieuwe kerncentrales, ook al gold kernenergie eerder als schoon alternatief.",
+        sleutelwoorden: [
+          "risico's/gevaar van straling/onveilig",
+          "angst/vertrouwen verloren"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Tegenstanders van kernenergie hadden altijd al gewezen op de risico's van een ongeluk. Toen de kernramp in Tsjernobyl in 1986 door radioactieve straling een groot gebied onbewoonbaar maakte, kregen zij gelijk en verloren veel landen het vertrouwen in de veiligheid van kernenergie, waardoor de bouw van nieuwe centrales stopte.",
+        uitleg: "De ramp in Tsjernobyl bevestigde de gevreesde risico's van kernenergie, waardoor het vertrouwen in nieuwe centrales instortte."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wat regelt de Schengenzone in Europa?",
-            "opties": [
-                  "Vrij reizen zonder grenscontroles tussen de aangesloten Europese landen",
-                  "Een gezamenlijk leger",
-                  "Gelijke belastingen",
-                  "Eén Europese krant"
-            ],
-            "antwoord": 0,
-            "uitleg": "Schengen schafte de grenscontroles binnenslands af."
+        id: "ex30_v20",
+        type: "open",
+        vraag: "Leg uit wat volgens Al Gores film uit 2006 een gevaarlijk gevolg is van het smelten van het poolijs door klimaatverandering.",
+        sleutelwoorden: [
+          "zeespiegel/zeewaterspiegel stijgt",
+          "gevaar voor kustgebieden/laaggelegen gebieden"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Als het poolijs smelt, stijgt de zeewaterspiegel. Dat is gevaarlijk voor de vele mensen die in laaggelegen kustgebieden wonen, omdat hun land kan overstromen.",
+        uitleg: "Al Gore liet zien dat het smelten van het poolijs kan leiden tot een voor veel mensen gevaarlijke stijging van de zeewaterspiegel."
       }
-]
+    ]
   });
 })();

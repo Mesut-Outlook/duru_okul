@@ -15,7 +15,7 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 - **2026-07-21 sonuç**: ✅ Okul-yılı refactor + inbox (TASK-05) + **10 HAVO 3 smoke-test dersi** (TASK-06) bitti.
   economie=Opus referans, 5 ders=Sonnet, 4 ders=agy. Hepsi node/serve/yapı doğrulandı, landing'de aktif, `?v=3.0`.
   **Sıradaki** (Duru materyal verince): her derse onderwerpen (oefenquiz) + daha çok proeftoets.
-- **Schedule**: agy → natuurkunde/scheikunde üretimi sürüyor (H1–H3 teslim). Opus → geschiedenis H2–H6 onarımı.
+- **Schedule**: geschiedenis ✅ bitti (TASK-07). agy → TASK-08 (natuurkunde H5-H7, scheikunde H1/H3-H7 + kalite).
 
 ## 2026-08-27 · Geschiedenis kalite denetimi (Opus) — ÖNEMLİ DERS
 `havo3/geschiedenis` (commit e8c8a66, "840 soru") denetlendi. Bulgular:
@@ -31,6 +31,48 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 **Kural (bundan sonra herkes için):** üretim şablonla değil, kaynak metin okunarak yapılır; kabul
 kriterlerine "şablon soru yasak + dosya başına mc cevap dağılımı ≤%40 + waaronwaar ≥%35 onwaar +
 sınavda invoer yasak" maddeleri eklenir. Denetim scripti: `scratchpad/gate.js` (11 kural).
+
+## ⚠️ agy'YE: SORU ÜRETİM KURALLARI (2026-08-28 — HER ÜRETİMDE UYGULA)
+
+Bu kurallar, `havo3/geschiedenis` (840 soru) ve `havo3/scheikunde` denetimlerinde çıkan gerçek
+kusurlardan türetildi. **Her yeni soru dosyasında bunlara uy; üretimi bitirince kendin kontrol et.**
+
+1. **Doğru şık hep A olmasın.** En ağır kusur buydu: geschiedenis'te 500 mc sorusunun 500'ünde,
+   scheikunde'de 5 proeftoesin 4'ünde doğru cevap A idi. Duru hepsine A tıklayıp 20/20 alıyordu.
+   **Kural: bir dosyadaki mc sorularının hiçbir şık pozisyonu %40'ı geçmesin.** A/B/C/D'yi
+   sırayla kullan. (Mevcut dosyalar Opus'un `scratchpad/spread.py` scriptiyle düzeltildi.)
+2. **`waaronwaar` hep "Waar" olmasın.** geschiedenis'te 99 Waar / 8 Onwaar idi.
+   **Kural: soruların en az %35'i `antwoord: false` olsun** — gerçekten yanlış ifadeler de yaz.
+3. **Sınavda `type:"invoer"` KULLANMA.** `exams.js` sınav modunda yalnız `mc`, `waaronwaar`,
+   `invul`, `open` render eder. `invoer` yazarsan **cevap kutusu hiç çizilmez**, soru
+   cevaplanamaz ve otomatik yanlış sayılır (23 soru böyle bozulmuştu). Sınav = `invul`,
+   oefenquiz = `invoer`. Tersi de geçerli: oefenquiz'de `invul`/`open` kullanma.
+4. **Şablon soru yasak.** "Wat is het hoofdonderwerp van Paragraaf X.X?", "Welk historisch begrip
+   staat centraal in…", "Hoe beoordelen historici…", "De bronnen in Geschiedeniswerkplaats…"
+   gibi, konu adını boşluğa yapıştıran kalıplar üretme — bunlar hiçbir şey ölçmüyor
+   (240 sorunun 133'ü böyleydi). Her soru somut bir olguyu sorsun: isim, yıl, kavram, sebep, sonuç.
+5. **Proeftoetsleri kopyalama.** 30 proeftoesin 25'i birebir aynıydı (5'er kopya). Her proeftoets
+   farklı sorular içermeli; aynı soru iki dosyada geçmesin.
+6. **Kaynağı gerçekten oku.** geschiedenis'te 25 paragraf başlığı uydurulmuştu; kitapla
+   (`inbox/h*_ocr.txt`) hiçbiri eşleşmiyordu. Paragraf numaraları/başlıkları **kaynaktan** alınır.
+7. **`open` sorularda cevabı soruda verme.** `sleutelwoorden` içindeki kelime soru metninde
+   geçiyorsa öğrenci kopyalayıp yapıştırır.
+8. **Her soruda dolu `uitleg`.** Yalnız "Waar." yeterli değil — neden doğru olduğunu bir cümleyle yaz.
+9. **Soru metnine numara koyma.** Arayüz zaten "Vraag 3 van 20" yazıyor; `vraag: "3. ..."` çift numara üretir.
+10. **Teslimden önce `node --check`.** Aşağıdaki hata bunun atlandığını gösteriyor.
+
+**Kendi kendini denetleme:** `node /path/to/scratchpad/gate.js <vak>` bu kuralların 11'ini birden
+ölçer. Opus her teslimi bu kapıdan geçiriyor; sen de geçir ki iş geri dönmesin.
+
+### 🔴 agy — ACİL: 5 bozuk dosya (2026-08-28 10:54)
+`havo3/natuurkunde/js/data/examen_21.js`, `examen_22.js`, `examen_23.js`, `examen_24.js`,
+`examen_25.js` **söz dizimi hatalı** — `modelantwoord` alanında çift tırnaklı string içinde
+gerçek satır sonu var (JS'te string satır sonu içeremez). `node --check` beşinde de patlıyor;
+bu hâliyle sayfa yüklenirse o dosyalardan sonraki hiçbir script çalışmaz.
+**Düzelt:** çok satırlı metni tek satıra indir (`\n` yerine boşluk) ya da backtick (`` ` ``)
+template string kullan. Ayrıca `examen_23.js`'te bozuk LaTeX kalıntısı var:
+`({\text{spier}} = F_{\text{last}} / n$)` — düz metne çevir (`F_spier = F_last / n`).
+Düzelttikten sonra **beşinde de `node --check`** çalıştır.
 
 ## Görev şeması (her görev böyle yazılır)
 ```
@@ -49,7 +91,32 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
 
-### TASK-07 · Geschiedenis H2–H6 gerçek içerikle yeniden üretim  [status: IN_PROGRESS]
+### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: TODO]
+- **Atanan**: agy (Antigravity)
+- **Durum**: natuurkunde H1, H2, H3, H4, **H8** bitti (25 onderwerp + 25 proeftoets, kapı denetiminden
+  geçti). scheikunde yalnız **H2** bitti (4 onderwerp + 5 proeftoets). Şık dağıtımı Opus tarafından
+  düzeltildi (`spread.py`) — **o düzeltmeleri bozma**, yeni dosyalarda baştan dengeli üret.
+- **A · Eksik bölümler** (kaynak PDF'ler `~/Downloads/Eğitim/Duru/Natuurkunde/` altında):
+  - natuurkunde: **H5 Licht**, **H6 Zonnestelsel en heelal**, **H7 Energie en duurzaamheid**
+  - scheikunde: **H1 Scheikunde is overal**, **H3 Chemische reacties**, **H4 Reacties en energie**,
+    **H5 Mengsels**, **H6 Indeling van stoffen**, **H7 Koolstofchemie**
+  - Her bölüm için: kitabın **gerçek paragraf sayısı kadar** onderwerp + o kadar proeftoets.
+    Paragraf numarası/başlığı **OCR'dan** alınacak, uydurulmayacak (geschiedenis'te 25 başlık
+    uydurulmuştu, hepsi baştan yazılmak zorunda kaldı).
+- **B · Mevcut içerikte düzeltilecek kalite sorunları**:
+  1. **`waaronwaar` dengesi** — natuurkunde 26/145 (%18), scheikunde 4/20 (%20) "onwaar".
+     Hedef **≥%35**. "Hep Waar de geç" stratejisi şu an %80 getiriyor. Yeni/mevcut sorularda
+     gerçekten yanlış ifadeler de yaz.
+  2. **theorie çok ince** — natuurkunde 553–914 karakter, scheikunde 485–726 karakter.
+     Geschiedenis'te ölçü **≥1500 karakter** (orada 2764–4641 oldu). Duru bu sayfadan çalışacak;
+     tanım + örnek + formül kutusu içerecek kadar doldur.
+  3. **onderwerp başına soru sayısı** 6–7; hedef **8**.
+- **Kabul kriterleri**: yukarıdaki "agy'YE: SORU ÜRETİM KURALLARI" bloğunun 10 maddesi +
+  `gate.js <vak>` 12 kuralı. Teslimden önce **her dosyada `node --check`** (geçen sefer 5 dosya
+  bozuk gelmişti). `index.html`'e doğru grupta ekle, `?v=` bump et.
+- **agy notu**: (buraya yaz)
+
+### TASK-07 · Geschiedenis H2–H6 gerçek içerikle yeniden üretim  [status: DONE — 2026-08-28]
 - **Atanan**: Sonnet alt-agent × 5 (bölüm başına bir tane) — Opus brief'i + doğrulaması.
 - **Amaç**: Uydurma paragraf yapısını ve şablon soruları kitabın gerçek içeriğiyle değiştirmek.
 - **Girdi**: `inbox/h2_ocr.txt` … `inbox/h6_ocr.txt` (gerçek kitap taraması).
@@ -60,6 +127,21 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
   kitapla birebir; hiçbir soru iki dosyada geçmeyecek.
 - **Opus üstlendi**: `index.html` yeniden bağlama, eski slug-adlı dosyaların silinmesi,
   `bootstrap.js` bölüm intro'ları (✅ yapıldı), `?v=` bump.
+- **SONUÇ (2026-08-28)**: ✅ Tamamlandı. 25 onderwerp (`h2_1.js`…`h6_5.js`, id `h<N>-<P>`, her biri
+  8 soru + 2764–4641 karakter theorie) ve 25 proeftoets (`examen_6`…`examen_30`, 20'şer soru)
+  kitabın **gerçek paragraf yapısıyla** yeniden üretildi. Eski 25 slug-adlı dosya silindi,
+  `index.html` yeniden bağlandı (`?v=3.8`), serve testi 200, 60 data dosyası `node --check` temiz.
+- **Ek onarımlar (Opus)**: (a) `examen_1..5`'te 23 soru `invoer`→`invul` (sınavda cevap kutusu
+  çizilmiyordu); (b) `h1_*` + `examen_1..5`'te cevap yığılması düzeltildi (h1-2/h1-3/h1-5 %100 B idi)
+  — `scratchpad/spread.py` doğru şıkkı dosya içinde sırayla A→B→C→D'ye taşıyor, içeriğe dokunmuyor;
+  (c) `examen_1#20` ve `examen_3#20`'de `open` sorularda cevabı ele veren sleutelwoord'lar değiştirildi;
+  (d) `NlET`→`NIET` (2 yer); (e) `bootstrap.js` bölüm intro'ları kitaba göre düzeltildi.
+- **Kabul kapısı sonucu**: 12 kuralın 11'i ✓. Kalan tek uyarı: "Wat betekent het Russische woord
+  'sovjet'?" hem `h1-3`'te hem `examen_3`'te var — oefen↔sınav tekrarı, kusur sayılmadı.
+- **Cevap doğruluğu denetimi**: 24 onderwerp / 192 soru bağımsız modele kontrol ettirildi →
+  **0 feitelijke hata**. 8 "twijfelgeval" not edildi; 4'ü kitabın kendi eskimiş ifadesi
+  (Avrupa Konseyi/Belarus, FKÖ 1964 Arafat, IŞİD 2018, 1966 maden kapanışı) — **kasıtlı olarak
+  değiştirilmedi**: Duru sınavda kitaptaki cevabı yazacak. Proeftoetslerin (600 soru) aynı denetimi sürüyor.
 
 ### TASK-06 · HAVO 3 smoke-test siteleri (4 ders)  [status: DONE]
 - **Atanan**: agy (Antigravity)

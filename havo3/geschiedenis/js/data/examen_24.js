@@ -1,12 +1,13 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 24 — Hoofdstuk 5 (Nederland na 1945 (1945–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 24 (20 vragen)
+   Hoofdstuk 5: Nederland na 1945 — 5.4 Veelkleurig Nederland
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-24",
-    titel: "Proeftoets 24 — Hoofdstuk 5 (Nederland na 1945 (1945–heden))",
+    titel: "Proeftoets 24 — 5.4 Veelkleurig Nederland",
     vak: "Geschiedenis · Hoofdstuk 5",
     hoofdstuk: 5,
     hoofdstukTitel: "Hoofdstuk 5 — Nederland na 1945 (1945–heden)",
@@ -14,265 +15,215 @@
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Hoe heette de periode van herstel van Nederland na WO2?",
-            "opties": [
-                  "De Wederopbouw",
-                  "De Roaring Twenties",
-                  "De Grote Depressie",
-                  "De Ontzuiling"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Wederopbouw herstelde Nederland na de verwoestingen."
+        id: "ex24_v1",
+        type: "mc",
+        vraag: "Hoeveel van de ruim zeventien miljoen Nederlanders hadden in 2018 een migratieachtergrond?",
+        opties: [
+          "Bijna vier miljoen",
+          "Ongeveer honderdduizend",
+          "Meer dan tien miljoen",
+          "Vrijwel niemand"
+        ],
+        antwoord: 0,
+        uitleg: "Van de ruim zeventien miljoen Nederlanders in 2018 hadden bijna vier miljoen een migratieachtergrond, met minstens één in het buitenland geboren ouder."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Welke premier voerde in 1957 de AOW in?",
-            "opties": [
-                  "Willem Drees",
-                  "Ruud Lubbers",
-                  "Joop den Uyl",
-                  "Jan Peter Balkenende"
-            ],
-            "antwoord": 0,
-            "uitleg": "Willem Drees legde de basis voor de AOW."
+        id: "ex24_v2",
+        type: "mc",
+        vraag: "Waardoor vielen mensen van gemengde Nederlands-Indonesische afkomst extra op toen ze na 1945 in Nederland aankwamen?",
+        opties: [
+          "Door hun andere kledingstijl",
+          "Door hun bruine huidskleur in het nog bijna geheel witte Nederland",
+          "Door hun taalgebruik",
+          "Door hun beroep"
+        ],
+        antwoord: 1,
+        uitleg: "Deze Indische Nederlanders vielen op met hun bruine huid in het nog bijna geheel witte Nederland."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wat is de definitie van een verzorgingsstaat?",
-            "opties": [
-                  "Een maatschappij waarin de overheid zorgt voor het welzijn van burgers via sociale voorzieningen",
-                  "Een staat zonder belastingen",
-                  "Een militaire dictatuur",
-                  "Een markt zonder regels"
-            ],
-            "antwoord": 0,
-            "uitleg": "In een verzorgingsstaat heeft de overheid een zorgplicht."
+        id: "ex24_v3",
+        type: "mc",
+        vraag: "Hoe heette de eigen republiek die Molukse militairen in Indonesië hadden gesticht, voordat ze naar Nederland moesten vertrekken?",
+        opties: [
+          "De VOC",
+          "De EGKS",
+          "De RMS (Republiek der Zuid-Molukken)",
+          "De RMI"
+        ],
+        antwoord: 2,
+        uitleg: "De Molukse militairen hadden de RMS gesticht; nadat het Indonesische leger daaraan een eind maakte, moesten ze Indonesië verlaten."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Met welke organisatie begon de Europese integratie in 1951?",
-            "opties": [
-                  "EGKS (Europese Gemeenschap voor Kolen en Staal)",
-                  "EU",
-                  "NAVO",
-                  "VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "EGKS was het begin van Europese samenwerking."
+        id: "ex24_v4",
+        type: "mc",
+        vraag: "Wat deden sommige Molukse jongeren in de jaren 1970 om het RMS-ideaal onder de aandacht van Nederland te brengen?",
+        opties: [
+          "Ze richtten een eigen politieke partij op in de Tweede Kamer",
+          "Ze organiseerden vreedzame optochten door Den Haag",
+          "Ze schreven brieven aan de Verenigde Naties",
+          "Ze pleegden terreuracties, zoals treinkapingen"
+        ],
+        antwoord: 3,
+        uitleg: "In de jaren 1970 pleegden sommige Molukse jongeren terreuracties, zoals treinkapingen, om het RMS-ideaal onder de aandacht te brengen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat werd afgesproken bij het Verdrag van Maastricht (1992)?",
-            "opties": [
-                  "Oprichting van de Europese Unie en de beslissing tot de euro",
-                  "Het einde van WO2",
-                  "Het Marshallplan",
-                  "De NAVO oprichting"
-            ],
-            "antwoord": 0,
-            "uitleg": "In Maastricht ontstond de EU."
+        id: "ex24_v5",
+        type: "mc",
+        vraag: "Wat bevorderde uiteindelijk de integratie van Surinaamse, Antilliaanse en Arubaanse migranten in Nederland?",
+        opties: [
+          "Overeenkomsten met de Nederlandse cultuur, zoals de taal",
+          "Het feit dat ze in aparte kampen woonden",
+          "Het ontbreken van Nederlands onderwijs",
+          "Een verbod op werk buitenshuis"
+        ],
+        antwoord: 0,
+        uitleg: "De integratie van Surinaamse, Antilliaanse en Arubaanse migranten werd bevorderd door overeenkomsten tussen hun cultuur en die van andere Nederlanders, zoals de Nederlandse taal."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat hield de \"ontzuiling\" in de jaren 60 in?",
-            "opties": [
-                  "Het afbrokkelen van de strakke scheiding tussen katholieken, protestanten, socialisten en liberalen",
-                  "Het sluiten van de kerken",
-                  "Het afschaffen van partijen",
-                  "Het afbreken van huizen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Ontzuiling maakte burgers onafhankelijker van hun zuil."
+        id: "ex24_v6",
+        type: "mc",
+        vraag: "Uit welk Zuid-Europees land kwamen omstreeks 1950 onder meer gastarbeiders naar Nederland?",
+        opties: [
+          "Zweden",
+          "Italië",
+          "Canada",
+          "Japan"
+        ],
+        antwoord: 1,
+        uitleg: "Gastarbeiders kwamen onder meer uit Italië en andere landen rond de Middellandse Zee."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Welke jeugdgroepeen kwamen in de jaren 50 en 60 op?",
-            "opties": [
-                  "Nozems en Provo's",
-                  "Punks en Goths",
-                  "Hippies en Yuppies",
-                  "Zwarthemden"
-            ],
-            "antwoord": 0,
-            "uitleg": "Nozems en Provo's stonden voor een nieuwe jeugdcultuur."
+        id: "ex24_v7",
+        type: "mc",
+        vraag: "Wat gebeurde er vanaf 1973 met veel arbeidsmigranten door de achteruitgang van de industrie?",
+        opties: [
+          "Ze kregen dubbel salaris",
+          "Ze werden automatisch Nederlander",
+          "Ze verloren hun baan",
+          "Ze mochten geen uitkering meer krijgen"
+        ],
+        antwoord: 2,
+        uitleg: "Vanaf 1973 verloren veel arbeidsmigranten hun baan door de achteruitgang van de industrie."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wat eiste de actiegroep \"Dolle Mina\" tijdens de tweede feministische golf?",
-            "opties": [
-                  "Gelijke rechten en kansen voor vrouwen in werk, studie en maatschappij",
-                  "Vrouwenkiesrecht",
-                  "Het afschaffen van huwelijken",
-                  "Dienstplicht voor vrouwen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Dolle Mina streed voor gelijke vrouwenrechten."
+        id: "ex24_v8",
+        type: "mc",
+        vraag: "Door welke oorlog kwam na de Koude Oorlog een groeiend aantal asielzoekers naar de EU-landen?",
+        opties: [
+          "De Eerste Wereldoorlog",
+          "De Koreaanse Oorlog",
+          "De Tachtigjarige Oorlog",
+          "De oorlog in Joegoslavië"
+        ],
+        antwoord: 3,
+        uitleg: "Na de Koude Oorlog kwam een groeiend aantal asielzoekers naar de EU-landen, bijvoorbeeld door de oorlog in Joegoslavië."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Uit welke landen kwamen veel gastarbeiders in de jaren 60 naar Nederland?",
-            "opties": [
-                  "Onder meer Turkije en Marokko",
-                  "Verenigde Staten",
-                  "Rusland",
-                  "Indonesië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Gastarbeiders vulden het tekort aan arbeidskrachten op."
+        id: "ex24_v9",
+        type: "mc",
+        vraag: "In welk jaar werd filmmaker Theo van Gogh door een radicale moslim vermoord?",
+        opties: [
+          "2004",
+          "1994",
+          "2010",
+          "1989"
+        ],
+        antwoord: 0,
+        uitleg: "In 2004 werd filmmaker Theo van Gogh door een radicale moslim vermoord."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Wanneer werd Suriname een onafhankelijke republiek?",
-            "opties": [
-                  "25 november 1975",
-                  "17 augustus 1945",
-                  "5 mei 1945",
-                  "1 januari 2002"
-            ],
-            "antwoord": 0,
-            "uitleg": "Suriname werd in 1975 onafhankelijk."
+        id: "ex24_v10",
+        type: "mc",
+        vraag: "Waarom was het bijzonder dat Khadija Arib op haar achttiende zelfstandig ging wonen?",
+        opties: [
+          "Omdat ze toen al voorzitter van de Tweede Kamer was",
+          "Omdat dat ongebruikelijk was voor een Marokkaans meisje in die tijd",
+          "Omdat ze toen nog in Marokko woonde",
+          "Omdat ze toen al getrouwd was"
+        ],
+        antwoord: 1,
+        uitleg: "Dat Arib op haar 18e zelfstandig ging wonen was bijzonder voor een Marokkaans meisje in die tijd."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat kenmerkt het Nederlandse Poldermodel?",
-            "opties": [
-                  "Samenwerking en overleg tussen werkgevers, vakbonden en overheid",
-                  "Het bouwen van dijken",
-                  "Het staken van arbeiders",
-                  "Het heffen van hoge tarieven"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het Poldermodel streeft naar consensus."
+        id: "ex24_v11",
+        type: "waaronwaar",
+        vraag: "Vanaf 1945 wilde de Nederlandse overheid dat Indische Nederlanders zich aanpasten en spreidde hen daarom over het hele land.",
+        antwoord: true,
+        uitleg: "Waar! Om de assimilatie te bevorderen, werden de Indische Nederlanders over het hele land gespreid."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat werd afgesproken in het Akkoord van Wassenaar (1982)?",
-            "opties": [
-                  "Loonmatiging door vakbonden in ruil voor kortere werktijden",
-                  "De invoering van de euro",
-                  "De sluiting van havens",
-                  "De AOW-invoering"
-            ],
-            "antwoord": 0,
-            "uitleg": "Wassenaar herstelde de Nederlandse concurrentiepositie."
+        id: "ex24_v12",
+        type: "waaronwaar",
+        vraag: "Molukse militairen werden na aankomst meteen tussen andere Nederlanders in gewone woonwijken gehuisvest.",
+        antwoord: false,
+        uitleg: "Onwaar. Molukkers werden eerst in opvangkampen ondergebracht en later in eigen wijken, waardoor de afstand tot andere Nederlanders groot bleef."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wanneer werd het baar geld van de euro ingevoerd in Nederland?",
-            "opties": [
-                  "1 januari 2002",
-                  "1992",
-                  "1989",
-                  "2010"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op 1 januari 2002 kwam het contante eurogeld."
+        id: "ex24_v13",
+        type: "waaronwaar",
+        vraag: "Een groot deel van de Surinaamse Nederlanders die vanaf 1975 naar Nederland kwamen, was aanvankelijk werkloos.",
+        antwoord: true,
+        uitleg: "Waar! Van deze Surinaamse Nederlanders was een groot deel eerst werkloos."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Wat was het doel van de geleide loonpolitiek na 1945?",
-            "opties": [
-                  "De lonen bewust laag houden om goedkoop te kunnen exporteren",
-                  "Lonen vervijfvoudigen",
-                  "Lonen afschaffen",
-                  "Alleen hoge inkomens belasten"
-            ],
-            "antwoord": 0,
-            "uitleg": "Lage lonen hielpen de wederopbouw van exportbedrijven."
+        id: "ex24_v14",
+        type: "waaronwaar",
+        vraag: "Na 2000 kwamen veel asielzoekers vooral uit oorlogsgebieden en arme landen in Noord-Amerika naar Nederland.",
+        antwoord: false,
+        uitleg: "Onwaar. Na 2000 kwamen veel asielzoekers juist uit oorlogsgebieden en arme landen in Afrika en Azië, niet uit Noord-Amerika."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wat betekent een pluriforme samenleving?",
-            "opties": [
-                  "Een samenleving waarin mensen met diverse achtergronden en leefstijlen samenleven",
-                  "Een eentonige maatschappij",
-                  "Een maatschappij zonder cultuur",
-                  "Een militaire staat"
-            ],
-            "antwoord": 0,
-            "uitleg": "Nederland werd veelkleurig en pluriform."
+        id: "ex24_v15",
+        type: "invul",
+        vraag: "Hoe noemen we een verklaring voor migratie in het land van aankomst, zoals het personeelstekort in Nederland omstreeks 1950?",
+        antwoord: "pullfactor",
+        uitleg: "Het personeelstekort in Nederland was een pullfactor, een verklaring voor migratie in het land van aankomst."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Welk effect had de televisie op de Nederlandse maatschappij?",
-            "opties": [
-                  "Het bevorderde de ontzuiling en verbreedde de horizon van de burger",
-                  "Het deed alle radio's verdwijnen",
-                  "Het veroorzaakte oorlog",
-                  "Het stopte de economie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Televisie bracht de wereld in de huiskamer."
+        id: "ex24_v16",
+        type: "invul",
+        vraag: "Hoe heet de aanpassing aan de dominante cultuur die de Nederlandse overheid van Indische Nederlanders verwachtte?",
+        antwoord: "assimilatie",
+        uitleg: "De overheid wilde dat de Indische Nederlanders zich aanpasten: assimilatie."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat voor acties voerde de Amsterdamse Provo-beweging uit?",
-            "opties": [
-                  "Ludieke, geweldloze acties tegen de gevestigde orde (zoals het Witte Fietsenplan)",
-                  "Gewelddadige overvallen",
-                  "Stakingen in mijnen",
-                  "Revoluties op straat"
-            ],
-            "antwoord": 0,
-            "uitleg": "Provo daagde de autoriteiten ludiek uit."
+        id: "ex24_v17",
+        type: "invul",
+        vraag: "Welk recht kregen Turkse en Marokkaanse gastarbeiders na enkele jaren, waardoor ze hun vrouw en kinderen konden laten overkomen?",
+        antwoord: "gezinshereniging",
+        uitleg: "Sinds enkele jaren hadden gastarbeiders recht op gezinshereniging, waardoor velen hun vrouw en kinderen lieten overkomen."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Wie waren de Indische repatrianten na 1945?",
-            "opties": [
-                  "Mensen van Nederlandse en Nederlands-Indische afkomst die uit Indonesië naar Nederland verhuisden",
-                  "Duitse vluchtelingen",
-                  "Amerikaanse soldaten",
-                  "Franse arbeiders"
-            ],
-            "antwoord": 0,
-            "uitleg": "Repatrianten vestigden zich in Nederland na de dekolonisatie."
+        id: "ex24_v18",
+        type: "invul",
+        vraag: "Welke twee groepen jongeren zonder opleiding raakten vanaf de jaren 1980 een deel van hen verzeild in een gewelddadige straatcultuur?",
+        antwoord: "Antilliaanse en Arubaanse jongeren|Antillianen en Arubanen",
+        uitleg: "Vanaf de jaren 1980 kwam een groeiend aantal Antilliaanse en Arubaanse jongeren zonder opleiding naar Nederland; een deel raakte verzeild in een gewelddadige straatcultuur."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Tot welke grote Deltawerken leidde de ramp van februari 1953?",
-            "opties": [
-                  "Tot de bouw van de Deltawerken ter bescherming tegen de zee",
-                  "Tot het afsluiten van het IJsselmeer",
-                  "Tot het dempen van grachten",
-                  "Tot de bouw van Schiphol"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Deltawerken beschermen Zuidwest-Nederland."
+        id: "ex24_v19",
+        type: "open",
+        vraag: "Leg uit waarom de integratie van de Molukse gemeenschap in Nederland aanvankelijk moeilijker verliep dan die van de Indische Nederlanders.",
+        sleutelwoorden: [
+          "opvangkampen/eigen wijken/afstand",
+          "RMS/republiek/terugkeer"
+        ],
+        minTreffers: 1,
+        modelantwoord: "De Molukkers werden ondergebracht in opvangkampen en later in eigen wijken omdat zijzelf en de Nederlandse regering aanvankelijk op terugkeer naar een eigen Molukse republiek (de RMS) rekenden, waardoor de afstand tot andere Nederlanders groot bleef.",
+        uitleg: "Doordat zowel de Molukkers als de regering aanvankelijk uitgingen van terugkeer naar de RMS, bleven ze apart wonen en verliep de integratie moeizamer dan bij de Indische Nederlanders."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer ontstond de moderne milieubeweging in Nederland?",
-            "opties": [
-                  "In de jaren 1970 (mede door het rapport van de Club van Rome)",
-                  "In de jaren 1920",
-                  "In 1945",
-                  "In 2010"
-            ],
-            "antwoord": 0,
-            "uitleg": "De jaren 70 brachten milieubewustzijn."
+        id: "ex24_v20",
+        type: "open",
+        vraag: "Leg uit hoe de integratie van Turkse en Marokkaanse gastarbeiders door het onderwijs juist werd bevorderd, ondanks de grote cultuurverschillen.",
+        sleutelwoorden: [
+          "meisjes/dochters",
+          "goed presteerden/succesvol op school"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Vooral meisjes met een Turkse of Marokkaanse achtergrond deden het op school goed, waardoor de jonge generatie via het onderwijs beter integreerde dan hun ouders, ondanks de grote cultuurverschillen tussen hun herkomstland en Nederland.",
+        uitleg: "Vooral meisjes met een Turkse en Marokkaanse achtergrond deden het heel goed op school, wat de integratie van de jonge generatie bevorderde."
       }
-]
+    ]
   });
 })();

@@ -24,12 +24,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat geeft de <b>coëfficiënt</b> (het grote getal vóór de formule) aan (zoals de 3 in 3 H₂O)?",
       opties: [
-        "Het aantal losse moleculen van die stof",
         "Het aantal protonen in de kern",
+        "Het aantal losse moleculen van die stof",
         "De massa van één atoom",
         "Het aantal schillen"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Een coëfficiënt vóór de formule telt het aantal hele moleculen (3 H₂O betekent 3 losse watermoleculen)."
     },
     {
@@ -48,12 +48,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welk Grieks voorvoegsel hoort bij het getal <b>4</b> in de systematische naamgeving van niet-metaalverbindingen?",
       opties: [
-        "tetra",
-        "tri",
         "penta",
+        "tri",
+        "tetra",
         "hexa"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "1 = mono, 2 = di, 3 = tri, 4 = tetra, 5 = penta, 6 = hexa."
     },
     {
@@ -72,12 +72,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de molecuulformule van <b>distikstoftetraoxide</b>?",
       opties: [
-        "N₂O₄",
+        "2 NO",
         "NO₂",
         "N₄O₂",
-        "2 NO"
+        "N₂O₄"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "di-stikstof = N₂, tetra-oxide = O₄ -> N₂O₄."
     },
     {
@@ -120,12 +120,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is het verschil in betekenis tussen <b>2 N</b> en <b>N₂</b>?",
       opties: [
-        "2 N betekent twee losse stikstofatomen; N₂ betekent één stikstofmolecuul waarin twee stikstofatomen aan elkaar gebonden zijn",
         "2 N is een vloeistof, N₂ is een gas",
+        "2 N betekent twee losse stikstofatomen; N₂ betekent één stikstofmolecuul waarin twee stikstofatomen aan elkaar gebonden zijn",
         "Er is geen verschil",
         "2 N betekent 2 moleculen stikstofgas"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Coëfficiënt 2 = losse atomen; index 2 = chemisch aan elkaar gebonden in een molecuul."
     },
     {
@@ -144,12 +144,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de formule van <b>waterstofchloride</b> (zoutzuurgas)?",
       opties: [
-        "HCl",
-        "H₂Cl",
         "HCl₂",
+        "H₂Cl",
+        "HCl",
         "H₂O"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Waterstofchloride = HCl."
     },
     {

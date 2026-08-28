@@ -12,12 +12,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de definitie van een <b>stofeigenschap</b>?",
       opties: [
-        "Een eigenschap die afhangt van de grootte en vorm van het voorwerp",
         "Een eigenschap die kenmerkend is voor de stof zelf en niet verandert bij een grotere of kleinere hoeveelheid",
+        "Een eigenschap die afhangt van de grootte en vorm van het voorwerp",
         "Een eigenschap die alleen geldt voor vloeistoffen",
         "De prijs van een materiaal in de winkel"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Stofeigenschappen (zoals dichtheid, kookpunt, smeltpunt, kleur en geleidbaarheid) zijn specifiek voor de stof zelf en onafhankelijk van vorm of massa."
     },
     {
@@ -49,11 +49,11 @@ DURU.registerExamen({
       vraag: "Een voorwerp met een dichtheid van 0,92 g/cm³ wordt in een bak met zuiver water (dichtheid 1,0 g/cm³) gelegd. Wat gebeurt er met het voorwerp?",
       opties: [
         "Het zinkt naar de bodem",
-        "Het blijft drijven aan het wateroppervlak",
         "Het zweeft precies midden in het water",
+        "Het blijft drijven aan het wateroppervlak",
         "Het lost direct op"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Omdat de dichtheid van het voorwerp kleiner is dan die van water (0,92 < 1,0), blijft het drijven (zoals ijs op water)."
     },
     {
@@ -61,11 +61,11 @@ DURU.registerExamen({
       vraag: "Wanneer zal een voorwerp in een vloeistof precies <b>zweven</b> (noch zinken, noch drijven)?",
       opties: [
         "Als de dichtheid van het voorwerp veel groter is dan die van de vloeistof",
-        "Als de dichtheid van het voorwerp exact gelijk is aan die van de vloeistof",
+        "Als het volume nul is",
         "Als het voorwerp van goud gemaakt is",
-        "Als het volume nul is"
+        "Als de dichtheid van het voorwerp exact gelijk is aan die van de vloeistof"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Zweven treedt op wanneer ρ_voorwerp = ρ_vloeistof."
     },
     {
@@ -84,12 +84,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe kun je het volume van een onregelmatig gevormd steentje nauwkeurig meten in het practicum?",
       opties: [
-        "Met een liniaal de lengte, breedte en hoogte meten",
         "Met de onderdompelmethode in een maatcilinder met water (eindstand - beginstand)",
+        "Met een liniaal de lengte, breedte en hoogte meten",
         "Door het steentje op een weegschaal te leggen",
         "Door de temperatuur van het steentje te meten"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Bij de onderdompelmethode is het volume van het steentje gelijk aan de stijging van het waterpeil in de maatcilinder: V = V_eind - V_begin."
     },
     {
@@ -121,11 +121,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de dichtheid van de meeste stoffen wanneer ze worden <b>verwarmd</b> en uitzetten?",
       opties: [
         "De dichtheid wordt groter",
-        "De dichtheid wordt kleiner",
         "De dichtheid blijft exact gelijk",
+        "De dichtheid wordt kleiner",
         "De massa neemt af"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Bij verwarming zetten stoffen uit (volume V wordt groter), terwijl de massa m gelijk blijft. Omdat ρ = m / V, daalt de dichtheid."
     },
     {
@@ -146,10 +146,10 @@ DURU.registerExamen({
       opties: [
         "Kookpunt",
         "Kleur",
-        "Massa",
-        "Dichtheid"
+        "Dichtheid",
+        "Massa"
       ],
-      antwoord: 2,
+      antwoord: 3,
       uitleg: "Massa hangt af van de hoeveelheid materiaal (grootte/aantal blokjes) en is dus een voorwerpeigenschap, geen stofeigenschap."
     },
     {

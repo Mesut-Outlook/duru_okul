@@ -47,8 +47,8 @@ DURU.registerExamen({
     {
       type: "mc",
       vraag: "In de vorige vraag (U = 10 V, I = 0,2 A, R_1 = 20 Ω, R_2 = 30 Ω): hoeveel Volt is de deelspanning over R_1?",
-      opties: ["2 V", "4 V", "6 V", "10 V"],
-      antwoord: 1,
+      opties: ["6 V", "2 V", "4 V", "10 V"],
+      antwoord: 2,
       uitleg: "U_1 = I × R_1 = 0,2 A × 20 Ω = 4 V (over R_2 staat 0,2 × 30 = 6 V; samen 4 + 6 = 10 V)."
     },
     {
@@ -62,11 +62,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er in een <b>serieschakeling</b> van kerstboomlampjes als één lampje doorbrandt?",
       opties: [
         "De andere lampjes gaan feller branden",
-        "Alle lampjes gaan uit omdat de stroomkring onderbroken is",
         "Alleen dat ene lampje gaat uit, de rest blijft branden",
+        "Alle lampjes gaan uit omdat de stroomkring onderbroken is",
         "Er ontstaat kortsluiting"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Bij serie onderbreekt één defect lampje de gehele stroomkring, waardoor alle lampjes doven."
     },
     {
@@ -86,11 +86,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de totale vervangingsweerstand van een schakeling als je er een extra weerstand <b>parallel</b> aan toevoegt?",
       opties: [
         "De totale weerstand wordt groter",
-        "De totale weerstand wordt kleiner",
+        "De totale weerstand wordt oneindig groot",
         "De totale weerstand blijft exact gelijk",
-        "De totale weerstand wordt oneindig groot"
+        "De totale weerstand wordt kleiner"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Een extra parallelle tak biedt een extra stroompad, waardoor de totale weerstand DAALT en de totale stroom toeneemt."
     },
     {
@@ -109,12 +109,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een huisgroep in de meterkast is beveiligd met een automatische zekering van <b>16 A</b> op 230 V. Wat gebeurt er als de totale stroomsterkte door aangesloten apparaten oploopt naar 19 A?",
       opties: [
-        "De apparaten krijgen meer spanning",
         "De zekering schakelt de groep automatisch uit ter voorkoming van oververhitting en brand (overbelasting)",
+        "De apparaten krijgen meer spanning",
         "De stroom daalt vanzelf zonder dat er iets gebeurt",
         "De netspanning zakt naar 100 V"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De zekering springt open bij overbelasting (I > 16 A) om de bedrading tegen oververhitting en brand te beschermen."
     },
     {
@@ -134,11 +134,11 @@ DURU.registerExamen({
       vraag: "Twee weerstanden R_1 = 20 Ω en R_2 = 30 Ω staan parallel op een spanningsbron van 12 V. Hoe groot is de totale stroomsterkte I_tot?",
       opties: [
         "0,24 A",
-        "0,60 A",
         "1,00 A",
+        "0,60 A",
         "1,20 A"
       ],
-      antwoord: 2,
+      antwoord: 1,
       uitleg: "I_1 = 12 / 20 = 0,6 A. I_2 = 12 / 30 = 0,4 A. I_tot = 0,6 + 0,4 = 1,0 A."
     },
     {

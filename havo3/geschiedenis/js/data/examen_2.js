@@ -19,20 +19,20 @@
         type: "mc",
         vraag: "Wat is een 'tweefrontenoorlog'?",
         opties: [
-          "Een oorlog waarbij soldaten alleen met messen en geweren vechten.",
           "Een oorlog waarbij een land tegelijkertijd aan twee verschillende grenzen tegen twee vijanden moet vechten.",
+          "Een oorlog waarbij soldaten alleen met messen en geweren vechten.",
           "Een strijd tussen twee steden in hetzelfde land.",
           "Een oorlog die na twee weken voorbij is."
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Duitsland moest tegelijk aan de westgrens (tegen Frankrijk/Groot-Brittannië) en aan de oostgrens (tegen Rusland) vechten."
       },
       {
         id: "ex2_v2",
         type: "waaronwaar",
-        vraag: "De Duitse legerleiding had verwacht dat de Russen pas na weken konden aanvallen, maar Rusland viel al in augustus 1915 Oost-Pruisen binnen.",
+        vraag: "De Duitse legerleiding had verwacht dat de Russen pas na weken konden aanvallen, maar Rusland viel al in augustus 1914 Oost-Pruisen binnen.",
         antwoord: true,
-        uitleg: "Waar! De snelle Russische inval dwong Duitsland troepen van het Westfront naar het Oostfront te verplaatsen."
+        uitleg: "Waar! Al in augustus 1914 — de eerste oorlogsmaand — vielen de Russen Oost-Pruisen binnen. Die snelle inval dwong Duitsland troepen van het Westfront naar het Oostfront te verplaatsen."
       },
       {
         id: "ex2_v3",
@@ -73,12 +73,12 @@
         type: "mc",
         vraag: "Welke beslissende gebeurtenis in april 1917 veranderde de verhoudingen aan het Westfront ten gunste van de Geallieerden?",
         opties: [
-          "De deelname van de Verenigde Staten aan de Eerste Wereldoorlog.",
-          "De overgave van de Franse regering aan Duitsland.",
           "De uitvinding van de telegraaf.",
+          "De overgave van de Franse regering aan Duitsland.",
+          "De deelname van de Verenigde Staten aan de Eerste Wereldoorlog.",
           "De sluiting van het Panamakanaal."
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "De oorlogsverklaring van de VS bracht enorme industriële middelen en honderdduizenden verse troepen naar Frankrijk."
       },
       {
@@ -88,10 +88,10 @@
         opties: [
           "10.000",
           "50.000",
-          "250.000 (een kwart miljoen)",
-          "1.000.000"
+          "1.000.000",
+          "250.000 (een kwart miljoen)"
         ],
-        antwoord: 2,
+        antwoord: 3,
         uitleg: "Vanaf 1918 kwamen maandelijks 250.000 verse Amerikaanse militairen de Geallieerden versterken."
       },
       {
@@ -113,12 +113,12 @@
         type: "mc",
         vraag: "Wanneer lanceerde het Duitse leger zijn laatste grote wanhoopsoffensief aan het Westfront?",
         opties: [
-          "In augustus 1914",
           "In maart 1918",
+          "In augustus 1914",
           "In november 1919",
           "In juli 1916"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Na de vrede met Rusland verplaatste Duitsland al zijn troepen naar het Westfront voor een offensief in maart 1918."
       },
       {
@@ -126,12 +126,12 @@
         type: "mc",
         vraag: "Wat gebeurde er vanaf augustus 1918 aan het Westfront?",
         opties: [
-          "Een geallieerd tegenoffensief drong de uitgeputte Duitse troepen steeds verder terug.",
           "Duitsland veroverde Parijs.",
+          "Een geallieerd tegenoffensief drong de uitgeputte Duitse troepen steeds verder terug.",
           "Engeland trok al zijn troepen terug naar Londen.",
           "De strijd verplaatste zich naar Spanje."
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Het geallieerde tegenoffensief met Amerikaanse steun brak de Duitse linies definitief."
       },
       {
@@ -154,11 +154,11 @@
         vraag: "In welk gebergte vochten Oostenrijk-Hongarije en Italië een bloedige gebergte-oorlog uit?",
         opties: [
           "De Pyreneeën",
-          "De Alpen",
           "De Karpaten",
+          "De Alpen",
           "De Oeral"
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "In de Alpen voerden Italiaanse en Oostenrijkse troepen een verschrikkelijke strijd in de bergen."
       },
       {
@@ -167,11 +167,11 @@
         vraag: "Wat gebeurde er met de burgerbevolking in Belgische en Franse steden nabij het front?",
         opties: [
           "Zij merkten niets van de oorlog.",
-          "Steden en dorpen werden verwoest, burgers werden gedood, verjaagd of op de vlucht gedwongen.",
+          "Zij kregen gratis voedsel van het Duitse leger.",
           "Zij verhuisden allemaal naar Engeland.",
-          "Zij kregen gratis voedsel van het Duitse leger."
+          "Steden en dorpen werden verwoest, burgers werden gedood, verjaagd of op de vlucht gedwongen."
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "De frontgebieden werden volledig verwoest en miljoenen burgers sloegen op de vlucht."
       },
       {

@@ -45,12 +45,12 @@
         type: "mc",
         vraag: "Vanaf welk jaar werkten zes landen samen in de EGKS?",
         opties: [
-          "1948",
-          "1950",
           "1952",
+          "1950",
+          "1948",
           "1958"
         ],
-        antwoord: 2,
+        antwoord: 0,
         uitleg: "Vanaf 1952 werkten Frankrijk, de Bondsrepubliek, Italië en de Beneluxlanden samen in de EGKS."
       },
       {
@@ -60,10 +60,10 @@
         opties: [
           "De NAVO en het Warschaupact",
           "De Raad van Europa en het Europees Hof voor de Rechten van de Mens",
-          "De Europese Commissie en het Europese Hof van Justitie",
-          "Het Europees Parlement en de Europese Centrale Bank"
+          "Het Europees Parlement en de Europese Centrale Bank",
+          "De Europese Commissie en het Europese Hof van Justitie"
         ],
-        antwoord: 2,
+        antwoord: 3,
         uitleg: "De EEG kreeg een dagelijks bestuur, de Europese Commissie, en een rechtbank, het Europese Hof van Justitie."
       },
       {
@@ -97,12 +97,12 @@
         type: "mc",
         vraag: "Welke landen werden in 1981 en 1986 lid van de EEG, nadat ze van militaire dictatuur naar democratie waren veranderd?",
         opties: [
-          "Groot-Brittannië, Ierland en Denemarken",
           "Griekenland, en Spanje en Portugal",
+          "Groot-Brittannië, Ierland en Denemarken",
           "Zweden en Finland",
           "Polen en Hongarije"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Griekenland (1981) en Spanje en Portugal (1986) werden lid van de EEG nadat ze democratieën waren geworden."
       },
       {
@@ -111,11 +111,11 @@
         vraag: "Wat wordt bedoeld met het 'Wirtschaftswunder' in West-Duitsland?",
         opties: [
           "De invoering van de deutsche mark",
-          "De snelle economische groei (het economische wonder) in West-Duitsland",
+          "De hereniging van Oost- en West-Duitsland",
           "De bouw van de Berlijnse Muur",
-          "De hereniging van Oost- en West-Duitsland"
+          "De snelle economische groei (het economische wonder) in West-Duitsland"
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Het Wirtschaftswunder was de razendsnelle economische groei in West-Duitsland, waardoor de meeste Duitsers in de jaren 1960 een televisie en een auto kregen."
       },
       {
@@ -215,7 +215,7 @@
       {
         id: "ex19_v20",
         type: "open",
-        vraag: "Beschrijf het verband tussen democratie en welvaart in West-Europa na 1945, zoals dat in West-Duitsland te zien was.",
+        vraag: "Beschrijf het verband tussen democratie en economisch succes in West-Europa na 1945, zoals dat in West-Duitsland te zien was.",
         sleutelwoorden: [
           "welvaart/wirtschaftswunder",
           "stabiel/rust"

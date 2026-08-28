@@ -12,24 +12,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welk proces vindt plaats in de kern van een kerncentrale om energie op te wekken?",
       opties: [
-        "Kernfusie van waterstofatomen",
         "Kernsplijting van zware Uranium-235 kernen",
+        "Kernfusie van waterstofatomen",
         "Chemische verbranding van uraniumpoeder",
         "Elektrolyse van zwaar water"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "In een kernreactor worden zware Uranium-235 kernen gespleten door invangst van langzame neutronen."
     },
     {
       type: "mc",
       vraag: "Wat ontstaat er wanneer een Uranium-235 kern een langzaam neutron invangt en splitst?",
       opties: [
-        "Twee middelzware dochterkernen, 2 à 3 nieuwe snelle neutronen en een enorme hoeveelheid energie (warmte)",
         "Eén grotere plutoniumkern en zuurstof",
+        "Twee middelzware dochterkernen, 2 à 3 nieuwe snelle neutronen en een enorme hoeveelheid energie (warmte)",
         "Alleen alfadeeltjes zonder energie",
         "Waterdamp en koolstofdioxide"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Bij kernsplijting splitst de kern in 2 splijtingsproducten, komen er 2 tot 3 neutronen vrij en komt er gigantisch veel warmte-energie vrij."
     },
     {
@@ -43,11 +43,11 @@ DURU.registerExamen({
       vraag: "Wat is de functie van de <b>regelstaven</b> (van bijv. boor of cadmium) in een kernreactor?",
       opties: [
         "De reactor extra heet stoken",
-        "Overtollige neutronen absorberen om de kettingreactie te beheersen of de reactor stil te leggen",
         "Straling omzetten in elektriciteit",
+        "Overtollige neutronen absorberen om de kettingreactie te beheersen of de reactor stil te leggen",
         "Het koelwater zuiveren"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Regelstaven vangen neutronen weg. Door ze dieper in de reactor te laten zakken, stopt de kettingreactie."
     },
     {
@@ -60,12 +60,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is het belangrijkste <b>milieuvoordeel</b> van kernenergie vergeleken met een kolen- of gascentrale?",
       opties: [
-        "Bij de stroomopwekking in een kernreactor komt vrijwel geen CO₂ (broeikasgas) vrij",
+        "Het koelwater kan direct als mineraalwater verkocht worden",
         "Er ontstaat helemaal geen afval",
         "De bouw van een kerncentrale kost bijna niets",
-        "Het koelwater kan direct als mineraalwater verkocht worden"
+        "Bij de stroomopwekking in een kernreactor komt vrijwel geen CO₂ (broeikasgas) vrij"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Kerncentrales stoten tijdens bedrijf geen broeikasgassen (zoals CO₂) of roet uit."
     },
     {
@@ -96,12 +96,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke soort straling ontstaat bij het verval van Radon-222 in de woning?",
       opties: [
-        "Alfastraling",
         "Röntgenstraling",
+        "Alfastraling",
         "Microgolven",
         "Infraroodstraling"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Radon-222 is een alfastraler; inademing van radongas levert risico op longkanker."
     },
     {
@@ -120,12 +120,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de functie van de <b>moderator</b> (bijv. water of grafiet) in een kernreactor?",
       opties: [
-        "De snelle neutronen afremmen tot langzame neutronen, zodat ze makkelijker uraniumkernen kunnen splijten",
-        "De elektriciteit opslaan in batterijen",
         "Het uranium laten smelten",
+        "De elektriciteit opslaan in batterijen",
+        "De snelle neutronen afremmen tot langzame neutronen, zodat ze makkelijker uraniumkernen kunnen splijten",
         "De turbine sneller laten draaien"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Snelle neutronen ketsen te snel af; een moderator vertraagt ze zodat kernsplijting optimaal verloopt."
     },
     {
@@ -144,12 +144,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom is goede ventilatie in een nieuwbouwwoning belangrijk met betrekking tot radioactiviteit?",
       opties: [
-        "Om te voorkomen dat radioactief radongas uit betonnen muren en de kruipruimte zich ophoopt in de leefruimte",
+        "Om te voorkomen dat de wifi-straling blijft hangen",
         "Om de zwaartekracht laag te houden",
         "Omdat elektronen anders niet kunnen bewegen",
-        "Om te voorkomen dat de wifi-straling blijft hangen"
+        "Om te voorkomen dat radioactief radongas uit betonnen muren en de kruipruimte zich ophoopt in de leefruimte"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Ventilatie voert radongas en thorongas uit bouwmaterialen continu af naar buiten."
     },
     {

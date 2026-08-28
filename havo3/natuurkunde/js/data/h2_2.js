@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de eenheid van elektrische weerstand?",
-      opties: ["Volt", "Ampère", "Ohm", "Joule"],
-      antwoord: 2,
+      opties: ["Ohm", "Ampère", "Volt", "Joule"],
+      antwoord: 0,
       uitleg: "Weerstand wordt gemeten in Ohm (Ω)."
     },
     {

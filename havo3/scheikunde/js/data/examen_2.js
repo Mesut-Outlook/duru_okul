@@ -24,24 +24,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is het verschil tussen een <b>element</b> (enkelvoudige stof) en een <b>verbinding</b> (samengestelde stof)?",
       opties: [
-        "Een element bestaat uit maar één atoomsoort; een verbinding bestaat uit twee of meer verschillende atoomsoorten",
         "Een element is altijd vloeibaar; een verbinding is altijd vast",
+        "Een element bestaat uit maar één atoomsoort; een verbinding bestaat uit twee of meer verschillende atoomsoorten",
         "Een element kun je niet zien; een verbinding wel",
         "Er is geen enkel verschil"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Element = 1 atoomsoort (bijv. Fe, O₂). Verbinding = meerdere atoomsoorten chemisch gebonden (bijv. H₂O, CO₂)."
     },
     {
       type: "mc",
       vraag: "Waar staan de <b>metalen</b> in het Periodiek Systeem?",
       opties: [
-        "Links en in het midden van het periodiek systeem",
-        "Helemaal rechtsboven",
         "Alleen in de onderste rij",
+        "Helemaal rechtsboven",
+        "Links en in het midden van het periodiek systeem",
         "In groep 18"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "De overgrote meerderheid van de elementen (links en midden) zijn metalen. Niet-metalen staan rechtsboven (plus waterstof)."
     },
     {
@@ -66,12 +66,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke naam hebben de elementen in de <b>uiterst rechtse kolom (Groep 18)</b> van het Periodiek Systeem (He, Ne, Ar, Kr, Xe)?",
       opties: [
-        "Edelgassen",
+        "Aardalkalimetalen",
         "Halogenen",
         "Alkalimetalen",
-        "Aardalkalimetalen"
+        "Edelgassen"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Groep 18 bevat de edelgassen: zeer stabiele, onreactieve gassen die niet graag chemische bindingen aangaan."
     },
     {
@@ -90,12 +90,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke naam hebben de metalen in <b>Groep 1</b> (Li, Na, K, Rb, Cs)?",
       opties: [
-        "Alkalimetalen",
         "Aardalkalimetalen",
+        "Alkalimetalen",
         "Edelmetalen",
         "Zware metalen"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Groep 1 (met uitzondering van H) bevat de alkalimetalen: zachte, zeer reactieve metalen die heftig reageren met water."
     },
     {
@@ -108,12 +108,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke <b>zeven elementen</b> komen in de natuur voor als <b>twee-atomige moleculen</b> (diatomaire gassen/vloeistoffen, ezelsbruggetje 'BrINClHOF')?",
       opties: [
-        "Br₂, I₂, N₂, Cl₂, H₂, O₂, F₂",
-        "He, Ne, Ar, Kr, Xe, Rn, Og",
         "Fe, Cu, Zn, Ag, Au, Pt, Hg",
+        "He, Ne, Ar, Kr, Xe, Rn, Og",
+        "Br₂, I₂, N₂, Cl₂, H₂, O₂, F₂",
         "Na, K, Li, Rb, Cs, Fr, Be"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "BrINClHOF: Broom (Br₂), Jood (I₂), Stikstof (N₂), Chloor (Cl₂), Waterstof (H₂), Zuurstof (O₂), Fluor (F₂)."
     },
     {
@@ -132,12 +132,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welk metaal is bij kamertemperatuur (20 °C) als enige een <b>vloeistof</b>?",
       opties: [
-        "Kwik (Hg)",
+        "Gallium (Ga)",
         "Lood (Pb)",
         "Aluminium (Al)",
-        "Gallium (Ga)"
+        "Kwik (Hg)"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Kwik (Hg) is het enige metaal dat vloeibaar is bij kamertemperatuur."
     },
     {

@@ -24,36 +24,36 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de elektrische lading en massa van een <b>proton</b>?",
       opties: [
-        "Lading: +1, massa: 1 u",
         "Lading: 0, massa: 1 u",
+        "Lading: +1, massa: 1 u",
         "Lading: -1, massa: 0 u",
         "Lading: +2, massa: 4 u"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Protonen zijn positief geladen (+1) en hebben een atomaire massa van 1 u."
     },
     {
       type: "mc",
       vraag: "Wat is de elektrische lading en massa van een <b>elektron</b>?",
       opties: [
-        "Lading: -1, massa: verwaarloosbaar klein (ongeveer 0 u)",
-        "Lading: +1, massa: 1 u",
         "Lading: 0, massa: 1 u",
+        "Lading: +1, massa: 1 u",
+        "Lading: -1, massa: verwaarloosbaar klein (ongeveer 0 u)",
         "Lading: -2, massa: 2 u"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Elektronen zijn negatief geladen (-1) en wegen vrijwel niets vergeleken met kerndeeltjes (1/1836 u)."
     },
     {
       type: "mc",
       vraag: "Wat is de elektrische lading en massa van een <b>neutron</b>?",
       opties: [
-        "Lading: 0 (neutraal/ongeladen), massa: 1 u",
+        "Lading: +1, massa: 0 u",
         "Lading: +1, massa: 1 u",
         "Lading: -1, massa: 0 u",
-        "Lading: +1, massa: 0 u"
+        "Lading: 0 (neutraal/ongeladen), massa: 1 u"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Neutronen zijn elektrisch neutraal (lading 0) en hebben een massa van 1 u."
     },
     {
@@ -72,24 +72,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat geeft het <b>atoomnummer (Z)</b> van een element aan?",
       opties: [
-        "Het aantal protonen in de kern van het atoom (bepaalt de atoomsoort)",
         "Het totale gewicht van het atoom in gram",
+        "Het aantal protonen in de kern van het atoom (bepaalt de atoomsoort)",
         "Het aantal neutronen",
         "De plaats in de rij van Mendelejev"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Atoomnummer = aantal protonen. Elk element heeft een uniek atoomnummer (bijv. C = 6, O = 8, Au = 79)."
     },
     {
       type: "mc",
       vraag: "Wat geeft het <b>massagetal (A)</b> van een atoom aan?",
       opties: [
-        "Het totale aantal kerndeeltjes: aantal protonen + aantal neutronen (A = p + n)",
-        "Alleen het aantal protonen",
         "Het aantal elektronen maal twee",
+        "Alleen het aantal protonen",
+        "Het totale aantal kerndeeltjes: aantal protonen + aantal neutronen (A = p + n)",
         "De dichtheid van het element"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Massagetal A = protonen + neutronen."
     },
     {
@@ -108,12 +108,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat zijn <b>isotopen</b>?",
       opties: [
-        "Atomen van hetzelfde element (zelfde aantal protonen) met een verschillend aantal neutronen (dus een ander massagetal)",
+        "Atomen die elektronen hebben verloren",
         "Atomen met hetzelfde aantal neutronen maar ander aantal protonen",
         "Moleculen met dubbele bindingen",
-        "Atomen die elektronen hebben verloren"
+        "Atomen van hetzelfde element (zelfde aantal protonen) met een verschillend aantal neutronen (dus een ander massagetal)"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Isotopen horen bij hetzelfde element (zelfde p⁺), maar verschillen in kernmassa (aantal n⁰)."
     },
     {
@@ -138,12 +138,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat ontdekte Ernest Rutherford met zijn beroemde <b>goudfolie-experiment</b>?",
       opties: [
-        "Dat het atoom voor het overgrote deel uit lege ruimte bestaat, met in het centrum een minuscule, zware, positief geladen atoomkern",
         "Dat atomen massieve harde bollen zijn",
+        "Dat het atoom voor het overgrote deel uit lege ruimte bestaat, met in het centrum een minuscule, zware, positief geladen atoomkern",
         "Dat elektronen in de kern zitten",
         "Dat goud radioactief is"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Vrijwel alle alfadeeltjes vlogen rechtdoor de folie; slechts een enkel deeltje ketste terug op de compacte positieve atoomkern."
     },
     {
@@ -168,12 +168,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een chlooratoom (Cl, atoomnummer 17) heeft 17 elektronen. Wat is de <b>elektronenverdeling</b> over de schillen (K, L, M)?",
       opties: [
-        "2, 8, 7",
-        "2, 7, 8",
         "2, 10, 5",
+        "2, 7, 8",
+        "2, 8, 7",
         "8, 8, 1"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "K-schil: 2, L-schil: 8, M-schil: 17 - 10 = 7 elektronen -> verdeling (2, 8, 7)."
     },
     {

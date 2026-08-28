@@ -25,11 +25,11 @@ DURU.registerExamen({
       vraag: "Wat is het <b>absolute nulpunt</b> van temperatuur (0 Kelvin)?",
       opties: [
         "0 °C (smeltpunt van ijs)",
-        "-100 °C",
         "-273,15 °C (de laagst mogelijke temperatuur waarbij moleculen vrijwel stilstaan)",
+        "-100 °C",
         "-450 °C"
       ],
-      antwoord: 2,
+      antwoord: 1,
       uitleg: "0 Kelvin = -273,15 °C. Lager dan 0 K kan een temperatuur niet dalen."
     },
     {
@@ -48,12 +48,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke formule gebruik je om de benodigde <b>warmtehoeveelheid (Q)</b> te berekenen om een stof op te warmen?",
       opties: [
-        "Q = m × c × ΔT",
-        "Q = m / (c × ΔT)",
         "Q = P × t",
+        "Q = m / (c × ΔT)",
+        "Q = m × c × ΔT",
         "Q = U × I"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Q = m · c · ΔT, waarbij Q de warmte in Joule is, m de massa in kg (of g), c de soortelijke warmte en ΔT het temperatuurverschil."
     },
     {
@@ -61,11 +61,11 @@ DURU.registerExamen({
       vraag: "Wat geeft de <b>soortelijke warmte (c)</b> van een stof aan?",
       opties: [
         "Hoe snel een stof verdampt",
-        "Hoeveel Joule warmte er nodig is om 1 kg (of 1 g) van die stof 1 graad in temperatuur te laten stijgen",
+        "De elektrische weerstand bij 100 °C",
         "De dichtheid van een hete stof",
-        "De elektrische weerstand bij 100 °C"
+        "Hoeveel Joule warmte er nodig is om 1 kg (of 1 g) van die stof 1 graad in temperatuur te laten stijgen"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Soortelijke warmte is de stofeigenschap die aangeeft hoeveel warmte-energie 1 kg stof per graad temperatuurstijging opneemt."
     },
     {
@@ -127,11 +127,11 @@ DURU.registerExamen({
       vraag: "In de vorige vraag (Q = 30.000 J toegevoegd aan 0,25 kg water met c = 4180 J/(kg·K)): hoeveel graden stijgt de temperatuur van het water (afgerond op 1 decimaal)?",
       opties: [
         "14,4 °C",
-        "28,7 °C",
         "50,0 °C",
+        "28,7 °C",
         "71,8 °C"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "ΔT = Q / (m × c) = 30.000 / (0,25 × 4180) = 30.000 / 1045 ≈ 28,7 °C."
     },
     {
@@ -151,11 +151,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de moleculen in een vloeistof als je de vloeistof afkoelt?",
       opties: [
         "Ze gaan steeds sneller bewegen",
-        "Ze gaan langzamer bewegen en komen dichter bij elkaar",
+        "Ze worden groter van formaat",
         "Ze verdwijnen",
-        "Ze worden groter van formaat"
+        "Ze gaan langzamer bewegen en komen dichter bij elkaar"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Lagere temperatuur betekent een lagere gemiddelde bewegingssnelheid van de moleculen."
     },
     {

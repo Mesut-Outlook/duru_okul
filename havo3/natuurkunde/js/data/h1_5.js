@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de eenheid van arbeid in de natuurkunde?",
-      opties: ["Newton (N)", "Watt (W)", "Joule (J)", "Pascal (Pa)"],
-      antwoord: 2,
+      opties: ["Joule (J)", "Watt (W)", "Newton (N)", "Pascal (Pa)"],
+      antwoord: 0,
       uitleg: "Arbeid is een vorm van overgedragen energie en wordt gemeten in Joule (J)."
     },
     {
@@ -35,8 +35,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Welke kracht verricht negatieve arbeid bij een rijdende auto?",
-      opties: ["De motorkracht", "De zwaartekracht", "De remkracht/wrijving", "De normaalkracht"],
-      antwoord: 2,
+      opties: ["De motorkracht", "De remkracht/wrijving", "De zwaartekracht", "De normaalkracht"],
+      antwoord: 1,
       uitleg: "De remkracht/wrijving werkt tegen de bewegingsrichting in en verricht negatieve arbeid (zet kinetische energie om in warmte)."
     },
     {

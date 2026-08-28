@@ -22,7 +22,7 @@ DURU.register({
       niveau: 1,
       vraag: "Wat is het chemische symbool voor Koolstof?",
       antwoord: "C",
-      uitleg: "Koolstof = C."
+      uitleg: "Koolstof heeft als symbool C, afgeleid van het Latijnse woord 'carbonium'. Koolstof staat in groep 14 van het periodiek systeem en is de basis van alle organische verbindingen."
     },
     {
       type: "invoer",
@@ -35,8 +35,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Welke groep elementen (Groep 18) is extreem onreactief en heeft een volle buitenste schil?",
-      opties: ["Edelgassen", "Halogenen", "Alkalimetalen", "Zware metalen"],
-      antwoord: 0,
+      opties: ["Halogenen", "Edelgassen", "Alkalimetalen", "Zware metalen"],
+      antwoord: 1,
       uitleg: "Edelgassen (He, Ne, Ar, Kr, Xe) gaan vrijwel nooit reacties aan."
     },
     {

@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de eenheid van elektrisch vermogen?",
-      opties: ["Joule (J)", "Watt (W)", "Volt (V)", "Ampère (A)"],
-      antwoord: 1,
+      opties: ["Watt (W)", "Joule (J)", "Volt (V)", "Ampère (A)"],
+      antwoord: 0,
       uitleg: "Vermogen P wordt gemeten in Watt (W)."
     },
     {

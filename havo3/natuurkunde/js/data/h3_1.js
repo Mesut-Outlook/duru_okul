@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Welke stralingssoort heeft de langste golflengte in het spectrum?",
-      opties: ["Röntgenstraling", "Radiogolven", "Gammastraling", "UV-straling"],
-      antwoord: 1,
+      opties: ["Radiogolven", "Röntgenstraling", "Gammastraling", "UV-straling"],
+      antwoord: 0,
       uitleg: "Radiogolven hebben de langste golflengte en laagste frequentie."
     },
     {
@@ -43,8 +43,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Waarom zijn botten wit op een röntgenfoto?",
-      opties: ["Omdat botten zelf licht geven", "Omdat botten meer röntgenstraling absorberen/tegenhouden", "Omdat botten warmer zijn", "Omdat spieren de straling reflecteren"],
-      antwoord: 1,
+      opties: ["Omdat botten zelf licht geven", "Omdat botten warmer zijn", "Omdat botten meer röntgenstraling absorberen/tegenhouden", "Omdat spieren de straling reflecteren"],
+      antwoord: 2,
       uitleg: "Calcium in botten absorbeert de röntgenstralen, waardoor er een witte schaduw ontstaat."
     },
     {

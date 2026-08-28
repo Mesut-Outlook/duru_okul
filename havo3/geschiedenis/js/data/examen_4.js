@@ -19,12 +19,12 @@
         type: "mc",
         vraag: "Waar kwamen de Geallieerde overwinnaars in 1919 bijeen om de vredesvoorwaarden op te stellen?",
         opties: [
-          "In Londen",
           "In Parijs (Versailles)",
+          "In Londen",
           "In Berlijn",
           "In Washington"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "De vredesconferentie vond in 1919 plaats in en rond Parijs."
       },
       {
@@ -32,12 +32,12 @@
         type: "mc",
         vraag: "Wie waren de 'Grote Drie' die de beslissingen namen tijdens de Vredesconferentie in Parijs?",
         opties: [
-          "Wilson (VS), Clemenceau (Frankrijk) en Lloyd George (Groot-Brittannië)",
           "Lenin (Rusland), Bismarck (Duitsland) en Churchill (VK)",
+          "Wilson (VS), Clemenceau (Frankrijk) en Lloyd George (Groot-Brittannië)",
           "Atatürk (Turkije), Wilhelmina (NL) en Roosevelt (VS)",
           "Hitler (Duitsland), Mussolini (Italië) en Stalin (Sovjet-Unie)"
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Woodrow Wilson (VS), Georges Clemenceau (Frankrijk) en David Lloyd George (VK) waren de belangrijkste leiders."
       },
       {
@@ -52,12 +52,12 @@
         type: "mc",
         vraag: "Wat hield het 'alleenschuld-artikel' (Artikel 231) in de Vrede van Versailles in?",
         opties: [
-          "Alleen Duitsland en zijn bondgenoten waren schuldig aan het uitbreken van de oorlog.",
-          "Frankrijk en Engeland moesten de schade van Duitsland vergoeden.",
           "Alle Europese landen waren even schuldig.",
+          "Frankrijk en Engeland moesten de schade van Duitsland vergoeden.",
+          "Alleen Duitsland en zijn bondgenoten waren schuldig aan het uitbreken van de oorlog.",
           "De schuld werd kwijtgescholden."
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Duitsland kreeg de volledige schuld en verantwoordelijkheid voor alle oorlogsschade opgelegd."
       },
       {
@@ -73,11 +73,11 @@
         vraag: "Tot hoeveel man werd het Duitse leger maximaal beperkt volgens het Verdrag van Versailles?",
         opties: [
           "50.000 man",
-          "100.000 man",
+          "1.000.000 man",
           "500.000 man",
-          "1.000.000 man"
+          "100.000 man"
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Het Duitse leger werd teruggebracht tot hooguit 100.000 man zonder zware wapens."
       },
       {
@@ -112,12 +112,12 @@
         type: "mc",
         vraag: "Wat wordt bedoeld met het 'zelfbeschikkingsrecht' van volkeren?",
         opties: [
-          "Het recht van elk volk om zelf te bepalen bij welke staat hun gebied hoort en hoe het bestuurd wordt.",
           "Het recht van keizers om grenzen te wijzigen.",
+          "Het recht van elk volk om zelf te bepalen bij welke staat hun gebied hoort en hoe het bestuurd wordt.",
           "Het recht van soldaten om hun eigen officier te kiezen.",
           "Het recht van de winnaar om alle fabrieken over te nemen."
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "President Wilson vond dat elk volk het recht had op een eigen natiestaat en democratisch bestuur."
       },
       {
@@ -134,10 +134,10 @@
         opties: [
           "Tsjecho-Slowakije",
           "Joegoslavië",
-          "Polen",
-          "Zwitserland"
+          "Zwitserland",
+          "Polen"
         ],
-        antwoord: 3,
+        antwoord: 2,
         uitleg: "Zwitserland bestond al eeuwen. Tsjecho-Slowakije, Joegoslavië en Polen waren nieuwe/herrezen staten."
       },
       {
@@ -146,11 +146,11 @@
         vraag: "Hoe werden de Arabische gebieden van het voormalige Ottomaanse Rijk na WO1 bestuurd door Frankrijk en Engeland?",
         opties: [
           "Als onafhankelijke koninkrijken.",
-          "Als mandaatgebieden namens de Volkenbond.",
+          "Als onderdeel van het Russische Rijk.",
           "Als provincies van Italië.",
-          "Als onderdeel van het Russische Rijk."
+          "Als mandaatgebieden namens de Volkenbond."
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Frankrijk en Groot-Brittannië kregen mandaat over gebieden zoals Syrië, Libanon, Irak en Palestina."
       },
       {

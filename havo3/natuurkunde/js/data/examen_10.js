@@ -24,12 +24,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe kun je een <b>elektromagneet</b> sterker maken?",
       opties: [
-        "Door een weekijzeren kern in de spoel te plaatsen, meer windingen te gebruiken en de stroomsterkte te verhogen",
         "Door de stroomsterkte te verlagen",
+        "Door een weekijzeren kern in de spoel te plaatsen, meer windingen te gebruiken en de stroomsterkte te verhogen",
         "Door de spoel van plastic te maken",
         "Door de spoel af te koelen tot het vriespunt"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "De magneetkracht van een spoel neemt toe bij: 1) meer windingen, 2) grotere stroomsterkte I, 3) een ijzeren kern."
     },
     {
@@ -42,12 +42,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe wekt een <b>dynamo of generator</b> in een elektriciteitscentrale spanning op (inductie)?",
       opties: [
-        "Door een magneet en een koperen spoel ten opzichte van elkaar te laten bewegen/draaien",
-        "Door twee batterijen tegen elkaar te wrijven",
         "Door water direct door een koperdraad te pompen",
+        "Door twee batterijen tegen elkaar te wrijven",
+        "Door een magneet en een koperen spoel ten opzichte van elkaar te laten bewegen/draaien",
         "Door statische lading met een wollen doek op te wekken"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Door een veranderend magnetisch veld in een spoel (draaiende magneet of draaiende spoel) ontstaat inductiespanning."
     },
     {
@@ -62,10 +62,10 @@ DURU.registerExamen({
       opties: [
         "8 V",
         "10 V",
-        "12 V",
-        "20 V"
+        "20 V",
+        "12 V"
       ],
-      antwoord: 2,
+      antwoord: 3,
       uitleg: "R_tot = 100 Ω. I = 20 / 100 = 0,2 A. U_2 = 0,2 A × 60 Ω = 12 V (over R_1 staat 8 V; samen 20 V)."
     },
     {

@@ -42,12 +42,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke drie gouden regels gelden voor <b>stralingsbescherming</b>?",
       opties: [
-        "Afstand vergroten, tijd zo kort mogelijk houden, en goede afscherming gebruiken (lood/beton)",
-        "Snel rennen, warm aankleden en water drinken",
         "Ramen openzetten, zonlicht vermijden en batterijen verwijderen",
+        "Snel rennen, warm aankleden en water drinken",
+        "Afstand vergroten, tijd zo kort mogelijk houden, en goede afscherming gebruiken (lood/beton)",
         "Straling absorberen met aluminiumfolie op je hoofd"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "De 3 beschermingsregels: 1) Afstand zo groot mogelijk, 2) Verblijftijd zo kort mogelijk, 3) Afscherming (lood, beton)."
     },
     {
@@ -60,12 +60,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom is <b>besmetting met een alfastraler</b> (zoals inademen van radongas of plutoniumstof) in het lichaam levensgevaarlijk, terwijl alfastraling van buitenaf ongevaarlijk is?",
       opties: [
-        "Omdat alfadeeltjes in het lichaam direct in contact komen met levende cellen en door hun grote massa en lading zware DNA-schade veroorzaken",
+        "Omdat alfadeeltjes giftig zijn voor de maagwand",
         "Omdat alfastraling in het lichaam verandert in gammastraling",
         "Omdat alfastraling het bloed laat koken",
-        "Omdat alfadeeltjes giftig zijn voor de maagwand"
+        "Omdat alfadeeltjes in het lichaam direct in contact komen met levende cellen en door hun grote massa en lading zware DNA-schade veroorzaken"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Buiten het lichaam stopt de dode huidlaag alfa; binnenin het lichaam richten de zware deeltjes direct enorme cel- en DNA-schade aan in de longen/organen."
     },
     {
@@ -121,11 +121,11 @@ DURU.registerExamen({
       vraag: "Waarom worden na een ernstig kernongeval (zoals bij Tsjernobyl of Fukushima) <b>jodiumtabletten</b> uitgedeeld aan omwonenden?",
       opties: [
         "Om radioactieve straling direct te neutraliseren",
-        "Om de schildklier te verzadigen met ongevaarlijk stabiel jodium, zodat schadelijk radioactief jodium-131 niet wordt opgenomen",
         "Om de huid ongevoelig te maken voor alfastraling",
+        "Om de schildklier te verzadigen met ongevaarlijk stabiel jodium, zodat schadelijk radioactief jodium-131 niet wordt opgenomen",
         "Om besmet water drinkbaar te maken"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "De schildklier slaat jodium op. Door stabiel jodium in te nemen raakt de klier vol en wordt het gevaarlijke radioactieve jodium-131 meteen uitgescheiden."
     },
     {
@@ -139,11 +139,11 @@ DURU.registerExamen({
       vraag: "Wat is acute stralingsziekte?",
       opties: [
         "Een verkoudheid door koude stralen",
-        "Een ernstige ziekte die ontstaat na blootstelling aan een zeer hoge stralingsdosis in korte tijd (schade aan beenmerg, darmen en bloed)",
+        "Een ontsteking van de botten door calciumgebrek",
         "Een allergie voor zonlicht",
-        "Een ontsteking van de botten door calciumgebrek"
+        "Een ernstige ziekte die ontstaat na blootstelling aan een zeer hoge stralingsdosis in korte tijd (schade aan beenmerg, darmen en bloed)"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Bij hoge doses (> 1 Sv ineens) sterven snel delende cellen massaal af, wat leidt tot misselijkheid, bloedingen en afweeruitval."
     },
     {
@@ -162,12 +162,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat gebeurt er met kleding die besmet is geraakt met radioactief stof?",
       opties: [
-        "Die kan gewoon in de wasmachine bij 40 graden gewassen worden",
         "Die moet worden uitgetrokken, in afgesloten zakken worden opgeborgen en als radioactief afval worden afgevoerd",
+        "Die kan gewoon in de wasmachine bij 40 graden gewassen worden",
         "Die moet 5 minuten in de zon gelegd worden",
         "Die wordt direct met chloor geneutraliseerd"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Besmette kleding wordt zorgvuldig verwijderd en als radioactief afval opgeslagen tot de stof is uitgestorven."
     },
     {

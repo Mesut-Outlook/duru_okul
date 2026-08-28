@@ -13,16 +13,16 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Welke vorm van warmtetransport kan door het vacuüm van het heelal reizen?",
-      opties: ["Geleiding", "Stroming", "Warmtestraling", "Geluid"],
-      antwoord: 2,
+      opties: ["Warmtestraling", "Stroming", "Geleiding", "Geluid"],
+      antwoord: 0,
       uitleg: "Straling heeft geen tussenstof nodig."
     },
     {
       type: "mc",
       niveau: 1,
       vraag: "Waarom stijgt warme lucht op boven een radiator?",
-      opties: ["Omdat warme lucht uitzet en een lagere dichtheid krijgt", "Omdat warme lucht zwaarder is", "Omdat de zwaartekracht verdwijnt", "Door magnetisme"],
-      antwoord: 0,
+      opties: ["Omdat warme lucht zwaarder is", "Omdat warme lucht uitzet en een lagere dichtheid krijgt", "Omdat de zwaartekracht verdwijnt", "Door magnetisme"],
+      antwoord: 1,
       uitleg: "Convectie: warme lucht zet uit -> dichtheid daalt -> stijgt op."
     },
     {
@@ -36,8 +36,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat voor waarde van de warmtegeleidingscoëfficiënt (λ) heeft een goed isolatiemateriaal?",
-      opties: ["Een zo hoog mogelijke λ", "Een zo laag mogelijke λ", "Altijd exact 100", "Een negatieve λ"],
-      antwoord: 1,
+      opties: ["Een zo hoog mogelijke λ", "Altijd exact 100", "Een zo laag mogelijke λ", "Een negatieve λ"],
+      antwoord: 2,
       uitleg: "Lage λ betekent dat er weinig warmte doorheen lekt."
     },
     {

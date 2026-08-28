@@ -24,12 +24,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom moet een radioactieve tracer die bij een patiënt wordt ingespoten een <b>korte halveringstijd</b> (bijv. enkele uren) hebben?",
       opties: [
-        "Zodat het onderzoek snel genoeg klaar is en de patiënt daarna niet onnodig lang van binnenuit bestraald blijft",
         "Omdat lange halveringstijden de camera beschadigen",
+        "Zodat het onderzoek snel genoeg klaar is en de patiënt daarna niet onnodig lang van binnenuit bestraald blijft",
         "Omdat de stof anders bevriest",
         "Zodat het bloed sneller gaat stromen"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Korte halveringstijd zorgt voor voldoende activiteit tijdens de scan, terwijl de radioactiviteit binnen 1 à 2 dagen vrijwel volledig uit het lichaam verdwenen is."
     },
     {
@@ -43,11 +43,11 @@ DURU.registerExamen({
       vraag: "Wat is <b>radiotherapie</b> (bestraling bij kanker)?",
       opties: [
         "Het luisteren naar radioberichten ter ontspanning",
-        "Het gericht bestralen van een kwaadaardige tumor met ioniserende straling om kankercellen te doden",
         "Het wassen van de huid met radioactieve zeep",
+        "Het gericht bestralen van een kwaadaardige tumor met ioniserende straling om kankercellen te doden",
         "Een dieet met kaliumrijke bananen"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Bij radiotherapie worden tumorcellen vanuit verschillende hoeken met sterke stralenbündels bestraald zodat de tumor sterft terwijl het gezonde weefsel gespaard blijft."
     },
     {
@@ -60,12 +60,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe werkt een traditionele optische <b>rookmelder</b> of ionisatierookmelder in huis?",
       opties: [
-        "Rookdeeltjes blokkeren een lichtstraal of de ionisatiestroom van een kleine alfabron, waardoor het alarm afgaat",
+        "De melder luistert naar het knetteren van vuur",
         "De rookmelder meet de temperatuur van de kamer",
         "De melder ruikt chemische geuren met een koolstoffilter",
-        "De melder luistert naar het knetteren van vuur"
+        "Rookdeeltjes blokkeren een lichtstraal of de ionisatiestroom van een kleine alfabron, waardoor het alarm afgaat"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Rookdeeltjes verstoren het licht of de ionenstroom in de meetkamer, wat het alarm activeert."
     },
     {
@@ -96,12 +96,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is het voordeel van een <b>PET-scan</b> (Positron Emissie Tomografie)?",
       opties: [
-        "Het kan actieve stofwisselingsprocessen en tumoren in een heel vroeg stadium opsporen via radioactief gelabeld glucose",
         "Het kost helemaal geen elektriciteit",
+        "Het kan actieve stofwisselingsprocessen en tumoren in een heel vroeg stadium opsporen via radioactief gelabeld glucose",
         "Het maakt alleen zwart-witfoto's van botten",
         "Het werkt met geluidsgolven"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Kankercellen verbruiken veel suiker. Door radioactief suiker in te spuiten lichten tumoren fel op op de PET-scan."
     },
     {
@@ -114,12 +114,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is radiometrische <b>koolstofdatering (C-14 datering)</b> in de archeologie?",
       opties: [
-        "Het bepalen van de ouderdom van oude organische voorwerpen (hout, botten) door het verval van Koolstof-14 te meten",
-        "Het wegen van oude stenen",
         "Het herstellen van oude schilderijen met UV-licht",
+        "Het wegen van oude stenen",
+        "Het bepalen van de ouderdom van oude organische voorwerpen (hout, botten) door het verval van Koolstof-14 te meten",
         "Het smelten van fossielen"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Zolang een organisme leeft, neemt het C-14 op. Na het sterven vervalt het C-14 ($t_{1/2} \approx 5730\text{ jaar}$); aan het restant meet men hoe lang geleden het organisme stierf."
     },
     {
@@ -133,11 +133,11 @@ DURU.registerExamen({
       vraag: "Welke stralingssoort wordt gebruikt bij <b>bagagescanners</b> op luchthavens om door koffers heen te kijken?",
       opties: [
         "Infraroodstraling",
-        "Röntgenstraling",
+        "Zichtbaar licht",
         "Alfastraling",
-        "Zichtbaar licht"
+        "Röntgenstraling"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Röntgenstralen dringen door kleding en kofferwanden heen en maken metalen voorwerpen en organische stoffen zichtbaar in verschillende kleuren."
     },
     {

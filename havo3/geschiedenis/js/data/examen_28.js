@@ -93,11 +93,11 @@
         vraag: "Wat veranderde er vanaf 2009 in het buitenlands beleid van de VS onder president Obama?",
         opties: [
           "De VS breidden hun leger fors uit",
-          "De VS kozen voor een minder leidende rol en trokken troepen terug uit Afghanistan en Irak",
           "De VS verklaarden Rusland de oorlog",
+          "De VS kozen voor een minder leidende rol en trokken troepen terug uit Afghanistan en Irak",
           "De VS traden toe tot de Europese Unie"
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "Obama koos vanaf 2009 voor een minder leidende rol van de VS in de wereld en trok het leger grotendeels terug uit Afghanistan en Irak."
       },
       {

@@ -111,12 +111,12 @@
         type: "mc",
         vraag: "Wat gebeurde er tijdens de afgesproken 'volkenruil' tussen Griekenland en Turkije na 1923?",
         opties: [
-          "1,2 miljoen Grieken verhuisden van Turkije naar Griekenland en 500.000 Turken van Griekenland naar Turkije.",
-          "Alle Grieken en Turken verhuisden samen naar Cyprus.",
           "Griekenland en Turkije werden samengevoegd tot één koninkrijk.",
+          "Alle Grieken en Turken verhuisden samen naar Cyprus.",
+          "1,2 miljoen Grieken verhuisden van Turkije naar Griekenland en 500.000 Turken van Griekenland naar Turkije.",
           "Alleen soldaten moesten van plaats ruilen."
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Om verdere etnische conflicten te voorkomen spraken beide landen een grootschalige verplichte bevolkingsruil af."
       },
       {

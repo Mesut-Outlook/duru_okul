@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de officiële eenheid van versnelling?",
-      opties: ["m/s", "m/s²", "km/h", "N/kg"],
-      antwoord: 1,
+      opties: ["m/s²", "m/s", "km/h", "N/kg"],
+      antwoord: 0,
       uitleg: "Versnelling wordt gemeten in m/s²."
     },
     {
@@ -35,8 +35,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Twee voorwerpen worden met dezelfde kracht geduwd. Voorwerp A heeft een massa van 5 kg, voorwerp B van 10 kg. Wat geldt voor de versnelling?",
-      opties: ["A versnelt 2× zo snel als B", "B versnelt 2× zo snel als A", "Beide versnellen even snel", "A versnelt 4× zo snel"],
-      antwoord: 0,
+      opties: ["B versnelt 2× zo snel als A", "A versnelt 2× zo snel als B", "Beide versnellen even snel", "A versnelt 4× zo snel"],
+      antwoord: 1,
       uitleg: "a = F / m: het lichtere voorwerp A (5 kg) krijgt een twee keer zo grote versnelling."
     },
     {

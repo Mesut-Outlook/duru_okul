@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat geldt voor de spanning in een parallelschakeling?",
-      opties: ["De spanning verdeelt zich", "De spanning is over elke tak gelijk", "De spanning is overal nul", "De grootste weerstand krijgt de meeste spanning"],
-      antwoord: 1,
+      opties: ["De spanning is over elke tak gelijk", "De spanning verdeelt zich", "De spanning is overal nul", "De grootste weerstand krijgt de meeste spanning"],
+      antwoord: 0,
       uitleg: "In parallel staat over elke tak direct de volledige bronspanning."
     },
     {

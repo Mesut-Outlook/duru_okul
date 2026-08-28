@@ -21,8 +21,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Waarom gebruikt een arts voor een tracer een gammastraler en GEEN alfastraler?",
-      opties: ["Omdat gammastraling door het lichaam naar buiten kan om gedetecteerd te worden", "Omdat alfastraling te duur is", "Omdat gammastraling koud is", "Omdat alfastraling de camera laat smelten"],
-      antwoord: 0,
+      opties: ["Omdat alfastraling te duur is", "Omdat gammastraling door het lichaam naar buiten kan om gedetecteerd te worden", "Omdat gammastraling koud is", "Omdat alfastraling de camera laat smelten"],
+      antwoord: 1,
       uitleg: "Gammastraling dringt naar buiten door tot de detector met minimale lokale weefselschade."
     },
     {
@@ -43,8 +43,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat voor straling gebruikt een CT-scanner?",
-      opties: ["Röntgenstraling", "Geluidsgolven", "Alfastraling", "Infrarood"],
-      antwoord: 0,
+      opties: ["Alfastraling", "Geluidsgolven", "Röntgenstraling", "Infrarood"],
+      antwoord: 2,
       uitleg: "Een CT-scanner maakt 3D-beelden met ronddraaiende röntgenstralen."
     },
     {

@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de eenheid voor de biologische stralingsdosis op het lichaam?",
-      opties: ["Becquerel (Bq)", "Sievert (Sv)", "Newton (N)", "Volt (V)"],
-      antwoord: 1,
+      opties: ["Sievert (Sv)", "Becquerel (Bq)", "Newton (N)", "Volt (V)"],
+      antwoord: 0,
       uitleg: "De effectieve dosis wordt uitgedrukt in Sievert (Sv) of millisievert (mSv)."
     },
     {
@@ -28,8 +28,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat zijn de 3 hoofdregels voor stralingsbescherming?",
-      opties: ["Afstand vergroten, tijd verkorten, afscherming gebruiken", "Warm aankleden, rennen, water drinken", "Ramen openzetten, zout eten, slapen", "Koperen sieraden dragen"],
-      antwoord: 0,
+      opties: ["Warm aankleden, rennen, water drinken", "Afstand vergroten, tijd verkorten, afscherming gebruiken", "Ramen openzetten, zout eten, slapen", "Koperen sieraden dragen"],
+      antwoord: 1,
       uitleg: "Afstand, tijd en afscherming (lood/beton)."
     },
     {

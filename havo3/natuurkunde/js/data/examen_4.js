@@ -12,12 +12,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de officiële eenheid van <b>arbeid (W)</b> en energie in de natuurkunde?",
       opties: [
-        "Newton (N)",
-        "Watt (W)",
         "Joule (J)",
+        "Watt (W)",
+        "Newton (N)",
         "Pascal (Pa)"
       ],
-      antwoord: 2,
+      antwoord: 0,
       uitleg: "Arbeid is de hoeveelheid overgedragen energie en wordt gemeten in Joule (J) of Newton-meter (N·m)."
     },
     {
@@ -90,12 +90,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke <b>energieomzetting</b> vindt er plaats als een kogelstoter zijn spieren gebruikt om een kogel met kracht weg te stoten?",
       opties: [
-        "Kernenergie → warmte",
         "Chemische energie (uit voedsel) → bewegingsenergie (kinetische energie)",
+        "Kernenergie → warmte",
         "Zwaarte-energie → chemische energie",
         "Elektrische energie → stralingsenergie"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Spieren zetten opgeslagen chemische energie uit voedsel om in mechanische arbeid, waardoor de kogel bewegingsenergie (kinetische energie) krijgt."
     },
     {
@@ -133,11 +133,11 @@ DURU.registerExamen({
       vraag: "Waarom neemt een speerwerper een flinke aanloop voordat hij de speer werpt?",
       opties: [
         "Om de speer zwaarder te maken",
-        "Om de afstand s waarover spierkracht op de speer kan worden uitgeoefend te vergroten, zodat er meer arbeid wordt verricht",
         "Om de luchtweerstand tijdens de vlucht te verminderen",
+        "Om de afstand s waarover spierkracht op de speer kan worden uitgeoefend te vergroten, zodat er meer arbeid wordt verricht",
         "Om de zwaartekracht tijdelijk uit te schakelen"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Door de aanloop en het strekken van het lichaam kan de kracht over een grotere afstand s worden uitgeoefend (W = F × s), waardoor de speer meer bewegingsenergie en een hogere afwerpsnelheid krijgt."
     },
     {
@@ -151,11 +151,11 @@ DURU.registerExamen({
       vraag: "Een wielrenner fietst een heuvel op. Welke vorm van energie bouwt de wielrenner op tijdens het klimmen?",
       opties: [
         "Chemische energie",
-        "Zwaarte-energie (potentiële energie)",
+        "Elektrische energie",
         "Kernenergie",
-        "Elektrische energie"
+        "Zwaarte-energie (potentiële energie)"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Door hoogte te winnen tegen de zwaartekracht in, wordt de verrichte arbeid omgezet in zwaarte-energie (hoogte-energie / potentiële energie)."
     },
     {

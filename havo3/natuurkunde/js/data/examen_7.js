@@ -11,20 +11,20 @@ DURU.registerExamen({
     {
       type: "mc",
       vraag: "Wat is de eenheid van <b>elektrische weerstand (R)</b>?",
-      opties: ["Volt (V)", "Ampère (A)", "Ohm (Ω)", "Watt (W)"],
-      antwoord: 2,
+      opties: ["Watt (W)", "Ampère (A)", "Volt (V)", "Ohm (Ω)"],
+      antwoord: 3,
       uitleg: "Elektrische weerstand wordt gemeten in Ohm (symbool: Ω, de Griekse letter omega)."
     },
     {
       type: "mc",
       vraag: "Welke formule geeft de <b>Wet van Ohm</b> correct weer?",
       opties: [
-        "R = U × I",
         "R = U / I",
+        "R = U × I",
         "R = I / U",
         "R = P × t"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "R = U / I (Weerstand = Spanning / Stroomsterkte). Hieruit volgt ook U = I × R en I = U / R."
     },
     {
@@ -49,12 +49,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat voor soort lijn zie je in een <b>(I,U)-diagram</b> bij een <b>ohmse weerstand</b> (constante weerstand)?",
       opties: [
-        "Een rechte lijn door de oorsprong (0,0)",
         "Een parabool die steeds vlakker wordt",
+        "Een rechte lijn door de oorsprong (0,0)",
         "Een cirkelvormige boog",
         "Een getrapte lijn"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Bij een ohmse weerstand is de verhouding U/I constant. De grafiek is een rechte lijn door de oorsprong."
     },
     {
@@ -68,23 +68,23 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de weerstand van een koperdraad als je de draad <b>twee keer zo lang</b> maakt?",
       opties: [
         "De weerstand wordt twee keer zo klein",
-        "De weerstand wordt twee keer zo groot",
         "De weerstand wordt vier keer zo groot",
+        "De weerstand wordt twee keer zo groot",
         "De weerstand verandert niet"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "De weerstand is recht evenredig met de lengte van de draad (R ~ l). Twee keer zo lang = twee keer zoveel weerstand."
     },
     {
       type: "mc",
       vraag: "Wat gebeurt er met de weerstand van een draad als je de <b>doorsnede (dikte)</b> van de draad twee keer zo groot maakt?",
       opties: [
-        "De weerstand wordt twee keer zo klein (gehalveerd)",
+        "De weerstand blijft gelijk",
         "De weerstand verdubbelt",
         "De weerstand verviervoudigt",
-        "De weerstand blijft gelijk"
+        "De weerstand wordt twee keer zo klein (gehalveerd)"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Een dikkere draad biedt meer ruimte voor passerende elektronen: de weerstand is omgekeerd evenredig met de doorsnede (R ~ 1/A)."
     },
     {
@@ -146,11 +146,11 @@ DURU.registerExamen({
       vraag: "In een schakeling vervang je een weerstand van 50 Ω door een weerstand van 100 Ω. De spanning blijft 10 V. Wat gebeurt er met de stroomsterkte?",
       opties: [
         "De stroomsterkte verdubbelt",
-        "De stroomsterkte wordt gehalveerd (van 0,2 A naar 0,1 A)",
         "De stroomsterkte blijft 0,2 A",
+        "De stroomsterkte wordt gehalveerd (van 0,2 A naar 0,1 A)",
         "De stroomsterkte wordt vier keer zo klein"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "I = U / R. Bij 50 Ω: I = 10 / 50 = 0,2 A. Bij 100 Ω: I = 10 / 100 = 0,1 A (gehalveerd)."
     },
     {

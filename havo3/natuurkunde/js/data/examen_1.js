@@ -12,24 +12,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de officiële SI-eenheid van <b>kracht</b>?",
       opties: [
-        "Joule (J)",
         "Newton (N)",
+        "Joule (J)",
         "Watt (W)",
         "Kilogram (kg)"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Kracht wordt gemeten in Newton (N). Joule is voor energie/arbeid, Watt voor vermogen en kilogram voor massa."
     },
     {
       type: "mc",
       vraag: "Een auto rijdt naar rechts met een motorkracht van 1200 N. De tegenwerkende wrijvingskrachten bedragen samen 800 N. Hoe groot is de <b>resulterende kracht (F_res)</b> en wat gebeurt er met de beweging?",
       opties: [
-        "400 N naar rechts; de auto versnelt",
         "400 N naar links; de auto vertraagt",
+        "400 N naar rechts; de auto versnelt",
         "2000 N naar rechts; de auto rijdt met constante snelheid",
         "0 N; de auto staat stil"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "F_res = F_motor - F_tegen = 1200 N - 800 N = 400 N naar rechts. Omdat de resulterende kracht in de bewegingsrichting werkt, versnelt de auto."
     },
     {
@@ -68,10 +68,10 @@ DURU.registerExamen({
       opties: [
         "300 N naar links",
         "300 N naar rechts",
-        "0 N",
-        "150 N naar rechts"
+        "150 N naar rechts",
+        "0 N"
       ],
-      antwoord: 2,
+      antwoord: 3,
       uitleg: "De krachten zijn even groot maar tegengesteld gericht: 150 N - 150 N = 0 N. Ze heffen elkaar precies op."
     },
     {
@@ -84,12 +84,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een scooter rijdt in 15 seconden een afstand van 180 meter met constante snelheid. Wat is zijn snelheid in m/s?",
       opties: [
-        "8 m/s",
-        "10 m/s",
         "12 m/s",
+        "10 m/s",
+        "8 m/s",
         "15 m/s"
       ],
-      antwoord: 2,
+      antwoord: 0,
       uitleg: "v = s / t = 180 m / 15 s = 12 m/s."
     },
     {
@@ -121,11 +121,11 @@ DURU.registerExamen({
       vraag: "Hoe bepaal je de <b>afgelegde afstand</b> uit een <b>(v,t)-diagram</b>?",
       opties: [
         "Door de hoogste snelheid af te lezen",
-        "Door de oppervlakte onder de grafieklijn te berekenen",
         "Door de helling van de lijn te bepalen",
+        "Door de oppervlakte onder de grafieklijn te berekenen",
         "Door de eindsnelheid te delen door de tijd"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "De afgelegde afstand s is gelijk aan de oppervlakte onder de (v,t)-grafiek (bijv. rechthoek: v × t of driehoek: 0,5 × v × t)."
     },
     {
@@ -138,12 +138,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat stelt een <b>horizontale rechte lijn</b> in een <b>(s,t)-diagram</b> voor?",
       opties: [
-        "Het voorwerp staat stil",
+        "Het voorwerp vertraagt",
         "Het voorwerp beweegt met constante snelheid",
         "Het voorwerp versnelt",
-        "Het voorwerp vertraagt"
+        "Het voorwerp staat stil"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "In een (s,t)-diagram staat de afstand op de y-as. Een horizontale lijn betekent dat de afstand niet verandert in de tijd: het voorwerp staat stil."
     },
     {
@@ -156,12 +156,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een trein rijdt met een constante snelheid van 90 km/h gedurende 20 minuten. Welke afstand legt de trein af?",
       opties: [
-        "18 km",
         "30 km",
+        "18 km",
         "45 km",
         "60 km"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "20 minuten = 1/3 uur (of 20/60 = 0,333 uur). Afstand s = v × t = 90 km/h × (20/60) h = 30 km."
     },
     {

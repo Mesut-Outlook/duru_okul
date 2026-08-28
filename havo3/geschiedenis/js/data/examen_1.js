@@ -19,12 +19,12 @@
         type: "mc",
         vraag: "Waarom werd in de 19e eeuw de invoering van een landelijke standaardtijd noodzakelijk?",
         opties: [
-          "Omdat dorpen en steden anders geen markt konden houden.",
           "Omdat de spoorwegen een strakke en betrouwbare dienstregeling nodig hadden.",
+          "Omdat dorpen en steden anders geen markt konden houden.",
           "Omdat de fabrieksarbeiders te laat op hun werk kwamen.",
           "Omdat de kerken hun klokken niet meer luidden."
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Met de komst van de trein en spoorwegen was het onmogelijk om een dienstregeling te maken als elke plaats een eigen zonne-tijd aanhield."
       },
       {
@@ -46,12 +46,12 @@
         type: "mc",
         vraag: "Hoe noemden de Fransen de periode 1890–1914 achteraf, gekenmerkt door vrede, welvaart en vernieuwing?",
         opties: [
-          "La belle époque",
           "Le grand siècle",
+          "La belle époque",
           "L'âge d'or",
           "La grande guerre"
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "'La belle époque' betekent 'het mooie tijdperk' en verwijst naar de periode van vrede en bloei voor 1914."
       },
       {
@@ -60,11 +60,11 @@
         vraag: "Wat wordt bedoeld met het 'vooruitgangsgeloof' rond 1900?",
         opties: [
           "Het geloof dat de kerk alle wetenschap zou vervangen.",
-          "Het optimistische idee dat de mensheid door wetenschap, techniek en industrie steeds beter zou worden.",
           "Het idee dat de Eerste Wereldoorlog snel gewonnen zou worden.",
+          "Het optimistische idee dat de mensheid door wetenschap, techniek en industrie steeds beter zou worden.",
           "Het geloof dat de economie alleen in Frankrijk kon groeien."
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "Het vooruitgangsgeloof was het rotsvaste vertrouwen dat de maatschappij door technologische vernieuwingen steeds verder ging."
       },
       {
@@ -80,11 +80,11 @@
         vraag: "Wie blies in 1896 in Athene de klassieke Olympische Spelen nieuw leven in als de moderne Olympische Spelen?",
         opties: [
           "Victor Hugo",
-          "Pierre de Coubertin",
+          "Koning Willem III",
           "Woodrow Wilson",
-          "Koning Willem III"
+          "Pierre de Coubertin"
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Baron Pierre de Coubertin was de Franse oprichter van de moderne Olympische Spelen."
       },
       {
@@ -99,12 +99,12 @@
         type: "mc",
         vraag: "Welke landen vormden bij de uitbraak van WO1 in 1914 de kern van de Geallieerden?",
         opties: [
-          "Duitsland, Oostenrijk-Hongarije en Italië",
           "Groot-Brittannië, Frankrijk en Rusland",
+          "Duitsland, Oostenrijk-Hongarije en Italië",
           "Verenigde Staten, Japan en Duitsland",
           "Nederland, België en Luxemburg"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Groot-Brittannië, Frankrijk en Rusland (de Triple Entente) vormden de kern van de Geallieerden."
       },
       {
@@ -139,12 +139,12 @@
         type: "mc",
         vraag: "Wie voerde de moord op Frans Ferdinand en zijn vrouw Sophie in Sarajevo uit?",
         opties: [
-          "Gavrilo Princip",
-          "Vladimir Lenin",
           "Mustafa Kemal",
+          "Vladimir Lenin",
+          "Gavrilo Princip",
           "Pieter Jelles Troelstra"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Gavrilo Princip, een 19-jarige Servische nationalist van de terreurgroep De Zwarte Hand, schoot de kroonprins neer."
       },
       {
@@ -153,11 +153,11 @@
         vraag: "Wat was het voornaamste doel van het Duitse 'Schlieffenplan'?",
         opties: [
           "Het veroveren van de Nederlandse zeehavens.",
-          "Frankrijk snel in 7 weken verslaan via neutraal België om een tweefrontenoorlog te voorkomen.",
+          "Een bondgenootschap sluiten met het Russische tsarenrijk.",
           "Direct een invasie in Groot-Brittannië uitvoeren.",
-          "Een bondgenootschap sluiten met het Russische tsarenrijk."
+          "Frankrijk snel in 7 weken verslaan via neutraal België om een tweefrontenoorlog te voorkomen."
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Het Schlieffenplan wilde Frankrijk snel uitschakelen om daarna alle troepen naar het oostfront tegen Rusland te sturen."
       },
       {
@@ -172,12 +172,12 @@
         type: "mc",
         vraag: "Bij welke Franse rivier werd de Duitse opmars in september 1914 definitief tot staan gebracht?",
         opties: [
-          "De Seine",
           "De Marne",
+          "De Seine",
           "De Rijn",
           "De Donau"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Bij de Slag bij de Marne stootten de Geallieerden de Duitse troepen terug en begon de uitputtende loopgravenoorlog."
       },
       {
@@ -212,8 +212,8 @@
         type: "open",
         vraag: "Leg in je eigen woorden het verschil uit tussen de diepere 'oorzaken' van de Eerste Wereldoorlog en de directe 'aanleiding'.",
         sleutelwoorden: [
-          "oorzaak/dieper/langere tijd/militarisme/nationalisme",
-          "aanleiding/vonk/moord/Sarajevo/Frans Ferdinand"
+          "militarisme/nationalisme/bondgenootschappen/wapenwedloop/langere tijd",
+          "vonk/moord/Sarajevo/Frans Ferdinand/schot"
         ],
         minTreffers: 1,
         modelantwoord: "Oorzaken zijn dieper liggende spanningen die al tientallen jaren opbouwden (zoals militarisme, wapenwedloop en bondgenootschappen). De aanleiding is de specifieke gebeurtenis die het conflict direct deed ontbranden (de moord op Frans Ferdinand in Sarajevo op 28 juni 1914).",

@@ -36,12 +36,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is <b>warmtestroming (convectie)</b>?",
       opties: [
-        "Warmtetransport waarbij een warme vloeistof of warm gas zelf beweegt en opstijgt door een lagere dichtheid",
-        "Warmteoverdracht door een vacuüm",
         "Warmte die door een stenen muur trekt",
+        "Warmteoverdracht door een vacuüm",
+        "Warmtetransport waarbij een warme vloeistof of warm gas zelf beweegt en opstijgt door een lagere dichtheid",
         "Het trillen van atomen in een kristal"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Bij stroming stijgt verwarmde vloeistof/gas op (kleinere dichtheid) en zakt koudere vloeistof/gas omlaag."
     },
     {
@@ -50,10 +50,10 @@ DURU.registerExamen({
       opties: [
         "Geleiding",
         "Stroming",
-        "Warmtestraling (infraroodstraling)",
-        "Geluidsgolven"
+        "Geluidsgolven",
+        "Warmtestraling (infraroodstraling)"
       ],
-      antwoord: 2,
+      antwoord: 3,
       uitleg: "Straling heeft geen tussenstof nodig en plant zich voort als elektromagnetische golven door het vacuüm."
     },
     {
@@ -66,12 +66,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat geeft de <b>warmtegeleidingscoëfficiënt (λ / lambda)</b> van een materiaal aan?",
       opties: [
-        "Hoeveel het materiaal uitzet bij hitte",
         "Hoe goed of slecht het materiaal warmte doorlaat (in W/(m·K))",
+        "Hoeveel het materiaal uitzet bij hitte",
         "De dichtheid van het materiaal",
         "Het smeltpunt van het materiaal"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Lambda (λ) meet het warmtegeleidingsvermogen: metalen hebben een hoge λ (goede geleiders); glaswol/piepschuim hebben een zeer lage λ (goede isolatoren)."
     },
     {
@@ -84,12 +84,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe werkt een <b>thermosfles (vacuümfles)</b> om warme drank urenlang heet te houden?",
       opties: [
-        "Het vacuüm tussen de dubbele wand stopt geleiding en stroming, en de zilveren spiegellaag reflecteert warmtestraling terug",
         "Er zit een klein elektrisch verwarmingselement in de dop",
+        "Het vacuüm tussen de dubbele wand stopt geleiding en stroming, en de zilveren spiegellaag reflecteert warmtestraling terug",
         "De fles maakt de drank zwaarder",
         "De fles laat geen zwaartekracht door"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Vacuüm blokkeert geleiding en stroming; spiegelende wanden blokkeren straling."
     },
     {
@@ -103,11 +103,11 @@ DURU.registerExamen({
       vraag: "Wat is <b>spouwmuurisolatie</b> bij een woning?",
       opties: [
         "De muren van buiten schilderen met witte verf",
-        "De lege ruimte (spouw) tussen de binnen- en buitenmuur vullen met isolatieschuim, parels of minerale wol",
         "De ramen openzetten voor ventilatie",
+        "De lege ruimte (spouw) tussen de binnen- en buitenmuur vullen met isolatieschuim, parels of minerale wol",
         "Een extra verdieping op het huis bouwen"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Het vullen van de luchtspouw voorkomt warmtestroming en geleiding door de buitenmuren."
     },
     {
@@ -127,11 +127,11 @@ DURU.registerExamen({
       vraag: "Waarom voelt een metalen deurklink in de winter veel kouder aan dan een houten deur op exact dezelfde temperatuur (bijv. 5 °C)?",
       opties: [
         "Omdat de klink daadwerkelijk een lagere temperatuur heeft dan het hout",
-        "Omdat metaal een goede warmtegeleider is en razendsnel warmte aan je hand onttrekt, terwijl hout warmte slecht geleidt",
+        "Omdat metaal magnetisch is",
         "Omdat hout zelf warmte produceert",
-        "Omdat metaal magnetisch is"
+        "Omdat metaal een goede warmtegeleider is en razendsnel warmte aan je hand onttrekt, terwijl hout warmte slecht geleidt"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Beide hebben 5 °C, maar metaal geleidt warmte uit je vingers veel sneller weg, waardoor je koudesensoren een snelle temperatuurdaling voelen."
     },
     {
@@ -150,19 +150,19 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom plaatst men vaak <b>radiatorfolie</b> achter een verwarmingsradiator tegen de buitenmuur?",
       opties: [
-        "Om de muur te versieren",
         "Om de infrarode warmtestraling van de achterkant van de radiator terug de kamer in te reflecteren i.p.v. de buitenmuur op te warmen",
+        "Om de muur te versieren",
         "Om stof tegen te houden",
         "Om het water in de radiator sneller te laten stromen"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De glimmende folie weerkaatst IR-warmtestraling direct terug de woonkamer in."
     },
     {
       type: "waaronwaar",
       vraag: "Goede woningisolatie (dak, muren, vloer en glas) verlaagt het aardgasverbruik, bespaart stookkosten en vermindert de CO₂-uitstoot van het huishouden.",
       antwoord: true,
-      uitleg: "Waar."
+      uitleg: "Waar: minder warmteverlies door isolatie betekent dat de cv-ketel minder aardgas hoeft te verbranden om het huis warm te houden. Omdat bij de verbranding van aardgas CO₂ vrijkomt, daalt met een lager gasverbruik ook de CO₂-uitstoot en de energierekening."
     },
     {
       type: "invul",

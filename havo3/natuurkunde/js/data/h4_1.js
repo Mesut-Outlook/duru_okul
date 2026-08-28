@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de dichtheid van zuiver water?",
-      opties: ["0,5 g/cm³", "1,0 g/cm³", "2,7 g/cm³", "7,9 g/cm³"],
-      antwoord: 1,
+      opties: ["1,0 g/cm³", "0,5 g/cm³", "2,7 g/cm³", "7,9 g/cm³"],
+      antwoord: 0,
       uitleg: "Water heeft een dichtheid van 1,0 g/cm³ (= 1,0 kg/dm³ = 1000 kg/m³)."
     },
     {
@@ -28,8 +28,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Een voorwerp met dichtheid 1,2 g/cm³ wordt in water (1,0 g/cm³) gegooid. Wat gebeurt er?",
-      opties: ["Het drijft", "Het zweeft", "Het zinkt naar de bodem", "Het verdampt"],
-      antwoord: 2,
+      opties: ["Het drijft", "Het zinkt naar de bodem", "Het zweeft", "Het verdampt"],
+      antwoord: 1,
       uitleg: "Omdat de dichtheid groter is dan die van water (1,2 > 1,0), zinkt het voorwerp."
     },
     {

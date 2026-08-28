@@ -111,12 +111,12 @@
         type: "mc",
         vraag: "Wat deden Duitse soldaten volgens het boek in West-Polen met de Poolse bevolking?",
         opties: [
-          "Ze voerden etnische zuiveringen uit: Polen werden verdreven en vervangen door etnische Duitsers.",
           "Ze gaven de Poolse bevolking extra grond.",
+          "Ze voerden etnische zuiveringen uit: Polen werden verdreven en vervangen door etnische Duitsers.",
           "Ze lieten de Poolse bevolking ongemoeid.",
           "Ze verhuisden de Poolse bevolking naar Duitsland voor scholing."
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "In West-Polen werden Poolse bewoners verdreven en vervangen door etnische Duitsers uit onder meer de Baltische staten en Roemenië."
       },
       {
@@ -138,12 +138,12 @@
         type: "mc",
         vraag: "Wat gebeurde er bij Koersk in de zomer van 1943?",
         opties: [
-          "De grootste tankslag uit de geschiedenis, die de Duitsers verloren.",
-          "De ondertekening van een nieuw niet-aanvalsverdrag.",
           "De eerste Duitse landing in Engeland.",
+          "De ondertekening van een nieuw niet-aanvalsverdrag.",
+          "De grootste tankslag uit de geschiedenis, die de Duitsers verloren.",
           "De bevrijding van Parijs."
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Bij Koersk verloren de Duitsers de grootste tankslag uit de geschiedenis, kort na hun nederlaag bij Stalingrad."
       },
       {
@@ -151,12 +151,12 @@
         type: "mc",
         vraag: "Wat was de Atlantikwall die Hitler langs de kust van West-Europa liet bouwen?",
         opties: [
-          "Een 5000 kilometer lang verdedigingsstelsel tegen een geallieerde invasie.",
+          "Een dijk om Nederland te beschermen tegen overstromingen.",
           "Een spoorlijn tussen Duitsland en Spanje.",
           "Een muur om Berlijn te beschermen tegen het Rode Leger.",
-          "Een dijk om Nederland te beschermen tegen overstromingen."
+          "Een 5000 kilometer lang verdedigingsstelsel tegen een geallieerde invasie."
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "De Atlantikwall was een langgerekt systeem van bunkers, mijnenvelden en versperringen tussen Noorwegen en de Spaanse grens."
       },
       {

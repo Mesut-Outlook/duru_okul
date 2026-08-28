@@ -35,8 +35,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Welk voorvoegsel hoort bij het getal 4?",
-      opties: ["tetra", "tri", "penta", "di"],
-      antwoord: 0,
+      opties: ["tri", "tetra", "penta", "di"],
+      antwoord: 1,
       uitleg: "4 = tetra (bijv. CCl₄ = koolstoftetrachloride)."
     },
     {

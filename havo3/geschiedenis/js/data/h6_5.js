@@ -48,8 +48,8 @@
         niveau: 1,
         type: "mc",
         vraag: "In welk jaar werd de Vereniging Natuurmonumenten opgericht om het Naardermeer te redden van gebruik als vuilnisbelt?",
-        opties: ["1895", "1905", "1945", "1971"],
-        antwoord: 1,
+        opties: ["1971", "1895", "1945", "1905"],
+        antwoord: 3,
         uitleg: "In 1905 kocht de nieuw opgerichte Vereniging Natuurmonumenten het Naardermeer, dat Amsterdam als vuilnisbelt wilde gebruiken."
       },
       {
@@ -74,12 +74,12 @@
         type: "mc",
         vraag: "Wat gebeurde er in 1986 bij de kerncentrale van Tsjernobyl?",
         opties: [
-          "Een succesvolle proefdraai zonder problemen",
-          "De centrale werd definitief gesloten wegens ouderdom",
           "Een kernramp die een groot gebied onbewoonbaar maakte",
+          "De centrale werd definitief gesloten wegens ouderdom",
+          "Een succesvolle proefdraai zonder problemen",
           "De bouw van de centrale werd stopgezet"
         ],
-        antwoord: 2,
+        antwoord: 0,
         uitleg: "Door een ongeluk in de Sovjetkerncentrale van Tsjernobyl werd een groot gebied onbewoonbaar door kankerverwekkende radioactieve straling."
       },
       {
@@ -97,11 +97,11 @@
         vraag: "Wat veroorzaakte de gaswinning in Groningen op den duur?",
         opties: [
           "Doordat het gas niet meer geëxporteerd mocht worden",
-          "Doordat de gasprijzen daalden tot nul",
           "Bodemdaling en honderden aardbevingen die huizen beschadigden",
+          "Doordat de gasprijzen daalden tot nul",
           "Doordat het gas volledig op raakte in één jaar"
         ],
-        antwoord: 2,
+        antwoord: 1,
         uitleg: "De gaswinning veroorzaakte bodemdaling en honderden aardbevingen, waardoor de gaswinning vanaf 2014 werd beperkt."
       },
       {
@@ -120,10 +120,10 @@
         opties: [
           "Een verbod op alle kernenergie wereldwijd",
           "Het stopzetten van alle olie-export uit het Midden-Oosten",
-          "Een gezamenlijk Europees leger tegen klimaatverandering",
-          "Te streven naar een energietransitie van fossiele naar duurzame energie"
+          "Te streven naar een energietransitie van fossiele naar duurzame energie",
+          "Een gezamenlijk Europees leger tegen klimaatverandering"
         ],
-        antwoord: 3,
+        antwoord: 2,
         uitleg: "Op de klimaatconferentie van Parijs spraken bijna alle landen af te streven naar een energietransitie: van fossiele brandstoffen naar duurzame energie zoals wind- en zonne-energie."
       }
     ]

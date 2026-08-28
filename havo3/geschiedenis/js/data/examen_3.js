@@ -19,12 +19,12 @@
         type: "mc",
         vraag: "Wie was de laatste tsaar van het Russische Rijk die in 1917 na massale opstanden moest aftreden?",
         opties: [
-          "Peter de Grote",
           "Nicolaas II",
+          "Peter de Grote",
           "Alexander III",
           "Jozef Stalin"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Tsaar Nicolaas II trad in februari 1917 af."
       },
       {
@@ -39,12 +39,12 @@
         type: "mc",
         vraag: "Wat gebeurde er tijdens 'Bloedige Zondag' in 1905 in Sint-Petersburg?",
         opties: [
-          "Het leger schoot honderden ongewapende arbeiders dood die hulp vroegen bij het Winterpaleis van de tsaar.",
           "Lenin werd tot premier gekozen.",
+          "Het leger schoot honderden ongewapende arbeiders dood die hulp vroegen bij het Winterpaleis van de tsaar.",
           "Het Russische leger versloeg Japan.",
           "De Sovjet-Unie werd gesticht."
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Soldaten openden het vuur op vredige betogers bij het Winterpaleis, wat leidde tot grote verontwaardiging."
       },
       {
@@ -59,12 +59,12 @@
         type: "mc",
         vraag: "Wat was het directe gevolg van de Februarirevolutie in 1917?",
         opties: [
-          "Tsaar Nicolaas II trad af, Rusland werd een republiek en de Doema vormde een voorlopige regering.",
-          "Lenin verbood alle godsdiensten.",
           "Rusland veroverde Berlijn.",
+          "Lenin verbood alle godsdiensten.",
+          "Tsaar Nicolaas II trad af, Rusland werd een republiek en de Doema vormde een voorlopige regering.",
           "Duitsland gaf zich over."
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "De Februarirevolutie maakte van het tsarenrijk een republiek met een voorlopige regering."
       },
       {
@@ -86,12 +86,12 @@
         type: "mc",
         vraag: "Hoe brachten de Duitsers de radicale communist Lenin in 1917 terug naar Rusland?",
         opties: [
-          "In het geheim met een speciale trein vanuit Zwitserland.",
+          "Met een Duitse U-boot.",
           "Met een Duits vliegdekschip.",
           "In een vermomming als Britse soldaat.",
-          "Met een Duitse U-boot."
+          "In het geheim met een speciale trein vanuit Zwitserland."
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Duitsland hoopte dat Lenin de chaos in Rusland zou vergroten, zodat Rusland uit de oorlog zou stappen."
       },
       {
@@ -126,12 +126,12 @@
         type: "mc",
         vraag: "Wat hield de 'dictatuur van het proletariaat' in die Lenin vestigde?",
         opties: [
-          "Een alleenheerschappij waarin de communistische partij in naam van de arbeidersklasse alle macht bezat.",
           "Een democratie waarin alle burgers wekelijks stemden.",
+          "Een alleenheerschappij waarin de communistische partij in naam van de arbeidersklasse alle macht bezat.",
           "Een regering geleid door de adel en kerk.",
           "Een staat zonder enige regering."
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Lenin maakte van Rusland een communistische eenpartijstaat zonder politieke oppositie."
       },
       {
@@ -139,12 +139,12 @@
         type: "mc",
         vraag: "Waarvoor stonden de hamer en de sikkel in het communistische symbool?",
         opties: [
-          "Hamer = fabrieksarbeiders; Sikkel = boeren",
-          "Hamer = militairen; Sikkel = doktoren",
           "Hamer = bouwvakkers; Sikkel = vissers",
+          "Hamer = militairen; Sikkel = doktoren",
+          "Hamer = fabrieksarbeiders; Sikkel = boeren",
           "Hamer = spoorwegen; Sikkel = leraren"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "De hamer verbeeldde de arbeider en de sikkel de boer."
       },
       {
@@ -166,12 +166,12 @@
         type: "mc",
         vraag: "Wie vochten er tegen elkaar in de bloedige Russische Burgeroorlog (1918–1922)?",
         opties: [
-          "Het communistische Rode Leger tegen de 'Witten' (tsaaraanhangers, adel en democraten).",
+          "De boeren tegen de fabrieksarbeiders.",
           "De Russen tegen de Chinezen.",
           "De Fransen tegen de Britse troepen.",
-          "De boeren tegen de fabrieksarbeiders."
+          "Het communistische Rode Leger tegen de 'Witten' (tsaaraanhangers, adel en democraten)."
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "De burgeroorlog ging tussen de communistische 'Roden' en hun tegenstanders, de 'Witten'."
       },
       {
@@ -206,8 +206,8 @@
         type: "open",
         vraag: "Leg in je eigen woorden uit wat het verschil was tussen de Februarirevolutie en de Oktoberrevolutie van 1917 in Rusland.",
         sleutelwoorden: [
-          "Februarievolutie/tsaar/aftreden/republiek/voorlopige",
-          "Oktoberrevolutie/Lenin/bolsjewieken/staatsgreep/communisme/dictatuur"
+          "tsaar/aftreden/republiek/voorlopige regering/Nicolaas",
+          "Lenin/bolsjewieken/staatsgreep/communisme/dictatuur"
         ],
         minTreffers: 1,
         modelantwoord: "Bij de Februarirevolutie trad tsaar Nicolaas II af en werd Rusland een democratische republiek met een voorlopige regering. Bij de Oktoberrevolutie pleegden Lenin en de bolsjewieken een gewapende staatsgreep en maakten ze van Rusland een communistische dictatuur (eenpartijstaat).",

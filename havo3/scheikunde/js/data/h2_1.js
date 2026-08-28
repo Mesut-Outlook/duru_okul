@@ -21,8 +21,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Hoe bewegen moleculen in een vaste stof?",
-      opties: ["Ze trillen om hun vaste roosterpositie", "Ze vliegen kriskras door de kamer", "Ze glijden snel langs elkaar", "Ze staan volkomen stil"],
-      antwoord: 0,
+      opties: ["Ze vliegen kriskras door de kamer", "Ze trillen om hun vaste roosterpositie", "Ze glijden snel langs elkaar", "Ze staan volkomen stil"],
+      antwoord: 1,
       uitleg: "In een vaste stof (s) trillen moleculen op vaste roosterplaatsen."
     },
     {
@@ -43,8 +43,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat is een zuivere stof op microniveau?",
-      opties: ["Bestaat uit maar één soort moleculen", "Bestaat uit meerdere soorten moleculen", "Is altijd doorzichtig", "Is kraanwater"],
-      antwoord: 0,
+      opties: ["Is altijd doorzichtig", "Bestaat uit meerdere soorten moleculen", "Bestaat uit maar één soort moleculen", "Is kraanwater"],
+      antwoord: 2,
       uitleg: "Een zuivere stof bevat slechts één molecuulsoort."
     },
     {

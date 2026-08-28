@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat betekent een horizontale rechte lijn in een (v,t)-diagram?",
-      opties: ["Het voorwerp staat stil", "Het voorwerp beweegt met constante snelheid", "Het voorwerp versnelt", "Het voorwerp vertraagt"],
-      antwoord: 1,
+      opties: ["Het voorwerp beweegt met constante snelheid", "Het voorwerp staat stil", "Het voorwerp versnelt", "Het voorwerp vertraagt"],
+      antwoord: 0,
       uitleg: "In een (v,t)-diagram geeft een horizontale lijn aan dat de snelheid v niet verandert (constante snelheid)."
     },
     {

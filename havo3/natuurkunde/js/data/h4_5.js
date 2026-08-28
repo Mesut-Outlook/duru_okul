@@ -13,16 +13,16 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat gebeurt er met de weerstand van een NTC als de temperatuur stijgt?",
-      opties: ["De weerstand stijgt", "De weerstand daalt", "De weerstand blijft gelijk", "De weerstand wordt 0"],
-      antwoord: 1,
+      opties: ["De weerstand daalt", "De weerstand stijgt", "De weerstand blijft gelijk", "De weerstand wordt 0"],
+      antwoord: 0,
       uitleg: "NTC = Negatieve coëfficiënt: warmer -> lagere weerstand."
     },
     {
       type: "mc",
       niveau: 1,
       vraag: "Wat gebeurt er met de weerstand van een LDR bij fel licht?",
-      opties: ["Weerstand wordt heel laag", "Weerstand wordt heel hoog", "Blijft gelijk", "Smelt"],
-      antwoord: 0,
+      opties: ["Weerstand wordt heel hoog", "Weerstand wordt heel laag", "Blijft gelijk", "Smelt"],
+      antwoord: 1,
       uitleg: "LDR: veel licht = lage weerstand; donker = hoge weerstand."
     },
     {
@@ -36,8 +36,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat gebeurt er met de weerstand van een PTC als hij warmer wordt?",
-      opties: ["Weerstand stijgt", "Weerstand daalt", "Spanning wordt nul", "Stroom explodeert"],
-      antwoord: 0,
+      opties: ["Spanning wordt nul", "Weerstand daalt", "Weerstand stijgt", "Stroom explodeert"],
+      antwoord: 2,
       uitleg: "PTC = Positieve coëfficiënt: warmer -> hogere weerstand."
     },
     {
@@ -45,14 +45,14 @@ DURU.register({
       niveau: 2,
       vraag: "Een sensor zet een natuurkundige grootheid (zoals temperatuur of licht) om in een elektrische spanning of weerstand.",
       antwoord: true,
-      uitleg: "Waar."
+      uitleg: "Waar: dat is precies de functie van een sensor. De NTC, PTC en LDR veranderen van weerstand door een verandering in temperatuur of lichtsterkte, waardoor een elektrisch circuit die grootheid kan 'meten' via een spanning."
     },
     {
       type: "mc",
       niveau: 3,
       vraag: "In een schemerschakelaar stijgt in het donker de weerstand van de LDR. Wat gebeurt er met de spanning over de LDR in een serieschakeling?",
-      opties: ["De spanning over de LDR daalt", "De spanning over de LDR stijgt", "De spanning blijft 0 V", "De batterij raakt direct leeg"],
-      antwoord: 1,
+      opties: ["De spanning over de LDR daalt", "De batterij raakt direct leeg", "De spanning blijft 0 V", "De spanning over de LDR stijgt"],
+      antwoord: 3,
       uitleg: "In een serieschakeling krijgt de grootste weerstand het grootste deel van de spanning."
     }
   ]

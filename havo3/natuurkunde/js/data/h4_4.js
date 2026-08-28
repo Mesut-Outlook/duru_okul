@@ -28,8 +28,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Welke draad heeft de kleinste elektrische weerstand?",
-      opties: ["Een lange, dunne draad", "Een lange, dikke draad", "Een korte, dunne draad", "Een korte, dikke draad"],
-      antwoord: 3,
+      opties: ["Een lange, dunne draad", "Een korte, dikke draad", "Een korte, dunne draad", "Een lange, dikke draad"],
+      antwoord: 1,
       uitleg: "Kort (kleine l) en dik (grote A) geeft de laagste weerstand."
     },
     {

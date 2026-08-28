@@ -40,11 +40,11 @@
         vraag: "Hoeveel Belgische vluchtelingen staken in het najaar van 1914 de grens over naar het neutrale Nederland?",
         opties: [
           "10.000",
-          "100.000",
           "Ruim 1.000.000 (één miljoen)",
+          "100.000",
           "5.000.000"
         ],
-        antwoord: 2,
+        antwoord: 1,
         uitleg: "Uit angst voor Duitse terreur vluchtten ruim één miljoen Belgen naar Nederland."
       },
       {
@@ -66,12 +66,12 @@
         type: "mc",
         vraag: "Waarom ontstond er vanaf 1916 in Nederland grote schaarste aan voedsel en steenkool?",
         opties: [
-          "Door zeemijnen, duikbootaanvallen en de geallieerde handelsblokkade kwamen er steeds minder goederen Rotterdam binnen.",
-          "Omdat Nederlandse boeren weigerden te werken.",
           "Omdat al het voedsel door de VS in beslag werd genomen.",
+          "Omdat Nederlandse boeren weigerden te werken.",
+          "Door zeemijnen, duikbootaanvallen en de geallieerde handelsblokkade kwamen er steeds minder goederen Rotterdam binnen.",
           "Omdat de fabrieken in Nederland afbrandden."
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Handelsblokkades en duikbootaanvallen sneden de aanvoer van grondstoffen en voedsel af."
       },
       {
@@ -79,12 +79,12 @@
         type: "mc",
         vraag: "Wat hield het overheidsstelsel van 'distributie' in?",
         opties: [
-          "Schaarse basisproducten gingen 'op de bon'; je had distributiebonnen nodig om vastgestelde hoeveelheden te kopen.",
+          "Iedereen mocht onbeperkt spullen meenemen uit de supermarkt.",
           "Eten werd alleen nog aan militairen gegeven.",
           "Alle winkels werden gesloten.",
-          "Iedereen mocht onbeperkt spullen meenemen uit de supermarkt."
+          "Schaarse basisproducten gingen 'op de bon'; je had distributiebonnen nodig om vastgestelde hoeveelheden te kopen."
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Rantsoenering via bonnen zorgde voor een meer gelijke verdeling van schaarse goederen."
       },
       {
@@ -126,12 +126,12 @@
         type: "mc",
         vraag: "Wie was de socialistische SDAP-leider die in november 1918 een mislukte oproep deed tot een socialistische revolutie in Nederland?",
         opties: [
-          "Pieter Jelles Troelstra",
           "Abraham Kuyper",
+          "Pieter Jelles Troelstra",
           "Herman Gorter",
           "Johan Thorbecke"
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Troelstra dacht dat de tijd rijp was voor een revolutie, maar hij kreeg amper steun ('de vergissing van Troelstra')."
       },
       {
@@ -146,12 +146,12 @@
         type: "mc",
         vraag: "Hoe heette de vernieuwende Nederlandse kunstbeweging die in 1917 werd opgericht?",
         opties: [
-          "De Stijl",
-          "De Nachtwacht",
           "Cobra",
+          "De Nachtwacht",
+          "De Stijl",
           "Het Impressionisme"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "De Stijl was de beroemde kunstenaarsbeweging gericht op eenvoud, harmonie en abstractie."
       },
       {
@@ -159,12 +159,12 @@
         type: "mc",
         vraag: "Welke drie primaire kleuren gebruikte de kunstbeweging De Stijl voornamelijk in hun kunstwerken?",
         opties: [
-          "Rood, geel en blauw",
+          "Roze, bruin en cyan",
           "Groen, oranje en paars",
           "Zwart, grijs en goud",
-          "Roze, bruin en cyan"
+          "Rood, geel en blauw"
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "De Stijl gebruikte rood, geel en blauw, gecombineerd met wit, grijs en zwart."
       },
       {
@@ -199,12 +199,12 @@
         type: "mc",
         vraag: "Waar verwijst de naam van Mondriaans beroemde schilderij 'Victory Boogie Woogie' (1944) naar?",
         opties: [
-          "Naar de aanstaande overwinning op nazi-Duitsland en zijn favoriete boogiewoogiemuziek.",
           "Naar de Nederlandse overwinning in de Eerste Wereldoorlog.",
+          "Naar de aanstaande overwinning op nazi-Duitsland en zijn favoriete boogiewoogiemuziek.",
           "Naar de invoering van de euro in 2002.",
           "Naar het spoorwegsysteem in Engeland."
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Mondriaan werkte aan Victory Boogie Woogie in New York tijdens WO2; de naam verwijst naar de komende geallieerde overwinning."
       },
       {

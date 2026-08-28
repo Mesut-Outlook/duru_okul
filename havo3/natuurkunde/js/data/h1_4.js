@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de stopafstand?",
-      opties: ["Alleen de remweg", "Reactieafstand plus remweg", "Reactieafstand maal remweg", "Remweg min reactieafstand"],
-      antwoord: 1,
+      opties: ["Reactieafstand plus remweg", "Alleen de remweg", "Reactieafstand maal remweg", "Remweg min reactieafstand"],
+      antwoord: 0,
       uitleg: "s_stop = s_reactie + s_rem."
     },
     {
@@ -43,8 +43,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Hoe vermindert een kreukelzone de letselkans bij een aanrijding?",
-      opties: ["Door de auto zwaarder te maken", "Door de botstijd te verlengen, waardoor de botskracht kleiner wordt", "Door de snelheid van tevoren te verlagen", "Door de remmen te blokkeren"],
-      antwoord: 1,
+      opties: ["Door de auto zwaarder te maken", "Door de snelheid van tevoren te verlagen", "Door de botstijd te verlengen, waardoor de botskracht kleiner wordt", "Door de remmen te blokkeren"],
+      antwoord: 2,
       uitleg: "Door in te deuken verlengt de kreukelzone de vertragingstijd Δt, waardoor de piek-botskracht F daalt."
     },
     {

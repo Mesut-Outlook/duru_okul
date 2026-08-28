@@ -1,278 +1,199 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 29 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 29 (20 vragen)
+   Hoofdstuk 6: Naar de wereld van nu — 6.4 Digitalisering en globalisering
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-29",
-    titel: "Proeftoets 29 — Hoofdstuk 6 (Naar de wereld van nu (1990–heden))",
+    titel: "Proeftoets 29 — 6.4 Digitalisering en globalisering",
     vak: "Geschiedenis · Hoofdstuk 6",
     hoofdstuk: 6,
     hoofdstukTitel: "Hoofdstuk 6 — Naar de wereld van nu (1990–heden)",
-    icoon: "🌐",
+    icoon: "💻",
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Wat gebeurde er in de jaren 90 na het uiteenvallen van Joegoslavië?",
-            "opties": [
-                  "Er ontstond een hevige etnische burgeroorlog in de Balkan",
-                  "Er werd een vredesunie gevormd",
-                  "Oostenrijk bezette het land",
-                  "Er gebeurde niets"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het uiteenvallen van Joegoslavië veroorzaakte bloedige strijd."
+        id: "ex29_v1",
+        type: "mc",
+        vraag: "In welk jaar kwam de smartphone op de markt, waarin mobiele telefonie en internet voor het eerst samengingen?",
+        opties: ["2007", "2001", "2004", "2010"],
+        antwoord: 0,
+        uitleg: "In 2007 kwam de smartphone op de markt, waarin mobiele telefonie en internet voortaan samengingen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Wat vond er plaats in Srebrenica in juli 1995?",
-            "opties": [
-                  "De genocide op meer dan 8.000 moslimmannen en -jongens door Bosnisch-Serwische troepen",
-                  "Een vredesconferentie",
-                  "Een geallieerde overwinning",
-                  "Een bevrijdingsfeest"
-            ],
-            "antwoord": 0,
-            "uitleg": "Srebrenica is de ergste genocide in Europa sinds WO2."
+        id: "ex29_v2",
+        type: "mc",
+        vraag: "Vanaf welke periode werd westerse kleding op grote schaal gemaakt in lagelonenlanden zoals Indonesië, Vietnam en Bangladesh?",
+        opties: ["Vanaf de jaren 1980", "Vanaf de jaren 1960", "Vanaf de jaren 1930", "Vanaf de jaren 2000"],
+        antwoord: 1,
+        uitleg: "Vanaf de jaren 1960 verplaatsten westerse kledingbedrijven hun productie naar lagelonenlanden zoals Indonesië, Vietnam en Bangladesh."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wanneer werd de staat Israël gesticht?",
-            "opties": [
-                  "14 mei 1948",
-                  "1 september 1939",
-                  "6 juni 1944",
-                  "11 september 2001"
-            ],
-            "antwoord": 0,
-            "uitleg": "Israël werd in mei 1948 gesticht."
+        id: "ex29_v3",
+        type: "mc",
+        vraag: "Welke bekende westerse bedrijven vestigden zich na de Koude Oorlog ook in Rusland en China, als voorbeeld van globalisering?",
+        opties: ["Sony en Toyota", "Nokia en Ericsson", "McDonald's, Coca-Cola en L'Oréal", "IBM en Microsoft"],
+        antwoord: 2,
+        uitleg: "Na de Koude Oorlog vestigden multinationals als McDonald's, Coca-Cola en het Franse L'Oréal zich ook in Rusland en China."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Wat vormt de kern van het Arabisch-Israëlische conflict?",
-            "opties": [
-                  "De strijd om land, grenzen en zelfbeschikking tussen de staat Israël en de Palestijnen",
-                  "Strijd om olie in Europa",
-                  "Een ruzie over geld",
-                  "Een meningsverschil in de VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het conflict draait om territorium en status van Jeruzalem."
+        id: "ex29_v4",
+        type: "mc",
+        vraag: "In welke Engelse stad begon Joseph William Foster in 1895 met het maken van hardloopschoenen, het latere merk Reebok?",
+        opties: ["Manchester", "Liverpool", "Leeds", "Bolton"],
+        antwoord: 3,
+        uitleg: "De 14-jarige leerling-schoenmaker Joseph William Foster begon in 1895 in het Engelse Bolton met hardloopschoenen met spikes."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat veroorzaakte de autoloze zondagen in Nederland in 1973?",
-            "opties": [
-                  "De olieboycot door Arabische olielanden (OPEC) vanwege Nederlandse steun aan Israël",
-                  "Een staking van de pompmedewerkers",
-                  "Een milieuramp",
-                  "Het instorten van de dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Oliecrisis van 1973 leidde tot schaarste en autoloze zondagen."
+        id: "ex29_v5",
+        type: "mc",
+        vraag: "In welk jaar won een hardloper op schoenen uit Fosters fabriekje de Olympische Spelen, waardoor de schoenen gewild werden?",
+        opties: ["1924", "1908", "1936", "1948"],
+        antwoord: 0,
+        uitleg: "In 1924 won een hardloper de Olympische Spelen op schoenen van Fosters fabriekje, waardoor ze erg gewild werden."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat gebeurde er op 11 september 2001 in New York en Washington?",
-            "opties": [
-                  "Al Qaida kaperste 4 vliegtuigen en boorde deze in het WTC en Pentagon",
-                  "De Berlijnse Muur viel",
-                  "De euro werd ingevoerd",
-                  "Een Beurskrach vond plaats"
-            ],
-            "antwoord": 0,
-            "uitleg": "9/11 schokte de wereld op 11 september 2001."
+        id: "ex29_v6",
+        type: "mc",
+        vraag: "In welk jaar nam het kledingbedrijf Adidas het inmiddels wereldberoemde merk Reebok over?",
+        opties: ["1995", "2005", "2010", "1990"],
+        antwoord: 1,
+        uitleg: "In 2005 nam Adidas het merk Reebok over, al bleef de populaire merknaam gewoon in gebruik."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Wie leidde het terreurnetwerk Al Qaida tijdens 9/11?",
-            "opties": [
-                  "Osama bin Laden",
-                  "Saddam Hoessein",
-                  "Yasser Arafat",
-                  "Muammar Gaddafi"
-            ],
-            "antwoord": 0,
-            "uitleg": "Osama bin Laden gaf leiding aan Al Qaida."
+        id: "ex29_v7",
+        type: "mc",
+        vraag: "Wat gebeurde er in 2008-2009 wereldwijd door de kredietcrisis?",
+        opties: [
+          "De wereldhandel verdubbelde in korte tijd",
+          "Alle centrale banken werden opgeheven",
+          "De wereldproductie daalde en de werkloosheid nam snel toe",
+          "De olieprijs daalde tot nul dollar"
+        ],
+        antwoord: 2,
+        uitleg: "In 2008 en 2009 daalde de wereldwijde productie en nam de werkloosheid snel toe door de overgeslagen kredietcrisis."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Welke Amerikaanse president begon de War on Terror?",
-            "opties": [
-                  "George W. Bush",
-                  "Bill Clinton",
-                  "Barack Obama",
-                  "Ronald Reagan"
-            ],
-            "antwoord": 0,
-            "uitleg": "George W. Bush verklaarde de War on Terror."
+        id: "ex29_v8",
+        type: "mc",
+        vraag: "Onder welke voorwaarde leenden de EU en het IMF miljarden euro's aan Griekenland tijdens de kredietcrisis?",
+        opties: [
+          "Griekenland moest de euro opgeven",
+          "Griekenland moest uit de EU stappen",
+          "Griekenland moest zijn schulden laten kwijtschelden",
+          "Griekenland moest zijn overheidsuitgaven verlagen"
+        ],
+        antwoord: 3,
+        uitleg: "De EU en het IMF leenden miljarden euro's aan Griekenland, op voorwaarde dat het land zijn overheidsuitgaven verlaagde."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Wat houdt globalisering in?",
-            "opties": [
-                  "De toenemende wereldwijde verbondenheid van economies, culturen en mensen",
-                  "Het bouwen van muren rond landen",
-                  "Het stoppen van internationale handel",
-                  "Het verbieden van internet"
-            ],
-            "antwoord": 0,
-            "uitleg": "Globalisering maakt de wereld tot één markt."
+        id: "ex29_v9",
+        type: "mc",
+        vraag: "Waardoor werd China, vergelijkbaar met Groot-Brittannië in de 19e eeuw, 'de werkplaats van de wereld' genoemd?",
+        opties: [
+          "Het werd de grootste exporteur van goederen ter wereld",
+          "Het bouwde de meeste auto's van de wereld",
+          "Het had de grootste kolenvoorraad ter wereld",
+          "Het exporteerde vooral graan naar Europa"
+        ],
+        antwoord: 0,
+        uitleg: "China veranderde in korte tijd in de grootste exporteur van goederen ter wereld en werd daarom 'de werkplaats van de wereld' genoemd."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Welke landen zijn opkomende economische wereldmachten sinds 1990?",
-            "opties": [
-                  "China en India",
-                  "Engeland en Frankrijk",
-                  "Griekenland en Spanje",
-                  "Canada en Mexico"
-            ],
-            "antwoord": 0,
-            "uitleg": "China en India groeiden uit tot economische giganten."
+        id: "ex29_v10",
+        type: "mc",
+        vraag: "Wat was in 2017 wereldwijd een nieuw welvaartsprobleem, naast de aanhoudende armoede in de armste landen?",
+        opties: [
+          "Een wereldwijd voedseltekort",
+          "Overgewicht bij 30 procent van de wereldbevolking",
+          "Een daling van de wereldbevolking",
+          "Een daling van de levensverwachting in bijna alle landen"
+        ],
+        antwoord: 1,
+        uitleg: "In 2017 had 30 procent van de wereldbevolking overgewicht, een nieuw probleem naast de aanhoudende armoede in de armste landen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat veroorzaakt de opwarming van de aarde?",
-            "opties": [
-                  "Het versterkte broeikaseffect door menselijke CO2-uitstoot",
-                  "Veranderingen in het getij",
-                  "De stand van de maan",
-                  "Zonnevlekken alleen"
-            ],
-            "antwoord": 0,
-            "uitleg": "CO2-uitstoot door fossiele brandstoffen leidt tot klimaatverandering."
+        id: "ex29_v11",
+        type: "waaronwaar",
+        vraag: "In China bleef de communistische partij aan de macht, maar de leiders lieten wel kapitalistische bedrijven toe.",
+        antwoord: true,
+        uitleg: "Waar! De Chinese communistische partij bleef aan de macht, maar liet kapitalistische bedrijven toe om de export te laten groeien."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat is het hoofddoel van het Klimaatakkoord van Parijs (2015)?",
-            "opties": [
-                  "De opwarming van de aarde beperken tot ruim onder 2°C",
-                  "Het stoppen van alle scheepvaart",
-                  "Het afschaffen van de auto",
-                  "Het bouwen van dijken"
-            ],
-            "antwoord": 0,
-            "uitleg": "Parijs 2015 stelt wereldwijde klimaatdoelen."
+        id: "ex29_v12",
+        type: "waaronwaar",
+        vraag: "Tussen 1990 en 2015 daalde de levensverwachting in India en China doordat de economische groei ten koste ging van de gezondheidszorg.",
+        antwoord: false,
+        uitleg: "Niet waar. De levensverwachting steeg juist fors: in India van 58 naar 68 jaar en in China van 69 naar 76 jaar."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wat betekent energietransitie?",
-            "opties": [
-                  "De overgang van fossiele brandstoffen naar duurzame schone energie (zon, wind)",
-                  "Het verhogen van de gasprijzen",
-                  "Het gratis maken van stroom",
-                  "Het bouwen van meer kolencentrales"
-            ],
-            "antwoord": 0,
-            "uitleg": "De energietransitie vervangt olie, gas en kolen."
+        id: "ex29_v13",
+        type: "waaronwaar",
+        vraag: "In Afrika ten zuiden van de Sahara halveerde de kindersterfte, ook al bleef het in bijna alle arme landen van 1990 slecht gaan.",
+        antwoord: true,
+        uitleg: "Waar! Ondanks aanhoudende armoede in veel landen halveerde de kindersterfte in Afrika ten zuiden van de Sahara."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Waarom vocht de VN-coalitie tegen Irak in de Eerste Golfoorlog (1991)?",
-            "opties": [
-                  "Omdat Irak het buurland Koeweit had binnengevallen en bezet",
-                  "Omdat Irak de VS bombardeerde",
-                  "Omdat Koeweit de VN aanviel",
-                  "Om olie te stelen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Saddam Hoessein werd uit Koeweit verdreven."
+        id: "ex29_v14",
+        type: "waaronwaar",
+        vraag: "Vooral in de VS bleef de armoede onder lager opgeleiden gelijk, terwijl automatisering en globalisering geen invloed hadden op hun banen.",
+        antwoord: false,
+        uitleg: "Niet waar. Door automatisering en globalisering verdwenen juist banen voor lager opgeleiden, waardoor vooral in de VS de armoede toenam."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Welke uitvinding bracht vanaf de jaren 90 een digitale informatierevolutie?",
-            "opties": [
-                  "Het Internet en World Wide Web",
-                  "De telegraaf",
-                  "De radio",
-                  "De televisie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het internet verbond de hele wereld digitaal."
+        id: "ex29_v15",
+        type: "invul",
+        vraag: "Hoeveel sterke industrielanden vormden in 1975 samen de G6 (Groep van Zes)?",
+        antwoord: "zes|6",
+        uitleg: "Duitsland, Frankrijk, Groot-Brittannië, Italië, Japan en de VS vormden in 1975 samen de G6, zes sterke industrielanden."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Wat hield de grote EU-uitbreiding van 2004 in?",
-            "opties": [
-                  "Tien nieuwe landen (hoofdzakelijk uit Oost-Europa) traden toe tot de EU",
-                  "Engeland verliet de EU",
-                  "De EU werd ontbonden",
-                  "De euro werd afgeschaft"
-            ],
-            "antwoord": 0,
-            "uitleg": "In 2004 traden 10 nieuwe lidstaten toe."
+        id: "ex29_v16",
+        type: "invul",
+        vraag: "Welk Aziatisch land diende vanaf de jaren 1990 als exportgericht groeimodel voor China en India?",
+        antwoord: "Zuid-Korea|Zuid Korea",
+        uitleg: "China en India volgden het voorbeeld van Zuid-Korea: ze richtten hun economie op de export."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat gebeurde er tijdens de Arabische Lente in 2011?",
-            "opties": [
-                  "Volksopstanden tegen dictaturen in het Midden-Oosten en Noord-Afrika",
-                  "Een grote droogte",
-                  "Een sportevenement",
-                  "Een handelsakkoord"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Arabische Lente eiste vrijheid en democratie."
+        id: "ex29_v17",
+        type: "invul",
+        vraag: "In welk jaar begon de kredietcrisis in de VS die deed denken aan de wereldcrisis van de jaren 1930?",
+        antwoord: "2007",
+        uitleg: "In 2007 begon in de VS een kredietcrisis die aanvankelijk deed denken aan de jaren 1930."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Tot welk menselijk drama leidde de burgeroorlog in Syrië?",
-            "opties": [
-                  "Een enorme vluchtelingencrisis naar omliggende landen en Europa",
-                  "Een snelle democratische staat",
-                  "Een overwinning van de VN",
-                  "Geen enkel gevolg"
-            ],
-            "antwoord": 0,
-            "uitleg": "Miljoenen Syriërs sloegen op de vlucht."
+        id: "ex29_v18",
+        type: "invul",
+        vraag: "Hoe noemen we bedrijven met vestigingen in veel verschillende landen, zoals McDonald's en Coca-Cola?",
+        antwoord: "multinationals|multinational|een multinational",
+        uitleg: "Multinationals zijn bedrijven met vestigingen in veel landen, die een belangrijke rol speelden bij de globalisering."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Wat voor dreiging is cybercriminaliteit?",
-            "opties": [
-                  "Digitale aanvallen op netwerken, overheden en bedrijven via internet",
-                  "Aanvallen met tanks",
-                  "Luchtaanvallen",
-                  "Zee-piraterij"
-            ],
-            "antwoord": 0,
-            "uitleg": "Cyberdreigingen vragen om digitale beveiliging."
+        id: "ex29_v19",
+        type: "open",
+        vraag: "Leg uit waarom multinationals hun productie vanaf de jaren 1960 verplaatsten naar landen als Indonesië, Vietnam en Bangladesh.",
+        sleutelwoorden: [
+          "lagere lonen/goedkoper produceren",
+          "lagelonenland/lageloonlanden"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Multinationals wilden dezelfde producten goedkoper maken en verplaatsten hun productie daarom naar landen met veel lagere lonen dan in het Westen, zoals Indonesië, Vietnam en Bangladesh.",
+        uitleg: "Productie in lagelonenlanden maakte dezelfde producten veel goedkoper dan productie in het Westen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wat regelt de Schengenzone in Europa?",
-            "opties": [
-                  "Vrij reizen zonder grenscontroles tussen de aangesloten Europese landen",
-                  "Een gezamenlijk leger",
-                  "Gelijke belastingen",
-                  "Eén Europese krant"
-            ],
-            "antwoord": 0,
-            "uitleg": "Schengen schafte de grenscontroles binnenslands af."
+        id: "ex29_v20",
+        type: "open",
+        vraag: "Leg uit waarom de wereldwijde crisis van 2007-2012 minder verwoestend uitpakte dan de crisis van de jaren 1930.",
+        sleutelwoorden: [
+          "overheden grepen snel in/werkten internationaal samen",
+          "banken gered met steun/vrijhandel bleef bevorderd"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Anders dan in de jaren 1930 grepen overheden nu snel in en werkten ze internationaal samen: banken werden met overheidssteun gered en landen bleven vrijhandel bevorderen in plaats van hun economie tegen het buitenland af te schermen.",
+        uitleg: "De les uit de jaren 1930 was dat internationale samenwerking en overheidsingrijpen een crisis minder verwoestend maken."
       }
-]
+    ]
   });
 })();

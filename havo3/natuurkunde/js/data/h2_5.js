@@ -36,8 +36,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Waarom werkt een transformator alleen op wisselspanning?",
-      opties: ["Omdat gelijkspanning te heet is", "Omdat er een veranderend magnetisch veld nodig is voor inductie", "Omdat batterijen te zwaar zijn", "Omdat wisselspanning geen weerstand heeft"],
-      antwoord: 1,
+      opties: ["Omdat gelijkspanning te heet is", "Omdat batterijen te zwaar zijn", "Omdat er een veranderend magnetisch veld nodig is voor inductie", "Omdat wisselspanning geen weerstand heeft"],
+      antwoord: 2,
       uitleg: "Alleen wisselstroom zorgt voor een voortdurend veranderend magnetisch veld dat inductiespanning wekt in de secundaire spoel."
     },
     {

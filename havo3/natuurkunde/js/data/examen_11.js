@@ -12,12 +12,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke soort elektromagnetische straling heeft de <b>grootste golflengte</b> en de <b>laagste energie per foton</b>?",
       opties: [
-        "Gammastraling",
+        "Radiogolven",
         "Röntgenstraling",
         "Zichtbaar licht",
-        "Radiogolven"
+        "Gammastraling"
       ],
-      antwoord: 3,
+      antwoord: 0,
       uitleg: "Radiogolven hebben de langste golflengte (tot kilometers) en de laagste frequentie/energie in het spectrum."
     },
     {
@@ -25,11 +25,11 @@ DURU.registerExamen({
       vraag: "Welke soort elektromagnetische straling heeft de <b>kortste golflengte</b> en de <b>hoogste energie</b>?",
       opties: [
         "Infraroodstraling",
-        "Ultraviolette straling (UV)",
         "Gammastraling",
+        "Ultraviolette straling (UV)",
         "Microgolven"
       ],
-      antwoord: 2,
+      antwoord: 1,
       uitleg: "Gammastraling heeft de kortste golflengte en de allerhoogste energie en doordringend vermogen."
     },
     {
@@ -43,11 +43,11 @@ DURU.registerExamen({
       vraag: "Welke stralingssoort zendt het menselijk lichaam voornamelijk uit door lichaamswarmte?",
       opties: [
         "Ultraviolette straling (UV)",
-        "Infraroodstraling (IR / warmtestraling)",
         "Röntgenstraling",
+        "Infraroodstraling (IR / warmtestraling)",
         "Microgolven"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Warme voorwerpen (zoals mensen van ca. 37 °C) zenden onzichtbare infraroodstraling (IR) uit."
     },
     {
@@ -61,11 +61,11 @@ DURU.registerExamen({
       vraag: "Welke kleuren vormen van lage naar hoge frequentie het <b>zichtbare licht</b> spectrum?",
       opties: [
         "Violet, blauw, groen, geel, oranje, rood",
-        "Rood, oranje, geel, groen, blauw, violet (ROGGBIV)",
+        "Infrarood, geel, ultraviolet",
         "Wit, grijs, zwart",
-        "Infrarood, geel, ultraviolet"
+        "Rood, oranje, geel, groen, blauw, violet (ROGGBIV)"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Rood heeft de langste golflengte / laagste frequentie van zichtbaar licht; violet heeft de kortste golflengte / hoogste frequentie."
     },
     {
@@ -78,12 +78,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom worden botten op een <b>röntgenfoto</b> wit/licht afgebeeld, terwijl spieren en vet donkerder zijn?",
       opties: [
-        "Omdat botten zelf röntgenstraling uitzenden",
         "Omdat botten (door calcium) meer röntgenstraling absorberen/tegenhouden dan weke weefsels",
+        "Omdat botten zelf röntgenstraling uitzenden",
         "Omdat botten warmer zijn dan spieren",
         "Omdat spieren de straling weerkaatsen"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Botten bevatten veel zware atomen (calcium) en absorberen röntgenstralen, waardoor er minder straling op de film achter het bot valt (witte schaduw)."
     },
     {
@@ -96,12 +96,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat voor straling gebruikt een <b>magnetron</b> om voedsel te verwarmen?",
       opties: [
-        "Microgolven",
         "Röntgenstraling",
+        "Microgolven",
         "Alfastraling",
         "Gammastraling"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Een magnetron zendt microgolven uit die watermoleculen in het eten snel laten trillen, wat wrijvingswarmte opwekt."
     },
     {
@@ -115,11 +115,11 @@ DURU.registerExamen({
       vraag: "Welke stralingssoorten in het spectrum zijn <b>ioniserend</b> (kunnen elektronen uit atomen slaan en DNA beschadigen)?",
       opties: [
         "Alleen radiogolven en infrarood",
-        "Extreem UV, röntgenstraling en gammastraling",
         "Alleen zichtbaar groen licht",
+        "Extreem UV, röntgenstraling en gammastraling",
         "Microgolven en infrarood"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Alleen straling met zeer hoge energie en korte golflengte (hoog-energetisch UV, röntgen en gamma) is ioniserend."
     },
     {
@@ -133,11 +133,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de kleur van een gloeiend stuk ijzer als de temperatuur steeds verder <b>stijgt</b>?",
       opties: [
         "Gaat van witgloeiend naar dofrood",
-        "Gaat van donkerrood naar oranje, geel en uiteindelijk fel witblauw",
+        "Wordt direct zwart",
         "Blijft altijd dezelfde kleur rood",
-        "Wordt direct zwart"
+        "Gaat van donkerrood naar oranje, geel en uiteindelijk fel witblauw"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Bij hogere temperatuur zendt het voorwerp straling uit met kortere golflengte en hogere frequentie: van donkerrood naar fel witblauw."
     },
     {
@@ -150,12 +150,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat betekent de 'Zonkracht' (UV-index) in het weerbericht?",
       opties: [
-        "De temperatuur van de zon in graden Celsius",
         "Een maat voor de hoeveelheid schadelijke UV-straling die het aardoppervlak bereikt",
+        "De temperatuur van de zon in graden Celsius",
         "De windsnelheid op grote hoogte",
         "De helderheid van de blauwe lucht"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De UV-index geeft aan hoe sterk de ultraviolette straling is en hoe snel de onbeschermde huid kan verbranden."
     },
     {

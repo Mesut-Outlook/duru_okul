@@ -87,11 +87,11 @@
         vraag: "Wat betekende de Japanse slagzin 'Azië voor de Aziaten' in de praktijk?",
         opties: [
           "Japan streed voor de onafhankelijkheid van alle Aziatische volken zonder eigen belang.",
-          "Japan presenteerde zich als bevrijder van westerse kolonisatie, maar onderdrukte de Aziatische volken zelf net zo hard.",
           "Alleen Chinezen mochten voortaan in Azië wonen.",
-          "Azië werd verdeeld tussen Japan en de Verenigde Staten."
+          "Azië werd verdeeld tussen Japan en de Verenigde Staten.",
+          "Japan presenteerde zich als bevrijder van westerse kolonisatie, maar onderdrukte de Aziatische volken zelf net zo hard."
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Ondanks de anti-westerse slagzin eisten de Japanners van andere Aziatische volken absolute onderdanigheid en straften zij ongehoorzaamheid wreed."
       },
       {

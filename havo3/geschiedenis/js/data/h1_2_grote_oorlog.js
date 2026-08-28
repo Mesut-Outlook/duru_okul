@@ -57,12 +57,12 @@
         type: "mc",
         vraag: "Welke landen vormden bij het uitbreken van de Eerste Wereldoorlog de kern van de Centralen?",
         opties: [
-          "Groot-Brittannië en Frankrijk",
           "Duitsland en Oostenrijk-Hongarije",
+          "Groot-Brittannië en Frankrijk",
           "Rusland en Italië",
           "Nederland en België"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "De Centralen dankten hun naam aan hun centrale ligging in Europa: Duitsland en Oostenrijk-Hongarije (later aangevuld met het Ottomaanse Rijk)."
       },
       {
@@ -102,11 +102,11 @@
         vraag: "Welke gebeurtenis in 1917 gaf de doorslag ten gunste van de Geallieerden aan het westfront?",
         opties: [
           "Het aftreden van de Duitse keizer.",
-          "De deelname van de Verenigde Staten aan de oorlog aan de zijde van de Geallieerden.",
           "De overgave van België aan Duitsland.",
+          "De deelname van de Verenigde Staten aan de oorlog aan de zijde van de Geallieerden.",
           "De uitvinding van de telegraaf."
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "De deelname van de VS bracht honderdduizenden verse troepen, enorme industriële capaciteit en geld naar het Westfront."
       },
       {
@@ -124,11 +124,11 @@
         vraag: "Wat is het verschil tussen een 'oorzaak' en de 'aanleiding' van de Eerste Wereldoorlog?",
         opties: [
           "Een oorzaak is de druppel die de emmer doet overlopen; de aanleiding speelt al tientallen jaren.",
-          "Oorzaken zijn dieper liggende spanningen die al langer opbouwen (militarisme, wapenwedloop); de aanleiding is de directe vonk (de moord in Sarajevo).",
+          "De aanleiding vond plaats in 1918; de oorzaken ontstonden pas na de Vrede van Versailles.",
           "Er is geen verschil; beide begrippen betekenen exact hetzelfde.",
-          "De aanleiding vond plaats in 1918; de oorzaken ontstonden pas na de Vrede van Versailles."
+          "Oorzaken zijn dieper liggende spanningen die al langer opbouwen (militarisme, wapenwedloop); de aanleiding is de directe vonk (de moord in Sarajevo)."
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Oorzaken (militarisme, nationalisme, bondgenootschappen) bouwden gedurende tientallen jaren spanning op; de moord in Sarajevo was de directe aanleiding (vonk) waardoor het kruitvat ontplofte."
       },
       {

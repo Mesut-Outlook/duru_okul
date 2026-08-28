@@ -42,12 +42,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welk metaal heeft van alle veelgebruikte metalen de <b>laagste</b> soortelijke weerstand (is de allerbeste geleider)?",
       opties: [
-        "Zilver (en direct daarna koper)",
-        "IJzer",
         "Lood",
+        "IJzer",
+        "Zilver (en direct daarna koper)",
         "Constantaan"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Zilver (ρ ≈ 0,016) en koper (ρ ≈ 0,017) zijn de beste elektrische geleiders."
     },
     {
@@ -66,12 +66,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom gebruikt men in huizen dikkere installatiedraad (bijv. 2,5 mm²) voor zware groepen i.p.v. dunne draadjes van 0,5 mm²?",
       opties: [
-        "Omdat dikkere draad een lagere weerstand heeft, waardoor er minder warmteontwikkeling (I²·R verlies) en minder risico op brand is bij hoge stroomsterktes",
+        "Omdat de spanning anders daalt naar nul",
         "Omdat dunne draadjes te duur zijn",
         "Omdat dikke draad buigzamer is",
-        "Omdat de spanning anders daalt naar nul"
+        "Omdat dikkere draad een lagere weerstand heeft, waardoor er minder warmteontwikkeling (I²·R verlies) en minder risico op brand is bij hoge stroomsterktes"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Grotere doorsnede A verlaagt R, waardoor draden niet gevaarlijk oververhit raken bij stromen tot 16 A."
     },
     {
@@ -114,12 +114,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke van de volgende vier draden van hetzelfde materiaal heeft de <b>ALLERGROOTSTE weerstand</b>?",
       opties: [
-        "Een lange, dunne draad",
         "Een lange, dikke draad",
+        "Een lange, dunne draad",
         "Een korte, dunne draad",
         "Een korte, dikke draad"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Grote lengte l (boven de breuk) en kleine doorsnede A (onder de breuk) maximaliseert R = ρ · l / A."
     },
     {
@@ -139,11 +139,11 @@ DURU.registerExamen({
       vraag: "Hoeveel Watt warmteverlies ontstaat er in het verlengsnoer uit de vorige vraag ( = U 	imes I$ of  = I^2 	imes R$)?",
       opties: [
         "4 W",
-        "40 W",
         "400 W",
+        "40 W",
         "4000 W"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "P = U × I = 4 V × 10 A = 40 W (of P = 10² × 0,40 = 40 W)."
     },
     {

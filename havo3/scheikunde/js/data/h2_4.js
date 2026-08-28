@@ -35,8 +35,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat zijn isotopen?",
-      opties: ["Atomen van hetzelfde element met een verschillend aantal neutronen", "Atomen met verschillend aantal protonen", "Moleculen met zout", "Atomen zonder elektronen"],
-      antwoord: 0,
+      opties: ["Atomen met verschillend aantal protonen", "Atomen van hetzelfde element met een verschillend aantal neutronen", "Moleculen met zout", "Atomen zonder elektronen"],
+      antwoord: 1,
       uitleg: "Isotopen hebben hetzelfde atoomnummer maar een ander massagetal."
     },
     {
@@ -50,8 +50,8 @@ DURU.register({
       type: "mc",
       niveau: 3,
       vraag: "Wat is de elektronenverdeling over de schillen van Chloor (atoomnummer 17)?",
-      opties: ["2, 8, 7", "2, 7, 8", "2, 10, 5", "8, 8, 1"],
-      antwoord: 0,
+      opties: ["2, 10, 5", "2, 7, 8", "2, 8, 7", "8, 8, 1"],
+      antwoord: 2,
       uitleg: "K=2, L=8, M=7 -> (2, 8, 7)."
     }
   ]

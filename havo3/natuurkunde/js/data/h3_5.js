@@ -21,8 +21,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat doen de regelstaven in een kernreactor?",
-      opties: ["Neutronen absorberen om de reactie te regelen of te stoppen", "De stroom naar het net sturen", "Het koelwater verwarmen", "Uranium bijvullen"],
-      antwoord: 0,
+      opties: ["De stroom naar het net sturen", "Neutronen absorberen om de reactie te regelen of te stoppen", "Het koelwater verwarmen", "Uranium bijvullen"],
+      antwoord: 1,
       uitleg: "Regelstaven vangen neutronen weg en beheersen zo de kettingreactie."
     },
     {
@@ -43,8 +43,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat is het grootste milieunadeel van kernenergie?",
-      opties: ["Hoogradioactief afval dat duizenden jaren veilig bewaard moet worden", "Te veel CO2-uitstoot", "De stroom is te sterk voor stopcontacten", "Het water raakt op"],
-      antwoord: 0,
+      opties: ["De stroom is te sterk voor stopcontacten", "Te veel CO2-uitstoot", "Hoogradioactief afval dat duizenden jaren veilig bewaard moet worden", "Het water raakt op"],
+      antwoord: 2,
       uitleg: "Kernafval blijft duizenden jaren gevaarlijk radioactief."
     },
     {

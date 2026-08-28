@@ -118,12 +118,12 @@
         type: "mc",
         vraag: "Welke twee nieuwe soorten misdaden stelden de geallieerden strafbaar om nazileiders te kunnen berechten?",
         opties: [
-          "Misdaden tegen de menselijkheid en misdaden tegen de vrede",
-          "Landverraad en spionage",
           "Oorlogswinst maken en zwarthandel",
+          "Landverraad en spionage",
+          "Misdaden tegen de menselijkheid en misdaden tegen de vrede",
           "Censuur en propaganda"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Naast bestaande regels tegen oorlogsmisdaden voegden de geallieerden 'misdaden tegen de menselijkheid' en 'misdaden tegen de vrede' toe."
       },
       {
@@ -172,7 +172,7 @@
         vraag: "Leg uit waarom de plek waar NSB-leider Mussert in 1946 werd geëxecuteerd, de Scheveningse duinen, een symbolische betekenis had.",
         sleutelwoorden: [
           "verzet/verzetsmensen/verzetsvrouwen",
-          "geëxecuteerd/gefusilleerd door de Duitsers"
+          "gefusilleerd/doodgeschoten door de Duitsers"
         ],
         minTreffers: 1,
         modelantwoord: "Op diezelfde plek in de Scheveningse duinen hadden de Duitsers tijdens de bezetting juist veel Nederlandse verzetsmannen en -vrouwen geëxecuteerd, waardoor het symbolisch was dat de landverrader Mussert er nu zelf werd terechtgesteld.",
@@ -203,12 +203,12 @@
         type: "mc",
         vraag: "Wat gebeurt er in Nederland kort voor 20.00 uur op 4 mei tijdens de Nationale Dodenherdenking?",
         opties: [
-          "De koning legt een krans en er volgen twee minuten stilte, afgesloten met het Wilhelmus.",
+          "Er klinkt een sirene die de bevrijding aankondigt.",
           "Er wordt een minuut stilte gehouden gevolgd door het volkslied van de Verenigde Naties.",
           "Alle winkels in Nederland gaan die avond dicht als eerbetoon.",
-          "Er klinkt een sirene die de bevrijding aankondigt."
+          "De koning legt een krans en er volgen twee minuten stilte, afgesloten met het Wilhelmus."
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Kort voor 20.00 uur legt de koning een krans bij het Nationaal Monument, gevolgd door acht klokslagen en twee minuten stilte, afgesloten met het Wilhelmus."
       },
       {

@@ -13,16 +13,16 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de eenheid van kracht?",
-      opties: ["Joule", "Newton", "Watt", "Kilogram"],
-      antwoord: 1,
+      opties: ["Newton", "Joule", "Watt", "Kilogram"],
+      antwoord: 0,
       uitleg: "Kracht wordt aangeduid met F en gemeten in Newton (N)."
     },
     {
       type: "mc",
       niveau: 1,
       vraag: "Een fietser trapt met 80 N voorwaarts. De tegenwerkende wrijving is 50 N. Wat is de resulterende kracht?",
-      opties: ["30 N voorwaarts", "130 N voorwaarts", "50 N tegenwerkend", "0 N"],
-      antwoord: 0,
+      opties: ["130 N voorwaarts", "30 N voorwaarts", "50 N tegenwerkend", "0 N"],
+      antwoord: 1,
       uitleg: "Fres = 80 N - 50 N = 30 N voorwaarts."
     },
     {
@@ -43,8 +43,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Welke twee krachten vormen samen de tegenwerkende kracht bij een rijdende auto?",
-      opties: ["Zwaartekracht en motorkracht", "Luchtweerstand en rolweerstand", "Spierkracht en veerkracht", "Massa en versnelling"],
-      antwoord: 1,
+      opties: ["Zwaartekracht en motorkracht", "Spierkracht en veerkracht", "Luchtweerstand en rolweerstand", "Massa en versnelling"],
+      antwoord: 2,
       uitleg: "Luchtweerstand (wrijving met lucht) en rolweerstand (wrijving tussen banden en wegdek)."
     },
     {

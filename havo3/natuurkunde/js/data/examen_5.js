@@ -12,12 +12,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een parachutist van 80 kg valt met een constante snelheid van 55 m/s naar beneden (neem g = 9,81 N/kg). Hoe groot is de opwaartse <b>luchtweerstandskracht</b> op dat moment?",
       opties: [
-        "0 N",
-        "440 N",
         "785 N",
+        "440 N",
+        "0 N",
         "4400 N"
       ],
-      antwoord: 2,
+      antwoord: 0,
       uitleg: "Omdat de snelheid constant is (a = 0), is F_res = 0 N. De opwaartse luchtweerstand moet gelijk zijn aan de neerwaartse zwaartekracht: F_lucht = F_z = m × g = 80 kg × 9,81 N/kg = 785 N."
     },
     {
@@ -44,10 +44,10 @@ DURU.registerExamen({
       opties: [
         "300 N",
         "3000 N",
-        "6000 N",
-        "7500 N"
+        "7500 N",
+        "6000 N"
       ],
-      antwoord: 3,
+      antwoord: 2,
       uitleg: "F_res = m × a = 1500 kg × 5,0 m/s² = 7500 N (7,5 kN)."
     },
     {
@@ -68,10 +68,10 @@ DURU.registerExamen({
       opties: [
         "15 meter",
         "25 meter",
-        "30 meter",
-        "108 meter"
+        "108 meter",
+        "30 meter"
       ],
-      antwoord: 2,
+      antwoord: 3,
       uitleg: "108 km/h / 3,6 = 30 m/s. In 1 seconde reactietijd legt de auto s_reactie = 30 m/s × 1 s = 30 meter af."
     },
     {
@@ -90,12 +90,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een slee wordt over een afstand van 40 meter over sneeuw getrokken met een trekkracht van 80 N. De wrijvingskracht van de sneeuw is 20 N tegenwerkend. Hoeveel <b>nuttige arbeid</b> is er netto aan de versnelling van de slee geleverd?",
       opties: [
-        "800 J",
         "2400 J",
+        "800 J",
         "3200 J",
         "4000 J"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "F_res = 80 N - 20 N = 60 N. W_netto = F_res × s = 60 N × 40 m = 2400 Joule."
     },
     {
@@ -115,11 +115,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de bewegingsenergie van een auto als deze via een noodstop tot stilstand wordt gebracht op een droge weg?",
       opties: [
         "De energie wordt vernietigd",
-        "De bewegingsenergie wordt omgezet in zwaarte-energie in de banden",
         "De bewegingsenergie wordt door wrijving omgezet in warmte in de remschijven en banden",
+        "De bewegingsenergie wordt omgezet in zwaarte-energie in de banden",
         "De energie verdwijnt in de kreukelzone zonder warmteontwikkeling"
       ],
-      antwoord: 2,
+      antwoord: 1,
       uitleg: "Energie kan nooit verdwijnen. Door wrijvingsarbeid (negatieve arbeid) wordt de kinetische energie omgezet in warmte en een beetje geluid."
     },
     {
@@ -156,12 +156,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een fietser fietst in 30 seconden 150 meter en staat daarna 10 seconden stil voor het stoplicht. Wat is zijn <b>gemiddelde snelheid over de totale tijd van 40 seconden</b>?",
       opties: [
-        "3,75 m/s",
+        "15 m/s",
         "5,0 m/s",
         "7,5 m/s",
-        "15 m/s"
+        "3,75 m/s"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Totale afstand s_tot = 150 m. Totale tijd t_tot = 30 s + 10 s = 40 s. v_gem = s_tot / t_tot = 150 m / 40 s = 3,75 m/s."
     },
     {

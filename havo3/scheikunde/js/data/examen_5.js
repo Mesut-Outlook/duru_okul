@@ -24,12 +24,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke van de volgende formules stelt een <b>chemische verbinding</b> voor en GEEN element?",
       opties: [
-        "CH₄ (methaan)",
         "O₂ (zuurstofgas)",
+        "CH₄ (methaan)",
         "Fe (ijzer)",
         "N₂ (stikstofgas)"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "CH₄ bevat 2 verschillende atoomsoorten (C en H) en is dus een verbinding. De andere drie bestaan uit slechts één atoomsoort (elementen)."
     },
     {
@@ -42,12 +42,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de systematische naam voor <b>N₂O₅</b>?",
       opties: [
-        "distikstofpentaoxide",
-        "stikstofdioxide",
         "stikstofpentachloride",
+        "stikstofdioxide",
+        "distikstofpentaoxide",
         "distikstoftrioxide"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "di-stikstof (N₂) penta-oxide (O₅) = distikstofpentaoxide."
     },
     {
@@ -66,12 +66,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat gebeurt er op microniveau tijdens het <b>stollen</b> van vloeibaar kaarsvet tot vast kaarsvet?",
       opties: [
-        "De moleculen gaan langzamer bewegen en gaan netjes gerangschikt op vaste posities in een rooster zitten",
+        "De moleculen lossen op in de lucht",
         "De moleculen veranderen in koolstofdioxide en water",
         "De moleculen bewegen veel sneller kriskras door elkaar",
-        "De moleculen lossen op in de lucht"
+        "De moleculen gaan langzamer bewegen en gaan netjes gerangschikt op vaste posities in een rooster zitten"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Stollen (vloeibaar -> vast) betekent dat moleculen hun vrije beweging verliezen en vastklikken in een rooster."
     },
     {
@@ -102,24 +102,24 @@ DURU.registerExamen({
       type: "invul",
       vraag: "Wat is het chemische symbool voor het element <b>Chloor</b>?",
       antwoord: "Cl",
-      uitleg: "Chloor = Cl."
+      uitleg: "Chloor heeft als symbool Cl, afgeleid van het Latijnse 'chlorum'. Chloor is een halogeen (Groep 17) en komt in de natuur vaak voor als negatief ion (Cl⁻), bijvoorbeeld in keukenzout (NaCl)."
     },
     {
       type: "invul",
       vraag: "Wat is het chemische symbool voor het element <b>Helium</b>?",
       antwoord: "He",
-      uitleg: "Helium = He."
+      uitleg: "Helium heeft als symbool He. Het is een edelgas (Groep 18) met een volle buitenste schil van 2 elektronen, waardoor het net als de andere edelgassen vrijwel nooit reacties aangaat."
     },
     {
       type: "mc",
       vraag: "Wat is de elektronenverdeling over de schillen van een neutraal <b>Magnesiumatoom</b> (Mg, atoomnummer 12)?",
       opties: [
-        "2, 8, 2",
         "2, 10",
+        "2, 8, 2",
         "2, 8, 8, 2",
         "4, 4, 4"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "K-schil: 2, L-schil: 8, M-schil: 2 -> (2, 8, 2)."
     },
     {
@@ -138,12 +138,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is een eigenschap van niet-metalen in vergelijking met metalen?",
       opties: [
-        "Niet-metalen geleiden stroom en warmte over het algemeen slecht (het zijn isolatoren)",
-        "Niet-metalen hebben altijd een zilveren metaalglans",
         "Niet-metalen zijn altijd vloeibaar",
+        "Niet-metalen hebben altijd een zilveren metaalglans",
+        "Niet-metalen geleiden stroom en warmte over het algemeen slecht (het zijn isolatoren)",
         "Niet-metalen trekken altijd magneten aan"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Niet-metalen (zoals C, N, O, S) zijn slechte geleiders van warmte en elektriciteit (uitzondering: koolstof/grafiet geleidt stroom)."
     },
     {

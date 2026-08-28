@@ -36,12 +36,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat gebeurt er met de weerstand van een <b>PTC-weerstand</b> als de temperatuur stijgt?",
       opties: [
-        "De weerstand stijgt (Positieve Temperatuur Coëfficiënt)",
-        "De weerstand daalt",
         "De stroom valt weg",
+        "De weerstand daalt",
+        "De weerstand stijgt (Positieve Temperatuur Coëfficiënt)",
         "De spanning wordt negatief"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "PTC = Positive Temperature Coefficient: hogere temperatuur -> hogere weerstand."
     },
     {
@@ -49,11 +49,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de weerstand van een <b>LDR</b> (Light Dependent Resistor) als er fel licht op schijnt?",
       opties: [
         "De weerstand wordt heel hoog",
-        "De weerstand wordt heel laag (er kan veel stroom lopen)",
+        "De LDR smelt direct",
         "De weerstand verandert niet",
-        "De LDR smelt direct"
+        "De weerstand wordt heel laag (er kan veel stroom lopen)"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Veel licht -> lage weerstand; donker -> zeer hoge weerstand."
     },
     {
@@ -78,19 +78,19 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een NTC staat in serie met een vaste weerstand van 100 Ω op een 5 V voeding. Als de temperatuur stijgt, daalt de weerstand van de NTC. Wat gebeurt er met de stroomsterkte in de kring?",
       opties: [
-        "De stroomsterkte daalt",
         "De stroomsterkte stijgt (I = U / R_tot, en R_tot is kleiner geworden)",
+        "De stroomsterkte daalt",
         "De stroomsterkte blijft gelijk",
         "De stroomsterkte wordt 0 A"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Omdat R_tot = R_ntc + 100 daalt, stijgt de stroomsterkte I = U / R_tot."
     },
     {
       type: "waaronwaar",
       vraag: "De soortelijke warmte van aluminium (880 J/kg·K) is bijna 5 keer zo klein als die van water (4180 J/kg·K).",
       antwoord: true,
-      uitleg: "Waar."
+      uitleg: "Waar: 4180 / 880 ≈ 4,75, dus water heeft bijna vijf keer zoveel warmte nodig om dezelfde massa met 1 K op te warmen. Daarom warmt aluminium veel sneller op (en koelt het ook sneller af) dan water bij dezelfde toegevoerde warmte."
     },
     {
       type: "invul",
@@ -126,12 +126,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "In een schemerschakelaar voor straatverlichting zit een LDR. Hoe zorgt de schakeling ervoor dat de lamp automatisch aangaat als het donker wordt?",
       opties: [
-        "In het donker stijgt de weerstand van de LDR; een elektronische schakeling detecteert de veranderde spanning en schakelt het relais van de straatlantaarn in",
-        "In het donker gaat de LDR licht geven",
         "De LDR smelt in het donker",
+        "In het donker gaat de LDR licht geven",
+        "In het donker stijgt de weerstand van de LDR; een elektronische schakeling detecteert de veranderde spanning en schakelt het relais van de straatlantaarn in",
         "De LDR wekt zelf 230 V op"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "In het donker wordt R_ldr heel groot -> spanning over de LDR stijgt -> transistor/relais schakelt de lantaarn in."
     },
     {
@@ -151,11 +151,11 @@ DURU.registerExamen({
       vraag: "Waarom worden koelribben op de achterkant van een koelkast of op een computerprocessor zwart gemaakt?",
       opties: [
         "Om ze tegen roest te beschermen",
-        "Omdat een zwart, mat oppervlak warmtestraling (infrarood) maximaal uitstraalt naar de omgeving",
+        "Zodat ze minder stof aantrekken",
         "Omdat zwarte verf elektriciteit geleidt",
-        "Zodat ze minder stof aantrekken"
+        "Omdat een zwart, mat oppervlak warmtestraling (infrarood) maximaal uitstraalt naar de omgeving"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Zwarte, doffe oppervlakken zijn de beste stralers van warmte (geven warmte snel af)."
     },
     {

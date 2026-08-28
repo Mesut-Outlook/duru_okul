@@ -24,12 +24,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe zijn de moleculen gerangschikt in een <b>vaste stof (s)</b> op microniveau?",
       opties: [
-        "Ze zitten dicht op elkaar op vaste plaatsen in een kristalrooster en trillen alleen om hun plaats",
         "Ze bewegen met hoge snelheid kriskras door de hele ruimte",
+        "Ze zitten dicht op elkaar op vaste plaatsen in een kristalrooster en trillen alleen om hun plaats",
         "Ze glijden willekeurig langs elkaar heen zonder vaste vorm",
         "Ze zijn helemaal verdwenen"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "In een vaste stof zitten de moleculen netjes gerangschikt op vaste posities in een rooster."
     },
     {
@@ -37,11 +37,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de moleculen in een <b>gas (g)</b>?",
       opties: [
         "Ze zitten dicht op elkaar in een vast rooster",
-        "Ze bewegen met grote tussenruimtes en hoge snelheden kriskras door elkaar",
         "Ze smelten aan elkaar vast",
+        "Ze bewegen met grote tussenruimtes en hoge snelheden kriskras door elkaar",
         "Ze staan volkomen stil"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "In een gas is de afstand tussen de moleculen enorm groot en bewegen ze vrij en snel."
     },
     {
@@ -54,12 +54,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is een <b>zuivere stof</b> op microniveau?",
       opties: [
-        "Een stof die bestaat uit slechts één soort moleculen (of één atoomsoort)",
+        "Kraanwater uit de bergen",
         "Een stof zonder bacteriën",
         "Een mengsel van water en suiker",
-        "Kraanwater uit de bergen"
+        "Een stof die bestaat uit slechts één soort moleculen (of één atoomsoort)"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Een zuivere stof bevat maar 1 soort bouwstenen (bijv. alleen H₂O-moleculen)."
     },
     {
@@ -96,12 +96,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom gebruiken scheikundigen <b>modellen</b> (zoals het bolletjesmodel) voor moleculen?",
       opties: [
-        "Omdat moleculen te klein zijn om met het blote oog of gewone microscoop te zien, en een model helpt processen te visualiseren en begrijpen",
         "Omdat moleculen van plastic gemaakt zijn",
+        "Omdat moleculen te klein zijn om met het blote oog of gewone microscoop te zien, en een model helpt processen te visualiseren en begrijpen",
         "Omdat de echte atomen te zwaar zijn om te tekenen",
         "Om computervirussen te bestrijden"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Modellen zijn vereenvoudigde voorstellingen van de werkelijkheid om onzichtbare deeltjesprocessen inzichtelijk te maken."
     },
     {
@@ -115,11 +115,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er met de suikermoleculen als je een schep suiker oplost in een beker warm water?",
       opties: [
         "De suikermoleculen verdwijnen en worden omgezet in water",
-        "De suikerkorrel valt uiteen en de losse suikermoleculen verspreiden zich gelijkmatig tussen de watermoleculen",
         "De suikermoleculen gaan chemisch reageren en vormen zout",
+        "De suikerkorrel valt uiteen en de losse suikermoleculen verspreiden zich gelijkmatig tussen de watermoleculen",
         "De suikermoleculen zinken allemaal als één grote klomp"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Bij oplossen worden de onderlinge bindingen tussen suikermoleculen verbroken en mengen de losse suikermoleculen zich tussen de watermoleculen."
     },
     {
@@ -138,12 +138,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke van de volgende voorbeelden is een <b>mengsel</b>?",
       opties: [
-        "Lucht (stikstof, zuurstof, argon, CO₂)",
+        "Zuiver vloeibaar kwik (Hg)",
         "Zuiver gedestilleerd water (H₂O)",
         "Zuiver zuurstofgas (O₂)",
-        "Zuiver vloeibaar kwik (Hg)"
+        "Lucht (stikstof, zuurstof, argon, CO₂)"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Lucht is een gasmengsel bestaande uit ca. 78% N₂, 21% O₂, 1% Ar en 0,04% CO₂."
     },
     {

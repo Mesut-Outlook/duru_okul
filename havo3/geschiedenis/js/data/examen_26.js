@@ -188,7 +188,7 @@
         vraag: "Leg uit welk verband er bestaat tussen de Arabische Lente en het ontstaan van de burgeroorlog in Syrië.",
         sleutelwoorden: [
           "protest/opstand tegen Assad",
-          "burgeroorlog/land werd verwoest"
+          "verwoestend/jarenlang/miljoenen doden of vluchtelingen"
         ],
         minTreffers: 1,
         modelantwoord: "De volksopstanden van de Arabische Lente sloegen ook over naar Syrië, waar het verzet tegen dictator Assad uitgroeide tot een jarenlange, verwoestende burgeroorlog waarin Assad met buitenlandse steun zijn vijanden versloeg.",

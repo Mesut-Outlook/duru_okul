@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Welke deeltjes bewegen door een koperdraad als er stroom loopt?",
-      opties: ["Protonen", "Elektronen", "Neutronen", "Moleculen"],
-      antwoord: 1,
+      opties: ["Elektronen", "Protonen", "Neutronen", "Moleculen"],
+      antwoord: 0,
       uitleg: "Elektrische stroom is een stroom van vrije elektronen."
     },
     {

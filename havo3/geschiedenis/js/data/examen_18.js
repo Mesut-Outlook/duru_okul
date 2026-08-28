@@ -71,12 +71,12 @@
         type: "mc",
         vraag: "Wat maakte het voor jongeren in de jaren 1950 mogelijk om een eigen smaak en levensstijl te ontwikkelen?",
         opties: [
-          "Ze kregen zakgeld of hoefden hun loon niet meer af te staan aan hun ouders",
           "Ze mochten van school stoppen",
           "De overheid gaf hun gratis auto's",
-          "Scholen schaften uniformen af"
+          "Scholen schaften uniformen af",
+          "Ze kregen zakgeld of hoefden hun loon niet meer af te staan aan hun ouders"
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Dankzij de welvaart kregen scholieren zakgeld en hoefden werkende jongeren hun loon niet meer af te staan aan hun ouders."
       },
       {
@@ -84,12 +84,12 @@
         type: "mc",
         vraag: "Sinds welk jaar was de slavernij in de VS door de federale overheid afgeschaft?",
         opties: [
-          "1865",
-          "1900",
           "1945",
+          "1900",
+          "1865",
           "1964"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Sinds de afschaffing van de slavernij door de federale overheid in 1865 voerden deelstaten en steden alsnog eigen segregatiewetten in."
       },
       {
@@ -97,12 +97,12 @@
         type: "mc",
         vraag: "Wie hield in 1963 in Washington een beroemde toespraak over zijn droom van gelijkheid tussen wit en zwart?",
         opties: [
-          "Martin Luther King",
+          "Elvis Presley",
           "President Kennedy",
           "President Johnson",
-          "Elvis Presley"
+          "Martin Luther King"
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Martin Luther King hield tijdens een massale demonstratie in Washington zijn beroemde toespraak over zijn droom van gelijkheid."
       },
       {
@@ -110,12 +110,12 @@
         type: "mc",
         vraag: "Wie werd na de moord op Kennedy president en zette diens beleid tegen rassendiscriminatie voort?",
         opties: [
-          "Johnson",
           "Nixon",
+          "Johnson",
           "Reagan",
           "Truman"
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Na de moord op Kennedy zette zijn opvolger Johnson het beleid tegen rassendiscriminatie voort."
       },
       {
@@ -123,12 +123,12 @@
         type: "mc",
         vraag: "Wat gebeurde er nadat het Congres in 1964 de Burgerrechtenwet aannam?",
         opties: [
-          "Discriminerende wetten en regels verloren hun wettigheid",
-          "Alle televisiezenders werden verboden",
           "De segregatie werd juist wettelijk vastgelegd",
+          "Alle televisiezenders werden verboden",
+          "Discriminerende wetten en regels verloren hun wettigheid",
           "Er kwam een nieuwe grondwet"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Door de Burgerrechtenwet van 1964 verloren alle discriminerende wetten en regels hun legitimiteit, al bleef racisme in de mentaliteit bestaan."
       },
       {
@@ -136,12 +136,12 @@
         type: "mc",
         vraag: "Waarom nam het bioscoopbezoek in de VS na 1950 af, terwijl het in Europa juist toenam?",
         opties: [
-          "Door de opkomst van de televisie in de VS",
+          "Doordat Hollywood failliet ging",
           "Doordat er in de VS geen nieuwe films meer werden gemaakt",
           "Doordat Europa geen televisie had",
-          "Doordat Hollywood failliet ging"
+          "Door de opkomst van de televisie in de VS"
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Door de opkomst van de televisie bleven Amerikanen vaker thuis, terwijl Europeanen juist massaal naar Amerikaanse films in de bioscoop gingen."
       },
       {

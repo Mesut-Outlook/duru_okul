@@ -168,6 +168,7 @@ a { color: var(--paars); text-decoration: none; }
 .h3-thema .ico { background: #fee2e2; }
 .h4-thema .ico { background: var(--blauw-zacht); }
 .h6-thema .ico { background: #dcfce7; }
+.h8-thema .ico { background: #e0e7ff; }
 
 /* progress bar on card */
 .mini-progress { height: 8px; border-radius: 8px; background: var(--lijn); overflow: hidden; margin-top: 6px; }

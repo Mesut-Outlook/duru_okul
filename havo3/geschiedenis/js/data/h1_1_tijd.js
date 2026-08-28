@@ -57,12 +57,12 @@
         type: "mc",
         vraag: "Waarom werd in de 19e eeuw een landelijke standaardtijd noodzakelijk?",
         opties: [
-          "Omdat de fabrieken precies om 08:00 uur moesten openen.",
           "Omdat de spoorwegen een betrouwbare dienstregeling nodig hadden.",
+          "Omdat de fabrieken precies om 08:00 uur moesten openen.",
           "Omdat de kerkklokken niet meer goed werkten.",
           "Omdat de telegraaf anders geen berichten kon versturen."
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Met de opkomst van de trein en spoorwegen was het onmogelijk om een dienstregeling te maken als elke stad zijn eigen zonne-tijd aanhield."
       },
       {
@@ -102,11 +102,11 @@
         vraag: "Wie was de Franse initiator van de moderne Olympische Spelen in 1896?",
         opties: [
           "Victor Hugo",
-          "Pierre de Coubertin",
           "Koning Willem III",
+          "Pierre de Coubertin",
           "Tsaar Nicolaas II"
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "Baron Pierre de Coubertin blies de klassieke Olympische Spelen in 1896 in Athene nieuw leven in."
       },
       {
@@ -123,12 +123,12 @@
         type: "mc",
         vraag: "Op welke manier droeg het nationalisme bij aan de populariteit van de moderne Olympische Spelen?",
         opties: [
-          "Landen wilden laten zien dat hun atleten de sterkste waren en sport maakte de jeugd weerbaar voor het leger.",
+          "Het nationalisme zorgde ervoor dat alle landen dezelfde vlag gebruikten.",
           "De Olympische Spelen vervingen alle nationale legers.",
           "Alleen neutrale landen mochten meedoen aan de Spelen.",
-          "Het nationalisme zorgde ervoor dat alle landen dezelfde vlag gebruikten."
+          "Landen wilden laten zien dat hun atleten de sterkste waren en sport maakte de jeugd weerbaar voor het leger."
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Sport werd gezien als een internationale krachtmeting tussen staten, en overheden zagen sport als een goede manier om jonge mannen fit en gedisciplineerd te maken voor militaire dienst."
       },
       {

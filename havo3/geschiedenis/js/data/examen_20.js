@@ -58,12 +58,12 @@
         type: "mc",
         vraag: "Waarom werden China en India na de oorlog vaak 'ontwikkelingslanden' genoemd?",
         opties: [
-          "Omdat ze een industriële samenleving wilden ontwikkelen",
           "Omdat ze geen eigen regering hadden",
+          "Omdat ze een industriële samenleving wilden ontwikkelen",
           "Omdat ze nog koloniën waren",
           "Omdat ze geen landbouw hadden"
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "De meeste landen met een agrarische samenleving wilden een industriële samenleving ontwikkelen en werden daarom ontwikkelingslanden genoemd."
       },
       {
@@ -71,12 +71,12 @@
         type: "mc",
         vraag: "Wat deed de Chinese regering vanaf 1961 om de economie te herstellen na de mislukte Grote Sprong Voorwaarts?",
         opties: [
-          "De communes werden verkleind en boeren kregen kleine stukjes land om zelf te verkopen",
           "Alle industrie werd stopgezet",
+          "De communes werden verkleind en boeren kregen kleine stukjes land om zelf te verkopen",
           "China sloot zich volledig af van de wereld",
           "Mao trad meteen af"
         ],
-        antwoord: 0,
+        antwoord: 1,
         uitleg: "Vanaf 1961 verkleinde de regering de communes en kregen boeren kleine stukjes land waarvan ze de producten lokaal mochten verkopen, wat tot enig herstel leidde."
       },
       {
@@ -84,12 +84,12 @@
         type: "mc",
         vraag: "Wie riep als secretaris-generaal van de VN in 2000 op tot de bevrijding van mensen uit extreme armoede, wat leidde tot de millenniumdoelen?",
         opties: [
-          "Kofi Annan",
-          "Nelson Mandela",
           "Kennedy",
+          "Nelson Mandela",
+          "Kofi Annan",
           "Gorbatsjov"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "De Ghanese secretaris-generaal Kofi Annan stelde in 2000 dat de VN zich moesten richten op de bevrijding van mensen uit extreme armoede."
       },
       {
@@ -110,12 +110,12 @@
         type: "mc",
         vraag: "Waarom leidde economische groei in India tussen 1950 en 1990 maar tot weinig welvaartsstijging voor de gewone bevolking?",
         opties: [
-          "De bevolking groeide van 350 naar 850 miljoen mensen, waardoor het inkomen per persoon weinig steeg",
-          "De regering weigerde in de industrie te investeren",
           "India voerde geen landbouwbeleid",
+          "De regering weigerde in de industrie te investeren",
+          "De bevolking groeide van 350 naar 850 miljoen mensen, waardoor het inkomen per persoon weinig steeg",
           "India kreeg geen buitenlandse hulp"
         ],
-        antwoord: 0,
+        antwoord: 2,
         uitleg: "Doordat de bevolking van 350 naar 850 miljoen groeide, ging het inkomen van veel Indiërs ondanks de economische groei van ruim drie procent per jaar weinig vooruit."
       },
       {
@@ -123,12 +123,12 @@
         type: "mc",
         vraag: "Hoe kwam generaal Park in 1961 aan de macht in Zuid-Korea?",
         opties: [
-          "Door een staatsgreep (militaire coup)",
+          "Doordat de vorige president zelf aftrad",
           "Door vrije verkiezingen",
           "Door een oorlog met Noord-Korea te winnen",
-          "Doordat de vorige president zelf aftrad"
+          "Door een staatsgreep (militaire coup)"
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Generaal Park kwam in 1961 door een staatsgreep aan de macht in Zuid-Korea en herstelde later de democratie."
       },
       {
@@ -136,12 +136,12 @@
         type: "mc",
         vraag: "Wat gebeurde er met het aandeel van de landbouw in de Zuid-Koreaanse economie tussen 1961 en 1990?",
         opties: [
-          "Het daalde tot 10 procent",
+          "De landbouw verdween helemaal",
           "Het steeg tot 80 procent",
           "Het bleef precies gelijk",
-          "De landbouw verdween helemaal"
+          "Het daalde tot 10 procent"
         ],
-        antwoord: 0,
+        antwoord: 3,
         uitleg: "Terwijl in 1961 nog bijna 80 procent van de Zuid-Koreanen in de landbouw werkte, daalde het aandeel van de landbouw in de economie tot 1990 tot 10 procent."
       },
       {

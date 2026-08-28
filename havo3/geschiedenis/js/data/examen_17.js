@@ -215,7 +215,7 @@
       {
         id: "ex17_v20",
         type: "open",
-        vraag: "Verklaar waarom het openen van de Berlijnse Muur in 1989 uiteindelijk leidde tot het einde van de DDR in plaats van tot het stoppen van de protesten.",
+        vraag: "Verklaar waarom het openen van de Berlijnse Muur in 1989 uiteindelijk leidde tot het einde van de DDR, terwijl de DDR-leiders daarmee juist rust hadden gehoopt te krijgen.",
         sleutelwoorden: [
           "protesten/demonstraties gingen door",
           "hereniging/sloop van de Muur/DDR viel"

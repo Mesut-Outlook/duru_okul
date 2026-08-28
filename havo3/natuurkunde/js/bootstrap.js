@@ -35,6 +35,13 @@
       icoon: "🧱",
       kleur: "h4-thema",
       intro: "Stofeigenschappen, dichtheid (ρ = m/V), drijven en zinken, soortelijke warmte (Q = m·c·ΔT), warmtetransport (geleiding, stroming, straling), soortelijke weerstand (R = ρ·l/A) en sensoren (NTC, PTC, LDR).",
+    },
+    {
+      nr: 8,
+      titel: "Krachten gebruiken",
+      icoon: "🪚",
+      kleur: "h8-thema",
+      intro: "Hefbomen, draaipunt en arm, moment van een kracht (M = F·r), de hefboomwet in evenwicht, overbrengingen (vaste en losse katrollen, takels, tandwielen), druk (p = F/A) en hydraulische vloeistofdruk (Wet van Pascal).",
     }
   ];
 

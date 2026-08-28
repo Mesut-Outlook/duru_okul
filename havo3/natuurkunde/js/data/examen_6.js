@@ -11,20 +11,20 @@ DURU.registerExamen({
     {
       type: "mc",
       vraag: "Welke deeltjes bewegen door een metalen stroomdraad wanneer er een elektrische stroom loopt?",
-      opties: ["Protonen", "Elektronen", "Neutronen", "Atomen"],
-      antwoord: 1,
+      opties: ["Atomen", "Protonen", "Neutronen", "Elektronen"],
+      antwoord: 3,
       uitleg: "Elektrische stroom in een metaaldraad bestaat uit een stroom van vrij bewegende negatieve elektronen."
     },
     {
       type: "mc",
       vraag: "Wat gebeurt er als twee voorwerpen beide <b>positief geladen</b> zijn en dicht bij elkaar worden gehouden?",
       opties: [
-        "Ze trekken elkaar aan",
         "Ze stoten elkaar af",
+        "Ze trekken elkaar aan",
         "Er gebeurt niets",
         "Ze ontladen direct zonder kracht"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Gelijksoortige ladingen (positief-positief of negatief-negatief) stoten elkaar af. Ongelijksoortige ladingen trekken elkaar aan."
     },
     {
@@ -61,12 +61,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Hoe sluit je een <b>stroommeter (ampèremeter)</b> aan om de stroom door een lampje te meten?",
       opties: [
-        "In serie (in dezelfde stroomtak)",
-        "Parallel over het lampje",
         "Direct tussen de plus- en minpool van de bron zonder lampje",
+        "Parallel over het lampje",
+        "In serie (in dezelfde stroomtak)",
         "Draadloos naast de schakeling"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Een stroommeter meet hoeveel lading er per seconde passeert en moet daarom IN SERIE in de stroomkring opgenomen worden."
     },
     {
@@ -91,12 +91,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is het verschil tussen een <b>geleider</b> en een <b>isolator</b>?",
       opties: [
-        "Een geleider laat elektrische stroom goed door (bevat vrije elektronen); een isolator laat stroom nauwelijks door",
+        "Er is geen verschil in stroomdoorlatendheid",
         "Een geleider is altijd van plastic; een isolator altijd van koper",
         "Een isolator kan alleen wisselstroom geleiden",
-        "Er is geen verschil in stroomdoorlatendheid"
+        "Een geleider laat elektrische stroom goed door (bevat vrije elektronen); een isolator laat stroom nauwelijks door"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Metalen zoals koper, aluminium en ijzer zijn goede geleiders. Stoffen als rubber, plastic, glas en lucht zijn isolatoren."
     },
     {
@@ -109,12 +109,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een stroomsterkte van 1 Ampère betekent dat er:",
       opties: [
-        "1 Joule energie per seconde geleverd wordt",
         "1 Coulomb aan lading per seconde door de draad stroomt",
+        "1 Joule energie per seconde geleverd wordt",
         "1 Volt spanning over de draad staat",
         "1 Ohm weerstand in de draad aanwezig is"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Stroomsterkte I is de hoeveelheid lading per seconde: 1 A = 1 C/s (Coulomb per seconde)."
     },
     {
@@ -146,11 +146,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er als je een ampèremeter per ongeluk <b>parallel</b> over een sterke batterij aansluit?",
       opties: [
         "Hij meet keurig de spanning",
-        "Er ontstaat kortsluiting met een zeer grote stroom, waardoor de meter of zekering kan doorbranden",
         "Er gaat helemaal geen stroom lopen",
+        "Er ontstaat kortsluiting met een zeer grote stroom, waardoor de meter of zekering kan doorbranden",
         "De batterij laadt razendsnel op"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Omdat de ampèremeter bijna 0 Ω weerstand heeft, ontstaat er kortsluiting met een gevaarlijk hoge stroomsterkte."
     },
     {

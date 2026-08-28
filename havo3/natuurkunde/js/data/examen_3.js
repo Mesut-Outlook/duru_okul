@@ -12,24 +12,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de juiste formule voor de totale <b>stopafstand (s_stop)</b>?",
       opties: [
-        "s_stop = s_reactie × s_rem",
         "s_stop = s_reactie + s_rem",
+        "s_stop = s_reactie × s_rem",
         "s_stop = s_rem - s_reactie",
         "s_stop = (s_reactie + s_rem) / 2"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De totale stopafstand is de som van de reactieafstand (afstand afgelegd tijdens reactietijd) en de remweg (afstand afgelegd tijdens het remmen): s_stop = s_reactie + s_rem."
     },
     {
       type: "mc",
       vraag: "Tijdens de <b>reactietijd</b> rijdt een automobilist met constante snelheid door. Welke bewegingssoort is dit?",
       opties: [
-        "Eenparige beweging (constante snelheid)",
         "Eenparig vertraagde beweging",
+        "Eenparige beweging (constante snelheid)",
         "Eenparig versnelde beweging",
         "Niet-eenparige vertraging"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Voordat de bestuurder het rempedaal indrukt, reageert hij alleen; de auto remt nog niet en behoudt zijn constante snelheid (eenparige beweging)."
     },
     {
@@ -43,11 +43,11 @@ DURU.registerExamen({
       vraag: "Als de beginsnelheid van een auto <b>2 keer zo groot</b> wordt, wat gebeurt er dan met de <b>remweg</b> (bij gelijke remkracht en wegdek)?",
       opties: [
         "De remweg wordt 2 keer zo lang",
-        "De remweg wordt 4 keer zo lang (2²)",
         "De remweg blijft hetzelfde",
+        "De remweg wordt 4 keer zo lang (2²)",
         "De remweg wordt 8 keer zo lang"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "De remweg is evenredig met het kwadraat van de beginsnelheid (s_rem ~ v²). Bij 2× zo hoge snelheid wordt de remweg 2² = 4 keer zo lang!"
     },
     {
@@ -68,10 +68,10 @@ DURU.registerExamen({
       opties: [
         "Het profiel van de autobanden",
         "Gladheid van het wegdek door regen of ijzel",
-        "De alcoholconsumptie van de bestuurder",
-        "De kwaliteit van de remmen"
+        "De kwaliteit van de remmen",
+        "De alcoholconsumptie van de bestuurder"
       ],
-      antwoord: 2,
+      antwoord: 3,
       uitleg: "Alcohol beïnvloedt de hersenen en verhoogt de reactietijd van de bestuurder, maar heeft geen effect op de mechanische remweg van de auto."
     },
     {
@@ -84,12 +84,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is het natuurkundige doel van een <b>kreukelzone</b> bij een autobotsing?",
       opties: [
-        "De massa van de auto vergroten",
         "De botsingstijd (remtijd) vergroten waardoor de botskracht kleiner wordt",
+        "De massa van de auto vergroten",
         "De snelheid van de auto voor de botsing verlagen",
         "De auto zo stijf en onbuigzaam mogelijk maken"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Door in te deuken verlengt de kreukelzone de botstijd (Δt). Volgens a = Δv / Δt wordt de vertraging kleiner en daardoor is de botskracht F = m × a op de inzittenden veel kleiner."
     },
     {
@@ -102,12 +102,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waarom loopt een <b>airbag</b> direct na het opblazen weer snel leeg via kleine openingen?",
       opties: [
-        "Om ruimte te maken voor de hulpdiensten en te voorkomen dat de bestuurder terugkaatst of stikt",
         "Omdat de lucht te warm wordt",
+        "Om ruimte te maken voor de hulpdiensten en te voorkomen dat de bestuurder terugkaatst of stikt",
         "Om de auto sneller tot stilstand te brengen",
         "Omdat het gas giftig is voor het stuur"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Het gecontroleerd leeglopen dempt de klap zachtjes (absorbeert energie), voorkomt dat het hoofd hard terugveert, en zorgt dat de bestuurder niet klem komt te zitten."
     },
     {
@@ -145,11 +145,11 @@ DURU.registerExamen({
       vraag: "Wat gebeurt er in het (v,t)-diagram tijdens een noodstop?",
       opties: [
         "Eerst een dalende lijn, daarna een horizontale lijn",
-        "Eerst een horizontale lijn (reactiefase), daarna een steil dalende lijn naar de nul-as (remfase)",
+        "Direct een verticale lijn naar beneden",
         "Een stijgende lijn gevolgd door een dalende lijn",
-        "Direct een verticale lijn naar beneden"
+        "Eerst een horizontale lijn (reactiefase), daarna een steil dalende lijn naar de nul-as (remfase)"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "Tijdens de reactietijd blijft v constant (horizontaal). Zodra er geremd wordt, daalt v gelijkmatig naar 0 (dalende rechte lijn)."
     },
     {

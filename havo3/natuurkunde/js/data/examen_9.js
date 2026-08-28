@@ -19,12 +19,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke formule gebruik je om het elektrisch vermogen te berekenen uit spanning en stroomsterkte?",
       opties: [
-        "P = U / I",
         "P = U × I",
+        "P = U / I",
         "P = I / U",
         "P = E × t"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "P = U × I (Vermogen in Watt = Spanning in Volt × Stroomsterkte in Ampère)."
     },
     {
@@ -43,12 +43,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke formule gebruik je om het totale <b>energieverbruik (E)</b> van een apparaat te berekenen?",
       opties: [
-        "E = P × t",
         "E = P / t",
+        "E = P × t",
         "E = U × R",
         "E = I / t"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "E = P × t (Energie = Vermogen × Tijd)."
     },
     {
@@ -90,8 +90,8 @@ DURU.registerExamen({
     {
       type: "mc",
       vraag: "Een magnetron heeft een vermogen van 800 W. Hoeveel kW is dat?",
-      opties: ["0,08 kW", "0,8 kW", "8 kW", "80 kW"],
-      antwoord: 1,
+      opties: ["0,08 kW", "8 kW", "0,8 kW", "80 kW"],
+      antwoord: 2,
       uitleg: "800 W / 1000 = 0,8 kW."
     },
     {
@@ -111,11 +111,11 @@ DURU.registerExamen({
       vraag: "Bij een oude gloeilamp van 60 W wordt slechts 3 W omgezet in nuttig licht. Wat gebeurt er met de overige 57 W?",
       opties: [
         "Die verdwijnt in de stroomdraad",
-        "Die wordt omgezet in ongewenste warmte",
+        "Die wordt opgeslagen in de fitting",
         "Die wordt teruggestuurd naar de centrale",
-        "Die wordt opgeslagen in de fitting"
+        "Die wordt omgezet in ongewenste warmte"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "95% van de energie bij een gloeilamp gaat verloren als warmte (rendement is slechts 5%)."
     },
     {
@@ -128,12 +128,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat meet de <b>kwh-meter (elektriciteitsmeter)</b> in de meterkast?",
       opties: [
-        "De momentane stroomsterkte in Ampère",
         "De totale hoeveelheid afgenomen elektrische energie in kWh",
+        "De momentane stroomsterkte in Ampère",
         "De gemiddelde netspanning in Volt",
         "Het maximale piekvermogen van het huis"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De kWh-meter meet de totale cumulatieve verbruikte elektrische energie in kilowattuur."
     },
     {

@@ -58,12 +58,12 @@
         type: "mc",
         vraag: "Wie was de laatste tsaar van het Russische Rijk die in 1917 moest aftreden?",
         opties: [
-          "Peter de Grote",
           "Nicolaas II",
+          "Peter de Grote",
           "Alexander III",
           "Jozef Stalin"
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Tsaar Nicolaas II trad in februari 1917 af onder druk van massale stakingen, muiterij in het leger en de Doema."
       },
       {
@@ -103,11 +103,11 @@
         vraag: "Waarvoor stonden de hamer en de sikkel in het communistische symbool van de Sovjet-Unie?",
         opties: [
           "Hamer = militairen; Sikkel = burgers",
-          "Hamer = fabrieksarbeiders; Sikkel = landbouwboeren",
           "Hamer = bewindvoerders; Sikkel = doktoren",
+          "Hamer = fabrieksarbeiders; Sikkel = landbouwboeren",
           "Hamer = spoorwegen; Sikkel = scheepvaart"
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "De hamer symboliseerde de industriële arbeidersklasse en de sikkel de boeren op het platteland."
       },
       {
@@ -125,11 +125,11 @@
         vraag: "Hoe heette de beruchte geheime dienst die door Lenin werd opgericht om tegenstanders uit te schakelen?",
         opties: [
           "Okhrana",
-          "Tsjeka (later KGB)",
+          "Gestapo",
           "Stasi",
-          "Gestapo"
+          "Tsjeka (later KGB)"
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "Lenin richtte in december 1917 de Tsjeka op, de wrede communistische geheime dienst die later bekend werd als de KGB."
       },
       {

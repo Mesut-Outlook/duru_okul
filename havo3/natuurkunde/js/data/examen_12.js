@@ -12,24 +12,24 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Waaruit bestaat de <b>atoomkern</b> van een atoom?",
       opties: [
-        "Alleen elektronen",
         "Protonen (positief) en neutronen (neutraal)",
+        "Alleen elektronen",
         "Protonen en elektronen",
         "Alleen fotonen"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De atoomkern bevat positieve protonen en ongeladen neutronen. De negatieve elektronen bewegen in een wolk om de kern heen."
     },
     {
       type: "mc",
       vraag: "Wat zijn <b>isotopen</b> van hetzelfde chemische element?",
       opties: [
-        "Atomen met hetzelfde aantal protonen, maar een verschillend aantal neutronen in de kern",
         "Atomen met hetzelfde aantal neutronen, maar verschillend aantal protonen",
+        "Atomen met hetzelfde aantal protonen, maar een verschillend aantal neutronen in de kern",
         "Atomen die altijd positief geladen zijn",
         "Atomen van verschillende elementen met hetzelfde gewicht"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Isotopen hebben hetzelfde atoomnummer (aantal protonen), maar een andere massa door een afwijkend aantal neutronen (bijv. Koolstof-12 en Koolstof-14)."
     },
     {
@@ -43,35 +43,35 @@ DURU.registerExamen({
       vraag: "Waaruit bestaat <b>alfastraling (α)</b>?",
       opties: [
         "Snelle elektronen",
-        "Heliumkernen (2 protonen en 2 neutronen)",
         "Lichtdeeltjes zonder massa",
+        "Heliumkernen (2 protonen en 2 neutronen)",
         "Losse neutronen"
       ],
-      antwoord: 1,
+      antwoord: 2,
       uitleg: "Een alfadeeltje is een positief geladen heliumkern (⁴₂He²⁺) bestaande uit 2 protonen en 2 neutronen."
     },
     {
       type: "mc",
       vraag: "Waaruit bestaat <b>bètastraling (β)</b>?",
       opties: [
-        "Snelle elektronen die uit de atoomkern weggeschoten worden",
+        "Protonen",
         "Heliumkernen",
         "Golven met ultrahoge frequentie",
-        "Protonen"
+        "Snelle elektronen die uit de atoomkern weggeschoten worden"
       ],
-      antwoord: 0,
+      antwoord: 3,
       uitleg: "Bij bètaverval verandert een neutron in een proton en wordt een snel elektron (bètadeeltje) uit de kern weggeschoten."
     },
     {
       type: "mc",
       vraag: "Wat is <b>gammastraling (γ)</b>?",
       opties: [
-        "Een stroom zware positieve deeltjes",
         "Zeer energierijke elektromagnetische straling (fotonen) zonder massa of lading",
+        "Een stroom zware positieve deeltjes",
         "Een stroom van losse neutronen",
         "Hetzelfde als radiogolven"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "Gammastraling is elektromagnetische straling met extreem hoge frequentie die vrijkomt bij radioactief kernverval."
     },
     {
@@ -115,11 +115,11 @@ DURU.registerExamen({
       vraag: "Wat betekent het begrip <b>halveringstijd (t₁/₂)</b> van een radioactieve stof?",
       opties: [
         "De tijd waarna de radioactiviteit helemaal nul is geworden",
-        "De tijd waarin de helft van het aantal instabiele radioactieve atoomkernen is vervallen",
+        "De tijd die nodig is om een atoom in tweeën te splijten",
         "De helft van de leeftijd van het heelal",
-        "De tijd die nodig is om een atoom in tweeën te splijten"
+        "De tijd waarin de helft van het aantal instabiele radioactieve atoomkernen is vervallen"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "De halveringstijd is de vaste tijd waarin 50% van de radioactieve kernen spontaan vervalt."
     },
     {
@@ -144,12 +144,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een monster bevat 100% instabiele kernen. Welk percentage van de oorspronkelijke instabiele kernen is na <b>3 halveringstijden</b> nog over?",
       opties: [
-        "50%",
-        "25%",
         "12,5%",
+        "25%",
+        "50%",
         "6,25%"
       ],
-      antwoord: 2,
+      antwoord: 0,
       uitleg: "Na 1× t₁/₂: 50%. Na 2× t₁/₂: 25%. Na 3× t₁/₂: 12,5%."
     },
     {
@@ -168,12 +168,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Welke stralingsmeter wordt gebruikt om radioactiviteit hoorbaar (tikken) en zichtbaar te meten?",
       opties: [
-        "Geiger-Müller-teller (Geigerteller)",
         "Voltmeter",
+        "Geiger-Müller-teller (Geigerteller)",
         "Barometer",
         "Thermometer"
       ],
-      antwoord: 0,
+      antwoord: 1,
       uitleg: "Een Geiger-Müller-telbuis detecteert geïoniseerde gasdeeltjes veroorzaakt door passerende kernstraling."
     },
     {

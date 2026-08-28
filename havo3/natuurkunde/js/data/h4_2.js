@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Wat is de eenheid van warmte (energie)?",
-      opties: ["Graden Celsius (°C)", "Kelvin (K)", "Joule (J)", "Watt (W)"],
-      antwoord: 2,
+      opties: ["Joule (J)", "Kelvin (K)", "Graden Celsius (°C)", "Watt (W)"],
+      antwoord: 0,
       uitleg: "Warmte is thermische energie en wordt gemeten in Joule (J)."
     },
     {
@@ -42,8 +42,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Wat is het absolute nulpunt (0 Kelvin) in graden Celsius?",
-      opties: ["0 °C", "-100 °C", "-273 °C", "-373 °C"],
-      antwoord: 2,
+      opties: ["0 °C", "-273 °C", "-100 °C", "-373 °C"],
+      antwoord: 1,
       uitleg: "0 K = -273,15 °C."
     },
     {

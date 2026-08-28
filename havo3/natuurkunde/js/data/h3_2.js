@@ -13,8 +13,8 @@ DURU.register({
       type: "mc",
       niveau: 1,
       vraag: "Waaruit bestaat de atoomkern?",
-      opties: ["Alleen elektronen", "Protonen en neutronen", "Elektronen en protonen", "Neutronen en fotonen"],
-      antwoord: 1,
+      opties: ["Protonen en neutronen", "Alleen elektronen", "Elektronen en protonen", "Neutronen en fotonen"],
+      antwoord: 0,
       uitleg: "De kern bestaat uit positieve protonen en ongeladen neutronen."
     },
     {
@@ -28,8 +28,8 @@ DURU.register({
       type: "mc",
       niveau: 2,
       vraag: "Welke stralingssoort wordt al gestopt door een velletje papier?",
-      opties: ["Alfastraling", "Bètastraling", "Gammastraling", "Röntgenstraling"],
-      antwoord: 0,
+      opties: ["Bètastraling", "Alfastraling", "Gammastraling", "Röntgenstraling"],
+      antwoord: 1,
       uitleg: "Alfastraling heeft een heel klein doordringend vermogen en wordt door papier tegengehouden."
     },
     {

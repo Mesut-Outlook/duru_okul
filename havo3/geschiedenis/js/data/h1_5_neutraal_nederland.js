@@ -59,12 +59,12 @@
         type: "mc",
         vraag: "Wat hield de 'neutraliteit' van Nederland in tijdens de Eerste Wereldoorlog?",
         opties: [
-          "Nederland vocht alleen mee aan de kant van de Geallieerden.",
           "Nederland koos geen partij en bleef onpartijdig buiten de oorlog.",
+          "Nederland vocht alleen mee aan de kant van de Geallieerden.",
           "Nederland werd bezet door het Duitse leger.",
           "Nederland stuurde al zijn soldaten naar Rusland."
         ],
-        antwoord: 1,
+        antwoord: 0,
         uitleg: "Nederland stelde zich neutraal op en hoefde daardoor niet mee te vechten aan de fronten."
       },
       {
@@ -96,11 +96,11 @@
         vraag: "Welke twee grote politieke problemen werden opgelost in de Grondwetsherziening van 1917?",
         opties: [
           "De afschaffing van de monarchie en het leger.",
-          "De kiesrechtkwestie (algemeen mannenkiesrecht) en de schoolstrijd (gelijke financiering van bijzonder en openbaar onderwijs).",
           "De toetreding tot de Volkenbond en de invoering van de euro.",
+          "De kiesrechtkwestie (algemeen mannenkiesrecht) en de schoolstrijd (gelijke financiering van bijzonder en openbaar onderwijs).",
           "Het verbod op stakingen en de afschaffing van belastingen."
         ],
-        antwoord: 1,
+        antwoord: 2,
         uitleg: "In 1917 kregen mannen algemeen kiesrecht (vrouwen in 1919) en kregen bijzondere scholen evenveel geld als openbare scholen."
       },
       {
@@ -126,11 +126,11 @@
         vraag: "Welke drie primaire kleuren gebruikte de kunstbeweging 'De Stijl' (1917) hoofdzakelijk in hun abstracte werken?",
         opties: [
           "Groen, oranje en paars",
-          "Rood, geel en blauw",
+          "Bruin, wit en rood",
           "Zwart, grijs en goud",
-          "Bruin, wit en rood"
+          "Rood, geel en blauw"
         ],
-        antwoord: 1,
+        antwoord: 3,
         uitleg: "De Stijl (Mondriaan, Rietveld) werkte met de drie primaire kleuren rood, geel en blauw, in combinatie met wit, grijs en zwart."
       },
       {

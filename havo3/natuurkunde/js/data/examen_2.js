@@ -12,12 +12,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat is de officiële eenheid van <b>versnelling (a)</b>?",
       opties: [
-        "m/s",
         "m/s²",
+        "m/s",
         "km/h",
         "N/kg"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "De eenheid van versnelling is meter per seconde kwadraat (m/s²). Dit geeft aan met hoeveel m/s de snelheid iedere seconde toeneemt."
     },
     {
@@ -25,11 +25,11 @@ DURU.registerExamen({
       vraag: "Een motorrijder versnelt vanuit stilstand naar 24 m/s in 6,0 seconden. Wat is zijn gemiddelde versnelling?",
       opties: [
         "2,0 m/s²",
-        "3,0 m/s²",
         "4,0 m/s²",
+        "3,0 m/s²",
         "6,0 m/s²"
       ],
-      antwoord: 2,
+      antwoord: 1,
       uitleg: "a = Δv / Δt = (24 m/s - 0 m/s) / 6,0 s = 4,0 m/s²."
     },
     {
@@ -84,12 +84,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Een fietser rijdt met een snelheid van 10 m/s en remt in 4,0 seconden gelijkmatig af tot stilstand. Wat is de (rem)vertraging?",
       opties: [
-        "1,5 m/s²",
         "2,5 m/s²",
+        "1,5 m/s²",
         "4,0 m/s²",
         "5,0 m/s²"
       ],
-      antwoord: 1,
+      antwoord: 0,
       uitleg: "a = Δv / Δt = 10 m/s / 4,0 s = 2,5 m/s²."
     },
     {
@@ -114,12 +114,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Twee voorwerpen A en B worden met dezelfde kracht F voortgeduwd. Voorwerp A heeft een massa van 10 kg, voorwerp B heeft een massa van 20 kg. Wat geldt voor hun versnellingen?",
       opties: [
-        "Versnelling van A is twee keer zo groot als die van B",
-        "Versnelling van B is twee keer zo groot als die van A",
         "Beide voorwerpen krijgen dezelfde versnelling",
+        "Versnelling van B is twee keer zo groot als die van A",
+        "Versnelling van A is twee keer zo groot als die van B",
         "Voorwerp B versnelt vier keer zo snel"
       ],
-      antwoord: 0,
+      antwoord: 2,
       uitleg: "Omdat a = F / m, is de versnelling omgekeerd evenredig met de massa. Het lichtere voorwerp A (10 kg) krijgt een twee keer zo grote versnelling als B (20 kg)."
     },
     {
@@ -139,11 +139,11 @@ DURU.registerExamen({
       vraag: "Een auto versnelt van 36 km/h naar 72 km/h in 5,0 seconden. Bereken eerst de snelheden in m/s en bepaal daarna de versnelling.",
       opties: [
         "1,0 m/s²",
-        "2,0 m/s²",
+        "7,2 m/s²",
         "3,6 m/s²",
-        "7,2 m/s²"
+        "2,0 m/s²"
       ],
-      antwoord: 1,
+      antwoord: 3,
       uitleg: "v_begin = 36 / 3,6 = 10 m/s; v_eind = 72 / 3,6 = 20 m/s. Δv = 20 - 10 = 10 m/s. a = Δv / Δt = 10 / 5,0 = 2,0 m/s²."
     },
     {
@@ -162,12 +162,12 @@ DURU.registerExamen({
       type: "mc",
       vraag: "Wat gebeurt er met de versnelling van een optrekkende auto als de motorkracht constant blijft, maar de luchtweerstand toeneemt naarmate de auto sneller gaat?",
       opties: [
-        "De versnelling blijft gelijk",
-        "De versnelling wordt steeds groter",
         "De versnelling wordt steeds kleiner",
+        "De versnelling wordt steeds groter",
+        "De versnelling blijft gelijk",
         "De versnelling wordt meteen negatief"
       ],
-      antwoord: 2,
+      antwoord: 0,
       uitleg: "Omdat de luchtweerstand toeneemt, wordt F_res = F_motor - F_lucht steeds kleiner. Volgens a = F_res / m wordt de versnelling dus ook steeds kleiner."
     },
     {

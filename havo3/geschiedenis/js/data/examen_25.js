@@ -1,12 +1,13 @@
 /* =========================================================
-   Duru's Geschiedenis (HAVO 3) — Proeftoets 25 — Hoofdstuk 5 (Nederland na 1945 (1945–heden))
+   Duru's Geschiedenis (HAVO 3) — Proeftoets 25 (20 vragen)
+   Hoofdstuk 5: Nederland na 1945 — 5.5 Recht in Nederland
    ========================================================= */
 (function () {
   "use strict";
 
   DURU.registerExamen({
     id: "ex-h3-geschiedenis-25",
-    titel: "Proeftoets 25 — Hoofdstuk 5 (Nederland na 1945 (1945–heden))",
+    titel: "Proeftoets 25 — 5.5 Recht in Nederland",
     vak: "Geschiedenis · Hoofdstuk 5",
     hoofdstuk: 5,
     hoofdstukTitel: "Hoofdstuk 5 — Nederland na 1945 (1945–heden)",
@@ -14,265 +15,215 @@
     duurMin: 20,
     vragen: [
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "1. Hoe heette de periode van herstel van Nederland na WO2?",
-            "opties": [
-                  "De Wederopbouw",
-                  "De Roaring Twenties",
-                  "De Grote Depressie",
-                  "De Ontzuiling"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Wederopbouw herstelde Nederland na de verwoestingen."
+        id: "ex25_v1",
+        type: "mc",
+        vraag: "Waar werd de vermoorde vrouw in de Puttense moordzaak in 1994 gevonden?",
+        opties: [
+          "In de woning van haar oma",
+          "In een park",
+          "In haar auto",
+          "Op haar werk"
+        ],
+        antwoord: 0,
+        uitleg: "In 1994 werd de 23-jarige vrouw dood gevonden in de woning van haar oma in Putten."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "2. Welke premier voerde in 1957 de AOW in?",
-            "opties": [
-                  "Willem Drees",
-                  "Ruud Lubbers",
-                  "Joop den Uyl",
-                  "Jan Peter Balkenende"
-            ],
-            "antwoord": 0,
-            "uitleg": "Willem Drees legde de basis voor de AOW."
+        id: "ex25_v2",
+        type: "mc",
+        vraag: "Waarom verdacht de politie in de Puttense moordzaak aanvankelijk vier mannen die regelmatig autotochtjes maakten?",
+        opties: [
+          "Ze hadden een bekentenis afgelegd bij de politie",
+          "Wandelaars meenden hun auto rond het tijdstip van de moord te hebben gezien",
+          "Er was DNA-bewijs tegen hen gevonden",
+          "Ze waren eerder veroordeeld voor moord"
+        ],
+        antwoord: 1,
+        uitleg: "Wandelaars meenden de auto van de vier mannen rond het tijdstip van de moord te hebben gezien."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "3. Wat is de definitie van een verzorgingsstaat?",
-            "opties": [
-                  "Een maatschappij waarin de overheid zorgt voor het welzijn van burgers via sociale voorzieningen",
-                  "Een staat zonder belastingen",
-                  "Een militaire dictatuur",
-                  "Een markt zonder regels"
-            ],
-            "antwoord": 0,
-            "uitleg": "In een verzorgingsstaat heeft de overheid een zorgplicht."
+        id: "ex25_v3",
+        type: "mc",
+        vraag: "Welk technisch bewijs had de politie tegen de twee veroordeelde mannen in de Puttense moordzaak?",
+        opties: [
+          "Vingerafdrukken op de plaats delict",
+          "Camerabeelden van de moord",
+          "Geen enkel technisch bewijs",
+          "Sperma of haren van de verdachten"
+        ],
+        antwoord: 2,
+        uitleg: "De politie had geen technisch bewijs: geen voet- of vingerafdrukken, geen sperma of haren."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "4. Met welke organisatie begon de Europese integratie in 1951?",
-            "opties": [
-                  "EGKS (Europese Gemeenschap voor Kolen en Staal)",
-                  "EU",
-                  "NAVO",
-                  "VN"
-            ],
-            "antwoord": 0,
-            "uitleg": "EGKS was het begin van Europese samenwerking."
+        id: "ex25_v4",
+        type: "mc",
+        vraag: "Wie raakten ervan overtuigd dat de twee veroordeelde mannen in de Puttense zaak onschuldig waren?",
+        opties: [
+          "De rechtbank en het gerechtshof",
+          "De officier van justitie en de politie",
+          "De Tweede Kamer",
+          "Misdaadjournalist Peter R. de Vries en oud-politiecommissaris Blaauw"
+        ],
+        antwoord: 3,
+        uitleg: "Misdaadjournalist Peter R. de Vries en oud-politiecommissaris Blaauw raakten ervan overtuigd dat de twee mannen onschuldig waren."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "5. Wat werd afgesproken bij het Verdrag van Maastricht (1992)?",
-            "opties": [
-                  "Oprichting van de Europese Unie en de beslissing tot de euro",
-                  "Het einde van WO2",
-                  "Het Marshallplan",
-                  "De NAVO oprichting"
-            ],
-            "antwoord": 0,
-            "uitleg": "In Maastricht ontstond de EU."
+        id: "ex25_v5",
+        type: "mc",
+        vraag: "Tot hoeveel jaar cel werd de echte dader in de Puttense moordzaak in 2008 veroordeeld?",
+        opties: [
+          "Achttien jaar",
+          "Tien jaar",
+          "Vijf jaar",
+          "Levenslang"
+        ],
+        antwoord: 0,
+        uitleg: "In 2008 werd de echte dader gearresteerd en veroordeeld tot achttien jaar gevangenisstraf."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "6. Wat hield de \"ontzuiling\" in de jaren 60 in?",
-            "opties": [
-                  "Het afbrokkelen van de strakke scheiding tussen katholieken, protestanten, socialisten en liberalen",
-                  "Het sluiten van de kerken",
-                  "Het afschaffen van partijen",
-                  "Het afbreken van huizen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Ontzuiling maakte burgers onafhankelijker van hun zuil."
+        id: "ex25_v6",
+        type: "mc",
+        vraag: "Wat kunnen het Openbaar Ministerie en een verdachte in een strafzaak afspreken in plaats van een rechtszaak?",
+        opties: [
+          "Dat de rechter wordt vervangen",
+          "Dat de verdachte geld betaalt of een taakstraf uitvoert",
+          "Dat de verdachte meteen wordt vrijgesproken",
+          "Dat de politie de zaak sluit zonder onderzoek"
+        ],
+        antwoord: 1,
+        uitleg: "Ook in een strafzaak kan geschikt worden: het OM en de verdachte kunnen afspreken dat de verdachte geld betaalt of een taakstraf (onbetaalde arbeid) uitvoert."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "7. Welke jeugdgroepeen kwamen in de jaren 50 en 60 op?",
-            "opties": [
-                  "Nozems en Provo's",
-                  "Punks en Goths",
-                  "Hippies en Yuppies",
-                  "Zwarthemden"
-            ],
-            "antwoord": 0,
-            "uitleg": "Nozems en Provo's stonden voor een nieuwe jeugdcultuur."
+        id: "ex25_v7",
+        type: "mc",
+        vraag: "Waar kan een burger die het niet eens is met een geweigerde bouwvergunning van de gemeente naartoe stappen?",
+        opties: [
+          "Naar de burgerrechter",
+          "Naar de Hoge Raad meteen",
+          "Naar de bestuursrechter",
+          "Naar de officier van justitie"
+        ],
+        antwoord: 2,
+        uitleg: "Wie een vergunning geweigerd krijgt van de gemeente, kan dat aanvechten bij de bestuursrechter, die conflicten tussen burgers en de overheid regelt."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "8. Wat eiste de actiegroep \"Dolle Mina\" tijdens de tweede feministische golf?",
-            "opties": [
-                  "Gelijke rechten en kansen voor vrouwen in werk, studie en maatschappij",
-                  "Vrouwenkiesrecht",
-                  "Het afschaffen van huwelijken",
-                  "Dienstplicht voor vrouwen"
-            ],
-            "antwoord": 0,
-            "uitleg": "Dolle Mina streed voor gelijke vrouwenrechten."
+        id: "ex25_v8",
+        type: "mc",
+        vraag: "Wat was gebruikelijk voor veroordeelde kinderen tot in de 19e eeuw?",
+        opties: [
+          "Ze kregen altijd vrijspraak",
+          "Ze werden nooit gestraft",
+          "Ze kregen een aparte kinderrechter zoals nu",
+          "Ze zaten samen met volwassen criminelen in de gevangenis"
+        ],
+        antwoord: 3,
+        uitleg: "Tot in de 19e eeuw zaten veroordeelde kinderen samen met volwassen criminelen in de gevangenis; pas in die eeuw kwamen de eerste wetten voor kinderen, zoals een verbod op kinderarbeid."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "9. Uit welke landen kwamen veel gastarbeiders in de jaren 60 naar Nederland?",
-            "opties": [
-                  "Onder meer Turkije en Marokko",
-                  "Verenigde Staten",
-                  "Rusland",
-                  "Indonesië"
-            ],
-            "antwoord": 0,
-            "uitleg": "Gastarbeiders vulden het tekort aan arbeidskrachten op."
+        id: "ex25_v9",
+        type: "mc",
+        vraag: "In welk jaar werden kinderrechten door de Verenigde Naties vastgelegd in het Kinderrechtenverdrag?",
+        opties: [
+          "1989",
+          "1945",
+          "1948",
+          "2001"
+        ],
+        antwoord: 0,
+        uitleg: "In 1989 werden kinderrechten door de VN vastgelegd in het Kinderrechtenverdrag, dat ook door Nederland werd ondertekend."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "10. Wanneer werd Suriname een onafhankelijke republiek?",
-            "opties": [
-                  "25 november 1975",
-                  "17 augustus 1945",
-                  "5 mei 1945",
-                  "1 januari 2002"
-            ],
-            "antwoord": 0,
-            "uitleg": "Suriname werd in 1975 onafhankelijk."
+        id: "ex25_v10",
+        type: "mc",
+        vraag: "Uit hoeveel artikelen bestaat het VN-Kinderrechtenverdrag uit 1989?",
+        opties: [
+          "10",
+          "52",
+          "100",
+          "7"
+        ],
+        antwoord: 1,
+        uitleg: "Het Kinderrechtenverdrag van 1989 bestaat uit 52 artikelen, met onder meer het recht op onderwijs, goede zorg en bescherming tegen mishandeling."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "11. Wat kenmerkt het Nederlandse Poldermodel?",
-            "opties": [
-                  "Samenwerking en overleg tussen werkgevers, vakbonden en overheid",
-                  "Het bouwen van dijken",
-                  "Het staken van arbeiders",
-                  "Het heffen van hoge tarieven"
-            ],
-            "antwoord": 0,
-            "uitleg": "Het Poldermodel streeft naar consensus."
+        id: "ex25_v11",
+        type: "waaronwaar",
+        vraag: "In de Puttense moordzaak bekenden de twee aangewezen mannen na de verhoren volledig en zonder enige twijfel.",
+        antwoord: false,
+        uitleg: "Onwaar. De twee aangewezen mannen bekenden daarna slechts gedeeltelijk, niet volledig."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "12. Wat werd afgesproken in het Akkoord van Wassenaar (1982)?",
-            "opties": [
-                  "Loonmatiging door vakbonden in ruil voor kortere werktijden",
-                  "De invoering van de euro",
-                  "De sluiting van havens",
-                  "De AOW-invoering"
-            ],
-            "antwoord": 0,
-            "uitleg": "Wassenaar herstelde de Nederlandse concurrentiepositie."
+        id: "ex25_v12",
+        type: "waaronwaar",
+        vraag: "Het gerechtshof nam in hoger beroep de veroordeling tot tien jaar cel van de twee mannen over.",
+        antwoord: true,
+        uitleg: "Waar! In hoger beroep nam het gerechtshof de veroordeling van de twee mannen over."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "13. Wanneer werd het baar geld van de euro ingevoerd in Nederland?",
-            "opties": [
-                  "1 januari 2002",
-                  "1992",
-                  "1989",
-                  "2010"
-            ],
-            "antwoord": 0,
-            "uitleg": "Op 1 januari 2002 kwam het contante eurogeld."
+        id: "ex25_v13",
+        type: "waaronwaar",
+        vraag: "De Hoge Raad wees de eerste herzieningsverzoeken in de Puttense zaak toe, waardoor de zaak meteen werd overgedaan.",
+        antwoord: false,
+        uitleg: "Onwaar. De Hoge Raad wees de eerste herzieningsverzoeken juist af; pas in 2001 gaf de Hoge Raad alsnog opdracht de zaak over te doen."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "14. Wat was het doel van de geleide loonpolitiek na 1945?",
-            "opties": [
-                  "De lonen bewust laag houden om goedkoop te kunnen exporteren",
-                  "Lonen vervijfvoudigen",
-                  "Lonen afschaffen",
-                  "Alleen hoge inkomens belasten"
-            ],
-            "antwoord": 0,
-            "uitleg": "Lage lonen hielpen de wederopbouw van exportbedrijven."
+        id: "ex25_v14",
+        type: "waaronwaar",
+        vraag: "Volgens de advocaat van de twee mannen hadden politie en justitie de sporen in de Puttense zaak gemanipuleerd en verkeerd geïnterpreteerd.",
+        antwoord: true,
+        uitleg: "Waar! Volgens hun advocaat hadden politie en justitie de sporen gemanipuleerd en de zaak bewust verkeerd geïnterpreteerd."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "15. Wat betekent een pluriforme samenleving?",
-            "opties": [
-                  "Een samenleving waarin mensen met diverse achtergronden en leefstijlen samenleven",
-                  "Een eentonige maatschappij",
-                  "Een maatschappij zonder cultuur",
-                  "Een militaire staat"
-            ],
-            "antwoord": 0,
-            "uitleg": "Nederland werd veelkleurig en pluriform."
+        id: "ex25_v15",
+        type: "invul",
+        vraag: "Wat is de term voor een ernstig strafbaar feit, zoals de moord in de Puttense zaak?",
+        antwoord: "misdrijf",
+        uitleg: "Een ernstig strafbaar feit, zoals moord, heet een misdrijf."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "16. Welk effect had de televisie op de Nederlandse maatschappij?",
-            "opties": [
-                  "Het bevorderde de ontzuiling en verbreedde de horizon van de burger",
-                  "Het deed alle radio's verdwijnen",
-                  "Het veroorzaakte oorlog",
-                  "Het stopte de economie"
-            ],
-            "antwoord": 0,
-            "uitleg": "Televisie bracht de wereld in de huiskamer."
+        id: "ex25_v16",
+        type: "invul",
+        vraag: "Wat is de term voor een licht strafbaar feit, zoals te hard rijden?",
+        antwoord: "overtreding",
+        uitleg: "Een licht strafbaar feit heet een overtreding."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "17. Wat voor acties voerde de Amsterdamse Provo-beweging uit?",
-            "opties": [
-                  "Ludieke, geweldloze acties tegen de gevestigde orde (zoals het Witte Fietsenplan)",
-                  "Gewelddadige overvallen",
-                  "Stakingen in mijnen",
-                  "Revoluties op straat"
-            ],
-            "antwoord": 0,
-            "uitleg": "Provo daagde de autoriteiten ludiek uit."
+        id: "ex25_v17",
+        type: "invul",
+        vraag: "Welk bedrag aan schadevergoeding kregen de twee mannen in de Puttense zaak nadat ze alsnog werden vrijgesproken?",
+        antwoord: "900.000 euro|€900.000|900000 euro|900.000|negenhonderdduizend euro",
+        uitleg: "De twee mannen kregen na hun vrijspraak € 900.000 schadevergoeding."
       },
       {
-            "type": "mc",
-            "niveau": 3,
-            "vraag": "18. Wie waren de Indische repatrianten na 1945?",
-            "opties": [
-                  "Mensen van Nederlandse en Nederlands-Indische afkomst die uit Indonesië naar Nederland verhuisden",
-                  "Duitse vluchtelingen",
-                  "Amerikaanse soldaten",
-                  "Franse arbeiders"
-            ],
-            "antwoord": 0,
-            "uitleg": "Repatrianten vestigden zich in Nederland na de dekolonisatie."
+        id: "ex25_v18",
+        type: "invul",
+        vraag: "Hoe heet de onbetaalde arbeid die een verdachte soms als straf moet uitvoeren in plaats van geld te betalen?",
+        antwoord: "taakstraf",
+        uitleg: "Een taakstraf is onbetaalde arbeid die een verdachte als straf kan moeten uitvoeren."
       },
       {
-            "type": "mc",
-            "niveau": 1,
-            "vraag": "19. Tot welke grote Deltawerken leidde de ramp van februari 1953?",
-            "opties": [
-                  "Tot de bouw van de Deltawerken ter bescherming tegen de zee",
-                  "Tot het afsluiten van het IJsselmeer",
-                  "Tot het dempen van grachten",
-                  "Tot de bouw van Schiphol"
-            ],
-            "antwoord": 0,
-            "uitleg": "De Deltawerken beschermen Zuidwest-Nederland."
+        id: "ex25_v19",
+        type: "open",
+        vraag: "Leg uit het verschil tussen burgerlijk recht en bestuursrecht, met voor elk een voorbeeld uit de tekst.",
+        sleutelwoorden: [
+          "burgers onderling/koopcontract",
+          "burger tegen overheid/vergunning"
+        ],
+        minTreffers: 1,
+        modelantwoord: "Burgerlijk recht gaat over conflicten tussen burgers onderling, bijvoorbeeld een ruzie over een koopcontract, terwijl bestuursrecht gaat over conflicten tussen een burger en de overheid, bijvoorbeeld wanneer een gemeente een bouwvergunning weigert.",
+        uitleg: "Burgerlijk recht regelt zaken tussen burgers, bestuursrecht regelt conflicten tussen burgers en de overheid."
       },
       {
-            "type": "mc",
-            "niveau": 2,
-            "vraag": "20. Wanneer ontstond de moderne milieubeweging in Nederland?",
-            "opties": [
-                  "In de jaren 1970 (mede door het rapport van de Club van Rome)",
-                  "In de jaren 1920",
-                  "In 1945",
-                  "In 2010"
-            ],
-            "antwoord": 0,
-            "uitleg": "De jaren 70 brachten milieubewustzijn."
+        id: "ex25_v20",
+        type: "open",
+        vraag: "Leg uit waarom de Puttense moordzaak een voorbeeld is van een rechterlijke dwaling die uiteindelijk werd hersteld.",
+        sleutelwoorden: [
+          "onschuldig/ten onrechte veroordeeld",
+          "Hoge Raad/zaak overdoen/vrijgesproken"
+        ],
+        minTreffers: 1,
+        modelantwoord: "De twee mannen werden ten onrechte veroordeeld op basis van onder druk afgelegde, gedeeltelijke bekentenissen zonder technisch bewijs; pas nadat de Hoge Raad in 2001 opdracht gaf de zaak over te doen, werden ze alsnog vrijgesproken en schadeloos gesteld.",
+        uitleg: "Doordat de zaak later werd overgedaan, kwam aan het licht dat de twee mannen onterecht waren veroordeeld en werden ze alsnog vrijgesproken."
       }
-]
+    ]
   });
 })();
