@@ -111,7 +111,7 @@ var VAKKEN = [
   { id:'h3-wiskunde',        titel:'Wiskunde',        icoon:'⚖️', domein:'exact', beschrijving:'Algebra, meetkunde & meer',       href:'./havo3/wiskunde/', sleutel:'duru_2627_wiskunde' },
   { id:'h3-natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', domein:'exact', beschrijving:'Krachten, energie & meer',        href:'./havo3/natuurkunde/', sleutel:'duru_2627_natuurkunde' },
   { id:'h3-scheikunde',      titel:'Scheikunde',      icoon:'🧪', domein:'exact', beschrijving:'Stoffen, atomen & reacties',      href:'./havo3/scheikunde/', sleutel:'duru_2627_scheikunde' },
-  { id:'h3-biologie',        titel:'Biologie',        icoon:'🧬', domein:'exact', beschrijving:'Cellen, organen & natuur',        href:'./havo3/biologie/', sleutel:'duru_2627_biologie' },
+  { id:'h3-biologie',        titel:'Biologie',        icoon:'🧬', domein:'exact', beschrijving:'Groei, puberteit & voortplanting', href:'./havo3/biologie/', sleutel:'duru_2627_biologie' },
   { id:'h3-geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', domein:'mens',  beschrijving:'Tijd, bronnen & gebeurtenissen',  href:'./havo3/geschiedenis/', sleutel:'duru_2627_geschiedenis' },
   { id:'h3-aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', domein:'mens',  beschrijving:'Aarde, klimaat & mensen',         href:'./havo3/aardrijkskunde/', sleutel:'duru_2627_aardrijkskunde' },
   { id:'h3-economie',        titel:'Economie',        icoon:'💶', domein:'mens',  beschrijving:'Geld, markt & keuzes',           href:'./havo3/economie/', sleutel:'duru_2627_economie' },

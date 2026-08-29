@@ -1,19 +1,27 @@
 /* =========================================================
-   Duru's biologie (HAVO 3) — Bootstrap
+   Duru's Biologie (HAVO 3) — Bootstrap
    Maakt het globale DURU-object klaar VOORDAT de databestanden laden.
    Elk databestand roept DURU.register({...}) / DURU.registerExamen({...}) aan.
-   Smoke-test-site: nog geen onderwerpen (oefenquizzes), alleen een proeftoets.
    ========================================================= */
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstukken overzicht Nectar Biologie HAVO 3
+  DURU.hoofdstukken = [
+    {
+      nr: 10,
+      titel: "Je verandert",
+      icoon: "🧬",
+      kleur: "h10-thema",
+      intro: "Levensfasen, lichamelijke en geestelijke ontwikkeling, groeispurt, hypofyse en hormoonwerking (groeihormoon, testosteron, oestrogeen), botgroei in groeischijven, primaire, secundaire en tertiaire geslachtskenmerken, puberteit, acne, zweetklieren en transgender & genderdysforie."
+    }
+  ];
+
   DURU.onderwerpen = [];
   DURU._byId = {};
 
   /**
-   * Registreer een onderwerp.
+   * Registreer een onderwerp (paragraaf met theorie en oefenquiz).
    * Verwacht: { id, hoofdstuk, paragraaf, titel, korteUitleg, icoon, kleur, theorie, vragen:[...] }
    */
   DURU.register = function (onderwerp) {

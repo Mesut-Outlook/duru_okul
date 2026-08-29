@@ -27,9 +27,9 @@
 
   /* ---------------- Badges ---------------- */
   var BADGES = [
-    { id: "start", ico: "🚀", naam: "Eerste stap", check: function () { return P.xp >= 10; } },
-    { id: "staatskenner", ico: "🧬", naam: "Staatskenner", check: function () { return klaarHoofdstuk(6); } },
-    { id: "belastingbaas", ico: "💶", naam: "Belastingbaas", check: function () { return P.xp >= 250; } },
+    { id: "start", ico: "🌱", naam: "Eerste stap", check: function () { return P.xp >= 10; } },
+    { id: "h10_meester", ico: "🧬", naam: "Groei & Puberteit Expert", check: function () { return klaarHoofdstuk(10); } },
+    { id: "bioloog", ico: "🌿", naam: "Top-Bioloog", check: function () { return P.xp >= 250; } },
     { id: "vlam", ico: "🔥", naam: "10 op rij", check: function () { return (P.maxStreak || 0) >= 10; } },
     { id: "ster", ico: "⭐", naam: "Perfecte toets", check: function () { return P.perfect; } },
     { id: "prof", ico: "🎓", naam: "Biologie-professor", check: function () { return P.xp >= 500; } },
@@ -108,7 +108,7 @@
     html += '<section class="hero view">' +
       '<div class="mascotte">🧬</div>' +
       '<div><h2>Hoi Duru! Klaar om te scoren? 🧬</h2>' +
-      '<p>Welkom in jouw eigen biologie-academie. Leer alles over <b>cellen, organen en planten</b> en <b>biologie</b>, ' +
+      '<p>Welkom in jouw eigen biologie-academie. Leer alles over <b>levensfasen</b>, <b>groeihormonen</b>, <b>puberteit</b> en <b>geslachtskenmerken</b>, ' +
       'oefen met ' + totaalVragen + ' vragen en verzamel medailles. Jij gaat die toets máken! 💪</p>' +
       '<div class="hero-cta">' +
       '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +

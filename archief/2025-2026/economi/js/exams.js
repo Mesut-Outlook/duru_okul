@@ -207,7 +207,9 @@
     h += '<div class="examen-knoppen">';
     h += T.i > 0 ? '<button class="btn ghost klein" onclick="DURU.examenGa(' + (T.i - 1) + ')">← Vorige</button>' : '<span></span>';
     if (T.i < n - 1) h += '<button class="btn klein" onclick="DURU.examenGa(' + (T.i + 1) + ')">Volgende →</button>';
-    else h += '<button class="btn groen klein" onclick="DURU.examenInleveren()">✅ Inleveren</button>';
+    // Inleveren-knop is ALTIJD zichtbaar (niet alleen op de laatste vraag),
+    // zodat je de toets altijd kunt inleveren — ook als je vragen door elkaar maakt.
+    h += '<button class="btn groen klein" onclick="DURU.examenInleveren()">✅ Inleveren</button>';
     h += '</div>';
 
     h += '</div></div>';
@@ -222,18 +224,42 @@
   DURU.examenTyp = function (val) { T.antwoorden[T.i] = val; var dot = document.querySelectorAll(".dot")[T.i]; if (dot) { if (val && val.trim()) dot.classList.add("beantwoord"); else dot.classList.remove("beantwoord"); } };
   DURU.examenGa = function (idx) { if (idx < 0 || idx >= T.ex.vragen.length) return; T.i = idx; renderVraag(); };
 
+  /* Eigen bevestig-pop-up (vervangt window.confirm — dat wordt in een
+     iframe door sommige browsers automatisch gesloten -> "verdwijnt"). */
+  function toonBevestiging(tekst, ico, opJa, jaLabel) {
+    var oud = document.getElementById("ex-modal"); if (oud) oud.parentNode.removeChild(oud);
+    var ov = document.createElement("div");
+    ov.id = "ex-modal";
+    ov.style.cssText = "position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:rgba(15,23,42,.55);padding:20px";
+    var kaart = document.createElement("div");
+    kaart.style.cssText = "background:#fff;max-width:380px;width:100%;border-radius:18px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center";
+    kaart.innerHTML = '<div style="font-size:34px;margin-bottom:8px">' + (ico || "📝") + '</div>' +
+      '<div style="font-size:16px;font-weight:700;color:#1e293b;line-height:1.45;margin-bottom:18px">' + esc(tekst) + '</div>' +
+      '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">' +
+      '<button id="ex-modal-nee" class="btn ghost klein">Annuleren</button>' +
+      '<button id="ex-modal-ja" class="btn groen klein">' + (jaLabel || "✅ Inleveren") + '</button></div>';
+    ov.appendChild(kaart);
+    document.body.appendChild(ov);
+    function sluit() { if (ov.parentNode) ov.parentNode.removeChild(ov); }
+    document.getElementById("ex-modal-nee").onclick = sluit;
+    document.getElementById("ex-modal-ja").onclick = function () { sluit(); opJa(); };
+    ov.onclick = function (e) { if (e.target === ov) sluit(); };
+    document.getElementById("ex-modal-ja").focus();
+  }
+
   DURU.examenAfbreken = function () {
-    if (confirm("Wil je stoppen met de toets? Je antwoorden worden NIET opgeslagen.")) {
-      DURU._stopExamTimer(); T = null; DURU.renderExamenLijst();
-    }
+    if (!T) return;
+    toonBevestiging("Wil je stoppen met de toets? Je antwoorden worden NIET opgeslagen.", "🛑",
+      function () { DURU._stopExamTimer(); T = null; DURU.renderExamenLijst(); }, "Stoppen");
   };
 
   DURU.examenInleveren = function () {
+    if (!T) return;
     var onbeantwoord = T.antwoorden.filter(function (a) { return a === null || a === ""; }).length;
     var msg = onbeantwoord > 0
       ? "Je hebt nog " + onbeantwoord + " vraag/vragen niet beantwoord. Toch inleveren?"
       : "Klaar? Lever je toets in en bekijk je cijfer!";
-    if (confirm(msg)) levereIn(false);
+    toonBevestiging(msg, "📝", function () { levereIn(false); }, "✅ Inleveren");
   };
 
   /* ---------- Nakijken ---------- */
