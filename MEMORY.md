@@ -246,3 +246,28 @@ This document serves as the project's global memory log, preserving all overall 
     5. `h2_5_steelbladdiagram.js`: Paragraaf 2.5 — Steelbladdiagram (steel en bladeren, geordende data, centrummaten en waarden aflezen).
   - **5 Proeftoetsen**: Created 5 full 15-question exam files (`examen_1.js` through `examen_5.js`) with 75 total exam questions (109 questions combined across all modules).
   - **Validation & HTML Integration**: Added script tags to `havo3/wiskunde/index.html` (`?v=2.0`), bumped root `index.html` (`?v=3.8`), and validated clean execution with Node.js stub test.
+
+### Milestone 18: buiteNLand 3 HAVO — Hoofdstuk 1 (Wereldhandel in beweging) & Hoofdstuk 2 (Schatkist aarde?) (2026-08-30)
+* **Goal**: Process Duru's textbook PDF (`Aardrijkskunde_3havo_Leerwerkboek_Hoofdstuk_1.pdf` - 45 pages covering both Hoofdstuk 1 and Hoofdstuk 2) into complete chapter structures, interactive theory modules, and 10 full 20-question proeftoetsen (5 per chapter, 200 exam questions total, 280 questions overall) with strict quality gate validation.
+* **Implementation Details**:
+  - **OCR Text Extraction**: Converted 45 scanned PDF pages to PNG (`pdftoppm`) and performed OCR extraction (`tesseract nld+eng`) using local traineddata (`scratch/tessdata/nld.traineddata`), yielding 133,721 characters of full textbook text.
+  - **Chapter Division**:
+    - **Hoofdstuk 1: Wereldhandel in beweging**: §1.1 Kantelt het economisch wereldbeeld?, §1.2 Wereldhandel: van kolonialisme tot nu, §1.3 Grondstoffen op de wereldmarkt, §1.4 Rol van Europa in de wereldhandel, §1.5 Rol van Nederland in de wereldhandel.
+    - **Hoofdstuk 2: Schatkist aarde?**: §2.1 De geschiedenis van de aarde, §2.2 Het dagboek van de aarde, §2.3 Het gebruik van delfstoffen, §2.4 Delfstoffen in Europa, §2.5 Delfstoffen in Nederland.
+  - **10 Full 20-Question Proeftoetsen**:
+    - `examen_1.js` to `examen_5.js`: 5 proeftoetsen for Hoofdstuk 1 (100 exam questions).
+    - `examen_6.js` to `examen_10.js`: 5 proeftoetsen for Hoofdstuk 2 (100 exam questions).
+  - **10 Practice Onderwerpen**: Created `h1_1.js` through `h2_5.js` with comprehensive theory (>1500 chars) and 8 practice questions each (80 practice questions).
+  - **Quality Gates & Validation**:
+    - Ran `tools/spread.py` to ensure perfectly balanced MCQ option rotation ({"0":30, "1":30, "2":30, "3":30} general distribution, no option >40%).
+    - Ran `tools/open_check.js` to ensure short, scorable keywords (1-3 words) with no keywords leaked in questions.
+    - Passed all 12 rules of `tools/gate.js` with 0 errors (`SONUC: 12 gecti, 0 kaldi`).
+  - **UI Integration**: Enhanced `havo3/aardrijkskunde/js/exams.js`, `bootstrap.js`, and `style.css` with accordion cards grouped by chapter. Updated `index.html` with script tags (`?v=3.8`).
+
+### Milestone 19: Begrippen, Personen & Gebeurtenissen Standard for All Chapters & Tests (2026-08-30)
+* **Goal**: Establish a permanent project-wide rule and workflow standard: for every course and for every chapter separately, extract all definitions/terms (*begrippen*), key figures (*personen*), critical events/dates (*gebeurtenissen*), and exam keywords; place them into a dedicated glossary/study section (`Begrippen & Kernconcepten`); and automatically create a dedicated vocabulary test (`Begrippentoets`) testing exclusively these terms whenever "test hazırla" is requested.
+* **Implementation Details**:
+  - **Pipeline Standard**: Formally added the Begrippen & Kernconcepten protocol to `docs/PIPELINE.md`.
+  - **Agent Guidelines**: Updated root `CLAUDE.md` to mandate that any future test preparation ("test hazırla") triggers this two-fold extraction and generation process automatically for each individual chapter and subject.
+
+

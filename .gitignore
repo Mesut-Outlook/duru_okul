@@ -23,3 +23,13 @@ inbox/wiskunde_h2_img/
 inbox/wiskunde_h2_txt/
 inbox/wiskunde_h2_ocr.txt
 
+# Python cache & tools scratch artifacts
+__pycache__/
+*.pyc
+tools/__pycache__/
+tools/auth_state.json
+tools/*.png
+tools/*.pdf
+tools/*.html
+tools/captured_pages/
+docs/books_pdf/

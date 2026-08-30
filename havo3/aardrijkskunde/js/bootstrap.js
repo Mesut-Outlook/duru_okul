@@ -7,8 +7,23 @@
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstukken overzicht
+  DURU.hoofdstukken = [
+    {
+      nr: 1,
+      titel: "Wereldhandel in beweging",
+      icoon: "🌐",
+      kleur: "h1-thema",
+      intro: "Global shift, multipolaire wereldeconomie, Big Tech, handelskolonialisme, dekolonisatie, waardeketens, de Europese Unie en Nederland als mainport- en distributieland."
+    },
+    {
+      nr: 2,
+      titel: "Schatkist aarde?",
+      icoon: "🌍",
+      kleur: "h2-thema",
+      intro: "Geologische tijdschaal van 4,6 miljard jaar, gesteentesoorten, gidsfossielen, mijnbouw en milieu (Suriname, Nigeria, Europa) en delfstoffen in Nederland (Mergel, steenkool, gas en zout)."
+    }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 

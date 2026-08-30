@@ -15,7 +15,10 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 - **2026-07-21 sonuç**: ✅ Okul-yılı refactor + inbox (TASK-05) + **10 HAVO 3 smoke-test dersi** (TASK-06) bitti.
   economie=Opus referans, 5 ders=Sonnet, 4 ders=agy. Hepsi node/serve/yapı doğrulandı, landing'de aktif, `?v=3.0`.
   **Sıradaki** (Duru materyal verince): her derse onderwerpen (oefenquiz) + daha çok proeftoets.
-- **Schedule**: geschiedenis ✅ bitti (TASK-07). agy → TASK-08 (natuurkunde H5-H7, scheikunde H1/H3-H7 + kalite).
+- **Schedule**: geschiedenis ✅ bitti (TASK-07). agy → TASK-08 (natuurkunde H5-H7, scheikunde H1/H3-H7
+  + 4 kalite maddesi). TASK-09 (kalan 9 ders) materyal beklediği için BLOCKED.
+- **Kalite kapısı**: `tools/gate.js` / `tools/spread.py` / `tools/open_check.js` — artık repoda,
+  kurallar `docs/PIPELINE.md` → "Kalite kapısı". Her teslim buradan geçer.
 
 ## 2026-08-27 · Geschiedenis kalite denetimi (Opus) — ÖNEMLİ DERS
 `havo3/geschiedenis` (commit e8c8a66, "840 soru") denetlendi. Bulgular:
@@ -30,7 +33,7 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
    girdi alanı render etmiyor. → Opus düzeltti (`invul`).
 **Kural (bundan sonra herkes için):** üretim şablonla değil, kaynak metin okunarak yapılır; kabul
 kriterlerine "şablon soru yasak + dosya başına mc cevap dağılımı ≤%40 + waaronwaar ≥%35 onwaar +
-sınavda invoer yasak" maddeleri eklenir. Denetim scripti: `scratchpad/gate.js` (11 kural).
+sınavda invoer yasak" maddeleri eklenir. Denetim scripti: `tools/gate.js` (12 kural, bkz. `tools/README.md`).
 
 ## ⚠️ agy'YE: SORU ÜRETİM KURALLARI (2026-08-28 — HER ÜRETİMDE UYGULA)
 
@@ -40,7 +43,7 @@ kusurlardan türetildi. **Her yeni soru dosyasında bunlara uy; üretimi bitirin
 1. **Doğru şık hep A olmasın.** En ağır kusur buydu: geschiedenis'te 500 mc sorusunun 500'ünde,
    scheikunde'de 5 proeftoesin 4'ünde doğru cevap A idi. Duru hepsine A tıklayıp 20/20 alıyordu.
    **Kural: bir dosyadaki mc sorularının hiçbir şık pozisyonu %40'ı geçmesin.** A/B/C/D'yi
-   sırayla kullan. (Mevcut dosyalar Opus'un `scratchpad/spread.py` scriptiyle düzeltildi.)
+   sırayla kullan. (Mevcut dosyalar Opus'un `tools/spread.py` scriptiyle düzeltildi.)
 2. **`waaronwaar` hep "Waar" olmasın.** geschiedenis'te 99 Waar / 8 Onwaar idi.
    **Kural: soruların en az %35'i `antwoord: false` olsun** — gerçekten yanlış ifadeler de yaz.
 3. **Sınavda `type:"invoer"` KULLANMA.** `exams.js` sınav modunda yalnız `mc`, `waaronwaar`,
@@ -68,9 +71,16 @@ kusurlardan türetildi. **Her yeni soru dosyasında bunlara uy; üretimi bitirin
     `"geen CO2"`), alternatifleri `/` ile ver (`"kernafval/radioactief afval"`). Uzun açıklama
     `modelantwoord`'a yazılır, `sleutelwoorden`'e değil. Ayrıca **`minTreffers` ≤ sleutelwoord sayısı**
     olmalı (aksi hâlde soru asla "goed" olamaz) ve anahtara `"voordeel:"` gibi önek koyma.
+    **İnce nokta (2026-08-28 · uzun anahtarları kısaltırken bunu kaçırdın):** eşleştirme
+    alternatifler arasında **VEYA**'dır. Soruda zaten geçen bir terimi alternatiflerden biri
+    yaparsan, öğrenci soruyu kopyalayınca puan alır. Örn. soru "…(Dalton, Thomson, Rutherford,
+    Bohr)" diyorsa `"Dalton/massief/bol"` anahtarı işe yaramaz — `"massief/ondeelbaar/bol"` yaz,
+    yani **ismi değil, o modelin ayırt edici özelliğini** anahtar yap. Aynısı `ex-h3-natuurkunde-11#19`
+    için geçerli: `"radiogolven"` ve `"röntgen/gammastraling"` soruda listelenmiş durumda; onların
+    yerine `"langste golflengte"`, `"meest energierijk/ioniserend"` gibi gerekçe anahtarları koy.
+    Denetim: `node tools/gate.js <vak>` → 8. kural.
 
-**Kendi kendini denetleme:** `node /path/to/scratchpad/gate.js <vak>` bu kuralların 11'ini birden
-ölçer. Opus her teslimi bu kapıdan geçiriyor; sen de geçir ki iş geri dönmesin.
+**Kendi kendini denetleme:** `node tools/gate.js <vak>` bu kuralları ölçer. Opus her teslimi bu kapıdan geçiriyor; sen de geçir ki iş geri dönmesin.
 
 ### 🔴 agy — TEKRARLAYAN HATA: çok satırlı string (2026-08-28)
 **Aynı hatayı üçüncü kez yaptın.** JS'te çift tırnaklı string **gerçek satır sonu içeremez**.
@@ -110,6 +120,21 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
 
+### TASK-09 · Kalan derslerin içeriği (Duru materyal verdikçe)  [status: BLOCKED — materyal bekleniyor]
+- **Atanan**: (henüz atanmadı — materyal gelince Opus dağıtır)
+- **Durum tablosu**: kök `CLAUDE.md` → "Ders doluluk durumu".
+- **economie** — `examen_1.js` H4 §4.1 üzerine 20 soruya genişletildi (agy, 2026-08-28; Opus söz
+  dizimini onardı + şık dağıtımını düzeltti, kapı 12/12). Ama **onderwerp (oefenquiz) hiç yok** ve
+  H4'ün diğer paragrafları eksik. Kaynak materyal gerekiyor.
+- **wiskunde** — yalnız H2 Statistiek (5 onderwerp + 5 proeftoets). Diğer hoofdstukken için kaynak yok.
+- **Smoke-test'te duran 7 ders** (her biri 1 proeftoets / 5 soru, onderwerp yok):
+  `biologie`, `aardrijkskunde`, `maatschappijleer`, `nederlands`, `engels`, `frans`, `duits`.
+  Bunlar için `inbox/2026-2027/<vak>/` altına materyal bırakılmadı — **Duru'dan kitap/PDF gelmeden
+  üretim yapılmaz** (uydurma içerik yasağı: geschiedenis dersi).
+- **Not**: `duits` ve `scheikunde` bir ara "pakkette yok" diye işaretlenmişti (TASK-05); artık
+  ikisi de aktif. Pakket değişirse `js/landing.js` → `VAKKEN` ve `js/dashboard.js` → `VAK_REGISTER`
+  birlikte güncellenir.
+
 ### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: TODO]
 - **Atanan**: agy (Antigravity)
 - **Durum**: natuurkunde H1, H2, H3, H4, **H8** bitti (25 onderwerp + 25 proeftoets, kapı denetiminden
@@ -134,9 +159,16 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
      natuurkunde `ex-h3-natuurkunde-8#20, 9#19, 9#20, 12#20, 17#19, 17#20, 19#19, 19#20, 20#20,
      21#19, 22#20, 23#19, 23#20, 24#19, 24#20, 25#19`; scheikunde `ex-h3-scheikunde-1#20, 4#20, 5#20`.
      Bu sorular şu an doğru cevaplansa bile 0 puan veriyor. `sleutelwoorden`'i kısa terimlere indir,
-     soru metnine ve `modelantwoord`'a dokunma. (`ex-h3-natuurkunde-15#20`'yi Opus düzeltti — örnek al.)
-- **Kabul kriterleri**: yukarıdaki "agy'YE: SORU ÜRETİM KURALLARI" bloğunun 10 maddesi +
-  `gate.js <vak>` 12 kuralı. Teslimden önce **her dosyada `node --check`** (geçen sefer 5 dosya
+     soru metnine ve `modelantwoord`'a dokunma. (`ex-h3-natuurkunde-15#20`'yi Opus düzeltti — örnek al. Tarama: `node tools/open_check.js`.)
+  5. **`open` anahtar sızıntısı (2026-08-28 · madde 4'ü yaparken oluştu)** — uzun anahtarları
+     kısaltırken soruda geçen terimleri alternatif yaptın; şimdi 16 soruda öğrenci soruyu
+     kopyalayarak puan alabiliyor. Kural 11'in "ince nokta" kısmına bak. Etkilenen:
+     natuurkunde `ex-11#19, 16#19, 16#20, 22#19, 22#20` (+2), scheikunde `ex-1#19, 1#20, 4#20` (+2).
+     Tam liste: `node tools/gate.js natuurkunde` ve `... scheikunde` → 8. kural.
+  6. **natuurkunde `waaronwaar` hâlâ dengesiz** — scheikunde'yi düzelttin (✅), natuurkunde
+     %35 eşiğinin altında kaldı.
+- **Kabul kriterleri**: yukarıdaki "agy'YE: SORU ÜRETİM KURALLARI" bloğunun 11 maddesi +
+  `node tools/gate.js <vak>` 12 kuralı. Teslimden önce **her dosyada `node --check`** (geçen sefer 5 dosya
   bozuk gelmişti). `index.html`'e doğru grupta ekle, `?v=` bump et.
 - **agy notu**: (buraya yaz)
 
@@ -157,7 +189,7 @@ Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan 
   `index.html` yeniden bağlandı (`?v=3.8`), serve testi 200, 60 data dosyası `node --check` temiz.
 - **Ek onarımlar (Opus)**: (a) `examen_1..5`'te 23 soru `invoer`→`invul` (sınavda cevap kutusu
   çizilmiyordu); (b) `h1_*` + `examen_1..5`'te cevap yığılması düzeltildi (h1-2/h1-3/h1-5 %100 B idi)
-  — `scratchpad/spread.py` doğru şıkkı dosya içinde sırayla A→B→C→D'ye taşıyor, içeriğe dokunmuyor;
+  — `tools/spread.py` doğru şıkkı dosya içinde sırayla A→B→C→D'ye taşıyor, içeriğe dokunmuyor;
   (c) `examen_1#20` ve `examen_3#20`'de `open` sorularda cevabı ele veren sleutelwoord'lar değiştirildi;
   (d) `NlET`→`NIET` (2 yer); (e) `bootstrap.js` bölüm intro'ları kitaba göre düzeltildi.
 - **Kabul kapısı sonucu**: 12 kuralın 11'i ✓. Kalan tek uyarı: "Wat betekent het Russische woord

@@ -14,7 +14,8 @@ klasörler olarak gömülü (submodule yok; 2026-06-03'ten beri gömülü).
 ## Kanonik dokümanlar (önce bunları oku)
 - `docs/ENGINE_SPEC.md` — DURU veri sözleşmesi (register/registerExamen, soru tipleri, localStorage). **Tek doğru kaynak.**
 - `docs/DOC_STANDARD.md` — tüm CLAUDE.md/MEMORY.md dosyalarının ortak yapısı + dil kuralı.
-- `docs/PIPELINE.md` — belge → sınav üretim hattı + **model/agent politikası**.
+- `docs/PIPELINE.md` — belge → sınav üretim hattı + **model/agent politikası** + **kalite kapısı kuralları**.
+- `tools/README.md` — kalite denetim araçları (`gate.js` / `spread.py` / `open_check.js`).
 - `coordination.md` — Opus ↔ agy (Antigravity) canlı görev panosu.
 
 ## Yapı
@@ -25,10 +26,31 @@ js/landing.js     VAKKEN dizisi + render + iframe-shell + storage-interceptor + 
 js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (vak listeleri HARD-CODED)
 server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
+tools/            soru kalite denetimi: gate.js (12 kural), spread.py, open_check.js (bkz. tools/README.md)
 inbox/            ders materyali bırakma alanı (PDF/Word/görsel)
 archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = MAVO 2 dersleri)
-havo3/<vak>/      HAVO 3 ders-siteleri (12 vak, smoke-test: şimdilik 1 proeftoets/5 soru). Anahtar: duru_2627_<slug>_*
+havo3/<vak>/      HAVO 3 ders-siteleri (12 vak). Anahtar: duru_2627_<slug>_*. Doluluk için CLAUDE.md "Ders doluluk durumu"
 ```
+
+## Ders doluluk durumu (2026-08-30)
+| vak | onderwerp | proeftoets | soru | kapsanan hoofdstuk |
+|---|---|---|---|---|
+| geschiedenis | 30 | 30 | 840 | H1–H6 (tam) |
+| natuurkunde | 25 | 25 | 652 | H1–H4, H8 (H5/H6/H7 eksik) |
+| aardrijkskunde | 10 | 10 | 280 | H1 & H2 (tam) |
+| scheikunde | 4 | 5 | 124 | H2 (H1, H3–H7 eksik) |
+| wiskunde | 5 | 5 | 109 | H2 |
+| economie | 0 | 1 | 20 | H4 §4.1 (onderwerp yok) |
+| biologie · maatschappijleer · nederlands · engels · frans · duits | 0 | 1 | 5 | smoke-test |
+
+Bekleyen üretim işleri `coordination.md` → "Pending Tasks" (TASK-08, TASK-09).
+Her teslim `tools/gate.js` kapısından geçmeli (bkz. `docs/PIPELINE.md` → Kalite kapısı).
+
+## 📌 "Test Hazırla" ve Bölüm Üretim Standardı (Zorunlu Kural)
+Kullanıcı **"test hazırla"** dediğinde veya herhangi bir ders için yeni bir bölüm/hoofdstuk materyali işlendiğinde **kendiliğinden ve otomatik olarak**:
+1. **Kavram, Kişi ve Olayların Çıkarımı**: O bölümdeki tüm tanım kelimeleri/kavramlar (*begrippen*), önemli şahsiyetler (*belangrijke personen*), özel olaylar/tarihler (*gebeurtenissen/data*) ve sınavda çıkabilecek tüm terimler eksiksiz çıkarılır.
+2. **Özel Bölüm (Begrippen & Kernconcepten)**: Her ders ve her bölüm (hoofdstuk) için ayrı ayrı olmak şartıyla o bölüme ait tüm bu kavramları içeren özel bir konu/sözlük modülü eklenir.
+3. **Özel Kavram Testi (Begrippentoets)**: SADECE bu kelimeleri/kavramları/kişileri/olayları doğrudan soran bağımsız bir test/sınav (mc, invul, open) hazırlanır.
 
 ## Model & agent politikası (ÖNEMLİ)
 - **Planlama HER ZAMAN Opus** (ben). Kapsam, mimari, doğrulama bende.
