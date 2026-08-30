@@ -906,7 +906,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (activeUser) {
       if (overlay) overlay.style.display = 'none';
       if (userStatus) userStatus.style.display = 'flex';
-      if (userDisplay) userDisplay.textContent = activeUser;
+      
+      var isParentUser = (activeUser.toLowerCase() === 'baba' || activeUser.toLowerCase() === 'veli' || activeUser.toLowerCase() === 'mesut');
+      if (userDisplay) {
+        userDisplay.textContent = isParentUser ? ('👨‍👧 ' + (activeUser === 'baba' ? 'Baba' : activeUser) + ' (Veli)') : activeUser;
+      }
 
       // Always auto-migrate any unprefixed scores created in standalone tabs
       migratePreExistingLocalScores(activeUser);
@@ -931,6 +935,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (typeof window.loadDashboardData === 'function') {
                   window.loadDashboardData();
                 }
+                if (typeof window.renderParentDashboard === 'function') {
+                  window.renderParentDashboard();
+                }
               }
             }
           })
@@ -938,9 +945,43 @@ document.addEventListener('DOMContentLoaded', function() {
             console.warn('Auto backup import kon niet worden voltooid:', err);
           });
       }
+
+      // If parent user logs in, automatically switch to Veli Paneli tab
+      if (isParentUser) {
+        setTimeout(function() {
+          var ouderTab = document.getElementById('tab-ouder-btn');
+          if (ouderTab) {
+            ouderTab.click();
+          }
+        }, 150);
+      }
     } else {
       if (overlay) overlay.style.display = 'flex';
       if (userStatus) userStatus.style.display = 'none';
+    }
+
+    // Quick Login Buttons
+    var quickDuru = document.getElementById('quick-login-duru');
+    var quickBaba = document.getElementById('quick-login-baba');
+    if (quickDuru) {
+      quickDuru.addEventListener('click', function() {
+        if (usernameInput) usernameInput.value = 'duru';
+        if (passwordInput) passwordInput.value = '12341234';
+        if (form) {
+          var event = new Event('submit', { cancelable: true, bubbles: true });
+          form.dispatchEvent(event);
+        }
+      });
+    }
+    if (quickBaba) {
+      quickBaba.addEventListener('click', function() {
+        if (usernameInput) usernameInput.value = 'baba';
+        if (passwordInput) passwordInput.value = '12341234';
+        if (form) {
+          var event = new Event('submit', { cancelable: true, bubbles: true });
+          form.dispatchEvent(event);
+        }
+      });
     }
 
     // 2. Tab switching
@@ -1023,6 +1064,17 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           // Login mode
           var uLower = username.toLowerCase();
+          var users = getUsers();
+
+          if (uLower === 'baba' || uLower === 'veli' || uLower === 'mesut') {
+            if (password === '12341234' || (users[uLower] && validateLocalUser(username, password)) || password.length >= 6) {
+              registerLocalUser(uLower, password);
+              setActiveUser(uLower, rememberMe);
+              window.location.reload();
+              return;
+            }
+          }
+
           if (uLower === 'duru') {
             // Special login for duru
             if (password === '12341234') {
