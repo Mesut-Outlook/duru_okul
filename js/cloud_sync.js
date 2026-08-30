@@ -319,10 +319,15 @@
   document.addEventListener("DOMContentLoaded", function () {
     initCloudSyncModal();
 
-    // 1. Sayfa açılır açılmaz buluttaki en yeni sonuçları çek
+    // 1. Sayfa açılır açılmaz iki yönlü eşitle: Önce buluttan çek, ardından yereldeki sınavları buluta yükle
     setTimeout(function () {
-      pullFromCloud(true);
-    }, 500);
+      pullFromCloud(false).then(function () {
+        var payload = exportLocalDataPayload();
+        if (payload.scores && payload.scores.length > 0) {
+          pushToCloud(true);
+        }
+      });
+    }, 600);
 
     // 2. Belirli aralıklarla arka planda otomatik kontrol et (arka planda baba ekranı yenilenir)
     var cfg = getConfig();
