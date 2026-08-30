@@ -1,7 +1,6 @@
 /* =========================================================
    Duru's Schoolhub — Bulut Senkronizasyon Motoru (Cloud Sync)
-   GitHub Pages ve çoklu cihazlar (Baba & Duru) arasında
-   otomatik, anlık ve çift yönlü veri senkronizasyonu sağlar.
+   Firebase Realtime DB, JSONBin.io ve REST API desteği.
    ========================================================= */
 
 (function () {
@@ -10,14 +9,12 @@
   var STORAGE_KEY_CONFIG = "duru_cloud_sync_config";
   var STORAGE_KEY_LAST_SYNC = "duru_cloud_last_sync";
 
-  // Varsayılan Bulut Senkronizasyon Yapılandırması (JSONBin / Firebase / REST)
   var DEFAULT_CONFIG = {
     enabled: true,
-    provider: "jsonbin", // "jsonbin", "firebase", "custom"
-    binId: "67c35848e41b4d34e49ea82b", // Duru Okul Genel Bulut Deposu
-    apiKey: "$2a$10$3YF9qBf9XnOwhh.lC8eLpuu7Qc5iV0FhX5aC/f3pE202026duru", // Okuma/Yazma Anahtarı
-    customUrl: "",
-    autoSyncIntervalMs: 45000 // Her 45 saniyede bir yeni sınav var mı diye kontrol et
+    provider: "firebase", // "firebase", "jsonbin", "custom"
+    endpointUrl: "", // Firebase Database URL (örn. https://duru-okul-default-rtdb.europe-west1.firebasedatabase.app/scores.json)
+    apiKey: "",
+    autoSyncIntervalMs: 45000
   };
 
   var syncState = {
@@ -49,12 +46,12 @@
     var btn = document.getElementById("cloud-sync-btn");
     var modalStatus = document.getElementById("cloud-modal-status");
 
-    var label = message || "Bulut Senkron: Aktif";
+    var label = message || "Bulut Senkron: Hazır";
     var icon = "☁️";
 
     if (status === "syncing") {
       icon = "🔄";
-      label = "Eşitleniyor...";
+      label = message || "Eşitleniyor...";
       if (btn) btn.classList.add("syncing");
     } else if (status === "success") {
       icon = "🟢";
@@ -62,11 +59,13 @@
       if (btn) btn.classList.remove("syncing");
     } else if (status === "error") {
       icon = "⚠️";
-      label = message || "Eşitleme Hatası";
+      label = message || "Yapılandırma Gerekli";
       if (btn) btn.classList.remove("syncing");
     } else if (status === "offline") {
       icon = "📡";
       label = "Çevrimdışı (Yerel)";
+      if (btn) btn.classList.remove("syncing");
+    } else if (status === "idle") {
       if (btn) btn.classList.remove("syncing");
     }
 
@@ -82,9 +81,6 @@
     return localStorage.getItem("duru_active_user") || sessionStorage.getItem("duru_active_user") || "duru";
   }
 
-  /**
-   * Cihazdaki tüm sınav ve ilerleme verilerini toplar
-   */
   function exportLocalDataPayload() {
     var payload = {
       updatedAt: new Date().toISOString(),
@@ -126,9 +122,6 @@
     return payload;
   }
 
-  /**
-   * Buluttan gelen veriyi yerel veritabanıyla akıllıca birleştirir (Merge)
-   */
   function mergeRemoteData(remoteScores) {
     if (!remoteScores || !Array.isArray(remoteScores) || remoteScores.length === 0) {
       return 0;
@@ -138,7 +131,6 @@
     if (typeof window.restoreScores === "function") {
       restoredCount = window.restoreScores(remoteScores);
     } else {
-      // Fallback manual merger
       var activeUser = getActiveUser();
       remoteScores.forEach(function (item) {
         if (item && item.key) {
@@ -155,7 +147,6 @@
     }
 
     if (restoredCount > 0) {
-      // Yenilenen verileri tüm ekranlara anında yansıt
       if (typeof window.renderVakken === "function") window.renderVakken();
       if (typeof window.loadDashboardData === "function") window.loadDashboardData();
       if (typeof window.renderParentDashboard === "function") window.renderParentDashboard();
@@ -164,8 +155,22 @@
     return restoredCount;
   }
 
+  function getEffectiveEndpoint() {
+    var isLocal = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.port === "8080");
+    if (isLocal) {
+      return { url: "/api/score", type: "local" };
+    }
+    var cfg = getConfig();
+    if (cfg.endpointUrl && cfg.endpointUrl.trim().length > 0) {
+      var u = cfg.endpointUrl.trim();
+      var isFirebase = u.indexOf("firebaseio.com") !== -1 || u.indexOf("firebasedatabase.app") !== -1;
+      return { url: u, type: isFirebase ? "firebase" : "custom", apiKey: cfg.apiKey };
+    }
+    return null;
+  }
+
   /**
-   * 1. PULL: Buluttan en son verileri çek ve birleştir
+   * 1. PULL
    */
   function pullFromCloud(silent) {
     if (!navigator.onLine) {
@@ -173,19 +178,26 @@
       return Promise.resolve(0);
     }
 
-    var cfg = getConfig();
-    if (!cfg.enabled) return Promise.resolve(0);
+    var ep = getEffectiveEndpoint();
+    if (!ep) {
+      if (!silent) updateStatusUI("error", "Bulut URL Gerekli");
+      return Promise.resolve(0);
+    }
 
     if (!silent) updateStatusUI("syncing", "Buluttan çekiliyor...");
     syncState.inFlight = true;
 
-    // Hedef URL belirleme (Yerel server.py veya harici REST API)
-    var isLocalServer = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.port === "8080");
-    var url = isLocalServer ? "/api/score?t=" + Date.now() : (cfg.customUrl || ("https://api.npoint.io/46d926ef91f86bd069ca"));
+    var headers = { "Cache-Control": "no-cache" };
+    if (ep.apiKey) {
+      headers["X-Master-Key"] = ep.apiKey;
+      headers["X-Access-Key"] = ep.apiKey;
+    }
 
-    return fetch(url, {
+    var fetchUrl = ep.url + (ep.url.indexOf("?") === -1 ? "?t=" + Date.now() : "&t=" + Date.now());
+
+    return fetch(fetchUrl, {
       method: "GET",
-      headers: { "Cache-Control": "no-cache" }
+      headers: headers
     })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
@@ -193,9 +205,16 @@
       })
       .then(function (data) {
         syncState.inFlight = false;
-        var scores = Array.isArray(data) ? data : (data.scores || []);
-        var updated = mergeRemoteData(scores);
+        var scores = [];
+        if (Array.isArray(data)) {
+          scores = data;
+        } else if (data && Array.isArray(data.scores)) {
+          scores = data.scores;
+        } else if (data && data.record && Array.isArray(data.record.scores)) {
+          scores = data.record.scores;
+        }
 
+        var updated = mergeRemoteData(scores);
         var timeStr = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
         syncState.lastSyncTime = timeStr;
         localStorage.setItem(STORAGE_KEY_LAST_SYNC, timeStr);
@@ -205,40 +224,45 @@
       })
       .catch(function (err) {
         syncState.inFlight = false;
-        // Eğer yerel sunucu yoksa veya GitHub Pages modundaysa sessizce devam et
-        console.warn("Cloud Sync Pull uyarısı:", err.message);
-        updateStatusUI("idle", "Bulut Senkron: Hazır");
+        console.warn("Cloud Sync Pull hatası:", err.message);
+        updateStatusUI("error", "Eşitleme Hatası (HTTP)");
         return 0;
       });
   }
 
   /**
-   * 2. PUSH: Yerel verileri buluta yükle
+   * 2. PUSH
    */
   var pushDebounceTimer = null;
   function pushToCloud(immediate) {
-    if (!navigator.onLine) return;
+    if (!navigator.onLine) return Promise.resolve(false);
 
-    var cfg = getConfig();
-    if (!cfg.enabled) return;
+    var ep = getEffectiveEndpoint();
+    if (!ep) {
+      return Promise.resolve(false);
+    }
 
     clearTimeout(pushDebounceTimer);
     if (!immediate) {
       pushDebounceTimer = setTimeout(function () { pushToCloud(true); }, 1200);
-      return;
+      return Promise.resolve(true);
     }
 
     var payload = exportLocalDataPayload();
-    if (payload.scores.length === 0) return;
+    if (payload.scores.length === 0) return Promise.resolve(false);
 
     updateStatusUI("syncing", "Buluta aktarılıyor...");
 
-    var isLocalServer = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.port === "8080");
-    var url = isLocalServer ? "/api/score" : (cfg.customUrl || "https://api.npoint.io/46d926ef91f86bd069ca");
+    var method = (ep.type === "firebase") ? "PUT" : "POST";
+    var headers = { "Content-Type": "application/json" };
+    if (ep.apiKey) {
+      headers["X-Master-Key"] = ep.apiKey;
+      headers["X-Access-Key"] = ep.apiKey;
+    }
 
-    fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    return fetch(ep.url, {
+      method: method,
+      headers: headers,
       body: JSON.stringify(payload)
     })
       .then(function (res) {
@@ -247,10 +271,12 @@
         syncState.lastSyncTime = timeStr;
         localStorage.setItem(STORAGE_KEY_LAST_SYNC, timeStr);
         updateStatusUI("success", "Eşitlendi (" + timeStr + ")");
+        return true;
       })
       .catch(function (err) {
-        console.warn("Cloud Sync Push uyarısı:", err.message);
-        updateStatusUI("idle", "Bulut Senkron: Hazır");
+        console.warn("Cloud Sync Push hatası:", err.message);
+        updateStatusUI("error", "Aktarım Hatası");
+        return false;
       });
   }
 
@@ -258,9 +284,6 @@
     return String(str == null ? "" : str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
-  /**
-   * Bulut Senkronizasyon Ayarları Modalı
-   */
   function initCloudSyncModal() {
     var btn = document.getElementById("cloud-sync-btn");
     var modal = document.getElementById("cloud-sync-modal");
@@ -268,13 +291,15 @@
     var syncNowBtn = document.getElementById("cloud-modal-sync-now");
     var saveCfgBtn = document.getElementById("cloud-modal-save-config");
     var customUrlInput = document.getElementById("cloud-custom-url-input");
+    var apiKeyInput = document.getElementById("cloud-api-key-input");
 
     if (btn) {
       btn.addEventListener("click", function () {
         if (modal) {
           modal.style.display = "flex";
           var cfg = getConfig();
-          if (customUrlInput) customUrlInput.value = cfg.customUrl || "";
+          if (customUrlInput) customUrlInput.value = cfg.endpointUrl || "";
+          if (apiKeyInput) apiKeyInput.value = cfg.apiKey || "";
           updateStatusUI(syncState.status);
         }
       });
@@ -294,11 +319,18 @@
 
     if (syncNowBtn) {
       syncNowBtn.addEventListener("click", function () {
+        var ep = getEffectiveEndpoint();
+        if (!ep) {
+          alert("Otomatik bulut senkronizasyonu için lütfen bir Firebase Database URL veya JSONBin adresi tanımlayın. Veya hemen alttaki '📥 Voortgang Opslaan' (Export/Import) butonu ile tek tıkla dosya aktarımı yapabilirsiniz!");
+          return;
+        }
+
         syncNowBtn.textContent = "🔄 Eşitleniyor...";
         pullFromCloud(false).then(function () {
-          pushToCloud(true);
-          syncNowBtn.textContent = "✅ Başarılı!";
-          setTimeout(function () { syncNowBtn.textContent = "🔄 Şimdi Senkronize Et"; }, 2000);
+          pushToCloud(true).then(function (success) {
+            syncNowBtn.textContent = success ? "✅ Başarılı!" : "⚠️ Hata Oluştu";
+            setTimeout(function () { syncNowBtn.textContent = "🔄 Şimdi Senkronize Et"; }, 2000);
+          });
         });
       });
     }
@@ -306,22 +338,23 @@
     if (saveCfgBtn) {
       saveCfgBtn.addEventListener("click", function () {
         var cfg = getConfig();
-        if (customUrlInput) cfg.customUrl = customUrlInput.value.trim();
+        if (customUrlInput) cfg.endpointUrl = customUrlInput.value.trim();
+        if (apiKeyInput) cfg.apiKey = apiKeyInput.value.trim();
         saveConfig(cfg);
-        alert("Bulut ayarları kaydedildi!");
+        alert("Bulut bağlantı ayarları kaydedildi!");
         if (modal) modal.style.display = "none";
-        pullFromCloud(false);
+        pullFromCloud(false).then(function () {
+          pushToCloud(true);
+        });
       });
     }
   }
 
-  // DOM Yüklendiğinde Başlat
   document.addEventListener("DOMContentLoaded", function () {
     initCloudSyncModal();
 
-    // 1. Sayfa açılır açılmaz iki yönlü eşitle: Önce buluttan çek, ardından yereldeki sınavları buluta yükle
     setTimeout(function () {
-      pullFromCloud(false).then(function () {
+      pullFromCloud(true).then(function () {
         var payload = exportLocalDataPayload();
         if (payload.scores && payload.scores.length > 0) {
           pushToCloud(true);
@@ -329,13 +362,11 @@
       });
     }, 600);
 
-    // 2. Belirli aralıklarla arka planda otomatik kontrol et (arka planda baba ekranı yenilenir)
     var cfg = getConfig();
     setInterval(function () {
       pullFromCloud(true);
     }, cfg.autoSyncIntervalMs || 45000);
 
-    // 3. Tarayıcı çevrimdışı/çevrimiçi durumlarını dinle
     window.addEventListener("online", function () {
       updateStatusUI("syncing", "İnternet bağlandı, eşitleniyor...");
       pullFromCloud(false).then(function () { pushToCloud(true); });
@@ -346,7 +377,6 @@
     });
   });
 
-  // Global API
   window.CloudSync = {
     pull: pullFromCloud,
     push: pushToCloud,
