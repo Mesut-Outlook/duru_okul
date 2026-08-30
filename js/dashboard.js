@@ -90,6 +90,8 @@
         // Draw / refresh charts if moving to statistics tab
         if (targetId === "statistieken-view") {
           loadDashboardData();
+        } else if (targetId === "ouder-view" && typeof window.renderParentDashboard === "function") {
+          window.renderParentDashboard();
         }
       });
     });

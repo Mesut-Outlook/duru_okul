@@ -249,6 +249,9 @@ function sluitIframe(viaPop) {
   if (typeof window.loadDashboardData === 'function') {
     window.loadDashboardData();
   }
+  if (typeof window.renderParentDashboard === 'function') {
+    window.renderParentDashboard();
+  }
 
   // Als we NIET via popstate terugkeren, moeten we zelf Back simuleren
   // zodat de pushState-entry uit de history-stack verdwijnt.

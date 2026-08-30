@@ -1717,3 +1717,451 @@ html.dark .jaar-chip--actief {
 }
 
 html.dark .vak-stats-leeg { color: #7db99e; }
+
+/* =========================================================
+   👨‍👧 Veli / Baba Takip Paneli (Parent Dashboard) Styles
+   ========================================================= */
+
+.ouder-header-card {
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  box-shadow: var(--schaduw-sm);
+}
+
+.ouder-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ouder-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--hub-achter);
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  box-shadow: var(--schaduw-sm);
+}
+
+.ouder-title {
+  font-family: var(--font-titel);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--inkt);
+  margin-bottom: 4px;
+}
+
+.ouder-subtitle {
+  font-size: 14px;
+  color: var(--grijs);
+}
+
+.ouder-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ouder-year-toggles {
+  display: flex;
+  background: var(--hub-achter);
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+}
+
+.ouder-year-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--grijs);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.ouder-year-btn.active {
+  background: var(--wit);
+  color: var(--hub-hoofd);
+  box-shadow: var(--schaduw-sm);
+}
+
+.ouder-btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--hub-gradient);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: var(--schaduw-sm);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.ouder-btn-print:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--schaduw);
+}
+
+/* KPIs Grid */
+.ouder-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ouder-kpi-card {
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--schaduw-sm);
+}
+
+.ouder-kpi-card.highlight {
+  border-left: 4px solid var(--hub-zacht);
+}
+
+.ouder-kpi-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.ouder-kpi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ouder-kpi-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--grijs);
+}
+
+.ouder-kpi-val-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ouder-kpi-val {
+  font-family: var(--font-titel);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--inkt);
+}
+
+.ouder-kpi-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.status-excellent { background: #dcfce7; color: #166534; }
+.status-good { background: #ccfbf1; color: #115e59; }
+.status-pass { background: #dbeafe; color: #1e40af; }
+.status-warning { background: #fee2e2; color: #991b1b; }
+.status-none { background: #f3f4f6; color: #6b7280; }
+
+.ouder-kpi-sub {
+  font-size: 12px;
+  color: var(--grijs-licht);
+}
+
+/* Insight Card */
+.ouder-insight-card {
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--schaduw-sm);
+}
+
+.ouder-insight-card.all-clear {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.ouder-insight-card.has-alerts {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+.ouder-insight-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ouder-insight-icon {
+  font-size: 32px;
+}
+
+.ouder-insight-title {
+  font-family: var(--font-titel);
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+  margin-bottom: 2px;
+}
+
+.ouder-insight-desc {
+  font-size: 13px;
+  color: #57534e;
+}
+
+.ouder-alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #fef08a;
+}
+
+.ouder-alert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  gap: 12px;
+  flex-wrap: wrap;
+  border: 1px solid #fef08a;
+}
+
+.ouder-alert-vak {
+  font-weight: 600;
+  color: var(--inkt);
+}
+
+.ouder-alert-grade {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.ouder-alert-date {
+  color: var(--grijs-licht);
+  font-size: 12px;
+}
+
+/* Sections & Tables */
+.ouder-section {
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  box-shadow: var(--schaduw-sm);
+}
+
+.ouder-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+
+.ouder-section-header h3 {
+  font-family: var(--font-titel);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--inkt);
+}
+
+.ouder-section-header small {
+  color: var(--grijs-licht);
+  font-size: 13px;
+}
+
+.ouder-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.ouder-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.ouder-table th {
+  background: var(--hub-achter);
+  color: var(--grijs);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--lijn);
+}
+
+.ouder-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--lijn);
+  color: var(--inkt);
+}
+
+.ouder-vak-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ouder-vak-ico {
+  font-size: 18px;
+}
+
+.ouder-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ouder-progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--lijn);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ouder-progress-fill {
+  height: 100%;
+  background: var(--hub-gradient);
+  border-radius: 4px;
+}
+
+.ouder-progress-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--grijs);
+  min-width: 32px;
+}
+
+.ouder-grade-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ouder-grade-pill.pass { background: #dcfce7; color: #15803d; }
+.ouder-grade-pill.fail { background: #fee2e2; color: #dc2626; }
+.ouder-grade-pill.none { background: #f3f4f6; color: #9ca3af; }
+
+.ouder-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ouder-badge-subtle {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--hub-achter);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Dark Mode Adaptations */
+html.dark .ouder-header-card,
+html.dark .ouder-kpi-card,
+html.dark .ouder-section {
+  background: #0a2e22;
+  border-color: #104030;
+}
+
+html.dark .ouder-avatar,
+html.dark .ouder-year-toggles,
+html.dark .ouder-badge-subtle,
+html.dark .ouder-table th {
+  background: #061a12;
+  color: #ecfdf5;
+}
+
+html.dark .ouder-year-btn.active {
+  background: #104030;
+  color: #34d399;
+}
+
+html.dark .ouder-insight-card.all-clear {
+  background: #062a1b;
+  border-color: #0f5132;
+}
+
+html.dark .ouder-insight-card.all-clear .ouder-insight-title { color: #86efac; }
+html.dark .ouder-insight-card.all-clear .ouder-insight-desc { color: #bbf7d0; }
+
+html.dark .ouder-insight-card.has-alerts {
+  background: #2a1f0a;
+  border-color: #78350f;
+}
+
+html.dark .ouder-insight-card.has-alerts .ouder-insight-title { color: #fde047; }
+html.dark .ouder-insight-card.has-alerts .ouder-insight-desc { color: #fef08a; }
+html.dark .ouder-alert-item {
+  background: #1e1608;
+  border-color: #78350f;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .topbar, .hub-tabs, .ouder-actions, .tip-banner, #login-overlay, footer {
+    display: none !important;
+  }
+
+  .hub-view {
+    display: none !important;
+  }
+
+  #ouder-view {
+    display: block !important;
+  }
+
+  .ouder-header-card, .ouder-kpi-card, .ouder-section, .ouder-insight-card {
+    border: 1px solid #cccccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .ouder-table th {
+    background: #f0f0f0 !important;
+    color: #000000 !important;
+  }
+}
+
