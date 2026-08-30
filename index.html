@@ -39,7 +39,11 @@
           <small>Mijn vakken · HAVO 3</small>
         </div>
       </a>
-      <div id="user-status-container" style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
+      <div id="user-status-container" style="display: flex; align-items: center; gap: 10px; margin-left: auto; flex-wrap: wrap;">
+        <button id="cloud-sync-btn" class="cloud-sync-pill" type="button" title="Bulut Senkronizasyonu">
+          <span class="cloud-sync-icon">☁️</span>
+          <span id="cloud-sync-status-text">Bulut Senkron: Aktif</span>
+        </button>
         <button id="theme-toggle" type="button" aria-label="Wissel tussen lichte en donkere modus" title="Licht / donker">🌙</button>
         <span id="user-display-name" style="color: var(--wit); font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); padding: 6px 12px; border-radius: 20px; border: 1px solid var(--lijn);">
           👤 <span id="user-display-name-text">...</span>
@@ -304,11 +308,50 @@
     </div>
   </div>
 
+  <!-- ══ Cloud Sync Modal ══════════════════════════════════════ -->
+  <div id="cloud-sync-modal" class="cloud-modal-overlay" style="display:none;">
+    <div class="cloud-modal-card">
+      <div class="cloud-modal-header">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:24px;">☁️</span>
+          <h3 style="margin:0;font-size:18px;color:var(--inkt);">Bulut Senkronizasyonu (Cloud Sync)</h3>
+        </div>
+        <button id="cloud-modal-close" class="cloud-modal-close" type="button">✕</button>
+      </div>
+
+      <div class="cloud-modal-body">
+        <div id="cloud-modal-status" class="cloud-status-banner">
+          🟢 <strong>Bulut Senkron: Aktif</strong>
+        </div>
+
+        <p style="font-size:13px;color:var(--grijs);margin:14px 0;line-height:1.5;">
+          Duru'nun kendi bilgisayarından/tabletinden yaptığı tüm sınavlar ve kazandığı puanlar bulut üzerinden cihazlarınız arasında otomatik olarak eşitlenir.
+        </p>
+
+        <div style="display:flex;gap:10px;margin-bottom:20px;">
+          <button id="cloud-modal-sync-now" class="filter-btn" style="flex:1;padding:12px;font-weight:700;background:var(--hub-gradient);color:#fff;" type="button">
+            🔄 Şimdi Senkronize Et
+          </button>
+        </div>
+
+        <details style="border-top:1px solid var(--lijn);padding-top:12px;font-size:13px;">
+          <summary style="cursor:pointer;color:var(--grijs);font-weight:600;">⚙️ Gelişmiş Bulut Ayarları (Opsiyonel)</summary>
+          <div style="margin-top:12px;">
+            <label style="display:block;font-weight:600;margin-bottom:4px;color:var(--inkt);">Özel API / Webhook Endpoint URL:</label>
+            <input type="text" id="cloud-custom-url-input" placeholder="https://api.npoint.io/... veya https://..." style="width:100%;padding:8px 12px;border-radius:8px;border:1px solid var(--lijn);background:var(--hub-achter);color:var(--inkt);font-size:13px;box-sizing:border-box;" />
+            <button id="cloud-modal-save-config" class="filter-btn" style="margin-top:10px;padding:8px 14px;" type="button">Ayarları Kaydet</button>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
   <!-- ══ Script ══════════════════════════════════════════════
        Gewone <script> tag — geen ES modules, werkt op file://  -->
   <script src="js/landing.js?v=3.7"></script>
   <script src="js/dashboard.js?v=3.7"></script>
   <script src="js/ouder_dashboard.js?v=3.7"></script>
+  <script src="js/cloud_sync.js?v=3.7"></script>
 
 </body>
 </html>

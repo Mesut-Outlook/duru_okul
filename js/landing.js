@@ -90,6 +90,11 @@ window.Storage.prototype.getItem = function(key) {
 window.Storage.prototype.setItem = function(key, value) {
   var prefixedKey = getPrefixedKey(key);
   originalSetItem.call(this, prefixedKey, value);
+  if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
+    if (window.CloudSync && typeof window.CloudSync.push === 'function') {
+      window.CloudSync.push();
+    }
+  }
 };
 
 window.Storage.prototype.removeItem = function(key) {
@@ -251,6 +256,9 @@ function sluitIframe(viaPop) {
   }
   if (typeof window.renderParentDashboard === 'function') {
     window.renderParentDashboard();
+  }
+  if (window.CloudSync && typeof window.CloudSync.push === 'function') {
+    window.CloudSync.push();
   }
 
   // Als we NIET via popstate terugkeren, moeten we zelf Back simuleren

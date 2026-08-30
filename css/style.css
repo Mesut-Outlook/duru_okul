@@ -2165,3 +2165,113 @@ html.dark .ouder-alert-item {
   }
 }
 
+/* =========================================================
+   ☁️ Bulut Senkronizasyon (Cloud Sync) Styles
+   ========================================================= */
+
+.cloud-sync-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--lijn);
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: var(--wit);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cloud-sync-pill:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.cloud-sync-pill.syncing .cloud-sync-icon {
+  display: inline-block;
+  animation: cloud-spin 1s linear infinite;
+}
+
+@keyframes cloud-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cloud-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 16px;
+}
+
+.cloud-modal-card {
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  border-radius: var(--radius);
+  max-width: 480px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: var(--schaduw-lg);
+  animation: modal-pop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modal-pop {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.cloud-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--lijn);
+  padding-bottom: 12px;
+}
+
+.cloud-modal-close {
+  font-size: 18px;
+  color: var(--grijs);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.cloud-modal-close:hover {
+  background: var(--hub-achter);
+  color: var(--inkt);
+}
+
+.cloud-status-banner {
+  background: var(--hub-achter);
+  border: 1px solid var(--lijn);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--inkt);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+html.dark .cloud-modal-card {
+  background: #0a2e22;
+  border-color: #104030;
+}
+
+html.dark .cloud-status-banner {
+  background: #061a12;
+  border-color: #104030;
+  color: #ecfdf5;
+}
+
+
