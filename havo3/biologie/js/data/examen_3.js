@@ -1,5 +1,6 @@
-/* Toets 3 — Geslachtskenmerken, Hormonen & Puberteit — Biologie HAVO 3
-   20 vragen conform DURU ENGINE_SPEC. */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Toets 3 — Geslachtskenmerken, Hormonen & Puberteit
+   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-3",
   "titel": "Toets 3 — Geslachtskenmerken, Hormonen & Puberteit",
@@ -23,12 +24,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk van de volgende opties is een <b>primair geslachtskenmerk</b> bij meisjes?",
       "opties": [
-        "De vagina en schaamlippen",
         "Borstontwikkeling",
+        "De vagina en schaamlippen",
         "Schaamhaar",
         "Bredere heupen"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Vagina en schaamlippen zijn primaire kenmerken; borstgroei, schaamhaar en heupverbreding zijn secundaire kenmerken."
     },
     {
@@ -53,24 +54,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk orgaan geeft het 'startsein' voor de puberteit door hormonen te produceren die de zaadballen of eierstokken activeren?",
       "opties": [
-        "De hypofyse",
-        "De lever",
         "De schildklier",
+        "De lever",
+        "De hypofyse",
         "De bijnieren"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "De hypofyse produceert hypofysehormonen die de geslachtsorganen aanzetten tot de productie van geslachtshormonen."
     },
     {
       "type": "mc",
       "vraag": "Welk van de volgende kenmerken is een <b>secundair geslachtskenmerk</b> dat specifiek bij jongens ontstaat?",
       "opties": [
-        "Baardgroei en stemverlaging (de baard in de keel)",
+        "Breder bekken",
         "De balzak en penis",
         "Borstgroei",
-        "Breder bekken"
+        "Baardgroei en stemverlaging (de baard in de keel)"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Baardgroei en het zwaarder worden van de stem zijn secundaire kenmerken bij jongens."
     },
     {
@@ -101,12 +102,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat zijn <b>tertiaire geslachtskenmerken</b>?",
       "opties": [
-        "Verschillen tussen jongens en meisjes in gedrag, kleding, interesses en denken",
         "De geslachtsorganen die bij de geboorte aanwezig zijn",
+        "Verschillen tussen jongens en meisjes in gedrag, kleding, interesses en denken",
         "Lichamelijke kenmerken zoals baardgroei en borstgroei",
         "De werking van de hypofyse"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Tertiaire geslachtskenmerken zijn niet-lichamelijke, maatschappelijke en psychologische verschillen in stijl, kleding en gedrag."
     },
     {
@@ -119,12 +120,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke hormonen regelen het ontstaan van de secundaire geslachtskenmerken in het lichaam?",
       "opties": [
-        "De geslachtshormonen (testosteron bij jongens, oestrogeen bij meisjes)",
-        "Alleen maagsap en speeksel",
         "Adrenaline uit het hart",
+        "Alleen maagsap en speeksel",
+        "De geslachtshormonen (testosteron bij jongens, oestrogeen bij meisjes)",
         "Alleen het groeihormoon"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Testosteron en oestrogeen sturen rechtstreeks de secundaire geslachtskenmerken aan."
     },
     {
@@ -137,12 +138,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke verandering in lichaamsvorm treedt bij meisjes op tijdens de puberteit onder invloed van oestrogeen?",
       "opties": [
-        "Verbreding van het bekken en de heupen en rondere vormen",
+        "Het korter worden van de benen",
         "Sterke verbreding van de schouders en baardgroei",
         "Verdwijnen van alle lichaamsvetten",
-        "Het korter worden van de benen"
+        "Verbreding van het bekken en de heupen en rondere vormen"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Oestrogeen zorgt voor borstontwikkeling, bredere heupen/bekken en een vrouwelijkere vetverdeling."
     },
     {
@@ -171,7 +172,7 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het verschil tussen primaire, secundaire en tertiaire geslachtskenmerken en geef van ELK type één duidelijk voorbeeld.",
+      "vraag": "Noem het verschil tussen aangeboren kenmerken, puberteitskenmerken en sociaal-psychologische uitingen, en geef van ELK type één duidelijk voorbeeld.",
       "sleutelwoorden": [
         "primair/geboorte/penis/balzak/vagina/schaamlippen",
         "secundair/puberteit/borsten/baard/stem/heupen",
@@ -183,7 +184,7 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe de hypofyse en de geslachtsorganen (zaadballen of eierstokken) samenwerken om de puberteit op gang te brengen.",
+      "vraag": "Leg uit hoe de centrale regelklier in het hoofd en de geslachtsklieren samenwerken om de geslachtsrijping op gang te brengen.",
       "sleutelwoorden": [
         "hypofyse/startsein/hormonen",
         "zaadballen/testosteron/eierstokken/oestrogeen",

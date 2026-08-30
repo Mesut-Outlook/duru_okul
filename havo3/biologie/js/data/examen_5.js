@@ -1,5 +1,6 @@
-/* Toets 5 — Transgender, Geslachtsverandering & Samenvatting — Biologie HAVO 3
-   20 vragen conform DURU ENGINE_SPEC. */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Toets 5 — Transgender, Geslachtsverandering & Samenvatting
+   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-5",
   "titel": "Toets 5 — Transgender, Geslachtsverandering & Samenvatting",
@@ -29,24 +30,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe vaak komt genderdysforie volgens de statistieken in bron 6 voor bij volwassenen?",
       "opties": [
-        "Bij ca. 1 op de 10.000 mannen en 1 op de 30.000 vrouwen",
         "Bij 50% van alle mensen",
+        "Bij ca. 1 op de 10.000 mannen en 1 op de 30.000 vrouwen",
         "Bij 1 op de 10 mensen",
         "Bij 1 op de 1.000.000 mannen"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Genderdysforie komt voor bij ca. 1 op 10.000 volwassen mannen en 1 op 30.000 volwassen vrouwen."
     },
     {
       "type": "mc",
       "vraag": "Wat is het wezenlijke verschil tussen een <b>travestiet</b> en een <b>transseksueel</b>?",
       "opties": [
-        "Een travestiet kleedt zich af en toe in kleding van het andere geslacht voor plezier/opwinding zonder zich in het verkeerde lichaam te voelen; een transseksueel ervaart genderdysforie en wil daadwerkelijk van geslacht veranderen",
-        "Er is geen verschil; beide termen zijn synoniemen",
         "Een transseksueel draagt alleen pruiken, een travestiet ondergaat altijd operaties",
+        "Er is geen verschil; beide termen zijn synoniemen",
+        "Een travestiet kleedt zich af en toe in kleding van het andere geslacht voor plezier/opwinding zonder zich in het verkeerde lichaam te voelen; een transseksueel ervaart genderdysforie en wil daadwerkelijk van geslacht veranderen",
         "Een travestiet is altijd een puber"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Travestieten kleden zich incidenteel anders, maar voelen zich over het algemeen prima in hun geboortegeslacht."
     },
     {
@@ -59,12 +60,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk effect heeft een hormoonbehandeling met <b>oestrogeen</b> op het lichaam van een man die vrouw wil worden?",
       "opties": [
-        "Groei van borsten, afname van spiermassa en spierkracht, en een zachtere huid",
+        "De geslachtsorganen veranderen binnen één week vanzelf",
         "De stem wordt direct heel hoog en de baard verdwijnt vanzelf",
         "De botten worden direct korter",
-        "De geslachtsorganen veranderen binnen één week vanzelf"
+        "Groei van borsten, afname van spiermassa en spierkracht, en een zachtere huid"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Oestrogeen stimuleert borstvorming, zachtere huid en vermindert spieren en lichaamsbeharing."
     },
     {
@@ -101,24 +102,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de wettelijke minimumleeftijd voor het ondergaan van een definitieve geslachtsoperatie (stap 5)?",
       "opties": [
-        "Ouder dan 18 jaar",
         "Vanaf 12 jaar",
+        "Ouder dan 18 jaar",
         "Vanaf 16 jaar",
         "Er geldt geen minimumleeftijd"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Voor de definitieve geslachtsoperatie (verwijderen/aanpassen geslachtsorganen) moet men ouder dan 18 jaar zijn."
     },
     {
       "type": "mc",
       "vraag": "Welke overkoepelende hormoonklier stuurt zowel de lengtegroei als het begin van de puberteit aan?",
       "opties": [
-        "De hypofyse",
-        "De maag",
         "De alvleesklier",
+        "De maag",
+        "De hypofyse",
         "De nieren"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "De hypofyse regelt zowel groeihormoon als de start van de puberteit."
     },
     {
@@ -137,12 +138,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Waarom stopt de lengtegroei definitief aan het einde van de puberteit?",
       "opties": [
-        "Omdat alle kraakbenige groeischijven verbenen (verkalken) en veranderen in hard bot",
+        "Omdat de hypofyse verdwijnt",
         "Omdat het bloed stopt met stromen naar de benen",
         "Omdat alle spieren verdwijnen",
-        "Omdat de hypofyse verdwijnt"
+        "Omdat alle kraakbenige groeischijven verbenen (verkalken) en veranderen in hard bot"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Zodra het kraakbeen in de groeischijven is omgezet in been, kunnen botten niet meer langer worden."
     },
     {
@@ -171,13 +172,13 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de 5 opeenvolgende stappen die iemand doorloopt bij een volledige geslachtsverandering (transitie).",
+      "vraag": "Noem de 5 opeenvolgende stappen die iemand doorloopt bij een volledige medische en maatschappelijke verandering naar het andere geslacht.",
       "sleutelwoorden": [
-        "1 onderzoek/lichamelijk/psychologisch",
-        "2 hormoonbehandeling/hormonen",
-        "3 real life test/geslachtsrol",
-        "4 operaties/borst/gezicht/stem",
-        "5 geslachtsoperatie/18 jaar/geslachtsorganen"
+        "psychologisch/intake/testen",
+        "hormoonbehandeling/medicatie",
+        "real life test/geslachtsrol",
+        "operaties/borst/gezicht/stem",
+        "geslachtsoperatie/volwassen"
       ],
       "minTreffers": 4,
       "modelantwoord": "1) Algemeen lichamelijk en psychologisch onderzoek (gesprekken en tests). 2) Hormoonbehandeling (eigen hormonen onderdrukken en geslachtshormonen van het gewenste geslacht toedienen). 3) Een 'real life test' (1,5 tot 2 jaar leven in de nieuwe geslachtsrol). 4) Verschillende aanvullende operaties (borstvergroting/-verkleining, gezichtscorrecties, stemoperatie). 5) Geslachtsoperatie (verwijderen en nieuw construeren van geslachtsorganen, vanaf 18 jaar).",

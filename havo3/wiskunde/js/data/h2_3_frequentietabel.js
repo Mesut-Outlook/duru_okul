@@ -1,86 +1,81 @@
+/* =========================================================
+   Duru's Wiskunde (HAVO 3) — Frequentietabellen & Relatieve Frequentie
+   ========================================================= */
 DURU.register({
-  id: "h2-3-frequentietabel",
-  hoofdstuk: 2,
-  paragraaf: "2.3",
-  titel: "2.3 Frequentietabel, Staafdiagram & Lijndiagram",
-  korteUitleg: "Frequenties, frequentietabellen maken/aflezen, staafdiagrammen en lijndiagrammen (tijdverloop).",
-  icoon: "📈",
-  theorie: `
-    <h3>Paragraaf 2.3 — Frequentietabel & Diagrammen</h3>
-    <p>Als je onderzoek doet en gegevens verzamelt, orden je de gegevens in een tabel of grafiek.</p>
-
-    <div class="formule-box">
-      <strong>Kernbegrippen:</strong><br>
-      • <strong>Frequentie:</strong> Het aantal keren dat een waarde voorkomt.<br>
-      • <strong>Frequentietabel:</strong> Een tabel waarin de waarden en hun bijbehorende frequentie vermeld staan.<br>
-      • <strong>Staafdiagram:</strong> Een diagram waarin de hoogtes van de staven de frequenties aangeven. De staven staan los van elkaar.<br>
-      • <strong>Lijndiagram:</strong> Wordt vooral gebruikt om te laten zien hoe aantallen <em>in de loop van de tijd veranderen</em> (tijdverloop).
-    </div>
-
-    <div class="voorbeeld">
-      <div class="vb-kop">Voorbeeld: Frequentie tellen</div>
-      <p>Sandra haalde voor wiskunde de cijfers: 7, 5, 8, 6, 6, 7, 5, 7, 7, 6.</p>
-      <div class="stap">
-        • Cijfer 5 komt 2 keer voor → Frequentie van 5 is <strong>2</strong>.<br>
-        • Cijfer 6 komt 3 keer voor → Frequentie van 6 is <strong>3</strong>.<br>
-        • Cijfer 7 komt 4 keer voor → Frequentie van 7 is <strong>4</strong>.<br>
-        • Cijfer 8 komt 1 keer voor → Frequentie van 8 is <strong>1</strong>.<br>
-        • Totale frequentie (aantal proefwerken) = 2 + 3 + 4 + 1 = <strong>10</strong>.
-      </div>
-    </div>
-  `,
-  vragen: [
+  "id": "h2-3-frequentietabel",
+  "hoofdstuk": 2,
+  "paragraaf": "2.3",
+  "titel": "Frequentietabellen & Relatieve Frequentie",
+  "korteUitleg": "Absolute frequentie, relatieve frequentie in procenten, turven en klassenindeling.",
+  "icoon": "📋",
+  "kleur": "blauw",
+  "theorie": "<h3>2.3 Frequentietabellen & Relatieve Frequentie</h3>\n<p>Wanneer je een statistisch onderzoek uitvoert en veel data verzamelt, krijg je een lange lijst met losse getallen (de ruwe data). Om hier structuur en overzicht in aan te brengen, orden je de gegevens in een <b>frequentietabel</b>.</p>\n<h4>Verschillende soorten frequenties</h4>\n<ul>\n  <li><b>Absolute frequentie:</b> Het werkelijke aantal keren dat een bepaalde waarneming of score voorkomt (bijvoorbeeld: 7 leerlingen hadden een 8 voor de toets).</li>\n  <li><b>Relatieve frequentie (percentage):</b> Het aandeel van een waarneming ten opzichte van het totale aantal waarnemingen, meestal uitgedrukt in een percentage:\n  <div class=\"formule-box\">\n    <code>Relatieve frequentie = (Absolute frequentie / Totaal aantal waarnemingen) × 100%</code>\n  </div>\n  </li>\n  <li><b>Cumulatieve frequentie:</b> De opgetelde frequentie vanaf de laagste score tot en met de huidige score (de 'lopende som').</li>\n</ul>\n<h4>Klassenindeling bij grote datasets</h4>\n<p>Wanneer de data veel verschillende waarden bevat (zoals de lengtes van 200 scholieren tussen 140 cm en 195 cm), groepeer je de waarden in <b>klassen</b> (bijvoorbeeld <code>140 - < 150</code>, <code>150 - < 160</code>, etc.):</p>\n<ul>\n  <li><b>Klassenbreedte:</b> Het verschil tussen de bovengrens en de ondergrens van een klasse (bijvoorbeeld: 150 - 140 = 10 cm breed).</li>\n  <li><b>Klassenmidden:</b> Het exacte gemiddelde van de ondergrens en de bovengrens: <code>(140 + 150) / 2 = 145 cm</code>. Het klassenmidden gebruik je om het gemiddelde van de gegroepeerde data te schatten.</li>\n</ul>",
+  "vragen": [
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "Wat betekent het woord 'frequentie' in de statistiek?",
-      opties: [
-        "Het gemiddelde van alle getallen",
-        "Het aantal keren dat een waarde voorkomt",
-        "Het verschil tussen de hoogste en laagste waarde",
-        "Het middelste getal van een rij"
+      "type": "mc",
+      "vraag": "In een groep van 50 sporters spelen 15 sporters basketbal. Wat is de relatieve frequentie van basketballers?",
+      "opties": [
+        "30%",
+        "25%",
+        "15%",
+        "35%"
       ],
-      antwoord: 1,
-      uitleg: "Frequentie is het aantal keren dat een bepaalde waarde voorkomt."
+      "antwoord": 0,
+      "uitleg": "(15 / 50) × 100% = 30%."
     },
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "Welk diagram gebruik je bij voorkeur om te laten zien hoe de temperatuur in de loop van een dag verandert?",
-      opties: ["Cirkeldiagram", "Staafdiagram", "Lijndiagram", "Beelddiagram"],
-      antwoord: 2,
-      uitleg: "Een lijndiagram is uitermate geschikt om verandering in de loop van de tijd (tijdverloop) weer te geven."
+      "type": "mc",
+      "vraag": "Wat is het klassenmidden van de klasse 20 - < 30?",
+      "opties": [
+        "20",
+        "25",
+        "24",
+        "30"
+      ],
+      "antwoord": 1,
+      "uitleg": "(20 + 30) / 2 = 25."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "Een fietshandelaar verkoopt 15 blauwe, 22 rode en 17 gele fietsen. Wat is de totale frequentie van de verkochte fietsen?",
-      antwoord: "54",
-      tolerantie: 0.1,
-      uitleg: "Totale frequentie = 15 + 22 + 17 = 54 fietsen."
+      "type": "waaronwaar",
+      "vraag": "De absolute frequentie is altijd een percentage tussen 0% en 100%.",
+      "antwoord": false,
+      "uitleg": "Niet waar: de absolute frequentie is het werkelijke aantal (een geheel getal), terwijl de relatieve frequentie een percentage is."
     },
     {
-      type: "waaronwaar",
-      niveau: 2,
-      vraag: "In een staafdiagram moeten de staven tegen elkaar aan getekend worden zonder ruimte er tussen.",
-      antwoord: false,
-      uitleg: "Onwaar. Bij een staafdiagram staan de staven los van elkaar (losse categorieën)."
+      "type": "invoer",
+      "vraag": "Als in een klas van 25 leerlingen er 5 een onvoldoende hebben, wat is dan de relatieve frequentie in procenten?",
+      "antwoord": "20|20%|20 procent",
+      "uitleg": "(5 / 25) × 100% = 20%."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "Arjan verkocht in 2020 racefietsen van merken: Cannondale (85), Felt (57), Giant (115), Specialized (97) en Trek (72). Hoe groot is de frequentie van Giant?",
-      antwoord: "115",
-      tolerantie: 0.1,
-      uitleg: "Giant is 115 keer verkocht, dus de frequentie is 115."
+      "type": "mc",
+      "vraag": "Wat is de klassenbreedte van de klasse 150 - < 175?",
+      "opties": [
+        "15",
+        "20",
+        "25",
+        "162,5"
+      ],
+      "antwoord": 2,
+      "uitleg": "Klassenbreedte = 175 - 150 = 25."
     },
     {
-      type: "mc",
-      niveau: 3,
-      vraag: "In een lijndiagram staat de verkoop van jus d'orange in pakken: Jan (120), Feb (150), Maart (180), April (240). Hoeveel pakken zijn er in het 1e kwartaal (Jan+Feb+Maart) totaal verkocht?",
-      opties: ["390", "450", "510", "690"],
-      antwoord: 1,
-      uitleg: "1e kwartaal = Jan + Feb + Maart = 120 + 150 + 180 = 450 pakken."
+      "type": "waaronwaar",
+      "vraag": "De som van alle relatieve frequenties in een complete frequentietabel is altijd gelijk aan 100%.",
+      "antwoord": true,
+      "uitleg": "Waar: alle delen samen vormen het volledige geheel (100%)."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Hoe heet de frequentie waarbij de opeenvolgende aantallen bij elkaar worden opgeteld?",
+      "antwoord": "cumulatieve frequentie|cumulatief",
+      "uitleg": "De cumulatieve frequentie telt de waarnemingen door."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Bij de notatie 10 - < 20 telt de waarde 20 zelf ook mee in die klasse.",
+      "antwoord": false,
+      "uitleg": "Niet waar: het teken '<' betekent 'tot maar niet met'. De waarde 20 hoort in de volgende klasse (20 - < 30)."
     }
   ]
 });

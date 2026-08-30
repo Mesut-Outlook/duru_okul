@@ -1,56 +1,87 @@
-/* Onderwerp 8.2 — Rekenen aan hefbomen */
+/* =========================================================
+   Duru's Natuurkunde (HAVO 3) — Rekenen aan Hefbomen & Momenten
+   ========================================================= */
 DURU.register({
-  id: "h8-2-rekenen-hefbomen",
-  hoofdstuk: 8,
-  paragraaf: "8.2",
-  titel: "Rekenen aan Hefbomen & Momenten",
-  korteUitleg: "Het moment van een kracht (M = F × r), de momentenwet en het zwaartepunt.",
-  icoon: "⚖️",
-  kleur: "h8-thema",
-  theorie: "<h3>8.2 Rekenen aan hefbomen</h3><div class='formule-box'><strong>Formules:</strong><br>• <b>Moment van een kracht ($):</b> 89565M = F \times r89565 ($ in $\text{Nm}$, $ in $\text{N}$, $ in $\text{m}$)<br>• <b>Hefboomwet / Momentenwet in evenwicht:</b> 89565M_{\text{links}} = M_{\text{rechts}} \iff F_1 \times r_1 = F_2 \times r_289565<br>• <b>Zwaartekracht:</b>  = m \times g$ ( \approx 10\text{ N/kg}$ of {,}8\text{ N/kg}$)</div><h4>Het Zwaartepunt ($)</h4><p>Het zwaartepunt is het punt waar je de totale zwaartekracht op het voorwerp geconcentreerd kunt denken. Een hefboom is stabiel als het zwaartepunt zich recht onder het ophangpunt bevindt.</p>",
-  vragen: [
+  "id": "h8-2-rekenen-hefbomen",
+  "hoofdstuk": 8,
+  "paragraaf": "8.2",
+  "titel": "Rekenen aan Hefbomen & Momenten",
+  "korteUitleg": "Het moment van een kracht (M = F × r), de momentenwet en het zwaartepunt.",
+  "icoon": "⚖️",
+  "kleur": "h8-thema",
+  "theorie": "<h3>8.2 Rekenen aan hefbomen</h3><div class='formule-box'><strong>Formules:</strong><br>• <b>Moment van een kracht ($):</b> 89565M = F \times r89565 ($ in $\text{Nm}$, $ in $\text{N}$, $ in $\text{m}$)<br>• <b>Hefboomwet / Momentenwet in evenwicht:</b> 89565M_{\text{links}} = M_{\text{rechts}} iff F_1 \times r_1 = F_2 \times r_289565<br>• <b>Zwaartekracht:</b>  = m \times g$ ( approx 10\text{ N/kg}$ of {,}8\text{ N/kg}$)</div><h4>Het Zwaartepunt ($)</h4><p>Het zwaartepunt is het punt waar je de totale zwaartekracht op het voorwerp geconcentreerd kunt denken. Een hefboom is stabiel als het zwaartepunt zich recht onder het ophangpunt bevindt.</p>\n<h4>Belangrijke natuurkundige principes en rekenvaardigheden</h4>\n<p>Bij het oplossen van natuurkundige vraagstukken in deze paragraaf is een systematische aanpak essentieel:</p>\n<ol>\n  <li><b>Gegevens en gevraagd:</b> Schrijf altijd eerst op welke grootheden bekend zijn met hun juiste eenheid en wat er precies berekend moet worden.</li>\n  <li><b>Eenheden omrekenen naar standaard SI-eenheden:</b>\n    <ul>\n      <li>Afstand en lengte: altijd omrekenen naar meter ($m$) (bijv. $1\\text{ km} = 1000\\text{ m}$, $1\\text{ cm} = 0,01\\text{ m}$).</li>\n      <li>Tijd: altijd omrekenen naar seconden ($s$) (bijv. $1\\text{ uur} = 3600\\text{ s}$, $1\\text{ min} = 60\\text{ s}$).</li>\n      <li>Snelheid: van $\\text{km/h}$ naar $\\text{m/s}$ deel je door $3,6$. Van $\\text{m/s}$ naar $\\text{km/h}$ vermenigvuldig je met $3,6$.</li>\n      <li>Massa: in kilogram ($kg$) of gram ($g$) afhankelijk van de gebruikte formule en dichtheid.</li>\n    </ul>\n  </li>\n  <li><b>Formule noteren en omschrijven:</b> Noteer eerst de basisformule in letters voordat je getallen invult.</li>\n  <li><b>Conclusie en eenheid:</b> Vergeet nooit de eenheid achter je eindantwoord te vermelden en rond af op een realistisch aantal decimalen.</li>\n</ol>\n<div class=\"begrippen-box\">\n  <b>Onthoud voor de toets:</b>\n  <p>Natuurkunde gaat over het begrijpen van de werkelijkheid om ons heen. Door theorie te koppelen aan praktische experimenten en alledaagse voorbeelden (zoals verkeersveiligheid, elektrische apparaten thuis en sportbewegingen) krijg je diepgaand inzicht in de natuurwetten.</p>\n</div>",
+  "vragen": [
     {
-      type: "invoer",
-      niveau: 1,
-      vraag: "Een kracht van 50 N werkt op een arm van 0,40 m. Hoe groot is het moment in Nm?",
-      antwoord: "20|20 Nm",
-      uitleg: "M = F × r = 50 N × 0,40 m = 20 Nm."
+      "type": "mc",
+      "vraag": "Wat is het kenmerk van een vaste katrol bij het hijsen van een last?",
+      "opties": [
+        "De benodigde trekkracht blijft gelijk aan het gewicht van de last, maar de richting verandert",
+        "De benodigde trekkracht halveert",
+        "De touwlengte verdubbelt",
+        "De zwaartekracht verdwijnt"
+      ],
+      "antwoord": 0,
+      "uitleg": "Een vaste katrol geeft geen krachtwinst, alleen richtingsgemak."
     },
     {
-      type: "invoer",
-      niveau: 1,
-      vraag: "Welke eenheid hoort bij het moment van een kracht (symbool)?",
-      antwoord: "Nm|Newtonmeter",
-      uitleg: "Nm = Newtonmeter."
+      "type": "mc",
+      "vraag": "Hoeveel spierkracht is nodig om een last van 600 N op te tillen met één losse katrol (2 dragende touwdelen)?",
+      "opties": [
+        "600 N",
+        "300 N",
+        "1200 N",
+        "150 N"
+      ],
+      "antwoord": 1,
+      "uitleg": "Kracht halveert: 600 / 2 = 300 N."
     },
     {
-      type: "mc",
-      niveau: 2,
-      vraag: "Op een wipwap zit Daan (400 N) op 1,5 m van het draaipunt. Sophie weegt 300 N. Op welke afstand moet Sophie zitten voor evenwicht?",
-      opties: ["2,0 m", "1,8 m", "2,5 m", "1,2 m"],
-      antwoord: 0,
-      uitleg: "r_Sophie = (400 × 1,5) / 300 = 600 / 300 = 2,0 m."
+      "type": "mc",
+      "vraag": "Wat is de gulden regel van de mechanica bij eenvoudige werktuigen zoals katrollen en hefbomen?",
+      "opties": [
+        "Kracht en afstand nemen beide af",
+        "Werktuigen leveren gratis extra energie",
+        "Wat je wint aan kracht, verlies je aan afstand (de benodigde arbeid blijft gelijk)",
+        "Arbeid wordt verdubbeld"
+      ],
+      "antwoord": 2,
+      "uitleg": "De totale arbeid blijft gelijk: F halveert betekent s verdubbelt."
     },
     {
-      type: "waaronwaar",
-      niveau: 2,
-      vraag: "In evenwicht is de som van alle linksdraaiende momenten gelijk aan de som van alle rechtsdraaiende momenten.",
-      antwoord: true,
-      uitleg: "Waar: de momentenwet."
+      "type": "mc",
+      "vraag": "In een takel met 4 dragende touwen hijs je een last 2 meter omhoog. Hoeveel meter touw moet je binnenhalen?",
+      "opties": [
+        "0,5 meter",
+        "2 meter",
+        "4 meter",
+        "8 meter"
+      ],
+      "antwoord": 3,
+      "uitleg": "Touwlengte = 4 × 2 m = 8 meter."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "Een kruiwagen bevat 600 N zand op een arm van 30 cm van het wiel. De handvatten zitten op 90 cm. Welke tilkracht in Newton is nodig?",
-      antwoord: "200|200 N",
-      uitleg: "F = (600 × 30) / 90 = 18.000 / 90 = 200 N."
+      "type": "waaronwaar",
+      "vraag": "Met een takel kun je energie uit het niets creëren.",
+      "antwoord": false,
+      "uitleg": "Onwaar: energiebehoud geldt altijd; je spaart kracht ten koste van meer touwlengte."
     },
     {
-      type: "waaronwaar",
-      niveau: 3,
-      vraag: "Als je de spierkracht verdubbelt en de arm halveert, blijft het moment exact gelijk.",
-      antwoord: true,
-      uitleg: "Waar: (2F) × (0,5r) = F × r."
+      "type": "waaronwaar",
+      "vraag": "Bij een losse katrol beweegt de katrol zelf mee met de opgetilde last.",
+      "antwoord": true,
+      "uitleg": "Waar: vandaar de naam losse katrol."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Hoeveel keer zo klein wordt de benodigde spierkracht bij gebruik van een takel met 4 dragende touwen?",
+      "antwoord": "4|4x|4 keer",
+      "uitleg": "Factor 4 krachtvoordeel."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Een last van 500 N wordt gehesen met een vaste katrol. Hoeveel Newton spankracht moet je leveren?",
+      "antwoord": "500|500 N|500 Newton",
+      "uitleg": "Bij een vaste katrol is Ftrek = Flast = 500 N."
     }
   ]
 });

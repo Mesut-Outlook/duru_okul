@@ -1,101 +1,81 @@
+/* =========================================================
+   Duru's Wiskunde (HAVO 3) — Cirkeldiagrammen & Middelpuntshoeken
+   ========================================================= */
 DURU.register({
-  id: "h2-2-cirkeldiagram",
-  hoofdstuk: 2,
-  paragraaf: "2.2",
-  titel: "2.2 Cirkeldiagram",
-  korteUitleg: "Sectoren, hoeken berekenen (100% = 360°), verhoudingen en cirkeldiagrammen aflezen.",
-  icoon: "🍕",
-  theorie: `
-    <h3>Paragraaf 2.2 — Cirkeldiagram</h3>
-    <p>In een <strong>cirkeldiagram</strong> worden gegevens weergegeven in taartpunten die we <strong>sectoren</strong> noemen.</p>
-
-    <div class="formule-box">
-      <strong>Belangrijke eigenschappen van een cirkeldiagram:</strong><br>
-      • De hele cirkel is <strong>100%</strong>.<br>
-      • De hoek rondom het middelpunt van een hele cirkel is <strong>360°</strong>.<br>
-      • Formule hoek van een sector:<br>
-      <code>Middelpuntshoek = (aantal ÷ totaal) × 360°</code><br>
-      of<br>
-      <code>Middelpuntshoek = (percentage ÷ 100) × 360°</code>
-    </div>
-
-    <div class="voorbeeld">
-      <div class="vb-kop">Voorbeeld: Middelpuntshoek berekenen</div>
-      <p>Van 120 toeristen gaan er 30 met het vliegtuig. Bereken de hoek van deze sector.</p>
-      <div class="stap">
-        <strong>Uitwerking:</strong><br>
-        • Totaal aantal mensen = 120 → Hoort bij 360°.<br>
-        • Hoek = <code>(30 ÷ 120) × 360° = 90°</code>.<br>
-        • Een hoek van 90° is precies een kwart van de cirkel (25%).
-      </div>
-    </div>
-
-    <div class="info-box tip">
-      <strong>Controle:</strong> Als je de hoeken van alle sectoren in een cirkeldiagram bij elkaar optelt, moet de som altijd precies <strong>360°</strong> zijn!
-    </div>
-  `,
-  vragen: [
+  "id": "h2-2-cirkeldiagram",
+  "hoofdstuk": 2,
+  "paragraaf": "2.2",
+  "titel": "Cirkeldiagrammen & Middelpuntshoeken",
+  "korteUitleg": "Omrekenen van absolute aantallen en percentages naar sectorhoeken in graden (360°).",
+  "icoon": "🥧",
+  "kleur": "blauw",
+  "theorie": "<h3>2.2 Cirkeldiagrammen & Middelpuntshoeken</h3>\n<p>Een <b>cirkeldiagram (taartdiagram)</b> is een visuele weergave van gegevens waarbij een totale verzameling wordt verdeeld in verschillende taartpunten (sectoren). Een cirkeldiagram is vooral geschikt om te laten zien hoe een <b>totaal (100%)</b> is opgebouwd uit verschillende delen.</p>\n<h4>De basisregels van een cirkel</h4>\n<ul>\n  <li>Een volledige cirkel is altijd gelijk aan <b>360 graden (360°)</b>.</li>\n  <li>Een volledige cirkel komt overeen met <b>100%</b> van het totaal.</li>\n  <li>Hieruit volgt dat <b>1%</b> in een cirkeldiagram exact overeenkomt met: <code>360° / 100 = 3,6°</code>.</li>\n</ul>\n<h4>Omrekenformules voor sectorhoeken</h4>\n<div class=\"formule-box\">\n  <b>Van percentage naar sectorhoek (middelpuntshoek):</b><br>\n  <code>Sectorhoek in graden = Percentage × 3,6°</code><br><br>\n  <b>Van aantal (frequentie) naar sectorhoek:</b><br>\n  <code>Sectorhoek in graden = (Deel / Totaal) × 360°</code><br><br>\n  <b>Van sectorhoek terug naar percentage:</b><br>\n  <code>Percentage = (Sectorhoek in graden / 360°) × 100%</code>\n</div>\n<h4>Stappenplan voor het tekenen van een cirkeldiagram</h4>\n<ol>\n  <li>Bereken eerst het totale aantal waarnemingen (de som van alle frequenties).</li>\n  <li>Bereken voor elke categorie de bijbehorende sectorhoek in graden met de formule <code>(aantal / totaal) × 360°</code>.</li>\n  <li>Controleer of de som van alle berekende hoeken samen precies <b>360°</b> is!</li>\n  <li>Teken een cirkel met een passer, trek een rechte startstraal naar boven (12 uur) en meet met je geodriehoek de hoeken nauwkeurig af.</li>\n  <li>Schrijf in of bij elke sector de categorienaam of het percentage en geef het diagram een duidelijke titel.</li>\n</ol>",
+  "vragen": [
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "Hoeveel graden is de totale hoek rondom het middelpunt van een cirkeldiagram?",
-      opties: ["90°", "180°", "270°", "360°"],
-      antwoord: 3,
-      uitleg: "Een volle cirkel is altijd 360° rondom het middelpunt."
-    },
-    {
-      type: "invoer",
-      niveau: 1,
-      vraag: "Een sector in een cirkeldiagram stelt 25% van het totaal voor. Hoeveel graden is de middelpuntshoek van deze sector?",
-      antwoord: "90",
-      eenheid: "°",
-      tolerantie: 0.1,
-      uitleg: "25% van 360° = 0,25 × 360° = 90°."
-    },
-    {
-      type: "mc",
-      niveau: 2,
-      vraag: "Van 40 leerlingen kiezen er 15 voor voetbal. Hoe bereken je de middelpuntshoek van de sector 'voetbal'?",
-      opties: [
-        "(15 ÷ 40) × 100°",
-        "(15 ÷ 40) × 360°",
-        "(40 ÷ 15) × 360°",
-        "(15 ÷ 360) × 40°"
+      "type": "mc",
+      "vraag": "Hoeveel graden is de sectorhoek van een categorie die 25% van het totaal beslaat?",
+      "opties": [
+        "90°",
+        "60°",
+        "45°",
+        "120°"
       ],
-      antwoord: 1,
-      uitleg: "Hoek = (deel ÷ totaal) × 360° = (15 ÷ 40) × 360° = 135°."
+      "antwoord": 0,
+      "uitleg": "25 × 3,6° = 90° (of 0,25 × 360° = 90°)."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "In een klas van 30 leerlingen hebben 12 leerlingen een hond als huisdier. Hoeveel graden is de sector voor honden in het cirkeldiagram?",
-      antwoord: "144",
-      eenheid: "°",
-      tolerantie: 0.5,
-      uitleg: "(12 ÷ 30) × 360° = 144°."
+      "type": "mc",
+      "vraag": "In een klas van 30 leerlingen hebben 6 leerlingen een hond. Hoe groot is de sectorhoek voor de categorie 'hond'?",
+      "opties": [
+        "36°",
+        "72°",
+        "60°",
+        "90°"
+      ],
+      "antwoord": 1,
+      "uitleg": "(6 / 30) × 360° = 0,20 × 360° = 72°."
     },
     {
-      type: "waaronwaar",
-      niveau: 2,
-      vraag: "Als een sector een hoek heeft van 72°, stelt deze sector 20% van het totaal voor.",
-      antwoord: true,
-      uitleg: "Waar. (72° ÷ 360°) × 100% = 20%."
+      "type": "waaronwaar",
+      "vraag": "Eén procent in een cirkeldiagram komt overeen met precies 3,6 graden.",
+      "antwoord": true,
+      "uitleg": "Waar: 360° / 100 = 3,6° per procent."
     },
     {
-      type: "mc",
-      niveau: 3,
-      vraag: "In een cirkeldiagram over vervoermiddelen (vliegtuig, bus, auto) heeft het vliegtuig 90° en de bus 45°. Hoeveel graden is de sector voor de auto?",
-      opties: ["180°", "225°", "240°", "270°"],
-      antwoord: 1,
-      uitleg: "Totaal is 360°. Auto = 360° - 90° - 45° = 225°."
+      "type": "invoer",
+      "vraag": "Hoeveel graden is een halve cirkel (50%) in een cirkeldiagram?",
+      "antwoord": "180|180 graden|180°",
+      "uitleg": "50 × 3,6° = 180°."
     },
     {
-      type: "invoer",
-      niveau: 3,
-      vraag: "Aan 800 inwoners is gevraagd welke supermarkt ze bezoeken. De sector AH heeft een hoek van 86,4° (24%). Hoeveel van de 800 inwoners gaan naar AH?",
-      antwoord: "192",
-      tolerantie: 0.5,
-      uitleg: "24% van 800 = 0,24 × 800 = 192 inwoners (of (86,4 ÷ 360) × 800 = 192)."
+      "type": "mc",
+      "vraag": "Een sector heeft een middelpuntshoek van 54°. Welk percentage hoort hierbij?",
+      "opties": [
+        "10%",
+        "20%",
+        "15%",
+        "25%"
+      ],
+      "antwoord": 2,
+      "uitleg": "(54 / 360) × 100% = 0,15 × 100% = 15%."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "De som van alle sectorhoeken in een cirkeldiagram mag maximaal 100 graden zijn.",
+      "antwoord": false,
+      "uitleg": "Onwaar: de som van alle hoeken in een cirkel is altijd exact 360 graden."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Bereken de sectorhoek in graden voor een percentage van 10%.",
+      "antwoord": "36|36 graden|36°",
+      "uitleg": "10 × 3,6° = 36°."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Een cirkeldiagram is ideaal om te zien hoe een totaal van 100% is verdeeld.",
+      "antwoord": true,
+      "uitleg": "Waar: een cirkeldiagram toont de verhouding van de delen ten opzichte van het geheel."
     }
   ]
 });

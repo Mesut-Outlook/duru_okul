@@ -1,58 +1,87 @@
-/* Onderwerp 3.4 — Straling gebruiken */
+/* =========================================================
+   Duru's Natuurkunde (HAVO 3) — Toepassingen in Geneeskunde & Techniek
+   ========================================================= */
 DURU.register({
-  id: "h3-4-toepassingen",
-  hoofdstuk: 3,
-  paragraaf: "3.4",
-  titel: "Toepassingen in Geneeskunde & Techniek",
-  korteUitleg: "Tracers, radiotherapie, CT-scans, rookmelders, diktemeting en C-14 datering.",
-  icoon: "🔬",
-  kleur: "h3-thema",
-  theorie: "<h3>3.4 Straling gebruiken</h3><div class=\"formule-box\"><strong>Belangrijke toepassingen:</strong><br>• <b>Medische diagnose:</b> Tracers (kortlevende gammastralers, bijv. Tc-99m) + gammacamera, CT-scan.<br>• <b>Radiotherapie:</b> Gerichte bestraling van tumoren om kankercellen te doden.<br>• <b>Sterilisatie:</b> Gammastraling steriliseert medisch gereedschap door verpakking heen.<br>• <b>Industrie & Archeologie:</b> Diktemeting met $\\beta$-straling, C-14 datering ($t_{1/2} = 5730\\text{ j}$).</div>",
-  vragen: [
+  "id": "h3-4-toepassingen",
+  "hoofdstuk": 3,
+  "paragraaf": "3.4",
+  "titel": "Toepassingen in Geneeskunde & Techniek",
+  "korteUitleg": "Tracers, radiotherapie, CT-scans, rookmelders, diktemeting en C-14 datering.",
+  "icoon": "🔬",
+  "kleur": "h3-thema",
+  "theorie": "<h3>3.4 Straling gebruiken</h3><div class=\"formule-box\"><strong>Belangrijke toepassingen:</strong><br>• <b>Medische diagnose:</b> Tracers (kortlevende gammastralers, bijv. Tc-99m) + gammacamera, CT-scan.<br>• <b>Radiotherapie:</b> Gerichte bestraling van tumoren om kankercellen te doden.<br>• <b>Sterilisatie:</b> Gammastraling steriliseert medisch gereedschap door verpakking heen.<br>• <b>Industrie & Archeologie:</b> Diktemeting met $\\beta$-straling, C-14 datering ($t_{1/2} = 5730\\text{ j}$).</div>\n<h4>Belangrijke natuurkundige principes en rekenvaardigheden</h4>\n<p>Bij het oplossen van natuurkundige vraagstukken in deze paragraaf is een systematische aanpak essentieel:</p>\n<ol>\n  <li><b>Gegevens en gevraagd:</b> Schrijf altijd eerst op welke grootheden bekend zijn met hun juiste eenheid en wat er precies berekend moet worden.</li>\n  <li><b>Eenheden omrekenen naar standaard SI-eenheden:</b>\n    <ul>\n      <li>Afstand en lengte: altijd omrekenen naar meter ($m$) (bijv. $1\\text{ km} = 1000\\text{ m}$, $1\\text{ cm} = 0,01\\text{ m}$).</li>\n      <li>Tijd: altijd omrekenen naar seconden ($s$) (bijv. $1\\text{ uur} = 3600\\text{ s}$, $1\\text{ min} = 60\\text{ s}$).</li>\n      <li>Snelheid: van $\\text{km/h}$ naar $\\text{m/s}$ deel je door $3,6$. Van $\\text{m/s}$ naar $\\text{km/h}$ vermenigvuldig je met $3,6$.</li>\n      <li>Massa: in kilogram ($kg$) of gram ($g$) afhankelijk van de gebruikte formule en dichtheid.</li>\n    </ul>\n  </li>\n  <li><b>Formule noteren en omschrijven:</b> Noteer eerst de basisformule in letters voordat je getallen invult.</li>\n  <li><b>Conclusie en eenheid:</b> Vergeet nooit de eenheid achter je eindantwoord te vermelden en rond af op een realistisch aantal decimalen.</li>\n</ol>\n<div class=\"begrippen-box\">\n  <b>Onthoud voor de toets:</b>\n  <p>Natuurkunde gaat over het begrijpen van de werkelijkheid om ons heen. Door theorie te koppelen aan praktische experimenten en alledaagse voorbeelden (zoals verkeersveiligheid, elektrische apparaten thuis en sportbewegingen) krijg je diepgaand inzicht in de natuurwetten.</p>\n</div>",
+  "vragen": [
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "Wat is een medische tracer?",
-      opties: ["Een radioactieve speurstof met korte halveringstijd om organen te onderzoeken", "Een chirurgische schaar", "Een röntgenschort", "Een medicijn tegen koorts"],
-      antwoord: 0,
-      uitleg: "Een tracer zendt van binnenuit gammastraling uit die een camera opvangt."
+      "type": "mc",
+      "vraag": "Welk type ioniserende straling bestaat uit zware heliumkernen (2 protonen en 2 neutronen)?",
+      "opties": [
+        "Alfastraling (α)",
+        "Bètastraling (β)",
+        "Gammastraling (γ)",
+        "Röntgenstraling"
+      ],
+      "antwoord": 0,
+      "uitleg": "Alfadeeltjes zijn helium-4 kernen."
     },
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "Waarom gebruikt een arts voor een tracer een gammastraler en GEEN alfastraler?",
-      opties: ["Omdat alfastraling te duur is", "Omdat gammastraling door het lichaam naar buiten kan om gedetecteerd te worden", "Omdat gammastraling koud is", "Omdat alfastraling de camera laat smelten"],
-      antwoord: 1,
-      uitleg: "Gammastraling dringt naar buiten door tot de detector met minimale lokale weefselschade."
+      "type": "mc",
+      "vraag": "Welk materiaal is al voldoende om alfastraling (α) volledig tegen te houden?",
+      "opties": [
+        "Een dikke plaat lood van 10 cm",
+        "Een enkel velletje papier of de bovenste dode huidlaag",
+        "Een betonnen bunker",
+        "Een stalen kluis"
+      ],
+      "antwoord": 1,
+      "uitleg": "Alfastraling heeft een zeer klein doordringend vermogen (stopt bij papier)."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "Koolstof-14 heeft een halveringstijd van 5730 jaar. Een stuk hout bevat nog 50% van de beginactiviteit. Hoe oud is het hout in jaren?",
-      antwoord: "5730|5730 jaar|5.730",
-      uitleg: "50% over = 1 halveringstijd = 5730 jaar oud."
+      "type": "mc",
+      "vraag": "Waaruit bestaat bètastraling (β)?",
+      "opties": [
+        "Elektromagnetische golven",
+        "Heliumkernen",
+        "Snelle elektronen",
+        "Neutronen"
+      ],
+      "antwoord": 2,
+      "uitleg": "Bètastraling bestaat uit met hoge snelheid weggeschoten elektronen."
     },
     {
-      type: "waaronwaar",
-      niveau: 2,
-      vraag: "Een MRI-scan werkt met magneten en radiogolven en gebruikt GEEN gevaarlijke ioniserende straling.",
-      antwoord: true,
-      uitleg: "Waar: MRI is volkomen vrij van ioniserende straling."
+      "type": "mc",
+      "vraag": "Waarom is ioniserende straling gevaarlijk voor levende cellen?",
+      "opties": [
+        "Het verandert water in benzine",
+        "Het maakt cellen direct radioactief",
+        "Het koelt cellen af tot het vriespunt",
+        "Het kan DNA-moleculen in cellen beschadigen en mutaties veroorzaken"
+      ],
+      "antwoord": 3,
+      "uitleg": "Ioniserende straling kan atomen ioniseren en DNA beschadigen."
     },
     {
-      type: "mc",
-      niveau: 2,
-      vraag: "Wat voor straling gebruikt een CT-scanner?",
-      opties: ["Alfastraling", "Geluidsgolven", "Röntgenstraling", "Infrarood"],
-      antwoord: 2,
-      uitleg: "Een CT-scanner maakt 3D-beelden met ronddraaiende röntgenstralen."
+      "type": "waaronwaar",
+      "vraag": "Gammastraling heeft geen massa en geen elektrische lading.",
+      "antwoord": true,
+      "uitleg": "Waar: gammastraling bestaat uit fotonen (energiepakketjes)."
     },
     {
-      type: "invoer",
-      niveau: 3,
-      vraag: "Welke straling wordt gebruikt om bankbiljetten te controleren op echtheidskenmerken?",
-      antwoord: "UV|UV-straling|ultraviolet",
-      uitleg: "Onder UV-licht lichten fluorescerende veiligheidskenmerken op."
+      "type": "waaronwaar",
+      "vraag": "Besmetting met een radioactieve stof is hetzelfde als bestraling van buitenaf.",
+      "antwoord": false,
+      "uitleg": "Onwaar: bij bestraling vang je straling op; bij besmetting zit de radioactieve bron OP of IN je lichaam."
+    },
+    {
+      "type": "invoer",
+      "vraag": "In welke eenheid wordt de effectieve stralingsdosis voor de mens uitgedrukt?",
+      "antwoord": "Sievert|Sv|mSv",
+      "uitleg": "Dosis wordt gemeten in Sievert (Sv)."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Met welk meettoestel kun je ioniserende straling aantonen en 'klikjes' horen?",
+      "antwoord": "Geiger-Müller-teller|geigerteller|GM-teller",
+      "uitleg": "Een Geigerteller detecteert stralingsdeeltjes."
     }
   ]
 });

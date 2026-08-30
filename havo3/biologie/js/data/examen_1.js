@@ -1,5 +1,6 @@
-/* Toets 1 — Levensfasen, Ontwikkeling & Hormonen — Biologie HAVO 3
-   20 vragen conform DURU ENGINE_SPEC. */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Toets 1 — Levensfasen, Ontwikkeling & Hormonen
+   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-1",
   "titel": "Toets 1 — Levensfasen, Ontwikkeling & Hormonen",
@@ -23,12 +24,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke levensfase volgt er direct na de <b>puber</b>?",
       "opties": [
-        "Adolescent (jongvolwassene)",
         "Volwassene",
+        "Adolescent (jongvolwassene)",
         "Schoolkind",
         "Oudere"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Tussen de puber (12-16 jaar) en de volwassene (vanaf 21 jaar) zit de fase van de adolescent of jongvolwassene (16-21 jaar)."
     },
     {
@@ -47,24 +48,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is het fundamentele verschil tussen <b>lichamelijke ontwikkeling</b> en <b>geestelijke ontwikkeling</b>?",
       "opties": [
-        "Lichamelijke ontwikkeling betreft veranderingen aan je lichaam (zoals lengte en spieren); geestelijke ontwikkeling betreft leren met je hersenen en verstand",
-        "Lichamelijke ontwikkeling stopt bij 10 jaar, geestelijke ontwikkeling begint pas bij 30 jaar",
         "Lichamelijke ontwikkeling gebeurt door school, geestelijke ontwikkeling door sport",
+        "Lichamelijke ontwikkeling stopt bij 10 jaar, geestelijke ontwikkeling begint pas bij 30 jaar",
+        "Lichamelijke ontwikkeling betreft veranderingen aan je lichaam (zoals lengte en spieren); geestelijke ontwikkeling betreft leren met je hersenen en verstand",
         "Er is geen verschil; beide begrippen betekenen precies hetzelfde"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Lichamelijk = verandering aan het lijf (botten, spieren, huid). Geestelijk = verandering van het verstand (praten, denken, zelfstandigheid)."
     },
     {
       "type": "mc",
       "vraag": "Wat zijn <b>hormonen</b> in het menselijk lichaam?",
       "opties": [
-        "Chemische regelstoffen die via het bloed processen en organen in het lichaam aansturen",
+        "Zenuwcellen die elektrische schokjes naar de spieren sturen",
         "Spijsverteringsenzymen die vetten in de maag afbreken",
         "Witte bloedcellen die bacteriën doden",
-        "Zenuwcellen die elektrische schokjes naar de spieren sturen"
+        "Chemische regelstoffen die via het bloed processen en organen in het lichaam aansturen"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Hormonen zijn regelstoffen die door hormoonklieren aan het bloed worden afgegeven om organen aan te sturen."
     },
     {
@@ -101,24 +102,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Waarom reageert een levercel wél op een bepaald hormoon, maar een spiercel niet?",
       "opties": [
-        "Omdat de levercel wél de specifieke receptoren bezit met de passende vorm voor dat hormoon en de spiercel niet",
         "Omdat het bloed niet door de spieren stroomt",
+        "Omdat de levercel wél de specifieke receptoren bezit met de passende vorm voor dat hormoon en de spiercel niet",
         "Omdat spiercellen geen celmembraan hebben",
         "Omdat hormonen bang zijn voor spieren"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Alleen cellen van het doelwitorgaan hebben de juiste receptoren waarop het hormoon past."
     },
     {
       "type": "mc",
       "vraag": "Waardoor wordt de snelle groei van een kind in de allereerste levensmaanden na de geboorte voornamelijk bepaald?",
       "opties": [
-        "Door de voedingsstoffen die de baby binnenkrijgt",
-        "Door testosteron",
         "Door zware krachttraining",
+        "Door testosteron",
+        "Door de voedingsstoffen die de baby binnenkrijgt",
         "Door veel zonlicht"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "In de eerste maanden na de geboorte is goede voeding bepalend voor de groei. Te weinig voeding veroorzaakt groeiachterstand."
     },
     {
@@ -137,12 +138,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat gebeurt er met de veroudering van de huid naarmate iemand ouder wordt (vanaf 30 jaar)?",
       "opties": [
-        "Het tempo van veroudering neemt steeds verder toe",
+        "De veroudering blijft constant 1% per jaar",
         "De huid verjongt zichzelf na het 50e levensjaar",
         "De veroudering stopt volledig bij 40 jaar",
-        "De veroudering blijft constant 1% per jaar"
+        "Het tempo van veroudering neemt steeds verder toe"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Volgens bron 3 neemt de snelheid van de veroudering toe naarmate de leeftijd vordert."
     },
     {
@@ -171,11 +172,11 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe het kan dat een hormoon via het bloed overal in het lichaam terechtkomt, maar toch alléén bepaalde doelwitorganen activeert.",
+      "vraag": "Leg uit hoe het kan dat een signaalstof via het bloed door het hele lichaam stroomt, maar toch alléén bepaalde organen en weefsels activeert.",
       "sleutelwoorden": [
         "receptor/receptoren",
         "specifiek/vorm/sleutel-slot",
-        "doelwit/doelwitorgaan/doelwitcel"
+        "doelwitorgaan/doelwitcel/doelwit"
       ],
       "minTreffers": 2,
       "modelantwoord": "Hormonen stromen via het bloed door het hele lichaam, maar in het celmembraan van doelwitcellen zitten specifieke receptoren. Een hormoon heeft een unieke ruimtelijke vorm die als een sleutel op een slot precies past op de receptor van de doelwitcel. Cellen van andere organen hebben deze passende receptor niet en reageren daarom niet.",
@@ -183,10 +184,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee duidelijke voorbeelden van lichamelijke ontwikkeling én twee voorbeelden van geestelijke ontwikkeling bij de opgroeiende mens.",
+      "vraag": "Noem twee duidelijke voorbeelden van somatische (biologische) veranderingen én twee voorbeelden van cognitieve (mentale) vooruitgang bij de opgroeiende mens.",
       "sleutelwoorden": [
-        "lichamelijk/lengte/spieren/huid/groeispurt/baard/borsten",
-        "geestelijk/praten/lezen/schrijven/zelfstandig/keuzes"
+        "lengte/spieren/huid/groeispurt/baard/borsten",
+        "praten/lezen/schrijven/zelfstandig/keuzes/taal"
       ],
       "minTreffers": 2,
       "modelantwoord": "Lichamelijke ontwikkeling: 1) Groter en zwaarder worden (groeispurt), 2) Ontwikkeling van spieren en veroudering van de huid. Geestelijke ontwikkeling: 1) Leren praten, lezen en schrijven, 2) Zelfstandige keuzes maken en je eigen mening vormen.",

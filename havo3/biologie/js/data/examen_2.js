@@ -1,5 +1,6 @@
-/* Toets 2 — Botgroei, Groeischijven & Groeistoornissen — Biologie HAVO 3
-   20 vragen conform DURU ENGINE_SPEC. */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Toets 2 — Botgroei, Groeischijven & Groeistoornissen
+   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-2",
   "titel": "Toets 2 — Botgroei, Groeischijven & Groeistoornissen",
@@ -23,12 +24,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Op welke plekken in het menselijk skelet bevinden zich de <b>groeischijven</b>?",
       "opties": [
-        "Aan de uiteinden van de pijpbeenderen (armen en benen), in de wervelkolom, bij heupbeenderen en in de kaak",
         "Alleen in de schedelnaden en de vingertoppen",
+        "Aan de uiteinden van de pijpbeenderen (armen en benen), in de wervelkolom, bij heupbeenderen en in de kaak",
         "Precies in het midden van het dijbeenmerg",
         "Alleen in het hart en de longen"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Botten groeien vanuit groeischijven aan de uiteinden van pijpbeenderen, in de wervels, heupen en onderkaak."
     },
     {
@@ -47,12 +48,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat gebeurt er met de groeischijven tijdens en aan het einde van de puberteit?",
       "opties": [
-        "Ze verbenen (verkalken) en veranderen volledig in been (bot), waardoor de lengtegroei stopt",
-        "Ze lossen op en worden vloeibaar",
         "Ze worden tien keer zo dik en blijven levenslang doorgroeien",
+        "Ze lossen op en worden vloeibaar",
+        "Ze verbenen (verkalken) en veranderen volledig in been (bot), waardoor de lengtegroei stopt",
         "Ze veranderen in spierweefsel"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Aan het eind van de puberteit verbenen de groeischijven volledig tot been en stopt de lengtegroei."
     },
     {
@@ -71,12 +72,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke factor verklaart waarom volwassen mannen gemiddeld langer worden dan volwassen vrouwen?",
       "opties": [
-        "De groeispurt begint bij jongens op latere leeftijd (ze zijn al langer bij de start), is intensiever en duurt langer",
+        "Jongens stoppen pas met groeien als ze 40 jaar zijn",
         "Vrouwen maken geen enkel groeihormoon aan",
         "Mannen hebben twee keer zoveel botten als vrouwen",
-        "Jongens stoppen pas met groeien als ze 40 jaar zijn"
+        "De groeispurt begint bij jongens op latere leeftijd (ze zijn al langer bij de start), is intensiever en duurt langer"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "De groeispurt van jongens start later (rond 12-14 jr vs 10-12 jr bij meisjes), duurt langer en verloopt met een hogere groeisnelheid."
     },
     {
@@ -107,12 +108,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe kan een arts een kind met dwerggroei door een hypofyse-afwijking effectief behandelen?",
       "opties": [
-        "Door het kind regelmatig extra groeihormoon toe te dienen via injecties",
         "Door de botten met gewichten uit te rekken",
+        "Door het kind regelmatig extra groeihormoon toe te dienen via injecties",
         "Door alleen maar suiker en vet te laten eten",
         "Door de groeischijven operatief te verwijderen"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Door extra groeihormoon toe te dienen kan de groeiachterstand worden ingehaald."
     },
     {
@@ -125,12 +126,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat kan een arts doen wanneer uit groeidiagrammen blijkt dat een jongere gevaarlijk extreem lang dreigt te worden?",
       "opties": [
-        "Gedurende 1 tot 2,5 jaar medicijnen voorschrijven die de groeispurt eerder stoppen, of een operatie door een orthopeed",
-        "De hypofyse operatief vergroten",
         "Het kind verbieden om te slapen",
+        "De hypofyse operatief vergroten",
+        "Gedurende 1 tot 2,5 jaar medicijnen voorschrijven die de groeispurt eerder stoppen, of een operatie door een orthopeed",
         "Niets, extreme lengte kan nooit medisch worden beïnvloed"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Groeiremmende medicatie of een ingreep door een orthopeed kan de groeischijven voortijdig laten sluiten."
     },
     {
@@ -143,12 +144,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke beroemde voetballer werd als kind behandeld met groeihormonen tegen dwerggroei en bereikte daardoor een lengte van 1,69 m?",
       "opties": [
-        "Lionel Messi",
+        "Virgil van Dijk",
         "Cristiano Ronaldo",
         "Kylian Mbappé",
-        "Virgil van Dijk"
+        "Lionel Messi"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Lionel Messi kreeg vanaf zijn 11e levensjaar groeihormooninjecties omdat zijn lichaam te weinig groeihormoon aanmaakte."
     },
     {
@@ -171,12 +172,12 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg stap voor stap uit hoe botten langer worden vanaf het moment dat de hypofyse groeihormoon aanmaakt tot het moment dat het bot stopt met groeien.",
+      "vraag": "Leg stap voor stap uit hoe botten langer worden vanaf het moment van hormoonproductie in de hersenen tot het moment dat het bot stopt met groeien.",
       "sleutelwoorden": [
-        "hypofyse/groeihormoon/bloed",
+        "hypofyse/groeihormoon/bloedbaan",
         "groeischijven/kraakbeencellen/uiteinden",
         "celdeling/celgroei",
-        "verbenen/verkalken/been/bot"
+        "verbenen/verkalken/hard bot"
       ],
       "minTreffers": 3,
       "modelantwoord": "1) De hypofyse maakt groeihormoon en geeft dit af aan het bloed. 2) Het hormoon bereikt de kraakbeencellen in de groeischijven aan de uiteinden van de botten. 3) De kraakbeencellen gaan sneller delen (celdeling) en de nieuwe cellen worden groter (celgroei), waardoor het bot langer wordt. 4) Aan het einde van de puberteit verbenen (verkalken) de groeischijven tot hard been/bot, waardoor de lengtegroei definitief stopt.",

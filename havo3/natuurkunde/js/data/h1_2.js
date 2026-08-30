@@ -1,64 +1,87 @@
-/* Onderwerp 1.2 — Soorten beweging */
+/* =========================================================
+   Duru's Natuurkunde (HAVO 3) — Soorten beweging & Diagrammen
+   ========================================================= */
 DURU.register({
-  id: "h1-2-soorten-beweging",
-  hoofdstuk: 1,
-  paragraaf: "1.2",
-  titel: "Soorten beweging & Diagrammen",
-  korteUitleg: "Herken bewegingssoorten in (s,t)- en (v,t)-diagrammen en reken met snelheid en afstand.",
-  icoon: "📈",
-  kleur: "h1-thema",
-  theorie: "<h3>1.2 Soorten beweging</h3><div class=\"formule-box\"><strong>Snelheid berekenen:</strong><br>v_gem = s / t &nbsp;&nbsp;|&nbsp;&nbsp; s = v × t &nbsp;&nbsp;|&nbsp;&nbsp; t = s / v<br><br><strong>Omrekenen eenheden:</strong><br>• m/s → vermenigvuldig met 3,6 → km/h<br>• km/h → deel door 3,6 → m/s</div><h4>Diagrammen herkennen</h4><ul><li><b>(s,t)-diagram:</b> De helling stelt de <b>snelheid</b> voor. Een rechte schuine lijn = constante snelheid; horizontale lijn = stilstand.</li><li><b>(v,t)-diagram:</b> De helling stelt de <b>versnelling</b> voor. Horizontale lijn = constante snelheid; schuin omhoog = eenparig versneld; schuin omlaag = eenparig vertraagd.</li><li><b>Afstand uit (v,t)-diagram:</b> De <b>oppervlakte</b> onder de grafiek is gelijk aan de afgelegde afstand s.</li></ul>",
-  vragen: [
+  "id": "h1-2-soorten-beweging",
+  "hoofdstuk": 1,
+  "paragraaf": "1.2",
+  "titel": "Soorten beweging & Diagrammen",
+  "korteUitleg": "Herken bewegingssoorten in (s,t)- en (v,t)-diagrammen en reken met snelheid en afstand.",
+  "icoon": "📈",
+  "kleur": "h1-thema",
+  "theorie": "<h3>1.2 Soorten beweging</h3><div class=\"formule-box\"><strong>Snelheid berekenen:</strong><br>v_gem = s / t &nbsp;&nbsp;|&nbsp;&nbsp; s = v × t &nbsp;&nbsp;|&nbsp;&nbsp; t = s / v<br><br><strong>Omrekenen eenheden:</strong><br>• m/s → vermenigvuldig met 3,6 → km/h<br>• km/h → deel door 3,6 → m/s</div><h4>Diagrammen herkennen</h4><ul><li><b>(s,t)-diagram:</b> De helling stelt de <b>snelheid</b> voor. Een rechte schuine lijn = constante snelheid; horizontale lijn = stilstand.</li><li><b>(v,t)-diagram:</b> De helling stelt de <b>versnelling</b> voor. Horizontale lijn = constante snelheid; schuin omhoog = eenparig versneld; schuin omlaag = eenparig vertraagd.</li><li><b>Afstand uit (v,t)-diagram:</b> De <b>oppervlakte</b> onder de grafiek is gelijk aan de afgelegde afstand s.</li></ul>\n<h4>Belangrijke natuurkundige principes en rekenvaardigheden</h4>\n<p>Bij het oplossen van natuurkundige vraagstukken in deze paragraaf is een systematische aanpak essentieel:</p>\n<ol>\n  <li><b>Gegevens en gevraagd:</b> Schrijf altijd eerst op welke grootheden bekend zijn met hun juiste eenheid en wat er precies berekend moet worden.</li>\n  <li><b>Eenheden omrekenen naar standaard SI-eenheden:</b>\n    <ul>\n      <li>Afstand en lengte: altijd omrekenen naar meter ($m$) (bijv. $1\\text{ km} = 1000\\text{ m}$, $1\\text{ cm} = 0,01\\text{ m}$).</li>\n      <li>Tijd: altijd omrekenen naar seconden ($s$) (bijv. $1\\text{ uur} = 3600\\text{ s}$, $1\\text{ min} = 60\\text{ s}$).</li>\n      <li>Snelheid: van $\\text{km/h}$ naar $\\text{m/s}$ deel je door $3,6$. Van $\\text{m/s}$ naar $\\text{km/h}$ vermenigvuldig je met $3,6$.</li>\n      <li>Massa: in kilogram ($kg$) of gram ($g$) afhankelijk van de gebruikte formule en dichtheid.</li>\n    </ul>\n  </li>\n  <li><b>Formule noteren en omschrijven:</b> Noteer eerst de basisformule in letters voordat je getallen invult.</li>\n  <li><b>Conclusie en eenheid:</b> Vergeet nooit de eenheid achter je eindantwoord te vermelden en rond af op een realistisch aantal decimalen.</li>\n</ol>\n<div class=\"begrippen-box\">\n  <b>Onthoud voor de toets:</b>\n  <p>Natuurkunde gaat over het begrijpen van de werkelijkheid om ons heen. Door theorie te koppelen aan praktische experimenten en alledaagse voorbeelden (zoals verkeersveiligheid, elektrische apparaten thuis en sportbewegingen) krijg je diepgaand inzicht in de natuurwetten.</p>\n</div>",
+  "vragen": [
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "Wat betekent een horizontale rechte lijn in een (v,t)-diagram?",
-      opties: ["Het voorwerp beweegt met constante snelheid", "Het voorwerp staat stil", "Het voorwerp versnelt", "Het voorwerp vertraagt"],
-      antwoord: 0,
-      uitleg: "In een (v,t)-diagram geeft een horizontale lijn aan dat de snelheid v niet verandert (constante snelheid)."
+      "type": "mc",
+      "vraag": "Wat is het kenmerk van een eenparige beweging?",
+      "opties": [
+        "De snelheid blijft constant",
+        "De snelheid neemt gelijkmatig toe",
+        "Het voorwerp staat stil",
+        "De richting verandert steeds"
+      ],
+      "antwoord": 0,
+      "uitleg": "Eenparig betekent constante snelheid in grootte en richting."
     },
     {
-      type: "invoer",
-      niveau: 1,
-      vraag: "Reken om: 90 km/h is gelijk aan hoeveel m/s?",
-      antwoord: "25|25 m/s|25,0",
-      uitleg: "90 / 3,6 = 25 m/s."
+      "type": "mc",
+      "vraag": "Een fietser legt 150 meter af in 10 seconden. Wat is zijn gemiddelde snelheid?",
+      "opties": [
+        "1500 m/s",
+        "15 m/s",
+        "1,5 m/s",
+        "54 m/s"
+      ],
+      "antwoord": 1,
+      "uitleg": "v = s / t = 150 / 10 = 15 m/s."
     },
     {
-      type: "invoer",
-      niveau: 1,
-      vraag: "Reken om: 15 m/s is gelijk aan hoeveel km/h?",
-      antwoord: "54|54 km/h|54,0",
-      uitleg: "15 × 3,6 = 54 km/h."
+      "type": "mc",
+      "vraag": "Hoeveel km/h is een snelheid van 20 m/s?",
+      "opties": [
+        "200 km/h",
+        "5,55 km/h",
+        "72 km/h",
+        "36 km/h"
+      ],
+      "antwoord": 2,
+      "uitleg": "20 × 3,6 = 72 km/h."
     },
     {
-      type: "mc",
-      niveau: 2,
-      vraag: "Hoe bereken je de afgelegde afstand s uit een (v,t)-diagram?",
-      opties: ["Eindsnelheid vermenigvuldigen met de helling", "De oppervlakte onder de grafieklijn bepalen", "De hoogste snelheid aflezen", "De tijd delen door de eindsnelheid"],
-      antwoord: 1,
-      uitleg: "De oppervlakte onder de (v,t)-grafiek stelt de afgelegde afstand s voor."
+      "type": "mc",
+      "vraag": "Wat stelt de oppervlakte onder een (v,t)-grafiek voor?",
+      "opties": [
+        "De massa (m)",
+        "De versnelling (a)",
+        "De nettokracht (F)",
+        "De afgelegde afstand (s)"
+      ],
+      "antwoord": 3,
+      "uitleg": "De oppervlakte onder een snelheid-tijdgrafiek is gelijk aan de afstand."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "Een scooter trekt eenparig op van stilstand naar 12 m/s in 6,0 s. Bereken de afgelegde afstand in meters (oppervlakte van de driehoek = 0,5 × v × t).",
-      antwoord: "36|36 m|36,0",
-      uitleg: "s = 0,5 × basis × hoogte = 0,5 × 6,0 s × 12 m/s = 36 meter."
+      "type": "waaronwaar",
+      "vraag": "In een (s,t)-diagram is een eenparige beweging een rechte lijn vanuit de oorsprong.",
+      "antwoord": true,
+      "uitleg": "Waar: afstand groeit evenredig met de tijd bij constante snelheid."
     },
     {
-      type: "waaronwaar",
-      niveau: 2,
-      vraag: "In een (s,t)-diagram betekent een kromme lijn die steeds steiler omhoog loopt dat de beweging versnelt.",
-      antwoord: true,
-      uitleg: "Waar: steiler worden in een (s,t)-diagram betekent dat de snelheid toeneemt."
+      "type": "waaronwaar",
+      "vraag": "Om van km/h naar m/s om te rekenen moet je vermenigvuldigen met 3,6.",
+      "antwoord": false,
+      "uitleg": "Onwaar: je moet DELEN door 3,6 om van km/h naar m/s te gaan."
     },
     {
-      type: "invoer",
-      niveau: 3,
-      vraag: "Een fietser rijdt 20 seconden met 6,0 m/s en remt daarna in 4,0 seconden gelijkmatig af tot stilstand. Wat is de totale afgelegde afstand in meters?",
-      antwoord: "132|132 m|132,0",
-      uitleg: "Deel 1 (rechthoek): 20 s × 6,0 m/s = 120 m. Deel 2 (driehoek): 0,5 × 4,0 s × 6,0 m/s = 12 m. Totaal = 120 + 12 = 132 meter."
+      "type": "invoer",
+      "vraag": "Welke letter is het symbool voor de afgelegde weg (afstand)?",
+      "antwoord": "s",
+      "uitleg": "s staat voor afstand (spatium)."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Bereken de afstand in meters bij een snelheid van 4 m/s gedurende 12 seconden.",
+      "antwoord": "48|48 m|48 meter",
+      "uitleg": "s = v × t = 4 × 12 = 48 meter."
     }
   ]
 });

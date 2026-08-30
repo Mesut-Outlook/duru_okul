@@ -1,5 +1,6 @@
-/* Toets 4 — Acne, Zweet, Emoties & Diergedrag — Biologie HAVO 3
-   20 vragen conform DURU ENGINE_SPEC. */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Toets 4 — Acne, Zweet, Emoties & Diergedrag
+   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-4",
   "titel": "Toets 4 — Acne, Zweet, Emoties & Diergedrag",
@@ -29,12 +30,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is een <b>mee-eter</b> en hoe ontstaat deze?",
       "opties": [
-        "Een klein zwart puntje op de huid dat ontstaat doordat een porie verstopt raakt door een teveel aan talg",
         "Een klein insect dat op de huid leeft",
+        "Een klein zwart puntje op de huid dat ontstaat doordat een porie verstopt raakt door een teveel aan talg",
         "Een pigmentvlek veroorzaakt door de zon",
         "Een open wondje door krabben"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Als er te veel talg wordt geproduceerd, raakt de porie verstopt. Dit zichtbare zwarte puntje heet een mee-eter."
     },
     {
@@ -53,24 +54,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Op welke plekken van het lichaam komen jeugdpuistjes (acne) het allermeest voor?",
       "opties": [
-        "In het gezicht (voorhoofd, kin) en bovenaan de rug",
-        "Op de voetzolen en handpalmen",
         "Op de knieën en ellebogen",
+        "Op de voetzolen en handpalmen",
+        "In het gezicht (voorhoofd, kin) en bovenaan de rug",
         "Alleen op de vingernagels"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Puistjes komen vooral voor in het gezicht (voorhoofd, neus, kin) en op het bovenste deel van de rug en borst."
     },
     {
       "type": "mc",
       "vraag": "Hoeveel procent van de jongeren heeft tijdens de puberteit volgens het boek last van puistjes?",
       "opties": [
-        "Bijna driekwart (ca. 75%)",
+        "Minder dan 1%",
         "Slechts 5%",
         "Precies 100%",
-        "Minder dan 1%"
+        "Bijna driekwart (ca. 75%)"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Bijna driekwart (ongeveer 75%) van de pubers heeft last van puistjes."
     },
     {
@@ -95,12 +96,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Waarom beweegt een puber direct na een groeispurt vaak wat onhandig of slungelig?",
       "opties": [
-        "Omdat de spieren later groeien dan de botten en tijdelijk nog niet sterk genoeg zijn voor de langere armen en benen",
         "Omdat de zenuwen korter zijn geworden",
+        "Omdat de spieren later groeien dan de botten en tijdelijk nog niet sterk genoeg zijn voor de langere armen en benen",
         "Omdat het gewicht van het hoofd verdubbelt",
         "Omdat pubers geen kraakbeen meer hebben"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Spiergroei en spierkracht lopen achter op de plotseling verlengde botten, wat zorgt voor tijdelijke slungeligheid."
     },
     {
@@ -119,24 +120,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe komt het dat ook dieren tijdens hun puberteit vaak ander of opstandig gedrag vertonen?",
       "opties": [
-        "Dieren worden net als mensen onder invloed van hormonen geslachtsrijp, wat zorgt voor gedragsveranderingen",
-        "Dieren kijken te veel televisie",
         "Dieren verliezen hun tanden in de puberteit",
+        "Dieren kijken te veel televisie",
+        "Dieren worden net als mensen onder invloed van hormonen geslachtsrijp, wat zorgt voor gedragsveranderingen",
         "Dieren kunnen niet zweten"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Hormonen sturen bij zoogdieren het geslachtsrijp worden aan en beïnvloeden ook direct de hersenen en het gedrag."
     },
     {
       "type": "mc",
       "vraag": "Welk voorbeeld van dierlijk pubergedrag wordt in het boek beschreven over een jonge dolfijn in Nieuw-Zeeland?",
       "opties": [
-        "Hij sprong over waterskiërs, stal surfplanken en zocht de grenzen op bij zwemmers",
+        "Hij bouwde een nest van schelpen",
         "Hij weigerde vis te eten en at alleen zeewier",
         "Hij ging op het strand slapen tussen de honden",
-        "Hij bouwde een nest van schelpen"
+        "Hij sprong over waterskiërs, stal surfplanken en zocht de grenzen op bij zwemmers"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "De puberdolfijn vertoonde typisch grensverleggend pubergedrag door waterskiërs en zwemmers uit te dagen."
     },
     {

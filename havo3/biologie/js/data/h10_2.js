@@ -1,4 +1,6 @@
-/* Onderwerp 10.2 — Puberteit, Hormonen & Transgender */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Puberteit, Hormonen & Transgender
+   ========================================================= */
 DURU.register({
   "id": "bio-h10-2-puberteit",
   "hoofdstuk": 10,
@@ -27,20 +29,39 @@ DURU.register({
       "niveau": 1,
       "vraag": "Welk hormoon produceren de zaadballen in de puberteit onder invloed van de hypofyse?",
       "opties": [
-        "Testosteron",
         "Oestrogeen",
+        "Testosteron",
         "Groeihormoon",
         "Insuline"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "De zaadballen produceren het mannelijk geslachtshormoon testosteron."
     },
     {
-      "type": "invoer",
-      "niveau": 1,
-      "vraag": "Welk vrouwelijk geslachtshormoon wordt in de puberteit door de eierstokken aangemaakt?",
-      "antwoord": "oestrogeen|oestrogenen|estrogen",
-      "uitleg": "De eierstokken maken oestrogeen aan, wat de vrouwelijke secundaire geslachtskenmerken stimuleert."
+      "type": "mc",
+      "niveau": 2,
+      "vraag": "Hoe ontstaat een jeugdpuistje (acne)?",
+      "opties": [
+        "Zweetklieren produceren te veel zout waardoor de huid beschadigt",
+        "Door te weinig water te drinken droogt de huid uit",
+        "Talgklieren maken extra veel talg; een porie raakt verstopt (mee-eter) en gaat ontsteken door bacteriën",
+        "Het bot groeit door de huid heen"
+      ],
+      "antwoord": 2,
+      "uitleg": "Overmatige talgproductie verstopt de porie (mee-eter), en als bacteriën hierin gaan groeien ontstaat een ontstoken puistje."
+    },
+    {
+      "type": "mc",
+      "niveau": 2,
+      "vraag": "Wat is het verschil tussen een travestiet en een transseksueel?",
+      "opties": [
+        "Een travestiet is altijd jonger dan 18 jaar",
+        "Er is geen enkel verschil tussen beiden",
+        "Een transseksueel draagt alleen pruiken, een travestiet ondergaat operaties",
+        "Een travestiet kleedt zich af en toe als het andere geslacht voor plezier, maar voelt zich niet in het verkeerde lichaam geboren; een transseksueel wil daadwerkelijk van geslacht veranderen"
+      ],
+      "antwoord": 3,
+      "uitleg": "Travestieten kleden zich incidenteel anders, maar ervaren geen genderdysforie (het gevoel in een verkeerd lichaam te zitten)."
     },
     {
       "type": "waaronwaar",
@@ -50,19 +71,6 @@ DURU.register({
       "uitleg": "Onwaar: borstgroei en stemverlaging zijn secundaire geslachtskenmerken. Tertiaire kenmerken betreffen verschillen in gedrag, kleding en denken."
     },
     {
-      "type": "mc",
-      "niveau": 2,
-      "vraag": "Hoe ontstaat een jeugdpuistje (acne)?",
-      "opties": [
-        "Talgklieren maken extra veel talg; een porie raakt verstopt (mee-eter) en gaat ontsteken door bacteriën",
-        "Door te weinig water te drinken droogt de huid uit",
-        "Zweetklieren produceren te veel zout waardoor de huid beschadigt",
-        "Het bot groeit door de huid heen"
-      ],
-      "antwoord": 0,
-      "uitleg": "Overmatige talgproductie verstopt de porie (mee-eter), en als bacteriën hierin gaan groeien ontstaat een ontstoken puistje."
-    },
-    {
       "type": "waaronwaar",
       "niveau": 2,
       "vraag": "De zweetklieren onder de oksels zijn vanaf de geboorte al even actief als bij een volwassene.",
@@ -70,17 +78,11 @@ DURU.register({
       "uitleg": "Onwaar: de zweetklieren onder de oksels gaan pas in de puberteit actief werken."
     },
     {
-      "type": "mc",
-      "niveau": 2,
-      "vraag": "Wat is het verschil tussen een travestiet en een transseksueel?",
-      "opties": [
-        "Een travestiet kleedt zich af en toe als het andere geslacht voor plezier, maar voelt zich niet in het verkeerde lichaam geboren; een transseksueel wil daadwerkelijk van geslacht veranderen",
-        "Er is geen enkel verschil tussen beiden",
-        "Een transseksueel draagt alleen pruiken, een travestiet ondergaat operaties",
-        "Een travestiet is altijd jonger dan 18 jaar"
-      ],
-      "antwoord": 0,
-      "uitleg": "Travestieten kleden zich incidenteel anders, maar ervaren geen genderdysforie (het gevoel in een verkeerd lichaam te zitten)."
+      "type": "invoer",
+      "niveau": 1,
+      "vraag": "Welk vrouwelijk geslachtshormoon wordt in de puberteit door de eierstokken aangemaakt?",
+      "antwoord": "oestrogeen|oestrogenen|estrogen",
+      "uitleg": "De eierstokken maken oestrogeen aan, wat de vrouwelijke secundaire geslachtskenmerken stimuleert."
     },
     {
       "type": "invoer",
@@ -88,40 +90,6 @@ DURU.register({
       "vraag": "Hoe noem je de aandoening waarbij iemands geboortegeslacht niet overeenkomt met diens innerlijke gevoel en gedrag?",
       "antwoord": "genderdysforie|transgender|gender-identiteitsstoornis",
       "uitleg": "Genderdysforie (of transgender zijn) betekent dat iemands biologische geslacht niet aansluit bij de genderidentiteit."
-    },
-    {
-      "type": "waaronwaar",
-      "niveau": 3,
-      "vraag": "Als een volwassen man een hormoonbehandeling met oestrogeen ondergaat, wordt zijn stem automatisch weer hoger.",
-      "antwoord": false,
-      "uitleg": "Onwaar: oestrogeen heeft geen invloed op het strottenhoofd / de stembanden; de stem blijft laag (hiervoor is eventueel een stemoperatie/logopedie nodig)."
-    },
-    {
-      "type": "invoer",
-      "niveau": 2,
-      "vraag": "Wat is de minimumleeftijd (in jaren) om in Nederland een definitieve geslachtsoperatie te mogen ondergaan?",
-      "antwoord": "18|18 jaar|achttien",
-      "uitleg": "Voor een definitieve geslachtsoperatie moet iemand minimaal 18 jaar oud zijn."
-    },
-    {
-      "type": "mc",
-      "niveau": 2,
-      "vraag": "Waarom beweegt een jongere direct na een flinke groeispurt vaak wat onhandig of slungelig?",
-      "opties": [
-        "Doordat de spieren later groeien dan de botten en tijdelijk nog niet sterk genoeg zijn voor de langere ledematen",
-        "Doordat het evenwichtsorgaan in het oor tijdelijk stopt met werken",
-        "Doordat de hersenen kleiner worden in de puberteit",
-        "Doordat de knieschijven tijdelijk verdwijnen"
-      ],
-      "antwoord": 0,
-      "uitleg": "Spiergroei loopt achter op de snelle lengtegroei van het skelet, wat zorgt voor tijdelijke slungeligheid."
-    },
-    {
-      "type": "waaronwaar",
-      "niveau": 2,
-      "vraag": "Onderzoek heeft aangetoond dat jonge muizen in hun puberteit tijdelijk minder angst kennen voor gevaarlijke geluiden.",
-      "antwoord": true,
-      "uitleg": "Waar: onder invloed van puberteitshormonen verdwijnt bij puberende muizen tijdelijk de angstreactie op aangeleerde alarmsignalen."
     }
   ]
 });

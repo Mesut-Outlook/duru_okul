@@ -1,111 +1,205 @@
+/* =========================================================
+   Duru's Wiskunde (HAVO 3) — Proeftoets 4 — Steel-bladdiagram & Kwartielen
+   ========================================================= */
 DURU.registerExamen({
-  id: "ex-wiskunde-h2-4",
-  titel: "Proeftoets 4 — Gemengde Proeftoets Statistiek",
-  vak: "Wiskunde · H2 Statistiek",
-  icoon: "📊",
-  duurMin: 20,
-  vragen: [
+  "id": "ex-wiskunde-h2-4",
+  "hoofdstuk": 2,
+  "titel": "Proeftoets 4 — Steel-bladdiagram & Kwartielen",
+  "vak": "Wiskunde · H2 Statistiek",
+  "icoon": "🌳",
+  "duurMin": 20,
+  "vragen": [
     {
-      type: "mc",
-      vraag: "Een T-shirt kost met 35% korting € 8,95. Hoeveel procent hoort bij de prijs die Josien betaalt?",
-      opties: ["35%", "65%", "100%", "135%"],
-      antwoord: 1,
-      uitleg: "100% - 35% korting = 65%."
+      "type": "mc",
+      "vraag": "In een steel-bladdiagram staat steel 5 met bladeren 1, 4, 7 (legenda 5 | 1 = 51). Welke getallen zijn dit?",
+      "opties": [
+        "51, 54, 57",
+        "5, 1, 4, 7",
+        "15, 45, 75",
+        "5147"
+      ],
+      "antwoord": 0,
+      "uitleg": "Steel 5 met bladeren 1, 4 en 7 vormt 51, 54 en 57."
     },
     {
-      type: "waaronwaar",
-      vraag: "De middelpuntshoek van een sector bereken je met de formule: (percentage ÷ 100) × 360°.",
-      antwoord: true,
-      uitleg: "Waar. (percentage ÷ 100) × 360° geeft de hoek van de sector."
+      "type": "mc",
+      "vraag": "Wat is de spreidingsbreedte van een dataset met minimum 14 en maximum 62?",
+      "opties": [
+        "46",
+        "48",
+        "50",
+        "76"
+      ],
+      "antwoord": 1,
+      "uitleg": "Spreidingsbreedte = Max - Min = 62 - 14 = 48."
     },
     {
-      type: "invul",
-      vraag: "Op een sportschool doen 40 leerlingen aan voetbal, 28 aan volleybal en 22 aan basketbal. Hoeveel graden is de sector 'voetbal' in een cirkeldiagram?",
-      antwoord: "160|160°",
-      uitleg: "Totaal = 40 + 28 + 22 = 90 leerlingen. Voetbal = (40 ÷ 90) × 360° = 160°."
+      "type": "mc",
+      "vraag": "Welk kwartiel komt exact overeen met de mediaan van de hele dataset?",
+      "opties": [
+        "Eerste kwartiel (Q1)",
+        "Derde kwartiel (Q3)",
+        "Tweede kwartiel (Q2)",
+        "Vierde kwartiel (Q4)"
+      ],
+      "antwoord": 2,
+      "uitleg": "Q2 is de mediaan (50% punt)."
     },
     {
-      type: "mc",
-      vraag: "Hoe noem je een tabel waarin vermeld staat hoe vaak elke waarde voorkomt?",
-      opties: ["Verhoudingstabel", "Frequentietabel", "Kruistabel", "Steelbladdiagram"],
-      antwoord: 1,
-      uitleg: "Een frequentietabel vermeldt de frequenties van waarden."
+      "type": "mc",
+      "vraag": "Als Q1 = 30 en Q3 = 55, wat is dan de kwartielafstand?",
+      "opties": [
+        "20",
+        "85",
+        "35",
+        "25"
+      ],
+      "antwoord": 3,
+      "uitleg": "Kwartielafstand = Q3 - Q1 = 55 - 30 = 25."
     },
     {
-      type: "open",
-      vraag: "Josien krijgt € 11,02 korting op een trui. Dit is 24% van de normale prijs. Bereken de normale prijs van de trui in euro's.",
-      sleutelwoorden: ["45,92", "45,92 euro", "45.92"],
-      minTreffers: 1,
-      modelantwoord: "11,02 ÷ 24 × 100 = € 45,916... → afgerond € 45,92.",
-      uitleg: "11,02 ÷ 24 × 100 = € 45,92."
+      "type": "mc",
+      "vraag": "Hoeveel procent van de waarnemingen ligt boven het derde kwartiel (Q3)?",
+      "opties": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "antwoord": 0,
+      "uitleg": "Boven Q3 bevindt zich het hoogste kwart (25%)."
     },
     {
-      type: "mc",
-      vraag: "Gegeven cijfers: 5, 6, 7, 7, 8. Wat is het gemiddelde?",
-      opties: ["6,4", "6,6", "6,8", "7,0"],
-      antwoord: 1,
-      uitleg: "(5 + 6 + 7 + 7 + 8) ÷ 5 = 33 ÷ 5 = 6,6."
+      "type": "mc",
+      "vraag": "In een steel-bladdiagram met legenda 2 | 3 = 2,3 staat steel 4 met blad 8. Welk getal is dit?",
+      "opties": [
+        "48",
+        "4,8",
+        "0,48",
+        "480"
+      ],
+      "antwoord": 1,
+      "uitleg": "Volgens de legenda staat 4 | 8 voor 4,8."
     },
     {
-      type: "waaronwaar",
-      vraag: "De mediaan van een oneven aantal geordende getallen is het exacte middelste getal.",
-      antwoord: true,
-      uitleg: "Waar. Bij oneven n is de mediaan de middelste waarde."
+      "type": "mc",
+      "vraag": "Hoeveel waarnemingen bevat een steel-bladdiagram met in totaal 18 getallen in de bladeren?",
+      "opties": [
+        "9",
+        "36",
+        "18",
+        "Afhankelijk van de steel"
+      ],
+      "antwoord": 2,
+      "uitleg": "Elk cijfer in het blad vertegenwoordigt exact één waarneming (dus 18 waarnemingen)."
     },
     {
-      type: "invul",
-      vraag: "In een steelbladdiagram staan bij steel 17 de bladeren: 0, 0, 1, 4, 8. Uit hoeveel metingen bestaat deze steel?",
-      antwoord: "5",
-      uitleg: "5 bladeren = 5 metingen."
+      "type": "mc",
+      "vraag": "Wat is de spreidingsbreedte van de getallen: 5, 8, 12, 19, 27?",
+      "opties": [
+        "20",
+        "27",
+        "24",
+        "22"
+      ],
+      "antwoord": 3,
+      "uitleg": "Max (27) - Min (5) = 22."
     },
     {
-      type: "mc",
-      vraag: "In januari stonden er in een gemeente 17.613 koopwoningen, wat 73,8% van alle woningen was. Hoeveel woningen stonden er in totaal? (Rond af op een geheel getal).",
-      opties: ["22.500", "23.866", "24.110", "25.000"],
-      antwoord: 1,
-      uitleg: "17.613 ÷ 73,8 × 100 = 23.865,85... → afgerond 23.866 woningen."
+      "type": "mc",
+      "vraag": "Welk percentage van de data ligt tussen het minimum en het eerste kwartiel (Q1)?",
+      "opties": [
+        "25%",
+        "50%",
+        "75%",
+        "10%"
+      ],
+      "antwoord": 0,
+      "uitleg": "Van minimum tot Q1 is het eerste kwart (25%)."
     },
     {
-      type: "open",
-      vraag: "Leg uit hoe je bij een frequentietabel de gemiddelde waarde berekenen kunt.",
-      sleutelwoorden: ["vermenigvuldig", "keer", "som", "delen"],
-      minTreffers: 1,
-      modelantwoord: "Vermenigvuldig elke waarde met zijn frequentie, tel alle uitkomsten bij elkaar op en deel deze totale som door de som van alle frequenties.",
-      uitleg: "(∑ waarde × freq) ÷ (∑ freq)."
+      "type": "mc",
+      "vraag": "Wat is het eerste kwartiel van de getallenrij: 2, 4, 6, 8, 10, 12, 14?",
+      "opties": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "antwoord": 1,
+      "uitleg": "Mediaan = 8. Linkerhelft = 2, 4, 6. De mediaan van de linkerhelft is Q1 = 4."
     },
     {
-      type: "mc",
-      vraag: "Wat stelt de steel in een steelbladdiagram meestal voor als het om gewichten van 45 g tot 68 g gaat?",
-      opties: ["Honderdtallen", "Tientallen", "Eenheden", "Decimalen"],
-      antwoord: 1,
-      uitleg: "De steel bevat de tientallen (4, 5, 6) en de bladeren de eenheden."
+      "type": "waaronwaar",
+      "vraag": "In een steel-bladdiagram moeten de bladeren per steel altijd van klein naar groot worden gerangschikt.",
+      "antwoord": true,
+      "uitleg": "Waar: dit is verplicht om de mediaan en kwartielen direct te kunnen aflezen."
     },
     {
-      type: "waaronwaar",
-      vraag: "Een lijndiagram is minder geschikt dan een staafdiagram om losse categorieën fruit te vergelijken.",
-      antwoord: true,
-      uitleg: "Waar. Categorieën fruit hebben geen continu tijdsverloop, dus een staafdiagram is daar beter voor."
+      "type": "waaronwaar",
+      "vraag": "De kwartielafstand bereken je met de formule Q1 + Q3.",
+      "antwoord": false,
+      "uitleg": "Onwaar: kwartielafstand = Q3 - Q1."
     },
     {
-      type: "invul",
-      vraag: "In een klas zijn 4 BMX-rijders, wat 14,8% van de klas is. Hoeveel leerlingen zitten er in de klas? (Rond af op een geheel getal).",
-      antwoord: "27|27 leerlingen",
-      uitleg: "4 ÷ 14,8 × 100 = 27,02... → 27 leerlingen."
+      "type": "waaronwaar",
+      "vraag": "Een steel-bladdiagram behoudt alle individuele meetwaarden van de data.",
+      "antwoord": true,
+      "uitleg": "Waar: je kunt elk getal direct reconstrueren."
     },
     {
-      type: "mc",
-      vraag: "Gegeven de cijfers: 4, 6, 7, 8, 9, 10. Wat is de mediaan?",
-      opties: ["7", "7,5", "8", "8,5"],
-      antwoord: 1,
-      uitleg: "(7 + 8) ÷ 2 = 7,5."
+      "type": "waaronwaar",
+      "vraag": "De spreidingsbreedte is ongevoelig voor uitschieters.",
+      "antwoord": false,
+      "uitleg": "Onwaar: spreidingsbreedte gebruikt juist het absolute minimum en maximum en is extreem gevoelig voor uitschieters."
     },
     {
-      type: "open",
-      vraag: "Bereken de hoek in graden voor een sector die 40% van een cirkeldiagram beslaat.",
-      sleutelwoorden: ["144", "144°", "144 graden"],
-      minTreffers: 1,
-      modelantwoord: "0,40 × 360° = 144°.",
-      uitleg: "0,40 × 360° = 144°."
+      "type": "invul",
+      "vraag": "Als de hoogste score 95 is en de laagste score 38, wat is dan de spreidingsbreedte?",
+      "antwoord": "57",
+      "uitleg": "De spreidingsbreedte is de hoogste min de laagste waarde: 95 - 38 = 57."
+    },
+    {
+      "type": "invul",
+      "vraag": "Als Q3 = 76 en Q1 = 42, bereken dan de kwartielafstand.",
+      "antwoord": "34",
+      "uitleg": "De kwartielafstand is het verschil tussen Q3 en Q1: 76 - 42 = 34."
+    },
+    {
+      "type": "invul",
+      "vraag": "In een steel-bladdiagram staat steel 8 met blad 0, 3, 9 (legenda 8 | 3 = 83). Wat is de hoogste waarde in deze rij?",
+      "antwoord": "89",
+      "uitleg": "8 met blad 9 = 89."
+    },
+    {
+      "type": "invul",
+      "vraag": "Welk percentage van de waarnemingen ligt tussen Q1 en Q3?",
+      "antwoord": "50|50%|50 procent",
+      "uitleg": "Tussen 25% en 75% zit 50% van de data."
+    },
+    {
+      "type": "open",
+      "vraag": "Leg uit hoe je stapsgewijs het eerste kwartiel (Q1) en derde kwartiel (Q3) bepaalt uit een geordende getallenreeks.",
+      "sleutelwoorden": [
+        "mediaan",
+        "linkerhelft",
+        "rechterhelft"
+      ],
+      "minTreffers": 2,
+      "modelantwoord": "1) Bepaal eerst de algehele mediaan (Q2) die de rij in twee helften splitst. 2) Bepaal de mediaan van de linkerhelft (dit is Q1). 3) Bepaal de mediaan van de rechterhelft (dit is Q3).",
+      "uitleg": "Q1 is mediaan van linkerhelft, Q3 is mediaan van rechterhelft."
+    },
+    {
+      "type": "open",
+      "vraag": "Gegeven de scores: 10, 12, 14, 16, 18, 20, 22. Bereken Q1, Mediaan (Q2) en Q3.",
+      "sleutelwoorden": [
+        "12",
+        "16",
+        "20"
+      ],
+      "minTreffers": 3,
+      "modelantwoord": "Mediaan (Q2) = 16. Linkerhelft is 10, 12, 14 -> Q1 = 12. Rechterhelft is 18, 20, 22 -> Q3 = 20.",
+      "uitleg": "Q1 = 12, Q2 = 16, Q3 = 20."
     }
   ]
 });

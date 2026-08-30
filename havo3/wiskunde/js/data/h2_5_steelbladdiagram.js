@@ -1,85 +1,81 @@
+/* =========================================================
+   Duru's Wiskunde (HAVO 3) — Steel-bladdiagrammen & Spreidingsmaten
+   ========================================================= */
 DURU.register({
-  id: "h2-5-steelbladdiagram",
-  hoofdstuk: 2,
-  paragraaf: "2.5",
-  titel: "2.5 Steelbladdiagram",
-  korteUitleg: "Gegevens overzichtelijk ordenen in steel en bladeren, aflezen van getallen en centrummaten.",
-  icoon: "🌿",
-  theorie: `
-    <h3>Paragraaf 2.5 — Steelbladdiagram</h3>
-    <p>Een <strong>steelbladdiagram</strong> (stem-and-leaf plot) is een overzichtelijke manier om veel getallen geordend weer te geven zonder informatie te verliezen.</p>
-
-    <div class="formule-box">
-      <strong>Opbouw van een steelbladdiagram:</strong><br>
-      • De <strong>steel</strong> (links van de verticale streep) bevat bijvoorbeeld de tientallen (of uren/gehele getallen).<br>
-      • De <strong>bladeren</strong> (rechts van de streep) bevatten de eenheden (of minuten/decimalen), altijd gesorteerd van klein naar groot!<br>
-      • Elk blad stelt één waarneming/waarde voor. Het totaal aantal bladeren is gelijk aan het totaal aantal gegevens.
-    </div>
-
-    <div class="voorbeeld">
-      <div class="vb-kop">Voorbeeld: Aflezen van een steelbladdiagram</div>
-      <p>Lengten van een voetbalteam in cm:</p>
-      <pre style="background:#f1f5f9; padding:8px; border-radius:6px; font-family:monospace;">
-14 | 5 8 8 8
-15 | 2 6 9
-16 | 3 3 4 7
-      </pre>
-      <div class="stap">
-        • De steel <code>14</code> met bladeren <code>5 8 8 8</code> betekent de lengten: 145 cm, 148 cm, 148 cm, 148 cm.<br>
-        • De steel <code>15</code> met bladeren <code>2 6 9</code> betekent: 152 cm, 156 cm, 159 cm.<br>
-        • Het kortste meisje is <strong>145 cm</strong>; het langste meisje is <strong>167 cm</strong>.<br>
-        • Aantal meisjes = tel alle bladeren = 4 + 3 + 4 = <strong>11 meisjes</strong>.<br>
-        • Modus = <strong>148 cm</strong> (komt 3 keer voor).
-      </div>
-    </div>
-  `,
-  vragen: [
+  "id": "h2-5-steelbladdiagram",
+  "hoofdstuk": 2,
+  "paragraaf": "2.5",
+  "titel": "Steel-bladdiagrammen & Spreidingsmaten",
+  "korteUitleg": "Steel-bladdiagram aflezen, minimum, maximum, spreidingsbreedte en kwartielen.",
+  "icoon": "🌳",
+  "kleur": "blauw",
+  "theorie": "<h3>2.5 Steel-bladdiagrammen & Spreidingsmaten</h3>\n<p>Een <b>steel-bladdiagram (stem-and-leaf plot)</b> is een compacte en overzichtelijke manier om getallen te ordenen zonder de oorspronkelijke exacte waarden te verliezen.</p>\n<h4>Hoe lees je een steel-bladdiagram?</h4>\n<ul>\n  <li><b>De steel (stam):</b> Bevat de tientallen (of honderdtallen/gehele getallen).</li>\n  <li><b>Het blad:</b> Bevat de eenheden (de laatste cijfers). De cijfers in het blad staan altijd <b>op volgorde van klein naar groot</b>.</li>\n  <li><b>Legenda (sleutel):</b> Geeft aan hoe je de getallen moet interpreteren. Bijvoorbeeld: <code>3 | 5 betekent 35</code> of <code>5 | 2 betekent 5,2</code>.</li>\n</ul>\n<h4>Spreidingsmaten: Hoe ver liggen de getallen uit elkaar?</h4>\n<p>Naast het centrum is het belangrijk om te weten hoe verspreid de data liggen:</p>\n<div class=\"formule-box\">\n  • <b>Minimum (Min):</b> De allerlaagste waarnemingswaarde.<br>\n  • <b>Maximum (Max):</b> De allerhoogste waarnemingswaarde.<br>\n  • <b>Spreidingsbreedte (Range):</b> <code>Spreidingsbreedte = Maximum - Minimum</code><br>\n  • <b>Kwartielen:</b> Verdelen de geordende data in 4 gelijke kwarten van 25%:<br>\n    - <b>Eerste kwartiel ($Q_1$):</b> De mediaan van de eerste (linker) helft van de data.<br>\n    - <b>Tweede kwartiel ($Q_2$):</b> De algehele mediaan (50%).<br>\n    - <b>Derde kwartiel ($Q_3$):</b> De mediaan van de tweede (rechter) helft van de data.<br>\n    - <b>Kwartielafstand:</b> <code>Kwartielafstand = Q₃ - Q₁</code>\n</div>",
+  "vragen": [
     {
-      type: "mc",
-      niveau: 1,
-      vraag: "In een steelbladdiagram staat aan de linkerkant van de streep '15' en aan de rechterkant het blad '7'. Welk getal stelt dit voor als de steel de tientallen zijn?",
-      opties: ["15", "57", "157", "175"],
-      antwoord: 2,
-      uitleg: "Steel 15 (tientallen/honderdtallen) en blad 7 (eenheid) vormt samen 157."
+      "type": "mc",
+      "vraag": "In een steel-bladdiagram staat steel 4 met bladeren 2, 5, 8 (legenda 4 | 2 = 42). Welke getallen stelt dit voor?",
+      "opties": [
+        "42, 45, 48",
+        "4, 2, 5, 8",
+        "24, 54, 84",
+        "4258"
+      ],
+      "antwoord": 0,
+      "uitleg": "Steel 4 combineert met de bladeren 2, 5 en 8 tot de getallen 42, 45 en 48."
     },
     {
-      type: "invoer",
-      niveau: 1,
-      vraag: "Een steelbladdiagram heeft in totaal 15 bladeren. Uit hoeveel waarnemingen bestaat de dataset?",
-      antwoord: "15",
-      tolerantie: 0.1,
-      uitleg: "Elk blad stelt precies één getal/waarneming voor. 15 bladeren = 15 waarnemingen."
+      "type": "mc",
+      "vraag": "De hoogste toetsscore in een klas is 9,4 en de laagste is 3,8. Wat is de spreidingsbreedte?",
+      "opties": [
+        "5,4",
+        "5,6",
+        "6,2",
+        "6,6"
+      ],
+      "antwoord": 1,
+      "uitleg": "Spreidingsbreedte = Maximum (9,4) - Minimum (3,8) = 5,6."
     },
     {
-      type: "mc",
-      niveau: 2,
-      vraag: "In een steelbladdiagram staan bij steel 4 de bladeren: 5, 5, 7, 8, 9 en bij steel 5 de bladeren: 2, 3, 3, 3, 8. Wat is de modus van deze getallen?",
-      opties: ["45", "52", "53", "58"],
-      antwoord: 2,
-      uitleg: "Blad 3 komt bij steel 5 het vaakst voor (3 keer), wat overeenkomt met het getal 53."
+      "type": "waaronwaar",
+      "vraag": "De bladeren in een steel-bladdiagram moeten altijd van klein naar groot worden gerangschikt.",
+      "antwoord": true,
+      "uitleg": "Waar: een correct steel-bladdiagram ordent de bladeren oplopend."
     },
     {
-      type: "invoer",
-      niveau: 2,
-      vraag: "Bij steel 16 staan bladeren: 0, 1, 3, 3, 8. Wat is het grootste getal in deze rij?",
-      antwoord: "168",
-      tolerantie: 0.1,
-      uitleg: "Steel 16 met het grootste blad 8 geeft het getal 168."
+      "type": "invoer",
+      "vraag": "Als Q3 = 82 en Q1 = 54, wat is dan de kwartielafstand?",
+      "antwoord": "28",
+      "uitleg": "Kwartielafstand = Q3 - Q1 = 82 - 54 = 28."
     },
     {
-      type: "waaronwaar",
-      niveau: 2,
-      vraag: "De bladeren in een steelbladdiagram horen altijd van klein naar groot op volgorde te staan.",
-      antwoord: true,
-      uitleg: "Waar. De bladeren worden per steel altijd in oplopende volgorde van klein naar groot genoteerd."
+      "type": "mc",
+      "vraag": "Welk percentage van de waarnemingen ligt tussen het eerste kwartiel (Q1) en het derde kwartiel (Q3)?",
+      "opties": [
+        "25%",
+        "75%",
+        "50%",
+        "100%"
+      ],
+      "antwoord": 2,
+      "uitleg": "Tussen Q1 (25%) en Q3 (75%) bevindt zich precies de middelste 50% van de data."
     },
     {
-      type: "invoer",
-      niveau: 3,
-      vraag: "Gegeven steelbladdiagram met 11 getallen: 145, 148, 148, 148, 152, 156, 159, 163, 163, 164, 167. Wat is de mediaan?",
-      antwoord: "156",
-      tolerantie: 0.5,
-      uitleg: "Met n = 11 getallen op volgorde is het 6e getal de mediaan. Het 6e getal is 156."
+      "type": "waaronwaar",
+      "vraag": "In een steel-bladdiagram gaan de oorspronkelijke exacte waarden van de getallen verloren.",
+      "antwoord": false,
+      "uitleg": "Niet waar: in tegenstelling tot een histogram kun je in een steel-bladdiagram elk individueel getal exact teruglezen."
+    },
+    {
+      "type": "invoer",
+      "vraag": "Hoe heet het verschil tussen de hoogste en de laagste score in een dataset?",
+      "antwoord": "spreidingsbreedte|range",
+      "uitleg": "Spreidingsbreedte = Max - Min."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Het tweede kwartiel (Q2) is precies gelijk aan de mediaan van de hele dataset.",
+      "antwoord": true,
+      "uitleg": "Waar: Q2 en de mediaan delen de dataset beide precies in twee helften van 50%."
     }
   ]
 });

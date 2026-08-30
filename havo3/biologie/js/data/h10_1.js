@@ -1,4 +1,6 @@
-/* Onderwerp 10.1 — Opgroeien & Groei */
+/* =========================================================
+   Duru's Biologie (HAVO 3) — Opgroeien & Groei
+   ========================================================= */
 DURU.register({
   "id": "bio-h10-1-opgroeien",
   "hoofdstuk": 10,
@@ -27,13 +29,39 @@ DURU.register({
       "niveau": 1,
       "vraag": "Welke belangrijke hormoonklier bevindt zich onderaan de hersenen en maakt onder andere groeihormoon?",
       "opties": [
-        "De hypofyse",
         "De schildklier",
+        "De hypofyse",
         "De eierstok",
         "De alvleesklier"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "De hypofyse is een klein orgaantje onderaan de hersenen dat regelstoffen en groeihormoon produceert."
+    },
+    {
+      "type": "mc",
+      "niveau": 2,
+      "vraag": "Hoe weet een hormoon in het bloed op welke cellen (doelwitorganen) het moet inwerken?",
+      "opties": [
+        "De cellen zuigen het hormoon met kleine pompjes naar binnen",
+        "Het bloed vervoert het hormoon alleen naar één specifiek orgaan en nergens anders heen",
+        "Het hormoon past door zijn specifieke vorm precies op de receptoren in het celmembraan van de doelwitcel",
+        "Het hormoon verandert van kleur zodra het bij het juiste orgaan is"
+      ],
+      "antwoord": 2,
+      "uitleg": "Hormonen binden volgens het sleutel-slot principe alleen aan specifieke receptoren op het membraan van doelwitcellen."
+    },
+    {
+      "type": "mc",
+      "niveau": 2,
+      "vraag": "Waar in de pijpbeenderen van je armen en benen vindt de werkelijke lengtegroei plaats?",
+      "opties": [
+        "In de spieren die aan de botten vastzitten",
+        "In het midden van het bot in het beenmerg",
+        "Alleen aan de buitenkant van de botvliezen",
+        "In de groeischijven aan de uiteinden van de botten, waar kraakbeencellen delen en groeien"
+      ],
+      "antwoord": 3,
+      "uitleg": "De lengtegroei van botten vindt plaats in de kraakbenige groeischijven aan de uiteinden van de pijpbeenderen."
     },
     {
       "type": "waaronwaar",
@@ -41,39 +69,6 @@ DURU.register({
       "vraag": "Leren praten, schrijven en zelfstandig keuzes maken zijn voorbeelden van lichamelijke ontwikkeling.",
       "antwoord": false,
       "uitleg": "Onwaar: dit zijn voorbeelden van geestelijke ontwikkeling (ontwikkeling van het verstand en de hersenen)."
-    },
-    {
-      "type": "mc",
-      "niveau": 2,
-      "vraag": "Hoe weet een hormoon in het bloed op welke cellen (doelwitorganen) het moet inwerken?",
-      "opties": [
-        "Het hormoon past door zijn specifieke vorm precies op de receptoren in het celmembraan van de doelwitcel",
-        "Het bloed vervoert het hormoon alleen naar één specifiek orgaan en nergens anders heen",
-        "De cellen zuigen het hormoon met kleine pompjes naar binnen",
-        "Het hormoon verandert van kleur zodra het bij het juiste orgaan is"
-      ],
-      "antwoord": 0,
-      "uitleg": "Hormonen binden volgens het sleutel-slot principe alleen aan specifieke receptoren op het membraan van doelwitcellen."
-    },
-    {
-      "type": "invoer",
-      "niveau": 2,
-      "vraag": "Vanaf welke leeftijd (in jaren) begint volgens de theorie de huid gemiddeld te verouderen?",
-      "antwoord": "30|dertig|30e|30ste|30 jaar",
-      "uitleg": "Vanaf het 30e levensjaar begint de huid langzaam te verouderen, en dit tempo neemt toe naarmate je ouder wordt."
-    },
-    {
-      "type": "mc",
-      "niveau": 2,
-      "vraag": "Waar in de pijpbeenderen van je armen en benen vindt de werkelijke lengtegroei plaats?",
-      "opties": [
-        "In de groeischijven aan de uiteinden van de botten, waar kraakbeencellen delen en groeien",
-        "In het midden van het bot in het beenmerg",
-        "Alleen aan de buitenkant van de botvliezen",
-        "In de spieren die aan de botten vastzitten"
-      ],
-      "antwoord": 0,
-      "uitleg": "De lengtegroei van botten vindt plaats in de kraakbenige groeischijven aan de uiteinden van de pijpbeenderen."
     },
     {
       "type": "waaronwaar",
@@ -85,43 +80,16 @@ DURU.register({
     {
       "type": "invoer",
       "niveau": 2,
+      "vraag": "Vanaf welke leeftijd (in jaren) begint volgens de theorie de huid gemiddeld te verouderen?",
+      "antwoord": "30|dertig|30e|30ste|30 jaar",
+      "uitleg": "Vanaf het 30e levensjaar begint de huid langzaam te verouderen, en dit tempo neemt toe naarmate je ouder wordt."
+    },
+    {
+      "type": "invoer",
+      "niveau": 2,
       "vraag": "Hoe noem je de periode in de puberteit waarin een jongere plotseling heel snel in de lengte groeit?",
       "antwoord": "groeispurt|de groeispurt|lengtespurt",
       "uitleg": "Een groeispurt is de periode van versnelde lengtegroei tijdens de puberteit."
-    },
-    {
-      "type": "mc",
-      "niveau": 2,
-      "vraag": "Waarom worden volwassen mannen gemiddeld langer dan vrouwen?",
-      "opties": [
-        "Omdat de groeispurt bij jongens later begint (ze zijn al langer bij de start), intensiever is en langer duurt",
-        "Omdat jongens meer melk drinken dan meisjes",
-        "Omdat jongens geen groeischijven hebben",
-        "Omdat meisjes pas na hun 20e beginnen te groeien"
-      ],
-      "antwoord": 0,
-      "uitleg": "De groeispurt start bij jongens later (rond 12-14 jaar t.o.v. 10-12 jaar bij meisjes), duurt langer en verloopt met een hogere pieksnelheid."
-    },
-    {
-      "type": "invoer",
-      "niveau": 3,
-      "vraag": "Hoe noem je een medisch specialist / arts die gespecialiseerd is in de behandeling van botten en gewrichten?",
-      "antwoord": "orthopeed|een orthopeed|orthopedist",
-      "uitleg": "Een orthopeed is een medisch specialist voor botten, gewrichten en groeicorrecties."
-    },
-    {
-      "type": "waaronwaar",
-      "niveau": 2,
-      "vraag": "Dwerggroei ontstaat doordat de hypofyse te veel groeihormoon aanmaakt.",
-      "antwoord": false,
-      "uitleg": "Onwaar: dwerggroei ontstaat door een tekort (te weinig aanmaak) aan groeihormoon door de hypofyse."
-    },
-    {
-      "type": "invoer",
-      "niveau": 3,
-      "vraag": "Welke bekende topvoetballer kreeg vanaf zijn elfde levensjaar groeihormooninjecties tegen dwerggroei?",
-      "antwoord": "Messi|Lionel Messi|Leo Messi",
-      "uitleg": "Lionel Messi werd als kind behandeld met groeihormonen om zijn aangeboren dwerggroei te overwinnen."
     }
   ]
 });
