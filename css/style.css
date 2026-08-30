@@ -2173,20 +2173,36 @@ html.dark .ouder-alert-item {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--wit);
   border: 1px solid var(--lijn);
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
-  color: var(--wit);
+  color: var(--inkt);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: var(--schaduw-sm);
   transition: all 0.2s ease;
 }
 
 .cloud-sync-pill:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: var(--hub-achter);
   transform: translateY(-1px);
+  box-shadow: var(--schaduw);
+}
+
+.user-display-pill {
+  color: var(--inkt);
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--wit);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--lijn);
+  box-shadow: var(--schaduw-sm);
 }
 
 .cloud-sync-pill.syncing .cloud-sync-icon {
