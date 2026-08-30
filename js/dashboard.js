@@ -302,6 +302,7 @@
     renderFilterBar(vakkenVanJaar);
     renderAttemptsTable();
   }
+  window.loadDashboardData = loadDashboardData;
 
   // ── Helper: load practice object (pogingen / titels / beste) ──
   function loadPracticeData(storageKey) {
@@ -971,20 +972,38 @@
     if (exportBtn) {
       exportBtn.addEventListener("click", function () {
         var backup = [];
+        var seenKeys = {};
         for (var i = 0; i < localStorage.length; i++) {
-          var key = localStorage.key(i);
-          if (key && (key.indexOf("duru_") === 0 || key.indexOf("begrijpend_lezen_") === 0)) {
-            var value = localStorage.getItem(key);
-            try {
-              backup.push({
-                key: key,
-                val: JSON.parse(value)
-              });
-            } catch (e) {
-              backup.push({
-                key: key,
-                val: value
-              });
+          var rawKey = localStorage.key(i);
+          if (!rawKey) continue;
+          var logicalKey = rawKey;
+          if (rawKey.indexOf("user_") === 0) {
+            var parts = rawKey.split("_");
+            // user_<username>_<realKey...>
+            if (parts.length >= 3) {
+              logicalKey = parts.slice(2).join("_");
+            }
+          }
+          if (logicalKey && (logicalKey.indexOf("duru_") === 0 || logicalKey.indexOf("begrijpend_lezen_") === 0)) {
+            if (logicalKey === "duru_active_user" || logicalKey === "duru_users" || logicalKey === "duru_backup_imported" || logicalKey === "duru_encrypted_backup") {
+              continue;
+            }
+            if (seenKeys[logicalKey]) continue;
+            seenKeys[logicalKey] = true;
+
+            var value = localStorage.getItem(logicalKey);
+            if (value) {
+              try {
+                backup.push({
+                  key: logicalKey,
+                  val: JSON.parse(value)
+                });
+              } catch (e) {
+                backup.push({
+                  key: logicalKey,
+                  val: value
+                });
+              }
             }
           }
         }

@@ -244,6 +244,12 @@ function sluitIframe(viaPop) {
 
   _iframeActief = false;
 
+  // Re-render subject cards and update statistics with newly earned XP/exam scores
+  renderVakken();
+  if (typeof window.loadDashboardData === 'function') {
+    window.loadDashboardData();
+  }
+
   // Als we NIET via popstate terugkeren, moeten we zelf Back simuleren
   // zodat de pushState-entry uit de history-stack verdwijnt.
   if (!viaPop) {
@@ -408,10 +414,20 @@ function leesVakData(vak) {
     var P = JSON.parse(localStorage.getItem(vak.sleutel + '_v1') || '{}') || {};
     var beste = P.beste || {};
     var vals = Object.keys(beste).map(function (k) { return Number(beste[k]) || 0; });
-    if (vals.length) {
-      uit.pct = Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / vals.length);
-    }
+
     var EX = JSON.parse(localStorage.getItem(vak.sleutel + '_examens_v1') || '{}') || {};
+    var exBeste = EX.beste || {};
+    var exVals = Object.keys(exBeste).map(function (k) { return Number(exBeste[k]) || 0; });
+
+    var allVals = vals.concat(exVals);
+    if (allVals.length > 0) {
+      uit.pct = Math.round(allVals.reduce(function (a, b) { return a + b; }, 0) / allVals.length);
+    } else if (vals.length > 0) {
+      uit.pct = Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / vals.length);
+    } else if (exVals.length > 0) {
+      uit.pct = Math.round(exVals.reduce(function (a, b) { return a + b; }, 0) / exVals.length);
+    }
+
     var hist = (EX.history || []).filter(function (h) { return h && typeof h.pct === 'number'; });
     if (hist.length) {
       var beentjes = hist.map(function (h) { return 1 + (h.pct / 100) * 9; });
@@ -880,6 +896,37 @@ document.addEventListener('DOMContentLoaded', function() {
       if (overlay) overlay.style.display = 'none';
       if (userStatus) userStatus.style.display = 'flex';
       if (userDisplay) userDisplay.textContent = activeUser;
+
+      // Always auto-migrate any unprefixed scores created in standalone tabs
+      migratePreExistingLocalScores(activeUser);
+
+      // If active user is duru, ensure historical backup data is imported
+      var backupDone = localStorage.getItem('duru_backup_imported');
+      if (activeUser.toLowerCase() === 'duru' && !backupDone) {
+        fetch('./scores_backup.json')
+          .then(function(res) {
+            if (!res.ok) throw new Error('Backup niet gevonden.');
+            return res.json();
+          })
+          .then(function(data) {
+            if (data && data.encrypted && data.data) {
+              var decryptedText = xorCipher(atob(data.data), 'duru:12341234');
+              decryptedText = decryptedText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, '–');
+              var parsedScores = JSON.parse(decryptedText);
+              if (parsedScores && Array.isArray(parsedScores)) {
+                restoreScores(parsedScores);
+                localStorage.setItem('duru_backup_imported', 'true');
+                renderVakken();
+                if (typeof window.loadDashboardData === 'function') {
+                  window.loadDashboardData();
+                }
+              }
+            }
+          })
+          .catch(function(err) {
+            console.warn('Auto backup import kon niet worden voltooid:', err);
+          });
+      }
     } else {
       if (overlay) overlay.style.display = 'flex';
       if (userStatus) userStatus.style.display = 'none';
@@ -968,9 +1015,10 @@ document.addEventListener('DOMContentLoaded', function() {
           if (uLower === 'duru') {
             // Special login for duru
             if (password === '12341234') {
-              // Check if already registered locally
+              // Check if already registered locally and backup imported
               var users = getUsers();
-              if (users['duru']) {
+              var backupDone = localStorage.getItem('duru_backup_imported');
+              if (users['duru'] && backupDone) {
                 // Log in locally
                 migratePreExistingLocalScores('duru');
                 setActiveUser('duru', rememberMe);
