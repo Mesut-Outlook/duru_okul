@@ -70,7 +70,7 @@
       {
         id: "ex3_v6",
         type: "invul",
-        vraag: "Wat betekent het Russische woord 'sovjet'?",
+        vraag: "Welke Nederlandse vertaling hoort bij het Russische woord 'sovjet'?",
         antwoord: "raad|raden",
         uitleg: "Een sovjet is een raad van gekozen arbeiders, boeren of soldaten."
       },

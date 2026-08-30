@@ -1,190 +1,204 @@
-/* Proeftoets 1 — Economie HAVO 3: Hoofdstuk 4 (Het bedrijfsleven - Deel 1)
-   Focus: Paragraaf 4.1 — Produceren, consumeren, zelfvoorziening, kringloop en productiefactoren.
-   20 vragen conform DURU ENGINE_SPEC. */
+/* =========================================================
+   Duru's Economie (HAVO 3) — Proeftoets 1: Behoeften, schaarste en middelen
+   ========================================================= */
 DURU.registerExamen({
-  id: "ex-h3-economie-1",
-  titel: "Toets 1 — Produceren, Consumeren & Productiefactoren",
-  vak: "Economie · HAVO 3 (H4)",
-  icoon: "🏭",
-  duurMin: 30,
-  vragen: [
+  "id": "ex-h3-economie-1",
+  "hoofdstuk": 1,
+  "paragraaf": "1.1",
+  "titel": "Proeftoets 1: Behoeften, schaarste en middelen",
+  "vak": "Economie · HAVO 3",
+  "icoon": "🛒",
+  "duurMin": 20,
+  "vragen": [
     {
-      type: "mc",
-      vraag: "Wat is de economische definitie van <b>produceren</b>?",
-      opties: [
-        "Het maken van goederen of het leveren van diensten door bedrijven voor anderen",
-        "Het kopen van spullen in een winkel",
-        "Het sparen van geld op een bankrekening",
-        "Het weggooien van afval"
+      "type": "mc",
+      "vraag": "Wat is het belangrijkste kenmerk van een primaire behoefte?",
+      "opties": [
+        "Het is strikt noodzakelijk om in leven te blijven.",
+        "Het maakt het leven vooral luxueuzer en comfortabeler.",
+        "Het is gratis verkrijgbaar in de vrije natuur.",
+        "Het kan uitsluitend via een lening gefinancierd worden."
       ],
-      antwoord: 0,
-      uitleg: "Produceren is het voortbrengen van goederen en diensten door producenten voor consumenten of andere bedrijven."
+      "antwoord": 0,
+      "uitleg": "Primaire behoeften zoals water, voedsel en onderdak zijn essentieel om te overleven."
     },
     {
-      type: "mc",
-      vraag: "Wat is <b>zelfvoorziening</b>?",
-      opties: [
-        "Alleen geld uitgeven aan luxegoederen",
-        "Wanneer consumenten goederen of diensten voor zichzelf maken zonder tussenkomst van bedrijven (bijv. zelf groenten verbouwen of zelf koken)",
-        "Werken voor de overheid",
-        "Geld lenen van vrienden"
+      "type": "mc",
+      "vraag": "Welk van de onderstaande voorbeelden is een vrij goed?",
+      "opties": [
+        "Leidingwater uit de kraan",
+        "Zonlicht op een open veld",
+        "Een gratis proefmonster in de supermarkt",
+        "Een openbare speelplaats"
       ],
-      antwoord: 1,
-      uitleg: "Zelfvoorziening = voor jezelf produceren (geen ruil met geld)."
+      "antwoord": 1,
+      "uitleg": "Zonlicht kost geen productiemiddelen en is onbeperkt voorhanden in de natuur."
     },
     {
-      type: "mc",
-      vraag: "Welke <b>vier productiefactoren</b> worden in de economie onderscheiden?",
-      opties: [
-        "Consumenten, Winkels, Fabrieken en Banken",
-        "Geld, Goud, Aandelen en Vastgoed",
-        "Kapitaal, Arbeid, Natuur en Ondernemerschap (KANO)",
-        "Import, Export, Belasting en Subsidie"
+      "type": "mc",
+      "vraag": "Wat betekent de term schaarste in de economische wetenschap?",
+      "opties": [
+        "Dat producten tijdelijk uitverkocht zijn in de schappen.",
+        "Dat consumenten het product weigeren te kopen.",
+        "Dat er productiemiddelen zijn ingezet om een goed te produceren.",
+        "Dat een goed alleen in het buitenland gefabriceerd wordt."
       ],
-      antwoord: 2,
-      uitleg: "De 4 productiefactoren zijn: Kapitaal (machines/gebouwen), Arbeid (werknemers), Natuur (grond/grondstoffen), Ondernemerschap (organisatie/risico). Ezelsbruggetje: KANO."
+      "antwoord": 2,
+      "uitleg": "Schaarste betekent dat middelen beperkt zijn ten opzichte van de oneindige menselijke behoeften."
     },
     {
-      type: "invul",
-      vraag: "Welke beloning (inkomen) ontvangt de productiefactor <b>arbeid</b>?",
-      antwoord: "loon|salaris",
-      uitleg: "Voor arbeid ontvang je loon (of salaris)."
-    },
-    {
-      type: "invul",
-      vraag: "Welke beloning ontvangt de productiefactor <b>ondernemerschap</b>?",
-      antwoord: "winst",
-      uitleg: "De ondernemer neemt risico en ontvangt winst als beloning."
-    },
-    {
-      type: "invul",
-      vraag: "Welke beloning ontvangt de productiefactor <b>kapitaal</b> (voor uitgeleend geld)?",
-      antwoord: "rente|interest",
-      uitleg: "Voor kapitaal ontvang je rente (of huur bij kapitaalgoederen)."
-    },
-    {
-      type: "mc",
-      vraag: "Onder welke productiefactor valt een vrachtwagen die door een transportbedrijf wordt gekocht?",
-      opties: [
-        "Consumptie",
-        "Natuur",
-        "Arbeid",
-        "Kapitaal (kapitaalgoederen)"
+      "type": "mc",
+      "vraag": "Wat is een typisch voorbeeld van een dienst?",
+      "opties": [
+        "Een tube zonnebrandcrème",
+        "Een wollen wintertrui",
+        "Een paar leren schoenen",
+        "Een knipbeurt bij de kapper"
       ],
-      antwoord: 3,
-      uitleg: "Een vrachtwagen is een kapitaalgoed (vast productiemiddel om mee te produceren)."
+      "antwoord": 3,
+      "uitleg": "Een knipbeurt is een niet-tastbare economische handeling (dienst)."
     },
     {
-      type: "waaronwaar",
-      vraag: "Als je moeder thuis voor het gezin kookt, is dat economisch gezien consumptie/zelfvoorziening; als een kok in een restaurant dezelfde maaltijd kookt, is het productie.",
-      antwoord: true,
-      uitleg: "Waar. In een restaurant wordt geproduceerd voor de verkoop aan anderen (toegevoegde waarde met geldstroom)."
-    },
-    {
-      type: "mc",
-      vraag: "Wat is een <b>bedrijfskolom</b>?",
-      opties: [
-        "Een schematisch overzicht van alle opeenvolgende bedrijven die meewerken aan de productie van een product, van oerproducent (grondstof) tot en met de winkelier",
-        "Een grote fabrieksschoorsteen",
-        "De winst- en verliesrekening van één winkel",
-        "Een lijst met alle werknemers van een bedrijf"
+      "type": "mc",
+      "vraag": "Waarom dwingt schaarste een consument tot het stellen van prioriteiten?",
+      "opties": [
+        "Omdat tijd en financiële middelen beperkt zijn ten opzichte van onze wensen.",
+        "Omdat de overheid aankooplimieten oplegt aan burgers.",
+        "Omdat producenten wettelijk geen reclame mogen maken.",
+        "Omdat er geen vrije goederen meer beschikbaar zijn."
       ],
-      antwoord: 0,
-      uitleg: "De bedrijfskolom toont de keten van grondstof tot consument (bijv. katoenplantage -> weverij -> kledingfabriek -> groothandel -> winkel)."
+      "antwoord": 0,
+      "uitleg": "Beperkte middelen dwingen ieder individu tot keuzes tussen verschillende behoeften."
     },
     {
-      type: "waaronwaar",
-      vraag: "De consument maakt ZELF onderdeel uit van de bedrijfskolom.",
-      antwoord: false,
-      uitleg: "Niet waar. De bedrijfskolom stopt bij de detailhandel (de winkel). De consument staat eronder en hoort niet bij de bedrijven."
-    },
-    {
-      type: "invul",
-      vraag: "Hoe noem je het verschil tussen de verkoopprijs en de inkoopprijs van een product bij een bedrijf?",
-      antwoord: "toegevoegde waarde",
-      uitleg: "Toegevoegde waarde = verkoopprijs - inkoopprijs (waarde die het bedrijf toevoegt door bewerking, opslag of transport)."
-    },
-    {
-      type: "mc",
-      vraag: "Een stoffenfabrikant koopt katoen in voor € 3,00 per meter en verkoopt de geweven stof voor € 8,00 per meter aan de kledingfabriek. Hoeveel waarde voegt de stoffenfabrikant toe per meter?",
-      opties: [
-        "€ 11,00",
-        "€ 5,00",
-        "€ 8,00",
-        "€ 3,00"
+      "type": "mc",
+      "vraag": "Wat is het belangrijkste verschil tussen goederen en diensten?",
+      "opties": [
+        "Goederen zijn altijd gratis en diensten zijn altijd betaald.",
+        "Goederen zijn tastbare producten en diensten zijn niet-tastbare activiteiten.",
+        "Goederen worden uitsluitend door de staat geleverd.",
+        "Er bestaat in de economie geen enkel onderscheid tussen beide."
       ],
-      antwoord: 1,
-      uitleg: "Toegevoegde waarde = € 8,00 - € 3,00 = € 5,00."
+      "antwoord": 1,
+      "uitleg": "Goederen zijn fysiek tastbaar; diensten zijn onstoffelijke handelingen."
     },
     {
-      type: "mc",
-      vraag: "Wat is het verschil tussen een <b>handelsonderneming</b> en een <b>productieonderneming</b>?",
-      opties: [
-        "Een productieonderneming heeft geen machines",
-        "Een handelsonderneming maakt geen winst",
-        "Een handelsonderneming verandert niets aan het product (koopt in en verkoopt door); een productieonderneming maakt van grondstoffen nieuwe producten",
-        "Er is geen verschil"
+      "type": "mc",
+      "vraag": "Welke van de volgende behoeften is een secundaire behoefte?",
+      "opties": [
+        "Eenvoudige basisvoeding",
+        "Zuiver drinkwater",
+        "Een abonnement op een gaming-platform",
+        "Beschermende kleding tegen strenge vorst"
       ],
-      antwoord: 2,
-      uitleg: "Handelsonderneming = winkels/groothandels (doorverkoop). Productieonderneming = fabrieken/boerderijen (bewerken/maken)."
+      "antwoord": 2,
+      "uitleg": "Gamen is ontspanning en luxe, en dus een secundaire behoefte."
     },
     {
-      type: "mc",
-      vraag: "Welk bedrijf is een voorbeeld van een <b>dienstverlenend bedrijf</b>?",
-      opties: [
-        "Een bakkerij die brood bakt",
-        "Een schoenenfabriek",
-        "Een olieraffinaderij",
-        "Een kapper"
+      "type": "mc",
+      "vraag": "Wat houdt het begrip zelfvoorziening in?",
+      "opties": [
+        "Al je inkomen automatisch laten sparen bij een bank.",
+        "Geld lenen van vrienden of familieleden.",
+        "Werken in loondienst bij een multinational.",
+        "Zelf goederen telen of maken voor eigen consumptie zonder geld."
       ],
-      antwoord: 3,
-      uitleg: "Een kapper verleent een dienst (handeling) en verkoopt geen zelfgemaakt tastbaar product."
+      "antwoord": 3,
+      "uitleg": "Bij zelfvoorziening produceer je zelf rechtstreeks voor eigen consumptie."
     },
     {
-      type: "waaronwaar",
-      vraag: "Door de inzet van kapitaalgoederen (zoals machines) kan de arbeidsproductiviteit van werknemers aanzienlijk stijgen.",
-      antwoord: true,
-      uitleg: "Waar. Met een machine kan één werknemer per uur veel meer producten maken."
-    },
-    {
-      type: "invul",
-      vraag: "Hoeveel productiefactoren zijn er in totaal volgens de economische theorie? (Geef het getal)",
-      antwoord: "4|vier",
-      uitleg: "4: Kapitaal, Arbeid, Natuur, Ondernemerschap."
-    },
-    {
-      type: "mc",
-      vraag: "Welke van de volgende zaken hoort bij de productiefactor <b>natuur</b>?",
-      opties: [
-        "Zonlicht, windenergie en ruwe aardolie in de grond",
-        "Een banklening van € 50.000",
-        "De heftruck in het magazijn",
-        "Het salaris van de directeur"
+      "type": "mc",
+      "vraag": "Wat verstaan economen onder de term consumeren?",
+      "opties": [
+        "Het aanschaffen van goederen en diensten door eindgebruikers.",
+        "Het produceren van halffabricaten in een fabriek.",
+        "Het exporteren van landbouwproducten naar buurlanden.",
+        "Het heffen van accijnzen op tabak en alcohol."
       ],
-      antwoord: 0,
-      uitleg: "Natuur = alle onbewerkte natuurlijke hulpbronnen, grond en energiebronnen."
+      "antwoord": 0,
+      "uitleg": "Consumeren is het kopen van producten door consumenten ter bevrediging van behoeften."
     },
     {
-      type: "waaronwaar",
-      vraag: "Een meubelwinkel die kasten inkoopt bij de fabriek en verkoopt aan consumenten is een productieonderneming.",
-      antwoord: false,
-      uitleg: "Niet waar. Een meubelwinkel is een handelsonderneming (detailhandel)."
+      "type": "mc",
+      "vraag": "Welke omstandigheid maakt dat elk mens economische keuzes moet maken?",
+      "opties": [
+        "De wetgeving van de Europese Unie",
+        "De spanning tussen onbegrensde behoeften en beperkte middelen",
+        "Het vaste aanbod in warenhuizen",
+        "De vaste rentestand van commerciële banken"
+      ],
+      "antwoord": 1,
+      "uitleg": "De oneindigheid van wensen tegenover begrensde middelen is de kern van het keuzeprobleem."
     },
     {
-      type: "open",
-      vraag: "Noem de <b>vier productiefactoren</b> en geef bij elke factor een concreet voorbeeld van een middel dat een bakkerij nodig heeft om brood te bakken.",
-      sleutelwoorden: ["1. Kapitaal: deegmachine / oven / bestelbus / winkelpand", "2. Arbeid: bakkersknecht / verkoopster", "3. Natuur: graan / water / zout / aardgas", "4. Ondernemerschap: bakker / eigenaar die het bedrijf leidt"],
-      minTreffers: 3,
-      modelantwoord: "De vier productiefactoren bij een bakkerij:\n1. Kapitaal: De deegmengmachine, de bakovens, het winkelpand en de bestelbus.\n2. Arbeid: De bakker en het winkelpersoneel die het werk uitvoeren.\n3. Natuur: Het meel/graan, water, zout en de energie (gas/stroom voor de oven).\n4. Ondernemerschap: De bakkerseigenaar die de grondstoffen inkoopt, personeel aanstuurt en financieel risico draagt.",
-      uitleg: "Toepassing van de productiefactoren op een concrete onderneming."
+      "type": "waaronwaar",
+      "vraag": "Een luxe spelcomputer is een primaire behoefte voor tieners.",
+      "antwoord": false,
+      "uitleg": "Een spelcomputer is een secundair goed; je kunt zonder overleven."
     },
     {
-      type: "open",
-      vraag: "Leg uit hoe een <b>bedrijfskolom</b> werkt aan de hand van de productie van een katoenen spijkerbroek. Noem minstens vier schakels in deze keten.",
-      sleutelwoorden: ["katoenplantage (oerteler)", "weverij / stoffenfabriek", "kledingfabriek (confectie)", "groothandel / kledingwinkel (detailhandel)"],
-      minTreffers: 3,
-      modelantwoord: "Een bedrijfskolom toont de route van grondstof tot eindproduct:\n1. Katoenplantage: Verbouwt en oogst ruwe katoen.\n2. Spinnerij / Weverij: Spint draden en weeft spijkerstof (denim).\n3. Kledingfabriek: Knipt en naait de stof tot spijkerbroeken.\n4. Groothandel / Kledingwinkel: Koopt de broeken in partijen in en verkoopt ze in de winkel aan de consument.\n(De consument staat aan het eind buiten de bedrijfskolom).",
-      uitleg: "Opbouw van een bedrijfskolom."
+      "type": "waaronwaar",
+      "vraag": "Vrije goederen vereisen geen inzet van schaarse productiemiddelen.",
+      "antwoord": true,
+      "uitleg": "Zonlicht en wind zijn door de natuur gegeven en kosten geen arbeid of kapitaal."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Bij zelfvoorziening maak je gebruik van bankoverschrijvingen om te betalen.",
+      "antwoord": false,
+      "uitleg": "Zelfvoorziening vindt plaats zonder enige vorm van geld of betaling."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Als een product schaars is, betekent dit dat er middelen zijn opgeofferd om het voort te brengen.",
+      "antwoord": true,
+      "uitleg": "Economische schaarste betekent dat er tijd, arbeid en grondstoffen voor nodig waren."
+    },
+    {
+      "type": "invul",
+      "vraag": "Goederen die de natuur ons gratis en onbeperkt schenkt noemen we [vrije goederen|vrij goed].",
+      "antwoord": "vrije goederen|vrij goed",
+      "uitleg": "Vrije goederen zijn niet schaars en kosten geen productiemiddelen."
+    },
+    {
+      "type": "invul",
+      "vraag": "Het kopen van producten door particulieren om in behoeften te voorzien heet [consumeren|consumptie].",
+      "antwoord": "consumeren|consumptie",
+      "uitleg": "Consumeren is het eindgebruik van goederen en diensten door consumenten."
+    },
+    {
+      "type": "invul",
+      "vraag": "Behoeften die noodzakelijk zijn om fysiek te kunnen overleven heten [primaire behoeften|basisbehoeften].",
+      "antwoord": "primaire behoeften|basisbehoeften",
+      "uitleg": "Primaire behoeften zijn de basisvoorwaarden voor het menselijk bestaan."
+    },
+    {
+      "type": "invul",
+      "vraag": "Niet-tastbare werkzaamheden die voor een ander worden verricht noemen we [diensten|dienst].",
+      "antwoord": "diensten|dienst",
+      "uitleg": "Diensten zijn onlichamelijke prestaties zoals openbaar vervoer of medische zorg."
+    },
+    {
+      "type": "open",
+      "vraag": "Leg uit waarom een economisch goed schaars wordt genoemd, ook al liggen de winkelrekken er vol mee.",
+      "sleutelwoorden": [
+        "productiemiddelen/arbeid/tijd",
+        "opgeofferd/inzet/kost"
+      ],
+      "minTreffers": 1,
+      "modelantwoord": "Een goed is economisch schaars omdat er productiemiddelen (tijd, arbeid, grondstoffen) voor zijn opgeofferd om het te maken.",
+      "uitleg": "Schaarste in de economie betekent dat iets niet vanzelf ontstaat maar middelen kost."
+    },
+    {
+      "type": "open",
+      "vraag": "Noem twee concrete voorbeelden van secundaire behoeften van een middelbare scholier.",
+      "sleutelwoorden": [
+        "smartphone/telefoon",
+        "merkkleding/scooter/gaming/bioscoop"
+      ],
+      "minTreffers": 1,
+      "modelantwoord": "Bijvoorbeeld een smartphone, merkkleding, spelcomputer, bioscoopbezoek of een scooter.",
+      "uitleg": "Dit zijn luxe behoeften die het leven aangenamer maken maar niet van levensbelang zijn."
     }
   ]
 });

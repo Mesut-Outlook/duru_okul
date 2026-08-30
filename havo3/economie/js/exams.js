@@ -47,51 +47,94 @@
   DURU._stopExamTimer = function () { if (T && T.interval) { clearInterval(T.interval); T.interval = null; } };
 
   /* ---------- Lijst met oefentoetsen ---------- */
+  DURU.toggleHoofdstukEx = function (nr) {
+    var card = document.getElementById("hf-ex-card-" + nr);
+    var content = document.getElementById("hf-ex-content-" + nr);
+    var label = document.getElementById("hf-ex-label-" + nr);
+    if (!content) return;
+    var isHidden = content.style.display === "none";
+    content.style.display = isHidden ? "block" : "none";
+    if (card) {
+      if (isHidden) card.classList.add("open");
+      else card.classList.remove("open");
+    }
+    if (label) label.textContent = isHidden ? "▲ Klap in" : "▼ Open Toetsen";
+  };
+
   DURU.renderExamenLijst = function () {
     DURU._stopExamTimer();
     var h = '<div class="terug" onclick="DURU.gaNaar(\'home\')">← Terug naar overzicht</div>';
-    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen</h3><div class="lijn"></div></div>';
-    h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Je krijgt aan het eind je cijfer én bij elke vraag te zien <b>hoe je het moet doen</b>. Deze toetsen tellen los van je oefen-punten — daar gebeurt niets mee.</p>';
-    h += '<div class="examen-lijst">';
+    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen per Hoofdstuk</h3><div class="lijn"></div></div>';
+    h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Klik op een Hoofdstuk om de 20-vragige proeftoetsen te bekijken.</p>';
+
+    // Groepeer op hoofdstuk
+    var groepen = {};
     DURU.examens.forEach(function (ex) {
-      var best = EX.beste[ex.id];
-      var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
-      if (laatste == null && EX.history) {
-        var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
-        if (attempts.length > 0) {
-          laatste = attempts[0].pct;
-        }
-      }
-
-      var statusHtml = '';
-      if (best != null) {
-        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
-          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
-            '<span>✓</span> Gemaakt' +
-          '</div>' +
-          '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
-        if (laatste != null) {
-          statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
-        }
-        statusHtml += '</div>';
-      } else {
-        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
-          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
-            'Nog niet gemaakt' +
-          '</div>' +
-          '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
-        '</div>';
-      }
-
-      h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
-        '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
-        '<h4>' + esc(ex.titel) + '</h4>' +
-        '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
-        statusHtml +
-        '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
-        '</div>';
+      var hfKey = ex.hoofdstukTitel || (ex.hoofdstuk ? "Hoofdstuk " + ex.hoofdstuk : "Hoofdstuk 1 — Jouw financiën");
+      if (!groepen[hfKey]) groepen[hfKey] = [];
+      groepen[hfKey].push(ex);
     });
-    h += '</div>';
+
+    var grpIndex = 0;
+    Object.keys(groepen).forEach(function (hfTitel) {
+      grpIndex++;
+      var exLijst = groepen[hfTitel];
+      var isOpen = grpIndex === 1;
+
+      h += '<div class="hf-accordion-card ' + (isOpen ? 'open' : '') + '" id="hf-ex-card-' + grpIndex + '">' +
+        '<div class="hf-header" onclick="DURU.toggleHoofdstukEx(' + grpIndex + ')">' +
+          '<div class="hf-ico">🏛️</div>' +
+          '<div class="hf-info">' +
+            '<h3>' + esc(hfTitel) + '</h3>' +
+            '<div class="hf-meta-badges">' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + (exLijst.length * 20) + ' vragen)</span>' +
+            '</div>' +
+          '</div>' +
+          '<button class="hf-toggle-btn" id="hf-ex-label-' + grpIndex + '">' + (isOpen ? '▲ Klap in' : '▼ Open Toetsen') + '</button>' +
+        '</div>' +
+        '<div class="hf-body" id="hf-ex-content-' + grpIndex + '" style="display:' + (isOpen ? 'block' : 'none') + ';">';
+
+      h += '<div class="examen-lijst">';
+      exLijst.forEach(function (ex) {
+        var best = EX.beste[ex.id];
+        var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
+        if (laatste == null && EX.history) {
+          var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
+          if (attempts.length > 0) {
+            laatste = attempts[0].pct;
+          }
+        }
+
+        var statusHtml = '';
+        if (best != null) {
+          statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+            '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+              '<span>✓</span> Gemaakt' +
+            '</div>' +
+            '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
+          if (laatste != null) {
+            statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
+          }
+          statusHtml += '</div>';
+        } else {
+          statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+            '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+              'Nog niet gemaakt' +
+            '</div>' +
+            '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
+          '</div>';
+        }
+
+        h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
+          '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
+          '<h4>' + esc(ex.titel) + '</h4>' +
+          '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
+          statusHtml +
+          '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
+          '</div>';
+      });
+      h += '</div></div></div>';
+    });
 
     // Toetshistorie & Foutanalyse sectie
     EX.history = EX.history || [];
