@@ -946,14 +946,16 @@ document.addEventListener('DOMContentLoaded', function() {
           });
       }
 
-      // If parent user logs in, automatically switch to Veli Paneli tab
+      var ouderTab = document.getElementById('tab-ouder-btn');
       if (isParentUser) {
+        if (ouderTab) ouderTab.style.display = 'inline-flex';
         setTimeout(function() {
-          var ouderTab = document.getElementById('tab-ouder-btn');
           if (ouderTab) {
             ouderTab.click();
           }
         }, 150);
+      } else {
+        if (ouderTab) ouderTab.style.display = 'none';
       }
     } else {
       if (overlay) overlay.style.display = 'flex';
