@@ -430,11 +430,11 @@
             <tbody>
               ${report.allAttempts.length === 0 ? `
                 <tr>
-                  <td colspan="7" style="text-align:center;padding:32px;color:var(--grijs-licht);">
+                  <td colspan="8" style="text-align:center;padding:32px;color:var(--grijs-licht);">
                     Bu dönem için henüz tamamlanmış sınav kaydı bulunmamaktadır.
                   </td>
                 </tr>
-              ` : report.allAttempts.map(function(att) {
+              ` : report.allAttempts.map(function(att, idx) {
                 return `
                   <tr>
                     <td style="color:var(--grijs);font-size:13px;">${escapeHtml(att.datumStr)}</td>
@@ -450,6 +450,11 @@
                         ${att.geslaagd ? "✅ Başarılı" : "❌ Tekrar Et"}
                       </span>
                     </td>
+                    <td style="text-align:center;">
+                      <button type="button" class="ouder-btn-delete-att" data-vak="${escapeHtml(att.vakId)}" data-datum="${escapeHtml(att.datumStr)}" data-titel="${escapeHtml(att.titel)}" title="Bu deneme kaydını sil" style="background:none;border:none;cursor:pointer;font-size:15px;padding:4px 8px;border-radius:6px;opacity:0.7;transition:all 0.15s ease;">
+                        🗑️
+                      </button>
+                    </td>
                   </tr>
                 `;
               }).join("")}
@@ -460,6 +465,20 @@
     `;
 
     container.innerHTML = html;
+
+    // Bind delete button listeners
+    var deleteBtns = container.querySelectorAll(".ouder-btn-delete-att");
+    deleteBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var vakId = btn.getAttribute("data-vak");
+        var datumStr = btn.getAttribute("data-datum");
+        var examTitel = btn.getAttribute("data-titel");
+
+        if (confirm("'" + examTitel + " (" + datumStr + ")' sınav kaydını silmek istediğinizden emin misiniz?")) {
+          deleteAttempt(vakId, datumStr, examTitel);
+        }
+      });
+    });
 
     // Bind event listeners
     var printBtn = document.getElementById("ouder-print-btn");
@@ -478,6 +497,121 @@
     });
   }
 
+  /**
+   * Belirtilen sınav kaydını yerel depolamadan siler ve puanları yeniden hesaplar
+   */
+  function deleteAttempt(vakId, datumStr, examTitel) {
+    var rows = VAK_CONFIG.filter(function (v) { return v.id === vakId; });
+    var student = getActiveStudent();
+
+    rows.forEach(function (vak) {
+      if (!vak.examKey) return;
+
+      var targetKeys = [
+        vak.examKey,
+        "user_" + student + "_" + vak.examKey,
+        "user_duru_" + vak.examKey,
+        "user_baba_" + vak.examKey
+      ];
+
+      targetKeys.forEach(function (key) {
+        try {
+          var raw = localStorage.getItem(key);
+          if (!raw) return;
+          var data = JSON.parse(raw);
+
+          if (Array.isArray(data)) {
+            // Begrijpend lezen
+            data = data.filter(function (a) {
+              return !(a.timestamp === datumStr || a.startingText === examTitel);
+            });
+            localStorage.setItem(key, JSON.stringify(data));
+          } else if (data && Array.isArray(data.history)) {
+            data.history = data.history.filter(function (a) {
+              return !(a.datum === datumStr || (a.examTitel === examTitel && a.datum === datumStr));
+            });
+
+            // Recalculate beste and laatste
+            data.beste = {};
+            data.laatste = {};
+            for (var i = data.history.length - 1; i >= 0; i--) {
+              var att = data.history[i];
+              if (att && att.examId) {
+                if (data.beste[att.examId] == null || att.pct > data.beste[att.examId]) {
+                  data.beste[att.examId] = att.pct;
+                }
+                data.laatste[att.examId] = att.pct;
+              }
+            }
+
+            localStorage.setItem(key, JSON.stringify(data));
+          }
+        } catch (e) {
+          console.warn("deleteAttempt error:", e);
+        }
+      });
+    });
+
+    // Re-render and push to Cloud
+    renderParentDashboard();
+    if (typeof window.renderVakken === "function") window.renderVakken();
+    if (typeof window.loadDashboardData === "function") window.loadDashboardData();
+    if (window.CloudSync && typeof window.CloudSync.push === "function") {
+      window.CloudSync.push(true);
+    }
+  }
+
+  /**
+   * 29 Ağustos'taki hatalı / boş 0% test kayıtlarını otomatik temizler
+   */
+  function purgeInvalidTestAttempts() {
+    var examKeys = [
+      "duru_2627_biologie_examens_v1",
+      "duru_biologie_examens_v1",
+      "duru_nask_examens_v1"
+    ];
+
+    var userPrefixes = ["", "user_duru_", "user_baba_", "user_veli_", "user_mesut_"];
+
+    examKeys.forEach(function (baseKey) {
+      userPrefixes.forEach(function (prefix) {
+        var fullKey = prefix + baseKey;
+        try {
+          var raw = localStorage.getItem(fullKey);
+          if (!raw) return;
+          var data = JSON.parse(raw);
+
+          if (data && Array.isArray(data.history)) {
+            var originalLen = data.history.length;
+            data.history = data.history.filter(function (att) {
+              // 0% ve 0 doğru olan 29 Ağustos denemelerini kaldır
+              var isZero = (att.pct === 0 || att.goed === 0);
+              var isTargetDate = att.datum && att.datum.indexOf("29-08-2026") !== -1;
+              var isTargetToets = (att.examTitel && (att.examTitel.indexOf("Levensfasen") !== -1 || att.examTitel.indexOf("Cellen") !== -1));
+              return !(isZero && isTargetDate && isTargetToets);
+            });
+
+            if (data.history.length !== originalLen) {
+              // Recalculate
+              data.beste = {};
+              data.laatste = {};
+              for (var i = data.history.length - 1; i >= 0; i--) {
+                var a = data.history[i];
+                if (a && a.examId) {
+                  if (data.beste[a.examId] == null || a.pct > data.beste[a.examId]) {
+                    data.beste[a.examId] = a.pct;
+                  }
+                  data.laatste[a.examId] = a.pct;
+                }
+              }
+              localStorage.setItem(fullKey, JSON.stringify(data));
+            }
+          }
+        } catch (e) {}
+      });
+    });
+  }
+
   function escapeHtml(str) {
     return String(str == null ? "" : str)
       .replace(/&/g, "&amp;")
@@ -488,6 +622,8 @@
 
   // Hook into DOM Ready
   document.addEventListener("DOMContentLoaded", function () {
+    purgeInvalidTestAttempts();
+
     // Check if parent tab was clicked
     var tabs = document.querySelectorAll(".hub-tab");
     tabs.forEach(function (tab) {
@@ -507,5 +643,6 @@
   });
 
   window.renderParentDashboard = renderParentDashboard;
+  window.purgeInvalidTestAttempts = purgeInvalidTestAttempts;
 
 })();
