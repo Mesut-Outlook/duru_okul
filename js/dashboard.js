@@ -191,22 +191,17 @@
     return lijst;
   }
 
-  // Bepaalt welk schooljaar getoond wordt: opgeslagen keuze > huidig jaar
-  // (als het data heeft) > nieuwste jaar met data > huidig jaar (leeg).
+  // Bepaalt welk schooljaar getoond wordt: standaard ALTIJD HUIDIG_SCHOOLJAAR (HAVO 3)
   function bepaalCurrentJaar() {
-    var jaren = beschikbareJaren();
     var opgeslagen = null;
     try {
       opgeslagen = localStorage.getItem("duru_dashboard_jaar");
-    } catch (e) { /* localStorage kan geblokkeerd zijn */ }
+    } catch (e) {}
 
-    if (opgeslagen && jaren.indexOf(opgeslagen) !== -1) return opgeslagen;
-    if (jaarHeeftData(HUIDIG_SCHOOLJAAR)) return HUIDIG_SCHOOLJAAR;
-
-    for (var i = 0; i < jaren.length; i++) {
-      if (jaarHeeftData(jaren[i])) return jaren[i];
+    if (opgeslagen === "2025-2026" || opgeslagen === "2026-2027") {
+      return opgeslagen;
     }
-    return HUIDIG_SCHOOLJAAR;
+    return HUIDIG_SCHOOLJAAR; // Altijd HAVO 3 (2026-2027)
   }
 
   // ── Render jaar-kiezer (chips boven de hero-kaarten) ──────
@@ -215,14 +210,20 @@
     if (!container) return;
 
     var html = "";
-    jaren.forEach(function (jaar) {
-      var isActief = jaar === actief;
-      var niveau = JAAR_NIVEAU[jaar] || "";
-      html += '<button type="button" class="jaar-chip' + (isActief ? " jaar-chip--actief" : "") + '" ' +
-                'role="tab" aria-selected="' + (isActief ? "true" : "false") + '" data-jaar="' + escHtml(jaar) + '">' +
-                "📅 " + escHtml(jaar) + (niveau ? " · " + escHtml(niveau) : "") +
-              "</button>";
-    });
+    // HAVO 3 aktif dönem butonu
+    var isHavo3 = (actief === "2026-2027");
+    html += '<button type="button" class="jaar-chip' + (isHavo3 ? " jaar-chip--actief" : "") + '" ' +
+              'role="tab" aria-selected="' + (isHavo3 ? "true" : "false") + '" data-jaar="2026-2027">' +
+              "🎒 HAVO 3 (2026-2027)" +
+            "</button>";
+
+    // MAVO 2 Arşiv butonu
+    var isMavo2 = (actief === "2025-2026");
+    html += '<button type="button" class="jaar-chip' + (isMavo2 ? " jaar-chip--actief" : "") + '" ' +
+              'role="tab" aria-selected="' + (isMavo2 ? "true" : "false") + '" data-jaar="2025-2026" style="opacity:' + (isMavo2 ? '1' : '0.7') + ';">' +
+              "📁 MAVO 2 (Arşiv)" +
+            "</button>";
+
     container.innerHTML = html;
 
     var chips = container.querySelectorAll(".jaar-chip");
@@ -232,7 +233,7 @@
         window.currentJaar = jaar;
         try {
           localStorage.setItem("duru_dashboard_jaar", jaar);
-        } catch (e) { /* localStorage kan geblokkeerd zijn */ }
+        } catch (e) {}
         loadDashboardData();
       });
     });

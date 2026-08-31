@@ -261,13 +261,12 @@
           </div>
         </div>
 
-        <div class="ouder-actions">
           <div class="ouder-year-toggles">
             <button type="button" class="ouder-year-btn ${selectedJaar === "2026-2027" ? "active" : ""}" data-year="2026-2027">
               🎒 HAVO 3 (2026-2027)
             </button>
-            <button type="button" class="ouder-year-btn ${selectedJaar === "2025-2026" ? "active" : ""}" data-year="2025-2026">
-              📚 MAVO 2 (2025-2026)
+            <button type="button" class="ouder-year-btn ${selectedJaar === "2025-2026" ? "active" : ""}" data-year="2025-2026" style="opacity:${selectedJaar === "2025-2026" ? "1" : "0.7"};">
+              📁 MAVO 2 (Arşiv)
             </button>
           </div>
           <button type="button" id="ouder-print-btn" class="ouder-btn-print" title="Yazdır / PDF Kaydet">
