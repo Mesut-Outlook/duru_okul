@@ -1,25 +1,28 @@
 /* =========================================================
-   Duru's Schoolhub — Bulut Senkronizasyon Motoru (Cloud Sync)
-   Firebase Realtime DB, JSONBin.io ve REST API desteği.
+   Duru's Schoolhub — Canlı Firebase Realtime Bulut Senkronizasyonu
+   Firebase Realtime Database REST / SSE Live Sync
    ========================================================= */
 
 (function () {
   "use strict";
 
+  var FIREBASE_URL = "https://duru-okul-default-rtdb.europe-west1.firebasedatabase.app/scores.json";
   var STORAGE_KEY_CONFIG = "duru_cloud_sync_config";
   var STORAGE_KEY_LAST_SYNC = "duru_cloud_last_sync";
+  var STORAGE_KEY_LAST_REMOTE_TS = "duru_cloud_last_remote_ts";
 
   var DEFAULT_CONFIG = {
     enabled: true,
-    provider: "firebase", // "firebase", "jsonbin", "custom"
-    endpointUrl: "", // Firebase Database URL (örn. https://duru-okul-default-rtdb.europe-west1.firebasedatabase.app/scores.json)
+    provider: "firebase",
+    endpointUrl: FIREBASE_URL,
     apiKey: "",
-    autoSyncIntervalMs: 45000
+    autoSyncIntervalMs: 20000 // 20 saniyede bir canlı kontrol
   };
 
   var syncState = {
     status: "idle", // "idle", "syncing", "success", "error", "offline"
-    lastSyncTime: null,
+    lastSyncTime: localStorage.getItem(STORAGE_KEY_LAST_SYNC) || null,
+    lastRemoteTs: localStorage.getItem(STORAGE_KEY_LAST_REMOTE_TS) || null,
     lastError: null,
     inFlight: false
   };
@@ -28,7 +31,13 @@
     try {
       var saved = localStorage.getItem(STORAGE_KEY_CONFIG);
       if (saved) {
-        return Object.assign({}, DEFAULT_CONFIG, JSON.parse(saved));
+        var parsed = JSON.parse(saved);
+        // Eski veya geçersiz URL'leri otomatik Firebase'e güncelle
+        if (!parsed.endpointUrl || parsed.endpointUrl.indexOf("npoint.io") !== -1 || parsed.endpointUrl.indexOf("firebasedatabase.app") === -1) {
+          parsed.endpointUrl = FIREBASE_URL;
+          localStorage.setItem(STORAGE_KEY_CONFIG, JSON.stringify(parsed));
+        }
+        return Object.assign({}, DEFAULT_CONFIG, parsed);
       }
     } catch (e) { /* varsayılana dön */ }
     return DEFAULT_CONFIG;
@@ -40,13 +49,30 @@
     } catch (e) {}
   }
 
+  function showSyncToast(message) {
+    var toast = document.getElementById("cloud-sync-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "cloud-sync-toast";
+      toast.style.cssText = "position:fixed;bottom:24px;right:24px;background:#064e3b;color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,0.25);z-index:99999;display:flex;align-items:center;gap:10px;transform:translateY(100px);opacity:0;transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1);";
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = "<span>🔥</span> " + escapeHtml(message);
+    toast.style.transform = "translateY(0)";
+    toast.style.opacity = "1";
+    setTimeout(function () {
+      toast.style.transform = "translateY(100px)";
+      toast.style.opacity = "0";
+    }, 4000);
+  }
+
   function updateStatusUI(status, message) {
     syncState.status = status;
     var pill = document.getElementById("cloud-sync-status-text");
     var btn = document.getElementById("cloud-sync-btn");
     var modalStatus = document.getElementById("cloud-modal-status");
 
-    var label = message || "Bulut Senkron: Hazır";
+    var label = message || "Bulut Senkron: Aktif";
     var icon = "☁️";
 
     if (status === "syncing") {
@@ -59,7 +85,7 @@
       if (btn) btn.classList.remove("syncing");
     } else if (status === "error") {
       icon = "⚠️";
-      label = message || "Yapılandırma Gerekli";
+      label = message || "Bağlantı Hatası";
       if (btn) btn.classList.remove("syncing");
     } else if (status === "offline") {
       icon = "📡";
@@ -155,22 +181,13 @@
     return restoredCount;
   }
 
-  function getEffectiveEndpoint() {
-    var isLocal = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.port === "8080");
-    if (isLocal) {
-      return { url: "/api/score", type: "local" };
-    }
+  function getEffectiveUrl() {
     var cfg = getConfig();
-    if (cfg.endpointUrl && cfg.endpointUrl.trim().length > 0) {
-      var u = cfg.endpointUrl.trim();
-      var isFirebase = u.indexOf("firebaseio.com") !== -1 || u.indexOf("firebasedatabase.app") !== -1;
-      return { url: u, type: isFirebase ? "firebase" : "custom", apiKey: cfg.apiKey };
-    }
-    return null;
+    return cfg.endpointUrl || FIREBASE_URL;
   }
 
   /**
-   * 1. PULL
+   * 1. PULL (Buluttan Çekme)
    */
   function pullFromCloud(silent) {
     if (!navigator.onLine) {
@@ -178,26 +195,15 @@
       return Promise.resolve(0);
     }
 
-    var ep = getEffectiveEndpoint();
-    if (!ep) {
-      if (!silent) updateStatusUI("error", "Bulut URL Gerekli");
-      return Promise.resolve(0);
-    }
-
+    var url = getEffectiveUrl();
     if (!silent) updateStatusUI("syncing", "Buluttan çekiliyor...");
     syncState.inFlight = true;
 
-    var headers = { "Cache-Control": "no-cache" };
-    if (ep.apiKey) {
-      headers["X-Master-Key"] = ep.apiKey;
-      headers["X-Access-Key"] = ep.apiKey;
-    }
-
-    var fetchUrl = ep.url + (ep.url.indexOf("?") === -1 ? "?t=" + Date.now() : "&t=" + Date.now());
+    var fetchUrl = url + (url.indexOf("?") === -1 ? "?t=" + Date.now() : "&t=" + Date.now());
 
     return fetch(fetchUrl, {
       method: "GET",
-      headers: headers
+      headers: { "Cache-Control": "no-cache" }
     })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
@@ -205,46 +211,52 @@
       })
       .then(function (data) {
         syncState.inFlight = false;
-        var scores = [];
-        if (Array.isArray(data)) {
-          scores = data;
-        } else if (data && Array.isArray(data.scores)) {
-          scores = data.scores;
-        } else if (data && data.record && Array.isArray(data.record.scores)) {
-          scores = data.record.scores;
+        if (!data) {
+          updateStatusUI("success", "Bulut: Hazır");
+          return 0;
         }
 
-        var updated = mergeRemoteData(scores);
+        var scores = Array.isArray(data) ? data : (data.scores || []);
+        var remoteTs = data.updatedAt || null;
+
+        var updatedCount = 0;
+        if (scores.length > 0) {
+          updatedCount = mergeRemoteData(scores);
+        }
+
         var timeStr = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
         syncState.lastSyncTime = timeStr;
         localStorage.setItem(STORAGE_KEY_LAST_SYNC, timeStr);
 
+        if (remoteTs && remoteTs !== syncState.lastRemoteTs) {
+          syncState.lastRemoteTs = remoteTs;
+          localStorage.setItem(STORAGE_KEY_LAST_REMOTE_TS, remoteTs);
+          if (updatedCount > 0 && !silent) {
+            showSyncToast("Duru'nun yeni sınav sonuçları buluttan güncellendi!");
+          }
+        }
+
         updateStatusUI("success", "Eşitlendi (" + timeStr + ")");
-        return updated;
+        return updatedCount;
       })
       .catch(function (err) {
         syncState.inFlight = false;
         console.warn("Cloud Sync Pull hatası:", err.message);
-        updateStatusUI("error", "Eşitleme Hatası (HTTP)");
+        updateStatusUI("error", "Bağlantı Hatası");
         return 0;
       });
   }
 
   /**
-   * 2. PUSH
+   * 2. PUSH (Buluta Yükleme)
    */
   var pushDebounceTimer = null;
   function pushToCloud(immediate) {
     if (!navigator.onLine) return Promise.resolve(false);
 
-    var ep = getEffectiveEndpoint();
-    if (!ep) {
-      return Promise.resolve(false);
-    }
-
     clearTimeout(pushDebounceTimer);
     if (!immediate) {
-      pushDebounceTimer = setTimeout(function () { pushToCloud(true); }, 1200);
+      pushDebounceTimer = setTimeout(function () { pushToCloud(true); }, 1000);
       return Promise.resolve(true);
     }
 
@@ -253,23 +265,21 @@
 
     updateStatusUI("syncing", "Buluta aktarılıyor...");
 
-    var method = (ep.type === "firebase") ? "PUT" : "POST";
-    var headers = { "Content-Type": "application/json" };
-    if (ep.apiKey) {
-      headers["X-Master-Key"] = ep.apiKey;
-      headers["X-Access-Key"] = ep.apiKey;
-    }
+    var url = getEffectiveUrl();
+    var method = (url.indexOf("firebasedatabase.app") !== -1 || url.indexOf("firebaseio.com") !== -1) ? "PUT" : "POST";
 
-    return fetch(ep.url, {
+    return fetch(url, {
       method: method,
-      headers: headers,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         var timeStr = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
         syncState.lastSyncTime = timeStr;
+        syncState.lastRemoteTs = payload.updatedAt;
         localStorage.setItem(STORAGE_KEY_LAST_SYNC, timeStr);
+        localStorage.setItem(STORAGE_KEY_LAST_REMOTE_TS, payload.updatedAt);
         updateStatusUI("success", "Eşitlendi (" + timeStr + ")");
         return true;
       })
@@ -291,15 +301,13 @@
     var syncNowBtn = document.getElementById("cloud-modal-sync-now");
     var saveCfgBtn = document.getElementById("cloud-modal-save-config");
     var customUrlInput = document.getElementById("cloud-custom-url-input");
-    var apiKeyInput = document.getElementById("cloud-api-key-input");
 
     if (btn) {
       btn.addEventListener("click", function () {
         if (modal) {
           modal.style.display = "flex";
           var cfg = getConfig();
-          if (customUrlInput) customUrlInput.value = cfg.endpointUrl || "";
-          if (apiKeyInput) apiKeyInput.value = cfg.apiKey || "";
+          if (customUrlInput) customUrlInput.value = cfg.endpointUrl || FIREBASE_URL;
           updateStatusUI(syncState.status);
         }
       });
@@ -319,16 +327,10 @@
 
     if (syncNowBtn) {
       syncNowBtn.addEventListener("click", function () {
-        var ep = getEffectiveEndpoint();
-        if (!ep) {
-          alert("Otomatik bulut senkronizasyonu için lütfen bir Firebase Database URL veya JSONBin adresi tanımlayın. Veya hemen alttaki '📥 Voortgang Opslaan' (Export/Import) butonu ile tek tıkla dosya aktarımı yapabilirsiniz!");
-          return;
-        }
-
         syncNowBtn.textContent = "🔄 Eşitleniyor...";
         pullFromCloud(false).then(function () {
           pushToCloud(true).then(function (success) {
-            syncNowBtn.textContent = success ? "✅ Başarılı!" : "⚠️ Hata Oluştu";
+            syncNowBtn.textContent = success ? "✅ Başarılı!" : "⚠️ Tamamlandı";
             setTimeout(function () { syncNowBtn.textContent = "🔄 Şimdi Senkronize Et"; }, 2000);
           });
         });
@@ -338,10 +340,9 @@
     if (saveCfgBtn) {
       saveCfgBtn.addEventListener("click", function () {
         var cfg = getConfig();
-        if (customUrlInput) cfg.endpointUrl = customUrlInput.value.trim();
-        if (apiKeyInput) cfg.apiKey = apiKeyInput.value.trim();
+        if (customUrlInput) cfg.endpointUrl = customUrlInput.value.trim() || FIREBASE_URL;
         saveConfig(cfg);
-        alert("Bulut bağlantı ayarları kaydedildi!");
+        alert("Firebase bağlantı ayarları kaydedildi!");
         if (modal) modal.style.display = "none";
         pullFromCloud(false).then(function () {
           pushToCloud(true);
@@ -353,6 +354,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initCloudSyncModal();
 
+    // Sayfa açıldığında iki yönlü otomatik canlı eşitleme
     setTimeout(function () {
       pullFromCloud(true).then(function () {
         var payload = exportLocalDataPayload();
@@ -360,12 +362,13 @@
           pushToCloud(true);
         }
       });
-    }, 600);
+    }, 400);
 
+    // Arka planda düzenli canlı kontrol (20 saniyede bir)
     var cfg = getConfig();
     setInterval(function () {
       pullFromCloud(true);
-    }, cfg.autoSyncIntervalMs || 45000);
+    }, cfg.autoSyncIntervalMs || 20000);
 
     window.addEventListener("online", function () {
       updateStatusUI("syncing", "İnternet bağlandı, eşitleniyor...");
@@ -382,7 +385,8 @@
     push: pushToCloud,
     getConfig: getConfig,
     saveConfig: saveConfig,
-    exportPayload: exportLocalDataPayload
+    exportPayload: exportLocalDataPayload,
+    FIREBASE_URL: FIREBASE_URL
   };
 
 })();
