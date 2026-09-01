@@ -2,13 +2,55 @@
    Duru's Engels (HAVO 3) — Bootstrap
    Maakt het globale DURU-object klaar VOORDAT de databestanden laden.
    Elk databestand roept DURU.register({...}) / DURU.registerExamen({...}) aan.
-   Smoke-test-site: nog geen onderwerpen (oefenquizzes), alleen een proeftoets.
    ========================================================= */
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstukken overzicht (Stepping Stones 3 HAVO)
+  DURU.hoofdstukken = [
+    {
+      nr: 1,
+      titel: "The world around you",
+      icoon: "🌍",
+      kleur: "h1-thema",
+      intro: "Culture, identity, customs and traditions, stereotypes, hospitality, Present Simple vs. Present Continuous, social interactions and penpal correspondence."
+    },
+    {
+      nr: 2,
+      titel: "Crime",
+      icoon: "🔍",
+      kleur: "h2-thema",
+      intro: "Crime types (burglary, theft, robbery, cybercrime), justice and court trials, Past Simple vs. Past Continuous, reporting incidents, physical suspect descriptions and mystery analysis."
+    },
+    {
+      nr: 3,
+      titel: "Science & technology",
+      icoon: "🔬",
+      kleur: "h3-thema",
+      intro: "Scientific discoveries vs. inventions, AI and robotics, Present Perfect vs. Past Simple (for/since, already/yet), explaining tech gadgets and reviewing devices."
+    },
+    {
+      nr: 4,
+      titel: "To the extreme",
+      icoon: "⚡",
+      kleur: "h4-thema",
+      intro: "Extreme sports, outdoor survival, endurance, Comparatives & Superlatives, Modals of obligation and prohibition (must, should, have to), urgent safety warnings and adventure narratives."
+    },
+    {
+      nr: 5,
+      titel: "Going green",
+      icoon: "🌱",
+      kleur: "h5-thema",
+      intro: "Environment and sustainability, carbon footprint, renewable energy, Future forms (will, be going to, Present Continuous), First Conditional, green proposals and climate debates."
+    },
+    {
+      nr: 6,
+      titel: "Your future",
+      icoon: "💼",
+      kleur: "h6-thema",
+      intro: "Careers, workplace skills, job vacancies, Passive Voice (Present & Past Simple), Second Conditional, formal application letters (CV) and professional interview etiquette."
+    }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 

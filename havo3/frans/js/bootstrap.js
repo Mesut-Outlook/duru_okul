@@ -7,8 +7,16 @@
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  DURU.hoofdstukken = [
+    { nr: 1, titel: "Poste, like, partage", icoon: "📱", kleur: "blauw", intro: "Sociale media, communicatie, vriendschap, basis grammatica en werkwoorden op -er." },
+    { nr: 2, titel: "Du temps pour moi", icoon: "🎸", kleur: "oranje", intro: "Vrije tijd, hobby's, sport, muziek, futur composé en werkwoorden faire/aller/prendre." },
+    { nr: 3, titel: "En route!", icoon: "🚆", kleur: "groen", intro: "Reizen, vakantie, vervoer, de weg vragen en passé composé met avoir." },
+    { nr: 4, titel: "Le pont", icoon: "🗼", kleur: "paars", intro: "Cultuur van Frankrijk, monumenten in Parijs, Francofonie en tussenbalans." },
+    { nr: 5, titel: "Au resto!", icoon: "🍽️", kleur: "roze", intro: "Eten & drinken, restaurant, menukaarten en het delend lidwoord (du, de la, des)." },
+    { nr: 6, titel: "C'est moi", icoon: "👗", kleur: "geel", intro: "Uiterlijk, kleding, mode, karakter en bijvoeglijk naamwoorden." },
+    { nr: 7, titel: "À tout prix!", icoon: "💶", kleur: "blauw", intro: "Geld, zakgeld, sparen, bijbaantjes en trappen van vergelijking." },
+    { nr: 8, titel: "Le pont (Examentraining)", icoon: "🎓", kleur: "groen", intro: "Eindbalans, passé composé met être, Cito-signaalwoorden en eindexamen." }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 
