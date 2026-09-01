@@ -115,7 +115,7 @@
 
     html += '<section class="hero view">' +
       '<div class="mascotte">🦁</div>' +
-      '<div><h2>Hoi Duru! Klaar om te scoren? 🇬🇧</h2>' +
+      '<div class="hero-body"><h2>Hoi Duru! Klaar om te scoren? 🇬🇧</h2>' +
       '<p>Welkom in jouw eigen Engels-academie. Leer alle <b>grammatica</b>, <b>vocabulaire</b> en <b>leesvaardigheid</b> voor HAVO 3 ' +
       'met ' + (totaalExamens > 0 ? (totaalExamens * 20) : totaalVragen) + ' vragen verdeeld over alle 6 hoofdstukken. Klik op een hoofdstuk om de toetsen te bekijken. Jij gaat die toets máken! 💪</p>' +
       '<div class="hero-cta">' +
