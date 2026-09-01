@@ -406,3 +406,128 @@ figure.bron figcaption { color: var(--grijs); font-size: 13px; margin-top: 6px; 
 .review-item .r-uitleg { background: var(--paars-zacht); border-radius:10px; padding:10px 14px; margin-top:8px; font-size:14px; }
 .review-item .r-uitleg b { color: var(--paars); }
 .filter-rij { display:flex; gap:8px; justify-content:center; margin:10px 0 4px; flex-wrap:wrap; }
+
+/* =========================================================
+   Collapsible Chapter Accordions
+   ========================================================= */
+.accordion-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.chapter-accordion {
+  background: var(--wit);
+  border: 1px solid var(--lijn);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  box-shadow: var(--schaduw);
+  overflow: hidden;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.chapter-accordion[open] {
+  border-color: var(--paars-licht);
+  box-shadow: var(--schaduw-lg);
+}
+.chapter-header {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fcfdfd;
+  user-select: none;
+  transition: background .15s ease;
+}
+.chapter-header::-webkit-details-marker {
+  display: none;
+}
+.chapter-header:hover {
+  background: var(--paars-zacht);
+}
+.chapter-header .ch-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--paars-zacht);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  flex-shrink: 0;
+  box-shadow: var(--schaduw-sm);
+}
+.chapter-header .ch-info {
+  flex: 1;
+  min-width: 0;
+}
+.chapter-header .ch-badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--paars);
+  background: var(--paars-zacht);
+  padding: 2px 8px;
+  border-radius: 99px;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.chapter-header .ch-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--inkt);
+  line-height: 1.2;
+}
+.chapter-header .ch-sub {
+  font-size: 13px;
+  color: var(--grijs);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.chapter-header .ch-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.chapter-header .ch-stats {
+  text-align: right;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--grijs);
+}
+.chapter-header .ch-chevron {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--lijn);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  color: var(--grijs);
+  transition: transform .25s ease, background .15s ease, color .15s ease;
+}
+.chapter-accordion[open] .chapter-header .ch-chevron {
+  transform: rotate(180deg);
+  background: var(--paars);
+  color: #fff;
+}
+.chapter-content {
+  padding: 22px;
+  background: #fdfdfd;
+  border-top: 1px solid var(--lijn);
+  animation: fadein .25s ease;
+}
+@media (max-width: 760px) {
+  .chapter-header { padding: 14px 16px; gap: 10px; }
+  .chapter-header .ch-icon { width: 40px; height: 40px; font-size: 20px; }
+  .chapter-header .ch-title { font-size: 16px; }
+  .chapter-header .ch-sub { display: none; }
+  .chapter-content { padding: 14px; }
+}
+
