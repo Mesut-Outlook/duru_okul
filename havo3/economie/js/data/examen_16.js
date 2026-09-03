@@ -39,11 +39,11 @@ DURU.registerExamen({
       "vraag": "Wat zijn in de economie 'kapitaalgoederen'?",
       "opties": [
         "Muntgeld en bankbiljetten in de kassa van een winkel.",
-        "Machines, gebouwen, gereedschappen en hulpmiddelen die nodig zijn om producten te kunnen maken en verkopen.",
         "De diploma's en vaardigheden van de werknemers.",
+        "Machines, gebouwen, gereedschappen en hulpmiddelen die nodig zijn om producten te kunnen maken en verkopen.",
         "Alle grondstoffen die direct uit de natuur worden geoogst."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "Kapitaalgoederen zijn fysieke hulpmiddelen zoals machines, computers, gebouwen en bestelbussen waarmee geproduceerd wordt."
     },
     {
@@ -51,23 +51,23 @@ DURU.registerExamen({
       "vraag": "Wat verstaan we onder de productiefactor 'Natuur'?",
       "opties": [
         "Alle werknemers die in de buitenlucht werken.",
-        "Alles wat zonder bewerking uit de natuur komt, inclusief de vestigingsplaats en energiebronnen zoals zon en wind.",
+        "Uitsluitend biologisch gecertificeerde landbouwproducten.",
         "Het geld dat overblijft na aftrek van de belasting.",
-        "Uitsluitend biologisch gecertificeerde landbouwproducten."
+        "Alles wat zonder bewerking uit de natuur komt, inclusief de vestigingsplaats en energiebronnen zoals zon en wind."
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "Onder Natuur valt alles wat de natuur levert zonder menselijke bewerking: grond, vestigingsplaats, water, mineralen en natuurlijke energie."
     },
     {
       "type": "mc",
       "vraag": "Wat is de rol van de productiefactor 'Ondernemerschap'?",
       "opties": [
-        "Het uitvoeren van handmatig werk aan de lopende band.",
         "Het combineren van de productiefactoren (kapitaal, arbeid, natuur) op de meest efficiënte manier en financieel risico lopen.",
+        "Het uitvoeren van handmatig werk aan de lopende band.",
         "Het vaststellen van wetten door de Tweede Kamer.",
         "Het sparen van zakgeld op een spaarrekening."
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "De ondernemer combineert kapitaal, arbeid en natuur zo efficiënt mogelijk om producten te maken en draagt het ondernemersrisico."
     },
     {
@@ -100,22 +100,22 @@ DURU.registerExamen({
       "opties": [
         "Een productieonderneming",
         "Een handelsonderneming",
-        "Een dienstverlenend bedrijf",
-        "Een oerproducent"
+        "Een oerproducent",
+        "Een dienstverlenend bedrijf"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Reparaties zijn niet-tastbare werkzaamheden die voor een klant worden uitgevoerd; de fietsenmaker verleent een dienst."
     },
     {
       "type": "mc",
       "vraag": "Wat is een handelsonderneming?",
       "opties": [
-        "Een bedrijf dat grondstoffen omzet in nieuwe eindproducten.",
         "Een bedrijf dat producten inkoopt en doorverkoopt zonder er zelf iets aan te veranderen.",
+        "Een bedrijf dat grondstoffen omzet in nieuwe eindproducten.",
         "Een ziekenhuis of tandartspraktijk.",
         "Een boerderij die graan zaait en oogst."
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Een handelsonderneming (zoals een supermarkt of kledingwinkel) koopt goederen in en verkoopt ze door zonder ze te bewerken."
     },
     {
@@ -135,11 +135,11 @@ DURU.registerExamen({
       "vraag": "Wat is het verschil tussen 'mechanisatie' en 'automatisering'?",
       "opties": [
         "Bij mechanisatie nemen computers het denkwerk over; bij automatisering worden handgereedschappen gebruikt.",
-        "Bij mechanisatie vervangen machines zware handarbeid; bij automatisering nemen computers en robots de besturing en het werk over.",
         "Mechanisatie geldt alleen voor kappers; automatisering alleen voor akkerbouw.",
+        "Bij mechanisatie vervangen machines zware handarbeid; bij automatisering nemen computers en robots de besturing en het werk over.",
         "Er is geen enkel verschil; het zijn synoniemen."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "Mechanisatie = fysieke arbeid vervangen door machines (bv. tractor). Automatisering/robotisering = computers en robots besturen en verrichten het werk."
     },
     {
@@ -147,11 +147,11 @@ DURU.registerExamen({
       "vraag": "Een bakkerij produceert per jaar 120.000 broden met 6 bakkers. Wat is de arbeidsproductiviteit per werknemer per jaar?",
       "opties": [
         "12.000 broden",
-        "20.000 broden",
+        "120.000 broden",
         "72.000 broden",
-        "120.000 broden"
+        "20.000 broden"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "Arbeidsproductiviteit = 120.000 / 6 = 20.000 broden per werknemer per jaar."
     },
     {

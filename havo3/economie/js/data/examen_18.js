@@ -14,12 +14,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Casus Rens (15 jaar): Rens verhuurt lasergamepistolen via zijn eigen bedrijf. Welke productiefactoren zet Rens in voor zijn onderneming?",
       "opties": [
-        "Uitsluitend natuur, want lasergamen doe je in het bos.",
         "Kapitaal (laserguns en website), Arbeid (zijn inzet en beheer) en Ondernemerschap (zijn initiatief en KvK-inschrijving).",
+        "Uitsluitend natuur, want lasergamen doe je in het bos.",
         "Alleen arbeid, want Rens heeft geen personeel in dienst.",
         "Geen enkele productiefactor, want minderjarigen mogen niet ondernemen."
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "De laserguns zijn kapitaalgoederen, zijn tijd is arbeid en zijn initiatief/risico als CEO is ondernemerschap."
     },
     {
@@ -38,12 +38,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Waarom kiezen autofabrikanten zoals Volvo steeds vaker voor gerecyclede petflessen en textiel in plaats van echt leer voor hun autobekleding?",
       "opties": [
-        "Om de milieubelasting en invloed van de veehouderij te beperken en duurzamer te produceren.",
-        "Omdat petflessen veel zwaarder zijn dan leer.",
         "Omdat de wet verbiedt om koeien te houden in Europa.",
+        "Omdat petflessen veel zwaarder zijn dan leer.",
+        "Om de milieubelasting en invloed van de veehouderij te beperken en duurzamer te produceren.",
         "Om te zorgen dat auto's niet meer elektrisch hoeven te rijden."
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Zoals in de lesstof vermeld: Volvo stapt af van leer vanwege de impact van veehouderij op het milieu en dierenwelzijn (duurzaamheid)."
     },
     {
@@ -51,35 +51,35 @@ DURU.registerExamen({
       "vraag": "Een verfbedrijf koopt een machine van € 30.000 met een jaarlijkse afschrijving van € 5.000. Hoeveel bedraagt de boekwaarde van de machine aan het einde van jaar 3?",
       "opties": [
         "€ 10.000",
-        "€ 15.000",
+        "€ 25.000",
         "€ 20.000",
-        "€ 25.000"
+        "€ 15.000"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "Na 3 jaar is er 3 × € 5.000 = € 15.000 afgeschreven. Boekwaarde eind jaar 3 = € 30.000 - € 15.000 = € 15.000."
     },
     {
       "type": "mc",
       "vraag": "Een winkelpand is op 1 januari 2023 € 280.000 waard en op 1 januari 2024 € 270.000. De onderneming schrijft ieder jaar 2% van de oorspronkelijke aanschafprijs af. Wat was de oorspronkelijke aanschafprijs van het pand?",
       "opties": [
-        "€ 280.000",
-        "€ 300.000",
         "€ 500.000",
+        "€ 300.000",
+        "€ 280.000",
         "€ 1.000.000"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "De jaarlijkse afschrijving is € 280.000 - € 270.000 = € 10.000. Als 2% gelijk is aan € 10.000, dan is 100% (de aanschafprijs) = € 10.000 / 0,02 = € 500.000."
     },
     {
       "type": "mc",
       "vraag": "Waarom is de afschrijvingsperiode van een computer (bijvoorbeeld 3 tot 4 jaar) meestal veel korter dan die van een bedrijfsauto of bedrijfspand?",
       "opties": [
-        "Omdat computers sneller verouderen en technisch achterhaald raken door snelle technologische ontwikkelingen.",
         "Omdat computers uitsluitend uit plastic bestaan en meteen kapot gaan.",
+        "Omdat computers sneller verouderen en technisch achterhaald raken door snelle technologische ontwikkelingen.",
         "Omdat de belastingdienst computers niet als kapitaalgoederen erkent.",
         "Omdat een computer geen restwaarde kan hebben."
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Computers kennen een hoge economische veroudering; software vraagt al snel om snellere processors waardoor ze sneller vervangen moeten worden."
     },
     {
@@ -87,11 +87,11 @@ DURU.registerExamen({
       "vraag": "Tijdens de coronaclockdown moesten cafés en restaurants vier weken dicht. Welke kosten moesten volgens Koninklijke Horeca Nederland (KHN) toch voldaan worden?",
       "opties": [
         "Alleen de inkoopwaarde van bier en frisdrank.",
-        "Loonkosten en andere constante kosten (zoals pandhuur).",
         "Uitsluitend de fooien van de kelners.",
+        "Loonkosten en andere constante kosten (zoals pandhuur).",
         "Geen enkele kostenpost, want alle kosten stopten automatisch."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "Vaste lasten zoals pandhuur en vaste loonkosten liepen volledig door, ondanks dat er door de sluiting geen omzet binnenkwam."
     },
     {
@@ -99,23 +99,23 @@ DURU.registerExamen({
       "vraag": "Casus Ajax: Ajax meldde in boekjaar 2020/2021 lagere bedrijfskosten doordat wedstrijden zonder publiek werden gespeeld. Welke kostenpost daalde hierdoor logischerwijs?",
       "opties": [
         "De afschrijving op het stadiongebouw.",
-        "Wedstrijdgerelateerde kosten (zoals stewards, beveiliging en cateringpersoneel op wedstrijddagen).",
+        "De brandverzekering van de Johan Cruijff ArenA.",
         "De rente op langlopende bankleningen.",
-        "De brandverzekering van de Johan Cruijff ArenA."
+        "Wedstrijdgerelateerde kosten (zoals stewards, beveiliging en cateringpersoneel op wedstrijddagen)."
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "Zonder stadionpubliek zijn er geen suppoosten, schoonmakers van tribunes of horecapersoneel nodig: deze wedstrijdgebonden variabele bedrijfskosten vielen weg."
     },
     {
       "type": "mc",
       "vraag": "Wat is het belangrijkste voordeel voor een ondernemer van werknemers met een nulurencontract?",
       "opties": [
-        "De ondernemer hoeft deze medewerkers nooit een salaris per uur te betalen.",
         "De ondernemer heeft flexibiliteit en betaalt alleen loon wanneer er daadwerkelijk werk/productie is (variabele personeelskosten).",
+        "De ondernemer hoeft deze medewerkers nooit een salaris per uur te betalen.",
         "Deze werknemers zijn automatisch eigenaar van de onderneming.",
         "Er hoeft geen belasting over dit werk afgedragen te worden."
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Flexibele oproepkrachten zorgen ervoor dat loonkosten meebewegen met de drukte, waardoor het bedrijf minder vaste loondruk heeft bij rustige periodes."
     },
     {
@@ -136,22 +136,22 @@ DURU.registerExamen({
       "opties": [
         "Loonkosten",
         "Huisvestingskosten",
-        "Verkoopkosten",
-        "Rentekosten"
+        "Rentekosten",
+        "Verkoopkosten"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "Rente die betaald wordt over een financiering of lening valt rechtstreeks onder de rentekosten."
     },
     {
       "type": "mc",
       "vraag": "Onder welke kostenpost vallen de visitekaartjes en flyers die de boerderijwinkel uitdeelt aan voorbijgangers?",
       "opties": [
-        "Verkoopkosten",
+        "Afschrijvingskosten",
         "Huisvestingskosten",
         "Loonkosten",
-        "Afschrijvingskosten"
+        "Verkoopkosten"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Reclame, drukwerk en promotie maken deel uit van de verkoopkosten."
     },
     {

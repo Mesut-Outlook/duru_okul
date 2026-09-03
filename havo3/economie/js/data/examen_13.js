@@ -183,7 +183,7 @@ DURU.registerExamen({
       "vraag": "Leg aan de hand van het begrip 'schaarste' uit waarom ook een miljardair toch economische keuzes moet maken.",
       "sleutelwoorden": [
         "tijd/uren/beperkt",
-        "keuzes/prioriteiten/niet alles tegelijk"
+        "prioriteiten/niet alles tegelijk/afwegen"
       ],
       "minTreffers": 1,
       "modelantwoord": "Hoewel een miljardair enorm veel geld bezit, is zijn tijd beperkt (slechts 24 uur per dag). Omdat tijd schaars is en niet oneindig, moet ook een rijk persoon keuzes maken tussen verschillende activiteiten.",
