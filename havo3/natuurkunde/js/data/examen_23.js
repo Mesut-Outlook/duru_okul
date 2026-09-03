@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-23",
+  "hoofdstuk": 8,
   "titel": "Toets 23 — Overbrengingen, Katrollen & Tandwielen",
   "vak": "Natuurkunde · HAVO 3 (H8)",
   "icoon": "⚙️",

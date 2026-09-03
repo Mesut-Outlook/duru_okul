@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-22",
+  "hoofdstuk": 8,
   "titel": "Toets 22 — Rekenen aan Hefbomen & Momenten",
   "vak": "Natuurkunde · HAVO 3 (H8)",
   "icoon": "⚖️",

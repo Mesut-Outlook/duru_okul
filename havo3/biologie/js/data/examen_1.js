@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-1",
+  "hoofdstuk": 10,
   "titel": "Toets 1 — Levensfasen, Ontwikkeling & Hormonen",
   "vak": "Biologie · HAVO 3 (H10.1)",
   "icoon": "🌱",

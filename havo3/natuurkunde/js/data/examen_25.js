@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-25",
+  "hoofdstuk": 8,
   "titel": "Toets 25 — Integrale Eindtoets Hoofdstuk 8 (Krachten gebruiken)",
   "vak": "Natuurkunde · HAVO 3 (H8)",
   "icoon": "🏆",

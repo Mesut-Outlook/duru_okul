@@ -74,6 +74,20 @@ tablosunda; yeni yıl eklerken oraya bir satır ekle. Arşiv dersleri eski slug'
 entry'sine `archief:true` + `jaar:'<schooljaar>'` + href `./archief/<schooljaar>/<vak>/` → `JAAR_NIVEAU`'ye
 yıl→niveau ekle → `?v=` bump.
 
+## Hoofdstuk (ünite) verisi — TEK KAYNAK, elle yazma
+Ünite kırılımı **üretilmiş bir manifest**ten gelir; hiçbir yerde elle hoofdstuk listesi tutulmaz.
+- `tools/build_hoofdstukken.js` → her `havo3/<vak>/js/bootstrap.js` + `js/data/*.js`'i node `vm`
+  içinde çalıştırıp `js/hoofdstukken.js` üretir (hoofdstuk listesi, examId→hoofdstuk,
+  onderwerpId→hoofdstuk, ünite başına sınav/onderwerp sayısı). Ders verisi değişince **yeniden çalıştır**;
+  `--check` bayat manifest'te exit 1 döner.
+- `js/hoofdstuk_util.js` → ortak `window.DURU_HF` API. `dashboard.js` ve `ouder_dashboard.js`
+  yalnız bunu kullanır. Yükleme sırası: `hoofdstukken.js` → `hoofdstuk_util.js` → `landing.js`.
+- **⚠️ `ex-h3-<vak>-N` id'sindeki `h3` = NIVEAU (HAVO 3), hoofdstuk DEĞİL.** Sınav id'sinden
+  hoofdstuk çıkarma; hoofdstuk'suz kayıt "Overige toetsen"e düşer. Sıra: `att.hoofdstuk` →
+  manifest → başlıkta `Hoofdstuk N` → `null`.
+- Yeni sınav dosyası yazarken `registerExamen({...})`'e **`hoofdstuk` alanını koymak zorunlu**;
+  onderwerp'lerde de `hoofdstuk` zaten zorunlu (`docs/ENGINE_SPEC.md`).
+
 ## Dashboard & istatistik
 `index.html` iki view içerir ("Mijn vakken" / "Mijn prestaties & statistieken"). `js/dashboard.js`
 **yıl-farkında**: tüm ders/yıl kombinasyonları `VAK_REGISTER` dizisinde tek satırda tanımlı (jaar,

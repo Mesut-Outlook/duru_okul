@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-15",
+  "hoofdstuk": 3,
   "titel": "Toets 15 — Kernenergie & Integrale Eindtoets Hoofdstuk 3",
   "vak": "Natuurkunde · HAVO 3 (H3)",
   "icoon": "🏆",

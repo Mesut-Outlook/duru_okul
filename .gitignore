@@ -33,3 +33,13 @@ tools/*.pdf
 tools/*.html
 tools/captured_pages/
 docs/books_pdf/
+
+# Ders kitabi PDF'leri (telifli kaynak materyal — repoya girmez, Pages'te yayinlanmaz)
+havo3/*/pdf/
+inbox/**/*.pdf
+
+# agy'nin dashboard'u ESKI (uydurma HOOFDSTUK_REGISTRY) haline geri yazan tek-seferlik
+# scriptleri — calistirilirsa 2026-09-02 manifest refactor'unu bozar, bkz. CLAUDE.md.
+tools/update_dashboard_js.py
+tools/update_ouder_dashboard_js.py
+tools/update_ouder_breakdown.py

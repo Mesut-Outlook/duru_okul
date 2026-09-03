@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-20",
+  "hoofdstuk": 4,
   "titel": "Toets 20 — Sensoren & Integrale Eindtoets Hoofdstuk 4",
   "vak": "Natuurkunde · HAVO 3 (H4)",
   "icoon": "🏆",

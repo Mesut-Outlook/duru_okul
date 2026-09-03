@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-scheikunde-4",
+  "hoofdstuk": 2,
   "titel": "Toets 4 — Atoombouw, Deeltjes & Isotopen",
   "vak": "Scheikunde · HAVO 3 (H2)",
   "icoon": "⚛️",

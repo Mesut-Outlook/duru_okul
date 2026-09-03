@@ -10,6 +10,13 @@
   // Hoofdstukken overzicht
   DURU.hoofdstukken = [
     {
+      nr: 1,
+      titel: "Scheikunde is overal",
+      icoon: "🧪",
+      kleur: "h1-thema",
+      intro: "Stofeigenschappen, zuivere stoffen versus mengsels, dichtheid berekenen, de drie fasen (s, l, g), de zes faseveranderingen en temperatuurschalen (°C en Kelvin).",
+    },
+    {
       nr: 2,
       titel: "Bouwstenen van stoffen",
       icoon: "⚛️",

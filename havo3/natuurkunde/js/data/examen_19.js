@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-19",
+  "hoofdstuk": 4,
   "titel": "Toets 19 — Soortelijke Weerstand & Weerstandsdraden",
   "vak": "Natuurkunde · HAVO 3 (H4)",
   "icoon": "📏",

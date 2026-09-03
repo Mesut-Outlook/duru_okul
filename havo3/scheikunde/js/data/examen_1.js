@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-scheikunde-1",
+  "hoofdstuk": 2,
   "titel": "Toets 1 — Macro & Micro, Fasen en Mengsels",
   "vak": "Scheikunde · HAVO 3 (H2)",
   "icoon": "🔍",

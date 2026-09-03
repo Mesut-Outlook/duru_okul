@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-7",
+  "hoofdstuk": 2,
   "titel": "Toets 7 — Weerstand, Wet van Ohm & Weerstandsdraden",
   "vak": "Natuurkunde · HAVO 3 (H2)",
   "icoon": "💡",

@@ -117,6 +117,67 @@ Düzelttikten sonra **beşinde de `node --check`** çalıştır.
 Durum döngüsü: Opus `TODO` → agy `IN_PROGRESS` → biter `REVIEW` → Opus doğrular `DONE`.
 Takıldıysa agy `BLOCKED` + neden yazar. **agy'ye yalnızca "Atanan: agy" olan görevler aittir.**
 
+## 2026-09-02 · Hoofdstuk-kırılımı denetimi (Opus) — agy'nin teslimi düzeltildi
+
+agy'nin "ders + hoofdstuk bazlı gruplama" teslimi denetlendi. Görsel katman iyiydi, **veri katmanı yanlıştı**:
+1. **Uydurma ünite metadata** — `js/dashboard.js` ve `js/ouder_dashboard.js` içine elle yazılmış
+   **iki kopya** `HOOFDSTUK_REGISTRY`; 12 dersin 8'inde gerçek `DURU.hoofdstukken` ile uyuşmuyordu
+   (wiskunde H2↔"H1 Lineaire Formules", biologie H10↔"H1 Organen & Cellen", frans 8↔2 hoofdstuk,
+   natuurkunde H1-4+H8↔tek hoofdstuk, aardrijkskunde/economie/scheikunde/engels benzeri).
+   CLAUDE.md'nin "çapraz-referanssız tek kaynak" kuralı da çiğnenmişti.
+2. **5 derste sınavlarda `hoofdstuk` alanı yoktu** → `ex.hoofdstuk || 1` ile hepsi H1'e yazılıyordu
+   (natuurkunde 25 sınav, scheikunde 10, biologie 5, nederlands 1, maatschappijleer 1).
+3. **`ex.hoofdstukTitel` hiç yoktu** → kaydedilen her başlık jenerik "Hoofdstuk N".
+4. **Fallback tahmini** `floor((n-1)/5)+1` → natuurkunde H8 sınavları "H5" görünüyordu;
+   `ex-h3-sch-h1-N` ve `ex12_v1` hiç eşleşmiyordu.
+5. **Oefen→hoofdstuk regex'i** `/h(\d+)_/` gerçek id'leri (`ak-h1-2`, `sch-h1-3-…`, `bio-h10-1-…`)
+   yakalamıyordu → ünite bazında oefen ilerlemesi tamamen boştu.
+6. **`maxExams: 5` sabiti** → economie'de ünite başına 3 sınav var, "x/5" yanlıştı.
+7. **Dil kuralı ihlali** — öğrenci ekranlarında Türkçe metin ("Ünite Başarı Karnesi", "Tekrar Gerekli",
+   "Henüz sınav çözülmedi"). Öğrenci-içeriği Flamanca olmak zorunda.
+
+**Düzeltme:** manifest mimarisi (`tools/build_hoofdstukken.js` → `js/hoofdstukken.js` →
+`js/hoofdstuk_util.js` / `window.DURU_HF`). Ayrıntı: kök `CLAUDE.md` → "Hoofdstuk (ünite) verisi"
+ve `MEMORY.md` → Milestone 20.
+
+### ⚠️ agy'YE YENİ KURAL: `ex-h3-<vak>-N` id'sindeki `h3` HOOFDSTUK DEĞİL, NIVEAU'dur (HAVO 3)
+Sınav id'sinden hoofdstuk çıkaran regex yazma; hoofdstuk'suz her kayıt sahte olarak "H3"e düşer.
+Hoofdstuk **veriden** gelir: `registerExamen({...})` içinde `hoofdstuk` alanı **zorunlu**.
+Ünite listesi/sayıları hiçbir yere elle yazılmaz — `node tools/build_hoofdstukken.js` çalıştırılır,
+`--check` bayat manifest'i yakalar. UI metni öğrenci tarafında **Flamanca**, veli sayfasında Türkçe.
+
+### TASK-11 · frans kalite kapısı: 5 madde kaldı  [status: TODO]
+- **Atanan**: agy (Antigravity)
+- **Durum**: `node tools/gate.js frans` → **7/12** (2026-09-03, mevcut 40 sınav üzerinde).
+  Kalanlar: 1 şablon soru · 2 tekrar eden soru · `waaronwaar` %35 onwaar barajı ·
+  **26 soruda `uitleg` boş** · 15 soruda yapı sözleşmeye uymuyor (`docs/ENGINE_SPEC.md`).
+- **Not**: `nederlands` (9/12) ve `maatschappijleer` (10/12) hâlâ smoke-test (5 soruluk tek sınav);
+  kural 9 "proeftoets = 20" oradan geliyor — materyal gelmeden düzeltilmez, TASK-09 kapsamında.
+- **Kabul**: `node tools/gate.js frans` → 12/12, her dosyada `node --check`.
+
+### TASK-10 · scheikunde H1 sınavlarında cevaplanamayan sorular  [status: DONE — Opus, 2026-09-03]
+- **Atanan**: Opus (agy'ye gitmeden çözüldü)
+- **Sonuç**: 16 `invoer` sorusu `invul`'e çevrildi (oefenquiz'lerdeki `invoer` bilinçli olarak korundu).
+  5 sınav dosyasının tamamı **%100 A** idi (`{"0":16}`, `{"0":13}`, `{"0":18}`, `{"0":14}`, `{"0":13}`)
+  — mc doğru şıkları A/B/C/D döngüsüne dağıtıldı (genel dağılım artık 41/37/35/26).
+  `sch-h1-3-faseveranderingen` (5/6 aynı şık) de düzeltildi. Tekrar eden soru
+  (`sch-h1-1-stofeigenschappen#7` ↔ `ex-h3-sch-h1-1#12`) sınav tarafında yeni bir soruyla değiştirildi
+  (dichtheid = stofeigenschap, hoeveelheden bağımsız). `node tools/gate.js scheikunde` → **11/12**.
+- **Açık kalan tek madde (bilinçli):** kural 9, onderwerp başına **tam 8** soru istiyor;
+  `sch-h1-1-stofeigenschappen` ve `sch-h1-3-faseveranderingen` 10'ar iyi soru içeriyor. İki iyi
+  alıştırma sorusunu yalnızca sayı tutsun diye silmek Duru'nun aleyhine olduğu için silinmedi.
+  Karar Duru'nun babasında: ya bu iki dosya 8'e indirilir, ya `tools/gate.js:70` kuralı onderwerp
+  için "**en az** 8" (`length < 8`) hâline getirilir.
+- **Eski görev tanımı (referans)**: agy (Antigravity)
+- **Sorun**: `node tools/gate.js scheikunde` → **5a kuralı: sınavda `invoer` 16 ihlal**.
+  Etkilenen dosyalar: `examen_h1_2.js` (5), `examen_h1_4.js` (5), `examen_h1_5.js` (6).
+  Sınav modunda `invoer` için girdi kutusu çizilmiyor → 16 soru cevaplanamıyor, otomatik yanlış.
+- **Yapılacak**: bu 16 soruyu `invul`'e çevir (sözleşme: `docs/ENGINE_SPEC.md`; kural 3, yukarıda).
+  Ayrıca aynı derste kapıda kalan diğer 3 madde: tekrar eden soru (1), mc şık dağılımı (6 dosya),
+  soru sayısı (2 dosya).
+- **Kabul**: `node tools/gate.js scheikunde` → 12/12; `node --check` her dosyada;
+  `node tools/build_hoofdstukken.js` yeniden çalıştırılıp manifest güncel bırakıldı.
+
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
 

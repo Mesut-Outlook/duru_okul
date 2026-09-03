@@ -271,3 +271,33 @@ This document serves as the project's global memory log, preserving all overall 
   - **Agent Guidelines**: Updated root `CLAUDE.md` to mandate that any future test preparation ("test hazırla") triggers this two-fold extraction and generation process automatically for each individual chapter and subject.
 
 
+
+### Milestone 20: Hoofdstuk-bazlı istatistik — tek doğru kaynak (manifest) (2026-09-02)
+* **Sorun**: Ünite (hoofdstuk) kırılımı `js/dashboard.js` + `js/ouder_dashboard.js` içine **elle yazılmış
+  ve uydurma** iki `HOOFDSTUK_REGISTRY` kopyasından besleniyordu; 12 dersin 8'inde gerçek
+  `DURU.hoofdstukken` ile uyuşmuyordu (wiskunde H2↔"H1 Lineaire Formules", biologie H10↔"H1 Organen",
+  frans 8 hoofdstuk↔2, natuurkunde H1-4+H8↔1, aardrijkskunde/economie/scheikunde/engels benzeri).
+* **Çözüm — manifest mimarisi**:
+  - `tools/build_hoofdstukken.js`: her `havo3/<vak>/js/bootstrap.js` + `js/data/*.js`'i node `vm`
+    sandbox'ında çalıştırıp `js/hoofdstukken.js` üretir (hoofdstuk listesi, examId→hoofdstuk,
+    onderwerpId→hoofdstuk, ünite başına sınav/onderwerp sayısı). `--check` modu bayat manifest'te exit 1.
+  - `js/hoofdstuk_util.js`: ortak `window.DURU_HF` API (`lijst/meta/vanAttempt/vanOnderwerp/
+    totaalExamens/totaalOnderwerpen`). İki dashboard da yalnız bunu kullanır; ayrı liste YOK.
+  - `index.html`: `hoofdstukken.js` → `hoofdstuk_util.js` → `landing.js` sırasıyla yüklenir (`?v=3.8`).
+* **⚠️ KRİTİK TUZAK — `ex-h3-<vak>-N` id'sindeki `h3` HOOFDSTUK DEĞİL, NIVEAU'dur (HAVO 3).**
+  Sınav id'sinden hoofdstuk çıkarmaya çalışan her regex yanlıştır; hoofdstuk'suz her kayıt sahte
+  olarak "H3"e düşer. Fallback zinciri: `att.hoofdstuk` → manifest `examenHoofdstuk[examId]` →
+  başlıkta `Hoofdstuk N` → `null` ("Overige toetsen"). Tahmin (`floor((n-1)/5)+1`) yasak.
+* **Veri düzeltmeleri**: natuurkunde examen_1-25 → H1/2/3/4/8, scheikunde `examen_h1_*`→H1 &
+  `examen_1-5`→H2, biologie examen_1-5→H10. 12 dersin `exams.js`'i başlığı `DURU.hoofdstukken`'den
+  okur, hoofdstuk'suz sınavı `null` kaydeder (eskiden hepsi yanlışça H1'di).
+* **Yeni ölçüler**: ünite kartlarında gemiddeld/hoogste/laatste cijfer + **toetsvoortgang**
+  (benzersiz çözülen/gerçek toplam) + **oefenvoortgang** (≥1 poging yapılmış onderwerp/toplam).
+  Sahte `maxExams:5` sabiti kaldırıldı (economie'de ünite başına 3 sınav var).
+* **Oefen→hoofdstuk eşlemesi düzeldi**: eski `/h(\d+)_/` regex'i `ak-h1-2`, `sch-h1-3-…`,
+  `bio-h10-1-…`, `h2-1-…` gibi gerçek id'leri hiç yakalamıyordu → artık manifest üzerinden.
+* **Dil**: Duru'nun gördüğü her yer (12 `engine.js` ünite tablosu + `index.html` + `dashboard.js`)
+  Flamancaya çevrildi; **veli sayfası (`ouder_dashboard.js`) bilinçli olarak Türkçe kalır**.
+* **Doğrulama**: 12 `engine.js` + tüm data/exams dosyalarında `node --check`;
+  `node tools/build_hoofdstukken.js --check` exit 0; headless DOM-stub harness ile hem öğrenci
+  hem veli dashboard'u render edilip ünite kırılımı, "Overige toetsen" ve oranlar doğrulandı.

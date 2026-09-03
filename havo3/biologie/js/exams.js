@@ -7,6 +7,15 @@
 (function () {
   "use strict";
 
+  function hoofdstukTitelVan(nr) {
+    if (nr == null) return "";
+    var lijst = (window.DURU && DURU.hoofdstukken) || [];
+    for (var i = 0; i < lijst.length; i++) {
+      if (lijst[i].nr === nr) return lijst[i].titel;
+    }
+    return "Hoofdstuk " + nr;
+  }
+
   /* ---------- Registratie ---------- */
   DURU.examens = DURU.examens || [];
   DURU._examenById = {};
@@ -322,6 +331,8 @@
       attemptId: attemptId,
       examId: ex.id,
       examTitel: ex.titel,
+      hoofdstuk: (ex.hoofdstuk != null ? ex.hoofdstuk : null),
+      hoofdstukTitel: hoofdstukTitelVan(ex.hoofdstuk),
       datum: datumStr,
       goed: goed,
       totaal: n,

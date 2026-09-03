@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-3",
+  "hoofdstuk": 10,
   "titel": "Toets 3 — Geslachtskenmerken, Hormonen & Puberteit",
   "vak": "Biologie · HAVO 3 (H10.2)",
   "icoon": "🚻",

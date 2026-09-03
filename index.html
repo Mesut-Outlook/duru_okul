@@ -141,6 +141,26 @@
         </div>
       </section>
 
+      <!-- 2.5 Overzicht per hoofdstuk -->
+      <section class="hoofdstuk-stats-sectie" id="hoofdstuk-stats-sectie" aria-label="Overzicht per hoofdstuk">
+        <div class="sectie-kop-flex">
+          <div>
+            <h3 class="vak-stats-sectie__titel" style="margin-bottom:4px;">📖 Overzicht per hoofdstuk</h3>
+            <p style="margin:0 0 16px; font-size:13px; color:var(--grijs);">
+              Zie per hoofdstuk hoe je ervoor staat: je gemiddelde cijfer, je beste resultaat en hoeveel je al geoefend hebt.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Hoofdstuk filter bar -->
+        <div class="filter-bar" id="hoofdstuk-filter-bar"></div>
+
+        <!-- Hoofdstuk grid -->
+        <div class="hoofdstuk-stats-grid" id="hoofdstuk-stats-grid">
+          <!-- Dynamically filled by JS -->
+        </div>
+      </section>
+
       <!-- 3. Score verloop chart -->
       <div class="chart-card" style="margin-bottom:32px;">
         <h3 class="chart-card__title">
@@ -162,7 +182,7 @@
         <!-- Search input -->
         <div class="search-input-wrapper">
           <span class="search-icon" aria-hidden="true">🔍</span>
-          <input class="search-input" id="exam-search" type="text" placeholder="Zoek op onderwerp..." aria-label="Zoek in gemaakte toetsen" />
+          <input class="search-input" id="exam-search" type="text" placeholder="Zoek op onderwerp of hoofdstuk..." aria-label="Zoek in gemaakte toetsen" />
         </div>
 
         <!-- Attempts Table -->
@@ -172,6 +192,7 @@
               <tr>
                 <th>Datum &amp; Tijd</th>
                 <th>Vak</th>
+                <th>Hoofdstuk</th>
                 <th>Onderwerp / Examen</th>
                 <th>Score / Vragen</th>
                 <th>Resultaat (Cijfer)</th>
@@ -180,7 +201,7 @@
             <tbody id="exam-attempts-tbody">
               <!-- Filled via JS -->
               <tr>
-                <td colspan="5" style="text-align:center;padding:24px;color:var(--grijs-licht);">
+                <td colspan="6" style="text-align:center;padding:24px;color:var(--grijs-licht);">
                   Nog geen resultaten gevonden in localStorage.
                 </td>
               </tr>
@@ -358,10 +379,12 @@
 
   <!-- ══ Script ══════════════════════════════════════════════
        Gewone <script> tag — geen ES modules, werkt op file://  -->
-  <script src="js/landing.js?v=3.7"></script>
-  <script src="js/dashboard.js?v=3.7"></script>
-  <script src="js/ouder_dashboard.js?v=3.7"></script>
-  <script src="js/cloud_sync.js?v=3.7"></script>
+  <script src="js/hoofdstukken.js?v=3.8"></script>
+  <script src="js/hoofdstuk_util.js?v=3.8"></script>
+  <script src="js/landing.js?v=3.8"></script>
+  <script src="js/dashboard.js?v=3.8"></script>
+  <script src="js/ouder_dashboard.js?v=3.8"></script>
+  <script src="js/cloud_sync.js?v=3.8"></script>
 
 </body>
 </html>

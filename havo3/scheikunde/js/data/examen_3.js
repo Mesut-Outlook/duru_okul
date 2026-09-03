@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-scheikunde-3",
+  "hoofdstuk": 2,
   "titel": "Toets 3 — Chemische Formuletaal & Naamgeving",
   "vak": "Scheikunde · HAVO 3 (H2)",
   "icoon": "📝",

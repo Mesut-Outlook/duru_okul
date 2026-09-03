@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-16",
+  "hoofdstuk": 4,
   "titel": "Toets 16 — Stofeigenschappen, Dichtheid & Drijven/Zinken",
   "vak": "Natuurkunde · HAVO 3 (H4)",
   "icoon": "🧱",

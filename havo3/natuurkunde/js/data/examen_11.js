@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-11",
+  "hoofdstuk": 3,
   "titel": "Toets 11 — Het Elektromagnetisch Spectrum & Soorten Straling",
   "vak": "Natuurkunde · HAVO 3 (H3)",
   "icoon": "🌈",

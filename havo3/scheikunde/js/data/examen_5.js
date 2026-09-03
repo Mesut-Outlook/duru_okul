@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-scheikunde-5",
+  "hoofdstuk": 2,
   "titel": "Toets 5 — Integrale Eindtoets Hoofdstuk 2 (Bouwstenen van stoffen)",
   "vak": "Scheikunde · HAVO 3 (H2)",
   "icoon": "🏆",

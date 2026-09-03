@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-13",
+  "hoofdstuk": 3,
   "titel": "Toets 13 — Gevaren van Straling, Besmetting & Bescherming",
   "vak": "Natuurkunde · HAVO 3 (H3)",
   "icoon": "☢️",

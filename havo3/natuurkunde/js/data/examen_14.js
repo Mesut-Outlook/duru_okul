@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-14",
+  "hoofdstuk": 3,
   "titel": "Toets 14 — Toepassingen van Straling & Medische Beeldvorming",
   "vak": "Natuurkunde · HAVO 3 (H3)",
   "icoon": "🔬",

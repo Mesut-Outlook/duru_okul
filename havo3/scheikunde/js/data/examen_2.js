@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-scheikunde-2",
+  "hoofdstuk": 2,
   "titel": "Toets 2 — Het Periodiek Systeem, Metalen & Niet-Metalen",
   "vak": "Scheikunde · HAVO 3 (H2)",
   "icoon": "🧪",

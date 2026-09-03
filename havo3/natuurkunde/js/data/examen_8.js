@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-8",
+  "hoofdstuk": 2,
   "titel": "Toets 8 — Serie- en Parallelschakelingen Berekenen",
   "vak": "Natuurkunde · HAVO 3 (H2)",
   "icoon": "🔌",

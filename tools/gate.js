@@ -67,9 +67,11 @@ const yapi=[];alle.forEach(a=>{const v=a.v,tag=`${a.owner}#${a.n}`;
   else yapi.push(tag+`: bilinmeyen type '${v.type}'`)});
 check('8. Soru yapisi sozlesmeye uygun', yapi);
 
-check('9. Soru sayilari (onderwerp 8 / proeftoets 20)',
-  [...OO.filter(o=>(o.vragen||[]).length!==8).map(o=>`${o.id}: ${(o.vragen||[]).length} vraag`),
-   ...EE.filter(e=>(e.vragen||[]).length!==20).map(e=>`${e.id}: ${(e.vragen||[]).length} vraag`)]);
+// onderwerp = EN AZ 8 soru (fazlasi serbest: ekstra alistirma sorusu silinmez);
+// proeftoets = TAM 20 soru (sinav uzunlugu her derste ayni kalmali).
+check('9. Soru sayilari (onderwerp \u2265 8 / proeftoets = 20)',
+  [...OO.filter(o=>(o.vragen||[]).length<8).map(o=>`${o.id}: ${(o.vragen||[]).length} vraag (min 8)`),
+   ...EE.filter(e=>(e.vragen||[]).length!==20).map(e=>`${e.id}: ${(e.vragen||[]).length} vraag (moet 20 zijn)`)]);
 check('10. theorie ≥1500 karakter', OO.filter(o=>String(o.theorie||'').length<1500).map(o=>`${o.id}: ${String(o.theorie||'').length}b`));
 check('11. index.html bagli', files.filter(f=>!refs.includes('js/data/'+f)).map(f=>'bagli degil: '+f));
 

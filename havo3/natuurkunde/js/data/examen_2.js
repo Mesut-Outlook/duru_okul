@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-2",
+  "hoofdstuk": 1,
   "titel": "Toets 2 — Versnelling, Massa & Wet van Newton",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "⚡",

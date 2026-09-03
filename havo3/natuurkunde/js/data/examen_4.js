@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-4",
+  "hoofdstuk": 1,
   "titel": "Toets 4 — Arbeid, Kracht & Energieomzetting",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "⚙️",

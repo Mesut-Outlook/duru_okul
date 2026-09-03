@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-10",
+  "hoofdstuk": 2,
   "titel": "Toets 10 — Integrale Eindtoets Hoofdstuk 2 (Elektriciteit)",
   "vak": "Natuurkunde · HAVO 3 (H2)",
   "icoon": "🏆",

@@ -489,6 +489,112 @@
       '<div style="font-size:28px;font-weight:800;">' + geoefendOnderwerpen + '<span style="font-size:16px;font-weight:600;color:var(--grijs);">/' + totaalOnderwerpen + '</span></div></div>';
     html += '</div>';
 
+    // Hoofdstukken Overzicht & Cijfers
+    if ((DURU.hoofdstukken || []).length === 0) {
+      html += '<p style="margin:0 4px 14px;color:var(--grijs)">De hoofdstukken voor dit vak komen zodra het lesmateriaal er is.</p>';
+    } else {
+      html += '<div class="sectie-titel"><h3>📖 Overzicht per hoofdstuk</h3><div class="lijn"></div></div>';
+      html += '<p style="margin:0 4px 14px;color:var(--grijs)">Zo zie je per hoofdstuk hoe je ervoor staat: je gemiddelde, je beste cijfer en wat je nog kunt oefenen.</p>';
+      html += '<table class="nask" style="margin-bottom:28px;">';
+      html += '<thead><tr><th style="text-align:left;">Hoofdstuk</th><th>Oefeningen</th><th>Proeftoetsen</th><th>Gemiddeld Cijfer</th><th>Beste Cijfer</th><th>Laatste Toets</th><th>Status</th></tr></thead><tbody>';
+
+      var hfVanAttempt = function (a) {
+        if (a.hoofdstuk != null) return a.hoofdstuk;
+        var lijst = DURU.examens || [];
+        for (var i = 0; i < lijst.length; i++) {
+          if (lijst[i].id === a.examId && lijst[i].hoofdstuk != null) return lijst[i].hoofdstuk;
+        }
+        // Uit het examId valt GEEN hoofdstuk af te leiden: "ex-h3-<vak>-N" bevat
+        // het NIVEAU (HAVO 3), niet het hoofdstuk. Alleen de titel is betrouwbaar.
+        var tm = String(a.examTitel || "").match(/Hoofdstuk\s*(\d+)/i);
+        return tm ? parseInt(tm[1], 10) : null;
+      };
+
+      var overigeAttempts = (exData.history || []).filter(function(a) {
+        var hfNr = hfVanAttempt(a);
+        if (hfNr == null) return true;
+        var bestaat = false;
+        (DURU.hoofdstukken || []).forEach(function(hh) { if (hh.nr === hfNr) bestaat = true; });
+        return !bestaat;
+      });
+
+      (DURU.hoofdstukken || []).forEach(function (h) {
+        var ow = DURU.onderwerpenVan ? DURU.onderwerpenVan(h.nr) : [];
+        var owDone = ow.filter(function(o) { return (P.pogingen && P.pogingen[o.id] > 0) || (P.beste && P.beste[o.id] > 0); }).length;
+
+        var hfExams = (DURU.examens || []).filter(function(ex) { return ex.hoofdstuk === h.nr; });
+        var hfAttempts = (exData.history || []).filter(function(a) { return hfVanAttempt(a) === h.nr; });
+
+        var examCount = hfAttempts.length;
+        var sumPcts = 0;
+        var maxPct = 0;
+        var lastPct = 0;
+        var lastDatum = "-";
+
+        if (examCount > 0) {
+          hfAttempts.forEach(function(a) {
+            sumPcts += (a.pct || 0);
+            if ((a.pct || 0) > maxPct) maxPct = a.pct;
+          });
+          lastPct = hfAttempts[0].pct || 0;
+          lastDatum = (hfAttempts[0].datum || "-").split(" ")[0];
+        }
+
+        var avgGrade = examCount > 0 ? cijferStr(sumPcts / examCount) : "—";
+        var maxGrade = examCount > 0 ? cijferStr(maxPct) : "—";
+        var lastGrade = examCount > 0 ? cijferStr(lastPct) : "—";
+
+        var avgNum = examCount > 0 ? (1 + (sumPcts / examCount) / 100 * 9) : 0;
+        var statusBadge = '<span style="color:var(--grijs-licht);">⏳ Niet gestart</span>';
+        if (examCount > 0) {
+          if (avgNum >= 8.5) statusBadge = '<span style="color:var(--groen);font-weight:800;">🌟 Uitmuntend</span>';
+          else if (avgNum >= 7.0) statusBadge = '<span style="color:var(--groen);font-weight:700;">👍 Goed</span>';
+          else if (avgNum >= 5.5) statusBadge = '<span style="color:var(--blauw);font-weight:700;">✔️ Voldoende</span>';
+          else statusBadge = '<span style="color:var(--oranje);font-weight:800;">⚠️ Herhalen</span>';
+        }
+
+        html += '<tr>';
+        html += '<td style="text-align:left;font-weight:700;">' + (h.icoon || "📖") + ' Hoofdstuk ' + h.nr + ': ' + esc(h.titel) + '</td>';
+        html += '<td>' + owDone + '/' + ow.length + '</td>';
+        html += '<td><strong>' + examCount + '</strong> / ' + hfExams.length + ' gemaakt</td>';
+        html += '<td><span style="font-size:15px;font-weight:800;color:' + (avgNum >= 5.5 ? 'var(--groen)' : (examCount > 0 ? 'var(--oranje)' : 'var(--grijs-licht)')) + ';">' + avgGrade + '</span></td>';
+        html += '<td><strong style="color:var(--groen);">' + maxGrade + '</strong></td>';
+        html += '<td>' + lastGrade + ' <small style="color:var(--grijs);font-size:11px;">(' + esc(lastDatum) + ')</small></td>';
+        html += '<td>' + statusBadge + '</td>';
+        html += '</tr>';
+      });
+
+      if (overigeAttempts.length > 0) {
+        var oSumPcts = 0, oMaxPct = 0, oLastPct = 0, oLastDatum = "-";
+        overigeAttempts.forEach(function(a) {
+          oSumPcts += (a.pct || 0);
+          if ((a.pct || 0) > oMaxPct) oMaxPct = a.pct;
+        });
+        oLastPct = overigeAttempts[0].pct || 0;
+        oLastDatum = (overigeAttempts[0].datum || "-").split(" ")[0];
+        var oAvgGrade = cijferStr(oSumPcts / overigeAttempts.length);
+        var oMaxGrade = cijferStr(oMaxPct);
+        var oLastGrade = cijferStr(oLastPct);
+        var oAvgNum = 1 + (oSumPcts / overigeAttempts.length) / 100 * 9;
+        var oStatusBadge = oAvgNum >= 8.5 ? '<span style="color:var(--groen);font-weight:800;">🌟 Uitmuntend</span>'
+          : oAvgNum >= 7.0 ? '<span style="color:var(--groen);font-weight:700;">👍 Goed</span>'
+          : oAvgNum >= 5.5 ? '<span style="color:var(--blauw);font-weight:700;">✔️ Voldoende</span>'
+          : '<span style="color:var(--oranje);font-weight:800;">⚠️ Herhalen</span>';
+
+        html += '<tr>';
+        html += '<td style="text-align:left;font-weight:700;">📦 Overige toetsen</td>';
+        html += '<td>—</td>';
+        html += '<td><strong>' + overigeAttempts.length + '</strong> gemaakt</td>';
+        html += '<td><span style="font-size:15px;font-weight:800;color:' + (oAvgNum >= 5.5 ? 'var(--groen)' : 'var(--oranje)') + ';">' + oAvgGrade + '</span></td>';
+        html += '<td><strong style="color:var(--groen);">' + oMaxGrade + '</strong></td>';
+        html += '<td>' + oLastGrade + ' <small style="color:var(--grijs);font-size:11px;">(' + esc(oLastDatum) + ')</small></td>';
+        html += '<td>' + oStatusBadge + '</td>';
+        html += '</tr>';
+      }
+
+      html += '</tbody></table>';
+    }
+
     html += '<div class="sectie-titel"><h3>📖 Oefenen per onderwerp</h3><div class="lijn"></div></div>';
     DURU.hoofdstukken.forEach(function (h) {
       var ow = DURU.onderwerpenVan(h.nr);

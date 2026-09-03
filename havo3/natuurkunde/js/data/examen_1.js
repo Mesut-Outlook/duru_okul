@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-1",
+  "hoofdstuk": 1,
   "titel": "Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "🏎️",

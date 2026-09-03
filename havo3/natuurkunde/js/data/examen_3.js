@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-3",
+  "hoofdstuk": 1,
   "titel": "Toets 3 — Verkeersveiligheid, Remweg & Stopafstand",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "🚗",

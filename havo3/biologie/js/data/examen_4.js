@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-4",
+  "hoofdstuk": 10,
   "titel": "Toets 4 — Acne, Zweet, Emoties & Diergedrag",
   "vak": "Biologie · HAVO 3 (H10.2)",
   "icoon": "🫧",

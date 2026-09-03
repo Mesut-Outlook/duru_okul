@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-18",
+  "hoofdstuk": 4,
   "titel": "Toets 18 — Warmtetransport, Geleiding & Isolatie",
   "vak": "Natuurkunde · HAVO 3 (H4)",
   "icoon": "🏡",

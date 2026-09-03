@@ -2,13 +2,55 @@
    Duru's Duits (HAVO 3) — Bootstrap
    Maakt het globale DURU-object klaar VOORDAT de databestanden laden.
    Elk databestand roept DURU.register({...}) / DURU.registerExamen({...}) aan.
-   Smoke-test-site: nog geen onderwerpen (oefenquizzes), alleen een proeftoets.
    ========================================================= */
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstukken overzicht (Neue Kontakte 3 HAVO)
+  DURU.hoofdstukken = [
+    {
+      nr: 1,
+      titel: "Umgebung & Wetter",
+      icoon: "🌲",
+      kleur: "blauw",
+      intro: "Natuur, het weer, seizoenen, maanden, temperatuur, verleden tijd van sein en haben, en het werkwoord werden."
+    },
+    {
+      nr: 2,
+      titel: "Gesundheit & Körper",
+      icoon: "🩺",
+      kleur: "oranje",
+      intro: "Lichaamsdelen, klachten, bij de dokter en apotheek, en persoonlijke voornaamwoorden in de 1e, 3e en 4e naamval."
+    },
+    {
+      nr: 3,
+      titel: "Unterwegs & Reisen",
+      icoon: "🚆",
+      kleur: "groen",
+      intro: "Vervoermiddelen, het station, wegwijzen in de stad, en modale hulpwerkwoorden in de verleden tijd (Präteritum)."
+    },
+    {
+      nr: 4,
+      titel: "Veranstaltungen & Feiern",
+      icoon: "🎪",
+      kleur: "paars",
+      intro: "Evenementen, feesten, uitnodigen, afspraken maken, de der-Gruppe en ein-Gruppe in de 1e en 4e naamval."
+    },
+    {
+      nr: 5,
+      titel: "Zukunft & Berufe",
+      icoon: "💼",
+      kleur: "roze",
+      intro: "Beroepen, opleidingen, solliciteren, toekomstplannen, en sterke werkwoorden met klinkerwisseling (a→ä en e→i/ie)."
+    },
+    {
+      nr: 6,
+      titel: "In Aktion & Hilfsbereitschaft",
+      icoon: "🚑",
+      kleur: "geel",
+      intro: "Hulpdiensten (brandweer, politie, THW), noodgevallen, vrijwilligerswerk, en het complete 4-naamvallensysteem."
+    }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 

@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-24",
+  "hoofdstuk": 8,
   "titel": "Toets 24 — Druk & Vloeistofdruk (Hydraulica)",
   "vak": "Natuurkunde · HAVO 3 (H8)",
   "icoon": "💧",

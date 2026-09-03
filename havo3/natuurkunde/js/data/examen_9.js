@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-9",
+  "hoofdstuk": 2,
   "titel": "Toets 9 — Vermogen, Energieverbruik & kWh",
   "vak": "Natuurkunde · HAVO 3 (H2)",
   "icoon": "⚡",

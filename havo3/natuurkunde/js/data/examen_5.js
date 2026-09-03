@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-5",
+  "hoofdstuk": 1,
   "titel": "Toets 5 — Integrale Eindtoets Hoofdstuk 1 (Kracht & Beweging)",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "🏆",

@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-biologie-5",
+  "hoofdstuk": 10,
   "titel": "Toets 5 — Transgender, Geslachtsverandering & Samenvatting",
   "vak": "Biologie · HAVO 3 (H10.1 & H10.2)",
   "icoon": "🧬",

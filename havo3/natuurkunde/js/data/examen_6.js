@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-6",
+  "hoofdstuk": 2,
   "titel": "Toets 6 — Lading, Stroomkring, Spanning & Stroomsterkte",
   "vak": "Natuurkunde · HAVO 3 (H2)",
   "icoon": "🔋",

@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-12",
+  "hoofdstuk": 3,
   "titel": "Toets 12 — Atoombouw, Kernstraling & Halveringstijd",
   "vak": "Natuurkunde · HAVO 3 (H3)",
   "icoon": "⚛️",

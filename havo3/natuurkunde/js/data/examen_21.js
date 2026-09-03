@@ -3,6 +3,7 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-21",
+  "hoofdstuk": 8,
   "titel": "Toets 21 — Hefbomen & De Hefboomwerking",
   "vak": "Natuurkunde · HAVO 3 (H8)",
   "icoon": "🪚",
