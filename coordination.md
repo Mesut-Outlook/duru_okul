@@ -5,7 +5,7 @@ Bu dosya, planlayan (**Opus** — ben) ile üreten (**agy** = Google Antigravity
 işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 
 ## Current Status
-- **Last Checked**: 2026-08-27 19:55 (Opus — geschiedenis kalite denetimi + H2-H6 yeniden üretimi başlatıldı)
+- **Last Checked**: 2026-09-04 (Opus — pano denetimi Faz 1-2-3 tamam; 8 bulgunun 8'i kapandı)
 - **Status**: **ACTIVE** — "Okul yılı = birinci sınıf boyut" refactor'u başladı (Opus planladı, Duru onayladı).
   Kararlar: yıl storage-anahtarında (`duru_<jaarcode>_<slug>`, jaarcode=2526/2627); her yıl sıfırdan;
   legacy MAVO 2 anahtarları **TAŞINMAZ** → dashboard sabit KEY→YIL haritasıyla 2025-2026'ya etiketler;
@@ -177,6 +177,184 @@ Hoofdstuk **veriden** gelir: `registerExamen({...})` içinde `hoofdstuk` alanı 
   soru sayısı (2 dosya).
 - **Kabul**: `node tools/gate.js scheikunde` → 12/12; `node --check` her dosyada;
   `node tools/build_hoofdstukken.js` yeniden çalıştırılıp manifest güncel bırakıldı.
+
+## 2026-09-03 · Veli paneli yeniden tasarlandı (Opus)
+
+Duru'nun babası için olan panel (`#ouder-view`) baştan tasarlandı. Tasarım **önce önizleme olarak
+onaya sunuldu**, onay sonrası production'a port edildi.
+
+- **Dokunulan**: `js/ouder_dashboard.js` (yalnız render katmanı), `css/style.css` (`.ouder-*` bloğu
+  tamamen yenilendi, -493 satır), `index.html` (`?v=3.8` → `?v=3.9`), `CLAUDE.md`, `MEMORY.md`.
+- **DOKUNULMADI**: `collectParentReportData` + `VAK_CONFIG` — manifest entegrasyonu ve iki-yıl
+  desteği zaten doğruydu. Öğrenci tarafı (`dashboard.js`, `landing.js`, `havo3/**`) hiç değişmedi.
+- **Yeni okuma sırası**: durum cümlesi → cijferschaal (Hollanda 1–10 ölçeği, 5,5 eşiği işaretli)
+  → "Önce buraya bakın" (5,5 altı hoofdstuk'lar) → ders listesi. Detaylar 4 sekmede
+  (`overzicht`/`vakken`/`units`/`logboek`), yalnız aktif olan HTML'e basılır.
+- **⚠️ agy'YE RENK KURALI**: veli panelinde anlam renkleri marka yeşilinden **ayrıdır**.
+  `--ouder-goed/net/zwak` (+ `-zacht`) `#ouder-view` üzerinde, `html.dark #ouder-view`'de yeniden
+  tanımlı. Yeşil = "iyi" demek, marka rengi değil. Yeni durum rengi eklerken bu ikisini karıştırma.
+- **Doğrulama**: `node --check` temiz; headless DOM-stub harness ile gerçek veri render edildi
+  (genel ortalama 6,6 = elle hesapla birebir), dört görünüm de `undefined`/`NaN` üretmedi,
+  verisi olmayan yıl boş-durum metnine düştü.
+
+### ✅ `js/hoofdstukken.js` bayatlığı  [status: DONE — Opus, 2026-09-03]
+`--check` exit 1 veriyordu. Yeniden üretildi (`node tools/build_hoofdstukken.js`) → **exit 0**.
+**Kaçan veri**: 6 economie sınavı (`ex-h3-economie-13..18`) manifest'te yoktu →
+economie H1 `3 → 6`, H4 `3 → 6` sınav. Başka hiçbir ders etkilenmedi; diff 10 satır.
+Bu sınavlar dashboard'larda "Overige toetsen"e düşüyordu, artık doğru üniteye yazılıyor.
+
+**2 uyarı kasıtlı, düzeltilmedi**: `maatschappijleer` + `nederlands` `bootstrap.js`'te
+`DURU.hoofdstukken = []` tutuyor (Duru henüz materyal vermedi). Tek smoke-test sınavlarına ünite
+numarası vermek **uydurma metadata** olurdu — projenin yasakladığı şey. Alan boş kaldı, sınavlar
+"Overige toetsen"e düşüyor. Materyal gelince önce `bootstrap.js`'e gerçek hoofdstuk'lar yazılacak.
+
+### ✅ Bayat dokümanlar düzeltildi  [status: DONE — Opus, 2026-09-03]
+- **`CLAUDE.md` doluluk tablosu** ciddi bayattı: `engels`/`frans`/`duits` hâlâ "smoke-test 0/1/5"
+  yazıyordu ama sırasıyla **30/30/40 proeftoets**'leri var. `economie` "0/1/20" yazıyordu, gerçek
+  **12/18/456**. Tablo baştan sayıldı: **toplam 126 onderwerp · 205 proeftoets · 5082 soru**.
+  (Sayım yöntemi doğrulandı: geschiedenis 840 çıktı, eski tablodaki değerle birebir.)
+- **`docs/ENGINE_SPEC.md` — Sözleşme 2'de `hoofdstuk` alanı hiç yazmıyordu.** CLAUDE.md zorunlu
+  diyor, manifest hattı tamamen buna dayanıyor, ama "tek doğru kaynak" olan spec'te yoktu.
+  Eklendi + `ex-h3-*` niveau tuzağı ve "ünite uydurma" kuralı spec'e yazıldı.
+  **agy: yeni sınav yazarken bu bloğa bak.**
+
+## 2026-09-04 · Faz 3 optimizasyonu uygulandı (Opus) — pano denetimi tamam
+
+### ✅ 1 · Rapor önbelleği + kısmi yeniden çizim  [status: DONE]
+`collectParentReportData` (12 vak × hoofdstuk × poging) sekme değişiminde, yıl değişiminde ve
+20 sn'lik senkronda baştan koşuyordu. Artık `haalContext()` bir **imza** tutuyor: ham string'lerin
+uzunluğu + ilk/son 48 karakteri. Parse YOK — pahalı olan zaten parse + toplama.
+`wisselView()` sekme değişiminde yalnız `.ouder-views` içeriğini değiştiriyor; statusband ve
+cijferschaal yerinde kalıyor. `bindParentEvents` ikiye ayrıldı: `bindKopEvents` (yıl/tab/print,
+`.ouder-views` dışında, tam render başına bir kez) + `bindViewEvents` (her view değişiminde).
+
+### ✅ 2 · Sparkline + trend  [status: DONE]
+Cijferschaal *nerede* olduğunu gösteriyordu, *nereye gittiğini* değil: 4,6→5,5 çıkan ünite ile
+7,0→5,5 düşen ünite panelde birebir aynı görünüyordu. Eklendi:
+- Ders satırında **son 8 denemenin sparkline'ı** (62×18 inline SVG, kütüphane yok, 5,5 eşiği kesik
+  çizgi, son nokta vurgulu, `role="img"` + `aria-label`).
+- **Trend oku** ▲/▼: son 3 deneme ortalaması ile önceki 3'ünkü arasındaki fark.
+  4 denemeden az → hüküm yok (bir sınav trend değildir); 0,3 puandan az fark → düz.
+- **"Önce buraya bakın" sıralaması değişti**: düşüş trendindeki ünite, uzun süredir sabit-düşük
+  olandan önce geliyor + `düşüyor` rozeti. Wegzakken urgenter dan stabiel laag.
+
+### ✅ 3 · Onderwerp'siz derste alıştırma çubuğu  [status: DONE]
+Veli panelinde frans "Alıştırma —" gösteriyordu (0 onderwerp, 40 sınav) — olmayan bir açığı ima
+ediyordu. Artık satır tamamen gizleniyor. **Öğrenci panosunda bu zaten doğruydu**
+(`if (oefTotaal > 0)`), orada değişiklik yapılmadı.
+
+**Doğrulama** (`/tmp/faz3_test.js`): en kritik test **önbellek geçersizleştirme** — yeni poging
+eklenince ortalama değişti (bayat önbellek olsaydı yakalanırdı). Ayrıca sparkline path/eşik/
+erişilebilirlik, trend rozeti, gizlenen alıştırma satırı, `undefined`/`NaN` yok.
+`index.html` → `?v=4.1`.
+
+**Not:** üç test harness'ının DOM stub'ları genişletildi (`querySelector`, `setAttribute`,
+`addEventListener`) — kod hatası değil, stub eksikliğiydi; üçü de gerçek DOM'da zaten vardı.
+
+## 2026-09-04 · Faz 2 optimizasyonu uygulandı (Opus)
+
+Üç maddenin hepsi bitti. **Davranış değişmedi** — regresyon testi eski (HEAD) değerlerle
+karşılaştırarak doğruladı.
+
+### ✅ 1 · Çok-kullanıcı veri sızıntısı kapatıldı  [status: DONE]
+`dashboard.js → safeReadJson` ve `ouder_dashboard.js → readStorageKey` son çare olarak tüm
+localStorage'ı **substring** ile tarıyordu (`k.indexOf(logicalKey) !== -1`) → `duru_2627_engels_v1`
+ararken `user_baba_duru_2627_engels_v1` de eşleşiyordu.
+Artık kesin ve sıralı: `user_<kişi>_<key>` → `<key>` → `null`. Tarama tamamen kaldırıldı.
+**Ek bulgu:** veli panelinde ilk deneme `localStorage.getItem(key)` idi — bu, landing.js'in
+override'ı yüzünden **AKTİF kullanıcıyla** öneklenir. Baba bakarken rapor Duru hakkında olduğu
+için bu yanlıştı. Yeni `leesRuw()` `originalGetItem` ile ham okuyor, kişiyi açıkça adresliyor.
+
+### ✅ 2 · `js/vakken.js` — tek ders kaynağı  [status: DONE]
+`VAK_REGISTER` (dashboard) ve `VAK_CONFIG` (ouder) kelimesi kelimesine aynıydı; landing de aynı
+12 dersi üçüncü kez tekrarlıyordu. Hepsi `window.DURU_VAKKEN`'den türüyor
+(`alle` / `vanJaar` / `zoek` / `landingKaarten`). dashboard −11 satır, landing'den 12 kart tanımı
+kalktı, ouder'dan 22 satır. **Arşiv dersleri landing'de kaldı** — iç içe `onderwerpen` taşıyan
+saf navigasyon, istatistik kaydında karşılığı yok, zorla birleştirmek yanlış olurdu.
+**Bilerek yapılan tek değişiklik:** HAVO 3 economie ikonu `🏛️` → `💶`. Panolarda economie ve
+maatschappijleer aynı ikonu paylaşıyordu; landing zaten ayırıyordu, ayırt eden kazandı.
+
+### ✅ 3 · `js/cijfer_util.js` — tek not mantığı  [status: DONE]
+`1 + pct/100*9` ve `>= 5.5` iki panoda ~20 yerdeydi (renk, rozet, tavsiye, filtre, grafik ızgarası).
+Artık `DURU_CIJFER`. **Renk paylaşılmıyor** — her panonun tokenı farklı; ortak olan sınıflandırma.
+Kalan ham eşik: **0**.
+
+**Yükleme sırası (`index.html`)**: `vakken.js` → `cijfer_util.js` → `hoofdstukken.js` →
+`hoofdstuk_util.js` → `landing.js` → `dashboard.js` → `ouder_dashboard.js` → `cloud_sync.js`.
+`ouder_dashboard.js` `DURU_CIJFER`'i yüklenme anında okuyor, sıra önemli.
+
+**Doğrulama** (`/tmp/faz2_test.js`): 18 satır birebir · tüm alanlar aynı ·
+**tüm storage anahtarları byte-byte aynı** (Duru'nun geçmişi güvende) · 12 landing kartının
+href/sleutel/id/domein'i eski landing.js ile eşleşiyor · cijfer formülü 7 yüzdede eski davranışla
+aynı · klasse/geslaagd/tekst/positie doğru.
+
+## 2026-09-04 · Faz 1 optimizasyonu uygulandı (Opus)
+
+Pano denetiminin (artifact) Faz 1'i bitti. Üç madde.
+
+### ✅ 1 · Veli panelinde yazdırma onarıldı  [status: DONE]
+**Benim 2026-09-03 regresyonum.** Yeniden tasarım hız için yalnız aktif sekmeyi DOM'a basıyordu;
+tarayıcı da yalnız DOM'dakini yazdırır → "Yazdır / PDF" sadece açık sekmeyi veriyordu.
+Çözüm: `beforeprint`'te dört bölüm de basılıyor (`toonVolledigRapport`), `afterprint`'te panel
+yeniden çiziliyor. Ctrl+P de çalışır. Düğme artık "Tam raporu yazdır".
+`viewVakken`'den `vakDetailHtml(vak, metGeschiedenis)` ayrıştırıldı — rapor tüm dersleri basar,
+sınav geçmişini atlar (günlük bölümü zaten her pogingi listeliyor).
+
+### ✅ 2 · scores.json anlık-görüntü kütüğü kaldırıldı  [status: DONE]
+`server.py` v2'ye geçti: anahtar-bazlı sözlük + `history` birleştirme + `events.jsonl`.
+**27,3 MB → 0,58 MB, 287 benzersiz poging, sıfır kayıp** (doğrulama script'i ile anahtar başına
+karşılaştırıldı). v1 otomatik göç ediyor, önce backup yazılıyor. `GET /api/score` hâlâ liste
+döndüğü için `restoreScores()` değişmedi. Uçtan uca test: aynı POST 5 kez → dosya büyümedi.
+
+### ✅ 3 · POST debounce  [status: DONE]
+`js/landing.js → queueScoreSync()`: anahtar başına 2 sn sessizlik sonrası gönderim.
+Sınav başına ~20 POST → 1. `pagehide`/`visibilitychange`'de `sendBeacon` ile flush.
+
+**Yan bulgu, düzeltildi:** günlük boşken "Bu filtrelerle eşleşen deneme yok" diyordu — veri hiç
+yokken bu yanlış sebep. Artık "Bu dönemde henüz çözülmüş bir sınav yok."
+
+**⚠️ agy'ye not:** `server.py` artık v2 sözlük yazıyor. Skor dosyasına dokunan script yazarsan
+listeyi değil `keys` sözlüğünü oku; ya da `GET /api/score`'u kullan (liste döner).
+
+`index.html` → `?v=4.0`.
+
+## 2026-09-04 · agy teslimi denetlendi: economie H4 · 5 yeni proeftoets (Opus)
+
+agy `240f6f3` ile **examen_19–23** (5 sınav, 100 soru, H4.1/4.2 · Pincode 7e editie) + üreteç
+script'i `tools/generate_h4_more_exams.py` teslim etti. Denetim sonucu: **içerik kalitesi iyi**,
+iki süreç hatası var.
+
+**✅ Geçenler**
+- `node tools/gate.js economie` → **12/12** (23 proeftoets · 556 vraag).
+- **`hoofdstuk: 4` beş dosyada da var** — 2026-09-03'te `ENGINE_SPEC.md`'ye yazdığım zorunlu alan
+  kuralı uygulanmış. Bu daha önce atlanan alandı.
+- Yapı sözleşmeye tam uyuyor: her sınav **12 mc / 4 waaronwaar / 2 invul / 2 open**.
+- mc cevap dağılımı her dosyada **3-3-3-3 (%25)** — A-yığılması yok.
+- Konu kapsamı doğru: 4.1 = productieproces/kringloop/bedrijfskolom/KANO-productiefactoren,
+  4.2 = constante-variabele kosten/kostprijs/inkoopwaarde/afschrijvingen. Kapsam kayması yok.
+- Yakın-kopya taraması (Jaccard ≥0,60, 460 soru çifti): yeni sınavları ilgilendiren **tek** çift.
+
+**⚠️ Düzelttiğim iki şey**
+1. **Manifest yeniden üretilmemişti** — `--check` exit 1. economie H4 `6` sınav gösteriyordu,
+   gerçek `11`. Her iki panoda da canlı yanlış sayı. `node tools/build_hoofdstukken.js` çalıştırıldı
+   → exit 0. **agy: veri eklediğinde bu komut teslimin parçasıdır**, ayrı bir iş değil.
+2. **Almanca sızıntı**: `examen_20` başlığında `Amortisationsanalyse` → `Afschrijvingsanalyse`.
+   Üreteç script'inde de düzeltildi (yoksa yeniden üretimde geri gelirdi). Sınav hiç çözülmemişti
+   (skor geçmişi 0), başlık değişimi güvenliydi.
+
+**⚠️ Kalan küçük madde (düzeltilmedi)**
+`ex-h3-economie-19` ile `ex-h3-economie-10` arasında %60 benzerlik: "Wat is de beloning voor de
+productiefactor arbeid" ≈ "Wat is de beloning die hoort bij de productiefactor arbeid". Aynı soru.
+agy: yeni sınav üretirken **mevcut sınavlardaki soruları da tara**, sadece dosya içi tekrar yetmez.
+
+**⚠️ SÜREÇ: agy `coordination.md`'ye geri yazmadı.** Politika `docs/PIPELINE.md`: iş çekilir,
+yapılır, **sonuç buraya yazılır**. Bu kaydı ben tuttum. agy: teslimden sonra buraya durum + gate
+çıktısı + manifest komutunun çalıştırıldığı yazılmalı.
+
+### ⚠️ agy'YE AÇIK İŞ · `frans` onderwerp'siz  [status: TODO]
+`frans` 40 proeftoets'e sahip ama **0 onderwerp** (oefenquiz) var — 12 ders içinde tek böyle ders.
+`aantalOnderwerpen={}` olduğu için veli/öğrenci panosunda "oefenvoortgang" hep %0 görünür.
+H1–H8 için onderwerp üretilmeli (bkz. TASK-11 kalite maddeleriyle birlikte).
 
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*

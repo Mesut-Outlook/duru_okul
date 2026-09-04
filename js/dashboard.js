@@ -19,27 +19,8 @@
   var HUIDIG_SCHOOLJAAR = '2026-2027';
   var JAAR_NIVEAU = { '2025-2026': 'MAVO 2', '2026-2027': 'HAVO 3' };
 
-  var VAK_REGISTER = [
-    { jaar:'2025-2026', id:'natuurkunde',          titel:'Natuurkunde (NASK)',    icoon:'⚛️', kleur:'blauw',  practiceKey:'duru_nask_v1',                examKey:'duru_nask_examens_v1' },
-    { jaar:'2025-2026', id:'wiskunde',             titel:'Wiskunde',              icoon:'⚖️', kleur:'teal',   practiceKey:'duru_wiskunde_v1',            examKey:'duru_wiskunde_examens_v1' },
-    { jaar:'2025-2026', id:'economie',             titel:'Economie',              icoon:'💶', kleur:'groen',  practiceKey:'duru_economi_v1',             examKey:'duru_economi_examens_v1' },
-    { jaar:'2025-2026', id:'geschiedenis',         titel:'Geschiedenis',          icoon:'🕰️', kleur:'oranje', practiceKey:'duru_geschiedenis_v1',        examKey:'duru_geschiedenis_examens_v1' },
-    { jaar:'2025-2026', id:'nederlands-spelling',  titel:'Spelling & Grammatica', icoon:'✍️', kleur:'oranje', practiceKey:'duru_nederlands_spelling_v1', examKey:'duru_nederlands_spelling_examens_v1' },
-    { jaar:'2025-2026', id:'nederlands-begrijpend',titel:'Begrijpend Lezen',      icoon:'🧠', kleur:'oranje', practiceKey:null,                          examKey:'begrijpend_lezen_history', special:'begrijpend' },
-    // ── 2026-2027 (HAVO 3) ──
-    { jaar:'2026-2027', id:'nederlands',      titel:'Nederlands',      icoon:'📖', kleur:'oranje', practiceKey:'duru_2627_nederlands_v1',      examKey:'duru_2627_nederlands_examens_v1' },
-    { jaar:'2026-2027', id:'engels',          titel:'Engels',          icoon:'🇬🇧', kleur:'oranje', practiceKey:'duru_2627_engels_v1',          examKey:'duru_2627_engels_examens_v1' },
-    { jaar:'2026-2027', id:'frans',           titel:'Frans',           icoon:'🇫🇷', kleur:'oranje', practiceKey:'duru_2627_frans_v1',           examKey:'duru_2627_frans_examens_v1' },
-    { jaar:'2026-2027', id:'duits',           titel:'Duits',           icoon:'🇩🇪', kleur:'oranje', practiceKey:'duru_2627_duits_v1',           examKey:'duru_2627_duits_examens_v1' },
-    { jaar:'2026-2027', id:'wiskunde',        titel:'Wiskunde',        icoon:'⚖️', kleur:'teal',   practiceKey:'duru_2627_wiskunde_v1',        examKey:'duru_2627_wiskunde_examens_v1' },
-    { jaar:'2026-2027', id:'natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', kleur:'blauw',  practiceKey:'duru_2627_natuurkunde_v1',     examKey:'duru_2627_natuurkunde_examens_v1' },
-    { jaar:'2026-2027', id:'scheikunde',      titel:'Scheikunde',      icoon:'🧪', kleur:'teal',   practiceKey:'duru_2627_scheikunde_v1',      examKey:'duru_2627_scheikunde_examens_v1' },
-    { jaar:'2026-2027', id:'biologie',        titel:'Biologie',        icoon:'🧬', kleur:'groen',  practiceKey:'duru_2627_biologie_v1',        examKey:'duru_2627_biologie_examens_v1' },
-    { jaar:'2026-2027', id:'geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', kleur:'oranje', practiceKey:'duru_2627_geschiedenis_v1',    examKey:'duru_2627_geschiedenis_examens_v1' },
-    { jaar:'2026-2027', id:'aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', kleur:'teal',   practiceKey:'duru_2627_aardrijkskunde_v1',  examKey:'duru_2627_aardrijkskunde_examens_v1' },
-    { jaar:'2026-2027', id:'economie',        titel:'Economie',        icoon:'🏛️', kleur:'groen',  practiceKey:'duru_2627_economie_v1',        examKey:'duru_2627_economie_examens_v1' },
-    { jaar:'2026-2027', id:'maatschappijleer',titel:'Maatschappijleer',icoon:'🏛️', kleur:'blauw',  practiceKey:'duru_2627_maatschappijleer_v1',examKey:'duru_2627_maatschappijleer_examens_v1' }
-  ];
+  // Vakregister komt uit js/vakken.js — één bron voor alle drie de panelen.
+  var VAK_REGISTER = window.DURU_VAKKEN.alle;
 
   // ── Initialization on DOM Ready ──────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
@@ -296,37 +277,45 @@
   window.loadDashboardData = loadDashboardData;
 
   // ── Helper: safeReadJson (supports user prefix & raw storage) ─
-  function safeReadJson(logicalKey) {
-    if (!logicalKey) return null;
-    var raw = localStorage.getItem(logicalKey);
-    if (!raw && typeof originalGetItem === "function") {
-      try { raw = originalGetItem.call(localStorage, logicalKey); } catch (e) {}
-    }
-    if (!raw) {
-      try {
-        var activeUser = localStorage.getItem("duru_active_user") || sessionStorage.getItem("duru_active_user");
-        if (activeUser) {
-          raw = localStorage.getItem("user_" + activeUser + "_" + logicalKey);
-        }
-      } catch (e) {}
-    }
-    if (!raw) {
-      try {
-        for (var i = 0; i < localStorage.length; i++) {
-          var k = localStorage.key(i);
-          if (k === logicalKey || (k && k.indexOf(logicalKey) !== -1)) {
-            raw = localStorage.getItem(k);
-            if (raw) break;
-          }
-        }
-      } catch (e) {}
-    }
-    if (!raw) return null;
+  /* Ruwe lees: langs de prefix-override van landing.js heen, zodat we sleutels
+     exact kunnen adresseren in plaats van impliciet via de actieve gebruiker. */
+  function leesRuw(sleutel) {
     try {
-      return JSON.parse(raw);
+      if (typeof originalGetItem === "function") {
+        return originalGetItem.call(localStorage, sleutel);
+      }
+      return localStorage.getItem(sleutel);
     } catch (e) {
       return null;
     }
+  }
+
+  /* Exacte, geordende lookup — nooit raden.
+       1. de ingelogde leerling  → user_<gebruiker>_<sleutel>
+       2. sleutels van vóór multi-user → <sleutel> zonder prefix
+     De vorige versie eindigde met een scan door heel localStorage die op
+     SUBSTRING matchte; die kon de gegevens van een ándere gebruiker
+     teruggeven (zie ouder_dashboard.js voor dezelfde correctie). */
+  function safeReadJson(logicalKey) {
+    if (!logicalKey) return null;
+
+    var actieveUser = null;
+    try {
+      actieveUser = localStorage.getItem("duru_active_user") ||
+                    sessionStorage.getItem("duru_active_user");
+    } catch (e) {}
+
+    var kandidaten = [];
+    if (actieveUser) kandidaten.push("user_" + actieveUser + "_" + logicalKey);
+    kandidaten.push(logicalKey);
+
+    for (var i = 0; i < kandidaten.length; i++) {
+      var raw = leesRuw(kandidaten[i]);
+      if (raw) {
+        try { return JSON.parse(raw); } catch (e) { return null; }
+      }
+    }
+    return null;
   }
 
   // ── Helper: load practice object ──────────────────────────
@@ -351,7 +340,7 @@
         var ts = parseDuruDate(att.datum);
         var pct = att.pct !== undefined ? att.pct : Math.round((att.goed / att.totaal) * 100);
 
-        var cijferVal = 1 + (pct / 100) * 9;
+        var cijferVal = window.DURU_CIJFER.vanPct(pct);
         cijferVal = Math.round(cijferVal * 10) / 10;
 
         var hf = window.DURU_HF ? window.DURU_HF.vanAttempt(att, vakId) : null;
@@ -371,7 +360,7 @@
           totaal: att.totaal !== undefined ? att.totaal : 20,
           pct: pct,
           cijfer: cijferVal,
-          geslaagd: cijferVal >= 5.5
+          geslaagd: window.DURU_CIJFER.geslaagd(cijferVal)
         });
       });
     }
@@ -408,7 +397,7 @@
           totaal: total,
           pct: pct,
           cijfer: gradeVal,
-          geslaagd: gradeVal >= 5.5
+          geslaagd: window.DURU_CIJFER.geslaagd(gradeVal)
         });
       });
     }
@@ -526,7 +515,7 @@
       } else {
         var cijferKlasse = "";
         if (examCount > 0) {
-          cijferKlasse = avgCijfer >= 5.5 ? " vak-cijfer--geslaagd" : " vak-cijfer--gezakt";
+          cijferKlasse = window.DURU_CIJFER.geslaagd(avgCijfer) ? " vak-cijfer--geslaagd" : " vak-cijfer--gezakt";
         }
         html += '<div class="vak-stat-card__cijfer-rij">';
         html +=   '<span class="vak-cijfer' + cijferKlasse + '">' + avgStr + '</span>';
@@ -579,7 +568,7 @@
           });
           var chAvg = chAttempts.length > 0 ? (chSum / chAttempts.length) : 0;
           var chAvgStr = chAttempts.length > 0 ? chAvg.toFixed(1).replace(".", ",") : "—";
-          var chBadgeCls = chAvg >= 5.5 ? "pass" : "fail";
+          var chBadgeCls = window.DURU_CIJFER.geslaagd(chAvg) ? "pass" : "fail";
 
           block += '<div class="chapter-group-block">';
           block +=   '<div class="chapter-group-header">';
@@ -612,8 +601,8 @@
               var bst = 0;
               atts.forEach(function (a) { if (a.cijfer > bst) bst = a.cijfer; });
               var last = atts[atts.length - 1];
-              var lastKlasse = last.cijfer >= 5.5 ? "pass" : "fail";
-              var bstKlasse  = bst >= 5.5 ? "pass" : "fail";
+              var lastKlasse = window.DURU_CIJFER.geslaagd(last.cijfer) ? "pass" : "fail";
+              var bstKlasse  = window.DURU_CIJFER.geslaagd(bst) ? "pass" : "fail";
               var lastDate   = (last.datumStr || "").split(" ")[0];
 
               block += '<tr>';
@@ -779,17 +768,17 @@
         var advice      = "Begin met de theorie en start proeftoets 1!";
 
         if (examCount > 0) {
-          if (avgC >= 8.5) {
+          if (avgC >= window.DURU_CIJFER.TOP) {
             statusLabel = "Uitmuntend";
             statusCls   = "status-mastered";
             statusIcon  = "🌟";
             advice      = "Geweldig! Je beheerst dit hoofdstuk volledig.";
-          } else if (avgC >= 7.0) {
+          } else if (avgC >= window.DURU_CIJFER.GOED) {
             statusLabel = "Goed";
             statusCls   = "status-good";
             statusIcon  = "👍";
             advice      = "Heel goed! Nog 1 oefentoets voor de perfecte score.";
-          } else if (avgC >= 5.5) {
+          } else if (window.DURU_CIJFER.geslaagd(avgC)) {
             statusLabel = "Voldoende";
             statusCls   = "status-pass";
             statusIcon  = "✔️";
@@ -832,7 +821,7 @@
 
         chapterCardsHtml +=   '<div class="hoofdstuk-card__grade-row">';
         chapterCardsHtml +=     '<div>';
-        chapterCardsHtml +=       '<div class="hoofdstuk-card__grade" style="color:' + (avgC >= 5.5 ? 'var(--groen)' : (examCount > 0 ? 'var(--oranje)' : 'var(--grijs-licht)')) + ';">' + avgStr + '</div>';
+        chapterCardsHtml +=       '<div class="hoofdstuk-card__grade" style="color:' + (window.DURU_CIJFER.geslaagd(avgC) ? 'var(--groen)' : (examCount > 0 ? 'var(--oranje)' : 'var(--grijs-licht)')) + ';">' + avgStr + '</div>';
         chapterCardsHtml +=       '<div style="font-size:11px;color:var(--grijs-licht);">Hoofdstuk Gemiddelde</div>';
         chapterCardsHtml +=     '</div>';
         chapterCardsHtml +=     '<span class="hoofdstuk-card__status ' + statusCls + '">';
@@ -848,7 +837,7 @@
         chapterCardsHtml +=   '</div>';
         if (examTotaal > 0) {
           chapterCardsHtml += '<div class="hoofdstuk-progress-bar">';
-          chapterCardsHtml +=   '<div class="hoofdstuk-progress-fill" style="width:' + examVoortgangPct + '%; background:' + (avgC >= 5.5 ? 'var(--hub-zacht)' : 'var(--oranje)') + ';"></div>';
+          chapterCardsHtml +=   '<div class="hoofdstuk-progress-fill" style="width:' + examVoortgangPct + '%; background:' + (window.DURU_CIJFER.geslaagd(avgC) ? 'var(--hub-zacht)' : 'var(--oranje)') + ';"></div>';
           chapterCardsHtml += '</div>';
         }
         chapterCardsHtml += '</div>';
@@ -904,7 +893,7 @@
         chapterCardsHtml +=   '</div></div>';
         chapterCardsHtml +=   '<div class="hoofdstuk-card__grade-row">';
         chapterCardsHtml +=     '<div>';
-        chapterCardsHtml +=       '<div class="hoofdstuk-card__grade" style="color:' + (ovAvg >= 5.5 ? 'var(--groen)' : 'var(--oranje)') + ';">' + ovAvgStr + '</div>';
+        chapterCardsHtml +=       '<div class="hoofdstuk-card__grade" style="color:' + (window.DURU_CIJFER.geslaagd(ovAvg) ? 'var(--groen)' : 'var(--oranje)') + ';">' + ovAvgStr + '</div>';
         chapterCardsHtml +=       '<div style="font-size:11px;color:var(--grijs-licht);">Gemiddelde</div>';
         chapterCardsHtml +=     '</div>';
         chapterCardsHtml +=   '</div>';
@@ -981,10 +970,10 @@
     svg += '  </linearGradient>';
     svg += '</defs>';
 
-    var gridGrades = [1, 3, 5.5, 8, 10];
+    var gridGrades = [1, 3, window.DURU_CIJFER.DREMPEL, 8, 10];
     gridGrades.forEach(function (g) {
       var y = getY(g);
-      var isPass = g === 5.5;
+      var isPass = g === window.DURU_CIJFER.DREMPEL;
       var strokeStyle = isPass ? 'stroke="var(--groen)" stroke-dasharray="4,4" stroke-opacity="0.7"' : 'stroke="var(--lijn)" stroke-opacity="0.5"';
 
       svg += '  <line x1="' + left + '" y1="' + y + '" x2="' + (w - right) + '" y2="' + y + '" ' + strokeStyle + ' stroke-width="1" />';

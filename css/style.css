@@ -1719,938 +1719,485 @@ html.dark .jaar-chip--actief {
 html.dark .vak-stats-leeg { color: #7db99e; }
 
 /* =========================================================
-   👨‍👧 Veli / Baba Takip Paneli (Parent Dashboard) Styles
+   👨‍👧 Veli / Baba Takip Paneli — herontwerp 2026-09
+   Leesvolgorde: status → cijferschaal → aandachtspunten → vakken.
+   Semantische kleuren (goed/net/zwak) staan los van het merkgroen.
    ========================================================= */
 
-.ouder-header-card {
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  border-radius: var(--radius-sm);
-  padding: 20px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 24px;
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-header-left {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.ouder-avatar {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: var(--hub-achter);
-  display: grid;
-  place-items: center;
-  font-size: 28px;
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-title {
-  font-family: var(--font-titel);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--inkt);
-  margin-bottom: 4px;
-}
-
-.ouder-subtitle {
-  font-size: 14px;
-  color: var(--grijs);
-}
-
-.ouder-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.ouder-year-toggles {
-  display: flex;
-  background: var(--hub-achter);
-  padding: 4px;
-  border-radius: 12px;
-  gap: 4px;
-}
-
-.ouder-year-btn {
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--grijs);
-  background: transparent;
-  transition: all 0.2s ease;
-}
-
-.ouder-year-btn.active {
-  background: var(--wit);
-  color: var(--hub-hoofd);
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-btn-print {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 12px;
-  background: var(--hub-gradient);
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 13px;
-  box-shadow: var(--schaduw-sm);
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-}
-
-.ouder-btn-print:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--schaduw);
-}
-
-/* KPIs Grid */
-.ouder-kpi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.ouder-kpi-card {
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  border-radius: var(--radius-sm);
-  padding: 20px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-kpi-card.highlight {
-  border-left: 4px solid var(--hub-zacht);
-}
-
-.ouder-kpi-icon {
-  font-size: 32px;
-  line-height: 1;
-}
-
-.ouder-kpi-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.ouder-kpi-label {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--grijs);
-}
-
-.ouder-kpi-val-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.ouder-kpi-val {
-  font-family: var(--font-titel);
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--inkt);
-}
-
-.ouder-kpi-badge {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 20px;
-}
-
-.status-excellent { background: #dcfce7; color: #166534; }
-.status-good { background: #ccfbf1; color: #115e59; }
-.status-pass { background: #dbeafe; color: #1e40af; }
-.status-warning { background: #fee2e2; color: #991b1b; }
-.status-none { background: #f3f4f6; color: #6b7280; }
-
-.ouder-kpi-sub {
-  font-size: 12px;
-  color: var(--grijs-licht);
-}
-
-/* Insight Card */
-.ouder-insight-card {
-  border-radius: var(--radius-sm);
-  padding: 20px 24px;
-  margin-bottom: 24px;
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-insight-card.all-clear {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-}
-
-.ouder-insight-card.has-alerts {
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-}
-
-.ouder-insight-header {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.ouder-insight-icon {
-  font-size: 32px;
-}
-
-.ouder-insight-title {
-  font-family: var(--font-titel);
-  font-size: 16px;
-  font-weight: 700;
-  color: #1c1917;
-  margin-bottom: 2px;
-}
-
-.ouder-insight-desc {
-  font-size: 13px;
-  color: #57534e;
-}
-
-.ouder-alerts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid #fef08a;
-}
-
-.ouder-alert-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 13px;
-  gap: 12px;
-  flex-wrap: wrap;
-  border: 1px solid #fef08a;
-}
-
-.ouder-alert-vak {
-  font-weight: 600;
-  color: var(--inkt);
-}
-
-.ouder-alert-grade {
-  color: #b91c1c;
-  font-weight: 700;
-}
-
-.ouder-alert-date {
-  color: var(--grijs-licht);
-  font-size: 12px;
-}
-
-/* Sections & Tables */
-.ouder-section {
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  border-radius: var(--radius-sm);
-  padding: 24px;
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 18px;
-}
-
-.ouder-section-header h3 {
-  font-family: var(--font-titel);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--inkt);
-}
-
-.ouder-section-header small {
-  color: var(--grijs-licht);
-  font-size: 13px;
-}
-
-.ouder-table-wrapper {
-  overflow-x: auto;
-  border-radius: 12px;
-}
-
-.ouder-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-}
-
-.ouder-table th {
-  background: var(--hub-achter);
-  color: var(--grijs);
-  font-weight: 600;
-  text-align: left;
-  padding: 12px 14px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 2px solid var(--lijn);
-}
-
-.ouder-table td {
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--lijn);
-  color: var(--inkt);
-}
-
-.ouder-vak-cell {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.ouder-vak-ico {
-  font-size: 18px;
-}
-
-.ouder-progress-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.ouder-progress-bar {
-  flex: 1;
-  height: 8px;
-  background: var(--lijn);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.ouder-progress-fill {
-  height: 100%;
-  background: var(--hub-gradient);
-  border-radius: 4px;
-}
-
-.ouder-progress-text {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--grijs);
-  min-width: 32px;
-}
-
-.ouder-grade-pill {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 13px;
-}
-
-.ouder-grade-pill.pass { background: #dcfce7; color: #15803d; }
-.ouder-grade-pill.fail { background: #fee2e2; color: #dc2626; }
-.ouder-grade-pill.none { background: #f3f4f6; color: #9ca3af; }
-
-.ouder-rating-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.ouder-badge-subtle {
-  display: inline-block;
-  padding: 2px 8px;
-  background: var(--hub-achter);
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-/* Dark Mode Adaptations */
-html.dark .ouder-header-card,
-html.dark .ouder-kpi-card,
-html.dark .ouder-section {
-  background: #0a2e22;
-  border-color: #104030;
-}
-
-html.dark .ouder-avatar,
-html.dark .ouder-year-toggles,
-html.dark .ouder-badge-subtle,
-html.dark .ouder-table th {
-  background: #061a12;
-  color: #ecfdf5;
-}
-
-html.dark .ouder-year-btn.active {
-  background: #104030;
-  color: #34d399;
-}
-
-html.dark .ouder-insight-card.all-clear {
-  background: #062a1b;
-  border-color: #0f5132;
-}
-
-html.dark .ouder-insight-card.all-clear .ouder-insight-title { color: #86efac; }
-html.dark .ouder-insight-card.all-clear .ouder-insight-desc { color: #bbf7d0; }
-
-html.dark .ouder-insight-card.has-alerts {
-  background: #2a1f0a;
-  border-color: #78350f;
-}
-
-html.dark .ouder-insight-card.has-alerts .ouder-insight-title { color: #fde047; }
-html.dark .ouder-insight-card.has-alerts .ouder-insight-desc { color: #fef08a; }
-html.dark .ouder-alert-item {
-  background: #1e1608;
-  border-color: #78350f;
-}
-
-/* Print Styles */
-@media print {
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-  }
-
-  .topbar, .hub-tabs, .ouder-actions, .tip-banner, #login-overlay, footer {
-    display: none !important;
-  }
-
-  .hub-view {
-    display: none !important;
-  }
-
-  #ouder-view {
-    display: block !important;
-  }
-
-  .ouder-header-card, .ouder-kpi-card, .ouder-section, .ouder-insight-card {
-    border: 1px solid #cccccc !important;
-    box-shadow: none !important;
-    break-inside: avoid;
-  }
-
-  .ouder-table th {
-    background: #f0f0f0 !important;
-    color: #000000 !important;
-  }
-}
-
-/* =========================================================
-   ☁️ Bulut Senkronizasyon (Cloud Sync) Styles
-   ========================================================= */
-
-.cloud-sync-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  padding: 6px 14px;
-  border-radius: 20px;
-  color: var(--inkt);
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: var(--schaduw-sm);
-  transition: all 0.2s ease;
-}
-
-.cloud-sync-pill:hover {
-  background: var(--hub-achter);
-  transform: translateY(-1px);
-  box-shadow: var(--schaduw);
-}
-
-.user-display-pill {
-  color: var(--inkt);
-  font-weight: 700;
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--wit);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--lijn);
-  box-shadow: var(--schaduw-sm);
-}
-
-.cloud-sync-pill.syncing .cloud-sync-icon {
-  display: inline-block;
-  animation: cloud-spin 1s linear infinite;
-}
-
-@keyframes cloud-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.cloud-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  padding: 16px;
-}
-
-.cloud-modal-card {
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  border-radius: var(--radius);
-  max-width: 480px;
-  width: 100%;
-  padding: 24px;
-  box-shadow: var(--schaduw-lg);
-  animation: modal-pop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes modal-pop {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-.cloud-modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--lijn);
-  padding-bottom: 12px;
-}
-
-.cloud-modal-close {
-  font-size: 18px;
-  color: var(--grijs);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.cloud-modal-close:hover {
-  background: var(--hub-achter);
-  color: var(--inkt);
-}
-
-.cloud-status-banner {
-  background: var(--hub-achter);
-  border: 1px solid var(--lijn);
-  border-radius: 12px;
-  padding: 12px 16px;
-  font-size: 14px;
-  color: var(--inkt);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-html.dark .cloud-modal-card {
-  background: #0a2e22;
-  border-color: #104030;
-}
-
-html.dark .cloud-status-banner {
-  background: #061a12;
-  border-color: #104030;
-  color: #ecfdf5;
-}
-
-/* =========================================================
-   Hoofdstuk (Chapter) Analytics & Progress Styling
-   ========================================================= */
-.hoofdstuk-stats-sectie {
-  margin-bottom: 36px;
-}
-
-.sectie-kop-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hoofdstuk-stats-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-@media (min-width: 768px) {
-  .hoofdstuk-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1100px) {
-  .hoofdstuk-stats-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.hoofdstuk-card {
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  border-radius: var(--radius-sm);
-  padding: 18px 20px;
-  box-shadow: var(--schaduw-sm);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-left: 5px solid var(--hub-zacht);
-}
-
-.hoofdstuk-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--schaduw);
-}
-
-.hoofdstuk-card--blauw  { border-left-color: var(--blauw); }
-.hoofdstuk-card--groen  { border-left-color: var(--groen); }
-.hoofdstuk-card--oranje { border-left-color: var(--oranje); }
-.hoofdstuk-card--teal   { border-left-color: var(--teal); }
-.hoofdstuk-card--paars  { border-left-color: #8b5cf6; }
-.hoofdstuk-card--roze   { border-left-color: #ec4899; }
-
-.hoofdstuk-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.hoofdstuk-card__badge {
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 3px 8px;
-  border-radius: 6px;
-  background: var(--hub-cream);
-  color: var(--hub-hoofd);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.hoofdstuk-card__titel {
-  font-family: var(--font-titel);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--inkt);
-  margin-top: 4px;
-  line-height: 1.3;
-}
-
-.hoofdstuk-card__grade-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.hoofdstuk-card__grade {
-  font-family: var(--font-titel);
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.hoofdstuk-card__status {
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 99px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.hoofdstuk-card__status.status-mastered {
-  background: var(--groen-zacht);
-  color: var(--groen);
-}
-
-.hoofdstuk-card__status.status-good {
-  background: var(--teal-zacht);
-  color: var(--teal-donker);
-}
-
-.hoofdstuk-card__status.status-pass {
-  background: var(--blauw-zacht);
-  color: var(--blauw-donker);
-}
-
-.hoofdstuk-card__status.status-review {
-  background: var(--oranje-zacht);
-  color: var(--oranje);
-}
-
-.hoofdstuk-card__status.status-empty {
-  background: var(--hub-cream);
-  color: var(--grijs-licht);
-}
-
-.hoofdstuk-progress-bar {
-  height: 6px;
-  background: var(--hub-cream);
-  border-radius: 3px;
-  overflow: hidden;
-  width: 100%;
-}
-
-.hoofdstuk-progress-fill {
-  height: 100%;
-  border-radius: 3px;
-  transition: width 0.6s ease;
-}
-
-.hoofdstuk-progress-bar--oefen {
-  background: var(--groen-zacht);
-}
-
-.hoofdstuk-progress-fill--oefen {
-  background: var(--groen);
-}
-
-.hoofdstuk-card__metrics {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  color: var(--grijs);
-}
-
-.hoofdstuk-card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid var(--lijn);
-  padding-top: 10px;
-  margin-top: 2px;
-  font-size: 12px;
-  color: var(--grijs-licht);
-}
-
-.chapter-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 99px;
-  background: var(--hub-cream);
-  color: var(--hub-hoofd);
-  border: 1px solid var(--lijn);
-}
-
-.chapter-group-block {
-  background: var(--hub-cream);
-  border: 1px solid var(--lijn);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin-top: 14px;
-}
-
-.chapter-group-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chapter-group-title {
-  font-family: var(--font-titel);
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--hub-hoofd);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.chapter-group-score {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--groen);
-}
-
-html.dark .hoofdstuk-card {
-  background: #0a2e22;
-  border-color: #104030;
-}
-
-html.dark .hoofdstuk-card__badge {
-  background: #061a12;
-  color: #34d399;
-}
-
-html.dark .hoofdstuk-progress-bar {
-  background: #061a12;
-}
-
-html.dark .hoofdstuk-progress-bar--oefen {
-  background: var(--groen-zacht);
-}
-
-html.dark .chapter-group-block {
-  background: #061a12;
-  border-color: #104030;
-}
-
-/* =========================================================
-   Interactive Report Card Subject Breakdown (Ünite Kırılımları)
-   ========================================================= */
-.ouder-vak-row-clickable {
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-
-.ouder-vak-row-clickable:hover {
-  background-color: var(--hub-cream);
-}
-
-.ouder-btn-breakdown {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--hub-cream);
-  border: 1px solid var(--lijn);
-  color: var(--hub-hoofd);
+#ouder-view {
+  --ouder-goed:       #047857;
+  --ouder-goed-zacht: #d6f2e4;
+  --ouder-net:        #b45309;
+  --ouder-net-zacht:  #fdeccd;
+  --ouder-zwak:       #b3261e;
+  --ouder-zwak-zacht: #fbdedb;
+
+  --ouder-vlak-2: #eaf4ee;
+  --ouder-vlak-3: #dfeee5;
+  --ouder-mut:    #6f8d7e;
+  --ouder-tekst-2:#406053;
+  --ouder-r:      14px;
+}
+
+html.dark #ouder-view {
+  --ouder-goed:       #34d399;
+  --ouder-goed-zacht: #0c3b2c;
+  --ouder-net:        #fbbf24;
+  --ouder-net-zacht:  #3b2c0c;
+  --ouder-zwak:       #fca5a5;
+  --ouder-zwak-zacht: #3f1d1b;
+
+  --ouder-vlak-2: #0c3629;
+  --ouder-vlak-3: #114032;
+  --ouder-mut:    #7b9a8b;
+  --ouder-tekst-2:#a5c4b5;
+}
+
+.ouder-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
   font-family: var(--font-tekst);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 99px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.ouder-btn-breakdown:hover {
-  background: var(--hub-hoofd);
-  color: var(--wit);
-}
-
-.ouder-vak-breakdown-cell {
-  padding: 0 !important;
-  background: var(--hub-achter);
-  border-bottom: 2px solid var(--lijn);
-}
-
-.ouder-breakdown-container {
-  padding: 16px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  animation: fadeIn 0.3s ease;
-}
-
-.ouder-chapter-card {
-  background: var(--wit);
-  border: 1px solid var(--lijn);
-  border-radius: 12px;
-  padding: 14px 16px;
-  box-shadow: var(--schaduw-sm);
-}
-
-.ouder-chapter-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.ouder-chapter-title {
-  font-family: var(--font-titel);
-  font-size: 14px;
-  font-weight: 800;
   color: var(--inkt);
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.ouder-wrap h2,
+.ouder-wrap h3 { font-family: var(--font-titel); margin: 0; }
+
+/* ── Kopbalk ─────────────────────────────────────────── */
+.ouder-bar {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-bottom: 18px; border-bottom: 1px solid var(--lijn);
+}
+.ouder-bar-ident { display: flex; align-items: center; gap: 11px; margin-right: auto; }
+.ouder-avatar {
+  width: 40px; height: 40px; border-radius: 12px; flex: none;
+  display: grid; place-items: center; font-size: 20px;
+  background: var(--ouder-vlak-2); border: 1px solid var(--lijn);
+}
+.ouder-bar-tekst { display: flex; flex-direction: column; line-height: 1.25; }
+.ouder-bar-naam { font-family: var(--font-titel); font-weight: 800; font-size: 15px; }
+.ouder-bar-sub { font-size: 12px; color: var(--ouder-mut); }
+
+.ouder-seg {
+  display: inline-flex; gap: 2px; padding: 3px;
+  background: var(--ouder-vlak-2); border: 1px solid var(--lijn); border-radius: 11px;
+}
+.ouder-year-btn {
+  font: 600 13px var(--font-tekst); color: var(--ouder-tekst-2);
+  background: none; border: 0; border-radius: 8px; padding: 6px 13px; cursor: pointer;
+}
+.ouder-year-btn:hover { color: var(--inkt); }
+.ouder-year-btn[aria-pressed="true"] {
+  background: var(--wit); color: var(--inkt); box-shadow: var(--schaduw-sm);
 }
 
-.ouder-exam-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  margin-top: 6px;
+.ouder-btn {
+  font: 600 13px var(--font-tekst); color: var(--ouder-tekst-2);
+  background: var(--wit); border: 1px solid var(--lijn); border-radius: 11px;
+  padding: 8px 14px; cursor: pointer;
+}
+.ouder-btn:hover { color: var(--inkt); border-color: var(--hub-zacht); }
+
+#ouder-view :focus-visible { outline: 2px solid var(--hub-zacht); outline-offset: 2px; border-radius: 4px; }
+
+/* ── Status ──────────────────────────────────────────── */
+.ouder-status { padding: 28px 0 4px; }
+.ouder-eyebrow {
+  margin: 0 0 8px; font-size: 11.5px; font-weight: 600;
+  letter-spacing: .11em; text-transform: uppercase; color: var(--ouder-mut);
+}
+.ouder-h1 {
+  font-size: clamp(26px, 4vw, 38px); font-weight: 800;
+  letter-spacing: -.024em; line-height: 1.1; text-wrap: balance;
+}
+.ouder-zin {
+  margin: 12px 0 0; max-width: 62ch; line-height: 1.5;
+  font-size: clamp(15px, 1.8vw, 17.5px); color: var(--ouder-tekst-2);
+}
+.ouder-zin strong { color: var(--inkt); font-weight: 600; }
+
+/* ── Cijferschaal ────────────────────────────────────── */
+.ouder-schaal-blok {
+  margin-top: 26px; padding: 22px 24px 18px;
+  background: var(--wit); border: 1px solid var(--lijn);
+  border-radius: var(--radius-sm); box-shadow: var(--schaduw-sm);
+}
+.ouder-schaal-kop { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.ouder-schaal-cijfer {
+  font-family: var(--font-titel); font-weight: 800; font-size: 42px;
+  line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums;
+}
+.ouder-schaal-label { font-size: 13.5px; color: var(--ouder-mut); }
+.ouder-schaal-label b { color: var(--ouder-tekst-2); font-weight: 600; }
+
+.ouder-schaal { position: relative; height: 46px; margin: 0 4px; }
+.ouder-schaal-track {
+  position: absolute; left: 0; right: 0; top: 13px; height: 10px;
+  border-radius: 6px; border: 1px solid var(--lijn);
+  background: linear-gradient(to right,
+    var(--ouder-zwak-zacht) 0%,   var(--ouder-zwak-zacht) 50%,
+    var(--ouder-net-zacht)  50%,  var(--ouder-net-zacht)  66.7%,
+    var(--ouder-goed-zacht) 66.7%, var(--ouder-goed-zacht) 100%);
+}
+.ouder-schaal-drempel {
+  position: absolute; left: 50%; top: 6px; bottom: 16px;
+  width: 2px; border-radius: 2px; background: var(--ouder-mut);
+}
+.ouder-schaal-drempel::after {
+  content: "5,5 geçme sınırı";
+  position: absolute; top: 100%; left: 50%; transform: translate(-50%, 4px);
+  white-space: nowrap; font-size: 11px; font-weight: 500; color: var(--ouder-mut);
+}
+.ouder-schaal-vak {
+  position: absolute; top: 14px; width: 7px; height: 7px;
+  border-radius: 50%; transform: translateX(-50%); border: 1.5px solid var(--wit);
+}
+.ouder-schaal-mij { position: absolute; top: 4px; transform: translateX(-50%); }
+.ouder-schaal-mij-punt {
+  display: block; width: 18px; height: 18px; border-radius: 50%;
+  background: currentColor; border: 4px solid var(--wit);
+  box-shadow: 0 0 0 1.5px currentColor;
+}
+.ouder-schaal-uiteinden {
+  display: flex; justify-content: space-between; margin-top: 22px; padding: 0 4px;
+  font-size: 11.5px; color: var(--ouder-mut); font-variant-numeric: tabular-nums;
+}
+.ouder-schaal-legenda {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-top: 15px; padding-top: 14px; border-top: 1px solid var(--lijn);
+}
+.ouder-schaal-legenda span {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--ouder-mut);
+}
+.ouder-legenda-uitleg { margin-left: auto; }
+.ouder-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+
+/* ── Tabs ────────────────────────────────────────────── */
+.ouder-tabs {
+  display: flex; gap: 2px; margin-top: 26px;
+  overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--lijn);
+}
+.ouder-tabs::-webkit-scrollbar { display: none; }
+.ouder-tab {
+  font: 600 14px var(--font-tekst); color: var(--ouder-mut); white-space: nowrap;
+  background: none; border: 0; border-bottom: 2px solid transparent;
+  padding: 11px 15px; margin-bottom: -1px; cursor: pointer;
+}
+.ouder-tab:hover { color: var(--inkt); }
+.ouder-tab[aria-selected="true"] { color: var(--hub-hoofd); border-bottom-color: var(--hub-zacht); }
+html.dark .ouder-tab[aria-selected="true"] { color: var(--hub-accent); }
+.ouder-tab-tel {
+  display: inline-block; margin-left: 7px; padding: 1px 6px; border-radius: 20px;
+  background: var(--ouder-vlak-3); color: var(--ouder-tekst-2); font-size: 11px; font-weight: 600;
 }
 
-.ouder-exam-table th {
-  background: var(--hub-cream);
-  color: var(--hub-hoofd);
-  padding: 6px 10px;
-  font-weight: 700;
+.ouder-views { padding-top: 4px; }
+
+/* ── Odak: aandachtspunten + mini-cijfers ────────────── */
+.ouder-odak {
+  display: grid; grid-template-columns: 1.6fr 1fr; gap: 18px;
+  align-items: start; margin-top: 22px;
+}
+@media (max-width: 860px) { .ouder-odak { grid-template-columns: 1fr; } }
+
+.ouder-dikkat {
+  padding: 20px 22px; background: var(--wit);
+  border: 1px solid var(--lijn); border-left: 4px solid var(--ouder-zwak);
+  border-radius: var(--ouder-r); box-shadow: var(--schaduw-sm);
+}
+.ouder-dikkat.is-schoon { border-left-color: var(--ouder-goed); }
+.ouder-dikkat h3 { font-size: 16.5px; font-weight: 700; letter-spacing: -.01em; }
+.ouder-dikkat-uitleg {
+  margin: 6px 0 16px; max-width: 58ch;
+  font-size: 13.5px; color: var(--ouder-tekst-2);
+}
+.ouder-dikkat-lijst {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--lijn); border-radius: 10px; overflow: hidden;
+}
+.ouder-dikkat-rij {
+  display: grid; grid-template-columns: 1fr auto; gap: 3px 14px;
+  align-items: center; padding: 12px 14px; background: var(--wit);
+}
+.ouder-dikkat-rij:hover { background: var(--ouder-vlak-2); }
+.ouder-dikkat-vak {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 600; font-size: 14px;
+}
+.ouder-dikkat-actie { grid-column: 1; font-size: 13px; color: var(--ouder-tekst-2); }
+.ouder-dikkat-cijfer {
+  grid-row: 1 / span 2; text-align: right;
+  font-family: var(--font-titel); font-weight: 800; font-size: 21px;
+  color: var(--ouder-zwak); font-variant-numeric: tabular-nums;
+}
+.ouder-dikkat-cijfer small {
+  display: block; font: 500 11px var(--font-tekst); color: var(--ouder-mut);
+}
+
+.ouder-hf-chip {
+  display: inline-block; padding: 2px 6px; border-radius: 5px;
+  background: var(--ouder-vlak-3); color: var(--ouder-tekst-2);
+  font-size: 11px; font-weight: 600; letter-spacing: .03em;
+}
+
+.ouder-zij { display: flex; flex-direction: column; gap: 11px; }
+.ouder-mini {
+  display: flex; flex-direction: column;
+  padding: 14px 16px; background: var(--wit);
+  border: 1px solid var(--lijn); border-radius: 11px;
+}
+.ouder-mini-label {
+  font-size: 11.5px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ouder-mut);
+}
+.ouder-mini-waarde {
+  margin-top: 3px; font-family: var(--font-titel); font-weight: 800;
+  font-size: 24px; letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+}
+.ouder-mini-waarde small { font-size: 15px; font-weight: 600; color: var(--ouder-mut); }
+.ouder-mini-sub { font-size: 12.5px; color: var(--ouder-tekst-2); }
+
+/* ── Sectiekop ───────────────────────────────────────── */
+.ouder-sec-kop {
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  margin: 36px 0 14px;
+}
+.ouder-sec-kop h3 { font-size: 18.5px; font-weight: 700; letter-spacing: -.015em; }
+.ouder-sec-kop p { margin: 0; font-size: 13.5px; color: var(--ouder-mut); }
+
+/* ── Vakkenlijst ─────────────────────────────────────── */
+.ouder-vak-lijst {
+  background: var(--wit); border: 1px solid var(--lijn);
+  border-radius: var(--ouder-r); overflow: hidden; box-shadow: var(--schaduw-sm);
+}
+.ouder-vak-rij {
+  display: grid; grid-template-columns: 1.35fr 150px 86px 118px 84px 22px;
+  gap: 16px; align-items: center; width: 100%; text-align: left;
+  padding: 13px 20px; font: inherit; color: inherit; cursor: pointer;
+  background: var(--wit); border: 0; border-top: 1px solid var(--lijn);
+}
+.ouder-vak-rij:first-child { border-top: 0; }
+.ouder-vak-rij:hover { background: var(--ouder-vlak-2); }
+.ouder-vak-naam { display: flex; align-items: center; gap: 11px; min-width: 0; }
+.ouder-vak-ico {
+  width: 34px; height: 34px; flex: none; border-radius: 9px;
+  display: grid; place-items: center; font-size: 17px;
+  background: var(--ouder-vlak-2); border: 1px solid var(--lijn);
+}
+.ouder-vak-ico--groot { width: 46px; height: 46px; font-size: 23px; border-radius: 12px; }
+.ouder-vak-tekst { display: flex; flex-direction: column; min-width: 0; }
+.ouder-vak-titel { font-weight: 600; font-size: 14.5px; letter-spacing: -.005em; }
+.ouder-vak-meta { font-size: 12px; color: var(--ouder-mut); }
+.ouder-vak-inline { display: inline-flex; align-items: center; gap: 8px; }
+.ouder-vak-inline b { font-weight: 600; }
+
+.ouder-mini-schaal-wrap { display: flex; align-items: center; gap: 10px; }
+.ouder-mini-schaal {
+  position: relative; flex: 1; height: 8px;
+  border-radius: 5px; background: var(--ouder-vlak-3);
+}
+.ouder-mini-schaal-vul { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px; }
+.ouder-mini-schaal-drempel {
+  position: absolute; left: 50%; top: -2px; bottom: -2px;
+  width: 1.5px; background: var(--ouder-mut); opacity: .55;
+}
+.ouder-mini-schaal-c {
+  min-width: 30px; font-family: var(--font-titel); font-weight: 700;
+  font-size: 15px; font-variant-numeric: tabular-nums;
+}
+
+.ouder-voortgang { font-size: 12.5px; color: var(--ouder-tekst-2); font-variant-numeric: tabular-nums; }
+.ouder-voortgang-bar {
+  display: block; height: 5px; margin-top: 5px; overflow: hidden;
+  border-radius: 3px; background: var(--ouder-vlak-3);
+}
+.ouder-voortgang-vul { display: block; height: 100%; border-radius: 3px; background: var(--hub-zacht); }
+.ouder-voortgang-cel { min-width: 96px; }
+.ouder-chev { text-align: right; font-size: 17px; color: var(--ouder-mut); }
+.ouder-vak-rij:hover .ouder-chev { color: var(--hub-hoofd); }
+html.dark .ouder-vak-rij:hover .ouder-chev { color: var(--hub-accent); }
+
+/* ── Verloop: sparkline + richting ───────────────────────
+   De cijferschaal toont de POSITIE, deze twee tonen de RICHTING. */
+.ouder-spark-cel { display: flex; align-items: center; gap: 7px; }
+.ouder-spark { display: block; overflow: visible; }
+.ouder-spark-leeg { font-size: 13px; color: var(--ouder-mut); }
+
+.ouder-trend {
+  font-size: 11.5px; font-weight: 700; white-space: nowrap;
+  font-variant-numeric: tabular-nums; letter-spacing: -.01em;
+}
+.ouder-trend--op   { color: var(--ouder-goed); }
+.ouder-trend--neer { color: var(--ouder-zwak); }
+
+/* Wegzakkend hoofdstuk: urgenter dan stabiel-laag, dus apart gemarkeerd. */
+.ouder-daalt {
+  display: inline-block; padding: 1px 6px; border-radius: 4px;
+  background: var(--ouder-zwak-zacht); color: var(--ouder-zwak);
+  font-size: 10.5px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; vertical-align: 1px;
+}
+
+@media (max-width: 900px) {
+  .ouder-vak-rij { grid-template-columns: 1fr 130px 22px; gap: 12px; }
+  .ouder-vak-rij > .ouder-voortgang,
+  .ouder-vak-rij > .ouder-spark-cel { display: none; }
+}
+
+/* ── Pillen ──────────────────────────────────────────── */
+.ouder-pill {
+  display: inline-flex; align-items: center; border-radius: 20px;
+  padding: 3px 10px; font-size: 12px; font-weight: 600;
+  white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.ouder-pill--goed { background: var(--ouder-goed-zacht); color: var(--ouder-goed); }
+.ouder-pill--net  { background: var(--ouder-net-zacht);  color: var(--ouder-net); }
+.ouder-pill--zwak { background: var(--ouder-zwak-zacht); color: var(--ouder-zwak); }
+.ouder-pill--none { background: var(--ouder-vlak-3);     color: var(--ouder-mut); }
+
+/* ── Vak-chips + detailkop ───────────────────────────── */
+.ouder-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+.ouder-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  font: 600 13px var(--font-tekst); color: var(--ouder-tekst-2); cursor: pointer;
+  background: var(--wit); border: 1px solid var(--lijn); border-radius: 20px; padding: 6px 14px;
+}
+.ouder-chip small { font-weight: 500; opacity: .6; }
+.ouder-chip:hover { border-color: var(--hub-zacht); }
+.ouder-chip[aria-pressed="true"] {
+  background: var(--hub-hoofd); border-color: var(--hub-hoofd); color: #ffffff;
+}
+html.dark .ouder-chip[aria-pressed="true"] {
+  background: var(--hub-accent); border-color: var(--hub-accent); color: #062f21;
+}
+
+.ouder-vd-kop {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin-bottom: 18px; padding: 18px 22px;
+  background: var(--wit); border: 1px solid var(--lijn);
+  border-radius: var(--ouder-r); box-shadow: var(--schaduw-sm);
+}
+.ouder-vd-kop h3 { font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+.ouder-vd-stats { display: flex; gap: 26px; flex-wrap: wrap; margin-left: auto; }
+.ouder-vd-stats > div { display: flex; flex-direction: column; }
+.ouder-vd-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--ouder-mut);
+}
+.ouder-vd-waarde {
+  font-family: var(--font-titel); font-weight: 800; font-size: 20px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Hoofdstukkaarten ────────────────────────────────── */
+.ouder-hf-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.ouder-hf-kaart {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 16px 18px; background: var(--wit);
+  border: 1px solid var(--lijn); border-radius: 12px;
+}
+.ouder-hf-kaart.is-aandacht {
+  border-color: var(--ouder-zwak);
+  background: var(--ouder-zwak-zacht);
+}
+.ouder-hf-kop { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ouder-hf-nr {
+  display: block; font-size: 11.5px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--ouder-mut);
+}
+.ouder-hf-titel {
+  display: block; margin-top: 2px; font-family: var(--font-titel);
+  font-weight: 700; font-size: 15.5px; letter-spacing: -.01em;
+}
+.ouder-hf-stats { display: flex; gap: 20px; flex-wrap: wrap; }
+.ouder-hf-stats > div { display: flex; flex-direction: column; }
+.ouder-hf-stat-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--ouder-mut);
+}
+.ouder-hf-stat-waarde { margin-top: 1px; font-size: 13px; color: var(--ouder-tekst-2); font-variant-numeric: tabular-nums; }
+.ouder-hf-advies {
+  margin: 0; padding-top: 11px; border-top: 1px solid var(--lijn);
+  font-size: 13px; line-height: 1.5; color: var(--ouder-tekst-2);
+}
+.ouder-hf-advies b { color: var(--inkt); font-weight: 600; }
+
+/* ── Tabellen ────────────────────────────────────────── */
+.ouder-tabel-wrap {
+  overflow-x: auto; background: var(--wit);
+  border: 1px solid var(--lijn); border-radius: var(--ouder-r); box-shadow: var(--schaduw-sm);
+}
+.ouder-tabel { width: 100%; min-width: 680px; border-collapse: collapse; }
+.ouder-tabel th {
+  padding: 12px 16px; text-align: left; white-space: nowrap;
+  font: 600 11.5px var(--font-tekst); letter-spacing: .07em; text-transform: uppercase;
+  color: var(--ouder-mut); background: var(--ouder-vlak-2); border-bottom: 1px solid var(--lijn);
+}
+.ouder-tabel td {
+  padding: 11px 16px; font-size: 13.5px; vertical-align: middle;
   border-bottom: 1px solid var(--lijn);
-  text-align: left;
+}
+.ouder-tabel tbody tr:last-child td { border-bottom: 0; }
+.ouder-tabel tbody tr:hover { background: var(--ouder-vlak-2); }
+.ouder-num { font-variant-numeric: tabular-nums; }
+.ouder-tabel td.ouder-streep,
+.ouder-tabel th.ouder-streep { width: 3px; padding: 0; }
+
+/* ── Filters + lege staat ────────────────────────────── */
+.ouder-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.ouder-zoek {
+  flex: 1; min-width: 210px; padding: 9px 13px;
+  font: 400 14px var(--font-tekst); color: var(--inkt);
+  background: var(--wit); border: 1px solid var(--lijn); border-radius: 10px;
+}
+.ouder-zoek::placeholder { color: var(--ouder-mut); }
+.ouder-zoek--kort { flex: none; min-width: 170px; cursor: pointer; }
+.ouder-leeg { padding: 34px 20px; text-align: center; font-size: 14px; color: var(--ouder-mut); }
+
+.ouder-voet {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--lijn);
+  font-size: 12.5px; color: var(--ouder-mut);
+}
+.ouder-voet code {
+  padding: 1px 5px; border-radius: 4px; background: var(--ouder-vlak-2);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px;
 }
 
-.ouder-exam-table td {
-  padding: 8px 10px;
-  border-bottom: 1px solid var(--lijn);
-  color: var(--inkt);
-  vertical-align: middle;
+@media (prefers-reduced-motion: reduce) {
+  #ouder-view *, #ouder-view *::before, #ouder-view *::after {
+    animation: none !important; transition: none !important;
+  }
 }
 
-.ouder-exam-table tr:last-child td {
-  border-bottom: none;
+/* ── Yazdırma / PDF ──────────────────────────────────────
+   Ekranda tek sekme DOM'da; yazdırmadan hemen önce ouder_dashboard.js
+   dört bölümü de basar (toonVolledigRapport). Bölüm başlıkları yalnız
+   kâğıtta görünür — ekranda sekmeler zaten bu işi yapıyor. */
+.ouder-print-kop { display: none; }
+
+@media print {
+  .ouder-bar, .ouder-tabs, .ouder-filters, .ouder-chev, .ouder-chips { display: none !important; }
+  .ouder-wrap { max-width: none; }
+  .ouder-schaal-blok, .ouder-dikkat, .ouder-mini,
+  .ouder-vak-lijst, .ouder-tabel-wrap, .ouder-hf-kaart, .ouder-vd-kop {
+    box-shadow: none; break-inside: avoid;
+  }
+
+  .ouder-print-kop {
+    display: block; margin: 0 0 14px; padding-bottom: 7px;
+    font-family: var(--font-titel); font-size: 17px; font-weight: 800;
+    letter-spacing: -.01em; border-bottom: 2px solid var(--inkt);
+  }
+  .ouder-print-sectie { margin-top: 30px; break-before: page; }
+  .ouder-print-sectie:first-child { margin-top: 22px; break-before: auto; }
+
+  /* Satırlar kâğıtta düğme gibi değil, tablo satırı gibi okunmalı */
+  .ouder-vak-rij { background: none !important; }
+  .ouder-tabel { min-width: 0; }
+  .ouder-tabel-wrap { overflow-x: visible; }
 }
-
-html.dark .ouder-chapter-card {
-  background: #0a2e22;
-  border-color: #104030;
-}
-
-html.dark .ouder-vak-breakdown-cell {
-  background: #061a12;
-}
-
-html.dark .ouder-btn-breakdown {
-  background: #061a12;
-  border-color: #104030;
-  color: #34d399;
-}
-
-
-
-

@@ -102,26 +102,78 @@ window.Storage.prototype.removeItem = function(key) {
   originalRemoveItem.call(this, prefixedKey);
 };
 
+// ── Score-sync naar de lokale server (gedebounced) ────────
+// De examenmotor roept bewaar() na ELK antwoord aan. Ongedebounced
+// stuurt één proeftoets ~20 POSTs, en de server herschrijft bij elke
+// POST scores.json volledig. We bundelen per sleutel: laatste waarde
+// wint, versturen pas na 2s stilte — in de praktijk één keer aan het
+// eind van een toets. Zie docs/ENGINE_SPEC.md en server.py.
+var scoreSyncPending = {};
+var scoreSyncTimers  = {};
+var SCORE_SYNC_STILTE_MS = 2000;
+
+function verstuurScore(key, val, gebruikBeacon) {
+  var body = JSON.stringify({
+    key: key,
+    val: val,
+    timestamp: new Date().toISOString()
+  });
+
+  // Bij het sluiten van de tab is fetch niet betrouwbaar; sendBeacon wel.
+  if (gebruikBeacon && navigator.sendBeacon) {
+    try {
+      navigator.sendBeacon('/api/score', new Blob([body], { type: 'application/json' }));
+      return;
+    } catch (e) { /* valt terug op fetch */ }
+  }
+
+  fetch('/api/score', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: body
+  }).catch(function(err) {
+    console.warn('Could not sync performance score with local server:', err);
+  });
+}
+
+function flushScoreSync(key, gebruikBeacon) {
+  if (!Object.prototype.hasOwnProperty.call(scoreSyncPending, key)) return;
+  var val = scoreSyncPending[key];
+  delete scoreSyncPending[key];
+  clearTimeout(scoreSyncTimers[key]);
+  delete scoreSyncTimers[key];
+  verstuurScore(key, val, gebruikBeacon);
+}
+
+function flushAlleScoreSync(gebruikBeacon) {
+  Object.keys(scoreSyncPending).forEach(function(k) {
+    flushScoreSync(k, gebruikBeacon);
+  });
+}
+
+function queueScoreSync(key, val) {
+  scoreSyncPending[key] = val;
+  clearTimeout(scoreSyncTimers[key]);
+  scoreSyncTimers[key] = setTimeout(function() {
+    flushScoreSync(key, false);
+  }, SCORE_SYNC_STILTE_MS);
+}
+
+// Niets verliezen als Duru de tab sluit of wegklikt midden in een toets.
+window.addEventListener('pagehide', function() { flushAlleScoreSync(true); });
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden') flushAlleScoreSync(true);
+});
+
 // ── Vakken-data ───────────────────────────────────────────
 // Elk vak heeft: id, titel, icoon, kleur (CSS-variabele-naam),
 // beschrijving en ofwel een href (directe link) ofwel een
 // onderwerpen-array (uitklapbare categorie).
-var VAKKEN = [
-  // ── HAVO 3 vakken (nog in opbouw — Duru's echte pakket, 10 vakken) ──
-  // domein: 'talen' | 'exact' | 'mens'. binnenkort:true = nog geen site/data.
-  { id:'h3-nederlands',      titel:'Nederlands',      icoon:'📖', domein:'talen', beschrijving:'Lezen, schrijven & taal',        href:'./havo3/nederlands/', sleutel:'duru_2627_nederlands' },
-  { id:'h3-engels',          titel:'Engels',          icoon:'🇬🇧', domein:'talen', beschrijving:'Reading, grammar & words',        href:'./havo3/engels/', sleutel:'duru_2627_engels' },
-  { id:'h3-frans',           titel:'Frans',           icoon:'🇫🇷', domein:'talen', beschrijving:'Grammaire & vocabulaire',         href:'./havo3/frans/', sleutel:'duru_2627_frans' },
-  { id:'h3-duits',           titel:'Duits',           icoon:'🇩🇪', domein:'talen', beschrijving:'Wörter, Fälle & grammatica',       href:'./havo3/duits/', sleutel:'duru_2627_duits' },
-  { id:'h3-wiskunde',        titel:'Wiskunde',        icoon:'⚖️', domein:'exact', beschrijving:'Algebra, meetkunde & meer',       href:'./havo3/wiskunde/', sleutel:'duru_2627_wiskunde' },
-  { id:'h3-natuurkunde',     titel:'Natuurkunde',     icoon:'⚛️', domein:'exact', beschrijving:'Krachten, energie & meer',        href:'./havo3/natuurkunde/', sleutel:'duru_2627_natuurkunde' },
-  { id:'h3-scheikunde',      titel:'Scheikunde',      icoon:'🧪', domein:'exact', beschrijving:'Stoffen, atomen & reacties',      href:'./havo3/scheikunde/', sleutel:'duru_2627_scheikunde' },
-  { id:'h3-biologie',        titel:'Biologie',        icoon:'🧬', domein:'exact', beschrijving:'Groei, puberteit & voortplanting', href:'./havo3/biologie/', sleutel:'duru_2627_biologie' },
-  { id:'h3-geschiedenis',    titel:'Geschiedenis',    icoon:'🕰️', domein:'mens',  beschrijving:'Tijd, bronnen & gebeurtenissen',  href:'./havo3/geschiedenis/', sleutel:'duru_2627_geschiedenis' },
-  { id:'h3-aardrijkskunde',  titel:'Aardrijkskunde',  icoon:'🗺️', domein:'mens',  beschrijving:'Aarde, klimaat & mensen',         href:'./havo3/aardrijkskunde/', sleutel:'duru_2627_aardrijkskunde' },
-  { id:'h3-economie',        titel:'Economie',        icoon:'💶', domein:'mens',  beschrijving:'Geld, markt & keuzes',           href:'./havo3/economie/', sleutel:'duru_2627_economie' },
-  { id:'h3-maatschappijleer',titel:'Maatschappijleer',icoon:'🏛️', domein:'mens',  beschrijving:'Samenleven & rechten',           href:'./havo3/maatschappijleer/', sleutel:'duru_2627_maatschappijleer' },
-
+// HAVO 3-kaarten worden afgeleid uit js/vakken.js (titel/icoon/sleutel staan
+// daar één keer). De archiefvakken hieronder blijven hier: dat is puur
+// navigatie, met een uitklapbare categorie die geen tegenhanger in het
+// statistiekregister heeft.
+var VAKKEN = window.DURU_VAKKEN.landingKaarten().concat([
   {
     id: 'natuurkunde',
     titel: 'Natuurkunde (NASK)',
@@ -186,7 +238,7 @@ var VAKKEN = [
       }
     ]
   }
-];
+]);
 
 // ── Iframe-shell staat ────────────────────────────────────
 // Bijhouden of we de iframe-modus zelf hebben geopend (om
@@ -1248,19 +1300,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 parsedVal = value;
               }
               
-              fetch('/api/score', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                  key: key,
-                  val: parsedVal,
-                  timestamp: new Date().toISOString()
-                })
-              }).catch(function(err) {
-                console.warn('Could not sync performance score with local server:', err);
-              });
+              // Gebundeld versturen i.p.v. bij elk antwoord — zie queueScoreSync.
+              queueScoreSync(key, parsedVal);
             }
           } catch (syncErr) {
             console.warn('Error in localStorage interception sync:', syncErr);

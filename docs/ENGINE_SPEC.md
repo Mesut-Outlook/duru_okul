@@ -39,6 +39,7 @@ DURU.register({
 ```js
 DURU.registerExamen({
   id: "ex-geschiedenis-66",    // KARARLI — kayıtlı skor geçmişinin anahtarı. ASLA yeniden adlandırma.
+  hoofdstuk: 4,                // number — ZORUNLU. Manifest'in tek kaynağı; bkz. uyarı ↓
   titel: "Proeftoets — ...",
   vak: "Geschiedenis · H4 (4.1)",
   icoon: "⚔️",
@@ -46,6 +47,13 @@ DURU.registerExamen({
   vragen: [ /* soru nesneleri */ ]
 });
 ```
+**⚠️ `hoofdstuk` alanı zorunludur.** `tools/build_hoofdstukken.js` yalnız bu alandan
+`js/hoofdstukken.js` manifestini üretir; alan yoksa sınav manifest'e **hiç girmez** ve dashboard'larda
+"Overige toetsen"e düşer. **Id'den hoofdstuk çıkarma:** `ex-h3-<vak>-N` içindeki `h3` NIVEAU'dur
+(HAVO 3), hoofdstuk değil — id'ye bakan her regex yanlıştır.
+Değer `bootstrap.js`'teki `DURU.hoofdstukken`'de **gerçekten tanımlı** bir `nr` olmalı; tanımlı
+değilse build uyarı verir. Ünitesi henüz belli olmayan bir sınava numara **uydurma** — alanı boş
+bırak, "Overige toetsen"e düşsün (ör. `nederlands` / `maatschappijleer` smoke-test'leri).
 
 ## Soru tipleri
 Oefen soruları ek `niveau` (zorluk 1–3) taşır; sınav soruları taşımaz. Her soruya opsiyonel

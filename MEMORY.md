@@ -283,7 +283,7 @@ This document serves as the project's global memory log, preserving all overall 
     onderwerpId→hoofdstuk, ünite başına sınav/onderwerp sayısı). `--check` modu bayat manifest'te exit 1.
   - `js/hoofdstuk_util.js`: ortak `window.DURU_HF` API (`lijst/meta/vanAttempt/vanOnderwerp/
     totaalExamens/totaalOnderwerpen`). İki dashboard da yalnız bunu kullanır; ayrı liste YOK.
-  - `index.html`: `hoofdstukken.js` → `hoofdstuk_util.js` → `landing.js` sırasıyla yüklenir (`?v=3.8`).
+  - `index.html`: `hoofdstukken.js` → `hoofdstuk_util.js` → `landing.js` sırasıyla yüklenir (`?v=3.9`).
 * **⚠️ KRİTİK TUZAK — `ex-h3-<vak>-N` id'sindeki `h3` HOOFDSTUK DEĞİL, NIVEAU'dur (HAVO 3).**
   Sınav id'sinden hoofdstuk çıkarmaya çalışan her regex yanlıştır; hoofdstuk'suz her kayıt sahte
   olarak "H3"e düşer. Fallback zinciri: `att.hoofdstuk` → manifest `examenHoofdstuk[examId]` →
@@ -301,3 +301,117 @@ This document serves as the project's global memory log, preserving all overall 
 * **Doğrulama**: 12 `engine.js` + tüm data/exams dosyalarında `node --check`;
   `node tools/build_hoofdstukken.js --check` exit 0; headless DOM-stub harness ile hem öğrenci
   hem veli dashboard'u render edilip ünite kırılımı, "Overige toetsen" ve oranlar doğrulandı.
+
+---
+
+## 📅 Milestone 9: Veli panelinin yeniden tasarımı (2026-09-03)
+
+* **Sorun**: `ouder_dashboard.js`'in render katmanı 4 eşit KPI kartı + iki dev tablo + açılır satır
+  kırılımından ibaretti. Her blok kart olduğu için hiyerarşi yoktu; "Baba bugün neye baksın?"
+  sorusunun cevabı sayfanın hiçbir yerinde tek bakışta okunmuyordu. Notlar metin olarak vardı ama
+  5,5 geçme sınırına göre nerede durdukları görünmüyordu.
+* **Yapılan**: Yalnız **render katmanı** (eski satır 399–825) değişti. `collectParentReportData`
+  ve `VAK_CONFIG` **olduğu gibi korundu** — manifest entegrasyonu ve iki-yıl desteği zaten doğruydu.
+  - **Cijferschaal**: Hollanda 1–10 ölçeği gerçek bir cetvel olarak çizildi (`.ouder-schaal*`).
+    5,5 eşiği çizgiyle işaretli; büyük nokta genel ortalama, küçük noktalar her dersin ortalaması.
+    Hangi dersin sınırın hangi tarafında olduğu tek bakışta okunuyor.
+  - **"Önce buraya bakın"** paneli: sayfadaki tek vurgulu blok (sol kenarında `--ouder-zwak` şerit).
+    Ortalaması 5,5 altındaki **hoofdstuk**'lar (attempt değil) en zayıftan sıralı, her biri
+    manifest'ten gelen `advice` ile.
+  - **Sekmeli görünüm** (`data-ouder-view`): `overzicht` / `vakken` / `units` / `logboek`.
+    Yalnız aktif görünüm HTML'e basılır → tek seferde basılan DOM ~4 kat küçüldü.
+    `actieveView` + `gekozenVak` + `logFilter` modül düzeyinde tutulur; yıl değişimi ve
+    `cloud_sync.js`'in periyodik `renderParentDashboard()` çağrısı seçimi artık sıfırlamıyor.
+  - **Ders listesi** ortalamaya göre artan sıralı (en çok ilgi bekleyen üstte); eski tablo alfabetikti.
+  - Günlük filtreleri (arama/ders/sonuç) yalnız tabloyu yeniden çizer → yazarken odak kaybolmuyor.
+* **Renk sözleşmesi (ÖNEMLİ)**: anlam renkleri marka yeşilinden **ayrıldı**.
+  `--ouder-goed/net/zwak` + `-zacht` tonları `#ouder-view` üzerinde tanımlı, `html.dark #ouder-view`'de
+  yeniden tanımlanır. Yeşil artık "iyi" demek, marka rengi değil. Proje tokenleri (`--wit`, `--inkt`,
+  `--lijn`, `--font-titel/tekst`, `--schaduw-sm`) korundu; koyu tema `html.dark` mekanizmasında kaldı.
+* **Kaldırılanlar**: `.ouder-kpi-*`, `.ouder-header-card`, `.ouder-insight-*`, `.ouder-grade-pill`,
+  `.ouder-vak-breakdown-*` ve `window.toggleOuderVakBreakdown` (inline `onclick`'ler de gitti).
+  Repo genelinde bunlara kalan referans yok (grep ile doğrulandı).
+* **Ölçüler**: `css/style.css` 2656 → 2163 satır (-493), `js/ouder_dashboard.js` 839 → 936 satır.
+  `index.html`'de tüm `?v=3.8` → **`?v=3.9`**.
+* **Doğrulama**: `node --check js/ouder_dashboard.js` temiz. Headless DOM-stub harness ile gerçek
+  veri (Frans H1/H3 + Geschiedenis H1) render edildi: genel ortalama **6,6** elle hesapla birebir
+  (7,3 · 4,6 · 5,5 · 9,1), zayıf ünite tespiti Frans H3'ü (5,05) yakaladı, dört görünüm de
+  `undefined`/`NaN` üretmeden render oldu, veri olmayan yıl boş-durum metnine düştü.
+* **Tasarım önizlemesi** (onay için, canlıya girmeden önce paylaşıldı):
+  https://claude.ai/code/artifact/2d374d3a-59a1-4217-8acc-d070aca3123f
+
+### Ek (aynı gün) — yarım kalan işler kapatıldı
+
+* **Manifest bayatlığı giderildi**: `node tools/build_hoofdstukken.js --check` exit 1 veriyordu
+  (`95572da`'dan beri). Yeniden üretildi → **exit 0**. Kaçan veri: 6 economie sınavı
+  (`ex-h3-economie-13..18`) → economie H1 `3→6`, H4 `3→6`. Bu sınavlar "Overige toetsen"e
+  düşüyordu, artık doğru üniteye yazılıyor. Başka ders etkilenmedi (diff 10 satır).
+* **`maatschappijleer` + `nederlands` uyarıları bilinçli bırakıldı**: `bootstrap.js`'te
+  `DURU.hoofdstukken = []` (materyal yok). Smoke-test sınavlarına ünite numarası vermek
+  **uydurma metadata** olurdu — projenin daha önce bedelini ödediği hata. Alan boş kaldı.
+* **`CLAUDE.md` doluluk tablosu baştan sayıldı** — ciddi bayattı: `engels`/`frans`/`duits`
+  "smoke-test 0/1/5" yazıyordu, gerçekte 30/40 proeftoets'leri var; `economie` "0/1/20" yazıyordu,
+  gerçek 12/18/456. Yeni toplam: **126 onderwerp · 205 proeftoets · 5082 soru**.
+  Sayım yöntemi doğrulandı (geschiedenis 840 = eski tablodaki değer).
+* **`docs/ENGINE_SPEC.md` boşluğu kapatıldı**: "tek doğru kaynak" olan Sözleşme 2'de
+  (`registerExamen`) **`hoofdstuk` alanı hiç yazmıyordu**, oysa CLAUDE.md zorunlu diyor ve tüm
+  manifest hattı buna dayanıyor. Bu boşluk `ex-h3-*` niveau tuzağının kaçmasına zemin hazırlamıştı.
+  Alan + niveau tuzağı + "ünite uydurma" kuralı spec'e eklendi.
+* **Yeni açık iş**: `frans` 40 proeftoets'e sahip ama **0 onderwerp** — 12 ders içinde tek böyle.
+  Oefenvoortgang hep %0 görünüyor. `coordination.md`'ye TODO olarak yazıldı.
+
+## 📅 Milestone 10: Pano denetimi + Faz 1 optimizasyonu (2026-09-04)
+
+Öğrenci ve veli panoları için ölçüme dayalı denetim yapıldı (8 bulgu, artifact olarak sunuldu),
+Faz 1 uygulandı.
+
+* **Yazdırma regresyonu onarıldı** (2026-09-03'te ben yapmıştım): tek-sekme-DOM stratejisi
+  yazdırmayı bozuyordu. `beforeprint`/`afterprint` kancaları + `vakDetailHtml()` ayrıştırması.
+* **`scores.json` v2**: append-only anlık görüntü kütüğü → anahtar-bazlı sözlük + `history`
+  birleştirme. **27,3 MB → 0,58 MB, 287 poging, sıfır kayıp.** Yan dosya `events.jsonl`
+  (poging başına ~100 B). `GET /api/score` liste döndürmeye devam ediyor → `restoreScores()`
+  sözleşmesi bozulmadı. v1 otomatik göç + backup.
+* **POST debounce** (`queueScoreSync`): sınav başına ~20 istek → 1. `sendBeacon` ile kapanışta flush.
+* **Yan bulgu**: boş günlükte yanlış sebep gösteriliyordu ("filtrelerle eşleşmedi" ≠ "hiç veri yok").
+* **Ölçüm yöntemi**: göç öncesi/sonrası anahtar başına benzersiz `attemptId` kümeleri karşılaştırıldı;
+  yazdırma yolu headless harness'ta `beforeprint` kancası tetiklenerek 4 bölüm de doğrulandı.
+* **Faz 2 (bekliyor)**: parça-eşleşmeli storage taramasını kaldır (çok-kullanıcı veri sızıntısı
+  riski), `js/vakken.js` tek ders kaynağı, `js/cijfer_util.js` tek not mantığı.
+* `index.html` → `?v=4.0`.
+
+### Faz 2 (aynı gün) — tek kaynak refactor'ları
+
+* **Çok-kullanıcı sızıntısı kapandı**: iki panodaki substring-taramalı storage fallback'i kaldırıldı.
+  Ayrıca veli panelinin ilk denemesi `localStorage.getItem(key)` idi; landing.js override'ı bunu
+  **aktif kullanıcıyla** önekliyordu — Baba bakarken Duru'nun raporu isteniyordu, yanlıştı.
+  Yeni `leesRuw()` `originalGetItem` ile ham okuyor, kişiyi açıkça adresliyor.
+* **`js/vakken.js` (`DURU_VAKKEN`)**: ders listesi 3 → 1. `VAK_REGISTER` ve `VAK_CONFIG` zaten
+  kelimesi kelimesine aynıydı. Arşiv dersleri landing'de bırakıldı (iç içe `onderwerpen` taşıyan
+  navigasyon, istatistik karşılığı yok). HAVO 3 economie ikonu `🏛️`→`💶` (maatschappijleer ile
+  çakışıyordu) — tek bilinçli davranış değişikliği.
+* **`js/cijfer_util.js` (`DURU_CIJFER`)**: formül + eşikler tek yerde. Renk paylaşılmıyor;
+  panoların tokenları farklı, ortak olan sınıflandırma. Kalan ham `5.5`/formül: 0.
+* **Regresyon testi**: türetilen değerler `git show HEAD` ile karşılaştırıldı —
+  **tüm storage anahtarları byte-byte aynı**, 12 landing kartı eski href/sleutel/id/domein ile
+  eşleşiyor, cijfer formülü 7 yüzdede aynı sonucu veriyor.
+* **Yükleme sırası kritik**: `vakken.js` → `cijfer_util.js` → … → `ouder_dashboard.js`
+  (sonuncusu `DURU_CIJFER`'i yüklenme anında okuyor).
+* **Faz 3 (bekliyor)**: rapor önbelleği + kısmi yeniden çizim, sparkline/trend oku,
+  onderwerp'siz derste alıştırma çubuğunu gizle.
+
+### Faz 3 (aynı gün) — hız + okunabilirlik; pano denetimi kapandı
+
+* **Rapor önbelleği**: `haalContext()` ham string uzunluğu + ilk/son 48 karakterden imza üretiyor,
+  parse etmeden. Sekme/yıl/senkron artık gereksiz yere yeniden hesaplamıyor.
+* **Kısmi çizim**: `wisselView()` yalnız `.ouder-views`'i değiştiriyor. `bindParentEvents` ikiye
+  bölündü (`bindKopEvents` / `bindViewEvents`) — kopbalk `.ouder-views` dışında olduğu için
+  tabwissel'de handler'ları hayatta kalıyor.
+* **Sparkline + trend**: 62×18 inline SVG (kütüphane yok), 5,5 eşiği kesik çizgi, son nokta vurgulu.
+  Trend = son 3 ile önceki 3'ün farkı; <4 deneme → hüküm yok, <0,3 puan → düz.
+  "Önce buraya bakın" artık **düşüş trendindekini** sabit-düşük olandan önce sıralıyor.
+* **frans alıştırma çubuğu** veli panelinde gizlendi (0 onderwerp). Öğrenci panosunda zaten doğruydu.
+* **Faz 3 testi** önbellek geçersizleştirmeyi ölçüyor — bayat önbellek en olası regresyondu.
+* **Harness dersi**: üç kez stub eksikliği (`window.addEventListener`, `document.querySelector`,
+  `setAttribute`) test hatası olarak göründü. Headless harness gerçek DOM'un yalnız kullanılan
+  yüzeyini taklit ediyor; yeni DOM API'si kullanınca stub'ı da genişlet.
+* `index.html` → `?v=4.1`. **Pano denetiminin 8 bulgusunun 8'i kapandı.**
