@@ -15,6 +15,8 @@ _math_extract/
 # Lokale scores en logs
 scores.json
 scores_log.txt
+events.jsonl
+scores_v1_backup_*.json
 
 # Scratch and temporary OCR artifacts
 scratch/
