@@ -234,7 +234,7 @@ exams = [
         "id": "ex-h3-economie-20",
         "hoofdstuk": 4,
         "paragraaf": "4.2",
-        "titel": "Proeftoets 20: Kostenstructuur, Vaste lasten & Amortisationsanalyse (4.2)",
+        "titel": "Proeftoets 20: Kostenstructuur, Vaste lasten & Afschrijvingsanalyse (4.2)",
         "vak": "Economie · HAVO 3 (Pincode)",
         "icoon": "📊",
         "duurMin": 20,
