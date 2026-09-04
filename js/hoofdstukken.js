@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-02",
+  "gegenereerd": "2026-09-04",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -225,7 +225,18 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-9": 3,
         "ex-h3-economie-10": 4,
         "ex-h3-economie-11": 4,
-        "ex-h3-economie-12": 4
+        "ex-h3-economie-12": 4,
+        "ex-h3-economie-13": 1,
+        "ex-h3-economie-14": 1,
+        "ex-h3-economie-15": 1,
+        "ex-h3-economie-16": 4,
+        "ex-h3-economie-17": 4,
+        "ex-h3-economie-18": 4,
+        "ex-h3-economie-19": 4,
+        "ex-h3-economie-20": 4,
+        "ex-h3-economie-21": 4,
+        "ex-h3-economie-22": 4,
+        "ex-h3-economie-23": 4
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -242,10 +253,10 @@ window.DURU_HOOFDSTUKKEN = {
         "h4-3": 4
       },
       "aantalExamens": {
-        "1": 3,
+        "1": 6,
         "2": 3,
         "3": 3,
-        "4": 3
+        "4": 11
       },
       "aantalOnderwerpen": {
         "1": 3,
@@ -761,7 +772,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h2-2": 2,
         "ex-wiskunde-h2-3": 2,
         "ex-wiskunde-h2-4": 2,
-        "ex-wiskunde-h2-5": 2
+        "ex-wiskunde-h2-5": 2,
+        "ex-wiskunde-h2-6": 2,
+        "ex-wiskunde-h2-7": 2,
+        "ex-wiskunde-h2-8": 2,
+        "ex-wiskunde-h2-9": 2,
+        "ex-wiskunde-h2-10": 2
       },
       "onderwerpHoofdstuk": {
         "h2-1-verhoudingstabel": 2,
@@ -771,7 +787,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h2-5-steelbladdiagram": 2
       },
       "aantalExamens": {
-        "2": 5
+        "2": 10
       },
       "aantalOnderwerpen": {
         "2": 5
