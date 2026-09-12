@@ -10,7 +10,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
 
   <!-- Google Fonts worden geladen vanuit style.css via @import -->
-  <link rel="stylesheet" href="css/style.css?v=4.1" />
+  <link rel="stylesheet" href="css/style.css?v=4.2" />
 
   <!-- Thema vroeg toepassen (voorkomt flits van verkeerde modus).
        Keuze in localStorage 'duru_hub_theme' ('light'/'dark'); zonder
@@ -104,124 +104,30 @@
     </div>
 
     <!-- ── Statistieken view ───────────────────────────────────── -->
+    <!-- ── Statistieken view ────────────────────────────────────
+         Het paneel wordt volledig door js/dashboard.js gerenderd:
+         "Wat nu?" → cijferschaal → momentum → tabbladen. Alleen het
+         backup-blok blijft statisch, zodat initBackupRestore() zijn
+         knoppen behoudt bij elke herrender. -->
     <div id="statistieken-view" class="hub-view">
 
-      <!-- 0. Schooljaar-kiezer — gevuld door renderJaarSelector() in dashboard.js -->
-      <div id="jaar-selector" class="jaar-selector" role="tablist" aria-label="Schooljaar"></div>
-
-      <!-- 1. Overview summary strip -->
-      <div class="stats-summary-grid">
-        <div class="stats-card">
-          <span class="stats-card__label">⚡ Totaal XP</span>
-          <span class="stats-card__value" id="stat-xp">0</span>
-          <span class="stats-card__desc">Verdiend met oefenen</span>
-        </div>
-        <div class="stats-card">
-          <span class="stats-card__label">🏆 Badges</span>
-          <span class="stats-card__value" id="stat-badges">0</span>
-          <span class="stats-card__desc">Verdiende badges in totaal</span>
-        </div>
-        <div class="stats-card">
-          <span class="stats-card__label">📝 Gemaakte proeftoetsen</span>
-          <span class="stats-card__value" id="stat-exams">0</span>
-          <span class="stats-card__desc">Voltooide proeftoetsen</span>
-        </div>
-        <div class="stats-card">
-          <span class="stats-card__label">🎯 Gemiddeld cijfer</span>
-          <span class="stats-card__value" id="stat-gemiddelde">-</span>
-          <span class="stats-card__desc">Gemiddelde van alle pogingen</span>
-        </div>
+      <div id="voortgang-paneel">
+        <!-- JavaScript rendert hier het voortgangspaneel -->
       </div>
 
-      <!-- 2. Per-subject cards (filled by JS) -->
-      <section class="vak-stats-sectie" aria-label="Overzicht per vak">
-        <h3 class="vak-stats-sectie__titel">📚 Overzicht per vak</h3>
-        <div class="vak-stats-grid" id="vak-stats-grid">
-          <!-- Filled via renderVakKaarten() in dashboard.js -->
-        </div>
-      </section>
-
-      <!-- 2.5 Overzicht per hoofdstuk -->
-      <section class="hoofdstuk-stats-sectie" id="hoofdstuk-stats-sectie" aria-label="Overzicht per hoofdstuk">
-        <div class="sectie-kop-flex">
-          <div>
-            <h3 class="vak-stats-sectie__titel" style="margin-bottom:4px;">📖 Overzicht per hoofdstuk</h3>
-            <p style="margin:0 0 16px; font-size:13px; color:var(--grijs);">
-              Zie per hoofdstuk hoe je ervoor staat: je gemiddelde cijfer, je beste resultaat en hoeveel je al geoefend hebt.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Hoofdstuk filter bar -->
-        <div class="filter-bar" id="hoofdstuk-filter-bar"></div>
-
-        <!-- Hoofdstuk grid -->
-        <div class="hoofdstuk-stats-grid" id="hoofdstuk-stats-grid">
-          <!-- Dynamically filled by JS -->
-        </div>
-      </section>
-
-      <!-- 3. Score verloop chart -->
-      <div class="chart-card" style="margin-bottom:32px;">
-        <h3 class="chart-card__title">
-          <span>📈 Score Verloop</span>
-          <small style="font-size:12px;font-weight:normal;color:var(--grijs-licht);">Laatste 15 proeftoetsen</small>
-        </h3>
-        <div class="svg-container" id="line-chart-container">
-          <!-- Will be drawn dynamically via SVG in JS -->
-        </div>
-      </div>
-
-      <!-- 4. Volledig logboek -->
-      <section class="exam-log-section">
-        <h3 class="chart-card__title">📋 Overzicht Gemaakte Toetsen & Spelling-spelen</h3>
-
-        <!-- Filter bar — gevuld door renderFilterBar() in dashboard.js (jaar-afhankelijk) -->
-        <div class="filter-bar" id="table-filter-bar"></div>
-
-        <!-- Search input -->
-        <div class="search-input-wrapper">
-          <span class="search-icon" aria-hidden="true">🔍</span>
-          <input class="search-input" id="exam-search" type="text" placeholder="Zoek op onderwerp of hoofdstuk..." aria-label="Zoek in gemaakte toetsen" />
-        </div>
-
-        <!-- Attempts Table -->
-        <div class="exam-table-wrapper">
-          <table class="exam-table" id="exam-attempts-table">
-            <thead>
-              <tr>
-                <th>Datum &amp; Tijd</th>
-                <th>Vak</th>
-                <th>Hoofdstuk</th>
-                <th>Onderwerp / Examen</th>
-                <th>Score / Vragen</th>
-                <th>Resultaat (Cijfer)</th>
-              </tr>
-            </thead>
-            <tbody id="exam-attempts-tbody">
-              <!-- Filled via JS -->
-              <tr>
-                <td colspan="6" style="text-align:center;padding:24px;color:var(--grijs-licht);">
-                  Nog geen resultaten gevonden in localStorage.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- 5. Backup & Restore section -->
-      <section class="backup-section" style="margin-top: 32px; padding: 20px; border-radius: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--lijn); text-align: center;">
-        <h4 style="margin: 0 0 8px 0; font-size: 16px; color: var(--inkt); font-family: var(--font-kop);">💾 Voortgang Beheer</h4>
-        <p style="margin: 0 0 16px 0; font-size: 13px; color: var(--grijs-licht);">
-          Exporteer je behaalde resultaten om ze op bir başka cihaza (bijv. tablet) te overdragen, of importeer een eerder opgeslagen bestand.
+      <!-- Backup & herstel -->
+      <section class="backup-section">
+        <h4>💾 Voortgang beheren</h4>
+        <p>
+          Sla je resultaten op om ze naar een ander apparaat (bijvoorbeeld je tablet)
+          over te zetten, of laad een eerder opgeslagen bestand terug.
         </p>
-        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-          <button id="backup-export-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px;" type="button">
-            📥 Voortgang Opslaan (Exporteren)
+        <div class="backup-knoppen">
+          <button id="backup-export-btn" class="filter-btn" type="button">
+            📥 Voortgang opslaan
           </button>
-          <button id="backup-import-btn" class="filter-btn" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px;" type="button">
-            📤 Voortgang Laden (Importeren)
+          <button id="backup-import-btn" class="filter-btn" type="button">
+            📤 Voortgang laden
           </button>
           <input type="file" id="backup-file-input" accept=".json" style="display: none;" />
         </div>
@@ -380,14 +286,14 @@
   <!-- ══ Script ══════════════════════════════════════════════
        Gewone <script> tag — geen ES modules, werkt op file://  -->
   <!-- Gedeelde bronnen eerst: de panelen lezen ze op moment van laden. -->
-  <script src="js/vakken.js?v=4.1"></script>
-  <script src="js/cijfer_util.js?v=4.1"></script>
-  <script src="js/hoofdstukken.js?v=4.1"></script>
-  <script src="js/hoofdstuk_util.js?v=4.1"></script>
-  <script src="js/landing.js?v=4.1"></script>
-  <script src="js/dashboard.js?v=4.1"></script>
-  <script src="js/ouder_dashboard.js?v=4.1"></script>
-  <script src="js/cloud_sync.js?v=4.1"></script>
+  <script src="js/vakken.js?v=4.2"></script>
+  <script src="js/cijfer_util.js?v=4.2"></script>
+  <script src="js/hoofdstukken.js?v=4.2"></script>
+  <script src="js/hoofdstuk_util.js?v=4.2"></script>
+  <script src="js/landing.js?v=4.2"></script>
+  <script src="js/dashboard.js?v=4.2"></script>
+  <script src="js/ouder_dashboard.js?v=4.2"></script>
+  <script src="js/cloud_sync.js?v=4.2"></script>
 
 </body>
 </html>

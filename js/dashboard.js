@@ -25,8 +25,6 @@
   // ── Initialization on DOM Ready ──────────────────────────
   document.addEventListener("DOMContentLoaded", function () {
     initTabs();
-    initFiltersAndSearch();
-    initVakKaartenToggle();
     initBackupRestore();
     loadDashboardData();
 
@@ -73,44 +71,6 @@
     });
   }
 
-  // ── Delegated toggle listener for per-subject detail panels ──
-  function initVakKaartenToggle() {
-    var grid = document.getElementById("vak-stats-grid");
-    if (!grid) return;
-
-    grid.addEventListener("click", function (e) {
-      var btn = e.target;
-      while (btn && btn !== grid) {
-        if (btn.classList && btn.classList.contains("detail-toggle")) {
-          var card = btn.closest ? btn.closest(".vak-stat-card") : null;
-          if (!card) {
-            var p = btn.parentNode;
-            while (p && !p.classList.contains("vak-stat-card")) {
-              p = p.parentNode;
-            }
-            card = p;
-          }
-          if (card) {
-            var detail = card.querySelector(".vak-detail");
-            if (detail) {
-              var isOpen = detail.classList.contains("open");
-              if (isOpen) {
-                detail.classList.remove("open");
-                btn.setAttribute("aria-expanded", "false");
-                btn.querySelector(".detail-toggle__arrow").textContent = "▾";
-              } else {
-                detail.classList.add("open");
-                btn.setAttribute("aria-expanded", "true");
-                btn.querySelector(".detail-toggle__arrow").textContent = "▴";
-              }
-            }
-          }
-          break;
-        }
-        btn = btn.parentNode;
-      }
-    });
-  }
 
   // ── Schooljaar helpers ─────────────────────────────────────
   function jaarHeeftData(jaar) {
@@ -177,103 +137,7 @@
     return HUIDIG_SCHOOLJAAR;
   }
 
-  // ── Render jaar-kiezer ─────────────────────────────────────
-  function renderJaarSelector(jaren, actief) {
-    var container = document.getElementById("jaar-selector");
-    if (!container) return;
 
-    var html = "";
-    var isHavo3 = (actief === "2026-2027");
-    html += '<button type="button" class="jaar-chip' + (isHavo3 ? " jaar-chip--actief" : "") + '" ' +
-              'role="tab" aria-selected="' + (isHavo3 ? "true" : "false") + '" data-jaar="2026-2027">' +
-              "🎒 HAVO 3 (2026-2027)" +
-            "</button>";
-
-    var isMavo2 = (actief === "2025-2026");
-    html += '<button type="button" class="jaar-chip' + (isMavo2 ? " jaar-chip--actief" : "") + '" ' +
-              'role="tab" aria-selected="' + (isMavo2 ? "true" : "false") + '" data-jaar="2025-2026" style="opacity:' + (isMavo2 ? '1' : '0.7') + ';">' +
-              "📁 MAVO 2 (Arşiv)" +
-            "</button>";
-
-    container.innerHTML = html;
-
-    var chips = container.querySelectorAll(".jaar-chip");
-    chips.forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        var jaar = chip.getAttribute("data-jaar");
-        window.currentJaar = jaar;
-        try {
-          localStorage.setItem("duru_dashboard_jaar", jaar);
-        } catch (e) {}
-        loadDashboardData();
-      });
-    });
-  }
-
-  // ── Load & Parse Data ─────────────────────────────────────
-  function loadDashboardData() {
-    window.currentJaar = bepaalCurrentJaar();
-    var jaren = beschikbareJaren();
-    renderJaarSelector(jaren, window.currentJaar);
-
-    var vakkenVanJaar = VAK_REGISTER.filter(function (v) { return v.jaar === window.currentJaar; });
-
-    // 1. Calculate Practice XP and Badges
-    var totalXP = 0;
-    var totalBadges = 0;
-
-    vakkenVanJaar.forEach(function (vak) {
-      if (!vak.practiceKey) return;
-      var prac = loadPracticeData(vak.practiceKey);
-      if (!prac) return;
-      totalXP += prac.xp || 0;
-      var badges = prac.badges || {};
-      totalBadges += Array.isArray(badges) ? badges.length : Object.keys(badges).length;
-    });
-
-    var xpEl = document.getElementById("stat-xp");
-    var badgesEl = document.getElementById("stat-badges");
-    if (xpEl) xpEl.textContent = totalXP;
-    if (badgesEl) badgesEl.textContent = totalBadges;
-
-    // 2. Aggregate exam attempts from all subjects
-    var attempts = [];
-
-    vakkenVanJaar.forEach(function (vak) {
-      if (vak.special === "begrijpend") {
-        loadBegrijpendLezenAttempts(attempts, vak.examKey);
-      } else {
-        loadDuruAttempts(attempts, vak.examKey, vak.id, vak.titel, vak.kleur);
-      }
-    });
-
-    attempts.sort(function (a, b) {
-      return b.timestamp - a.timestamp;
-    });
-
-    window.allAttempts = attempts;
-
-    var examsEl = document.getElementById("stat-exams");
-    var avgEl = document.getElementById("stat-gemiddelde");
-
-    if (examsEl) examsEl.textContent = attempts.length;
-
-    if (attempts.length > 0) {
-      var sum = 0;
-      attempts.forEach(function (att) { sum += att.cijfer; });
-      var avg = sum / attempts.length;
-      if (avgEl) avgEl.textContent = avg.toFixed(1).replace(".", ",");
-    } else {
-      if (avgEl) avgEl.textContent = "-";
-    }
-
-    // Render Components
-    renderVakKaarten(attempts, vakkenVanJaar);
-    renderHoofdstukStats(attempts, vakkenVanJaar);
-    renderScoreTimeline(attempts);
-    renderFilterBar(vakkenVanJaar);
-    renderAttemptsTable();
-  }
   window.loadDashboardData = loadDashboardData;
 
   // ── Helper: safeReadJson (supports user prefix & raw storage) ─
@@ -442,478 +306,612 @@
     }
   }
 
-  // ── Render per-subject cards (Grouped by Hoofdstuk in Details) ─
-  function renderVakKaarten(attempts, vakkenVanJaar) {
-    var grid = document.getElementById("vak-stats-grid");
-    if (!grid) return;
 
-    if (!vakkenVanJaar || vakkenVanJaar.length === 0) {
-      grid.innerHTML = '<p class="vak-stats-leeg">Nog geen gegevens voor schooljaar ' +
-        escHtml(window.currentJaar || "") +
-        '. Zodra Duru begint, verschijnt het hier! 🚀</p>';
-      return;
-    }
 
-    var vakken = vakkenVanJaar.map(function (v) {
+  // ── Simple HTML escaping helper ───────────────────────────
+  /* ─────────────────────────────────────────────────────────
+     Voortgangspaneel — herontwerp 2026-09.
+
+     Stond eerst als één kolom onder elkaar: 4 KPI-kaarten, 12 vakkaarten,
+     41 hoofdstukkaarten, de grafiek én een logboek van 200+ rijen. Om te
+     zien wat je moest doen, moest je langs alles scrollen.
+
+     Nu leest de pagina in één volgorde: WAT NU? → waar sta je (cijferschaal)
+     → momentum → details achter tabs. Anders dan het ouderpaneel (dat
+     diagnose en een printbaar rapport geeft) staat hier de VOLGENDE STAP
+     bovenaan: Duru wil weten wat ze moet doen, niet hoe het met haar gaat.
+     ───────────────────────────────────────────────────────── */
+
+  var C = window.DURU_CIJFER;
+
+  var actieveTab  = "overzicht";
+  var logFilter   = { q: "", vak: "" };
+  var laatsteModel = null;
+
+  var KLASSE_KLEUR = {
+    goed: "var(--st-goed)",
+    net:  "var(--st-net)",
+    zwak: "var(--st-zwak)",
+    none: "var(--st-mut)"
+  };
+
+  function fmtC(c) { return C.tekst(c); }
+  function kleurVan(c, n) { return KLASSE_KLEUR[C.klasse(c, n)]; }
+  function kortDatum(s) { return String(s || "").split(" ")[0] || "—"; }
+
+  function pil(c, n, tekst) {
+    return '<span class="st-pil st-pil--' + C.klasse(c, n) + '">' +
+      (tekst != null ? tekst : (n ? fmtC(c) : "nieuw")) + '</span>';
+  }
+
+  /* ── Model: vakken → hoofdstukken → pogingen ────────────── */
+  function bouwModel(attempts, vakkenVanJaar) {
+    var vakken = vakkenVanJaar.map(function (vak) {
+      var eigen = attempts.filter(function (a) { return a.vakId === vak.id; });
+      var defs = window.DURU_HF ? window.DURU_HF.lijst(vak.id) : [];
+      var gezien = {};
+
+      var hfs = defs.map(function (ch) {
+        gezien[ch.nr] = true;
+        var lijst = eigen.filter(function (a) { return a.hoofdstuk === ch.nr; });
+        var uniek = {};
+        lijst.forEach(function (a) { uniek[a.examId || a.titel] = 1; });
+        var gedaan = Object.keys(uniek).length;
+        var exTot = window.DURU_HF ? window.DURU_HF.totaalExamens(vak.id, ch.nr) : 0;
+        return {
+          nr: ch.nr, titel: ch.titel, icoon: ch.icoon || "📖", vak: vak,
+          lijst: lijst, count: lijst.length, gem: C.gemiddelde(lijst, "cijfer"),
+          beste: lijst.length ? Math.max.apply(null, lijst.map(function (a) { return a.cijfer; })) : 0,
+          laatsteDatum: lijst.length ? kortDatum(lijst[0].datumStr) : "—",
+          // recent = de laatste 3 toetsen. Voor "wat nu?" telt waar je NU staat,
+          // niet je gemiddelde over het hele jaar: een hoofdstuk dat van 8,2
+          // naar 4,6 zakt houdt een gemiddelde van 6,4 en zou anders onzichtbaar
+          // blijven, terwijl dat juist het urgentste is.
+          recent: C.gemiddelde(lijst.slice(0, 3), "cijfer"),
+          gedaan: gedaan, exTotaal: exTot,
+          over: Math.max(0, exTot - gedaan),
+          vg: exTot ? Math.min(100, Math.round((gedaan / exTot) * 100)) : 0
+        };
+      });
+
+      // Toetsen die aan geen enkel hoofdstuk hangen — niet verstoppen.
+      var overig = eigen.filter(function (a) { return a.hoofdstuk == null || !gezien[a.hoofdstuk]; });
+      if (overig.length) {
+        hfs.push({
+          nr: null, titel: "Overige toetsen", icoon: "📦", vak: vak,
+          lijst: overig, count: overig.length, gem: C.gemiddelde(overig, "cijfer"),
+          recent: C.gemiddelde(overig.slice(0, 3), "cijfer"),
+          beste: Math.max.apply(null, overig.map(function (a) { return a.cijfer; })),
+          laatsteDatum: kortDatum(overig[0].datumStr),
+          gedaan: overig.length, exTotaal: 0, over: 0, vg: 0
+        });
+      }
+
+      var tot = 0, ged = 0;
+      hfs.forEach(function (h) { tot += h.exTotaal; ged += Math.min(h.gedaan, h.exTotaal); });
+
       return {
-        id: v.id,
-        titel: v.titel,
-        icoon: v.icoon,
-        kleur: v.kleur,
-        practiceKey: v.practiceKey,
-        hasPractice: !!v.practiceKey
+        vak: vak, pogingen: eigen, count: eigen.length,
+        gem: C.gemiddelde(eigen, "cijfer"),
+        beste: eigen.length ? Math.max.apply(null, eigen.map(function (a) { return a.cijfer; })) : 0,
+        laatsteDatum: eigen.length ? kortDatum(eigen[0].datumStr) : "—",
+        hfs: hfs, gedaan: ged, exTotaal: tot,
+        vg: tot ? Math.round((ged / tot) * 100) : 0
       };
     });
 
-    var html = "";
+    var alleHf = [];
+    vakken.forEach(function (v) { v.hfs.forEach(function (h) { alleHf.push(h); }); });
 
-    vakken.forEach(function (vak) {
-      var vakAttempts = attempts.filter(function (a) { return a.vakId === vak.id; });
-      var examCount = vakAttempts.length;
+    var nu = attempts.length ? attempts[0].timestamp : Date.now();
 
-      var prac = vak.hasPractice ? loadPracticeData(vak.practiceKey) : null;
-      var pogingen = prac ? (prac.pogingen || {}) : {};
-      var titels   = prac ? (prac.titels   || {}) : {};
-      var beste    = prac ? (prac.beste    || {}) : {};
-
-      var totalPogingen = 0;
-      Object.keys(pogingen).forEach(function (tid) {
-        totalPogingen += (pogingen[tid] || 0);
-      });
-
-      var topicSet = {};
-      Object.keys(pogingen).forEach(function (tid) { topicSet[tid] = true; });
-      Object.keys(beste).forEach(function (tid) { topicSet[tid] = true; });
-      var topicIds = Object.keys(topicSet);
-      var topicCount = topicIds.length;
-
-      var avgCijfer = 0;
-      var hoogsteCijfer = 0;
-      if (examCount > 0) {
-        var sumC = 0;
-        vakAttempts.forEach(function (a) {
-          sumC += a.cijfer;
-          if (a.cijfer > hoogsteCijfer) hoogsteCijfer = a.cijfer;
-        });
-        avgCijfer = sumC / examCount;
-      }
-
-      var avgStr     = examCount > 0 ? avgCijfer.toFixed(1).replace(".", ",")     : "-";
-      var hoogsteStr = examCount > 0 ? hoogsteCijfer.toFixed(1).replace(".", ",") : "-";
-      var isEmpty    = (examCount === 0) && (!vak.hasPractice || totalPogingen === 0);
-
-      html += '<div class="vak-stat-card vak-stat-card--' + vak.kleur + '">';
-
-      // Header row
-      html += '<div class="vak-stat-card__header">';
-      html +=   '<span class="vak-stat-card__icoon">' + vak.icoon + '</span>';
-      html +=   '<span class="vak-stat-card__naam">' + vak.titel + '</span>';
-      html += '</div>';
-
-      if (isEmpty) {
-        html += '<p class="vak-stat-card__leeg">Nog niets gedaan &mdash; start een oefening! 🚀</p>';
-      } else {
-        var cijferKlasse = "";
-        if (examCount > 0) {
-          cijferKlasse = window.DURU_CIJFER.geslaagd(avgCijfer) ? " vak-cijfer--geslaagd" : " vak-cijfer--gezakt";
-        }
-        html += '<div class="vak-stat-card__cijfer-rij">';
-        html +=   '<span class="vak-cijfer' + cijferKlasse + '">' + avgStr + '</span>';
-        if (examCount > 0) {
-          html += '<span class="vak-stat-card__hoogste">Hoogste: ' + hoogsteStr + '</span>';
-        }
-        html += '</div>';
-
-        html += '<ul class="vak-metrics">';
-        html +=   '<li class="vak-metric"><span class="vak-metric__icoon">🧪</span>';
-        html +=     '<span>' + examCount + ' proeftoets' + (examCount === 1 ? '' : 'en') + ' gemaakt</span></li>';
-        if (vak.hasPractice) {
-          html += '<li class="vak-metric"><span class="vak-metric__icoon">🔁</span>';
-          html +=   '<span>' + totalPogingen + ' keer geoefend</span></li>';
-          html += '<li class="vak-metric"><span class="vak-metric__icoon">📚</span>';
-          html +=   '<span>' + topicCount + ' onderwerp' + (topicCount === 1 ? '' : 'en') + ' geoefend</span></li>';
-        }
-        html += '</ul>';
-
-        html += '<button class="detail-toggle" type="button" aria-expanded="false">';
-        html +=   'Hoofdstuk Details <span class="detail-toggle__arrow">▾</span>';
-        html += '</button>';
-
-        // Detail panel (grouped by chapter)
-        html += '<div class="vak-detail">';
-
-        // Get chapters known for this subject from the real manifest (DURU_HF)
-        var chapterDefs = window.DURU_HF.lijst(vak.id);
-
-        // Renders one chapter-group-block (works for real chapters and for the
-        // "Overige toetsen/oefeningen" catch-all group)
-        var renderChapterGroupBlock = function (titleHtml, chAttempts, chPracticeTopics) {
-          var block = "";
-
-          if (chAttempts.length === 0 && chPracticeTopics.length === 0) {
-            block += '<div class="chapter-group-block" style="opacity:0.8;">';
-            block +=   '<div class="chapter-group-header">';
-            block +=     '<div class="chapter-group-title">' + titleHtml + '</div>';
-            block +=     '<div class="chapter-group-score" style="color:var(--grijs-licht);font-weight:normal;font-size:12px;">⏳ Nog geen proeftoets gemaakt</div>';
-            block +=   '</div>';
-            block += '</div>';
-            return block;
-          }
-
-          var chSum = 0;
-          var chMax = 0;
-          chAttempts.forEach(function (a) {
-            chSum += a.cijfer;
-            if (a.cijfer > chMax) chMax = a.cijfer;
-          });
-          var chAvg = chAttempts.length > 0 ? (chSum / chAttempts.length) : 0;
-          var chAvgStr = chAttempts.length > 0 ? chAvg.toFixed(1).replace(".", ",") : "—";
-          var chBadgeCls = window.DURU_CIJFER.geslaagd(chAvg) ? "pass" : "fail";
-
-          block += '<div class="chapter-group-block">';
-          block +=   '<div class="chapter-group-header">';
-          block +=     '<div class="chapter-group-title">' + titleHtml + '</div>';
-          if (chAttempts.length > 0) {
-            block +=   '<div class="chapter-group-score"><span class="badge-grade ' + chBadgeCls + '">Gem. ' + chAvgStr + '</span> (' + chAttempts.length + ' toetsen)</div>';
-          }
-          block +=   '</div>';
-
-          // Proeftoetsen table
-          if (chAttempts.length > 0) {
-            block += '<table class="vak-detail-table">';
-            block +=   '<thead><tr><th>Toets</th><th>Keer</th><th>Beste</th><th>Laatste</th><th>Datum</th></tr></thead>';
-            block +=   '<tbody>';
-
-            var examGroups = {};
-            chAttempts.forEach(function (a) {
-              var gKey = (a.examId && a.examId !== "") ? a.examId : a.titel;
-              if (!examGroups[gKey]) {
-                examGroups[gKey] = { titel: a.titel, attempts: [] };
-              }
-              examGroups[gKey].attempts.push(a);
-            });
-
-            Object.keys(examGroups).forEach(function (gKey) {
-              var grp = examGroups[gKey];
-              var atts = grp.attempts;
-              atts.sort(function (a, b) { return a.timestamp - b.timestamp; });
-
-              var bst = 0;
-              atts.forEach(function (a) { if (a.cijfer > bst) bst = a.cijfer; });
-              var last = atts[atts.length - 1];
-              var lastKlasse = window.DURU_CIJFER.geslaagd(last.cijfer) ? "pass" : "fail";
-              var bstKlasse  = window.DURU_CIJFER.geslaagd(bst) ? "pass" : "fail";
-              var lastDate   = (last.datumStr || "").split(" ")[0];
-
-              block += '<tr>';
-              block +=   '<td><strong>' + escHtml(grp.titel) + '</strong></td>';
-              block +=   '<td>&times;' + atts.length + '</td>';
-              block +=   '<td><span class="badge-grade ' + bstKlasse + '">' + bst.toFixed(1).replace(".", ",") + '</span></td>';
-              block +=   '<td><span class="badge-grade ' + lastKlasse + '">' + last.cijfer.toFixed(1).replace(".", ",") + '</span></td>';
-              block +=   '<td style="font-size:12px;color:var(--grijs);">' + escHtml(lastDate) + '</td>';
-              block += '</tr>';
-            });
-
-            block +=   '</tbody></table>';
-          }
-
-          // Practice topics table
-          if (chPracticeTopics.length > 0) {
-            block += '<div style="font-size:12px; font-weight:700; color:var(--grijs); margin:8px 0 4px;">🔁 Oefeningen:</div>';
-            block += '<table class="vak-detail-table">';
-            block +=   '<tbody>';
-            chPracticeTopics.forEach(function (tid) {
-              var tTitle = titels[tid] || tid;
-              var pCount = pogingen[tid] || 0;
-              var bScore = beste[tid] != null ? Math.round(beste[tid]) : null;
-
-              block += '<tr>';
-              block +=   '<td>' + escHtml(tTitle) + '</td>';
-              block +=   '<td>&times;' + pCount + '</td>';
-              block +=   '<td>' + (bScore != null ? '<span class="vak-score-badge">' + bScore + '%</span>' : '-') + '</td>';
-              block += '</tr>';
-            });
-            block +=   '</tbody></table>';
-          }
-
-          block += '</div>'; // .chapter-group-block
-          return block;
-        };
-
-        if (chapterDefs.length === 0) {
-          html += '<p class="vak-detail__leeg">De hoofdstukken volgen zodra het lesmateriaal er is.</p>';
-        } else {
-          chapterDefs.forEach(function (chDef) {
-            var chAttempts = vakAttempts.filter(function (a) { return a.hoofdstuk === chDef.nr; });
-            var chPracticeTopics = topicIds.filter(function (tid) {
-              return window.DURU_HF.vanOnderwerp(vak.id, tid) === chDef.nr;
-            });
-            var titleHtml = '<span>' + (chDef.icoon || "📖") + '</span><span>Hoofdstuk ' + chDef.nr + ': ' + escHtml(chDef.titel) + '</span>';
-            html += renderChapterGroupBlock(titleHtml, chAttempts, chPracticeTopics);
-          });
-        }
-
-        // Overige toetsen/oefeningen: attempts/onderwerpen die niet bij een getoond hoofdstuk horen
-        var chapterNrs = {};
-        chapterDefs.forEach(function (c) { chapterNrs[c.nr] = true; });
-        var overigeAttempts = vakAttempts.filter(function (a) {
-          return a.hoofdstuk == null || !chapterNrs[a.hoofdstuk];
-        });
-        var overigeTopics = topicIds.filter(function (tid) {
-          var nr = window.DURU_HF.vanOnderwerp(vak.id, tid);
-          return nr == null || !chapterNrs[nr];
-        });
-        if (overigeAttempts.length > 0 || overigeTopics.length > 0) {
-          html += renderChapterGroupBlock('<span>📦</span><span>Overige toetsen</span>', overigeAttempts, overigeTopics);
-        }
-
-        html += '</div>'; // .vak-detail
-      }
-
-      html += '</div>'; // .vak-stat-card
-    });
-
-    grid.innerHTML = html;
+    return {
+      attempts: attempts,
+      vakken: vakken,
+      actief: vakken.filter(function (v) { return v.count > 0; }),
+      alleHf: alleHf,
+      gem: C.gemiddelde(attempts, "cijfer"),
+      geslaagdN: attempts.filter(function (a) { return a.geslaagd; }).length,
+      week: attempts.filter(function (a) { return a.timestamp >= nu - 7 * 864e5; }),
+      streak: berekenStreak(attempts, nu),
+      open: vakken.reduce(function (s, v) { return s + Math.max(0, v.exTotaal - v.gedaan); }, 0)
+    };
   }
 
-  // ── Render Dedicated Hoofdstuk Performance Matrix ─────────
-  function renderHoofdstukStats(attempts, vakkenVanJaar) {
-    var grid = document.getElementById("hoofdstuk-stats-grid");
-    var filterBar = document.getElementById("hoofdstuk-filter-bar");
-    if (!grid) return;
+  /* Aantal dagen op rij met minstens één toets, geteld vanaf de laatste dag. */
+  function berekenStreak(attempts, nu) {
+    if (!attempts.length) return 0;
+    var dagen = {};
+    attempts.forEach(function (a) { dagen[new Date(a.timestamp).toDateString()] = 1; });
+    var n = 0, d = new Date(nu);
+    while (dagen[d.toDateString()]) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
 
-    var filterVak = window.currentHoofdstukFilter || "all";
+  /* ── Verloop ───────────────────────────────────────────── */
+  function trendVan(lijst) {
+    if (!lijst || lijst.length < 4) return null;
+    var recent = lijst.slice(0, 3), ouder = lijst.slice(3, 6);
+    if (!ouder.length) return null;
+    var d = C.gemiddelde(recent, "cijfer") - C.gemiddelde(ouder, "cijfer");
+    if (Math.abs(d) < 0.3) return { d: d, r: "vlak" };
+    return { d: d, r: d > 0 ? "op" : "neer" };
+  }
 
-    // 1. Build Filter Buttons
-    if (filterBar) {
-      var filterHtml = '<button class="filter-btn ' + (filterVak === "all" ? "active" : "") + '" data-hfilter="all" type="button">Alle Vakken</button>';
-      (vakkenVanJaar || []).forEach(function (v) {
-        var isActive = filterVak === v.id ? "active" : "";
-        filterHtml += '<button class="filter-btn ' + isActive + '" data-hfilter="' + escHtml(v.id) + '" type="button">' + v.icoon + ' ' + escHtml(v.titel) + '</button>';
-      });
-      filterBar.innerHTML = filterHtml;
+  function trendHtml(lijst) {
+    var t = trendVan(lijst);
+    if (!t || t.r === "vlak") return "";
+    var op = t.r === "op";
+    return '<span class="st-trend st-trend--' + (op ? "op" : "neer") +
+      '" title="Je laatste 3 toetsen vergeleken met de 3 daarvoor">' +
+      (op ? "▲" : "▼") + fmtC(Math.abs(t.d)) + '</span>';
+  }
 
-      var btns = filterBar.querySelectorAll(".filter-btn");
-      btns.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          btns.forEach(function (b) { b.classList.remove("active"); });
-          btn.classList.add("active");
-          window.currentHoofdstukFilter = btn.getAttribute("data-hfilter");
-          renderHoofdstukStats(window.allAttempts, vakkenVanJaar);
-        });
-      });
-    }
+  function daalt(h) { var t = trendVan(h && h.lijst); return !!t && t.r === "neer"; }
 
-    // 2. Aggregate all chapters
-    var targetVakken = vakkenVanJaar;
-    if (filterVak !== "all") {
-      targetVakken = vakkenVanJaar.filter(function (v) { return v.id === filterVak; });
-    }
+  function sparkline(lijst) {
+    var p = (lijst || []).slice(0, 8).reverse();
+    if (p.length < 2) return '<span class="st-spark-leeg">–</span>';
 
-    var chapterCardsHtml = "";
-
-    targetVakken.forEach(function (vak) {
-      var chapterDefs = window.DURU_HF.lijst(vak.id);
-
-      var prac = vak.practiceKey ? loadPracticeData(vak.practiceKey) : null;
-      var pogingenMap = prac ? (prac.pogingen || {}) : {};
-      var geoefendeTopicIds = Object.keys(pogingenMap).filter(function (tid) {
-        return (pogingenMap[tid] || 0) > 0;
-      });
-
-      if (chapterDefs.length === 0) {
-        chapterCardsHtml += '<div class="hoofdstuk-card hoofdstuk-card--' + vak.kleur + '" style="opacity:0.75;">';
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__header"><div>';
-        chapterCardsHtml +=     '<span class="hoofdstuk-card__badge">' + vak.icoon + ' ' + escHtml(vak.titel) + '</span>';
-        chapterCardsHtml +=     '<div class="hoofdstuk-card__titel">De hoofdstukken volgen zodra het lesmateriaal er is.</div>';
-        chapterCardsHtml +=   '</div></div>';
-        chapterCardsHtml += '</div>';
-        // geen return: de "Overige toetsen"-kaart hieronder laat losse resultaten
-        // van dit vak alsnog zien (chapterDefs is leeg, dus de lus doet niets).
-      }
-
-      var chapterNrs = {};
-
-      chapterDefs.forEach(function (chDef) {
-        chapterNrs[chDef.nr] = true;
-
-        var chAttempts = attempts.filter(function (a) {
-          return a.vakId === vak.id && a.hoofdstuk === chDef.nr;
-        });
-
-        var examCount = chAttempts.length;
-        var sumC = 0;
-        var maxC = 0;
-        var lastC = 0;
-        var lastDatum = "-";
-
-        if (examCount > 0) {
-          chAttempts.forEach(function (a) {
-            sumC += a.cijfer;
-            if (a.cijfer > maxC) maxC = a.cijfer;
-          });
-          lastC = chAttempts[0].cijfer;
-          lastDatum = (chAttempts[0].datumStr || "-").split(" ")[0];
-        }
-
-        var avgC = examCount > 0 ? (sumC / examCount) : 0;
-        var avgStr = examCount > 0 ? avgC.toFixed(1).replace(".", ",") : "—";
-        var maxStr = examCount > 0 ? maxC.toFixed(1).replace(".", ",") : "—";
-        var lastStr = examCount > 0 ? lastC.toFixed(1).replace(".", ",") : "—";
-
-        // Performance status classification
-        var statusLabel = "Nog niet gestart";
-        var statusCls   = "status-empty";
-        var statusIcon  = "⏳";
-        var advice      = "Begin met de theorie en start proeftoets 1!";
-
-        if (examCount > 0) {
-          if (avgC >= window.DURU_CIJFER.TOP) {
-            statusLabel = "Uitmuntend";
-            statusCls   = "status-mastered";
-            statusIcon  = "🌟";
-            advice      = "Geweldig! Je beheerst dit hoofdstuk volledig.";
-          } else if (avgC >= window.DURU_CIJFER.GOED) {
-            statusLabel = "Goed";
-            statusCls   = "status-good";
-            statusIcon  = "👍";
-            advice      = "Heel goed! Nog 1 oefentoets voor de perfecte score.";
-          } else if (window.DURU_CIJFER.geslaagd(avgC)) {
-            statusLabel = "Voldoende";
-            statusCls   = "status-pass";
-            statusIcon  = "✔️";
-            advice      = "Voldoende! Oefen de fouten nog even door.";
-          } else {
-            statusLabel = "Aandachtspunt";
-            statusCls   = "status-review";
-            statusIcon  = "⚠️";
-            advice      = "Herhaal de theorie en maak een herkansing.";
-          }
-        }
-
-        // Toetsvoortgang: unieke proeftoetsen t.o.v. het echte aantal uit het manifest
-        var examIdSet = {};
-        chAttempts.forEach(function (a) {
-          var k = (a.examId && a.examId !== "") ? a.examId : a.titel;
-          examIdSet[k] = true;
-        });
-        var uniekeExamens = Object.keys(examIdSet).length;
-        var examTotaal = window.DURU_HF.totaalExamens(vak.id, chDef.nr);
-        var examVoortgangPct = examTotaal > 0 ? Math.min(100, Math.round((uniekeExamens / examTotaal) * 100)) : 0;
-
-        // Oefenvoortgang: aantal onderwerpen met >=1 poging t.o.v. het manifest-totaal
-        var oefTotaal = window.DURU_HF.totaalOnderwerpen(vak.id, chDef.nr);
-        var oefGedaan = geoefendeTopicIds.filter(function (tid) {
-          return window.DURU_HF.vanOnderwerp(vak.id, tid) === chDef.nr;
-        }).length;
-        var oefVoortgangPct = oefTotaal > 0 ? Math.min(100, Math.round((oefGedaan / oefTotaal) * 100)) : 0;
-
-        chapterCardsHtml += '<div class="hoofdstuk-card hoofdstuk-card--' + vak.kleur + '">';
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__header">';
-        chapterCardsHtml +=     '<div>';
-        chapterCardsHtml +=       '<span class="hoofdstuk-card__badge">' + vak.icoon + ' ' + escHtml(vak.titel) + ' · H' + chDef.nr + '</span>';
-        chapterCardsHtml +=       '<div class="hoofdstuk-card__titel">' + (chDef.icoon || "📖") + ' ' + escHtml(chDef.titel) + '</div>';
-        if (chDef.intro) {
-          chapterCardsHtml +=     '<div style="font-size:12px;color:var(--grijs);margin-top:2px;">' + escHtml(chDef.intro) + '</div>';
-        }
-        chapterCardsHtml +=     '</div>';
-        chapterCardsHtml +=   '</div>';
-
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__grade-row">';
-        chapterCardsHtml +=     '<div>';
-        chapterCardsHtml +=       '<div class="hoofdstuk-card__grade" style="color:' + (window.DURU_CIJFER.geslaagd(avgC) ? 'var(--groen)' : (examCount > 0 ? 'var(--oranje)' : 'var(--grijs-licht)')) + ';">' + avgStr + '</div>';
-        chapterCardsHtml +=       '<div style="font-size:11px;color:var(--grijs-licht);">Hoofdstuk Gemiddelde</div>';
-        chapterCardsHtml +=     '</div>';
-        chapterCardsHtml +=     '<span class="hoofdstuk-card__status ' + statusCls + '">';
-        chapterCardsHtml +=       '<span>' + statusIcon + '</span> ' + statusLabel;
-        chapterCardsHtml +=     '</span>';
-        chapterCardsHtml +=   '</div>';
-
-        // Proeftoetsen-voortgang
-        chapterCardsHtml += '<div>';
-        chapterCardsHtml +=   '<div style="display:flex;justify-content:space-between;font-size:11px;color:var(--grijs);margin-bottom:4px;">';
-        chapterCardsHtml +=     '<span>Proeftoetsen</span>';
-        chapterCardsHtml +=     '<span>' + (examTotaal > 0 ? (uniekeExamens + '/' + examTotaal + ' (' + examVoortgangPct + '%)') : (examCount + ' gemaakt')) + '</span>';
-        chapterCardsHtml +=   '</div>';
-        if (examTotaal > 0) {
-          chapterCardsHtml += '<div class="hoofdstuk-progress-bar">';
-          chapterCardsHtml +=   '<div class="hoofdstuk-progress-fill" style="width:' + examVoortgangPct + '%; background:' + (window.DURU_CIJFER.geslaagd(avgC) ? 'var(--hub-zacht)' : 'var(--oranje)') + ';"></div>';
-          chapterCardsHtml += '</div>';
-        }
-        chapterCardsHtml += '</div>';
-
-        // Oefenvoortgang (alleen tonen als het vak onderwerpen heeft voor dit hoofdstuk)
-        if (oefTotaal > 0) {
-          chapterCardsHtml += '<div style="margin-top:8px;">';
-          chapterCardsHtml +=   '<div style="display:flex;justify-content:space-between;font-size:11px;color:var(--grijs);margin-bottom:4px;">';
-          chapterCardsHtml +=     '<span>Geoefende onderwerpen</span>';
-          chapterCardsHtml +=     '<span>' + oefGedaan + '/' + oefTotaal + ' (' + oefVoortgangPct + '%)</span>';
-          chapterCardsHtml +=   '</div>';
-          chapterCardsHtml +=   '<div class="hoofdstuk-progress-bar hoofdstuk-progress-bar--oefen">';
-          chapterCardsHtml +=     '<div class="hoofdstuk-progress-fill hoofdstuk-progress-fill--oefen" style="width:' + oefVoortgangPct + '%;"></div>';
-          chapterCardsHtml +=   '</div>';
-          chapterCardsHtml += '</div>';
-        }
-
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__metrics">';
-        chapterCardsHtml +=     '<span>🏆 Hoogste: <strong>' + maxStr + '</strong></span>';
-        chapterCardsHtml +=     '<span>⏱️ Laatste: <strong>' + lastStr + '</strong></span>';
-        chapterCardsHtml +=     '<span>📅 Datum: ' + escHtml(lastDatum) + '</span>';
-        chapterCardsHtml +=   '</div>';
-
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__footer">';
-        chapterCardsHtml +=     '<span style="font-style:italic;">💡 ' + advice + '</span>';
-        chapterCardsHtml +=   '</div>';
-        chapterCardsHtml += '</div>';
-      });
-
-      // 📦 Overige toetsen: pogingen die niet bij een getoond hoofdstuk horen
-      var overigeAttempts = attempts.filter(function (a) {
-        return a.vakId === vak.id && (a.hoofdstuk == null || !chapterNrs[a.hoofdstuk]);
-      });
-
-      if (overigeAttempts.length > 0) {
-        var ovSum = 0;
-        var ovMax = 0;
-        overigeAttempts.forEach(function (a) {
-          ovSum += a.cijfer;
-          if (a.cijfer > ovMax) ovMax = a.cijfer;
-        });
-        var ovAvg = ovSum / overigeAttempts.length;
-        var ovLast = overigeAttempts[0].cijfer;
-        var ovLastDatum = (overigeAttempts[0].datumStr || "-").split(" ")[0];
-        var ovAvgStr = ovAvg.toFixed(1).replace(".", ",");
-        var ovMaxStr = ovMax.toFixed(1).replace(".", ",");
-        var ovLastStr = ovLast.toFixed(1).replace(".", ",");
-
-        chapterCardsHtml += '<div class="hoofdstuk-card hoofdstuk-card--' + vak.kleur + '">';
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__header"><div>';
-        chapterCardsHtml +=     '<span class="hoofdstuk-card__badge">' + vak.icoon + ' ' + escHtml(vak.titel) + ' · 📦</span>';
-        chapterCardsHtml +=     '<div class="hoofdstuk-card__titel">📦 Overige toetsen</div>';
-        chapterCardsHtml +=   '</div></div>';
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__grade-row">';
-        chapterCardsHtml +=     '<div>';
-        chapterCardsHtml +=       '<div class="hoofdstuk-card__grade" style="color:' + (window.DURU_CIJFER.geslaagd(ovAvg) ? 'var(--groen)' : 'var(--oranje)') + ';">' + ovAvgStr + '</div>';
-        chapterCardsHtml +=       '<div style="font-size:11px;color:var(--grijs-licht);">Gemiddelde</div>';
-        chapterCardsHtml +=     '</div>';
-        chapterCardsHtml +=   '</div>';
-        chapterCardsHtml +=   '<div class="hoofdstuk-card__metrics">';
-        chapterCardsHtml +=     '<span>🏆 Hoogste: <strong>' + ovMaxStr + '</strong></span>';
-        chapterCardsHtml +=     '<span>⏱️ Laatste: <strong>' + ovLastStr + '</strong></span>';
-        chapterCardsHtml +=     '<span>📅 Datum: ' + escHtml(ovLastDatum) + '</span>';
-        chapterCardsHtml +=   '</div>';
-        chapterCardsHtml += '</div>';
-      }
+    var b = 60, h = 18, m = 3, stap = (b - m * 2) / (p.length - 1);
+    var xy = p.map(function (a, i) {
+      return [m + i * stap, h - m - (C.positie(a.cijfer) / 100) * (h - m * 2)];
     });
+    var d = xy.map(function (q, i) {
+      return (i ? "L" : "M") + q[0].toFixed(1) + " " + q[1].toFixed(1);
+    }).join(" ");
+    var e = xy[xy.length - 1];
+    var k = kleurVan(p[p.length - 1].cijfer, 1);
+    var dy = (h - m - (C.positie(C.DREMPEL) / 100) * (h - m * 2)).toFixed(1);
 
-    if (!chapterCardsHtml) {
-      grid.innerHTML = '<p style="text-align:center;color:var(--grijs-licht);padding:24px;">Geen hoofdstukken gevonden voor dit filter.</p>';
+    return '<svg class="st-spark" width="' + b + '" height="' + h + '" viewBox="0 0 ' + b + ' ' + h +
+      '" role="img" aria-label="Verloop van je laatste ' + p.length + ' toetsen">' +
+      '<line x1="0" y1="' + dy + '" x2="' + b + '" y2="' + dy +
+        '" stroke="var(--st-mut)" stroke-width="1" stroke-dasharray="2,2" opacity=".45"/>' +
+      '<path d="' + d + '" fill="none" stroke="' + k + '" stroke-width="1.5" ' +
+        'stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<circle cx="' + e[0].toFixed(1) + '" cy="' + e[1].toFixed(1) + '" r="2.3" fill="' + k + '"/></svg>';
+  }
+
+  /* ── "Wat nu?" ──────────────────────────────────────────
+     De volgorde IS het advies: wegzakken eerst (daar verlies je het snelst),
+     dan onvoldoende, dan bijna-examenklaar, dan nog niet begonnen. */
+  function watNu(model) {
+    var gedaan = model.alleHf.filter(function (h) { return h.count > 0; });
+    var zwak = gedaan.filter(function (h) { return !C.geslaagd(h.recent); })
+                     .sort(function (a, b) { return a.recent - b.recent; });
+
+    var dalend = zwak.filter(daalt);
+    var wegzakkend = gedaan.filter(function (h) {
+      return daalt(h) && C.geslaagd(h.recent) && zwak.indexOf(h) === -1;
+    }).sort(function (a, b) { return a.recent - b.recent; });
+
+    var hf = null, label, titel, waarom, knop;
+
+    if (dalend.length) {
+      hf = dalend[0];
+      label = "Eerst dit";
+      titel = "Herhaal " + hf.vak.titel + hfLabel(hf) + " — " + hf.titel;
+      waarom = "Je laatste toetsen gingen omlaag naar " + fmtC(hf.recent) +
+               ". Dit zakt weg, dus hier beginnen levert het meeste op.";
+      knop = "Ga oefenen";
+    } else if (zwak.length) {
+      hf = zwak[0];
+      label = "Eerst dit";
+      titel = "Oefen " + hf.vak.titel + hfLabel(hf) + " — " + hf.titel;
+      waarom = "Je staat hier op " + fmtC(hf.recent) +
+               ", nog onder de 5,5. Eén goede toets tilt je erboven.";
+      knop = "Ga oefenen";
+    } else if (wegzakkend.length) {
+      hf = wegzakkend[0];
+      label = "Let op";
+      titel = "Frist " + hf.vak.titel + hfLabel(hf) + " even op";
+      waarom = "Je stond hier hoger, maar je laatste toetsen zakken richting " +
+               fmtC(hf.recent) + ". Nu bijsturen is makkelijker dan straks inhalen.";
+      knop = "Ga oefenen";
     } else {
-      grid.innerHTML = chapterCardsHtml;
+      var bijna = gedaan.filter(function (h) {
+        return h.recent >= C.GOED && !C.examenklaar(h.recent);
+      }).sort(function (a, b) { return b.recent - a.recent; });
+
+      if (bijna.length) {
+        hf = bijna[0];
+        label = "Bijna klaar";
+        titel = "Nog één toets voor " + hf.vak.titel + hfLabel(hf);
+        waarom = "Je staat op " + fmtC(hf.recent) +
+                 ". Vanaf 8,5 ben je klaar voor de schooltoets — dat is dichtbij.";
+        knop = "Pak die 8,5";
+      } else {
+        var nieuw = model.alleHf.filter(function (h) { return h.count === 0 && h.exTotaal > 0; });
+        if (nieuw.length) {
+          hf = nieuw[0];
+          label = "Nieuw";
+          titel = "Begin met " + hf.vak.titel + hfLabel(hf) + " — " + hf.titel;
+          waarom = "Dit hoofdstuk heb je nog niet geoefend. " +
+                   hf.exTotaal + " proeftoetsen staan klaar.";
+          knop = "Beginnen";
+        } else if (model.attempts.length) {
+          label = "Top";
+          titel = "Je staat overal voldoende";
+          waarom = "Alle hoofdstukken staan boven de 5,5. Kies zelf een vak om scherp te blijven.";
+          knop = null;
+        } else {
+          label = "Start";
+          titel = "Nog geen toetsen dit schooljaar";
+          waarom = "Kies een vak op het tabblad “Mijn vakken” en maak je eerste proeftoets.";
+          knop = null;
+        }
+      }
     }
+
+    return { label: label, titel: titel, waarom: waarom, knop: knop, hf: hf };
   }
 
-  // ── Simple HTML escaping helper ───────────────────────────
+  function hfLabel(hf) { return hf.nr != null ? " H" + hf.nr : ""; }
+
+  /* ── Onderdelen ────────────────────────────────────────── */
+  function schaalHtml(model) {
+    var h = '<div class="st-schaal-track"></div><div class="st-schaal-drempel"></div>';
+    model.actief.forEach(function (v) {
+      h += '<span class="st-schaal-vak" style="left:' + C.positie(v.gem) + '%;background:' +
+        kleurVan(v.gem, v.count) + '" title="' + escHtml(v.vak.titel) + ' — ' + fmtC(v.gem) + '"></span>';
+    });
+    if (model.attempts.length) {
+      h += '<span class="st-schaal-mij" style="left:' + C.positie(model.gem) + '%;color:' +
+        kleurVan(model.gem, 1) + '"><span class="st-schaal-punt"></span></span>';
+    }
+    return h;
+  }
+
+  function miniSchaal(c, n) {
+    return '<span class="st-mschaal-wrap"><span class="st-mschaal">' +
+      '<span class="st-mschaal-vul" style="width:' + C.positie(c) + '%;background:' + kleurVan(c, n) + '"></span>' +
+      '<span class="st-mschaal-drempel"></span></span>' +
+      '<span class="st-mschaal-c" style="color:' + kleurVan(c, n) + '">' + (n ? fmtC(c) : "—") + '</span></span>';
+  }
+
+  function vakRij(v) {
+    return '<button type="button" class="st-vakrij" data-open-vak="' + escHtml(v.vak.id) + '">' +
+      '<span class="st-vaknaam"><span class="st-vakico">' + (v.vak.icoon || "") + '</span>' +
+      '<span class="st-vaktekst"><span class="st-vaktitel">' + escHtml(v.vak.titel) + '</span>' +
+      '<span class="st-vakmeta">' + v.count + ' toetsen · ' + v.hfs.length + ' hoofdstukken</span></span></span>' +
+      miniSchaal(v.gem, v.count) +
+      '<span class="st-spark-cel">' + sparkline(v.pogingen) + trendHtml(v.pogingen) + '</span>' +
+      '<span class="st-vg">' + (v.exTotaal ? v.gedaan + "/" + v.exTotaal + " toetsen" : "—") +
+        '<span class="st-vg-bar"><span class="st-vg-vul" style="width:' + v.vg + '%"></span></span></span>' +
+      '<span class="st-chev">›</span></button>';
+  }
+
+  /* ── Tabbladen ─────────────────────────────────────────── */
+  function tabOverzicht(model) {
+    var gesorteerd = model.vakken.slice().sort(function (a, b) {
+      if (!a.count && b.count) return 1;
+      if (a.count && !b.count) return -1;
+      return a.gem - b.gem;
+    });
+
+    return '<div class="st-sec-kop"><h3>Mijn vakken</h3>' +
+      '<p>Het vak dat de meeste aandacht vraagt staat bovenaan. Klik om te oefenen.</p></div>' +
+      '<div class="st-vaklijst">' + gesorteerd.map(vakRij).join("") + '</div>' +
+      '<div class="st-sec-kop"><h3>Score verloop</h3><p>Je laatste 15 proeftoetsen.</p></div>' +
+      '<div class="chart-card"><div class="svg-container" id="line-chart-container"></div></div>';
+  }
+
+  function tabVakken(model) {
+    var metInhoud = model.vakken.filter(function (v) { return v.exTotaal > 0 || v.count > 0; });
+    if (!metInhoud.length) {
+      return '<div class="st-leeg">Voor dit schooljaar staat er nog geen lesmateriaal klaar.</div>';
+    }
+
+    return '<div class="st-sec-kop"><h3>Per vak</h3>' +
+      '<p>Hoeveel proeftoetsen heb je al gemaakt, en hoe sta je ervoor?</p></div>' +
+      '<div class="st-kaartgrid">' + metInhoud.map(function (v) {
+        var over = Math.max(0, v.exTotaal - v.gedaan);
+        return '<article class="st-kaart">' +
+          '<div class="st-kaartkop"><div>' +
+            '<span class="st-kaartnr">' + v.count + ' toetsen gemaakt</span>' +
+            '<span class="st-kaarttitel">' + (v.vak.icoon || "") + ' ' + escHtml(v.vak.titel) + '</span>' +
+          '</div>' + pil(v.gem, v.count, v.count ? null : "nog niets") + '</div>' +
+          '<div class="st-kaartstats">' +
+            '<div><span class="st-slabel">Voortgang</span><span class="st-swaarde">' +
+              (v.exTotaal ? v.gedaan + "/" + v.exTotaal + " · " + v.vg + "%" : "—") + '</span></div>' +
+            '<div><span class="st-slabel">Beste</span><span class="st-swaarde">' +
+              (v.count ? fmtC(v.beste) : "—") + '</span></div>' +
+            '<div><span class="st-slabel">Laatst</span><span class="st-swaarde">' +
+              escHtml(v.laatsteDatum) + '</span></div>' +
+          '</div>' +
+          (v.exTotaal ? '<span class="st-vg-bar"><span class="st-vg-vul" style="width:' + v.vg + '%"></span></span>' : '') +
+          '<p class="st-kaartactie">' + (over > 0
+            ? "Nog <b>" + over + (over === 1 ? " proeftoets" : " proeftoetsen") + "</b> te gaan."
+            : (v.exTotaal ? "Alle proeftoetsen gemaakt. 🎉" : "Nog geen proeftoetsen beschikbaar.")) +
+          '</p>' +
+          '<button type="button" class="st-kaartknop" data-open-vak="' + escHtml(v.vak.id) + '">Ga oefenen →</button>' +
+        '</article>';
+      }).join("") + '</div>';
+  }
+
+  function tabHoofdstukken(model) {
+    var lijst = model.alleHf.slice().sort(function (a, b) {
+      if (!a.count && b.count) return 1;
+      if (a.count && !b.count) return -1;
+      var da = daalt(a) ? 0 : 1, db = daalt(b) ? 0 : 1;
+      if (da !== db) return da - db;
+      return a.gem - b.gem;
+    });
+
+    if (!lijst.length) {
+      return '<div class="st-leeg">Nog geen hoofdstukken voor dit schooljaar.</div>';
+    }
+
+    return '<div class="st-sec-kop"><h3>Per hoofdstuk</h3>' +
+      '<p>Van &ldquo;moet nog oefenen&rdquo; naar &ldquo;klaar voor de schooltoets&rdquo;.</p></div>' +
+      '<div class="st-kaartgrid">' + lijst.map(function (h) {
+        var letOp = h.count > 0 && !C.geslaagd(h.gem);
+        var actie = !h.count
+          ? "Nog niet begonnen — " + h.exTotaal + " toetsen staan klaar."
+          : C.examenklaar(h.gem) ? "Klaar voor de schooltoets. 🌟"
+          : h.gem >= C.GOED ? "Goed bezig. Nog één toets voor een 8,5."
+          : C.geslaagd(h.gem) ? "Voldoende. Kijk je fouten na en probeer het nog eens."
+          : "Herhaal dit hoofdstuk — begin met de oefenvragen.";
+
+        return '<article class="st-kaart' + (letOp ? " st-kaart--letop" : "") + '">' +
+          '<div class="st-kaartkop"><div>' +
+            '<span class="st-kaartnr">' + (h.vak.icoon || "") + ' ' + escHtml(h.vak.titel) +
+              (h.nr != null ? " · H" + h.nr : "") + '</span>' +
+            '<span class="st-kaarttitel">' + escHtml(h.titel) + '</span>' +
+          '</div>' + pil(h.gem, h.count) + '</div>' +
+          '<div class="st-kaartstats">' +
+            '<div><span class="st-slabel">Gemaakt</span><span class="st-swaarde">' +
+              (h.exTotaal ? h.gedaan + "/" + h.exTotaal : h.gedaan) + '</span></div>' +
+            '<div><span class="st-slabel">Beste</span><span class="st-swaarde">' +
+              (h.count ? fmtC(h.beste) : "—") + '</span></div>' +
+            '<div><span class="st-slabel">Laatst</span><span class="st-swaarde">' +
+              escHtml(h.laatsteDatum) + '</span></div>' +
+          '</div>' +
+          '<p class="st-kaartactie">' + (daalt(h) ? "<b>Let op: dit gaat omlaag.</b> " : "") + actie + '</p>' +
+          '<button type="button" class="st-kaartknop" data-open-vak="' + escHtml(h.vak.id) + '">Ga oefenen →</button>' +
+        '</article>';
+      }).join("") + '</div>';
+  }
+
+  function logRijen(model) {
+    return model.attempts.filter(function (a) {
+      if (logFilter.vak && a.vakId !== logFilter.vak) return false;
+      if (logFilter.q &&
+          String(a.titel).toLowerCase().indexOf(logFilter.q) === -1 &&
+          String(a.vakTitel).toLowerCase().indexOf(logFilter.q) === -1) return false;
+      return true;
+    });
+  }
+
+  function logTabelHtml(model) {
+    var r = logRijen(model);
+    if (!r.length) {
+      return '<div class="st-leeg">' + (model.attempts.length
+        ? "Geen toetsen gevonden. Pas je zoekopdracht aan."
+        : "Nog geen toetsen gemaakt dit schooljaar.") + '</div>';
+    }
+
+    return '<table class="st-tabel"><thead><tr><th class="st-streep"></th>' +
+      '<th>Datum</th><th>Vak</th><th>H</th><th>Toets</th><th>Goed</th><th>Cijfer</th></tr></thead><tbody>' +
+      r.map(function (a) {
+        return '<tr><td class="st-streep" style="background:' + kleurVan(a.cijfer, 1) + '"></td>' +
+          '<td class="st-num">' + escHtml(kortDatum(a.datumStr)) + '</td>' +
+          '<td>' + escHtml(a.vakTitel) + '</td>' +
+          '<td><span class="st-chip">' + (a.hoofdstuk != null ? "H" + a.hoofdstuk : "—") + '</span></td>' +
+          '<td>' + escHtml(a.titel) + '</td>' +
+          '<td class="st-num">' + a.goed + '/' + a.totaal + '</td>' +
+          '<td>' + pil(a.cijfer, 1) + '</td></tr>';
+      }).join("") + '</tbody></table>';
+  }
+
+  function tabLogboek(model) {
+    var h = '<div class="st-sec-kop"><h3>Logboek</h3><p>Alles wat je gemaakt hebt, nieuwste eerst.</p></div>';
+    h += '<div class="st-filters">' +
+      '<input type="search" id="st-zoek" class="st-zoek" placeholder="Zoek een toets…" ' +
+        'aria-label="Zoeken in het logboek" value="' + escHtml(logFilter.q) + '">' +
+      '<select id="st-vakfilter" class="st-zoek st-zoek--kort" aria-label="Filter op vak">' +
+        '<option value="">Alle vakken</option>';
+    model.actief.forEach(function (v) {
+      h += '<option value="' + escHtml(v.vak.id) + '"' +
+        (logFilter.vak === v.vak.id ? " selected" : "") + '>' + escHtml(v.vak.titel) + '</option>';
+    });
+    h += '</select></div><div class="st-tabelwrap" id="st-logtabel">' + logTabelHtml(model) + '</div>';
+    return h;
+  }
+
+  function bouwTab(model) {
+    if (actieveTab === "overzicht")    return tabOverzicht(model);
+    if (actieveTab === "vakken")       return tabVakken(model);
+    if (actieveTab === "hoofdstukken") return tabHoofdstukken(model);
+    return tabLogboek(model);
+  }
+
+  /* ── Hoofdrender ───────────────────────────────────────── */
+  function renderVoortgang(model) {
+    var houder = document.getElementById("voortgang-paneel");
+    if (!houder) return;
+
+    laatsteModel = model;
+
+    var W = watNu(model);
+    var heeft = model.attempts.length > 0;
+    var niveau = JAAR_NIVEAU[window.currentJaar] || "";
+    var jaren = beschikbareJaren();
+
+    var h = '<div class="st-wrap">';
+
+    /* Kop + jaarkiezer */
+    h += '<div class="st-bar"><div class="st-ident"><span class="st-avatar">👩‍🎓</span>' +
+      '<span><span class="st-barnaam">Mijn voortgang</span>' +
+      '<span class="st-barsub">' + escHtml(window.currentJaar) + ' · ' + escHtml(niveau) + '</span></span></div>';
+    if (jaren.length > 1) {
+      h += '<div class="st-seg" role="group" aria-label="Schooljaar">';
+      jaren.forEach(function (j) {
+        h += '<button type="button" class="st-jaar" data-jaar="' + escHtml(j) + '" aria-pressed="' +
+          (j === window.currentJaar) + '">' + escHtml(j) + ' · ' + escHtml(JAAR_NIVEAU[j] || "") + '</button>';
+      });
+      h += '</div>';
+    }
+    h += '</div>';
+
+    /* Status */
+    h += '<section class="st-status">' +
+      '<p class="st-eyebrow">Schooljaar ' + escHtml(window.currentJaar) + ' · ' + escHtml(niveau) + '</p>' +
+      '<h2 class="st-groet">Hoi Duru 👋</h2>' +
+      '<p class="st-zin">' + (heeft
+        ? "Je hebt deze week <strong>" + model.week.length + (model.week.length === 1 ? " toets" : " toetsen") +
+          "</strong> gemaakt en je gemiddelde is <strong>" + fmtC(model.gem) + "</strong>. " +
+          (C.geslaagd(model.gem) ? "Dat is boven de 5,5 — goed bezig!" : "Nog even doorzetten naar de 5,5.")
+        : "Nog geen toetsen dit schooljaar. Kies een vak en begin — je resultaten verschijnen hier meteen.") +
+      '</p></section>';
+
+    /* Wat nu? */
+    h += '<div class="st-watnu">' +
+      '<span class="st-watnu-label">' + escHtml(W.label) + '</span>' +
+      '<span class="st-watnu-titel">' + escHtml(W.titel) + '</span>' +
+      '<span class="st-watnu-waarom">' + escHtml(W.waarom) + '</span>' +
+      (W.knop && W.hf
+        ? '<button type="button" class="st-watnu-knop" data-open-vak="' + escHtml(W.hf.vak.id) + '">' +
+          escHtml(W.knop) + ' →</button>'
+        : '') +
+      '</div>';
+
+    /* Cijferschaal */
+    h += '<div class="st-schaal-blok"><div class="st-schaal-kop">' +
+      '<span class="st-schaal-cijfer" style="color:' + kleurVan(model.gem, model.attempts.length) + '">' +
+        (heeft ? fmtC(model.gem) : "–") + '</span>' +
+      '<span class="st-schaal-label">jouw gemiddelde · <b>' + model.attempts.length +
+        '</b> toetsen · <b>' +
+        (heeft ? Math.round(model.geslaagdN / model.attempts.length * 100) : 0) +
+        '%</b> voldoende</span></div>' +
+      '<div class="st-schaal">' + schaalHtml(model) + '</div>' +
+      '<div class="st-schaal-uit"><span>1,0</span><span>10,0</span></div></div>';
+
+    /* Momentum */
+    var st = model.streak;
+    var klaar = model.alleHf.filter(function (x) { return x.count > 0 && C.examenklaar(x.gem); }).length;
+    h += '<div class="st-momentum">' +
+      '<div class="st-mom' + (st >= 2 ? " st-mom--vlam" : "") + '">' +
+        '<span class="st-momlabel">Op rij</span>' +
+        '<span class="st-momwaarde">' + st + '<small> ' + (st === 1 ? "dag" : "dagen") + '</small></span>' +
+        '<span class="st-momsub">' + (st >= 2 ? "Mooie reeks — hou vol! 🔥" : "Oefen morgen weer voor een reeks") + '</span></div>' +
+      '<div class="st-mom"><span class="st-momlabel">Deze week</span>' +
+        '<span class="st-momwaarde">' + model.week.length + '</span>' +
+        '<span class="st-momsub">toetsen gemaakt' +
+        (model.week.length ? " · gem. " + fmtC(C.gemiddelde(model.week, "cijfer")) : "") + '</span></div>' +
+      '<div class="st-mom"><span class="st-momlabel">Klaar voor de toets</span>' +
+        '<span class="st-momwaarde">' + klaar + '<small> / ' + model.alleHf.length + '</small></span>' +
+        '<span class="st-momsub">hoofdstukken op 8,5 of hoger</span></div>' +
+      '<div class="st-mom"><span class="st-momlabel">Nog te doen</span>' +
+        '<span class="st-momwaarde">' + model.open + '</span>' +
+        '<span class="st-momsub">proeftoetsen open</span></div>' +
+      '</div>';
+
+    /* Tabs */
+    var tabs = [
+      { id: "overzicht",    label: "Overzicht",    tel: null },
+      { id: "vakken",       label: "Vakken",       tel: model.actief.length },
+      { id: "hoofdstukken", label: "Hoofdstukken", tel: model.alleHf.filter(function (x) { return x.count > 0; }).length },
+      { id: "logboek",      label: "Logboek",      tel: model.attempts.length }
+    ];
+    h += '<nav class="st-tabs" role="tablist">';
+    tabs.forEach(function (t) {
+      h += '<button type="button" role="tab" class="st-tab" data-st-tab="' + t.id + '" aria-selected="' +
+        (actieveTab === t.id) + '">' + t.label +
+        (t.tel != null ? '<span class="st-tel">' + t.tel + '</span>' : "") + '</button>';
+    });
+    h += '</nav>';
+
+    h += '<div class="st-views">' + bouwTab(model) + '</div>';
+    h += '</div>';
+
+    houder.innerHTML = h;
+
+    bindKopEvents(model);
+    bindTabEvents(model);
+
+    // De grafiek meet zijn eigen breedte, dus pas ná het invoegen tekenen.
+    if (actieveTab === "overzicht") renderScoreTimeline(model.attempts);
+  }
+
+  function wisselTab(naam, model) {
+    actieveTab = naam;
+    var views = document.querySelector("#voortgang-paneel .st-views");
+    if (!views) { renderVoortgang(model); return; }
+
+    views.innerHTML = bouwTab(model);
+    document.querySelectorAll("#voortgang-paneel [data-st-tab]").forEach(function (b) {
+      b.setAttribute("aria-selected", String(b.getAttribute("data-st-tab") === naam));
+    });
+    bindTabEvents(model);
+    if (naam === "overzicht") renderScoreTimeline(model.attempts);
+  }
+
+  function bindKopEvents(model) {
+    document.querySelectorAll("#voortgang-paneel .st-jaar").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var j = b.getAttribute("data-jaar");
+        try { localStorage.setItem("duru_dashboard_jaar", j); } catch (e) {}
+        window.currentJaar = j;
+        actieveTab = "overzicht";
+        logFilter = { q: "", vak: "" };
+        loadDashboardData();
+      });
+    });
+
+    document.querySelectorAll("#voortgang-paneel [data-st-tab]").forEach(function (b) {
+      b.addEventListener("click", function () { wisselTab(b.getAttribute("data-st-tab"), model); });
+    });
+  }
+
+  function bindTabEvents(model) {
+    var views = document.querySelector("#voortgang-paneel .st-views");
+    if (!views) return;
+
+    // "Ga oefenen": open het vak in de iframe-shell van de hub (landing.js).
+    document.querySelectorAll("#voortgang-paneel [data-open-vak]").forEach(function (b) {
+      if (b.dataset.stGebonden) return;
+      b.dataset.stGebonden = "1";
+      b.addEventListener("click", function () {
+        var id = b.getAttribute("data-open-vak");
+        var vak = null;
+        model.vakken.forEach(function (v) { if (v.vak.id === id) vak = v.vak; });
+        if (!vak) return;
+        if (typeof window.openInIframe === "function") {
+          window.openInIframe("./havo3/" + id + "/", vak.icoon || "📘", vak.titel);
+        }
+      });
+    });
+
+    var zoek = document.getElementById("st-zoek");
+    var vakf = document.getElementById("st-vakfilter");
+    var tab  = document.getElementById("st-logtabel");
+    function herteken() { if (tab) tab.innerHTML = logTabelHtml(model); }
+    if (zoek) zoek.addEventListener("input", function () { logFilter.q = zoek.value.toLowerCase(); herteken(); });
+    if (vakf) vakf.addEventListener("change", function () { logFilter.vak = vakf.value; herteken(); });
+  }
+
+  function loadDashboardData() {
+    window.currentJaar = bepaalCurrentJaar();
+
+    var vakkenVanJaar = VAK_REGISTER.filter(function (v) { return v.jaar === window.currentJaar; });
+
+    var attempts = [];
+    vakkenVanJaar.forEach(function (vak) {
+      if (vak.special === "begrijpend") {
+        loadBegrijpendLezenAttempts(attempts, vak.examKey);
+      } else {
+        loadDuruAttempts(attempts, vak.examKey, vak.id, vak.titel, vak.kleur);
+      }
+    });
+    attempts.sort(function (a, b) { return b.timestamp - a.timestamp; });
+    window.allAttempts = attempts;
+
+    renderVoortgang(bouwModel(attempts, vakkenVanJaar));
+  }
+
+
   function escHtml(str) {
     if (!str) return "";
     return String(str)
@@ -1109,101 +1107,9 @@
     tooltip.style.top  = posY + "px";
   }
 
-  // ── Render Exam Log Table (with Hoofdstuk column & search) ─
-  function renderAttemptsTable() {
-    var tbody = document.getElementById("exam-attempts-tbody");
-    if (!tbody) return;
 
-    var attempts = window.allAttempts || [];
 
-    var filtered = attempts.filter(function (att) {
-      if (window.currentTableFilter !== "all") {
-        if (att.vakId !== window.currentTableFilter) {
-          return false;
-        }
-      }
 
-      if (window.currentTableSearch) {
-        var query = window.currentTableSearch.toLowerCase();
-        var matchTitle = (att.titel || "").toLowerCase().indexOf(query) !== -1;
-        var matchVak   = (att.vakTitel || "").toLowerCase().indexOf(query) !== -1;
-        var matchHf    = ("hoofdstuk " + (att.hoofdstuk || "")).toLowerCase().indexOf(query) !== -1 ||
-                         ("h" + (att.hoofdstuk || "")).toLowerCase().indexOf(query) !== -1 ||
-                         (att.hoofdstukTitel || "").toLowerCase().indexOf(query) !== -1;
-        if (!matchTitle && !matchVak && !matchHf) {
-          return false;
-        }
-      }
-
-      return true;
-    });
-
-    if (filtered.length === 0) {
-      tbody.innerHTML = '<tr>' +
-                          '<td colspan="6" style="text-align:center; padding:32px; color:var(--grijs-licht);">' +
-                            'Geen gemaakte toetsen gevonden met de geselecteerde filters.' +
-                          '</td>' +
-                        '</tr>';
-      return;
-    }
-
-    var html = "";
-    filtered.forEach(function (att) {
-      var gradeClass     = att.geslaagd ? "pass" : "fail";
-      var formattedGrade = att.cijfer.toFixed(1).replace(".", ",");
-      var hfBadge = '<span class="chapter-badge" title="' + escHtml(att.hoofdstukTitel || "") + '">' + (att.hoofdstukIcoon || "📖") + ' ' + (att.hoofdstuk != null ? ('H' + att.hoofdstuk) : 'Overig') + '</span>';
-
-      html += '<tr>' +
-                '<td>' + att.datumStr + '</td>' +
-                '<td><span class="subject-badge ' + att.vakKleur + '">' + att.vakTitel + '</span></td>' +
-                '<td>' + hfBadge + '</td>' +
-                '<td><strong>' + escHtml(att.titel) + '</strong></td>' +
-                '<td>' + att.goed + ' / ' + att.totaal + ' <span style="color:var(--grijs-licht); font-size:12px;">(' + att.pct + '%)</span></td>' +
-                '<td><span class="badge-grade ' + gradeClass + '">' + formattedGrade + '</span></td>' +
-              '</tr>';
-    });
-
-    tbody.innerHTML = html;
-  }
-
-  // ── Render Filter Bar ─────────────────────────────────────
-  function renderFilterBar(vakkenVanJaar) {
-    var bar = document.getElementById("table-filter-bar");
-    if (!bar) return;
-
-    window.currentTableFilter = "all";
-
-    var html = '<button class="filter-btn active" data-filter="all" type="button">Alles</button>';
-    (vakkenVanJaar || []).forEach(function (vak) {
-      html += '<button class="filter-btn" data-filter="' + escHtml(vak.id) + '" type="button">' + vak.icoon + ' ' + escHtml(vak.titel) + '</button>';
-    });
-    bar.innerHTML = html;
-
-    bindFilterButtons();
-  }
-
-  function bindFilterButtons() {
-    var filterButtons = document.querySelectorAll("#table-filter-bar .filter-btn");
-    filterButtons.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        filterButtons.forEach(function (b) { b.classList.remove("active"); });
-        btn.classList.add("active");
-
-        window.currentTableFilter = btn.getAttribute("data-filter");
-        renderAttemptsTable();
-      });
-    });
-  }
-
-  function initFiltersAndSearch() {
-    var searchInput = document.getElementById("exam-search");
-    if (searchInput) {
-      searchInput.addEventListener("input", function () {
-        window.currentTableSearch = searchInput.value;
-        renderAttemptsTable();
-      });
-    }
-  }
 
   // ── Backup & Restore Logic ──────────────────────────────
   function initBackupRestore() {
