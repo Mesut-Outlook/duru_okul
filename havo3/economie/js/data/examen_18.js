@@ -180,19 +180,19 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Het vervangen van werknemers door robots aan de lopende band heet [robotisering].",
+      "vraag": "Het vervangen van werknemers door robots aan de lopende band heet ____.",
       "antwoord": "robotisering",
       "uitleg": "Robotisering is het overnemen van werk door robots, bijvoorbeeld in de auto-industrie."
     },
     {
       "type": "invul",
-      "vraag": "De formule voor arbeidsproductiviteit is het aantal geproduceerde goederen of diensten gedeeld door het aantal [medewerkers|werknemers|arbeidskrachten].",
+      "vraag": "De formule voor arbeidsproductiviteit is het aantal geproduceerde goederen of diensten gedeeld door het aantal ____.",
       "antwoord": "medewerkers|werknemers|arbeidskrachten",
       "uitleg": "Arbeidsproductiviteit = Totale productie / aantal medewerkers."
     },
     {
       "type": "invul",
-      "vraag": "Het bedrag waarvoor een kapitaalgoed oorspronkelijk is aangeschaft noemen we de [aanschafwaarde|aanschafprijs].",
+      "vraag": "Het bedrag waarvoor een kapitaalgoed oorspronkelijk is aangeschaft noemen we de ____.",
       "antwoord": "aanschafwaarde|aanschafprijs",
       "uitleg": "De aanschafwaarde is het aankoopbedrag van het productiemiddel."
     },

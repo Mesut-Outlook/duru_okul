@@ -114,8 +114,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Vaste stoffen hebben een vaste vorm en een vast volume doordat de moleculen dicht op elkaar zitten en elkaar sterk aantrekken.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. In een vaste stof zitten moleculen op vaste roosterplaatsen en trillen ze alleen om hun evenwichtsstand."
+      "antwoord": true,
+      "uitleg": "Waar. In een vaste stof zitten moleculen op vaste roosterplaatsen en trillen ze alleen om hun evenwichtsstand."
     },
     {
       "type": "mc",
@@ -156,8 +156,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Een stalen schip blijft drijven omdat de <b>gemiddelde dichtheid</b> van het hele schip (staal + grote hoeveelheid lucht in het ruim) kleiner is dan de dichtheid van water.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Door de holle vorm en de lucht is de totale massa gedeeld door het totale volume kleiner dan 1,0 g/cm³."
+      "antwoord": true,
+      "uitleg": "Waar. Door de holle vorm en de lucht is de totale massa gedeeld door het totale volume kleiner dan 1,0 g/cm³."
     },
     {
       "type": "invul",

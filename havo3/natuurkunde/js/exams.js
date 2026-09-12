@@ -55,52 +55,292 @@
   var T = null; // examen-state
   DURU._stopExamTimer = function () { if (T && T.interval) { clearInterval(T.interval); T.interval = null; } };
 
+  /* ---------- Helper voor examen card HTML ---------- */
+  function bouwExamenCard(ex) {
+    var best = EX.beste[ex.id];
+    var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
+    if (laatste == null && EX.history) {
+      var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
+      if (attempts.length > 0) {
+        laatste = attempts[0].pct;
+      }
+    }
+
+    var pInfo = DURU.getParagraafInfo ? DURU.getParagraafInfo(ex, true) : { code: "§1." + (ex.hoofdstuk || 1), tagClass: "toets" };
+
+    var statusHtml = '';
+    if (best != null) {
+      statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+        '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+          '<span>✓</span> Gemaakt' +
+        '</div>' +
+        '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
+      if (laatste != null) {
+        statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
+      }
+      statusHtml += '</div>';
+    } else {
+      statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+        '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+          'Nog niet gemaakt' +
+        '</div>' +
+        '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
+      '</div>';
+    }
+
+    return '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
+      '<div class="card-type-row">' +
+        '<span class="card-type-label toets">📝 Proeftoets</span>' +
+        '<span class="paragraaf-tag ' + (pInfo.tagClass || "") + '">' + pInfo.code + '</span>' +
+      '</div>' +
+      '<div class="ex-ico" style="margin-top:6px;">' + (ex.icoon || "📝") + '</div>' +
+      '<h4>' + esc(ex.titel) + '</h4>' +
+      '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
+      statusHtml +
+      '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
+    '</div>';
+  }
+
+  function bouwExamenParagraafSecties(hfNr, exLijst) {
+    var out = "";
+    if (hfNr === 1) {
+      var sectiesH1 = [
+        {
+          titel: "Paragraaf 1.1 — Kracht bij beweging",
+          ico: "🏎️",
+          tag: "§1.1",
+          exIds: ["ex-h3-natuurkunde-26", "ex-h3-natuurkunde-27", "ex-h3-natuurkunde-28"]
+        },
+        {
+          titel: "Paragraaf 1.2 — Soorten beweging & Diagrammen",
+          ico: "📈",
+          tag: "§1.2",
+          exIds: ["ex-h3-natuurkunde-29", "ex-h3-natuurkunde-30", "ex-h3-natuurkunde-31"]
+        },
+        {
+          titel: "Paragraaf 1.3 — Kracht en Versnelling (F = m · a)",
+          ico: "🚀",
+          tag: "§1.3",
+          exIds: ["ex-h3-natuurkunde-32", "ex-h3-natuurkunde-33", "ex-h3-natuurkunde-34"]
+        },
+        {
+          titel: "Paragraaf 1.4 — Veiligheid, Remweg & Stopafstand",
+          ico: "🛑",
+          tag: "§1.4",
+          exIds: ["ex-h3-natuurkunde-35"]
+        },
+        {
+          titel: "Paragraaf 1.5 — Arbeid en Energieomzetting",
+          ico: "🚴",
+          tag: "§1.5",
+          exIds: ["ex-h3-natuurkunde-36"]
+        },
+        {
+          titel: "Integrale Toetstraining — Mix Paragrafen 1.1 t/m 1.3",
+          ico: "🎯",
+          tag: "Mix §1.1–1.3",
+          exIds: ["ex-h3-natuurkunde-1", "ex-h3-natuurkunde-2", "ex-h3-natuurkunde-3", "ex-h3-natuurkunde-4", "ex-h3-natuurkunde-5"]
+        }
+      ];
+
+      sectiesH1.forEach(function (s) {
+        var matched = exLijst.filter(function (e) { return s.exIds.indexOf(e.id) !== -1; });
+        if (matched.length === 0) return;
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel"><span>' + s.ico + '</span> ' + s.titel + '</div>' +
+            '<div class="paragraaf-groep-meta">' +
+              '<span class="paragraaf-tag ' + (s.tag.indexOf('Mix') !== -1 ? 'mix' : '') + '">' + s.tag + '</span>' +
+              '<span class="hf-badge paars">📝 ' + matched.length + ' toetsen</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="examen-lijst">';
+        matched.forEach(function (ex) {
+          out += bouwExamenCard(ex);
+        });
+        out += '</div></div>';
+      });
+
+      var handledIds = {};
+      sectiesH1.forEach(function(s){ s.exIds.forEach(function(id){ handledIds[id] = true; }); });
+      var rest = exLijst.filter(function(e){ return !handledIds[e.id]; });
+      if (rest.length > 0) {
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel"><span>📚</span> Overige Oefentoetsen H1</div>' +
+            '<div class="paragraaf-groep-meta">' +
+              '<span class="hf-badge paars">📝 ' + rest.length + ' toetsen</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="examen-lijst">';
+        rest.forEach(function (ex) {
+          out += bouwExamenCard(ex);
+        });
+        out += '</div></div>';
+      }
+    } else {
+      var paraEx = [];
+      var eindEx = [];
+      exLijst.forEach(function (ex) {
+        var p = DURU.getParagraafInfo(ex, true);
+        if (p.tagClass === "eind" || (ex.titel && ex.titel.indexOf("Eindtoets") !== -1)) {
+          eindEx.push(ex);
+        } else {
+          paraEx.push(ex);
+        }
+      });
+
+      if (paraEx.length > 0) {
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel"><span>📌</span> Deeltoetsen per Paragraaf (H' + hfNr + ')</div>' +
+            '<div class="paragraaf-groep-meta">' +
+              '<span class="paragraaf-tag">§' + hfNr + '.x</span>' +
+              '<span class="hf-badge paars">📝 ' + paraEx.length + ' toetsen</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="examen-lijst">';
+        paraEx.forEach(function (ex) {
+          out += bouwExamenCard(ex);
+        });
+        out += '</div></div>';
+      }
+
+      if (eindEx.length > 0) {
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel"><span>🎯</span> Hoofdstuk Eindtoets (Integrale Herhaling)</div>' +
+            '<div class="paragraaf-groep-meta">' +
+              '<span class="paragraaf-tag eind">Eindtoets H' + hfNr + '</span>' +
+              '<span class="hf-badge paars">📝 ' + eindEx.length + ' toets</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="examen-lijst">';
+        eindEx.forEach(function (ex) {
+          out += bouwExamenCard(ex);
+        });
+        out += '</div></div>';
+      }
+    }
+    return out;
+  }
+
   /* ---------- Lijst met oefentoetsen ---------- */
   DURU.renderExamenLijst = function () {
     DURU._stopExamTimer();
     var h = '<div class="terug" onclick="DURU.gaNaar(\'home\')">← Terug naar overzicht</div>';
-    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen</h3><div class="lijn"></div></div>';
-    h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Je krijgt aan het eind je cijfer én bij elke vraag te zien <b>hoe je het moet doen</b>. Deze toetsen tellen los van je oefen-punten — daar gebeurt niets mee.</p>';
-    h += '<div class="examen-lijst">';
+    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen per Hoofdstuk &amp; Paragraaf</h3><div class="lijn"></div></div>';
+    h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Kies hieronder een Hoofdstuk of filter direct op een specifieke paragraaf.</p>';
+
+    // Groepeer op hoofdstuk
+    var groepen = {};
     DURU.examens.forEach(function (ex) {
-      var best = EX.beste[ex.id];
-      var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
-      if (laatste == null && EX.history) {
-        var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
-        if (attempts.length > 0) {
-          laatste = attempts[0].pct;
-        }
-      }
-
-      var statusHtml = '';
-      if (best != null) {
-        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
-          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
-            '<span>✓</span> Gemaakt' +
-          '</div>' +
-          '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
-        if (laatste != null) {
-          statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
-        }
-        statusHtml += '</div>';
-      } else {
-        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
-          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
-            'Nog niet gemaakt' +
-          '</div>' +
-          '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
-        '</div>';
-      }
-
-      h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
-        '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
-        '<h4>' + esc(ex.titel) + '</h4>' +
-        '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
-        statusHtml +
-        '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
-        '</div>';
+      var hfNr = ex.hoofdstuk || 1;
+      var hfObj = null;
+      (DURU.hoofdstukken || []).forEach(function(hh) { if (hh.nr === hfNr) hfObj = hh; });
+      var hfKey = hfObj ? ("Hoofdstuk " + hfObj.nr + " — " + hfObj.titel) : ("Hoofdstuk " + hfNr);
+      if (!groepen[hfNr]) groepen[hfNr] = { obj: hfObj, nr: hfNr, titel: hfKey, lijst: [] };
+      groepen[hfNr].lijst.push(ex);
     });
+
+    var hfNummers = Object.keys(groepen).map(Number).sort(function(a,b){ return a-b; });
+
+    // Filter & Navigatie balk
+    h += '<div class="hf-filter-wrap">';
+    h +=   '<div class="hf-filter-title">⚡ Snel filteren &amp; navigeren per hoofdstuk:</div>';
+    h +=   '<div class="hf-filter-pills">';
+    h +=     '<button class="hf-filter-pill actief" id="hf-ex-pill-all" onclick="DURU.filterHoofdstukEx(0)">🌟 Alle Hoofdstukken (' + DURU.examens.length + ' toetsen)</button>';
+    hfNummers.forEach(function(hfNr) {
+      var g = groepen[hfNr];
+      h +=   '<button class="hf-filter-pill" id="hf-ex-pill-' + hfNr + '" onclick="DURU.filterHoofdstukEx(' + hfNr + ')">' +
+               ((g.obj && g.obj.icoon) || "⚛️") + ' H' + hfNr + ' (' + g.lijst.length + ')' +
+             '</button>';
+    });
+    h +=   '</div>';
+    h +=   '<div class="hf-acties-row">';
+    h +=     '<button class="hf-actie-knop" onclick="DURU.toggleAlleHoofdstukkenEx(true)">📖 Klap alles uit</button>';
+    h +=     '<button class="hf-actie-knop" onclick="DURU.toggleAlleHoofdstukkenEx(false)">🔒 Klap alles in</button>';
+    h +=   '</div>';
     h += '</div>';
+
+    hfNummers.forEach(function (hfNr) {
+      var g = groepen[hfNr];
+      var exLijst = g.lijst;
+      var isOpen = (hfNr === 1);
+
+      h += '<div class="hf-accordion-card ' + (isOpen ? 'open' : '') + '" id="hf-ex-card-' + hfNr + '" data-hf-nr="' + hfNr + '">' +
+        '<div class="hf-header" onclick="DURU.toggleHoofdstukEx(' + hfNr + ')">' +
+          '<div class="hf-ico">' + ((g.obj && g.obj.icoon) || "⚛️") + '</div>' +
+          '<div class="hf-info">' +
+            '<h3>' + esc(g.titel) + '</h3>' +
+            '<div class="hf-meta-badges">' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + (exLijst.reduce(function(s, e){ return s + e.vragen.length; }, 0)) + ' vragen)</span>' +
+            '</div>' +
+          '</div>' +
+          '<button class="hf-toggle-btn" id="hf-ex-label-' + hfNr + '">' + (isOpen ? '▲ Klap in' : '▼ Open Toetsen') + '</button>' +
+        '</div>' +
+        '<div class="hf-body" id="hf-ex-content-' + hfNr + '" style="display:' + (isOpen ? 'block' : 'none') + ';">';
+
+      // Bouw geordende paragrafen/sub-secties
+      h += bouwExamenParagraafSecties(hfNr, exLijst);
+
+      h += '</div></div>'; // Einde hf-body en hf-accordion-card
+    });
+
+    DURU.toggleHoofdstukEx = function(hfNr) {
+      var card = document.getElementById("hf-ex-card-" + hfNr);
+      var content = document.getElementById("hf-ex-content-" + hfNr);
+      var label = document.getElementById("hf-ex-label-" + hfNr);
+      if (!content) return;
+      var isHidden = content.style.display === "none";
+      content.style.display = isHidden ? "block" : "none";
+      if (card) {
+        if (isHidden) card.classList.add("open");
+        else card.classList.remove("open");
+      }
+      if (label) label.textContent = isHidden ? "▲ Klap in" : "▼ Open Toetsen";
+    };
+
+    DURU.filterHoofdstukEx = function(hfNr) {
+      document.querySelectorAll('.hf-filter-pill').forEach(function(pill) {
+        pill.classList.remove('actief');
+      });
+      var activePill = document.getElementById(hfNr === 0 ? 'hf-ex-pill-all' : ('hf-ex-pill-' + hfNr));
+      if (activePill) activePill.classList.add('actief');
+
+      document.querySelectorAll('[id^="hf-ex-card-"]').forEach(function(card) {
+        var cardNr = parseInt(card.getAttribute('data-hf-nr'), 10);
+        if (hfNr === 0 || cardNr === hfNr) {
+          card.style.display = 'block';
+          if (hfNr !== 0) {
+            card.classList.add('open');
+            var content = card.querySelector('.hf-body');
+            if (content) content.style.display = 'block';
+            var btn = card.querySelector('.hf-toggle-btn');
+            if (btn) btn.textContent = '▲ Klap in';
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    };
+
+    DURU.toggleAlleHoofdstukkenEx = function(open) {
+      document.querySelectorAll('[id^="hf-ex-card-"]').forEach(function(card) {
+        var content = card.querySelector('.hf-body');
+        var btn = card.querySelector('.hf-toggle-btn');
+        if (open) {
+          card.classList.add('open');
+          if (content) content.style.display = 'block';
+          if (btn) btn.textContent = '▲ Klap in';
+        } else {
+          card.classList.remove('open');
+          if (content) content.style.display = 'none';
+          if (btn) btn.textContent = '▼ Open Toetsen';
+        }
+      });
+    };
 
     // Toetshistorie & Foutanalyse sectie
     EX.history = EX.history || [];
@@ -251,6 +491,39 @@
       .replace(/[.,;:!?'"()·]/g, " ")
       .replace(/\s+/g, " ").trim();
   }
+  // invul nakijken (ENGINE_SPEC): getal-antwoorden numeriek, tekst-antwoorden zoals voorheen.
+  // Zonder dit telde "12" of "0,2" goed bij antwoord "2" (indexOf op tekst).
+  function leesGetal(s) {
+    var m = String(s == null ? "" : s).replace(/−/g, "-").match(/-?\d+(?:[.,]\d+)*/);
+    if (!m) return null;
+    var g = m[0], dec = 0;
+    if (/^-?\d{1,3}(\.\d{3})+$/.test(g)) g = g.replace(/\./g, "");            // 16.000 = zestienduizend
+    else if (g.indexOf(",") !== -1) g = g.replace(/\./g, "").replace(",", "."); // 1,5 / 1.234,5
+    if (g.indexOf(".") !== -1) dec = g.length - g.indexOf(".") - 1;
+    return { waarde: parseFloat(g), decimalen: dec };
+  }
+  // "15", "15 m/s", "2,0 m/s²", "3 m/s2", "18h", "9%" — een getal met hooguit een eenheid erachter
+  function isGetalAntwoord(a) {
+    return /^\s*[-−]?\d+(?:[.,]\d+)*\s*(?:[a-zA-Zµμ°%€\/²³^().·Ω ]*[a-zA-Z\/^]\d)?[a-zA-Zµμ°%€\/²³^().·Ω ]*$/.test(a);
+  }
+  function invulGoed(antw, v) {
+    var inv = normaliseer(antw);
+    if (inv === "") return false;
+    var getal = leesGetal(antw);
+    var tekstAlts = [];
+    var goed = String(v.antwoord).split("|").some(function (a) {
+      if (isGetalAntwoord(a)) {
+        var verwacht = leesGetal(a);
+        if (!getal || !verwacht) return false;
+        // tolerantie: expliciet, anders een halve eenheid van de laatste gegeven decimaal (12,5 -> 0,05; 1914 -> 0,5)
+        var tol = v.tolerantie != null ? v.tolerantie : 0.5 * Math.pow(10, -verwacht.decimalen) + 1e-9;
+        return Math.abs(getal.waarde - verwacht.waarde) <= tol;
+      }
+      tekstAlts.push(normaliseer(a));
+      return false;
+    });
+    return goed || tekstAlts.some(function (a) { return a && (inv === a || inv.indexOf(a) !== -1); });
+  }
   function beoordeel(v, antw) {
     // geeft "goed" | "fout" | "deels" + of het meetelt als goed
     if (v.type === "mc") {
@@ -261,9 +534,7 @@
       return { status: antw === juist ? "goed" : "fout", punt: antw === juist ? 1 : 0 };
     }
     if (v.type === "invul") {
-      var inv = normaliseer(antw);
-      var alts = String(v.antwoord).split("|").map(normaliseer);
-      var ok = inv !== "" && alts.some(function (a) { return inv === a || inv.indexOf(a) !== -1; });
+      var ok = invulGoed(antw, v);
       return { status: ok ? "goed" : "fout", punt: ok ? 1 : 0 };
     }
     // open: tel sleutelwoorden

@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Fysieke munten en bankbiljetten noemen we [chartaal geld|chartaal].",
+      "vraag": "Fysieke munten en bankbiljetten noemen we ____.",
       "antwoord": "chartaal geld|chartaal",
       "uitleg": "Chartaal geld is tastbaar contant geld."
     },
     {
       "type": "invul",
-      "vraag": "Direct opvraagbaar geld op een bankrekening noemen we [giraal geld|giraal].",
+      "vraag": "Direct opvraagbaar geld op een bankrekening noemen we ____.",
       "antwoord": "giraal geld|giraal",
       "uitleg": "Giraal geld is elektronisch banktegoed."
     },
     {
       "type": "invul",
-      "vraag": "Het bedrag dat officieel op een munt of biljet staat gedrukt heet de [nominale waarde|nominaal].",
+      "vraag": "Het bedrag dat officieel op een munt of biljet staat gedrukt heet de ____.",
       "antwoord": "nominale waarde|nominaal",
       "uitleg": "De nominale waarde is de aangegeven waarde op het geldstuk."
     },
     {
       "type": "invul",
-      "vraag": "De materiële waarde van het metaal of papier van geld heet de [intrinsieke waarde|intrinsiek].",
+      "vraag": "De materiële waarde van het metaal of papier van geld heet de ____.",
       "antwoord": "intrinsieke waarde|intrinsiek",
       "uitleg": "Intrinsieke waarde is de zuivere grondstofwaarde."
     },

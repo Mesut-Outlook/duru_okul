@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een algemene stijging van het gemiddelde prijspeil heet [inflatie].",
+      "vraag": "Een algemene stijging van het gemiddelde prijspeil heet ____.",
       "antwoord": "inflatie",
       "uitleg": "Inflatie is het duurder worden van het dagelijks leven."
     },
     {
       "type": "invul",
-      "vraag": "De hoeveelheid goederen en diensten die je met je inkomen kunt kopen heet je [koopkracht|reëel inkomen].",
+      "vraag": "De hoeveelheid goederen en diensten die je met je inkomen kunt kopen heet je ____.",
       "antwoord": "koopkracht|reëel inkomen",
       "uitleg": "Koopkracht is het reële inkomen."
     },
     {
       "type": "invul",
-      "vraag": "De instantie die in Nederland de inflatie berekent is het [CBS|Centraal Bureau voor de Statistiek].",
+      "vraag": "De instantie die in Nederland de inflatie berekent is het ____.",
       "antwoord": "CBS|Centraal Bureau voor de Statistiek",
       "uitleg": "CBS berekent de CPI en andere nationale statistieken."
     },
     {
       "type": "invul",
-      "vraag": "Een algemene daling van het gemiddelde prijspeil noemen we [deflatie].",
+      "vraag": "Een algemene daling van het gemiddelde prijspeil noemen we ____.",
       "antwoord": "deflatie",
       "uitleg": "Deflatie is een daling van het prijspeil."
     },

@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Economie (HAVO 3) — Proeftoets 20: Kostenstructuur, Vaste lasten & Afschrijvingsanalyse (4.2)
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-h3-economie-20",
   "hoofdstuk": 4,
   "paragraaf": "4.2",
@@ -181,13 +180,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De kosten die samenhangen met het pand, zoals huur, erfpacht en energiekosten, noemen we [huisvestingskosten].",
+      "vraag": "De kosten die samenhangen met het pand, zoals huur, erfpacht en energiekosten, noemen we ____.",
       "antwoord": "huisvestingskosten",
       "uitleg": "Huisvestingskosten betreffen alle kosten van het onderkomen van het bedrijf."
     },
     {
       "type": "invul",
-      "vraag": "Het bedrag waarvoor een winkelier de verkochte artikelen zelf heeft ingekocht heet de [inkoopwaarde van de omzet|inkoopwaarde].",
+      "vraag": "Het bedrag waarvoor een winkelier de verkochte artikelen zelf heeft ingekocht heet de ____.",
       "antwoord": "inkoopwaarde van de omzet|inkoopwaarde",
       "uitleg": "De inkoopwaarde van de omzet zijn de totale inkoopkosten van de verkochte goederen."
     },
@@ -215,5 +214,4 @@ DURU.registerExamen(
       "uitleg": "Omdat TCK constant blijft, stijgt TK minder hard dan de productie."
     }
   ]
-}
-);
+});

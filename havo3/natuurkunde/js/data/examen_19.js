@@ -78,8 +78,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Constantaan heeft een veel hogere soortelijke weerstand dan koper en wordt daarom gebruikt om verwarmingselementen en weerstanden te maken.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Koper geleidt bijna 26× beter dan constantaan."
+      "antwoord": true,
+      "uitleg": "Waar. Koper geleidt bijna 26× beter dan constantaan."
     },
     {
       "type": "invul",
@@ -126,18 +126,18 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Supergeleiding is een verschijnsel waarbij bepaalde materialen bij extreem lage temperaturen (nabij 0 Kelvin) hun elektrische weerstand volledig verliezen (R = 0 Ω).",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Bij supergeleiding kan stroom zonder enig energieverlies blijven rondstromen."
+      "antwoord": true,
+      "uitleg": "Waar. Bij supergeleiding kan stroom zonder enig energieverlies blijven rondstromen."
     },
     {
       "type": "invul",
-      "vraag": "Door een verlengsnoer van 20 m koperdraad (weerstand R = 0,40 Ω) loopt een stroom van 10 A. Hoeveel Volt spanningsverlies treedt er op over het snoer ( = I \times R$)?",
+      "vraag": "Door een verlengsnoer van 20 m koperdraad (weerstand R = 0,40 Ω) loopt een stroom van 10 A. Hoeveel Volt spanningsverlies treedt er op over het snoer (U = I × R)?",
       "antwoord": "4|4 V|4,0|4,0 V",
       "uitleg": "U = I × R = 10 A × 0,40 Ω = 4,0 V."
     },
     {
       "type": "mc",
-      "vraag": "Hoeveel Watt warmteverlies ontstaat er in het verlengsnoer uit de vorige vraag ( = U \times I$ of  = I^2 \times R$)?",
+      "vraag": "Hoeveel Watt warmteverlies ontstaat er in het verlengsnoer uit de vorige vraag (P = U × I of P = I² × R)?",
       "opties": [
         "4 W",
         "400 W",

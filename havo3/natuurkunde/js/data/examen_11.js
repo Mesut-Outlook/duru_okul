@@ -35,7 +35,7 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Alle elektromagnetische golven planten zich in een vacuüm voort met de <b>lichtsnelheid</b> ($c approx 300.000\text{ km/s}$).",
+      "vraag": "Alle elektromagnetische golven planten zich in een vacuüm voort met de <b>lichtsnelheid</b> (c ≈ 300.000 km/s).",
       "antwoord": true,
       "uitleg": "Waar. Alle EM-straling (van radio tot gamma) reist in een vacuüm met circa 300.000 km/s (3 × 10⁸ m/s)."
     },
@@ -72,8 +72,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Ultraviolette straling (UV) van de zon zorgt voor de aanmaak van vitamine D in de huid, maar kan bij overmatige blootstelling zonnebrand en huidkanker veroorzaken.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. UV stimuleert vitamine D-aanmaak, maar te veel UV beschadigt DNA in huidcellen."
+      "antwoord": true,
+      "uitleg": "Waar. UV stimuleert vitamine D-aanmaak, maar te veel UV beschadigt DNA in huidcellen."
     },
     {
       "type": "mc",

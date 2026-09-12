@@ -180,19 +180,19 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De keten van alle bedrijven die meewerken aan een product vanaf de grondstof tot de winkel heet de [bedrijfskolom].",
+      "vraag": "De keten van alle bedrijven die meewerken aan een product vanaf de grondstof tot de winkel heet de ____.",
       "antwoord": "bedrijfskolom",
       "uitleg": "De bedrijfskolom toont de route van grondstof tot eindproduct bij de detaillist."
     },
     {
       "type": "invul",
-      "vraag": "De vier productiefactoren zijn kapitaal, arbeid, natuur en [ondernemerschap].",
+      "vraag": "De vier productiefactoren zijn kapitaal, arbeid, natuur en ____.",
       "antwoord": "ondernemerschap",
       "uitleg": "De vier productiefactoren zijn Kapitaal, Arbeid, Natuur en Ondernemerschap."
     },
     {
       "type": "invul",
-      "vraag": "Het vervangen van menselijke arbeid door machines noemen we [mechanisatie].",
+      "vraag": "Het vervangen van menselijke arbeid door machines noemen we ____.",
       "antwoord": "mechanisatie",
       "uitleg": "Mechanisatie is het inzetten van machines en technische hulpmiddelen in plaats van handarbeid."
     },

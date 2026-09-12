@@ -90,8 +90,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "De soortelijke warmte van aluminium (880 J/kg·K) is bijna 5 keer zo klein als die van water (4180 J/kg·K).",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar: 4180 / 880 ≈ 4,75, dus water heeft bijna vijf keer zoveel warmte nodig om dezelfde massa met 1 K op te warmen. Daarom warmt aluminium veel sneller op (en koelt het ook sneller af) dan water bij dezelfde toegevoerde warmte."
+      "antwoord": true,
+      "uitleg": "Waar: 4180 / 880 ≈ 4,75, dus water heeft bijna vijf keer zoveel warmte nodig om dezelfde massa met 1 K op te warmen. Daarom warmt aluminium veel sneller op (en koelt het ook sneller af) dan water bij dezelfde toegevoerde warmte."
     },
     {
       "type": "invul",
@@ -138,8 +138,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "In een vacuüm kan warmtetransport uitsluitend plaatsvinden via warmtestraling (infrarood).",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Geleiding en stroming hebben materie (atomen/moleculen) nodig."
+      "antwoord": true,
+      "uitleg": "Waar. Geleiding en stroming hebben materie (atomen/moleculen) nodig."
     },
     {
       "type": "invul",

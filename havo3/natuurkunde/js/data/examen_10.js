@@ -72,8 +72,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "In een parallelschakeling is de totale stroomsterkte altijd groter dan de stroomsterkte door elk van de afzonderlijke takken.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. De hoofdstroom is de som van alle takstromen: I_tot = I_1 + I_2 + ..."
+      "antwoord": true,
+      "uitleg": "Waar. De hoofdstroom is de som van alle takstromen: I_tot = I_1 + I_2 + ..."
     },
     {
       "type": "invul",
@@ -132,8 +132,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Als je twee weerstanden van 100 Ω in serie schakelt is de vervangingsweerstand 200 Ω; schakel je ze parallel dan is de vervangingsweerstand 50 Ω.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Serie: 100 + 100 = 200 Ω. Parallel: 100 / 2 = 50 Ω."
+      "antwoord": true,
+      "uitleg": "Waar. Serie: 100 + 100 = 200 Ω. Parallel: 100 / 2 = 50 Ω."
     },
     {
       "type": "mc",

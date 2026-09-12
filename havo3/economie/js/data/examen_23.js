@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Economie (HAVO 3) — Proeftoets 23: Integratie Casussen H4.1 en H4.2 — Van Grondstof tot Kostprijs (Pincode)
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-h3-economie-23",
   "hoofdstuk": 4,
   "paragraaf": "4.1",
@@ -181,13 +180,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De inkomensbeloning die hoort bij de productiefactor Natuur noemen we [pacht].",
+      "vraag": "De inkomensbeloning die hoort bij de productiefactor Natuur noemen we ____.",
       "antwoord": "pacht",
       "uitleg": "Pacht is de vergoeding voor het gebruik van grond en natuurlijke elementen."
     },
     {
       "type": "invul",
-      "vraag": "Het voordeel dat ontstaat wanneer vaste kosten over steeds grotere productieaantallen worden verdeeld heet [schaalvoordeel|schaalvoordelen].",
+      "vraag": "Het voordeel dat ontstaat wanneer vaste kosten over steeds grotere productieaantallen worden verdeeld heet ____.",
       "antwoord": "schaalvoordeel|schaalvoordelen",
       "uitleg": "Schaalvoordelen zorgen voor lagere vaste kosten per eenheid bij schaalvergroting."
     },
@@ -218,5 +217,4 @@ DURU.registerExamen(
       "uitleg": "Dit zijn de vier officiële bedrijfskostencategorieën uit het tekstboek Pincode."
     }
   ]
-}
-);
+});

@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Wiskunde (HAVO 3) — Proeftoets 8 — Frequentietabellen, Klassen & Relatieve Frequentie
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-wiskunde-h2-8",
   "hoofdstuk": 2,
   "titel": "Proeftoets 8 — Frequentietabellen, Klassen & Relatieve Frequentie",
@@ -180,13 +179,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "Het werkelijke aantal keren dat een waarneming voorkomt noemen we de [absolute frequentie].",
+      "vraag": "Het werkelijke aantal keren dat een waarneming voorkomt noemen we de ____.",
       "antwoord": "absolute frequentie",
       "uitleg": "Absolute frequentie is het zuivere getelde aantal waarnemingen."
     },
     {
       "type": "invul",
-      "vraag": "Het exacte gemiddelde van de ondergrens en bovengrens van een klasse heet het [klassenmidden].",
+      "vraag": "Het exacte gemiddelde van de ondergrens en bovengrens van een klasse heet het ____.",
       "antwoord": "klassenmidden",
       "uitleg": "Klassenmidden = (Ondergrens + Bovengrens) / 2."
     },
@@ -215,5 +214,4 @@ DURU.registerExamen(
       "uitleg": "(Aantal / Totaal) × 100%."
     }
   ]
-}
-);
+});

@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De instantie die in Nederland kredieten registreert heet het [BKR|Bureau Krediet Registratie].",
+      "vraag": "De instantie die in Nederland kredieten registreert heet het ____.",
       "antwoord": "BKR|Bureau Krediet Registratie",
       "uitleg": "BKR staat voor Bureau Krediet Registratie."
     },
     {
       "type": "invul",
-      "vraag": "Een langlopende lening voor een woning met het huis als onderpand heet een [hypotheek|hypothecaire lening].",
+      "vraag": "Een langlopende lening voor een woning met het huis als onderpand heet een ____.",
       "antwoord": "hypotheek|hypothecaire lening",
       "uitleg": "Een hypotheek is een lening voor onroerend goed."
     },
     {
       "type": "invul",
-      "vraag": "Het daadwerkelijk terugbetalen van de geleende hoofdsom heet [aflossen|aflossing].",
+      "vraag": "Het daadwerkelijk terugbetalen van de geleende hoofdsom heet ____.",
       "antwoord": "aflossen|aflossing",
       "uitleg": "Aflossen verlaagt de openstaande leenschuld."
     },
     {
       "type": "invul",
-      "vraag": "De totale extra kosten (rente + administratie) van een lening noemen we de [kredietkosten].",
+      "vraag": "De totale extra kosten (rente + administratie) van een lening noemen we de ____.",
       "antwoord": "kredietkosten",
       "uitleg": "Kredietkosten zijn alle kosten bovenop de geleende som."
     },

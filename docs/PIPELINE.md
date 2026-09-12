@@ -62,6 +62,20 @@ kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçül�
 9. **Çok satırlı string yok** — çift tırnaklı JS string'i gerçek satır sonu içeremez; `\n` kaçışı
    ya da backtick kullan. (Bu hata üç kez dosya bozdu.)
 10. **Teslimden önce her dosyada `node --check`.**
+11. **LaTeX yok** — projede KaTeX/MathJax yok; `$F_{res} = 0\text{ N}$` öğrenciye aynen görünür.
+    Düz metin + HTML yaz: `F<sub>res</sub> = m × a`, `m/s²`, `Δv`, `t<sub>½</sub>`. Sınavda `opties` ve
+    `modelantwoord` escape edilir → orada `<sub>` de çalışmaz, `Fres`/`F₁` gibi düz yaz. (Kapı: 12)
+12. **Üreteç script'inde `$` içeren metni shell heredoc'a / çift tırnağa koyma.** Shell `$1`, `$4`,
+    `$0`, `$$`, `$F_z` ifadelerini değişken sanıp yutar: `$10\text{ Nm}$` → "0 Nm", `$0{,}30` →
+    "bash{,}30", `$$` → işlem numarası "89565". natuurkunde'de 35 metin böyle bozuldu, bazılarında
+    **sayı yanlış** kaldı. Veriyi Python/JS dosyasından yaz, shell'den geçirme. (Kapı: 13)
+13. **`invul` sorusunda cevabı soruya yazma** — `"heet de [restwaarde]."` motor tarafından boşluğa
+    çevrilmez, cevap ekrana basılır. Boşluk `____` ile gösterilir. (economie'de 87 soru; kapı: 14)
+14. **Kapıyı geçmek için `waaronwaar` cevabını çevirme.** %35 onwaar barajı için ifade **gerçekten
+    yanlış** olacak şekilde yeniden yazılır; doğru bir ifadenin `antwoord`'unu `false` yapıp uitleg'e
+    "Onwaar: Waar." eklemek Duru'ya **yanlış bilgi öğretir** (natuurkunde'de 28 soru; kapı: 15).
+15. **`open` sayı anahtarı noktasız biçimle birlikte** — nakijken `"21.000"`'i `"21 000"`'e çevirir;
+    `21000` yazan öğrenci kaçar. `"21.000/21000"` yaz. (Kapı: 8)
 
 ## 📌 "Test Hazırla" ve Bölüm Üretimlerinde Zorunlu Kavram / Terim Standardı (2026-08-30)
 Kullanıcı **"test hazırla"** dediğinde veya herhangi bir ders için yeni bir bölüm/hoofdstuk işlendiğinde **otomatik olarak** şu adımlar uygulanır:

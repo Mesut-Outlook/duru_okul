@@ -114,8 +114,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Een apparaat met een energielabel A is energiezuiniger en heeft een hoger rendement dan een vergelijkbaar apparaat met label G.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Label A staat voor zeer efficiënt energiegebruik met weinig ongewenst warmteverlies."
+      "antwoord": true,
+      "uitleg": "Waar. Label A staat voor zeer efficiënt energiegebruik met weinig ongewenst warmteverlies."
     },
     {
       "type": "mc",
@@ -175,9 +175,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een apparaat staat het hele jaar onnodig in de <b>stand-by-stand</b> met een continu vermogen van 10 W. Bereken het jaarverbruik in kWh (1 jaar = 8760 uur) en leg uit waarom sluipverbruik een probleem is.",
       "sleutelwoorden": [
-        "87,6 kWh / 88 kWh",
-        "E = 0,010 kW * 8760 h",
-        "sluipverbruik kost onnodig geld/energie"
+        "87,6 kWh/88 kWh/87,6",
+        "0,010 kW/0,01 kW",
+        "verspilling/kosten/geld/energieverlies"
       ],
       "minTreffers": 2,
       "modelantwoord": "P = 10 W = 0,010 kW. E = P × t = 0,010 kW × 8760 uur = 87,6 kWh per jaar. Bij € 0,35 per kWh kost dit apparaat jaarlijks circa € 30,- aan ongebruikte stand-by-stroom. Sluipverbruik van meerdere apparaten bij elkaar telt op tot honderden kilowatturen per jaar, wat zorgt voor onnodige energiekosten en extra belasting van het milieu.",

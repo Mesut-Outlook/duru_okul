@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Het gestructureerde overzicht van verwachte inkomsten en uitgaven voor de komende periode noemen we een [begroting|budgetplan].",
+      "vraag": "Het gestructureerde overzicht van verwachte inkomsten en uitgaven voor de komende periode noemen we een ____.",
       "antwoord": "begroting|budgetplan",
       "uitleg": "Een begroting laat vooraf zien of je zult uitkomen met je financiën."
     },
     {
       "type": "invul",
-      "vraag": "Wanneer de uitgaven groter zijn dan de inkomsten is er sprake van een [begrotingstekort|tekort].",
+      "vraag": "Wanneer de uitgaven groter zijn dan de inkomsten is er sprake van een ____.",
       "antwoord": "begrotingstekort|tekort",
       "uitleg": "Bij een tekort kom je geld tekort en moet je bezuinigen."
     },
     {
       "type": "invul",
-      "vraag": "Om van een weekbedrag een maandbedrag te maken vermenigvuldig je met 52 en deel je door [12].",
+      "vraag": "Om van een weekbedrag een maandbedrag te maken vermenigvuldig je met 52 en deel je door ____.",
       "antwoord": "12",
       "uitleg": "Formule: (weekbedrag × 52) / 12."
     },
     {
       "type": "invul",
-      "vraag": "Het onafhankelijke instituut voor budgetvoorlichting heet het [NIBUD|Nibud].",
+      "vraag": "Het onafhankelijke instituut voor budgetvoorlichting heet het ____.",
       "antwoord": "NIBUD|Nibud",
       "uitleg": "Het Nationaal Instituut voor Budgetvoorlichting (NIBUD)."
     },

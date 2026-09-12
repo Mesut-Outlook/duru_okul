@@ -84,12 +84,12 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "De dikke betonnen koepel (containment) om het reactorvat dient om te voorkomen dat er bij een calamiteit radioactiviteit in het milieu ontsnapt.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. De containment is een metersdikke bunker van gewapend beton en staal."
+      "antwoord": true,
+      "uitleg": "Waar. De containment is een metersdikke bunker van gewapend beton en staal."
     },
     {
       "type": "invul",
-      "vraag": "Een hoeveelheid Jodium-131 ($t_{1/2} = 8\text{ dagen}$) heeft een beginactiviteit van 160 kBq. Na hoeveel dagen is de activiteit gedaald tot 10 kBq?",
+      "vraag": "Een hoeveelheid Jodium-131 (t<sub>½</sub> = 8 dagen) heeft een beginactiviteit van 160 kBq. Na hoeveel dagen is de activiteit gedaald tot 10 kBq?",
       "antwoord": "32|32 dagen|32 d",
       "uitleg": "160 -> 80 -> 40 -> 20 -> 10 kBq = 4 halveringstijden. Tijd = 4 × 8 dagen = 32 dagen."
     },
@@ -113,9 +113,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een atoomkern van Uranium-238 ($^{238}_{92}\text{U}$) zendt een alfadeeltje ($^{4}_{2}\text{He}$) uit. Wat is het massagetal van de ontstane dochterkern (Thorium)?",
+      "vraag": "Een atoomkern van Uranium-238 (<sup>238</sup><sub>92</sub>U) zendt een alfadeeltje (<sup>4</sup><sub>2</sub>He) uit. Wat is het massagetal van de ontstane dochterkern (Thorium)?",
       "antwoord": "234",
-      "uitleg": "Massagetal = 238 - 4 = 234 ($^{234}_{90}\text{Th}$)."
+      "uitleg": "Massagetal = 238 - 4 = 234 (<sup>234</sup><sub>90</sub>Th)."
     },
     {
       "type": "mc",
@@ -132,8 +132,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Bij een kernongeval is het koelhouden van de reactor cruciaal, omdat de splijtingsproducten na uitschakeling nog langere tijd nawarmte produceren.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Zonder noodkoeling kan de reactorkern oververhitten en smelten (meltdown)."
+      "antwoord": true,
+      "uitleg": "Waar. Zonder noodkoeling kan de reactorkern oververhitten en smelten (meltdown)."
     },
     {
       "type": "invul",
@@ -161,7 +161,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "In een ziekenhuis wordt een radioactieve bron afgeschermd met loden platen. Eén loden plaat van 1,5 cm dikte halveert de stralingsintensiteit (halveringsdikte $d_{1/2} = 1{,}5\text{ cm}$). Hoeveel cm lood is er nodig om de straling terug te brengen tot 12,5% (drie halveringen)?",
+      "vraag": "In een ziekenhuis wordt een radioactieve bron afgeschermd met loden platen. Eén loden plaat van 1,5 cm dikte halveert de stralingsintensiteit (halveringsdikte d<sub>½</sub> = 1,5 cm). Hoeveel cm lood is er nodig om de straling terug te brengen tot 12,5% (drie halveringen)?",
       "antwoord": "4,5|4,5 cm|4.5",
       "uitleg": "3 halveringsdiktes: 3 × 1,5 cm = 4,5 cm lood."
     },

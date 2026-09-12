@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Het aantal verkochte stuks producten heet de [afzet].",
+      "vraag": "Het aantal verkochte stuks producten heet de ____.",
       "antwoord": "afzet",
       "uitleg": "Afzet meet de fysieke verkoophoeveelheid."
     },
     {
       "type": "invul",
-      "vraag": "De totale geldopbrengst van de verkopen (prijs × afzet) heet de [omzet|totale opbrengst].",
+      "vraag": "De totale geldopbrengst van de verkopen (prijs × afzet) heet de ____.",
       "antwoord": "omzet|totale opbrengst",
       "uitleg": "Omzet = Prijs × Afzet."
     },
     {
       "type": "invul",
-      "vraag": "Het punt waarop de totale opbrengst precies gelijk is aan de totale kosten heet het [break-evenpunt|BEP].",
+      "vraag": "Het punt waarop de totale opbrengst precies gelijk is aan de totale kosten heet het ____.",
       "antwoord": "break-evenpunt|BEP",
       "uitleg": "Op het break-evenpunt is de winst nul."
     },
     {
       "type": "invul",
-      "vraag": "De afkorting btw staat voor belasting over de [toegevoegde waarde].",
+      "vraag": "De afkorting btw staat voor belasting over de ____.",
       "antwoord": "toegevoegde waarde",
       "uitleg": "Btw = Belasting over de Toegevoegde Waarde."
     },
@@ -182,8 +182,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een winkelier behaalt een omzet van € 80.000. De inkoopwaarde van de verkochte goederen is € 45.000. De overige bedrijfskosten zijn € 20.000. Bereken de brutowinst en de nettowinst.",
       "sleutelwoorden": [
-        "brutowinst: 35.000",
-        "nettowinst: 15.000"
+        "35.000/35000",
+        "15.000/15000"
       ],
       "minTreffers": 2,
       "modelantwoord": "Brutowinst = € 80.000 - € 45.000 = € 35.000. Nettowinst = € 35.000 - € 20.000 = € 15.000.",

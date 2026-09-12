@@ -1,12 +1,12 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten
+   Duru's Natuurkunde (HAVO 3) — Toets 1 — Begrippen, Formules & Basiskennis (§1.1, §1.2 & §1.3)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-1",
   "hoofdstuk": 1,
-  "titel": "Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten",
+  "titel": "Toets 1 — Begrippen, Formules & Basiskennis (§1.1, §1.2 & §1.3)",
   "vak": "Natuurkunde · HAVO 3 (H1)",
-  "icoon": "🏎️",
+  "icoon": "🎯",
   "duurMin": 30,
   "vragen": [
     {
@@ -19,180 +19,197 @@ DURU.registerExamen({
         "Kilogram (kg)"
       ],
       "antwoord": 0,
-      "uitleg": "Kracht wordt gemeten in Newton (N). Joule is voor energie/arbeid, Watt voor vermogen en kilogram voor massa."
+      "uitleg": "Kracht wordt in het SI-stelsel gemeten in Newton (N). Joule is de eenheid voor energie en arbeid, Watt voor vermogen en kilogram voor massa."
     },
     {
       "type": "mc",
-      "vraag": "Een auto rijdt naar rechts met een motorkracht van 1200 N. De tegenwerkende wrijvingskrachten bedragen samen 800 N. Hoe groot is de <b>resulterende kracht (F_res)</b> en wat gebeurt er met de beweging?",
+      "vraag": "Welk meetinstrument gebruik je in het natuurkundelokaal om rechtstreeks een trekkracht te meten?",
       "opties": [
-        "400 N naar links; de auto vertraagt",
-        "400 N naar rechts; de auto versnelt",
-        "2000 N naar rechts; de auto rijdt met constante snelheid",
-        "0 N; de auto staat stil"
+        "Een voltmeter",
+        "Een dynamometer (veerkrachtmeter)",
+        "Een barometer",
+        "Een chronometer"
       ],
       "antwoord": 1,
-      "uitleg": "F_res = F_motor - F_tegen = 1200 N - 800 N = 400 N naar rechts. Omdat de resulterende kracht in de bewegingsrichting werkt, versnelt de auto."
-    },
-    {
-      "type": "waaronwaar",
-      "vraag": "Als de resulterende kracht op een bewegend voorwerp gelijk is aan <b>0 N</b>, komt het voorwerp onmiddellijk tot stilstand.",
-      "antwoord": false,
-      "uitleg": "Niet waar. Als F_res = 0 N, blijft de snelheid constant (eenparige beweging). Het voorwerp behoudt zijn snelheid en richting."
-    },
-    {
-      "type": "invul",
-      "vraag": "Reken om: een fietser rijdt met een snelheid van <b>18 km/h</b>. Hoeveel meter per seconde (m/s) is dat?",
-      "antwoord": "5|5,0|5 m/s",
-      "uitleg": "Om te rekenen van km/h naar m/s deel je door 3,6: 18 / 3,6 = 5 m/s."
+      "uitleg": "Een dynamometer bevat een spiraalveer die uitrekt als er een kracht op werkt. Op de schaalverdeling lees je de kracht rechtstreeks af in Newton."
     },
     {
       "type": "mc",
-      "vraag": "Wat voor soort beweging stelt een <b>horizontale rechte lijn</b> in een <b>(v,t)-diagram</b> voor?",
+      "vraag": "Wat stelt het symbool <b>v</b> voor in natuurkundige formules en welke SI-eenheid hoort hier standaard bij?",
       "opties": [
-        "Eenparig versnelde beweging",
-        "Stilstand",
-        "Eenparige beweging (constante snelheid)",
-        "Eenparig vertraagde beweging"
+        "Versnelling in m/s²",
+        "Vermogen in Watt",
+        "Snelheid in m/s",
+        "Verplaatsing in km"
       ],
       "antwoord": 2,
-      "uitleg": "In een (v,t)-diagram staat de snelheid op de verticale as. Een horizontale lijn betekent dat de snelheid niet verandert: de beweging is eenparig (constante snelheid)."
-    },
-    {
-      "type": "invul",
-      "vraag": "Reken om: een hardloper rent met <b>4,5 m/s</b>. Hoeveel km/h is dat?",
-      "antwoord": "16,2|16,2 km/h",
-      "uitleg": "Om te rekenen van m/s naar km/h vermenigvuldig je met 3,6: 4,5 × 3,6 = 16,2 km/h."
+      "uitleg": "Het symbool v staat voor snelheid (van het Latijnse velocitas). De standaard SI-eenheid van snelheid is meter per seconde (m/s)."
     },
     {
       "type": "mc",
-      "vraag": "Twee personen trekken aan een touw. Anna trekt naar links met 150 N, Bram trekt naar rechts met 150 N. Wat is de resulterende kracht?",
+      "vraag": "Hoe noem je een beweging waarbij de snelheid iedere seconde met exact dezelfde hoeveelheid toeneemt?",
       "opties": [
-        "300 N naar links",
-        "300 N naar rechts",
-        "150 N naar rechts",
-        "0 N"
+        "Een eenparige beweging",
+        "Een eenparig vertraagde beweging",
+        "Een niet-eenparige beweging",
+        "Een eenparig versnelde beweging"
       ],
       "antwoord": 3,
-      "uitleg": "De krachten zijn even groot maar tegengesteld gericht: 150 N - 150 N = 0 N. Ze heffen elkaar precies op."
-    },
-    {
-      "type": "waaronwaar",
-      "vraag": "In een <b>(s,t)-diagram</b> betekent een steilere lijn dat de snelheid groter is.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. De helling (steilheid) in een (s,t)-diagram geeft aan hoeveel afstand er per seconde wordt afgelegd, oftewel de snelheid."
+      "uitleg": "Als de snelheid elke seconde met een vaste hoeveelheid stijgt, is de versnelling constant. Dit heet een eenparig versnelde beweging."
     },
     {
       "type": "mc",
-      "vraag": "Een scooter rijdt in 15 seconden een afstand van 180 meter met constante snelheid. Wat is zijn snelheid in m/s?",
+      "vraag": "Wat gebeurt er met de toestand van een voorwerp wanneer de resulterende kracht gelijk is aan 0 N (F<sub>res</sub> = 0 N)?",
       "opties": [
-        "12 m/s",
-        "10 m/s",
-        "8 m/s",
-        "15 m/s"
+        "De snelheid en bewegingsrichting blijven onveranderd (constante snelheid of stilstand)",
+        "Het voorwerp komt altijd direct tot stilstand",
+        "Het voorwerp begint direct te versnellen",
+        "De massa van het voorwerp neemt geleidelijk af"
       ],
       "antwoord": 0,
-      "uitleg": "v = s / t = 180 m / 15 s = 12 m/s."
-    },
-    {
-      "type": "invul",
-      "vraag": "Als een voorwerp iedere seconde met <b>dezelfde hoeveelheid snelheid toeneemt</b>, noem je de beweging … versneld.",
-      "antwoord": "eenparig|eenparig versneld",
-      "uitleg": "Als de snelheid gelijkmatig (met een vast aantal m/s per seconde) toeneemt, heet dat een eenparig versnelde beweging."
+      "uitleg": "Als alle krachten elkaar opheffen (F<sub>res</sub> = 0 N), verandert er niets aan de snelheid. Een stilstaand voorwerp blijft stilstaan en een bewegend voorwerp behoudt zijn constante snelheid (eenparige beweging)."
     },
     {
       "type": "mc",
-      "vraag": "Welke twee krachten vormen samen de belangrijkste <b>tegenwerkende kracht</b> op een rijdende fietser?",
+      "vraag": "Wat geeft de <b>steilheid (helling)</b> van de grafieklijn aan in een <b>(s,t)-diagram</b>?",
       "opties": [
-        "Zwaartekracht en normaalkracht",
-        "Luchtweerstand en rolweerstand",
-        "Spierkracht en veerkracht",
-        "Motorkracht en zwaartekracht"
+        "De versnelling van het voorwerp",
+        "De snelheid van het voorwerp",
+        "De uitgeoefende wrijvingskracht",
+        "De totale verstreken tijdsduur"
       ],
       "antwoord": 1,
-      "uitleg": "De tegenwerkende wrijvingskrachten bij fietsen zijn de luchtweerstand (wrijving met de lucht) en de rolweerstand (wrijving van de banden met de weg)."
-    },
-    {
-      "type": "waaronwaar",
-      "vraag": "Als je twee keer zo snel fietst, wordt de <b>luchtweerstand</b> ongeveer vier keer zo groot.",
-      "antwoord": true,
-      "uitleg": "Waar. De luchtweerstand stijgt kwadratisch met de snelheid (als de snelheid verdubbelt, wordt de luchtweerstand 2² = 4 keer zo groot)."
+      "uitleg": "In een (s,t)-diagram staat afstand verticaal en tijd horizontaal. De helling Δs / Δt is gelijk aan de snelheid: hoe steiler de lijn, hoe groter de snelheid."
     },
     {
       "type": "mc",
-      "vraag": "Hoe bepaal je de <b>afgelegde afstand</b> uit een <b>(v,t)-diagram</b>?",
+      "vraag": "Welke twee tegenwerkende weerstandskrachten werken samen als totale tegenkracht op een rijdende fietser?",
       "opties": [
-        "Door de hoogste snelheid af te lezen",
-        "Door de helling van de lijn te bepalen",
+        "De zwaartekracht en de normaalkracht",
+        "De motorkracht en de spierkracht",
+        "De luchtweerstand en de rolweerstand",
+        "De spankracht en de veerkracht"
+      ],
+      "antwoord": 2,
+      "uitleg": "Op een rijdende fietser werken horizontaal twee weerstandskrachten tegen: de luchtweerstand (wrijving met de lucht) en de rolweerstand (vervorming van band en wegdek)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Welke formule geeft de Tweede wet van Newton correct weer?",
+      "opties": [
+        "v = s / t",
+        "s = v × t",
+        "a = Δv / t",
+        "Fres = m × a"
+      ],
+      "antwoord": 3,
+      "uitleg": "De tweede wet van Newton luidt F<sub>res</sub> = m · a: de resulterende kracht (in N) is gelijk aan de massa (in kg) vermenigvuldigd met de versnelling (in m/s²)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe reken je een snelheid in kilometer per uur (km/h) correct om naar meter per seconde (m/s)?",
+      "opties": [
+        "Delen door 3,6",
+        "Vermenigvuldigen met 3,6",
+        "Delen door 60",
+        "Vermenigvuldigen met 10"
+      ],
+      "antwoord": 0,
+      "uitleg": "Omdat 1 uur 3600 seconden heeft en 1 km 1000 meter is, geldt: 1 m/s = 3,6 km/h. Omrekenen van km/h naar m/s doe je dus door te delen door 3,6."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe heet de eigenschap van materie waardoor een voorwerp zich verzet tegen iedere verandering van zijn snelheid of bewegingsrichting?",
+      "opties": [
+        "Veerkracht",
+        "Traagheid (inertie)",
+        "Elasticiteit",
+        "Zwaartekracht"
+      ],
+      "antwoord": 1,
+      "uitleg": "Massa bezit traagheid (of inertie). Een zwaar voorwerp verzet zich sterker tegen snelheidsveranderingen dan een licht voorwerp."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe kun je in een <b>(v,t)-diagram</b> de totale afgelegde afstand bepalen?",
+      "opties": [
+        "Door de helling van de lijn te berekenen",
+        "Door de eindsnelheid te delen door de verstreken tijd",
         "Door de oppervlakte onder de grafieklijn te berekenen",
-        "Door de eindsnelheid te delen door de tijd"
+        "Door de gemiddelde versnelling te vermenigvuldigen met de massa"
       ],
       "antwoord": 2,
-      "uitleg": "De afgelegde afstand s is gelijk aan de oppervlakte onder de (v,t)-grafiek (bijv. rechthoek: v × t of driehoek: 0,5 × v × t)."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een auto trekt eenparig op vanuit stilstand (v = 0 m/s) naar 20 m/s in 8,0 seconden. Bereken de afgelegde afstand s in meters (gebruik de oppervlakte van de driehoek onder de grafiek).",
-      "antwoord": "80|80 m|80,0",
-      "uitleg": "Afstand = oppervlakte onder de driehoek = 0,5 × basis × hoogte = 0,5 × 8,0 s × 20 m/s = 80 meter."
+      "uitleg": "De oppervlakte onder de (v,t)-grafiek heeft als eenheid m/s × s = meter. De oppervlakte stelt dus de afgelegde afstand s voor."
     },
     {
       "type": "mc",
-      "vraag": "Wat stelt een <b>horizontale rechte lijn</b> in een <b>(s,t)-diagram</b> voor?",
+      "vraag": "Wat is de officiële eenheid van <b>versnelling (a)</b> in het SI-stelsel?",
       "opties": [
-        "Het voorwerp vertraagt",
-        "Het voorwerp beweegt met constante snelheid",
-        "Het voorwerp versnelt",
-        "Het voorwerp staat stil"
+        "m/s",
+        "km/h",
+        "N/kg",
+        "m/s²"
       ],
       "antwoord": 3,
-      "uitleg": "In een (s,t)-diagram staat de afstand op de y-as. Een horizontale lijn betekent dat de afstand niet verandert in de tijd: het voorwerp staat stil."
+      "uitleg": "Versnelling is de snelheidsverandering per seconde: (m/s) / s = m/s² (meter per seconde kwadraat)."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een kracht is een vectorgrootheid, wat betekent dat een kracht zowel een <b>grootte</b> als een <b>richting</b> heeft.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Kracht heeft een grootte (aantal Newton), een richting (waarheen) en een aangrijpingspunt."
+      "vraag": "Een raceauto die met een constante snelheid van 240 km/h over een recht stuk rijdt, ondervindt een resulterende kracht van exact 0 N.",
+      "antwoord": true,
+      "uitleg": "Waar. Omdat de snelheid constant is en de auto in een rechte lijn rijdt, is er geen versnelling (a = 0). Volgens F<sub>res</sub> = m · a is de resulterende kracht dan precies 0 N."
     },
     {
-      "type": "mc",
-      "vraag": "Een trein rijdt met een constante snelheid van 90 km/h gedurende 20 minuten. Welke afstand legt de trein af?",
-      "opties": [
-        "30 km",
-        "18 km",
-        "45 km",
-        "60 km"
-      ],
-      "antwoord": 0,
-      "uitleg": "20 minuten = 1/3 uur (of 20/60 = 0,333 uur). Afstand s = v × t = 90 km/h × (20/60) h = 30 km."
+      "type": "waaronwaar",
+      "vraag": "In een (s,t)-diagram betekent een horizontale rechte lijn dat het voorwerp met een constante, gelijkmatige snelheid beweegt.",
+      "antwoord": false,
+      "uitleg": "Niet waar. In een (s,t)-diagram betekent een horizontale lijn dat de afstand niet verandert in de tijd: het voorwerp staat dus stil (v = 0 m/s)."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Volgens de formule F<sub>res</sub> = m · a krijgt een voorwerp met een twee keer zo grote massa bij dezelfde kracht een twee keer zo kleine versnelling.",
+      "antwoord": true,
+      "uitleg": "Waar. De versnelling is omgekeerd evenredig met de massa (a = F<sub>res</sub> / m). Hoe zwaarder het voorwerp, hoe kleiner de versnelling bij gelijke kracht."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Om een snelheid van meter per seconde (m/s) om te rekenen naar kilometer per uur (km/h) moet je de waarde delen door 3,6.",
+      "antwoord": false,
+      "uitleg": "Niet waar. Van m/s naar km/h moet je juist vermenigvuldigen met 3,6 (bijvoorbeeld 10 m/s = 36 km/h)."
     },
     {
       "type": "invul",
-      "vraag": "Drie kinderen duwen samen een kano vooruit met krachten van 45 N, 55 N en 60 N. Het water oefent een tegenwerkende wrijvingskracht uit van 110 N. Hoe groot is de resulterende kracht in Newton?",
-      "antwoord": "50|50 N",
-      "uitleg": "Totale voorwaartse kracht = 45 + 55 + 60 = 160 N. Tegenwerkende kracht = 110 N. F_res = 160 N - 110 N = 50 N."
+      "vraag": "Reken om: een stadsbus rijdt met een constante snelheid van <b>54 km/h</b>. Hoeveel meter per seconde (m/s) is dat?",
+      "antwoord": "15|15 m/s|15,0|15,0 m/s",
+      "uitleg": "Om te rekenen van km/h naar m/s deel je door 3,6: 54 / 3,6 = 15 m/s."
+    },
+    {
+      "type": "invul",
+      "vraag": "Een trein legt in 0,50 uur een afstand van 45 km af. Bereken de gemiddelde snelheid in km/h.",
+      "antwoord": "90|90 km/h|90,0|90,0 km/h",
+      "uitleg": "v_gem = s / t = 45 km / 0,50 h = 90 km/h."
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen een <b>versnelde beweging</b> en een <b>eenparig versnelde beweging</b>.",
+      "vraag": "Leg uit wat er wordt bedoeld met de 'resulterende kracht' (of somkracht) als er tegelijkertijd meerdere krachten op een voorwerp werken.",
       "sleutelwoorden": [
-        "toeneemt/groter wordt",
-        "gelijkmatig/iedere seconde evenveel/constante versnelling"
+        "alle krachten samen/som van de krachten/optelsom",
+        "hetzelfde effect/vervangende kracht"
       ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij een versnelde beweging neemt de snelheid in de loop van de tijd toe. Bij een eenparig versnelde beweging neemt de snelheid gelijkmatig toe, wat betekent dat er iedere seconde precies evenveel snelheid bij komt (de versnelling is constant).",
-      "uitleg": "Kernpunten: beide bewegingen gaan sneller, maar 'eenparig' betekent dat de toename per tijdseenheid constant (gelijkmatig) is."
+      "minTreffers": 1,
+      "modelantwoord": "De resulterende kracht is de som van alle afzonderlijke krachten die op een voorwerp werken. Deze ene denkbeeldige kracht heeft precies hetzelfde effect op de beweging als alle losse krachten bij elkaar.",
+      "uitleg": "De resulterende kracht vervangt alle afzonderlijke krachten en bepaalt de uiteindelijke versnelling of vertraging van het voorwerp."
     },
     {
       "type": "open",
-      "vraag": "Een parachutist springt uit een vliegtuig. Na enige tijd bereikt hij een constante eindsnelheid (nog vóór hij zijn parachute opent). Leg uit welke <b>krachten</b> er op hem werken en waarom zijn snelheid niet meer toeneemt.",
+      "vraag": "Waarom kost het aanzienlijk meer spierkracht om een zware bakfiets op gang te brengen dan een lichte racefiets? Benoem het natuurkundige verschijnsel.",
       "sleutelwoorden": [
-        "zwaartekracht",
-        "luchtweerstand",
-        "gelijk/opheffen/nul/resulterende kracht 0"
+        "traagheid/inertie",
+        "grotere massa/veel massa"
       ],
-      "minTreffers": 2,
-      "modelantwoord": "Tijdens het vallen neemt door de toenemende snelheid de luchtweerstand steeds verder toe, totdat de omhooggerichte luchtweerstand precies even groot is als de omlaaggerichte zwaartekracht. De resulterende kracht wordt dan 0 N, waardoor de snelheid constant blijft en niet meer toeneemt.",
-      "uitleg": "Als F_lucht = F_zwaartekracht, is F_res = 0 N en versnelt de springer niet meer."
+      "minTreffers": 1,
+      "modelantwoord": "Een bakfiets heeft een veel grotere massa dan een racefiets. Door de grotere traagheid (inertie) verzet de bakfiets zich veel sterker tegen een verandering van snelheid. Volgens F = m · a is er daardoor een grotere kracht nodig om dezelfde versnelling te krijgen.",
+      "uitleg": "Massa bezit traagheid: hoe groter de massa, des te meer kracht nodig is om het voorwerp op gang te brengen."
     }
   ]
 });

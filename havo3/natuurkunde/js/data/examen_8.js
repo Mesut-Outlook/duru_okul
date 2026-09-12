@@ -102,8 +102,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "In een parallelschakeling loopt door de tak met de <b>kleinste weerstand</b> de <b>grootste stroom</b>.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Omdat U gelijk is, geldt I = U / R: de tak met de minste weerstand laat de meeste stroom door."
+      "antwoord": true,
+      "uitleg": "Waar. Omdat U gelijk is, geldt I = U / R: de tak met de minste weerstand laat de meeste stroom door."
     },
     {
       "type": "invul",
@@ -156,8 +156,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Kortsluiting ontstaat wanneer de stroomkring een pad krijgt met nagenoeg 0 Ohm weerstand, waardoor de stroomsterkte extreem hoog wordt.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Bij R ≈ 0 wordt I = U / R gigantisch groot, wat leidt tot vonken, smelten van draden of brand."
+      "antwoord": true,
+      "uitleg": "Waar. Bij R ≈ 0 wordt I = U / R gigantisch groot, wat leidt tot vonken, smelten van draden of brand."
     },
     {
       "type": "open",

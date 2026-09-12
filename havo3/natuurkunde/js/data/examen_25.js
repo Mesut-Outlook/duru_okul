@@ -77,7 +77,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Op een wipwap zit Thomas ( = 450\text{ N}$) op 1,6 m van het draaipunt. Aan de andere kant zit Lisa op 2,0 m van het draaipunt in evenwicht. Hoe zwaar is Lisa in Newton?",
+      "vraag": "Op een wipwap zit Thomas (F<sub>z</sub> = 450 N) op 1,6 m van het draaipunt. Aan de andere kant zit Lisa op 2,0 m van het draaipunt in evenwicht. Hoe zwaar is Lisa in Newton?",
       "antwoord": "360|360 N",
       "uitleg": "F₂ = (450 N × 1,6 m) / 2,0 m = 720 / 2,0 = 360 N."
     },
@@ -85,7 +85,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Bij een vaste katrol hoef je slechts de helft van de touwlengte binnen te halen vergeleken met de hoogte waarover de last stijgt.",
       "antwoord": false,
-      "uitleg": "Onwaar: Waar. Een vaste katrol verandert alleen de richting, niet de kracht en niet de afstand."
+      "uitleg": "Onwaar. Een vaste katrol verandert alleen de richting van de kracht: je haalt precies evenveel touw binnen als de last omhoog gaat."
     },
     {
       "type": "mc",
@@ -145,7 +145,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Een schroevendraaier met een dunner handvat levert bij dezelfde handkracht een groter draaimoment dan een met een dik handvat.",
       "antwoord": false,
-      "uitleg": "Onwaar: Waar. De straal (arm r) van het dikke handvat is groter, waardoor M = F × r toeneemt."
+      "uitleg": "Onwaar. Een dik handvat heeft een grotere straal (arm r), dus bij dezelfde handkracht is het draaimoment M = F × r juist groter. Een dun handvat geeft een kleiner moment."
     },
     {
       "type": "invul",
@@ -173,19 +173,19 @@ DURU.registerExamen({
         "krachtvoordeel/factor 4"
       ],
       "minTreffers": 2,
-      "modelantwoord": "1. Vaste katrol: - Spierkracht:  = 800\text{ N}$ (geen krachtwinst, alleen richtingsverandering). - Touwlengte:  = 1{,}0\text{ m}$. 2. Losse katrol (2 dragende touwdelen): - Spierkracht:  = 800 / 2 = 400\text{ N}$ (kracht gehalveerd). - Touwlengte:  = 2 \times 1{,}0 = 2{,}0\text{ m}$. 3. Takel met 4 touwdelen: - Spierkracht:  = 800 / 4 = 200\text{ N}$ (kracht 4× kleiner). - Touwlengte:  = 4 \times 1{,}0 = 4{,}0\text{ m}$.",
+      "modelantwoord": "Bij een takel met 4 dragende touwdelen wordt het gewicht van de last verdeeld over 4 touwdelen: in elk touwdeel staat een spankracht van een kwart van de last. Je krachtvoordeel is dus een factor 4 (een last van 800 N vraagt 200 N spierkracht). Volgens de Gouden Regel moet je daarvoor wel 4x zoveel touw binnenhalen.",
       "uitleg": "Vergelijking van hefwerktuigen."
     },
     {
       "type": "open",
-      "vraag": "Een olifant van 36.000 N staat op 4 poten (elk 50\text{ cm}^2$). Een circusartieste van 540 N balanceert op de punt van één stilettohak (bash{,}30\text{ cm}^2$). Bereken voor beide de druk in N/cm² en leg uit wie van de twee de grootste kans heeft om een houten parketvloer te beschadigen (deukjes te maken).",
+      "vraag": "Een olifant van 36.000 N staat op 4 poten (elk 450 cm²). Een circusartieste van 540 N balanceert op de punt van één stilettohak (0,30 cm²). Bereken voor beide de druk in N/cm² en leg uit wie van de twee de grootste kans heeft om een houten parketvloer te beschadigen (deukjes te maken).",
       "sleutelwoorden": [
         "20",
         "1800",
         "vrouw/hak/deukjes/grootste druk/puntbelasting"
       ],
       "minTreffers": 3,
-      "modelantwoord": "Berekening olifant: - Totaal oppervlak =  \times 450 = 1800\text{ cm}^2$. - Druk =  / A = 36.000\text{ N} / 1800\text{ cm}^2 = 20\text{ N/cm}^2$. Berekening artieste op stilettohak: - Oppervlak = bash{,}30\text{ cm}^2$. - Druk =  / A = 540\text{ N} / 0{,}30\text{ cm}^2 = 1800\text{ N/cm}^2$. Conclusie: De druk onder de stilettohak (800\text{ N/cm}^2$) is maar liefst 90 keer zo groot als de druk onder de poten van de olifant (0\text{ N/cm}^2$). De artieste op de stilettohak zal dus veel eerder deukjes en putjes in het houten parket drukken.",
+      "modelantwoord": "Olifant: totaal oppervlak = 4 × 450 = 1800 cm². Druk = F / A = 36.000 N / 1800 cm² = 20 N/cm². Artieste op stilettohak: oppervlak = 0,30 cm². Druk = F / A = 540 N / 0,30 cm² = 1800 N/cm². Conclusie: de druk onder de stilettohak (1800 N/cm²) is 90 keer zo groot als onder de poten van de olifant (20 N/cm²). De vrouw op de hak maakt dus veel eerder deukjes in het parket.",
       "uitleg": "Drukvergelijking tussen grote kracht / groot oppervlak en kleine kracht / miniem oppervlak."
     }
   ]

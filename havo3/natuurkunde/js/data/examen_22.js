@@ -41,7 +41,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Om de hefboom uit de vorige vraag ({\text{links}} = 12\text{ Nm}$) in evenwicht te brengen, wordt rechts één gewichtje geplaatst op een afstand van 0,30 m van het draaipunt. Hoe groot moet de zwaartekracht op dit gewichtje zijn in Newton?",
+      "vraag": "Om de hefboom uit de vorige vraag (M<sub>links</sub> = 12 Nm) in evenwicht te brengen, wordt rechts één gewichtje geplaatst op een afstand van 0,30 m van het draaipunt. Hoe groot moet de zwaartekracht op dit gewichtje zijn in Newton?",
       "antwoord": "40|40 N",
       "uitleg": "F_rechts = M_links / r_rechts = 12 Nm / 0,30 m = 40 N."
     },
@@ -65,7 +65,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Wat is de massa in kg van de maximale last van 16.000 N uit de vorige vraag (neem  = 9{,}8\text{ N/kg}$ of 0\text{ N/kg}$, reken met  = 10\text{ N/kg}$)?",
+      "vraag": "Wat is de massa in kg van de maximale last van 16.000 N uit de vorige vraag (reken met g = 10 N/kg)?",
       "antwoord": "1600|1600 kg|1.600|1.600 kg",
       "uitleg": "m = F_z / g = 16.000 N / 10 N/kg = 1.600 kg (of 1633 kg bij g=9,8)."
     },
@@ -85,7 +85,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Een hefboom is stabiel in evenwicht als het zwaartepunt zich recht BOVEN het draaipunt bevindt.",
       "antwoord": false,
-      "uitleg": "Onwaar: Waar. Als het zwaartepunt onder het ophangpunt ligt, keert het bij verstoring vanzelf terug naar evenwicht (stabiel evenwicht)."
+      "uitleg": "Onwaar. Een hefboom is juist stabiel als het zwaartepunt recht ONDER het draaipunt ligt: bij een verstoring keert hij vanzelf terug. Ligt het zwaartepunt erboven, dan valt hij om (labiel evenwicht)."
     },
     {
       "type": "invul",
@@ -107,13 +107,13 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Als een kracht schuin werkt op een hefboom (hoek kleiner dan 90°), is de arm $ korter dan de afstand langs de hefboom van draaipunt tot aangrijpingspunt.",
+      "vraag": "Als een kracht schuin werkt op een hefboom (hoek kleiner dan 90°), is de arm r korter dan de afstand langs de hefboom van draaipunt tot aangrijpingspunt.",
       "antwoord": true,
       "uitleg": "Waar. Omdat de loodrechte afstand altijd korter is dan de schuine zijde van de driehoek (r = l × sin(alpha))."
     },
     {
       "type": "invul",
-      "vraag": "Een kruiwagen bevat 90 kg zand ( = 900\text{ N}$). De last bevindt zich op een arm van 40 cm van het voorwiel (draaipunt). De handvatten zitten op 120 cm van het voorwiel. Welke opwaartse tilkracht in Newton moet je uitoefenen op de handvatten om de kruiwagen op te tillen?",
+      "vraag": "Een kruiwagen bevat 90 kg zand (F<sub>z</sub> = 900 N). De last bevindt zich op een arm van 40 cm van het voorwiel (draaipunt). De handvatten zitten op 120 cm van het voorwiel. Welke opwaartse tilkracht in Newton moet je uitoefenen op de handvatten om de kruiwagen op te tillen?",
       "antwoord": "300|300 N",
       "uitleg": "F_spier × 120 cm = 900 N × 40 cm = 36.000 -> F_spier = 36.000 / 120 = 300 N."
     },
@@ -131,9 +131,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Als je een kracht van 50 N loodrecht op een arm van 20 cm uitoefent, is het moment 0\text{ Nm}$.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. 20 cm = 0,20 m. M = 50 N × 0,20 m = 10 Nm."
+      "vraag": "Als je een kracht van 50 N loodrecht op een arm van 20 cm uitoefent, is het moment 10 Nm.",
+      "antwoord": true,
+      "uitleg": "Waar. 20 cm = 0,20 m. M = 50 N × 0,20 m = 10 Nm."
     },
     {
       "type": "invul",
@@ -155,7 +155,7 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een balans of weegschaal met twee gelijke armen werkt op basis van de hefboomwet ( \times r = F_2 \times r implies F_1 = F_2$).",
+      "vraag": "Een balans of weegschaal met twee gelijke armen werkt op basis van de hefboomwet (F<sub>1</sub> × r = F<sub>2</sub> × r ⇒ F<sub>1</sub> = F<sub>2</sub>).",
       "antwoord": true,
       "uitleg": "Waar. Omdat de armen gelijk zijn, moeten de gewichten aan beide zijden precies gelijk zijn voor evenwicht."
     },

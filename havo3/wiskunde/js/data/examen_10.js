@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Wiskunde (HAVO 3) — Proeftoets 10 — Steel-bladdiagram, Spreidingsbreedte & Kwartielen
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-wiskunde-h2-10",
   "hoofdstuk": 2,
   "titel": "Proeftoets 10 — Steel-bladdiagram, Spreidingsbreedte & Kwartielen",
@@ -180,13 +179,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De formule voor de kwartielafstand luidt: derde kwartiel ([Q3|Q₃]) minus eerste kwartiel ([Q1|Q₁]).",
-      "antwoord": "Q3 - Q1|Q₃ - Q₁",
+      "vraag": "Met welke formule bereken je de kwartielafstand? Gebruik de symbolen voor het eerste en het derde kwartiel.",
+      "antwoord": "Q3 - Q1|Q₃ - Q₁|Q3-Q1|Q₃-Q₁",
       "uitleg": "Kwartielafstand = Q₃ - Q₁."
     },
     {
       "type": "invul",
-      "vraag": "De maat die het verschil tussen de hoogste en laagste waarneming aangeeft heet de [spreidingsbreedte].",
+      "vraag": "De maat die het verschil tussen de hoogste en laagste waarneming aangeeft heet de ____.",
       "antwoord": "spreidingsbreedte",
       "uitleg": "Spreidingsbreedte = Maximum - Minimum."
     },
@@ -213,5 +212,4 @@ DURU.registerExamen(
       "uitleg": "De legenda bepaalt de schaal en decimale waarde van de cijfers."
     }
   ]
-}
-);
+});

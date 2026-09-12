@@ -4,7 +4,7 @@
 2026-08-27/28'de geschiedenis'te (840 soru) ve scheikunde'de yakalanan kusurlar bu araçlarla
 bulundu. Sözleşme: `docs/ENGINE_SPEC.md`. Kural listesi: `docs/PIPELINE.md` → "Kalite kapısı".
 
-## `gate.js` — kabul kapısı (12 kural)
+## `gate.js` — kabul kapısı (16 kontrol: 1–15, 5 = 5a/5b)
 
 ```bash
 node tools/gate.js <vak>          # ör. node tools/gate.js geschiedenis
@@ -22,10 +22,18 @@ Bir dersin `index.html`'ine bağlı tüm data dosyalarını yükleyip şunları 
 | 5 | Sınavda `invoer` yok / oefenquiz'de `invul`-`open` yok |
 | 6 | Soru metni "1. " gibi numarayla başlamıyor |
 | 7 | Her soruda dolu `uitleg` var |
-| 8 | Soru yapısı sözleşmeye uygun (mc index, boolean, `minTreffers` ≤ sleutelwoord sayısı, `open`'da cevap sızıntısı yok) |
+| 8 | Soru yapısı sözleşmeye uygun (mc index, boolean, `minTreffers` ≤ sleutelwoord sayısı, `open`'da cevap sızıntısı yok, `"21.000"` anahtarı noktasız `"21000"` ile birlikte) |
 | 9 | Soru sayıları (onderwerp 8 / proeftoets 20) |
 | 10 | `theorie` ≥ 1500 karakter |
 | 11 | Her data dosyası `index.html`'e bağlı, her referans mevcut |
+| 12 | Ham LaTeX yok (`$F_{res}$`, `\frac`, `\text`) — KaTeX/MathJax yüklü değil |
+| 13 | Bozuk metin yok: kontrol karakteri (`\t`/`\f` = yarım kalmış `\text`/`\frac`), `($)`, `( = 900 N)`, `bash{` — shell'in yuttuğu `$`-ifadeleri |
+| 14 | `invul` sorusunda cevap `[köşeli parantez]` içinde soruda yazmıyor |
+| 15 | `waaronwaar`: `uitleg` cevapla çelişmiyor ("Onwaar: Waar." / uitleg "Waar." ama antwoord `false`) |
+
+12–15 2026-09-12 denetiminde eklendi: 1–11'i geçen teslimlerde (natuurkunde, economie, wiskunde,
+scheikunde) 101 LaTeX, 36 bozuk metin, 97 cevabı görünen `invul` ve 38 çelişkili `waaronwaar` vardı.
+Yeni kurallar düzeltme öncesi yedekte bunların hepsini yakaladı, 12 derste yanlış alarm vermedi.
 
 Çıkış kodu: ihlal varsa 1. 9 ve 10 numaralı kurallar **hedef**tir, dersin brief'inde farklı bir
 ölçü verildiyse ihlal sayılmayabilir — raporu okurken bunu ayırt et.

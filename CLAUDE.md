@@ -26,13 +26,13 @@ js/landing.js     VAKKEN dizisi + render + iframe-shell + storage-interceptor + 
 js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (vak listeleri HARD-CODED)
 server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
-tools/            soru kalite denetimi: gate.js (12 kural), spread.py, open_check.js (bkz. tools/README.md)
+tools/            soru kalite denetimi: gate.js (15 kural), spread.py, open_check.js (bkz. tools/README.md)
 inbox/            ders materyali bırakma alanı (PDF/Word/görsel)
 archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = MAVO 2 dersleri)
 havo3/<vak>/      HAVO 3 ders-siteleri (12 vak). Anahtar: duru_2627_<slug>_*. Doluluk için CLAUDE.md "Ders doluluk durumu"
 ```
 
-## Ders doluluk durumu (2026-09-04)
+## Ders doluluk durumu (2026-09-12)
 Sayılar `havo3/<vak>/js/{bootstrap,data/*}.js`'i node `vm`'de çalıştırıp `DURU.onderwerpen` /
 `DURU.examens` ve `vragen` uzunluklarını sayarak çıkarılır (`tools/build_hoofdstukken.js` ile aynı
 teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçerik eklendikçe güncelle.
@@ -43,8 +43,8 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | frans | **0** | 40 | 800 | H1–H8 (onderwerp yok — sadece sınav) |
 | duits | 18 | 30 | 744 | H1–H6 |
 | engels | 18 | 30 | 744 | H1–H6 |
-| natuurkunde | 25 | 25 | 700 | H1–H4, H8 (H5/H6/H7 eksik) |
-| economie | 12 | 23 | 556 | H1–H4 |
+| natuurkunde | 26 | 36 | 928 | H1–H8 (H1–H4, H8 tam; H5–H7 açıldı; H1 16 sınav) |
+| economie | 12 | 27 | 636 | H1–H4 |
 | aardrijkskunde | 10 | 10 | 280 | H1–H2 (tam) |
 | scheikunde | 6 | 10 | 252 | H1–H2 (H3–H7 eksik) |
 | wiskunde | 5 | 10 | 240 | H2 |
@@ -52,7 +52,8 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 0 | 1 | 5 | **yok** — smoke-test |
 
-**Toplam: 126 onderwerp · 215 proeftoets · 5282 soru.**
+**Toplam: 127 onderwerp · 230 proeftoets · 5590 soru.** (Satırların toplamı; 2026-09-12'de
+elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` + `nederlands` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavları bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
 girmez → "Overige toetsen"e düşer. **Buraya ünite numarası uydurma**; materyal gelince önce
@@ -105,15 +106,34 @@ yıl→niveau ekle → `?v=` bump.
 
 ## Dashboard & istatistik
 `index.html` iki view içerir ("Mijn vakken" / "Mijn prestaties & statistieken"). `js/dashboard.js`
-**yıl-farkında**: tüm ders/yıl kombinasyonları `VAK_REGISTER` dizisinde tek satırda tanımlı (jaar,
-id, titel, icoon, kleur, practiceKey, examKey; begrijpend lezen `special:'begrijpend'`). Üstte bir
-**yıl-seçici** (`#jaar-selector`, `renderJaarSelector`) var; seçim `localStorage.duru_dashboard_jaar`'da
-kalıcı. Seçili yıla göre filtrelenmiş satırlardan: 4 hero-kart (XP/badges/proeftoetsen/gemiddeld
-cijfer, o yıla özel) + per-vak kartlar (`renderVakKaarten`) + SVG score-timeline + filtre çubuğu
-(`renderFilterBar`, yıla göre yeniden kurulur) + doorzoekbaar logboek. 2025-2026 (MAVO 2) anahtarları
-**yılsız ve donmuş** (`duru_nask_v1` …) — `VAK_REGISTER`'da sabit `jaar:'2025-2026'` ile etiketli,
-asla değiştirilmez. Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=3.9`).
+**yıl-farkında**: ders/yıl kombinasyonları artık `js/vakken.js` → `DURU_VAKKEN`'den gelir
+(`VAK_REGISTER` yalnızca ona bir referanstır). Yıl seçimi `localStorage.duru_dashboard_jaar`'da
+kalıcı; `beschikbareJaren()` yalnız **verisi olan** yılları listeler, tek yıl varsa seçici gizlenir.
+Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJson`) ve
+`renderScoreTimeline` korunur; görünüm için bkz. "Öğrenci ilerleme sayfası" (aşağıda).
+2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
+`jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
+Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=4.2`).
+
+## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
+"Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
+`index.html`'de `#statistieken-view` artık neredeyse boş: JS `#voortgang-paneel`'e render eder,
+yalnız backup bloğu statik kalır (böylece `initBackupRestore()` düğmelerini kaybetmez).
+Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
+- **Veli panelinin kopyası DEĞİL.** Baba teşhis + yazdırılabilir rapor ister; Duru "şimdi ne
+  yapmalıyım"ı ister. Bu yüzden en üstte, ölçekten bile önce, tek bir eylem durur.
+- **`watNu()` önceliği**: düşen & zayıf → zayıf → düşen ama hâlâ yeterli → 8,5'e yakın → hiç
+  başlanmamış → hepsi iyi. Düğme `openInIframe()` ile dersi hub'ın iframe-shell'inde açar.
+- **⚠️ Aciliyet ömür-boyu ortalamayla DEĞİL, `recent` ile ölçülür** (son 3 deneme).
+  8,2'den 4,6'ya düşen bir ünitenin ortalaması 6,4 kalır ve ortalamaya bakan mantıkta görünmez —
+  oysa sayfadaki en acil şey odur. Kart üstünde ömür-boyu ortalama gösterilir, karar `recent`'tir.
+- **Momentum**: `berekenStreak()` ardışık gün sayısı, bu hafta, 8,5 üstü ünite, açık proeftoets.
+  Öğrenciye özgü; veli panelinde yok.
+- Renk sözleşmesi ouder ile aynı desende: `--st-goed/net/zwak` + sıcak `--st-actie`,
+  `#statistieken-view` üzerinde, `html.dark #statistieken-view`'de yeniden tanımlı.
+- `renderScoreTimeline()` korundu, Overzicht sekmesine taşındı. Grafik kendi genişliğini ölçtüğü
+  için **DOM'a eklendikten sonra** çağrılır.
 
 ## Veli paneli (`js/ouder_dashboard.js`) — 2026-09 yeniden tasarımı
 Sadece Baba görür (`#tab-ouder-btn` varsayılan gizli). Dil **Türkçe**, ders adları Flamanca.

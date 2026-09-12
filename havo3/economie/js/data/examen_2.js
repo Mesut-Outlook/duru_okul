@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De periodieke beloning die een werknemer ontvangt voor zijn werk heet [loon|salaris].",
+      "vraag": "De periodieke beloning die een werknemer ontvangt voor zijn werk heet ____.",
       "antwoord": "loon|salaris",
       "uitleg": "Loon of salaris is de vergoeding voor verrichte arbeid."
     },
     {
       "type": "invul",
-      "vraag": "Uitgaven die maandelijks volgens een contract terugkeren noemen we [vaste lasten|vaste last].",
+      "vraag": "Uitgaven die maandelijks volgens een contract terugkeren noemen we ____.",
       "antwoord": "vaste lasten|vaste last",
       "uitleg": "Vaste lasten zijn contractuele terugkerende kosten zoals huur of verzekering."
     },
     {
       "type": "invul",
-      "vraag": "Inkomen waarvoor je geen directe economische prestatie levert heet [overdrachtsinkomen|overdrachtsinkomens].",
+      "vraag": "Inkomen waarvoor je geen directe economische prestatie levert heet ____.",
       "antwoord": "overdrachtsinkomen|overdrachtsinkomens",
       "uitleg": "Overdrachtsinkomens worden door de overheid of familie overgedragen (bijv. zakgeld, bijstand)."
     },
     {
       "type": "invul",
-      "vraag": "Het sparen van geld voor toekomstige grote reparaties of vervangingen noemen we [reserveren|reserveringsuitgaven].",
+      "vraag": "Het sparen van geld voor toekomstige grote reparaties of vervangingen noemen we ____.",
       "antwoord": "reserveren|reserveringsuitgaven",
       "uitleg": "Reserveren is het apart zetten van geld voor incidentele kosten."
     },

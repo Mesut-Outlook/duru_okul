@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De vier productiefactoren korten we af met het woord [KANO].",
+      "vraag": "De vier productiefactoren korten we af met het woord ____.",
       "antwoord": "KANO",
       "uitleg": "KANO = Kapitaal, Arbeid, Natuur, Ondernemerschap."
     },
     {
       "type": "invul",
-      "vraag": "De extra waarde die een bedrijf toevoegt door bewerking heet de [toegevoegde waarde].",
+      "vraag": "De extra waarde die een bedrijf toevoegt door bewerking heet de ____.",
       "antwoord": "toegevoegde waarde",
       "uitleg": "Toegevoegde waarde = Verkoopprijs - Inkoopwaarde."
     },
     {
       "type": "invul",
-      "vraag": "De beloning voor de productiefactor Natuur noemen we [pacht].",
+      "vraag": "De beloning voor de productiefactor Natuur noemen we ____.",
       "antwoord": "pacht",
       "uitleg": "Pacht is de huurvergoeding voor grond en natuur."
     },
     {
       "type": "invul",
-      "vraag": "De keten van bedrijven van oerproducent tot winkelier heet de [bedrijfskolom].",
+      "vraag": "De keten van bedrijven van oerproducent tot winkelier heet de ____.",
       "antwoord": "bedrijfskolom",
       "uitleg": "De bedrijfskolom toont de opeenvolgende productieschakels."
     },

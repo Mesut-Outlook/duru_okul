@@ -180,19 +180,19 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De formule voor de afschrijving per jaar is: (aanschafwaarde minus [restwaarde]) gedeeld door het aantal gebruiksjaren.",
+      "vraag": "De formule voor de afschrijving per jaar is: (aanschafwaarde minus ____) gedeeld door het aantal gebruiksjaren.",
       "antwoord": "restwaarde",
       "uitleg": "Afschrijvingskosten per jaar = (aanschafwaarde - restwaarde) / aantal gebruiksjaren."
     },
     {
       "type": "invul",
-      "vraag": "Kosten voor rente die betaald wordt over een lening voor een bedrijfspand of machine heten [rentekosten].",
+      "vraag": "Kosten voor rente die betaald wordt over een lening voor een bedrijfspand of machine heten ____.",
       "antwoord": "rentekosten",
       "uitleg": "Rentekosten zijn de kosten voor het lenen van geld bij de bank."
     },
     {
       "type": "invul",
-      "vraag": "Het contract waarbij een medewerker alleen werkt en betaald krijgt wanneer de werkgever hem oproept heet een [nulurencontract].",
+      "vraag": "Het contract waarbij een medewerker alleen werkt en betaald krijgt wanneer de werkgever hem oproept heet een ____.",
       "antwoord": "nulurencontract",
       "uitleg": "Bij een nulurencontract staan er geen vaste wekelijkse werkuren vast."
     },

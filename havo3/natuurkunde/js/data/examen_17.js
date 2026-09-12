@@ -101,9 +101,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een temperatuurstijging van 1 graad Celsius (\text{ °C}$) is qua grootte exact gelijk aan een stijging van \text{ Kelvin}$ (\text{ K}$).",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. De schaalstappen van Celsius en Kelvin zijn identiek; alleen het nulpunt verschilt (0 K = -273 °C)."
+      "vraag": "Een temperatuurstijging van 1 graad Celsius (1 °C) is qua grootte exact gelijk aan een stijging van 1 kelvin (1 K).",
+      "antwoord": true,
+      "uitleg": "Waar. De schaalstappen van Celsius en Kelvin zijn identiek; alleen het nulpunt verschilt (0 K = -273 °C)."
     },
     {
       "type": "mc",
@@ -119,7 +119,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een dompelaar levert 500 W aan 0,25 kg water. Hoeveel Joule warmte levert de dompelaar in 60 seconden ( = P \times t$)?",
+      "vraag": "Een dompelaar levert 500 W aan 0,25 kg water. Hoeveel Joule warmte levert de dompelaar in 60 seconden (Q = P × t)?",
       "antwoord": "30000|30.000|30 kJ|30000 J",
       "uitleg": "Q = P × t = 500 W × 60 s = 30.000 Joule (30 kJ)."
     },
@@ -162,8 +162,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Warmte stroomt vanzelf altijd van een voorwerp met een hogere temperatuur naar een voorwerp met een lagere temperatuur totdat de temperaturen gelijk zijn.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Dit heet thermisch evenwicht."
+      "antwoord": true,
+      "uitleg": "Waar. Dit heet thermisch evenwicht."
     },
     {
       "type": "open",
@@ -182,8 +182,8 @@ DURU.registerExamen({
       "vraag": "Een warm stuk koper van 200 gram met een temperatuur van 90 °C wordt in een bekerglas met 300 gram water van 20 °C gelegd. Leg uit wat er gebeurt met de warmte en de eindtemperatuur van het mengsel.",
       "sleutelwoorden": [
         "warmte stroomt/koper naar water",
-        "koper koelt af, water warmt op",
-        "thermisch evenwicht/eindtemperatuur"
+        "koelt af/warmt op",
+        "thermisch evenwicht/dezelfde temperatuur/gelijke temperatuur"
       ],
       "minTreffers": 2,
       "modelantwoord": "Het hete koper staat warmte af aan het koudere water. Omdat energie behouden blijft (Q_afgestaan = Q_opgenomen), koelt het koper af en stijgt de temperatuur van het water totdat beide stoffen dezelfde eindtemperatuur bereiken (thermisch evenwicht). Omdat water een veel grotere soortelijke warmte en massa heeft, ligt de eindtemperatuur veel dichter bij de 20 °C van het water dan bij de 90 °C van het koper.",

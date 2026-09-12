@@ -90,8 +90,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "De netspanning uit een standaard stopcontact in Nederland bedraagt <b>230 Volt</b>.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. De standaard netspanning voor huishoudens in Nederland en Europa is 230 V wisselspanning."
+      "antwoord": true,
+      "uitleg": "Waar. De standaard netspanning voor huishoudens in Nederland en Europa is 230 V wisselspanning."
     },
     {
       "type": "mc",
@@ -144,8 +144,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Een ideale stroommeter heeft een zo laag mogelijke weerstand (bijna 0 Ω), zodat hij de stroom in de kring niet afremt.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Een ampèremeter heeft vrijwel geen weerstand om de stroomkring niet te beïnvloeden."
+      "antwoord": true,
+      "uitleg": "Waar. Een ampèremeter heeft vrijwel geen weerstand om de stroomkring niet te beïnvloeden."
     },
     {
       "type": "mc",

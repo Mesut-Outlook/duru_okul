@@ -75,8 +75,15 @@ Oefen soruları ek `niveau` (zorluk 1–3) taşır; sınav soruları taşımaz. 
 { type:"open", vraag:"...", sleutelwoorden:["gemeente/de gemeente","rijk"], minTreffers:1,
                modelantwoord:"...", uitleg:"..." }
 ```
-**Cevap denetimi:** `invoer`/`invul` önce sayısal karşılaştırılır (`parseFloat`, `tolerantie` ya da
-`max(|beklenen|*0.02, 0.01)`), sayısal değilse `"|"` ile bölünüp normalize edilmiş tam eşleşme aranır.
+**Cevap denetimi:** `invoer` (oefen, `engine.js`) önce sayısal karşılaştırılır (`parseFloat`,
+`tolerantie` ya da `max(|beklenen|*0.02, 0.01)`), sayısal değilse `"|"` ile bölünüp normalize edilmiş tam eşleşme aranır.
+`invul` (sınav, `exams.js → invulGoed`, 2026-09-12'den beri): `"|"` alternatiflerinden **sayı (+ eenheid)**
+olanlar (`15`, `2,0 m/s²`, `9%`) öğrencinin yazdığı ilk sayıyla sayısal karşılaştırılır; tolerans
+`tolerantie` ya da **son verilen ondalığın yarım birimi** (`12,5` → ±0,05, `1914` → ±0,5 — yıllarda %2 kuralı
+±38 yıl verirdi). `16.000` binlik, `1,5` ondalık okunur. Metin alternatifleri eskisi gibi normalize + alt-dizi.
+Eskiden `invul` tamamen alt-diziydi: cevap `2` iken `12` ve `0,2` de doğru sayılıyordu.
+**`invul` sorusunda cevabı `[köşeli parantez]` ile soruya yazma** — motor onu boşluğa çevirmez; boşluk `____`.
+**LaTeX yazma** — KaTeX/MathJax yüklü değil; `F<sub>res</sub>`, `m/s²`, `Δv` gibi düz metin/HTML kullan.
 `open`: tüm sleutelwoorden bulunursa "goed", `>= minTreffers` "deels" (yine 1 puan), yoksa "fout".
 `/` bir sleutel için alternatif yazımlardır.
 

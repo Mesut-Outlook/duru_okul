@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Het officiële schriftelijke contract van een verzekering heet de [polis|verzekeringspolis].",
+      "vraag": "Het officiële schriftelijke contract van een verzekering heet de ____.",
       "antwoord": "polis|verzekeringspolis",
       "uitleg": "De polis is het contractuele document."
     },
     {
       "type": "invul",
-      "vraag": "Het vaste bedrag dat je bij schade eerst zelf moet betalen heet het [eigen risico].",
+      "vraag": "Het vaste bedrag dat je bij schade eerst zelf moet betalen heet het ____.",
       "antwoord": "eigen risico",
       "uitleg": "Het eigen risico blijft voor eigen rekening."
     },
     {
       "type": "invul",
-      "vraag": "Het periodieke bedrag dat je betaalt aan de verzekeringsmaatschappij heet de [premie].",
+      "vraag": "Het periodieke bedrag dat je betaalt aan de verzekeringsmaatschappij heet de ____.",
       "antwoord": "premie",
       "uitleg": "Premie is de periodieke vergoeding voor dekking."
     },
     {
       "type": "invul",
-      "vraag": "De verzekering die schade dekt aan losse spullen in huis heet de [inboedelverzekering].",
+      "vraag": "De verzekering die schade dekt aan losse spullen in huis heet de ____.",
       "antwoord": "inboedelverzekering",
       "uitleg": "Inboedelverzekering dekt roerende goederen in huis."
     },

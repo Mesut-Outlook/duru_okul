@@ -277,6 +277,39 @@
       .replace(/[.,;:!?'"()·]/g, " ")
       .replace(/\s+/g, " ").trim();
   }
+  // invul nakijken (ENGINE_SPEC): getal-antwoorden numeriek, tekst-antwoorden zoals voorheen.
+  // Zonder dit telde "12" of "0,2" goed bij antwoord "2" (indexOf op tekst).
+  function leesGetal(s) {
+    var m = String(s == null ? "" : s).replace(/−/g, "-").match(/-?\d+(?:[.,]\d+)*/);
+    if (!m) return null;
+    var g = m[0], dec = 0;
+    if (/^-?\d{1,3}(\.\d{3})+$/.test(g)) g = g.replace(/\./g, "");            // 16.000 = zestienduizend
+    else if (g.indexOf(",") !== -1) g = g.replace(/\./g, "").replace(",", "."); // 1,5 / 1.234,5
+    if (g.indexOf(".") !== -1) dec = g.length - g.indexOf(".") - 1;
+    return { waarde: parseFloat(g), decimalen: dec };
+  }
+  // "15", "15 m/s", "2,0 m/s²", "3 m/s2", "18h", "9%" — een getal met hooguit een eenheid erachter
+  function isGetalAntwoord(a) {
+    return /^\s*[-−]?\d+(?:[.,]\d+)*\s*(?:[a-zA-Zµμ°%€\/²³^().·Ω ]*[a-zA-Z\/^]\d)?[a-zA-Zµμ°%€\/²³^().·Ω ]*$/.test(a);
+  }
+  function invulGoed(antw, v) {
+    var inv = normaliseer(antw);
+    if (inv === "") return false;
+    var getal = leesGetal(antw);
+    var tekstAlts = [];
+    var goed = String(v.antwoord).split("|").some(function (a) {
+      if (isGetalAntwoord(a)) {
+        var verwacht = leesGetal(a);
+        if (!getal || !verwacht) return false;
+        // tolerantie: expliciet, anders een halve eenheid van de laatste gegeven decimaal (12,5 -> 0,05; 1914 -> 0,5)
+        var tol = v.tolerantie != null ? v.tolerantie : 0.5 * Math.pow(10, -verwacht.decimalen) + 1e-9;
+        return Math.abs(getal.waarde - verwacht.waarde) <= tol;
+      }
+      tekstAlts.push(normaliseer(a));
+      return false;
+    });
+    return goed || tekstAlts.some(function (a) { return a && (inv === a || inv.indexOf(a) !== -1); });
+  }
   function beoordeel(v, antw) {
     // geeft "goed" | "fout" | "deels" + of het meetelt als goed
     if (v.type === "mc") {
@@ -287,9 +320,7 @@
       return { status: antw === juist ? "goed" : "fout", punt: antw === juist ? 1 : 0 };
     }
     if (v.type === "invul") {
-      var inv = normaliseer(antw);
-      var alts = String(v.antwoord).split("|").map(normaliseer);
-      var ok = inv !== "" && alts.some(function (a) { return inv === a || inv.indexOf(a) !== -1; });
+      var ok = invulGoed(antw, v);
       return { status: ok ? "goed" : "fout", punt: ok ? 1 : 0 };
     }
     // open: tel sleutelwoorden

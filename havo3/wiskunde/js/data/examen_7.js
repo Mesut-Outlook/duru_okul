@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Wiskunde (HAVO 3) — Proeftoets 7 — Cirkeldiagrammen, Middelpuntshoeken & Sectoren
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-wiskunde-h2-7",
   "hoofdstuk": 2,
   "titel": "Proeftoets 7 — Cirkeldiagrammen, Middelpuntshoeken & Sectoren",
@@ -180,13 +179,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De hoek van een categorie die een derde (1/3) van het totaal vormt is precies [120|120°|120 graden].",
+      "vraag": "De hoek van een categorie die een derde (1/3) van het totaal vormt is precies ____.",
       "antwoord": "120|120°|120 graden",
       "uitleg": "(1 / 3) × 360° = 120°."
     },
     {
       "type": "invul",
-      "vraag": "Een sectorhoek van 108 graden komt overeen met een percentage van [30|30%|30 procent].",
+      "vraag": "Een sectorhoek van 108 graden komt overeen met een percentage van ____.",
       "antwoord": "30|30%|30 procent",
       "uitleg": "108° / 3,6° = 30%."
     },
@@ -213,5 +212,4 @@ DURU.registerExamen(
       "uitleg": "De cirkel stelt het geheel (100%) voor."
     }
   ]
-}
-);
+});

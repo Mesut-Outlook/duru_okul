@@ -72,8 +72,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Met behulp van een bètastralingsbron en een detector kan in een fabriek continu de dikte van geproduceerd papier of aluminiumfolie automatisch worden gemeten en bijgesteld.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Als het papier dikker wordt, absorbeert het meer bètadeeltjes en meet de detector minder straling, waarna de walsen strakker worden gezet."
+      "antwoord": true,
+      "uitleg": "Waar. Als het papier dikker wordt, absorbeert het meer bètadeeltjes en meet de detector minder straling, waarna de walsen strakker worden gezet."
     },
     {
       "type": "mc",
@@ -121,7 +121,7 @@ DURU.registerExamen({
         "Het smelten van fossielen"
       ],
       "antwoord": 2,
-      "uitleg": "Zolang een organisme leeft, neemt het C-14 op. Na het sterven vervalt het C-14 ($t_{1/2} approx 5730\text{ jaar}$); aan het restant meet men hoe lang geleden het organisme stierf."
+      "uitleg": "Zolang een organisme leeft, neemt het C-14 op. Na het sterven vervalt het C-14 (t<sub>½</sub> ≈ 5730 jaar); aan het restant meet men hoe lang geleden het organisme stierf."
     },
     {
       "type": "invul",
@@ -144,8 +144,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Bij radiotherapie wordt de stralingsbron vanuit verschillende hoeken om de patiënt gedraaid, zodat de tumor maximaal bestraald wordt en omliggend gezond weefsel gespaard blijft.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. De stralenkruising zorgt dat alleen de tumor in het snijpunt de maximale dodelijke dosis ontvangt."
+      "antwoord": true,
+      "uitleg": "Waar. De stralenkruising zorgt dat alleen de tumor in het snijpunt de maximale dodelijke dosis ontvangt."
     },
     {
       "type": "mc",

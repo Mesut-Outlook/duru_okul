@@ -192,7 +192,7 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In een laboratorium wordt de activiteit van een onbekende radioactieve stof gemeten. Op $t = 0$ is de activiteit 1200 Bq. Na 45 minuten is de activiteit gedaald naar 150 Bq. Bereken de <b>halveringstijd</b> van deze stof.",
+      "vraag": "In een laboratorium wordt de activiteit van een onbekende radioactieve stof gemeten. Op t = 0 is de activiteit 1200 Bq. Na 45 minuten is de activiteit gedaald naar 150 Bq. Bereken de <b>halveringstijd</b> van deze stof.",
       "sleutelwoorden": [
         "3 halveringstijden",
         "150/drie halveringstijden",

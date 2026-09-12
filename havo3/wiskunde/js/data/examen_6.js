@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Wiskunde (HAVO 3) — Proeftoets 6 — Verhoudingen, Procenten & Kruistabellen
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-wiskunde-h2-6",
   "hoofdstuk": 2,
   "titel": "Proeftoets 6 — Verhoudingen, Procenten & Kruistabellen",
@@ -180,13 +179,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De algemene formule voor procentuele toename of afname is: ([nieuw - oud|nieuw-oud]) gedeeld door oud vermenigvuldigd met 100%.",
+      "vraag": "De algemene formule voor procentuele toename of afname is: (____) gedeeld door oud vermenigvuldigd met 100%.",
       "antwoord": "nieuw - oud|nieuw-oud",
       "uitleg": "De formule luidt: ((Nieuw - Oud) / Oud) × 100%."
     },
     {
       "type": "invul",
-      "vraag": "Een product van € 80,- stijgt in prijs naar € 100,-. De procentuele toename is [25|25%|25 procent].",
+      "vraag": "Een product van € 80,- stijgt in prijs naar € 100,-. De procentuele toename is ____.",
       "antwoord": "25|25%|25 procent",
       "uitleg": "((100 - 80) / 80) × 100% = (20 / 80) × 100% = 25%."
     },
@@ -215,5 +214,4 @@ DURU.registerExamen(
       "uitleg": "320 × 0,85 = € 272,-."
     }
   ]
-}
-);
+});

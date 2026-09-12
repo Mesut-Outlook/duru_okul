@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Middelen die je slechts voor één doel tegelijk kunt gebruiken noemen economen [alternatief aanwendbaar|alternatief aanwendbare].",
+      "vraag": "Middelen die je slechts voor één doel tegelijk kunt gebruiken noemen economen ____.",
       "antwoord": "alternatief aanwendbaar|alternatief aanwendbare",
       "uitleg": "Alternatieve aanwendbaarheid betekent dat een middel (geld of tijd) op verschillende manieren kan worden benut, maar nooit tegelijk."
     },
     {
       "type": "invul",
-      "vraag": "Het niet-tastbare werk dat een arts of leraar verricht noemen we een [dienst|diensten].",
+      "vraag": "Het niet-tastbare werk dat een arts of leraar verricht noemen we een ____.",
       "antwoord": "dienst|diensten",
       "uitleg": "Diensten zijn economische handelingen die onstoffelijk van aard zijn."
     },
     {
       "type": "invul",
-      "vraag": "Goederen waarvoor geen enkele inzet van productiemiddelen nodig is heten [vrije goederen|vrij goed].",
+      "vraag": "Goederen waarvoor geen enkele inzet van productiemiddelen nodig is heten ____.",
       "antwoord": "vrije goederen|vrij goed",
       "uitleg": "Vrije goederen (zoals zonlicht of zeewater) zijn door de natuur zonder kosten ter beschikking gesteld."
     },
     {
       "type": "invul",
-      "vraag": "Het aanschaffen van producten door gezinnen om hun wensen en behoeften te vervullen heet [consumeren|consumptie].",
+      "vraag": "Het aanschaffen van producten door gezinnen om hun wensen en behoeften te vervullen heet ____.",
       "antwoord": "consumeren|consumptie",
       "uitleg": "Consumptie is het gebruiken of verbruiken van goederen en diensten door consumenten."
     },

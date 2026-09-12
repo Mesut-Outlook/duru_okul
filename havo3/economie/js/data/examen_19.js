@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Economie (HAVO 3) — Proeftoets 19: Productieprocessen, Kringloop & Bedrijfskolom (4.1)
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-h3-economie-19",
   "hoofdstuk": 4,
   "paragraaf": "4.1",
@@ -181,13 +180,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "Het maken van goederen of leveren van diensten door bedrijven voor anderen noemen we in de economie [produceren|productie].",
+      "vraag": "Het maken van goederen of leveren van diensten door bedrijven voor anderen noemen we in de economie ____.",
       "antwoord": "produceren|productie",
       "uitleg": "Produceren is het voortbrengen van goederen en diensten door ondernemingen voor afnemers."
     },
     {
       "type": "invul",
-      "vraag": "De hoeveelheid producten of diensten die een werknemer in een bepaalde tijd kan maken heet de [arbeidsproductiviteit].",
+      "vraag": "De hoeveelheid producten of diensten die een werknemer in een bepaalde tijd kan maken heet de ____.",
       "antwoord": "arbeidsproductiviteit",
       "uitleg": "Arbeidsproductiviteit = productieomvang gedeeld door het aantal ingezette medewerkers."
     },
@@ -214,5 +213,4 @@ DURU.registerExamen(
       "uitleg": "Hogere productiviteit verlaagt de kostprijs per product en verhoogt het rendement."
     }
   ]
-}
-);
+});

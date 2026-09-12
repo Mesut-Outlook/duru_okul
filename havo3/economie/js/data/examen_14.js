@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De periodieke vergoeding die een aandeelhouder ontvangt als aandeel in de bedrijfswinst heet [dividend].",
+      "vraag": "De periodieke vergoeding die een aandeelhouder ontvangt als aandeel in de bedrijfswinst heet ____.",
       "antwoord": "dividend",
       "uitleg": "Dividend is de winstuitkering op aandelen en behoort tot inkomen uit bezit."
     },
     {
       "type": "invul",
-      "vraag": "Kosten die maandelijks volgens vaste contracten moeten worden voldaan noemen we [vaste lasten|vaste last].",
+      "vraag": "Kosten die maandelijks volgens vaste contracten moeten worden voldaan noemen we ____.",
       "antwoord": "vaste lasten|vaste last",
       "uitleg": "Vaste lasten zijn terugkerende verplichtingen zoals internet, huur en verzekeringen."
     },
     {
       "type": "invul",
-      "vraag": "Het opzijzetten van spaargeld om toekomstige grote vervangingen te betalen heet [reserveren|reserveringsuitgaven].",
+      "vraag": "Het opzijzetten van spaargeld om toekomstige grote vervangingen te betalen heet ____.",
       "antwoord": "reserveren|reserveringsuitgaven",
       "uitleg": "Reserveren voorkomt dat je plotseling geld tekortkomt bij een kapot apparaat."
     },
     {
       "type": "invul",
-      "vraag": "Een uitkering zoals de bijstand of AOW zonder economische tegenprestatie heet een [overdrachtsinkomen|overdrachtsinkomens].",
+      "vraag": "Een uitkering zoals de bijstand of AOW zonder economische tegenprestatie heet een ____.",
       "antwoord": "overdrachtsinkomen|overdrachtsinkomens",
       "uitleg": "Overdrachtsinkomens worden door de overheid verstrekt om sociale zekerheid te bieden."
     },

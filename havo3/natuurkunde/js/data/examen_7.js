@@ -96,8 +96,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Als je bij een constante weerstand de spanning over de weerstand verdubbelt, wordt de stroomsterkte ook twee keer zo groot.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Volgens I = U / R zijn stroomsterkte en spanning recht evenredig bij constante R."
+      "antwoord": true,
+      "uitleg": "Waar. Volgens I = U / R zijn stroomsterkte en spanning recht evenredig bij constante R."
     },
     {
       "type": "invul",
@@ -162,8 +162,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Constantaan is een legering waarvan de weerstand nauwelijks verandert als de temperatuur stijgt. Het is dus zeer geschikt voor precisieweerstanden.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Daarom heet het 'constantaan': de weerstand blijft nagenoeg constant."
+      "antwoord": true,
+      "uitleg": "Waar. Daarom heet het 'constantaan': de weerstand blijft nagenoeg constant."
     },
     {
       "type": "open",

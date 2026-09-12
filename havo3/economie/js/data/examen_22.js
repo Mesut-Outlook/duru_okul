@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Economie (HAVO 3) — Proeftoets 22: Berekeningen Kosten, Omzetwaarde & Afschrijvingen (4.2)
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-h3-economie-22",
   "hoofdstuk": 4,
   "paragraaf": "4.2",
@@ -181,13 +180,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De boekhoudkundige waardevermindering van kapitaalgoederen over de tijd noemen we [afschrijving|afschrijven|afschrijvingskosten].",
+      "vraag": "De boekhoudkundige waardevermindering van kapitaalgoederen over de tijd noemen we ____.",
       "antwoord": "afschrijving|afschrijven|afschrijvingskosten",
       "uitleg": "Afschrijving is het verdelen van de waardevermindering over de gebruiksjaren."
     },
     {
       "type": "invul",
-      "vraag": "Het bedrag waarvoor een machine na afloop van de gebruiksperiode nog kan worden verkocht is de [restwaarde].",
+      "vraag": "Het bedrag waarvoor een machine na afloop van de gebruiksperiode nog kan worden verkocht is de ____.",
       "antwoord": "restwaarde",
       "uitleg": "De restwaarde is de opbrengst bij inruil of verkoop aan het einde van de levensduur."
     },
@@ -217,5 +216,4 @@ DURU.registerExamen(
       "uitleg": "Totale kosten gedeeld door productieomvang levert de eenheidskostprijs op."
     }
   ]
-}
-);
+});

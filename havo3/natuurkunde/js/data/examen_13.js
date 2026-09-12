@@ -78,8 +78,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Piloten en cabinepersoneel ontvangen per jaar meer straling dan gemiddeld doordat er op grote vlieghoogte minder atmosfeer is om kosmische straling uit het heelal tegen te houden.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Op 10 km hoogte is de kosmische stralingsintensiteit veel hoger dan op zeeniveau."
+      "antwoord": true,
+      "uitleg": "Waar. Op 10 km hoogte is de kosmische stralingsintensiteit veel hoger dan op zeeniveau."
     },
     {
       "type": "mc",
@@ -103,7 +103,7 @@ DURU.registerExamen({
         "Blijft gelijk"
       ],
       "antwoord": 1,
-      "uitleg": "Volgens de omgekeerde kwadratenwet ($I sim 1/r^2$) daalt de intensiteit met een factor 4 bij verdubbeling van de afstand."
+      "uitleg": "Volgens de omgekeerde kwadratenwet (I sim 1/r²) daalt de intensiteit met een factor 4 bij verdubbeling van de afstand."
     },
     {
       "type": "waaronwaar",
@@ -191,7 +191,7 @@ DURU.registerExamen({
         "afscherming/lood gebruiken"
       ],
       "minTreffers": 3,
-      "modelantwoord": "1. Afstand vergroten: Door afstand te houden van de bron daalt de stralingsintensiteit kwadratisch (omgekeerde kwadratenwet).\n2. Tijd verkorten: Door zo kort mogelijk in de buurt van de stralingsbron te verblijven, is de totale opgenomen dosis minimaal ($Dosis = tempo \times tijd$).\n3. Afscherming: Door loden schorten, loden schermen of dikke wanden te gebruiken, wordt de straling geabsorbeerd voordat deze het lichaam bereikt.",
+      "modelantwoord": "1. Afstand vergroten: Door afstand te houden van de bron daalt de stralingsintensiteit kwadratisch (omgekeerde kwadratenwet).\n2. Tijd verkorten: Door zo kort mogelijk in de buurt van de stralingsbron te verblijven, is de totale opgenomen dosis minimaal (dosis = tempo × tijd).\n3. Afscherming: Door loden schorten, loden schermen of dikke wanden te gebruiken, wordt de straling geabsorbeerd voordat deze het lichaam bereikt.",
       "uitleg": "De 3 pijlers van stralingsbescherming: Afstand, Tijd en Afscherming."
     }
   ]

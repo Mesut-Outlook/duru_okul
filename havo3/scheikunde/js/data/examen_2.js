@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Elementen die in dezelfde <b>horizontale periode (rij)</b> staan, hebben altijd exact dezelfde chemische eigenschappen.",
       "antwoord": false,
-      "uitleg": "Waar. Omdat ze hetzelfde aantal elektronen in hun buitenste schil hebben, reageren ze op vergelijkbare wijze."
+      "uitleg": "Onwaar. Elementen in dezelfde <b>groep (kolom)</b> hebben vergelijkbare chemische eigenschappen, omdat ze evenveel elektronen in hun buitenste schil hebben. Elementen in dezelfde periode verschillen juist sterk van elkaar."
     },
     {
       "type": "mc",

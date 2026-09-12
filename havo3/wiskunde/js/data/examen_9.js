@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Wiskunde (HAVO 3) — Proeftoets 9 — Centrummaten: Gemiddelde, Mediaan & Modus
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-wiskunde-h2-9",
   "hoofdstuk": 2,
   "titel": "Proeftoets 9 — Centrummaten: Gemiddelde, Mediaan & Modus",
@@ -180,13 +179,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "Het getal dat in een statistische dataset het vaakst voorkomt noemen we de [modus].",
+      "vraag": "Het getal dat in een statistische dataset het vaakst voorkomt noemen we de ____.",
       "antwoord": "modus",
       "uitleg": "De modus is de waarneming met de hoogste frequentie."
     },
     {
       "type": "invul",
-      "vraag": "De middelste waarde van een op volgorde gezette getallenreeks heet de [mediaan].",
+      "vraag": "De middelste waarde van een op volgorde gezette getallenreeks heet de ____.",
       "antwoord": "mediaan",
       "uitleg": "De mediaan verdeelt de geordende dataset precies in twee gelijke helften van 50%."
     },
@@ -214,5 +213,4 @@ DURU.registerExamen(
       "uitleg": "De mediaan is ongevoelig voor extreme uitschieters."
     }
   ]
-}
-);
+});

@@ -100,85 +100,320 @@
     renderHome();
   };
 
-  /* ---------------- Home ---------------- */
+  /* ---------------- Home & Hoofdstuk Navigatie ---------------- */
+  DURU.filterHoofdstuk = function (nr) {
+    var cards = document.querySelectorAll(".hf-accordion-card");
+    var pills = document.querySelectorAll(".hf-filter-pill");
+    pills.forEach(function (p) {
+      if (p.getAttribute("data-filter") === String(nr)) p.classList.add("actief");
+      else p.classList.remove("actief");
+    });
+
+    cards.forEach(function (c) {
+      var cNr = c.getAttribute("data-hoofdstuk");
+      if (nr === "all" || String(nr) === String(cNr)) {
+        c.style.display = "block";
+        if (nr !== "all") {
+          var content = c.querySelector(".hf-body");
+          var label = c.querySelector(".hf-toggle-btn");
+          if (content) content.style.display = "block";
+          c.classList.add("open");
+          if (label) label.textContent = "▲ Klap in";
+          c.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        c.style.display = "none";
+      }
+    });
+  };
+
+  DURU.toggleAlleHoofdstukken = function (open) {
+    var cards = document.querySelectorAll(".hf-accordion-card");
+    cards.forEach(function (card) {
+      var content = card.querySelector(".hf-body");
+      var label = card.querySelector(".hf-toggle-btn");
+      if (content) content.style.display = open ? "block" : "none";
+      if (open) card.classList.add("open");
+      else card.classList.remove("open");
+      if (label) label.textContent = open ? "▲ Klap in" : "▼ Open Hoofdstuk";
+    });
+  };
+
+  DURU.toggleHoofdstuk = function (nr) {
+    var card = document.getElementById("hf-card-" + nr);
+    var content = document.getElementById("hf-content-" + nr);
+    var label = document.getElementById("hf-label-" + nr);
+    if (!content) return;
+    var isHidden = content.style.display === "none";
+    content.style.display = isHidden ? "block" : "none";
+    if (card) {
+      if (isHidden) card.classList.add("open");
+      else card.classList.remove("open");
+    }
+    if (label) label.textContent = isHidden ? "▲ Klap in" : "▼ Open Hoofdstuk";
+  };
+
+  function renderTopicCard(o, h) {
+    var beste = P.beste[o.id] || 0;
+    var pInfo = DURU.getParagraafInfo(o, false);
+    return '<div class="topic-card ' + (h.kleur || "oranje") + '" onclick="DURU.gaNaar(\'theorie\',\'' + o.id + '\')">' +
+      '<div class="card-type-row">' +
+        '<span class="card-type-label oefen">📖 Oefenles</span>' +
+        '<span class="paragraaf-tag ' + (pInfo.tagClass || "") + '">' + pInfo.code + '</span>' +
+      '</div>' +
+      '<div class="ico">' + (o.icoon || h.icoon || "📖") + '</div>' +
+      '<h4>' + esc(o.titel) + '</h4>' +
+      '<p>' + esc(o.korteUitleg || "") + '</p>' +
+      '<span class="tag">' + o.vragen.length + ' vragen</span>' +
+      '<div class="mini-progress"><span style="width:' + beste + '%"></span></div>' +
+      (beste ? '<small style="color:var(--groen);font-weight:800">Beste score: ' + beste + '%</small>' : '<small style="color:var(--grijs-licht)">Nog niet gedaan</small>') +
+      '</div>';
+  }
+
+  function renderExamenCard(ex, h, exDataHome) {
+    var pInfo = DURU.getParagraafInfo(ex, true);
+    var atts = (exDataHome && exDataHome.history ? exDataHome.history : []).filter(function (a) { return a.examId === ex.id; });
+    var statusHtml;
+    if (atts.length > 0) {
+      var pcts = atts.map(function (a) { return a.pct || 0; });
+      var laatstePct = pcts[0];
+      var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
+      statusHtml =
+        '<div class="ex-status">' +
+          '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
+          '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
+          (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld: ' + cijferStr(gemPct) + '</div>' : '') +
+        '</div>';
+    } else {
+      statusHtml =
+        '<div class="ex-status">' +
+          '<span class="tag">Proeftoets</span>' +
+          '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
+        '</div>';
+    }
+    return '<div class="topic-card toets-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
+      '<div class="card-type-row">' +
+        '<span class="card-type-label toets">📝 Proeftoets</span>' +
+        '<span class="paragraaf-tag ' + (pInfo.tagClass || "") + '">' + pInfo.code + '</span>' +
+      '</div>' +
+      '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
+      '<h4>' + esc(ex.titel) + '</h4>' +
+      '<p><b>' + (ex.vragen.length) + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
+      statusHtml + '</div>';
+  }
+
+  function bouwParagraafSecties(h, ow, exLijst, exDataHome) {
+    var out = "";
+    if (h.nr === 1) {
+      // HOOFDSTUK 1: Indeling per paragraaf (alt bölümler)
+      var sectiesH1 = [
+        {
+          titel: "Paragraaf 1.1 — Kracht bij beweging",
+          ico: "🏎️",
+          tag: "§1.1",
+          owIds: ["h1-1-kracht-beweging"],
+          exIds: ["ex-h3-natuurkunde-26", "ex-h3-natuurkunde-27", "ex-h3-natuurkunde-28"]
+        },
+        {
+          titel: "Paragraaf 1.2 — Soorten beweging & Diagrammen",
+          ico: "📈",
+          tag: "§1.2",
+          owIds: ["h1-2-soorten-beweging"],
+          exIds: ["ex-h3-natuurkunde-29", "ex-h3-natuurkunde-30", "ex-h3-natuurkunde-31"]
+        },
+        {
+          titel: "Paragraaf 1.3 — Kracht en Versnelling (F = m · a)",
+          ico: "🚀",
+          tag: "§1.3",
+          owIds: ["h1-3-kracht-versnelling"],
+          exIds: ["ex-h3-natuurkunde-32", "ex-h3-natuurkunde-33", "ex-h3-natuurkunde-34"]
+        },
+        {
+          titel: "Paragraaf 1.4 — Veiligheid, Remweg & Stopafstand",
+          ico: "🛑",
+          tag: "§1.4",
+          owIds: ["h1-4-veiligheid-verkeer"],
+          exIds: ["ex-h3-natuurkunde-35"]
+        },
+        {
+          titel: "Paragraaf 1.5 — Arbeid en Energieomzetting",
+          ico: "⚙️",
+          tag: "§1.5",
+          owIds: ["h1-5-arbeid"],
+          exIds: ["ex-h3-natuurkunde-36"]
+        },
+        {
+          titel: "Samengestelde Toetsen (§1.1, §1.2 & §1.3 Mix)",
+          ico: "🎯",
+          tag: "Mix §1.1–1.3",
+          tagClass: "mix",
+          owIds: [],
+          exIds: ["ex-h3-natuurkunde-1", "ex-h3-natuurkunde-2", "ex-h3-natuurkunde-3", "ex-h3-natuurkunde-4", "ex-h3-natuurkunde-5"]
+        },
+        {
+          titel: "Kernbegrippen & Formules (§1.1 t/m §1.3)",
+          ico: "🔑",
+          tag: "§1.0",
+          tagClass: "begrippen",
+          owIds: ["h1-begrippen"],
+          exIds: []
+        }
+      ];
+
+      sectiesH1.forEach(function (sec) {
+        var secOw = ow.filter(function(o){ return sec.owIds.indexOf(o.id) !== -1; });
+        var secEx = exLijst.filter(function(e){ return sec.exIds.indexOf(e.id) !== -1; });
+        if (!secOw.length && !secEx.length) return;
+
+        var itemsCount = [];
+        if (secOw.length) itemsCount.push(secOw.length + " Oefening" + (secOw.length > 1 ? "en" : ""));
+        if (secEx.length) itemsCount.push(secEx.length + " Proeftoets" + (secEx.length > 1 ? "en" : ""));
+
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel">' +
+              '<span>' + sec.ico + '</span>' +
+              '<span>' + sec.titel + '</span>' +
+              '<span class="paragraaf-tag ' + (sec.tagClass || "") + '">' + sec.tag + '</span>' +
+            '</div>' +
+            '<div class="paragraaf-groep-meta">' +
+              '<span style="font-size:12px;font-weight:700;color:var(--grijs);">' + itemsCount.join(" · ") + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="grid cols-3">';
+
+        secOw.forEach(function(o){ out += renderTopicCard(o, h); });
+        secEx.forEach(function(e){ out += renderExamenCard(e, h, exDataHome); });
+
+        out += '</div></div>';
+      });
+
+      return out;
+    }
+
+    // VOOR ANDERE HOOFDSTUKKEN (H2, H3, H4, H8):
+    if (ow.length || exLijst.length) {
+      var pMap = {};
+      ow.forEach(function(o) {
+        var p = o.paragraaf || "overig";
+        if (!pMap[p]) pMap[p] = { p: p, ow: [], ex: [] };
+        pMap[p].ow.push(o);
+      });
+      exLijst.forEach(function(e) {
+        var pInfo = DURU.getParagraafInfo(e, true);
+        var p = pInfo.nr || "overig";
+        if (!pMap[p]) pMap[p] = { p: p, ow: [], ex: [] };
+        pMap[p].ex.push(e);
+      });
+
+      var pKeys = Object.keys(pMap).sort(function(a, b) {
+        if (a === "eind") return 1;
+        if (b === "eind") return -1;
+        return a.localeCompare(b, undefined, { numeric: true });
+      });
+
+      pKeys.forEach(function(pk) {
+        var grp = pMap[pk];
+        var isEind = pk === "eind";
+        var titel = isEind ? ("Hoofdstuk " + h.nr + " — Integrale Eindtoets") : ("Paragraaf " + pk);
+        if (!isEind && grp.ow[0]) titel += " — " + grp.ow[0].titel;
+        var tag = isEind ? ("Eindtoets H" + h.nr) : ("§" + pk);
+        var tagClass = isEind ? "eind" : "";
+
+        var countTxt = [];
+        if (grp.ow.length) countTxt.push(grp.ow.length + " Oefening");
+        if (grp.ex.length) countTxt.push(grp.ex.length + " Proeftoets" + (grp.ex.length > 1 ? "en" : ""));
+
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel">' +
+              '<span>' + (isEind ? "🏆" : "📌") + '</span>' +
+              '<span>' + esc(titel) + '</span>' +
+              '<span class="paragraaf-tag ' + tagClass + '">' + tag + '</span>' +
+            '</div>' +
+            '<div class="paragraaf-groep-meta">' +
+              '<span style="font-size:12px;font-weight:700;color:var(--grijs);">' + countTxt.join(" · ") + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="grid cols-3">';
+
+        grp.ow.forEach(function(o){ out += renderTopicCard(o, h); });
+        grp.ex.forEach(function(e){ out += renderExamenCard(e, h, exDataHome); });
+
+        out += '</div></div>';
+      });
+
+      return out;
+    }
+
+    return '<p style="margin: 8px 4px; color: var(--grijs); font-style: italic;">📚 De onderwerpen en proeftoetsen voor dit hoofdstuk worden binnenkort toegevoegd.</p>';
+  }
+
   function renderHome() {
-    var totaalVragen = DURU.onderwerpen.reduce(function (s, o) { return s + o.vragen.length; }, 0);
     var html = "";
 
     html += '<section class="hero view">' +
-      '<div class="mascotte">🚀</div>' +
+      '<div class="mascotte">⚛️</div>' +
       '<div><h2>Hoi Duru! Klaar om te scoren? ⚛️</h2>' +
-      '<p>Welkom in jouw eigen natuurkunde-academie. Leer alles over <b>krachten</b>, <b>energie</b> en <b>snelheid</b>, ' +
-      'oefen met ' + totaalVragen + ' vragen en verzamel medailles. Jij gaat die toets máken! 💪</p>' +
+      '<p>Welkom bij Natuurkunde HAVO 3! Kies hieronder een <b>Hoofdstuk</b> of een specifieke <b>Paragraaf</b> om direct te oefenen of een toets te maken.</p>' +
       '<div class="hero-cta">' +
       '<button class="btn oranje" onclick="DURU.gaNaar(\'theorie\',\'' + (DURU.onderwerpen[0] ? DURU.onderwerpen[0].id : "") + '\')">▶️ Begin met leren</button>' +
-      '<button class="btn ghost" onclick="DURU.gaNaar(\'examens\')">📝 Oefentoetsen</button>' +
+      '<button class="btn ghost" onclick="DURU.gaNaar(\'examens\')">📝 Alle Oefentoetsen</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'badges\')">🏅 Mijn medailles</button>' +
       '<button class="btn ghost" onclick="DURU.gaNaar(\'dashboard\')">📊 Mijn dashboard</button>' +
       '</div></div></section>';
 
-    // Oefentoetsen-sectie (op tijd, met cijfer en uitleg)
-    if (DURU.examens && DURU.examens.length) {
-      html += '<div class="sectie-titel"><h3>📝 Oefentoetsen — test jezelf op tijd!</h3><div class="lijn"></div></div>';
-      html += '<p style="margin:0 4px 14px;color:var(--grijs)">Doe een echte proeftoets met een klok. Aan het eind krijg je je cijfer én bij elke vraag <b>hoe je het moet doen</b>.</p>';
-      // Lees de examen-geschiedenis (zelfde sleutel als het dashboard) zodat de
-      // kaarten tonen of een toets al gemaakt is, het laatste cijfer en — bij
-      // meerdere pogingen — het gemiddelde cijfer.
-      var exDataHome;
-      try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
-      exDataHome.history = exDataHome.history || [];
-      html += '<div class="grid cols-3">';
-      DURU.examens.forEach(function (ex) {
-        var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
-        var statusHtml;
-        if (atts.length > 0) {
-          var pcts = atts.map(function (a) { return a.pct || 0; });
-          var laatstePct = pcts[0];
-          var gemPct = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
-          statusHtml =
-            '<div class="ex-status">' +
-              '<span class="tag" style="background:var(--groen-zacht);color:var(--groen)">✓ ' + atts.length + 'x gemaakt</span>' +
-              '<div style="font-size:12px;font-weight:800;margin-top:6px;color:' + (laatstePct >= 55 ? 'var(--groen)' : 'var(--oranje)') + '">⏱️ Laatste cijfer: ' + cijferStr(laatstePct) + ' (' + laatstePct + '%)</div>' +
-              (atts.length > 1 ? '<div style="font-size:12px;font-weight:800;margin-top:2px;color:var(--grijs)">📊 Gemiddeld cijfer: ' + cijferStr(gemPct) + '</div>' : '') +
-            '</div>';
-        } else {
-          statusHtml =
-            '<div class="ex-status">' +
-              '<span class="tag">Proeftoets</span>' +
-              '<div style="font-size:12px;font-weight:700;margin-top:6px;color:var(--grijs-licht)">Nog niet gemaakt</div>' +
-            '</div>';
-        }
-        html += '<div class="topic-card" onclick="DURU.gaNaar(\'examens\',\'' + ex.id + '\')">' +
-          '<div class="ico" style="background:var(--paars-zacht)">' + (ex.icoon || "📝") + '</div>' +
-          '<h4>' + ex.titel + '</h4>' +
-          '<p>' + (ex.vragen.length) + ' vragen · ⏱️ ' + (ex.duurMin || 20) + ' min</p>' +
-          statusHtml + '</div>';
-      });
-      html += '</div>';
-    }
+    var exDataHome;
+    try { exDataHome = JSON.parse(localStorage.getItem(SLEUTEL.replace(/_v1$/, "_examens_v1"))) || { history: [] }; } catch (e) { exDataHome = { history: [] }; }
+    exDataHome.history = exDataHome.history || [];
+
+    // Hoofdstuk Filter & Navigatie Balk
+    html += '<div class="hf-filter-wrap">' +
+      '<div class="hf-filter-kop">' +
+        '<div class="hf-filter-titel">📚 Kies een Hoofdstuk:</div>' +
+        '<div class="hf-filter-acties">' +
+          '<button class="hf-actie-knop" onclick="DURU.toggleAlleHoofdstukken(true)">📖 Klap alles uit</button>' +
+          '<button class="hf-actie-knop" onclick="DURU.toggleAlleHoofdstukken(false)">🔒 Klap alles in</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="hf-filter-pills">' +
+        '<button class="hf-filter-pill actief" data-filter="all" onclick="DURU.filterHoofdstuk(\'all\')">🌟 Alle Hoofdstukken</button>';
 
     DURU.hoofdstukken.forEach(function (h) {
-      var ow = DURU.onderwerpenVan(h.nr);
-      if (!ow.length) return;
-      html += '<div class="sectie-titel"><h3>' + h.icoon + ' Hoofdstuk ' + h.nr + ' — ' + h.titel + '</h3><div class="lijn"></div></div>';
-      html += '<p style="margin:0 4px 14px;color:var(--grijs)">' + h.intro + '</p>';
-      html += '<div class="grid cols-3">';
-      ow.forEach(function (o, i) {
-        var beste = P.beste[o.id] || 0;
-        html += '<div class="topic-card ' + h.kleur + '" onclick="DURU.gaNaar(\'theorie\',\'' + o.id + '\')">' +
-          '<span class="badge-num">' + (o.paragraaf || (h.nr + "." + (i + 1))) + '</span>' +
-          '<div class="ico">' + (o.icoon || h.icoon) + '</div>' +
-          '<h4>' + o.titel + '</h4>' +
-          '<p>' + (o.korteUitleg || "") + '</p>' +
-          '<span class="tag">' + o.vragen.length + ' vragen</span>' +
-          '<div class="mini-progress"><span style="width:' + beste + '%"></span></div>' +
-          (beste ? '<small style="color:var(--groen);font-weight:800">Beste score: ' + beste + '%</small>' : '<small style="color:var(--grijs-licht)">Nog niet gedaan</small>') +
-          '</div>';
-      });
-      html += '</div>';
+      html += '<button class="hf-filter-pill" data-filter="' + h.nr + '" onclick="DURU.filterHoofdstuk(' + h.nr + ')">' +
+        (h.icoon || "⚛️") + ' H' + h.nr + ': ' + esc(h.titel) + '</button>';
     });
 
-    html += '<div class="footer">Gemaakt met 🏛️ en 💜 voor Duru · Natuurkunde HAVO 3</div>';
+    html += '</div></div>';
+
+    // Render interactieve Hoofdstuk-kaarten (Accordion Boxes)
+    DURU.hoofdstukken.forEach(function (h, index) {
+      var ow = DURU.onderwerpenVan(h.nr);
+      var exLijst = (DURU.examens || []).filter(function(ex) { return ex.hoofdstuk === h.nr; });
+      var isOpen = index === 0; // Eerste hoofdstuk staat standaard open
+
+      html += '<div class="hf-accordion-card ' + (isOpen ? 'open' : '') + '" id="hf-card-' + h.nr + '" data-hoofdstuk="' + h.nr + '">' +
+        '<div class="hf-header" onclick="DURU.toggleHoofdstuk(' + h.nr + ')">' +
+          '<div class="hf-ico">' + (h.icoon || "⚛️") + '</div>' +
+          '<div class="hf-info">' +
+            '<h3>Hoofdstuk ' + h.nr + ' — ' + esc(h.titel) + '</h3>' +
+            '<p>' + esc(h.intro || "") + '</p>' +
+            '<div class="hf-meta-badges">' +
+              '<span class="hf-badge oranje">📖 ' + ow.length + ' Paragrafen</span>' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + (exLijst.reduce(function(s, e){ return s + e.vragen.length; }, 0)) + ' vragen)</span>' +
+            '</div>' +
+          '</div>' +
+          '<button class="hf-toggle-btn" id="hf-label-' + h.nr + '">' + (isOpen ? '▲ Klap in' : '▼ Open Hoofdstuk') + '</button>' +
+        '</div>' +
+        '<div class="hf-body" id="hf-content-' + h.nr + '" style="display:' + (isOpen ? 'block' : 'none') + ';">';
+
+      // Paragrafen & sub-secties
+      html += bouwParagraafSecties(h, ow, exLijst, exDataHome);
+
+      html += '</div></div>'; // Einde hf-body en hf-accordion-card
+    });
+
+    html += '<div class="footer" style="margin-top:40px;">Gemaakt met ⚛️ en 💜 voor Duru · Natuurkunde HAVO 3</div>';
     app.innerHTML = html;
     updateStats();
   }

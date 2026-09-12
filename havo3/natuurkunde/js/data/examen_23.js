@@ -79,7 +79,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Als twee tandwielen direct in elkaar grijpen, draaien ze altijd in precies dezelfde richting.",
       "antwoord": false,
-      "uitleg": "Waar. Tandwiel 1 draait met de klok mee -> tandwiel 2 draait tegen de klok in."
+      "uitleg": "Onwaar. Twee tandwielen die direct in elkaar grijpen draaien juist in tegengestelde richting: draait tandwiel 1 met de klok mee, dan draait tandwiel 2 tegen de klok in."
     },
     {
       "type": "mc",
@@ -115,7 +115,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Bij een racefiets kies je bij het beklimmen van een steile berg juist het allergrootste voortandwiel en kleinste achtertandwiel om lichter te kunnen trappen.",
       "antwoord": false,
-      "uitleg": "Onwaar: Waar. Hierdoor hoef je minder spierkracht te zetten, maar moet je vaker trappen (meer omwentelingen maken)."
+      "uitleg": "Onwaar. Bij een steile klim kies je juist het kleinste voortandwiel en het grootste achtertandwiel. Dan trap je lichter, maar moet je vaker trappen."
     },
     {
       "type": "mc",
@@ -156,8 +156,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "In de praktijk moet je bij een takel altijd iets meer spierkracht zetten dan theoretisch berekend door wrijving in de lagers en het eigen gewicht van de losse katrollen.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Rendement is in de werkelijkheid kleiner dan 100%."
+      "antwoord": true,
+      "uitleg": "Waar. Rendement is in de werkelijkheid kleiner dan 100%."
     },
     {
       "type": "invul",
@@ -173,8 +173,8 @@ DURU.registerExamen({
         "kracht driemaal kleiner"
       ],
       "minTreffers": 2,
-      "modelantwoord": "1. Bij een takel met n dragende touwdelen wordt het gewicht van de last gelijkmatig verdeeld over alle dragende touwen. Daardoor is de benodigde trekkracht n keer zo klein als het gewicht van de last ({\text{spier}} = F_{\text{last}} / n$). 2. Volgens de Gouden Regel van de Mechanica (behoud van arbeid) moet je echter n keer zoveel touw binnenhalen om de last omhoog te bewegen ({\text{touw}} = n \times s_{\text{last}}$). Wat je aan spierkracht wint, moet je compenseren in trekafstand.",
-      "uitleg": "Krachtverdeling en touwverplaatsing bij takels."
+      "modelantwoord": "Volgens de momentenwet geldt F1 × r1 = F2 × r2: kracht maal arm is aan beide kanten gelijk. Het moment van de last verandert niet. Is de arm van de handkracht drie keer zo lang, dan is een drie keer zo kleine kracht genoeg voor hetzelfde moment: de benodigde kracht is driemaal kleiner.",
+      "uitleg": "Momentenwet: F1 × r1 = F2 × r2. Een 3× langere arm betekent een 3× kleinere kracht."
     },
     {
       "type": "open",
@@ -184,8 +184,8 @@ DURU.registerExamen({
         "koppel 4x groter/sterker"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Berekening: Overbrengingsverhouding = 44 / 22 = 2. Bij 1 pedaalomwenteling draait het achterwiel 2 keer rond. Bij 10 omwentelingen van de trappers maakt het achterwiel dus 0 \times 2 = 20\text{ omwentelingen}$. Uitleg: Omdat het achterwiel twee keer zo snel draait als de trappers, is de benodigde trapkracht twee keer zo groot (zwaarder trappen), maar leg je per pedaalslag een dubbele afstand af.",
-      "uitleg": "Overbrenging bij fietsversnelling."
+      "modelantwoord": "Bij een overbrenging van 1:4 draait de uitgaande as vier keer langzamer dan de motor: het toerental wordt 4x kleiner. Het vermogen blijft (bijna) gelijk, dus het koppel (draaimoment) wordt 4x groter. Je ruilt snelheid in voor kracht.",
+      "uitleg": "Een tandwieloverbrenging ruilt toerental tegen koppel: 4x trager draaien geeft 4x meer draaimoment."
     }
   ]
 });

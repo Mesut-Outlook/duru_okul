@@ -11,7 +11,7 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat is de natuurkundige definitie van <b>druk ($)</b>?",
+      "vraag": "Wat is de natuurkundige definitie van <b>druk (p)</b>?",
       "opties": [
         "De loodrechte kracht die per oppervlakte-eenheid (per m² of cm²) wordt uitgeoefend (p = F / A)",
         "Het totale gewicht van een voorwerp",
@@ -53,7 +53,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een naaldpunt heeft een oppervlakte van 0,001 cm² (0^{-7}\text{ m}^2$). Je drukt met een vingerkracht van 5,0 N op de naald. Hoe groot is de druk onder de naaldpunt in N/cm²?",
+      "vraag": "Een naaldpunt heeft een oppervlakte van 0,001 cm² (10⁻⁷ m²). Je drukt met een vingerkracht van 5,0 N op de naald. Hoe groot is de druk onder de naaldpunt in N/cm²?",
       "antwoord": "5000|5000 N/cm²|5.000|5.000 N/cm²",
       "uitleg": "p = F / A = 5,0 N / 0,001 cm² = 5000 N/cm² (dat is maar liefst 50.000.000 Pa!)."
     },
@@ -73,7 +73,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Om een taart makkelijk door te snijden, moet het mes een zo breed en stomp mogelijk lemmet (groot oppervlak) hebben.",
       "antwoord": false,
-      "uitleg": "Waar. Klein oppervlak A -> zeer hoge druk p."
+      "uitleg": "Onwaar. Een scherp mes heeft juist een heel klein oppervlak A. Daardoor is de druk p = F / A groot en snijd je makkelijk."
     },
     {
       "type": "mc",
@@ -89,15 +89,15 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een vrouw van 60 kg ( = 600\text{ N}$) staat op naaldhakken. Het oppervlak van één naaldhak is 0,5 cm². Als ze op één hak balanceert met al haar gewicht, hoe groot is dan de druk onder die hak in N/cm²?",
+      "vraag": "Een vrouw van 60 kg (F<sub>z</sub> = 600 N) staat op naaldhakken. Het oppervlak van één naaldhak is 0,5 cm². Als ze op één hak balanceert met al haar gewicht, hoe groot is dan de druk onder die hak in N/cm²?",
       "antwoord": "1200|1200 N/cm²|1.200|1.200 N/cm²",
       "uitleg": "p = 600 N / 0,5 cm² = 1200 N/cm² (veel groter dan de druk van de olifant!)."
     },
     {
       "type": "waaronwaar",
       "vraag": "Vloeistoffen zijn nauwelijks samendrukbaar, waardoor een uitgeoefende druk zich in een afgesloten vloeistofsysteem naar alle kanten onverminderd voortplant.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Dit is de Wet van Pascal, het basisprincipe van hydraulische systemen."
+      "antwoord": true,
+      "uitleg": "Waar. Dit is de Wet van Pascal, het basisprincipe van hydraulische systemen."
     },
     {
       "type": "mc",
@@ -169,7 +169,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Als je een rechthoekige baksteen op zijn smalle kant zet in plaats van op zijn platte kant, wordt de druk op de tafel kleiner omdat het gewicht gelijk blijft.",
       "antwoord": false,
-      "uitleg": "Onwaar: Waar. Het gewicht F blijft gelijk, maar het contactoppervlak A is kleiner, dus p = F / A neemt toe."
+      "uitleg": "Onwaar. Het gewicht F blijft gelijk, maar het contactoppervlak A wordt kleiner. Dus de druk p = F / A wordt juist groter."
     },
     {
       "type": "open",
@@ -185,7 +185,7 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een bergwandelaar van 80 kg zakt met zijn wandelschoenen (totaal oppervlak  = 400\text{ cm}^2$) diep weg in het zachte ijs. Hij besluit sneeuwschoenen onder te binden (totaal oppervlak  = 2000\text{ cm}^2$). Bereken voor beide situaties de druk in N/cm² en leg uit waarom hij nu niet meer wegzakt. (neem g = 10 N/kg)",
+      "vraag": "Een bergwandelaar van 80 kg zakt met zijn wandelschoenen (totaal oppervlak A = 400 cm²) diep weg in het zachte ijs. Hij besluit sneeuwschoenen onder te binden (totaal oppervlak A = 2000 cm²). Bereken voor beide situaties de druk in N/cm² en leg uit waarom hij nu niet meer wegzakt. (neem g = 10 N/kg)",
       "sleutelwoorden": [
         "800",
         "2/2,0",
@@ -193,7 +193,7 @@ DURU.registerExamen({
         "kleiner/5x"
       ],
       "minTreffers": 3,
-      "modelantwoord": "Gewicht wandelaar:  = m \times g = 80\text{ kg} \times 10\text{ N/kg} = 800\text{ N}$. 1. Met gewone wandelschoenen:  = F / A = 800\text{ N} / 400\text{ cm}^2 = 2{,}0\text{ N/cm}^2$ (oftewel 0.000\text{ Pa}$). 2. Met sneeuwschoenen:  = F / A = 800\text{ N} / 2000\text{ cm}^2 = 0{,}4\text{ N/cm}^2$ (oftewel 000\text{ Pa}$). Verklaring: Doordat het oppervlak met een factor 5 is vergroot, is de druk op de sneeuw met een factor 5 gedaald van 2,0 naar 0,4 N/cm². Deze druk is lager dan de draagkracht van het sneeuwdek, waardoor hij niet meer wegzakt.",
+      "modelantwoord": "Gewicht wandelaar: Fz = m × g = 80 kg × 10 N/kg = 800 N. 1. Met gewone wandelschoenen: p = F / A = 800 N / 400 cm² = 2,0 N/cm² (oftewel 20.000 Pa). 2. Met sneeuwschoenen: p = F / A = 800 N / 2000 cm² = 0,4 N/cm² (oftewel 4000 Pa). Verklaring: doordat het oppervlak 5x zo groot is, is de druk op de sneeuw 5x kleiner geworden, van 2,0 naar 0,4 N/cm². Die druk is lager dan wat het sneeuwdek kan dragen, dus hij zakt niet meer weg.",
       "uitleg": "Drukberekening en vergelijking bij sneeuwschoenen."
     }
   ]

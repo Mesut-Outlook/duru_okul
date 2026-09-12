@@ -151,7 +151,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Volgens het atoommodel van Bohr bevinden de protonen en elektronen zich samen vast in de atoomkern en zweven de neutronen in schillen eromheen.",
       "antwoord": false,
-      "uitleg": "Waar. De K-schil kan max 2 elektronen bevatten, de L-schil max 8, de M-schil max 18 (of 8 bij de eerste perioden)."
+      "uitleg": "Onwaar. In het atoommodel van Bohr zitten de protonen en neutronen samen in de kern; de elektronen bewegen in schillen rond de kern."
     },
     {
       "type": "invul",

@@ -1,8 +1,7 @@
 /* =========================================================
    Duru's Economie (HAVO 3) — Proeftoets 21: Productiefactoren KANO, Bedrijfstypen & Efficiëntie (4.1)
    ========================================================= */
-DURU.registerExamen(
-{
+DURU.registerExamen({
   "id": "ex-h3-economie-21",
   "hoofdstuk": 4,
   "paragraaf": "4.1",
@@ -181,13 +180,13 @@ DURU.registerExamen(
     },
     {
       "type": "invul",
-      "vraag": "De beloning voor de inzet van kapitaal in de vorm van geleend geld noemen we [rente|interest].",
+      "vraag": "De beloning voor de inzet van kapitaal in de vorm van geleend geld noemen we ____.",
       "antwoord": "rente|interest",
       "uitleg": "Rente is de inkomensbeloning voor de productiefactor Kapitaal."
     },
     {
       "type": "invul",
-      "vraag": "Wanneer machines menselijke handkracht vervangen noemen we dat [mechanisatie].",
+      "vraag": "Wanneer machines menselijke handkracht vervangen noemen we dat ____.",
       "antwoord": "mechanisatie",
       "uitleg": "Mechanisatie is het inzetten van machines ter vervanging van fysieke arbeid."
     },
@@ -214,5 +213,4 @@ DURU.registerExamen(
       "uitleg": "Toegevoegde waarde dekt de inzet van alle productiefactoren van de horecaonderneming."
     }
   ]
-}
-);
+});

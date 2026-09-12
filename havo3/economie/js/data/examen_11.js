@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Kosten die niet veranderen bij een verandering van de productieomvang heten [constante kosten|vaste kosten].",
+      "vraag": "Kosten die niet veranderen bij een verandering van de productieomvang heten ____.",
       "antwoord": "constante kosten|vaste kosten",
       "uitleg": "Constante kosten blijven vast op korte termijn."
     },
     {
       "type": "invul",
-      "vraag": "Kosten die rechtstreeks meegroeien met het productievolume noemen we [variabele kosten].",
+      "vraag": "Kosten die rechtstreeks meegroeien met het productievolume noemen we ____.",
       "antwoord": "variabele kosten",
       "uitleg": "Variabele kosten hangen af van de productieomvang."
     },
     {
       "type": "invul",
-      "vraag": "Het voordeel dat ontstaat doordat vaste kosten over grote aantallen worden verdeeld heet [schaalvoordeel|schaalvoordelen].",
+      "vraag": "Het voordeel dat ontstaat doordat vaste kosten over grote aantallen worden verdeeld heet ____.",
       "antwoord": "schaalvoordeel|schaalvoordelen",
       "uitleg": "Schaalvoordelen verlagen de kostprijs per eenheid."
     },
     {
       "type": "invul",
-      "vraag": "De formule voor totale kosten is TCK plus [TVK|totale variabele kosten].",
+      "vraag": "De formule voor totale kosten is TCK plus ____.",
       "antwoord": "TVK|totale variabele kosten",
       "uitleg": "TK = TCK + TVK."
     },

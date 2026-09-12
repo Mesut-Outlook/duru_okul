@@ -190,7 +190,7 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Gegeven de getallen: 3, 7, 7, $x$. Bepaal de waarde van $x$ als het gemiddelde van de 4 getallen precies 8 moet zijn.",
+      "vraag": "Gegeven de getallen: 3, 7, 7, x. Bepaal de waarde van x als het gemiddelde van de 4 getallen precies 8 moet zijn.",
       "sleutelwoorden": [
         "15",
         "32",

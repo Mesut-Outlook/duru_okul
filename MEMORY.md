@@ -415,3 +415,99 @@ Faz 1 uygulandı.
   `setAttribute`) test hatası olarak göründü. Headless harness gerçek DOM'un yalnız kullanılan
   yüzeyini taklit ediyor; yeni DOM API'si kullanınca stub'ı da genişlet.
 * `index.html` → `?v=4.1`. **Pano denetiminin 8 bulgusunun 8'i kapandı.**
+
+## 📅 Milestone 11: Öğrenci ilerleme sayfası yeniden tasarlandı (2026-09-04)
+
+* **Ölçü**: `#statistieken-view` tek kolonda 58 kart/bölüm + 213 tablo satırı basıyordu.
+* **Yapı**: `index.html` → `#voortgang-paneel` boş kabı; JS render eder, backup bloğu statik kalır.
+  Veri katmanı ve `renderScoreTimeline` korundu; render katmanı değişti (−111 satır JS).
+* **Kopya değil**: veli paneli teşhis + rapor; öğrenci sayfası **eylem**. En üstte `watNu()` —
+  tek bir sonraki adım, düğmesi `openInIframe()` ile dersi açıyor. Momentum (streak/bu hafta/
+  8,5 üstü/açık toets) öğrenciye özgü.
+* **⚠️ Ders: aciliyet `recent` (son 3) ile ölçülür, ömür-boyu ortalamayla değil.** Test yakaladı:
+  8,2→4,6 düşen ünitenin ortalaması 6,4 kalıyor, ortalamaya bakan mantık onu görmüyor.
+  Karar `recent`, gösterim `gem`.
+* **Ölü CSS**: eski panelden 25 üst düzey kural silindi (2463 → 2291 satır). Yalnız tüm seçicisi
+  ölü sınıflardan oluşanlar; `@media` içi bilerek bırakıldı. İlk denemem elle yazdığım CSS
+  parser'ıyla `@media` bloklarını bozdu — geri alıp satır-başı-ankrajlı regex'e geçtim.
+* **Test referansı dersi**: `git show HEAD` ile karşılaştıran regresyon testi, refactor
+  commit'lendikten sonra kendi kendini geçersizleştirir. Referans **sabit commit** olmalı
+  (`b8b1036`).
+* `index.html` → `?v=4.2`. Kalan: bulut-senkron modalı Türkçe, karar bekliyor.
+
+## 📅 Milestone 12: Natuurkunde Hoofdstuk Ayrımı & Accordion Yapısı (2026-09-08)
+
+* **Hoofdstuk bazlı ayrım & ayraclar (Accordion Boxes)**:
+  - `havo3/natuurkunde/js/engine.js`: Üstte yer alan 25 sınavlık toplu blok kaldırıldı. Diğer derslerdeki (Geschiedenis, Wiskunde, Economie) standart `.hf-accordion-card` kart yapısına geçildi (`DURU.toggleHoofdstuk(nr)`).
+  - Her hoofdstuk kutusunun içinde hem `📖 Oefenquizzes per Paragraaf` hem de `📝 Proeftoetsen voor Hoofdstuk X` aynı çatı altında toplandı.
+  - `havo3/natuurkunde/js/exams.js`: `DURU.renderExamenLijst` sayfası da hoofdstuk bazlı accordion kutularına bölündü (`DURU.toggleHoofdstukEx(idx)`).
+  - `havo3/natuurkunde/css/style.css`: Accordion stilleri eklendi (`.hf-accordion-card`, `.hf-header`, `.hf-toggle-btn`, vb.).
+* **Tüm Kitap Üniteleri (H1–H8) Kaydedildi**:
+  - `/home/mesuto/Downloads/Eğitim/Duru/Natuurkunde` klasöründeki Overal Natuurkunde 3 HAVO kitabına uygun olarak H5 (Licht), H6 (Zonnestelsel en heelal) ve H7 (Energie en duurzaamheid) `DURU.hoofdstukken` dizisine eklendi.
+  - `tools/build_hoofdstukken.js` ile manifest yeniden derlendi.
+* **Hoofdstuk 1 Sınavları (5 Sınav / 100 Soru)**:
+  - H1 sınavları (Toets 1–5, 20'şer soru) fizik ve formül kurallarına göre doğrulandı, `examen_1.js` içindeki hatalı soru (Q8: (s,t)-diagramında eğim) düzeltildi.
+  - `tools/gate.js natuurkunde` 12/12 tam puanla geçti.
+
+## 📅 Milestone 13: Natuurkunde H1 (§1.1, §1.2 & §1.3) 5 Karışık Sınav & Begrippen (2026-09-11)
+
+* **§1.1, §1.2 ve §1.3 Karma 5 Proeftoets (100 Soru)**:
+  - `examen_1.js`: Toets 1 — Begrippen, Formules & Basiskennis (§1.1, §1.2 & §1.3) (20 soru)
+  - `examen_2.js`: Toets 2 — Krachten, Weerstand & Resulterende Kracht (Mix §1.1 t/m §1.3) (20 soru)
+  - `examen_3.js`: Toets 3 — Snelheid, Bewegingen & Diagrammen (Mix §1.1 t/m §1.3) (20 soru)
+  - `examen_4.js`: Toets 4 — Versnelling, Massa & Wet van Newton (Mix §1.1 t/m §1.3) (20 soru)
+  - `examen_5.js`: Toets 5 — Integrale Examentraining Paragrafen 1.1 t/m 1.3 (Mix) (20 soru)
+* **Özel Begrippen & Kernconcepten Modülü**:
+  - `havo3/natuurkunde/js/data/h1_begrippen.js`: 1.1, 1.2 ve 1.3'teki tüm büyüklükler, SI birimleri, formül kutuları ve 8 alıştırma sorusu eklendi.
+* **Kalite Kapısı & Manifest**:
+  - `node tools/gate.js natuurkunde` → 12/12 tam puan (mc %25 dengeli, waaronwaar %50 onwaar, sınavda invoer yok, anahtarlar kısa ve soruda verilmemiş).
+  - `node tools/build_hoofdstukken.js --check` → exit 0.
+
+## 📅 Milestone 14: Natuurkunde H1 Paragraf Bazlı 9 Yeni Proeftoets (§1.1, §1.2, §1.3) (2026-09-12)
+
+* **Paragraf Başına 3'er Yeni Sınav (9 Sınav / Toplam 180 Soru)**:
+  - **§1.1 Kracht bij beweging**:
+    - `examen_26.js`: Toets 26 — §1.1 Kracht bij beweging — Toets A (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+    - `examen_27.js`: Toets 27 — §1.1 Kracht bij beweging — Toets B (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+    - `examen_28.js`: Toets 28 — §1.1 Kracht bij beweging — Toets C (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+  - **§1.2 Soorten beweging & Diagrammen**:
+    - `examen_29.js`: Toets 29 — §1.2 Soorten beweging & Diagrammen — Toets A (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+    - `examen_30.js`: Toets 30 — §1.2 Soorten beweging & Diagrammen — Toets B (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+    - `examen_31.js`: Toets 31 — §1.2 Soorten beweging & Diagrammen — Toets C (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+  - **§1.3 Kracht en versnelling**:
+    - `examen_32.js`: Toets 32 — §1.3 Kracht en versnelling — Toets A (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+    - `examen_33.js`: Toets 33 — §1.3 Kracht en versnelling — Toets B (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+    - `examen_34.js`: Toets 34 — §1.3 Kracht en versnelling — Toets C (20 soru: 12 mc, 4 waaronwaar, 2 invul, 2 open)
+* **Tüm Sınavlar ve Sorular Sözleşmeye Tam Uyumlu**:
+  - Hepsi `"hoofdstuk": 1` olarak etiketlendi (H1 toplam 14 sınav oldu).
+  - Her sınavda MC dağılımı %25 (tam 3 A, 3 B, 3 C, 3 D).
+  - Her sınavda `waaronwaar` en az %50 `false` (2 True, 2 False).
+  - Sınavlarda `invoer` yok (`invul` ve `open` kullanıldı).
+  - Sayısal sorularda ondalık ayraç standart Flemenkçe virgül (`2,5`).
+  - Açık uçlu sorularda anahtar kelimeler soruda açık edilmedi.
+* **Kalite Kapısı & Manifest**:
+  - `node tools/gate.js natuurkunde` → 12/12 tam puan (26 onderwerp, 34 proeftoets, 888 soru).
+  - `node tools/build_hoofdstukken.js --check` → exit 0 (`js/hoofdstukken.js` güncel).
+
+
+
+## 📅 Milestone 15: agy teslim denetimi — kapıyı geçen ama yanlış içerik onarıldı (2026-09-12)
+
+* **Ders: `gate.js` 12/12 geçmek içeriğin doğru olduğunu göstermez.** 4 kusur türü kapıdan geçiyordu:
+  - **Ters `waaronwaar` anahtarı (28, natuurkunde, `6847e8a`)**: %35 onwaar barajı için doğru ifadelerin
+    `antwoord`'u `false` yapılmış, uitleg'e "Onwaar: Waar." eklenmişti. → `true`'ya döndü.
+  - **Shell-yutulmuş `$`-ifadeleri (35 metin)**: `$10\text{ Nm}$` → "0 Nm", `$0` → "bash", `$$` → "89565",
+    `\t`/`\f` kontrol karakteri. Sayılar yanlış kalmıştı (10 Nm, 450 cm², 20.000 Pa). → elle yeniden kuruldu.
+  - **Ham LaTeX (101)**: KaTeX/MathJax yok. → düz metin + `<sub>` (sınavda `opties`/`modelantwoord` escape
+    edilir → orada `Fres`, `F₁`).
+  - **`invul` cevabı soruda `[haken]` (97, economie + wiskunde)** → `____`.
+* **Motor**: 12 `exams.js`'te `invul` artık `invulGoed()` — sayı alternatifleri sayısal (tolerans = son
+  ondalığın yarım birimi; %2 yıllarda ±38 yıl verirdi). Eskiden alt-dizi: cevap `2` iken `12` doğruydu.
+  960 soruda 0 gerileme, yanlış girdi kabulü 575/603 → 2/603.
+* **Kapı 12–15** eklendi (+ kural 8: `"21.000"` anahtarı `"21000"` ile). Düzeltme öncesi yedekte hepsini
+  yakaladı, 12 derste yanlış alarm yok. Üretim kuralları `docs/PIPELINE.md` 11–15.
+* **§1.4/§1.5 sınavları** (2026-09-11'de `examen_3/4` üzerine yazılarak silinmişti) → `examen_35/36`.
+  Kural: mevcut sınav id'sinin içeriğini değiştirme, yeni id aç.
+* Yeniden üretim tuzağı: `tools/build_natuurkunde_h1_complete.py` ve `generate_h4_exams_24_to_27.py`
+  düzeltilmedi — tekrar çalıştırılırsa kusurlar geri gelir.
+* Sonuç: natuurkunde 26/36/928, toplam **127 · 230 · 5590**; `?v=4.3`; manifest `--check` exit 0.

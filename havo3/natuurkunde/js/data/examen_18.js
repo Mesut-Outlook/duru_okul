@@ -138,8 +138,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Donkere, matte voorwerpen absorberen warmtestraling veel beter dan glimmende, witte voorwerpen.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. Zwart/mat absorbeert en zendt straling goed uit; wit/glimmend reflecteert straling."
+      "antwoord": true,
+      "uitleg": "Waar. Zwart/mat absorbeert en zendt straling goed uit; wit/glimmend reflecteert straling."
     },
     {
       "type": "invul",

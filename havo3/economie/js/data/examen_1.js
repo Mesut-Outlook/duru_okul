@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Goederen die de natuur ons gratis en onbeperkt schenkt noemen we [vrije goederen|vrij goed].",
+      "vraag": "Goederen die de natuur ons gratis en onbeperkt schenkt noemen we ____.",
       "antwoord": "vrije goederen|vrij goed",
       "uitleg": "Vrije goederen zijn niet schaars en kosten geen productiemiddelen."
     },
     {
       "type": "invul",
-      "vraag": "Het kopen van producten door particulieren om in behoeften te voorzien heet [consumeren|consumptie].",
+      "vraag": "Het kopen van producten door particulieren om in behoeften te voorzien heet ____.",
       "antwoord": "consumeren|consumptie",
       "uitleg": "Consumeren is het eindgebruik van goederen en diensten door consumenten."
     },
     {
       "type": "invul",
-      "vraag": "Behoeften die noodzakelijk zijn om fysiek te kunnen overleven heten [primaire behoeften|basisbehoeften].",
+      "vraag": "Behoeften die noodzakelijk zijn om fysiek te kunnen overleven heten ____.",
       "antwoord": "primaire behoeften|basisbehoeften",
       "uitleg": "Primaire behoeften zijn de basisvoorwaarden voor het menselijk bestaan."
     },
     {
       "type": "invul",
-      "vraag": "Niet-tastbare werkzaamheden die voor een ander worden verricht noemen we [diensten|dienst].",
+      "vraag": "Niet-tastbare werkzaamheden die voor een ander worden verricht noemen we ____.",
       "antwoord": "diensten|dienst",
       "uitleg": "Diensten zijn onlichamelijke prestaties zoals openbaar vervoer of medische zorg."
     },

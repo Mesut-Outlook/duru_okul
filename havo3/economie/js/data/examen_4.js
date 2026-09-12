@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Het ruilen van goederen tegen goederen zonder geld noemen we [directe ruil|ruil in natura].",
+      "vraag": "Het ruilen van goederen tegen goederen zonder geld noemen we ____.",
       "antwoord": "directe ruil|ruil in natura",
       "uitleg": "Directe ruil is handel in natura."
     },
     {
       "type": "invul",
-      "vraag": "Geld waarvan de waarde berust op onderling vertrouwen heet [fiduciair geld|fiduciair].",
+      "vraag": "Geld waarvan de waarde berust op onderling vertrouwen heet ____.",
       "antwoord": "fiduciair geld|fiduciair",
       "uitleg": "Fiduciair geld heeft geen intrinsieke gouddekking meer."
     },
     {
       "type": "invul",
-      "vraag": "Vroegere ruilmiddelen zoals schelpen, zout en vee noemen we [goederengeld].",
+      "vraag": "Vroegere ruilmiddelen zoals schelpen, zout en vee noemen we ____.",
       "antwoord": "goederengeld",
       "uitleg": "Goederengeld bestaat uit goederen die tevens als ruilmiddel dienstdeden."
     },
     {
       "type": "invul",
-      "vraag": "Het ruilen van goederen met behulp van een algemeen ruilmiddel noemen we [indirecte ruil].",
+      "vraag": "Het ruilen van goederen met behulp van een algemeen ruilmiddel noemen we ____.",
       "antwoord": "indirecte ruil",
       "uitleg": "Indirecte ruil verloopt via geld."
     },

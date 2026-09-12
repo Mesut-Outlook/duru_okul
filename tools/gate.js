@@ -63,7 +63,10 @@ const yapi=[];alle.forEach(a=>{const v=a.v,tag=`${a.owner}#${a.n}`;
   else if(v.type==='open'){if(!Array.isArray(v.sleutelwoorden)||!v.sleutelwoorden.length)yapi.push(tag+': sleutelwoorden yok');
     if(!Number.isInteger(v.minTreffers)||v.minTreffers<1)yapi.push(tag+': minTreffers gecersiz');
     else if(Array.isArray(v.sleutelwoorden)&&v.minTreffers>v.sleutelwoorden.length)yapi.push(tag+': minTreffers > sleutelwoorden');
-    (v.sleutelwoorden||[]).forEach(s=>{const w=norm(String(s).split('/')[0]);if(w.length>4&&norm(v.vraag).includes(w))yapi.push(tag+`: sleutelwoord "${s}" soruda geciyor`)})}
+    (v.sleutelwoorden||[]).forEach(s=>{const w=norm(String(s).split('/')[0]);if(w.length>4&&norm(v.vraag).includes(w))yapi.push(tag+`: sleutelwoord "${s}" soruda geciyor`)})
+    // nakijken maakt van "21.000" "21 000": wie "21000" typt, mist de sleutel zonder puntloze variant
+    ;(v.sleutelwoorden||[]).forEach(s=>{const alts=String(s).split('/').map(x=>x.trim());alts.forEach(x=>{
+      if(/^\d{1,3}(\.\d{3})+$/.test(x)&&!alts.includes(x.replace(/\./g,'')))yapi.push(tag+`: sleutelwoord "${x}" noktasiz "${x.replace(/\./g,'')}" olmadan`)})})}
   else yapi.push(tag+`: bilinmeyen type '${v.type}'`)});
 check('8. Soru yapisi sozlesmeye uygun', yapi);
 
@@ -74,6 +77,24 @@ check('9. Soru sayilari (onderwerp \u2265 8 / proeftoets = 20)',
    ...EE.filter(e=>(e.vragen||[]).length!==20).map(e=>`${e.id}: ${(e.vragen||[]).length} vraag (moet 20 zijn)`)]);
 check('10. theorie ≥1500 karakter', OO.filter(o=>String(o.theorie||'').length<1500).map(o=>`${o.id}: ${String(o.theorie||'').length}b`));
 check('11. index.html bagli', files.filter(f=>!refs.includes('js/data/'+f)).map(f=>'bagli degil: '+f));
+
+// 12-15: 2026-09-12 denetiminde bulunan, 1-11'in yakalamadigi kusurlar (bkz. tools/README.md)
+const teksten=[];[...OO,...EE].forEach(x=>{const walk=(o,p)=>{if(typeof o==='string')teksten.push({tag:x.id,p,s:o});
+  else if(Array.isArray(o))o.forEach((y,i)=>walk(y,p+'['+i+']'));else if(o&&typeof o==='object')for(const k in o)walk(o[k],p?p+'.'+k:k)};walk(x,'')});
+const kort=(t,m)=>`${t.tag} ${t.p}: …${t.s.slice(Math.max(0,m.index-25),m.index+45).replace(/[\x00-\x1f]/g,'¿')}…`;
+// Projede KaTeX/MathJax yok: "$F_{res}$" ogrenciye aynen gorunur. Duz metin + <sub>/<sup> kullan.
+const LATEX=/\$[^$]*(?:\\[a-zA-Z]+|[_^]\{)[^$]*\$|\\(?:frac|text|cdot|times|Delta|approx)\b/;
+check('12. Ham LaTeX yok', teksten.filter(t=>LATEX.test(t.s)).map(t=>kort(t,t.s.match(LATEX))));
+// Uretec shell'de "$1", "$F_z", "$$" gibi ifadeleri degisken sanip yutunca: "( = 900 N)", "($)", "bash{", \t/\f kalintisi
+const BOZUK=/[\x00-\x08\x0b-\x0c\x0e-\x1f\t]|\(\s*\$\s*\)|\(\s+=\s|\bbash\{/;
+check('13. Bozuk metin yok (stuurteken / yutulmus $-degisken)', teksten.filter(t=>BOZUK.test(t.s)).map(t=>kort(t,t.s.match(BOZUK))));
+// Motor [..] isaretini bosluga cevirmez: "heet de [restwaarde]" cevabi ekrana basar
+check('14. invul: cevap soruda [haken] icinde degil', alle.filter(a=>a.v.type==='invul'&&/\[[^\]]+\]/.test(a.v.vraag)).map(a=>`${a.owner}#${a.n}: ${a.v.vraag.match(/\[[^\]]+\]/)[0]}`));
+// Kapidan gecmek icin ifadeyi degistirmeden antwoord'u cevirmek: uitleg "Onwaar: Waar." ile ele verir
+const ZEGT_WAAR=/^(waar|juist|true|right|correct|richtig|vrai)\b/i, ZEGT_ONWAAR=/^(onwaar|niet waar|fout|false|wrong|incorrect|falsch|faux)\b/i;
+check('15. waaronwaar: uitleg antwoord ile celismiyor', wow.filter(a=>{const u=norm(a.v.uitleg);
+  return /^(onwaar|waar)\s*[:.]\s*(waar|onwaar)\b/i.test(u)||(ZEGT_WAAR.test(u)&&a.v.antwoord===false)||(ZEGT_ONWAAR.test(u)&&a.v.antwoord===true)})
+  .map(a=>`${a.owner}#${a.n} (antwoord ${a.v.antwoord}): ${norm(a.v.uitleg).slice(0,50)}`));
 
 console.log(`\n  SONUC: ${passes} gecti, ${fails} kaldi`);
 process.exit(fails?1:0);

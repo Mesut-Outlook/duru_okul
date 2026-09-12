@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-04",
+  "gegenereerd": "2026-09-12",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -236,7 +236,11 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-20": 4,
         "ex-h3-economie-21": 4,
         "ex-h3-economie-22": 4,
-        "ex-h3-economie-23": 4
+        "ex-h3-economie-23": 4,
+        "ex-h3-economie-24": 4,
+        "ex-h3-economie-25": 4,
+        "ex-h3-economie-26": 4,
+        "ex-h3-economie-27": 4
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -256,7 +260,7 @@ window.DURU_HOOFDSTUKKEN = {
         "1": 6,
         "2": 3,
         "3": 3,
-        "4": 11
+        "4": 15
       },
       "aantalOnderwerpen": {
         "1": 3,
@@ -633,6 +637,24 @@ window.DURU_HOOFDSTUKKEN = {
           "intro": "Stofeigenschappen, dichtheid (ρ = m/V), drijven en zinken, soortelijke warmte (Q = m·c·ΔT), warmtetransport (geleiding, stroming, straling), soortelijke weerstand (R = ρ·l/A) en sensoren (NTC, PTC, LDR)."
         },
         {
+          "nr": 5,
+          "titel": "Licht",
+          "icoon": "🔦",
+          "intro": "Licht en beeld, breking van licht, construeren bij bolle en holle lenzen, oogafwijkingen (bijziend en verziend) en rekenen aan lenzen (lenzenformule en vergroting)."
+        },
+        {
+          "nr": 6,
+          "titel": "Zonnestelsel en heelal",
+          "icoon": "🪐",
+          "intro": "Ons zonnestelsel en planeten op schaal, de aarde en de maan (schijngestalten), krachten in het heelal (zwaartekracht en planeetbanen), de Melkweg en astronomisch onderzoek."
+        },
+        {
+          "nr": 7,
+          "titel": "Energie en duurzaamheid",
+          "icoon": "🌿",
+          "intro": "Energieomzettingen, verbrandingswarmte, rekenen met energie en rendement (η = Enuttig / Ein · 100%), energiegebruik in huis, milieu-impact en duurzame energiebronnen."
+        },
+        {
           "nr": 8,
           "titel": "Krachten gebruiken",
           "icoon": "🪚",
@@ -664,7 +686,18 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-22": 8,
         "ex-h3-natuurkunde-23": 8,
         "ex-h3-natuurkunde-24": 8,
-        "ex-h3-natuurkunde-25": 8
+        "ex-h3-natuurkunde-25": 8,
+        "ex-h3-natuurkunde-26": 1,
+        "ex-h3-natuurkunde-27": 1,
+        "ex-h3-natuurkunde-28": 1,
+        "ex-h3-natuurkunde-29": 1,
+        "ex-h3-natuurkunde-30": 1,
+        "ex-h3-natuurkunde-31": 1,
+        "ex-h3-natuurkunde-32": 1,
+        "ex-h3-natuurkunde-33": 1,
+        "ex-h3-natuurkunde-34": 1,
+        "ex-h3-natuurkunde-35": 1,
+        "ex-h3-natuurkunde-36": 1
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -672,6 +705,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h1-3-kracht-versnelling": 1,
         "h1-4-veiligheid-verkeer": 1,
         "h1-5-arbeid": 1,
+        "h1-begrippen": 1,
         "h2-1-lading-spanning": 2,
         "h2-2-weerstand-ohm": 2,
         "h2-3-serie-parallel": 2,
@@ -694,14 +728,14 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 5,
+        "1": 16,
         "2": 5,
         "3": 5,
         "4": 5,
         "8": 5
       },
       "aantalOnderwerpen": {
-        "1": 5,
+        "1": 6,
         "2": 5,
         "3": 5,
         "4": 5,

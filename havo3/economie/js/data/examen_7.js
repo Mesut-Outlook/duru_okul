@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De vergoeding die je van de bank ontvangt over je spaargeld heet [rente|spaarloon].",
+      "vraag": "De vergoeding die je van de bank ontvangt over je spaargeld heet ____.",
       "antwoord": "rente|spaarloon",
       "uitleg": "Rente is de prijs voor het uitlenen van spaargeld."
     },
     {
       "type": "invul",
-      "vraag": "Het fenomeen waarbij rente bij het kapitaal wordt opgeteld en zelf weer rente oplevert heet [samengestelde rente|rente op rente].",
+      "vraag": "Het fenomeen waarbij rente bij het kapitaal wordt opgeteld en zelf weer rente oplevert heet ____.",
       "antwoord": "samengestelde rente|rente op rente",
       "uitleg": "Samengestelde rente is rente-op-rente."
     },
     {
       "type": "invul",
-      "vraag": "Het wettelijke stelsel dat spaargeld tot € 100.000 garandeert heet het [depositogarantiestelsel].",
+      "vraag": "Het wettelijke stelsel dat spaargeld tot € 100.000 garandeert heet het ____.",
       "antwoord": "depositogarantiestelsel",
       "uitleg": "Het depositogarantiestelsel waarborgt spaartegoeden."
     },
     {
       "type": "invul",
-      "vraag": "Een spaarrekening waarop geld voor een afgesproken vaste periode vaststaat heet een [spaardeposito|deposito].",
+      "vraag": "Een spaarrekening waarop geld voor een afgesproken vaste periode vaststaat heet een ____.",
       "antwoord": "spaardeposito|deposito",
       "uitleg": "Bij een deposito staat het spaargeld tijdelijk vast."
     },

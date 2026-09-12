@@ -11,7 +11,7 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat is de <b>arm van een kracht</b> ($) bij een hefboom?",
+      "vraag": "Wat is de <b>arm van een kracht</b> (r) bij een hefboom?",
       "opties": [
         "De kortste (loodrechte) afstand van het draaipunt tot de werklijn van de kracht",
         "De totale lengte van de hefboom van begin tot eind",
@@ -89,7 +89,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Welke eenheid hoort bij het moment van een kracht ($)? Geef het symbool van deze eenheid.",
+      "vraag": "Welke eenheid hoort bij het moment van een kracht (M)? Geef het symbool van deze eenheid.",
       "antwoord": "Nm|N*m|N m|Newtonmeter",
       "uitleg": "Moment M = F × r -> Newton × meter = Nm (Newtonmeter)."
     },
@@ -107,13 +107,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Aan de rechterkant van deze wipwap (uit de vorige vraag, met {\text{links}} = 600\text{ Nm}$) gaat iemand zitten op 2,0 m van het draaipunt. Hoe zwaar moet deze persoon zijn in Newton om precies evenwicht te maken?",
+      "vraag": "Aan de rechterkant van deze wipwap (uit de vorige vraag, met M<sub>links</sub> = 600 Nm) gaat iemand zitten op 2,0 m van het draaipunt. Hoe zwaar moet deze persoon zijn in Newton om precies evenwicht te maken?",
       "antwoord": "300|300 N",
       "uitleg": "F = M / r = 600 Nm / 2,0 m = 300 N."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Als de werklijn van een kracht precies door het draaipunt heen loopt, is de arm  = 0\text{ m}$ en is het moment van die kracht nul ( = 0\text{ Nm}$).",
+      "vraag": "Als de werklijn van een kracht precies door het draaipunt heen loopt, is de arm r = 0 m en is het moment van die kracht nul (M = 0 Nm).",
       "antwoord": true,
       "uitleg": "Waar. Als je tegen het scharnier van een deur duwt, draait de deur niet (r = 0 -> M = 0)."
     },
@@ -150,8 +150,8 @@ DURU.registerExamen({
     {
       "type": "waaronwaar",
       "vraag": "Bij het berekenen van een hefboom in evenwicht mogen de armen in centimeters (cm) staan, mits beide armen in dezelfde eenheid staan.",
-      "antwoord": false,
-      "uitleg": "Onwaar: Waar. F₁ × r₁ = F₂ × r₂ klopt ook als beide r in cm staan (de verhouding blijft gelijk). Als je het moment M zelf berekent, moet r wel in meters."
+      "antwoord": true,
+      "uitleg": "Waar. F₁ × r₁ = F₂ × r₂ klopt ook als beide r in cm staan (de verhouding blijft gelijk). Als je het moment M zelf berekent, moet r wel in meters."
     },
     {
       "type": "invul",

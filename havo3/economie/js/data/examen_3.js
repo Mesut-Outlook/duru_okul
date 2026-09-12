@@ -156,25 +156,25 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Het financiële plan waarin verwachte inkomsten en uitgaven op elkaar worden afgestemd heet een [begroting|budgetplan].",
+      "vraag": "Het financiële plan waarin verwachte inkomsten en uitgaven op elkaar worden afgestemd heet een ____.",
       "antwoord": "begroting|budgetplan",
       "uitleg": "Een begroting is een overzicht van verwachte toekomstige baten en lasten."
     },
     {
       "type": "invul",
-      "vraag": "Als de inkomsten groter zijn dan de uitgaven ontstaat een [begrotingsoverschot|overschot].",
+      "vraag": "Als de inkomsten groter zijn dan de uitgaven ontstaat een ____.",
       "antwoord": "begrotingsoverschot|overschot",
       "uitleg": "Een begrotingsoverschot betekent een positief saldo op de begroting."
     },
     {
       "type": "invul",
-      "vraag": "De afkorting van het Nationaal Instituut voor Budgetvoorlichting is [NIBUD|Nibud].",
+      "vraag": "De afkorting van het Nationaal Instituut voor Budgetvoorlichting is ____.",
       "antwoord": "NIBUD|Nibud",
       "uitleg": "NIBUD staat voor Nationaal Instituut voor Budgetvoorlichting."
     },
     {
       "type": "invul",
-      "vraag": "Om weekbedragen om te rekenen naar maandbedragen vermenigvuldig je met 52 en deel je door [12].",
+      "vraag": "Om weekbedragen om te rekenen naar maandbedragen vermenigvuldig je met 52 en deel je door ____.",
       "antwoord": "12",
       "uitleg": "Formule: (weekbedrag × 52) / 12."
     },
