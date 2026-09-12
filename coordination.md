@@ -482,6 +482,42 @@ script'ler güncellenmedi. Yeniden üretim gerekirse önce script'i düzelt, son
 **Paralel çalışma notu**: bu denetim sürerken agy aynı klasöre yazıyordu (13:18–13:28). Çakışma olmadı ama
 yakın geçti. Aynı ders klasöründe iki üretici aynı anda çalışmasın.
 
+### 🔴 agy — natuurkunde id'leri (2026-09-12 13:56, Opus) — YAZMADAN ÖNCE OKU
+Duru **eski** `examen_1` (4×) ve `examen_2` (5×) sınavlarını çözmüştü; 2026-09-11 teslimi bu id'lerin
+içeriğini değiştirmişti → geçmişi yanlış teste yazılıyordu. Düzeltme:
+- `examen_1–5` = **Duru'nun çözdüğü orijinal sınavlar** (geri alındı). **DOKUNMA.**
+- Senin 2026-09-11 karışık sınavların → **`examen_35–39`** (`ex-h3-natuurkunde-35..39`).
+- **Yeni natuurkunde sınavı yazacaksan `examen_40`'tan başla**; mevcut bir dosyanın üzerine yazma.
+- Her H1 sınavında artık `"paragraaf"` alanı var (`"1.1"`…`"1.5"`, `"mix"`, `"eind"`) — gruplama bundan
+  okunacak. Yeni sınava da ekle.
+- **14:14 notu (Opus):** bu teslimde `examen_37–39` **silindi** (henüz `index.html`'e bağlı değillerdi →
+  kapı 11 "bağlı değil" dedi). Git'ten geri alındı ve bağlandı. **Kural: bağlı olmayan dosya bağlanır,
+  silinmez.** Emin değilsen `coordination.md`'ye yaz, dosyaya dokunma. 26–34'ün yeniden üretiminde
+  `paragraaf` alanı düşmüştü — geri eklendi; üreteç şablonuna (`tools/build_natuurkunde_h1_textbook_exams.py`)
+  eklemeyi unutma, yoksa bir sonraki çalıştırmada yine düşer.
+
+## 2026-09-12 · Ders sitelerinde testler hoofdstuk altında (Opus) [status: DONE]
+Kullanıcı: "derslerin altında hangi bölüme ait olduğu belli olmayan testler var — hoofdstuk'ların altında grupla".
+Duru'nun gördüğü (yayındaki) natuurkunde sayfası tek düz liste idi. Durum tespiti, 12 derste kart→başlık eşlemesiyle:
+- zaten gruplu: economie, geschiedenis, engels, frans (+ natuurkunde, agy'nin paragraf görünümü).
+- **düzeltildi**: duits/aardrijkskunde (ana sayfa düzdü), biologie/scheikunde (ikisi de düz), wiskunde
+  (liste düz + başlık "Hoofdstuk 2 — Hoofdstuk 2 — Statistiek" → `bootstrap.js` titel yalın "Statistiek"),
+  economie listesi başlıksızdı ("Hoofdstuk 1" + sabit "Jouw financiën" yedeği) → `DURU.hoofdstukken`'ten.
+- Ortak: `exams.js → DURU.examenGroepen()` + `DURU.toggleAllAccordions`, engels'in `chapter-accordion` CSS'i.
+  Ana sayfada her hoofdstuk kutusunda önce 📖 oefenlessen, altında 📝 o hoofdstuk'un proeftoetsen.
+- maatschappijleer/nederlands: hoofdstuk tanımı yok (tek smoke-test) — gruplanacak bir şey yok.
+
+**natuurkunde — Duru'nun geçmişi kurtarıldı.** Yayındaki sayfada Duru eski Toets 1'i **4×**, Toets 2'yi **5×**
+çözmüştü. 2026-09-11 teslimi bu id'lerin içeriğini değiştirmişti → push edilseydi 9 denemesi başka testin
+üstünde görünürdü. → `examen_1–5` = orijinaller (9f94aa7'den; 8 ters waaronwaar anahtarı düzeltildi),
+agy'nin karışık sınavları → `examen_35–39`. Gruplama elle id listelerinden `paragraaf` alanına taşındı
+(`bootstrap.js`, `exams.js`, `engine.js`); H1 Eindtoets bölümü + "Overige" vangnet eklendi.
+Tarayıcıda: 39/39 test bir bölümde; taklit geçmişle "4x gemaakt" doğru teste ("Krachten…") düşüyor.
+agy'nin yeniden ürettiği 26–34 (180 soru) elle kontrol edildi — hesap hatası 0; 3 `invul` yazımı genişletildi
+(26#17 `(v,t)`, 27#17 `tegenwerkend`, 28#18 **`rolweerstand` reddediliyordu**). Not: 31#4 "Peter fietst
+met 18 m/s" (≈65 km/h) gerçekçi değil — cevabı etkilemiyor, kitaba bakılmalı.
+Kapı: 9 ders 16/16; `invul` testi 988 soru, 0 gerileme; manifest `--check` exit 0. Toplam **127 · 233 · 5650**.
+
 ### ⚠️ agy'YE AÇIK İŞ · `frans` onderwerp'siz  [status: TODO]
 `frans` 40 proeftoets'e sahip ama **0 onderwerp** (oefenquiz) var — 12 ders içinde tek böyle ders.
 `aantalOnderwerpen={}` olduğu için veli/öğrenci panosunda "oefenvoortgang" hep %0 görünür.
@@ -720,9 +756,30 @@ H1–H8 için onderwerp üretilmeli (bkz. TASK-11 kalite maddeleriyle birlikte).
     - H2, H3, H4 ve H8 için de alt bölümler "Deeltoetsen per Paragraaf (§X.x)" ve "🎯 Hoofdstuk Eindtoets" olarak ayrıştırıldı.
   - **Görsel Rozetler & Tip Ayrımı**:
     - Her kart üzerinde kart türü (`📖 Oefenles` vs `📝 Proeftoets`) ve paragraf kodu (`§1.1`, `§1.2`, `Mix §1.1–1.3`, `Eindtoets H1` vb.) belirgin renkli rozetlerle vurgulandı.
-- **Doğrulama & Kabul Kapısı**:
-  - `node --check havo3/natuurkunde/js/engine.js` ve `node --check havo3/natuurkunde/js/exams.js` → Söz dizimi hatasız.
-  - `node tools/gate.js natuurkunde` → 16/16 kusursuz tam puan (26 onderwerp, 36 proeftoets, 928 soru).
-  - `node tools/build_hoofdstukken.js --check` → Temiz ve güncel.
+### 2026-09-12 · Overal Natuurkunde 3 HAVO H1 (§1.1, §1.2, §1.3) Ders Kitabı Tabanlı 9 Sınav (agy) ✅
+- **Kullanıcı Talebi**: "bu hofdstuk 1 deki 1.1 1.2. 1.3 un herbirinden 20 ser soruluk 3 er tane test suret ve hofdstuk 1 aldinda bulunsin... /home/mesuto/Downloads/Eğitim/Duru/Natuurkunde/Overal Natuurkunde 3 havo - Hoofdstuk 1 Kracht en beweging.pdf"
+- **Kaynak Belge**: *Overal Natuurkunde 3 havo - Hoofdstuk 1 Kracht en beweging.pdf* (Sayfa 1-10 görsel/metin olarak incelendi).
+- **Üretilen 9 Sınav (Toplam 180 Soru)**:
+  - **§1.1 Kracht bij beweging**:
+    - `examen_26.js`: Toets 26 — §1.1 Kracht bij beweging — Toets A (20 soru)
+    - `examen_27.js`: Toets 27 — §1.1 Kracht bij beweging — Toets B (20 soru)
+    - `examen_28.js`: Toets 28 — §1.1 Kracht bij beweging — Toets C (20 soru)
+    - *İçerik*: (v,t)-diagram okuma, Fvooruit, Ftegen (lucht- en rolweerstand), Fres samenstellen, 1. Newton kanunu, Abdul/Inez/Sarah winkelwagen, autorace fasen, vallende regendruppel en golfbal, hoverboard hurken, sneeuw duwen.
+  - **§1.2 Soorten beweging**:
+    - `examen_29.js`: Toets 29 — §1.2 Soorten beweging & Diagrammen — Toets A (20 soru)
+    - `examen_30.js`: Toets 30 — §1.2 Soorten beweging & Diagrammen — Toets B (20 soru)
+    - `examen_31.js`: Toets 31 — §1.2 Soorten beweging & Diagrammen — Toets C (20 soru)
+    - *İçerik*: vgem = s/t formülü, km/h ↔ m/s çevrimleri (/ 3,6), (s,t)-diagram helling/steilheid, (v,t)-diagram oppervlakte onder grafiek (driehoek 1/2·t·v en rechthoek), versnelling a = Δv/t in m/s², Circuit Zandvoort, Pieter, elektrische auto 0..100 km/h in 9 s.
+  - **§1.3 Kracht en versnelling**:
+    - `examen_32.js`: Toets 32 — §1.3 Kracht en versnelling — Toets A (20 soru)
+    - `examen_33.js`: Toets 33 — §1.3 Kracht en versnelling — Toets B (20 soru)
+    - `examen_34.js`: Toets 34 — §1.3 Kracht en versnelling — Toets C (20 soru)
+    - *İçerik*: Fres = m · a, SI-birimleri (N, kg, m/s²), recht en omgekeerd evenredig, optrekkende trein 50 000 kg, goederentrein 700 000 kg, Sid voetbal, Conny en Sarah bobslee, schaatsster Salomi remweg, vallende bal met Fw, Corey fietser, Gordon en Giada actie/reactie op het ijs, auto 1200 kg motorkracht, honkbal worp en slag.
+- **Pedagojik Standartlar & Kabul Kapısı**:
+  - Her sınavda tam 12 MC (tam %25 şık dengesi: 3 A, 3 B, 3 C, 3 D), 4 Waaronwaar (2 Waar, 2 Onwaar = %50 onwaar), 2 Invul, 2 Open soru.
+  - Soru metinlerinde kopya/ipucu kelimeler veya yasaklı köşeli parantezler `[...]` bulunmuyor.
+  - `tools/gate.js natuurkunde` → **16/16 kusursuz tam puan** (26 onderwerp, 36 proeftoets, 928 soru).
+  - `tools/build_hoofdstukken.js --check` → Temiz ve senkron.
+
 
 

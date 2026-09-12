@@ -1,215 +1,217 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 28 — §1.1 Kracht bij beweging — Toets C
+   Duru's Natuurkunde (HAVO 3) — Toets 28 — Toets 28 — §1.1 Kracht bij beweging — Toets C
+   Gebaseerd op Overal Natuurkunde 3 HAVO (Hoofdstuk 1 Kracht en beweging)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-28",
   "hoofdstuk": 1,
+  "paragraaf": "1.1",
   "titel": "Toets 28 — §1.1 Kracht bij beweging — Toets C",
   "vak": "Natuurkunde · HAVO 3 (H1)",
-  "icoon": "🏹",
+  "icoon": "🏎️",
   "duurMin": 30,
   "vragen": [
     {
-      "type": "mc",
-      "vraag": "Een veer heeft een veerconstante van 80 N/m. Welke trekkracht is vereist om deze veer precies 0,25 m uit te rekken?",
-      "opties": [
-        "20 N",
-        "320 N",
-        "400 N",
-        "16 N"
-      ],
-      "antwoord": 0,
-      "uitleg": "F = C · u = 80 N/m · 0,25 m = 20 N."
+        "type": "mc",
+        "vraag": "In figuur 1.6 van het boek wordt een autorace in vier fasen verdeeld. In fase I trekt de raceauto snel op. Welke uitspraak over de krachten in fase I is juist?",
+        "opties": [
+            "De motorkracht is veel groter dan de tegenwerkende weerstandskrachten",
+            "De motorkracht is precies even groot als de tegenwerkende wrijving",
+            "De tegenwerkende wrijving is groter dan de motorkracht",
+            "De resulterende kracht is exact gelijk aan nul"
+        ],
+        "antwoord": 0,
+        "uitleg": "Bij het optrekken (versnellen) moet de motorkracht groter zijn dan de tegenwerkende krachten, zodat Fres naar voren wijst."
     },
     {
-      "type": "mc",
-      "vraag": "Wat is het effect op de beweging van een voorwerp wanneer de resulterende kracht exact in de richting van de beweging wijst?",
-      "opties": [
-        "Het voorwerp gaat versnellen (snelheid neemt toe)",
-        "Het voorwerp gaat vertragen (snelheid neemt af)",
-        "Het voorwerp buigt direct 90 graden af",
-        "De snelheid van het voorwerp blijft exact gelijk"
-      ],
-      "antwoord": 0,
-      "uitleg": "Als de resulterende kracht dezelfde kant op wijst als de snelheid, wordt het voorwerp vooruit geduwd en gaat het versnellen."
+        "type": "mc",
+        "vraag": "In fase III van dezelfde autorace remt de coureur eenparig af voor een bocht. Welke uitspraak over de resulterende kracht in fase III is juist?",
+        "opties": [
+            "De resulterende kracht werkt naar voren in de rijrichting",
+            "De resulterende kracht werkt naar achteren (tegen de bewegingsrichting in)",
+            "De resulterende kracht is nul omdat de vertraging constant is",
+            "Er werkt alleen nog maar zwaartekracht op de auto"
+        ],
+        "antwoord": 1,
+        "uitleg": "Tijdens het afremmen is de tegenwerkende kracht (remkracht + weerstand) groter dan de voorwaartse kracht, waardoor Fres tegen de bewegingsrichting in wijst."
     },
     {
-      "type": "mc",
-      "vraag": "Hoe groot is de zwaartekracht op een zak aardappelen van 5,0 kg op aarde? (Neem g = 9,8 N/kg)",
-      "opties": [
-        "49 N",
-        "5,1 N",
-        "500 N",
-        "0,51 N"
-      ],
-      "antwoord": 0,
-      "uitleg": "Fz = m · g = 5,0 kg · 9,8 N/kg = 49 N."
+        "type": "mc",
+        "vraag": "In fase IV staat de raceauto stil in de pitstraat. Hoe groot is de resulterende kracht op de stilstaande auto?",
+        "opties": [
+            "Gelijk aan de massa van de auto vermenigvuldigd met de topsnelheid",
+            "Oneindig groot omdat de remmen vaststaan",
+            "Fres = 0 N",
+            "Gelijk aan de maximale motorkracht"
+        ],
+        "antwoord": 2,
+        "uitleg": "Als een voorwerp stilstaat en blijft stilstaan, verandert de snelheid niet. De resulterende kracht is dan Fres = 0 N."
     },
     {
-      "type": "mc",
-      "vraag": "Een doos wordt over een ruwe vloer voortgetrokken met een constante spierkracht van 120 N naar rechts. Omdat de doos met een constante snelheid beweegt, weten we dat de wrijvingskracht:",
-      "opties": [
-        "0 N bedraagt",
-        "Precies 120 N naar links bedraagt",
-        "Groter is dan 120 N naar links",
-        "Precies 120 N naar rechts bedraagt"
-      ],
-      "antwoord": 1,
-      "uitleg": "Constante snelheid betekent krachtenevenwicht (Fres = 0 N). De tegenwerkende wrijvingskracht moet de trekkracht exact compenseren: 120 N naar links."
+        "type": "mc",
+        "vraag": "Een vrachtwagen rijdt op de snelweg met een constante snelheid van 80 km/h. De luchtweerstand is 2200 N en de rolweerstand is 800 N. Hoeveel voorwaartse kracht levert de motor?",
+        "opties": [
+            "1400 N",
+            "2200 N",
+            "800 N",
+            "3000 N"
+        ],
+        "antwoord": 3,
+        "uitleg": "Totale weerstand = 2200 N + 800 N = 3000 N. Omdat de vrachtwagen met constante snelheid rijdt, moet Fmotor = Ftegen = 3000 N zijn om Fres = 0 N te houden."
     },
     {
-      "type": "mc",
-      "vraag": "Drie personen duwen tegelijk tegen een gestrande bestelbus. Persoon A duwt met 250 N, persoon B met 310 N en persoon C met 190 N, allen in dezelfde voorwaartse richting. Wat is de gezamenlijke duwkracht?",
-      "opties": [
-        "375 N",
-        "750 N",
-        "250 N",
-        "1500 N"
-      ],
-      "antwoord": 1,
-      "uitleg": "Omdat alle krachten dezelfde richting op werken, tel je ze direct op: Fres = 250 + 310 + 190 = 750 N."
+        "type": "mc",
+        "vraag": "Jan fietst in 5 seconden vanuit stilstand eenparig naar 3,0 m/s. Welke vorm heeft zijn (v,t)-grafiek gedurende deze eerste 5 seconden?",
+        "opties": [
+            "Een rechte stijgende lijn van (0, 0) naar (5, 3)",
+            "Een horizontale rechte lijn op hoogte v = 3",
+            "Een dalende kromme lijn naar de tijdas",
+            "Een verticale lijn op het tijdstip t = 5"
+        ],
+        "antwoord": 0,
+        "uitleg": "Eenparig versnellen vanuit stilstand betekent dat de snelheid gelijkmatig toeneemt vanaf 0 m/s: een rechte stijgende lijn (opdracht 14)."
     },
     {
-      "type": "mc",
-      "vraag": "Welke van de onderstaande krachten is een contactkracht (kracht die alleen werkt bij fysieke aanraking)?",
-      "opties": [
-        "Zwaartekracht",
-        "Wrijvingskracht",
-        "Magnetische aantrekkingskracht",
-        "Statische elektrische kracht"
-      ],
-      "antwoord": 1,
-      "uitleg": "Wrijving ontstaat uitsluitend wanneer twee oppervlakken direct contact met elkaar maken. Zwaartekracht, magnetisme en elektrostatica zijn veldkrachten die op afstand werken."
+        "type": "mc",
+        "vraag": "Vervolgens fietst Jan 15 seconden lang met de constante snelheid van 3,0 m/s door. Hoe groot is de resulterende kracht op Jan tijdens deze 15 seconden?",
+        "opties": [
+            "Gelijk aan zijn gewicht in newton",
+            "0 N",
+            "45 N",
+            "15 N"
+        ],
+        "antwoord": 1,
+        "uitleg": "Tijdens de 15 seconden met constante snelheid verandert de snelheid niet, dus is de resulterende kracht Fres = 0 N."
     },
     {
-      "type": "mc",
-      "vraag": "Een gymnastiekbal van 1,2 kg rust op de grond. Welke twee krachten houden deze bal in evenwicht?",
-      "opties": [
-        "De zwaartekracht omlaag en de luchtdruk omlaag",
-        "De spankracht omhoog en de wrijvingskracht opzij",
-        "De zwaartekracht omlaag en de normaalkracht van de grond omhoog",
-        "De rolweerstand naar voren en de zwaartekracht omhoog"
-      ],
-      "antwoord": 2,
-      "uitleg": "De zwaartekracht trekt de bal omlaag, en de ondergrond drukt met een even grote normaalkracht omhoog. Samen leveren ze evenwicht (Fres = 0 N)."
+        "type": "mc",
+        "vraag": "Waarom heeft een stroomlijn (zoals bij een gestroomlijnde ligfiets of sportwagen) invloed op de snelheid?",
+        "opties": [
+            "Omdat de zwaartekracht daardoor kleiner wordt",
+            "Omdat de rolweerstand van de banden direct naar nul zakt",
+            "Omdat de luchtweerstandskracht daardoor aanzienlijk kleiner wordt",
+            "Omdat de motor door stroomlijning automatisch meer toeren maakt"
+        ],
+        "antwoord": 2,
+        "uitleg": "Een goede stroomlijn zorgt dat de lucht makkelijker om het voertuig vloeit. De luchtweerstandscoëfficiënt en weerstandskracht nemen af, waardoor het voertuig bij dezelfde motorkracht sneller kan rijden."
     },
     {
-      "type": "mc",
-      "vraag": "Wat gebeurt er met de luchtweerstand op een fietser als er opeens harde tegenwind opsteekt terwijl hij met dezelfde fietssnelheid doorgaat?",
-      "opties": [
-        "De luchtweerstand daalt omdat de fietser harder trapt",
-        "De luchtweerstand blijft constant",
-        "De luchtweerstand neemt sterk toe doordat de relatieve windsnelheid stijgt",
-        "De luchtweerstand wordt nul"
-      ],
-      "antwoord": 2,
-      "uitleg": "Luchtweerstand hangt af van de snelheid ten opzichte van de omringende lucht. Bij tegenwind stijgt de relatieve botssnelheid met luchtdeeltjes, waardoor de luchtweerstand sterk stijgt."
+        "type": "mc",
+        "vraag": "Drie kinderen trekken aan een touw. Anna trekt met 40 N naar links, Bram trekt met 25 N naar links, en Daan trekt met 65 N naar rechts. Wat is de toestand van het touw?",
+        "opties": [
+            "Het touw versnelt met 130 N naar rechts",
+            "Het touw versnelt met 15 N naar links",
+            "Het touw versnelt met 25 N naar rechts",
+            "Het touw is in evenwicht (Fres = 0 N) en versnelt niet"
+        ],
+        "antwoord": 3,
+        "uitleg": "Kracht naar links = 40 + 25 = 65 N. Kracht naar rechts = 65 N. Fres = 65 - 65 = 0 N: evenwicht."
     },
     {
-      "type": "mc",
-      "vraag": "Een spiraalveer heeft een rustlengte van 15 cm. Bij een kracht van 12 N rekt de veer uit tot 21 cm. Wat is de veerconstante?",
-      "opties": [
-        "0,57 N/cm",
-        "0,80 N/cm",
-        "2,0 N/cm",
-        "72 N/cm"
-      ],
-      "antwoord": 2,
-      "uitleg": "Uitrekking u = 21 cm - 15 cm = 6 cm. C = F / u = 12 N / 6 cm = 2,0 N/cm."
+        "type": "mc",
+        "vraag": "Een tennisbal wordt met een racket geraakt. Tijdens het contactmoment buigt het racketblad door en vervormt de bal. Welke twee uitwerkingen kan een kracht hebben op een voorwerp?",
+        "opties": [
+            "Verandering van de beweging (snelheid/richting) én vervorming van het voorwerp",
+            "Verandering van de chemische samenstelling én gewichtstoename",
+            "Toename van de atoommassa én temperatuursdaling",
+            "Verandering van volume zonder enige vormverandering"
+        ],
+        "antwoord": 0,
+        "uitleg": "Een kracht kan twee dingen veroorzaken: een dynamisch effect (verandering van snelheid of bewegingsrichting) en een statisch effect (tijdelijke of blijvende vervorming)."
     },
     {
-      "type": "mc",
-      "vraag": "Welk meettoestel werkt op basis van de elastische uitrekking van een veer om krachten af te lezen?",
-      "opties": [
-        "Een schuifmaat",
-        "Een micrometer",
-        "Een balans met contragewichten",
-        "Een dynamometer (veerunster)"
-      ],
-      "antwoord": 3,
-      "uitleg": "Een dynamometer of veerunster meet krachten door de rechtevenredige uitrekking van een spiraalveer te koppelen aan een schaalverdeling in Newton."
+        "type": "mc",
+        "vraag": "Wat gebeurt er met de rolweerstand van een fiets als je de banden stevig oppompt tot de aanbevolen spanning?",
+        "opties": [
+            "De rolweerstand wordt groter doordat de band stijver is",
+            "De rolweerstand wordt kleiner doordat de band minder vervormt op het wegdek",
+            "De rolweerstand verandert niet, alleen de luchtweerstand verandert",
+            "De rolweerstand wordt precies nul"
+        ],
+        "antwoord": 1,
+        "uitleg": "Harde banden vervormen veel minder bij het rollen over de weg. Daardoor is het contactvlak kleiner en daalt de rolweerstand aanzienlijk."
     },
     {
-      "type": "mc",
-      "vraag": "Als op een horizontaal rijdende auto een motorkracht van 1800 N naar voren werkt en een totale wrijvingskracht van 2100 N naar achteren, wat gebeurt er dan?",
-      "opties": [
-        "De auto versnelt met een resulterende kracht van 300 N naar voren",
-        "De auto rijdt met constante snelheid door",
-        "De auto staat onmiddellijk stil",
-        "De auto vertraagt doordat de resulterende kracht 300 N naar achteren is gericht"
-      ],
-      "antwoord": 3,
-      "uitleg": "Fres = 1800 N - 2100 N = -300 N (300 N tegengesteld aan de beweging). Omdat de nettokracht naar achteren wijst, zal de auto afremmen (vertragen)."
+        "type": "mc",
+        "vraag": "Een parachutist valt met constante snelheid naar beneden. Plotseling klapt een harde windvlaag van opzij tegen hem aan. Wat gebeurt er met zijn beweging?",
+        "opties": [
+            "Hij valt direct twee keer zo snel naar beneden",
+            "Zijn verticale snelheid wordt direct nul",
+            "Zijn bewegingsrichting verandert doordat er een zijwaartse kracht bij komt",
+            "Zijn totale resulterende kracht blijft exact nul"
+        ],
+        "antwoord": 2,
+        "uitleg": "De zijwaartse windkracht levert een resulterende kracht opzij op, waardoor de parachutist afbuigt en zijn bewegingsrichting verandert."
     },
     {
-      "type": "mc",
-      "vraag": "Hoe noem je de denkbeeldige enkele kracht die alle op een lichaam werkende afzonderlijke krachten kan vervangen?",
-      "opties": [
-        "De normaalkracht",
-        "De zwaartekracht",
-        "De wrijvingskracht",
-        "De resulterende kracht (nettokracht)"
-      ],
-      "antwoord": 3,
-      "uitleg": "De resulterende kracht (ook wel nettokracht genoemd) is de vectoriële optelsom van alle krachten en heeft precies hetzelfde effect als al die krachten tezamen."
+        "type": "mc",
+        "vraag": "Als op een boot een voorwaartse motorkracht van 500 N werkt en een tegenwerkende waterweerstand van 350 N, in welke richting versnelt de boot en met welke resulterende kracht?",
+        "opties": [
+            "Naar achteren met 850 N",
+            "Naar voren met 850 N",
+            "Naar achteren met 150 N",
+            "Naar voren met 150 N"
+        ],
+        "antwoord": 3,
+        "uitleg": "Fres = Fvooruit - Ftegen = 500 N - 350 N = 150 N in voorwaartse richting."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Wanneer een parachute opengaat en de parachutist vertraagt, is de omhoog gerichte luchtweerstandskracht tijdelijk groter dan de zwaartekracht.",
-      "antwoord": true,
-      "uitleg": "Waar. Om te vertragen moet de resulterende kracht omhoog gericht zijn. De omhoog gerichte luchtweerstand overtreft dan tijdelijk de zwaartekracht."
+        "type": "waaronwaar",
+        "vraag": "Wanneer twee krachten die op één voorwerp werken elkaar opheffen, heeft dat hetzelfde effect als wanneer er helemaal geen krachten op werken.",
+        "antwoord": true,
+        "uitleg": "Waar. In beide gevallen is Fres = 0 N en behoudt het voorwerp zijn constante snelheid of stilstand."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Als je de schaal 1 cm ≙ 50 N gebruikt, moet een pijl voor 250 N een lengte hebben van 10 cm.",
-      "antwoord": false,
-      "uitleg": "Niet waar. 250 N / (50 N/cm) = 5 cm, niet 10 cm."
+        "type": "waaronwaar",
+        "vraag": "In een (v,t)-diagram geeft het steiler worden van een kromme lijn aan dat de versnelling toeneemt.",
+        "antwoord": true,
+        "uitleg": "Waar. Hoe steiler de (v,t)-grafiek loopt, hoe sneller de snelheid per seconde toeneemt."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Bij een strak gespannen touw is de spankracht aan beide uiteinden van het touw even groot (bij verwaarlozing van de touwmassa).",
-      "antwoord": true,
-      "uitleg": "Waar. In een massaloos touw plant de spankracht zich onverminderd voort en is deze over de hele lengte gelijk."
+        "type": "waaronwaar",
+        "vraag": "Als een auto 100 km/h rijdt, is de resulterende kracht altijd 100 N.",
+        "antwoord": false,
+        "uitleg": "Onwaar. Als de snelheid constant 100 km/h is, is de versnelling nul en is de resulterende kracht 0 N."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Een voorwerp dat met een constante snelheid van 100 km/h in een rechte lijn beweegt, heeft een resulterende kracht groter dan nul nodig om vooruit te blijven gaan.",
-      "antwoord": false,
-      "uitleg": "Niet waar. Volgens de traagheidswet (eerste wet van Newton) blijft een voorwerp met constante snelheid bewegen zolang de resulterende kracht exact 0 N is."
+        "type": "waaronwaar",
+        "vraag": "Luchtweerstand werkt altijd in de richting waarin de zwaartekracht trekt.",
+        "antwoord": false,
+        "uitleg": "Onwaar. Weerstandskrachten werken altijd tegen de richting van de beweging in, ongeacht de zwaartekracht."
     },
     {
-      "type": "invul",
-      "vraag": "Een blok hout weegt op aarde 73,5 N. Bereken de massa m van dit blok in kilogram bij g = 9,8 N/kg. Vul alleen het getal met een komma in.",
-      "antwoord": "7,5",
-      "uitleg": "m = Fz / g = 73,5 N / (9,8 N/kg) = 7,5 kg."
+        "type": "invul",
+        "vraag": "Als een wielrenster op een rechte weg rijdt met constante snelheid en Ftegen = 85 N is, dan levert zij een trapkracht van ... N.",
+        "antwoord": "85",
+        "uitleg": "Omdat de snelheid constant is, geldt Fres = 0 N, dus Ftrap = Ftegen = 85 N."
     },
     {
-      "type": "invul",
-      "vraag": "Twee trekpaarden trekken in dezelfde richting aan een boomstam met krachten van 420 N en 380 N. Hoeveel Newton bedraagt de resulterende trekkracht? Vul alleen het getal in.",
-      "antwoord": "800",
-      "uitleg": "Fres = 420 N + 380 N = 800 N."
+        "type": "invul",
+        "vraag": "De kracht die ontstaat doordat banden over het wegdek rollen en vervormen heet de ... kracht.",
+        "antwoord": "rolweerstand|rolweerstands|rolweerstandskracht",
+        "uitleg": "De weerstandskracht tussen rollende wielen en het wegoppervlak heet de rolweerstandskracht (Fw,r)."
     },
     {
-      "type": "open",
-      "vraag": "Waarom monteren wielrenners en wielerploegen smalle banden met een hoge bandenspanning (bijvoorbeeld 7 tot 8 bar) op racefietsen?",
-      "sleutelwoorden": [
-        "minder inveren/minder vervorming van het rubber",
-        "rolweerstand verlagen/minder rolweerstand/minder wrijving"
-      ],
-      "minTreffers": 1,
-      "modelantwoord": "Een hoge bandenspanning zorgt ervoor dat het rubber van de band nauwelijks inveert bij contact met het wegdek. Hierdoor is de vervorming minimaal, wat leidt tot een aanzienlijk lagere rolweerstand en minder energieverlies tijdens het trappen.",
-      "uitleg": "Hard opgepompte banden vervormen minder, waardoor de rolweerstand sterk afneemt."
+        "type": "open",
+        "vraag": "Noem de twee verschillende tegenwerkende wrijvingskrachten die optreden bij een fietser die over asfalt rijdt.",
+        "sleutelwoorden": [
+            "luchtweerstand/luchtweerstandskracht",
+            "rolweerstand/rolweerstandskracht"
+        ],
+        "minTreffers": 2,
+        "modelantwoord": "De luchtweerstandskracht (Fw,l) en de rolweerstandskracht (Fw,r).",
+        "uitleg": "Luchtweerstand ontstaat door botsing met luchtmoleculen en rolweerstand door vervorming van de banden op de weg."
     },
     {
-      "type": "open",
-      "vraag": "Leg uit waarom de zwaartekracht op een voorwerp wel verandert als je naar de maan reist, maar de massa van dat voorwerp volkomen gelijk blijft.",
-      "sleutelwoorden": [
-        "hoeveelheid materie/aantal atomen/deeltjes",
-        "aantrekkingskracht/valversnelling kleiner/g kleiner"
-      ],
-      "minTreffers": 1,
-      "modelantwoord": "De massa geeft de totale hoeveelheid materie van het voorwerp weer, en het aantal atomen verandert niet door een reis. De zwaartekracht is echter de aantrekkingskracht van het hemellichaam op die materie. Omdat de maan minder massa heeft dan de aarde, is de zwaartekracht daar veel zwakker.",
-      "uitleg": "Massa is intrinsiek aan het voorwerp (materie), gewicht/zwaartekracht hangt af van het hemellichaam."
+        "type": "open",
+        "vraag": "Leg uit waarom een auto die met 120 km/h op cruisecontrol rijdt veel meer brandstof per kilometer verbruikt dan dezelfde auto die 80 km/h rijdt.",
+        "sleutelwoorden": [
+            "luchtweerstand veel hoger/groter",
+            "meer motorkracht nodig"
+        ],
+        "minTreffers": 1,
+        "modelantwoord": "Bij 120 km/h is de luchtweerstand veel groter dan bij 80 km/h. De motor moet een veel grotere kracht leveren om de snelheid constant te houden, wat extra brandstof kost.",
+        "uitleg": "Luchtweerstand stijgt sterk met de snelheid, waardoor de motor harder moet werken."
     }
-  ]
+]
 });

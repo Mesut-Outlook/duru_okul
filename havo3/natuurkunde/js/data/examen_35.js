@@ -1,193 +1,216 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 35 — Verkeersveiligheid, Remweg & Stopafstand (§1.4)
+   Duru's Natuurkunde (HAVO 3) — Toets 35 — Begrippen, Formules & Basiskennis (§1.1, §1.2 & §1.3)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-35",
   "hoofdstuk": 1,
-  "titel": "Toets 35 — Verkeersveiligheid, Remweg & Stopafstand (§1.4)",
+  "paragraaf": "mix",
+  "titel": "Toets 35 — Begrippen, Formules & Basiskennis (§1.1, §1.2 & §1.3)",
   "vak": "Natuurkunde · HAVO 3 (H1)",
-  "icoon": "🚗",
+  "icoon": "🎯",
   "duurMin": 30,
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat is de juiste formule voor de totale <b>stopafstand (s_stop)</b>?",
+      "vraag": "In welke fundamentele standaardeenheid (SI) wordt een uitgeoefende kracht F uitgedrukt?",
       "opties": [
-        "s_stop = s_reactie + s_rem",
-        "s_stop = s_reactie × s_rem",
-        "s_stop = s_rem - s_reactie",
-        "s_stop = (s_reactie + s_rem) / 2"
+        "Newton (N)",
+        "Joule (J)",
+        "Watt (W)",
+        "Kilogram (kg)"
       ],
       "antwoord": 0,
-      "uitleg": "De totale stopafstand is de som van de reactieafstand (afstand afgelegd tijdens reactietijd) en de remweg (afstand afgelegd tijdens het remmen): s_stop = s_reactie + s_rem."
+      "uitleg": "Kracht wordt in het SI-stelsel gemeten in Newton (N). Joule is de eenheid voor energie en arbeid, Watt voor vermogen en kilogram voor massa."
     },
     {
       "type": "mc",
-      "vraag": "Tijdens de <b>reactietijd</b> rijdt een automobilist met constante snelheid door. Welke bewegingssoort is dit?",
+      "vraag": "Welk meetinstrument gebruik je in het natuurkundelokaal om rechtstreeks een trekkracht te meten?",
       "opties": [
-        "Eenparig vertraagde beweging",
-        "Eenparige beweging (constante snelheid)",
-        "Eenparig versnelde beweging",
-        "Niet-eenparige vertraging"
+        "Een voltmeter",
+        "Een dynamometer (veerkrachtmeter)",
+        "Een barometer",
+        "Een chronometer"
       ],
       "antwoord": 1,
-      "uitleg": "Voordat de bestuurder het rempedaal indrukt, reageert hij alleen; de auto remt nog niet en behoudt zijn constante snelheid (eenparige beweging)."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een auto rijdt met <b>72 km/h</b> (20 m/s). De bestuurder heeft een reactietijd van <b>0,8 s</b>. Bereken de reactieafstand in meters.",
-      "antwoord": "16|16 m|16,0|16,0 m",
-      "uitleg": "s_reactie = v × t_reactie = 20 m/s × 0,8 s = 16 meter."
+      "uitleg": "Een dynamometer bevat een spiraalveer die uitrekt als er een kracht op werkt. Op de schaalverdeling lees je de kracht rechtstreeks af in Newton."
     },
     {
       "type": "mc",
-      "vraag": "Als de beginsnelheid van een auto <b>2 keer zo groot</b> wordt, wat gebeurt er dan met de <b>remweg</b> (bij gelijke remkracht en wegdek)?",
+      "vraag": "Wat stelt het symbool <b>v</b> voor in natuurkundige formules en welke SI-eenheid hoort hier standaard bij?",
       "opties": [
-        "De remweg wordt 2 keer zo lang",
-        "De remweg blijft hetzelfde",
-        "De remweg wordt 4 keer zo lang (2²)",
-        "De remweg wordt 8 keer zo lang"
+        "Versnelling in m/s²",
+        "Vermogen in Watt",
+        "Snelheid in m/s",
+        "Verplaatsing in km"
       ],
       "antwoord": 2,
-      "uitleg": "De remweg is evenredig met het kwadraat van de beginsnelheid (s_rem ~ v²). Bij 2× zo hoge snelheid wordt de remweg 2² = 4 keer zo lang!"
+      "uitleg": "Het symbool v staat voor snelheid (van het Latijnse velocitas). De standaard SI-eenheid van snelheid is meter per seconde (m/s)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe noem je een beweging waarbij de snelheid iedere seconde met exact dezelfde hoeveelheid toeneemt?",
+      "opties": [
+        "Een eenparige beweging",
+        "Een eenparig vertraagde beweging",
+        "Een niet-eenparige beweging",
+        "Een eenparig versnelde beweging"
+      ],
+      "antwoord": 3,
+      "uitleg": "Als de snelheid elke seconde met een vaste hoeveelheid stijgt, is de versnelling constant. Dit heet een eenparig versnelde beweging."
+    },
+    {
+      "type": "mc",
+      "vraag": "Wat gebeurt er met de toestand van een voorwerp wanneer de resulterende kracht gelijk is aan 0 N (F<sub>res</sub> = 0 N)?",
+      "opties": [
+        "De snelheid en bewegingsrichting blijven onveranderd (constante snelheid of stilstand)",
+        "Het voorwerp komt altijd direct tot stilstand",
+        "Het voorwerp begint direct te versnellen",
+        "De massa van het voorwerp neemt geleidelijk af"
+      ],
+      "antwoord": 0,
+      "uitleg": "Als alle krachten elkaar opheffen (F<sub>res</sub> = 0 N), verandert er niets aan de snelheid. Een stilstaand voorwerp blijft stilstaan en een bewegend voorwerp behoudt zijn constante snelheid (eenparige beweging)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Wat geeft de <b>steilheid (helling)</b> van de grafieklijn aan in een <b>(s,t)-diagram</b>?",
+      "opties": [
+        "De versnelling van het voorwerp",
+        "De snelheid van het voorwerp",
+        "De uitgeoefende wrijvingskracht",
+        "De totale verstreken tijdsduur"
+      ],
+      "antwoord": 1,
+      "uitleg": "In een (s,t)-diagram staat afstand verticaal en tijd horizontaal. De helling Δs / Δt is gelijk aan de snelheid: hoe steiler de lijn, hoe groter de snelheid."
+    },
+    {
+      "type": "mc",
+      "vraag": "Welke twee tegenwerkende weerstandskrachten werken samen als totale tegenkracht op een rijdende fietser?",
+      "opties": [
+        "De zwaartekracht en de normaalkracht",
+        "De motorkracht en de spierkracht",
+        "De luchtweerstand en de rolweerstand",
+        "De spankracht en de veerkracht"
+      ],
+      "antwoord": 2,
+      "uitleg": "Op een rijdende fietser werken horizontaal twee weerstandskrachten tegen: de luchtweerstand (wrijving met de lucht) en de rolweerstand (vervorming van band en wegdek)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Welke formule geeft de Tweede wet van Newton correct weer?",
+      "opties": [
+        "v = s / t",
+        "s = v × t",
+        "a = Δv / t",
+        "Fres = m × a"
+      ],
+      "antwoord": 3,
+      "uitleg": "De tweede wet van Newton luidt F<sub>res</sub> = m · a: de resulterende kracht (in N) is gelijk aan de massa (in kg) vermenigvuldigd met de versnelling (in m/s²)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe reken je een snelheid in kilometer per uur (km/h) correct om naar meter per seconde (m/s)?",
+      "opties": [
+        "Delen door 3,6",
+        "Vermenigvuldigen met 3,6",
+        "Delen door 60",
+        "Vermenigvuldigen met 10"
+      ],
+      "antwoord": 0,
+      "uitleg": "Omdat 1 uur 3600 seconden heeft en 1 km 1000 meter is, geldt: 1 m/s = 3,6 km/h. Omrekenen van km/h naar m/s doe je dus door te delen door 3,6."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe heet de eigenschap van materie waardoor een voorwerp zich verzet tegen iedere verandering van zijn snelheid of bewegingsrichting?",
+      "opties": [
+        "Veerkracht",
+        "Traagheid (inertie)",
+        "Elasticiteit",
+        "Zwaartekracht"
+      ],
+      "antwoord": 1,
+      "uitleg": "Massa bezit traagheid (of inertie). Een zwaar voorwerp verzet zich sterker tegen snelheidsveranderingen dan een licht voorwerp."
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe kun je in een <b>(v,t)-diagram</b> de totale afgelegde afstand bepalen?",
+      "opties": [
+        "Door de helling van de lijn te berekenen",
+        "Door de eindsnelheid te delen door de verstreken tijd",
+        "Door de oppervlakte onder de grafieklijn te berekenen",
+        "Door de gemiddelde versnelling te vermenigvuldigen met de massa"
+      ],
+      "antwoord": 2,
+      "uitleg": "De oppervlakte onder de (v,t)-grafiek heeft als eenheid m/s × s = meter. De oppervlakte stelt dus de afgelegde afstand s voor."
+    },
+    {
+      "type": "mc",
+      "vraag": "Wat is de officiële eenheid van <b>versnelling (a)</b> in het SI-stelsel?",
+      "opties": [
+        "m/s",
+        "km/h",
+        "N/kg",
+        "m/s²"
+      ],
+      "antwoord": 3,
+      "uitleg": "Versnelling is de snelheidsverandering per seconde: (m/s) / s = m/s² (meter per seconde kwadraat)."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Het gebruik van een mobiele telefoon tijdens het rijden vergroot de <b>remweg</b> van de auto direct.",
+      "vraag": "Een raceauto die met een constante snelheid van 240 km/h over een recht stuk rijdt, ondervindt een resulterende kracht van exact 0 N.",
+      "antwoord": true,
+      "uitleg": "Waar. Omdat de snelheid constant is en de auto in een rechte lijn rijdt, is er geen versnelling (a = 0). Volgens F<sub>res</sub> = m · a is de resulterende kracht dan precies 0 N."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "In een (s,t)-diagram betekent een horizontale rechte lijn dat het voorwerp met een constante, gelijkmatige snelheid beweegt.",
       "antwoord": false,
-      "uitleg": "Niet waar. Afleiding door een telefoon vergroot de <b>reactietijd</b> (en dus de reactieafstand). De mechanische remweg van de auto zelf verandert niet, maar de totale stopafstand wordt wel veel groter."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een auto rijdt met 15 m/s en remt in 3,0 seconden gelijkmatig af tot stilstand. Bereken de remweg (s_rem) in meters via de formule s = 0,5 × v × t.",
-      "antwoord": "22,5|22,5 m",
-      "uitleg": "s_rem = 0,5 × v × t_rem = 0,5 × 15 m/s × 3,0 s = 22,5 meter."
-    },
-    {
-      "type": "mc",
-      "vraag": "Welke factor heeft <b>geen</b> invloed op de lengte van de mechanische remweg?",
-      "opties": [
-        "Het profiel van de autobanden",
-        "Gladheid van het wegdek door regen of ijzel",
-        "De kwaliteit van de remmen",
-        "De alcoholconsumptie van de bestuurder"
-      ],
-      "antwoord": 3,
-      "uitleg": "Alcohol beïnvloedt de hersenen en verhoogt de reactietijd van de bestuurder, maar heeft geen effect op de mechanische remweg van de auto."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een automobilist rijdt op een natte weg. Zijn reactieafstand is 14 meter en zijn remweg is 28 meter. Wat is zijn totale stopafstand in meters?",
-      "antwoord": "42|42 m",
-      "uitleg": "s_stop = s_reactie + s_rem = 14 m + 28 m = 42 meter."
-    },
-    {
-      "type": "mc",
-      "vraag": "Wat is het natuurkundige doel van een <b>kreukelzone</b> bij een autobotsing?",
-      "opties": [
-        "De botsingstijd (remtijd) vergroten waardoor de botskracht kleiner wordt",
-        "De massa van de auto vergroten",
-        "De snelheid van de auto voor de botsing verlagen",
-        "De auto zo stijf en onbuigzaam mogelijk maken"
-      ],
-      "antwoord": 0,
-      "uitleg": "Door in te deuken verlengt de kreukelzone de botstijd (Δt). Volgens a = Δv / Δt wordt de vertraging kleiner en daardoor is de botskracht F = m × a op de inzittenden veel kleiner."
+      "uitleg": "Niet waar. In een (s,t)-diagram betekent een horizontale lijn dat de afstand niet verandert in de tijd: het voorwerp staat dus stil (v = 0 m/s)."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een veiligheidsgordel rekt tijdens een zware botsing een klein beetje mee om de remtijd van het lichaam te verlengen.",
+      "vraag": "Volgens de formule F<sub>res</sub> = m · a krijgt een voorwerp met een twee keer zo grote massa bij dezelfde kracht een twee keer zo kleine versnelling.",
       "antwoord": true,
-      "uitleg": "Waar. Door het gecontroleerde meerekken wordt de remtijd van het lichaam verlengd en de piekkracht op het lichaam verlaagd."
-    },
-    {
-      "type": "mc",
-      "vraag": "Waarom loopt een <b>airbag</b> direct na het opblazen weer snel leeg via kleine openingen?",
-      "opties": [
-        "Omdat de lucht te warm wordt",
-        "Om ruimte te maken voor de hulpdiensten en te voorkomen dat de bestuurder terugkaatst of stikt",
-        "Om de auto sneller tot stilstand te brengen",
-        "Omdat het gas giftig is voor het stuur"
-      ],
-      "antwoord": 1,
-      "uitleg": "Het gecontroleerd leeglopen dempt de klap zachtjes (absorbeert energie), voorkomt dat het hoofd hard terugveert, en zorgt dat de bestuurder niet klem komt te zitten."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een bromfiets rijdt met 45 km/h (12,5 m/s). De remvertraging is 5,0 m/s². Hoeveel seconden duurt het remmen tot stilstand?",
-      "antwoord": "2,5|2,5 s|2,5 sec",
-      "uitleg": "t_rem = v / a = 12,5 m/s / 5,0 m/s² = 2,5 seconden."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een auto heeft bij 50 km/h een remweg van 12 meter. Wat is de remweg van dezelfde auto op hetzelfde wegdek als de snelheid 100 km/h is?",
-      "opties": [
-        "24 meter",
-        "36 meter",
-        "48 meter",
-        "60 meter"
-      ],
-      "antwoord": 2,
-      "uitleg": "100 km/h is 2× zo snel als 50 km/h. De remweg wordt 2² = 4 keer zo lang: 12 m × 4 = 48 meter."
+      "uitleg": "Waar. De versnelling is omgekeerd evenredig met de massa (a = F<sub>res</sub> / m). Hoe zwaarder het voorwerp, hoe kleiner de versnelling bij gelijke kracht."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Op een spiegelglad wegdek (ijzel) is de maximale remkracht veel kleiner, waardoor de remvertraging daalt en de remweg veel langer wordt.",
-      "antwoord": true,
-      "uitleg": "Waar. Weinig grip betekent minder remkracht tussen band en wegdek, dus een lagere vertraging a en een veel langere remweg."
+      "vraag": "Om een snelheid van meter per seconde (m/s) om te rekenen naar kilometer per uur (km/h) moet je de waarde delen door 3,6.",
+      "antwoord": false,
+      "uitleg": "Niet waar. Van m/s naar km/h moet je juist vermenigvuldigen met 3,6 (bijvoorbeeld 10 m/s = 36 km/h)."
     },
     {
       "type": "invul",
-      "vraag": "Een fietser heeft bij 20 km/h een stopafstand van 9,0 m (reactieafstand = 4,0 m, remweg = 5,0 m). Als hij zijn snelheid verdubbelt naar 40 km/h bij dezelfde reactietijd (0,72 s), wordt de reactieafstand 8,0 m en de remweg 20,0 m. Wat is dan de nieuwe totale stopafstand in meters?",
-      "antwoord": "28|28 m|28,0|28,0 m",
-      "uitleg": "s_stop = s_reactie + s_rem = 8,0 m + 20,0 m = 28 meter."
-    },
-    {
-      "type": "mc",
-      "vraag": "Wat gebeurt er in het (v,t)-diagram tijdens een noodstop?",
-      "opties": [
-        "Eerst een dalende lijn, daarna een horizontale lijn",
-        "Direct een verticale lijn naar beneden",
-        "Een stijgende lijn gevolgd door een dalende lijn",
-        "Eerst een horizontale lijn (reactiefase), daarna een steil dalende lijn naar de nul-as (remfase)"
-      ],
-      "antwoord": 3,
-      "uitleg": "Tijdens de reactietijd blijft v constant (horizontaal). Zodra er geremd wordt, daalt v gelijkmatig naar 0 (dalende rechte lijn)."
-    },
-    {
-      "type": "waaronwaar",
-      "vraag": "Een fietshelm beschermt het hoofd doordat het piepschuim indeukt bij een val, waardoor de remweg van het hoofd iets groter en de botstijd langer wordt.",
-      "antwoord": true,
-      "uitleg": "Waar. Het samendrukken van het schuim verlengt de impacttijd en vermindert de piekversnelling op de hersenen."
+      "vraag": "Reken om: een stadsbus rijdt met een constante snelheid van <b>54 km/h</b>. Hoeveel meter per seconde (m/s) is dat?",
+      "antwoord": "15|15 m/s|15,0|15,0 m/s",
+      "uitleg": "Om te rekenen van km/h naar m/s deel je door 3,6: 54 / 3,6 = 15 m/s."
     },
     {
       "type": "invul",
-      "vraag": "Een scooterrijder rijdt met 10 m/s. Zijn reactietijd is 1,0 s en zijn remtijd is 2,0 s. Bereken de totale afstand die hij aflegt vanaf het zien van het gevaar tot stilstand (in meters).",
-      "antwoord": "20|20 m|20,0",
-      "uitleg": "s_reactie = 10 m/s × 1,0 s = 10 m. s_rem = 0,5 × 10 m/s × 2,0 s = 10 m. s_stop = 10 + 10 = 20 meter."
+      "vraag": "Een trein legt in 0,50 uur een afstand van 45 km af. Bereken de gemiddelde snelheid in km/h.",
+      "antwoord": "90|90 km/h|90,0|90,0 km/h",
+      "uitleg": "v_gem = s / t = 45 km / 0,50 h = 90 km/h."
     },
     {
       "type": "open",
-      "vraag": "Leg in je eigen woorden uit waarom in woonwijken een maximumsnelheid van 30 km/h veel veiliger is dan 50 km/h. Verwerk daarin het effect op de <b>stopafstand</b> en de <b>botssnelheid</b>.",
+      "vraag": "Leg uit wat er wordt bedoeld met de 'resulterende kracht' (of somkracht) als er tegelijkertijd meerdere krachten op een voorwerp werken.",
       "sleutelwoorden": [
-        "stopafstand korter/veel korter",
-        "reactieafstand kleiner",
-        "remweg kwadratisch/veel kleiner/kracht kleiner"
+        "alle krachten samen/som van de krachten/optelsom",
+        "hetzelfde effect/vervangende kracht"
       ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij 30 km/h is zowel de reactieafstand als de remweg aanzienlijk korter dan bij 50 km/h (de remweg is bij 30 km/h minder dan de helft van die bij 50 km/h). De totale stopafstand is daardoor veel kleiner, waardoor een auto veel eerder stilstaat en een aanrijding vaker voorkomen kan worden, of de resterende botssnelheid veel lager is.",
-      "uitleg": "Lagere snelheid betekent kortere reactieafstand én een kwadratisch veel kortere remweg, waardoor de overlevingskans van voetgangers enorm toeneemt."
+      "minTreffers": 1,
+      "modelantwoord": "De resulterende kracht is de som van alle afzonderlijke krachten die op een voorwerp werken. Deze ene denkbeeldige kracht heeft precies hetzelfde effect op de beweging als alle losse krachten bij elkaar.",
+      "uitleg": "De resulterende kracht vervangt alle afzonderlijke krachten en bepaalt de uiteindelijke versnelling of vertraging van het voorwerp."
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van de begrippen <b>vertraging</b> en <b>kracht</b> uit hoe een veiligheidsgordel voorkomt dat iemand door de voorruit vliegt.",
+      "vraag": "Waarom kost het aanzienlijk meer spierkracht om een zware bakfiets op gang te brengen dan een lichte racefiets? Benoem het natuurkundige verschijnsel.",
       "sleutelwoorden": [
-        "kracht uitoefent/tegenhoudt",
-        "vertraagt/meevertraagt met de auto",
-        "traagheid"
+        "traagheid/inertie",
+        "grotere massa/veel massa"
       ],
-      "minTreffers": 2,
-      "modelantwoord": "Door traagheid wil het lichaam van de passagier met constante snelheid doorbewegen als de auto plots stopt. De veiligheidsgordel oefent een achterwaartse kracht uit op het lichaam, waardoor het lichaam samen met de auto gelijkmatig vertraagt en niet met hoge snelheid tegen het stuur of door de voorruit gelanceerd wordt.",
-      "uitleg": "De gordel levert de benodigde tegenkracht F om de massa m van de passagier af te remmen (F = m × a)."
+      "minTreffers": 1,
+      "modelantwoord": "Een bakfiets heeft een veel grotere massa dan een racefiets. Door de grotere traagheid (inertie) verzet de bakfiets zich veel sterker tegen een verandering van snelheid. Volgens F = m · a is er daardoor een grotere kracht nodig om dezelfde versnelling te krijgen.",
+      "uitleg": "Massa bezit traagheid: hoe groter de massa, des te meer kracht nodig is om het voorwerp op gang te brengen."
     }
   ]
 });

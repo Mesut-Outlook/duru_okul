@@ -1,193 +1,217 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 36 — Arbeid, Kracht & Energieomzetting (§1.5)
+   Duru's Natuurkunde (HAVO 3) — Toets 36 — Krachten, Weerstand & Resulterende Kracht (Mix §1.1 t/m §1.3)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-36",
   "hoofdstuk": 1,
-  "titel": "Toets 36 — Arbeid, Kracht & Energieomzetting (§1.5)",
+  "paragraaf": "mix",
+  "titel": "Toets 36 — Krachten, Weerstand & Resulterende Kracht (Mix §1.1 t/m §1.3)",
   "vak": "Natuurkunde · HAVO 3 (H1)",
-  "icoon": "⚙️",
+  "icoon": "🏎️",
   "duurMin": 30,
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat is de officiële eenheid van <b>arbeid (W)</b> en energie in de natuurkunde?",
+      "vraag": "Een personenauto rijdt op de weg. De motor levert een voorwaartse kracht van 1400 N. De tegenwerkende luchtweerstand is 900 N en de rolweerstand is 300 N. Hoe groot is de resulterende kracht en wat gebeurt er?",
       "opties": [
-        "Joule (J)",
-        "Watt (W)",
-        "Newton (N)",
-        "Pascal (Pa)"
+        "200 N naar voren; de auto versnelt",
+        "200 N naar achteren; de auto vertraagt",
+        "1200 N naar voren; de auto rijdt met constante snelheid",
+        "0 N; de auto staat stil"
       ],
       "antwoord": 0,
-      "uitleg": "Arbeid is de hoeveelheid overgedragen energie en wordt gemeten in Joule (J) of Newton-meter (N·m)."
+      "uitleg": "De totale tegenkracht is 900 + 300 = 1200 N. F<sub>res</sub> = F<sub>motor</sub> - F<sub>tegen</sub> = 1400 - 1200 = 200 N naar voren. Omdat F<sub>res</sub> > 0 in de rijrichting is, versnelt de auto."
     },
     {
       "type": "mc",
-      "vraag": "Welke formule gebruik je om de verrichte <b>arbeid (W)</b> te berekenen bij een kracht F over een afstand s?",
+      "vraag": "Twee sleepboten trekken in exact dezelfde richting aan een containerschip. Boot A trekt met 25 kN en boot B trekt met 35 kN. Hoe groot is de totale resulterende trekkracht op het schip?",
       "opties": [
-        "W = F / s",
-        "W = F × s",
-        "W = m × a",
-        "W = s / t"
+        "10 kN",
+        "60 kN",
+        "30 kN",
+        "70 kN"
       ],
       "antwoord": 1,
-      "uitleg": "W = F × s, waarbij W de arbeid in Joule is, F de kracht in Newton in de bewegingsrichting, en s de verplaatsing in meter."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een paard trekt een kar met een constante kracht van 400 N over een afstand van 25 meter. Hoeveel Joule arbeid verricht het paard?",
-      "antwoord": "10000|10.000|10000 J|10.000 J|10 kJ",
-      "uitleg": "W = F × s = 400 N × 25 m = 10.000 J (of 10 kJ)."
-    },
-    {
-      "type": "waaronwaar",
-      "vraag": "Als je 10 minuten lang uit alle macht tegen een zware stenen muur duwt die niet van zijn plek komt, heb je in de natuurkunde <b>geen arbeid</b> verricht.",
-      "antwoord": true,
-      "uitleg": "Waar. Omdat de verplaatsing s = 0 m is, geldt W = F × 0 = 0 Joule. Er is natuurkundig gezien geen arbeid verricht, ook al voel je je moe."
+      "uitleg": "Krachten die in dezelfde richting werken, mag je bij elkaar optellen: 25 kN + 35 kN = 60 kN."
     },
     {
       "type": "mc",
-      "vraag": "In welke van de volgende situaties wordt er <b>negatieve arbeid</b> verricht?",
+      "vraag": "Waardoor wordt de luchtweerstand van een rijdend voertuig in de praktijk vooral veel groter?",
       "opties": [
-        "Een trekker die een ploeg vooruit trekt",
-        "De zwaartekracht op een appel die van een boom naar beneden valt",
-        "De wrijvingskracht van de remmen die een auto tot stilstand brengt",
-        "Een gewichtheffer die een halter omhoog drukt"
+        "Door zachtere autobanden te monteren",
+        "Door het voertuig zwaarder te beladen",
+        "Door sneller te gaan rijden of een minder gestroomlijnde vorm te hebben",
+        "Door op een nat wegdek te rijden"
       ],
       "antwoord": 2,
-      "uitleg": "De wrijvings- of remkracht werkt tegen de bewegingsrichting in en verricht daardoor negatieve arbeid: het onttrekt bewegingsenergie en zet dit om in warmte."
-    },
-    {
-      "type": "invul",
-      "vraag": "Reken om: hoeveel Joule is <b>18,5 kJ</b>?",
-      "antwoord": "18500|18.500|18500 J|18.500 J",
-      "uitleg": "1 kJ (kilojoule) = 1000 Joule. Dus 18,5 × 1000 = 18.500 J."
+      "uitleg": "Luchtweerstand hangt sterk af van de snelheid (kwadratisch) en het frontale oppervlak/stroomlijn. Hoe harder je rijdt, hoe meer luchtmoleculen per seconde weggeduwd moeten worden."
     },
     {
       "type": "mc",
-      "vraag": "Iemand tilt een doos van 15 kg verticaal 2,0 meter omhoog (neem g = 10 N/kg). Hoeveel arbeid verricht de spierkracht?",
+      "vraag": "Een wielrenster fietst met een constante snelheid van 36 km/h. De totale tegenwerkende weerstandskracht is 65 N. Hoe groot is de voorwaartse spierkracht die zij uitoefent?",
       "opties": [
-        "30 J",
-        "75 J",
-        "150 J",
-        "300 J"
+        "0 N",
+        "130 N",
+        "32,5 N",
+        "65 N"
       ],
       "antwoord": 3,
-      "uitleg": "Eerst de zwaartekracht: F_z = m × g = 15 kg × 10 N/kg = 150 N. Arbeid: W = F × s = 150 N × 2,0 m = 300 Joule."
+      "uitleg": "Bij een constante snelheid is de versnelling nul, waardoor de resulterende kracht 0 N moet zijn. De voorwaartse trapkracht moet daarom precies gelijk zijn aan de totale tegenkracht: 65 N."
+    },
+    {
+      "type": "mc",
+      "vraag": "Een parachutist zweeft na het openen van de parachute met een constante snelheid recht naar beneden. Wat geldt er voor de zwaartekracht (F<sub>z</sub>) en de opwaartse luchtweerstand (F<sub>l</sub>)?",
+      "opties": [
+        "Fl is exact even groot als Fz, waardoor de resulterende kracht 0 N is",
+        "Fz is veel groter dan Fl",
+        "Fl is groter dan Fz waardoor hij omhoog beweegt",
+        "Er werkt helemaal geen zwaartekracht meer op de parachutist"
+      ],
+      "antwoord": 0,
+      "uitleg": "Bij constante daalsnelheid heffen de opwaartse luchtweerstand en de neerwaartse zwaartekracht elkaar volledig op (F<sub>res</sub> = 0 N)."
+    },
+    {
+      "type": "mc",
+      "vraag": "Wanneer een automobilist op een vlakke weg het gaspedaal loslaat en niet remt, rolt de auto uit. Welke kracht zorgt ervoor dat de auto afremt?",
+      "opties": [
+        "De motorkracht",
+        "De tegenwerkende rol- en luchtweerstandskracht",
+        "De zwaartekracht",
+        "De normaalkracht van het wegdek"
+      ],
+      "antwoord": 1,
+      "uitleg": "Omdat de motor geen voorwaartse kracht meer levert, werken alleen de rolweerstand en luchtweerstand tegen de bewegingsrichting in. Hierdoor ontstaat een vertraging."
+    },
+    {
+      "type": "mc",
+      "vraag": "Twee groepen spelen touwtrekken. Groep Blauw trekt naar links met 520 N. Groep Rood trekt naar rechts met 480 N. Wat is de resulterende kracht?",
+      "opties": [
+        "1000 N naar rechts",
+        "40 N naar rechts",
+        "40 N naar links",
+        "0 N"
+      ],
+      "antwoord": 2,
+      "uitleg": "Tegengestelde krachten trek je van elkaar af: 520 N - 480 N = 40 N. De richting is naar de kant van de grootste kracht, dus naar links."
+    },
+    {
+      "type": "mc",
+      "vraag": "Welke handeling zorgt voor een merkbare verlaging van de <b>rolweerstand</b> van een fiets?",
+      "opties": [
+        "Een strakke aerodynamische jas dragen",
+        "Het spatbord en de kettingkast demonteren",
+        "Diep voorovergebogen over het stuur gaan liggen",
+        "De fietsbanden oppompen tot de aanbevolen maximale druk"
+      ],
+      "antwoord": 3,
+      "uitleg": "Harde banden vervormen veel minder tijdens het rollen over het wegdek, waardoor de rolweerstand aanzienlijk afneemt."
+    },
+    {
+      "type": "mc",
+      "vraag": "Een scooter met bestuurder (totale massa 120 kg) trekt op met een versnelling van 1,5 m/s². Hoe groot is de resulterende kracht die op de scooter werkt?",
+      "opties": [
+        "180 N",
+        "80 N",
+        "120 N",
+        "270 N"
+      ],
+      "antwoord": 0,
+      "uitleg": "F<sub>res</sub> = m × a = 120 kg × 1,5 m/s² = 180 N."
+    },
+    {
+      "type": "mc",
+      "vraag": "Bij de wintersport curling vegen teamgenoten het ijs fanatiek vlak vóór de glijdende curlingsteen. Wat is het natuurkundige doel hiervan?",
+      "opties": [
+        "De massa van de steen tijdelijk verkleinen",
+        "De wrijvingskracht verkleinen zodat de steen minder vertraagt en verder glijdt",
+        "Een extra voorwaartse luchtdruk opwekken",
+        "De zwaartekracht op de steen verminderen"
+      ],
+      "antwoord": 1,
+      "uitleg": "Door het vegen smelt het ijs heel licht en ontstaat een dun waterlaagje dat de schuifwrijving sterk verlaagt, zodat de steen minder snel afremt."
+    },
+    {
+      "type": "mc",
+      "vraag": "Een voorwerp met een massa van 40 kg ondervindt een voorwaartse kracht van 300 N en een tegenkracht van 100 N. Wat is de versnelling van het voorwerp?",
+      "opties": [
+        "10 m/s²",
+        "7,5 m/s²",
+        "5,0 m/s²",
+        "2,5 m/s²"
+      ],
+      "antwoord": 2,
+      "uitleg": "Eerst F<sub>res</sub> = 300 - 100 = 200 N. Vervolgens a = F<sub>res</sub> / m = 200 / 40 = 5,0 m/s²."
+    },
+    {
+      "type": "mc",
+      "vraag": "Wat gebeurt er met de resulterende kracht als een fietser vanuit stilstand steeds sneller gaat fietsen terwijl hij met een constante trapkracht blijft duwen?",
+      "opties": [
+        "De resulterende kracht blijft exact gelijk",
+        "De resulterende kracht wordt steeds groter",
+        "De resulterende kracht springt direct naar nul",
+        "De resulterende kracht wordt steeds kleiner doordat de luchtweerstand toeneemt"
+      ],
+      "antwoord": 3,
+      "uitleg": "Als de fietser versnelt, neemt de luchtweerstand toe. Omdat de spierkracht gelijk blijft en de tegenkracht groeit, wordt F<sub>res</sub> = F<sub>spier</sub> - F<sub>tegen</sub> steeds kleiner totdat F<sub>res</sub> = 0 bij topsnelheid."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Wanneer je een zware tas vasthoudt en horizontaal op gelijke hoogte recht vooruit loopt, verricht de opwaartse tilkracht van je arm arbeid op de tas.",
+      "vraag": "Als de voorwaartse motorkracht kleiner is dan de totale weerstandskracht (F<sub>motor</sub> < F<sub>tegen</sub>), is de beweging van een auto vertraagd.",
+      "antwoord": true,
+      "uitleg": "Waar. De resulterende kracht werkt dan tegen de bewegingsrichting in, waardoor de auto snelheid verliest (vertraging)."
+    },
+    {
+      "type": "waaronwaar",
+      "vraag": "Een voorwerp dat met een constante snelheid beweegt, heeft altijd een resulterende kracht die groter is dan nul in de bewegingsrichting.",
       "antwoord": false,
-      "uitleg": "Niet waar. De tilkracht staat loodrecht (90°) op de horizontale bewegingsrichting. Een kracht loodrecht op de verplaatsing verricht geen arbeid."
-    },
-    {
-      "type": "invul",
-      "vraag": "Een fietser verricht 2400 J arbeid door over een afstand van 60 meter te trappen. Hoe groot was de gemiddelde voorwaartse kracht in Newton?",
-      "antwoord": "40|40 N|40,0",
-      "uitleg": "F = W / s = 2400 J / 60 m = 40 Newton."
-    },
-    {
-      "type": "mc",
-      "vraag": "Welke <b>energieomzetting</b> vindt er plaats als een kogelstoter zijn spieren gebruikt om een kogel met kracht weg te stoten?",
-      "opties": [
-        "Chemische energie (uit voedsel) → bewegingsenergie (kinetische energie)",
-        "Kernenergie → warmte",
-        "Zwaarte-energie → chemische energie",
-        "Elektrische energie → stralingsenergie"
-      ],
-      "antwoord": 0,
-      "uitleg": "Spieren zetten opgeslagen chemische energie uit voedsel om in mechanische arbeid, waardoor de kogel bewegingsenergie (kinetische energie) krijgt."
+      "uitleg": "Niet waar. Bij een constante snelheid is de versnelling nul, en dus is de resulterende kracht altijd exact 0 N."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Volgens de <b>wet van behoud van energie</b> kan energie niet verdwijnen of uit het niets ontstaan, maar alleen van vorm veranderen.",
+      "vraag": "Rolweerstand ontstaat doordat de banden van een voertuig en het wegdek tijdens het rijden voortdurend een beetje indeuken en vervormen.",
       "antwoord": true,
-      "uitleg": "Waar. Energie blijft altijd behouden: totale energie voor = totale energie na."
-    },
-    {
-      "type": "invul",
-      "vraag": "Bij het heien slaat een heiblok met een kracht van 50.000 N op een paal. De paal zakt bij één klap 0,08 m de grond in. Hoeveel Joule arbeid is er bij die klap verricht?",
-      "antwoord": "4000|4000 J|4.000|4.000 J|4 kJ",
-      "uitleg": "W = F × s = 50.000 N × 0,08 m = 4000 Joule (4 kJ)."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een windsurfer vaart met <b>constante snelheid</b>. De windkracht in het zeil is 250 N voorwaarts. De surfer legt 100 m af. Hoeveel arbeid verricht de <b>tegenwerkende waterweerstand</b>?",
-      "opties": [
-        "+25.000 J",
-        "-25.000 J",
-        "0 J",
-        "+250 J"
-      ],
-      "antwoord": 1,
-      "uitleg": "Bij constante snelheid is F_wrijving even groot als de voorwaartse kracht (250 N), maar tegengesteld gericht. W_wrijving = -250 N × 100 m = -25.000 J (-25 kJ)."
+      "uitleg": "Waar. Deze voortdurende vervorming kost energie en veroorzaakt de rolweerstandskracht."
     },
     {
       "type": "waaronwaar",
-      "vraag": "Bij het afremmen van een auto wordt de bewegingsenergie door wrijvingsarbeid in de remmen omgezet in warmte-energie.",
-      "antwoord": true,
-      "uitleg": "Waar. De remblokken wrijven tegen de remschijven en zetten de kinetische energie van de auto om in warmte."
-    },
-    {
-      "type": "mc",
-      "vraag": "Waarom neemt een speerwerper een flinke aanloop voordat hij de speer werpt?",
-      "opties": [
-        "Om de speer zwaarder te maken",
-        "Om de luchtweerstand tijdens de vlucht te verminderen",
-        "Om de afstand s waarover spierkracht op de speer kan worden uitgeoefend te vergroten, zodat er meer arbeid wordt verricht",
-        "Om de zwaartekracht tijdelijk uit te schakelen"
-      ],
-      "antwoord": 2,
-      "uitleg": "Door de aanloop en het strekken van het lichaam kan de kracht over een grotere afstand s worden uitgeoefend (W = F × s), waardoor de speer meer bewegingsenergie en een hogere afwerpsnelheid krijgt."
+      "vraag": "Als twee krachten van 50 N in precies tegengestelde richting op hetzelfde voorwerp werken, is de somkracht 100 N.",
+      "antwoord": false,
+      "uitleg": "Niet waar. Omdat ze tegengesteld gericht zijn trek je ze af: 50 - 50 = 0 N. Ze heffen elkaar op."
     },
     {
       "type": "invul",
-      "vraag": "Een kraan hijst een container van 2000 kg over een hoogte van 15 meter omhoog (neem g = 9,81 N/kg). Hoeveel kJ arbeid verricht de kraan? (Rond af op een geheel getal).",
-      "antwoord": "294|294 kJ|294,3|294,3 kJ|300",
-      "uitleg": "F_z = 2000 kg × 9,81 N/kg = 19.620 N. W = F × s = 19.620 N × 15 m = 294.300 J = 294,3 kJ (afgerond 294 kJ). Met g = 10 is het 300 kJ."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een wielrenner fietst een heuvel op. Welke vorm van energie bouwt de wielrenner op tijdens het klimmen?",
-      "opties": [
-        "Chemische energie",
-        "Elektrische energie",
-        "Kernenergie",
-        "Zwaarte-energie (potentiële energie)"
-      ],
-      "antwoord": 3,
-      "uitleg": "Door hoogte te winnen tegen de zwaartekracht in, wordt de verrichte arbeid omgezet in zwaarte-energie (hoogte-energie / potentiële energie)."
+      "vraag": "Een vrachtwagen met een massa van 8000 kg ondervindt een resulterende kracht van 16.000 N. Bereken de versnelling in m/s².",
+      "antwoord": "2|2,0|2 m/s2|2 m/s²|2,0 m/s2|2,0 m/s²",
+      "uitleg": "a = F<sub>res</sub> / m = 16.000 / 8000 = 2,0 m/s²."
     },
     {
       "type": "invul",
-      "vraag": "Een boogschutter trekt een pees naar achteren met een gemiddelde kracht van 120 N over een afstand van 0,50 m. Hoeveel Joule spankracht-arbeid (veerenergie) zit er in de boog opgeslagen?",
-      "antwoord": "60|60 J|60,0",
-      "uitleg": "W = F × s = 120 N × 0,50 m = 60 Joule."
+      "vraag": "Een wielrenner levert 140 N voorwaartse trapkracht. De rolweerstand is 25 N. Als hij met constante snelheid rijdt, hoe groot is dan de luchtweerstand in Newton?",
+      "antwoord": "115|115 N|115,0|115,0 N",
+      "uitleg": "Bij constante snelheid is F<sub>res</sub> = 0, dus F<sub>spier</sub> = F<sub>rol</sub> + F<sub>lucht</sub>. 140 = 25 + F<sub>lucht</sub> ⇒ F<sub>lucht</sub> = 115 N."
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe de energieomzetting verloopt bij een skateboarder die van een helling (halfpipe) naar beneden rijdt en aan de overkant weer omhoog gaat. <b>Benoem zelf de energiesoorten</b> die daarbij een rol spelen, en verklaar waarom hij zonder bijsteppen telkens iets minder hoog komt.",
+      "vraag": "Waarom neemt de topsnelheid van een auto nauwelijks toe als je het motorvermogen verdubbelt? Leg uit wat er met de tegenkracht gebeurt bij hogere snelheden.",
       "sleutelwoorden": [
-        "zwaarte-energie/potentiële energie",
-        "bewegingsenergie/kinetische energie",
-        "omgezet in warmte/wrijving/energieverlies"
+        "luchtweerstand",
+        "kwadratisch/sterk toeneemt/veel groter wordt"
       ],
-      "minTreffers": 2,
-      "modelantwoord": "Bovenaan de helling heeft de skateboarder maximale zwaarte-energie en geen bewegingsenergie. Tijdens het naar beneden rijden wordt zwaarte-energie omgezet in bewegingsenergie (hoogste snelheid onderaan). Als hij weer omhoog rijdt, wordt bewegingsenergie weer omgezet in zwaarte-energie. Door wrijving wordt een klein deel van de energie omgezet in warmte, waardoor hij zonder bijsteppen telkens iets minder hoog komt.",
-      "uitleg": "Zwaarte-energie ↔ bewegingsenergie met een klein energieverlies aan wrijvingswarmte."
+      "minTreffers": 1,
+      "modelantwoord": "Bij hogere snelheden neemt de luchtweerstand heel sterk toe (kwadratisch met de snelheid). Om nog een klein beetje sneller te kunnen rijden, moet de motor tegen een enorm toegenomen luchtweerstand opboksen.",
+      "uitleg": "De luchtweerstand groeit zeer snel bij hoge snelheid, waardoor een verdubbeling van de motorkracht maar een bescheiden snelheidswinst oplevert."
     },
     {
       "type": "open",
-      "vraag": "Een sporter tilt een halter van 80 kg op vanaf de grond tot boven zijn hoofd (2,0 meter hoog) en houdt hem daar 5 seconden stil. Leg uit in welke fase hij <b>natuurkundige arbeid verricht</b> en in welke fase <b>niet</b>, en verklaar waarom.",
+      "vraag": "Een zware doos staat stil op de vloer. Je duwt horizontaal tegen de doos, maar deze komt niet van zijn plek. Wat kun je concluderen over de grootte en richting van de wrijvingskracht ten opzichte van jouw duwkracht?",
       "sleutelwoorden": [
-        "optillen/omhoog bewegen wel arbeid",
-        "stilhouden geen arbeid/verplaatsing is nul",
-        "W = F * s"
+        "even groot/dezelfde grootte/gelijk",
+        "tegengestelde richting/tegengesteld gericht",
+        "heffen elkaar op/resulterende kracht nul"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Tijdens het optillen van de halter is er een kracht omhoog én een verplaatsing van 2,0 m omhoog (s > 0), dus verricht hij positieve arbeid (W = F × s = 800 N × 2 m = 1600 J). Tijdens het 5 seconden stilhouden boven zijn hoofd is de verplaatsing s = 0 meter; volgens de formule W = F × s verricht hij dan natuurkundig gezien 0 Joule arbeid.",
-      "uitleg": "Alleen wanneer er een verplaatsing is in de richting van de kracht, is er sprake van natuurkundige arbeid."
+      "modelantwoord": "De wrijvingskracht is precies even groot als jouw duwkracht, maar werkt in tegengestelde richting. Omdat de doos stil blijft staan is de versnelling nul, waardoor beide krachten elkaar opheffen en de resulterende kracht 0 N is.",
+      "uitleg": "Bij stilstand is de statische wrijving exact gelijk en tegengesteld aan de duwkracht."
     }
   ]
 });

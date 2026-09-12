@@ -109,42 +109,50 @@
           titel: "Paragraaf 1.1 — Kracht bij beweging",
           ico: "🏎️",
           tag: "§1.1",
-          exIds: ["ex-h3-natuurkunde-26", "ex-h3-natuurkunde-27", "ex-h3-natuurkunde-28"]
+          sleutel: "1.1"
         },
         {
           titel: "Paragraaf 1.2 — Soorten beweging & Diagrammen",
           ico: "📈",
           tag: "§1.2",
-          exIds: ["ex-h3-natuurkunde-29", "ex-h3-natuurkunde-30", "ex-h3-natuurkunde-31"]
+          sleutel: "1.2"
         },
         {
           titel: "Paragraaf 1.3 — Kracht en Versnelling (F = m · a)",
           ico: "🚀",
           tag: "§1.3",
-          exIds: ["ex-h3-natuurkunde-32", "ex-h3-natuurkunde-33", "ex-h3-natuurkunde-34"]
+          sleutel: "1.3"
         },
         {
           titel: "Paragraaf 1.4 — Veiligheid, Remweg & Stopafstand",
           ico: "🛑",
           tag: "§1.4",
-          exIds: ["ex-h3-natuurkunde-35"]
+          sleutel: "1.4"
         },
         {
           titel: "Paragraaf 1.5 — Arbeid en Energieomzetting",
           ico: "🚴",
           tag: "§1.5",
-          exIds: ["ex-h3-natuurkunde-36"]
+          sleutel: "1.5"
         },
         {
           titel: "Integrale Toetstraining — Mix Paragrafen 1.1 t/m 1.3",
           ico: "🎯",
           tag: "Mix §1.1–1.3",
-          exIds: ["ex-h3-natuurkunde-1", "ex-h3-natuurkunde-2", "ex-h3-natuurkunde-3", "ex-h3-natuurkunde-4", "ex-h3-natuurkunde-5"]
+          sleutel: "1.mix"
+        },
+        {
+          titel: "Hoofdstuk 1 — Integrale Eindtoets",
+          ico: "🏆",
+          tag: "Eindtoets H1",
+          sleutel: "eind"
         }
       ];
+      // groepering uit het paragraaf-veld van de toets (DURU.getParagraafInfo), niet uit id-lijsten
+      var sleutelVan = function (e) { return DURU.getParagraafInfo(e, true).nr; };
 
       sectiesH1.forEach(function (s) {
-        var matched = exLijst.filter(function (e) { return s.exIds.indexOf(e.id) !== -1; });
+        var matched = exLijst.filter(function (e) { return sleutelVan(e) === s.sleutel; });
         if (matched.length === 0) return;
         out += '<div class="paragraaf-groep">' +
           '<div class="paragraaf-groep-header">' +
@@ -162,8 +170,8 @@
       });
 
       var handledIds = {};
-      sectiesH1.forEach(function(s){ s.exIds.forEach(function(id){ handledIds[id] = true; }); });
-      var rest = exLijst.filter(function(e){ return !handledIds[e.id]; });
+      sectiesH1.forEach(function(s){ handledIds[s.sleutel] = true; });
+      var rest = exLijst.filter(function(e){ return !handledIds[sleutelVan(e)]; });
       if (rest.length > 0) {
         out += '<div class="paragraaf-groep">' +
           '<div class="paragraaf-groep-header">' +

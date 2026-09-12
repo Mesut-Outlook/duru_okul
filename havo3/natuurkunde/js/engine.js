@@ -212,35 +212,35 @@
           ico: "🏎️",
           tag: "§1.1",
           owIds: ["h1-1-kracht-beweging"],
-          exIds: ["ex-h3-natuurkunde-26", "ex-h3-natuurkunde-27", "ex-h3-natuurkunde-28"]
+          sleutel: "1.1"
         },
         {
           titel: "Paragraaf 1.2 — Soorten beweging & Diagrammen",
           ico: "📈",
           tag: "§1.2",
           owIds: ["h1-2-soorten-beweging"],
-          exIds: ["ex-h3-natuurkunde-29", "ex-h3-natuurkunde-30", "ex-h3-natuurkunde-31"]
+          sleutel: "1.2"
         },
         {
           titel: "Paragraaf 1.3 — Kracht en Versnelling (F = m · a)",
           ico: "🚀",
           tag: "§1.3",
           owIds: ["h1-3-kracht-versnelling"],
-          exIds: ["ex-h3-natuurkunde-32", "ex-h3-natuurkunde-33", "ex-h3-natuurkunde-34"]
+          sleutel: "1.3"
         },
         {
           titel: "Paragraaf 1.4 — Veiligheid, Remweg & Stopafstand",
           ico: "🛑",
           tag: "§1.4",
           owIds: ["h1-4-veiligheid-verkeer"],
-          exIds: ["ex-h3-natuurkunde-35"]
+          sleutel: "1.4"
         },
         {
           titel: "Paragraaf 1.5 — Arbeid en Energieomzetting",
           ico: "⚙️",
           tag: "§1.5",
           owIds: ["h1-5-arbeid"],
-          exIds: ["ex-h3-natuurkunde-36"]
+          sleutel: "1.5"
         },
         {
           titel: "Samengestelde Toetsen (§1.1, §1.2 & §1.3 Mix)",
@@ -248,7 +248,15 @@
           tag: "Mix §1.1–1.3",
           tagClass: "mix",
           owIds: [],
-          exIds: ["ex-h3-natuurkunde-1", "ex-h3-natuurkunde-2", "ex-h3-natuurkunde-3", "ex-h3-natuurkunde-4", "ex-h3-natuurkunde-5"]
+          sleutel: "1.mix"
+        },
+        {
+          titel: "Hoofdstuk 1 — Integrale Eindtoets",
+          ico: "🏆",
+          tag: "Eindtoets H1",
+          tagClass: "eind",
+          owIds: [],
+          sleutel: "eind"
         },
         {
           titel: "Kernbegrippen & Formules (§1.1 t/m §1.3)",
@@ -256,13 +264,16 @@
           tag: "§1.0",
           tagClass: "begrippen",
           owIds: ["h1-begrippen"],
-          exIds: []
+          sleutel: null
         }
       ];
 
+      // toetsen: uit het paragraaf-veld (DURU.getParagraafInfo), niet uit id-lijsten
+      var geplaatst = {};
       sectiesH1.forEach(function (sec) {
         var secOw = ow.filter(function(o){ return sec.owIds.indexOf(o.id) !== -1; });
-        var secEx = exLijst.filter(function(e){ return sec.exIds.indexOf(e.id) !== -1; });
+        var secEx = exLijst.filter(function(e){ return sec.sleutel && DURU.getParagraafInfo(e, true).nr === sec.sleutel; });
+        secEx.forEach(function (e) { geplaatst[e.id] = true; });
         if (!secOw.length && !secEx.length) return;
 
         var itemsCount = [];
@@ -287,6 +298,19 @@
 
         out += '</div></div>';
       });
+
+      // vangnet: een H1-toets zonder (bekend) paragraaf-veld mag nooit onzichtbaar worden
+      var rest = exLijst.filter(function (e) { return !geplaatst[e.id]; });
+      if (rest.length) {
+        out += '<div class="paragraaf-groep">' +
+          '<div class="paragraaf-groep-header">' +
+            '<div class="paragraaf-groep-titel"><span>📚</span><span>Overige toetsen H1</span></div>' +
+            '<div class="paragraaf-groep-meta"><span style="font-size:12px;font-weight:700;color:var(--grijs);">' + rest.length + ' Proeftoets' + (rest.length > 1 ? 'en' : '') + '</span></div>' +
+          '</div>' +
+          '<div class="grid cols-3">';
+        rest.forEach(function(e){ out += renderExamenCard(e, h, exDataHome); });
+        out += '</div></div>';
+      }
 
       return out;
     }

@@ -96,7 +96,19 @@
         tagClass: p === "1.0" ? "begrippen" : "oefen"
       };
     }
-    // Examens
+    // Examens — het "paragraaf"-veld in de data is de bron ("1.1".."1.5", "mix", "eind").
+    // Nooit uit de id afleiden: ids verhuizen (2026-09-12: toetsen 1-5 terug naar hun eigen id).
+    var hf = item.hoofdstuk || 1;
+    if (item.paragraaf === "mix") {
+      return { code: "Mix H" + hf, nr: hf + ".mix", label: "Integrale toets (meerdere paragrafen)", tagClass: "mix" };
+    }
+    if (item.paragraaf === "eind") {
+      return { code: "Eindtoets H" + hf, nr: "eind", label: "Eindtoets Hoofdstuk " + hf, tagClass: "eind" };
+    }
+    if (item.paragraaf) {
+      return { code: "§" + item.paragraaf, nr: item.paragraaf, label: "Paragraaf " + item.paragraaf, tagClass: "toets" };
+    }
+    // Terugval voor toetsen zonder paragraaf-veld (H2, H3, H4, H8)
     var t = item.titel || "";
     var m = t.match(/§\s*(\d+\.\d+)/);
     if (m) {
@@ -105,16 +117,6 @@
         nr: m[1],
         label: "Paragraaf " + m[1],
         tagClass: "toets"
-      };
-    }
-    if (t.indexOf("Mix") !== -1 || (t.indexOf("1.1") !== -1 && t.indexOf("1.2") !== -1) ||
-        item.id === "ex-h3-natuurkunde-1" || item.id === "ex-h3-natuurkunde-2" || item.id === "ex-h3-natuurkunde-3" ||
-        item.id === "ex-h3-natuurkunde-4" || item.id === "ex-h3-natuurkunde-5") {
-      return {
-        code: "Mix §1.1–1.3",
-        nr: "1.mix",
-        label: "Integrale Toets (§1.1 t/m §1.3)",
-        tagClass: "mix"
       };
     }
     if (t.indexOf("Eindtoets") !== -1 || item.id === "ex-h3-natuurkunde-10" || item.id === "ex-h3-natuurkunde-15" ||
@@ -130,8 +132,7 @@
       "ex-h3-natuurkunde-6": "2.1", "ex-h3-natuurkunde-7": "2.2", "ex-h3-natuurkunde-8": "2.3", "ex-h3-natuurkunde-9": "2.4",
       "ex-h3-natuurkunde-11": "3.1", "ex-h3-natuurkunde-12": "3.2", "ex-h3-natuurkunde-13": "3.3", "ex-h3-natuurkunde-14": "3.4",
       "ex-h3-natuurkunde-16": "4.1", "ex-h3-natuurkunde-17": "4.2", "ex-h3-natuurkunde-18": "4.3", "ex-h3-natuurkunde-19": "4.4",
-      "ex-h3-natuurkunde-21": "8.1", "ex-h3-natuurkunde-22": "8.2", "ex-h3-natuurkunde-23": "8.3", "ex-h3-natuurkunde-24": "8.4",
-      "ex-h3-natuurkunde-35": "1.4", "ex-h3-natuurkunde-36": "1.5"
+      "ex-h3-natuurkunde-21": "8.1", "ex-h3-natuurkunde-22": "8.2", "ex-h3-natuurkunde-23": "8.3", "ex-h3-natuurkunde-24": "8.4"
     };
     if (mapIds[item.id]) {
       var pNr = mapIds[item.id];

@@ -51,6 +51,19 @@
   var app = function () { return document.getElementById("app"); };
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 
+  // Proeftoetsen per hoofdstuk. Bron: ex.hoofdstuk + DURU.hoofdstukken — nooit de id
+  // (in ex-h3-* is "h3" het niveau). Toetsen zonder bekend hoofdstuk komen onderaan.
+  DURU.examenGroepen = function () {
+    var bekend = {};
+    var groepen = (DURU.hoofdstukken || []).map(function (hf) {
+      bekend[hf.nr] = true;
+      return { hf: hf, examens: (DURU.examens || []).filter(function (ex) { return ex.hoofdstuk === hf.nr; }) };
+    });
+    var overig = (DURU.examens || []).filter(function (ex) { return !bekend[ex.hoofdstuk]; });
+    if (overig.length) groepen.push({ hf: { nr: null, titel: "Overige toetsen", icoon: "📝", intro: "" }, examens: overig });
+    return groepen;
+  };
+
   /* ---------- Timer (wordt netjes gestopt bij verlaten) ---------- */
   var T = null; // examen-state
   DURU._stopExamTimer = function () { if (T && T.interval) { clearInterval(T.interval); T.interval = null; } };

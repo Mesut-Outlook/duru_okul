@@ -51,6 +51,22 @@
   var app = function () { return document.getElementById("app"); };
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 
+  // Proeftoetsen per hoofdstuk. Bron: ex.hoofdstuk + DURU.hoofdstukken — nooit de id
+  // (in ex-h3-* is "h3" het niveau). Toetsen zonder bekend hoofdstuk komen onderaan.
+  DURU.examenGroepen = function () {
+    var bekend = {};
+    var groepen = (DURU.hoofdstukken || []).map(function (hf) {
+      bekend[hf.nr] = true;
+      return { hf: hf, examens: (DURU.examens || []).filter(function (ex) { return ex.hoofdstuk === hf.nr; }) };
+    });
+    var overig = (DURU.examens || []).filter(function (ex) { return !bekend[ex.hoofdstuk]; });
+    if (overig.length) groepen.push({ hf: { nr: null, titel: "Overige toetsen", icoon: "📝", intro: "" }, examens: overig });
+    return groepen;
+  };
+  DURU.toggleAllAccordions = function (openState) {
+    document.querySelectorAll(".chapter-accordion").forEach(function (acc) { acc.open = openState; });
+  };
+
   /* ---------- Timer (wordt netjes gestopt bij verlaten) ---------- */
   var T = null; // examen-state
   DURU._stopExamTimer = function () { if (T && T.interval) { clearInterval(T.interval); T.interval = null; } };
@@ -59,48 +75,70 @@
   DURU.renderExamenLijst = function () {
     DURU._stopExamTimer();
     var h = '<div class="terug" onclick="DURU.gaNaar(\'home\')">← Terug naar overzicht</div>';
-    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen</h3><div class="lijn"></div></div>';
+    h += '<div class="sectie-titel"><h3>📝 Oefentoetsen per Hoofdstuk</h3><div class="lijn"></div></div>';
     h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Je krijgt aan het eind je cijfer én bij elke vraag te zien <b>hoe je het moet doen</b>. Deze toetsen tellen los van je oefen-punten — daar gebeurt niets mee.</p>';
-    h += '<div class="examen-lijst">';
-    DURU.examens.forEach(function (ex) {
-      var best = EX.beste[ex.id];
-      var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
-      if (laatste == null && EX.history) {
-        var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
-        if (attempts.length > 0) {
-          laatste = attempts[0].pct;
-        }
-      }
-
-      var statusHtml = '';
-      if (best != null) {
-        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
-          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
-            '<span>✓</span> Gemaakt' +
-          '</div>' +
-          '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
-        if (laatste != null) {
-          statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
-        }
-        statusHtml += '</div>';
-      } else {
-        statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
-          '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
-            'Nog niet gemaakt' +
-          '</div>' +
-          '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
+    h += '<div class="accordion-controls">' +
+        '<button class="btn ghost klein" onclick="DURU.toggleAllAccordions(true)">📂 Alles uitvouwen</button>' +
+        '<button class="btn ghost klein" onclick="DURU.toggleAllAccordions(false)">📁 Alles inklappen</button>' +
         '</div>';
-      }
+    DURU.examenGroepen().forEach(function (g) {
+      if (!g.examens.length) return;
+      var gemaakt = g.examens.filter(function (ex) { return EX.beste[ex.id] != null; }).length;
+      h += '<details class="chapter-accordion" open>' +
+        '<summary class="chapter-header">' +
+          '<div class="ch-icon">' + (g.hf.icoon || "📘") + '</div>' +
+          '<div class="ch-info">' +
+            (g.hf.nr != null ? '<span class="ch-badge">Hoofdstuk ' + g.hf.nr + '</span>' : '') +
+            '<div class="ch-title">' + esc(g.hf.titel) + '</div>' +
+          '</div>' +
+          '<div class="ch-meta">' +
+            '<div class="ch-stats"><div>' + g.examens.length + ' toets' + (g.examens.length > 1 ? 'en' : '') + '</div>' +
+              (gemaakt ? '<div style="color:var(--groen);font-size:12px;">✓ ' + gemaakt + '/' + g.examens.length + ' gemaakt</div>' : '<div style="color:var(--grijs-licht);font-size:12px;">Nog niet gemaakt</div>') +
+            '</div>' +
+            '<div class="ch-chevron">▼</div>' +
+          '</div>' +
+        '</summary>' +
+        '<div class="chapter-content"><div class="examen-lijst">';
+      g.examens.forEach(function (ex) {
+        var best = EX.beste[ex.id];
+        var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
+        if (laatste == null && EX.history) {
+          var attempts = EX.history.filter(function (a) { return a.examId === ex.id; });
+          if (attempts.length > 0) {
+            laatste = attempts[0].pct;
+          }
+        }
 
-      h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
-        '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
-        '<h4>' + esc(ex.titel) + '</h4>' +
-        '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
-        statusHtml +
-        '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
-        '</div>';
+        var statusHtml = '';
+        if (best != null) {
+          statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+            '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--groen); background: var(--groen-zacht); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+              '<span>✓</span> Gemaakt' +
+            '</div>' +
+            '<div class="ex-best" style="color:' + (best >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px;">🏆 Beste cijfer: ' + cijfer(best) + ' (' + best + '%)</div>';
+          if (laatste != null) {
+            statusHtml += '<div class="ex-laatste" style="color:' + (laatste >= 55 ? 'var(--groen)' : 'var(--oranje)') + '; font-size: 13px; font-weight: 800;">⏱️ Laatste cijfer: ' + cijfer(laatste) + ' (' + laatste + '%)</div>';
+          }
+          statusHtml += '</div>';
+        } else {
+          statusHtml += '<div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">' +
+            '<div style="font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; color: var(--grijs); background: var(--lijn); padding: 2px 8px; border-radius: 99px; width: fit-content;">' +
+              'Nog niet gemaakt' +
+            '</div>' +
+            '<div class="ex-best" style="color:var(--grijs-licht); font-size: 13px;">🏆 Beste: -</div>' +
+          '</div>';
+        }
+
+        h += '<div class="examen-card" onclick="DURU.examenStart(\'' + ex.id + '\')">' +
+          '<div class="ex-ico">' + (ex.icoon || "📝") + '</div>' +
+          '<h4>' + esc(ex.titel) + '</h4>' +
+          '<div class="ex-meta">' + esc(ex.vak || "") + '<br><b>' + ex.vragen.length + ' vragen</b> · ⏱️ ' + (ex.duurMin || 20) + ' min</div>' +
+          statusHtml +
+          '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
+          '</div>';
+      });
+      h += '</div></div></details>';
     });
-    h += '</div>';
 
     // Toetshistorie & Foutanalyse sectie
     EX.history = EX.history || [];

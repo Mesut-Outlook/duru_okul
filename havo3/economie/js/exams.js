@@ -79,7 +79,9 @@
     // Groepeer op hoofdstuk
     var groepen = {};
     DURU.examens.forEach(function (ex) {
-      var hfKey = ex.hoofdstukTitel || (ex.hoofdstuk ? "Hoofdstuk " + ex.hoofdstuk : "Hoofdstuk 1 — Jouw financiën");
+      // titel uit DURU.hoofdstukken (bron), anders onderaan als "Overige toetsen"
+      var hf = (DURU.hoofdstukken || []).filter(function (x) { return x.nr === ex.hoofdstuk; })[0];
+      var hfKey = hf ? "Hoofdstuk " + hf.nr + " — " + hf.titel : "Overige toetsen";
       if (!groepen[hfKey]) groepen[hfKey] = [];
       groepen[hfKey].push(ex);
     });

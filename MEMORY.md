@@ -511,3 +511,19 @@ Faz 1 uygulandı.
 * Yeniden üretim tuzağı: `tools/build_natuurkunde_h1_complete.py` ve `generate_h4_exams_24_to_27.py`
   düzeltilmedi — tekrar çalıştırılırsa kusurlar geri gelir.
 * Sonuç: natuurkunde 26/36/928, toplam **127 · 230 · 5590**; `?v=4.3`; manifest `--check` exit 0.
+
+## 📅 Milestone 16: Ders sitelerinde testler hoofdstuk altında + natuurkunde geçmişi kurtarıldı (2026-09-12)
+
+* **İstek**: "hangi bölüme ait olduğu belli olmayan testler" — yayındaki natuurkunde tek düz listeydi.
+* **Artık hiçbir ders sayfasında hoofdstuk'suz test yok.** duits/aardrijkskunde/biologie/scheikunde/
+  wiskunde: `exams.js → DURU.examenGroepen()` (kaynak `ex.hoofdstuk` + `DURU.hoofdstukken`, bilinmeyen →
+  "Overige toetsen") + engels/frans'ın `<details class="chapter-accordion">` deseni ve CSS'i. Ana sayfada
+  hoofdstuk kutusu = 📖 oefenlessen + 📝 o bölümün proeftoetsen. economie listesine bölüm adları,
+  wiskunde'de çift "Hoofdstuk 2 —" başlığı düzeldi.
+* **natuurkunde**: gruplama elle id listelerinden sınavdaki `"paragraaf"` alanına taşındı
+  (`"1.1"`…`"1.5"`, `"mix"`, `"eind"`; `DURU.getParagraafInfo`).
+* **⚠️ Ders: kullanılmış sınav id'sinin içeriği değiştirilmez.** Duru eski natuurkunde Toets 1'i 4×,
+  Toets 2'yi 5× çözmüştü; 2026-09-11 teslimi aynı id'lere yeni içerik yazmıştı. Push edilseydi denemeleri
+  başka testin üstünde görünecekti. Orijinaller 1–5'e geri, yeniler 35–39'a.
+* agy paralel çalışırken `examen_37–39`'u (bağlı değil diye) sildi → geri alındı. Kural `coordination.md`'de.
+* Toplam **127 · 233 · 5650**; 9 ders kapı 16/16; manifest `--check` exit 0.

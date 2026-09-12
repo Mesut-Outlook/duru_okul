@@ -82,6 +82,9 @@ olanlar (`15`, `2,0 m/s²`, `9%`) öğrencinin yazdığı ilk sayıyla sayısal 
 `tolerantie` ya da **son verilen ondalığın yarım birimi** (`12,5` → ±0,05, `1914` → ±0,5 — yıllarda %2 kuralı
 ±38 yıl verirdi). `16.000` binlik, `1,5` ondalık okunur. Metin alternatifleri eskisi gibi normalize + alt-dizi.
 Eskiden `invul` tamamen alt-diziydi: cevap `2` iken `12` ve `0,2` de doğru sayılıyordu.
+**Sınavda opsiyonel `paragraaf`** (natuurkunde H1'den beri): `"1.3"` gibi paragraf, `"mix"` (birden çok
+paragraf) ya da `"eind"` (hoofdstuk eindtoets). Ders sitesi testleri bununla gruplar; id'den çıkarılmaz.
+**Kullanılmış bir sınav id'sinin içeriğini değiştirme** — geçmiş `examId` + soru sırasıyla saklanır.
 **`invul` sorusunda cevabı `[köşeli parantez]` ile soruya yazma** — motor onu boşluğa çevirmez; boşluk `____`.
 **LaTeX yazma** — KaTeX/MathJax yüklü değil; `F<sub>res</sub>`, `m/s²`, `Δv` gibi düz metin/HTML kullan.
 `open`: tüm sleutelwoorden bulunursa "goed", `>= minTreffers` "deels" (yine 1 puan), yoksa "fout".

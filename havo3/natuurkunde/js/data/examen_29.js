@@ -1,216 +1,218 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 29 — §1.2 Soorten beweging & Diagrammen — Toets A
+   Duru's Natuurkunde (HAVO 3) — Toets 29 — Toets 29 — §1.2 Soorten beweging & Diagrammen — Toets A
+   Gebaseerd op Overal Natuurkunde 3 HAVO (Hoofdstuk 1 Kracht en beweging)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-29",
   "hoofdstuk": 1,
+  "paragraaf": "1.2",
   "titel": "Toets 29 — §1.2 Soorten beweging & Diagrammen — Toets A",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "📈",
   "duurMin": 30,
   "vragen": [
     {
-      "type": "mc",
-      "vraag": "Wat betekent het als de grafiek in een afstand-tijd-diagram ((s,t)-diagram) een volkomen rechte, schuin omhoog lopende lijn is?",
-      "opties": [
-        "Het voorwerp beweegt met een constante snelheid (eenparige beweging)",
-        "Het voorwerp staat stil op een vaste plek",
-        "Het voorwerp versnelt voortdurend",
-        "Het voorwerp remt gelijkmatig af tot stilstand"
-      ],
-      "antwoord": 0,
-      "uitleg": "In een (s,t)-diagram stelt de steilheid de snelheid voor. Een rechte lijn betekent een constante steilheid, dus een constante snelheid (eenparige beweging)."
+        "type": "mc",
+        "vraag": "Met welke formule bereken je de gemiddelde snelheid (vgem) als de afstand s en de tijdsduur t bekend zijn?",
+        "opties": [
+            "vgem = s / t",
+            "vgem = s · t",
+            "vgem = t / s",
+            "vgem = 1/2 · s · t²"
+        ],
+        "antwoord": 0,
+        "uitleg": "De gemiddelde snelheid is de afstand gedeeld door de tijd: vgem = s / t (blz. 14 in het theorieboek)."
     },
     {
-      "type": "mc",
-      "vraag": "Een sprinter legt 100 meter af in 12,5 seconden. Hoe groot is zijn gemiddelde snelheid in m/s?",
-      "opties": [
-        "8,0 m/s",
-        "12,5 m/s",
-        "7,5 m/s",
-        "10,0 m/s"
-      ],
-      "antwoord": 0,
-      "uitleg": "vgem = s / t = 100 m / 12,5 s = 8,0 m/s."
+        "type": "mc",
+        "vraag": "Hoe reken je een snelheid van kilometer per uur (km/h) correct om naar meter per seconde (m/s)?",
+        "opties": [
+            "Vermenigvuldigen met 3,6",
+            "Delen door 3,6",
+            "Vermenigvuldigen met 1000",
+            "Delen door 60"
+        ],
+        "antwoord": 1,
+        "uitleg": "Omdat 1 km = 1000 m en 1 uur = 3600 s, geldt: 3600 / 1000 = 3,6. Van km/h naar m/s moet je dus altijd delen door 3,6."
     },
     {
-      "type": "mc",
-      "vraag": "Hoe kun je in een snelheid-tijd-diagram ((v,t)-diagram) bepalen welke afstand s een voorwerp in een bepaald tijdsinterval heeft afgelegd?",
-      "opties": [
-        "Door de oppervlakte onder de grafieklijn te berekenen",
-        "Door de hoogste snelheid te delen door de tijd",
-        "Door de steilheid van de grafieklijn te meten",
-        "Door de eindsnelheid te vermenigvuldigen met 3,6"
-      ],
-      "antwoord": 0,
-      "uitleg": "In een (v,t)-diagram stelt het oppervlak onder de grafieklijn altijd de afgelegde afstand voor (s = oppervlakte)."
+        "type": "mc",
+        "vraag": "Een auto rijdt met 72 km/h over een provinciale weg. Hoeveel meter legt deze auto per seconde af?",
+        "opties": [
+            "7,2 m/s",
+            "259,2 m/s",
+            "20 m/s",
+            "25 m/s"
+        ],
+        "antwoord": 2,
+        "uitleg": "72 km/h omrekenen naar m/s: 72 / 3,6 = 20 m/s (zie opdracht 23a)."
     },
     {
-      "type": "mc",
-      "vraag": "Een auto rijdt met een constante snelheid van 72 km/h over de snelweg. Hoeveel meter per seconde is dat?",
-      "opties": [
-        "259,2 m/s",
-        "20 m/s",
-        "25 m/s",
-        "15 m/s"
-      ],
-      "antwoord": 1,
-      "uitleg": "Omrekenen van km/h naar m/s doe je door te delen door 3,6: 72 / 3,6 = 20 m/s."
+        "type": "mc",
+        "vraag": "Wat betekent de steilheid (helling) van de grafiek in een (s,t)-diagram?",
+        "opties": [
+            "De totale massa van het voertuig",
+            "De resulterende tegenwerkende kracht",
+            "De verstreken tijd tot aan de finish",
+            "De snelheid van het voorwerp op dat moment"
+        ],
+        "antwoord": 3,
+        "uitleg": "In een (s,t)-diagram geldt: hoe steiler de lijn loopt, des te meer meters er per seconde worden afgelegd. De steilheid stelt dus de snelheid voor (blz. 14)."
     },
     {
-      "type": "mc",
-      "vraag": "Wat stelt een horizontale rechte lijn voor in een (s,t)-diagram?",
-      "opties": [
-        "Een eenparig versnelde beweging",
-        "Het voorwerp staat stil (snelheid is nul)",
-        "Een eenparige beweging met constante snelheid",
-        "Een plotselinge sprong in verplaatsing"
-      ],
-      "antwoord": 1,
-      "uitleg": "Als s niet verandert in de tijd, is de steilheid nul. Dat betekent dat de afstand gelijk blijft en het voorwerp stilstaat (v = 0 m/s)."
+        "type": "mc",
+        "vraag": "Het Formule 1-circuit van Zandvoort is 4259 m lang. Max Verstappen rijdt een ronde in 1 minuut en 20,4 seconden (80,4 s). Wat is zijn gemiddelde snelheid?",
+        "opties": [
+            "53,0 m/s (ongeveer 191 km/h)",
+            "34,2 m/s (ongeveer 123 km/h)",
+            "80,4 m/s (ongeveer 289 km/h)",
+            "12,5 m/s (ongeveer 45 km/h)"
+        ],
+        "antwoord": 0,
+        "uitleg": "vgem = s / t = 4259 m / 80,4 s = 52,97 m/s ≈ 53,0 m/s (voorbeeld in theorieboek op blz. 14)."
     },
     {
-      "type": "mc",
-      "vraag": "Een trein versnelt eenparig vanuit stilstand naar 30 m/s in een tijd van 10 seconden. Wat was de gemiddelde snelheid van de trein tijdens deze versnelling?",
-      "opties": [
-        "30 m/s",
-        "15 m/s",
-        "3,0 m/s",
-        "20 m/s"
-      ],
-      "antwoord": 1,
-      "uitleg": "Bij een eenparige versnelling vanuit stilstand geldt vgem = (vbegin + veind) / 2 = (0 + 30) / 2 = 15 m/s."
+        "type": "mc",
+        "vraag": "Hoe herken je stilstand in een (s,t)-diagram?",
+        "opties": [
+            "Een stijgende rechte lijn vanuit de oorsprong",
+            "Een horizontale rechte lijn (de afstand s verandert niet)",
+            "Een dalende rechte lijn naar de tijdas",
+            "Een kromme lijn die steeds steiler wordt"
+        ],
+        "antwoord": 1,
+        "uitleg": "Als de afstand s gedurende een tijdinterval gelijk blijft (horizontale lijn), beweegt het voorwerp niet: het staat stil (snelheid v = 0)."
     },
     {
-      "type": "mc",
-      "vraag": "In een (s,t)-diagram buigt de kromme grafieklijn steeds steiler omhoog. Wat voor soort beweging voert dit voertuig uit?",
-      "opties": [
-        "Een eenparige beweging",
-        "Een eenparig vertraagde beweging",
-        "Een versnelde beweging",
-        "Een stilstaande toestand"
-      ],
-      "antwoord": 2,
-      "uitleg": "Omdat de steilheid (helling) van een (s,t)-diagram gelijk is aan de momentane snelheid, betekent een steeds steiler wordende lijn dat de snelheid toeneemt: een versnelde beweging."
+        "type": "mc",
+        "vraag": "Wat stelt de oppervlakte onder de grafiek in een (v,t)-diagram voor?",
+        "opties": [
+            "De gemiddelde versnelling in m/s²",
+            "De benodigde motorkracht in newton",
+            "De afgelegde afstand (s) in meters",
+            "Het brandstofverbruik in liters"
+        ],
+        "antwoord": 2,
+        "uitleg": "Omdat snelheid × tijd = afstand (m/s × s = m), stelt de oppervlakte onder de grafiek in een (v,t)-diagram precies de afgelegde afstand s voor (blz. 15)."
     },
     {
-      "type": "mc",
-      "vraag": "Een fietser rijdt 18 kilometer in precies 45 minuten. Wat is zijn gemiddelde snelheid in km/h?",
-      "opties": [
-        "13,5 km/h",
-        "18 km/h",
-        "24 km/h",
-        "40 km/h"
-      ],
-      "antwoord": 2,
-      "uitleg": "45 minuten is 0,75 uur (45/60). vgem = s / t = 18 km / 0,75 h = 24 km/h."
+        "type": "mc",
+        "vraag": "Een scooter rijdt gedurende 8,0 seconden met een constante snelheid van 6,0 m/s. Hoeveel afstand legt de scooter af?",
+        "opties": [
+            "14 m",
+            "24 m",
+            "1,33 m",
+            "48 m"
+        ],
+        "antwoord": 3,
+        "uitleg": "Bij constante snelheid bereken je de oppervlakte van de rechthoek: s = v · t = 6,0 m/s × 8,0 s = 48 m."
     },
     {
-      "type": "mc",
-      "vraag": "In een (v,t)-diagram zien we een horizontale rechte lijn op een hoogte van 15 m/s gedurende 8 seconden. Welke afstand heeft het voorwerp afgelegd?",
-      "opties": [
-        "1,875 m",
-        "60 m",
-        "120 m",
-        "23 m"
-      ],
-      "antwoord": 2,
-      "uitleg": "De oppervlakte onder de lijn is een rechthoek: oppervlakte = hoogte × breedte = 15 m/s × 8 s = 120 meter."
+        "type": "mc",
+        "vraag": "Een fietser versnelt eenparig vanuit stilstand (0 m/s) in 6,0 seconden naar een eindsnelheid van 8,0 m/s. Hoe bereken je de afgelegde afstand met de oppervlaktemethode?",
+        "opties": [
+            "Oppervlakte driehoek = 1/2 × basis × hoogte = 1/2 × 6,0 × 8,0 = 24 m",
+            "Oppervlakte rechthoek = 6,0 × 8,0 = 48 m",
+            "Afstand = eindsnelheid / tijd = 8,0 / 6,0 = 1,33 m",
+            "Afstand = 6,0 + 8,0 = 14 m"
+        ],
+        "antwoord": 0,
+        "uitleg": "Bij eenparige versnelling vanuit stilstand vormt de grafiek een driehoek met basis t = 6,0 s en hoogte v = 8,0 m/s: s = 1/2 × 6,0 × 8,0 = 24 m (of s = vgem · t = 4,0 × 6,0 = 24 m)."
     },
     {
-      "type": "mc",
-      "vraag": "Een hardloper rent 15 m/s. Welke snelheid in km/h hoort hierbij?",
-      "opties": [
-        "4,17 km/h",
-        "30 km/h",
-        "45 km/h",
-        "54 km/h"
-      ],
-      "antwoord": 3,
-      "uitleg": "Omrekenen van m/s naar km/h doe je door te vermenigvuldigen met 3,6: 15 × 3,6 = 54 km/h."
+        "type": "mc",
+        "vraag": "Wat is sneller: een fietser die 10 m/s rijdt of een brommer die 30 km/h rijdt?",
+        "opties": [
+            "De brommer met 30 km/h is sneller",
+            "De fietser met 10 m/s is sneller (want 10 m/s = 36 km/h)",
+            "Ze gaan precies even snel",
+            "Dat kun je niet vergelijken omdat de eenheden anders zijn"
+        ],
+        "antwoord": 1,
+        "uitleg": "10 m/s omrekenen naar km/h: 10 × 3,6 = 36 km/h. 36 km/h is sneller dan 30 km/h (zie opdracht 21 uit het boek)."
     },
     {
-      "type": "mc",
-      "vraag": "Wat stelt de steilheid (helling) van de grafieklijn voor in een snelheid-tijd-diagram ((v,t)-diagram)?",
-      "opties": [
-        "De afgelegde afstand",
-        "De gemiddelde snelheid",
-        "De totale massa",
-        "De versnelling of vertraging"
-      ],
-      "antwoord": 3,
-      "uitleg": "In een (v,t)-diagram is de helling Δv / Δt gelijk aan de versnelling a (of vertraging als de lijn daalt)."
+        "type": "mc",
+        "vraag": "Welke eenheid hoort bij de grootheid versnelling (a)?",
+        "opties": [
+            "Meter per seconde (m/s)",
+            "Newton per kilogram (N/kg)",
+            "Meter per seconde kwadraat (m/s²)",
+            "Kilometer per uur (km/h)"
+        ],
+        "antwoord": 2,
+        "uitleg": "Versnelling geeft aan hoeveel m/s de snelheid per seconde verandert: (m/s) / s = m/s² (blz. 16)."
     },
     {
-      "type": "mc",
-      "vraag": "In een (v,t)-diagram start een rechte lijn in de oorsprong (0,0) en stijgt naar het punt (t = 6 s, v = 12 m/s). Welke afstand is in die 6 seconden afgelegd?",
-      "opties": [
-        "72 m",
-        "2 m",
-        "18 m",
-        "36 m"
-      ],
-      "antwoord": 3,
-      "uitleg": "De oppervlakte is een driehoek: s = 0,5 × basis × hoogte = 0,5 × 6 s × 12 m/s = 36 meter."
+        "type": "mc",
+        "vraag": "Een hardloper rent 1500 m in 5 minuten (300 s). Wat is zijn gemiddelde snelheid in m/s?",
+        "opties": [
+            "300 m/s",
+            "10 m/s",
+            "3 m/s",
+            "5 m/s"
+        ],
+        "antwoord": 3,
+        "uitleg": "vgem = s / t = 1500 m / 300 s = 5,0 m/s."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Om een snelheid van km/h om te rekenen naar m/s, moet je de waarde delen door 3,6.",
-      "antwoord": true,
-      "uitleg": "Waar. Omdat 1 km = 1000 m en 1 uur = 3600 s, geldt 1000/3600 = 1/3,6. Delen door 3,6 levert de snelheid in m/s op."
+        "type": "waaronwaar",
+        "vraag": "In een (s,t)-diagram stelt een schuine rechte lijn een beweging met constante snelheid voor.",
+        "antwoord": true,
+        "uitleg": "Waar. Omdat de steilheid constant is, legt het voorwerp in elk gelijk tijdsinterval evenveel meters af."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Een horizontale rechte lijn in een (v,t)-diagram betekent dat het voorwerp met een constante versnelling sneller gaat.",
-      "antwoord": false,
-      "uitleg": "Niet waar. Een horizontale lijn in een (v,t)-diagram betekent dat de snelheid constant blijft; de versnelling is dan 0 m/s²."
+        "type": "waaronwaar",
+        "vraag": "De oppervlakte onder een (v,t)-diagram is gelijk aan de afgelegde afstand s.",
+        "antwoord": true,
+        "uitleg": "Waar. Dit is een fundamentele rekenregel in de natuurkunde: oppervlakte onder (v,t) = afstand."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "Bij een eenparig vertraagde beweging is de grafiek in een (v,t)-diagram een rechte dalende lijn.",
-      "antwoord": true,
-      "uitleg": "Waar. Bij eenparige vertraging neemt de snelheid per seconde met een constant bedrag af, wat resulteert in een rechte dalende lijn."
+        "type": "waaronwaar",
+        "vraag": "Om van m/s naar km/h om te rekenen, moet je de waarde delen door 3,6.",
+        "antwoord": false,
+        "uitleg": "Onwaar. Van m/s naar km/h moet je vermenigvuldigen met 3,6 (bijvoorbeeld 10 m/s × 3,6 = 36 km/h)."
     },
     {
-      "type": "waaronwaar",
-      "vraag": "De gemiddelde snelheid van een autorit is altijd exact gelijk aan de helft van de hoogst gereden maximumsnelheid.",
-      "antwoord": false,
-      "uitleg": "Niet waar. Gemiddelde snelheid hangt af van de totale afstand en totale reistijd inclusief tussenstops, file en langzaam rijden; dit is niet simpelweg de halve topsnelheid."
+        "type": "waaronwaar",
+        "vraag": "Een horizontale lijn in een (s,t)-diagram betekent dat het voorwerp met constante snelheid doorrijdt.",
+        "antwoord": false,
+        "uitleg": "Onwaar. In een (s,t)-diagram betekent een horizontale lijn dat de afstand niet verandert: het voorwerp staat stil."
     },
     {
-      "type": "invul",
-      "vraag": "Een drone vliegt met een constante snelheid van 14 m/s gedurende 25 seconden. Bereken de afgelegde afstand in meters. Vul alleen het getal in.",
-      "antwoord": "350",
-      "uitleg": "s = v · t = 14 m/s · 25 s = 350 meter."
+        "type": "invul",
+        "vraag": "Reken om: een snelheid van 54 km/h is gelijk aan ... m/s.",
+        "antwoord": "15",
+        "uitleg": "54 / 3,6 = 15 m/s."
     },
     {
-      "type": "invul",
-      "vraag": "Reken een snelheid van 90 km/h om naar m/s. Vul alleen het getal in.",
-      "antwoord": "25",
-      "uitleg": "v = 90 / 3,6 = 25 m/s."
+        "type": "invul",
+        "vraag": "Een auto rijdt 4,0 seconden met een constante snelheid van 25 m/s. De afgelegde afstand is ... meter.",
+        "antwoord": "100",
+        "uitleg": "s = v · t = 25 m/s × 4,0 s = 100 m."
     },
     {
-      "type": "open",
-      "vraag": "Twee hardlopers worden vergeleken in een afstand-tijd-diagram. Leg uit hoe je aan de hand van de grafieklijnen direct kunt zien wie van de twee het hoogste tempo heeft.",
-      "sleutelwoorden": [
-        "steilste lijn/steilheid/grootste helling",
-        "meer afstand per tijdseenheid/meer meters per seconde"
-      ],
-      "minTreffers": 1,
-      "modelantwoord": "De hardloper met de steilste grafieklijn (de grootste helling) heeft de hoogste snelheid. Een steilere lijn betekent namelijk dat er in dezelfde tijdsduur een grotere afstand wordt afgelegd.",
-      "uitleg": "In een afstand-tijd-diagram stelt de steilheid de snelheid voor: hoe steiler de lijn, hoe sneller de loper."
+        "type": "open",
+        "vraag": "Leg uit waarom de omrekenfactor tussen meter per seconde en kilometer per uur precies 3,6 is.",
+        "sleutelwoorden": [
+            "1000 meter",
+            "3600 seconden",
+            "delen/verhouding"
+        ],
+        "minTreffers": 2,
+        "modelantwoord": "In één kilometer zit 1000 meter en in één uur zitten 3600 seconden. De verhouding is 3600 / 1000 = 3,6.",
+        "uitleg": "1 km = 1000 m en 1 h = 3600 s. Dus 3600 / 1000 = 3,6."
     },
     {
-      "type": "open",
-      "vraag": "Leg uit hoe je met de oppervlaktemethode de totale afgelegde afstand berekent bij een metro die eerst eenparig versnelt en daarna enige tijd met constante snelheid doorrijdt.",
-      "sleutelwoorden": [
-        "driehoek/oppervlakte driehoek",
-        "rechthoek/oppervlakte rechthoek",
-        "optellen/som van beide oppervlaktes"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In het snelheid-tijd-diagram splits je het gebied onder de grafiek in twee delen: een driehoek voor de eenparige versnellingsfase en een rechthoek voor de fase met constante snelheid. Je berekent van beide figuren de oppervlakte en telt deze bij elkaar op om de totale afstand te vinden.",
-      "uitleg": "De totale oppervlakte onder de v,t-grafiek bestaat uit een driehoek (versnelling) plus een rechthoek (constante snelheid)."
+        "type": "open",
+        "vraag": "Een wandelaar legt 1800 meter af in 20 minuten tijd. Bereken zijn gemiddelde snelheid in m/s.",
+        "sleutelwoorden": [
+            "1,5",
+            "1200 seconden"
+        ],
+        "minTreffers": 1,
+        "modelantwoord": "20 minuten = 20 × 60 = 1200 seconden. vgem = s / t = 1800 m / 1200 s = 1,5 m/s.",
+        "uitleg": "Tijd omrekenen naar seconden (1200 s) en dan delen: 1800 / 1200 = 1,5 m/s."
     }
-  ]
+]
 });

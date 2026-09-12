@@ -43,7 +43,7 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | frans | **0** | 40 | 800 | H1–H8 (onderwerp yok — sadece sınav) |
 | duits | 18 | 30 | 744 | H1–H6 |
 | engels | 18 | 30 | 744 | H1–H6 |
-| natuurkunde | 26 | 36 | 928 | H1–H8 (H1–H4, H8 tam; H5–H7 açıldı; H1 16 sınav) |
+| natuurkunde | 26 | 39 | 988 | H1–H8 (H1–H4, H8 tam; H5–H7 açıldı; H1 19 sınav) |
 | economie | 12 | 27 | 636 | H1–H4 |
 | aardrijkskunde | 10 | 10 | 280 | H1–H2 (tam) |
 | scheikunde | 6 | 10 | 252 | H1–H2 (H3–H7 eksik) |
@@ -52,7 +52,7 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 0 | 1 | 5 | **yok** — smoke-test |
 
-**Toplam: 127 onderwerp · 230 proeftoets · 5590 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 127 onderwerp · 233 proeftoets · 5650 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` + `nederlands` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavları bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
@@ -103,6 +103,15 @@ yıl→niveau ekle → `?v=` bump.
   manifest → başlıkta `Hoofdstuk N` → `null`.
 - Yeni sınav dosyası yazarken `registerExamen({...})`'e **`hoofdstuk` alanını koymak zorunlu**;
   onderwerp'lerde de `hoofdstuk` zaten zorunlu (`docs/ENGINE_SPEC.md`).
+- **Ders sitelerinde testler hoofdstuk altında gösterilir** (2026-09-12): hiçbir ders sayfasında
+  hoofdstuk'suz düz test listesi kalmadı. duits/aardrijkskunde/biologie/scheikunde/wiskunde →
+  `exams.js → DURU.examenGroepen()` (`ex.hoofdstuk` + `DURU.hoofdstukken`, bilinmeyen → "Overige
+  toetsen") + `<details class="chapter-accordion">` (engels/frans deseni). natuurkunde H1 ayrıca
+  **paragraf** bazlı: sınavdaki `"paragraaf"` alanı (`"1.1"`…`"1.5"`, `"mix"`, `"eind"`) →
+  `bootstrap.js → DURU.getParagraafInfo`. Gruplama için elle id listesi tutma.
+- **⚠️ Kullanılmış bir sınav id'sinin içeriği değiştirilmez.** Duru'nun geçmişi `examId` + soru
+  sırasıyla saklanır; içerik değişirse eski denemesi yeni teste yazılır. Yeni sınav = yeni id.
+  (2026-09-12: natuurkunde 1–5 böyle ezilmişti; orijinaller geri alındı, yeniler 35–39'a taşındı.)
 
 ## Dashboard & istatistik
 `index.html` iki view içerir ("Mijn vakken" / "Mijn prestaties & statistieken"). `js/dashboard.js`
