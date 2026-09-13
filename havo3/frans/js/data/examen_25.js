@@ -43,7 +43,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vervoeg <b>boire</b> bij <i>nous</i>: <i>Nous ... du jus de pomme.</i>",
       "antwoord": "buvons",
-      "uitleg": "Nous buvons."
+      "uitleg": "Boire (drinken) is onregelmatig: je bois, tu bois, il boit, nous buvons, vous buvez, ils boivent."
     },
     {
       "type": "mc",
@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vertaal het woord <i>lunch / middagmaaltijd</i> naar het Frans: <i>À midi, je prends le ... .</i>",
       "antwoord": "déjeuner|dejeuner",
-      "uitleg": "Le déjeuner."
+      "uitleg": "'Le déjeuner' is de lunch/middagmaaltijd in het Frans; 'le petit-déjeuner' is het ontbijt."
     },
     {
       "type": "mc",

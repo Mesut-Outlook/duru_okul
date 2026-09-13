@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""mc siklarini yeniden dagit: dogru cevap dosya icinde sirayla A,B,C,D pozisyonlarina gider.
+"""mc siklarini yeniden dagit: dogru cevap dosya icinde A,B,C,D'ye DENGELI ama RASTGELE dagilir.
+2026-09-13: eskiden sirayla 0,1,2,3,0,1,... yaziyordu -> tum derslerde tahmin edilebilir dongu olustu.
+Artik her 4'lu blok karistirilir (dosya adindan tohumlanir: ayni dosya ayni sonucu verir).
 Kullanim: spread.py <dosya.js> [--dry]   (metni degistirmez, yalnizca sirayi ve antwoord'u duzeltir)"""
-import re, sys, io
+import re, sys, io, random
 
 OPT_RE = re.compile(
     r'(?P<head>opties:\s*\[\s*\n)(?P<body>(?:[^\[\]]*?\n)??)(?P<tail>\s*\],\s*\n\s*antwoord:\s*)(?P<ans>\d+)',
@@ -31,8 +33,20 @@ def normalize(opts):
         out.append(stripped + (',' if i < len(opts) - 1 else ''))
     return out
 
+def hedef_uretici(path):
+    """Dengeli ama dongusuz hedef: k secenek icin 0..k-1 karistirilmis bloklar halinde verilir.
+    Dosya adiyla tohumlanir -> ayni dosyada tekrar calistirmak ayni sonucu verir."""
+    rnd = random.Random(path)
+    zak = {}
+    def volgende(k):
+        if not zak.get(k):
+            blok = list(range(k)); rnd.shuffle(blok); zak[k] = blok
+        return zak[k].pop()
+    return volgende
+
 def process(path, dry=False):
     src = open(path, encoding='utf-8').read()
+    hedef = hedef_uretici(path)
     counter = [0]
     changed = [0]
 
@@ -41,7 +55,7 @@ def process(path, dry=False):
         opts = split_options(body)
         if len(opts) < 2 or ans >= len(opts):
             return m.group(0)
-        target = counter[0] % len(opts)
+        target = hedef(len(opts))
         counter[0] += 1
         if target != ans:
             opts[ans], opts[target] = opts[target], opts[ans]
@@ -86,13 +100,14 @@ def split_inline(body):
 
 def process_inline(path, dry=False):
     src = open(path, encoding='utf-8').read()
+    hedef = hedef_uretici(path)
     counter = [0]; changed = [0]
     def repl(m):
         opts = split_inline(m.group('body'))
         ans = int(m.group('ans'))
         if len(opts) < 2 or ans >= len(opts):
             return m.group(0)
-        target = counter[0] % len(opts)
+        target = hedef(len(opts))
         counter[0] += 1
         if target != ans:
             opts[ans], opts[target] = opts[target], opts[ans]
@@ -104,15 +119,16 @@ def process_inline(path, dry=False):
     return counter[0], changed[0]
 
 def spread_file(path, dry=False):
-    """Iki bicimi TEK sayacla isler (karisik dosyalarda dagilim bozulmasin)."""
+    """Iki bicimi TEK hedef ureticiyle isler (karisik dosyalarda dagilim bozulmasin)."""
     src = open(path, encoding='utf-8').read()
+    hedef = hedef_uretici(path)
     counter = [0]; changed = [0]
     def mk(splitter, join_fn):
         def repl(m):
             opts = splitter(m.group('body')); ans = int(m.group('ans'))
             if len(opts) < 2 or ans >= len(opts):
                 return m.group(0)
-            t = counter[0] % len(opts); counter[0] += 1
+            t = hedef(len(opts)); counter[0] += 1
             if t != ans:
                 opts[ans], opts[t] = opts[t], opts[ans]; changed[0] += 1
             return m.group('head') + join_fn(opts) + m.group('tail') + str(t)

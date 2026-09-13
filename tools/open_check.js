@@ -7,9 +7,15 @@ for(const v of vakken){
   const DURU={hoofdstukken:[],onderwerpen:[],examens:[],register:o=>{O.push(o);src.set(o,cur)},registerExamen:e=>{E.push(e);src.set(e,cur)}};
   global.DURU=DURU;global.window={DURU};
   for(const f of fs.readdirSync(d).filter(f=>f.endsWith('.js'))){cur=f;try{new Function('DURU','window',fs.readFileSync(path.join(d,f),'utf8'))(DURU,global.window)}catch(e){}}
+  // Echte nakijklogica van dit vak (exams.js → beoordeel), zodat de controle niet afwijkt van wat Duru krijgt.
+  const ex=fs.readFileSync(`havo3/${v}/js/exams.js`,'utf8');
+  const beoordeel=new Function(ex.slice(ex.indexOf('function normaliseer(s)'),ex.indexOf('function levereIn'))+'\nreturn beoordeel;')();
   [...O,...E].forEach(x=>(x.vragen||[]).forEach((q,i)=>{
     if(q.type!=='open')return; n++;
     const tag=`${v} · ${x.id}#${i+1}`;
+    // Het modelantwoord moet bij de eigen sleutelwoorden volledig goed scoren — anders wordt een
+    // leerling die precies het voorbeeldantwoord schrijft afgekeurd (2026-09-13: frans 19/24/34).
+    if(q.modelantwoord){const r=beoordeel(q,q.modelantwoord);if(r.status!=='goed')bad.push(`${tag}: modelantwoord scoort zelf "${r.status}" (punt ${r.punt})`)}
     const sw=q.sleutelwoorden||[];
     if(q.minTreffers>sw.length) bad.push(`${tag}: minTreffers ${q.minTreffers} > ${sw.length} sleutelwoord — ASLA tam dogru olamaz`);
     sw.forEach(s=>{

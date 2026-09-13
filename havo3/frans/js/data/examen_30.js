@@ -19,7 +19,7 @@ DURU.registerExamen({
         "belles"
       ],
       "antwoord": 0,
-      "uitleg": "Beau -> belle."
+      "uitleg": "Bijvoeglijke naamwoorden op -eau vormen het vrouwelijk met -elle: beau -> belle."
     },
     {
       "type": "mc",
@@ -31,7 +31,7 @@ DURU.registerExamen({
         "de etalages"
       ],
       "antwoord": 1,
-      "uitleg": "Paskamers."
+      "uitleg": "'Les cabines d'essayage' zijn de paskamers in een kledingwinkel, waar je kleding past."
     },
     {
       "type": "waaronwaar",
@@ -174,7 +174,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vertaal naar het Frans (broek): <i>J'aime ce ... noir.</i>",
       "antwoord": "pantalon|jean",
-      "uitleg": "Un pantalon."
+      "uitleg": "'Un pantalon' is het Franse woord voor broek; let op, het staat in het enkelvoud."
     },
     {
       "type": "mc",
@@ -186,7 +186,7 @@ DURU.registerExamen({
         "bonnesse"
       ],
       "antwoord": 0,
-      "uitleg": "Bon -> bonne."
+      "uitleg": "Het vrouwelijk van 'bon' wordt gevormd met een dubbele medeklinker + -e: bon -> bonne."
     }
   ]
 });

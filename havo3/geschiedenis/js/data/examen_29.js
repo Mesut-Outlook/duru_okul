@@ -176,7 +176,7 @@
         vraag: "Leg uit waarom multinationals hun productie vanaf de jaren 1960 verplaatsten naar landen als Indonesië, Vietnam en Bangladesh.",
         sleutelwoorden: [
           "lagere lonen/goedkoper produceren",
-          "lagelonenland/lageloonlanden"
+          "goedkoop/lagelonenland"
         ],
         minTreffers: 1,
         modelantwoord: "Multinationals wilden dezelfde producten goedkoper maken en verplaatsten hun productie daarom naar landen met veel lagere lonen dan in het Westen, zoals Indonesië, Vietnam en Bangladesh.",
@@ -187,8 +187,8 @@
         type: "open",
         vraag: "Leg uit waarom de wereldwijde crisis van 2007-2012 minder verwoestend uitpakte dan de crisis van de jaren 1930.",
         sleutelwoorden: [
-          "overheden grepen snel in/werkten internationaal samen",
-          "banken gered met steun/vrijhandel bleef bevorderd"
+          "internationaal/ingrijp",
+          "overheidssteun/vrijhandel"
         ],
         minTreffers: 1,
         modelantwoord: "Anders dan in de jaren 1930 grepen overheden nu snel in en werkten ze internationaal samen: banken werden met overheidssteun gered en landen bleven vrijhandel bevorderen in plaats van hun economie tegen het buitenland af te schermen.",

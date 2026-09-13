@@ -43,7 +43,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul het Franse signaalwoord in voor <i>maar / echter</i>: <i>Il aime le foot, ... il préfère le tennis.</i>",
       "antwoord": "mais|cependant|pourtant",
-      "uitleg": "'Mais' = maar."
+      "uitleg": "'Mais', 'cependant' en 'pourtant' zijn signaalwoorden voor een tegenstelling, vergelijkbaar met 'maar/echter' in het Nederlands."
     },
     {
       "type": "mc",

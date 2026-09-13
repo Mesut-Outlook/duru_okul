@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul de juiste vorm van <b>prendre</b> in: <i>Nous ... le bus pour aller au club de sport.</i>",
       "antwoord": "prenons",
-      "uitleg": "Nous prenons."
+      "uitleg": "Prendre (nemen) is onregelmatig: nous prenons, vous prenez, ils prennent — let op de dubbele n bij 'ils/elles'."
     },
     {
       "type": "mc",

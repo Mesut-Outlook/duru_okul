@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Lees: <i>'Pour protéger vos données personnelles, ne partagez jamais votre mot de passe ni votre adresse avec des inconnus.'</i><br>Welke twee dingen mag je volgens deze tekst nooit delen met onbekenden?",
       "sleutelwoorden": [
-        "wachtwoord/mot de passe",
-        "adres/woonplaats/locatie/adresse"
+        "wachtwoord",
+        "woonplaats/locatie/adres"
       ],
       "minTreffers": 2,
       "modelantwoord": "Je mag nooit je wachtwoord en je adres delen met onbekenden.",

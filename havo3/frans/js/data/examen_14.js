@@ -122,8 +122,7 @@ DURU.registerExamen({
       "vraag": "Lees: <i>'En cas de perte de vos bagages, veuillez vous présenter immédiatement au guichet des objets trouvés situé au terminal 2.'</i><br>Waar moet je naartoe als je je bagage kwijt bent?",
       "sleutelwoorden": [
         "loket/balie/guichet/bureau",
-        "gevonden voorwerpen/objets trouvés",
-        "terminal 2"
+        "gevonden voorwerpen/objets trouvés"
       ],
       "minTreffers": 2,
       "modelantwoord": "Naar het loket voor gevonden voorwerpen (objets trouvés) in terminal 2.",

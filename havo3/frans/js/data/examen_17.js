@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul de juiste vorm in van <b>vouloir</b> (willen): <i>Nous ... réserver une chambre d'hôtel.</i>",
       "antwoord": "voulons",
-      "uitleg": "Nous voulons."
+      "uitleg": "Vouloir (willen) is onregelmatig: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent."
     },
     {
       "type": "mc",
@@ -150,7 +150,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul de juiste vorm in van <b>savoir</b> (weten): <i>Vous ... où se trouve la station de métro ?</i>",
       "antwoord": "savez",
-      "uitleg": "Vous savez."
+      "uitleg": "Savoir (weten) is onregelmatig: je sais, tu sais, il sait, nous savons, vous savez, ils savent."
     },
     {
       "type": "mc",

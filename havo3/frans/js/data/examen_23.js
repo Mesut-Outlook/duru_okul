@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul het ontbrekende woord in: <i>À ..., s'il vous plaît ! (Om mee te nemen)</i>",
       "antwoord": "emporter",
-      "uitleg": "À emporter."
+      "uitleg": "'À emporter' betekent 'om mee te nemen', tegenover 'sur place' (om ter plaatse op te eten)."
     },
     {
       "type": "mc",

@@ -218,7 +218,7 @@
         vraag: "Leg uit hoe de integratie van Turkse en Marokkaanse gastarbeiders door het onderwijs juist werd bevorderd, ondanks de grote cultuurverschillen.",
         sleutelwoorden: [
           "meisjes/dochters",
-          "goed presteerden/succesvol op school"
+          "school/presteerde/succesvol"
         ],
         minTreffers: 1,
         modelantwoord: "Vooral meisjes met een Turkse of Marokkaanse achtergrond deden het op school goed, waardoor de jonge generatie via het onderwijs beter integreerde dan hun ouders, ondanks de grote cultuurverschillen tussen hun herkomstland en Nederland.",

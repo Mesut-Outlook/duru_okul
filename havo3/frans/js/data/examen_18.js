@@ -175,7 +175,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vertaal het woord <i>'souvenir'</i> naar het Frans: <i>J'ai acheté un petit ... de Paris.</i>",
       "antwoord": "souvenir",
-      "uitleg": "Un souvenir."
+      "uitleg": "'Un souvenir' is, net als in het Nederlands, een aandenken dat je koopt tijdens een reis."
     },
     {
       "type": "mc",

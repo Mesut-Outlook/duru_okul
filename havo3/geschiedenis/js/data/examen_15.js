@@ -172,7 +172,7 @@
         vraag: "Leg uit waarom de plek waar NSB-leider Mussert in 1946 werd geëxecuteerd, de Scheveningse duinen, een symbolische betekenis had.",
         sleutelwoorden: [
           "verzet/verzetsmensen/verzetsvrouwen",
-          "gefusilleerd/doodgeschoten door de Duitsers"
+          "terechtgesteld/geëxecuteerd/geexecuteerd/gefusilleerd/doodgeschoten"
         ],
         minTreffers: 1,
         modelantwoord: "Op diezelfde plek in de Scheveningse duinen hadden de Duitsers tijdens de bezetting juist veel Nederlandse verzetsmannen en -vrouwen geëxecuteerd, waardoor het symbolisch was dat de landverrader Mussert er nu zelf werd terechtgesteld.",

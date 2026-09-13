@@ -43,7 +43,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vervoeg <b>pouvoir</b> voor <i>nous</i>: <i>Nous ... visiter le musée demain.</i>",
       "antwoord": "pouvons",
-      "uitleg": "Nous pouvons."
+      "uitleg": "Pouvoir (kunnen) is onregelmatig: je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent."
     },
     {
       "type": "mc",
@@ -79,7 +79,7 @@ DURU.registerExamen({
         "La Seine"
       ],
       "antwoord": 3,
-      "uitleg": "De Seine."
+      "uitleg": "'La Seine' is de rivier die dwars door Parijs stroomt, langs onder meer de Notre-Dame en de Eiffeltoren."
     },
     {
       "type": "mc",
@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit wat het verschil is tussen <i>'notre maison'</i> en <i>'nos maisons'</i> in het Frans.",
       "sleutelwoorden": [
-        "notre/ons/één huis/enkelvoud",
-        "nos/onze/meerdere huizen/meervoud"
+        "ons/één huis/enkelvoud",
+        "onze/meerdere huizen/meervoud"
       ],
       "minTreffers": 2,
       "modelantwoord": "'Notre maison' betekent 'ons huis' (enkelvoud), terwijl 'nos maisons' 'onze huizen' (meervoud) betekent.",
@@ -150,7 +150,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vertaal het woord <i>'hoofdstad'</i> naar het Frans: <i>Paris est la ... de la France.</i>",
       "antwoord": "capitale",
-      "uitleg": "La capitale."
+      "uitleg": "'La capitale' betekent 'de hoofdstad'; Paris is la capitale de la France."
     },
     {
       "type": "mc",

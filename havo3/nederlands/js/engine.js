@@ -270,6 +270,12 @@
       .replace("km/u", "km/h");
   }
 
+  // Tekstvergelijking: typografische apostrof (telefoon/Mac) = gewone, afsluitende leestekens tellen niet.
+  function normaliseerTekst(s) {
+    return normaliseer(String(s).replace(/[\u2018\u2019\u02bc`\u00b4]/g, "'"))
+      .replace(/[.!?;:]+$/, "");
+  }
+
   DURU.checkInvoer = function () {
     if (Q.beantwoord) return;
     var v = Q.vragen[Q.i];
@@ -277,6 +283,10 @@
     var ruw = inp.value;
     if (ruw.trim() === "") { inp.focus(); return; }
     var goed = false;
+    // Eerst letterlijke match met een van de "|"-alternatieven: anders leest parseFloat
+    // een goed antwoord als "1.000" als 1 en valt het nooit door naar de tekstvergelijking.
+    var letterlijk = String(v.antwoord).split("|").map(normaliseerTekst);
+    if (letterlijk.indexOf(normaliseerTekst(ruw)) !== -1) { inp.disabled = true; verwerk(true, v); return; }
     var getalAntw = parseFloat(normaliseer(ruw));
     var verwacht = parseFloat(normaliseer(v.antwoord));
     if (!isNaN(getalAntw) && !isNaN(verwacht)) {
@@ -284,8 +294,8 @@
       goed = Math.abs(getalAntw - verwacht) <= tol;
     } else {
       // tekstvergelijking (eventueel meerdere goede antwoorden via |)
-      var opties = String(v.antwoord).split("|").map(normaliseer);
-      goed = opties.indexOf(normaliseer(ruw)) !== -1;
+      var opties = String(v.antwoord).split("|").map(normaliseerTekst);
+      goed = opties.indexOf(normaliseerTekst(ruw)) !== -1;
     }
     inp.disabled = true;
     verwerk(goed, v);

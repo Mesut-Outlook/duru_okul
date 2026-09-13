@@ -211,7 +211,7 @@
         vraag: "Leg uit waarom de Amerikaanse oorlogsindustrie zo belangrijk was voor de uiteindelijke overwinning van de geallieerden.",
         sleutelwoorden: [
           "productie/materieel/wapens/vliegtuigen",
-          "overmacht/meer dan de vijand"
+          "overmacht/overtreffen"
         ],
         minTreffers: 1,
         modelantwoord: "Doordat de Amerikaanse industrie al vanaf 1942 meer oorlogsmaterieel produceerde dan alle asmogendheden samen, konden de geallieerden hun tegenstanders qua wapens, vliegtuigen en tanks steeds verder overtreffen, wat uiteindelijk de doorslag gaf.",

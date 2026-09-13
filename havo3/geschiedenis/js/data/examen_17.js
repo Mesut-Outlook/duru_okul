@@ -217,8 +217,8 @@
         type: "open",
         vraag: "Verklaar waarom het openen van de Berlijnse Muur in 1989 uiteindelijk leidde tot het einde van de DDR, terwijl de DDR-leiders daarmee juist rust hadden gehoopt te krijgen.",
         sleutelwoorden: [
-          "protesten/demonstraties gingen door",
-          "hereniging/sloop van de Muur/DDR viel"
+          "protesten/demonstraties",
+          "opgeheven/hereniging/slop"
         ],
         minTreffers: 1,
         modelantwoord: "De DDR-leiders hoopten dat het openen van de grens de protesten zou stoppen, maar in plaats daarvan begonnen mensen meteen de Muur te slopen en gingen de protesten door totdat de DDR in 1990 werd opgeheven en opging in de Bondsrepubliek.",

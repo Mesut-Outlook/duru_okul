@@ -206,6 +206,21 @@
   }
 
   /* ---------- Start ---------- */
+  // mc-opties per poging schudden: in de data staat het goede antwoord vaak op een voorspelbare plek
+  // (spread.py zette het op 0,1,2,3,0,1,…). Antwoorden en beoordelingen blijven in de ORIGINELE index
+  // opgeslagen, dus oude pogingen, nakijken en review veranderen niet. Opties die naar elkaar of naar
+  // een plek verwijzen ("geen van beide", "alle bovenstaande") blijven in de vaste volgorde.
+  var VASTE_VOLGORDE = /geen van|beide|bovenstaande|alle (?:antwoorden|opties)|all of the above|none of the above|toutes les r|keine der|alle Antworten/i;
+  function optieVolgorde(v) {
+    if (v.type !== "mc" || !v.opties) return null;
+    var orde = v.opties.map(function (_, i) { return i; });
+    if (v.opties.some(function (o) { return VASTE_VOLGORDE.test(String(o)); })) return orde;
+    for (var i = orde.length - 1; i > 0; i--) {
+      var j = (Math.random() * (i + 1)) | 0, t = orde[i]; orde[i] = orde[j]; orde[j] = t;
+    }
+    return orde;
+  }
+
   DURU.examenStart = function (id) {
     var ex = DURU._examenById[id];
     if (!ex) return DURU.renderExamenLijst();
@@ -214,6 +229,7 @@
       ex: ex,
       i: 0,
       antwoorden: new Array(ex.vragen.length).fill(null),
+      volgorde: ex.vragen.map(optieVolgorde),
       resterend: (ex.duurMin || 20) * 60,
       interval: null,
       klaar: false
@@ -256,9 +272,11 @@
 
     if (v.type === "mc" || v.type === "waaronwaar") {
       var opties = v.type === "waaronwaar" ? ["Waar", "Onwaar"] : v.opties;
+      var orde = (v.type === "mc" && T.volgorde && T.volgorde[T.i]) || opties.map(function (_, i) { return i; });
       h += '<div class="opties">';
-      opties.forEach(function (opt, idx) {
-        var letter = v.type === "waaronwaar" ? (idx === 0 ? "✔" : "✗") : String.fromCharCode(65 + idx);
+      orde.forEach(function (idx, pos) {
+        var opt = opties[idx];
+        var letter = v.type === "waaronwaar" ? (idx === 0 ? "✔" : "✗") : String.fromCharCode(65 + pos);
         var sel = gegeven === idx ? " gekozen" : "";
         h += '<button class="optie' + sel + '" onclick="DURU.examenKies(' + idx + ')">' +
           '<span class="letter">' + letter + '</span><span>' + esc(opt) + '</span></button>';
@@ -318,7 +336,7 @@
   /* ---------- Nakijken ---------- */
   function normaliseer(s) {
     return String(s == null ? "" : s).toLowerCase()
-      .replace(/[.,;:!?'"()·]/g, " ")
+      .replace(/[.,;:!?'"()·\u2018\u2019\u201c\u201d\u02bc`\u00b4]/g, " ")
       .replace(/\s+/g, " ").trim();
   }
   // invul nakijken (ENGINE_SPEC): getal-antwoorden numeriek, tekst-antwoorden zoals voorheen.

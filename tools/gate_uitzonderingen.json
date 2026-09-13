@@ -1,0 +1,19 @@
+{
+  "_uitleg": "Bilincli gate istisnalari. YALNIZ yayinda olan ve Duru'nun gecmisi yuzunden metni degistirilemeyen sorular (CLAUDE.md: kullanilmis sinav id'sinin icerigi degismez) ya da kuralin yapisal olarak uymadigi soru tipleri. Yeni icerik icin istisna YAZILMAZ — soruyu duzelt. Anahtar: <id>#<soru-no>, deger: gerekce + tarih. Kural 2'de tekrar eden grubun TUM uyeleri listelenmeli.",
+  "frans": {
+    "1": {
+      "ex-h3-frans-38#6": "Yanlis pozitif: 'hoofdonderwerp van' geschiedenis sablon regex'i; burada gecerli bir leesstrategie sorusu. 2026-09-13"
+    },
+    "2": {
+      "ex-h3-frans-1#17": "'un internaute' ex-h3-frans-5#12 ile ayni; ikisi de yayinda, metin degistirilemez. 2026-09-13",
+      "ex-h3-frans-5#12": "'un internaute' ex-h3-frans-1#17 ile ayni; ikisi de yayinda, metin degistirilemez. 2026-09-13",
+      "ex-h3-frans-6#20": "'un passe-temps' ex-h3-frans-10#17 ile ayni; ikisi de yayinda, metin degistirilemez. 2026-09-13",
+      "ex-h3-frans-10#17": "'un passe-temps' ex-h3-frans-6#20 ile ayni; ikisi de yayinda, metin degistirilemez. 2026-09-13"
+    },
+    "8": {
+      "ex-h3-frans-19#13": "Okudugunu anlama: cevap (crepes, cidre) alintilanan Fransizca metinde; modelantwoord Fransizca terimi kullaniyor. 2026-09-13",
+      "ex-h3-frans-24#13": "Okudugunu anlama: cevap (glace vanille, crepe au sucre) alintidaki menude. 2026-09-13",
+      "ex-h3-frans-34#13": "Okudugunu anlama: 'tombola' hem alintida hem Nederlands'ta gecerli kelime. 2026-09-13"
+    }
+  }
+}

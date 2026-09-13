@@ -43,7 +43,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vervoeg <b>faire</b> voor <i>vous</i>: <i>Qu'est-ce que vous ... ce soir ?</i>",
       "antwoord": "faites",
-      "uitleg": "Vous faites."
+      "uitleg": "Faire (doen/maken) is onregelmatig: je fais, tu fais, il fait, nous faisons, vous faites, ils font."
     },
     {
       "type": "mc",
@@ -121,7 +121,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg in het kort uit wat de twee belangrijkste verschillen zijn tussen de <b>passé composé met avoir</b> en de <b>passé composé met être</b>.",
       "sleutelwoorden": [
-        "avoir/geen aanpassing/meeste werkwoorden",
+        "geen aanpassing/meeste werkwoorden",
         "être/beweging/huis/accord/past zich aan/vrouwelijk/meervoud"
       ],
       "minTreffers": 2,

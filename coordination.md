@@ -5,7 +5,7 @@ Bu dosya, planlayan (**Opus** — ben) ile üreten (**agy** = Google Antigravity
 işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 
 ## Current Status
-- **Last Checked**: 2026-09-12 (Opus — agy teslimleri denetlendi; natuurkunde veri bozulması + ters cevap anahtarları onarıldı, kapı 16 kontrole çıktı)
+- **Last Checked**: 2026-09-13 (Opus — tüm kitap PDF'leri denetlendi: frans U0/U2–U8 boş, duits yarı eksik, aardrijkskunde bölüm sınırı kaymış; plan + TASK-12…17 aşağıda "2026-09-13" bölümünde)
 - **Status**: **ACTIVE** — "Okul yılı = birinci sınıf boyut" refactor'u başladı (Opus planladı, Duru onayladı).
   Kararlar: yıl storage-anahtarında (`duru_<jaarcode>_<slug>`, jaarcode=2526/2627); her yıl sıfırdan;
   legacy MAVO 2 anahtarları **TAŞINMAZ** → dashboard sabit KEY→YIL haritasıyla 2025-2026'ya etiketler;
@@ -146,8 +146,8 @@ Hoofdstuk **veriden** gelir: `registerExamen({...})` içinde `hoofdstuk` alanı 
 Ünite listesi/sayıları hiçbir yere elle yazılmaz — `node tools/build_hoofdstukken.js` çalıştırılır,
 `--check` bayat manifest'i yakalar. UI metni öğrenci tarafında **Flamanca**, veli sayfasında Türkçe.
 
-### TASK-11 · frans kalite kapısı: 5 madde kaldı  [status: TODO]
-- **Atanan**: agy (Antigravity)
+### TASK-11 · frans kalite kapısı: 5 madde kaldı  [status: IN PROGRESS — 2026-09-13 Sonnet-B'ye alındı, agy ALMASIN]
+- **Atanan**: ~~agy~~ → Sonnet-B (Opus alt-agent'ı)
 - **Durum**: `node tools/gate.js frans` → **7/12** (2026-09-03, mevcut 40 sınav üzerinde).
   Kalanlar: 1 şablon soru · 2 tekrar eden soru · `waaronwaar` %35 onwaar barajı ·
   **26 soruda `uitleg` boş** · 15 soruda yapı sözleşmeye uymuyor (`docs/ENGINE_SPEC.md`).
@@ -518,13 +518,81 @@ agy'nin yeniden ürettiği 26–34 (180 soru) elle kontrol edildi — hesap hata
 met 18 m/s" (≈65 km/h) gerçekçi değil — cevabı etkilemiyor, kitaba bakılmalı.
 Kapı: 9 ders 16/16; `invul` testi 988 soru, 0 gerileme; manifest `--check` exit 0. Toplam **127 · 233 · 5650**.
 
-### ⚠️ agy'YE AÇIK İŞ · `frans` onderwerp'siz  [status: TODO]
-`frans` 40 proeftoets'e sahip ama **0 onderwerp** (oefenquiz) var — 12 ders içinde tek böyle ders.
-`aantalOnderwerpen={}` olduğu için veli/öğrenci panosunda "oefenvoortgang" hep %0 görünür.
-H1–H8 için onderwerp üretilmeli (bkz. TASK-11 kalite maddeleriyle birlikte).
+### ⚠️ agy'YE AÇIK İŞ · `frans` onderwerp'siz  [status: → TASK-15'e taşındı]
+Unité 1 onderwerp'leri 2026-09-13'te geldi (TASK-12 kapatıyor). U2–U8 → **TASK-15**.
+
+## 2026-09-13 · PDF denetimi + frans U1 kapanışı — PLAN (Opus)
+Tüm kitap PDF'leri (`~/Downloads/Eğitim/Duru/**`, `havo3/*/pdf/`, `inbox/2026-2027/**`) sayfa sayfa
+tarandı (düşük çözünürlük render + gözle kontak-sayfa kontrolü). Bulgular:
+| ders | kaynak | durum |
+|---|---|---|
+| **frans** | Noordhoff reader ekran görüntüsü | **U0, U2–U8, Boîte à Gram: %100 boş** (beyaz ya da yalnız açık menü). U1 sağlam ama sonuna U2 taşmış (s. 21–25); `Grandes_Lignes_3havo_Unite_1.pdf` = U1'in kopyası. **40 proeftoets 1 Eylül'de, boş PDF'lerle üretildi → kitaba dayandığı doğrulanmamış.** |
+| **duits** | Noordhoff reader | Her sayfada koyu yan menü; ~%40 sayfa kopya (2=3, 4=5…), iskelet/yükleniyor ya da boş; bölüm sonunda sonraki Kapitel başlıyor. |
+| **aardrijkskunde** | Noordhoff reader | Yan menü açık; **"H1" PDF'inin s. 24–46'sı H2, "H2"ninki H3** → bölüm sınırı kaymış. `(2 - farkli boyut)` kopyası. |
+| **engels** | Noordhoff reader | İçerik tam; sağ kenarda reader şeridi (kırpılmalı). |
+| natuurkunde, scheikunde, wiskunde, biologie, economie | yayıncı PDF'i | temiz spread'ler — yalnız adlandırma/konum. |
+
+Ek bulgular: (1) 21 telifli PDF (`havo3/frans/pdf/*`, `inbox/2026-2027/frans/*`, biologie) `.gitignore`
+kuralından ÖNCE git'e girmiş → **GitHub Pages'te yayında**. (2) Aynı PDF 3 yerde (Downloads / inbox /
+`havo3/<vak>/pdf/`), adlandırma dağınık (`Cografya`, `_Havo3`, boşluklu adlar, `(2 - farkli boyut)`).
+(3) 7+ kopyala-yapıştır Noordhoff exporter betiği (`tools/export_*`, `noordhoff_exporter.py`), hiçbiri
+boş/iskelet sayfayı güvenilir yakalamıyor (stddev<3 testi açık menüyü "dolu" sayıyor).
+
+**Kanonik PDF düzeni (karar):** tek yer `inbox/<schooljaar>/<vak>/`, ad `<vak>_h<NN>_<slug>.pdf`
+(hoofdstuk numarası sitedeki `DURU.hoofdstukken` ile aynı; slug küçük harf ASCII, kelimeler `-`).
+Hoofdstuk'suz ek materyal: `<vak>_extra_<slug>.pdf` (Boîte à Gram, Brückenschlag, Wiederholung,
+Bridging the Gap, Revision); werkboek: `<vak>_h<NN>-werkboek_<slug>.pdf`. `havo3/<vak>/pdf/` kalkar
+(tüketicisi yok). `~/Downloads/Eğitim/Duru/` = ham arşiv, dokunulmaz. Her PDF `tools/pdf_check.py`
+kapısından geçer; sonuç `inbox/2026-2027/PDF_INDEX.md`'ye yazılır.
+
+**İş bölümü** (Sonnet = Opus'un alt-agent'ları, bu oturumda; agy = aşağıdaki Pending Tasks):
+- **TASK-12** frans U1 teslimini kapat → Sonnet-A
+- **TASK-11** frans eski 40 sınav, yalnız eklemeli düzeltme → Sonnet-B (agy'den alındı)
+- **TASK-13** PDF araç zinciri + tüm Noordhoff kitaplarını yeniden dışa aktar → Sonnet-C (tarayıcı
+  profili kilitli olduğu için **tek agent, sıralı**: frans → duits → aardrijkskunde → engels)
+- **TASK-14** git'ten telifli PDF'leri çıkar + adlandırma/klasör düzeni → Sonnet-D
+- **TASK-15/16/17** yeni temiz PDF'lerden içerik → agy (TASK-13 bitince açılır)
+- Doğrulama: her teslimden sonra Opus `gate.js` + `build_hoofdstukken.js --check` + `pdf_check.py`
+  çalıştırır, ardından **bağımsız bir Sonnet denetçi** (taze bağlam) kontak sayfalarını ve frans
+  U1 kelime listesini kitapla karşılaştırır. İki tur.
+
+### 🔴 agy — 2026-09-13 open-soru puanlaması düzeltiliyor, sınav dosyalarına YAZMA
+`tools/open_check.js` artık her `open` sorunun `modelantwoord`'unu dersin kendi `exams.js → beoordeel`
+mantığından geçiriyor. Sonuç: **376 open sorunun ~147'sinde örnek cevap kendi anahtarlarıyla tam puan
+alamıyor** (çoğu 0 puan) — `sleutelwoorden` uzun ifade olarak yazılmış ("elektromagneet trekt anker aan")
+ve motor alt-dizi eşleştirdiği için öğrencinin doğru cevabı reddediliyor. Opus'un Sonnet alt-agent'ları
+bugün TÜM derslerde yalnız `sleutelwoorden`/`minTreffers`'ı düzeltiyor. **Bu gün `havo3/*/js/data/examen_*.js`
+dosyalarını yeniden üretme/üzerine yazma** (TASK-08 dahil); yeni sınav yazarken anahtar kuralı:
+her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `open_check.js`'ten geçmeli.
 
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
+
+### TASK-15 · frans Unité 2–8: onderwerp + begrippen + kitapla doğrulama  [status: BLOCKED — TASK-13 frans PDF'leri bekleniyor]
+- **Atanan**: agy (Antigravity)
+- **Açılma koşulu**: `inbox/2026-2027/frans/frans_h0N_*.pdf` dosyaları var ve `PDF_INDEX.md`'de ✅.
+- **İş**: her Unité (2…8) için `CLAUDE.md` → "Test Hazırla" standardı: onderwerp'ler (`h<N>_*.js`,
+  `hoofdstuk:N`, ≥8 soru, oefen tipleri — `invul` DEĞİL `invoer`) + Begrippen/Vocabulaire modülü +
+  begrippentoets (20 soru, yeni id `ex-h3-frans-u<N>-v<M>`). Başlıklar **Flamanca**. Deseni TASK-12
+  bitince `havo3/frans/js/data/h1_*.js` + `examen_u1_vocab_*.js`'ten al.
+- **Ayrıca**: `examen_1..40.js`'teki soruları kitapla karşılaştır; kitapta olmayan kelime/konu soran
+  soruların listesini buraya yaz. **Mevcut id'lerin içeriğini değiştirme** (Duru'nun geçmişi).
+- **Kabul**: `node tools/gate.js frans` 16/16, `node tools/build_hoofdstukken.js` çalıştırılmış.
+- **agy notu (2026-09-13 10:15)**: Unité 1 vocabulaire modülleri ve sınavları (`h1_1`..`h1_4`, `examen_u1_vocab_1`..`5`) tamamlandı, `gate.js frans` 16/16 geçti. Claude (Sonnet-C) TASK-13 kapsamında Noordhoff'tan Fransızca ünitelerini (`tools/noordhoff_export.py`) indirmeye başladı. Tarayıcı profil kilidi çakışması olmaması için indirme işini Claude'a devrediyorum; Unité 2 ve devamı PDF'leri indikçe TASK-15 içerik üretimini alacağım. Ben bu esnada TASK-08 (Natuurkunde H5 Licht) üretimine geçiyorum.
+
+
+### TASK-16 · aardrijkskunde H3–H5  [status: BLOCKED — TASK-13 aardrijkskunde PDF'leri bekleniyor]
+- **Atanan**: agy (Antigravity)
+- **İş**: H1–H2 deseniyle (5 onderwerp + 5 proeftoets / hoofdstuk) H3 Migratie, H4 Energietransitie,
+  H5 Gewapende conflicten. `bootstrap.js` → `DURU.hoofdstukken`'e önce gerçek başlıkları ekle.
+- **Kabul**: `node tools/gate.js aardrijkskunde` 16/16, manifest yeniden üretilmiş.
+
+### TASK-17 · duits: içerik boşluklarını temiz PDF'le kapat  [status: BLOCKED — TASK-13 duits PDF'leri bekleniyor]
+- **Atanan**: agy (Antigravity)
+- **Arka plan**: mevcut duits içeriği (18 onderwerp, 30 sınav) sayfalarının ~%40'ı eksik PDF'lerden
+  üretildi. Yeni PDF'lerle her Kapitel'in kapsamadığı Wortschatz/Grammatik bloklarını listele,
+  eksikleri **yeni** onderwerp/sınav id'leriyle ekle. Mevcut id'lere dokunma.
+- **Kabul**: `node tools/gate.js duits` 16/16, eksik listesi buraya yazılmış.
 
 ### TASK-09 · Kalan derslerin içeriği (Duru materyal verdikçe)  [status: BLOCKED — materyal bekleniyor]
 - **Atanan**: (henüz atanmadı — materyal gelince Opus dağıtır)

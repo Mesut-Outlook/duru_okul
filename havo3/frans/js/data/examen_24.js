@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Lees: <i>'Menu enfant (-12 ans) à 9,50€ : Nuggets de poulet ou burger + frites + sirop à l'eau + glace vanille ou crêpe au sucre.'</i><br>Welke twee toetjes kan een kind kiezen?",
       "sleutelwoorden": [
-        "glace/vanille/ijs/vanille-ijs",
-        "crêpe/crepe/suiker/pannekoek/pannenkoek"
+        "glace/vanille-ijs/ijsje/ijs",
+        "crêpe/crepe/pannenkoek/pannekoek/suikerpannenkoek"
       ],
       "minTreffers": 2,
       "modelantwoord": "Vanille-ijs (glace vanille) of een suikerpannenkoek (crêpe au sucre).",

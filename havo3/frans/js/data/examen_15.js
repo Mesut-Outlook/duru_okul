@@ -19,7 +19,7 @@ DURU.registerExamen({
         "een bagagetoeslag"
       ],
       "antwoord": 0,
-      "uitleg": "Retourkaartje."
+      "uitleg": "'Un aller-retour' is een retourticket (heen én terug); 'un aller simple' is een enkele reis."
     },
     {
       "type": "mc",
@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul het voltooid deelwoord in van <b>finir</b>: <i>Ils ont ... leur voyage à Nice.</i>",
       "antwoord": "fini",
-      "uitleg": "Finir -> fini."
+      "uitleg": "Werkwoorden op -ir zoals 'finir' vormen het voltooid deelwoord met -i: finir -> fini."
     },
     {
       "type": "mc",

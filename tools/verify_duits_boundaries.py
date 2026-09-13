@@ -41,7 +41,7 @@ def ocr_image(img_path):
     try:
         txt = subprocess.check_output([
             'tesseract', img_path, 'stdout',
-            '--tessdata-dir', '/home/mesuto/Documents/PROJELER/duru_okul/inbox/tessdata',
+            '--tessdata-dir', '/home/mesuto/Documents/PROJELER/duru_okul/tools/tessdata',
             '-l', 'nld+eng'
         ], stderr=subprocess.DEVNULL).decode('utf-8')
         return txt

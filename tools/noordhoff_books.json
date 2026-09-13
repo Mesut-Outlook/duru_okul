@@ -1,0 +1,56 @@
+{
+  "_readme": "TASK-13 Noordhoff export config. course_id/ebook_id = apps.noordhoff.nl/se/content/book/<course_id>/ebook/<ebook_id>?page=N. start/end = kitabın kendi sayfa numaraları (reader page-navigator ile aynı, PDF sayfa sırası değil). hoofdstuk = havo3/<vak>/js/bootstrap.js -> DURU.hoofdstukken ile birebir eşleşir (null = ekstra materyal, hoofdstuk'suz). output = inbox/2026-2027/<vak>/ altına yazılacak dosya adı (kanonik: <vak>_h<NN>_<slug>.pdf / <vak>_extra_<slug>.pdf).",
+  "frans": {
+    "course_id": "fe9559e5-2325-407a-a4a8-bcc3b16708da",
+    "ebook_id": "23a8e547-a7d7-46e9-b45a-1895c6e5f429",
+    "chapters": [
+      {"hoofdstuk": null, "label": "Unité 0", "titel": "On y va", "start": 10, "end": 17, "slug": "on-y-va", "output": "frans_extra_on-y-va.pdf"},
+      {"hoofdstuk": 1, "label": "Unité 1", "titel": "Poste, like, partage", "start": 18, "end": 55, "slug": "poste-like-partage", "output": "frans_h01_poste-like-partage.pdf"},
+      {"hoofdstuk": 2, "label": "Unité 2", "titel": "Du temps pour moi", "start": 56, "end": 93, "slug": "du-temps-pour-moi", "output": "frans_h02_du-temps-pour-moi.pdf"},
+      {"hoofdstuk": 3, "label": "Unité 3", "titel": "En route!", "start": 94, "end": 131, "slug": "en-route", "output": "frans_h03_en-route.pdf"},
+      {"hoofdstuk": 4, "label": "Unité 4", "titel": "Le pont", "start": 132, "end": 165, "slug": "le-pont", "output": "frans_h04_le-pont.pdf"},
+      {"hoofdstuk": 5, "label": "Unité 5", "titel": "Au resto!", "start": 166, "end": 201, "slug": "au-resto", "output": "frans_h05_au-resto.pdf"},
+      {"hoofdstuk": 6, "label": "Unité 6", "titel": "C'est moi", "start": 202, "end": 239, "slug": "c-est-moi", "output": "frans_h06_c-est-moi.pdf"},
+      {"hoofdstuk": 7, "label": "Unité 7", "titel": "À tout prix!", "start": 240, "end": 273, "slug": "a-tout-prix", "output": "frans_h07_a-tout-prix.pdf"},
+      {"hoofdstuk": 8, "label": "Unité 8", "titel": "Le pont (Examentraining)", "start": 274, "end": 291, "slug": "le-pont-examentraining", "output": "frans_h08_le-pont-examentraining.pdf"},
+      {"hoofdstuk": null, "label": "Boîte à Gram", "titel": "Boîte à Gram & Vocabulaire", "start": 292, "end": 330, "slug": "boite-a-gram", "output": "frans_extra_boite-a-gram.pdf"}
+    ]
+  },
+  "duits": {
+    "course_id": "b5ae3b67-6f8f-47d7-92b7-e3057c772724",
+    "books": {"A": "8e824d31-cf14-4f42-876a-b25a84b47f33", "B": "7e751e87-5f77-454d-9866-a82dff6724e0"},
+    "chapters": [
+      {"hoofdstuk": null, "label": "Brückenschlag 1", "titel": "Sich Vorstellen", "book": "A", "start": 8, "end": 15, "slug": "brueckenschlag-1-sich-vorstellen", "output": "duits_extra_brueckenschlag-1-sich-vorstellen.pdf"},
+      {"hoofdstuk": 1, "label": "Kapitel 1", "titel": "Umgebung & Wetter", "book": "A", "start": 16, "end": 55, "slug": "umgebung-wetter", "output": "duits_h01_umgebung-wetter.pdf"},
+      {"hoofdstuk": 2, "label": "Kapitel 2", "titel": "Gesundheit & Körper", "book": "A", "start": 56, "end": 95, "slug": "gesundheit-korper", "output": "duits_h02_gesundheit-korper.pdf"},
+      {"hoofdstuk": 3, "label": "Kapitel 3", "titel": "Unterwegs & Reisen", "book": "A", "start": 96, "end": 133, "slug": "unterwegs-reisen", "output": "duits_h03_unterwegs-reisen.pdf"},
+      {"hoofdstuk": 4, "label": "Kapitel 4", "titel": "Veranstaltungen & Feiern", "book": "B", "start": 16, "end": 55, "slug": "veranstaltungen-feiern", "output": "duits_h04_veranstaltungen-feiern.pdf"},
+      {"hoofdstuk": 5, "label": "Kapitel 5", "titel": "Zukunft & Berufe", "book": "B", "start": 56, "end": 95, "slug": "zukunft-berufe", "output": "duits_h05_zukunft-berufe.pdf"},
+      {"hoofdstuk": 6, "label": "Kapitel 6", "titel": "In Aktion & Hilfsbereitschaft", "book": "B", "start": 96, "end": 133, "slug": "in-aktion-hilfsbereitschaft", "output": "duits_h06_in-aktion-hilfsbereitschaft.pdf"},
+      {"hoofdstuk": null, "label": "Wiederholung A", "titel": "Wiederholung & Grammatikübersicht A", "book": "A", "start": 134, "end": 160, "slug": "wiederholung-a", "output": "duits_extra_wiederholung-a.pdf"},
+      {"hoofdstuk": null, "label": "Wiederholung B", "titel": "Wiederholung & Grammatikübersicht B", "book": "B", "start": 134, "end": 170, "slug": "wiederholung-b", "output": "duits_extra_wiederholung-b.pdf"}
+    ]
+  },
+  "engels": {
+    "course_id": "a7fecc29-5ede-4046-8d65-65cc4f19344b",
+    "books": {"A": "6a1457cf-1943-482a-bdbd-120b3e5934c3", "B": "6e5c48d6-ea83-40f5-a528-654dc6fa9d50"},
+    "chapters": [
+      {"hoofdstuk": null, "label": "Bridging the Gap Year 2", "titel": "Show What You Know & Bridging the Gap Year 2", "book": "A", "start": 10, "end": 36, "slug": "bridging-the-gap-year-2", "output": "engels_extra_bridging-the-gap-year-2.pdf"},
+      {"hoofdstuk": 1, "label": "Hoofdstuk 1", "titel": "The world around you", "book": "A", "start": 37, "end": 84, "slug": "the-world-around-you", "output": "engels_h01_the-world-around-you.pdf"},
+      {"hoofdstuk": 2, "label": "Hoofdstuk 2", "titel": "Crime", "book": "A", "start": 85, "end": 134, "slug": "crime", "output": "engels_h02_crime.pdf"},
+      {"hoofdstuk": 3, "label": "Hoofdstuk 3", "titel": "Science & technology", "book": "A", "start": 135, "end": 183, "slug": "science-and-technology", "output": "engels_h03_science-and-technology.pdf"},
+      {"hoofdstuk": null, "label": "Revision & Enrichment 1-3", "titel": "Revision & Enrichment 1-3", "book": "A", "start": 184, "end": 196, "slug": "revision-and-enrichment-1-3", "output": "engels_extra_revision-and-enrichment-1-3.pdf"},
+      {"hoofdstuk": 4, "label": "Hoofdstuk 4", "titel": "To the extreme", "book": "B", "start": 7, "end": 54, "slug": "to-the-extreme", "output": "engels_h04_to-the-extreme.pdf"},
+      {"hoofdstuk": 5, "label": "Hoofdstuk 5", "titel": "Going green", "book": "B", "start": 55, "end": 104, "slug": "going-green", "output": "engels_h05_going-green.pdf"},
+      {"hoofdstuk": 6, "label": "Hoofdstuk 6", "titel": "Your future", "book": "B", "start": 105, "end": 153, "slug": "your-future", "output": "engels_h06_your-future.pdf"},
+      {"hoofdstuk": null, "label": "Revision & Enrichment 1-6", "titel": "Revision & Enrichment 1-6", "book": "B", "start": 154, "end": 172, "slug": "revision-and-enrichment-1-6", "output": "engels_extra_revision-and-enrichment-1-6.pdf"},
+      {"hoofdstuk": null, "label": "Bridging the Gap Year 4", "titel": "Bridging the Gap Year 4", "book": "B", "start": 173, "end": 182, "slug": "bridging-the-gap-year-4", "output": "engels_extra_bridging-the-gap-year-4.pdf"}
+    ]
+  },
+  "aardrijkskunde": {
+    "course_id": null,
+    "ebook_id": null,
+    "_note": "Keşfedilmedi — Aşama 3'te tools/noordhoff_export.py --discover aardrijkskunde ile bulunup buraya yazılacak. Eski (bozuk) exportlardaki başlıklardan hoofdstuk eşlemesi biliniyor: H1 Wereldhandel in beweging, H2 Schatkist aarde, H3 Migratie, H4 Energietransitie, H5 Gewapende conflicten (site bootstrap.js şu an yalnız H1/H2'yi kayıtlı tutuyor).",
+    "chapters": []
+  }
+}

@@ -43,7 +43,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vervoeg <b>faire</b> bij <i>vous</i>: <i>Qu'est-ce que vous ... ce soir ?</i>",
       "antwoord": "faites",
-      "uitleg": "Vous faites."
+      "uitleg": "Faire (doen/maken) is onregelmatig: je fais, tu fais, il fait, nous faisons, vous faites, ils font."
     },
     {
       "type": "mc",

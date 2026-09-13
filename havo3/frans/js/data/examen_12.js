@@ -67,7 +67,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vul de passé composé in voor <i>tu (visiter)</i>: <i>Tu ... le musée du Louvre ? (heb jij bezocht)</i>",
       "antwoord": "as visité|as visite",
-      "uitleg": "Tu as visité."
+      "uitleg": "'Visiter' is een regelmatig -er werkwoord; de passé composé wordt gevormd met avoir + voltooid deelwoord: tu as visité."
     },
     {
       "type": "mc",

@@ -162,7 +162,7 @@ DURU.registerExamen({
         "buvons"
       ],
       "antwoord": 3,
-      "uitleg": "Nous buvons."
+      "uitleg": "Boire (drinken) is onregelmatig: je bois, tu bois, il boit, nous buvons, vous buvez, ils boivent."
     },
     {
       "type": "waaronwaar",

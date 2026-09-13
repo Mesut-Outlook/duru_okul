@@ -103,7 +103,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vervoeg <b>payer</b> bij <i>nous</i>: <i>Nous ... par carte bancaire.</i>",
       "antwoord": "payons",
-      "uitleg": "Nous payons."
+      "uitleg": "Payer (betalen) is een werkwoord op -yer; bij 'nous' en 'vous' blijft de y: nous payons, vous payez."
     },
     {
       "type": "mc",

@@ -67,7 +67,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Lees: <i>'Tarif réduit : 5 euros pour les étudiants.'</i><br>Wat is de gereduceerde prijs voor studenten in euro's?",
       "antwoord": "5|5 euro|5 euros|vijf",
-      "uitleg": "5 euros."
+      "uitleg": "'Tarif réduit' betekent verlaagd tarief; volgens de tekst is dat 5 euro voor studenten."
     },
     {
       "type": "mc",

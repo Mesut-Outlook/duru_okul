@@ -20,10 +20,9 @@ scores_v1_backup_*.json
 
 # Scratch and temporary OCR artifacts
 scratch/
-inbox/tessdata/
-inbox/wiskunde_h2_img/
-inbox/wiskunde_h2_txt/
-inbox/wiskunde_h2_ocr.txt
+tools/tessdata/
+inbox/2026-2027/wiskunde/_render/
+inbox/2026-2027/wiskunde/wiskunde_h02_statistiek.ocr.txt
 
 # Python cache & tools scratch artifacts
 __pycache__/

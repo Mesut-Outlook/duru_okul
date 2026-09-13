@@ -23,7 +23,8 @@
 | Otomatik, şemaya-bağlı toplu üretim | agy (Antigravity/Gemini) |
 
 ## Belge teslim yolları (ikisi de geçerli)
-1. **`inbox/` klasörü** — dosyayı `inbox/<vak>/<hoofdstuk>/` altına koy (bkz. `inbox/README.md`).
+1. **`inbox/` klasörü** — dosyayı `inbox/<schooljaar>/<vak>/` altına koy, kanonik adla
+   `<vak>_h<NN>_<slug>.pdf` (bkz. `inbox/README.md`).
 2. **Sohbet yüklemesi** — dosyayı doğrudan sohbette ver.
 
 ## Akış

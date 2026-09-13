@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom in het Frans de zin <i>'J'ai acheté une voiture rouge'</i> de kleur achter 'voiture' heeft staan, terwijl in het Nederlands 'rode auto' vooraan staat.",
       "sleutelwoorden": [
-        "kleur/kleuren/couleur",
-        "achter/na/achteraan/zelfstandig naamwoord"
+        "altijd/regel/couleur/bijvoeglijk",
+        "achteraan/zelfstandig naamwoord"
       ],
       "minTreffers": 1,
       "modelantwoord": "In het Frans worden kleuren altijd áchter het zelfstandig naamwoord geplaatst (une voiture rouge).",

@@ -170,8 +170,8 @@
         type: "open",
         vraag: "Leg uit waarom bondskanselier Kohl na de val van de Berlijnse Muur juist méér Europese integratie voorstelde in plaats van minder.",
         sleutelwoorden: [
-          "angst/vrees voor een sterk of te machtig Duitsland",
-          "Duitsland verankeren/binden aan Europa"
+          "angst/vrees/bang",
+          "veranker/bind"
         ],
         minTreffers: 1,
         modelantwoord: "Andere Europese landen waren bang voor een te machtig herenigd Duitsland. Door de Europese samenwerking te versterken, liet Kohl zien dat een groter Duitsland geen bedreiging vormde, maar juist stevig verankerd bleef in een sterker Europa.",

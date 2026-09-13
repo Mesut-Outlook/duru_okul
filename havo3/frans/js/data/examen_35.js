@@ -91,7 +91,7 @@ DURU.registerExamen({
         "vend"
       ],
       "antwoord": 0,
-      "uitleg": "Ils vendent."
+      "uitleg": "Vendre (verkopen) is een regelmatig -re werkwoord: je vends, tu vends, il vend, nous vendons, vous vendez, ils vendent."
     },
     {
       "type": "waaronwaar",
@@ -121,7 +121,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom de zin <i>'Ce vélo est plus bon que le mien'</i> fout is in het Frans en verbeter de zin.",
       "sleutelwoorden": [
-        "plus bon/fout/onjuist/niet correct",
+        "fout/onjuist/niet correct",
         "meilleur/meilleur que"
       ],
       "minTreffers": 2,
@@ -138,7 +138,7 @@ DURU.registerExamen({
         "paie"
       ],
       "antwoord": 2,
-      "uitleg": "Nous payons."
+      "uitleg": "Payer (betalen) is een werkwoord op -yer; bij 'nous' en 'vous' blijft de y: nous payons, vous payez."
     },
     {
       "type": "waaronwaar",
@@ -150,7 +150,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "Vertaal het woord <i>wisselgeld / kleingeld</i>: <i>Gardez la ... ! (Houd het wisselgeld maar)</i>",
       "antwoord": "monnaie",
-      "uitleg": "La monnaie."
+      "uitleg": "'La monnaie' betekent hier 'het wisselgeld/kleingeld', niet 'de munt' in de zin van valuta."
     },
     {
       "type": "mc",

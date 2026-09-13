@@ -190,8 +190,8 @@
         type: "open",
         vraag: "Leg uit waarom veel landen na de kernramp in Tsjernobyl in 1986 stopten met het bouwen van nieuwe kerncentrales, ook al gold kernenergie eerder als schoon alternatief.",
         sleutelwoorden: [
-          "risico's/gevaar van straling/onveilig",
-          "angst/vertrouwen verloren"
+          "risico's/gevaar/onveilig",
+          "vertrouwen/angst"
         ],
         minTreffers: 1,
         modelantwoord: "Tegenstanders van kernenergie hadden altijd al gewezen op de risico's van een ongeluk. Toen de kernramp in Tsjernobyl in 1986 door radioactieve straling een groot gebied onbewoonbaar maakte, kregen zij gelijk en verloren veel landen het vertrouwen in de veiligheid van kernenergie, waardoor de bouw van nieuwe centrales stopte.",
@@ -202,8 +202,8 @@
         type: "open",
         vraag: "Leg uit wat volgens Al Gores film uit 2006 een gevaarlijk gevolg is van het smelten van het poolijs door klimaatverandering.",
         sleutelwoorden: [
-          "zeespiegel/zeewaterspiegel stijgt",
-          "gevaar voor kustgebieden/laaggelegen gebieden"
+          "zeewaterspiegel/zeespiegel",
+          "gevaar/kustgebied/laaggelegen"
         ],
         minTreffers: 1,
         modelantwoord: "Als het poolijs smelt, stijgt de zeewaterspiegel. Dat is gevaarlijk voor de vele mensen die in laaggelegen kustgebieden wonen, omdat hun land kan overstromen.",

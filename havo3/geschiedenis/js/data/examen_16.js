@@ -206,8 +206,8 @@
         vraag: "Leg uit waarom de Tweede Wereldoorlog een belangrijke oorzaak was voor de snelle dekolonisatie in Azië.",
         sleutelwoorden: [
           "Japan/Japanse bezetting",
-          "nationalisme/nationalistische bewegingen",
-          "Europa/Europese landen verzwakt"
+          "nationalisme/nationalistisch",
+          "Europ/verzwakt"
         ],
         minTreffers: 2,
         modelantwoord: "Japan versloeg de westerse koloniale machten en zette de inheemse bevolking op tegen het Westen, waardoor het nationalisme in Azië na de Japanse capitulatie sterk opbloeide. Bovendien waren de Europese landen zelf verzwakt door de oorlog en waren de nieuwe supermachten VS en Sovjet-Unie tegen kolonialisme.",

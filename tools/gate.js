@@ -21,6 +21,11 @@ const SJABLON_OPT=/De historische ontwikkeling van|Het begrip verbonden aan/i;
 const SJABLON=/hoofdonderwerp van|historisch begrip staat centraal|beoordelen historici|In welk tijdvak \(1900-1950|bronnen in Geschiedeniswerkplaats|Het begrip verbonden aan/i;
 const norm=s=>String(s||'').toLowerCase().replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
 let fails=0,passes=0;
+/* Bilincli istisnalar: tools/gate_uitzonderingen.json → {<slug>:{<kural-no>:{"<id>#<n>":"gerekce"}}}.
+   Yalnizca DEGISTIRILEMEYEN (yayinda, Duru'nun gecmisi olan) sorular icin; yeni icerige istisna yazilmaz. */
+const UITZ=(()=>{try{return JSON.parse(fs.readFileSync(path.join(__dirname,'gate_uitzonderingen.json'),'utf8'))[slug]||{}}catch(e){return {}}})();
+const vrij=(nr,keys)=>{const u=UITZ[nr]||{};return keys.filter(k=>u[k]).length};
+let istisna=0;
 const check=(naam,bad,detail)=>{
   if(bad.length){fails++;console.log(`  ✗ ${naam}: ${bad.length} ihlal`);bad.slice(0,6).forEach(b=>console.log('      · '+b));if(bad.length>6)console.log(`      … +${bad.length-6}`);}
   else{passes++;console.log(`  ✓ ${naam}${detail?' — '+detail:''}`)}};
@@ -33,10 +38,15 @@ EE.forEach(e=>(e.vragen||[]).forEach((v,i)=>alle.push({owner:e.id,file:src.get(e
 console.log(`\n=== KABUL KAPISI · ${slug}${only?' ('+only.join(',')+')':''} ===`);
 console.log(`  onderwerp ${OO.length} · proeftoets ${EE.length} · toplam ${alle.length} vraag\n`);
 
-check('1. Sablon soru yok', alle.filter(a=>SJABLON.test(a.v.vraag)||(a.v.opties||[]).some(o=>SJABLON.test(o)||SJABLON_OPT.test(o))).map(a=>`${a.owner}#${a.n}: ${a.v.vraag.slice(0,70)}`));
+const sjab=alle.filter(a=>SJABLON.test(a.v.vraag)||(a.v.opties||[]).some(o=>SJABLON.test(o)||SJABLON_OPT.test(o)));
+const sjabVrij=sjab.filter(a=>vrij('1',[a.owner+'#'+a.n]));istisna+=sjabVrij.length;
+check('1. Sablon soru yok', sjab.filter(a=>!sjabVrij.includes(a)).map(a=>`${a.owner}#${a.n}: ${a.v.vraag.slice(0,70)}`), sjabVrij.length?`${sjabVrij.length} bilincli istisna`:'');
 
 const byT={};alle.forEach(a=>{const k=norm(a.v.vraag);if(k)(byT[k]=byT[k]||[]).push(a)});
-check('2. Tekrar eden soru yok', Object.values(byT).filter(v=>v.length>1).map(v=>`${v.length}x "${v[0].v.vraag.slice(0,60)}" (${v.map(x=>x.owner+'#'+x.n).join(', ')})`));
+const dubbel=Object.values(byT).filter(v=>v.length>1);
+/* grup muaf yalniz TUM gecisleri listedeyse — listedeki bir soruyla ayni metne sahip yeni bir soru sessizce muaf olmasin */
+const dubbelVrij=dubbel.filter(v=>vrij('2',v.map(x=>x.owner+'#'+x.n))===v.length);istisna+=dubbelVrij.length;
+check('2. Tekrar eden soru yok', dubbel.filter(v=>!dubbelVrij.includes(v)).map(v=>`${v.length}x "${v[0].v.vraag.slice(0,60)}" (${v.map(x=>x.owner+'#'+x.n).join(', ')})`), dubbelVrij.length?`${dubbelVrij.length} bilincli istisna`:'');
 
 const bias=[];[...OO,...EE].forEach(x=>{const mc=(x.vragen||[]).filter(v=>v.type==='mc');if(mc.length<4)return;
   const p={};mc.forEach(v=>p[v.antwoord]=(p[v.antwoord]||0)+1);
@@ -68,7 +78,9 @@ const yapi=[];alle.forEach(a=>{const v=a.v,tag=`${a.owner}#${a.n}`;
     ;(v.sleutelwoorden||[]).forEach(s=>{const alts=String(s).split('/').map(x=>x.trim());alts.forEach(x=>{
       if(/^\d{1,3}(\.\d{3})+$/.test(x)&&!alts.includes(x.replace(/\./g,'')))yapi.push(tag+`: sleutelwoord "${x}" noktasiz "${x.replace(/\./g,'')}" olmadan`)})})}
   else yapi.push(tag+`: bilinmeyen type '${v.type}'`)});
-check('8. Soru yapisi sozlesmeye uygun', yapi);
+/* kural 8 istisnasi yalniz "soruda geciyor" uyarisi icin (okuduğunu anlama: cevap alintidaki metinde) */
+const yapiVrij=yapi.filter(t=>/soruda geciyor$/.test(t)&&vrij('8',[t.split(':')[0]]));istisna+=yapiVrij.length;
+check('8. Soru yapisi sozlesmeye uygun', yapi.filter(t=>!yapiVrij.includes(t)), yapiVrij.length?`${yapiVrij.length} bilincli istisna`:'');
 
 // onderwerp = EN AZ 8 soru (fazlasi serbest: ekstra alistirma sorusu silinmez);
 // proeftoets = TAM 20 soru (sinav uzunlugu her derste ayni kalmali).

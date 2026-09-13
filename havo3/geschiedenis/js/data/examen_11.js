@@ -205,7 +205,7 @@
         vraag: "Leg uit waarom de westerse geallieerden vanaf 1943 op zee en in de lucht sterker waren dan Duitsland, en wat dit betekende voor Duitse steden.",
         sleutelwoorden: [
           "materieel/industrie/overmacht/productie",
-          "bombardementen/gebombardeerd/verwoest"
+          "bombard/verwoest"
         ],
         minTreffers: 1,
         modelantwoord: "De Amerikaanse en Britse industrie produceerde veel meer vliegtuigen en schepen dan Duitsland kon bijhouden. Daardoor konden Amerikaanse en Britse vliegtuigen vanaf 1943 ongehinderd Duitse militaire doelen én steden bombarderen.",

@@ -205,8 +205,8 @@
         type: "open",
         vraag: "Leg uit wat Gandhi bedoelde met 'non-coöperatie' als methode om de Britten onder druk te zetten.",
         sleutelwoorden: [
-          "niet meewerken/weigeren samen te werken/boycotten",
-          "geweld/vreedzaam/vreedzame manier"
+          "meewerk/weiger/boycot",
+          "geweld/vreedzaam"
         ],
         minTreffers: 1,
         modelantwoord: "Non-coöperatie betekende dat de Indiërs weigerden met de Britse overheersers samen te werken: ze gehoorzaamden hun wetten niet en kochten geen Britse producten meer, maar deden dit zonder geweld te gebruiken.",
