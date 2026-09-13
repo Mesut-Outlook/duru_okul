@@ -84,15 +84,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "In welke situatie ontstaat achter een ondoorzichtig voorwerp zowel een kernschaduw als een halfschaduw?",
+      "vraag": "Op welk oppervlak zie je glinsteringen (spitslichtjes), maar nauwelijks schaduwen?",
       "opties": [
-        "Bij belichting door een laserpointer",
-        "Bij belichting door een enkel klein ledlampje",
-        "Bij belichting door een grote, uitgebreide lichtbron zoals een lange tl-buis",
-        "In een volledig donkere kamer zonder ramen"
+        "Een katoenen T-shirt",
+        "Een vel wit papier",
+        "Een gepoetste metalen lepel",
+        "Een grasveld"
       ],
       "antwoord": 2,
-      "uitleg": "Een uitgebreide lichtbron zorgt voor overlappende schaduwen: kernschaduw in het midden en halfschaduw aan de randen."
+      "uitleg": "Een gepoetste lepel weerkaatst spiegelend: je ziet spitslichtjes en nauwelijks schaduwen. Katoen, papier en gras weerkaatsen diffuus: daar zie je kleur en schaduwen."
     },
     {
       "type": "mc",
@@ -168,9 +168,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "In een kernschaduw kan een waarnemer nog steeds een klein randje van de lichtbron zien.",
+      "vraag": "Het licht dat in een schaduw komt, is direct licht van de lichtbron.",
       "antwoord": false,
-      "uitleg": "Onwaar: In de kernschaduw is de lichtbron 100% afgeschermd. Alleen in de halfschaduw zie je een deel van de bron."
+      "uitleg": "Onwaar: in de schaduw komt geen direct licht. Het licht dat er wel komt, is indirect licht: het is door andere voorwerpen in de omgeving weerkaatst."
     },
     {
       "type": "waaronwaar",

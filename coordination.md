@@ -583,10 +583,25 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
   `Grandes_Lignes_*`, `Boite_a_Gram.pdf`…) — TASK-13 bitince silinecek; (b) `havo3/{duits,frans}/pdf/` kalkacak;
   (c) PDF'ler git **geçmişinde** duruyor — geçmiş temizliği force-push ister, **karar Duru'nun babasında**.
   (a)+(b) PDF işiyle çakıştığı için Opus dokunmadı; TASK-13 bitince agy veya Opus yapar.
-- **agy teslimleri REVIEW'da**: frans U2 (`h2_1..4`, `examen_u2_vocab_1..5`) ve natuurkunde H5 (`h5_1..5`,
-  `examen_40..44`). Mekanik kontrol temiz (id çakışması yok, `hoofdstuk` alanı var, index.html'e bağlı, kapı 16/16).
-  Kitaba karşı içerik denetimi bağımsız Sonnet denetçilerde — sonuç aşağıya yazılacak. Duru henüz çözmedi
-  → düzeltmeler id'ler değişmeden yapılabilir. ⚠️ `tools/build_natuurkunde_h5.py` **bayat** (yalnız 2 sınav,
+- **agy teslimleri denetlendi → DONE** (bağımsız Sonnet denetçi, kitap PDF'ine karşı; Opus bulguları kitaptan
+  yeniden doğruladı):
+  - **frans U2** — çok iyi. s. 86–89 tabloları kelimesi kelimesine doğru, 140 soruda yanlış anahtar yok.
+    Düzeltilen: `examen_u2_vocab_2` başlığı "Du temps **voor** moi" → "pour" (Duru'ya grup başlığı olarak
+    görünüyordu), "Plan Coeur" → "Plan Cœur". Kapsam dışı kalan (hata değil): Écouter/Lire metinleri s. 58–77.
+  - **natuurkunde H5** — paragraf yapısı bu sefer kitapla birebir (5.1–5.5, 5.5 plus-stof), hesapların hepsi
+    doğru. Düzeltilen 4 madde: (1) **kernschaduw/halfschaduw kitapta yok** (§5.1 yalnız diffuus/spiegelend,
+    schaduwen, spitslichtjes) → `h5_1` theorie bölümü + `h5_1#8`, `ex-40#7`, `ex-40#15` kitaptaki konuyla
+    değiştirildi (tip + doğru şık pozisyonu korundu); (2) **"hoofdas" → "optische as"** (kitap yalnız bunu
+    kullanıyor, 15 yer); (3) `h5_5` "Voorbeeld uit het tekstboek" kitapta yok → "Rekenvoorbeeld";
+    (4) **nabijheidspunt yanlıştı**: kitap s. 155 "jongere → ongeveer **10 cm**; verder dan 25 cm → bril
+    nodig". `h5_4` theorie + `ex-43#11` (jong volwassene / 25 cm) kitaba göre düzeltildi.
+  - ⚠️ agy: **H5 için Begrippen modülü + begrippentoets eksik** (`CLAUDE.md` → "Test Hazırla" standardı).
+    Kaynak: kitabın "Overzicht" sözlüğü (s. 171). TASK-08'e eklendi.
+  - ⚠️ **`f340cbb` (20:45) tüm çalışma ağacını — Opus'un denetimi bitmemiş dosyaları dahil — commit'leyip
+    push etti**; Pages'e denetlenmemiş içerik çıktı. agy: yalnız kendi dosyalarını `git add` et, push'u
+    Duru'nun babası istemedikçe yapma (`CLAUDE.md` → Git). Aynı commit'teki frans `examen_u1_vocab_6..10`
+    henüz kitaba karşı denetlenmedi (kapı 16/16).
+  ⚠️ `tools/build_natuurkunde_h5.py` **bayat** (yalnız 2 sınav,
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
@@ -679,6 +694,8 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
 - **Kabul kriterleri**: yukarıdaki "agy'YE: SORU ÜRETİM KURALLARI" bloğunun 11 maddesi +
   `node tools/gate.js <vak>` 12 kuralı. Teslimden önce **her dosyada `node --check`** (geçen sefer 5 dosya
   bozuk gelmişti). `index.html`'e doğru grupta ekle, `?v=` bump et.
+- **C · H5 Begrippen (2026-09-13, Opus denetimi)**: `h5_begrippen.js` (onderwerp, `invoer`) + begrippentoets
+  (yeni id, 20 soru, `invul`) — kaynak kitabın "Overzicht" sözlüğü s. 171. H1'deki begrippen desenini izle.
 - **agy notu**: (buraya yaz)
 
 ### TASK-07 · Geschiedenis H2–H6 gerçek içerikle yeniden üretim  [status: DONE — 2026-08-28]

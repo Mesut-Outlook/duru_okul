@@ -40,7 +40,7 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | vak | onderwerp | proeftoets | soru | kapsanan hoofdstuk |
 |---|---|---|---|---|
 | geschiedenis | 30 | 30 | 840 | H1–H6 (tam) |
-| frans | 9 | 50 | 1117 | H1–H8 sınav; onderwerp yalnız U1 (5) + U2 (4) — U3–U8 TASK-15 |
+| frans | 9 | 55 | 1217 | H1–H8 sınav; onderwerp yalnız U1 (5) + U2 (4) — U3–U8 TASK-15 |
 | duits | 18 | 30 | 744 | H1–H6 |
 | engels | 18 | 30 | 744 | H1–H6 |
 | natuurkunde | 31 | 44 | 1138 | H1–H5, H8 tam; H6–H7 boş (TASK-08); H1 19 sınav |
@@ -52,7 +52,7 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 0 | 1 | 5 | **yok** — smoke-test |
 
-**Toplam: 141 onderwerp · 248 proeftoets · 6117 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 141 onderwerp · 253 proeftoets · 6217 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` + `nederlands` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavları bilinçli olarak `hoofdstuk`'suzdur ve manifest'e

@@ -132,15 +132,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat is bij benadering de afstand van het nabijheidspunt van een jong volwassene met gezonde ogen?",
+      "vraag": "Op welke afstand ligt ongeveer het nabijheidspunt van een normaalziend oog van een jongere?",
       "opties": [
-        "5 cm",
-        "100 cm",
+        "Ongeveer 1 m",
         "Ongeveer 25 cm",
+        "Ongeveer 10 cm",
         "Oneindig ver"
       ],
       "antwoord": 2,
-      "uitleg": "Het standaard nabijheidspunt voor een jongvolwassene ligt rond de 25 cm."
+      "uitleg": "Bij een normaalziend oog van een jongere ligt het nabijheidspunt op ongeveer 10 cm. Ligt het verder dan 25 cm van je oog, dan heb je een bril of lenzen nodig."
     },
     {
       "type": "mc",
