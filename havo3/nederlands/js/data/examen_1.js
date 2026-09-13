@@ -46,7 +46,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit wat het verschil is tussen een <b>synoniem</b> en een <b>antoniem</b>. Geef bij allebei een voorbeeld.",
-      sleutelwoorden: ["synoniem/zelfde betekenis/hetzelfde betekent", "antoniem/tegenovergestelde/tegengestelde", "voorbeeld"],
+      sleutelwoorden: ["zelfde betekenis/hetzelfde betekent", "tegenovergestelde/tegengestelde", "bijvoorbeeld"],
       minTreffers: 2,
       modelantwoord: "Een synoniem is een woord met (bijna) dezelfde betekenis als een ander woord, bijvoorbeeld 'blij' en 'vrolijk'. Een antoniem is een woord met de tegenovergestelde betekenis, bijvoorbeeld 'blij' en 'verdrietig'.",
       uitleg: "Synoniem = zelfde/vergelijkbare betekenis (bijv. mooi/fraai). Antoniem = tegenovergestelde betekenis (bijv. groot/klein). Een goed voorbeeld bij elk begrip maakt het antwoord compleet."

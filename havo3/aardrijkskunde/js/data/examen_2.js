@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom de Nederlandse overheid op verzoek van de VS exportvergunningen voor de nieuwste ASML-chipmachines naar China kan weigeren.",
-      sleutelwoorden: ["nationale veiligheid/militaire technologie", "geopolitiek bondgenootschap/VS druk", "technologische voorsprong behouden"],
+      sleutelwoorden: ["militaire doeleinden/militaire technologie", "geopolitieke druk/druk uit", "technologische voorsprong"],
       minTreffers: 2,
       modelantwoord: "ASML beschikt over unieke, hoogwaardige technologie die essentieel is voor het maken van de allersnelste chips. Omdat deze geavanceerde chips ook gebruikt kunnen worden voor militaire doeleinden en supercomputers in China, oefenen de VS geopolitieke druk uit op Nederland om de export te beperken ter bescherming van de westerse technologische voorsprong en internationale veiligheid.",
       uitleg: "Duale technologie (civiel + militair) en geopolitieke bondgenootschappen bepalen het exportbeleid van strategische hightech."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Vergelijk de economische structuur van een voormalige exploitatiekolonie met die van een voormalige vestigingskolonie in de huidige wereldhandel.",
-      sleutelwoorden: ["exploitatiekolonie grondstoffen/laag inkomen", "vestigingskolonie gediversifieerd/hoog inkomen", "economische afhankelijkheid/industrie"],
+      sleutelwoorden: ["lagere inkomens/ruwe grondstoffen/exploitatiekolonie", "kenniseconomie/gediversifieerde/rijkste centrumlanden", "afhankelijk/industrieën"],
       minTreffers: 2,
       modelantwoord: "Voormalige exploitatiekolonies (zoals Suriname of Congo) zijn vaak nog steeds sterk afhankelijk van de export van enkele ruwe grondstoffen en hebben minder ontwikkelde industrieën en lagere inkomens. Voormalige vestigingskolonies (zoals de VS of Australië) hebben vanaf het begin eigen instituties, sterke universiteiten en gediversifieerde kenniseconomieën opgebouwd, waardoor zij nu tot de rijkste centrumlanden behoren.",
       uitleg: "Koloniaal verleden bepaalt het type economische instituties en de huidige positie in de wereldhandelsketen."

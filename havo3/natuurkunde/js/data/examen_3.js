@@ -170,8 +170,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg in je eigen woorden uit waarom in woonwijken een maximumsnelheid van 30 km/h veel veiliger is dan 50 km/h. Verwerk daarin het effect op de <b>stopafstand</b> en de <b>botssnelheid</b>.",
       "sleutelwoorden": [
-        "stopafstand korter/veel korter",
-        "reactieafstand kleiner",
+        "aanzienlijk korter/stopafstand kleiner/veel korter",
+        "reactieafstand/reactietijd/korter",
         "remweg kwadratisch/veel kleiner/kracht kleiner"
       ],
       "minTreffers": 2,
@@ -182,7 +182,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg met behulp van de begrippen <b>vertraging</b> en <b>kracht</b> uit hoe een veiligheidsgordel voorkomt dat iemand door de voorruit vliegt.",
       "sleutelwoorden": [
-        "kracht uitoefent/tegenhoudt",
+        "achterwaartse kracht/tegenhoudt/afremmende kracht",
         "vertraagt/meevertraagt met de auto",
         "traagheid"
       ],

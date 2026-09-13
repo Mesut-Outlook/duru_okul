@@ -194,8 +194,8 @@ DURU.registerExamen({
       "vraag": "Noem drie concrete tips die het NIBUD geeft om grip te houden op je maandelijkse geldzaken.",
       "sleutelwoorden": [
         "begroting/overzicht maken/budgetplan",
-        "reserveren/buffer opbouwen/sparen voor onvoorzien",
-        "vaste lasten checken/abonnementen opzeggen/pinnen"
+        "reserveer/buffer/noodbuffer",
+        "vaste lasten/abonnementen"
       ],
       "minTreffers": 2,
       "modelantwoord": "1. Maak maandelijks een begroting (overzicht van inkomsten en uitgaven). 2. Reserveer maandelijks geld voor onverwachte uitgaven (noodbuffer). 3. Controleer regelmatig vaste lasten en zeg ongebruikte abonnementen op.",

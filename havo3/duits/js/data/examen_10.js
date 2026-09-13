@@ -182,12 +182,10 @@ DURU.registerExamen({
       "vraag": "Wat zijn de twee Duitse noodnummers en waarvoor bel je elk nummer?",
       "modelantwoord": "112 voor ambulance en brandweer; 110 voor de politie.",
       "sleutelwoorden": [
-        "112",
-        "110",
-        "Polizei",
-        "Feuerwehr"
+        "112/Feuerwehr",
+        "110/Polizei"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "112 voor brandweer/ambulance en 110 voor politie."
     },
     {

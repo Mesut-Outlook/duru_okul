@@ -182,10 +182,10 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Noem de vier productiefactoren (KANO) en geef bij elke factor de bijbehorende beloning.",
       "sleutelwoorden": [
-        "kapitaal - rente/huur",
-        "arbeid - loon",
-        "natuur - pacht",
-        "ondernemerschap - winst"
+        "rente/huur",
+        "loon/salaris",
+        "pacht",
+        "winst"
       ],
       "minTreffers": 3,
       "modelantwoord": "1. Kapitaal (rente/huur), 2. Arbeid (loon/salaris), 3. Natuur (pacht), 4. Ondernemerschap (winst).",
@@ -195,7 +195,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een bakker koopt bloem, gist en water in voor € 0,40 per brood. De energiekosten zijn € 0,10 per brood. Hij verkoopt het brood voor € 2,50. Bereken de toegevoegde waarde per brood.",
       "sleutelwoorden": [
-        "2,50 - 0,50",
+        "0,50",
         "2,00/2 euro"
       ],
       "minTreffers": 1,

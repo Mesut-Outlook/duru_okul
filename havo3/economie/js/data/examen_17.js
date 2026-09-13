@@ -200,9 +200,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een bezorgdienst koopt een nieuwe bestelbus voor € 42.000. De bus wordt 4 jaar gebruikt. Na 4 jaar verwacht het bedrijf de bus te verkopen voor een restwaarde van € 10.000. Bereken de jaarlijkse afschrijvingskosten en geef de formule weer.",
       "sleutelwoorden": [
-        "42000 - 10000 = 32000",
-        "32000 / 4",
-        "8000/8.000 euro"
+        "32.000/32000",
+        "aanschafwaarde/restwaarde",
+        "8.000/8000"
       ],
       "minTreffers": 2,
       "modelantwoord": "Formule: (Aanschafwaarde - Restwaarde) / Aantal gebruiksjaren. Berekening: (€ 42.000 - € 10.000) / 4 = € 32.000 / 4 = € 8.000 per jaar.",

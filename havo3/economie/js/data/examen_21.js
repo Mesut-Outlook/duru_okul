@@ -194,8 +194,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een tapijtenweverij maakte in 2021 met 15 wevers 30.000 m² tapijt. In 2022 schaffen zij automatische weefgetouwen aan: 12 wevers produceren nu 36.000 m² tapijt. Bereken de arbeidsproductiviteit in m² tapijt per wever voor beide jaren.",
       "sleutelwoorden": [
-        "30000 / 15 = 2000",
-        "36000 / 12 = 3000"
+        "2.000/2000",
+        "3.000/3000"
       ],
       "minTreffers": 2,
       "modelantwoord": "In 2021: 30.000 / 15 = 2.000 m² per wever. In 2022: 36.000 / 12 = 3.000 m² per wever. De arbeidsproductiviteit steeg met 1.000 m² per wever.",

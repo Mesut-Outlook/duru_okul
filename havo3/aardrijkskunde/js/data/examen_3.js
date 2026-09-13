@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom het voor een land als DR Congo moeilijk is om te ontsnappen aan de grondstoffenvloek, ondanks een gigantische rijkdom aan kobalt en koper.",
-      sleutelwoorden: ["corruptie/milities", "ruilvoetverslechtering/weinig verwerking", "buitenlandse multinationals/geen welvaartsverdeling"],
+      sleutelwoorden: ["corruptie/milities", "toegevoegde waarde/onbewerkte ertsen", "buitenlandse multinationals/geen welvaartsverdeling"],
       minTreffers: 2,
       modelantwoord: "DR Congo exporteert vooral onbewerkte ertsen waar weinig toegevoegde waarde op zit. De opbrengsten komen vaak terecht bij corrupte leiders, gewapende milities en buitenlandse multinationals in plaats van de bevolking. Omdat het land nauwelijks eigen verwerkende fabrieken, infrastructuur of een stabiele rechtsstaat heeft, blijft de lokale economie kwetsbaar en arm.",
       uitleg: "Ontbreken van verwerkende industrie, zwakke instituties en oneerlijke verdeling bestendigen de grondstoffenvloek."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Vergelijk de waardeketen van een agrarisch product uit de VS met de export van ruwe mineralen uit een ontwikkelingsland.",
-      sleutelwoorden: ["hightech/mechanisatie/subsidies in VS", "onbewerkt/handwerk in ontwikkelingsland", "hoge toegevoegde waarde/kennis"],
+      sleutelwoorden: ["mechanis/hightech/subsidies", "onbewerkt/handwerk", "winstmarges/hoge winsten/raffinage"],
       minTreffers: 2,
       modelantwoord: "De agrarische sector in de VS is sterk gemechaniseerd, gesubsidieerd en gekoppeld aan geavanceerde voedselverwerkende multinationals die merkproducten met hoge winstmarges wereldwijd afzetten. In een ontwikkelingsland wordt het mineraal vaak met de hand gedolven en onbewerkt geëxporteerd, waardoor de lokale economie de hoge winsten uit latere raffinage en chipfabricage misloopt.",
       uitleg: "Mechanisatie, industriële verwerking en merkkracht bepalen het verschil in economische opbrengst in de keten."

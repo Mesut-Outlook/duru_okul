@@ -194,7 +194,7 @@ DURU.registerExamen({
       "vraag": "Leg uit waarom vertrouwen essentieel is voor het functioneren van ons huidige geldsysteem.",
       "sleutelwoorden": [
         "intrinsieke/materiaalwaarde laag",
-        "iedereen accepteert/aanvaardt"
+        "vertrouwt/betaalmiddel accepteert"
       ],
       "minTreffers": 1,
       "modelantwoord": "Omdat bankbiljetten en digitaal geld nauwelijks intrinsieke materiaalwaarde hebben; het werkt alleen als iedereen erop vertrouwt dat een ander het ook als betaalmiddel accepteert.",

@@ -195,7 +195,7 @@ DURU.registerExamen({
       "vraag": "Hoe kun je aan de vorm van de lijn in een (s,t)-diagram direct zien of een fietser sneller gaat rijden of juist afremt?",
       "sleutelwoorden": [
         "steiler/helling groter",
-        "vlakker/helling kleiner"
+        "afvlakt/helling neemt af/minder steil"
       ],
       "minTreffers": 1,
       "modelantwoord": "Als de lijn steeds steiler omhoog buigt (de helling neemt toe), rijdt de fietser sneller (versnelling). Als de lijn afvlakt en minder steil wordt (de helling neemt af), remt de fietser af (vertraging).",

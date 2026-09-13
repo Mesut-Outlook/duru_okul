@@ -189,7 +189,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "warme lucht stijgt op/convectie",
         "onder het dak/bovenin",
-        "warmteverlies via dak/dakisolatie"
+        "warmteverlies/ongeïsoleerde dak/dakisolatie"
       ],
       "minTreffers": 2,
       "modelantwoord": "Doordat warme lucht uitzet en een lagere dichtheid heeft dan koude lucht, stijgt warme lucht in het hele huis van nature op naar de bovenste verdieping (stroming/convectie). Hierdoor is de temperatuur direct onder het dak het allerhoogst, waardoor het temperatuurverschil met de buitenlucht en dus het warmteverlies door het ongeïsoleerde dak het grootst is (tot wel 30% van het totale verlies).",

@@ -194,9 +194,7 @@ DURU.registerExamen({
       "vraag": "Wat gebeurt er met de klinker van het werkwoord 'werden' bij de personen du en er/sie/es in de tegenwoordige tijd?",
       "modelantwoord": "De klinker e verandert in een i (du wirst, er wird).",
       "sleutelwoorden": [
-        "klinkerwisseling",
-        "verandert in i",
-        "naar i"
+        "verander/klinkerwisseling/wirst/wird"
       ],
       "minTreffers": 1,
       "uitleg": "De stamklinker e wisselt naar een i bij du en er/sie/es."

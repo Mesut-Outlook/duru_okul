@@ -207,7 +207,7 @@ DURU.registerExamen({
         "vraag": "Leg uit waarom een auto die met 120 km/h op cruisecontrol rijdt veel meer brandstof per kilometer verbruikt dan dezelfde auto die 80 km/h rijdt.",
         "sleutelwoorden": [
             "luchtweerstand veel hoger/groter",
-            "meer motorkracht nodig"
+            "grotere kracht/meer kracht leveren/motorkracht"
         ],
         "minTreffers": 1,
         "modelantwoord": "Bij 120 km/h is de luchtweerstand veel groter dan bij 80 km/h. De motor moet een veel grotere kracht leveren om de snelheid constant te houden, wat extra brandstof kost.",

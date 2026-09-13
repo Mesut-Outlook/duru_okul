@@ -182,9 +182,9 @@ DURU.registerExamen({
       "vraag": "Hoe zeg je in het Duits dat je later arts wilt worden?",
       "modelantwoord": "Ich möchte später Arzt (of Ärztin) werden.",
       "sleutelwoorden": [
-        "Arzt werden",
-        "Ärztin werden",
-        "möchte später"
+        "Arzt",
+        "Ärztin",
+        "möchte/später"
       ],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'Ich möchte Arzt/Ärztin werden'."

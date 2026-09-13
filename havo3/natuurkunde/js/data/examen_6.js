@@ -170,8 +170,8 @@ DURU.registerExamen({
       "vraag": "Leg uit hoe statische elektriciteit ontstaat wanneer je op sokken over een nylon tapijt loopt en daarna een metalen deurklink aanraakt.",
       "sleutelwoorden": [
         "wrijving",
-        "elektronen overgaan/overspringen/lading opbouwen",
-        "ontlading/schokje naar metaal"
+        "elektronen/lading/springen over",
+        "vonkje/ontlaadt/schok"
       ],
       "minTreffers": 2,
       "modelantwoord": "Door wrijving tussen je sokken en het tapijt springen er elektronen over, waardoor je lichaam een statische elektrische lading opbouwt. Wanneer je vervolgens de metalen geleidende deurklink nadert, springen de overtollige elektronen in één keer over (een vonkje/schok), waardoor je lichaam weer neutraal ontlaadt.",
@@ -181,8 +181,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom de koperen kern van een netsnoer altijd omhuld is met een laag flexibel PVC-plastic.",
       "sleutelwoorden": [
-        "koper is geleider",
-        "plastic is isolator",
+        "geleider/uitstekende geleider/koper geleidt",
+        "isolator/plastic eromheen/plastic isoleert",
         "veiligheid/kortsluiting voorkomen/aanraking/schok voorkomen"
       ],
       "minTreffers": 2,

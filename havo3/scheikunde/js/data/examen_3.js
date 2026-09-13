@@ -163,9 +163,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Geef de systematische namen van de volgende drie stoffen: 1) SO₂, 2) N₂O, 3) SF₆.",
       "sleutelwoorden": [
-        "1) zwaveldioxide",
-        "2) distikstofmonoxide / distikstofmono-oxide",
-        "3) zwavelhexafluoride"
+        "zwaveldioxide",
+        "distikstofmonoxide/distikstofmono-oxide/lachgas",
+        "zwavelhexafluoride"
       ],
       "minTreffers": 3,
       "modelantwoord": "1. SO₂ = zwaveldioxide, 2. N₂O = distikstofmonoxide (ook bekend als lachgas), 3. SF₆ = zwavelhexafluoride.",

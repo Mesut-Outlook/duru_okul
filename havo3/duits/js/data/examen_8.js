@@ -194,9 +194,8 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Duitse term 'die Krankenkasse' in het zorgsysteem?",
       "modelantwoord": "De zorgverzekeraar of het ziekenfonds.",
       "sleutelwoorden": [
-        "zorgverzekeraar",
-        "ziekenfonds",
-        "verzekering"
+        "zorgverzekeraar/verzeker",
+        "ziekenfonds"
       ],
       "minTreffers": 1,
       "uitleg": "Die Krankenkasse is de Duitse zorgverzekeraar."

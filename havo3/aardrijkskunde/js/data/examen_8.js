@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Vergelijk de milieugevolgen van de goudwinning in Suriname met de oliewinning in Nigeria.",
-      sleutelwoorden: ["Suriname kwikvergiftiging/ontbossing", "Nigeria olielekkages/vervuilde mangroven", "water- en bodemverontreiniging"],
+      sleutelwoorden: ["kwikvergiftiging/ontbossing", "lekkende leidingen/mangrovebossen", "vervuiling/viswateren"],
       minTreffers: 2,
       modelantwoord: "In Suriname leidt vooral illegale kleinschalige goudwinning tot grootschalige ontbossing van het regenwoud en zware kwikvergiftiging van rivieren en visbestanden. In Nigeria veroorzaakt de grootschalige oliewinning door lekkende leidingen en lozingen ernstige bodemvervuiling, vernietiging van kwetsbare mangrovebossen en vervuiling van viswateren in de dichtbevolkte Nigerdelta.",
       uitleg: "Suriname = ontbossing + kwik; Nigeria = olielozingen + vernietiging mangrove-ecosystemen."

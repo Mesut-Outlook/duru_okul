@@ -200,9 +200,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een kledingzaak koopt een computerkassa voor € 2.400. Ieder jaar wordt er € 400 op de kassa afgeschreven. Uiteindelijk wordt de kassa verkocht voor een restwaarde van € 400. Bereken hoeveel jaar de kassa door de winkel is gebruikt.",
       "sleutelwoorden": [
-        "2400 - 400 = 2000",
-        "2000 / 400",
-        "5/5 jaar"
+        "2.000/2000",
+        "aantal gebruiksjaren/gebruiksjaren",
+        "5 jaar/5"
       ],
       "minTreffers": 2,
       "modelantwoord": "Totale waardevermindering = Aanschafwaarde (€ 2.400) - Restwaarde (€ 400) = € 2.000. Aantal gebruiksjaren = € 2.000 / € 400 per jaar = 5 jaar.",

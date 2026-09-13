@@ -170,7 +170,7 @@ DURU.registerExamen({
       "vraag": "Beredeneer waarom een hefboom met een driemaal langere arm de benodigde handkracht met een factor drie verlaagt bij gelijkblijvende last.",
       "sleutelwoorden": [
         "momentenwet/kracht maal arm",
-        "kracht driemaal kleiner"
+        "driemaal kleiner/drie keer kleiner/kracht is kleiner"
       ],
       "minTreffers": 2,
       "modelantwoord": "Volgens de momentenwet geldt F1 × r1 = F2 × r2: kracht maal arm is aan beide kanten gelijk. Het moment van de last verandert niet. Is de arm van de handkracht drie keer zo lang, dan is een drie keer zo kleine kracht genoeg voor hetzelfde moment: de benodigde kracht is driemaal kleiner.",
@@ -180,8 +180,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Verklaar hoe een tandwieloverbrenging met verhouding 1:4 het toerental en koppel van een motor transformeert.",
       "sleutelwoorden": [
-        "toerental 4x kleiner/trager",
-        "koppel 4x groter/sterker"
+        "4x kleiner/vier keer langzamer/trager",
+        "4x groter/koppel groter/sterker"
       ],
       "minTreffers": 2,
       "modelantwoord": "Bij een overbrenging van 1:4 draait de uitgaande as vier keer langzamer dan de motor: het toerental wordt 4x kleiner. Het vermogen blijft (bijna) gelijk, dus het koppel (draaimoment) wordt 4x groter. Je ruilt snelheid in voor kracht.",

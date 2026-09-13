@@ -5,7 +5,7 @@ Bu dosya, planlayan (**Opus** — ben) ile üreten (**agy** = Google Antigravity
 işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 
 ## Current Status
-- **Last Checked**: 2026-09-13 (Opus — tüm kitap PDF'leri denetlendi: frans U0/U2–U8 boş, duits yarı eksik, aardrijkskunde bölüm sınırı kaymış; plan + TASK-12…17 aşağıda "2026-09-13" bölümünde)
+- **Last Checked**: 2026-09-13 akşam (Opus — open-soru düzeltmesi kapandı, TASK-11/12 DONE, agy'nin frans U2 + natuurkunde H5 teslimi REVIEW'da; bkz. "2026-09-13 akşam" bölümü)
 - **Status**: **ACTIVE** — "Okul yılı = birinci sınıf boyut" refactor'u başladı (Opus planladı, Duru onayladı).
   Kararlar: yıl storage-anahtarında (`duru_<jaarcode>_<slug>`, jaarcode=2526/2627); her yıl sıfırdan;
   legacy MAVO 2 anahtarları **TAŞINMAZ** → dashboard sabit KEY→YIL haritasıyla 2025-2026'ya etiketler;
@@ -146,7 +146,7 @@ Hoofdstuk **veriden** gelir: `registerExamen({...})` içinde `hoofdstuk` alanı 
 Ünite listesi/sayıları hiçbir yere elle yazılmaz — `node tools/build_hoofdstukken.js` çalıştırılır,
 `--check` bayat manifest'i yakalar. UI metni öğrenci tarafında **Flamanca**, veli sayfasında Türkçe.
 
-### TASK-11 · frans kalite kapısı: 5 madde kaldı  [status: IN PROGRESS — 2026-09-13 Sonnet-B'ye alındı, agy ALMASIN]
+### TASK-11 · frans kalite kapısı: 5 madde kaldı  [status: DONE — 2026-09-13, `gate.js frans` 16/16]
 - **Atanan**: ~~agy~~ → Sonnet-B (Opus alt-agent'ı)
 - **Durum**: `node tools/gate.js frans` → **7/12** (2026-09-03, mevcut 40 sınav üzerinde).
   Kalanlar: 1 şablon soru · 2 tekrar eden soru · `waaronwaar` %35 onwaar barajı ·
@@ -556,7 +556,15 @@ kapısından geçer; sonuç `inbox/2026-2027/PDF_INDEX.md`'ye yazılır.
   çalıştırır, ardından **bağımsız bir Sonnet denetçi** (taze bağlam) kontak sayfalarını ve frans
   U1 kelime listesini kitapla karşılaştırır. İki tur.
 
-### 🔴 agy — 2026-09-13 open-soru puanlaması düzeltiliyor, sınav dosyalarına YAZMA
+### ✅ agy — 2026-09-13 open-soru puanlaması düzeltildi (yazma yasağı KALKTI)
+**Akşam güncellemesi (Opus):** düzeltme bitti — `node tools/open_check.js` → 396 open soru, **0 sorun**.
+Son 14 soru (duits 8, engels 5, frans 1) soruyu kopyalayan öğrenciye puan veriyordu. Motor **alt-dizi**
+eşleştirdiği için `"den"` anahtarı soru metnindeki "lidwoor**den**"de, `"ans"` "Fr**ans**"ta, `"grad"`
+"**grad**en"de bulunuyordu. **Yeni kural:** kısa anahtarın (≤4 harf) soru metninin *içinde* geçip
+geçmediğine bak; geçiyorsa `minTreffers`'ı yükselt (soru "iki lidwoord" istiyorsa ikisi de zorunlu) ya da
+anahtarı bağlamlı yaz (`"see is een meer"`). Sınav dosyalarına yazma yasağı kalktı.
+
+~~Eski metin:~~
 `tools/open_check.js` artık her `open` sorunun `modelantwoord`'unu dersin kendi `exams.js → beoordeel`
 mantığından geçiriyor. Sonuç: **376 open sorunun ~147'sinde örnek cevap kendi anahtarlarıyla tam puan
 alamıyor** (çoğu 0 puan) — `sleutelwoorden` uzun ifade olarak yazılmış ("elektromagneet trekt anker aan")
@@ -564,6 +572,22 @@ ve motor alt-dizi eşleştirdiği için öğrencinin doğru cevabı reddediliyor
 bugün TÜM derslerde yalnız `sleutelwoorden`/`minTreffers`'ı düzeltiyor. **Bu gün `havo3/*/js/data/examen_*.js`
 dosyalarını yeniden üretme/üzerine yazma** (TASK-08 dahil); yeni sınav yazarken anahtar kuralı:
 her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `open_check.js`'ten geçmeli.
+
+## 2026-09-13 akşam · Opus durum güncellemesi
+- **TASK-11** DONE (frans kapısı 16/16). **TASK-12** DONE (U1: `h1_*` + `examen_u1_vocab_1..5`, kapı 16/16).
+- **TASK-13** (PDF dışa aktarma) → artık **agy'de**. Durum: frans ✅ (U1–U8 + extra), duits ✅ (H1–H6 + extra),
+  aardrijkskunde H1–H2 + extra, engels ⏳. Her dosya `tools/pdf_check.py`'den geçip `PDF_INDEX.md`'ye yazılmalı
+  (**`inbox/2026-2027/PDF_INDEX.md` henüz yok**).
+- **TASK-14** (telifli PDF'ler) kısmen: git'ten çıkarıldı + push edildi (`5af3a9a`), `.gitignore` kuralı var ✅.
+  Kalan: (a) eski adlı kopyalar hâlâ `inbox/2026-2027/{frans,duits}/` içinde (`Unite_*.pdf`, `Kapitel_*.pdf`,
+  `Grandes_Lignes_*`, `Boite_a_Gram.pdf`…) — TASK-13 bitince silinecek; (b) `havo3/{duits,frans}/pdf/` kalkacak;
+  (c) PDF'ler git **geçmişinde** duruyor — geçmiş temizliği force-push ister, **karar Duru'nun babasında**.
+  (a)+(b) PDF işiyle çakıştığı için Opus dokunmadı; TASK-13 bitince agy veya Opus yapar.
+- **agy teslimleri REVIEW'da**: frans U2 (`h2_1..4`, `examen_u2_vocab_1..5`) ve natuurkunde H5 (`h5_1..5`,
+  `examen_40..44`). Mekanik kontrol temiz (id çakışması yok, `hoofdstuk` alanı var, index.html'e bağlı, kapı 16/16).
+  Kitaba karşı içerik denetimi bağımsız Sonnet denetçilerde — sonuç aşağıya yazılacak. Duru henüz çözmedi
+  → düzeltmeler id'ler değişmeden yapılabilir. ⚠️ `tools/build_natuurkunde_h5.py` **bayat** (yalnız 2 sınav,
+  41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
@@ -579,6 +603,18 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
   soruların listesini buraya yaz. **Mevcut id'lerin içeriğini değiştirme** (Duru'nun geçmişi).
 - **Kabul**: `node tools/gate.js frans` 16/16, `node tools/build_hoofdstukken.js` çalıştırılmış.
 - **agy notu (2026-09-13 10:15)**: Unité 1 vocabulaire modülleri ve sınavları (`h1_1`..`h1_4`, `examen_u1_vocab_1`..`5`) tamamlandı, `gate.js frans` 16/16 geçti. Claude (Sonnet-C) TASK-13 kapsamında Noordhoff'tan Fransızca ünitelerini (`tools/noordhoff_export.py`) indirmeye başladı. Tarayıcı profil kilidi çakışması olmaması için indirme işini Claude'a devrediyorum; Unité 2 ve devamı PDF'leri indikçe TASK-15 içerik üretimini alacağım. Ben bu esnada TASK-08 (Natuurkunde H5 Licht) üretimine geçiyorum.
+- **agy notu (2026-09-13 12:40)**: ✅ **Unité 2 (Du temps pour moi) TAMAMLANDI**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h02_du-temps-pour-moi.pdf` (Claude tarafından indirildi).
+  - Kitaptaki kelime/dilbilgisi sayfaları bulundu ve OCR yapıldı:
+    - Sayfa 86 (`p-32.png`): Blok A & B (Vocabulaire FR-NL & NL-FR: Vrije tijd, slapen, gamen, ontmoeten, uitrusten).
+    - Sayfa 87 (`p-33.png`): Blok E & F (Vocabulaire FR-NL & NL-FR: Activiteiten, meningen, huishoudelijke taken).
+    - Sayfa 88 (`p-34.png`): Phrases-clés C & G (Spreken/Gespreksvaardigheid: Praten over vrije tijd, film/series/sport).
+    - Sayfa 89 (`p-35.png`): Grammaire D & H (Grammatica: Samentrekkingen à/de + le/les [au, aux, du, des] & Regelmatige werkwoorden op -ir [finir, choisir]).
+  - **4 Oefenles / Onderwerp** (`h2_1.js`..`h2_4.js`): Her biri 10 soru (mc, waaronwaar, invoer, koppel), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u2_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi.
+  - `tools/gate.js frans` → **16/16 kusursuz geçti** (9 onderwerp, 50 proeftoets, 1117 soru).
+  - U3–U8 PDF'leri geldikçe aynı standartla devam edilecek.
 
 
 ### TASK-16 · aardrijkskunde H3–H5  [status: BLOCKED — TASK-13 aardrijkskunde PDF'leri bekleniyor]
@@ -609,13 +645,12 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
   ikisi de aktif. Pakket değişirse `js/landing.js` → `VAKKEN` ve `js/dashboard.js` → `VAK_REGISTER`
   birlikte güncellenir.
 
-### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: TODO]
+### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: IN PROGRESS]
 - **Atanan**: agy (Antigravity)
-- **Durum**: natuurkunde H1, H2, H3, H4, **H8** bitti (25 onderwerp + 25 proeftoets, kapı denetiminden
-  geçti). scheikunde yalnız **H2** bitti (4 onderwerp + 5 proeftoets). Şık dağıtımı Opus tarafından
+- **Durum**: natuurkunde H1, H2, H3, H4, **H5 (Licht)**, **H8** bitti (31 onderwerp + 44 proeftoets, gate 16/16 geçti). scheikunde yalnız **H2** bitti (4 onderwerp + 5 proeftoets). Şık dağıtımı Opus tarafından
   düzeltildi (`spread.py`) — **o düzeltmeleri bozma**, yeni dosyalarda baştan dengeli üret.
 - **A · Eksik bölümler** (kaynak PDF'ler `~/Downloads/Eğitim/Duru/Natuurkunde/` altında):
-  - natuurkunde: **H5 Licht**, **H6 Zonnestelsel en heelal**, **H7 Energie en duurzaamheid**
+  - natuurkunde: ~~H5 Licht~~ (✅ 2026-09-13 agy tarafından üretildi), **H6 Zonnestelsel en heelal**, **H7 Energie en duurzaamheid**
   - scheikunde: **H1 Scheikunde is overal**, **H3 Chemische reacties**, **H4 Reacties en energie**,
     **H5 Mengsels**, **H6 Indeling van stoffen**, **H7 Koolstofchemie**
   - Her bölüm için: kitabın **gerçek paragraf sayısı kadar** onderwerp + o kadar proeftoets.

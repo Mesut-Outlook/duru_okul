@@ -182,11 +182,10 @@ DURU.registerExamen({
       "vraag": "Welke twee Duitse woorden kun je gebruiken om te zeggen dat het weer zonnig en warm is?",
       "modelantwoord": "Sonnig en warm (of die Sonne scheint).",
       "sleutelwoorden": [
-        "sonnig",
-        "warm",
-        "Sonne"
+        "sonnig/sonne",
+        "warm"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "Je gebruikt 'sonnig' en 'warm'."
     },
     {

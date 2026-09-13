@@ -16,6 +16,12 @@ for(const v of vakken){
     // Het modelantwoord moet bij de eigen sleutelwoorden volledig goed scoren — anders wordt een
     // leerling die precies het voorbeeldantwoord schrijft afgekeurd (2026-09-13: frans 19/24/34).
     if(q.modelantwoord){const r=beoordeel(q,q.modelantwoord);if(r.status!=='goed')bad.push(`${tag}: modelantwoord scoort zelf "${r.status}" (punt ${r.punt})`)}
+    // Wie de vraag zelf in het antwoordvak plakt, mag geen punt krijgen (sleutelwoord staat al in de vraag).
+    // Uitzondering: tekstbegrip met een geciteerde brontekst ('Lees: ...' of een citaat van 6+ woorden) —
+    // daar staat het antwoord per definitie in de vraag en is kiezen uit de tekst juist de vaardigheid.
+    {const plak=String(q.vraag).replace(/<[^>]+>/g,' ');
+     const citaat=/\bLees\b|\bRead\b|\bLies\b|['"‘’“”«»„][^'"‘’“”«»„]*(?:\s+\S+){5,}[^'"‘’“”«»„]*['"‘’“”«»„]/i.test(plak);
+     const r=beoordeel(q,plak);if(r.punt>0&&!citaat)bad.push(`${tag}: de vraag zelf plakken scoort "${r.status}" (punt ${r.punt})`)}
     const sw=q.sleutelwoorden||[];
     if(q.minTreffers>sw.length) bad.push(`${tag}: minTreffers ${q.minTreffers} > ${sw.length} sleutelwoord — ASLA tam dogru olamaz`);
     sw.forEach(s=>{

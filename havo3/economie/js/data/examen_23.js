@@ -194,10 +194,10 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een pizzeria heeft € 4.500 constante kosten per maand (huur, afschrijving ovens, verzekering). De variabele kosten voor meel, kaas, tomaten en bezorging zijn € 2,50 per pizza. Bereken de kostprijs per pizza als er deze maand 3.000 pizza's worden gebakken.",
       "sleutelwoorden": [
-        "3000 * 2,50 = 7500",
-        "4500 + 7500 = 12000",
-        "12000 / 3000",
-        "4/4 euro/€ 4"
+        "7.500/7500",
+        "12.000/12000",
+        "4,00/4 euro",
+        "tck/tvk"
       ],
       "minTreffers": 2,
       "modelantwoord": "TVK = 3.000 × € 2,50 = € 7.500. TK = € 4.500 (TCK) + € 7.500 (TVK) = € 12.000. Kostprijs per pizza = € 12.000 / 3.000 = € 4,00 per pizza.",

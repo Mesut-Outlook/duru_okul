@@ -195,7 +195,7 @@ DURU.registerExamen({
       "vraag": "Waarom is het wettelijk verplicht om zware goederen op een open laadbak stevig vast te zetten met spanbanden? Benoem het fysische verschijnsel van de lading.",
       "sleutelwoorden": [
         "traagheid/inertie",
-        "doorschieten/naar voren schuiven/losraken"
+        "naar voren/schuift/losraken"
       ],
       "minTreffers": 1,
       "modelantwoord": "Bij plotseling krachtig remmen wil de zware lading door haar eigen traagheid (inertie) met dezelfde snelheid vooruit blijven bewegen. Zonder stevige spanbanden schuift de lading naar voren van de laadbak af, wat grote schade en ongelukken veroorzaakt.",

@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe de Europese interne markt bijdraagt aan de welvaart van consumenten in Europese lidstaten.",
-      sleutelwoorden: ["lagere prijzen/meer concurrentie", "grotere keuze/vrij aanbod", "geen invoerrechten/lagere kosten"],
+      sleutelwoorden: ["lagere prijzen/meer concurrentie", "groter aanbod/aanbod", "invoerrechten/productiekosten"],
       minTreffers: 2,
       modelantwoord: "Door het wegvallen van invoerrechten en handelsbelemmeringen kunnen bedrijven hun producten in de hele EU verkopen. Dit leidt tot meer onderlinge concurrentie, schaalvoordelen en lagere productiekosten. Consumenten profiteren daardoor van een veel groter aanbod aan goederen en diensten tegen lagere prijzen en met strikte Europese kwaliteits- en veiligheidsgaranties.",
       uitleg: "Interne markt vergroot concurrentie, verlaagt transactiekosten en verbreedt de keuze voor consumenten."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beredeneer waarom het gemeenschappelijk buitentarief noodzakelijk is om de interne markt van de EU goed te laten functioneren.",
-      sleutelwoorden: ["gelijke invoerrechten overal", "omzeiling via goedkoopste land voorkomen", "eerlijke concurrentie bewaren"],
+      sleutelwoorden: ["allerlaagste invoerheffing/laagste heffing", "handelsverlegging/tolvrij", "gelijkmatig/oneerlijke route"],
       minTreffers: 2,
       modelantwoord: "Zonder een gemeenschappelijk buitentarief zou een land buiten de EU zijn goederen exporteren naar het EU-land met de allerlaagste invoerheffing. Eenmaal binnen de EU kunnen die goederen immers tolvrij doorstromen naar alle andere lidstaten. Het gezamenlijke buitentarief voorkomt deze oneerlijke route (handelsverlegging) en beschermt alle lidstaten gelijkmatig.",
       uitleg: "Uniform buitentarief voorkomt dat goederen via het goedkoopste douanegat belastingvrij de hele unie overspoelen."

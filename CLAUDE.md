@@ -26,13 +26,13 @@ js/landing.js     VAKKEN dizisi + render + iframe-shell + storage-interceptor + 
 js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (vak listeleri HARD-CODED)
 server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
-tools/            soru kalite denetimi: gate.js (15 kural), spread.py, open_check.js (bkz. tools/README.md)
+tools/            soru kalite denetimi: gate.js (16 kural), spread.py, open_check.js (bkz. tools/README.md)
 inbox/            ders materyali bırakma alanı (PDF/Word/görsel)
 archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = MAVO 2 dersleri)
 havo3/<vak>/      HAVO 3 ders-siteleri (12 vak). Anahtar: duru_2627_<slug>_*. Doluluk için CLAUDE.md "Ders doluluk durumu"
 ```
 
-## Ders doluluk durumu (2026-09-12)
+## Ders doluluk durumu (2026-09-13)
 Sayılar `havo3/<vak>/js/{bootstrap,data/*}.js`'i node `vm`'de çalıştırıp `DURU.onderwerpen` /
 `DURU.examens` ve `vragen` uzunluklarını sayarak çıkarılır (`tools/build_hoofdstukken.js` ile aynı
 teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçerik eklendikçe güncelle.
@@ -40,10 +40,10 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | vak | onderwerp | proeftoets | soru | kapsanan hoofdstuk |
 |---|---|---|---|---|
 | geschiedenis | 30 | 30 | 840 | H1–H6 (tam) |
-| frans | **0** | 40 | 800 | H1–H8 (onderwerp yok — sadece sınav) |
+| frans | 9 | 50 | 1117 | H1–H8 sınav; onderwerp yalnız U1 (5) + U2 (4) — U3–U8 TASK-15 |
 | duits | 18 | 30 | 744 | H1–H6 |
 | engels | 18 | 30 | 744 | H1–H6 |
-| natuurkunde | 26 | 39 | 988 | H1–H8 (H1–H4, H8 tam; H5–H7 açıldı; H1 19 sınav) |
+| natuurkunde | 31 | 44 | 1138 | H1–H5, H8 tam; H6–H7 boş (TASK-08); H1 19 sınav |
 | economie | 12 | 27 | 636 | H1–H4 |
 | aardrijkskunde | 10 | 10 | 280 | H1–H2 (tam) |
 | scheikunde | 6 | 10 | 252 | H1–H2 (H3–H7 eksik) |
@@ -52,14 +52,14 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 0 | 1 | 5 | **yok** — smoke-test |
 
-**Toplam: 127 onderwerp · 233 proeftoets · 5650 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 141 onderwerp · 248 proeftoets · 6117 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` + `nederlands` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavları bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
 girmez → "Overige toetsen"e düşer. **Buraya ünite numarası uydurma**; materyal gelince önce
 `bootstrap.js`'e gerçek hoofdstuk'ları yaz.
 
-Bekleyen üretim işleri `coordination.md` → "Pending Tasks" (TASK-08, TASK-09).
+Bekleyen üretim işleri `coordination.md` → "Pending Tasks" (TASK-08, 09, 15, 16, 17).
 Her teslim `tools/gate.js` kapısından geçmeli (bkz. `docs/PIPELINE.md` → Kalite kapısı).
 
 ## 📌 "Test Hazırla" ve Bölüm Üretim Standardı (Zorunlu Kural)

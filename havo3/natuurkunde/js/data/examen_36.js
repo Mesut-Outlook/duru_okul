@@ -207,7 +207,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "even groot/dezelfde grootte/gelijk",
         "tegengestelde richting/tegengesteld gericht",
-        "heffen elkaar op/resulterende kracht nul"
+        "opheffen/resulterende kracht/versnelling nul"
       ],
       "minTreffers": 2,
       "modelantwoord": "De wrijvingskracht is precies even groot als jouw duwkracht, maar werkt in tegengestelde richting. Omdat de doos stil blijft staan is de versnelling nul, waardoor beide krachten elkaar opheffen en de resulterende kracht 0 N is.",

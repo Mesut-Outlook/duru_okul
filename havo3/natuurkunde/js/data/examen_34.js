@@ -208,7 +208,7 @@ DURU.registerExamen({
         "vraag": "Een auto van duizend kilogram accelereert in vijf seconden van stilstand naar twintig meter per seconde. Bereken de benodigde voorwaartse resulterende kracht.",
         "sleutelwoorden": [
             "4000 N",
-            "4000 newton"
+            "4000/vierduizend/4000 newton"
         ],
         "minTreffers": 1,
         "modelantwoord": "a = 20 / 5 = 4,0 m/s². Fres = m · a = 1000 kg × 4,0 m/s² = 4000 N.",

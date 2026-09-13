@@ -182,7 +182,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Duru koopt een scooter van € 2.000. Ze betaalt 24 maanden lang € 95 per maand. Bereken de totale kredietkosten.",
       "sleutelwoorden": [
-        "24 * 95 = 2280",
+        "2.280/2280",
         "280"
       ],
       "minTreffers": 1,
@@ -194,7 +194,7 @@ DURU.registerExamen({
       "vraag": "Leg uit waarom de bank bij een hypotheeklening een lager rentepercentage vraagt dan bij een persoonlijke lening.",
       "sleutelwoorden": [
         "onderpand/woning als zekerheid",
-        "lager risico voor de bank"
+        "risico voor de bank/veel lager"
       ],
       "minTreffers": 1,
       "modelantwoord": "Omdat de bank het huis als onderpand heeft. Als de klant niet betaalt, kan de bank het huis verkopen. Het risico voor de bank is daardoor veel lager.",

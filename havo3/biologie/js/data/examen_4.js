@@ -175,8 +175,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Beschrijf in twee duidelijke stappen hoe een gezonde porie verandert in een ontstoken jeugdpuistje (acne).",
       "sleutelwoorden": [
-        "stap 1/talg/te veel/verstopt/porie/mee-eter",
-        "stap 2/bacteriën/ontsteking/puistje/ontsteekt"
+        "stap 1/talg/te veel/verstopt/mee-eter",
+        "stap 2/bacteriën/ontsteking/ontsteekt"
       ],
       "minTreffers": 2,
       "modelantwoord": "Stap 1: De talgklier produceert in de puberteit extra veel talg, waardoor de porie verstopt raakt en een mee-eter (zwart puntje) ontstaat. Stap 2: In de opgehoopte talg gaan bacteriën groeien, waardoor de talgklier gaat ontsteken en er een rood, pijnlijk puistje ontstaat.",

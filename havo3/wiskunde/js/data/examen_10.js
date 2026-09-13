@@ -193,8 +193,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Gegeven zijn de meetwaarden: 5, 8, 12, 14, 17, 20, 25. Bepaal het minimum, het maximum, de spreidingsbreedte en de kwartielafstand van deze reeks.",
       "sleutelwoorden": [
-        "spreidingsbreedte = 20|spreidingsbreedte 20",
-        "kwartielafstand = 12|kwartielafstand 12"
+        "= 20/spreidingsbreedte 20",
+        "= 12/kwartielafstand 12"
       ],
       "minTreffers": 1,
       "modelantwoord": "Minimum = 5, Maximum = 25. Spreidingsbreedte = 25 - 5 = 20. Mediaan (Q₂) = 14. Q₁ = 8, Q₃ = 20. Kwartielafstand = Q₃ - Q₁ = 20 - 8 = 12.",
@@ -204,8 +204,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom de legenda bij een steel-bladdiagram onmisbaar is.",
       "sleutelwoorden": [
-        "betekenis van de getallen/eenheden",
-        "tiental of decimaal/kommagetal"
+        "betekenen/betekenis",
+        "470/47"
       ],
       "minTreffers": 1,
       "modelantwoord": "Zonder legenda weet de lezer niet of bijvoorbeeld '4 | 7' staat voor het getal 47, voor 4,7 of voor 470. De legenda geeft aan wat de steel en het blad precies betekenen.",

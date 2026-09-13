@@ -176,8 +176,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit wat het verschil is tussen een <b>versnelde beweging</b> en een <b>eenparig versnelde beweging</b>.",
       "sleutelwoorden": [
-        "toeneemt/groter wordt",
-        "gelijkmatig/iedere seconde evenveel/constante versnelling"
+        "sneller/toename/steeds harder/neemt",
+        "gelijkmatig/constant/steeds evenveel"
       ],
       "minTreffers": 2,
       "modelantwoord": "Bij een versnelde beweging neemt de snelheid in de loop van de tijd toe. Bij een eenparig versnelde beweging neemt de snelheid gelijkmatig toe, wat betekent dat er iedere seconde precies evenveel snelheid bij komt (de versnelling is constant).",
@@ -187,9 +187,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een parachutist springt uit een vliegtuig. Na enige tijd bereikt hij een constante eindsnelheid (nog vóór hij zijn parachute opent). Leg uit welke <b>krachten</b> er op hem werken en waarom zijn snelheid niet meer toeneemt.",
       "sleutelwoorden": [
-        "zwaartekracht",
-        "luchtweerstand",
-        "gelijk/opheffen/nul/resulterende kracht 0"
+        "zwaartekracht/gewichtskracht/gewicht",
+        "luchtweerstand/weerstandskracht",
+        "resulterende kracht/kracht is nul/opheffen"
       ],
       "minTreffers": 2,
       "modelantwoord": "Tijdens het vallen neemt door de toenemende snelheid de luchtweerstand steeds verder toe, totdat de omhooggerichte luchtweerstand precies even groot is als de omlaaggerichte zwaartekracht. De resulterende kracht wordt dan 0 N, waardoor de snelheid constant blijft en niet meer toeneemt.",

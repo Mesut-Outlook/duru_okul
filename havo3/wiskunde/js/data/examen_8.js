@@ -193,9 +193,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "In een sportteam hebben 5 spelers schoenmaat 41, 8 spelers maat 42, 5 spelers maat 43 en 2 spelers maat 44. Bereken de gemiddelde schoenmaat van dit team.",
       "sleutelwoorden": [
-        "20 spelers",
-        "844 / 20",
-        "42,2|42.2"
+        "= 20/20 spelers",
+        "844/20",
+        "42,2/42.2"
       ],
       "minTreffers": 1,
       "modelantwoord": "Totaal aantal spelers = 5 + 8 + 5 + 2 = 20. Som = (5×41) + (8×42) + (5×43) + (2×44) = 205 + 336 + 215 + 88 = 844. Gemiddelde = 844 / 20 = 42,2.",
@@ -206,8 +206,8 @@ DURU.registerExamen({
       "vraag": "Geef de definitie van de relatieve frequentie en noem de formule om deze in procenten te berekenen.",
       "sleutelwoorden": [
         "deel van het totaal/aandeel",
-        "absolute frequentie / totaal",
-        "* 100%"
+        "absolute frequentie/totaal",
+        "100%/keer 100"
       ],
       "minTreffers": 1,
       "modelantwoord": "Definitie: Het aandeel van een bepaalde waarneming ten opzichte van het totaal. Formule: Relatieve frequentie = (Absolute frequentie / Totaal aantal waarnemingen) × 100%.",

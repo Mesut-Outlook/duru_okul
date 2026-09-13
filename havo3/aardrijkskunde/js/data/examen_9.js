@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom Europa voor een groot dilemma staat: enerzijds wil het strategisch onafhankelijk zijn voor accugrondstoffen (zoals lithium), anderzijds stuit lokale winning op fel verzet.",
-      sleutelwoorden: ["importafhankelijkheid van China/onveilig", "milieuschade/verzet omwonenden/NIMBY", "eigen winning nodig voor energietransitie"],
+      sleutelwoorden: ["chantabel/china", "nimby/milieuorganisaties", "eigen mijnen/lithium"],
       minTreffers: 2,
       modelantwoord: "Voor de energietransitie heeft Europa gigantische hoeveelheden lithium en zeldzame aardmetalen nodig. Om niet chantabel te zijn door landen als China, wil de EU eigen mijnen openen (zoals in Duitsland of Servië). Echter, lokale bewoners en milieuorganisaties vrezen watervervuiling, landschapsaantasting en geluidsoverlast (NIMBY-syndroom), waardoor projecten vertragen of worden geblokkeerd.",
       uitleg: "Spanning tussen geopolitieke autonomie en lokale milieubescherming/burgerprotest."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beredeneer waarom Duitsland van plan is om de bruinkoolwinning en bruinkoolcentrales uiterlijk in 2030 of 2038 definitief te sluiten.",
-      sleutelwoorden: ["extreem hoge CO2-uitstoot/klimaatdoelen", "milieu- en landschapsvernietiging/dorpen slopen", "overstap naar hernieuwbare energie/zon en wind"],
+      sleutelwoorden: ["klimaatdoelen/parijs", "eeuwenoude dorpen/weerstand", "hernieuwbare energie/zon en wind"],
       minTreffers: 2,
       modelantwoord: "Bruinkool is de meest CO2-intensieve en luchtvervuilende brandstof van Europa. Om de internationale klimaatdoelen van Parijs te halen en de uitstoot van broeikasgassen terug te dringen, moet Duitsland stoppen met kolen. Bovendien stuit het slopen van eeuwenoude dorpen en bossen voor dagbouw op steeds grotere maatschappelijke en politieke weerstand, terwijl hernieuwbare energie (zon en wind) steeds goedkoper wordt.",
       uitleg: "Klimaatdoelen, gigantische emissies en maatschappelijk verzet forceren de sluiting van bruinkoolmijnen."

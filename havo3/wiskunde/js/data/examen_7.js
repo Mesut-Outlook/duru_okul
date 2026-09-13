@@ -193,8 +193,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "In een klas van 32 leerlingen spelen 8 leerlingen een muziekinstrument. Bereken de grootte van de sectorhoek voor een cirkeldiagram en toon de berekening.",
       "sleutelwoorden": [
-        "8/32",
-        "90|90°|90 graden"
+        "0,25/25%",
+        "90/90°/90 graden"
       ],
       "minTreffers": 1,
       "modelantwoord": "Berekening: (8 / 32) × 360° = 0,25 × 360° = 90°.",
@@ -204,7 +204,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg in één duidelijke zin uit waarom de som van alle percentages in een cirkeldiagram altijd 100% moet zijn.",
       "sleutelwoorden": [
-        "hele cirkel/volledige cirkel/alles",
+        "geheel/precies gelijk",
         "totaal/alle waarnemingen samen"
       ],
       "minTreffers": 1,

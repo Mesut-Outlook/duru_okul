@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beredeneer waarom de verschuiving naar een multipolaire wereldeconomie kan leiden tot meer handelsconflicten tussen grote machtsblokken.",
-      sleutelwoorden: ["rivaliteit/concurrentie", "bescherming eigen industrie/protectionisme", "grote mogendheden/VS en China"],
+      sleutelwoorden: ["concurre/rivaliteit", "protectionis/beschermen", "afzetmarkten/grondstoffen"],
       minTreffers: 2,
       modelantwoord: "In een multipolaire wereld is er niet meer één dominante leider, maar concurreren meerdere grote machtsblokken (zoals de VS, de EU en China) om invloed, afzetmarkten en strategische grondstoffen. Om hun eigen economische en technologische voorsprong te beschermen, nemen landen sneller toevlucht tot invoertarieven, exportverboden en protectionistische maatregelen, wat leidt tot handelsconflicten en handelsoorlogen.",
       uitleg: "Meerdere gelijkwaardige machtscentra verhogen de rivaliteit om markten en technologie."

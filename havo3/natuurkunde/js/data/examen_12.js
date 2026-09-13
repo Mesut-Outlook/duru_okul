@@ -181,10 +181,10 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Vergelijk <b>alfastraling</b> en <b>gammastraling</b> op de volgende twee eigenschappen: 1) het ioniserend vermogen, 2) het doordringend vermogen.",
       "sleutelwoorden": [
-        "alfastraling groot ioniserend vermogen",
-        "gammastraling klein ioniserend vermogen",
-        "alfastraling klein doordringend vermogen",
-        "gammastraling groot doordringend vermogen"
+        "groot ioniserend/veel ionisatie/sterk ioniserend",
+        "klein ioniserend/weinig ionisatie/zwak ioniserend",
+        "klein doordringend/weinig doordringend/laag doordringend vermogen",
+        "groot doordringend/sterk doordringend/hoog doordringend vermogen"
       ],
       "minTreffers": 3,
       "modelantwoord": "1. Ioniserend vermogen: Alfastraling heeft een zeer groot ioniserend vermogen (richt door zijn dubbele lading en massa veel schade aan over korte afstand). Gammastraling heeft een relatief klein ioniserend vermogen.\n2. Doordringend vermogen: Alfastraling heeft een zeer klein doordringend vermogen (wordt gestopt door papier of huid). Gammastraling heeft juist een extreem groot doordringend vermogen (gaat door het hele lichaam heen en vereist dik lood/beton).",
@@ -195,8 +195,8 @@ DURU.registerExamen({
       "vraag": "In een laboratorium wordt de activiteit van een onbekende radioactieve stof gemeten. Op t = 0 is de activiteit 1200 Bq. Na 45 minuten is de activiteit gedaald naar 150 Bq. Bereken de <b>halveringstijd</b> van deze stof.",
       "sleutelwoorden": [
         "3 halveringstijden",
-        "150/drie halveringstijden",
-        "15 minuten/15 min/15"
+        "600/300",
+        "15 minuten/15 min"
       ],
       "minTreffers": 2,
       "modelantwoord": "De activiteit halveert van 1200 -> 600 (1x) -> 300 (2x) -> 150 Bq (3x). Er zijn dus 3 halveringstijden verstreken in 45 minuten. De halveringstijd is dus: t₁/₂ = 45 minuten / 3 = 15 minuten.",

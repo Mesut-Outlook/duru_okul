@@ -176,7 +176,7 @@ DURU.registerExamen({
       "vraag": "Leg uit waarom een torenkraan op een bouwplaats zware betonnen ballastblokken aan de achterzijde heeft en hoe de verplaatsing daarvan stabiliteit waarborgt.",
       "sleutelwoorden": [
         "tegenmoment/tegengesteld moment",
-        "evenwicht/omvallen",
+        "balans/kantelt/bezwijkt",
         "tegengewicht/compenseren/draaimoment"
       ],
       "minTreffers": 2,

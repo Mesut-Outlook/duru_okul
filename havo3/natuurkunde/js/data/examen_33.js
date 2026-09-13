@@ -195,7 +195,7 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Waarom beweegt bij het tegen elkaar wegduwen op het ijs de persoon met de kleinste massa sneller naar achteren dan de zwaardere persoon?",
         "sleutelwoorden": [
-            "kracht gelijk/even groot",
+            "is gelijk/kracht gelijk/even groot",
             "versnelling groter bij kleine massa/omgekeerd evenredig"
         ],
         "minTreffers": 2,

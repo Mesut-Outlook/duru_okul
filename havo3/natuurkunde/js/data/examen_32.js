@@ -195,8 +195,8 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Leg uit waarom het met iemand achterop de fiets veel zwaarder is om vanuit stilstand weg te rijden dan wanneer je alleen op de fiets zit.",
         "sleutelwoorden": [
-            "massa groter/meer gewicht",
-            "grotere trapkracht nodig/meer kracht nodig"
+            "massa/grotere massa/meer gewicht",
+            "spierkracht/meer kracht nodig/grotere trapkracht"
         ],
         "minTreffers": 2,
         "modelantwoord": "De totale massa is veel groter. Volgens F = m · a is er bij een grotere massa veel meer spierkracht nodig om dezelfde versnelling te krijgen.",
@@ -208,7 +208,7 @@ DURU.registerExamen({
         "sleutelwoorden": [
             "3 m/s²",
             "3,0",
-            "3 meter per seconde kwadraat"
+            "fres/a = fres/berekening"
         ],
         "minTreffers": 1,
         "modelantwoord": "a = Fres / m = 75 N / 25 kg = 3,0 m/s².",

@@ -172,7 +172,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "reactiefase/reactietijd/constante snelheid",
         "remfase/vertragende beweging/remkracht",
-        "stopafstand is som van beide"
+        "totale stopafstand/stopafstand is/som van beide"
       ],
       "minTreffers": 2,
       "modelantwoord": "1. Reactiefase: Tijdens de reactietijd (t_r) reageert de bestuurder; de auto beweegt met constante snelheid (F_res = 0 N) en legt s_reactie = v × t_r af. 2. Remfase: Zodra het rempedaal wordt ingetrapt, levert het remsysteem een tegenwerkende remkracht; de beweging is (eenparig) vertraagd (a = F_rem / m) en legt de remweg s_rem = 0,5 × v × t_rem af. 3. Stilstand: De auto staat stil (v = 0 m/s). De totale stopafstand is s_stop = s_reactie + s_rem.",
@@ -182,9 +182,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom een wielrenner die 40 km/h fietst veel meer vermogen en arbeid per seconde moet leveren dan wanneer hij 20 km/h fietst. Betrek daarin de <b>luchtweerstand</b> en de formule <b>W = F × s</b>.",
       "sleutelwoorden": [
-        "luchtweerstand kwadratisch/veel groter",
-        "W = F * s / grotere kracht vereist meer arbeid",
-        "afstand per seconde groter"
+        "kwadratisch/vier keer zo groot/veel groter",
+        "vereist/zo grote kracht/4x zoveel arbeid",
+        "twee keer zoveel/dubbele afstand/meer afstand per tijdseenheid"
       ],
       "minTreffers": 2,
       "modelantwoord": "Bij verdubbeling van de snelheid van 20 naar 40 km/h wordt de luchtweerstandskracht (F_lucht) ongeveer vier keer zo groot (kwadratisch verband). Om een constante snelheid te houden moet de trapkracht gelijk zijn aan de luchtweerstand. Volgens W = F × s vereist een 4× zo grote kracht over dezelfde afstand 4× zoveel arbeid. Bovendien legt de wielrenner per seconde twee keer zoveel afstand af, waardoor hij in dezelfde tijd veel meer arbeid moet leveren.",

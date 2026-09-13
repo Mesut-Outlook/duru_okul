@@ -169,8 +169,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom de edelgassen (zoals helium, neon en argon) in groep 18 vrijwel nooit chemische reacties aangaan met andere stoffen.",
       "sleutelwoorden": [
-        "volle buitenste elektronenschil / edelgasconfiguratie",
-        "zeer stabiel / hoeven geen elektronen op te nemen of af te staan"
+        "edelgasconfiguratie/octetregel/volle schil",
+        "stabiel/inert/onreactief"
       ],
       "minTreffers": 2,
       "modelantwoord": "Edelgassen hebben een volledig gevulde buitenste elektronenschil (2 elektronen bij helium, 8 bij neon en argon; de zogeheten edelgasconfiguratie of octetregel). Hierdoor zijn ze extreem stabiel en hebben ze geen enkele neiging om elektronen te delen, op te nemen of af te staan, waardoor ze chemisch inert (onreactief) zijn.",
@@ -180,13 +180,13 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Noem de <b>7 twee-atomige elementen</b> (moleculen die altijd met index 2 geschreven worden als losse stof) met hun naam en juiste molecuulformule.",
       "sleutelwoorden": [
-        "Br2 broom",
-        "I2 jood",
-        "N2 stikstof",
-        "Cl2 chloor",
-        "H2 waterstof",
-        "O2 zuurstof",
-        "F2 fluor"
+        "broom/br2",
+        "jood/i2",
+        "stikstof/n2",
+        "chloor/cl2",
+        "waterstof/h2",
+        "zuurstof/o2",
+        "fluor/f2"
       ],
       "minTreffers": 4,
       "modelantwoord": "De 7 twee-atomige elementen (BrINClHOF) zijn: 1. Broom (Br₂), 2. Jood (I₂), 3. Stikstof (N₂), 4. Chloor (Cl₂), 5. Waterstof (H₂), 6. Zuurstof (O₂), 7. Fluor (F₂).",

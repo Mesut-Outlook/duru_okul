@@ -182,7 +182,7 @@ DURU.registerExamen({
       "vraag": "Leg uit waarom de mediaan soms een beter beeld van het midden geeft dan het gemiddelde aan de hand van salarisgegevens waarin één directeur miljoenen verdient.",
       "sleutelwoorden": [
         "uitschieter/extreem",
-        "vertekend/beïnvloedt/ongevoelig"
+        "realistischer/betrouwbaarder/middelste werknemer"
       ],
       "minTreffers": 2,
       "modelantwoord": "Het gemiddelde wordt sterk omhoog getrokken door het extreem hoge salaris van de directeur (uitschieter). De mediaan kijkt naar de middelste werknemer en geeft daardoor een veel realistischer beeld van het typische inkomen.",

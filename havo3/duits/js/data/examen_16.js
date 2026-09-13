@@ -185,7 +185,7 @@ DURU.registerExamen({
         "den",
         "einen"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "Der verandert in den en ein verandert in einen."
     },
     {

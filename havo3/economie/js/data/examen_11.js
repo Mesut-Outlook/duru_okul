@@ -182,8 +182,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een pizzabakker heeft € 2.000 constante kosten per maand. De variabele kosten zijn € 2 per pizza. Bereken de totale kosten bij het bakken van 1.500 pizza's.",
       "sleutelwoorden": [
-        "1500 * 2 = 3000",
-        "5000/5.000 euro"
+        "3.000/3000",
+        "5.000/5000"
       ],
       "minTreffers": 1,
       "modelantwoord": "TVK = 1.500 × € 2 = € 3.000. TK = TCK (€ 2.000) + TVK (€ 3.000) = € 5.000.",
@@ -194,7 +194,7 @@ DURU.registerExamen({
       "vraag": "Leg uit waarom de kostprijs per product daalt als een fabriek haar productie verdubbelt van 1.000 naar 2.000 stuks.",
       "sleutelwoorden": [
         "constante/vaste kosten verdeeld",
-        "over meer stuks/producten"
+        "schaalvoordeel/aandeel vaste kosten"
       ],
       "minTreffers": 1,
       "modelantwoord": "Omdat de constante kosten (zoals huur en machines) nu verdeeld worden over 2.000 stuks in plaats van 1.000 stuks. Hierdoor daalt het aandeel vaste kosten per product (schaalvoordeel).",

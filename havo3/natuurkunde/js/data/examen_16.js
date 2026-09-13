@@ -169,7 +169,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit hoe je in het practicumlokaal met een meetinstrument en een maatglas de soortelijke massa (rho) van een steentje bepaalt. Noem de handelingen en de berekening.",
       "sleutelwoorden": [
-        "massa wegen op weegschaal",
+        "weegschaal/massa wegen/weeg het",
         "onderdompelmethode/maatcilinder",
         "massa delen door volume/formule/gram per cm3"
       ],
@@ -181,8 +181,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Verklaar waarom een mens in het water makkelijker blijft drijven na een diepe ademhaling.",
       "sleutelwoorden": [
-        "lichaamsomvang/uitzetting",
-        "gemiddelde dichtheid daalt/lichter"
+        "borstkas/volume neemt toe/uitzetting",
+        "dichtheid/lichter drijven/minder dicht"
       ],
       "minTreffers": 2,
       "modelantwoord": "Met ingeademde longen zet de borstkas uit en neemt het totale volume van het lichaam toe terwijl de massa nauwelijks verandert. Hierdoor wordt de gemiddelde dichtheid van het lichaam kleiner dan die van water (ρ < 1,0 g/cm³), waardoor je drijft. Bij uitademen neemt het volume af, waardoor de gemiddelde dichtheid boven 1,0 g/cm³ stijgt en het lichaam naar beneden zinkt.",

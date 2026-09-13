@@ -196,7 +196,7 @@ DURU.registerExamen({
         "vraag": "Geef de twee formules waarmee je de afgelegde afstand kunt berekenen bij een eenparig versnelde beweging vanuit rust.",
         "sleutelwoorden": [
             "1/2 * basis * hoogte/oppervlakte driehoek",
-            "vgem * t/gemiddelde snelheid"
+            "vgem/gemiddelde snelheid/v gemiddeld"
         ],
         "minTreffers": 1,
         "modelantwoord": "s = 1/2 · t · veind (oppervlakte van de driehoek) of s = vgem · t (waarbij vgem = 1/2 · veind).",
@@ -206,9 +206,9 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Een auto remt af van 24 m/s naar stilstand in een tijdsduur van 6,0 seconden. Bereken hoe sterk de auto afremt (de snelheidsvermindering per seconde) en noteer de bijbehorende eenheid.",
         "sleutelwoorden": [
-            "4 m/s²",
+            "4,0 m",
             "4,0",
-            "vertraging"
+            "24 - 0/vertraging/uitkomst berekenen"
         ],
         "minTreffers": 1,
         "modelantwoord": "a = (24 - 0) / 6,0 = 4,0 m/s².",

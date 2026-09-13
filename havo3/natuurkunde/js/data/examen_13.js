@@ -175,12 +175,13 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom een holle negatieve lens bijziendheid corrigeert en schets het pad van de lichtstralen vóór en na het hoornvlies.",
       "sleutelwoorden": [
-        "divergeren/uit elkaar buigen",
-        "beeld op netvlies/scherp"
+        "netvlies",
+        "uit elkaar/divergen/spreid/uiteen",
+        "te sterk/vóór het netvlies/voor het netvlies/te lang/te bol"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Bij een röntgenapparaat is er slechts sprake van kortstondige bestraling van buitenaf; zodra het apparaat uit staat is er geen straling meer. Radioactief stof veroorzaakt echter besmetting: als de deeltjes op je kleding/huid komen of worden ingeademd/ingeslikt, blijven ze 24 uur per dag van binnenuit je organen bestralen (zeer lange stralingsduur), wat leidt tot ernstige DNA- en weefselschade.",
-      "uitleg": "Kortstondige externe bestraling vs. continue langdurige inwendige besmetting."
+      "modelantwoord": "Bij bijziendheid breekt het oog het licht te sterk: de lichtstralen komen vóór het netvlies samen. Een holle (negatieve) lens laat de evenwijdige lichtstralen eerst uit elkaar lopen (divergeren). Daardoor komen ze na het hoornvlies en de ooglens later samen, precies op het netvlies, en zie je veraf weer scherp.",
+      "uitleg": "Een negatieve (holle) lens spreidt het licht. Vóór de lens: evenwijdige stralen; na de lens: uiteenlopende stralen; na hoornvlies en ooglens: samenkomend op het netvlies in plaats van ervoor."
     },
     {
       "type": "open",

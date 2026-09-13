@@ -197,7 +197,7 @@ DURU.registerExamen({
         "dem",
         "der"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "Dem Mann (mannelijk) en der Frau (vrouwelijk)."
     }
   ]

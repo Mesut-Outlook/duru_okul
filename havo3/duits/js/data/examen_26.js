@@ -183,10 +183,9 @@ DURU.registerExamen({
       "modelantwoord": "Mannelijk: dem; vrouwelijk: der; onzijdig: dem.",
       "sleutelwoorden": [
         "dem",
-        "der",
-        "dem"
+        "der"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "Dem (mannelijk), der (vrouwelijk), dem (onzijdig)."
     },
     {

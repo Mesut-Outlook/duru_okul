@@ -188,8 +188,8 @@ DURU.registerExamen({
       "vraag": "Een vrachtwagen van 15.000 kg en een kleine personenauto van 1000 kg rijden beiden met 50 km/h. Leg uit waarom de vrachtwagen een veel grotere remkracht nodig heeft om in dezelfde remtijd tot stilstand te komen.",
       "sleutelwoorden": [
         "massa",
-        "F = m * a / grotere massa vereist grotere kracht",
-        "traagheid"
+        "evenredig/f_rem/grotere kracht nodig",
+        "15 keer/verhouding massa/grotere massa grotere kracht"
       ],
       "minTreffers": 2,
       "modelantwoord": "Beide voertuigen moeten in dezelfde tijd van 50 km/h naar 0 km/h, dus ze hebben dezelfde vertraging (a). Volgens de formule F_rem = m × a is de benodigde remkracht recht evenredig met de massa. Omdat de vrachtwagen een 15 keer zo grote massa heeft, is er ook een 15 keer zo grote remkracht nodig.",

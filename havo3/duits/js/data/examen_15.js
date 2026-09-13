@@ -194,9 +194,7 @@ DURU.registerExamen({
       "vraag": "Wat gebeurt er met de klinkers ö en ü van modale werkwoorden in de verleden tijd?",
       "modelantwoord": "Ze verliezen hun Umlaut (ö wordt o, ü wordt u).",
       "sleutelwoorden": [
-        "verliezen Umlaut",
-        "zonder Umlaut",
-        "geen Umlaut"
+        "verlie/zonder umlaut/geen umlaut"
       ],
       "minTreffers": 1,
       "uitleg": "De Umlaut verdwijnt in de verleden tijd (können → konnte, müssen → musste)."

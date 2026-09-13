@@ -175,9 +175,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit hoe een arts met een <b>radioactieve tracer</b> en een <b>gammacamera</b> een nieraandoening kan opsporen bij een patiënt.",
       "sleutelwoorden": [
-        "tracer in bloedbaan spuiten",
-        "gammastraling verlaat lichaam",
-        "camera maakt beelden/functie zichtbaar"
+        "bloedbaan/tracer inspuiten/spuit tracer",
+        "gammastraling/straling dringt/door het lichaam",
+        "zichtbaar/ophopen/afgevoerd"
       ],
       "minTreffers": 2,
       "modelantwoord": "De arts spuit een kleine hoeveelheid van een gammastralende tracer met korte halveringstijd in de bloedbaan. De nieren filteren deze stof uit het bloed. Omdat gammastraling makkelijk door het lichaam heen dringt, registreert de externe gammacamera waar en hoe snel de tracer zich ophoopt en wordt afgevoerd. Een verstopping of slecht functionerende nier is zo direct zichtbaar.",

@@ -122,7 +122,7 @@ DURU.registerExamen({
       "vraag": "List one significant positive benefit and one limitation of using AI in homework assignments.",
       "sleutelwoorden": [
         "explains/helps/ideas/fast/support",
-        "lazy/inaccurate/mistakes/reliance/cheat"
+        "rely/lazy/reliance/cheat"
       ],
       "minTreffers": 1,
       "modelantwoord": "A benefit is that AI explains difficult concepts quickly; a limitation is that students might rely on it too much and not think for themselves.",

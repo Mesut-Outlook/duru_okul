@@ -183,8 +183,8 @@ DURU.registerExamen({
       "vraag": "Een sporter tilt een halter van 80 kg op vanaf de grond tot boven zijn hoofd (2,0 meter hoog) en houdt hem daar 5 seconden stil. Leg uit in welke fase hij <b>natuurkundige arbeid verricht</b> en in welke fase <b>niet</b>, en verklaar waarom.",
       "sleutelwoorden": [
         "optillen/omhoog bewegen wel arbeid",
-        "stilhouden geen arbeid/verplaatsing is nul",
-        "W = F * s"
+        "stilhouden/s = 0/0 joule arbeid",
+        "w = f/f × s/arbeid formule"
       ],
       "minTreffers": 2,
       "modelantwoord": "Tijdens het optillen van de halter is er een kracht omhoog én een verplaatsing van 2,0 m omhoog (s > 0), dus verricht hij positieve arbeid (W = F × s = 800 N × 2 m = 1600 J). Tijdens het 5 seconden stilhouden boven zijn hoofd is de verplaatsing s = 0 meter; volgens de formule W = F × s verricht hij dan natuurkundig gezien 0 Joule arbeid.",

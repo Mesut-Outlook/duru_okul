@@ -194,9 +194,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een auto rijdt met 100 km/h. De bestuurder trapt het gaspedaal dieper in om te versnellen naar 120 km/h. Beschrijf wat er gebeurt met de voorwaartse kracht en de tegenkrachten totdat de auto weer een constante snelheid heeft bereikt.",
       "sleutelwoorden": [
-        "motorkracht groter/voorwaartse kracht groter",
-        "luchtweerstand stijgt/luchtweerstand groter",
-        "heffen elkaar op/resulterende kracht nul"
+        "motorkracht/vergroot/groter wordt",
+        "luchtweerstand/stijgt de luchtweerstand/groter wordt",
+        "resulterende kracht/nul wordt/fres 0"
       ],
       "minTreffers": 2,
       "modelantwoord": "De bestuurder vergroot de motorkracht waardoor Fmotor > Ftegen, er ontstaat een positieve resulterende kracht en de auto versnelt. Doordat de snelheid toeneemt, stijgt de luchtweerstand. Bij 120 km/h is de luchtweerstand weer precies even groot geworden als de motorkracht, waardoor de resulterende kracht weer nul wordt (Fres = 0) en de snelheid constant blijft.",
@@ -207,8 +207,8 @@ DURU.registerExamen({
       "vraag": "Op een wrijvingsloze baan worden twee wagentjes gelijktijdig afgeschoten met exact dezelfde kracht. Wagentje 1 heeft een massa van 800 gram en wagentje 2 heeft een massa van 150 gram. Beargumenteer natuurkundig waarom het lichte wagentje na de afstoot een veel hogere snelheid heeft.",
       "sleutelwoorden": [
         "grotere versnelling/hogere versnelling",
-        "F = m * a/Fres = m . a/tweede wet van newton/Newton",
-        "traagheid/minder traagheid/minder verzet"
+        "a = f / m/f = m * a/tweede wet van newton",
+        "kleinere massa/minder massa/minder traagheid"
       ],
       "minTreffers": 2,
       "modelantwoord": "Voorwerp B bereikt een veel hogere snelheid. Volgens a = F / m krijgt voorwerp B door zijn veel kleinere massa een enorm veel grotere versnelling bij dezelfde kracht van 20 N. Daardoor wint voorwerp B in dezelfde 0,2 seconden veel meer snelheid dan het zware voorwerp A.",

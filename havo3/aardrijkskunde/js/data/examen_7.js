@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom fossielen vrijwel uitsluitend worden aangetroffen in sedimentgesteente en waarom ze ontbreken in stollings- en metamorf gesteente.",
-      sleutelwoorden: ["sedimentatie bedekt organismen/zuurstofloos", "stollingsgesteente hete lava/verbranding", "metamorfose hoge druk/hitte vernietigt fossielen"],
+      sleutelwoorden: ["bedekt/afgesloten van zuurstof", "verbrandt/magma", "verpletterd/herkristalliseerd"],
       minTreffers: 2,
       modelantwoord: "In sedimentgesteente worden dode organismen snel bedekt onder lagen zand, klei of kalk, waardoor ze worden afgesloten van zuurstof en kunnen fossiliseren. In stollingsgesteente ontbreekt elk fossiel omdat vloeibaar magma van 1000 °C alle organische resten direct verbrandt. Bij metamorfe gesteenten worden eventuele fossiele resten door de extreme druk en vervorming geheel verpletterd en onherkenbaar herkristalliseerd.",
       uitleg: "Zachte afzetting behoudt fossielen; hitte en deformatie vernietigen organische structuren."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom gidsfossielen onmisbaar zijn om gesteentelagen die duizenden kilometers uit elkaar liggen aan hetzelfde tijdvak te koppelen.",
-      sleutelwoorden: ["korte bestaansduur/exacte datering", "wereldwijde verspreiding in oceanen", "laagcorrelatie/zelfde geologische tijd"],
+      sleutelwoorden: ["korte geologische periode/uitstierven", "wijdverspreid/oceanen", "kalklaag/zekerheid"],
       minTreffers: 2,
       modelantwoord: "Gidsfossielen zijn afkomstig van diersoorten die wereldwijd wijdverspreid leefden in de oceanen, maar slechts gedurende een heel korte geologische periode bestonden voordat ze uitstierven. Als een geoloog in Europa en een geoloog in Zuid-Amerika exact hetzelfde gidsfossiel in een kalklaag aantreffen, weten zij met zekerheid dat beide lagen in exact hetzelfde tijdvak zijn gevormd.",
       uitleg: "Korte bestaansperiode + wereldwijde spreiding = perfecte universele geologische tijdsmarkering."

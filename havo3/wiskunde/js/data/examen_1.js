@@ -193,7 +193,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "In een vereniging van 180 leden stemmen 45 leden voor een voorstel. Bereken de sectorhoek in graden voor een cirkeldiagram en toon de formule.",
       "sleutelwoorden": [
-        "45/180",
+        "0,25/25%",
         "90",
         "90°"
       ],

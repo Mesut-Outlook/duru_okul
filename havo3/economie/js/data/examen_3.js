@@ -182,7 +182,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Bereken de maandelijkse kosten van een zorgverzekering die € 390 per kwartaal bedraagt. Geef de berekening.",
       "sleutelwoorden": [
-        "390 / 3",
+        "per maand",
         "130"
       ],
       "minTreffers": 1,
@@ -194,7 +194,7 @@ DURU.registerExamen({
       "vraag": "Noem twee maatregelen die een gezin kan nemen om een begrotingstekort op te lossen.",
       "sleutelwoorden": [
         "bezuinigen/uitgaven verlagen/besparen",
-        "meer werken/inkomsten verhogen/extra baan"
+        "extra inkomsten/overwerken/bijbaan"
       ],
       "minTreffers": 1,
       "modelantwoord": "1. Bezuinigen op variabele of incidentele uitgaven (abonnementen opzeggen), 2. Extra inkomsten genereren (overwerken, bijbaan).",

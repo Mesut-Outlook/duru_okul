@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Schrijf in het Frans een korte introductiezin waarin je vertelt hoe je heet en hoe oud je bent.",
       "sleutelwoorden": [
-        "m'appelle/je suis/nom",
-        "j'ai/ans"
+        "m appelle/mappelle/je suis/mon nom",
+        "j ai/jai"
       ],
       "minTreffers": 1,
       "modelantwoord": "Je m'appelle Duru et j'ai 14 ans.",

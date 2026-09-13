@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Write a short polite response concurring with a classmate who states that speaking multiple tongues brings immense benefits on trips abroad.",
       "sleutelwoorden": [
-        "completely/definitely/concur/same view/agree",
-        "valuable/helpful/practical/essential/advantage"
+        "agree/completely/definitely/absolutely/same view/you re right",
+        "easier/enjoyable/helpful/valuable/practical/useful"
       ],
       "minTreffers": 1,
       "modelantwoord": "I completely agree with you. Knowing different languages makes traveling much easier and more enjoyable.",

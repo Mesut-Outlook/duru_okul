@@ -194,7 +194,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Bereken de enkelvoudige rente na 9 maanden over een spaarbedrag van € 6.000 bij een rente van 2% per jaar. Toon de berekening.",
       "sleutelwoorden": [
-        "(6000 * 2 * 9) / 1200",
+        "108.000/108000",
         "90"
       ],
       "minTreffers": 1,

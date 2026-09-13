@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Explain the difference between losing keys in the past versus currently missing keys.",
       "sleutelwoorden": [
-        "finished/yesterday/earlier",
-        "result/current/still/missing/now"
+        "finished/yesterday/lost",
+        "result/still/now"
       ],
       "minTreffers": 1,
       "modelantwoord": "'I lost my keys' is past, while 'I have lost my keys' has a direct result in the present (they are still missing now).",

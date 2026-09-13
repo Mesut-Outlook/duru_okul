@@ -61,7 +61,7 @@ Oefen soruları ek `niveau` (zorluk 1–3) taşır; sınav soruları taşımaz. 
 
 | type | nerede | `antwoord` | notlar |
 |---|---|---|---|
-| `mc` | oefen + sınav | 0-tabanlı **index** | `opties:[...]` şart |
+| `mc` | oefen + sınav | 0-tabanlı **index** | `opties:[...]` şart; sınavda gösterim sırası her denemede karışır |
 | `waaronwaar` | oefen + sınav | **boolean** | doğru/yanlış |
 | `invoer` | sadece oefen | **string** | `"|"` = kabul edilen yazımlar; opsiyonel `eenheid`, `tolerantie`, `figuur` |
 | `invul` | sadece sınav | **string** | `"|"` = kabul edilen yazımlar |
@@ -75,8 +75,14 @@ Oefen soruları ek `niveau` (zorluk 1–3) taşır; sınav soruları taşımaz. 
 { type:"open", vraag:"...", sleutelwoorden:["gemeente/de gemeente","rijk"], minTreffers:1,
                modelantwoord:"...", uitleg:"..." }
 ```
-**Cevap denetimi:** `invoer` (oefen, `engine.js`) önce sayısal karşılaştırılır (`parseFloat`,
-`tolerantie` ya da `max(|beklenen|*0.02, 0.01)`), sayısal değilse `"|"` ile bölünüp normalize edilmiş tam eşleşme aranır.
+**Cevap denetimi:** `invoer` (oefen, `engine.js`) **önce** `"|"` alternatiflerinden biriyle birebir metin
+eşleşmesi aranır (2026-09-13'ten beri — yoksa `parseFloat("1.000")` = 1 olur ve `"1000|1.000"` sorusunda
+doğru yazılmış "1.000" reddedilirdi); metin karşılaştırmasında kıvrık apostrof (’) = düz ('), sondaki
+`. ! ? ; :` sayılmaz ("amuse-toi bien" = "amuse-toi bien!"). Eşleşme yoksa sayısal karşılaştırma
+(`parseFloat`, `tolerantie` ya da `max(|beklenen|*0.02, 0.01)`), sayısal değilse normalize edilmiş tam eşleşme.
+**Sınavda mc şık sırası** (`exams.js → optieVolgorde`, 2026-09-13): her denemede karıştırılır; `antwoorden`
+ve `beoordelingen` **orijinal index**'le saklanır, review şık metnini gösterir → eski denemeler etkilenmez.
+Şıkları birbirine/konuma atıf yapan sorular ("geen van beide", "alle bovenstaande") sabit kalır.
 `invul` (sınav, `exams.js → invulGoed`, 2026-09-12'den beri): `"|"` alternatiflerinden **sayı (+ eenheid)**
 olanlar (`15`, `2,0 m/s²`, `9%`) öğrencinin yazdığı ilk sayıyla sayısal karşılaştırılır; tolerans
 `tolerantie` ya da **son verilen ondalığın yarım birimi** (`12,5` → ±0,05, `1914` → ±0,5 — yıllarda %2 kuralı

@@ -182,9 +182,8 @@ DURU.registerExamen({
       "vraag": "Hoe zeg je in het Duits dat het vandaag bewolkt is en tien graden?",
       "modelantwoord": "Heute ist es bewölkt und es sind zehn Grad.",
       "sleutelwoorden": [
-        "bewölkt/wolkig",
-        "zehn Grad",
-        "Grad"
+        "bewölkt/bewoelkt/wolkig",
+        "zehn grad/10 grad"
       ],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'bewölkt' en 'zehn Grad'."
@@ -194,8 +193,8 @@ DURU.registerExamen({
       "vraag": "Wat is het verschil in betekenis tussen de Duitse woorden 'der See' en 'das Meer'?",
       "modelantwoord": "Der See is een meer (binnenwater) en das Meer is de zee/oceaan.",
       "sleutelwoorden": [
-        "meer/binnenwater",
-        "zee/oceaan"
+        "see is een meer/see = meer/see meer/see betekent meer/binnenwater/binnenmeer",
+        "meer is de zee/meer = zee/meer zee/meer betekent zee/oceaan"
       ],
       "minTreffers": 1,
       "uitleg": "Der See = meer; das Meer = zee."

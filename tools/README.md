@@ -38,13 +38,24 @@ Yeni kurallar düzeltme öncesi yedekte bunların hepsini yakaladı, 12 derste y
 Çıkış kodu: ihlal varsa 1. 9 ve 10 numaralı kurallar **hedef**tir, dersin brief'inde farklı bir
 ölçü verildiyse ihlal sayılmayabilir — raporu okurken bunu ayırt et.
 
+**Bilinçli istisnalar — `tools/gate_uitzonderingen.json`** (2026-09-13): `{<vak>:{<kural>:{"<id>#<n>":"gerekçe"}}}`.
+Yalnız kural 1, 2 ve 8'in "soruda geçiyor" uyarısı için; yalnız **yayında olduğu için metni değiştirilemeyen**
+sorular ya da kuralın yapısal olarak uymadığı tip (okuduğunu anlama: cevap alıntıdaki metinde). Kural 2'de
+tekrar eden grubun **tüm** üyeleri listelenmeli (yoksa listedekiyle aynı metinli yeni bir soru sessizce muaf
+olurdu). Gate çıktısı muaf sayısını "N bilincli istisna" diye gösterir. **Yeni içerik için istisna yazılmaz.**
+
 ## `spread.py` — doğru şık dağıtımı
 
 ```bash
 python3 -c "import sys; sys.path.insert(0,'tools'); import spread; print(spread.spread_file('havo3/<vak>/js/data/examen_1.js'))"
 ```
 
-Doğru cevabı dosya içinde sırayla A→B→C→D pozisyonlarına taşır, `antwoord` index'ini günceller.
+Doğru cevabı dosya içinde A/B/C/D'ye **dengeli ama rastgele** dağıtır (her 4'lü blok karıştırılır, dosya
+adıyla tohumlanır), `antwoord` index'ini günceller. ⚠️ 2026-09-13'e kadar **sırayla** 0,1,2,3,0,1,… yazıyordu →
+12 dersin neredeyse tüm sınavlarında doğru şık tahmin edilebilir bir döngüdeydi. Artık sınav motoru
+(`exams.js → optieVolgorde`) şıkları her denemede zaten karıştırıyor; `spread.py` yalnız veri dağılımı
+(gate kural 3) ve oefenquiz'ler için. **Yayındaki bir sınava çalıştırma** — şık sırası değişirse eski
+denemelerin `antwoorden` index'leri başka şıkkı gösterir.
 **Soru metnine, şık metnine, `uitleg`'e dokunmaz** — yalnız sıra değişir.
 
 `spread_file()` kullan: iki dosya biçimini (çok satırlı `opties: [` ve tek satırlık
@@ -65,3 +76,24 @@ Tüm dersleri tarar. Motor (`exams.js`) `sleutelwoorden`'i `tekst.indexOf(altern
 - Uzun açıklama `modelantwoord`'a yazılır, `sleutelwoorden`'e değil.
 - `minTreffers` ≤ sleutelwoord sayısı olmalı; aksi hâlde soru asla "goed" olamaz.
 - Anahtara `"voordeel:"` gibi önek koyma — öğrenci öyle yazmaz.
+
+**2026-09-13 eklenen iki test** (dersin gerçek `exams.js → beoordeel` fonksiyonuyla, kopya mantık değil):
+- **`modelantwoord` kendi anahtarlarıyla "goed" almalı.** 376 open sorunun ~147'si almıyordu (çoğu 0 puan):
+  anahtarlar cümle hâlindeydi, çekim farkı (`weigeren`/`weigerden`), ayrılabilir fiil (`neemt … toe`), `|`
+  ile ayrılmış alternatif (motor yalnız `/` tanır), `m/s²` gibi `/` içeren birim (alternatif ayırıcı sanılır).
+- **Soru metnini yapıştırmak 0 puan almalı** (anahtar zaten soruda geçiyorsa yankı puanı). Alıntılı
+  okuduğunu anlama soruları (`Lees: '…'` ya da 6+ kelimelik alıntı) muaf: cevap tanım gereği metinde.
+
+## `pdf_check.py` — kitap PDF'i kalite kapısı (2026-09-13)
+
+```bash
+python3 tools/pdf_check.py inbox/2026-2027/frans/*.pdf   # sayfa sayfa sınıflandır + kontak sayfası
+python3 tools/pdf_check.py --index                        # inbox/2026-2027/PDF_INDEX.md'yi yeniden yazar
+```
+
+Her sayfayı `BOS` / `ISKELET` (yükleniyor) / `MENU` (yalnız açık okuyucu menüsü) / `ARAYUZ` (reader
+arayüzü görünüyor) / `KOPYA` (bir öncekinin aynısı) / `OK` olarak sınıflandırır; sorun varsa exit 1.
+Kitap materyalinden içerik üretmeden önce PDF ✅ olmalı: 1 Eylül'de frans'ın 40 sınavı %100 boş
+PDF'lerle üretildi. Noordhoff kitapları yalnız `tools/noordhoff_export.py` + `noordhoff_books.json` ile
+çekilir (eski `export_*` betikleri yerine; tarayıcı profili kilitli → tek süreç, sıralı).
+

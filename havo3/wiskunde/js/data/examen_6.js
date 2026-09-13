@@ -193,9 +193,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een abonnement kostte vorig jaar € 25,- per maand en kost dit jaar € 28,50 per maand. Bereken de procentuele toename en laat de berekening zien.",
       "sleutelwoorden": [
-        "28,50 - 25 = 3,50",
-        "3,50 / 25",
-        "14|14%"
+        "3,50/3 50",
+        "100%/keer 100",
+        "14%/14"
       ],
       "minTreffers": 1,
       "modelantwoord": "Verschil = 28,50 - 25 = € 3,50. Procentuele stijging = (3,50 / 25) × 100% = 14% toename.",
@@ -205,9 +205,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Op een smartphone van € 320,- wordt een korting van 15% gegeven. Toon aan dat de nieuwe verkoopprijs € 272,- bedraagt.",
       "sleutelwoorden": [
-        "320 * 0,15 = 48",
-        "320 - 48 = 272",
-        "320 * 0,85"
+        "0,15",
+        "48",
+        "0,85/85"
       ],
       "minTreffers": 1,
       "modelantwoord": "Korting = 0,15 × € 320 = € 48,-. Nieuwe prijs = € 320 - € 48 = € 272,- (of direct: 320 × 0,85 = € 272,-).",

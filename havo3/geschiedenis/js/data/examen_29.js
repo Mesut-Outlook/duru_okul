@@ -176,7 +176,7 @@
         vraag: "Leg uit waarom multinationals hun productie vanaf de jaren 1960 verplaatsten naar landen als Indonesië, Vietnam en Bangladesh.",
         sleutelwoorden: [
           "lagere lonen/goedkoper produceren",
-          "goedkoop/lagelonenland"
+          "goedko/lagelonenland"
         ],
         minTreffers: 1,
         modelantwoord: "Multinationals wilden dezelfde producten goedkoper maken en verplaatsten hun productie daarom naar landen met veel lagere lonen dan in het Westen, zoals Indonesië, Vietnam en Bangladesh.",

@@ -121,8 +121,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Explain the clear distinction between telling someone that an action is forbidden versus stating that it is not required.",
       "sleutelwoorden": [
-        "prohibited/illegal/not allowed/banned",
-        "unnecessary/optional/choice/freedom"
+        "must not/mustn t/prohibit/banned/illegal/not allowed",
+        "don t have to/do not have to/doesn t have to/no obligation/optional/unnecessary"
       ],
       "minTreffers": 1,
       "modelantwoord": "'Must not' is a strict prohibition (forbidden), while 'don't have to' means there is no obligation (it is optional).",

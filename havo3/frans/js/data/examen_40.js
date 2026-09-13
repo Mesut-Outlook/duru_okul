@@ -121,7 +121,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg in het kort uit wat de twee belangrijkste verschillen zijn tussen de <b>passé composé met avoir</b> en de <b>passé composé met être</b>.",
       "sleutelwoorden": [
-        "geen aanpassing/meeste werkwoorden",
+        "meeste/geen aanpassing",
         "être/beweging/huis/accord/past zich aan/vrouwelijk/meervoud"
       ],
       "minTreffers": 2,

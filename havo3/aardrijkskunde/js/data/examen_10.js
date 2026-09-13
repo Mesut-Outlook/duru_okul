@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe de geologische opbouw van Groningen (poreus reservoir, ondoordringbare afsluitlaag) zorgde voor het ontstaan en vasthouden van het aardgasveld.",
-      sleutelwoorden: ["steenkool onderin vormt gas/moedergesteente", "poreus zandsteen als reservoirgesteente", "ondoordringbare zoutlaag/Zechstein als afsluiting"],
+      sleutelwoorden: ["moedergesteente", "reservoirgesteente", "zechstein/zoutlaag"],
       minTreffers: 2,
       modelantwoord: "Diep in de ondergrond vormden de Carboon-steenkoollagen onder hoge temperatuur en druk het aardgas (moedergesteente). Dit gas steeg op en verzamelde zich in de poriën van de bovenliggende zandsteenlaag uit het Perm (reservoirgesteente). Bovenop dit zandsteen lag een dikke, volkomen dichte zoutlaag (Zechstein), die als afsluitend gesteente fungeerde en voorkwam dat het gas naar de oppervlakte kon ontsnappen.",
       uitleg: "Combinatie van Carboon-steenkool (bron), Perm-zandsteen (reservoir) en Zechstein-zout (afsluiting) maakte het gasveld mogelijk."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beredeneer waarom de sluiting van de Limburgse steenkoolmijnen in de jaren 1960/1970 leidde tot grote sociaaleconomische problemen in de regio en hoe de overheid dit probeerde op te vangen.",
-      sleutelwoorden: ["massale werkloosheid/tienduizenden banen verloren", "mijnstreek economisch ontwricht", "overheidsdiensten verhuizen/CBS/DAF"],
+      sleutelwoorden: ["werkloosheid", "economische neergang/neergang", "cbs/daf/rijksdiensten"],
       minTreffers: 2,
       modelantwoord: "Tienduizenden mijnwerkers en toeleveranciers verloren in korte tijd hun baan, waardoor Zuid-Limburg kampte met torenhoge werkloosheid en economische neergang. Om dit verlies te compenseren, verhuisde de overheid rijksdiensten naar Limburg (zoals het CBS naar Heerlen en het ABP) en stimuleerde zij nieuwe bedrijven zoals de DAF-autofabriek (later NedCar) in Born.",
       uitleg: "Mijnsluiting veroorzaakte massale werkloosheid; spreiding van rijksdiensten en industriële subsidies moesten de regio herstellen."

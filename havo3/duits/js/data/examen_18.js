@@ -197,7 +197,7 @@ DURU.registerExamen({
         "ein",
         "eine"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "Ein (mannelijk) en eine (vrouwelijk)."
     }
   ]

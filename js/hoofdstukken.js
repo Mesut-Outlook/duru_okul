@@ -473,18 +473,32 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-frans-u1-v2": 1,
         "ex-h3-frans-u1-v3": 1,
         "ex-h3-frans-u1-v4": 1,
-        "ex-h3-frans-u1-v5": 1
+        "ex-h3-frans-u1-v5": 1,
+        "ex-h3-frans-u1-v6": 1,
+        "ex-h3-frans-u1-v7": 1,
+        "ex-h3-frans-u1-v8": 1,
+        "ex-h3-frans-u1-v9": 1,
+        "ex-h3-frans-u1-v10": 1,
+        "ex-h3-frans-u2-v1": 2,
+        "ex-h3-frans-u2-v2": 2,
+        "ex-h3-frans-u2-v3": 2,
+        "ex-h3-frans-u2-v4": 2,
+        "ex-h3-frans-u2-v5": 2
       },
       "onderwerpHoofdstuk": {
         "fr-u1-1": 1,
         "fr-u1-2": 1,
         "fr-u1-3": 1,
         "fr-u1-4": 1,
+        "fr-u2-1": 2,
+        "fr-u2-2": 2,
+        "fr-u2-3": 2,
+        "fr-u2-4": 2,
         "th-h3-frans-u1-vocab": 1
       },
       "aantalExamens": {
-        "1": 10,
-        "2": 5,
+        "1": 15,
+        "2": 10,
         "3": 5,
         "4": 5,
         "5": 5,
@@ -493,7 +507,8 @@ window.DURU_HOOFDSTUKKEN = {
         "8": 5
       },
       "aantalOnderwerpen": {
-        "1": 5
+        "1": 5,
+        "2": 4
       }
     },
     "geschiedenis": {
@@ -713,7 +728,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-36": 1,
         "ex-h3-natuurkunde-37": 1,
         "ex-h3-natuurkunde-38": 1,
-        "ex-h3-natuurkunde-39": 1
+        "ex-h3-natuurkunde-39": 1,
+        "ex-h3-natuurkunde-40": 5,
+        "ex-h3-natuurkunde-41": 5,
+        "ex-h3-natuurkunde-42": 5,
+        "ex-h3-natuurkunde-43": 5,
+        "ex-h3-natuurkunde-44": 5
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -737,6 +757,11 @@ window.DURU_HOOFDSTUKKEN = {
         "h4-3-warmtetransport-isolatie": 4,
         "h4-4-soortelijke-weerstand": 4,
         "h4-5-sensoren-ntc-ptc-ldr": 4,
+        "h5-1-licht-en-beeld": 5,
+        "h5-2-breking": 5,
+        "h5-3-construeren-bij-lenzen": 5,
+        "h5-4-oogafwijkingen": 5,
+        "h5-5-rekenen-aan-lenzen": 5,
         "h8-1-hefbomen": 8,
         "h8-2-rekenen-hefbomen": 8,
         "h8-3-overbrengingen": 8,
@@ -748,6 +773,7 @@ window.DURU_HOOFDSTUKKEN = {
         "2": 5,
         "3": 5,
         "4": 5,
+        "5": 5,
         "8": 5
       },
       "aantalOnderwerpen": {
@@ -755,6 +781,7 @@ window.DURU_HOOFDSTUKKEN = {
         "2": 5,
         "3": 5,
         "4": 5,
+        "5": 5,
         "8": 5
       }
     },

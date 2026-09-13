@@ -177,7 +177,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "werklijn",
         "loodlijn/loodrecht",
-        "afstand"
+        "lengte/arm van de kracht/meten"
       ],
       "minTreffers": 2,
       "modelantwoord": "1. Teken of verleng de werklijn van de kracht met een stippellijn in beide richtingen. 2. Leg de nullijn van de geodriehoek langs de werklijn en schuif totdat de liniaal door het draaipunt (D) gaat. 3. Teken een loodrechte lijn (hoek van 90°) vanuit het draaipunt naar de werklijn. 4. Meet de lengte van deze loodlijn op; dat is de arm van de kracht (r).",
@@ -187,12 +187,13 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een kraan tilt een zware last. Beredeneer met de hefboomwet waarom het gevaarte dreigt om te slaan en hoe dit mechanisch voorkomen wordt.",
       "sleutelwoorden": [
-        "moment/draaikracht",
-        "tegengewicht/balans/contragewicht"
+        "moment/kracht x arm/kracht maal arm/kracht × arm",
+        "arm/afstand",
+        "contragewicht/tegengewicht/steunpo/ballast"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Dubbelzijdige hefbomen (draaipunt ligt tussen de twee krachten): 1. Schaar (of snoeischaar), 2. Wipwap (of koevoet/combinatietang). Enkelzijdige hefbomen (beide krachten liggen aan dezelfde kant van het draaipunt): 1. Kruiwagen, 2. Notenkraker (of flesopener/pincet).",
-      "uitleg": "Classificatie van hefbomen in het dagelijks leven."
+      "modelantwoord": "De last hangt ver van het kantelpunt, dus aan een lange arm: het moment (kracht × arm) van de last is groot. Is dat moment groter dan het tegenwerkende moment van de kraan zelf, dan slaat de kraan om. Dit voorkom je met een contragewicht aan de andere kant van het draaipunt en met uitgeschoven steunpoten, zodat het tegenmoment groter wordt (moment links = moment rechts).",
+      "uitleg": "Hefboomwet: F1 × r1 = F2 × r2. De kraan blijft staan zolang het moment van het contragewicht (plus het eigen gewicht van de kraan) minstens even groot is als het moment van de last."
     }
   ]
 });

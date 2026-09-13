@@ -169,9 +169,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom water uitermate geschikt is als transportmiddel in een centrale verwarmingsinstallatie (cv) in woonhuizen. Betrek daarin de <b>soortelijke warmte</b> van water.",
       "sleutelwoorden": [
-        "zeer hoge soortelijke warmte",
+        "4180/j per kg/veel warmte-energie",
         "hoge soortelijke warmte/veel warmte",
-        "warmtetransport/langzaam afkoelen"
+        "transporteren/radiatoren/afkoelen langzaam"
       ],
       "minTreffers": 2,
       "modelantwoord": "Water heeft een uitzonderlijk hoge soortelijke warmte (4180 J/kg·K). Dit betekent dat een relatief kleine hoeveelheid rondgepompt water in de cv-ketel een enorme hoeveelheid warmte-energie kan opnemen en transporteren naar de radiatoren in de kamers zonder snel drastisch af te koelen. Bovendien is water goedkoop, vloeibaar en veilig.",
@@ -181,8 +181,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een warm stuk koper van 200 gram met een temperatuur van 90 °C wordt in een bekerglas met 300 gram water van 20 °C gelegd. Leg uit wat er gebeurt met de warmte en de eindtemperatuur van het mengsel.",
       "sleutelwoorden": [
-        "warmte stroomt/koper naar water",
-        "koelt af/warmt op",
+        "warmte af/afgestaan/warmte stroomt",
+        "koelt/temperatuur stijgt/warmt op",
         "thermisch evenwicht/dezelfde temperatuur/gelijke temperatuur"
       ],
       "minTreffers": 2,

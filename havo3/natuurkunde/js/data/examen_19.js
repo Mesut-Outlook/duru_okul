@@ -163,9 +163,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Beredeneer met behulp van de formule R = (ρ · l) / A wat er gebeurt met de weerstand van een draad als je: 1) de lengte verdrievoudigt, 2) de doorsnede verdubbelt, 3) beide tegelijk doet.",
       "sleutelwoorden": [
-        "3x zo groot/3x groter",
-        "2) doorsnede 2x zo groot -> weerstand gehalveerd / 0,5x",
-        "3) beide -> factor 3/2 = 1,5x zo groot"
+        "3 keer zo groot/drie keer groter/drie keer zo groot",
+        "gehalveerd/half zo groot/0,5 keer",
+        "1,5 keer zo groot/anderhalf keer/1,5x"
       ],
       "minTreffers": 3,
       "modelantwoord": "1. Lengte verdrievoudigen: Omdat R ~ l, wordt de weerstand 3 keer zo groot (3×). 2. Doorsnede verdubbelen: Omdat R ~ 1/A, wordt de weerstand gehalveerd (0,5×). 3. Beide tegelijk: De nieuwe weerstand wordt 3 / 2 = 1,5 keer zo groot als de oorspronkelijke weerstand.",
@@ -175,8 +175,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom hoogspanningskabels vaak van aluminium met een stalen kern gemaakt worden in plaats van massief koper, ondanks dat koper een iets betere geleider is.",
       "sleutelwoorden": [
-        "lichter/lage dichtheid",
-        "stalen kern geeft treksterkte",
+        "licht/lagere dichtheid/lichter",
+        "treksterkte/binnenkern/mechanische sterkte",
         "koper te zwaar/duur"
       ],
       "minTreffers": 2,

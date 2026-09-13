@@ -193,9 +193,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Gegeven zijn de cijfers: 4, 9, 6, 7, 9, 8, 6, 7, 7. Bepaal het gemiddelde, de mediaan en de modus van deze cijfers.",
       "sleutelwoorden": [
-        "gemiddelde = 7|gemiddelde 7",
-        "mediaan = 7|mediaan 7",
-        "modus = 7|modus 7"
+        "63/gemiddelde 7",
+        "5e getal/mediaan 7",
+        "modus = 7/modus 7"
       ],
       "minTreffers": 1,
       "modelantwoord": "Geordend: 4, 6, 6, 7, 7, 7, 8, 9, 9 (n = 9). Som = 63. Gemiddelde = 63 / 9 = 7. Mediaan = 5e getal = 7. Modus = 7 (komt 3 keer voor).",
@@ -206,7 +206,7 @@ DURU.registerExamen({
       "vraag": "Leg uit waarom een makelaar bij huizenprijzen in een wijk liever de mediaan vermeldt dan het gemiddelde.",
       "sleutelwoorden": [
         "uitschieter/villa/miljoenenwoning/duur huis",
-        "gemiddelde omhoog trekt/vertekend beeld/mediaan betrouwbaarder"
+        "betrouwbaarder/omhoog trekt/vertekend"
       ],
       "minTreffers": 1,
       "modelantwoord": "Als er in een wijk één extreem duur landhuis van 3 miljoen euro staat, trekt dat het gemiddelde enorm omhoog. De mediaan trekt zich niets aan van die ene uitschieter en geeft een veel betrouwbaarder beeld van wat een 'normale' woning in die wijk kost.",

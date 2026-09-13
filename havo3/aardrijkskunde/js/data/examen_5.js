@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg het verschil uit tussen doorvoer en wederuitvoer en beredeneer welke van de twee economisch gunstiger is voor Nederland.",
-      sleutelwoorden: ["doorvoer geen eigendom/direct door", "wederuitvoer wel eigendom/lichte bewerking", "wederuitvoer meer winst/toegevoegde waarde"],
+      sleutelwoorden: ["direct door/geen eigendom", "tijdelijk eigendom/opgeslagen", "toegevoegde waarde/meer winst"],
       minTreffers: 2,
       modelantwoord: "Bij doorvoer reizen goederen direct door naar het buitenland zonder dat ze eigendom worden van een Nederlands bedrijf; Nederland verdient alleen aan transport en overslag. Bij wederuitvoer worden de goederen tijdelijk eigendom van een Nederlands bedrijf, vaak opgeslagen, gekeurd of herverpakt, en vervolgens met winst doorverkocht. Wederuitvoer levert daarom veel meer toegevoegde waarde en werkgelegenheid op.",
       uitleg: "Wederuitvoer genereert hogere winstmarges en banen in opslag en bewerking dan pure doorvoer."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Beredeneer waarom Brainport Eindhoven en de Mainport Rotterdam elkaar versterken in de internationale concurrentiepositie van Nederland.",
-      sleutelwoorden: ["Rotterdam brengt grondstoffen/onderdelen", "Brainport levert hoogwaardige exportproducten/machines", "multimodale logistiek en toptechnologie"],
+      sleutelwoorden: ["grondstoffen/componenten", "chipmachines/exportwaarde", "kenniseconomie/logistieke ketens"],
       minTreffers: 2,
       modelantwoord: "Mainport Rotterdam zorgt voor een efficiënte invoer van hoogwaardige componenten en grondstoffen en de snelle export van zware industriële goederen naar wereldwijde markten. Brainport Eindhoven ontwikkelt de technologie, kennis en chipmachines die enorme exportwaarde creëren en logistieke ketens aansturen. Samen maken zij Nederland tot een complete en aantrekkelijke handels- en kenniseconomie.",
       uitleg: "Wisselwerking tussen fysieke logistieke mainport en technologische kennisregio vormt de economische ruggengraat."

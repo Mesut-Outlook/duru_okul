@@ -175,8 +175,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Rangschik de volgende vier stralingssoorten van de laagste naar de hoogste frequentie: radio, warmtestraling (IR), het voor ons oog waarneembare licht, en medische foto-straling (X-ray). Licht je keuze toe.",
       "sleutelwoorden": [
-        "korte golflengte/korter",
-        "hogere energie/meer energie/frequentie",
+        "golflengte/korte golflengte/frequentie omgekeerd",
+        "hogere energie/meer energie/energierijk",
         "volgorde/rangschikking"
       ],
       "minTreffers": 3,
@@ -187,12 +187,14 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Noem de twee uiterste stralingssoorten van het complete spectrum (de laagste en hoogste frequentie) en geef van elk een medische of technische toepassing.",
       "sleutelwoorden": [
-        "radiogolven/laag",
-        "gammastraling/röntgen/hoog"
+        "radio",
+        "gamma",
+        "telefoon/televisie/tv/mri/zender/communicatie/wifi",
+        "kanker/tumor/sterilis/radiotherapie/bestralen/bestraling"
       ],
-      "minTreffers": 2,
-      "modelantwoord": "Als patiënt krijg je slechts af en toe één foto (een verwaarloosbaar kleine stralingsdosis zonder gezondheidsrisico). De assistente maakt echter dagelijks tientallen foto's. Als zij telkens in de ruimte zou blijven, telt de totale opgetelde stralingsdosis (cumulatieve dosis) op tot een gevaarlijk niveau. Daarom moet zij zich beroepsmatig beschermen achter lood.",
-      "uitleg": "Verschil tussen eenmalige lage dosis voor patiënt en herhaalde beroepsmatige blootstelling."
+      "minTreffers": 3,
+      "modelantwoord": "De laagste frequentie heeft radiostraling (radiogolven): die gebruik je voor radio, tv en mobiele telefoons (en bij een MRI-scan). De hoogste frequentie heeft gammastraling: daarmee bestraal je kankercellen (radiotherapie) of steriliseer je medische instrumenten.",
+      "uitleg": "Het elektromagnetisch spectrum loopt van radiogolven (lange golflengte, laagste frequentie) via microgolven, infrarood, zichtbaar licht, uv en röntgenstraling naar gammastraling (kortste golflengte, hoogste frequentie en de meeste energie)."
     }
   ]
 });

@@ -182,9 +182,7 @@ DURU.registerExamen({
       "vraag": "Hoe vraag je in het Duits hoe laat een feestje of concert begint?",
       "modelantwoord": "Um wie viel Uhr fängt die Party / das Konzert an?",
       "sleutelwoorden": [
-        "Um wie viel Uhr",
-        "fängt an",
-        "Wann beginnt"
+        "um wie viel uhr/wann beginnt/fängt"
       ],
       "minTreffers": 1,
       "uitleg": "Je vraagt 'Um wie viel Uhr fängt es an?'."
@@ -195,7 +193,7 @@ DURU.registerExamen({
       "modelantwoord": "Omdat vrouwelijke woorden in de 4e naamval hetzelfde blijven als in de 1e naamval (die blijft die).",
       "sleutelwoorden": [
         "vrouwelijk",
-        "blijft hetzelfde/gelijk",
+        "hetzelfde/gelijk",
         "die blijft die"
       ],
       "minTreffers": 1,

@@ -193,8 +193,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit hoe je met de formule ((Nieuw - Oud) / Oud) × 100% berekent dat een krimp van 80 naar 60 overeenkomt met een percentage van -25%.",
       "sleutelwoorden": [
-        "-20/80",
-        "-25%",
+        "-20",
+        "-0,25",
         "minteken/afname/daling"
       ],
       "minTreffers": 2,

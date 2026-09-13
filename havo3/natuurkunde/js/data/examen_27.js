@@ -195,8 +195,8 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Beschrijf wat er gebeurt met de opwaartse wrijvingskracht op een vallende regendruppel vanaf het moment dat hij uit de wolk vertrekt tot het moment dat zijn snelheid constant blijft.",
         "sleutelwoorden": [
-            "luchtweerstand neemt toe/wordt groter",
-            "tot gelijk aan zwaartekracht/evenwicht"
+            "steeds groter/luchtweerstand neemt toe/wordt groter",
+            "zwaartekracht/gelijk is aan/evenwicht"
         ],
         "minTreffers": 1,
         "modelantwoord": "In het begin versnelt de druppel. Naarmate zijn snelheid toeneemt, wordt de luchtweerstand steeds groter totdat deze gelijk is aan de zwaartekracht (Fres = 0 N).",
@@ -207,7 +207,7 @@ DURU.registerExamen({
         "vraag": "Een fietser oefent negentig newton trapkracht uit en heeft veertig newton rolweerstand en vijftig newton luchtweerstand. Bepaal de resulterende netto kracht op de fietser.",
         "sleutelwoorden": [
             "0 N/nul/0 newton",
-            "heffen elkaar op/evenwicht"
+            "heffen elkaar op/gelijk aan elkaar/fres/40 + 50"
         ],
         "minTreffers": 1,
         "modelantwoord": "Fvooruit = 90 N en Ftegen = 40 + 50 = 90 N. Fres = 90 - 90 = 0 N.",

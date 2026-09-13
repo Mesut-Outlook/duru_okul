@@ -194,9 +194,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een transportbedrijf koopt een nieuwe trekker voor € 120.000. Na 5 jaar trouwe dienst schat het bedrijf de restwaarde op € 30.000. Bereken de jaarlijkse afschrijvingskosten en geef de tussenstap.",
       "sleutelwoorden": [
-        "120000 - 30000 = 90000",
-        "90000 / 5",
-        "18000/18.000 euro"
+        "90.000/90000",
+        "afschrijving per jaar/afschrijving",
+        "18.000/18000"
       ],
       "minTreffers": 2,
       "modelantwoord": "Totale waardevermindering = € 120.000 - € 30.000 = € 90.000. Afschrijving per jaar = € 90.000 / 5 = € 18.000 per jaar.",

@@ -196,7 +196,7 @@ DURU.registerExamen({
         "vraag": "Leg uit wat er met de beweging van een voorwerp gebeurt als de motorkracht en de tegenwerkende krachten precies even groot zijn.",
         "sleutelwoorden": [
             "constante snelheid/eenparig",
-            "stilstand/blijft stil",
+            "staat stil/stilstand/niet meer bewegen",
             "Fres is nul/heffen elkaar op"
         ],
         "minTreffers": 1,
@@ -208,7 +208,7 @@ DURU.registerExamen({
         "vraag": "Twee krachten van 80 N en 50 N werken beide naar het oosten op een slee. Bereken de grootte van de resulterende kracht met de juiste eenheid.",
         "sleutelwoorden": [
             "130 N/130 newton",
-            "optellen/somkracht"
+            "optellen/samen tellen/+"
         ],
         "minTreffers": 1,
         "modelantwoord": "Fres = 80 N + 50 N = 130 N.",

@@ -200,8 +200,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een fabriek produceerde vorig jaar met 50 medewerkers 100.000 artikelen. Dit jaar schaft het bedrijf nieuwe machines aan: met 40 medewerkers worden 120.000 artikelen gemaakt. Bereken de arbeidsproductiviteit per werknemer in beide jaren.",
       "sleutelwoorden": [
-        "100000 / 50 = 2000",
-        "120000 / 40 = 3000"
+        "2.000/2000",
+        "3.000/3000"
       ],
       "minTreffers": 2,
       "modelantwoord": "Vorig jaar: 100.000 / 50 = 2.000 stuks per werknemer. Dit jaar: 120.000 / 40 = 3.000 stuks per werknemer. De arbeidsproductiviteit is met 1.000 stuks (50%) gestegen.",

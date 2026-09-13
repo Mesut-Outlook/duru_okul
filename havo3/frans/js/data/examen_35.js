@@ -121,7 +121,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom de zin <i>'Ce vélo est plus bon que le mien'</i> fout is in het Frans en verbeter de zin.",
       "sleutelwoorden": [
-        "fout/onjuist/niet correct",
+        "fout/onjuist/bestaat niet",
         "meilleur/meilleur que"
       ],
       "minTreffers": 2,

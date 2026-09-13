@@ -195,7 +195,7 @@ DURU.registerExamen({
       "vraag": "Leg uit wat er zou gebeuren als de intrinsieke waarde van een 1-euromunt zou stijgen naar 1,50 euro.",
       "sleutelwoorden": [
         "omsmelten/verkopen als metaal",
-        "uit circulatie verdwijnen/winst"
+        "verdwijnen/circulatie"
       ],
       "minTreffers": 1,
       "modelantwoord": "Mensen zouden de munten massaal verzamelen en omsmelten om het metaal voor 1,50 euro te verkopen, waardoor de munten uit de roulatie verdwijnen.",

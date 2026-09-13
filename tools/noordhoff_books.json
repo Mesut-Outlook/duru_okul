@@ -4,15 +4,15 @@
     "course_id": "fe9559e5-2325-407a-a4a8-bcc3b16708da",
     "ebook_id": "23a8e547-a7d7-46e9-b45a-1895c6e5f429",
     "chapters": [
-      {"hoofdstuk": null, "label": "Unité 0", "titel": "On y va", "start": 10, "end": 17, "slug": "on-y-va", "output": "frans_extra_on-y-va.pdf"},
-      {"hoofdstuk": 1, "label": "Unité 1", "titel": "Poste, like, partage", "start": 18, "end": 55, "slug": "poste-like-partage", "output": "frans_h01_poste-like-partage.pdf"},
-      {"hoofdstuk": 2, "label": "Unité 2", "titel": "Du temps pour moi", "start": 56, "end": 93, "slug": "du-temps-pour-moi", "output": "frans_h02_du-temps-pour-moi.pdf"},
-      {"hoofdstuk": 3, "label": "Unité 3", "titel": "En route!", "start": 94, "end": 131, "slug": "en-route", "output": "frans_h03_en-route.pdf"},
-      {"hoofdstuk": 4, "label": "Unité 4", "titel": "Le pont", "start": 132, "end": 165, "slug": "le-pont", "output": "frans_h04_le-pont.pdf"},
-      {"hoofdstuk": 5, "label": "Unité 5", "titel": "Au resto!", "start": 166, "end": 201, "slug": "au-resto", "output": "frans_h05_au-resto.pdf"},
-      {"hoofdstuk": 6, "label": "Unité 6", "titel": "C'est moi", "start": 202, "end": 239, "slug": "c-est-moi", "output": "frans_h06_c-est-moi.pdf"},
-      {"hoofdstuk": 7, "label": "Unité 7", "titel": "À tout prix!", "start": 240, "end": 273, "slug": "a-tout-prix", "output": "frans_h07_a-tout-prix.pdf"},
-      {"hoofdstuk": 8, "label": "Unité 8", "titel": "Le pont (Examentraining)", "start": 274, "end": 291, "slug": "le-pont-examentraining", "output": "frans_h08_le-pont-examentraining.pdf"},
+      {"hoofdstuk": null, "label": "Unité 0", "titel": "On y va", "start": 10, "end": 16, "slug": "on-y-va", "output": "frans_extra_on-y-va.pdf"},
+      {"hoofdstuk": 1, "label": "Unité 1", "titel": "Poste, like, partage", "start": 17, "end": 54, "slug": "poste-like-partage", "output": "frans_h01_poste-like-partage.pdf"},
+      {"hoofdstuk": 2, "label": "Unité 2", "titel": "Du temps pour moi", "start": 55, "end": 92, "slug": "du-temps-pour-moi", "output": "frans_h02_du-temps-pour-moi.pdf"},
+      {"hoofdstuk": 3, "label": "Unité 3", "titel": "En route!", "start": 93, "end": 130, "slug": "en-route", "output": "frans_h03_en-route.pdf"},
+      {"hoofdstuk": 4, "label": "Unité 4", "titel": "Le pont", "start": 131, "end": 164, "slug": "le-pont", "output": "frans_h04_le-pont.pdf"},
+      {"hoofdstuk": 5, "label": "Unité 5", "titel": "Au resto!", "start": 165, "end": 200, "slug": "au-resto", "output": "frans_h05_au-resto.pdf"},
+      {"hoofdstuk": 6, "label": "Unité 6", "titel": "C'est moi", "start": 201, "end": 238, "slug": "c-est-moi", "output": "frans_h06_c-est-moi.pdf"},
+      {"hoofdstuk": 7, "label": "Unité 7", "titel": "À tout prix!", "start": 239, "end": 272, "slug": "a-tout-prix", "output": "frans_h07_a-tout-prix.pdf"},
+      {"hoofdstuk": 8, "label": "Unité 8", "titel": "Le pont (Examentraining)", "start": 273, "end": 291, "slug": "le-pont-examentraining", "output": "frans_h08_le-pont-examentraining.pdf"},
       {"hoofdstuk": null, "label": "Boîte à Gram", "titel": "Boîte à Gram & Vocabulaire", "start": 292, "end": 330, "slug": "boite-a-gram", "output": "frans_extra_boite-a-gram.pdf"}
     ]
   },
@@ -28,7 +28,7 @@
       {"hoofdstuk": 5, "label": "Kapitel 5", "titel": "Zukunft & Berufe", "book": "B", "start": 56, "end": 95, "slug": "zukunft-berufe", "output": "duits_h05_zukunft-berufe.pdf"},
       {"hoofdstuk": 6, "label": "Kapitel 6", "titel": "In Aktion & Hilfsbereitschaft", "book": "B", "start": 96, "end": 133, "slug": "in-aktion-hilfsbereitschaft", "output": "duits_h06_in-aktion-hilfsbereitschaft.pdf"},
       {"hoofdstuk": null, "label": "Wiederholung A", "titel": "Wiederholung & Grammatikübersicht A", "book": "A", "start": 134, "end": 160, "slug": "wiederholung-a", "output": "duits_extra_wiederholung-a.pdf"},
-      {"hoofdstuk": null, "label": "Wiederholung B", "titel": "Wiederholung & Grammatikübersicht B", "book": "B", "start": 134, "end": 170, "slug": "wiederholung-b", "output": "duits_extra_wiederholung-b.pdf"}
+      {"hoofdstuk": null, "label": "Wiederholung B", "titel": "Wiederholung & Grammatikübersicht B", "book": "B", "start": 134, "end": 166, "slug": "wiederholung-b", "output": "duits_extra_wiederholung-b.pdf"}
     ]
   },
   "engels": {
@@ -48,9 +48,16 @@
     ]
   },
   "aardrijkskunde": {
-    "course_id": null,
-    "ebook_id": null,
-    "_note": "Keşfedilmedi — Aşama 3'te tools/noordhoff_export.py --discover aardrijkskunde ile bulunup buraya yazılacak. Eski (bozuk) exportlardaki başlıklardan hoofdstuk eşlemesi biliniyor: H1 Wereldhandel in beweging, H2 Schatkist aarde, H3 Migratie, H4 Energietransitie, H5 Gewapende conflicten (site bootstrap.js şu an yalnız H1/H2'yi kayıtlı tutuyor).",
-    "chapters": []
+    "course_id": "fd197c5c-1dfc-446b-bc2c-0b34e0643ef4",
+    "ebook_id": "d3a1eb35-9ea6-452c-addc-d00d50a95399",
+    "chapters": [
+      {"hoofdstuk": null, "label": "Welkom", "titel": "Welkom & Introductie", "start": 1, "end": 9, "slug": "welkom-introductie", "output": "aardrijkskunde_extra_welkom.pdf"},
+      {"hoofdstuk": 1, "label": "Hoofdstuk 1", "titel": "Wereldhandel in beweging", "start": 10, "end": 55, "slug": "wereldhandel-in-beweging", "output": "aardrijkskunde_h01_wereldhandel-in-beweging.pdf"},
+      {"hoofdstuk": 2, "label": "Hoofdstuk 2", "titel": "Schatkist aarde?", "start": 56, "end": 101, "slug": "schatkist-aarde", "output": "aardrijkskunde_h02_schatkist-aarde.pdf"},
+      {"hoofdstuk": 3, "label": "Hoofdstuk 3", "titel": "Migratie", "start": 102, "end": 147, "slug": "migratie", "output": "aardrijkskunde_h03_migratie.pdf"},
+      {"hoofdstuk": 4, "label": "Hoofdstuk 4", "titel": "Energietransitie", "start": 148, "end": 193, "slug": "energietransitie", "output": "aardrijkskunde_h04_energietransitie.pdf"},
+      {"hoofdstuk": 5, "label": "Hoofdstuk 5", "titel": "Gewapende conflicten", "start": 194, "end": 235, "slug": "gewapende-conflicten", "output": "aardrijkskunde_h05_gewapende-conflicten.pdf"},
+      {"hoofdstuk": null, "label": "Topografie", "titel": "Topografie", "start": 236, "end": 243, "slug": "topografie", "output": "aardrijkskunde_extra_topografie.pdf"}
+    ]
   }
 }

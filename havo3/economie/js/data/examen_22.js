@@ -194,9 +194,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een grafisch ontwerper koopt een computerinstallatie voor € 3.600. Na 3 jaar intensief gebruik wordt de computer verkocht voor een restwaarde van € 600. Bereken de jaarlijkse afschrijvingskosten en geef de berekening weer.",
       "sleutelwoorden": [
-        "3600 - 600 = 3000",
-        "3000 / 3",
-        "1000/1.000 euro"
+        "3.000/3000",
+        "1.000/1000",
+        "per jaar"
       ],
       "minTreffers": 2,
       "modelantwoord": "Totale afschrijving = € 3.600 - € 600 = € 3.000. Jaarlijkse afschrijving = € 3.000 / 3 = € 1.000 per jaar.",
@@ -206,10 +206,10 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een onderneming heeft € 60.000 constante kosten per jaar. De variabele kosten zijn € 20 per product. Bereken de kostprijs per eenheid bij een productie van 3.000 producten per jaar.",
       "sleutelwoorden": [
-        "3000 * 20 = 60000",
-        "60000 + 60000 = 120000",
-        "120000 / 3000",
-        "40/40 euro"
+        "120.000/120000",
+        "40,00/40",
+        "kostprijs per product/kostprijs",
+        "tck/tvk"
       ],
       "minTreffers": 2,
       "modelantwoord": "TVK = 3.000 × € 20 = € 60.000. TK = € 60.000 (TCK) + € 60.000 (TVK) = € 120.000. Kostprijs per product = € 120.000 / 3.000 = € 40,00.",

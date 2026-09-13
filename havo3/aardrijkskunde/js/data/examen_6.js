@@ -169,7 +169,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit waarom de ontdekking van een dunne laag iridiumrijk sediment wereldwijd in gesteenten van 66 miljoen jaar oud het bewijs leverde voor de meteorietinslag aan het einde van het Krijt.",
-      sleutelwoorden: ["iridium zeldzaam op aarde", "veel voorkomend in meteorieten", "wereldwijde stoflaag/inslag"],
+      sleutelwoorden: ["zeldzaam", "meteorieten", "wereldwijde stofwolk/kleilaag"],
       minTreffers: 2,
       modelantwoord: "Het metaal iridium is uiterst zeldzaam in de aardkorst omdat het tijdens de vorming van de aarde naar de kern is gezonken, maar komt wel in hoge concentraties voor in meteorieten. De vondst van een wereldwijde dunne kleilaag met een extreem hoog iridiumgehalte precies op de grens tussen Krijt en Tertiair bewees dat een enorme ruimterots is ingeslagen en verpulverd tot een wereldwijde stofwolk.",
       uitleg: "Iridium-piek op de Krijt-Tertiair grens vormt de onweerlegbare chemische vingerafdruk van de meteoriet."
@@ -177,7 +177,7 @@ DURU.registerExamen({
     {
       type: "open",
       vraag: "Leg uit hoe geologen met behulp van fossielen en het superpositiebeginsel de relatieve ouderdom van verschillende gesteentelagen in een bergketen vaststellen.",
-      sleutelwoorden: ["onderste lagen ouder dan bovenste", "gidsfossielen karakteristiek voor tijdvak", "lagen vergelijken/correlatie"],
+      sleutelwoorden: ["ouder dan/onderste", "gidsfossielen", "correleren/correlatie"],
       minTreffers: 2,
       modelantwoord: "Volgens het superpositiebeginsel zijn de onderste sedimentlagen ouder dan de bovenliggende lagen. Door te kijken welke specifieke gidsfossielen (organismen die slechts in één specifieke periode leefden) in de verschillende lagen voorkomen, kunnen geologen lagen in verschillende bergen met elkaar correleren en bepalen welke formatie eerder of later is afgezet.",
       uitleg: "Superpositie geeft verticale volgorde; gidsfossielen maken datering en correlatie tussen locaties mogelijk."

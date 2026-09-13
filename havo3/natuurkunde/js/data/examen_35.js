@@ -194,7 +194,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit wat er wordt bedoeld met de 'resulterende kracht' (of somkracht) als er tegelijkertijd meerdere krachten op een voorwerp werken.",
       "sleutelwoorden": [
-        "alle krachten samen/som van de krachten/optelsom",
+        "som van/alle krachten samen/optelsom",
         "hetzelfde effect/vervangende kracht"
       ],
       "minTreffers": 1,

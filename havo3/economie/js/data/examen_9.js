@@ -193,8 +193,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Waarom hanteren verzekeraars een eigen risico bij schadeverzekeringen? Noem twee redenen.",
       "sleutelwoorden": [
-        "premie verlagen/laag houden",
-        "minder kleine claims/voorzichtiger zijn"
+        "premie/verlaagt",
+        "wissewasje/voorzichtiger"
       ],
       "minTreffers": 1,
       "modelantwoord": "1. Het verlaagt de maandelijkse premie voor de klant, 2. Het voorkomt dat mensen voor elk klein wissewasje declareren en stimuleert voorzichtiger gedrag.",

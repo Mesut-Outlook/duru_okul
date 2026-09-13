@@ -182,11 +182,7 @@ DURU.registerExamen({
       "vraag": "Noem twee sterke Duitse werkwoorden die bij 'du' en 'er/sie/es' een klinkerwisseling van a naar ä krijgen.",
       "modelantwoord": "Fahren, schlafen, tragen of waschen.",
       "sleutelwoorden": [
-        "fahren",
-        "schlafen",
-        "tragen",
-        "waschen",
-        "laufen"
+        "fahren/schlafen/tragen/waschen/laufen"
       ],
       "minTreffers": 1,
       "uitleg": "Je kunt fahren, schlafen, tragen, waschen of laufen noemen."
@@ -198,7 +194,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "universiteit/hogeschool",
         "schoolwerk/huiswerk",
-        "hoger onderwijs"
+        "woordjes/vocabulaire"
       ],
       "minTreffers": 1,
       "uitleg": "Studieren = hogeschool/universiteit; lernen = schoolwerk."

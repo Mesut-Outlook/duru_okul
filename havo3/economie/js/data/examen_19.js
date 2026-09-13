@@ -194,7 +194,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een kaasfabriek produceert in een jaar tijd 450.000 kazen met behulp van 25 werknemers. Bereken de jaarlijkse arbeidsproductiviteit per werknemer en schrijf de formule op.",
       "sleutelwoorden": [
-        "450000 / 25",
+        "totale productie/aantal medewerkers",
         "18000/18.000 kazen"
       ],
       "minTreffers": 1,

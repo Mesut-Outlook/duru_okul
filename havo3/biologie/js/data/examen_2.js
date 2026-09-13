@@ -189,7 +189,7 @@ DURU.registerExamen({
       "vraag": "Noem twee specifieke redenen waarom mannen na de puberteit gemiddeld langer zijn dan vrouwen, gebaseerd op de groeispurt.",
       "sleutelwoorden": [
         "later begint/start/ouder",
-        "meer gegroeid/startlengte",
+        "basislengte/meer lengte opgebouwd/voorsprong",
         "intensiever/sneller/langer duurt"
       ],
       "minTreffers": 2,

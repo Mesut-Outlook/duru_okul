@@ -203,7 +203,7 @@
         vraag: "Leg uit wat volgens Al Gores film uit 2006 een gevaarlijk gevolg is van het smelten van het poolijs door klimaatverandering.",
         sleutelwoorden: [
           "zeewaterspiegel/zeespiegel",
-          "gevaar/kustgebied/laaggelegen"
+          "kustgebied/laaggelegen"
         ],
         minTreffers: 1,
         modelantwoord: "Als het poolijs smelt, stijgt de zeewaterspiegel. Dat is gevaarlijk voor de vele mensen die in laaggelegen kustgebieden wonen, omdat hun land kan overstromen.",

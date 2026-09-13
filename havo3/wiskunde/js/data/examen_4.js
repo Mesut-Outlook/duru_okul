@@ -193,9 +193,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Gegeven de scores: 10, 12, 14, 16, 18, 20, 22. Bereken Q1, Mediaan (Q2) en Q3.",
       "sleutelwoorden": [
-        "12",
-        "16",
-        "20"
+        "q1 = 12",
+        "q2 = 16",
+        "q3 = 20"
       ],
       "minTreffers": 3,
       "modelantwoord": "Mediaan (Q2) = 16. Linkerhelft is 10, 12, 14 -> Q1 = 12. Rechterhelft is 18, 20, 22 -> Q3 = 20.",

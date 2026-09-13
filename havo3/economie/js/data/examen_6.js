@@ -193,8 +193,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Wat is het verschil tussen nominaal inkomen en reëel inkomen?",
       "sleutelwoorden": [
-        "nominaal is bedrag/in euros",
-        "reëel is koopkracht/wat je kunt kopen"
+        "bedrag/euro",
+        "koopkracht"
       ],
       "minTreffers": 2,
       "modelantwoord": "Nominaal inkomen is het bedrag in euro's op je loonstrook; reëel inkomen is de koopkracht (de hoeveelheid goederen en diensten die je met dat geld kunt kopen).",

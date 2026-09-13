@@ -193,8 +193,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een tablet kost in de winkel € 363 inclusief 21% btw. Bereken het btw-bedrag in euro's. Toon de berekening.",
       "sleutelwoorden": [
-        "363 / 1,21 = 300",
-        "63/63 euro"
+        "300",
+        "€ 63"
       ],
       "minTreffers": 1,
       "modelantwoord": "Prijs excl. btw = € 363 / 1,21 = € 300. Btw-bedrag = € 363 - € 300 = € 63.",

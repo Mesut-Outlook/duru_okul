@@ -47,9 +47,11 @@
 kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçülür (ayrıntı: `tools/README.md`).
 
 **Üretirken uyulacak kurallar** (kabul kriterlerine bunları yaz):
-1. **Doğru şık dağılımı** — bir dosyadaki mc sorularının hiçbir şık pozisyonu %40'ı geçmesin.
+1. **Doğru şık dağılımı** — bir dosyadaki mc sorularının hiçbir şık pozisyonu %40'ı geçmesin ve
+   **döngü kurmasın** (0,1,2,3,0,1,… de tahmin edilebilir; 2026-09-13'te 12 derste bulundu).
    (Geschiedenis'te 500/500 "A", scheikunde'de 4 toetsin tamamı "A" idi → bilmeden %95.)
-   Bozuksa `tools/spread.py` → `spread_file()` düzeltir.
+   Bozuksa `tools/spread.py` → `spread_file()` düzeltir (yalnız YAYINLANMAMIŞ dosyada). Sınav motoru
+   şıkları zaten her denemede karıştırır (`exams.js → optieVolgorde`).
 2. **`waaronwaar` ≥ %35 `false`** — hep "Waar" olursa "hep Waar de geç" %90 getirir.
 3. **Sınavda `invoer` yasak** — `exams.js` bu tipe girdi alanı çizmez, soru cevaplanamaz ve
    otomatik yanlış sayılır. Sınav = `invul`, oefenquiz = `invoer`.
@@ -57,8 +59,10 @@ kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçül�
 5. **Proeftoetsler birbirinin kopyası olmasın**; aynı soru iki dosyada geçmesin.
 6. **Paragraf numarası/başlığı kaynaktan** alınır, uydurulmaz. (25 başlık uydurulmuştu; hepsi
    yeniden yazıldı.)
-7. **`open` sorularda `sleutelwoorden` = 1–3 kelimelik terim**, cümle değil; `minTreffers` ≤
-   sleutelwoord sayısı; anahtar soru metninde geçmesin. Gerekçe ve tarama: `tools/open_check.js`.
+7. **`open` sorularda `sleutelwoorden` = 1–2 kelimelik terim/kök**, cümle değil; alternatifler yalnız `/`
+   ile (`|` DEĞİL); `minTreffers` ≤ grup sayısı; hiçbir alternatif soru metninde geçmesin.
+   **`modelantwoord` kendi anahtarlarıyla tam puan almalı, soruyu yapıştırmak 0 almalı** —
+   `node tools/open_check.js` 0 ihlal vermeden teslim yok (2026-09-13: ~147 soru örnek cevabını reddediyordu).
 8. **Her soruda dolu `uitleg`**; soru metnine numara öneki koyma.
 9. **Çok satırlı string yok** — çift tırnaklı JS string'i gerçek satır sonu içeremez; `\n` kaçışı
    ya da backtick kullan. (Bu hata üç kez dosya bozdu.)

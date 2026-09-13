@@ -187,10 +187,10 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Geef voor een atoom van Fosfor-31 (³¹₁₅P) het aantal: 1) protonen, 2) neutronen, 3) elektronen, 4) de elektronenverdeling over de schillen (K, L, M).",
       "sleutelwoorden": [
-        "15 protonen/15 p",
-        "16 neutronen/16 n",
-        "15 elektronen/15 e",
-        "2, 8, 5/2,8,5"
+        "15 protonen/protonen 15/15",
+        "16 neutronen/neutronen 16/16",
+        "15 elektronen/elektronen 15/15",
+        "2 8 5/schilverdeling 2 8 5"
       ],
       "minTreffers": 3,
       "modelantwoord": "Voor Fosfor-31 (³¹₁₅P): 1. Aantal protonen = atoomnummer = 15, 2. Aantal neutronen = massagetal - atoomnummer = 31 - 15 = 16, 3. Aantal elektronen = aantal protonen = 15, 4. Elektronenverdeling: K-schil: 2, L-schil: 8, M-schil: 5 (notatie: 2, 8, 5).",

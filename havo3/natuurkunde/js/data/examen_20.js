@@ -169,9 +169,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit hoe een <b>automatische brandmelder</b> met een <b>NTC-weerstand</b> werkt wanneer er brand uitbreekt in een kamer.",
       "sleutelwoorden": [
-        "temperatuur stijgt door vuur/brand",
-        "weerstand van NTC daalt",
-        "weerstand daalt/stroom stijgt",
+        "kamertemperatuur/hitte/stijgt snel",
+        "daalt de weerstand/weerstand van de ntc/ntc-sensor",
+        "stroomsterkte/stroom neemt toe/deelspanning verandert",
         "schakeling activeert sirene/alarm"
       ],
       "minTreffers": 3,
@@ -182,8 +182,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Vergelijk een koperen kookpan met een dikke aluminium kookpan op het gebied van <b>warmtegeleiding</b>, <b>massa</b> en <b>warmtecapaciteit</b>.",
       "sleutelwoorden": [
-        "koper betere geleider/sneller warm",
-        "aluminium lichter/goedkoper",
+        "sneller/warmtegeleidingscoëfficiënt/betere geleider",
+        "lichter/lagere dichtheid/handzamer",
         "soortelijke warmte"
       ],
       "minTreffers": 2,

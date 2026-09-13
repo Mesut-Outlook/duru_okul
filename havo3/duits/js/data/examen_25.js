@@ -182,10 +182,7 @@ DURU.registerExamen({
       "vraag": "Noem twee verschillende beroepen in het Duits in de mannelijke en vrouwelijke vorm.",
       "modelantwoord": "Der Lehrer / die Lehrerin en der Arzt / die Ärztin (of der Polizist / die Polizistin).",
       "sleutelwoorden": [
-        "Lehrer / Lehrerin",
-        "Arzt / Ärztin",
-        "Polizist / Polizistin",
-        "Verkäufer"
+        "Lehrer/Lehrerin/Arzt/Ärztin/Polizist/Polizistin/Verkäufer/Verkäuferin"
       ],
       "minTreffers": 1,
       "uitleg": "Bijvoorbeeld Lehrer/Lehrerin en Arzt/Ärztin."
@@ -195,8 +192,8 @@ DURU.registerExamen({
       "vraag": "Wat betekent het begrip 'Duales System' in het Duitse onderwijs?",
       "modelantwoord": "Leren op school (Berufsschule) combineren met betaald praktijkwerk in een bedrijf.",
       "sleutelwoorden": [
-        "school en bedrijf",
-        "theorie en praktijk",
+        "school",
+        "praktijk/bedrijf/werk",
         "Berufsschule"
       ],
       "minTreffers": 1,

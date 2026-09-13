@@ -186,7 +186,7 @@ DURU.registerExamen({
         "die",
         "das"
       ],
-      "minTreffers": 1,
+      "minTreffers": 2,
       "uitleg": "Den (mannelijk), die (vrouwelijk), das (onzijdig)."
     },
     {

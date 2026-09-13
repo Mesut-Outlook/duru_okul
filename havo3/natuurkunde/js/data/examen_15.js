@@ -169,10 +169,10 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg stap voor stap uit hoe in een kerncentrale elektrische stroom wordt opgewekt, vanaf de kernsplijting tot de elektriciteit op het hoogspanningsnet.",
       "sleutelwoorden": [
-        "kernsplijting levert warmte",
-        "water verdampt tot stoom",
-        "stoom drijft turbine aan",
-        "generator wekt elektriciteit op"
+        "reactorvat/warmte-energie/uranium",
+        "stoomgenerator/koelwater/stoom onder druk",
+        "turbine/ronddraaien/schoepen",
+        "generator/dynamo/elektrische energie"
       ],
       "minTreffers": 3,
       "modelantwoord": "1. In het reactorvat vindt gecontroleerde kernsplijting van uranium plaats, waarbij een enorme hoeveelheid warmte-energie vrijkomt.\n2. Deze warmte verhit het koelwater, dat via een stoomgenerator water in een tweede circuit omzet in stoom onder hoge druk.\n3. De krachtige stoom blaast tegen de schoepen van een stoomturbine en laat deze met hoge snelheid ronddraaien.\n4. De as van de turbine drijft een generator (dynamo) aan, die de mechanische draaienergie via elektromagnetische inductie omzet in elektrische wisselspanning voor het stroomnet.",
@@ -182,7 +182,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Bespreek de voor- en nadelen van kernenergie in het kader van het klimaat en de energievoorziening. Noem minimaal twee duidelijke voordelen en twee duidelijke nadelen/risico's.",
       "sleutelwoorden": [
-        "geen CO2/geen CO₂/CO2-vrij/geen uitstoot",
+        "uitstoot/broeikaseffect/co2 arm",
         "betrouwbaar/continu/leveringszekerheid/weersonafhankelijk/hoge opbrengst",
         "kernafval/radioactief afval/opslag van afval",
         "ongeluk/ongeval/meltdown/ramp/veiligheidsrisico/hoge bouwkosten/dure bouw"

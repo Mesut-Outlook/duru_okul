@@ -163,8 +163,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom het vervangen van oude 50 W halogeenspots door 5 W LED-lampen op jaarbasis veel geld bespaart, terwijl de lichtopbrengst hetzelfde blijft.",
       "sleutelwoorden": [
-        "lager vermogen/minder Watt",
-        "minder energie/minder kWh",
+        "zo laag/vermogen laag/minder watt",
+        "minder kilowattuur/kwh/minder energie",
         "rendement/minder warmte"
       ],
       "minTreffers": 2,
