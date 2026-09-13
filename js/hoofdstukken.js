@@ -733,7 +733,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-41": 5,
         "ex-h3-natuurkunde-42": 5,
         "ex-h3-natuurkunde-43": 5,
-        "ex-h3-natuurkunde-44": 5
+        "ex-h3-natuurkunde-44": 5,
+        "ex-h3-natuurkunde-45": 1,
+        "ex-h3-natuurkunde-46": 1,
+        "ex-h3-natuurkunde-47": 1
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -769,7 +772,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 19,
+        "1": 22,
         "2": 5,
         "3": 5,
         "4": 5,

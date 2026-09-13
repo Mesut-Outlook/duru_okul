@@ -83,10 +83,10 @@ const yapiVrij=yapi.filter(t=>/soruda geciyor$/.test(t)&&vrij('8',[t.split(':')[
 check('8. Soru yapisi sozlesmeye uygun', yapi.filter(t=>!yapiVrij.includes(t)), yapiVrij.length?`${yapiVrij.length} bilincli istisna`:'');
 
 // onderwerp = EN AZ 8 soru (fazlasi serbest: ekstra alistirma sorusu silinmez);
-// proeftoets = TAM 20 soru (sinav uzunlugu her derste ayni kalmali).
-check('9. Soru sayilari (onderwerp \u2265 8 / proeftoets = 20)',
+// proeftoets = 20 - 25 soru (standaard 20, uitgebreide examentraining tot 25).
+check('9. Soru sayilari (onderwerp \u2265 8 / proeftoets 20-25)',
   [...OO.filter(o=>(o.vragen||[]).length<8).map(o=>`${o.id}: ${(o.vragen||[]).length} vraag (min 8)`),
-   ...EE.filter(e=>(e.vragen||[]).length!==20).map(e=>`${e.id}: ${(e.vragen||[]).length} vraag (moet 20 zijn)`)]);
+   ...EE.filter(e=>(e.vragen||[]).length<20 || (e.vragen||[]).length>25).map(e=>`${e.id}: ${(e.vragen||[]).length} vraag (moet 20-25 zijn)`)]);
 check('10. theorie ≥1500 karakter', OO.filter(o=>String(o.theorie||'').length<1500).map(o=>`${o.id}: ${String(o.theorie||'').length}b`));
 check('11. index.html bagli', files.filter(f=>!refs.includes('js/data/'+f)).map(f=>'bagli degil: '+f));
 
