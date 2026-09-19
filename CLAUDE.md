@@ -44,18 +44,18 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | duits | 18 | 30 | 744 | H1–H6 |
 | engels | 18 | 30 | 744 | H1–H6 |
 | natuurkunde | 31 | 44 | 1138 | H1–H5, H8 tam; H6–H7 boş (TASK-08); H1 19 sınav |
-| economie | 12 | 27 | 636 | H1–H4 |
+| economie | 12 | 37 | 836 | H1–H4 |
 | aardrijkskunde | 10 | 10 | 280 | H1–H2 (tam) |
 | scheikunde | 6 | 10 | 252 | H1–H2 (H3–H7 eksik) |
 | wiskunde | 5 | 10 | 240 | H2 |
 | biologie | 2 | 5 | 116 | H10 |
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
-| nederlands | 0 | 1 | 5 | **yok** — smoke-test |
+| nederlands | 5 | 6 | 160 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 141 onderwerp · 253 proeftoets · 6217 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 146 onderwerp · 271 proeftoets · 6632 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
-`maatschappijleer` + `nederlands` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
-materyal vermedi), bu yüzden tek sınavları bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
+`maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
+materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
 girmez → "Overige toetsen"e düşer. **Buraya ünite numarası uydurma**; materyal gelince önce
 `bootstrap.js`'e gerçek hoofdstuk'ları yaz.
 

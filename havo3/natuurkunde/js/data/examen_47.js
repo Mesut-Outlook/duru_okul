@@ -1,27 +1,27 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 47 — §1.3 Kracht en versnelling — Toets D (25 vragen)
+   Duru's Natuurkunde (HAVO 3) — Toets 47 — §1.3 Kracht en versnelling — Toets D
    Gebaseerd op Overal Natuurkunde 3 HAVO (Hoofdstuk 1 Kracht en beweging)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-47",
   "hoofdstuk": 1,
   "paragraaf": "1.3",
-  "titel": "Toets 47 — §1.3 Kracht en versnelling — Toets D (25 vragen)",
+  "titel": "Toets 47 — §1.3 Kracht en versnelling — Toets D",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "🚀",
   "duurMin": 35,
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Welke formule geeft de tweede wet van Newton weer?",
+      "vraag": "In welke eenheid druk je de versnelling a uit?",
       "opties": [
-        "Fres = m · a",
-        "v = s / t",
-        "Fz = m / g",
-        "p = F / A"
+        "m/s²",
+        "m/s",
+        "N",
+        "kg"
       ],
       "antwoord": 0,
-      "uitleg": "De tweede wet van Newton luidt: Fres = m · a, waarin Fres de resulterende kracht is in newton (N), m de massa in kilogram (kg) en a de versnelling in m/s²."
+      "uitleg": "De versnelling is de verandering van snelheid per seconde: (m/s) per s = m/s²."
     },
     {
       "type": "mc",
@@ -109,33 +109,32 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Bij actie en reactie (de derde wet van Newton) werken de twee krachten altijd op hetzelfde voorwerp en heffen ze elkaar daarom altijd op.",
+      "vraag": "De versnelling van een auto bereken je met a = Δv · t.",
       "antwoord": false,
-      "uitleg": "Onwaar. Actie en reactie werken altijd op TWEE VERSCHILLENDE voorwerpen (bijv. voet duwt tegen bal en bal duwt tegen voet). Ze heffen elkaar dus niet op!"
+      "uitleg": "Onwaar: de versnelling is de snelheidsverandering gedeeld door de tijd, a = Δv / t."
     },
     {
       "type": "mc",
-      "vraag": "Tijdens een botsingtest van een auto oefent de muur een reactiekracht uit van 45.000 N op de voorkant van de auto. Hoe groot is de actiekracht die de auto op de muur uitoefent?",
+      "vraag": "Een auto van 1000 kg remt af. De resulterende kracht tegen de rijrichting in is 5000 N. Hoe groot is de vertraging?",
       "opties": [
-        "0 N",
-        "22.500 N",
-        "Precies 45.000 N",
-        "90.000 N"
+        "0,2 m/s²",
+        "50 m/s²",
+        "5 m/s²",
+        "5000 m/s²"
       ],
       "antwoord": 2,
-      "uitleg": "Volgens de derde wet van Newton (actie = -reactie) zijn de twee krachten precies even groot en tegengesteld gericht: Factie = Freactie = 45.000 N."
+      "uitleg": "a = Fres / m = 5000 N / 1000 kg = 5 m/s² (tegen de rijrichting in, dus een vertraging)."
     },
     {
       "type": "open",
-      "vraag": "Twee schaatsers, Lisa (50 kg) en Tom (80 kg), staan stil tegenover elkaar op spiegelglad ijs. Lisa duwt Tom met haar handen weg. Leg uit wie van beiden na de duw de grootste snelheid krijgt en waarom.",
+      "vraag": "Op een voorwerp werkt een resulterende kracht van 500 N. Het voorwerp versnelt daardoor met 2,5 m/s². Bereken in stappen de massa van het voorwerp.",
       "sleutelwoorden": [
-        "Lisa",
-        "kleinere massa/lichter",
-        "grotere versnelling/a = F/m"
+        "200 kg/200kg",
+        "m = f/m=f/gedeeld door/delen door"
       ],
       "minTreffers": 1,
-      "modelantwoord": "Volgens de derde wet van Newton oefenen ze tijdens het duwen een even grote kracht op elkaar uit. Omdat Lisa een kleinere massa heeft (50 kg < 80 kg), krijgt zij volgens a = F/m een grotere versnelling en bereikt zij dus de grootste snelheid.",
-      "uitleg": "De krachten zijn gelijk (actie=-reactie). De schaatser met de kleinste massa krijgt de grootste versnelling en dus de hoogste snelheid."
+      "modelantwoord": "Fres = m · a, dus m = Fres / a = 500 / 2,5 = 200 kg.",
+      "uitleg": "Omschrijven van Fres = m · a geeft m = Fres / a = 500 N / 2,5 m/s² = 200 kg."
     },
     {
       "type": "mc",
@@ -163,9 +162,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een raket kan in het luchtledige van de ruimte versnellen doordat de uitgestoten verbrandingsgassen naar achteren een reactiekracht naar voren uitoefenen op de raket.",
+      "vraag": "Een auto die met een constante snelheid rijdt, heeft een versnelling van 0 m/s².",
       "antwoord": true,
-      "uitleg": "Waar. Dit is een direct gevolg van de derde wet van Newton: de raket duwt het gas naar achteren (actie), en het gas duwt de raket naar voren (reactie). Er is geen lucht nodig om tegen af te zetten."
+      "uitleg": "Waar: bij een constante snelheid is Δv = 0, dus a = Δv / t = 0 m/s²."
     },
     {
       "type": "invul",
@@ -202,65 +201,6 @@ DURU.registerExamen({
       "vraag": "Als twee voorwerpen met verschillende massa's met dezelfde resulterende kracht worden voortgeduwd, krijgt het voorwerp met de grootste massa ook de grootste versnelling.",
       "antwoord": false,
       "uitleg": "Onwaar. Volgens a = Fres / m krijgt het zwaarste voorwerp juist de kleinste versnelling (omgekeerd evenredig verband)."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een ijshockeypuck van 160 gram (0,16 kg) glijdt over het ijs en ondervindt een wrijvingskracht van 0,32 N. Wat is de vertraging van de puck?",
-      "opties": [
-        "0,051 m/s²",
-        "2,0 m/s²",
-        "0,50 m/s²",
-        "5,0 m/s²"
-      ],
-      "antwoord": 1,
-      "uitleg": "a = Fres / m = 0,32 N / 0,16 kg = 2,0 m/s²."
-    },
-    {
-      "type": "mc",
-      "vraag": "Waarom is het verplicht om in een auto een veiligheidsgordel te dragen?",
-      "opties": [
-        "Om bij een botsing de noodzakelijke remkracht op het lichaam uit te oefenen zodat het niet door massatraagheid naar voren schiet",
-        "Om de massa van de inzittenden te verkleinen",
-        "Om de motor van de auto meer trekkracht te geven",
-        "Om de zwaartekracht op te heffen"
-      ],
-      "antwoord": 0,
-      "uitleg": "Bij een plotselinge stop blijft het lichaam van de inzittende door massatraagheid met de oude snelheid naar voren bewegen. De veiligheidsgordel oefent de vereiste tegenkracht uit om het lichaam veilig mee af te remmen."
-    },
-    {
-      "type": "open",
-      "vraag": "Een geweer vuurt een kogel af. Tijdens het schot ervaart de schutter een voelbare 'terugslag' tegen zijn schouder. Verklaar dit verschijnsel met een natuurkundige wet.",
-      "sleutelwoorden": [
-        "derde wet van newton/actie en reactie/actie is reactie",
-        "kracht op kogel/kracht op geweer/tegengesteld"
-      ],
-      "minTreffers": 1,
-      "modelantwoord": "Volgens de derde wet van Newton (actie = -reactie) treden krachten altijd in paren op. Het geweer oefent een grote voorwaartse kracht uit op de kogel om deze te versnellen; tegelijkertijd oefent de kogel een even grote, maar achterwaarts gerichte reactiekracht uit op het geweer.",
-      "uitleg": "De terugslag is de reactiekracht van de kogel op het geweer (3e wet van Newton: Factie = -Freactie)."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een vliegtuig met een massa van 60.000 kg heeft een startversnelling van 2,0 m/s². De wrijving met de landingsbaan en lucht is 30.000 N. Hoe groot moet de stuwkracht van de straalmotoren samen zijn?",
-      "opties": [
-        "120.000 N",
-        "90.000 N",
-        "150.000 N",
-        "60.000 N"
-      ],
-      "antwoord": 2,
-      "uitleg": "Voor de versnelling is een resulterende kracht nodig van Fres = m · a = 60.000 · 2,0 = 120.000 N. Omdat Fstuw - Fwrijving = Fres, geldt Fstuw = Fres + Fwrijving = 120.000 + 30.000 = 150.000 N."
-    },
-    {
-      "type": "mc",
-      "vraag": "Welke combinatie van grootheden en SI-eenheden in de formule Fres = m · a is correct?",
-      "opties": [
-        "Kracht in joule (J), massa in gram (g), versnelling in m/s",
-        "Kracht in newton (N), massa in kilogram (kg), versnelling in meter per seconde kwadraat (m/s²)",
-        "Kracht in watt (W), massa in kg, versnelling in km/h",
-        "Kracht in newton (N), massa in gram (g), versnelling in m/s²"
-      ],
-      "antwoord": 1,
-      "uitleg": "In het SI-stelsel geldt: 1 newton (N) = 1 kg · m/s²."
     }
   ]
 });

@@ -59,5 +59,125 @@
       {"hoofdstuk": 5, "label": "Hoofdstuk 5", "titel": "Gewapende conflicten", "start": 194, "end": 235, "slug": "gewapende-conflicten", "output": "aardrijkskunde_h05_gewapende-conflicten.pdf"},
       {"hoofdstuk": null, "label": "Topografie", "titel": "Topografie", "start": 236, "end": 243, "slug": "topografie", "output": "aardrijkskunde_extra_topografie.pdf"}
     ]
+  },
+  "nederlands": {
+    "course_id": "6c374a35-8883-461d-b91f-135c2275a858",
+    "ebook_id": "29e5dda2-75d8-458a-83ba-7c9b824388cd",
+    "chapters": [
+      {
+        "hoofdstuk": 1,
+        "label": "Cursus 1",
+        "titel": "Meer dan lezen",
+        "start": 8,
+        "end": 49,
+        "slug": "meer-dan-lezen",
+        "output": "nederlands_h01_meer-dan-lezen.pdf"
+      }
+    ]
+  },
+  "wiskunde": {
+    "course_id": "0af2365c-c0f7-460c-83aa-ebce84531c79",
+    "ebook_id": "dd7260be-e3f3-4891-acbc-b078e6bbccc4",
+    "chapters": [
+      {
+        "hoofdstuk": 1,
+        "label": "Hoofdstuk 1",
+        "titel": "Lineaire en exponentiële formules",
+        "start": 7,
+        "end": 40,
+        "slug": "lineaire-en-exponentiele-formules",
+        "output": "wiskunde_h01_lineaire-en-exponentiele-formules.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "Hoofdstuk 2",
+        "titel": "Parabolen",
+        "start": 41,
+        "end": 74,
+        "slug": "parabolen",
+        "output": "wiskunde_h02_parabolen.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Rekenen & Vaardigheden 1",
+        "titel": "Veel geld verdienen, Rekenen 1, Vaardigheden 1, Bruggen",
+        "start": 75,
+        "end": 86,
+        "slug": "rekenen-en-vaardigheden-1",
+        "output": "wiskunde_extra_rekenen-en-vaardigheden-1.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "Hoofdstuk 3",
+        "titel": "Vlakke figuren",
+        "start": 87,
+        "end": 120,
+        "slug": "vlakke-figuren",
+        "output": "wiskunde_h03_vlakke-figuren.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "Hoofdstuk 4",
+        "titel": "De abc-formule",
+        "start": 121,
+        "end": 150,
+        "slug": "de-abc-formule",
+        "output": "wiskunde_h04_de-abc-formule.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Rekenen & Vaardigheden 2",
+        "titel": "Königsberg, Rekenen 2, Vaardigheden 2, Bewijs abc-formule",
+        "start": 151,
+        "end": 164,
+        "slug": "rekenen-en-vaardigheden-2",
+        "output": "wiskunde_extra_rekenen-en-vaardigheden-2.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Hoofdstuk 5",
+        "titel": "Nieuwe grafieken",
+        "start": 165,
+        "end": 198,
+        "slug": "nieuwe-grafieken",
+        "output": "wiskunde_h05_nieuwe-grafieken.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "Hoofdstuk 6",
+        "titel": "Goniometrie",
+        "start": 199,
+        "end": 236,
+        "slug": "goniometrie",
+        "output": "wiskunde_h06_goniometrie.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Rekenen & Vaardigheden 3",
+        "titel": "Möbiusbanden, Rekenen 3, Vaardigheden 3, Driehoeksmeting",
+        "start": 237,
+        "end": 248,
+        "slug": "rekenen-en-vaardigheden-3",
+        "output": "wiskunde_extra_rekenen-en-vaardigheden-3.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "Hoofdstuk 7",
+        "titel": "Verbanden",
+        "start": 249,
+        "end": 286,
+        "slug": "verbanden",
+        "output": "wiskunde_h07_verbanden.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Trefwoorden & Herhaling",
+        "titel": "Uit deel 1A, 1B, 2A en 2B & Trefwoorden",
+        "start": 287,
+        "end": 300,
+        "slug": "trefwoorden-en-herhaling",
+        "output": "wiskunde_extra_trefwoorden-en-herhaling.pdf"
+      }
+    ]
   }
 }

@@ -206,10 +206,8 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Een slee van 25 kg ondervindt 75 N netto voortstuwende trekkracht. Bereken de resulterende versnelling.",
         "sleutelwoorden": [
-            "3 m/s²",
-            "3,0",
-            "fres/a = fres/berekening"
-        ],
+        "3 0 m/3 m"
+      ],
         "minTreffers": 1,
         "modelantwoord": "a = Fres / m = 75 N / 25 kg = 3,0 m/s².",
         "uitleg": "a = F / m = 75 / 25 = 3,0 m/s²."

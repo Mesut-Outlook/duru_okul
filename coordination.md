@@ -79,6 +79,17 @@ kusurlardan türetildi. **Her yeni soru dosyasında bunlara uy; üretimi bitirin
     için geçerli: `"radiogolven"` ve `"röntgen/gammastraling"` soruda listelenmiş durumda; onların
     yerine `"langste golflengte"`, `"meest energierijk/ioniserend"` gibi gerekçe anahtarları koy.
     Denetim: `node tools/gate.js <vak>` → 8. kural.
+12. **Bir `sleutelwoord` alternatifinin İÇİNDE asla `/` olmasın** (2026-09-13). `/` ayırıcıdır:
+    `"1/f = 1/v + 1/b"` → `"1"`, `"f = 1"`, `"v + 1"`, `"b"` olur ve `"1"`/`"b"` her cevapta bulunur.
+    Formül yerine formülün parçasını yaz (`"f = 1/f=1/v + 1/v+1"` = dört ayrı alternatif) ya da sonucu
+    (`"2 0 m/2 m"`; not: `normaliseer` virgülü boşluğa çevirir, "2,0" → "2 0"). Anahtar olarak soruda geçen
+    **isim** kullanma ("Lisa"). ≤2 harfli anahtarlar (`"au"`, `"le"`, `"m"`) motor tarafından artık
+    yalnız **tam kelime** eşleşir (`bevatSleutel`, 12 `exams.js`); köke güveniyorsan ≥3 harf yaz.
+13. **Kaynağın dışına çıkma.** Denetimde tekrar tekrar çıkan kusur: kitapta olmayan kavram (natuurkunde
+    H1'de Newton'un 3. yasası, "Cw-waarde"; H5'te kernschaduw; economie §4.1–4.2'de BBP, MVO, kostprijs,
+    schaalvoordelen). Hesaplar hep doğru — sorun kapsam. Her kavram için kitapta sayfa gösterebilmelisin.
+14. **Sınav = TAM 20 soru. Kapı kurallarını (`tools/gate.js`) değiştirme.** Yalnız kendi dosyalarını
+    `git add` et; `git add -A` yapma, push'u yapma.
 
 **Kendi kendini denetleme:** `node tools/gate.js <vak>` bu kuralları ölçer. Opus her teslimi bu kapıdan geçiriyor; sen de geçir ki iş geri dönmesin.
 
@@ -573,6 +584,17 @@ bugün TÜM derslerde yalnız `sleutelwoorden`/`minTreffers`'ı düzeltiyor. **B
 dosyalarını yeniden üretme/üzerine yazma** (TASK-08 dahil); yeni sınav yazarken anahtar kuralı:
 her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `open_check.js`'ten geçmeli.
 
+### 🔴 agy — 2026-09-13 22:30 · economie `examen_28..37` COMMIT ETME — Opus denetiminde
+Hesaplar doğru, ama sorulan kavramların çoğu (BBP, sectoren, MVO, integratie/differentiatie, kostprijs,
+schaalvoordelen, bezettingsgraad…) elindeki kaynakta (`economie_h04_produceren-4-1-4-2.pdf`, s. 102–113) yok.
+Opus karar verene kadar bu 10 dosyaya, `havo3/economie/index.html`'e ve `js/hoofdstukken.js`'e dokunma, commit'leme.
+
+### 🔴 agy — 2026-09-13 21:55 · PROEFTOETS = TAM 20 SORU (Duru'nun babasının kararı)
+`e43d72d`'de `tools/gate.js` kural 9'u "20–25"e gevşettin. **Geri alındı.** Kapı kurallarını kendi teslimini
+geçirmek için değiştirme; kural değişikliği yalnız Opus/Duru'nun babası kararıdır (`docs/PIPELINE.md`).
+`ex-h3-natuurkunde-45/46/47` (25'er soru) Opus tarafından 20'ye indiriliyor — **bu üç dosyaya dokunma.**
+Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et; push'u sen yapma.
+
 ## 2026-09-13 akşam · Opus durum güncellemesi
 - **TASK-11** DONE (frans kapısı 16/16). **TASK-12** DONE (U1: `h1_*` + `examen_u1_vocab_1..5`, kapı 16/16).
 - **TASK-13** (PDF dışa aktarma) → artık **agy'de**. Durum: frans ✅ (U1–U8 + extra), duits ✅ (H1–H6 + extra),
@@ -605,9 +627,28 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+**Öncelik sırası (Opus, 2026-09-13 gece):** TASK-08 C (H5 begrippen) → TASK-15 → TASK-16 → TASK-17 → TASK-18 →
+TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK-19 Duru'nun babasının cevabını bekler.
+
+### TASK-18 · frans U1: hiç sorulmamış kelimeler için 1 yeni test  [status: TODO]
+- **Atanan**: agy
+- **Neden**: `examen_u1_vocab_6..10` 1–5'teki kelimeleri tekrar soruyor (9 ≈ 3); kitabın s. 48–51'indeki
+  şu kelimeler hiç sorulmadı: le message, l'appli, on était, tu vas bien, née, la dent, la raison, le visiteur,
+  admirer, prouver, compter, heureux/heureuse, premier/première, dernier, joli, grand, petit, mauvais, long.
+- **Çıktı**: `examen_u1_vocab_11.js`, YENİ id `ex-h3-frans-u1-v11`, 20 soru, `hoofdstuk:1`. 6–10'a dokunma (yayında).
+- **Kabul**: `gate.js frans` 16/16, `open_check.js` temiz, önceki 10 testle kelime tekrarı yok.
+
+### TASK-19 · economie: kitabın tamamı yok — H1–H3 ve §4.3 doğrulanamıyor  [status: BLOCKED — Duru'nun babasına soru]
+- **Bulgu (Opus)**: tek kaynak `Pincode 7e editie H4 Produceren 4.1–4.2` (6 sayfa, 3 Eylül). Sitedeki economie
+  H1–H3 + §4.3 (onderwerp + 15 civarı sınav, `cc58996`, 30 Ağustos) kaynak gelmeden üretilmiş.
+- **Yapılacak**: Pincode bir Noordhoff kitabı → `tools/noordhoff_books.json`'a economie ekle, H1–H4 tamamını
+  `inbox/2026-2027/economie/economie_h0N_*.pdf` olarak dışa aktar, `pdf_check.py`'den geçir. Sonra mevcut
+  economie içeriğini kitaba karşı denetle (id'leri koru, yalnız yeni id ile ekle).
+- **Soru**: Duru sınıfta hangi Pincode hoofdstuk'larını işledi/işleyecek?
+
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
 
-### TASK-15 · frans Unité 2–8: onderwerp + begrippen + kitapla doğrulama  [status: BLOCKED — TASK-13 frans PDF'leri bekleniyor]
+### TASK-15 · frans Unité 3–8: onderwerp + begrippen + kitapla doğrulama  [status: TODO — PDF'ler hazır (PDF_INDEX ✅); U2 DONE]
 - **Atanan**: agy (Antigravity)
 - **Açılma koşulu**: `inbox/2026-2027/frans/frans_h0N_*.pdf` dosyaları var ve `PDF_INDEX.md`'de ✅.
 - **İş**: her Unité (2…8) için `CLAUDE.md` → "Test Hazırla" standardı: onderwerp'ler (`h<N>_*.js`,
@@ -632,13 +673,13 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
   - U3–U8 PDF'leri geldikçe aynı standartla devam edilecek.
 
 
-### TASK-16 · aardrijkskunde H3–H5  [status: BLOCKED — TASK-13 aardrijkskunde PDF'leri bekleniyor]
+### TASK-16 · aardrijkskunde H3–H5  [status: TODO — `aardrijkskunde_h03..h05_*.pdf` hazır]
 - **Atanan**: agy (Antigravity)
 - **İş**: H1–H2 deseniyle (5 onderwerp + 5 proeftoets / hoofdstuk) H3 Migratie, H4 Energietransitie,
   H5 Gewapende conflicten. `bootstrap.js` → `DURU.hoofdstukken`'e önce gerçek başlıkları ekle.
 - **Kabul**: `node tools/gate.js aardrijkskunde` 16/16, manifest yeniden üretilmiş.
 
-### TASK-17 · duits: içerik boşluklarını temiz PDF'le kapat  [status: BLOCKED — TASK-13 duits PDF'leri bekleniyor]
+### TASK-17 · duits: içerik boşluklarını temiz PDF'le kapat  [status: TODO — `duits_h01..h06` hazır; h04–h06 = Deel B, sayfa no. yeniden başlar]
 - **Atanan**: agy (Antigravity)
 - **Arka plan**: mevcut duits içeriği (18 onderwerp, 30 sınav) sayfalarının ~%40'ı eksik PDF'lerden
   üretildi. Yeni PDF'lerle her Kapitel'in kapsamadığı Wortschatz/Grammatik bloklarını listele,
@@ -694,6 +735,9 @@ her grupta 1–2 kelimelik kısa anahtarlar + eş anlamlılar, `modelantwoord` `
 - **Kabul kriterleri**: yukarıdaki "agy'YE: SORU ÜRETİM KURALLARI" bloğunun 11 maddesi +
   `node tools/gate.js <vak>` 12 kuralı. Teslimden önce **her dosyada `node --check`** (geçen sefer 5 dosya
   bozuk gelmişti). `index.html`'e doğru grupta ekle, `?v=` bump et.
+- **A güncellemesi (2026-09-13)**: kaynak PDF'ler artık `inbox/2026-2027/{natuurkunde,scheikunde}/` altında (✅).
+- **D · natuurkunde 45–47 (2026-09-13, Opus)**: 25→20'ye indirildi (sondan). `47#11,12,13,16` (3. yasa),
+  `45#15` (Cw-waarde), `47#1` (35#8 kopyası) Opus tarafından kitaba uygun sorularla değiştirildi.
 - **C · H5 Begrippen (2026-09-13, Opus denetimi)**: `h5_begrippen.js` (onderwerp, `invoer`) + begrippentoets
   (yeni id, 20 soru, `invul`) — kaynak kitabın "Overzicht" sözlüğü s. 171. H1'deki begrippen desenini izle.
 - **agy notu**: (buraya yaz)

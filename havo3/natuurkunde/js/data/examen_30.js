@@ -195,9 +195,9 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Geef de twee formules waarmee je de afgelegde afstand kunt berekenen bij een eenparig versnelde beweging vanuit rust.",
         "sleutelwoorden": [
-            "1/2 * basis * hoogte/oppervlakte driehoek",
-            "vgem/gemiddelde snelheid/v gemiddeld"
-        ],
+        "oppervlakte/driehoek/veind/v eind/eindsnelheid",
+        "vgem/v gem/gemiddelde snelheid"
+      ],
         "minTreffers": 1,
         "modelantwoord": "s = 1/2 · t · veind (oppervlakte van de driehoek) of s = vgem · t (waarbij vgem = 1/2 · veind).",
         "uitleg": "Beide methodes zijn gelijkwaardig en leveren dezelfde afstand op."

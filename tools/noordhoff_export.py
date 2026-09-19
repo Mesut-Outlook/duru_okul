@@ -45,7 +45,7 @@ INBOX = REPO / "inbox" / "2026-2027"
 USER_DATA_DIR = os.path.expanduser("~/.config/noordhoff_browser_profile")
 BOOKSHELF_URL = "https://apps.noordhoff.nl/my/nl/bookshelf"
 
-ASSET_RE = re.compile(r"/api/ebook-assets/production/main/[^/]+_(\d+)_(\d+)\.png(?:\?|$)")
+ASSET_RE = re.compile(r"/api/ebook-assets/production/main/[^/]+_(\d+)_([0-9.]+)\.png(?:\?|$)")
 
 JPEG_QUALITY = 88
 GAP_FILL_ROUNDS = 3
@@ -58,17 +58,26 @@ def log(msg):
 
 # ---------------------------------------------------------------- login ----
 def ensure_login(page, timeout_s=90):
-    """export_frans_ebook.py'den alınan, doğrulanmış SSO akışı
-    (Entree -> Somtoday 'önceki seçim' -> sessiz Azure SSO). Bkz. 2026-09-13
-    canlı testi: headless'ta oturum sessiz yenilenmiyor, headed'de ~13 sn'de
-    tıklama olmadan tamamlanıyor (mevcut Somtoday/Azure oturumu geçerliyse).
+    """Doğrulanmış SSO akışı
+    (Entree -> Somtoday 'önceki seçim' -> sessiz Azure SSO).
     """
     start = time.time()
+    time.sleep(1.0)
     while time.time() - start < timeout_s:
         url = page.url
+        try:
+            if page.locator("[data-testid='new-product-card']").count() > 0:
+                return True
+        except Exception:
+            pass
+
         if ("bookshelf" in url or "se/content" in url) and "identity" not in url \
                 and "entree" not in url and "somtoday" not in url:
-            return True
+            try:
+                page.wait_for_selector("[data-testid='new-product-card']", timeout=4000)
+                return True
+            except Exception:
+                pass
         try:
             if "identity" in url:
                 b = page.locator("text='via Entree'")
@@ -151,7 +160,9 @@ def capture_chapter(page, course_id, ebook_id, start, end):
         m = ASSET_RE.search(resp.url)
         if not m:
             return
-        pnum, scale = int(m.group(1)), int(m.group(2))
+        pnum, scale = int(m.group(1)), float(m.group(2))
+        if scale < 1.0:
+            return
         if pnum < start or pnum > end:
             return
         prev = urls.get(pnum)
@@ -257,10 +268,20 @@ def export_chapter(page, vak, vak_cfg, chapter):
     out_path = INBOX / vak / chapter["output"]
 
     vak_titles = {"frans": "Frans", "duits": "Duits", "engels": "Engels",
-                  "aardrijkskunde": "Aardrijkskunde"}
+                  "aardrijkskunde": "Aardrijkskunde", "nederlands": "Nederlands",
+                  "wiskunde": "Wiskunde"}
     pdf_title = f"{vak_titles.get(vak, vak)} · {label} · {titel}"
 
     log(f"\n--- {vak} / {label} ({titel}) — kitap sayfa {start}-{end} ---")
+
+    # Ensure reader session is initialized if not yet active
+    try:
+        reader_init_url = reader_url(course_id, ebook_id, start)
+        page.goto(reader_init_url, timeout=30000)
+        page.wait_for_selector("img[src*='ebook-assets']", timeout=20000)
+        time.sleep(2)
+    except Exception as e:
+        log(f"    (Reader ön-yükleme uyarısı: {e})")
 
     attempt = 0
     while True:
@@ -358,7 +379,7 @@ def cmd_export(vak, hoofdstuk=None, label=None, only_output=None):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--vak", help="frans | duits | engels | aardrijkskunde")
+    ap.add_argument("--vak", help="frans | duits | engels | aardrijkskunde | nederlands")
     ap.add_argument("--hoofdstuk", type=int, default=None, help="Yalnız bu hoofdstuk numarası")
     ap.add_argument("--label", default=None, help="Label'da geçen metne göre filtre (örn. 'Unité 2')")
     ap.add_argument("--output", default=None, help="Yalnız bu çıktı dosya adını üret")

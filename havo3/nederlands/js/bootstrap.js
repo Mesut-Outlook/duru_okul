@@ -7,8 +7,16 @@
 (function () {
   window.DURU = window.DURU || {};
 
-  // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
-  DURU.hoofdstukken = [];
+  // Hoofdstuk 1: Meer dan lezen
+  DURU.hoofdstukken = [
+    {
+      nr: 1,
+      titel: "Meer dan lezen",
+      icoon: "📖",
+      kleur: "h1-thema",
+      intro: "Inleiding en slot (§1), argumentatiestructuren (§2), vaste tekststructuren (§4) en actief lezen (§5)."
+    }
+  ];
   DURU.onderwerpen = [];
   DURU._byId = {};
 

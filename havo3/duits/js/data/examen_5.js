@@ -193,9 +193,8 @@ DURU.registerExamen({
       "vraag": "Hoe spreek je in het Duits de medeklinkers 'sp' en 'st' uit aan het begin van een woord?",
       "modelantwoord": "Als 'sjp' en 'sjt' (bijvoorbeeld Sport klinkt als sjport).",
       "sleutelwoorden": [
-        "sjp",
-        "sjt",
-        "sj"
+        "sjp/sj-p/sj p",
+        "sjt/sj-t/sj t"
       ],
       "minTreffers": 1,
       "uitleg": "Aan het begin van een woord klinken sp en st als sjp en sjt."

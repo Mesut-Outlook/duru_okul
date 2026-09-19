@@ -269,6 +269,14 @@
       .replace(/[.,;:!?'"()·\u2018\u2019\u201c\u201d\u02bc`\u00b4]/g, " ")
       .replace(/\s+/g, " ").trim();
   }
+  // Sleutel van hooguit 2 tekens ("le", "au", "im", "m", "5") telt alleen als heel woord: als substring
+  // zat "au" in "aux" (het typische foute antwoord) en "es" in bijna elke Franse zin. Langere sleutels
+  // blijven substring, zodat stammen in samenstellingen werken ("gas" in "aardgas", "bol" in "bolle").
+  function bevatSleutel(tekst, a) {
+    if (a.length > 2) return tekst.indexOf(a) !== -1;
+    var esc = a.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp("(^|[^0-9a-z\u00c0-\u024f\u00b2\u00b3])" + esc + "(?=$|[^0-9a-z\u00c0-\u024f\u00b2\u00b3])").test(tekst);
+  }
   // invul nakijken (ENGINE_SPEC): getal-antwoorden numeriek, tekst-antwoorden zoals voorheen.
   // Zonder dit telde "12" of "0,2" goed bij antwoord "2" (indexOf op tekst).
   function leesGetal(s) {
@@ -324,7 +332,7 @@
     sleutels.forEach(function (woordgroep) {
       // een "sleutel" mag meerdere alternatieven hebben gescheiden door /
       var alt = woordgroep.split("/").map(function (x) { return x.trim(); });
-      if (alt.some(function (a) { return a && tekst.indexOf(a) !== -1; })) treffers++;
+      if (alt.some(function (a) { return a && bevatSleutel(tekst, a); })) treffers++;
     });
     if (sleutels.length === 0) return { status: tekst.length > 3 ? "deels" : "fout", punt: tekst.length > 3 ? 1 : 0 };
     if (treffers >= sleutels.length) return { status: "goed", punt: 1 };

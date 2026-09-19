@@ -155,7 +155,7 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Waar hebben de vrienden elkaar ontmoet in de zin: <i>'J'ai rencontré Lucas au club de sport'</i> (p. 49-50)?",
+      "vraag": "Waar hebben de vrienden elkaar ontmoet in de zin: <i>'J'ai rencontré Max au club de sport'</i> (p. 50)?",
       "opties": [
         "op het schoolplein",
         "in het ziekenhuis",
@@ -171,11 +171,11 @@ DURU.registerExamen({
       "opties": [
         "zonder vrienden",
         "met vreemde mensen",
-        "bij vrienden (thuis)",
+        "bij vrienden",
         "op het sportveld"
       ],
       "antwoord": 2,
-      "uitleg": "'Chez des amis' betekent 'bij vrienden thuis' ('chez' = bij ... thuis)."
+      "uitleg": "'Chez des amis' betekent 'bij vrienden' (p. 49). 'Chez' = bij iemand (thuis)."
     },
     {
       "type": "waaronwaar",

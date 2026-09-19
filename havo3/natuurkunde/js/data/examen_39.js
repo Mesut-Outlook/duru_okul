@@ -206,12 +206,12 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Op een wrijvingsloze baan worden twee wagentjes gelijktijdig afgeschoten met exact dezelfde kracht. Wagentje 1 heeft een massa van 800 gram en wagentje 2 heeft een massa van 150 gram. Beargumenteer natuurkundig waarom het lichte wagentje na de afstoot een veel hogere snelheid heeft.",
       "sleutelwoorden": [
-        "grotere versnelling/hogere versnelling",
-        "a = f / m/f = m * a/tweede wet van newton",
-        "kleinere massa/minder massa/minder traagheid"
+        "grotere versnelling/hogere versnelling/meer versnelling/grootste versnelling",
+        "tweede wet/newton/a = f/f = m",
+        "kleinere massa/minder massa/minder traagheid/lichter"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Voorwerp B bereikt een veel hogere snelheid. Volgens a = F / m krijgt voorwerp B door zijn veel kleinere massa een enorm veel grotere versnelling bij dezelfde kracht van 20 N. Daardoor wint voorwerp B in dezelfde 0,2 seconden veel meer snelheid dan het zware voorwerp A.",
+      "modelantwoord": "Het lichte wagentje (150 g) krijgt de hoogste snelheid. Beide wagentjes krijgen dezelfde kracht. Volgens de tweede wet van Newton (a = F / m) geeft dezelfde kracht bij een kleinere massa een grotere versnelling, dus wint het lichte wagentje in dezelfde tijd veel meer snelheid.",
       "uitleg": "Kleinere massa betekent bij gelijke kracht een grotere versnelling en dus een hogere eindsnelheid."
     }
   ]

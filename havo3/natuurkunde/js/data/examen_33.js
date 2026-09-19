@@ -206,10 +206,9 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Een motorblok levert 4500 N aandrijfkracht aan een racewagen van 900 kg. De totale tegenkrachten bedragen 900 N. Bepaal de versnelling.",
         "sleutelwoorden": [
-            "4 m/s²",
-            "4,0",
-            "3600 N"
-        ],
+        "4 0 m/4 m",
+        "3600"
+      ],
         "minTreffers": 1,
         "modelantwoord": "Fres = 4500 - 900 = 3600 N. a = Fres / m = 3600 / 900 = 4,0 m/s².",
         "uitleg": "Fres = 3600 N. a = 3600 / 900 = 4,0 m/s²."

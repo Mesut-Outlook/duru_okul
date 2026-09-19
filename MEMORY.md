@@ -527,3 +527,20 @@ Faz 1 uygulandı.
   başka testin üstünde görünecekti. Orijinaller 1–5'e geri, yeniler 35–39'a.
 * agy paralel çalışırken `examen_37–39`'u (bağlı değil diye) sildi → geri alındı. Kural `coordination.md`'de.
 * Toplam **127 · 233 · 5650**; 9 ders kapı 16/16; manifest `--check` exit 0.
+
+## 📅 Milestone 17: Economie 4.1 & 4.2 için 10 Yeni Proeftoets (2026-09-13)
+
+* **İstek**: "ekonomi 4.1 ve 4.2 icin ayri ayri 3 er tane berbaer de 4 tane olmak uzere 10 tane yeni test uret".
+* **Kapsam**:
+  - Paragraaf 4.1 için 3 ayrı test: `examen_28.js`, `examen_29.js`, `examen_30.js` (Begrippentoets 4.1 dahil).
+  - Paragraaf 4.2 için 3 ayrı test: `examen_31.js`, `examen_32.js`, `examen_33.js` (Begrippentoets 4.2 dahil).
+  - Paragraaf 4.1 & 4.2 entegre 4 ortak test: `examen_34.js`, `examen_35.js`, `examen_36.js`, `examen_37.js`.
+* **Kalite**:
+  - Her test tam 20 soru (12 mc, 4 waaronwaar, 2 invul, 2 open) = 200 yeni soru.
+  - MC seçenekleri dosya başına dengeli (A, B, C, D tam %25'er) ve tahmin edilemez dağılım.
+  - Waaronwaar tam %50 onwaar (2 true, 2 false).
+  - `tools/gate.js economie` 16/16 yeşil geçti.
+  - `tools/open_check.js economie` 0 hata ile geçti.
+  - `tools/build_hoofdstukken.js` ile `js/hoofdstukken.js` manifesti güncellendi (H4 sınav sayısı 15 → 25).
+* **Toplam**: Economie 12 onderwerp · 37 proeftoets · 836 soru. (Genel toplam: 141 onderwerp · 263 proeftoets · 6417 soru).
+

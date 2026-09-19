@@ -37,7 +37,7 @@ DURU.registerExamen({
       "type": "waaronwaar",
       "vraag": "Het Franse werkwoord <b>'télécharger'</b> (p. 48) betekent een foto of bestand downloaden.",
       "antwoord": true,
-      "uitleg": "Waar. 'Télécharger' betekent 'downloaden' (of uploaden)."
+      "uitleg": "Waar. 'Télécharger' betekent 'downloaden' (p. 48). Iets online zetten is 'publier' of 'mettre en ligne'."
     },
     {
       "type": "invul",

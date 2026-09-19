@@ -1,12 +1,12 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 46 — §1.2 Soorten beweging & Diagrammen — Toets D (25 vragen)
+   Duru's Natuurkunde (HAVO 3) — Toets 46 — §1.2 Soorten beweging & Diagrammen — Toets D
    Gebaseerd op Overal Natuurkunde 3 HAVO (Hoofdstuk 1 Kracht en beweging)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-46",
   "hoofdstuk": 1,
   "paragraaf": "1.2",
-  "titel": "Toets 46 — §1.2 Soorten beweging & Diagrammen — Toets D (25 vragen)",
+  "titel": "Toets 46 — §1.2 Soorten beweging & Diagrammen — Toets D",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "📈",
   "duurMin": 35,
@@ -201,65 +201,6 @@ DURU.registerExamen({
       "vraag": "In een (v,t)-diagram heeft een eenparig vertraagde beweging altijd een horizontale grafieklijn.",
       "antwoord": false,
       "uitleg": "Onwaar. Een eenparig vertraagde beweging heeft een schuin omlaag lopende rechte lijn in een (v,t)-diagram. Een horizontale lijn betekent een constante snelheid."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een personenauto remt op een natte weg af van 25 m/s naar stilstand in 5,0 seconden. Bereken de vertraging a in m/s²:",
-      "opties": [
-        "125 m/s²",
-        "5,0 m/s²",
-        "2,5 m/s²",
-        "10 m/s²"
-      ],
-      "antwoord": 1,
-      "uitleg": "De verandering van snelheid is Δv = 25 m/s. a = Δv / t = 25 / 5,0 = 5,0 m/s²."
-    },
-    {
-      "type": "mc",
-      "vraag": "Hoe lang doet een geluidssignaal (snelheid v = 340 m/s) erover om een afstand van 1700 meter af te leggen door de lucht?",
-      "opties": [
-        "2,0 seconden",
-        "5,0 seconden",
-        "0,2 seconden",
-        "578 seconden"
-      ],
-      "antwoord": 1,
-      "uitleg": "t = s / v = 1700 m / 340 m/s = 5,0 s."
-    },
-    {
-      "type": "open",
-      "vraag": "Leg uit waarom men bij een kromme lijn in een (v,t)-diagram de totale afgelegde weg kan bepalen door het tellen van roostervierkantjes.",
-      "sleutelwoorden": [
-        "oppervlak/oppervlakte",
-        "breedte maal hoogte/tijd maal snelheid/meters/v maal t"
-      ],
-      "minTreffers": 1,
-      "modelantwoord": "De afgelegde weg komt overeen met de oppervlakte onder de (v,t)-grafiek. Elk roostervierkantje heeft een vaste breedte (tijd) en hoogte (snelheid), waardoor één vierkantje een vast aantal meters vertegenwoordigt (v · t). Het totaal aantal vierkantjes levert zo de totale afstand op.",
-      "uitleg": "De totale oppervlakte onder de (v,t)-lijn geeft de afstand; door roostervierkantjes op te tellen bereken je die oppervlakte (Δv · Δt)."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een schaatser legt een ronde van 400 meter af met een constante snelheid van 10 m/s. Hoeveel seconden duurt deze ronde?",
-      "opties": [
-        "25 seconden",
-        "4000 seconden",
-        "4 seconden",
-        "40 seconden"
-      ],
-      "antwoord": 3,
-      "uitleg": "t = s / v = 400 m / 10 m/s = 40 s."
-    },
-    {
-      "type": "mc",
-      "vraag": "Welke eenheid hoort bij de versnelling in het SI-stelsel?",
-      "opties": [
-        "m/s²",
-        "m/s",
-        "km/h",
-        "N/kg"
-      ],
-      "antwoord": 0,
-      "uitleg": "Versnelling is de toename van de snelheid per seconde: (m/s) / s = m/s²."
     }
   ]
 });

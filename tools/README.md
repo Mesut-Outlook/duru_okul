@@ -68,8 +68,9 @@ için karışık biçimli dosyalarda dağılımı tam oturtmuyor.
 node tools/open_check.js
 ```
 
-Tüm dersleri tarar. Motor (`exams.js`) `sleutelwoorden`'i `tekst.indexOf(alternatif)` ile
-**birebir alt-dizi** olarak arar. Dolayısıyla:
+Tüm dersleri tarar. Motor (`exams.js → bevatSleutel`) `sleutelwoorden`'i **birebir alt-dizi** olarak
+arar; yalnız ≤2 karakterlik alternatifler tam kelime eşleşir (2026-09-13: `"au"` "aux"ta, `"es"` her
+Fransızca cümlede bulunuyordu). Bir alternatifin içine `/` yazma — ayırıcıdır. Dolayısıyla:
 
 - `sleutelwoord` **1–3 kelimelik terim** olmalı (`"kernafval"`, `"turbine"`), alternatifler `/` ile.
 - 6–12 kelimelik cümle yazılırsa öğrenci onu harfiyen yazmadıkça **doğru cevap 0 puan** alır.
@@ -93,6 +94,10 @@ python3 tools/pdf_check.py --index                        # inbox/2026-2027/PDF_
 
 Her sayfayı `BOS` / `ISKELET` (yükleniyor) / `MENU` (yalnız açık okuyucu menüsü) / `ARAYUZ` (reader
 arayüzü görünüyor) / `KOPYA` (bir öncekinin aynısı) / `OK` olarak sınıflandırır; sorun varsa exit 1.
+Yanlış alarmlar (benzer cevap tabloları, renkli başlıklı "Overzicht" sayfaları, kapak/künye) gözle
+kontrol edilip `tools/pdf_check_onay.json`'a **sayfa sayfa** yazılır; indeks onları "✅ gözle onaylı" gösterir,
+listede olmayan yeni bir işaret yine ❌ olur. Kitap sayfa aralığı `noordhoff_books.json`'dan gelir
+(duits: Deel A/B, sayfa numaraları iki ciltte yeniden başlar → `A:16-55`, `B:16-55`).
 Kitap materyalinden içerik üretmeden önce PDF ✅ olmalı: 1 Eylül'de frans'ın 40 sınavı %100 boş
 PDF'lerle üretildi. Noordhoff kitapları yalnız `tools/noordhoff_export.py` + `noordhoff_books.json` ile
 çekilir (eski `export_*` betikleri yerine; tarayıcı profili kilitli → tek süreç, sıralı).

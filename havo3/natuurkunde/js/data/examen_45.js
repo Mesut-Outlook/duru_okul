@@ -1,12 +1,12 @@
 /* =========================================================
-   Duru's Natuurkunde (HAVO 3) — Toets 45 — §1.1 Kracht bij beweging — Toets D (25 vragen)
+   Duru's Natuurkunde (HAVO 3) — Toets 45 — §1.1 Kracht bij beweging — Toets D
    Gebaseerd op Overal Natuurkunde 3 HAVO (Hoofdstuk 1 Kracht en beweging)
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-natuurkunde-45",
   "hoofdstuk": 1,
   "paragraaf": "1.1",
-  "titel": "Toets 45 — §1.1 Kracht bij beweging — Toets D (25 vragen)",
+  "titel": "Toets 45 — §1.1 Kracht bij beweging — Toets D",
   "vak": "Natuurkunde · HAVO 3 (H1)",
   "icoon": "🏎️",
   "duurMin": 35,
@@ -25,15 +25,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat gebeurt er met de grootte van de luchtweerstand op een fietser als zijn snelheid verdubbelt van 15 km/h naar 30 km/h?",
+      "vraag": "Op een fietser werkt een resulterende kracht van 20 N naar voren. Wat gebeurt er met zijn snelheid?",
       "opties": [
-        "De luchtweerstand verdubbelt (wordt 2 keer zo groot)",
-        "De luchtweerstand blijft gelijk",
-        "De luchtweerstand wordt 8 keer zo groot",
-        "De luchtweerstand wordt 4 keer zo groot"
+        "De snelheid blijft gelijk",
+        "De snelheid neemt af",
+        "De fietser staat meteen stil",
+        "De snelheid neemt toe"
       ],
       "antwoord": 3,
-      "uitleg": "De luchtweerstand is evenredig met het kwadraat van de snelheid (v²). Als de snelheid 2 keer zo groot wordt, neemt de luchtweerstand toe met een factor 2² = 4."
+      "uitleg": "Een resulterende kracht in de bewegingsrichting zorgt voor een versnelde beweging: de snelheid neemt toe."
     },
     {
       "type": "waaronwaar",
@@ -127,14 +127,15 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in eigen woorden uit waarom een wielrenner bij windstil weer aanzienlijk meer moeite moet doen om zijn snelheid te verhogen van 30 km/h naar 40 km/h dan van 10 km/h naar 20 km/h.",
+      "vraag": "Leg uit wat het verschil is tussen de massa van een voorwerp en de zwaartekracht op dat voorwerp. Noem bij allebei ook de eenheid.",
       "sleutelwoorden": [
-        "luchtweerstand/wrijvingskracht",
-        "kwadraat/kwadratisch/sterker stijgt/v²"
+        "kilogram/kg",
+        "newton/in n",
+        "hoeveelheid stof/hoeveel stof/aarde trekt/aantrekkingskracht/fz = m/fz=m"
       ],
-      "minTreffers": 1,
-      "modelantwoord": "De luchtweerstand neemt kwadratisch toe met de snelheid (v²). Bij hogere snelheden stijgt de luchtweerstand veel sterker voor elke extra km/h, waardoor er veel meer vermogen en spierkracht nodig is.",
-      "uitleg": "Omdat Fw,l evenredig is met v², kost versnellen bij hoge snelheid veel meer kracht dan bij lage snelheid."
+      "minTreffers": 2,
+      "modelantwoord": "Massa is de hoeveelheid stof van een voorwerp en wordt uitgedrukt in kilogram (kg); die is overal even groot. Zwaartekracht is de kracht waarmee de aarde aan het voorwerp trekt, in newton (N): Fz = m · g.",
+      "uitleg": "Massa (kg) verandert niet van plaats tot plaats; de zwaartekracht (N) hangt af van de massa én van g (Fz = m · g)."
     },
     {
       "type": "mc",
@@ -150,15 +151,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Welke vorm heeft de laagste luchtweerstandscoëfficiënt (Cw-waarde) bij gelijke frontale oppervlakte?",
+      "vraag": "Wat verstaan we onder de resulterende kracht op een voorwerp?",
       "opties": [
-        "Een gestroomlijnde druppelvorm",
-        "Een platte rechthoekige plaat",
-        "Een holle halve bol gericht tegen de wind",
-        "Een kubusvormig blok"
+        "De som van alle krachten die op het voorwerp werken",
+        "De grootste kracht die op het voorwerp werkt",
+        "Alleen de zwaartekracht op het voorwerp",
+        "De kracht waarmee een motor het voorwerp vooruit duwt"
       ],
       "antwoord": 0,
-      "uitleg": "Een gestroomlijnde druppelvorm zorgt ervoor dat de lucht geleidelijk langs het oppervlak vloeit zonder grote wervelingen erachter, wat resulteert in de kleinste Cw-waarde."
+      "uitleg": "De resulterende kracht is de som van alle krachten op een voorwerp (boek, Overzicht H1)."
     },
     {
       "type": "waaronwaar",
@@ -201,65 +202,6 @@ DURU.registerExamen({
       "vraag": "De rolweerstand van een voertuig is afhankelijk van de ruwheid en zachtheid van de ondergrond.",
       "antwoord": true,
       "uitleg": "Waar. Rijden over een zacht of modderig bospad geeft veel meer wiel- en bodemvervorming (en dus een veel hogere rolweerstand) dan rijden over glad asfalt."
-    },
-    {
-      "type": "mc",
-      "vraag": "Twee krachten werken langs dezelfde rechte lijn op een voorwerp: F1 = 120 N naar rechts en F2 = 75 N naar links. Wat is de resulterende kracht Fres?",
-      "opties": [
-        "195 N naar rechts",
-        "45 N naar links",
-        "0 N",
-        "45 N naar rechts"
-      ],
-      "antwoord": 3,
-      "uitleg": "Omdat de krachten tegengesteld gericht zijn, trek je ze van elkaar af: Fres = 120 N - 75 N = 45 N in de richting van de grootste kracht (naar rechts)."
-    },
-    {
-      "type": "mc",
-      "vraag": "Tijdens een noodstop blokkeren de wielen van een personenauto. Welke kracht zorgt voor de vertraging van de auto?",
-      "opties": [
-        "De schuifwrijvingskracht tussen de banden en het wegdek",
-        "De motorkracht die plotseling achteruit draait",
-        "De normaalkracht die loodrecht omhoog werkt",
-        "De zwaartekracht die naar beneden trekt"
-      ],
-      "antwoord": 0,
-      "uitleg": "Bij slippende banden zorgt de wrijvingskracht (schuifwrijving) tussen het rubber en het wegdek voor de remmende resulterende kracht."
-    },
-    {
-      "type": "open",
-      "vraag": "Beschrijf wat er gebeurt met de beweging van een parachutespringer op het moment dat hij zijn parachute opent bij een valsnelheid van 180 km/h.",
-      "sleutelwoorden": [
-        "vertraging/afremmen/remt af",
-        "oppervlak/luchtweerstand/groter dan zwaartekracht"
-      ],
-      "minTreffers": 1,
-      "modelantwoord": "Het openen van het doek vergroot het frontale oppervlak enorm, waardoor de opwaartse luchtweerstand plotseling veel groter wordt dan de zwaartekracht. Hierdoor ontstaat een grote resulterende kracht omhoog en vertraagt de springer snel tot een veilige landingssnelheid.",
-      "uitleg": "Door de enorme toename van Fw,l ontstaat een netto opwaartse remkracht waardoor de valsnelheid sterk afneemt."
-    },
-    {
-      "type": "mc",
-      "vraag": "Een sleepboot trekt een zeeschip met een constante snelheid de haven in. Welke bewering over de krachten is juist?",
-      "opties": [
-        "De trekkracht van de sleepboot is veel groter dan de wrijvingskracht",
-        "De wrijvingskracht van het water is groter dan de trekkracht",
-        "De trekkracht van de sleepboot is even groot als de totale wrijvingskracht van het water op het schip",
-        "Er werken geen krachten op het schip"
-      ],
-      "antwoord": 2,
-      "uitleg": "Omdat de snelheid constant is, is de resulterende kracht nul. De voorwaartse trekkracht van de kabel is dus precies even groot als de tegenwerkende waterweerstand."
-    },
-    {
-      "type": "mc",
-      "vraag": "Waarom monteren raceauto's spoilers en een gladde bodemplaat?",
-      "opties": [
-        "Om het gewicht van de auto te vergroten voor meer rolweerstand",
-        "Om de luchtstroming te optimaliseren en turbulentie/luchtweerstand te minimaliseren",
-        "Om de zwaartekracht naar voren te buigen",
-        "Om meer wrijving met de lucht te genereren"
-      ],
-      "antwoord": 1,
-      "uitleg": "Een aerodynamische vorm en gladde onderkant verminderen wervelingen en luchtweerstand, waardoor de auto met hetzelfde motorvermogen een hogere snelheid kan bereiken."
     }
   ]
 });

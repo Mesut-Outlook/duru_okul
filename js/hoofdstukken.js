@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-13",
+  "gegenereerd": "2026-09-19",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -240,7 +240,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-24": 4,
         "ex-h3-economie-25": 4,
         "ex-h3-economie-26": 4,
-        "ex-h3-economie-27": 4
+        "ex-h3-economie-27": 4,
+        "ex-h3-economie-28": 4,
+        "ex-h3-economie-29": 4,
+        "ex-h3-economie-30": 4,
+        "ex-h3-economie-31": 4,
+        "ex-h3-economie-32": 4,
+        "ex-h3-economie-33": 4,
+        "ex-h3-economie-34": 4,
+        "ex-h3-economie-35": 4,
+        "ex-h3-economie-36": 4,
+        "ex-h3-economie-37": 4
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -260,7 +270,7 @@ window.DURU_HOOFDSTUKKEN = {
         "1": 6,
         "2": 3,
         "3": 3,
-        "4": 15
+        "4": 25
       },
       "aantalOnderwerpen": {
         "1": 3,
@@ -789,11 +799,35 @@ window.DURU_HOOFDSTUKKEN = {
       }
     },
     "nederlands": {
-      "hoofdstukken": [],
-      "examenHoofdstuk": {},
-      "onderwerpHoofdstuk": {},
-      "aantalExamens": {},
-      "aantalOnderwerpen": {}
+      "hoofdstukken": [
+        {
+          "nr": 1,
+          "titel": "Meer dan lezen",
+          "icoon": "📖",
+          "intro": "Inleiding en slot (§1), argumentatiestructuren (§2), vaste tekststructuren (§4) en actief lezen (§5)."
+        }
+      ],
+      "examenHoofdstuk": {
+        "ex-h3-nederlands-1": 1,
+        "ex-h3-nederlands-2": 1,
+        "ex-h3-nederlands-3": 1,
+        "ex-h3-nederlands-4": 1,
+        "ex-h3-nederlands-5": 1,
+        "ex-h3-nederlands-6": 1
+      },
+      "onderwerpHoofdstuk": {
+        "h1-1-inleiding-slot": 1,
+        "h1-2-argumenteren": 1,
+        "h1-4-vaste-structuren": 1,
+        "h1-5-actief-lezen": 1,
+        "h1-begrippen": 1
+      },
+      "aantalExamens": {
+        "1": 6
+      },
+      "aantalOnderwerpen": {
+        "1": 5
+      }
     },
     "scheikunde": {
       "hoofdstukken": [

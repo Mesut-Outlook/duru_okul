@@ -205,8 +205,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een auto van 1200 kg trekt op. De motorkracht is 3000 N en de gezamenlijke rol- en luchtweerstand is 600 N. Bereken in twee stappen de versnelling.",
       "sleutelwoorden": [
-        "2400 N/2400 newton",
-        "2 m/s2/2,0 m/s2/2 m/s²/2,0 m/s²"
+        "2400",
+        "2 0 m/2 m"
       ],
       "minTreffers": 2,
       "modelantwoord": "Stap 1: Bereken de resulterende kracht: Fres = Fmotor - Fweerstand = 3000 - 600 = 2400 N. Stap 2: Bereken de versnelling: a = Fres / m = 2400 / 1200 = 2,0 m/s².",

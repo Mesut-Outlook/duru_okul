@@ -94,7 +94,11 @@ paragraf) ya da `"eind"` (hoofdstuk eindtoets). Ders sitesi testleri bununla gru
 **`invul` sorusunda cevabı `[köşeli parantez]` ile soruya yazma** — motor onu boşluğa çevirmez; boşluk `____`.
 **LaTeX yazma** — KaTeX/MathJax yüklü değil; `F<sub>res</sub>`, `m/s²`, `Δv` gibi düz metin/HTML kullan.
 `open`: tüm sleutelwoorden bulunursa "goed", `>= minTreffers` "deels" (yine 1 puan), yoksa "fout".
-`/` bir sleutel için alternatif yazımlardır.
+`/` bir sleutel için alternatif yazımlardır — **bir alternatifin içinde `/` olamaz** (`"1/f = 1/v"` → `"1"`,
+`"f = 1"`, `"v"` diye bölünür). Eşleştirme: öğrenci metni ve anahtar `normaliseer`'dan geçer (küçük harf,
+`.,;:!?'"()` → boşluk; yani `"2,0"` → `"2 0"`). **≥3 karakterlik** alternatif alt-dizi olarak aranır (kök
+eşleşir: `"gas"` ⊂ "aardgas"); **≤2 karakterlik** alternatif (`"au"`, `"le"`, `"m"`, `"5"`) yalnız **tam kelime**
+eşleşir (`exams.js → bevatSleutel`, 2026-09-13). Soru metninde geçen kelimeyi/ismi anahtar yapma.
 
 ## theorie HTML — mevcut CSS sınıflarını kullan (yeni sınıf uydurma)
 `<h3>/<h4>`, `formule-box` (tanım/anahtar kavram kutusu), `voorbeeld`/`vb-kop`/`stap` (çözümlü örnek),

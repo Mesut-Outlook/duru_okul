@@ -295,12 +295,16 @@ def find_book_range_for_file(fname, books_cfg):
     """noordhoff_books.json içindeki chapters listelerinde dosya adına (output)
     göre kitap sayfa aralığını bul."""
     stem = Path(fname).stem
-    for vak, cfg in books_cfg.items():
-        for ch in cfg.get("chapters", []):
-            out = ch.get("output", "")
-            if Path(out).stem == stem or ch.get("slug", "") in stem:
-                return f"{ch.get('start', '?')}-{ch.get('end', '?')}"
-    return ""
+    chapters = [ch for cfg in books_cfg.values() if isinstance(cfg, dict)
+                for ch in cfg.get("chapters", [])]
+    # Eerst exacte bestandsnaam, dan "_<slug>" als ACHTERVOEGSEL. Een losse "slug in stem" koppelde
+    # frans_h08_le-pont-examentraining aan de h04-slug "le-pont" (verkeerde paginareeks in PDF_INDEX).
+    match = next((ch for ch in chapters if Path(ch.get("output", "")).stem == stem), None) \
+        or next((ch for ch in chapters if ch.get("slug") and stem.endswith("_" + ch["slug"])), None)
+    if not match:
+        return ""
+    boek = f"{match['book']}:" if match.get("book") else ""   # duits: deel A/B, paginanummers beginnen opnieuw
+    return f"{boek}{match.get('start', '?')}-{match.get('end', '?')}"
 
 
 def build_index():
@@ -318,6 +322,8 @@ def build_index():
         "|---|---|---|---|---|---|",
     ]
     any_bad = False
+    onay_pad = REPO / "tools" / "pdf_check_onay.json"   # met het oog gecontroleerde vals-positieven
+    onay = json.loads(onay_pad.read_text()) if onay_pad.exists() else {}
     for pdf in pdfs:
         vak = pdf.parent.name
         try:
@@ -327,7 +333,11 @@ def build_index():
             any_bad = True
             continue
         rng = find_book_range_for_file(pdf.name, books_cfg)
-        if res["bad_pages"]:
+        ok_sayfalar = set(onay.get(pdf.name, {}).get("sayfalar", []))
+        if res["bad_pages"] and all(r["page"] in ok_sayfalar for r in res["bad_pages"]):
+            bad_desc = "gözle onaylı yanlış alarm: " + ", ".join(f"s.{r['page']}" for r in res["bad_pages"])
+            durum = "✅"
+        elif res["bad_pages"]:
             any_bad = True
             bad_desc = "; ".join(
                 f"s.{r['page']}({','.join(r['flags'])})" for r in res["bad_pages"][:12]

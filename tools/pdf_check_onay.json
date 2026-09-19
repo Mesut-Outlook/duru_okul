@@ -1,0 +1,12 @@
+{
+  "_uitleg": "Pagina's die pdf_check.py markeert maar die met het oog zijn gecontroleerd en in orde zijn (yanlış alarm). Alleen de hier genoemde pagina's worden goedgekeurd; een nieuwe markering elders blijft ❌.",
+  "natuurkunde_h08_krachten-gebruiken.pdf": {"sayfalar": [17, 18], "neden": "Numerieke antwoorden: gelijkende tabellen, geen kopie", "door": "Opus, 2026-09-13"},
+  "scheikunde_h01_scheikunde-is-overal.pdf": {"sayfalar": [1, 2, 18, 19], "neden": "s.1 omslag, s.2 colofon (weinig tekst), s.18-19 gekleurde koppen / Overzicht begrippen", "door": "Opus, 2026-09-13"},
+  "scheikunde_h02_bouwstenen-van-stoffen.pdf": {"sayfalar": [15], "neden": "gekleurde kop, boekpagina compleet", "door": "Opus, 2026-09-13"},
+  "scheikunde_h03_chemische-reacties.pdf": {"sayfalar": [12], "neden": "gekleurde kop, boekpagina compleet", "door": "Opus, 2026-09-13"},
+  "scheikunde_h04_reacties-en-energie.pdf": {"sayfalar": [14], "neden": "gekleurde kop, boekpagina compleet", "door": "Opus, 2026-09-13"},
+  "scheikunde_h05_mengsels.pdf": {"sayfalar": [14], "neden": "gekleurde kop, boekpagina compleet", "door": "Opus, 2026-09-13"},
+  "economie_h04_produceren-4-1-4-2.pdf": {"sayfalar": [1], "neden": "eerste spread iets andere verhouding; inhoud compleet", "door": "Opus, 2026-09-13"},
+  "duits_extra_wiederholung-a.pdf": {"sayfalar": [25, 26], "neden": "Wortschatz-lijsten lijken op elkaar, verschillende thema's", "door": "Opus, 2026-09-13"},
+  "duits_extra_wiederholung-b.pdf": {"sayfalar": [27, 28], "neden": "Wortschatz-lijsten lijken op elkaar, verschillende thema's", "door": "Opus, 2026-09-13"}
+}
