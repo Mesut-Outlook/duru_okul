@@ -552,12 +552,18 @@ Faz 1 uygulandı.
   - `examen_2.js`: **Toets 2 — §2 Inleiding en Slot (Leesteksten & Functies)** (20 soru: 'Biologische klok' ve 'Smartphone op school' leestekstleri ile dikkat çekme yöntemleri, konu tanıtımı, slot fonksiyonları ve güzelce tamamlama).
   - `examen_3.js`: **Toets 3 — §5 Vaste Tekststructuren (De 7 Modellen & Signaalwoorden)** (20 soru: 'Elektrische deelfiets' ve 'Leven in de diepzee' leestekstleri ile 7 sabit model, metin hedefleri ve signaalwoorden).
   - `examen_4.js`: **Toets 4 — Proeftoets Lezen HAVO 3 (Integrale Oefentoets B)** (20 soru: 'Psychologie van nepnieuws' ve 'Plastic soep' leestekstleri ile tam deneme).
+  - `examen_5.js`: **Toets 5 — §2 Inleiding en Slot (Toets B — Tekstanalyse & Aandachtstrekkers)** (20 soru: 'Wedergeboorte van vinyl' ve 'Opmars van de Noordzee' leestekstleri).
+  - `examen_6.js`: **Toets 6 — §2 Inleiding en Slot (Toets C — Probleemstelling & Hoofdgedachte)** (20 soru: 'Dokter en algoritme' ve 'Waarom bewegen brein oplaadt' leestekstleri).
+  - `examen_7.js`: **Toets 7 — §5 Vaste Tekststructuren (Toets B — Modellen & Alineaverbanden)** (20 soru: 'De wolf terug in Nederland' ve 'Anatomie van de tornado' leestekstleri).
+  - `examen_8.js`: **Toets 8 — §5 Vaste Tekststructuren (Toets C — Signaalwoorden & Oorzaak-Gevolg)** (20 soru: 'Twee eeuwen spoor' ve 'Verdwijnende gezoem: reddingsplan voor de bij' leestekstleri).
 * **Kalite & Standartlar**:
+  - Toplam 8 sınav x 20 soru = 160 sınav sorusu; 5 konu anlatımı x 8 = 40 oefenvragen (Toplam 200 soru).
   - Okuma parçaları `v.figuur` içinde zarif, kaydırılabilir leestekst kartı olarak tasarlandı.
   - Soru başına `v.vraag` açık ve anahtar kelime sızdırmayacak şekilde yapılandırıldı.
-  - MC seçenekleri her sınavda dengeli (A, B, C, D dağılımı ≤%30).
+  - MC seçenekleri her sınavda dengeli (A, B, C, D dağılımı ≤%35).
   - Waaronwaar sorularında en az %35 onwaar barajı sağlandı.
   - `tools/gate.js nederlands` 16/16 kusursuz geçti.
   - `js/hoofdstukken.js` güncellendi ve senkronize edildi.
+
 
 

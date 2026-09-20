@@ -958,6 +958,28 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
   - `tools/build_hoofdstukken.js` ile manifest derlendi ve senkronize edildi.
 
-
-
-
+### 2026-09-20 · Nederlands Cursus 1 — §2 ve §5 için 4 Ek Sınav (Toets 5 t/m 8) (agy) ✅
+- **Kullanıcı Talebi**: "tamamm bu bolumlerden 2 ser sinav daha yarat" (§2 Inleiding en slot ve §5 Vaste tekststructuren bölümlerinden 2'şer sınav daha).
+- **Üretilen 4 Sınav (Toplam 80 Soru)**:
+  - **§2 Inleiding en slot**:
+    - `examen_5.js`: Toets 5 — §2 Inleiding en Slot — Toets B (20 soru)
+      - Tekst 1: 'De wedergeboorte van vinyl' (10 alinea)
+      - Tekst 2: 'De opmars van de Noordzee' (10 alinea)
+    - `examen_6.js`: Toets 6 — §2 Inleiding en Slot — Toets C (20 soru)
+      - Tekst 1: 'De dokter en het algoritme: AI in de zorg' (10 alinea)
+      - Tekst 2: 'Waarom bewegen je brein oplaadt' (10 alinea)
+  - **§5 Vaste tekststructuren**:
+    - `examen_7.js`: Toets 7 — §5 Vaste Tekststructuren — Toets B (20 soru)
+      - Tekst 1: 'De wolf terug in Nederland: zegen of plaag?' (probleem-oplossing / voor- en nadelenstructuur, 10 alinea)
+      - Tekst 2: 'De anatomie van de tornado: hoe ontstaat extreem weer?' (oorzaak-gevolgstructuur / verschijnsel-kenmerken, 10 alinea)
+    - `examen_8.js`: Toets 8 — §5 Vaste Tekststructuren — Toets C (20 soru)
+      - Tekst 1: 'Twee eeuwen spoor: van stoomlocomotief tot zweeftrein' (historische structuur / verleden-heden-toekomst, 10 alinea)
+      - Tekst 2: 'Het verdwijnende gezoem: een reddingsplan voor de bij' (probleem-oplossing / maatregelstructuur, 10 alinea)
+- **Pedagojik Standartlar & Kalite Kapısı**:
+  - Her sınav tam 20 soru: 12 MC (%25 tam dengeli A/B/C/D), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open.
+  - Okuma parçaları `v.figuur` içinde `.leestekst-card` olarak numaralandırılmış paragraflarla (`[1]`, `[2]`...) yerleştirildi.
+  - Soru köklerinde açık edilen anahtar kelime yok; gate kural 8 ve 16 tam uyumlu.
+  - `havo3/nederlands/index.html` güncellendi ve `examen_5.js` - `examen_8.js` script etiketleri eklendi.
+  - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":8}`).
+  - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan** (200 soru: 160 sınav + 40 alıştırma).
+  - `node tools/gate.js` (tüm dersler) → **Tümü 16/16 yeşil**.
