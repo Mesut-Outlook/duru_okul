@@ -6,6 +6,27 @@ This document serves as the project's global memory log, preserving all overall 
 
 ## 📅 Project Evolution & Milestones
 
+### Milestone: Bulut senkron veri kaybı ve birleştirme değişmezi (2026-09-20)
+* **Belirti**: Duru'nun madalyaları ve puanları kayboldu — natuurkunde 865 XP / 5 madalya → 95 XP / 1 madalya,
+  ayrıca economi (130→43), geschiedenis (82→43), nederlands_spelling (74→1), natuurkunde (47→1) pogingen.
+* **Kök neden (üç kusur üst üste)**:
+  1. `js/landing.js → restoreScores()` yeni değeri **yalnız gelen paketten** kurup `localStorage`'ı eziyordu.
+  2. `window.restoreScores` hiç export edilmemişti → `js/cloud_sync.js → mergeRemoteData` her zaman kendi
+     **kör üzerine-yazma** tepesine düşüyordu, **20 saniyede bir**. Asıl yıkıcı buydu.
+  3. Tek paylaşımlı Firebase düğümü + PUT + `exportLocalDataPayload`'ın çapraz-kullanıcı `seenKeys`
+     tekilleştirmesi → baba'nın küçük kopyası Duru'nunkinin üstüne yükleniyordu. Sayfa açılışında
+     sıra pull→push olduğu için kayıp hemen buluta geri yazılıp kalıcılaşıyordu.
+* **Onarım**: yerel değer artık bir birleştirme kaynağı (`bronnen = data.concat([lokaal])`);
+  `window.restoreScores` export edildi ve merger yoksa pull hiçbir şey yazmıyor; her kullanıcı
+  kendi düğümüne yazıyor (`/scores_v2/<user>.json`), eski `/scores.json` yalnızca okunuyor;
+  export yalnız aktif kullanıcının önekini alıyor. `?v=4.2 → 4.3`.
+* **Kurtarma**: `scores_rescue_20260920.json` — tarayıcı localStorage (duru+baba) + 4 Eylül sunucu
+  anlık görüntüsü + Haziran v1 kütüğü + bulut **birleşimi**, 26 anahtar. Her tek kaynaktan zengin
+  (ör. natuurkunde 48 poging, biologie 11, economie 14, frans 12).
+* **Test**: `node tools/test_score_merge.js` — 12 kontrol, onarım öncesi kodda 9 kırmızı
+  (865→95 ve 5→1 madalyayı birebir yeniden üretiyor).
+* **Değişmez**: **BİRLEŞTİRME BÜYÜYEBİLİR, ASLA KÜÇÜLEMEZ.**
+
 ### Milestone 1: Merging Subprojects (2026-06-03)
 * **Goal**: Consolidate Duru's separate school module sites under a single repository/origin to easily run and sync progress.
 * **Result**: natural sciences (NASK), math (Wiskunde), economy (Economie), and Dutch (begrijpend-lezen and spelling) were embedded as subfolders in this repository.
@@ -565,5 +586,20 @@ Faz 1 uygulandı.
   - `tools/gate.js nederlands` 16/16 kusursuz geçti.
   - `js/hoofdstukken.js` güncellendi ve senkronize edildi.
 
+## 📅 Milestone 19: Nederlands Cursus 1 — 5 Ek Leestoets (Toets 9 t/m 13) (2026-09-20)
 
-
+* **İstek**: "5 test daha yap" (Nederlands Cursus 1 okuma anlama / metin yapıları için 5 ek sınav).
+* **Kapsam**:
+  - `examen_9.js`: **Toets 9 — §2 Inleiding en Slot (Toets D — Aandachtstrekkers & Probleemstellingen)** (20 soru: 'De nachtdienst van ons brein' ve 'Ruimtepuin: tikkende tijdbom in de kosmos').
+  - `examen_10.js`: **Toets 10 — §5 Vaste Tekststructuren (Toets D — Probleem-Oplossing & Voor- en Nadelen)** (20 soru: 'De opkomst van vertical farming' ve 'Contant geld: zegen of verleden tijd?').
+  - `examen_11.js`: **Toets 11 — §2 Inleiding en Slot (Toets E — Vraagstellingen, Citaten & Uitsmijters)** (20 soru: 'De kick van kippenvel' ve 'Het geheime internet van het bos').
+  - `examen_12.js`: **Toets 12 — §5 Vaste Tekststructuren (Toets E — Oorzaak-Gevolg & Historische Structuur)** (20 soru: 'De onzichtbare plaag in onze kleding' ve 'Van postduif tot smartphone').
+  - `examen_13.js`: **Toets 13 — Cursus 1 Integrale Eindtoets Lezen (Mix §2 & §5 — Examentraining)** (20 soru: 'De geheimen van het supermarktdoolhof' ve 'Wonen op Mars: utopie or waanzin?').
+* **Kalite & Standartlar**:
+  - Toplam 13 sınav x 20 soru = 260 sınav sorusu; 5 konu anlatımı x 8 = 40 oefenvragen (Toplam 300 soru).
+  - MC seçenekleri dosya başına tam %25 dengeli (3 A, 3 B, 3 C, 3 D).
+  - Waaronwaar sorularında %50 onwaar oranı (2 True, 2 False).
+  - Açık uçlu sorularda `modelantwoord` tam puan alacak şekilde sleutelwoord'larla uyumlu ve soruda ipucu vermeyen yapı.
+  - `tools/open_check.js nederlands` → **0 hata**.
+  - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
+  - `js/hoofdstukken.js` güncellendi (`nederlands: hoofdstukken=[1] aantalExamens={"1":13}`).

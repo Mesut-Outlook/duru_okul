@@ -102,3 +102,21 @@ Kitap materyalinden içerik üretmeden önce PDF ✅ olmalı: 1 Eylül'de frans'
 PDF'lerle üretildi. Noordhoff kitapları yalnız `tools/noordhoff_export.py` + `noordhoff_books.json` ile
 çekilir (eski `export_*` betikleri yerine; tarayıcı profili kilitli → tek süreç, sıralı).
 
+## `test_score_merge.js` — skor birleştirme regresyon testi
+
+```bash
+node tools/test_score_merge.js                 # js/landing.js'e karşı
+node tools/test_score_merge.js <baska/landing.js>
+```
+
+Soru kalitesiyle ilgisi yok; **Duru'nun kayıtlı geçmişini** korur. `restoreScores()` ve
+`parseAttemptDate()`'i `js/landing.js`'ten harfi harfine kesip sahte bir `localStorage`
+üzerinde çalıştırır ve tek bir kuralı ölçer: **birleştirme büyüyebilir, asla küçülemez.**
+
+12 kontrol: XP/streak/pogingen/beste `max` ile korunuyor mu, madalyalar union mu, uzaktan gelen
+yeni değer alınıyor mu, `history` union'lanıp tekilleniyor mu, `beste` yeniden hesaplanıyor mu,
+bozuk yerel JSON çökme yerine kurtarılıyor mu.
+
+2026-09-20'de bu testin koruduğu hata 865 XP + 4 madalya + 199 poging'e mal oldu — ayrıntı
+`CLAUDE.md` → "Bulut senkron & birleştirme değişmezi". Senkron/merge koduna dokunan her
+değişiklikten sonra çalıştır.

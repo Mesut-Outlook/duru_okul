@@ -225,6 +225,34 @@ ve her cevap tüm dosyayı okuyup yazıyordu. Şimdi:
   sonra gönderir (sınav başına ~20 POST → 1). Sekme kapanırken `pagehide`/`visibilitychange`'de
   `sendBeacon` ile flush edilir, veri kaybolmaz.
 
+## ⚠️ Bulut senkron & birleştirme değişmezi (2026-09-20 veri kaybı)
+**Değişmez: BİRLEŞTİRME BÜYÜYEBİLİR, ASLA KÜÇÜLEMEZ.** Duru'nun geçmişi yalnızca eklenir.
+Bir senkron yolu bir anahtarı küçültüyorsa o bir hatadır, çakışma çözümü değildir.
+
+2026-09-20'de 865 XP → 95 ve 5 → 1 madalya (natuurkunde) ile dört derste 199 poging kayboldu.
+Üç kusur üst üste bindi:
+1. **`js/landing.js → restoreScores()` yereli okumuyordu.** `newVal`'i yalnız gelen paketten
+   kurup `localStorage`'ı eziyordu; yalnızca yerelde olan XP/madalya/history siliniyordu.
+   Artık yereldeki değer de bir **birleştirme kaynağı** (`bronnen = data.concat([lokaal])`).
+2. **`window.restoreScores` hiç export edilmemişti**, bu yüzden `js/cloud_sync.js →
+   mergeRemoteData` her zaman kendi yedek tepesine düşüyordu: `setItem(targetKey, remoteVal)`
+   — sıfır birleştirme, kör üzerine yazma, **20 saniyede bir**. Asıl yıkıcı buydu.
+   Artık export ediliyor; merger yoksa pull **hiçbir şey yazmaz**.
+3. **Tek paylaşımlı Firebase düğümü + PUT** (`/scores.json`) = tüm cihaz ve kullanıcılar arasında
+   "son yazan kazanır"; üstelik `exportLocalDataPayload` mantıksal anahtarı **tüm `user_*`
+   önekleri arasında** tekilleştirdiği için baba'nın küçük kopyası Duru'nunki yerine yükleniyordu.
+   Artık her kullanıcı **kendi düğümüne** yazar (`/scores_v2/<user>.json`) ve yalnız **kendi**
+   öneki export edilir. Eski `/scores.json` yalnızca **okunur** (göç için).
+
+- **Regresyon testi: `node tools/test_score_merge.js`** — fonksiyonları `landing.js`'ten olduğu
+  gibi kesip sahte `localStorage`'da çalıştırır. Onarım öncesi kodda 9 test kırmızı.
+  Senkron/merge koduna dokunan her değişiklikten sonra çalıştır.
+- Kurtarma seti: `scores_rescue_20260920.json` (gitignore'da) — tarayıcı localStorage (duru+baba),
+  4 Eylül sunucu anlık görüntüsü, Haziran v1 kütüğü ve bulutun **birleşimi**; 26 anahtar.
+- **Ders notu:** yukarıdaki "v2" bölümü *sunucunun* birleştirdiğini söylüyordu ve bu doğruydu —
+  ama istemci tarafı birleştirmiyordu. "Veri birleştirilir" yazan bir doküman, hangi katmanın
+  birleştirdiğini söylemiyorsa yanlış güven verir.
+
 ## Çalıştırma & hosting
 - **Yerel:** `Duru_Okul_Baslat.command` veya `python3 -m http.server 8125` → `http://localhost:8125/`.
   Ev ağı: `http://<mac-ip>:8125/`. UFW: `sudo ufw allow 8125/tcp`.

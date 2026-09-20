@@ -726,10 +726,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     Object.keys(allKeys).forEach(function(key) {
       var newVal = null;
-      
+
+      /* ⚠️ De lokale waarde is óók een bron. Vóór 2026-09-20 bouwde deze
+         functie newVal uitsluitend uit `data` en overschreef daarna de
+         localStorage-sleutel — alles wat alléén lokaal bestond (XP, medailles,
+         pogingen, history) verdween. Op 2026-09-20 kostte dat o.a. 46 pogingen
+         en 4 medailles bij natuurkunde. Samenvoegen mag groeien, nooit krimpen.
+         Zie CLAUDE.md → "Skor kayıt hattı". */
+      var bronnen = data;
+      try {
+        var lokaalRuw = localStorage.getItem(key);
+        if (lokaalRuw) bronnen = data.concat([{ key: key, val: JSON.parse(lokaalRuw) }]);
+      } catch (e) { /* onleesbare lokale waarde: alleen `data` gebruiken */ }
+
       if (key === 'begrijpend_lezen_history') {
         var uniqueAttemptsBL = {};
-        data.forEach(function(item) {
+        bronnen.forEach(function(item) {
           if (item && item.key === key && Array.isArray(item.val)) {
             item.val.forEach(function(att) {
               var uniqId = att.timestamp || (att.startingText + '_' + att.grade + '_' + att.score);
@@ -745,7 +757,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } 
       else if (key.indexOf('_examens_v1') !== -1) {
         var uniqueAttempts = {};
-        data.forEach(function(item) {
+        bronnen.forEach(function(item) {
           if (item && item.key === key && item.val && Array.isArray(item.val.history)) {
             item.val.history.forEach(function(att) {
               var uniqId = att.attemptId || (att.examId + '_' + att.datum + '_' + att.pct);
@@ -786,7 +798,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var pogingen = {};
         var titels = {};
         
-        data.forEach(function(item) {
+        bronnen.forEach(function(item) {
           if (item && item.key === key && item.val) {
             var val = item.val;
             if (val.xp && val.xp > xp) xp = val.xp;
@@ -847,6 +859,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     return restoredCount;
   }
+
+  /* cloud_sync.js zocht window.restoreScores en vond niets, dus viel het terug
+     op zijn eigen blinde overschrijf-tak. Die tak was de directe oorzaak van het
+     verlies op 2026-09-20. Expliciet exporteren: één merger voor alle paden. */
+  window.restoreScores = restoreScores;
 
   function migratePreExistingLocalScores(username) {
     var unprefixedData = [];

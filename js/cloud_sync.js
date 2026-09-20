@@ -6,7 +6,14 @@
 (function () {
   "use strict";
 
-  var FIREBASE_URL = "https://duru-okul-default-rtdb.europe-west1.firebasedatabase.app/scores.json";
+  var FIREBASE_BASE = "https://duru-okul-default-rtdb.europe-west1.firebasedatabase.app";
+  /* ⚠️ Eén gedeelde knoop + PUT = "laatste schrijver wint" over álle apparaten
+     en álle gebruikers heen. Op 2026-09-20 duwde babas sessie zijn kleinere
+     momentopname over Duru's gegevens (47 pogingen -> 1). Sinds dan schrijft
+     iedere gebruiker naar zijn eigen knoop; de oude knoop wordt nog uitsluitend
+     GELEZEN, zodat bestaande apparaten hun geschiedenis binnenhalen. */
+  var LEGACY_URL   = FIREBASE_BASE + "/scores.json";
+  var FIREBASE_URL = LEGACY_URL; // alleen nog voor oude, opgeslagen configuraties
   var STORAGE_KEY_CONFIG = "duru_cloud_sync_config";
   var STORAGE_KEY_LAST_SYNC = "duru_cloud_last_sync";
   var STORAGE_KEY_LAST_REMOTE_TS = "duru_cloud_last_remote_ts";
@@ -114,26 +121,25 @@
       scores: []
     };
 
-    var seenKeys = {};
+    /* ⚠️ Deze lus liep vroeger over ALLE "user_<naam>_"-sleutels en hield per
+       logische sleutel de eerste die hij tegenkwam (seenKeys). In een browser
+       met zowel baba als duru bepaalde de iteratievolgorde van localStorage dus
+       wiens cijfer werd geüpload. Nu: uitsluitend de actieve gebruiker. */
+    var eigenPrefix = "user_" + getActiveUser() + "_";
     for (var i = 0; i < localStorage.length; i++) {
       var rawKey = localStorage.key(i);
       if (!rawKey) continue;
 
       var logicalKey = rawKey;
       if (rawKey.indexOf("user_") === 0) {
-        var parts = rawKey.split("_");
-        if (parts.length >= 3) {
-          logicalKey = parts.slice(2).join("_");
-        }
+        if (rawKey.indexOf(eigenPrefix) !== 0) continue; // andere gebruiker
+        logicalKey = rawKey.slice(eigenPrefix.length);
       }
 
       if (logicalKey && (logicalKey.indexOf("duru_") === 0 || logicalKey.indexOf("begrijpend_lezen_") === 0)) {
         if (logicalKey === "duru_active_user" || logicalKey === "duru_users" || logicalKey === "duru_backup_imported" || logicalKey === "duru_encrypted_backup") {
           continue;
         }
-        if (seenKeys[logicalKey]) continue;
-        seenKeys[logicalKey] = true;
-
         var valStr = localStorage.getItem(rawKey);
         if (valStr) {
           try {
@@ -153,24 +159,19 @@
       return 0;
     }
 
-    var restoredCount = 0;
-    if (typeof window.restoreScores === "function") {
-      restoredCount = window.restoreScores(remoteScores);
-    } else {
-      var activeUser = getActiveUser();
-      remoteScores.forEach(function (item) {
-        if (item && item.key) {
-          var targetKey = activeUser ? ("user_" + activeUser + "_" + item.key) : item.key;
-          var localValStr = localStorage.getItem(targetKey);
-          var newValStr = typeof item.val === "object" ? JSON.stringify(item.val) : String(item.val);
-
-          if (!localValStr || localValStr !== newValStr) {
-            localStorage.setItem(targetKey, newValStr);
-            restoredCount++;
-          }
-        }
-      });
+    /* ⚠️ Alleen de echte merger uit landing.js mag naar localStorage schrijven.
+       Hier stond een fallback die item.val ONGEWIJZIGD over de lokale sleutel
+       zette. Omdat window.restoreScores nooit geëxporteerd werd, liep élke pull
+       via die fallback: iedere 20 seconden werd Duru's lokale voortgang
+       vervangen door wat er in de cloud stond. Dat was de directe oorzaak van
+       het verlies op 2026-09-20. Geen merger = niet schrijven. */
+    if (typeof window.restoreScores !== "function") {
+      console.warn("CloudSync: restoreScores ontbreekt — pull overgeslagen, " +
+                   "lokale gegevens blijven ongemoeid.");
+      return 0;
     }
+
+    var restoredCount = window.restoreScores(remoteScores);
 
     if (restoredCount > 0) {
       if (typeof window.renderVakken === "function") window.renderVakken();
@@ -183,7 +184,12 @@
 
   function getEffectiveUrl() {
     var cfg = getConfig();
-    return cfg.endpointUrl || FIREBASE_URL;
+    // Strip een eventueel opgeslagen pad (oud of nieuw) en bouw het pad van
+    // de huidige gebruiker. Zo migreert een verouderde config zichzelf.
+    var basis = String(cfg.endpointUrl || FIREBASE_BASE)
+      .replace(/\/scores(_v2\/[^\/?#]*)?\.json.*$/, "");
+    if (!basis) basis = FIREBASE_BASE;
+    return basis + "/scores_v2/" + encodeURIComponent(getActiveUser()) + ".json";
   }
 
   /**
@@ -199,25 +205,37 @@
     if (!silent) updateStatusUI("syncing", "Buluttan çekiliyor...");
     syncState.inFlight = true;
 
-    var fetchUrl = url + (url.indexOf("?") === -1 ? "?t=" + Date.now() : "&t=" + Date.now());
+    function haal(u) {
+      var q = u + (u.indexOf("?") === -1 ? "?t=" : "&t=") + Date.now();
+      return fetch(q, { method: "GET", headers: { "Cache-Control": "no-cache" } })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        });
+    }
 
-    return fetch(fetchUrl, {
-      method: "GET",
-      headers: { "Cache-Control": "no-cache" }
-    })
-      .then(function (res) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        return res.json();
-      })
-      .then(function (data) {
+    /* Eigen knoop + de oude gedeelde knoop. Die laatste is de enige cloud-kopie
+       van alles van vóór 2026-09-20; samenvoegen is nu veilig (het kan alleen
+       groeien), dus apparaten halen hun geschiedenis er automatisch uit terug. */
+    return Promise.all([
+      haal(url),
+      haal(LEGACY_URL).catch(function () { return null; })
+    ])
+      .then(function (beide) {
+        var data = beide[0];
+        var legacy = beide[1];
         syncState.inFlight = false;
-        if (!data) {
+        if (!data && !legacy) {
           updateStatusUI("success", "Bulut: Hazır");
           return 0;
         }
 
-        var scores = Array.isArray(data) ? data : (data.scores || []);
-        var remoteTs = data.updatedAt || null;
+        function pak(d) {
+          if (!d) return [];
+          return Array.isArray(d) ? d : (d.scores || []);
+        }
+        var scores = pak(data).concat(pak(legacy));
+        var remoteTs = (data && data.updatedAt) || null;
 
         var updatedCount = 0;
         if (scores.length > 0) {

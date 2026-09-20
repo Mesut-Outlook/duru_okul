@@ -20,6 +20,25 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 - **Kalite kapısı**: `tools/gate.js` / `tools/spread.py` / `tools/open_check.js` — artık repoda,
   kurallar `docs/PIPELINE.md` → "Kalite kapısı". Her teslim buradan geçer.
 
+## 2026-09-20 · Bulut senkron veri kaybı (Opus) — KAPANDI, iki adım onay bekliyor
+**Belirti**: "Duru'nun madalyaları ve puanları kayıp mı?" → evet. Ölçüldü, uydurulmadı.
+
+**Kök neden**: `cloud_sync.js → mergeRemoteData`, `window.restoreScores` export edilmediği için her
+pull'da kör üzerine-yazma tepesine düşüyordu (20 sn'de bir); `restoreScores()` da yereli okumadan
+eziyordu; üstüne tek paylaşımlı Firebase düğümü + PUT + çapraz-kullanıcı tekilleştirme.
+Ayrıntı: `CLAUDE.md` → "Bulut senkron & birleştirme değişmezi".
+
+**Yapıldı**: her iki dosya onarıldı · `tools/test_score_merge.js` (12 kontrol, eski kodda 9 kırmızı) ·
+`scores_rescue_20260920.json` (26 anahtar, tüm kaynakların birleşimi) · `?v=4.3` · dokümanlar.
+
+**ONAY BEKLEYEN (Mesut)** — ikisi de dışa dönük, bu yüzden yapılmadı:
+1. `main`'e push → GitHub Pages'e deploy. **Canlı site hâlâ yıkıcı kodu çalıştırıyor**; deploy
+   olmadan kurtarma anlamsız (ilk açılışta tekrar ezilir).
+2. Firebase'e kurtarma setini yazmak (`/scores_v2/duru.json`, `/scores_v2/baba.json` ve eski
+   `/scores.json`) — bulut hâlâ küçük seti tutuyor. Sıra önemli: **önce bulut + deploy, sonra aç.**
+
+⚠️ O ikisi bitene kadar hub'ı açma.
+
 ## 2026-08-27 · Geschiedenis kalite denetimi (Opus) — ÖNEMLİ DERS
 `havo3/geschiedenis` (commit e8c8a66, "840 soru") denetlendi. Bulgular:
 1. **Paragraf yapısı uydurma** — H2–H6'daki 25 paragraf başlığının hiçbiri Geschiedeniswerkplaats
@@ -983,3 +1002,32 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":8}`).
   - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan** (200 soru: 160 sınav + 40 alıştırma).
   - `node tools/gate.js` (tüm dersler) → **Tümü 16/16 yeşil**.
+
+### 2026-09-20 · Nederlands Cursus 1 — 5 Yeni Leestoets (Toets 9 t/m 13) (agy) ✅
+- **Kullanıcı Talebi**: "5 test daha yap" (Nederlands Cursus 1 okuma anlama / metin yapıları için 5 ek sınav).
+- **Üretilen 5 Sınav (Toplam 100 Soru)**:
+  - **§2 Inleiding en slot**:
+    - `examen_9.js`: Toets 9 — §2 Inleiding en Slot — Toets D (20 soru)
+      - Tekst 1: 'De nachtdienst van ons brein' (6 alinea)
+      - Tekst 2: 'Ruimtepuin: tikkende tijdbom in de kosmos' (6 alinea)
+    - `examen_11.js`: Toets 11 — §2 Inleiding en Slot — Toets E (20 soru)
+      - Tekst 1: 'De kick van kippenvel' (6 alinea)
+      - Tekst 2: 'Het geheime internet van het bos' (6 alinea)
+  - **§5 Vaste tekststructuren**:
+    - `examen_10.js`: Toets 10 — §5 Vaste Tekststructuren — Toets D (20 soru)
+      - Tekst 1: 'De opkomst van vertical farming' (probleem-oplossingstructuur, 6 alinea)
+      - Tekst 2: 'Contant geld: zegen of verleden tijd?' (voor- en nadelenstructuur, 6 alinea)
+    - `examen_12.js`: Toets 12 — §5 Vaste Tekststructuren — Toets E (20 soru)
+      - Tekst 1: 'De onzichtbare plaag in onze kleding' (oorzaak-gevolgstructuur, 6 alinea)
+      - Tekst 2: 'Van postduif tot smartphone' (historische structuur / vroeger-nu-toekomst, 6 alinea)
+  - **Integrale Eindtoets**:
+    - `examen_13.js`: Toets 13 — Cursus 1 Integrale Eindtoets Lezen — Mix §2 & §5 (20 soru)
+      - Tekst 1: 'De geheimen van het supermarktdoolhof' (verschijnsel-verklaring & advies, 6 alinea)
+      - Tekst 2: 'Wonen op Mars: utopie of waanzin?' (voor- en nadelen & afweging, 6 alinea)
+- **Pedagojik Standartlar & Kalite Kapısı**:
+  - Her sınav tam 20 soru: 12 MC (%25 tam dengeli A/B/C/D), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open.
+  - Açık uçlu sorularda anahtar kelimeler soruda ele verilmiyor (`open_check.js` 0 hata).
+  - `havo3/nederlands/index.html` güncellendi ve `examen_9.js` - `examen_13.js` script etiketleri eklendi.
+  - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":13}`).
+  - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan** (300 soru: 260 sınav + 40 alıştırma).
+  - `node tools/open_check.js nederlands` → **0 hata**.

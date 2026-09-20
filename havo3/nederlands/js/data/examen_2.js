@@ -94,7 +94,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "slot",
         "inleiding/aandachtstrekker",
-        "aansluiten/terugkomen/teruggrijpen"
+        "aansluiten/terugkomen/teruggrijpen/teruggrijpt"
       ],
       "minTreffers": 1,
       "modelantwoord": "Als de schrijver in het slot inhoudelijk of qua formulering teruggrijpt op de aandachtstrekker uit de inleiding.",

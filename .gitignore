@@ -17,6 +17,8 @@ scores.json
 scores_log.txt
 events.jsonl
 scores_v1_backup_*.json
+# Kurtarma anlik goruntuleri (2026-09-20 restoreScores uzerine-yazma olayi)
+scores_rescue_*.json
 
 # Scratch and temporary OCR artifacts
 scratch/

@@ -48,7 +48,7 @@ DURU.registerExamen({
       "vraag": "In alinea 4 wordt het woord 'verrommeling' gebruikt. Leg uit wat daarmee in deze context wordt bedoeld.",
       "sleutelwoorden": [
         "openbare/ruimte/straat",
-        "blokkeren/stoep/omgevallen/rommel/overal"
+        "blokkeren/stoep/omgevallen/troep/chaos/slordig/overal"
       ],
       "minTreffers": 1,
       "modelantwoord": "Het slordig en overal achterlaten van omgevallen deelfietsen waardoor stoepen, winkelpuien en de openbare ruimte worden geblokkeerd.",

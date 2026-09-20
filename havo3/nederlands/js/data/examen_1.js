@@ -81,8 +81,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "voor wat hoort wat",
         "terugkrijgen/terug",
-        "verwachten",
-        "delen"
+        "verwachten/verwacht"
       ],
       "minTreffers": 1,
       "modelantwoord": "Het betekent 'voor wat hoort wat': als je iets aan iemand geeft, verwacht je daar op termijn ook weer iets voor terug.",
