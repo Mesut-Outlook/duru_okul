@@ -544,3 +544,20 @@ Faz 1 uygulandı.
   - `tools/build_hoofdstukken.js` ile `js/hoofdstukken.js` manifesti güncellendi (H4 sınav sayısı 15 → 25).
 * **Toplam**: Economie 12 onderwerp · 37 proeftoets · 836 soru. (Genel toplam: 141 onderwerp · 263 proeftoets · 6417 soru).
 
+## 📅 Milestone 18: Nederlands Cursus 1 — Word Proeftoets Formatında 4 Yeni Leestoets (2026-09-20)
+
+* **İstek**: Eski Hollandaca sınavlarını kaldır, okulun resmi Word sınavı (`PROEFTOETS LEZEN 3H.docx`) formatında §2 Inleiding en slot ve §5 Vaste tekststructuren konularında yeni sınavlar üret.
+* **Kapsam**:
+  - `examen_1.js`: **Toets 1 — Officiële Proeftoets Lezen (Tekst 1 & 2)** (20 soru: Word belgesindeki 'De ziekte van Vrek' ve 'Tour de fiets' metinleri ve analiz soruları).
+  - `examen_2.js`: **Toets 2 — §2 Inleiding en Slot (Leesteksten & Functies)** (20 soru: 'Biologische klok' ve 'Smartphone op school' leestekstleri ile dikkat çekme yöntemleri, konu tanıtımı, slot fonksiyonları ve güzelce tamamlama).
+  - `examen_3.js`: **Toets 3 — §5 Vaste Tekststructuren (De 7 Modellen & Signaalwoorden)** (20 soru: 'Elektrische deelfiets' ve 'Leven in de diepzee' leestekstleri ile 7 sabit model, metin hedefleri ve signaalwoorden).
+  - `examen_4.js`: **Toets 4 — Proeftoets Lezen HAVO 3 (Integrale Oefentoets B)** (20 soru: 'Psychologie van nepnieuws' ve 'Plastic soep' leestekstleri ile tam deneme).
+* **Kalite & Standartlar**:
+  - Okuma parçaları `v.figuur` içinde zarif, kaydırılabilir leestekst kartı olarak tasarlandı.
+  - Soru başına `v.vraag` açık ve anahtar kelime sızdırmayacak şekilde yapılandırıldı.
+  - MC seçenekleri her sınavda dengeli (A, B, C, D dağılımı ≤%30).
+  - Waaronwaar sorularında en az %35 onwaar barajı sağlandı.
+  - `tools/gate.js nederlands` 16/16 kusursuz geçti.
+  - `js/hoofdstukken.js` güncellendi ve senkronize edildi.
+
+

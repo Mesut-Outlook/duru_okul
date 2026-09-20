@@ -945,5 +945,19 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `tools/gate.js natuurkunde` → **16/16 kusursuz tam puan** (26 onderwerp, 36 proeftoets, 928 soru).
   - `tools/build_hoofdstukken.js --check` → Temiz ve senkron.
 
+### 2026-09-20 · Nederlands Cursus 1 — Word Proeftoets Formatında 4 Yeni Sınav (agy) ✅
+- **Kullanıcı Talebi**: "hollandaca sinavindan daha once yaratilan sinavlarin hepsini kaldiralim... ardindan... bu vercegim sinav formatinda.. /home/mesuto/Downloads/PROEFTOETS LEZEN 3H.docx hollandaca unite 1 deki simdi resim linkleri vercegim konularda bu sekilde sinavlar uretmeni isiyotum... Screenshot_20260920_135902.png (§5 Vaste tekststructuren) Screenshot_20260920_135846.png (§2 Inleiding en slot)"
+- **Kullanıcı Tercihi**: 4 Yeni Sınav (1x Word'deki Resmi Proeftoets, 1x §2 Inleiding & Slot özel sınavı, 1x §5 Vaste Tekststructuren özel sınavı, 1x Genel Deneme B).
+- **Yapılan İşlemler**:
+  - Eski sınavlar (`examen_1.js` - `examen_6.js`) kaldırıldı.
+  - Word dosyasındaki (`PROEFTOETS LEZEN 3H.docx`) 'De ziekte van Vrek' (11 alinea) ve 'Tour de fiets' (11 alinea) metinleri ve analiz soruları birebir `examen_1.js` (Toets 1) olarak uyarlandı.
+  - §2 Inleiding en Slot için `examen_2.js` (Toets 2) 2 leestekst ile üretildi.
+  - §5 Vaste Tekststructuren için `examen_3.js` (Toets 3) 2 leestekst ile üretildi.
+  - Genel Lezen denemesi olarak `examen_4.js` (Toets 4) 2 leestekst ile üretildi.
+  - Okuma parçaları `v.figuur` içinde zarif kaydırılabilir kartlar olarak sunuldu; anahtar kelimeler soru köklerinde açık edilmedi.
+  - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
+  - `tools/build_hoofdstukken.js` ile manifest derlendi ve senkronize edildi.
+
+
 
 

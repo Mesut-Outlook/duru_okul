@@ -1,209 +1,224 @@
-/* Proeftoets conform DURU ENGINE_SPEC (HAVO 3 Nederlands · Cursus 1) */
+/* Examen conform DURU ENGINE_SPEC (HAVO 3 Nederlands · Cursus 1) */
 DURU.registerExamen({
-  id: "ex-h3-nederlands-2",
-  hoofdstuk: 1,
-  hoofdstukTitel: "Cursus 1 — Meer dan lezen",
-  paragraaf: "1.2",
-  titel: "Toets 2 — §2 Argumenteren: Argumentatiestructuren",
-  vak: "Nederlands · HAVO 3 (Cursus 1)",
-  icoon: "⚖️",
-  duurMin: 20,
-  vragen: [
+  "id": "ex-h3-nederlands-2",
+  "hoofdstuk": 1,
+  "hoofdstukTitel": "Cursus 1 — Meer dan lezen",
+  "paragraaf": "2",
+  "titel": "Toets 2 — §2 Inleiding en Slot (Leesteksten & Functies)",
+  "vak": "Nederlands · HAVO 3 (Cursus 1)",
+  "icoon": "🎯",
+  "duurMin": 25,
+  "vragen": [
     {
-      type: "mc",
-      vraag: "Wat wil de auteur van een overtuigende tekst (zoals een betoog) bereiken bij de lezer?",
-      opties: [
-        "De lezer uitsluitend vermaken met humoristische anekdotes",
-        "De lezer overtuigen van zijn standpunt of mening",
-        "Stapsgewijs uitleggen hoe een apparaat in elkaar gezet moet worden",
-        "Geheel neutraal twee kanten van een zaak belichten zonder partij te kiezen"
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Welke beproefde aandachtstrekker herken je in alinea 1 van Tekst A?",
+      "opties": [
+        "Een verwijzing naar iets uit de geschiedenis",
+        "Het noemen van actuele rampencijfers",
+        "Een citaat van een bekende politicus",
+        "Een persoonlijke aanleiding van de schrijver"
       ],
-      antwoord: 1,
-      uitleg: "Een overtuigende tekst heeft als tekstdoel om de lezer te winnen voor het eigen standpunt met behulp van argumenten."
+      "antwoord": 0,
+      "uitleg": "De auteur grijpt terug op de zestiende eeuw en schilder Pieter Bruegel: dit is 'iets uit de geschiedenis'."
     },
     {
-      type: "mc",
-      vraag: "Wat is het wezenlijke verschil tussen een <b>feitelijk</b> argument en een <b>waarderend</b> argument?",
-      opties: [
-        "Een waarderend argument is altijd waar; een feitelijk argument is altijd subjectief",
-        "Een feitelijk argument bevat altijd een mening; een waarderend argument bevat alleen getallen",
-        "Een feitelijk argument is controleerbaar (waar of niet waar); over een waarderend argument kun je van mening verschillen",
-        "Er is geen verschil; beide termen betekenen exact hetzelfde in het Nederlands"
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Op welke manier introduceert de auteur in alinea 1 en 2 van Tekst A het centrale onderwerp?",
+      "opties": [
+        "Door direct een scherp standpunt in te nemen",
+        "Door een centrale hoofdvraag te stellen",
+        "Door een definitie uit het woordenboek te citeren",
+        "Door een juridische klacht in te dienen"
       ],
-      antwoord: 2,
-      uitleg: "Feitelijke argumenten zijn objectief en te verifiëren. Waarderende argumenten zijn subjectief (gebaseerd op gevoel, smaak of normen)."
+      "antwoord": 1,
+      "uitleg": "Aan het einde van alinea 1 wordt een centrale vraag gesteld ('Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?'), die in alinea 2 verder wordt uitgewerkt."
     },
     {
-      type: "mc",
-      vraag: "Lees de zin: <i>'Grote reclameschermen langs de snelweg moeten worden weggehaald, want ze leiden automobilisten meetbaar af van het verkeer.'</i><br>Wat voor soort argument is dit?",
-      opties: [
-        "Een feitelijk (objectief) argument",
-        "Een waarderend (subjectief) argument",
-        "Een tegenargument zonder onderbouwing",
-        "Een cirkelredenering"
+      "type": "waaronwaar",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Volgens de theorie van paragraaf 2 heeft de inleiding van een zakelijke tekst altijd maar één vaste alinea; twee alinea's is volgens de regels niet toegestaan.",
+      "antwoord": false,
+      "uitleg": "Onwaar. Een inleiding kan uit één of twee alinea's bestaan, en bij langere artikelen zelfs uit meer."
+    },
+    {
+      "type": "open",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Welke twee functies vervult de slotalinea (alinea 7) van Tekst A?",
+      "sleutelwoorden": [
+        "conclusie/samenvatting/hoofdgedachte",
+        "aanbeveling/advies/oproep"
       ],
-      antwoord: 0,
-      uitleg: "Of bestuurders afgeleid worden door felle schermen is via waarnemingen en onderzoek objectief te controleren: het is een feitelijk argument."
+      "minTreffers": 1,
+      "modelantwoord": "Een conclusie/samenvatting van het belang van slaap én een concrete aanbeveling/advies om de telefoon eerder weg te leggen.",
+      "uitleg": "Alinea 7 vat samen dat slaap een eerste levensbehoefte is (conclusie) en geeft de lezer het advies om de telefoon weg te leggen en op tijd te gaan slapen (aanbeveling)."
     },
     {
-      type: "mc",
-      vraag: "Lees de zin: <i>'Reclameschermen langs de snelweg moeten worden verboden, want ze verpesten het prachtige Hollandse polderlandschap.'</i><br>Wat voor argument is dit?",
-      opties: [
-        "Een statistisch bewijs",
-        "Een feitelijk (objectief) argument",
-        "Een onderschikkend subargument",
-        "Een waarderend (subjectief) argument"
+      "type": "invul",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Met welk typisch samenvattend signaalwoord begint de slotalinea van Tekst A?",
+      "antwoord": "al met al",
+      "uitleg": "Alinea 7 begint met de signaalwoordgroep 'Al met al'."
+    },
+    {
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Welke aandachtstrekker gebruikt de auteur aan het begin van Tekst B in alinea 1?",
+      "opties": [
+        "Iets uit de geschiedenis van de oudheid",
+        "Tot de verbeelding sprekende statistieken",
+        "Een sprekend voorbeeld of korte anekdote",
+        "Een verwijzing naar een buitenlands wetsartikel"
       ],
-      antwoord: 3,
-      uitleg: "Of iets het landschap 'verpest' is een kwestie van persoonlijke smaak en esthetiek. Je kunt erover van mening verschillen: een waarderend argument."
+      "antwoord": 2,
+      "uitleg": "De auteur begint met een herkenbare situatie op het schoolplein van het Rembrandt College (tafelvoetballende leerlingen): een concreet voorbeeld / anekdote."
     },
     {
-      type: "waaronwaar",
-      vraag: "Een waarderend argument berust op een subjectief oordeel, een norm of een persoonlijke smaak.",
-      antwoord: true,
-      uitleg: "Waar. Waarderende argumenten gaan over wat iemand mooi, lelijk, goed, slecht, nuttig of ongezellig vindt."
-    },
-    {
-      type: "mc",
-      vraag: "Welke signaalwoorden kondigen volgens het boek doorgaans een <b>standpunt</b> aan?",
-      opties: [
-        "Want, omdat, immers, namelijk, aangezien",
-        "Ik vind, volgens ons, de auteur is van mening dat, kortom, dus",
-        "Enerzijds, anderzijds, daarentegen, maar",
-        "Nadat, voordat, intussen, vervolgens"
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Hoe wordt het onderwerp in alinea 2 van Tekst B gepresenteerd?",
+      "opties": [
+        "Via een historisch overzicht",
+        "Via een opsomming van boetes",
+        "Via een sprookjesachtige verhaallijn",
+        "Via het schetsen van een maatschappelijk probleem"
       ],
-      antwoord: 1,
-      uitleg: "Formuleringen als 'ik vind', 'volgens ons', 'dus' en 'kortom' geven de stelling of conclusie (het standpunt) aan."
+      "antwoord": 3,
+      "uitleg": "In alinea 2 wordt de probleemstelling neergezet: de worsteling van scholen om balans te vinden tussen digitale tools en lesaandacht."
     },
     {
-      type: "mc",
-      vraag: "Welke signaalwoorden geven aan dat er een <b>argument</b> volgt?",
-      opties: [
-        "Hoewel, ofschoon, desalniettemin",
-        "Kortom, al met al, we concluderen dat",
-        "Want, omdat, immers, namelijk, de reden hiervoor is",
-        "Zowel ... als, niet alleen ... maar ook"
+      "type": "open",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Wanneer noemen we een tekst volgens de theorie van paragraaf 2 'mooi rond'?",
+      "sleutelwoorden": [
+        "slot",
+        "inleiding/aandachtstrekker",
+        "aansluiten/terugkomen/teruggrijpen"
       ],
-      antwoord: 2,
-      uitleg: "Argumenten geven de reden of oorzaak waarom iemand iets vindt en worden ingeleid door 'want', 'omdat', 'immers', 'namelijk', enz."
+      "minTreffers": 1,
+      "modelantwoord": "Als de schrijver in het slot inhoudelijk of qua formulering teruggrijpt op de aandachtstrekker uit de inleiding.",
+      "uitleg": "Een tekst is 'mooi rond' als het slot weer aansluit bij het beeld of de anekdote waarmee de inleiding begon."
     },
     {
-      type: "invul",
-      vraag: "Hoe noemt men een argumentatie waarin een standpunt met slechts één enkel argument wordt ondersteund?",
-      antwoord: "enkelvoudige argumentatie|enkelvoudig",
-      uitleg: "Bij enkelvoudige argumentatie is er sprake van exact één standpunt en één argument."
+      "type": "waaronwaar",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "In alinea 7 van Tekst B is er sprake van een tekst die 'mooi rond' is gemaakt, omdat de schrijver teruggrijpt op de rust en ontmoeting die in alinea 1 op het schoolplein werd beschreven.",
+      "antwoord": true,
+      "uitleg": "Waar. In het slot spreekt de auteur over 'ontmoeting en focus' en de rust om echt contact te maken, wat direct aansluit bij de ontmoetende leerlingen op het schoolplein uit alinea 1."
     },
     {
-      type: "mc",
-      vraag: "Wat kenmerkt een <b>nevenschikkende argumentatie</b>?",
-      opties: [
-        "Twee of meer gelijkwaardige argumenten ondersteunen samen direct het standpunt",
-        "Eén argument ondersteunt een ander argument in een keten",
-        "De schrijver gebruikt alleen maar tegenargumenten zonder eigen stelling",
-        "Het standpunt staat helemaal onderaan en wordt nergens bewezen"
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Welk tekstdoel past het beste bij Tekst B?",
+      "opties": [
+        "Beschouwen en overtuigen",
+        "Puur amuseren met fictieve verhalen",
+        "Uitsluitend instrueren met een stappenplan",
+        "Activeren om een smartphone te kopen"
       ],
-      antwoord: 0,
-      uitleg: "Bij nevenschikking staan meerdere argumenten naast elkaar om gezamenlijk hetzelfde standpunt te dragen (je kunt er 'en' tussen denken)."
+      "antwoord": 0,
+      "uitleg": "De tekst weegt voor- en nadelen af (beschouwen) en overtuigt de lezer van het nut van een smartphonevrije school (overtuigen)."
     },
     {
-      type: "waaronwaar",
-      vraag: "Tussen de blokjes van argumenten die samen nevenschikkend een standpunt ondersteunen, kun je in gedachten het woord 'en' invullen.",
-      antwoord: true,
-      uitleg: "Waar. Nevenschikkende argumenten zijn gelijkwaardige redenen: Argument 1 én Argument 2 ondersteunen het standpunt."
-    },
-    {
-      type: "invul",
-      vraag: "Hoe noem je een argument dat niet direct het standpunt onderbouwt, maar dient als ondersteuning van een ander argument?",
-      antwoord: "subargument|een subargument",
-      uitleg: "Een subargument is een ondergeschikt argument dat een hoofdargument nader bewijst of verduidelijkt."
-    },
-    {
-      type: "mc",
-      vraag: "Wat is een <b>onderschikkende argumentatie</b>?",
-      opties: [
-        "Een opsomming van drie losse meningen zonder enig bewijs",
-        "Een argumentatie met uitsluitend feitelijke getallen zonder mening",
-        "Een tekst waarin de auteur zijn standpunt intrekt na overleg",
-        "Een argumentatie waarin een argument zelf weer wordt ondersteund door een subargument"
+      "type": "mc",
+      "vraag": "Wat is volgens de theorie van paragraaf 2 een 'toekomstverwachting' in het slot van een tekst?",
+      "opties": [
+        "Een samenvatting van wat er vroeger allemaal is gebeurd",
+        "Een doorkijk of voorspelling van hoe de kwestie zich vermoedelijk zal ontwikkelen",
+        "Een lijst met moeilijke woorden uit de voorbije alinea's",
+        "Een herhaling van de allereerste zin van de inleiding"
       ],
-      antwoord: 3,
-      uitleg: "Bij onderschikking ontstaat een keten: Standpunt → Argument (want...) → Subargument (want...)."
+      "antwoord": 1,
+      "uitleg": "Een toekomstverwachting blikt vooruit op de komende ontwikkelingen rondom het thema van de tekst."
     },
     {
-      type: "mc",
-      vraag: "Hoe lees je in een blokjesschema van een argumentatie de pijlen die van boven naar beneden lopen?",
-      opties: [
-        "Als het woord 'want'",
-        "Als het woord 'hoewel'",
-        "Als het woord 'echter'",
-        "Als het woord 'tenzij'"
+      "type": "waaronwaar",
+      "vraag": "Een aanbeveling in de slotalinea is bedoeld om de lezer een concreet advies of nuttige suggestie te geven voor wat er moet gebeuren.",
+      "antwoord": true,
+      "uitleg": "Waar. De aanbeveling geeft een praktisch advies of handelingsperspectief naar aanleiding van de conclusie."
+    },
+    {
+      "type": "open",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Waarom past de titel 'De geheimen van de biologische klok' goed bij alinea 3 van Tekst A?",
+      "sleutelwoorden": [
+        "slaapcyclus/slaapcycli/rem/diep",
+        "brein/herstelslaap/hersenen/geheugen"
       ],
-      antwoord: 0,
-      uitleg: "De theorie stelt letterlijk: als je de tekst in een blokjesschema van boven naar beneden doorneemt, kun je de pijlen lezen als 'want'."
+      "minTreffers": 1,
+      "modelantwoord": "Omdat alinea 3 precies uitlegt wat de biologische klok en de slaapcycli in ons brein doen (diepe slaap en REM-slaap).",
+      "uitleg": "Alinea 3 onthult de werking van de slaapfasen en hoe het brein 's nachts functioneert."
     },
     {
-      type: "waaronwaar",
-      vraag: "In een standaard blokjesschema staat het standpunt in het onderste blokje en de argumenten daarboven.",
-      antwoord: false,
-      uitleg: "Onwaar. Het standpunt staat altijd in het bovenste blokje, met de ondersteunende argumenten in de blokjes daaronder."
+      "type": "invul",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Met welk klassiek signaalwoord opent alinea 7 van Tekst B om aan te geven dat de conclusie volgt?",
+      "antwoord": "kortom",
+      "uitleg": "Alinea 7 start met 'Kortom:'."
     },
     {
-      type: "mc",
-      vraag: "Lees de redenering: <i>'Standpunt: We moeten geen windmolens vlak bij de kust bouwen.<br>Argument: Ze zorgen voor ernstige horizonvervuiling.'</i><br>Welke argumentatiestructuur is dit?",
-      opties: [
-        "Onderschikkende argumentatie met drie niveaus",
-        "Enkelvoudige argumentatie",
-        "Nevenschikkende argumentatie met vijf argumenten",
-        "Een samengestelde tegenwerping"
+      "type": "mc",
+      "vraag": "Welke van de onderstaande technieken is GEEN officiële aandachtstrekker volgens de theorie van paragraaf 2?",
+      "opties": [
+        "Een herkenbaar voorbeeld of anekdote",
+        "Iets uit de actualiteit",
+        "De lezer bedreigen met fysiek geweld",
+        "Tot de verbeelding sprekende cijfers"
       ],
-      antwoord: 1,
-      uitleg: "Er is één standpunt dat met één enkel argument wordt onderbouwd: dit is enkelvoudige argumentatie."
+      "antwoord": 2,
+      "uitleg": "Bedreigingen horen uiteraard niet thuis in een zakelijke tekst. De beproefde methoden zijn actualiteit, geschiedenis, anekdote, belang, aanleiding en cijfers."
     },
     {
-      type: "waaronwaar",
-      vraag: "Bij het invullen van een blokjesschema met meerdere gelijkwaardige argumenten werk je volgens de theorie van links naar rechts.",
-      antwoord: true,
-      uitleg: "Waar. Gelijkwaardige nevenschikkende argumenten worden van links naar rechts in de blokjes geplaatst."
+      "type": "waaronwaar",
+      "vraag": "De hoofdgedachte van een tekst is de belangrijkste mededeling over het onderwerp, samengevat in één duidelijke bewering of zin.",
+      "antwoord": true,
+      "uitleg": "Waar. De hoofdgedachte is altijd één volwaardige zin die de kern van de hele tekst weergeeft."
     },
     {
-      type: "invul",
-      vraag: "Hoe noemt men de gecombineerde structuur waarin zowel nevenschikkende als onderschikkende argumenten voorkomen?",
-      antwoord: "samengestelde argumentatie|samengesteld|meervoudige argumentatie",
-      uitleg: "Wanneer er sprake is van meerdere argumenten én subargumenten, noemt men dit een samengestelde (of meervoudige) argumentatie."
-    },
-    {
-      type: "mc",
-      vraag: "In tekst 2 (s. 20) bekritiseert de auteur de commercial waarin voetballer Lionel Messi op de bank chips eet met vrienden. Wat is het standpunt van de auteur?",
-      opties: [
-        "Voetbal kijken met vrienden is verboden voor topsporters",
-        "Messi moet direct stoppen met voetballen",
-        "Chips zijn veel te duur geworden in de supermarkt",
-        "Er klopt helemaal niets van de commercial met Messi"
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst A: De geheimen van de biologische klok</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> In de zestiende eeuw, toen schilder Pieter Bruegel het winterse dorpsleven vastlegde, kropen gezinnen al vroeg bij het haardvuur onder dikke wollen dekens. Zonder elektrisch licht volgde de mens vanzelf het ritme van zonsopgang en zonsondergang. Tegenwoordig kijken we tot diep in de nacht naar oplichtende schermen en bepalen we met één druk op de knop ons eigen daglicht. Maar kan ons oeroude lichaam die moderne 24-uurseconomie wel bijbenen?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Die vraag houdt neurowetenschappers al jaren bezig. Want hoewel we een derde van ons leven slapend doorbrengen, beschouwden veel mensen slaap lang als verloren tijd. 'Slaap is voor watjes', riepen zakenmensen in de jaren tachtig trots. Inmiddels weten we wel beter: slaap is geen passieve ruststand, maar een hyperactieve onderhoudsbeurt voor lichaam en geest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tijdens een gezonde nachtrust doorloopt ons brein meerdere cycli van ongeveer anderhalf uur. Daarin wisselen lichte slaap, diepe herstelslaap en de zogeheten REM-slaap (waarin we levendig dromen) elkaar af. Tijdens de diepe slaap spoelt het hersenvocht giftige eiwitten weg die zich overdag hebben opgehoopt. De REM-slaap helpt juist bij het ordenen van emoties en het opslaan van leerstof in het langetermijngeheugen.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Wie structureel te weinig slaapt, merkt dat onmiddellijk. Het reactievermogen daalt, het humeur verslechtert en het immuunsysteem verzwakt. Onderzoek van de Universiteit van Amsterdam toont aan dat middelbare scholieren die minder dan zeven uur per nacht slapen, gemiddeld een vol punt lager scoren op proefwerken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> Toch is de verleiding om laat op te blijven groot, vooral door sociale media en streamingdiensten. Het blauwe licht van telefoons en tablets onderdrukt de aanmaak van melatonine, het slaaphormoon dat het brein het sein geeft dat de nacht is aangebroken.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Gelukkig is een verstoord slaapritme te herstellen met eenvoudige aanpassingen: vaste bedtijden aanhouden, schermen minstens een uur voor het slapengaan uitschakelen en overdag voldoende natuurlijk daglicht opzoeken. Een koele, donkere slaapkamer doet de rest.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Al met al is slaap geen overbodige luxe, maar een eerste levensbehoefte die onze gezondheid en schoolprestaties rechtstreeks bepaalt. Wie zijn brein overdag maximaal wil laten presteren, moet het 's nachts de rust gunnen die het verdient. Dus leg die telefoon vanavond eens wat eerder weg en kruip lekker onder de wol.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Natuurwetenschap & Gezondheid, 2025</div>\n</div>",
+      "vraag": "Welke van de onderstaande zinnen verwoordt het meest adequaat de hoofdgedachte van Tekst A?",
+      "opties": [
+        "Middelbare scholieren halen door slaaptekort een punt lager op hun proefwerken.",
+        "In de zestiende eeuw ging iedereen slapen zodra de zon onderging.",
+        "Sociale media zijn de voornaamste oorzaak van slaapstoornissen bij jongeren.",
+        "Voldoende slaap is een onmisbare levensbehoefte voor herstel, gezondheid en prestaties."
       ],
-      antwoord: 3,
-      uitleg: "Het standpunt in de tekst luidt: 'Er klopt niets van de commercial met Messi waarin hij met vrienden op de bank al chips etend naar voetbal kijkt.'"
+      "antwoord": 3,
+      "uitleg": "De kern van Tekst A is dat slaap geen verloren tijd is, maar essentieel onderhoud voor het brein en lichaam."
     },
     {
-      type: "open",
-      vraag: "Leg uit wat het fundamentele verschil is tussen een nevenschikkende argumentatie en een onderschikkende argumentatie.",
-      sleutelwoorden: [
-        "gelijkwaardig/naast elkaar/direct",
-        "subargument/keten/ondersteunt argument"
+      "type": "open",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "In alinea 4 van Tekst B wordt een argument genoemd tegen het toelaten van mobieltjes in de klas. Welk argument is dat?",
+      "sleutelwoorden": [
+        "concentratie/aandacht",
+        "paraat/stand/melding/prikkels/trilling"
       ],
-      minTreffers: 2,
-      modelantwoord: "Bij nevenschikkende argumentatie ondersteunen meerdere gelijkwaardige argumenten direct het standpunt. Bij onderschikkende argumentatie ondersteunt een subargument een ander argument.",
-      uitleg: "Nevenschikkend = argumenten naast elkaar (en). Onderschikkend = argument ondersteunt een ander argument (keten met subargument)."
+      "minTreffers": 1,
+      "modelantwoord": "Zelfs een stille telefoon op tafel slurpt concentratie weg doordat het brein voortdurend alert blijft op mogelijke meldingen.",
+      "uitleg": "Alinea 4 legt uit dat de telefoon op de hoek van de tafel ongemerkt concentratie wegneemt omdat de hersenen in de 'paraat-stand' blijven."
     },
     {
-      type: "open",
-      vraag: "Geef voor het standpunt 'Scholen moeten energiedrankjes verbieden' één feitelijk argument en één waarderend argument.",
-      sleutelwoorden: [
-        "suiker/cafeïne/hartkloppingen/slaap/onderzoek",
-        "ongezellig/ongezond/slecht/onrustig/mening"
+      "type": "waaronwaar",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Alinea 6 van Tekst B stelt dat een smartphoneverbod op school automatisch ook alle problemen rondom cyberpesten in de thuissituatie definitief oplost.",
+      "antwoord": false,
+      "uitleg": "Onwaar. Alinea 6 zegt juist letterlijk dat een verbod op school cyberpesten niet oplost en dat daarvoor ook afspraken thuis nodig zijn."
+    },
+    {
+      "type": "mc",
+      "figuur": "<div class=\"leestekst-card\" style=\"background:#f8fafc; border:1px solid #cbd5e1; border-left:4px solid #15803d; border-radius:12px; padding:16px 20px; margin-bottom:14px; max-height:350px; overflow-y:auto; font-size:14.5px; line-height:1.65; color:#1e293b; box-shadow:0 2px 8px rgba(0,0,0,0.04);\">\n  <div style=\"font-weight:800; color:#15803d; font-size:15px; margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px;\">\n    <span>📄 Tekst B: De smartphone op school: zegen of ramp?</span>\n    <span style=\"font-size:12px; font-weight:600; color:#64748b; background:#e2e8f0; padding:2px 8px; border-radius:99px;\">7 alinea's</span>\n  </div>\n  <p style=\"margin-bottom:10px;\"><strong>[1]</strong> Op een maandagochtend in september heerst er een ongewone stilte op het schoolplein van het Rembrandt College. Waar voorheen tientallen leerlingen gebogen zaten over hun oplichtende telefoons, klinkt nu gelach en het getik van een tafelvoetbalspelletje. De school voerde namelijk een strikt smartphoneverbod in: 'thuis of in de kluis'.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[2]</strong> Deze maatregel staat niet op zichzelf. Sinds de overheid landelijke richtlijnen opstelde tegen mobiele telefoons in de klas, worstelen veel scholen met de vraag: hoe creëren we een gezonde balans tussen digitale vaardigheden en ongestoorde lesaandacht?</p>\n  <p style=\"margin-bottom:10px;\"><strong>[3]</strong> Tegenstanders van het verbod voeren aan dat de smartphone niet meer weg te denken is uit de maatschappij en dat scholen jongeren juist moeten leren omgaan met digitale prikkels. Bovendien wordt de telefoon soms handig ingezet voor educatieve quizzen of roosters.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[4]</strong> Onderwijskundigen en psychologen wijzen daarentegen op de harde cijfers: zelfs een telefoon die stil op de hoek van de tafel ligt, slurpt ongemerkt concentratie weg. Het brein staat voortdurend in de 'paraat-stand', wachtend op een trilling of pop-upmelding.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[5]</strong> De eerste resultaten van scholen met een kluisjesbeleid zijn veelbelovend. Docenten melden dat leerlingen aanzienlijk alerter zijn tijdens de instructie en dat er tijdens tussenuren spontaan meer met elkaar wordt gepraat en gesport.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[6]</strong> Natuurlijk lost een verbod op school niet alle digitale problemen op. Cyberpesten en verslavende algoritmes verdwijnen niet zodra de schoolbel om half vier gaat; dat vraagt ook om duidelijke afspraken thuis.</p>\n  <p style=\"margin-bottom:10px;\"><strong>[7]</strong> Kortom: de smartphonevrije school blijkt een verademing voor de concentratie en sociale sfeer in de klas. Het verbod geeft leerlingen de broodnodige rust om weer echt te leren en contact te maken. Laten we die rust koesteren, zodat school weer een plek wordt voor ontmoeting en focus.</p>\n  <div style=\"font-size:12px; font-style:italic; color:#64748b; margin-top:8px; border-top:1px dashed #cbd5e1; padding-top:4px;\">Bron: Onderwijs & Samenleving, 2024</div>\n</div>",
+      "vraag": "Welke uitspraak geeft de hoofdgedachte van Tekst B het beste weer?",
+      "opties": [
+        "Een smartphonevrije school bevordert de rust, concentratie en sociale omgang in het onderwijs.",
+        "Leerlingen moeten op school leren programmeren en omgaan met algoritmes.",
+        "Het Rembrandt College is de enige school in Nederland waar leerlingen tafelvoetballen.",
+        "Tegenstanders van het mobielverbod hebben gelijk dat educatieve apps onmisbaar zijn."
       ],
-      minTreffers: 2,
-      modelantwoord: "Feitelijk argument: In een blikje zit 80 mg cafeïne en 10 suikerklontjes, wat volgens artsen leidt tot hartkloppingen. Waarderend argument: Ik vind het buitengewoon ongezellig en asociaal als leerlingen steeds met die blikjes rondlopen.",
-      uitleg: "Een feitelijk argument bevat controleerbare feiten of medische gegevens. Een waarderend argument geeft een subjectieve mening over sfeer, fatsoen of gevoel."
+      "antwoord": 0,
+      "uitleg": "De slotalinea en het betoog benadrukken dat het weren van smartphones rust, focus en echt sociaal contact oplevert."
     }
   ]
 });
