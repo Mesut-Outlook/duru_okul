@@ -23,7 +23,13 @@ const src = fs.readFileSync(LANDING, 'utf8');
 
 function slice(name) {
   const start = src.indexOf('  function ' + name + '(');
-  if (start < 0) throw new Error('bulunamadi: ' + name);
+  if (start < 0) {
+    // Oudere landing.js zonder de pure merger: dat is precies de kapotte vorm.
+    console.error('FAIL  ' + name + '() niet gevonden in ' + LANDING +
+                  '\n      Deze landing.js mist de merger — zie CLAUDE.md -> ' +
+                  '"Bulut senkron & birlestirme degismezi".');
+    process.exit(1);
+  }
   let depth = 0, i = src.indexOf('{', start);
   for (let j = i; j < src.length; j++) {
     if (src[j] === '{') depth++;
@@ -41,13 +47,20 @@ const localStorage = {
   get length() { return Object.keys(store).length; }
 };
 
-const fn = new Function('localStorage', slice('parseAttemptDate') + '\n' + slice('restoreScores') + '\nreturn restoreScores;')(localStorage);
+const bron = slice('parseAttemptDate') + '\n' + slice('mergeScoreItems') + '\n' + slice('restoreScores');
+const api = new Function('localStorage', bron + '\nreturn { restoreScores: restoreScores, merge: mergeScoreItems };')(localStorage);
+const fn = api.restoreScores;
+const merge = api.merge;
 
 let fail = 0;
+const kort = v => { const t = JSON.stringify(v); return t && t.length > 70 ? t.slice(0, 67) + '...' : t; };
 const ok = (naam, got, exp) => {
   const good = JSON.stringify(got) === JSON.stringify(exp);
   if (!good) fail++;
-  console.log((good ? 'PASS ' : 'FAIL ') + naam + '  beklenen=' + JSON.stringify(exp) + ' gelen=' + JSON.stringify(got));
+  // Bij PASS alleen de naam; bij FAIL de (ingekorte) waarden, anders verzuipt
+  // een geslaagde run in JSON.
+  console.log(good ? 'PASS ' + naam
+                   : 'FAIL ' + naam + '  beklenen=' + kort(exp) + ' gelen=' + kort(got));
 };
 
 /* ── 1) voortgang: yereldeki XP/madalya, fakir uzak pakette yok ── */
@@ -90,6 +103,28 @@ ok('tekrar poging eklenmiyor',  e.history.length, 3);
 store['duru_2627_duits_v1'] = '{bozuk json';
 fn([{ key: 'duru_2627_duits_v1', val: { xp: 50, badges: {} } }]);
 ok('bozuk yerel deger kurtariliyor', JSON.parse(store['duru_2627_duits_v1']).xp, 50);
+
+/* ── 6) PUSH-pad: pure merger mag de cloud niet uitkleden ──
+   cloud_sync.js leest de knoop, voegt samen met het lokale en schrijft pas dan.
+   Verarmd lokaal + rijke cloud moet RIJK opleveren, niet arm. */
+const rijkeCloud = [{ key: 'duru_2627_natuurkunde_v1', val: { xp: 865, streak: 11, badges: { a:1,b:2,c:3,d:4,e:5 }, beste: { t1: 90 }, pogingen: { t1: 7 } } }];
+const armLokaal  = [{ key: 'duru_2627_natuurkunde_v1', val: { xp: 95, streak: 1, badges: { a:1 }, beste: { t1: 40 }, pogingen: { t1: 1 } } }];
+let push = merge(rijkeCloud.concat(armLokaal))['duru_2627_natuurkunde_v1'];
+ok('push: XP krimpt niet',       push.xp, 865);
+ok('push: madalya krimpt niet',  Object.keys(push.badges).length, 5);
+ok('push: pogingen krimpt niet', push.pogingen.t1, 7);
+
+/* ── 7) merger is puur: schrijft niet naar localStorage ── */
+const voor = JSON.stringify(store);
+merge(rijkeCloud);
+ok('merge() localStorage-a dokunmuyor', JSON.stringify(store), voor);
+
+/* ── 8) history: cloud 48, lokaal 1 -> 48 blijft ── */
+const h48 = { history: Array.from({ length: 48 }, (_, i) => ({ attemptId: 'att_' + (i + 1), examId: 'ex-' + i, pct: 70, datum: '01-09-2026 10:00' })) };
+const h1  = { history: [{ attemptId: 'att_1', examId: 'ex-0', pct: 70, datum: '01-09-2026 10:00' }] };
+let ph = merge([{ key: 'duru_2627_natuurkunde_examens_v1', val: h48 },
+                { key: 'duru_2627_natuurkunde_examens_v1', val: h1 }])['duru_2627_natuurkunde_examens_v1'];
+ok('push: 48 poging korunuyor', ph.history.length, 48);
 
 console.log(fail === 0 ? '\nTUM TESTLER GECTI' : '\n' + fail + ' TEST BASARISIZ');
 process.exit(fail ? 1 : 0);

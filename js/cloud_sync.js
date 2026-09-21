@@ -281,16 +281,47 @@
     var payload = exportLocalDataPayload();
     if (payload.scores.length === 0) return Promise.resolve(false);
 
-    updateStatusUI("syncing", "Buluta aktarılıyor...");
-
     var url = getEffectiveUrl();
     var method = (url.indexOf("firebasedatabase.app") !== -1 || url.indexOf("firebaseio.com") !== -1) ? "PUT" : "POST";
 
-    return fetch(url, {
-      method: method,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    })
+    /* ⚠️ PUT vervangt de HELE knoop. Een localStorage die iets mist zou de cloud
+       dus uitkleden — op 2026-09-21 09:00 overschreef precies dat de herstelde
+       knoop van baba weer met 95 XP / 1 medaille. "Groeien, nooit krimpen" geldt
+       dus ook hier: eerst lezen, samenvoegen, dán pas schrijven. Kunnen we niet
+       lezen of niet samenvoegen, dan schrijven we niet. */
+    if (typeof window.DURU_MERGE !== "function") {
+      console.warn("CloudSync: DURU_MERGE ontbreekt — push overgeslagen, " +
+                   "de cloud blijft ongemoeid.");
+      return Promise.resolve(false);
+    }
+
+    updateStatusUI("syncing", "Buluta aktarılıyor...");
+
+    return fetch(url + (url.indexOf("?") === -1 ? "?t=" : "&t=") + Date.now(),
+                 { method: "GET", headers: { "Cache-Control": "no-cache" } })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (remote) {
+        var remoteScores = !remote ? [] : (Array.isArray(remote) ? remote : (remote.scores || []));
+        var alle = remoteScores.concat(payload.scores); // lokaal als laatste: wint bij gelijkspel
+        var samen = window.DURU_MERGE(alle);
+
+        var uit = [], gezien = {};
+        Object.keys(samen).forEach(function (k) { gezien[k] = true; uit.push({ key: k, val: samen[k] }); });
+        // Niet-samenvoegbare sleutels (thema, laatste sync, ...) ongemoeid meesturen.
+        payload.scores.concat(remoteScores).forEach(function (it) {
+          if (it && it.key && !gezien[it.key]) { gezien[it.key] = true; uit.push(it); }
+        });
+        payload.scores = uit;
+
+        return fetch(url, {
+          method: method,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+      })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         var timeStr = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });

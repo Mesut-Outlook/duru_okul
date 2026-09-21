@@ -244,6 +244,16 @@ Bir senkron yolu bir anahtarı küçültüyorsa o bir hatadır, çakışma çöz
    Artık her kullanıcı **kendi düğümüne** yazar (`/scores_v2/<user>.json`) ve yalnız **kendi**
    öneki export edilir. Eski `/scores.json` yalnızca **okunur** (göç için).
 
+4. **Push de tam-değiştirmeydi.** `pushToCloud` yereli olduğu gibi PUT ediyordu; fakir bir
+   `localStorage` bulutu soyabiliyordu. 2026-09-21 09:00'da onarılmış `scores_v2/baba` düğümü
+   tam böyle yeniden 95 XP / 1 madalyaya düştü — pull başarısız olsa bile push devam ediyordu.
+   Artık push **önce okur, birleştirir, sonra yazar**; okuyamazsa veya merger yoksa **yazmaz**.
+
+**Tek merger, iki yön:** `js/landing.js → mergeScoreItems()` saf bir fonksiyon (hiçbir şey yazmaz),
+`window.DURU_MERGE` olarak dışa açılır. `restoreScores()` onu yerel değeri de kaynak koyarak
+okuma yönünde, `cloud_sync.js → pushToCloud` yazma yönünde kullanır. Yeni bir senkron yolu
+eklerken bu fonksiyonu kullan — ikinci bir birleştirme mantığı yazma.
+
 - **Regresyon testi: `node tools/test_score_merge.js`** — fonksiyonları `landing.js`'ten olduğu
   gibi kesip sahte `localStorage`'da çalıştırır. Onarım öncesi kodda 9 test kırmızı.
   Senkron/merge koduna dokunan her değişiklikten sonra çalıştır.

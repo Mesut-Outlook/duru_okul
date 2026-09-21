@@ -713,31 +713,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
 
-  function restoreScores(data) {
-    if (!Array.isArray(data)) return 0;
+  /* ⚠️ PURE samenvoeger: krijgt {key, val}-items uit ALLE bronnen (cloud,
+     server, localStorage) en geeft {sleutel: samengevoegde waarde} terug.
+     Schrijft zelf niets, zodat zowel het lees- als het schrijfpad van de sync
+     hem kan gebruiken. De regel die hij afdwingt: SAMENVOEGEN MAG GROEIEN,
+     NOOIT KRIMPEN — XP/streak/pogingen via max, medailles en history via union.
+     Zie CLAUDE.md → "Bulut senkron & birleştirme değişmezi". */
+  function mergeScoreItems(items) {
+    if (!Array.isArray(items)) return {};
     var allKeys = {};
-    data.forEach(function(item) {
+    items.forEach(function(item) {
       if (item && item.key) {
         allKeys[item.key] = true;
       }
     });
-    
-    var restoredCount = 0;
-    
+
+    var resultaat = {};
+
     Object.keys(allKeys).forEach(function(key) {
       var newVal = null;
-
-      /* ⚠️ De lokale waarde is óók een bron. Vóór 2026-09-20 bouwde deze
-         functie newVal uitsluitend uit `data` en overschreef daarna de
-         localStorage-sleutel — alles wat alléén lokaal bestond (XP, medailles,
-         pogingen, history) verdween. Op 2026-09-20 kostte dat o.a. 46 pogingen
-         en 4 medailles bij natuurkunde. Samenvoegen mag groeien, nooit krimpen.
-         Zie CLAUDE.md → "Skor kayıt hattı". */
-      var bronnen = data;
-      try {
-        var lokaalRuw = localStorage.getItem(key);
-        if (lokaalRuw) bronnen = data.concat([{ key: key, val: JSON.parse(lokaalRuw) }]);
-      } catch (e) { /* onleesbare lokale waarde: alleen `data` gebruiken */ }
+      var bronnen = items;
 
       if (key === 'begrijpend_lezen_history') {
         var uniqueAttemptsBL = {};
@@ -847,23 +842,48 @@ document.addEventListener('DOMContentLoaded', function() {
         };
       }
       
-      if (newVal) {
-        var localVal = localStorage.getItem(key);
-        var newValStr = JSON.stringify(newVal);
-        if (localVal !== newValStr) {
-          localStorage.setItem(key, newValStr);
-          restoredCount++;
-        }
+      if (newVal) resultaat[key] = newVal;
+    });
+
+    return resultaat;
+  }
+
+  /* Schrijft de samenvoeging naar localStorage. De LOKALE waarde gaat als extra
+     bron mee: vóór 2026-09-20 gebeurde dat niet en werd alles wat alléén lokaal
+     bestond (XP, medailles, pogingen, history) overschreven door wat de cloud
+     toevallig had — 865 XP en 5 medailles werden 95 XP en 1 medaille. */
+  function restoreScores(data) {
+    if (!Array.isArray(data)) return 0;
+
+    var bronnen = data.slice();
+    var sleutels = {};
+    data.forEach(function(item) { if (item && item.key) sleutels[item.key] = true; });
+    Object.keys(sleutels).forEach(function(key) {
+      try {
+        var lokaalRuw = localStorage.getItem(key);
+        if (lokaalRuw) bronnen.push({ key: key, val: JSON.parse(lokaalRuw) });
+      } catch (e) { /* onleesbare lokale waarde: alleen de andere bronnen */ }
+    });
+
+    var samengevoegd = mergeScoreItems(bronnen);
+    var restoredCount = 0;
+    Object.keys(samengevoegd).forEach(function(key) {
+      var newValStr = JSON.stringify(samengevoegd[key]);
+      if (localStorage.getItem(key) !== newValStr) {
+        localStorage.setItem(key, newValStr);
+        restoredCount++;
       }
     });
-    
+
     return restoredCount;
   }
 
   /* cloud_sync.js zocht window.restoreScores en vond niets, dus viel het terug
-     op zijn eigen blinde overschrijf-tak. Die tak was de directe oorzaak van het
-     verlies op 2026-09-20. Expliciet exporteren: één merger voor alle paden. */
+     op zijn eigen blinde overschrijf-tak — de directe oorzaak van het verlies op
+     2026-09-20. Beide expliciet exporteren: DURU_MERGE beschermt óók het
+     schrijfpad, zodat een verarmde localStorage de cloud niet kan uitkleden. */
   window.restoreScores = restoreScores;
+  window.DURU_MERGE = mergeScoreItems;
 
   function migratePreExistingLocalScores(username) {
     var unprefixedData = [];

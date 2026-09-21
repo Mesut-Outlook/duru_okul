@@ -28,7 +28,8 @@ pull'da kör üzerine-yazma tepesine düşüyordu (20 sn'de bir); `restoreScores
 eziyordu; üstüne tek paylaşımlı Firebase düğümü + PUT + çapraz-kullanıcı tekilleştirme.
 Ayrıntı: `CLAUDE.md` → "Bulut senkron & birleştirme değişmezi".
 
-**Yapıldı**: her iki dosya onarıldı · `tools/test_score_merge.js` (12 kontrol, eski kodda 9 kırmızı) ·
+**Yapıldı**: her iki dosya onarıldı (okuma *ve* yazma yönü) · saf `mergeScoreItems()` →
+`window.DURU_MERGE`, tek merger iki yön · `tools/test_score_merge.js` (17 kontrol) ·
 `scores_rescue_20260920.json` (26 anahtar, tüm kaynakların birleşimi) · `?v=4.3` · dokümanlar.
 
 **ONAY BEKLEYEN (Mesut)** — ikisi de dışa dönük, bu yüzden yapılmadı:
