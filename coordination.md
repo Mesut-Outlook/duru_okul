@@ -28,17 +28,20 @@ pull'da kör üzerine-yazma tepesine düşüyordu (20 sn'de bir); `restoreScores
 eziyordu; üstüne tek paylaşımlı Firebase düğümü + PUT + çapraz-kullanıcı tekilleştirme.
 Ayrıntı: `CLAUDE.md` → "Bulut senkron & birleştirme değişmezi".
 
-**Yapıldı**: her iki dosya onarıldı (okuma *ve* yazma yönü) · saf `mergeScoreItems()` →
-`window.DURU_MERGE`, tek merger iki yön · `tools/test_score_merge.js` (17 kontrol) ·
+**Yapıldı**: hata **üç katmandaydı**, üçü de onarıldı — okuma (`restoreScores`), yazma
+(`pushToCloud` tam-PUT'tu) ve `server.py → voeg_samen()` (ilerlemede "son yazan kazanır") ·
+saf `mergeScoreItems()` → `window.DURU_MERGE`, tek merger iki yön ·
+`tools/test_score_merge.js` (17) + `tools/test_server_merge.py` (15) ·
 `scores_rescue_20260920.json` (26 anahtar, tüm kaynakların birleşimi) · `?v=4.3` · dokümanlar.
 
-**ONAY BEKLEYEN (Mesut)** — ikisi de dışa dönük, bu yüzden yapılmadı:
-1. `main`'e push → GitHub Pages'e deploy. **Canlı site hâlâ yıkıcı kodu çalıştırıyor**; deploy
-   olmadan kurtarma anlamsız (ilk açılışta tekrar ezilir).
-2. Firebase'e kurtarma setini yazmak (`/scores_v2/duru.json`, `/scores_v2/baba.json` ve eski
-   `/scores.json`) — bulut hâlâ küçük seti tutuyor. Sıra önemli: **önce bulut + deploy, sonra aç.**
+**KAPANDI**: Firebase'in üç düğümü de (`scores_v2/duru`, `scores_v2/baba`, eski `scores`)
+kurtarma setini taşıyor; onarım `main`'e push edildi ve GitHub Pages'te doğrulandı
+(`landing.js?v=4.4`, `DURU_MERGE` canlıda, `merge(fakir+zengin) → 865 XP / 5 madalya`).
+baba düğümü 09:06'da kendi kendini onardı.
 
-⚠️ O ikisi bitene kadar hub'ı açma.
+⚠️ **agy'ye not**: 2026-09-21'de `81587f2` commit'i bu oturumun yarım kalmış senkron
+dosyalarını da içine aldı. Bu sefer zararsızdı; `js/`'te çalışan başka biri varsa
+`git add -A` yerine dosya dosya sahnele.
 
 ## 2026-08-27 · Geschiedenis kalite denetimi (Opus) — ÖNEMLİ DERS
 `havo3/geschiedenis` (commit e8c8a66, "840 soru") denetlendi. Bulgular:

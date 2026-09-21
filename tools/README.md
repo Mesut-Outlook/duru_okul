@@ -113,10 +113,24 @@ Soru kalitesiyle ilgisi yok; **Duru'nun kayıtlı geçmişini** korur. `restoreS
 `parseAttemptDate()`'i `js/landing.js`'ten harfi harfine kesip sahte bir `localStorage`
 üzerinde çalıştırır ve tek bir kuralı ölçer: **birleştirme büyüyebilir, asla küçülemez.**
 
-12 kontrol: XP/streak/pogingen/beste `max` ile korunuyor mu, madalyalar union mu, uzaktan gelen
+17 kontrol: XP/streak/pogingen/beste `max` ile korunuyor mu, madalyalar union mu, uzaktan gelen
 yeni değer alınıyor mu, `history` union'lanıp tekilleniyor mu, `beste` yeniden hesaplanıyor mu,
-bozuk yerel JSON çökme yerine kurtarılıyor mu.
+bozuk yerel JSON çökme yerine kurtarılıyor mu — **ve yazma yönünde**: fakir bir yerel bulutu
+soyabiliyor mu, `mergeScoreItems()` gerçekten saf mı (localStorage'a dokunmuyor mu).
 
 2026-09-20'de bu testin koruduğu hata 865 XP + 4 madalya + 199 poging'e mal oldu — ayrıntı
 `CLAUDE.md` → "Bulut senkron & birleştirme değişmezi". Senkron/merge koduna dokunan her
 değişiklikten sonra çalıştır.
+
+## `test_server_merge.py` — sunucu tarafı aynı değişmez
+
+```bash
+python3 tools/test_server_merge.py
+```
+
+`server.py → voeg_samen()` aynı hatayı taşıyordu: sınav geçmişini birleştiriyor ama **ilerleme
+anahtarlarında "son yazan kazanır"** uyguluyordu. Yani fakir bir istemci, kurtarmayı borçlu
+olduğumuz `scores.json`'u da soyabilirdi. 15 kontrol; onarım öncesi kodda 865 XP → 95 düşüyor.
+
+**İki testi birlikte çalıştır** — değişmez üç yerde de aynı:
+`node tools/test_score_merge.js && python3 tools/test_server_merge.py`

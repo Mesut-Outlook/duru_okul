@@ -249,14 +249,20 @@ Bir senkron yolu bir anahtarı küçültüyorsa o bir hatadır, çakışma çöz
    tam böyle yeniden 95 XP / 1 madalyaya düştü — pull başarısız olsa bile push devam ediyordu.
    Artık push **önce okur, birleştirir, sonra yazar**; okuyamazsa veya merger yoksa **yazmaz**.
 
+5. **`server.py → voeg_samen()` de aynı hatayı taşıyordu.** Sınav geçmişini birleştiriyor ama
+   ilerleme anahtarlarında (xp/badges/pogingen) "son yazan kazanır" uyguluyordu — yani yerel
+   sunucu yedeği de küçülebilirdi. Tam da kurtarmayı çıkardığımız dosya. Artık o da
+   büyüyen-birleştirme yapıyor (`tools/test_server_merge.py`, 15 kontrol).
+
 **Tek merger, iki yön:** `js/landing.js → mergeScoreItems()` saf bir fonksiyon (hiçbir şey yazmaz),
 `window.DURU_MERGE` olarak dışa açılır. `restoreScores()` onu yerel değeri de kaynak koyarak
 okuma yönünde, `cloud_sync.js → pushToCloud` yazma yönünde kullanır. Yeni bir senkron yolu
 eklerken bu fonksiyonu kullan — ikinci bir birleştirme mantığı yazma.
 
-- **Regresyon testi: `node tools/test_score_merge.js`** — fonksiyonları `landing.js`'ten olduğu
-  gibi kesip sahte `localStorage`'da çalıştırır. Onarım öncesi kodda 9 test kırmızı.
-  Senkron/merge koduna dokunan her değişiklikten sonra çalıştır.
+- **Regresyon testleri — senkron/merge koduna dokunan her değişiklikten sonra ikisini de çalıştır:**
+  `node tools/test_score_merge.js` (17 kontrol; fonksiyonları `landing.js`'ten olduğu gibi kesip
+  sahte `localStorage`'da çalıştırır) **ve** `python3 tools/test_server_merge.py` (15 kontrol).
+  Onarım öncesi kodda ikisi de kırmızı.
 - Kurtarma seti: `scores_rescue_20260920.json` (gitignore'da) — tarayıcı localStorage (duru+baba),
   4 Eylül sunucu anlık görüntüsü, Haziran v1 kütüğü ve bulutun **birleşimi**; 26 anahtar.
 - **Ders notu:** yukarıdaki "v2" bölümü *sunucunun* birleştirdiğini söylüyordu ve bu doğruydu —

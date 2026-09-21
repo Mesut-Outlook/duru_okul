@@ -18,6 +18,14 @@
   var STORAGE_KEY_LAST_SYNC = "duru_cloud_last_sync";
   var STORAGE_KEY_LAST_REMOTE_TS = "duru_cloud_last_remote_ts";
 
+  // Sleutels die nooit naar de cloud gaan: accounts, lokale voorkeuren en de
+  // sync-boekhouding zelf.
+  var NIET_SYNCEN = [
+    "duru_active_user", "duru_users", "duru_backup_imported", "duru_encrypted_backup",
+    "duru_hub_theme", "duru_dashboard_jaar",
+    STORAGE_KEY_CONFIG, STORAGE_KEY_LAST_SYNC, STORAGE_KEY_LAST_REMOTE_TS
+  ];
+
   var DEFAULT_CONFIG = {
     enabled: true,
     provider: "firebase",
@@ -137,7 +145,11 @@
       }
 
       if (logicalKey && (logicalKey.indexOf("duru_") === 0 || logicalKey.indexOf("begrijpend_lezen_") === 0)) {
-        if (logicalKey === "duru_active_user" || logicalKey === "duru_users" || logicalKey === "duru_backup_imported" || logicalKey === "duru_encrypted_backup") {
+        /* Alleen resultaten horen in de cloud. duru_cloud_last_sync en
+           duru_cloud_last_remote_ts zijn lokale sync-boekhouding: die meesturen
+           maakt élke payload anders en schrijft de eigen klok terug naar de
+           andere apparaten. Thema en jaarkeuze zijn voorkeuren per apparaat. */
+        if (NIET_SYNCEN.indexOf(logicalKey) !== -1) {
           continue;
         }
         var valStr = localStorage.getItem(rawKey);
@@ -217,8 +229,12 @@
     /* Eigen knoop + de oude gedeelde knoop. Die laatste is de enige cloud-kopie
        van alles van vóór 2026-09-20; samenvoegen is nu veilig (het kan alleen
        groeien), dus apparaten halen hun geschiedenis er automatisch uit terug. */
+    /* Beide apart afvangen. Stond de eigen knoop niet in een .catch, dan sloeg
+       één mislukte fetch de hele samenvoeging over; op 2026-09-21 09:00 ging
+       daardoor een verarmde staat naar de cloud. Eén bron die wegvalt mag de
+       andere niet meenemen. */
     return Promise.all([
-      haal(url),
+      haal(url).catch(function () { return null; }),
       haal(LEGACY_URL).catch(function () { return null; })
     ])
       .then(function (beide) {
