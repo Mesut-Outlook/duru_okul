@@ -146,7 +146,69 @@ def voeg_samen(key, oude_val, nieuwe_val):
         samen['laatste'] = laatste
         return samen, vers
 
-    # 3. Oefenvoortgang (xp, badges, pogingen…): laatste schrijver wint.
+    # 3. Oefenvoortgang (xp, streak, badges, beste, gedaan, pogingen, titels).
+    #
+    # ⚠️ Hier stond "laatste schrijver wint" — dezelfde fout die op 2026-09-20 aan
+    # de clientkant 865 XP en 5 medailles tot 95 XP en 1 medaille terugbracht. Een
+    # client met een verarmde localStorage kon zo ook het bestand op schijf
+    # uitkleden, juist het bestand waaruit we het herstel hebben gehaald.
+    # De regel is overal dezelfde: SAMENVOEGEN MAG GROEIEN, NOOIT KRIMPEN.
+    # Zie CLAUDE.md -> "Bulut senkron & birlestirme degismezi".
+    VOORTGANG_VELDEN = ('xp', 'streak', 'maxStreak', 'badges', 'beste',
+                        'gedaan', 'pogingen', 'titels')
+    if isinstance(nieuwe_val, dict):
+        oud = oude_val if isinstance(oude_val, dict) else {}
+        if any(v in nieuwe_val or v in oud for v in VOORTGANG_VELDEN):
+
+            def _getal(d, veld):
+                w = d.get(veld)
+                return w if isinstance(w, (int, float)) and not isinstance(w, bool) else None
+
+            def _max(veld):
+                w = [x for x in (_getal(oud, veld), _getal(nieuwe_val, veld)) if x is not None]
+                return max(w) if w else None
+
+            def _union(veld):
+                uit = {}
+                for d in (oud, nieuwe_val):
+                    if isinstance(d.get(veld), dict):
+                        uit.update(d[veld])
+                return uit
+
+            def _max_map(veld):
+                uit = {}
+                for d in (oud, nieuwe_val):
+                    if not isinstance(d.get(veld), dict):
+                        continue
+                    for k, w in d[veld].items():
+                        oud_w = uit.get(k)
+                        if isinstance(w, (int, float)) and not isinstance(w, bool):
+                            if not isinstance(oud_w, (int, float)) or w > oud_w:
+                                uit[k] = w
+                        elif k not in uit:
+                            uit[k] = w
+                return uit
+
+            samen = dict(oud)
+            samen.update(nieuwe_val)
+
+            for veld in ('xp', 'maxStreak'):
+                w = _max(veld)
+                if w is not None:
+                    samen[veld] = w
+            # streak groeit mee met de hoogste streak die we ooit zagen
+            streaks = [x for x in (_max('streak'), _max('maxStreak')) if x is not None]
+            if streaks:
+                samen['streak'] = max(streaks)
+            for veld in ('badges', 'gedaan', 'titels'):
+                if veld in samen:
+                    samen[veld] = _union(veld)
+            for veld in ('beste', 'pogingen'):
+                if veld in samen:
+                    samen[veld] = _max_map(veld)
+
+            return samen, []
+
     return nieuwe_val, []
 
 

@@ -204,8 +204,8 @@ DURU.registerExamen({
         "type": "open",
         "vraag": "Leg uit waarom afschrijvingskosten horen bij de constante kosten van een bedrijf.",
         "sleutelwoorden": [
-            "ieder jaar hetzelfde bedrag/vast bedrag",
-            "ongeacht hoeveel er geproduceerd wordt/onafhankelijk van de productie"
+            "ieder jaar hetzelfde/vast bedrag/gelijk",
+            "ongeacht/onafhankelijk van de productie/productieomvang"
         ],
         "minTreffers": 2,
         "modelantwoord": "Afschrijvingskosten zijn constante kosten omdat het bedrag ieder jaar hetzelfde is, ongeacht hoeveel er dat jaar geproduceerd wordt.",
