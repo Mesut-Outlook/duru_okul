@@ -254,6 +254,13 @@ Bir senkron yolu bir anahtarı küçültüyorsa o bir hatadır, çakışma çöz
    sunucu yedeği de küçülebilirdi. Tam da kurtarmayı çıkardığımız dosya. Artık o da
    büyüyen-birleştirme yapıyor (`tools/test_server_merge.py`, 15 kontrol).
 
+6. **Pull → push geri besleme döngüsü.** `pullFromCloud` her turda
+   `duru_cloud_last_sync`'i yazıyordu; `setItem` override'ı bunu `duru_`ile başlayan
+   bir anahtar görüp push tetikliyordu → pull → yine last_sync → … Açık her sekme,
+   hiçbir şey değişmese bile 20 sn'de bir GET+PUT üretiyordu. Artık `NIET_SYNCEN`
+   listesindeki anahtarlar ne push tetikler ne de buluta gider (liste
+   `window.CloudSync.NIET_SYNCEN`'den paylaşılır) — yalnız gerçek sonuçlar senkronlanır.
+
 **Tek merger, iki yön:** `js/landing.js → mergeScoreItems()` saf bir fonksiyon (hiçbir şey yazmaz),
 `window.DURU_MERGE` olarak dışa açılır. `restoreScores()` onu yerel değeri de kaynak koyarak
 okuma yönünde, `cloud_sync.js → pushToCloud` yazma yönünde kullanır. Yeni bir senkron yolu

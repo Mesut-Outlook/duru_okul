@@ -451,6 +451,7 @@
   });
 
   window.CloudSync = {
+    NIET_SYNCEN: NIET_SYNCEN,
     pull: pullFromCloud,
     push: pushToCloud,
     getConfig: getConfig,

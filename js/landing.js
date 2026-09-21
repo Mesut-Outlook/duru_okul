@@ -87,10 +87,21 @@ window.Storage.prototype.getItem = function(key) {
   return originalGetItem.call(this, prefixedKey);
 };
 
+/* ⚠️ Niet élke duru_-sleutel hoort een push te starten. pullFromCloud() schrijft
+   bij iedere ronde duru_cloud_last_sync weg; die setItem startte dan weer een
+   push, die een pull-antwoord verwerkte, die opnieuw last_sync schreef — een
+   lus die per open tabblad elke 20 seconden bleef draaien, ook als er niets
+   veranderd was. Alleen echte resultaten mogen synchroniseren. */
 window.Storage.prototype.setItem = function(key, value) {
   var prefixedKey = getPrefixedKey(key);
   originalSetItem.call(this, prefixedKey, value);
   if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
+    var nietSyncen = (window.CloudSync && window.CloudSync.NIET_SYNCEN) || [
+      'duru_active_user', 'duru_users', 'duru_backup_imported', 'duru_encrypted_backup',
+      'duru_hub_theme', 'duru_dashboard_jaar', 'duru_cloud_sync_config',
+      'duru_cloud_last_sync', 'duru_cloud_last_remote_ts'
+    ];
+    if (nietSyncen.indexOf(key) !== -1) return;
     if (window.CloudSync && typeof window.CloudSync.push === 'function') {
       window.CloudSync.push();
     }
