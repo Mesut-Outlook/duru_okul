@@ -326,9 +326,14 @@
 
         var uit = [], gezien = {};
         Object.keys(samen).forEach(function (k) { gezien[k] = true; uit.push({ key: k, val: samen[k] }); });
-        // Niet-samenvoegbare sleutels (thema, laatste sync, ...) ongemoeid meesturen.
+        /* Sleutels die de merger niet kent (nog onbekende vormen) gaan ongemoeid
+           mee, zodat een nieuwe soort gegevens hier niet sneuvelt. Maar wat op de
+           NIET_SYNCEN-lijst staat valt af — óók als het al in de cloud stond, want
+           anders blijft oude troep zichzelf eeuwig doorgeven. */
         payload.scores.concat(remoteScores).forEach(function (it) {
-          if (it && it.key && !gezien[it.key]) { gezien[it.key] = true; uit.push(it); }
+          if (!it || !it.key || gezien[it.key]) return;
+          gezien[it.key] = true;
+          if (NIET_SYNCEN.indexOf(it.key) === -1) uit.push(it);
         });
         payload.scores = uit;
 
