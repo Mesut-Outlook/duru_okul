@@ -227,6 +227,22 @@ Ders `#vak-frame`'de açılır; sabit "← Terug naar de vakken" balığı. Geri
 browser-back (`history.pushState` + `popstate`). Kapalıyken iframe `src` = `about:blank`
 (asla boş `src=""` — hub'ı yeniden yükler). Multi-user login + `/api/score` sync `js/landing.js`'de.
 
+## Ders sitelerinde koyu tema (2026-09-22)
+Ders siteleri hub'ın temasını izler. **Tek yer, 12 kopya değil:**
+- `js/vak_thema.js` — her `havo3/<vak>/index.html` `<head>`'inde (yönlendirme betiğinden hemen sonra)
+  yüklenir. `localStorage.duru_hub_theme` ('light'/'dark', yoksa OS) → `<html class="dark">`;
+  `storage` olayıyla hub'daki değişikliği anında izler. Ayrıca `<html data-vak="<klasör>">` koyar.
+- `css/vak_dark.css` — her dersin kendi `css/style.css`'inden **sonra** yüklenir. 12 dersin ortak
+  token'larını (`--wit/--inkt/--lijn/--paars/...`) `html.dark` altında yeniden tanımlar; mavi aile
+  (engels, frans) `html.dark[data-vak=...]` ile ayrı ton alır. Sabit hex/rgba renkli seçiciler ve
+  soru verisindeki satır içi stiller (nederlands leesteksten: `[style*="background:#f8fafc"]` …) burada ezilir.
+  **Bir ders CSS'ine yeni sabit renk eklenirse koyu karşılığını buraya yaz**, dersin kendi dosyasına değil.
+- `duru_hub_theme` artık **öneksiz** bir cihaz tercihi: `getPrefixedKey` ve diğer 3 sistem-anahtar
+  listesinde muaf (önceden `user_<naam>_duru_hub_theme` olarak yazılıyordu, hub'ın `<head>` betiği
+  ise öneksiz okuyordu). Eski değer `initTheme`'de bir kez taşınır.
+- Doğrulama: 12 ders × (ana sayfa, sınav listesi, dashboard, madalyalar) koyu modda WCAG-benzeri
+  kontrast taraması → 3:1 altı yazı yok (gradyanlı hero/başlıklar ayrıca gözle kontrol edildi).
+
 ## Storage & SVG iframe düzeltmeleri (kritik)
 1. **Storage interception:** `js/landing.js` `Storage.prototype.setItem`'ı prototip düzeyinde
    `try-catch` ile override eder → `duru_*` sonuçlarını `POST /api/score`'a senkronlar +

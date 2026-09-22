@@ -64,8 +64,10 @@ function xorCipher(text, key) {
 
 function getPrefixedKey(key) {
   if (!key) return key;
-  // Exclude system keys
-  if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+  // Exclude system keys. duru_hub_theme is een apparaatvoorkeur zonder
+  // voorvoegsel: het <head>-script van de hub én js/vak_thema.js in de
+  // vak-sites lezen dezelfde sleutel (vóór 2026-09-22: user_<naam>_…).
+  if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup' || key === 'duru_hub_theme') {
     return key;
   }
   if (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0) {
@@ -702,6 +704,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function opgeslagen() {
       try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
     }
+    // Eenmalig: oude keuze onder user_<naam>_duru_hub_theme overnemen.
+    try {
+      if (!opgeslagen() && getActiveUser()) {
+        var oud = originalGetItem.call(localStorage, 'user_' + getActiveUser() + '_' + THEME_KEY);
+        if (oud) originalSetItem.call(localStorage, THEME_KEY, oud);
+      }
+    } catch (e) { /* geen toegang tot opslag */ }
     function isDonker() {
       var k = opgeslagen();
       return k ? k === 'dark' : mq.matches;
@@ -926,7 +935,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var key = localStorage.key(i);
       if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
         if (key.indexOf('user_') !== 0) {
-          if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+          if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup' || key === 'duru_hub_theme') {
             continue;
           }
           var valStr = originalGetItem.call(localStorage, key);
@@ -1238,7 +1247,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           var key = localStorage.key(i);
                           if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
                             if (key.indexOf('user_') !== 0) {
-                              if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+                              if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup' || key === 'duru_hub_theme') {
                                 continue;
                               }
                               var valStr = originalGetItem.call(localStorage, key);
@@ -1267,7 +1276,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           var key = localStorage.key(i);
                           if (key && (key.indexOf('duru_') === 0 || key.indexOf('begrijpend_lezen_') === 0)) {
                             if (key.indexOf('user_') !== 0) {
-                              if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup') {
+                              if (key === 'duru_active_user' || key === 'duru_users' || key === 'duru_backup_imported' || key === 'duru_encrypted_backup' || key === 'duru_hub_theme') {
                                 continue;
                               }
                               keysToRemove.push(key);

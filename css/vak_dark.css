@@ -1,0 +1,118 @@
+/* =========================================================
+   Duru's Schoolhub — donkere modus voor ALLE vak-sites (havo3/<vak>/)
+   Geladen ná de eigen css/style.css van elk vak. Actief zodra
+   js/vak_thema.js de klasse .dark op <html> zet (volgt de hub).
+
+   Werkwijze: de twaalf style.css-bestanden delen dezelfde tokens
+   (--wit, --inkt, --lijn, --paars, …). Die worden hier donker
+   herdefinieerd; alleen plekken met vaste hex-kleuren krijgen een
+   eigen regel. Nieuwe vaste kleuren in een vak-CSS? Hier toevoegen,
+   niet in het vak zelf.
+   ========================================================= */
+
+/* ── Tokens: groene vakken (standaard) ─────────────────── */
+html.dark {
+  color-scheme: dark;
+  --inkt: #e6f2ea;
+  --grijs: #a7b6ae;
+  --grijs-licht: #74867c;
+  --lijn: #2c3d35;
+  --wit: #16211c;
+  --kaart: #16211c;
+  --achtergrond: #0e1714;
+
+  /* Accent iets lichter dan overdag: leesbaar als tekst op donker,
+     wit erop blijft nog leesbaar op knoppen. */
+  --paars: #2a9d5c;
+  --paars-licht: #36ad69;
+  --paars-zacht: #173628;
+  --groen: #36ad69;
+  --groen-zacht: #173628;
+  --rood: #f07167;
+  --rood-zacht: #3a1d1b;
+  --blauw: #6aa4ff;
+  --blauw-zacht: #1a2a45;
+  --roze: #f0a53a;
+  --oranje: #fb923c;
+  --geel: #fbbf24;
+  --cyan: #22d3ee;
+
+  --schaduw-sm: 0 1px 3px rgba(0, 0, 0, .45);
+  --schaduw: 0 6px 20px rgba(0, 0, 0, .40);
+  --schaduw-lg: 0 16px 40px rgba(0, 0, 0, .55);
+}
+
+/* ── Tokens: blauwe vakken ─────────────────────────────── */
+html.dark[data-vak="engels"],
+html.dark[data-vak="frans"] {
+  --inkt: #e6ecf7;
+  --grijs: #a4afc2;
+  --lijn: #2a3448;
+  --wit: #151c2b;
+  --kaart: #151c2b;
+  --achtergrond: #0d1320;
+  --paars: #3b76e0;
+  --paars-licht: #5b8def;
+  --paars-zacht: #1a2745;
+  --roze: #f07167;
+}
+
+/* ── Pagina ────────────────────────────────────────────── */
+html.dark body { background: var(--achtergrond); color: var(--inkt); }
+html.dark .topbar { background: color-mix(in srgb, var(--wit) 88%, transparent); border-color: var(--lijn); }
+html.dark input, html.dark textarea, html.dark select { color: var(--inkt); }
+
+/* ── Vaste lichte vlakken uit de vak-CSS ───────────────── */
+html.dark .h1-thema .ico, html.dark .h2-thema .ico, html.dark .h3-thema .ico,
+html.dark .h4-thema .ico, html.dark .h5-thema .ico, html.dark .h6-thema .ico,
+html.dark .h7-thema .ico, html.dark .h8-thema .ico { background: rgba(255, 255, 255, .07); }
+
+html.dark .formule-box { background: linear-gradient(135deg, #16261e, #262414); }
+html.dark .voorbeeld { background: #29220f; border-color: #5b4a17; }
+html.dark table.nask tr:nth-child(even) td { background: rgba(255, 255, 255, .04); }
+html.dark .niveau-2 { background: #3a2f14; color: #f5c56b; }
+
+html.dark .review-item.goed  { background: #13291d; }
+html.dark .review-item.fout  { background: #2e1917; }
+html.dark .review-item.deels { background: #2b2412; }
+
+html.dark .chapter-header,
+html.dark .paragraaf-groep { background: var(--wit); }
+html.dark .chapter-content,
+html.dark .hf-body { background: var(--achtergrond); }
+
+html.dark .hf-header { background: linear-gradient(135deg, var(--paars-zacht), var(--wit)); }
+html.dark .hf-header:hover { background: linear-gradient(135deg, #1e4432, var(--wit)); }
+html.dark[data-vak="engels"] .hf-header:hover,
+html.dark[data-vak="frans"] .hf-header:hover { background: linear-gradient(135deg, #22335a, var(--wit)); }
+
+html.dark .hf-badge.oranje { background: #33230f; border-color: #5a3b14; }
+html.dark .hf-badge.groen  { background: var(--groen-zacht); border-color: #245c3c; }
+
+html.dark .paragraaf-tag           { background: #1a2745; border-color: #2c3f6b; color: #9cc0ff; }
+html.dark .paragraaf-tag.mix       { background: #33280f; border-color: #5a4614; color: #f5c56b; }
+html.dark .paragraaf-tag.eind      { background: #36162a; border-color: #5e2748; color: #f5a3cf; }
+html.dark .paragraaf-tag.begrippen { background: #2a1a3d; border-color: #47306a; color: #d3b3ff; }
+
+html.dark .card-type-label.oefen { background: var(--groen-zacht); color: #7ddc9f; }
+html.dark .card-type-label.toets { background: #33230f; color: #fdba74; }
+html.dark .topic-card.toets-card { background: var(--wit); border-color: #5a3b14; }
+
+/* SVG-tekeningen (natuurkunde) zijn voor wit papier getekend: de kaart
+   blijft licht, maar gedempt zodat hij niet verblindt. */
+html.dark .svg-card { background: #eef2ef; }
+
+/* ── Inline-stijlen uit vraagdata (o.a. nederlands leesteksten) ──
+   Die staan hard in de data-bestanden; overschrijven i.p.v. 400+
+   vragen aanpassen. */
+html.dark [style*="background:#f8fafc"],
+html.dark [style*="background:#fff;"] { background: var(--wit) !important; }
+html.dark [style*="background:#e2e8f0"] { background: var(--lijn) !important; }
+html.dark [style*="color:#1e293b"] { color: var(--inkt) !important; }
+html.dark [style*="color:#64748b"] { color: var(--grijs) !important; }
+html.dark [style*="color:#15803d"] { color: #5fd08e !important; }
+html.dark [style*="solid #cbd5e1"],
+html.dark [style*="dashed #cbd5e1"],
+html.dark [style*="solid #e2e8f0"],
+html.dark [style*="solid #ccc"] { border-color: var(--lijn) !important; }
+html.dark [style*="border-left:4px solid #15803d"] { border-left-color: #2a9d5c !important; }
