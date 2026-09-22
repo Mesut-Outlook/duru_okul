@@ -1882,6 +1882,10 @@ html.dark #ob {
 .ob-zacht { color: var(--ob-zacht); font-size: 13px; white-space: nowrap; }
 .ob-unite td { background: var(--ob-bg2); font-size: 13px; }
 .ob-unite td:first-child { padding-left: 28px; }
+.ob-tabel tr.ob-unite { cursor: pointer; }
+.ob-tabel tr.ob-unite:hover td, .ob-tabel tr.ob-unite:focus-visible td { background: var(--ob-lijn); }
+.ob-tabel tr.ob-toetsen > td { background: var(--ob-bg2); padding: 2px 8px 8px 44px; }
+.ob-toetsen .ob-log li { font-size: 13px; padding: 6px 0; }
 .ob-legenda { margin-top: 10px; font-size: 12px; color: var(--ob-zacht); line-height: 1.8; }
 
 /* 4 — son denemeler */

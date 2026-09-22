@@ -397,6 +397,7 @@
 
   var C = window.DURU_CIJFER;
   var openVak = null;        // blijft bewaard tussen renders (cloud-sync hertekent elke 20 s)
+  var openUnite = null;      // "<vakId>|<nr>": die unit toont zijn losse toetsen
   var toonAlleLog = false;
 
   function nieuwstEerst(l) {
@@ -423,6 +424,19 @@
     return '<span class="ob-gidis ' + g.r + '">' + (g.r === "op" ? "↑ iyileşiyor" : "↓ düşüyor") + '</span>';
   }
 
+  /* "22-09-2026 21:03" — veli wil zien hoe laat Duru oefende. */
+  function datumTijd(a) {
+    var p = ontleedDatum(a.datumStr, a.timestamp);
+    return p.datum + (p.tijd ? " " + p.tijd : "");
+  }
+
+  /* Eén toetsregel: cijfer · (vak —) toetsnaam · datum + tijd. */
+  function logItem(a, metVak) {
+    return '<li>' + pil(a.cijfer, 1) + '<span class="ob-t">' +
+      (metVak ? a.vakIcoon + ' ' + escapeHtml(a.vakTitel) + ' — ' : '') + escapeHtml(a.titel) +
+      '</span><span class="ob-zacht">' + escapeHtml(datumTijd(a)) + '</span></li>';
+  }
+
   function gunOnce(ts) {
     if (!ts) return "—";
     var gun = Math.floor((Date.now() - ts) / 864e5);
@@ -436,7 +450,9 @@
     if (!s && !ts) return { datum: "—", tijd: "" };
     var str = String(s || "").trim();
     if (/^\d{4}-\d{2}-\d{2}T/.test(str) || (ts && isNaN(str))) {
-      var d = new Date(str || ts);
+      // Alleen ISO-tekst mag door new Date(); "05-09-2026" leest de browser als
+      // 9 mei (Amerikaans). Anders de tijdstempel gebruiken (al dd-mm geparsed).
+      var d = /^\d{4}-\d{2}-\d{2}T/.test(str) ? new Date(str) : new Date(ts);
       if (!isNaN(d.getTime())) {
         var pad = function (n) { return n < 10 ? "0" + n : String(n); };
         var dat = pad(d.getDate()) + "-" + pad(d.getMonth() + 1) + "-" + d.getFullYear();
@@ -556,7 +572,9 @@
          (archief ? '</div>' : '<div class="ob-feiten">' +
            '<span class="ob-feit">Bu hafta <b>' + Object.keys(dagen).length + '</b> gün çalıştı</span>' +
            '<span class="ob-feit"><b>' + week.length + '</b> deneme (7 gün)</span>' +
-           '<span class="ob-feit">Son çalışma: <b>' + (alle[0] ? gunOnce(alle[0].timestamp) : "—") + '</b></span>' +
+           '<span class="ob-feit">Son çalışma: <b>' + (alle[0] ? gunOnce(alle[0].timestamp) +
+             (ontleedDatum(alle[0].datumStr, alle[0].timestamp).tijd ? " " + ontleedDatum(alle[0].datumStr, alle[0].timestamp).tijd : "")
+             : "—") + '</b></span>' +
          '</div></div>');
 
     /* 2 — Dikkat */
@@ -592,15 +610,23 @@
         if (open) {
           r.chapters.filter(function (c) { return c.vakId === v.id && c.count > 0; }).forEach(function (c) {
             var l = nieuwstEerst(c.attempts);
-            h += '<tr class="ob-unite"><td>' + (c.nr != null ? "H" + c.nr + " · " : "") + escapeHtml(c.titel) + '</td>' +
+            var sleutel = v.id + "|" + (c.nr != null ? c.nr : "overig");
+            var uOpen = openUnite === sleutel;
+            h += '<tr class="ob-unite" data-unite="' + escapeHtml(sleutel) + '" tabindex="0" aria-expanded="' + uOpen + '">' +
+                 '<td>' + (c.nr != null ? "H" + c.nr + " · " : "") + escapeHtml(c.titel) +
+                   '<span class="ob-ok">' + (uOpen ? "▾" : "▸") + '</span></td>' +
                  '<td class="r">' + pil(c.avgCijfer, c.count) + '</td><td>' + gidisHtml(c.attempts) + '</td>' +
                  '<td class="r m-weg">' + c.count + ' deneme</td>' +
                  '<td class="r m-weg ob-zacht">' + (l[0] ? gunOnce(l[0].timestamp) : "—") + '</td></tr>';
+            if (uOpen) {
+              h += '<tr class="ob-toetsen"><td colspan="5"><ul class="ob-log">' +
+                   l.map(function (a) { return logItem(a, false); }).join("") + '</ul></td></tr>';
+            }
           });
         }
       });
       h += '</tbody></table>' +
-           '<div class="ob-legenda">Bir derse tıklayınca üniteleri açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
+           '<div class="ob-legenda">Derse tıklayınca üniteleri, üniteye tıklayınca sınav sonuçları açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
            '<span class="ob-pil net">5,5–6,9</span> yeterli · <span class="ob-pil zwak">&lt;5,5</span> yetersiz. ' +
            'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma.</div></div>';
     }
@@ -609,11 +635,7 @@
     if (alle.length) {
       var log = toonAlleLog ? alle : alle.slice(0, 8);
       h += '<div class="ob-kaart"><h3>Son denemeler</h3><ul class="ob-log">' +
-        log.map(function (a) {
-          return '<li>' + pil(a.cijfer, 1) + '<span class="ob-t">' + a.vakIcoon + ' ' + escapeHtml(a.vakTitel) +
-                 ' — ' + escapeHtml(a.titel) + '</span><span class="ob-zacht">' +
-                 escapeHtml(kortDatum(a.datumStr)) + '</span></li>';
-        }).join("") + '</ul>' +
+        log.map(function (a) { return logItem(a, true); }).join("") + '</ul>' +
         (alle.length > 8 ? '<p class="ob-meer-rij"><button type="button" class="ob-knop" id="ob-meer">' +
           (toonAlleLog ? "Daha az göster" : "Tümünü göster (" + alle.length + ")") + '</button></p>' : '') +
         '</div>';
@@ -628,7 +650,7 @@
     container.querySelectorAll(".ob-jaar").forEach(function (b) {
       b.addEventListener("click", function () {
         selectedJaar = b.getAttribute("data-year");
-        openVak = null; toonAlleLog = false;
+        openVak = null; openUnite = null; toonAlleLog = false;
         renderParentDashboard();
       });
     });
@@ -636,6 +658,18 @@
       function wissel() {
         var id = tr.getAttribute("data-vak");
         openVak = openVak === id ? null : id;
+        openUnite = null;
+        renderParentDashboard();
+      }
+      tr.addEventListener("click", wissel);
+      tr.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); wissel(); }
+      });
+    });
+    container.querySelectorAll("tr.ob-unite").forEach(function (tr) {
+      function wissel() {
+        var id = tr.getAttribute("data-unite");
+        openUnite = openUnite === id ? null : id;
         renderParentDashboard();
       }
       tr.addEventListener("click", wissel);
