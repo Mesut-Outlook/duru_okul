@@ -62,9 +62,9 @@
   function parseDate(dateStr) {
     if (!dateStr) return new Date();
     try {
-      var parts = dateStr.split(" ");
+      var parts = String(dateStr).trim().split(" ");
       if (parts.length < 2) return new Date(dateStr);
-      var dp = parts[0].split("-");
+      var dp = parts[0].replace(/,$/, "").split("-");
       var tp = parts[1].split(":");
       if (dp.length < 3 || tp.length < 2) return new Date(dateStr);
       return new Date(
@@ -232,7 +232,7 @@
             if (a.cijfer > chMax) chMax = a.cijfer;
           });
           chLast = chAttempts[0].cijfer;
-          chLastDate = (chAttempts[0].datumStr || "-").split(" ")[0];
+          chLastDate = chAttempts.length ? kortDatum(chAttempts[0].datumStr) : "-";
         }
 
         var chAvg = chCount > 0 ? (chSum / chCount) : 0;
@@ -304,7 +304,7 @@
         });
         var ovAvg = ovSum / overigeAttempts.length;
         var ovLast = overigeAttempts[0].cijfer;
-        var ovLastDate = (overigeAttempts[0].datumStr || "-").split(" ")[0];
+        var ovLastDate = overigeAttempts.length ? kortDatum(overigeAttempts[0].datumStr) : "-";
 
         var overigChObj = {
           vakId: vak.id,
@@ -415,7 +415,51 @@
   function cijferKleur(c, count) {
     return KLASSE_KLEUR[C.klasse(c, count)];
   }
-  function kortDatum(s) { var d = String(s || "").split(" ")[0]; return d || "—"; }
+  function ontleedDatum(s, ts) {
+    if (!s && !ts) return { datum: "—", tijd: "" };
+    var str = String(s || "").trim();
+    if (/^\d{4}-\d{2}-\d{2}T/.test(str) || (ts && isNaN(str))) {
+      var d = new Date(str || ts);
+      if (!isNaN(d.getTime())) {
+        var pad = function (n) { return n < 10 ? "0" + n : String(n); };
+        var dat = pad(d.getDate()) + "-" + pad(d.getMonth() + 1) + "-" + d.getFullYear();
+        var tij = pad(d.getHours()) + ":" + pad(d.getMinutes());
+        return { datum: dat, tijd: tij };
+      }
+    }
+    var m = str.match(/^(\d{1,2}[-.\/]\d{1,2}[-.\/]\d{2,4})\s*,?\s*(?:(?:om|at)\s*)?(\d{1,2}:\d{2}(?::\d{2})?)?/i);
+    if (m) {
+      var dat2 = m[1].replace(/\//g, "-").replace(/\./g, "-");
+      var tij2 = m[2] ? m[2].slice(0, 5) : "";
+      return { datum: dat2, tijd: tij2 };
+    }
+    var d2 = new Date(str);
+    if (!isNaN(d2.getTime())) {
+      var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
+      return {
+        datum: pad2(d2.getDate()) + "-" + pad2(d2.getMonth() + 1) + "-" + d2.getFullYear(),
+        tijd: pad2(d2.getHours()) + ":" + pad2(d2.getMinutes())
+      };
+    }
+    return { datum: str.replace(/[,;]+$/, "").trim(), tijd: "" };
+  }
+
+  function kortDatum(s) {
+    var p = ontleedDatum(s);
+    return p.datum || "—";
+  }
+
+  function formatDatumTijdHtml(s, ts) {
+    var p = ontleedDatum(s, ts);
+    if (!p.datum || p.datum === "—") return "—";
+    if (!p.tijd) {
+      return '<span class="ouder-dt-date">' + escapeHtml(p.datum) + '</span>';
+    }
+    return '<div class="ouder-dt-box">' +
+             '<span class="ouder-dt-date">' + escapeHtml(p.datum) + '</span>' +
+             '<span class="ouder-dt-time">' + escapeHtml(p.tijd) + '</span>' +
+           '</div>';
+  }
   function niveauVan(jaar) { return jaar === "2026-2027" ? "HAVO 3" : "MAVO 2"; }
   function hfChip(nr) {
     return '<span class="ouder-hf-chip">' + (nr != null ? "H" + nr : "—") + "</span>";
@@ -637,12 +681,12 @@
       h += '<div class="ouder-sec-kop"><h3>Sınav geçmişi</h3><p>' +
            escapeHtml(gekozen.titel) + ' · yeniden eskiye</p></div>';
       h += '<div class="ouder-tabel-wrap"><table class="ouder-tabel"><thead><tr>' +
-        '<th class="ouder-streep"></th><th>Tarih</th><th>Ünite</th><th>Sınav</th>' +
+        '<th class="ouder-streep"></th><th class="ouder-col-datum">Tarih / Saat</th><th>Ünite</th><th>Sınav</th>' +
         '<th>Doğru</th><th>Yüzde</th><th>Not</th></tr></thead><tbody>';
       gekozen.attempts.forEach(function (a) {
         h += '<tr>' +
           '<td class="ouder-streep" style="background:' + cijferKleur(a.cijfer, 1) + '"></td>' +
-          '<td class="ouder-num">' + escapeHtml(kortDatum(a.datumStr)) + '</td>' +
+          '<td class="ouder-num ouder-datum-cel">' + formatDatumTijdHtml(a.datumStr, a.timestamp) + '</td>' +
           '<td>' + hfChip(a.hoofdstuk) + '</td>' +
           '<td>' + escapeHtml(a.titel) + '</td>' +
           '<td class="ouder-num">' + a.goed + "/" + a.totaal + '</td>' +
@@ -719,12 +763,12 @@
         '</div>';
     }
     var t = '<table class="ouder-tabel"><thead><tr><th class="ouder-streep"></th>' +
-      '<th>Tarih</th><th>Ders</th><th>Ünite</th><th>Sınav</th>' +
+      '<th class="ouder-col-datum">Tarih / Saat</th><th>Ders</th><th>Ünite</th><th>Sınav</th>' +
       '<th>Doğru</th><th>Yüzde</th><th>Not</th><th>Sonuç</th></tr></thead><tbody>';
     rijen.forEach(function (a) {
       t += '<tr>' +
         '<td class="ouder-streep" style="background:' + cijferKleur(a.cijfer, 1) + '"></td>' +
-        '<td class="ouder-num">' + escapeHtml(kortDatum(a.datumStr)) + '</td>' +
+        '<td class="ouder-num ouder-datum-cel">' + formatDatumTijdHtml(a.datumStr, a.timestamp) + '</td>' +
         '<td>' + (a.vakIcoon || "") + ' ' + escapeHtml(a.vakTitel) + '</td>' +
         '<td>' + hfChip(a.hoofdstuk) + '</td>' +
         '<td>' + escapeHtml(a.titel) + '</td>' +

@@ -2235,6 +2235,35 @@ html.dark .ouder-chip[aria-pressed="true"] {
 .ouder-num { font-variant-numeric: tabular-nums; }
 .ouder-tabel td.ouder-streep,
 .ouder-tabel th.ouder-streep { width: 3px; padding: 0; }
+.ouder-tabel th.ouder-col-datum,
+.ouder-tabel td.ouder-datum-cel {
+  white-space: nowrap;
+  width: 105px;
+  min-width: 95px;
+}
+.ouder-dt-box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.25;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.ouder-dt-date {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--inkt);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.ouder-dt-time {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ouder-mut);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
 
 /* ── Filters + lege staat ────────────────────────────── */
 .ouder-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
