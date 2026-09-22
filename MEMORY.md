@@ -603,3 +603,40 @@ Faz 1 uygulandı.
   - `tools/open_check.js nederlands` → **0 hata**.
   - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
   - `js/hoofdstukken.js` güncellendi (`nederlands: hoofdstukken=[1] aantalExamens={"1":13}`).
+
+## 📅 Milestone 20: Nederlands Cursus 1 — 4 Ek Leestoets (§2 & §5 için 2'şer Toets: Toets 14 t/m 17) (2026-09-21)
+
+* **İstek**: "Hollandaca ünite 1'deki daha önceki hazırladığın gibi 2 ve 5. paragraftan 2'şer tane daha test üret".
+* **Kapsam**:
+  - `examen_14.js`: **Toets 14 — §2 Inleiding en Slot (Toets F — Actuele Kwesties, Probleemstellingen & Oproepen)** (20 soru: 'De terugkeer van het donker' ve 'E-sports: topsport of zolderkamervermaak?').
+  - `examen_15.js`: **Toets 15 — §5 Vaste Tekststructuren (Toets F — Probleem-Oplossing & Vraag-Antwoord)** (20 soru: 'Laadstress op de Route du Soleil' ve 'Het geheime kompas van de trekvogel').
+  - `examen_16.js`: **Toets 16 — §2 Inleiding en Slot (Toets G — Historische Vergelijkingen, Anekdotes & Cirkelstructuren)** (20 soru: 'De onzichtbare gifstroom uit je wasmachine' ve 'De denkbeeldige rode vlag').
+  - `examen_17.js`: **Toets 17 — §5 Vaste Tekststructuren (Toets G — Voor- en Nadelen & Verleden-Heden-Toekomst)** (20 soru: 'De vierdaagse werkweek: paradijs of strop?' ve 'De evolutie van geld: van schelp tot algoritme').
+* **Kalite & Standartlar**:
+  - Toplam 17 sınav x 20 soru = 340 sınav sorusu; 5 konu anlatımı x 8 = 40 oefenvragen (Toplam 380 soru).
+  - MC seçenekleri dosya başına tam %25 dengeli (3 A, 3 B, 3 C, 3 D).
+  - Waaronwaar sorularında %50 onwaar oranı (2 True, 2 False).
+  - Açık uçlu sorularda `modelantwoord` tam puan alacak şekilde sleutelwoord'larla uyumlu ve soruda ipucu vermeyen yapı.
+  - `tools/open_check.js nederlands` → **0 hata**.
+  - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
+  - `havo3/nederlands/index.html` güncellendi (`examen_14.js` - `examen_17.js` eklendi).
+  - `js/hoofdstukken.js` güncellendi (`nederlands: hoofdstukken=[1] aantalExamens={"1":17}`).
+
+## 📅 Milestone 21: Nederlands Cursus 1 — 5 Ek Leestoets (§2 & §5 Benzeri: Toets 18 t/m 22) (2026-09-22)
+
+* **İstek**: "Hollandaca ünite 1'deki paragraf 2 ve 5'e benzer 5 test daha üret".
+* **Kapsam**:
+  - `examen_18.js`: **Toets 18 — §2 Inleiding en Slot (Toets H — Natuurherstel & Biologische Ritmes)** (20 soru: 'De triomfantelijke terugkeer van de otter' ve 'Waarom tieners later moeten beginnen').
+  - `examen_19.js`: **Toets 19 — §5 Vaste Tekststructuren (Toets H — Probleem-Oplossing & Verschijnsel-Verklaring)** (20 soru: 'De stad als bakoven: strijd tegen het hitte-eiland' ve 'Het geheime internet van het woud').
+  - `examen_20.js`: **Toets 20 — §2 Inleiding en Slot (Toets I — Anekdotes, Cirkelstructuren & Reviewfraude)** (20 soru: 'De stille ramp onder de Caribische golven' ve 'De illusie van vijf sterren: online reviewfraude').
+  - `examen_21.js`: **Toets 21 — §5 Vaste Tekststructuren (Toets I — Voor- en Nadelen & Verleden-Heden-Toekomst)** (20 soru: 'Kweekvlees: de bioreactor als redder van de planeet?' ve 'De opkomst en val van de plastic tas').
+  - `examen_22.js`: **Toets 22 — Cursus 1 Integrale Eindtoets Lezen (Mix §2 & §5 — Examentraining B)** (20 soru: 'Luistert je smartphone je af? De mythe ontmaskerd' ve 'Kernenergie: noodzakelijke reddingsboei of geldverslindende illusie?').
+* **Kalite & Standartlar**:
+  - Toplam 22 sınav x 20 soru = 440 sınav sorusu; 5 konu anlatımı x 8 = 40 oefenvragen (Toplam 480 soru).
+  - MC seçenekleri dosya başına tam %25 dengeli (3 A, 3 B, 3 C, 3 D).
+  - Waaronwaar sorularında %50 onwaar oranı (2 True, 2 False).
+  - Açık uçlu sorularda `modelantwoord` tam puan alacak şekilde sleutelwoord'larla uyumlu ve soruda ipucu vermeyen yapı.
+  - `tools/open_check.js nederlands` → **486 open soru tarandı, 0 hata**.
+  - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
+  - `havo3/nederlands/index.html` güncellendi (`examen_18.js` - `examen_22.js` eklendi).
+  - `js/hoofdstukken.js` güncellendi (`nederlands: hoofdstukken=[1] aantalExamens={"1":22}`).

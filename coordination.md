@@ -1035,3 +1035,55 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":13}`).
   - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan** (300 soru: 260 sınav + 40 alıştırma).
   - `node tools/open_check.js nederlands` → **0 hata**.
+
+### 2026-09-21: Nederlands Cursus 1 — 4 Ek Leestoets (Toets 14 t/m 17)
+- **Kapsam**:
+  - **§2 Inleiding en slot**:
+    - `examen_14.js`: Toets 14 — §2 Inleiding en Slot — Toets F (20 soru)
+      - Tekst 1: 'De terugkeer van het donker' (lichtvervuiling, 6 alinea)
+      - Tekst 2: 'E-sports: topsport of zolderkamervermaak?' (topgamen en erkenning, 6 alinea)
+    - `examen_16.js`: Toets 16 — §2 Inleiding en Slot — Toets G (20 soru)
+      - Tekst 1: 'De onzichtbare gifstroom uit je wasmachine' (microplastics in kleding, 6 alinea)
+      - Tekst 2: 'De denkbeeldige rode vlag' (historische vergelijking Red Flag Act vs autonome auto's, 6 alinea)
+  - **§5 Vaste tekststructuren**:
+    - `examen_15.js`: Toets 15 — §5 Vaste Tekststructuren — Toets F (20 soru)
+      - Tekst 1: 'Laadstress op de Route du Soleil' (probleem-oplossingstructuur, 6 alinea)
+      - Tekst 2: 'Het geheime kompas van de trekvogel' (vraag-antwoord / verschijnsel-verklaring, 6 alinea)
+    - `examen_17.js`: Toets 17 — §5 Vaste Tekststructuren — Toets G (20 soru)
+      - Tekst 1: 'De vierdaagse werkweek: paradijs of strop?' (voor- en nadelenstructuur, 6 alinea)
+      - Tekst 2: 'De evolutie van geld: van schelp tot algoritme' (verleden-heden-toekomststructuur, 6 alinea)
+- **Pedagojik Standartlar & Kalite Kapısı**:
+  - 4 yeni sınav x 20 soru = 80 yeni soru (Toplam: 17 sınav x 20 = 340 sınav sorusu + 40 alıştırma = 380 soru).
+  - Her sınavda 12 MC (%25 tam dengeli A/B/C/D), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru.
+  - `havo3/nederlands/index.html` güncellendi (`examen_14.js` - `examen_17.js` eklendi).
+  - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":17}`).
+  - `node tools/open_check.js nederlands` → **472 open soru tarandı, 0 hata**.
+  - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
+
+### 2026-09-22: Nederlands Cursus 1 — 5 Ek Leestoets (Toets 18 t/m 22)
+- **Kapsam**:
+  - **§2 Inleiding en slot**:
+    - `examen_18.js`: Toets 18 — §2 Inleiding en Slot — Toets H (20 soru)
+      - Tekst 1: 'De triomfantelijke terugkeer van de otter' (historisch feit, probleemstelling, slotoproep, 6 alinea)
+      - Tekst 2: 'Waarom tieners later moeten beginnen' (herkenbare situatie, stelling, uitsmijter, 6 alinea)
+    - `examen_20.js`: Toets 20 — §2 Inleiding en Slot — Toets I (20 soru)
+      - Tekst 1: 'De stille ramp onder de Caribische golven' (zintuiglijke opening, contrast, cirkelstructuur, 6 alinea)
+      - Tekst 2: 'De illusie van vijf sterren: online reviewfraude' (anekdote, vraagstelling, consumentenadvies, 6 alinea)
+  - **§5 Vaste tekststructuren**:
+    - `examen_19.js`: Toets 19 — §5 Vaste Tekststructuren — Toets H (20 soru)
+      - Tekst 1: 'De stad als bakoven: strijd tegen het hitte-eiland' (probleem-oplossingstructuur, 6 alinea)
+      - Tekst 2: 'Het geheime internet van het woud' (vraag-antwoord / verschijnsel-verklaring, 6 alinea)
+    - `examen_21.js`: Toets 21 — §5 Vaste Tekststructuren — Toets I (20 soru)
+      - Tekst 1: 'Kweekvlees: de bioreactor als redder van de planeet?' (voor- en nadelenstructuur, 6 alinea)
+      - Tekst 2: 'De opkomst en val van de plastic tas' (verleden-heden-toekomst / chronologisch, 6 alinea)
+  - **Integrale Eindtoets (Mix §2 & §5)**:
+    - `examen_22.js`: Toets 22 — Cursus 1 Integrale Eindtoets Lezen — Examentraining B (20 soru)
+      - Tekst 1: 'Luistert je smartphone je af? De mythe ontmaskerd' (anekdote, privacy, drieslag-uitsmijter, 6 alinea)
+      - Tekst 2: 'Kernenergie: noodzakelijke reddingsboei of geldverslindende illusie?' (voor- en nadelen, afweging, 6 alinea)
+- **Pedagojik Standartlar & Kalite Kapısı**:
+  - 5 yeni sınav x 20 soru = 100 yeni soru (Toplam: 22 sınav x 20 = 440 sınav sorusu + 40 alıştırma = 480 soru).
+  - Her sınavda 12 MC (%25 tam dengeli A/B/C/D), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru.
+  - `havo3/nederlands/index.html` güncellendi (`examen_18.js` - `examen_22.js` eklendi).
+  - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":22}`).
+  - `node tools/open_check.js nederlands` → **486 open soru tarandı, 0 hata**.
+  - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan**.

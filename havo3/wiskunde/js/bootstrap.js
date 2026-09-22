@@ -10,6 +10,13 @@
   // Nog geen hoofdstukken/onderwerpen — die komen zodra Duru materiaal aanlevert.
   DURU.hoofdstukken = [
     {
+      nr: 1,
+      titel: "Lineaire en exponentiële formules",
+      icoon: "📈",
+      kleur: "#c2185b",
+      beschrijving: "§1.1 Lineaire formules opstellen (richtingscoëfficiënt, startgetal, evenwijdige lijnen) en §1.2 Lijnen snijden (snijpunt berekenen)."
+    },
+    {
       nr: 2,
       titel: "Statistiek",
       icoon: "📊",

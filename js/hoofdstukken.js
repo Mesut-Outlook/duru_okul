@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-20",
+  "gegenereerd": "2026-09-22",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -820,7 +820,16 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-10": 1,
         "ex-h3-nederlands-11": 1,
         "ex-h3-nederlands-12": 1,
-        "ex-h3-nederlands-13": 1
+        "ex-h3-nederlands-13": 1,
+        "ex-h3-nederlands-14": 1,
+        "ex-h3-nederlands-15": 1,
+        "ex-h3-nederlands-16": 1,
+        "ex-h3-nederlands-17": 1,
+        "ex-h3-nederlands-18": 1,
+        "ex-h3-nederlands-19": 1,
+        "ex-h3-nederlands-20": 1,
+        "ex-h3-nederlands-21": 1,
+        "ex-h3-nederlands-22": 1
       },
       "onderwerpHoofdstuk": {
         "h1-1-inleiding-slot": 1,
@@ -830,7 +839,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h1-begrippen": 1
       },
       "aantalExamens": {
-        "1": 13
+        "1": 22
       },
       "aantalOnderwerpen": {
         "1": 5
@@ -883,6 +892,11 @@ window.DURU_HOOFDSTUKKEN = {
     "wiskunde": {
       "hoofdstukken": [
         {
+          "nr": 1,
+          "titel": "Lineaire en exponentiële formules",
+          "icoon": "📈"
+        },
+        {
           "nr": 2,
           "titel": "Statistiek",
           "icoon": "📊"
@@ -898,9 +912,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h2-7": 2,
         "ex-wiskunde-h2-8": 2,
         "ex-wiskunde-h2-9": 2,
-        "ex-wiskunde-h2-10": 2
+        "ex-wiskunde-h2-10": 2,
+        "ex-wiskunde-h1-1": 1,
+        "ex-wiskunde-h1-2": 1,
+        "ex-wiskunde-h1-3": 1
       },
       "onderwerpHoofdstuk": {
+        "h1-begrippen": 1,
         "h2-1-verhoudingstabel": 2,
         "h2-2-cirkeldiagram": 2,
         "h2-3-frequentietabel": 2,
@@ -908,9 +926,11 @@ window.DURU_HOOFDSTUKKEN = {
         "h2-5-steelbladdiagram": 2
       },
       "aantalExamens": {
+        "1": 3,
         "2": 10
       },
       "aantalOnderwerpen": {
+        "1": 1,
         "2": 5
       }
     }

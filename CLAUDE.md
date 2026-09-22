@@ -32,7 +32,7 @@ archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = M
 havo3/<vak>/      HAVO 3 ders-siteleri (12 vak). Anahtar: duru_2627_<slug>_*. Doluluk için CLAUDE.md "Ders doluluk durumu"
 ```
 
-## Ders doluluk durumu (2026-09-13)
+## Ders doluluk durumu (2026-09-22)
 Sayılar `havo3/<vak>/js/{bootstrap,data/*}.js`'i node `vm`'de çalıştırıp `DURU.onderwerpen` /
 `DURU.examens` ve `vragen` uzunluklarını sayarak çıkarılır (`tools/build_hoofdstukken.js` ile aynı
 teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçerik eklendikçe güncelle.
@@ -47,12 +47,12 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | economie | 12 | 37 | 836 | H1–H4 |
 | aardrijkskunde | 10 | 10 | 280 | H1–H2 (tam) |
 | scheikunde | 6 | 10 | 252 | H1–H2 (H3–H7 eksik) |
-| wiskunde | 5 | 10 | 240 | H2 |
+| wiskunde | 6 | 13 | 308 | H1 §1.1–1.2 (2 toets + begrippen, uit aantekeningen docent), H2 |
 | biologie | 2 | 5 | 116 | H10 |
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 5 | 6 | 160 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 146 onderwerp · 271 proeftoets · 6632 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 147 onderwerp · 274 proeftoets · 6700 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
