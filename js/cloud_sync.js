@@ -72,13 +72,41 @@
       toast.style.cssText = "position:fixed;bottom:24px;right:24px;background:#064e3b;color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,0.25);z-index:99999;display:flex;align-items:center;gap:10px;transform:translateY(100px);opacity:0;transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1);";
       document.body.appendChild(toast);
     }
-    toast.innerHTML = "<span>🔥</span> " + escapeHtml(message);
+    toast.innerHTML = "<span>🔥</span> " + escapeHtml(t(message));
     toast.style.transform = "translateY(0)";
     toast.style.opacity = "1";
     setTimeout(function () {
       toast.style.transform = "translateY(100px)";
       toast.style.opacity = "0";
     }, 4000);
+  }
+
+  /* Duru ziet de hub in het Nederlands, de ouder in het Turks
+     (CLAUDE.md → dilkuralı). Statusteksten staan hieronder in het Turks
+     en worden voor een leerling vertaald; onbekende tekst blijft staan. */
+  var NL = {
+    "Bulut Senkron: Aktif": "Online opslag: aan",
+    "Eşitleniyor...": "Synchroniseren…",
+    "Eşitlendi": "Opgeslagen",
+    "Bağlantı Hatası": "Geen verbinding",
+    "Çevrimdışı (Yerel)": "Offline (op dit apparaat)",
+    "Buluttan çekiliyor...": "Ophalen…",
+    "Bulut: Hazır": "Online opslag klaar",
+    "Buluta aktarılıyor...": "Opslaan…",
+    "Aktarım Hatası": "Opslaan mislukt",
+    "İnternet bağlandı, eşitleniyor...": "Weer online, synchroniseren…",
+    "Henüz yapılmadı": "nog niet",
+    "Duru'nun yeni sınav sonuçları buluttan güncellendi!": "Je nieuwste resultaten zijn binnengehaald!"
+  };
+  function isOuder() {
+    var u = String(getActiveUser() || "").toLowerCase();
+    return u === "baba" || u === "veli" || u === "mesut";
+  }
+  function t(tekst) {
+    if (isOuder() || !tekst) return tekst;
+    if (NL[tekst]) return NL[tekst];
+    var m = /^Eşitlendi \((.*)\)$/.exec(tekst);
+    return m ? "Opgeslagen (" + m[1] + ")" : tekst;
   }
 
   function updateStatusUI(status, message) {
@@ -110,8 +138,10 @@
       if (btn) btn.classList.remove("syncing");
     }
 
+    label = t(label);
     if (pill) pill.textContent = label;
-    if (btn) btn.setAttribute("title", "Bulut Senkron: " + label + " (" + (syncState.lastSyncTime || "Henüz yapılmadı") + ")");
+    if (btn) btn.setAttribute("title", (isOuder() ? "Bulut Senkron: " : "Online opslag: ") + label +
+      " (" + (syncState.lastSyncTime || t("Henüz yapılmadı")) + ")");
     if (modalStatus) {
       modalStatus.innerHTML = icon + " <strong>" + escapeHtml(label) + "</strong>" +
         (syncState.lastSyncTime ? " <small style='color:var(--grijs-licht);'>(" + syncState.lastSyncTime + ")</small>" : "");
@@ -207,6 +237,26 @@
   /**
    * 1. PULL (Buluttan Çekme)
    */
+  /* Ouderpaneel: Duru's resultaten staan in HAAR knoop (/scores_v2/duru).
+     Tot 2026-09-22 haalde een ouderapparaat alleen /scores_v2/baba op en
+     toonde het paneel een oude kopie (206 pogingen / 7,0 terwijl Duru op
+     191 / 7,1 stond; een zwakke unit was onzichtbaar). Alleen lezen:
+     samenvoegen onder user_duru_ zonder push (zie restoreScores). */
+  var LEERLING = "duru";
+  function haalLeerlingOp() {
+    if (!isOuder() || typeof window.restoreScores !== "function") return Promise.resolve(0);
+    var url = getEffectiveUrl().replace(/\/scores_v2\/[^\/?#]*\.json$/, "/scores_v2/" + LEERLING + ".json");
+    return fetch(url + "?t=" + Date.now(), { method: "GET", headers: { "Cache-Control": "no-cache" } })
+      .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(function (d) {
+        var lijst = d ? (Array.isArray(d) ? d : (d.scores || [])) : [];
+        var n = lijst.length ? window.restoreScores(lijst, LEERLING) : 0;
+        if (n > 0 && typeof window.renderParentDashboard === "function") window.renderParentDashboard();
+        return n;
+      })
+      .catch(function (err) { console.warn("CloudSync: leerlingknoop niet opgehaald:", err.message); return 0; });
+  }
+
   function pullFromCloud(silent) {
     if (!navigator.onLine) {
       updateStatusUI("offline", "Çevrimdışı (Yerel)");
@@ -271,7 +321,7 @@
         }
 
         updateStatusUI("success", "Eşitlendi (" + timeStr + ")");
-        return updatedCount;
+        return haalLeerlingOp().then(function (n) { return updatedCount + n; });
       })
       .catch(function (err) {
         syncState.inFlight = false;
@@ -374,6 +424,12 @@
 
     if (btn) {
       btn.addEventListener("click", function () {
+        // Leerling: geen (Turkstalig) instellingenvenster met endpoint-URL's,
+        // een klik betekent gewoon "nu opslaan".
+        if (!isOuder()) {
+          pullFromCloud(false).then(function () { pushToCloud(true); });
+          return;
+        }
         if (modal) {
           modal.style.display = "flex";
           var cfg = getConfig();

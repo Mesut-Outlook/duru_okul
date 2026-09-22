@@ -377,13 +377,18 @@
       // Toetsen die aan geen enkel hoofdstuk hangen — niet verstoppen.
       var overig = eigen.filter(function (a) { return a.hoofdstuk == null || !gezien[a.hoofdstuk]; });
       if (overig.length) {
+        // Gemaakte toetsen die niet (meer) in het manifest staan: tel ze als
+        // gedaan én in het totaal, anders staat er "0/10 toetsen" naast een 7,3.
+        var uniekOverig = {};
+        overig.forEach(function (a) { uniekOverig[a.examId || a.titel] = 1; });
+        var nOverig = Object.keys(uniekOverig).length;
         hfs.push({
           nr: null, titel: "Overige toetsen", icoon: "📦", vak: vak,
           lijst: overig, count: overig.length, gem: C.gemiddelde(overig, "cijfer"),
           recent: C.gemiddelde(overig.slice(0, 3), "cijfer"),
           beste: Math.max.apply(null, overig.map(function (a) { return a.cijfer; })),
           laatsteDatum: kortDatum(overig[0].datumStr),
-          gedaan: overig.length, exTotaal: 0, over: 0, vg: 0
+          gedaan: nOverig, exTotaal: nOverig, over: 0, vg: 100
         });
       }
 
@@ -571,10 +576,12 @@
   }
 
   function vakRij(v) {
+    var aantalHf = v.hfs.filter(function (h) { return h.nr != null; }).length;
     return '<button type="button" class="st-vakrij" data-open-vak="' + escHtml(v.vak.id) + '">' +
       '<span class="st-vaknaam"><span class="st-vakico">' + (v.vak.icoon || "") + '</span>' +
       '<span class="st-vaktekst"><span class="st-vaktitel">' + escHtml(v.vak.titel) + '</span>' +
-      '<span class="st-vakmeta">' + v.count + ' toetsen · ' + v.hfs.length + ' hoofdstukken</span></span></span>' +
+      '<span class="st-vakmeta">' + v.count + (v.count === 1 ? ' poging' : ' pogingen') + ' · ' +
+        aantalHf + (aantalHf === 1 ? ' hoofdstuk' : ' hoofdstukken') + '</span></span></span>' +
       miniSchaal(v.gem, v.count) +
       '<span class="st-spark-cel">' + sparkline(v.pogingen) + trendHtml(v.pogingen) + '</span>' +
       '<span class="st-vg">' + (v.exTotaal ? v.gedaan + "/" + v.exTotaal + " toetsen" : "—") +
@@ -584,7 +591,9 @@
 
   /* ── Tabbladen ─────────────────────────────────────────── */
   function tabOverzicht(model) {
-    var gesorteerd = model.vakken.slice().sort(function (a, b) {
+    // Vakken zonder inhoud én zonder pogingen (bv. een smoke-test-vak) niet
+    // tonen: dezelfde regel als het tabblad "Vakken".
+    var gesorteerd = model.vakken.filter(function (v) { return v.exTotaal > 0 || v.count > 0; }).sort(function (a, b) {
       if (!a.count && b.count) return 1;
       if (a.count && !b.count) return -1;
       return a.gem - b.gem;
@@ -756,13 +765,12 @@
     h += '</div>';
 
     /* Status */
+    // Geen tweede "Hoi Duru" en geen derde keer het schooljaar: de hero van
+    // de hub en de kopbalk hierboven zeggen dat al.
     h += '<section class="st-status">' +
-      '<p class="st-eyebrow">Schooljaar ' + escHtml(window.currentJaar) + ' · ' + escHtml(niveau) + '</p>' +
-      '<h2 class="st-groet">Hoi Duru 👋</h2>' +
       '<p class="st-zin">' + (heeft
-        ? "Je hebt deze week <strong>" + model.week.length + (model.week.length === 1 ? " toets" : " toetsen") +
-          "</strong> gemaakt en je gemiddelde is <strong>" + fmtC(model.gem) + "</strong>. " +
-          (C.geslaagd(model.gem) ? "Dat is boven de 5,5 — goed bezig!" : "Nog even doorzetten naar de 5,5.")
+        ? "Je gemiddelde dit schooljaar is <strong>" + fmtC(model.gem) + "</strong>" +
+          (C.geslaagd(model.gem) ? " — boven de 5,5, goed bezig!" : " — nog even doorzetten naar de 5,5.")
         : "Nog geen toetsen dit schooljaar. Kies een vak en begin — je resultaten verschijnen hier meteen.") +
       '</p></section>';
 
@@ -790,7 +798,12 @@
 
     /* Momentum */
     var st = model.streak;
-    var klaar = model.alleHf.filter(function (x) { return x.count > 0 && C.examenklaar(x.gem); }).length;
+    // Noemer = hoofdstukken waarin je al geoefend hebt (zelfde getal als het
+    // tabblad "Hoofdstukken"), niet alle hoofdstukken van alle vakken.
+    var geoefend = model.alleHf.filter(function (x) { return x.count > 0 && x.nr != null; });
+    var klaar = geoefend.filter(function (x) { return C.examenklaar(x.gem); }).length;
+    var exTot = model.vakken.reduce(function (s, v) { return s + v.exTotaal; }, 0);
+    var exGed = model.vakken.reduce(function (s, v) { return s + v.gedaan; }, 0);
     h += '<div class="st-momentum">' +
       '<div class="st-mom' + (st >= 2 ? " st-mom--vlam" : "") + '">' +
         '<span class="st-momlabel">Op rij</span>' +
@@ -801,18 +814,18 @@
         '<span class="st-momsub">toetsen gemaakt' +
         (model.week.length ? " · gem. " + fmtC(C.gemiddelde(model.week, "cijfer")) : "") + '</span></div>' +
       '<div class="st-mom"><span class="st-momlabel">Klaar voor de toets</span>' +
-        '<span class="st-momwaarde">' + klaar + '<small> / ' + model.alleHf.length + '</small></span>' +
-        '<span class="st-momsub">hoofdstukken op 8,5 of hoger</span></div>' +
-      '<div class="st-mom"><span class="st-momlabel">Nog te doen</span>' +
-        '<span class="st-momwaarde">' + model.open + '</span>' +
-        '<span class="st-momsub">proeftoetsen open</span></div>' +
+        '<span class="st-momwaarde">' + klaar + '<small> / ' + geoefend.length + '</small></span>' +
+        '<span class="st-momsub">van je geoefende hoofdstukken staan op 8,5+</span></div>' +
+      '<div class="st-mom"><span class="st-momlabel">Proeftoetsen gedaan</span>' +
+        '<span class="st-momwaarde">' + exGed + '<small> / ' + exTot + '</small></span>' +
+        '<span class="st-momsub">verschillende toetsen gemaakt</span></div>' +
       '</div>';
 
     /* Tabs */
     var tabs = [
       { id: "overzicht",    label: "Overzicht",    tel: null },
       { id: "vakken",       label: "Vakken",       tel: model.actief.length },
-      { id: "hoofdstukken", label: "Hoofdstukken", tel: model.alleHf.filter(function (x) { return x.count > 0; }).length },
+      { id: "hoofdstukken", label: "Hoofdstukken", tel: geoefend.length },
       { id: "logboek",      label: "Logboek",      tel: model.attempts.length }
     ];
     h += '<nav class="st-tabs" role="tablist">';

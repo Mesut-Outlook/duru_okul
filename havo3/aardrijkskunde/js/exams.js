@@ -79,11 +79,13 @@
     h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Klik op een Hoofdstuk om de 20-vragige proeftoetsen te bekijken.</p>';
 
     // Groepeer op hoofdstuk
+    // Via DURU.examenGroepen(): volgorde uit DURU.hoofdstukken, toetsen zonder
+    // hoofdstuk onderaan als "Overige toetsen" (niet stilletjes in H1).
     var groepen = {};
-    DURU.examens.forEach(function (ex) {
-      var hfKey = ex.hoofdstukTitel || (ex.hoofdstuk ? "Hoofdstuk " + ex.hoofdstuk : "Hoofdstuk 1 — Wereldhandel in beweging");
-      if (!groepen[hfKey]) groepen[hfKey] = [];
-      groepen[hfKey].push(ex);
+    DURU.examenGroepen().forEach(function (g) {
+      if (!g.examens.length) return;
+      var hfKey = g.hf.nr != null ? "Hoofdstuk " + g.hf.nr + " — " + g.hf.titel : "Overige toetsen";
+      groepen[hfKey] = g.examens;
     });
 
     var grpIndex = 0;
@@ -98,7 +100,7 @@
           '<div class="hf-info">' +
             '<h3>' + esc(hfTitel) + '</h3>' +
             '<div class="hf-meta-badges">' +
-              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + (exLijst.length * 20) + ' vragen)</span>' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + exLijst.reduce(function (s, e) { return s + (e.vragen || []).length; }, 0) + ' vragen)</span>' +
             '</div>' +
           '</div>' +
           '<button class="hf-toggle-btn" id="hf-ex-label-' + grpIndex + '">' + (isOpen ? '▲ Klap in' : '▼ Open Toetsen') + '</button>' +

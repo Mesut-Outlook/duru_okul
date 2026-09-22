@@ -95,6 +95,7 @@
     return vanJaar('2026-2027').map(function (v) {
       return {
         id: 'h3-' + v.id,
+        vakId: v.id,   // zonder prefix: sleutel in het manifest en in ./#vak=<id>
         titel: v.titel,
         icoon: v.icoon,
         domein: v.domein,

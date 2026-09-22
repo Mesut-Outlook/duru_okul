@@ -2,6 +2,9 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
+  <!-- Los geopend (bladwijzer)? Via de hub openen, anders ziet deze site
+       Duru's voortgang niet (user_<naam>_-voorvoegsel zit in de hub). -->
+  <script>if (window.top === window.self) location.replace("../../#vak=aardrijkskunde");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duru's Aardrijkskunde 🗺️ — HAVO 3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +24,14 @@
         </div>
       </div>
       <div class="stats">
-        <span class="chip xp" title="Jouw punten">💎 <span id="stat-xp">0</span> <span class="lbl">XP</span></span>
-        <span class="chip streak" title="Hoeveel vragen achter elkaar goed">🔥 <span id="stat-streak">0</span></span>
-        <span class="chip medal" title="Behaalde medailles">🏅 <span id="stat-badges">0</span></span>
+        <span class="chip xp" title="Jouw punten">💎 <span id="stat-xp">…</span> <span class="lbl">XP</span></span>
+        <span class="chip streak" title="Hoeveel vragen achter elkaar goed">🔥 <span id="stat-streak">…</span></span>
+        <span class="chip medal" title="Behaalde medailles">🏅 <span id="stat-badges">…</span></span>
       </div>
     </div>
   </header>
 
-  <main class="app" id="app"><!-- views worden hier gerenderd --></main>
+  <main class="app" id="app"><!-- views worden hier gerenderd --><p style="text-align:center;padding:48px 0;opacity:.6">Laden…</p></main>
 
   <div id="toast"></div>
   <canvas id="confetti"></canvas>
@@ -37,7 +40,8 @@
   <script src="js/bootstrap.js?v=4.3"></script>
 
   <!-- ====== Examen-motor + proeftoetsen (Hoofdstuk 1 & 2: 10 toetsen x 20 vragen) ====== -->
-  <script src="js/exams.js?v=4.6"></script>
+  <script src="js/exams.js?v=20260922b"></script>
+  <script src="js/data/examen_0_start.js?v=3.8"></script>
   <script src="js/data/examen_1.js?v=3.8"></script>
   <script src="js/data/examen_2.js?v=3.8"></script>
   <script src="js/data/examen_3.js?v=3.8"></script>

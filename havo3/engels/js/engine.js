@@ -144,10 +144,10 @@
       });
 
       DURU.examens.forEach(function (ex) {
-        var hfNr = ex.hoofdstuk || 1;
+        var hfNr = ex.hoofdstuk != null ? ex.hoofdstuk : 999; // 999 = zonder hoofdstuk → onderaan
         if (!chaptersMap[hfNr]) {
           chaptersMap[hfNr] = {
-            meta: { nr: hfNr, titel: ex.hoofdstukTitel || ("Hoofdstuk " + hfNr), icoon: ex.icoon || "🇬🇧", intro: "" },
+            meta: { nr: hfNr, titel: hfNr === 999 ? "Overige toetsen" : (ex.hoofdstukTitel || ("Hoofdstuk " + hfNr)), icoon: ex.icoon || "🇬🇧", intro: "" },
             examens: []
           };
         }
@@ -176,13 +176,13 @@
         html += '<summary class="chapter-header">' +
           '<div class="ch-icon">' + (meta.icoon || "🇬🇧") + '</div>' +
           '<div class="ch-info">' +
-            '<span class="ch-badge">Hoofdstuk ' + meta.nr + '</span>' +
+            '<span class="ch-badge">' + (meta.nr === 999 ? 'Extra' : 'Hoofdstuk ' + meta.nr) + '</span>' +
             '<div class="ch-title">' + esc(meta.titel) + '</div>' +
             (meta.intro ? '<div class="ch-sub">' + esc(meta.intro) + '</div>' : '') +
           '</div>' +
           '<div class="ch-meta">' +
             '<div class="ch-stats">' +
-              '<div>' + totalExams + ' toetsen · ' + (totalExams * 20) + ' vragen</div>' +
+              '<div>' + totalExams + ' toetsen · ' + exams.reduce(function (s, e) { return s + (e.vragen || []).length; }, 0) + ' vragen</div>' +
               (completedExams > 0 ? '<div style="color:var(--groen);font-size:12px;">✓ ' + completedExams + '/' + totalExams + ' gemaakt (Gem. ' + avgScore + ')</div>' : '<div style="color:var(--grijs-licht);font-size:12px;">Nog niet gemaakt</div>') +
             '</div>' +
             '<div class="ch-chevron">▼</div>' +

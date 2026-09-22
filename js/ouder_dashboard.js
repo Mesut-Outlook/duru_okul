@@ -1,12 +1,7 @@
 /* =========================================================
    Duru's Schoolhub — Veli / Baba Takip & İlerleme Paneli
-   Özellikler:
-   - Genel Başarı Skoru (Hollanda 1-10 not sistemi)
-   - Karnede Herhangi Bir Derse Tıklandığında Ünite ve Sınav Kırılımları
-   - Hoofdstuk (Ünite) Bazlı Başarı & Teşhis Karnesi
-   - Güçlü & Geliştirilmesi Gereken Konular (Aandachtspunten)
-   - Tarihli Sınav ve Çalışma Günlüğü (Tüm denemeler)
-   - Tek Tıkla Yazdır / PDF İndir (Print-friendly format)
+   Sade tek sayfa (2026-09-22): özet → dikkat edilecekler → dersler
+   (tıklayınca üniteler) → son denemeler. Yazdır = window.print().
    ========================================================= */
 
 (function () {
@@ -17,9 +12,13 @@
   // Vakregister komt uit js/vakken.js — zelfde bron als js/dashboard.js.
   var VAK_CONFIG = window.DURU_VAKKEN.alle;
 
+  /* Het ouderpaneel toont altijd de LEERLING. Tot 2026-09-22 gaf dit de
+     actieve gebruiker terug — ingelogd als baba las het paneel dus babas
+     eigen (oude) kopie in plaats van Duru's resultaten. */
   function getActiveStudent() {
     var raw = localStorage.getItem("duru_active_user") || sessionStorage.getItem("duru_active_user");
-    return raw ? raw.trim() : "duru";
+    var u = raw ? raw.trim().toLowerCase() : "duru";
+    return (u === "baba" || u === "veli" || u === "mesut") ? "duru" : u;
   }
 
   /* Ruwe lees: langs de prefix-override van landing.js heen.
@@ -385,36 +384,54 @@
   }
 
   /* ─────────────────────────────────────────────────────────
-     Weergave — herontwerp 2026-09.
-     Één leesvolgorde: status → cijferschaal → aandachtspunten
-     → vakken, met detailweergaven achter tabs.
+     Weergave — vereenvoudigd 2026-09-22 (goedgekeurd via
+     preview/ouder_basit.html). Eén pagina, vier blokken:
+       1. Özet      — groot gemiddelde + één zin + deze week
+       2. Dikkat    — max. 3 units, beslist op de LAATSTE 3 pogingen
+       3. Dersler   — tabel; klik op een vak → units klappen open
+       4. Son denemeler — 8 regels + "Tümünü göster"
+     Weg: 1–10-liniaal, XP/rozetten, 4 tabbladen, lijsten van 25+
+     sterke/zwakke punten. Regels (dekking, gidiş, dikkat) zijn dezelfde
+     als op Duru's eigen pagina, zodat beide panelen hetzelfde zeggen.
      ───────────────────────────────────────────────────────── */
 
-  var actieveView = "overzicht";   // blijft bewaard tussen renders
-  var gekozenVak  = null;
-  var logFilter   = { q: "", vak: "", res: "" };
-  var laatsteCtx  = null;          // laatst berekende rapport, voor het printrapport
-  var printGekoppeld = false;      // beforeprint/afterprint maar één keer koppelen
-  var printBezig  = false;
-
-  /* Cijferlogica komt uit js/cijfer_util.js — formule en slaaggrens staan
-     daar één keer. Hier alleen de vertaling naar de tokens van dit paneel. */
   var C = window.DURU_CIJFER;
+  var openVak = null;        // blijft bewaard tussen renders (cloud-sync hertekent elke 20 s)
+  var toonAlleLog = false;
 
-  function fmtC(c) { return C.tekst(c); }
-  function cijferKlasse(c, count) { return C.klasse(c, count); }
-  function schaalPos(c) { return C.positie(c); }
-
-  var KLASSE_KLEUR = {
-    goed: "var(--ouder-goed)",
-    net:  "var(--ouder-net)",
-    zwak: "var(--ouder-zwak)",
-    none: "var(--ouder-mut)"
-  };
-
-  function cijferKleur(c, count) {
-    return KLASSE_KLEUR[C.klasse(c, count)];
+  function nieuwstEerst(l) {
+    return (l || []).slice().sort(function (a, b) { return (b.timestamp || 0) - (a.timestamp || 0); });
   }
+  function gem(l) { return C.gemiddelde(l, "cijfer"); }
+  function pil(c, n) {
+    return '<span class="ob-pil ' + C.klasse(c, n) + '">' + (n ? C.tekst(c) : "—") + '</span>';
+  }
+  function niveauVan(jaar) { return jaar === "2026-2027" ? "HAVO 3" : "MAVO 2"; }
+
+  /* Gidiş: laatste 3 pogingen tegen de 3 daarvoor (zelfde regel als dashboard.js). */
+  function gidis(lijst) {
+    var l = nieuwstEerst(lijst);
+    if (l.length < 4) return { r: "yok" };
+    var d = gem(l.slice(0, 3)) - gem(l.slice(3, 6));
+    if (Math.abs(d) < 0.3) return { r: "vlak", d: d };
+    return { r: d > 0 ? "op" : "neer", d: d };
+  }
+  function gidisHtml(lijst) {
+    var g = gidis(lijst);
+    if (g.r === "yok") return '<span class="ob-gidis vlak">—</span>';
+    if (g.r === "vlak") return '<span class="ob-gidis vlak">→ sabit</span>';
+    return '<span class="ob-gidis ' + g.r + '">' + (g.r === "op" ? "↑ iyileşiyor" : "↓ düşüyor") + '</span>';
+  }
+
+  function gunOnce(ts) {
+    if (!ts) return "—";
+    var gun = Math.floor((Date.now() - ts) / 864e5);
+    if (gun <= 0) return "bugün";
+    if (gun === 1) return "dün";
+    return gun + " gün önce";
+  }
+
+  /* Datum-parsing (ook gebruikt door collectParentReportData). */
   function ontleedDatum(s, ts) {
     if (!s && !ts) return { datum: "—", tijd: "" };
     var str = String(s || "").trim();
@@ -449,541 +466,49 @@
     return p.datum || "—";
   }
 
-  function formatDatumTijdHtml(s, ts) {
-    var p = ontleedDatum(s, ts);
-    if (!p.datum || p.datum === "—") return "—";
-    if (!p.tijd) {
-      return '<span class="ouder-dt-date">' + escapeHtml(p.datum) + '</span>';
-    }
-    return '<div class="ouder-dt-box">' +
-             '<span class="ouder-dt-date">' + escapeHtml(p.datum) + '</span>' +
-             '<span class="ouder-dt-time">' + escapeHtml(p.tijd) + '</span>' +
-           '</div>';
-  }
-  function niveauVan(jaar) { return jaar === "2026-2027" ? "HAVO 3" : "MAVO 2"; }
-  function hfChip(nr) {
-    return '<span class="ouder-hf-chip">' + (nr != null ? "H" + nr : "—") + "</span>";
-  }
 
-  /* Toetsvoortgang van een vak: som over zijn hoofdstukken. */
-  function vakVoortgang(v) {
-    var tot = 0, gedaan = 0;
-    v.chapters.forEach(function (c) {
-      if (!c.examTotaal) return;
-      tot += c.examTotaal;
-      gedaan += Math.round((c.progressPct / 100) * c.examTotaal);
-    });
-    return { tot: tot, gedaan: gedaan, pct: tot > 0 ? Math.round((gedaan / tot) * 100) : 0 };
+  /* Dekking: aantal verschillende examId's / manifest-totaal — dezelfde regel
+     als de vakkaarten (landing.js → leesVakData) en dashboard.js. Gemaakte
+     toetsen die niet in het manifest staan tellen aan beide kanten mee.
+     Zonder manifest (MAVO 2) is er geen totaal: dan alleen "N sınav". */
+  function dekking(vak, student) {
+    var uit = { gedaan: 0, totaal: 0 };
+    var HF = (vak.jaar === "2026-2027" && window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.vakken &&
+              window.DURU_HOOFDSTUKKEN.vakken[vak.id]) || {};
+    var inM = HF.examenHoofdstuk || {};
+    Object.keys(HF.aantalExamens || {}).forEach(function (nr) { uit.totaal += Number(HF.aantalExamens[nr]) || 0; });
+    var EX = vak.examKey ? readStorageKey(vak.examKey, student) : null;
+    if (!EX || Array.isArray(EX)) return null;   // begrijpend lezen: andere vorm
+    var uniek = {};
+    (EX.history || []).forEach(function (h) { if (h && h.examId) uniek[h.examId] = 1; });
+    Object.keys(uniek).forEach(function (id) { uit.gedaan++; if (uit.totaal && !(id in inM)) uit.totaal++; });
+    return uit;
   }
 
-  function miniSchaal(c, count) {
-    return '' +
-      '<span class="ouder-mini-schaal-wrap">' +
-        '<span class="ouder-mini-schaal">' +
-          '<span class="ouder-mini-schaal-vul" style="width:' + schaalPos(c) + '%;background:' + cijferKleur(c, count) + '"></span>' +
-          '<span class="ouder-mini-schaal-drempel"></span>' +
-        '</span>' +
-        '<span class="ouder-mini-schaal-c" style="color:' + cijferKleur(c, count) + '">' +
-          (count ? fmtC(c) : "—") +
-        '</span>' +
-      '</span>';
-  }
-
-  function pill(c, count, tekst) {
-    return '<span class="ouder-pill ouder-pill--' + cijferKlasse(c, count) + '">' +
-      (tekst != null ? tekst : (count ? fmtC(c) : "henüz yok")) + '</span>';
-  }
-
-  /* ── Cijferschaal: de Nederlandse 1–10 schaal als echt meetlint ── */
-  function schaalHtml(report) {
-    var h = '<div class="ouder-schaal-track"></div><div class="ouder-schaal-drempel"></div>';
-
-    report.vakken.forEach(function (v) {
-      if (!v.count) return;
-      h += '<span class="ouder-schaal-vak" style="left:' + schaalPos(v.avgCijfer) + '%;background:' +
-           cijferKleur(v.avgCijfer, v.count) + '" title="' + escapeHtml(v.titel) + ' — ' + fmtC(v.avgCijfer) + '"></span>';
-    });
-
-    if (report.overallExamCount > 0) {
-      h += '<span class="ouder-schaal-mij" style="left:' + schaalPos(report.overallAvg) + '%;color:' +
-           cijferKleur(report.overallAvg, 1) + '"><span class="ouder-schaal-mij-punt"></span></span>';
-    }
-    return h;
-  }
-
-  /* ── Weergave 1: Genel Bakış ─────────────────────────── */
-  function viewOverzicht(report, zwakke, sterke) {
-    var h = '<div class="ouder-odak">';
-
-    h += '<section class="ouder-dikkat' + (zwakke.length ? '' : ' is-schoon') + '">';
-    if (zwakke.length) {
-      h += '<h3>Önce buraya bakın</h3>' +
-           '<p class="ouder-dikkat-uitleg">Geçme sınırının (5,5) altında kalan üniteler. Her satır, Duru\'nun bu hafta tekrar etmesi gereken tek bir konuyu gösteriyor.</p>' +
-           '<div class="ouder-dikkat-lijst">';
-      zwakke.slice(0, 5).forEach(function (c) {
-        h += '<div class="ouder-dikkat-rij">' +
-               '<span class="ouder-dikkat-vak">' + (c.vakIcoon || "") + ' ' + escapeHtml(c.vakTitel) + ' ' + hfChip(c.nr) +
-                 (daaltNog(c) ? ' <span class="ouder-daalt" title="Son denemeler öncekilerden daha düşük">düşüyor</span>' : '') + '</span>' +
-               '<span class="ouder-dikkat-cijfer">' + fmtC(c.avgCijfer) +
-                 '<small>' + c.count + ' deneme</small></span>' +
-               '<span class="ouder-dikkat-actie">' + escapeHtml(c.titel) + ' — ' + escapeHtml(c.advice) + '</span>' +
-             '</div>';
-      });
-      h += '</div>';
-    } else if (report.overallExamCount > 0) {
-      h += '<h3>Şu an tekrar gereken ünite yok</h3>' +
-           '<p class="ouder-dikkat-uitleg">Tüm ünitelerin ortalaması geçme sınırının üstünde. Duru istikrarlı gidiyor.</p>';
-    } else {
-      h += '<h3>Bu dönem henüz kayıt yok</h3>' +
-           '<p class="ouder-dikkat-uitleg">Duru bir proeftoets çözdüğünde sonuçlar burada belirir.</p>';
-    }
-    h += '</section>';
-
-    var actieveVakTel = report.vakken.filter(function (v) { return v.count > 0; }).length;
-    h += '<div class="ouder-zij">' +
-      '<div class="ouder-mini">' +
-        '<span class="ouder-mini-label">Son 7 gün</span>' +
-        '<span class="ouder-mini-waarde">' + report.recent7DaysCount + '</span>' +
-        '<span class="ouder-mini-sub">deneme çözüldü</span>' +
-      '</div>' +
-      '<div class="ouder-mini">' +
-        '<span class="ouder-mini-label">Sınava hazır ünite</span>' +
-        '<span class="ouder-mini-waarde">' + sterke.length + '</span>' +
-        '<span class="ouder-mini-sub">ortalaması 8,5 ve üstü</span>' +
-      '</div>' +
-      '<div class="ouder-mini">' +
-        '<span class="ouder-mini-label">Aktif ders</span>' +
-        '<span class="ouder-mini-waarde">' + actieveVakTel +
-          '<small> / ' + report.vakken.length + '</small></span>' +
-        '<span class="ouder-mini-sub">bu yıl en az bir deneme çözülen</span>' +
-      '</div>' +
-      '<div class="ouder-mini">' +
-        '<span class="ouder-mini-label">Emek</span>' +
-        '<span class="ouder-mini-waarde">' + report.totalXP.toLocaleString("tr-TR") + '<small> XP</small></span>' +
-        '<span class="ouder-mini-sub">' + report.totalBadges + ' rozet kazanıldı</span>' +
-      '</div>' +
-    '</div></div>';
-
-    h += '<div class="ouder-sec-kop"><h3>Dersler</h3>' +
-         '<p>En çok ilgi bekleyen ders en üstte. Bir derse tıklayın — ünite kırılımı açılır.</p></div>';
-
-    var gesorteerd = report.vakken.slice().sort(function (a, b) {
-      if (!a.count && b.count) return 1;
-      if (a.count && !b.count) return -1;
-      return a.avgCijfer - b.avgCijfer;
-    });
-
-    h += '<div class="ouder-vak-lijst">';
-    gesorteerd.forEach(function (v) {
-      var vg = vakVoortgang(v);
-      h += '<button type="button" class="ouder-vak-rij" data-open-vak="' + escapeHtml(v.id) + '">' +
-        '<span class="ouder-vak-naam">' +
-          '<span class="ouder-vak-ico">' + (v.icoon || "") + '</span>' +
-          '<span class="ouder-vak-tekst">' +
-            '<span class="ouder-vak-titel">' + escapeHtml(v.titel) + '</span>' +
-            '<span class="ouder-vak-meta">' + v.count + ' deneme · ' + v.chapterCount + ' ünite</span>' +
-          '</span>' +
-        '</span>' +
-        miniSchaal(v.avgCijfer, v.count) +
-        '<span class="ouder-spark-cel">' + sparkline(v.attempts) + trendHtml(v.attempts) + '</span>' +
-        '<span class="ouder-voortgang">' +
-          (vg.tot > 0 ? vg.gedaan + "/" + vg.tot + " proeftoets" : "—") +
-          '<span class="ouder-voortgang-bar"><span class="ouder-voortgang-vul" style="width:' + vg.pct + '%"></span></span>' +
-        '</span>' +
-        '<span class="ouder-voortgang ouder-datum-cel">' + escapeHtml(kortDatum(v.lastDatum)) + '</span>' +
-        '<span class="ouder-chev">›</span>' +
-      '</button>';
-    });
-    h += '</div>';
-
-    return h;
-  }
-
-  /* ── Weergave 2: Dersler ─────────────────────────────── */
-  function viewVakken(report) {
-    var h = '<div class="ouder-sec-kop"><h3>Ders detayı</h3>' +
-            '<p>Bir ders seçin; üniteleri, ilerlemesi ve sınav geçmişi aşağıda.</p></div>';
-
-    h += '<div class="ouder-chips">';
-    report.vakken.forEach(function (v) {
-      h += '<button type="button" class="ouder-chip" data-kies-vak="' + escapeHtml(v.id) + '" aria-pressed="' +
-           (gekozenVak === v.id ? "true" : "false") + '">' + (v.icoon || "") + ' ' + escapeHtml(v.titel) +
-           (v.count ? "" : ' <small>· boş</small>') + '</button>';
-    });
-    h += '</div>';
-
-    var gekozen = null;
-    report.vakken.forEach(function (v) { if (v.id === gekozenVak) gekozen = v; });
-    if (!gekozen) {
-      return h + '<div class="ouder-tabel-wrap"><div class="ouder-leeg">Yukarıdan bir ders seçin.</div></div>';
-    }
-
-    return h + vakDetailHtml(gekozen, true);
-  }
-
-  /* Eén vak volledig uitgeschreven. Gedeeld door de tab-weergave en het
-     printrapport; het printrapport laat de toetsgeschiedenis weg, omdat het
-     logboek verderop elke poging al opsomt. */
-  function vakDetailHtml(gekozen, metGeschiedenis) {
-    var h = '';
-    var vg = vakVoortgang(gekozen);
-    h += '<div class="ouder-vd-kop">' +
-      '<span class="ouder-vak-ico ouder-vak-ico--groot">' + (gekozen.icoon || "") + '</span>' +
-      '<div><h3>' + escapeHtml(gekozen.titel) + '</h3>' +
-        '<span class="ouder-vak-meta">' + gekozen.chapterCount + ' ünite · ' + gekozen.count +
-        ' deneme · son çalışma ' + escapeHtml(kortDatum(gekozen.lastDatum)) + '</span></div>' +
-      '<div class="ouder-vd-stats">' +
-        '<div><span class="ouder-vd-label">Ortalama</span>' +
-          '<span class="ouder-vd-waarde" style="color:' + cijferKleur(gekozen.avgCijfer, gekozen.count) + '">' +
-          (gekozen.count ? fmtC(gekozen.avgCijfer) : "—") + '</span></div>' +
-        '<div><span class="ouder-vd-label">En iyi</span>' +
-          '<span class="ouder-vd-waarde">' + (gekozen.count ? fmtC(gekozen.maxCijfer) : "—") + '</span></div>' +
-        '<div><span class="ouder-vd-label">Proeftoets</span>' +
-          '<span class="ouder-vd-waarde">' + (vg.tot > 0 ? vg.gedaan + "/" + vg.tot : "—") + '</span></div>' +
-      '</div>' +
-    '</div>';
-
-    if (!gekozen.chapters.length) {
-      h += '<div class="ouder-tabel-wrap"><div class="ouder-leeg">Bu ders için henüz ünite verisi yok.</div></div>';
-    } else {
-      h += '<div class="ouder-hf-grid">';
-      gekozen.chapters.forEach(function (c) {
-        var aandacht = c.count > 0 && !C.geslaagd(c.avgCijfer);
-        h += '<article class="ouder-hf-kaart' + (aandacht ? " is-aandacht" : "") + '">' +
-          '<div class="ouder-hf-kop">' +
-            '<div>' +
-              '<span class="ouder-hf-nr">' + (c.nr != null ? "Hoofdstuk " + c.nr : "Ünitesiz") + '</span>' +
-              '<span class="ouder-hf-titel">' + escapeHtml(c.titel) + '</span>' +
-            '</div>' +
-            pill(c.avgCijfer, c.count) +
-          '</div>' +
-          '<div class="ouder-hf-stats">' +
-            '<div><span class="ouder-hf-stat-label">Deneme</span>' +
-              '<span class="ouder-hf-stat-waarde">' + c.count +
-              (c.examTotaal > 0 ? " · %" + c.progressPct : "") + '</span></div>' +
-            // Geen onderwerpen in dit vak? Dan is een lege balk geen informatie
-            // maar ruis — die suggereert achterstand die er niet is (frans).
-            (c.oefTotaal > 0
-              ? '<div><span class="ouder-hf-stat-label">Alıştırma</span>' +
-                '<span class="ouder-hf-stat-waarde">' + c.oefGedaan + "/" + c.oefTotaal + '</span></div>'
-              : '') +
-            '<div><span class="ouder-hf-stat-label">Son</span>' +
-              '<span class="ouder-hf-stat-waarde">' +
-              (c.count ? fmtC(c.lastCijfer) + " · " + escapeHtml(c.lastDatum) : "—") + '</span></div>' +
-          '</div>' +
-          '<p class="ouder-hf-advies">' + (aandacht ? "<b>Tekrar önerilir.</b> " : "") + escapeHtml(c.advice) + '</p>' +
-        '</article>';
-      });
-      h += '</div>';
-    }
-
-    if (metGeschiedenis && gekozen.attempts.length) {
-      h += '<div class="ouder-sec-kop"><h3>Sınav geçmişi</h3><p>' +
-           escapeHtml(gekozen.titel) + ' · yeniden eskiye</p></div>';
-      h += '<div class="ouder-tabel-wrap"><table class="ouder-tabel"><thead><tr>' +
-        '<th class="ouder-streep"></th><th class="ouder-col-datum">Tarih / Saat</th><th>Ünite</th><th>Sınav</th>' +
-        '<th>Doğru</th><th>Yüzde</th><th>Not</th></tr></thead><tbody>';
-      gekozen.attempts.forEach(function (a) {
-        h += '<tr>' +
-          '<td class="ouder-streep" style="background:' + cijferKleur(a.cijfer, 1) + '"></td>' +
-          '<td class="ouder-num ouder-datum-cel">' + formatDatumTijdHtml(a.datumStr, a.timestamp) + '</td>' +
-          '<td>' + hfChip(a.hoofdstuk) + '</td>' +
-          '<td>' + escapeHtml(a.titel) + '</td>' +
-          '<td class="ouder-num">' + a.goed + "/" + a.totaal + '</td>' +
-          '<td class="ouder-num">%' + a.pct + '</td>' +
-          '<td>' + pill(a.cijfer, 1) + '</td>' +
-        '</tr>';
-      });
-      h += '</tbody></table></div>';
-    }
-
-    return h;
-  }
-
-  /* ── Weergave 3: Üniteler ────────────────────────────── */
-  function viewUnits(report) {
-    var lijst = report.chapters.slice().sort(function (a, b) {
-      if (!a.count && b.count) return 1;
-      if (a.count && !b.count) return -1;
-      return a.avgCijfer - b.avgCijfer;
-    });
-
-    var h = '<div class="ouder-sec-kop"><h3>Ünite teşhisi</h3>' +
-            '<p>Tüm derslerin üniteleri, en zayıftan en güçlüye. Duru\'nun neyi tekrar etmesi gerektiği bu sırada.</p></div>';
-
-    if (!lijst.length) {
-      return h + '<div class="ouder-tabel-wrap"><div class="ouder-leeg">Bu dönem için ünite verisi bulunamadı.</div></div>';
-    }
-
-    h += '<div class="ouder-tabel-wrap"><table class="ouder-tabel"><thead><tr>' +
-      '<th class="ouder-streep"></th><th>Ders</th><th>Ünite</th><th>Deneme</th>' +
-      '<th>İlerleme</th><th>En iyi</th><th>Ortalama</th><th>Son çalışma</th>' +
-      '</tr></thead><tbody>';
-    lijst.forEach(function (c) {
-      h += '<tr>' +
-        '<td class="ouder-streep" style="background:' + cijferKleur(c.avgCijfer, c.count) + '"></td>' +
-        '<td><span class="ouder-vak-inline">' + (c.vakIcoon || "") + ' <b>' + escapeHtml(c.vakTitel) + '</b></span></td>' +
-        '<td>' + hfChip(c.nr) + ' ' + escapeHtml(c.titel) + '</td>' +
-        '<td class="ouder-num">' + c.count + '</td>' +
-        '<td class="ouder-num ouder-voortgang-cel">' +
-          (c.examTotaal > 0 ? "%" + c.progressPct : "—") +
-          '<span class="ouder-voortgang-bar"><span class="ouder-voortgang-vul" style="width:' + c.progressPct + '%"></span></span>' +
-        '</td>' +
-        '<td class="ouder-num">' + (c.count ? fmtC(c.maxCijfer) : "—") + '</td>' +
-        '<td>' + pill(c.avgCijfer, c.count) + '</td>' +
-        '<td class="ouder-num">' + escapeHtml(c.lastDatum) + '</td>' +
-      '</tr>';
-    });
-    h += '</tbody></table></div>';
-    return h;
-  }
-
-  /* ── Weergave 4: Günlük ──────────────────────────────── */
-  function logRijen(report) {
-    var q = logFilter.q.toLowerCase();
-    return report.allAttempts.filter(function (a) {
-      if (logFilter.vak && a.vakId !== logFilter.vak) return false;
-      if (logFilter.res === "zwak" && C.geslaagd(a.cijfer)) return false;
-      if (logFilter.res === "goed" && a.cijfer < C.GOED) return false;
-      if (q &&
-          String(a.titel).toLowerCase().indexOf(q) === -1 &&
-          String(a.vakTitel).toLowerCase().indexOf(q) === -1) return false;
-      return true;
-    });
-  }
-
-  function logTabelHtml(report) {
-    var rijen = logRijen(report);
-    if (!rijen.length) {
-      // Hiç kayıt yoksa bu bir filtre sorunu değil — doğru sebebi söyle.
-      return '<div class="ouder-leeg">' +
-        (report.allAttempts.length
-          ? "Bu filtrelerle eşleşen deneme yok. Aramayı temizleyip tekrar deneyin."
-          : "Bu dönemde henüz çözülmüş bir sınav yok.") +
-        '</div>';
-    }
-    var t = '<table class="ouder-tabel"><thead><tr><th class="ouder-streep"></th>' +
-      '<th class="ouder-col-datum">Tarih / Saat</th><th>Ders</th><th>Ünite</th><th>Sınav</th>' +
-      '<th>Doğru</th><th>Yüzde</th><th>Not</th><th>Sonuç</th></tr></thead><tbody>';
-    rijen.forEach(function (a) {
-      t += '<tr>' +
-        '<td class="ouder-streep" style="background:' + cijferKleur(a.cijfer, 1) + '"></td>' +
-        '<td class="ouder-num ouder-datum-cel">' + formatDatumTijdHtml(a.datumStr, a.timestamp) + '</td>' +
-        '<td>' + (a.vakIcoon || "") + ' ' + escapeHtml(a.vakTitel) + '</td>' +
-        '<td>' + hfChip(a.hoofdstuk) + '</td>' +
-        '<td>' + escapeHtml(a.titel) + '</td>' +
-        '<td class="ouder-num">' + a.goed + "/" + a.totaal + '</td>' +
-        '<td class="ouder-num">%' + a.pct + '</td>' +
-        '<td class="ouder-num"><b>' + fmtC(a.cijfer) + '</b></td>' +
-        '<td><span class="ouder-pill ouder-pill--' + (a.geslaagd ? "goed" : "zwak") + '">' +
-          (a.geslaagd ? "geslaagd" : "onvoldoende") + '</span></td>' +
-      '</tr>';
-    });
-    return t + '</tbody></table>';
-  }
-
-  function viewLogboek(report) {
-    var h = '<div class="ouder-sec-kop"><h3>Çalışma günlüğü</h3>' +
-            '<p>Kayıtlı her deneme, en yenisi üstte.</p></div>';
-
-    h += '<div class="ouder-filters">' +
-      '<input type="search" id="ouder-log-zoek" class="ouder-zoek" placeholder="Sınav veya ders adında ara…" ' +
-        'aria-label="Günlükte ara" value="' + escapeHtml(logFilter.q) + '">' +
-      '<select id="ouder-log-vak" class="ouder-zoek ouder-zoek--kort" aria-label="Derse göre filtrele">' +
-        '<option value="">Tüm dersler</option>';
-    report.vakken.forEach(function (v) {
-      if (!v.count) return;
-      h += '<option value="' + escapeHtml(v.id) + '"' +
-           (logFilter.vak === v.id ? " selected" : "") + '>' + escapeHtml(v.titel) + '</option>';
-    });
-    h += '</select>' +
-      '<select id="ouder-log-res" class="ouder-zoek ouder-zoek--kort" aria-label="Sonuca göre filtrele">' +
-        '<option value=""' + (logFilter.res === "" ? " selected" : "") + '>Tüm sonuçlar</option>' +
-        '<option value="zwak"' + (logFilter.res === "zwak" ? " selected" : "") + '>Sadece 5,5 altı</option>' +
-        '<option value="goed"' + (logFilter.res === "goed" ? " selected" : "") + '>Sadece 7,0 ve üstü</option>' +
-      '</select>' +
-    '</div>';
-
-    h += '<div class="ouder-tabel-wrap" id="ouder-log-tabel">' + logTabelHtml(report) + '</div>';
-    return h;
-  }
-
-  /* ── Rapportcache ────────────────────────────────────────
-     collectParentReportData loopt langs 12 vakken × hoofdstukken × pogingen.
-     Dat draaide bij élke tabwissel, jaarwissel en bij de sync elke 20s opnieuw.
-     De handtekening hieronder kijkt alleen naar de RUWE strings — lengte plus
-     kop en staart — zodat we weten of er iets veranderd is zonder te parsen;
-     juist het parsen en aggregeren is het dure deel. */
-
-  var rapportCache = { sleutel: null, ctx: null };
-
-  function opslagHandtekening(student, jaar) {
-    var delen = [student, jaar];
-    var rijen = window.DURU_VAKKEN.vanJaar(jaar);
-
-    for (var i = 0; i < rijen.length; i++) {
-      var sleutels = [rijen[i].practiceKey, rijen[i].examKey];
-      for (var j = 0; j < sleutels.length; j++) {
-        var k = sleutels[j];
-        if (!k) continue;
-        var raw = leesRuw("user_" + student + "_" + k) || leesRuw(k) || "";
-        // Nieuwe pogingen worden vóóraan in history gezet, dus de kop verandert;
-        // lengte + staart vangen bewerkingen verderop in het object af.
-        delen.push(k + ":" + raw.length + ":" + raw.slice(0, 48) + raw.slice(-48));
+  /* Dikkat: units waarvan de laatste 3 pogingen onder 5,5 liggen, of die
+     duidelijk (≥ 1 punt) zakken. Beslist op recent, NIET op het levens-
+     gemiddelde (zie CLAUDE.md → "Aciliyet"). Maximaal 3. */
+  function dikkatListesi(r) {
+    var uit = [];
+    r.chapters.forEach(function (h) {
+      if (!h.count || h.nr == null) return;
+      var l = nieuwstEerst(h.attempts);
+      var son = gem(l.slice(0, 3));
+      var g = gidis(l);
+      var naam = h.vakIcoon + " " + h.vakTitel + " · H" + h.nr + " " + h.titel;
+      if (!C.geslaagd(son)) {
+        uit.push({ ernst: 0, son: son, cls: "zwak", kop: naam,
+          tekst: "Son " + Math.min(3, l.length) + " denemenin ortalaması <strong>" + C.tekst(son) +
+                 "</strong> — geçme sınırı 5,5. " +
+                 (g.r === "op" ? "Yükselişte, ama henüz sınırın altında; biraz daha tekrar iyi olur."
+                               : "Bu üniteyi tekrar etmesi iyi olur.") });
+      } else if (g.r === "neer" && g.d <= -1) {
+        uit.push({ ernst: 1, son: son, cls: "net", kop: naam,
+          tekst: "Notları düşüyor: son 3 denemede " + C.tekst(son) + ", öncesinde " + C.tekst(son - g.d) + "." });
       }
-    }
-    return delen.join("|");
-  }
-
-  function haalContext(student, jaar) {
-    var sleutel = opslagHandtekening(student, jaar);
-    if (rapportCache.sleutel === sleutel && rapportCache.ctx) {
-      return rapportCache.ctx;
-    }
-
-    var report = collectParentReportData(student, jaar);
-    var ctx = {
-      report: report,
-      zwakke: report.chapters.filter(function (c) {
-        return c.count > 0 && !C.geslaagd(c.avgCijfer);
-      }).sort(function (a, b) {
-        // Dalend gaat vóór stabiel-laag: een vak dat wegzakt is urgenter dan
-        // een vak dat al langer op hetzelfde lage niveau staat.
-        var da = daaltNog(a) ? 0 : 1, db = daaltNog(b) ? 0 : 1;
-        if (da !== db) return da - db;
-        return a.avgCijfer - b.avgCijfer;
-      }),
-      sterke: report.chapters.filter(function (c) {
-        return c.count > 0 && C.examenklaar(c.avgCijfer);
-      })
-    };
-
-    rapportCache = { sleutel: sleutel, ctx: ctx };
-    return ctx;
-  }
-
-  /* ── Verloop: sparkline en richting ──────────────────────
-     De cijferschaal laat zien wáár Duru staat, niet welke kant het op gaat.
-     Een vak dat van 4,6 naar 5,5 klimt en een vak dat van 7,0 naar 5,5 zakt
-     zagen er in het paneel identiek uit — terwijl dat tegengesteld nieuws is. */
-
-  function sparkline(attempts) {
-    var punten = (attempts || []).slice(0, 8).reverse();   // oud → nieuw
-    if (punten.length < 2) return '<span class="ouder-spark-leeg">–</span>';
-
-    var b = 62, h = 18, p = 3;
-    var stap = (b - p * 2) / (punten.length - 1);
-    var xy = punten.map(function (a, i) {
-      return [
-        p + i * stap,
-        h - p - (C.positie(a.cijfer) / 100) * (h - p * 2)
-      ];
     });
-
-    var d = xy.map(function (q, i) {
-      return (i ? "L" : "M") + q[0].toFixed(1) + " " + q[1].toFixed(1);
-    }).join(" ");
-
-    var eind = xy[xy.length - 1];
-    var kleur = cijferKleur(punten[punten.length - 1].cijfer, 1);
-    var drempelY = (h - p - (C.positie(C.DREMPEL) / 100) * (h - p * 2)).toFixed(1);
-
-    return '<svg class="ouder-spark" width="' + b + '" height="' + h +
-             '" viewBox="0 0 ' + b + ' ' + h + '" role="img" aria-label="Son ' +
-             punten.length + ' denemenin gidişi">' +
-             '<line x1="0" y1="' + drempelY + '" x2="' + b + '" y2="' + drempelY +
-               '" stroke="var(--ouder-mut)" stroke-width="1" stroke-dasharray="2,2" opacity=".45" />' +
-             '<path d="' + d + '" fill="none" stroke="' + kleur + '" stroke-width="1.5" ' +
-               'stroke-linecap="round" stroke-linejoin="round" />' +
-             '<circle cx="' + eind[0].toFixed(1) + '" cy="' + eind[1].toFixed(1) +
-               '" r="2.3" fill="' + kleur + '" />' +
-           '</svg>';
-  }
-
-  /* Laatste 3 pogingen t.o.v. de 3 daarvóór. Minder dan 4 pogingen: geen
-     uitspraak — één toets is geen trend. Onder 0,3 punt verschil: vlak. */
-  function trendVan(attempts) {
-    if (!attempts || attempts.length < 4) return null;
-    var recent = attempts.slice(0, 3);
-    var ouder  = attempts.slice(3, 6);
-    if (!ouder.length) return null;
-
-    var d = C.gemiddelde(recent, "cijfer") - C.gemiddelde(ouder, "cijfer");
-    if (Math.abs(d) < 0.3) return { delta: d, richting: "vlak" };
-    return { delta: d, richting: d > 0 ? "op" : "neer" };
-  }
-
-  /* Hoofdstuk dat wegzakt: gebruikt voor de urgentie-sortering en de badge. */
-  function daaltNog(hoofdstuk) {
-    var t = trendVan(hoofdstuk && hoofdstuk.attempts);
-    return !!t && t.richting === "neer";
-  }
-
-  function trendHtml(attempts) {
-    var t = trendVan(attempts);
-    if (!t || t.richting === "vlak") return "";
-    var op = t.richting === "op";
-    return '<span class="ouder-trend ouder-trend--' + (op ? "op" : "neer") +
-             '" title="Son 3 deneme, önceki 3 denemeye göre">' +
-             (op ? "▲" : "▼") + C.tekst(Math.abs(t.delta)) + '</span>';
-  }
-
-  /* ── Volledig printrapport ───────────────────────────────
-     Op het scherm staat maar één tab in de DOM (dat houdt het snel), maar de
-     browser print uitsluitend wat in de DOM staat. Zonder deze stap levert
-     "Yazdır / PDF" alleen de op dat moment open tab op. Daarom zetten we vlak
-     vóór het printen alle vier de secties neer en na afloop de schermweergave
-     terug. Werkt ook bij Ctrl+P, niet alleen via de knop. */
-
-  function printSectie(titel, inhoud) {
-    return '<section class="ouder-print-sectie">' +
-             '<h3 class="ouder-print-kop">' + escapeHtml(titel) + '</h3>' +
-             inhoud +
-           '</section>';
-  }
-
-  function toonVolledigRapport() {
-    if (printBezig || !laatsteCtx) return;
-    var houder = document.querySelector("#ouder-view .ouder-views");
-    if (!houder) return;
-    printBezig = true;
-
-    var r = laatsteCtx.report;
-    var bewaardVak = gekozenVak;
-    var bewaardFilter = logFilter;
-    logFilter = { q: "", vak: "", res: "" };   // een rapport is altijd volledig
-
-    // Alle vakken met resultaten, niet alleen de gekozen. De toetsgeschiedenis
-    // per vak laten we weg: het logboek verderop somt elke poging al op.
-    var vakDelen = "";
-    r.vakken.forEach(function (v) {
-      if (v.count) vakDelen += vakDetailHtml(v, false);
-    });
-    if (!vakDelen) {
-      vakDelen = '<div class="ouder-leeg">Bu dönemde çözülmüş sınav yok.</div>';
-    }
-
-    houder.innerHTML =
-      printSectie("Genel bakış", viewOverzicht(r, laatsteCtx.zwakke, laatsteCtx.sterke)) +
-      printSectie("Ders detayı", vakDelen) +
-      printSectie("Ünite teşhisi", viewUnits(r)) +
-      printSectie("Çalışma günlüğü", viewLogboek(r));
-
-    logFilter = bewaardFilter;
-    gekozenVak = bewaardVak;
-  }
-
-  function herstelSchermweergave() {
-    if (!printBezig) return;
-    printBezig = false;
-    renderParentDashboard();   // herstelt de actieve tab én alle event-handlers
-  }
-
-  function koppelPrintEvents() {
-    if (printGekoppeld) return;
-    printGekoppeld = true;
-    window.addEventListener("beforeprint", toonVolledigRapport);
-    window.addEventListener("afterprint", herstelSchermweergave);
+    uit.sort(function (a, b) { return a.ernst - b.ernst || a.son - b.son; });
+    return uit.slice(0, 3);
   }
 
   /* ── Hoofdrender ─────────────────────────────────────── */
@@ -992,196 +517,137 @@
     if (!container) return;
 
     var student = getActiveStudent();
-    var ctx = haalContext(student, selectedJaar);
-    var report = ctx.report;
-    var zwakke = ctx.zwakke;
-    var sterke = ctx.sterke;
-    laatsteCtx = ctx;
+    var r = collectParentReportData(student, selectedJaar);
+    var alle = nieuwstEerst(r.allAttempts);
+    var week = alle.filter(function (a) { return a.timestamp >= Date.now() - 7 * 864e5; });
+    var dagen = {};
+    week.forEach(function (a) { dagen[new Date(a.timestamp).toDateString()] = 1; });
+    var dikkat = dikkatListesi(r);
+    var heeft = r.overallExamCount > 0;
+    // Voorbij schooljaar: "deze week" en "dikkat" zeggen dan niets meer.
+    var archief = selectedJaar !== (window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.jaar || "2026-2027");
 
-    var heeftData = report.overallExamCount > 0;
-    var avgStr = heeftData ? fmtC(report.overallAvg) : "–";
+    var h = '<div id="ob">';
 
-    var zin;
-    if (!heeftData) {
-      zin = "Bu ders yılında henüz kayıtlı bir deneme yok. Duru bir proeftoets çözdüğünde sonuç burada görünür.";
-    } else if (zwakke.length) {
-      zin = "Duru son 7 günde <strong>" + report.recent7DaysCount + " deneme</strong> çözdü ve genel ortalaması " +
-            "<strong>" + avgStr + "</strong>. <strong>" + zwakke.length + " ünite</strong> geçme sınırının altında — " +
-            "en acili <strong>" + escapeHtml(zwakke[0].vakTitel) +
-            (zwakke[0].nr != null ? " H" + zwakke[0].nr : "") + "</strong>.";
-    } else {
-      zin = "Duru son 7 günde <strong>" + report.recent7DaysCount + " deneme</strong> çözdü ve genel ortalaması " +
-            "<strong>" + avgStr + "</strong>. Şu an geçme sınırının altında ünite yok.";
+    /* Kop: titel, jaar, printen */
+    h += '<div class="ob-kop"><div><h2>' + escapeHtml(student.charAt(0).toUpperCase() + student.slice(1)) +
+         '\'nun durumu</h2><small>' + escapeHtml(selectedJaar) + ' · ' + niveauVan(selectedJaar) + '</small></div>' +
+         '<div class="ob-kop-rechts">' +
+           '<div class="ob-seg" role="group" aria-label="Ders yılı">' +
+             ['2026-2027', '2025-2026'].map(function (j) {
+               return '<button type="button" class="ob-jaar" data-year="' + j + '" aria-pressed="' +
+                 (selectedJaar === j) + '">' + j + ' · ' + niveauVan(j) + '</button>';
+             }).join("") +
+           '</div>' +
+           '<button type="button" class="ob-knop" id="ob-print">🖨 Yazdır</button>' +
+         '</div></div>';
+
+    /* 1 — Özet */
+    var durum = !heeft ? "Bu ders yılında henüz deneme yok. Duru bir proeftoets çözdüğünde sonuç burada görünür."
+      : archief ? "Geçmiş ders yılı: " + r.overallExamCount + " deneme, yıl ortalaması " + C.tekst(r.overallAvg) + "."
+      : C.geslaagd(r.overallAvg)
+        ? (dikkat.length ? "Genel durum iyi, ama aşağıda dikkat edilmesi gereken " + dikkat.length + " konu var."
+                         : "Genel durum iyi. Şu an endişe edilecek bir konu yok.")
+        : "Genel ortalama geçme sınırının (5,5) altında. Aşağıdaki konulara birlikte bakmak iyi olur.";
+    var kl = C.klasse(r.overallAvg, r.overallExamCount);
+    h += '<div class="ob-kaart"><div class="ob-ozet">' +
+           '<div class="ob-not ob-kleur-' + kl + '">' + (heeft ? C.tekst(r.overallAvg) : "—") + '</div>' +
+           '<p>' + durum + '</p></div>' +
+         (archief ? '</div>' : '<div class="ob-feiten">' +
+           '<span class="ob-feit">Bu hafta <b>' + Object.keys(dagen).length + '</b> gün çalıştı</span>' +
+           '<span class="ob-feit"><b>' + week.length + '</b> deneme (7 gün)</span>' +
+           '<span class="ob-feit">Son çalışma: <b>' + (alle[0] ? gunOnce(alle[0].timestamp) : "—") + '</b></span>' +
+         '</div></div>');
+
+    /* 2 — Dikkat */
+    if (heeft && !archief) {
+      h += '<div class="ob-kaart"><h3>Dikkat edilecekler</h3>' +
+        (dikkat.length
+          ? '<ul class="ob-dikkat">' + dikkat.map(function (d) {
+              return '<li class="' + d.cls + '"><b>' + escapeHtml(d.kop) + '</b>' + d.tekst + '</li>';
+            }).join("") + '</ul>'
+          : '<div class="ob-rahat">✓ Şu an tekrar gereken ünite yok.</div>') +
+        '</div>';
     }
 
-    var uniekeUnits = report.chapters.filter(function (c) { return c.count > 0; }).length;
-    var actieveVakTel = report.vakken.filter(function (v) { return v.count > 0; }).length;
+    /* 3 — Dersler */
+    var vakken = r.vakken.filter(function (v) { return v.count > 0; })
+      .sort(function (a, b) { return a.avgCijfer - b.avgCijfer; });
+    if (vakken.length) {
+      h += '<div class="ob-kaart"><h3>Dersler</h3><table class="ob-tabel"><thead><tr>' +
+           '<th>Ders</th><th class="r">Ortalama</th><th>Gidiş</th>' +
+           '<th class="r m-weg">Yapılan sınav</th><th class="r m-weg">Son çalışma</th></tr></thead><tbody>';
+      vakken.forEach(function (v) {
+        var cfg = VAK_CONFIG.filter(function (x) { return x.jaar === selectedJaar && x.id === v.id; })[0] || {};
+        var dk = dekking(cfg, student);
+        var laatst = nieuwstEerst(v.attempts)[0];
+        var open = openVak === v.id;
+        h += '<tr class="ob-vak" data-vak="' + escapeHtml(v.id) + '" tabindex="0" aria-expanded="' + open + '">' +
+             '<td class="ob-ders">' + v.icoon + ' ' + escapeHtml(v.titel) +
+               '<span class="ob-ok">' + (open ? "▾" : "▸") + '</span></td>' +
+             '<td class="r">' + pil(v.avgCijfer, v.count) + '</td>' +
+             '<td>' + gidisHtml(v.attempts) + '</td>' +
+             '<td class="r m-weg">' + (!dk ? "—" : dk.totaal ? dk.gedaan + " / " + dk.totaal : dk.gedaan + " sınav") + '</td>' +
+             '<td class="r m-weg ob-zacht">' + (laatst ? gunOnce(laatst.timestamp) : "—") + '</td></tr>';
+        if (open) {
+          r.chapters.filter(function (c) { return c.vakId === v.id && c.count > 0; }).forEach(function (c) {
+            var l = nieuwstEerst(c.attempts);
+            h += '<tr class="ob-unite"><td>' + (c.nr != null ? "H" + c.nr + " · " : "") + escapeHtml(c.titel) + '</td>' +
+                 '<td class="r">' + pil(c.avgCijfer, c.count) + '</td><td>' + gidisHtml(c.attempts) + '</td>' +
+                 '<td class="r m-weg">' + c.count + ' deneme</td>' +
+                 '<td class="r m-weg ob-zacht">' + (l[0] ? gunOnce(l[0].timestamp) : "—") + '</td></tr>';
+          });
+        }
+      });
+      h += '</tbody></table>' +
+           '<div class="ob-legenda">Bir derse tıklayınca üniteleri açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
+           '<span class="ob-pil net">5,5–6,9</span> yeterli · <span class="ob-pil zwak">&lt;5,5</span> yetersiz. ' +
+           'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma.</div></div>';
+    }
 
-    var tabs = [
-      { id: "overzicht", label: "Genel Bakış", tel: null },
-      { id: "vakken",    label: "Dersler",     tel: actieveVakTel },
-      { id: "units",     label: "Üniteler",    tel: uniekeUnits },
-      { id: "logboek",   label: "Günlük",      tel: report.overallExamCount }
-    ];
+    /* 4 — Son denemeler */
+    if (alle.length) {
+      var log = toonAlleLog ? alle : alle.slice(0, 8);
+      h += '<div class="ob-kaart"><h3>Son denemeler</h3><ul class="ob-log">' +
+        log.map(function (a) {
+          return '<li>' + pil(a.cijfer, 1) + '<span class="ob-t">' + a.vakIcoon + ' ' + escapeHtml(a.vakTitel) +
+                 ' — ' + escapeHtml(a.titel) + '</span><span class="ob-zacht">' +
+                 escapeHtml(kortDatum(a.datumStr)) + '</span></li>';
+        }).join("") + '</ul>' +
+        (alle.length > 8 ? '<p class="ob-meer-rij"><button type="button" class="ob-knop" id="ob-meer">' +
+          (toonAlleLog ? "Daha az göster" : "Tümünü göster (" + alle.length + ")") + '</button></p>' : '') +
+        '</div>';
+    }
 
-    var html = '<div class="ouder-wrap">';
-
-    /* Kop: wie, welk jaar, printen */
-    html += '<div class="ouder-bar">' +
-      '<div class="ouder-bar-ident">' +
-        '<span class="ouder-avatar">👨‍👧</span>' +
-        '<span class="ouder-bar-tekst">' +
-          '<span class="ouder-bar-naam">Veli paneli</span>' +
-          '<span class="ouder-bar-sub">' + escapeHtml(student) + ' · ' +
-            escapeHtml(selectedJaar) + ' · ' + niveauVan(selectedJaar) + '</span>' +
-        '</span>' +
-      '</div>' +
-      '<div class="ouder-seg" role="group" aria-label="Ders yılı">' +
-        '<button type="button" class="ouder-year-btn" data-year="2026-2027" aria-pressed="' +
-          (selectedJaar === "2026-2027" ? "true" : "false") + '">2026-2027 · HAVO 3</button>' +
-        '<button type="button" class="ouder-year-btn" data-year="2025-2026" aria-pressed="' +
-          (selectedJaar === "2025-2026" ? "true" : "false") + '">2025-2026 · MAVO 2</button>' +
-      '</div>' +
-      '<button type="button" id="ouder-print-btn" class="ouder-btn" ' +
-        'title="Dört bölümün tamamı tek raporda yazdırılır">🖨 Tam raporu yazdır</button>' +
-    '</div>';
-
-    /* Status */
-    html += '<section class="ouder-status">' +
-      '<p class="ouder-eyebrow">' + escapeHtml(selectedJaar) + ' · ' + niveauVan(selectedJaar) + '</p>' +
-      '<h2 class="ouder-h1">Duru\'nun Karnesi</h2>' +
-      '<p class="ouder-zin">' + zin + '</p>' +
-    '</section>';
-
-    /* Cijferschaal */
-    html += '<div class="ouder-schaal-blok">' +
-      '<div class="ouder-schaal-kop">' +
-        '<span class="ouder-schaal-cijfer" style="color:' + cijferKleur(report.overallAvg, report.overallExamCount) + '">' +
-          avgStr + '</span>' +
-        '<span class="ouder-schaal-label">genel ortalama · <b>' + report.overallExamCount +
-          ' deneme</b> · <b>%' + report.passRate + '</b> geçti</span>' +
-      '</div>' +
-      '<div class="ouder-schaal">' + schaalHtml(report) + '</div>' +
-      '<div class="ouder-schaal-uiteinden"><span>1,0</span><span>10,0</span></div>' +
-      '<div class="ouder-schaal-legenda">' +
-        '<span><i class="ouder-dot" style="background:var(--ouder-zwak)"></i> 1,0 – 5,4 onvoldoende</span>' +
-        '<span><i class="ouder-dot" style="background:var(--ouder-net)"></i> 5,5 – 6,9 voldoende</span>' +
-        '<span><i class="ouder-dot" style="background:var(--ouder-goed)"></i> 7,0 – 10 goed</span>' +
-        '<span class="ouder-legenda-uitleg">Küçük noktalar: her dersin ortalaması</span>' +
-      '</div>' +
-    '</div>';
-
-    /* Tabs */
-    html += '<nav class="ouder-tabs" role="tablist">';
-    tabs.forEach(function (t) {
-      html += '<button type="button" role="tab" class="ouder-tab" data-ouder-view="' + t.id + '" aria-selected="' +
-        (actieveView === t.id ? "true" : "false") + '">' + t.label +
-        (t.tel != null ? '<span class="ouder-tab-tel">' + t.tel + '</span>' : "") + '</button>';
-    });
-    html += '</nav>';
-
-    /* Weergaven — alleen de actieve wordt gebouwd (zie wisselView) */
-    html += '<div class="ouder-views">' + bouwView(ctx) + '</div>';
-
-    html += '<p class="ouder-voet">Notlar Hollanda ölçeğinde (1,0 – 10,0), <code>cijfer = 1 + yüzde/100 × 9</code> ' +
-      'ile hesaplanır; geçme sınırı 5,5. Ünite kırılımı <code>js/hoofdstukken.js</code> manifestinden gelir.</p>';
-
-    html += '</div>';
-
-    container.innerHTML = html;
-    bindParentEvents(report);
+    h += '</div>';
+    container.innerHTML = h;
+    bindEvents(container);
   }
 
-  /* Kopbalk, jaarknoppen, tabs en printen: staan buiten .ouder-views en
-     overleven dus een tabwissel. Eén keer koppelen per volledige render. */
-  function bindKopEvents() {
-    var container = document.getElementById("ouder-view");
-    if (!container) return;
-
-    container.querySelectorAll(".ouder-year-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        selectedJaar = btn.getAttribute("data-year");
-        gekozenVak = null;
+  function bindEvents(container) {
+    container.querySelectorAll(".ob-jaar").forEach(function (b) {
+      b.addEventListener("click", function () {
+        selectedJaar = b.getAttribute("data-year");
+        openVak = null; toonAlleLog = false;
         renderParentDashboard();
       });
     });
-
-    container.querySelectorAll("[data-ouder-view]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        wisselView(btn.getAttribute("data-ouder-view"));
+    container.querySelectorAll("tr.ob-vak").forEach(function (tr) {
+      function wissel() {
+        var id = tr.getAttribute("data-vak");
+        openVak = openVak === id ? null : id;
+        renderParentDashboard();
+      }
+      tr.addEventListener("click", wissel);
+      tr.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); wissel(); }
       });
     });
-
-    koppelPrintEvents();
-    var printBtn = document.getElementById("ouder-print-btn");
-    if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
+    var meer = document.getElementById("ob-meer");
+    if (meer) meer.addEventListener("click", function () { toonAlleLog = !toonAlleLog; renderParentDashboard(); });
+    var pr = document.getElementById("ob-print");
+    if (pr) pr.addEventListener("click", function () { window.print(); });
   }
-
-  /* Alles binnen .ouder-views. Wordt opnieuw gekoppeld na elke viewwissel. */
-  function bindViewEvents(report) {
-    var houder = document.querySelector("#ouder-view .ouder-views");
-    if (!houder) return;
-
-    houder.querySelectorAll("[data-open-vak]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        gekozenVak = btn.getAttribute("data-open-vak");
-        wisselView("vakken");
-      });
-    });
-
-    houder.querySelectorAll("[data-kies-vak]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        gekozenVak = btn.getAttribute("data-kies-vak");
-        wisselView("vakken");
-      });
-    });
-
-    /* Günlük-filters: alleen de tabel hertekenen, focus blijft staan */
-    var zoek = document.getElementById("ouder-log-zoek");
-    var fVak = document.getElementById("ouder-log-vak");
-    var fRes = document.getElementById("ouder-log-res");
-    var tabel = document.getElementById("ouder-log-tabel");
-
-    function hertekenLog() {
-      if (!tabel) return;
-      tabel.innerHTML = logTabelHtml(report);
-    }
-    if (zoek) zoek.addEventListener("input", function () { logFilter.q = zoek.value; hertekenLog(); });
-    if (fVak) fVak.addEventListener("change", function () { logFilter.vak = fVak.value; hertekenLog(); });
-    if (fRes) fRes.addEventListener("change", function () { logFilter.res = fRes.value; hertekenLog(); });
-  }
-
-  function bindParentEvents(report) {
-    bindKopEvents();
-    bindViewEvents(report);
-  }
-
-  function bouwView(ctx) {
-    if (actieveView === "overzicht") return viewOverzicht(ctx.report, ctx.zwakke, ctx.sterke);
-    if (actieveView === "vakken")    return viewVakken(ctx.report);
-    if (actieveView === "units")     return viewUnits(ctx.report);
-    return viewLogboek(ctx.report);
-  }
-
-  /* Tabwissel vervangt alleen de inhoud van .ouder-views. De statusband en de
-     cijferschaal blijven staan — die veranderen niet door van tab te wisselen,
-     en opnieuw opbouwen kostte eerst een volledige herberekening. */
-  function wisselView(naam) {
-    actieveView = naam;
-
-    var houder = document.querySelector("#ouder-view .ouder-views");
-    if (!houder || !laatsteCtx) { renderParentDashboard(); return; }
-
-    houder.innerHTML = bouwView(laatsteCtx);
-
-    var container = document.getElementById("ouder-view");
-    container.querySelectorAll("[data-ouder-view]").forEach(function (b) {
-      b.setAttribute("aria-selected", String(b.getAttribute("data-ouder-view") === naam));
-    });
-
-    bindViewEvents(laatsteCtx.report);
-  }
-
 
   function escapeHtml(str) {
     if (!str) return "";

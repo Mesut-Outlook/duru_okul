@@ -98,7 +98,7 @@
           '<div class="hf-info">' +
             '<h3>' + esc(hfTitel) + '</h3>' +
             '<div class="hf-meta-badges">' +
-              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + (exLijst.length * 20) + ' vragen)</span>' +
+              '<span class="hf-badge groen">📝 ' + exLijst.length + ' Proeftoetsen (' + exLijst.reduce(function (s, e) { return s + (e.vragen || []).length; }, 0) + ' vragen)</span>' +
             '</div>' +
           '</div>' +
           '<button class="hf-toggle-btn" id="hf-ex-label-' + grpIndex + '">' + (isOpen ? '▲ Klap in' : '▼ Open Toetsen') + '</button>' +

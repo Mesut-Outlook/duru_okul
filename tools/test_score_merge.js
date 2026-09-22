@@ -48,7 +48,11 @@ const localStorage = {
 };
 
 const bron = slice('parseAttemptDate') + '\n' + slice('mergeScoreItems') + '\n' + slice('restoreScores');
-const api = new Function('localStorage', bron + '\nreturn { restoreScores: restoreScores, merge: mergeScoreItems };')(localStorage);
+// originalGetItem/originalSetItem = de ongeprefixte Storage-methodes van landing.js
+// (restoreScores(data, voorGebruiker) gebruikt ze om onder user_<naam>_ te schrijven).
+const api = new Function('localStorage', 'originalGetItem', 'originalSetItem',
+  bron + '\nreturn { restoreScores: restoreScores, merge: mergeScoreItems };')(
+  localStorage, localStorage.getItem, localStorage.setItem);
 const fn = api.restoreScores;
 const merge = api.merge;
 
@@ -125,6 +129,18 @@ const h1  = { history: [{ attemptId: 'att_1', examId: 'ex-0', pct: 70, datum: '0
 let ph = merge([{ key: 'duru_2627_natuurkunde_examens_v1', val: h48 },
                 { key: 'duru_2627_natuurkunde_examens_v1', val: h1 }])['duru_2627_natuurkunde_examens_v1'];
 ok('push: 48 poging korunuyor', ph.history.length, 48);
+
+/* ── 9) ouderpaneel: restoreScores(data, 'duru') schrijft onder user_duru_,
+         groeit (lokaal 1 + cloud 48 -> 48) en raakt de sleutel van de
+         actieve gebruiker niet aan (2026-09-22) ── */
+const K9 = 'duru_2627_wiskunde_examens_v1';
+store['user_duru_' + K9] = JSON.stringify(h1);
+store[K9] = JSON.stringify({ history: [] });
+fn([{ key: K9, val: h48 }], 'duru');
+ok('ouder: user_duru_ büyüdü (48)', JSON.parse(store['user_duru_' + K9]).history.length, 48);
+ok('ouder: aktif kullanıcı anahtarı değişmedi', JSON.parse(store[K9]).history.length, 0);
+fn([{ key: K9, val: h1 }], 'duru');
+ok('ouder: küçük bulut küçültmüyor', JSON.parse(store['user_duru_' + K9]).history.length, 48);
 
 console.log(fail === 0 ? '\nTUM TESTLER GECTI' : '\n' + fail + ' TEST BASARISIZ');
 process.exit(fail ? 1 : 0);

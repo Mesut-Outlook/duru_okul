@@ -2,6 +2,9 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
+  <!-- Los geopend (bladwijzer)? Via de hub openen, anders ziet deze site
+       Duru's voortgang niet (user_<naam>_-voorvoegsel zit in de hub). -->
+  <script>if (window.top === window.self) location.replace("../../#vak=natuurkunde");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duru's Natuurkunde ⚛️ — HAVO 3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +24,14 @@
         </div>
       </div>
       <div class="stats">
-        <span class="chip xp" title="Jouw punten">💎 <span id="stat-xp">0</span> <span class="lbl">XP</span></span>
-        <span class="chip streak" title="Hoeveel vragen achter elkaar goed">🔥 <span id="stat-streak">0</span></span>
-        <span class="chip medal" title="Behaalde medailles">🏅 <span id="stat-badges">0</span></span>
+        <span class="chip xp" title="Jouw punten">💎 <span id="stat-xp">…</span> <span class="lbl">XP</span></span>
+        <span class="chip streak" title="Hoeveel vragen achter elkaar goed">🔥 <span id="stat-streak">…</span></span>
+        <span class="chip medal" title="Behaalde medailles">🏅 <span id="stat-badges">…</span></span>
       </div>
     </div>
   </header>
 
-  <main class="app" id="app"><!-- views worden hier gerenderd --></main>
+  <main class="app" id="app"><!-- views worden hier gerenderd --><p style="text-align:center;padding:48px 0;opacity:.6">Laden…</p></main>
 
   <div id="toast"></div>
   <canvas id="confetti"></canvas>

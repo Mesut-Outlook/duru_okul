@@ -42,17 +42,17 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | geschiedenis | 30 | 30 | 840 | H1–H6 (tam) |
 | frans | 9 | 55 | 1217 | H1–H8 sınav; onderwerp yalnız U1 (5) + U2 (4) — U3–U8 TASK-15 |
 | duits | 18 | 30 | 744 | H1–H6 |
-| engels | 18 | 30 | 744 | H1–H6 |
+| engels | 18 | 31 | 749 | H1–H6 (+1 hersteld smoke-test, "Overige") |
 | natuurkunde | 31 | 44 | 1138 | H1–H5, H8 tam; H6–H7 boş (TASK-08); H1 19 sınav |
 | economie | 12 | 37 | 836 | H1–H4 |
-| aardrijkskunde | 10 | 10 | 280 | H1–H2 (tam) |
+| aardrijkskunde | 10 | 11 | 285 | H1–H2 (tam) (+1 hersteld smoke-test, "Overige") |
 | scheikunde | 6 | 10 | 252 | H1–H2 (H3–H7 eksik) |
 | wiskunde | 6 | 13 | 308 | H1 §1.1–1.2 (2 toets + begrippen, uit aantekeningen docent), H2 |
 | biologie | 2 | 5 | 116 | H10 |
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 5 | 6 | 160 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 147 onderwerp · 274 proeftoets · 6700 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 147 onderwerp · 276 proeftoets · 6710 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur ve manifest'e
@@ -112,6 +112,13 @@ yıl→niveau ekle → `?v=` bump.
 - **⚠️ Kullanılmış bir sınav id'sinin içeriği değiştirilmez.** Duru'nun geçmişi `examId` + soru
   sırasıyla saklanır; içerik değişirse eski denemesi yeni teste yazılır. Yeni sınav = yeni id.
   (2026-09-12: natuurkunde 1–5 böyle ezilmişti; orijinaller geri alındı, yeniler 35–39'a taşındı.)
+  **Silmek de yasak.** 2026-09-22: `ex-h3-aardrijkskunde-1` (6 poging) ve `ex-h3-engels-1` (14 poging)
+  smoke-test'leri, gerçek içerik `examen_1.js`'in **üzerine** yazılınca kaybolmuştu → Duru'nun
+  denemeleri hiçbir sınava bağlı değildi ("0/10 toets" ama ort. 7,3). Orijinalleri
+  `js/data/examen_0_start.js` olarak geri geldi (hoofdstuk'suz → "Overige toetsen").
+  Yeni içerik için **yeni dosya adı** kullan, `examen_1.js` gibi mevcut dosyayı ezme.
+  Ders sitelerinde hoofdstuk'suz sınav artık **H1'e değil "Overige toetsen"e** düşer
+  (`ex.hoofdstuk || 1` deseni kaldırıldı: duits/engels/frans); "N vragen" `×20` tahmini değil gerçek sayı.
 
 ## Dashboard & istatistik
 `index.html` iki view içerir ("Mijn vakken" / "Mijn prestaties & statistieken"). `js/dashboard.js`
@@ -123,7 +130,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=4.2`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.2`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -144,21 +151,25 @@ Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
 - `renderScoreTimeline()` korundu, Overzicht sekmesine taşındı. Grafik kendi genişliğini ölçtüğü
   için **DOM'a eklendikten sonra** çağrılır.
 
-## Veli paneli (`js/ouder_dashboard.js`) — 2026-09 yeniden tasarımı
+## Veli paneli (`js/ouder_dashboard.js`) — sade tek sayfa (2026-09-22)
 Sadece Baba görür (`#tab-ouder-btn` varsayılan gizli). Dil **Türkçe**, ders adları Flamanca.
-Veri toplama `collectParentReportData(user, jaar)`'da — manifest-farkında (`window.DURU_HF`) ve
-`VAK_CONFIG` ile **iki yılı da** kapsar; render katmanı bundan türer, ayrı hesap yapmaz.
-Okuma sırası: **durum cümlesi → cijferschaal → "Önce buraya bakın" → ders listesi**.
-- **Cijferschaal**: Hollanda 1–10 ölçeği gerçek bir cetvel (`.ouder-schaal*`). 5,5 eşiği çizgiyle
-  işaretli, büyük nokta genel ortalama, küçük noktalar her dersin ortalaması.
-- **Sekmeler** (`data-ouder-view`): `overzicht` / `vakken` / `units` / `logboek`. Yalnız aktif
-  görünüm HTML'e basılır. `actieveView` + `gekozenVak` + `logFilter` modül düzeyinde tutulur, böylece
-  yıl değişimi ve cloud-sync yeniden render'ı seçimi kaybetmez.
-- **Anlam renkleri marka yeşilinden ayrıdır**: `--ouder-goed/net/zwak` (+ `-zacht` tonları)
-  `#ouder-view` üzerinde tanımlı, `html.dark #ouder-view`'de yeniden tanımlanır. Yeşil = "iyi"
-  demektir, marka rengi değil. Yeni renk eklerken bu ikisini karıştırma.
-- Ders satırı/chip'i tıklanınca `vakken` görünümü o dersle açılır (`data-open-vak` / `data-kies-vak`).
-- Yazdırma `@media print` ile: çubuk, sekmeler ve filtreler gizlenir, kartlar sayfa bölmez.
+Kullanıcı isteği: **"karışık olmasın, bakması ve anlaması kolay olsun — basit iyidir."**
+Tek sayfa, dört blok (sekme yok): **özet** (büyük ortalama + tek cümle + bu hafta gün/deneme/son
+çalışma) → **Dikkat edilecekler** (en fazla 3 ünite) → **Dersler** tablosu (ortalama · gidiş ·
+yapılan sınav · son çalışma; satıra tıkla → üniteler açılır) → **Son denemeler** (8 + "Tümünü göster").
+Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Yazdır = `window.print()`
+(`@media print` hub çerçevesini gizler). Kaldırılanlar: 1–10 cetveli, XP/rozet, 4 sekme,
+25+ maddelik güçlü/zayıf listeleri — geri ekleme, önce kullanıcıya sor.
+- **Kurallar Duru'nun sayfasıyla aynı:** "dikkat" = son 3 deneme < 5,5 veya ≥1 puan düşüş
+  (ömür-boyu ortalama DEĞİL); gidiş = son 3 vs önceki 3 (±0,3); yapılan sınav = farklı `examId` /
+  manifest (hub kartlarıyla aynı). İki panel aynı soruya farklı cevap vermemeli.
+- **⚠️ Panel her zaman ÖĞRENCİYİ gösterir:** `getActiveStudent()` veli girişinde `"duru"` döner; veli
+  cihazı `cloud_sync.js → haalLeerlingOp()` ile `/scores_v2/duru`'yu **yalnız okur**,
+  `restoreScores(data, "duru")` ile `user_duru_*`'ya büyüyen-birleştirme yapar (push yok). 2026-09-22
+  öncesi panel `user_baba_*`'yı, yani eski bir kopyayı okuyordu (206 poging / 7,0 vs gerçek 191 / 7,1).
+- Veri katmanı `collectParentReportData(user, jaar)` değişmedi (dışa açık); render bundan türer.
+- Stiller `css/style.css` sonunda `#ob` altında, kendi `--ob-*` token'ları + `html.dark #ob`.
+  Anlam renkleri (goed/net/zwak) marka yeşilinden ayrı.
 
 ## Landing düzeni (HAVO 3 — sıcak, alan-gruplu)
 "Mijn vakken" görünümü `js/landing.js`'te `renderVakken` ile kurulur. Aktif (HAVO 3) dersler
@@ -167,6 +178,15 @@ kartlar (`.havo3-*` stilleri, `css/style.css` sonunda, scoped + tema-güvenli) b
 dersleri altta açılır "Archief — vorige schooljaren" bölümünde **yıla göre gruplu** (`renderArchief`,
 eski kart stili). `VAKKEN` entry alanları: `id, titel, icoon, domein('talen'|'exact'|'mens'),
 beschrijving, binnenkort?, href?, sleutel?, archief?, jaar?`.
+**Kart = kapsama + not** (2026-09-22): sağ üst ve çubuk = `gedaan / totaal toetsen` (farklı `examId` /
+manifest toplamı; manifestte olmayan yapılmış sınav iki tarafa da eklenir), alt = not ortalaması
+(poging başına önce 1 ondalığa yuvarlanır — `dashboard.js` ile aynı). Eskiden çubuk "en iyi skorların
+ortalaması"ydı: 30 sınavın 2'si yapılmış ders "%90" görünüyordu. `landingKaarten()` kartlara öneksiz
+`vakId` verir (kart `id`'si `h3-` önekli) — manifest ve derin link bununla eşleşir.
+**Derin link:** `./#vak=<vakId>` dersi iframe-shell'de açar. Her `havo3/<vak>/index.html` tek başına
+(top-level) açılırsa buraya yönlenir — aksi halde `user_<naam>_` öneki yok, 0 XP görünür.
+**Dil kullanıcıya göre:** Duru girişliyken üst çubuk/senkron metinleri Flamanca (`cloud_sync.js → t()`,
+`NL` tablosu), veli girişliyken Türkçe. Öğrenci senkron hapına tıklayınca modal yerine doğrudan senkron.
 `binnenkort:true` = henüz site/data yok (tıklanmaz, "Binnenkort"). Aktif ders: `binnenkort` kaldır +
 `href:'./havo3/<vak>/'` + `sleutel:'duru_2627_<vak>'` ekle → kart ilerleme/cijfer'i `leesVakData` ile gösterir.
 **Şu an 12 HAVO 3 dersi aktif** (`havo3/<vak>/`, her biri 1 proeftoets/5 soru = smoke-test); Duru materyal
@@ -267,7 +287,7 @@ okuma yönünde, `cloud_sync.js → pushToCloud` yazma yönünde kullanır. Yeni
 eklerken bu fonksiyonu kullan — ikinci bir birleştirme mantığı yazma.
 
 - **Regresyon testleri — senkron/merge koduna dokunan her değişiklikten sonra ikisini de çalıştır:**
-  `node tools/test_score_merge.js` (17 kontrol; fonksiyonları `landing.js`'ten olduğu gibi kesip
+  `node tools/test_score_merge.js` (20 kontrol, veli okuma yolu dahil; fonksiyonları `landing.js`'ten olduğu gibi kesip
   sahte `localStorage`'da çalıştırır) **ve** `python3 tools/test_server_merge.py` (15 kontrol).
   Onarım öncesi kodda ikisi de kırmızı.
 - Kurtarma seti: `scores_rescue_20260920.json` (gitignore'da) — tarayıcı localStorage (duru+baba),

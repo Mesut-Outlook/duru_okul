@@ -476,37 +476,43 @@ var DOMEINEN = [
 ];
 
 /**
- * Leest voortgang (pct + gemiddeld cijfer) van een actief HAVO 3-vak uit
- * localStorage. Zwaar gutted met guards; ontbrekende data → nullen.
- * @param {Object} vak  - moet vak.sleutel hebben (bv. 'duru_h3_wiskunde')
- * @returns {{pct:number, cijfer:(string|null)}}
+ * Leest voortgang van een actief HAVO 3-vak uit localStorage.
+ * - gedaan/totaal = hoeveel VERSCHILLENDE proeftoetsen gemaakt zijn van het
+ *   totaal (manifest). Dit is wat de balk toont: "hoe ver ben ik".
+ *   (Tot 2026-09-22 toonde de balk het gemiddelde van de beste scores — een
+ *   vak met 2 van 30 toetsen gemaakt stond dan op "90%".)
+ * - cijfer = gemiddelde van alle pogingen, per poging eerst afgerond op één
+ *   decimaal — precies zoals js/dashboard.js het rekent, zodat kaart en
+ *   statistiekenpagina hetzelfde cijfer tonen.
+ * Toetsen die niet (meer) in het manifest staan tellen mee als gedaan én in
+ * het totaal: Duru heeft ze echt gemaakt.
+ * @returns {{gedaan:number, totaal:number, cijfer:(string|null)}}
  */
 function leesVakData(vak) {
-  var uit = { pct: 0, cijfer: null };
+  var uit = { gedaan: 0, totaal: 0, cijfer: null };
   if (!vak.sleutel) return uit;
+  var C = window.DURU_CIJFER;
   try {
-    var P = JSON.parse(localStorage.getItem(vak.sleutel + '_v1') || '{}') || {};
-    var beste = P.beste || {};
-    var vals = Object.keys(beste).map(function (k) { return Number(beste[k]) || 0; });
+    var HF = window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.vakken &&
+             window.DURU_HOOFDSTUKKEN.vakken[vak.vakId];
+    var inManifest = (HF && HF.examenHoofdstuk) || {};
+    Object.keys((HF && HF.aantalExamens) || {}).forEach(function (nr) {
+      uit.totaal += Number(HF.aantalExamens[nr]) || 0;
+    });
 
     var EX = JSON.parse(localStorage.getItem(vak.sleutel + '_examens_v1') || '{}') || {};
-    var exBeste = EX.beste || {};
-    var exVals = Object.keys(exBeste).map(function (k) { return Number(exBeste[k]) || 0; });
-
-    var allVals = vals.concat(exVals);
-    if (allVals.length > 0) {
-      uit.pct = Math.round(allVals.reduce(function (a, b) { return a + b; }, 0) / allVals.length);
-    } else if (vals.length > 0) {
-      uit.pct = Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / vals.length);
-    } else if (exVals.length > 0) {
-      uit.pct = Math.round(exVals.reduce(function (a, b) { return a + b; }, 0) / exVals.length);
-    }
-
     var hist = (EX.history || []).filter(function (h) { return h && typeof h.pct === 'number'; });
+
+    var uniek = {};
+    hist.forEach(function (h) { if (h.examId) uniek[h.examId] = 1; });
+    Object.keys(uniek).forEach(function (id) {
+      uit.gedaan++;
+      if (!(id in inManifest)) uit.totaal++;
+    });
+
     if (hist.length) {
-      var beentjes = hist.map(function (h) { return 1 + (h.pct / 100) * 9; });
-      var gem = beentjes.reduce(function (a, b) { return a + b; }, 0) / beentjes.length;
-      uit.cijfer = gem.toFixed(1).replace('.', ',');
+      var cijfers = hist.map(function (h) { return { c: C.vanPct(h.pct) }; });
+      uit.cijfer = C.tekst(C.gemiddelde(cijfers, 'c'));
     }
   } catch (e) { /* corrupt/leeg → nullen */ }
   return uit;
@@ -532,8 +538,11 @@ function maakVakKaartHavo3(vak) {
   } else {
     el.href = vak.href;
     var d = leesVakData(vak);
-    rechtsboven = '<span class="havo3-pct">' + d.pct + '%</span>';
-    balk = '<div class="havo3-balk"><div class="havo3-balk__vul" style="width:' + d.pct + '%"></div></div>';
+    var vg = d.totaal ? Math.min(100, Math.round(d.gedaan / d.totaal * 100)) : 0;
+    rechtsboven = '<span class="havo3-pct" title="Aantal verschillende proeftoetsen dat je gemaakt hebt">' +
+      (d.totaal ? d.gedaan + ' / ' + d.totaal + ' toetsen' : 'nog geen toetsen') + '</span>';
+    balk = '<div class="havo3-balk" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + vg +
+      '" aria-label="' + d.gedaan + ' van ' + d.totaal + ' toetsen gemaakt"><div class="havo3-balk__vul" style="width:' + vg + '%"></div></div>';
     voet =
       '<span class="havo3-kaart__cijfer">' +
         (d.cijfer ? d.cijfer + ' <small>gem.</small>' : '<small>nog geen cijfer</small>') +
@@ -863,15 +872,27 @@ document.addEventListener('DOMContentLoaded', function() {
      bron mee: vóór 2026-09-20 gebeurde dat niet en werd alles wat alléén lokaal
      bestond (XP, medailles, pogingen, history) overschreven door wat de cloud
      toevallig had — 865 XP en 5 medailles werden 95 XP en 1 medaille. */
-  function restoreScores(data) {
+  /* voorGebruiker (optioneel): schrijf onder user_<naam>_ in plaats van onder
+     de actieve gebruiker. Zo haalt het ouderpaneel Duru's cloud-knoop binnen
+     (alleen lezen): rechtstreeks via de originele Storage-methodes, dus zonder
+     push — een ouderapparaat mag nooit namens Duru naar de cloud schrijven. */
+  function restoreScores(data, voorGebruiker) {
     if (!Array.isArray(data)) return 0;
+
+    var lees = function (key) { return localStorage.getItem(key); };
+    var schrijf = function (key, val) { localStorage.setItem(key, val); };
+    if (voorGebruiker) {
+      var pre = 'user_' + voorGebruiker + '_';
+      lees = function (key) { return originalGetItem.call(localStorage, pre + key); };
+      schrijf = function (key, val) { originalSetItem.call(localStorage, pre + key, val); };
+    }
 
     var bronnen = data.slice();
     var sleutels = {};
     data.forEach(function(item) { if (item && item.key) sleutels[item.key] = true; });
     Object.keys(sleutels).forEach(function(key) {
       try {
-        var lokaalRuw = localStorage.getItem(key);
+        var lokaalRuw = lees(key);
         if (lokaalRuw) bronnen.push({ key: key, val: JSON.parse(lokaalRuw) });
       } catch (e) { /* onleesbare lokale waarde: alleen de andere bronnen */ }
     });
@@ -880,8 +901,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var restoredCount = 0;
     Object.keys(samengevoegd).forEach(function(key) {
       var newValStr = JSON.stringify(samengevoegd[key]);
-      if (localStorage.getItem(key) !== newValStr) {
-        localStorage.setItem(key, newValStr);
+      if (lees(key) !== newValStr) {
+        schrijf(key, newValStr);
         restoredCount++;
       }
     });
@@ -1009,8 +1030,11 @@ document.addEventListener('DOMContentLoaded', function() {
       
       var isParentUser = (activeUser.toLowerCase() === 'baba' || activeUser.toLowerCase() === 'veli' || activeUser.toLowerCase() === 'mesut');
       if (userDisplay) {
-        userDisplay.textContent = isParentUser ? ('👨‍👧 ' + (activeUser === 'baba' ? 'Baba' : activeUser) + ' (Veli)') : activeUser;
+        userDisplay.textContent = isParentUser ? ('👨‍👧 ' + (activeUser === 'baba' ? 'Baba' : activeUser) + ' (Veli)')
+          : activeUser.charAt(0).toUpperCase() + activeUser.slice(1);
       }
+      // Taal volgt de gebruiker: leerling Nederlands, ouder Turks.
+      if (logoutBtn) logoutBtn.textContent = isParentUser ? 'Çıkış Yap' : 'Uitloggen';
 
       // Always auto-migrate any unprefixed scores created in standalone tabs
       migratePreExistingLocalScores(activeUser);
@@ -1408,5 +1432,16 @@ document.addEventListener('DOMContentLoaded', function() {
   //    pushState later altijd een stap terug kan zetten.
   if (!history.state || !history.state.vakIframe) {
     history.replaceState({ vakIframe: false }, '', '');
+  }
+
+  // ── Deep link: ./#vak=<id> opent dat vak meteen in de iframe-shell.
+  //    Een vak-site die los (buiten de hub) geopend wordt, stuurt hierheen
+  //    door: los geopend ziet de site het user_<naam>_-voorvoegsel niet en
+  //    toont dan 0 XP / "nog niet gedaan" (zie havo3/<vak>/index.html).
+  var diep = /^#vak=([\w-]+)$/.exec(location.hash || '');
+  if (diep) {
+    history.replaceState({ vakIframe: false }, '', location.pathname + location.search);
+    var doel = VAKKEN.filter(function (v) { return !v.archief && !v.binnenkort && v.vakId === diep[1]; })[0];
+    if (doel) openInIframe(doel.href, doel.icoon, doel.titel);
   }
 });
