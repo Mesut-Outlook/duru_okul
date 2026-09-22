@@ -130,7 +130,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.2`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.3`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -157,7 +157,8 @@ Kullanıcı isteği: **"karışık olmasın, bakması ve anlaması kolay olsun �
 Tek sayfa, dört blok (sekme yok): **özet** (büyük ortalama + tek cümle + bu hafta gün/deneme/son
 çalışma) → **Dikkat edilecekler** (en fazla 3 ünite) → **Dersler** tablosu (ortalama · gidiş ·
 yapılan sınav · son çalışma; satıra tıkla → üniteler açılır) → **Son denemeler** (8 + "Tümünü göster").
-Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Yazdır = `window.print()`
+Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekmesi açıkken
+`body.ouder-actief` → "Hoi Duru" hero'su gizli (`dashboard.js → initTabs`). Yazdır = `window.print()`
 (`@media print` hub çerçevesini gizler). Kaldırılanlar: 1–10 cetveli, XP/rozet, 4 sekme,
 25+ maddelik güçlü/zayıf listeleri — geri ekleme, önce kullanıcıya sor.
 - **Kurallar Duru'nun sayfasıyla aynı:** "dikkat" = son 3 deneme < 5,5 veya ≥1 puan düşüş

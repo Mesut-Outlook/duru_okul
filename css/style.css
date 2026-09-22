@@ -1897,6 +1897,9 @@ html.dark #ob {
   .ob-kaart { padding: 16px; }
 }
 
+/* Veli sekmesi: "Hoi Duru"-hero hoort bij Duru, niet bij de ouder. */
+body.ouder-actief .hero { display: none; }
+
 /* ── Yazdırma: alleen het paneel, zonder hub-omlijsting ── */
 @media print {
   .topbar, .hero, .hub-tabs, footer, .ob-seg, .ob-knop { display: none !important; }

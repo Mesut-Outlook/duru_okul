@@ -57,6 +57,8 @@
         views.forEach(function (v) { v.classList.remove("active"); });
 
         var targetId = tab.getAttribute("data-target");
+        // Veli sekmesinde "Hoi Duru"-karşılaması yersiz: hero gizlenir (css).
+        document.body.classList.toggle("ouder-actief", targetId === "ouder-view");
         var targetView = document.getElementById(targetId);
         if (targetView) {
           targetView.classList.add("active");
