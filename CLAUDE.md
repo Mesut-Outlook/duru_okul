@@ -130,7 +130,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.5`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.7`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -158,6 +158,13 @@ Tek sayfa, dört blok (sekme yok): **özet** (büyük ortalama + tek cümle + bu
 çalışma) → **Dikkat edilecekler** (en fazla 3 ünite) → **Dersler** tablosu (ortalama · gidiş ·
 yapılan sınav · son çalışma; derse tıkla → üniteler, üniteye tıkla → o ünitenin tek tek sınavları:
 not · ad · tarih+saat) → **Son denemeler** (8 + "Tümünü göster", tarih+saat).
+**Review (2026-09-22):** bir deneme satırına tıklayınca o sınavın soruları açılır — her soru için
+doğru/kısmen/yanlış, Duru'nun cevabı, doğru cevap, açıklama; "Sadece yanlışları göster" filtresi,
+"← Geri" aynı kaydırma konumuna döner. Salt-okunur: sorular `laadExamens(vakId)` ile
+`havo3/<vak>/index.html`'deki `js/data/*.js` listesi fetch edilip sahte bir `DURU`
+(`registerExamen` toplayan) içinde çalıştırılarak alınır — ders motoru yüklenmez, localStorage'a
+yazılmaz. Cevap biçimi ders sitelerindeki `toonAntwoord/juisteAntwoord` ile aynı (12 motorda
+birebir). Yalnız 2026-2027 (antwoorden/beoordelingen kaydı olan) denemeler tıklanabilir.
 **⚠️ Tarih:** `"05-09-2026"` gibi metni asla `new Date()`'e verme — tarayıcı 9 Mayıs okur.
 `ontleedDatum(s, ts)` ISO dışı metinde zaman damgasını kullanır (2026-09-22 düzeltmesi).
 Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekmesi açıkken
@@ -221,6 +228,13 @@ Artık: `van(goed,totaal)` · `vanPct(pct)` · `geslaagd(c)` · `klasse(c,aantal
 `examenklaar(c)` (≥8,5) · `tekst(c)` (virgüllü) · `positie(c)` (1–10 ölçeğinde %) · `gemiddelde(lijst)`.
 Eşikler `DREMPEL/GOED/TOP` sabitlerinde. **Renk burada YOK** — her panonun kendi token'ı var
 (`--ouder-goed` vs `--groen`); paylaşılan şey sınıflandırma, biçimlendirme değil.
+
+## Giriş & veli şifresi (2026-09-22)
+Duru girişi değişmedi (hızlı düğme). **Veli (`baba`/`veli`/`mesut`) artık gerçek şifre ister:**
+"Baba" düğmesi yalnız adı doldurur; `12341234` (Duru'nun şifresi) veli için reddedilir; cihazda henüz
+güçlü bir veli şifresi yoksa ilk geçerli (≥6) şifre veli şifresi olarak kaydedilir, sonra yalnız o kabul
+edilir. Bu üç ad "Kayıt Ol"dan alınamaz. Önceden ≥6 karakterli **her** şifre kabul edilip üzerine
+yazılıyordu. Not: istemci tarafı, cihaz başına bir kilittir — çocuğa karşı yeterli, gerçek güvenlik değil.
 
 ## Navigasyon (iframe-shell)
 Ders `#vak-frame`'de açılır; sabit "← Terug naar de vakken" balığı. Geri = knop / Escape /

@@ -1108,14 +1108,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
+    // Veli: alleen de naam invullen — het wachtwoord typt de ouder zelf.
+    // (Tot 2026-09-22 vulde deze knop '12341234' in = Duru's wachtwoord,
+    //  dus Duru kwam met één klik in het ouderpaneel.)
     if (quickBaba) {
       quickBaba.addEventListener('click', function() {
         if (usernameInput) usernameInput.value = 'baba';
-        if (passwordInput) passwordInput.value = '12341234';
-        if (form) {
-          var event = new Event('submit', { cancelable: true, bubbles: true });
-          form.dispatchEvent(event);
-        }
+        if (passwordInput) { passwordInput.value = ''; passwordInput.focus(); }
       });
     }
 
@@ -1180,7 +1179,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
 
           var uLower = username.toLowerCase();
-          if (uLower === 'duru') {
+          if (uLower === 'duru' || uLower === 'baba' || uLower === 'veli' || uLower === 'mesut') {
             showError('Deze gebruikersnaam is al gereserveerd.');
             return;
           }
@@ -1202,12 +1201,29 @@ document.addEventListener('DOMContentLoaded', function() {
           var users = getUsers();
 
           if (uLower === 'baba' || uLower === 'veli' || uLower === 'mesut') {
-            if (password === '12341234' || (users[uLower] && validateLocalUser(username, password)) || password.length >= 6) {
-              registerLocalUser(uLower, password);
-              setActiveUser(uLower, rememberMe);
-              window.location.reload();
+            // Veli-wachtwoord (2026-09-22). Vroeger werd elk wachtwoord van
+            // ≥ 6 tekens geaccepteerd én opgeslagen — er was geen slot.
+            // Nu: Duru's wachtwoord mag het nooit zijn; is er op dit apparaat
+            // nog geen eigen veli-wachtwoord, dan wordt het eerste geldige
+            // wachtwoord het veli-wachtwoord; daarna alleen dat.
+            var zwak = !users[uLower] || users[uLower] === simpleHash('12341234');
+            if (password === '12341234') {
+              showError('Bu, Duru\'nun şifresi. Veli için farklı bir şifre yazın.');
               return;
             }
+            if (zwak) {
+              if (password.length < 6) {
+                showError('Veli şifresi en az 6 karakter olmalı. Bu şifre bundan sonra veli şifresi olur.');
+                return;
+              }
+              registerLocalUser(uLower, password);
+            } else if (!validateLocalUser(uLower, password)) {
+              showError('Şifre yanlış.');
+              return;
+            }
+            setActiveUser(uLower, rememberMe);
+            window.location.reload();
+            return;
           }
 
           if (uLower === 'duru') {

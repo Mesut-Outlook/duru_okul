@@ -555,10 +555,9 @@ figure.bron figcaption { color: var(--grijs); font-size: 13px; margin-top: 6px; 
 }
 .hf-filter-pills {
   display: flex;
+  flex-wrap: wrap;      /* alle hoofdstukken zichtbaar; vroeger scrollde de rij en vielen H6–H8 weg */
   gap: 8px;
-  overflow-x: auto;
   padding-bottom: 4px;
-  scrollbar-width: thin;
 }
 .hf-filter-pill {
   background: var(--achtergrond);

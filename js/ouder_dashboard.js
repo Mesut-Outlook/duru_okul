@@ -154,7 +154,9 @@
             totaal: att.totaal != null ? att.totaal : 20,
             pct: pct,
             cijfer: c,
-            geslaagd: window.DURU_CIJFER.geslaagd(c)
+            geslaagd: window.DURU_CIJFER.geslaagd(c),
+            examId: att.examId || null,
+            ruw: att            // voor de review: antwoorden + beoordelingen
           };
           vakAttempts.push(item);
           allAttempts.push(item);
@@ -399,6 +401,10 @@
   var openVak = null;        // blijft bewaard tussen renders (cloud-sync hertekent elke 20 s)
   var openUnite = null;      // "<vakId>|<nr>": die unit toont zijn losse toetsen
   var toonAlleLog = false;
+  var reviewPoging = null;   // open review (item uit allAttempts) of null
+  var reviewIndex = {};      // data-review-sleutel → poging (per render opnieuw)
+  var reviewFilterFout = false;
+  var scrollVoorReview = 0;  // na "Geri" terug naar dezelfde plek in de lijst
 
   function nieuwstEerst(l) {
     return (l || []).slice().sort(function (a, b) { return (b.timestamp || 0) - (a.timestamp || 0); });
@@ -432,9 +438,118 @@
 
   /* Eén toetsregel: cijfer · (vak —) toetsnaam · datum + tijd. */
   function logItem(a, metVak) {
-    return '<li>' + pil(a.cijfer, 1) + '<span class="ob-t">' +
+    // Alleen toetsen met opgeslagen antwoorden (HAVO 3-sites) zijn na te kijken.
+    var kan = heeftReview(a);
+    var sleutel = kan ? a.vakId + "|" + (a.ruw.attemptId || a.timestamp) : "";
+    if (kan) reviewIndex[sleutel] = a;
+    return '<li' + (kan ? ' class="ob-klik" data-review="' + escapeHtml(sleutel) + '" tabindex="0" role="button" ' +
+        'title="Soruları ve cevapları göster"' : '') + '>' + pil(a.cijfer, 1) + '<span class="ob-t">' +
       (metVak ? a.vakIcoon + ' ' + escapeHtml(a.vakTitel) + ' — ' : '') + escapeHtml(a.titel) +
-      '</span><span class="ob-zacht">' + escapeHtml(datumTijd(a)) + '</span></li>';
+      '</span><span class="ob-zacht">' + escapeHtml(datumTijd(a)) + '</span>' +
+      (kan ? '<span class="ob-pijl" aria-hidden="true">›</span>' : '') + '</li>';
+  }
+
+  function heeftReview(a) {
+    return !!(a && a.ruw && a.examId && Array.isArray(a.ruw.antwoorden) &&
+              Array.isArray(a.ruw.beoordelingen) && selectedJaar === "2026-2027");
+  }
+
+  /* ── Review: de vragen van een toets ophalen ─────────────
+     De vragen staan in havo3/<vak>/js/data/*.js. We lezen de <script>-lijst uit
+     de index.html van het vak en voeren elk databestand uit met een nep-DURU
+     die alleen registerExamen opvangt (zelfde techniek als
+     tools/build_hoofdstukken.js). Alleen lezen: geen engine, geen localStorage.
+     Resultaat per vak in het geheugen bewaard. */
+  var examenCache = {};
+  function laadExamens(vakId) {
+    if (examenCache[vakId]) return examenCache[vakId];
+    var basis = "./havo3/" + vakId + "/";
+    examenCache[vakId] = fetch(basis + "index.html", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+      .then(function (html) {
+        var srcs = [], re = /<script[^>]+src="(js\/data\/[^"?]+)[^"]*"/g, m;
+        while ((m = re.exec(html))) srcs.push(m[1]);
+        return Promise.all(srcs.map(function (src) {
+          return fetch(basis + src).then(function (r) { return r.ok ? r.text() : ""; });
+        }));
+      })
+      .then(function (codes) {
+        var examens = {};
+        var nep = { registerExamen: function (e) { if (e && e.id) examens[e.id] = e; }, register: function () {} };
+        codes.forEach(function (code) {
+          try { new Function("DURU", "window", code)(nep, { DURU: nep }); } catch (e) { /* kapot bestand overslaan */ }
+        });
+        return examens;
+      })
+      .catch(function (e) { delete examenCache[vakId]; throw e; });
+    return examenCache[vakId];
+  }
+
+  /* Antwoordweergave — gelijk aan toonAntwoord/juisteAntwoord in de
+     exams.js van de vak-sites (alle twaalf identiek). */
+  function toonAntwoord(v, antw) {
+    if (antw === null || antw === undefined || antw === "") return "<i>(boş bırakmış)</i>";
+    if (v.type === "mc") return escapeHtml(v.opties[antw]);
+    if (v.type === "waaronwaar") return antw === 0 ? "Waar" : "Onwaar";
+    return escapeHtml(antw);
+  }
+  function juisteAntwoord(v) {
+    if (v.type === "mc") return escapeHtml(v.opties[v.antwoord]);
+    if (v.type === "waaronwaar") return (v.antwoord === true || v.antwoord === "waar" || v.antwoord === 0) ? "Waar" : "Onwaar";
+    if (v.type === "invul") return escapeHtml(String(v.antwoord).split("|")[0]);
+    return escapeHtml(v.modelantwoord || "");
+  }
+
+  function renderReview(container) {
+    var a = reviewPoging, att = a.ruw;
+    container.innerHTML = '<div id="ob">' +
+      '<div class="ob-kop"><button type="button" class="ob-knop" id="ob-terug">← Geri</button>' +
+      '<button type="button" class="ob-knop" id="ob-print">🖨 Yazdır</button></div>' +
+      '<div class="ob-kaart"><div class="ob-ozet">' +
+        '<div class="ob-not ob-kleur-' + C.klasse(a.cijfer, 1) + '">' + C.tekst(a.cijfer) + '</div>' +
+        '<p><b>' + a.vakIcoon + ' ' + escapeHtml(a.vakTitel) + '</b> — ' + escapeHtml(a.titel) + '<br>' +
+        '<span class="ob-zacht">' + escapeHtml(datumTijd(a)) + ' · ' + (att.goed != null ? att.goed : "?") +
+        ' / ' + (att.totaal != null ? att.totaal : "?") + ' doğru</span></p></div></div>' +
+      '<div class="ob-kaart" id="ob-review"><p class="ob-zacht">Sorular yükleniyor…</p></div></div>';
+    bindEvents(container);
+
+    laadExamens(a.vakId).then(function (examens) {
+      if (reviewPoging !== a) return;               // intussen teruggegaan
+      var box = document.getElementById("ob-review");
+      if (!box) return;
+      var ex = examens[a.examId];
+      if (!ex || !Array.isArray(ex.vragen)) {
+        box.innerHTML = '<p class="ob-zacht">Bu sınavın soruları bulunamadı.</p>';
+        return;
+      }
+      var tel = { goed: 0, deels: 0, fout: 0 };
+      var items = ex.vragen.map(function (v, i) {
+        var b = att.beoordelingen[i] || { status: "fout" };
+        var st = b.status === "goed" ? "goed" : (b.status === "deels" ? "deels" : "fout");
+        tel[st]++;
+        if (reviewFilterFout && st === "goed") return "";
+        var kop = st === "goed" ? "✅ Doğru" : (st === "deels" ? "🟡 Kısmen doğru" : "❌ Yanlış");
+        return '<li class="ob-rv ob-rv--' + st + '" value="' + (i + 1) + '">' +
+          '<div class="ob-rv-kop">Soru ' + (i + 1) + ' — ' + kop + '</div>' +
+          '<div class="ob-rv-vraag">' + v.vraag + '</div>' +
+          (v.figuur ? '<div class="ob-rv-figuur">' + v.figuur + '</div>' : '') +
+          '<div class="ob-rv-rij"><span>Duru\'nun cevabı:</span> ' + toonAntwoord(v, att.antwoorden[i]) + '</div>' +
+          (st !== "goed" ? '<div class="ob-rv-rij"><span>Doğru cevap:</span> ' + juisteAntwoord(v) + '</div>' : '') +
+          (v.uitleg ? '<div class="ob-rv-uitleg">💡 ' + v.uitleg + '</div>' : '') +
+          '</li>';
+      }).join("");
+      box.innerHTML =
+        '<div class="ob-rv-balk"><span><b>' + tel.goed + '</b> doğru · <b>' + tel.deels + '</b> kısmen · <b>' +
+          tel.fout + '</b> yanlış</span>' +
+        '<button type="button" class="ob-knop" id="ob-rv-filter">' +
+          (reviewFilterFout ? "Tüm soruları göster" : "Sadece yanlışları göster") + '</button></div>' +
+        '<ol class="ob-rv-lijst">' + items + '</ol>';
+      var fb = document.getElementById("ob-rv-filter");
+      if (fb) fb.addEventListener("click", function () { reviewFilterFout = !reviewFilterFout; renderParentDashboard(); });
+    }).catch(function () {
+      var box = document.getElementById("ob-review");
+      if (box) box.innerHTML = '<p class="ob-zacht">Sorular yüklenemedi. Bağlantıyı kontrol edip tekrar deneyin.</p>';
+    });
   }
 
   function gunOnce(ts) {
@@ -531,6 +646,9 @@
   function renderParentDashboard() {
     var container = document.getElementById("ouder-view");
     if (!container) return;
+    // Cloud-sync hertekent elke 20 s: een open review blijft dan open.
+    if (reviewPoging) { renderReview(container); return; }
+    reviewIndex = {};
 
     var student = getActiveStudent();
     var r = collectParentReportData(student, selectedJaar);
@@ -650,6 +768,7 @@
     container.querySelectorAll(".ob-jaar").forEach(function (b) {
       b.addEventListener("click", function () {
         selectedJaar = b.getAttribute("data-year");
+        reviewPoging = null;
         openVak = null; openUnite = null; toonAlleLog = false;
         renderParentDashboard();
       });
@@ -679,6 +798,26 @@
     });
     var meer = document.getElementById("ob-meer");
     if (meer) meer.addEventListener("click", function () { toonAlleLog = !toonAlleLog; renderParentDashboard(); });
+    container.querySelectorAll("[data-review]").forEach(function (li) {
+      function open() {
+        var a = reviewIndex[li.getAttribute("data-review")];
+        if (!a) return;
+        scrollVoorReview = window.scrollY;
+        reviewPoging = a; reviewFilterFout = false;
+        renderParentDashboard();
+        window.scrollTo(0, 0);
+      }
+      li.addEventListener("click", function (e) { e.stopPropagation(); open(); });
+      li.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+      });
+    });
+    var terug = document.getElementById("ob-terug");
+    if (terug) terug.addEventListener("click", function () {
+      reviewPoging = null;
+      renderParentDashboard();
+      window.scrollTo(0, scrollVoorReview);
+    });
     var pr = document.getElementById("ob-print");
     if (pr) pr.addEventListener("click", function () { window.print(); });
   }

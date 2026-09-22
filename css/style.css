@@ -1901,12 +1901,36 @@ html.dark #ob {
   .ob-kaart { padding: 16px; }
 }
 
+/* Klikbare toetsregels → review */
+.ob-log li.ob-klik { cursor: pointer; border-radius: 8px; margin: 0 -6px; padding-left: 6px; padding-right: 6px; }
+.ob-log li.ob-klik:hover, .ob-log li.ob-klik:focus-visible { background: var(--ob-bg2); }
+.ob-log li.ob-klik:focus-visible { outline: 2px solid var(--ob-goed); outline-offset: -2px; }
+.ob-pijl { color: var(--ob-zacht); font-size: 18px; line-height: 1; }
+
+/* Review van één toets (alleen lezen) */
+.ob-rv-balk { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;
+              margin-bottom: 12px; font-size: 14px; }
+.ob-rv-lijst { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ob-rv { border-radius: 12px; padding: 12px 14px; border-left: 4px solid; font-size: 14px; line-height: 1.5; }
+.ob-rv--goed  { background: var(--ob-goed-z); border-color: var(--ob-goed); }
+.ob-rv--deels { background: var(--ob-net-z);  border-color: var(--ob-net); }
+.ob-rv--fout  { background: var(--ob-zwak-z); border-color: var(--ob-zwak); }
+.ob-rv-kop { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+.ob-rv-vraag { margin-bottom: 8px; overflow-wrap: anywhere; }
+.ob-rv-vraag img, .ob-rv-vraag svg { max-width: 100%; height: auto; }
+.ob-rv-figuur { background: #fff; border-radius: 8px; padding: 8px; margin-bottom: 8px; max-width: 460px; }
+.ob-rv-figuur svg { width: 100%; height: auto; }
+.ob-rv-rij { margin-top: 2px; }
+.ob-rv-rij > span { color: var(--ob-zacht); font-size: 13px; margin-right: 4px; }
+.ob-rv-uitleg { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--ob-lijn); color: var(--ob-zacht); font-size: 13px; }
+
 /* Veli sekmesi: "Hoi Duru"-hero hoort bij Duru, niet bij de ouder. */
 body.ouder-actief .hero { display: none; }
 
 /* ── Yazdırma: alleen het paneel, zonder hub-omlijsting ── */
 @media print {
-  .topbar, .hero, .hub-tabs, footer, .ob-seg, .ob-knop { display: none !important; }
+  .topbar, .hero, .hub-tabs, footer, .ob-seg, .ob-knop, .ob-pijl { display: none !important; }
+  .ob-rv { break-inside: avoid; }
   .ob-kaart { break-inside: avoid; }
   .ob-ok { display: none; }
 }
