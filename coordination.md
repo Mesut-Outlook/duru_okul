@@ -676,7 +676,7 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - **⚠️ `frans_h08_le-pont-examentraining.pdf` eksik:** 19 sayfa = kitap s. 272–290; DELF A2 (opdracht 19–25, s. 291+)
   PDF'te YOK (`noordhoff_books.json` `end: 291`). h8_4 §DELF A2 + `u8-v5`'in bir kısmı (un CV, se présenter, À bientôt)
   kaynaksız → **TASK-21**: bitişi düzelt, s. 291–~297'yi yeniden dışa aktar, h8_4 + `u8-v5`'i kitaba karşı denetle
-  (`u8-v5` henüz push edilmedi → düzeltme serbest; push'tan sonra yeni id).
+  (`u8-v5` 2026-09-24'te push edildi → düzeltmeden önce Duru'nun bulut geçmişinde `ex-h3-frans-u8-v5`'e bak; çözülmüşse içeriğine dokunma, yeni id ile ek sınav yaz).
 - **TASK-15 tam DONE değil:** "Ayrıca" maddesi (`examen_1..40.js`'teki soruları kitapla karşılaştır, kitapta olmayanları
   listele) yapılmadı. → **TASK-20** olarak ayrıldı (aşağıda).
 
