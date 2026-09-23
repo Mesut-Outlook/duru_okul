@@ -742,6 +742,18 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H4: 10 examen, 4 onderwerp`).
   - `tools/gate.js frans` → **16/16 kusursuz geçti** (17 onderwerp, 66 proeftoets, 1517 soru).
   - `tools/open_check.js frans` → **609 open soru tarandı, 0 sorun**.
+- **agy notu (2026-09-23 22:50)**: ✅ **Unité 5 (Au resto!) TAMAMLANDI**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h05_au-resto.pdf`.
+  - Kitaptaki bölümler ve sayfalar analiz edildi (s. 194-198):
+    - §5.1: Vocabulaire A & B: Eten, drinken, maaltijden, beroepen (kok, maaltijd, team, bestelling), uitdrukkingen met avoir (faim, soif, besoin de, l'air).
+    - §5.2: Vocabulaire E & F: Tafelgerei (couteau, fourchette, cuillère, assiette, serviette), sauzen & smaakmakers (sel, poivre, moutarde, beurre), oceaan en milieu (mer, bateau, pollution, protéger, menacer).
+    - §5.3: Phrases-clés C & G: Gespreksvaardigheid: eten en drinken bestellen (plat du jour, carafe d'eau), reageren op fouten (il y a une erreur) of koud eten (mes frites sont froides).
+    - §5.4: Grammaire D & H: Het delend lidwoord (article partitif: du, de la, de l', des & uitzonderingen na hoeveelheden/ontkenning = de/d') én onregelmatig werkwoord venir (présent & passé composé met être: venu/venue/venus/venues).
+  - **4 Oefenles / Onderwerp** (`h5_1.js`..`h5_4.js`): Her biri 10 soru (mc, waaronwaar, invoer), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u5_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H5: 10 examen, 4 onderwerp`).
+  - `tools/gate.js frans` → **16/16 kusursuz geçti** (21 onderwerp, 71 proeftoets, 1657 soru).
+  - `tools/open_check.js frans` → **619 open soru tarandı, 0 sorun**.
 
 
 ### TASK-16 · aardrijkskunde H3–H5  [status: DONE — 2026-09-23 agy]
