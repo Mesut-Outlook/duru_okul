@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-22",
+  "gegenereerd": "2026-09-23",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -489,11 +489,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-frans-u1-v8": 1,
         "ex-h3-frans-u1-v9": 1,
         "ex-h3-frans-u1-v10": 1,
+        "ex-h3-frans-u1-v11": 1,
         "ex-h3-frans-u2-v1": 2,
         "ex-h3-frans-u2-v2": 2,
         "ex-h3-frans-u2-v3": 2,
         "ex-h3-frans-u2-v4": 2,
-        "ex-h3-frans-u2-v5": 2
+        "ex-h3-frans-u2-v5": 2,
+        "ex-h3-frans-u3-v1": 3,
+        "ex-h3-frans-u3-v2": 3,
+        "ex-h3-frans-u3-v3": 3,
+        "ex-h3-frans-u3-v4": 3,
+        "ex-h3-frans-u3-v5": 3
       },
       "onderwerpHoofdstuk": {
         "fr-u1-1": 1,
@@ -504,12 +510,16 @@ window.DURU_HOOFDSTUKKEN = {
         "fr-u2-2": 2,
         "fr-u2-3": 2,
         "fr-u2-4": 2,
+        "fr-u3-1": 3,
+        "fr-u3-2": 3,
+        "fr-u3-3": 3,
+        "fr-u3-4": 3,
         "th-h3-frans-u1-vocab": 1
       },
       "aantalExamens": {
-        "1": 15,
+        "1": 16,
         "2": 10,
-        "3": 5,
+        "3": 10,
         "4": 5,
         "5": 5,
         "6": 5,
@@ -518,7 +528,8 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalOnderwerpen": {
         "1": 5,
-        "2": 4
+        "2": 4,
+        "3": 4
       }
     },
     "geschiedenis": {
@@ -746,7 +757,8 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-44": 5,
         "ex-h3-natuurkunde-45": 1,
         "ex-h3-natuurkunde-46": 1,
-        "ex-h3-natuurkunde-47": 1
+        "ex-h3-natuurkunde-47": 1,
+        "ex-h3-natuurkunde-48": 5
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -775,6 +787,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h5-3-construeren-bij-lenzen": 5,
         "h5-4-oogafwijkingen": 5,
         "h5-5-rekenen-aan-lenzen": 5,
+        "h5-begrippen": 5,
         "h8-1-hefbomen": 8,
         "h8-2-rekenen-hefbomen": 8,
         "h8-3-overbrengingen": 8,
@@ -786,7 +799,7 @@ window.DURU_HOOFDSTUKKEN = {
         "2": 5,
         "3": 5,
         "4": 5,
-        "5": 5,
+        "5": 6,
         "8": 5
       },
       "aantalOnderwerpen": {
@@ -794,7 +807,7 @@ window.DURU_HOOFDSTUKKEN = {
         "2": 5,
         "3": 5,
         "4": 5,
-        "5": 5,
+        "5": 6,
         "8": 5
       }
     },

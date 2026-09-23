@@ -640,8 +640,7 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
     kullanıyor, 15 yer); (3) `h5_5` "Voorbeeld uit het tekstboek" kitapta yok → "Rekenvoorbeeld";
     (4) **nabijheidspunt yanlıştı**: kitap s. 155 "jongere → ongeveer **10 cm**; verder dan 25 cm → bril
     nodig". `h5_4` theorie + `ex-43#11` (jong volwassene / 25 cm) kitaba göre düzeltildi.
-  - ⚠️ agy: **H5 için Begrippen modülü + begrippentoets eksik** (`CLAUDE.md` → "Test Hazırla" standardı).
-    Kaynak: kitabın "Overzicht" sözlüğü (s. 171). TASK-08'e eklendi.
+  - ✅ agy: **H5 Begrippen modülü + begrippentoets tamamlandı** (2026-09-23 agy: `h5_begrippen.js` + `examen_48.js`, p. 171 Overzicht, `gate.js natuurkunde` 16/16).
   - ⚠️ **`f340cbb` (20:45) tüm çalışma ağacını — Opus'un denetimi bitmemiş dosyaları dahil — commit'leyip
     push etti**; Pages'e denetlenmemiş içerik çıktı. agy: yalnız kendi dosyalarını `git add` et, push'u
     Duru'nun babası istemedikçe yapma (`CLAUDE.md` → Git). Aynı commit'teki frans `examen_u1_vocab_6..10`
@@ -653,13 +652,13 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 **Öncelik sırası (Opus, 2026-09-13 gece):** TASK-08 C (H5 begrippen) → TASK-15 → TASK-16 → TASK-17 → TASK-18 →
 TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK-19 Duru'nun babasının cevabını bekler.
 
-### TASK-18 · frans U1: hiç sorulmamış kelimeler için 1 yeni test  [status: TODO]
+### TASK-18 · frans U1: hiç sorulmamış kelimeler için 1 yeni test  [status: DONE — 2026-09-23 agy]
 - **Atanan**: agy
 - **Neden**: `examen_u1_vocab_6..10` 1–5'teki kelimeleri tekrar soruyor (9 ≈ 3); kitabın s. 48–51'indeki
   şu kelimeler hiç sorulmadı: le message, l'appli, on était, tu vas bien, née, la dent, la raison, le visiteur,
   admirer, prouver, compter, heureux/heureuse, premier/première, dernier, joli, grand, petit, mauvais, long.
-- **Çıktı**: `examen_u1_vocab_11.js`, YENİ id `ex-h3-frans-u1-v11`, 20 soru, `hoofdstuk:1`. 6–10'a dokunma (yayında).
-- **Kabul**: `gate.js frans` 16/16, `open_check.js` temiz, önceki 10 testle kelime tekrarı yok.
+- **Çıktı**: `examen_u1_vocab_11.js`, YENİ id `ex-h3-frans-u1-v11`, 20 soru, `hoofdstuk:1`. 6–10'a dokunulmadı.
+- **Kabul**: `gate.js frans` 16/16 geçti, `open_check.js` 0 hata, manifest güncellendi (`frans H1: 16 examen`).
 
 ### TASK-19 · economie: kitabın tamamı yok — H1–H3 ve §4.3 doğrulanamıyor  [status: BLOCKED — Duru'nun babasına soru]
 - **Bulgu (Opus)**: tek kaynak `Pincode 7e editie H4 Produceren 4.1–4.2` (6 sayfa, 3 Eylül). Sitedeki economie
@@ -693,7 +692,18 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - **5 Begrippentoets / Proeftoets** (`examen_u2_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
   - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi.
   - `tools/gate.js frans` → **16/16 kusursuz geçti** (9 onderwerp, 50 proeftoets, 1117 soru).
-  - U3–U8 PDF'leri geldikçe aynı standartla devam edilecek.
+- **agy notu (2026-09-23 13:45)**: ✅ **Unité 3 (En route!) TAMAMLANDI**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h03_en-route.pdf`.
+  - Kitaptaki kelime, konuşma ve dilbilgisi sayfaları bulundu ve OCR yapıldı (s. 124-127):
+    - Sayfa 124 (p-33.png): Blok A & B (Vocabulaire: Reizen, verkeer, richtingen, stad, werk, landschap).
+    - Sayfa 125 (p-34.png): Blok E & F (Vocabulaire: Vakantieverblijf, hotel, camping, maaltijden, beroepen, meningen).
+    - Sayfa 126 (p-35.png): Phrases-clés C & G (Spreken/Gespreksvaardigheid: Parler d'un voyage & Parler de ses vacances).
+    - Sayfa 127 (p-36.png): Grammaire D & H (Grammatica: Passé composé met avoir/être + accord & Lijdend voorwerp le, la, l', les).
+  - **4 Oefenles / Onderwerp** (`h3_1.js`..`h3_4.js`): Her biri 10 soru (mc, waaronwaar, invoer), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u3_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H3: 10 examen, 4 onderwerp`).
+  - `tools/gate.js frans` → **16/16 kusursuz geçti** (13 onderwerp, 61 proeftoets, 1377 soru).
+  - `tools/open_check.js frans` → **502 open soru tarandı, 0 sorun**.
 
 
 ### TASK-16 · aardrijkskunde H3–H5  [status: TODO — `aardrijkskunde_h03..h05_*.pdf` hazır]
