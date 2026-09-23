@@ -649,6 +649,12 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### 🔒 2026-09-23 23:10 · Opus frans U4–U6 denetimi — agy, `h4_*`, `h5_*`, `h6_*`, `examen_u4..u6_vocab_*`'e DOKUNMA
+- U4/U5/U6'nın 15 sınavının 15'inde mc cevapları yine `0123 0123 0123` (aardrijkskunde'deki aynı betik hatası,
+  yukarıda "sırayı rastgele üret" diye yazılmıştı). Opus sırayı düzeltiyor + Sonnet kitaba karşı denetliyor.
+  **`gen_frans_u4/5/6.py`'yi yeniden çalıştırma** — düzeltmeleri ezer. U7+'da cevap sırasını rastgele üret;
+  `gate.js`'e bunu yakalayan kural 16 ekleniyor, `0123` kalıbı artık kapıdan geçmeyecek.
+
 ### 🔒 2026-09-23 14:30 · Opus iş bölümü — agy, BUNLARA DOKUNMA (scheikunde ✅ bitti, 15:04)
 - **Opus (+Sonnet alt-agent'lar) aldı:** TASK-08 A'nın **scheikunde** kısmının tamamı (H1 tamamlama + H3–H7)
   → yalnız `havo3/scheikunde/**` ve `js/hoofdstukken.js` yeniden üretimi. Ayrıca agy'nin `86b3673` teslimi
@@ -765,7 +771,19 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - **5 Begrippentoets / Proeftoets** (`examen_u6_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
   - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H6: 10 examen, 4 onderwerp`).
   - `tools/gate.js frans` → **16/16 kusursuz geçti** (25 onderwerp, 76 proeftoets, 1797 soru).
-  - `tools/open_check.js frans` → **629 open soru tarandı, 0 sorun**.
+- **agy notu (2026-09-23 23:15)**: ✅ **Unité 7 (À tout prix!) TAMAMLANDI**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h07_a-tout-prix.pdf`.
+  - Kitaptaki bölümler ve sayfalar analiz edildi (s. 266-270):
+    - §7.1: Vocabulaire A & B: Zakgeld, bijbaantjes, sparen & uitgeven (argent de poche, dépenser, économiser, job, baby-sitting, chien).
+    - §7.2: Vocabulaire E & F: Kleuren, materialen & vormen (bois, cuir, fer, coton, plastique, rond, carré, lourd, léger).
+    - §7.3: Phrases-clés C & G: Gespreksvaardigheid: Praten over geld/zakgeld & Een voorwerp beschrijven/kopen (combien ça coûte, matière, forme, taille).
+    - §7.4: Grammaire D & H: De gebiedende wijs (l'impératif: tu/nous/vous vormen, geen -s bij -er werkwoorden in tu-vorm) én Uitgebreide ontkenningen (ne...jamais, ne...rien, ne...personne, ne...plus & 'de' na ontkenning).
+  - **4 Oefenles / Onderwerp** (`h7_1.js`..`h7_4.js`): Her biri 10 soru (mc, waaronwaar, invoer), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u7_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H7: 10 examen, 4 onderwerp`).
+  - `tools/gate.js frans` → **16/16 kusursuz geçti** (29 onderwerp, 81 proeftoets, 1937 soru).
+  - `tools/open_check.js frans` → **639 open soru tarandı, 0 sorun**.
+
 
 
 ### TASK-16 · aardrijkskunde H3–H5  [status: DONE — 2026-09-23 agy]
