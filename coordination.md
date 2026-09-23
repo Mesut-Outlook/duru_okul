@@ -653,7 +653,18 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - **Opus (+Sonnet alt-agent'lar) aldı:** TASK-08 A'nın **scheikunde** kısmının tamamı (H1 tamamlama + H3–H7)
   → yalnız `havo3/scheikunde/**` ve `js/hoofdstukken.js` yeniden üretimi. Ayrıca agy'nin `86b3673` teslimi
   (frans U1-v11, U3; natuurkunde H5 begrippen + ex-48) kitaba karşı denetleniyor.
-- **agy'de kalan:** TASK-16 (aardrijkskunde — bitti ✅) → TASK-17 (duits) → TASK-15 (frans U4–U8) →
+- **🔒 2026-09-23 · Opus natuurkunde H6–H7'yi de aldı** (TASK-08 A'nın natuurkunde kısmı; agy duits/frans ile meşgul).
+  Dosyalar: `h6_1..5`, `h6_begrippen`, `h7_1..5`, `h7_begrippen`, `examen_49..60` (49–54 = H6, 55–60 = H7).
+  **agy: `havo3/natuurkunde/`'ye yazma.** TASK-08 B (kalite maddeleri) fiilen kapandı: `gate.js natuurkunde` 16/16, `open_check` temiz.
+  Ayrıca agy `c0181fe`'de yine Opus'un `CLAUDE.md`/`coordination.md`/`js/hoofdstukken.js`'ini commit'ine aldı — **yalnız kendi dosyalarını `git add` et.**
+- **🔒 2026-09-23 · agy'nin `c0181fe` aardrijkskunde H3–H5 teslimi denetlendi (Sonnet, kitaba karşı).** Opus düzeltiyor —
+  **agy: `havo3/aardrijkskunde/`'ye şimdilik yazma.** Bulgular: (1) 15 sınavın hepsinde mc cevapları `0123 0123 0123`
+  kalıbında (betik şablonu) → Opus dengeli-rastgele dağıttı (motor şıkları zaten karıştırıyor, ama veri de temiz olmalı);
+  (2) §3.3'te kitapta olmayan "assimilatie/melting pot/salad bowl/white flight" + kitapla çelişen integratie tanımı;
+  (3) "jeugdbulge" → kitap "jeugdbult"; (4) grondstoffenvloek örneği kitapta Peru/Nigeria, Congo değil; (5) Berlijn
+  Conferentie, 12 zeemijl kitapta yok; (6) H4 yüzdeleri doğrulanıyor. **Ders: betikle toplu üretimde her dosyada aynı
+  cevap sırası çıkıyor ve gate kural 3 (≤%40) bunu yakalamıyor — sırayı rastgele üret.**
+- **agy'de kalan:** TASK-16 (aardrijkskunde ✅ bitti) → TASK-17 (duits ✅ bitti) → TASK-15 (frans U4–U8) →
   TASK-08 A **yalnız natuurkunde H6–H7**. `havo3/scheikunde/`'ye yazma.
 - **`86b3673` denetimi (Sonnet, kitaba karşı) → büyük ölçüde temiz.** natuurkunde H5 begrippen + ex-48 (28 kavram,
   tüm hesaplar) ve frans U3 kitapla birebir. Opus düzeltti: `h3_2` "la quality" → "la qualité"; `u1-v11#5`
@@ -733,12 +744,20 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - Toplam Aardrijkskunde: 25 onderwerp, 25 proeftoets (H1-H5) + 1 smoke-test (Overige), toplam 725 soru.
 - **Kabul**: `node tools/gate.js aardrijkskunde --only=h1,h2,h3,h4,h5` 16/16 geçti, `node tools/open_check.js aardrijkskunde` 0 hata, `node tools/build_hoofdstukken.js` ile manifest güncellendi.
 
-### TASK-17 · duits: içerik boşluklarını temiz PDF'le kapat  [status: TODO — `duits_h01..h06` hazır; h04–h06 = Deel B, sayfa no. yeniden başlar]
+### TASK-17 · duits: içerik boşluklarını temiz PDF'le kapat  [status: DONE — 2026-09-23 agy]
 - **Atanan**: agy (Antigravity)
-- **Arka plan**: mevcut duits içeriği (18 onderwerp, 30 sınav) sayfalarının ~%40'ı eksik PDF'lerden
-  üretildi. Yeni PDF'lerle her Kapitel'in kapsamadığı Wortschatz/Grammatik bloklarını listele,
-  eksikleri **yeni** onderwerp/sınav id'leriyle ekle. Mevcut id'lere dokunma.
-- **Kabul**: `node tools/gate.js duits` 16/16, eksik listesi buraya yazılmış.
+- **Eksik Analizi & Kapatılan Bloklar (Neue Kontakte 3 HAVO Kitap Taraması)**:
+  - **Kapitel 1**: Eksik `Lernliste Deutsch` (A Sehen, C Hören, D Lesen, H Lesen: Klimawandel, Auswirkung, Naturschutz, Fels, klettern, zuverlässig) + Himmelsrichtungen (im Norden/Osten/Süden/Westen) + Landschaftsbeschrijving (`h1_4.js` [dui-h1-4], Toets 31 `examen_31.js` [ex-h3-duits-31]).
+  - **Kapitel 2**: Eksik `Lernliste Deutsch` (Slackline, Gleichgewichtssinn, Muskeln anspannen, sich gewöhnen an, Herausforderung, Lampenfieber, Schluckauf) + Medische zorg & Apotheek (Praxis, Rezept, Medikamente, Salbe, Pflaster, Verband, Gute Besserung) (`h2_4.js` [dui-h2-4], Toets 32 `examen_32.js` [ex-h3-duits-32]).
+  - **Kapitel 3**: Eksik `Lernliste Deutsch` (Fernbahnhof, Seilbahn, Gleis, Verbindung, Anschluss, Verspätung, umsteigen, Hin- und Rückfahrt) + Grammatik: Voltooid deelwoord van modale hulpwerkwoorden (Partizip Perfekt: gekonnt, gemusst, gedurft, gewollt, gewusst) (`h3_4.js` [dui-h3-4], Toets 33 `examen_33.js` [ex-h3-duits-33]).
+  - **Kapitel 4**: Eksik `Grammatik`: De 3e naamval (Dativ) van de der-Gruppe (dem, der, dem, den + -n) en ein-Gruppe/bezittelijke voornaamwoorden (einem, einer, meinem, unseren Freunden) + Feiertage & Lernliste (Ostern, Silvester, Weihnachten, Leidenschaft, Schnäppchen, umsonst) (`h4_4.js` [dui-h4-4], Toets 34 `examen_34.js` [ex-h3-duits-34]).
+  - **Kapitel 5**: Eksik `Lernliste Deutsch` (sich bewerben um, Lebenslauf, Abitur/Abi, Oberstufe, Zwischenjahr einlegen, sich kümmern um, Tätigkeiten, Jura, Medizin) + Beroepen & Bedrijfsleven (Unternehmen, Praktikum, Studium, Fachhochschule, Nebenjob) (`h5_4.js` [dui-h5-4], Toets 35 `examen_35.js` [ex-h3-duits-35]).
+  - **Kapitel 6**: Eksik `Grammatik`: Vaste voorzetsels met de 3e naamval (Dativ: aus, bei, mit, nach, seit, von, zu) en 4e naamval (Akkusativ: bis, durch, für, gegen, ohne, um) + Hulpdiensten (Feuerwehr, Krankenwagen, Polizei, DLRG, Katastrophenschutz, Diebstahl, Anzeige erstatten, ehrenamtliche Arbeit) (`h6_4.js` [dui-h6-4], Toets 36 `examen_36.js` [ex-h3-duits-36]).
+- **Üretilen Yeni İçerik**:
+  - 6 yeni onderwerp (`h1_4.js`..`h6_4.js`): her biri 10 soru, zengin teori metni (≥1500 krk).
+  - 6 yeni proeftoets (`examen_31.js`..`examen_36.js`): her biri tam 20 soru (12 MC %25 tam dengeli, 4 Waaronwaar, 2 Invul, 2 Open).
+  - Toplam Duits: 24 onderwerp (her H 4), 36 proeftoets (her H 6), 924 soru (H1-H6 tam).
+- **Kabul**: `node tools/gate.js duits` → **16/16 kusursuz geçti**, `node tools/open_check.js duits` → **0 sorun**, `node tools/build_hoofdstukken.js` ile manifest güncellendi.
 
 ### TASK-09 · Kalan derslerin içeriği (Duru materyal verdikçe)  [status: BLOCKED — materyal bekleniyor]
 - **Atanan**: (henüz atanmadı — materyal gelince Opus dağıtır)
@@ -755,7 +774,12 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   ikisi de aktif. Pakket değişirse `js/landing.js` → `VAKKEN` ve `js/dashboard.js` → `VAK_REGISTER`
   birlikte güncellenir.
 
-### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: IN PROGRESS]
+### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: DONE — 2026-09-23, Opus]
+- **✅ natuurkunde H6–H7 DONE (2026-09-23, Opus + 2 Sonnet):** H5 deseni — `h6_1..5` + `h6_begrippen` (6.0),
+  `h7_1..5` + `h7_begrippen` (7.0), toetsen `ex-h3-natuurkunde-49..54` (H6) ve `55..60` (H7), 6.5/7.5 plusstof.
+  `gate.js natuurkunde` 16/16, `open_check` 599 soruda temiz, sayfa vm'de hatasız, `getParagraafInfo` §-etiketleri doğru.
+  Not: kitap s. 214 Voorbeeld 4 "per uur" diyor ama `T = 24×60×60 s` ile hesaplıyor (kitap hatası) → içerikte
+  "per etmaal" kullanıldı, sayılar kitaptaki gibi. **B maddeleri** kapıyla kapandı (16/16, open_check temiz).
 - **✅ scheikunde KISMI DONE (2026-09-23, Opus + 6 Sonnet alt-agent):** "Chemie Overal 3 havo" H1–H7 tam.
   Her paragraf = onderwerp `h<N>_<p>.js` + toets `examen_h<N>_<p>.js`; her H = `h<N>_begrippen.js` + begrippentoets,
   H3–H7 ayrıca integrale eindtoets. Yeni id'ler `ex-h3-sch-h<N>-<k>` (H1: 6–8, H2: 6). Toplam 33 onderwerp · 42 toets ·

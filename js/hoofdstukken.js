@@ -201,43 +201,55 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-duits-27": 6,
         "ex-h3-duits-28": 6,
         "ex-h3-duits-29": 6,
-        "ex-h3-duits-30": 6
+        "ex-h3-duits-30": 6,
+        "ex-h3-duits-31": 1,
+        "ex-h3-duits-32": 2,
+        "ex-h3-duits-33": 3,
+        "ex-h3-duits-34": 4,
+        "ex-h3-duits-35": 5,
+        "ex-h3-duits-36": 6
       },
       "onderwerpHoofdstuk": {
         "dui-h1-1": 1,
         "dui-h1-2": 1,
         "dui-h1-3": 1,
+        "dui-h1-4": 1,
         "dui-h2-1": 2,
         "dui-h2-2": 2,
         "dui-h2-3": 2,
+        "dui-h2-4": 2,
         "dui-h3-1": 3,
         "dui-h3-2": 3,
         "dui-h3-3": 3,
+        "dui-h3-4": 3,
         "dui-h4-1": 4,
         "dui-h4-2": 4,
         "dui-h4-3": 4,
+        "dui-h4-4": 4,
         "dui-h5-1": 5,
         "dui-h5-2": 5,
         "dui-h5-3": 5,
+        "dui-h5-4": 5,
         "dui-h6-1": 6,
         "dui-h6-2": 6,
-        "dui-h6-3": 6
+        "dui-h6-3": 6,
+        "dui-h6-4": 6
       },
       "aantalExamens": {
-        "1": 5,
-        "2": 5,
-        "3": 5,
-        "4": 5,
-        "5": 5,
-        "6": 5
+        "1": 6,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6,
+        "6": 6
       },
       "aantalOnderwerpen": {
-        "1": 3,
-        "2": 3,
-        "3": 3,
-        "4": 3,
-        "5": 3,
-        "6": 3
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4
       }
     },
     "economie": {
@@ -812,7 +824,19 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-45": 1,
         "ex-h3-natuurkunde-46": 1,
         "ex-h3-natuurkunde-47": 1,
-        "ex-h3-natuurkunde-48": 5
+        "ex-h3-natuurkunde-48": 5,
+        "ex-h3-natuurkunde-49": 6,
+        "ex-h3-natuurkunde-50": 6,
+        "ex-h3-natuurkunde-51": 6,
+        "ex-h3-natuurkunde-52": 6,
+        "ex-h3-natuurkunde-53": 6,
+        "ex-h3-natuurkunde-54": 6,
+        "ex-h3-natuurkunde-55": 7,
+        "ex-h3-natuurkunde-56": 7,
+        "ex-h3-natuurkunde-57": 7,
+        "ex-h3-natuurkunde-58": 7,
+        "ex-h3-natuurkunde-59": 7,
+        "ex-h3-natuurkunde-60": 7
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -842,6 +866,18 @@ window.DURU_HOOFDSTUKKEN = {
         "h5-4-oogafwijkingen": 5,
         "h5-5-rekenen-aan-lenzen": 5,
         "h5-begrippen": 5,
+        "h6-1-ons-zonnestelsel": 6,
+        "h6-2-aarde-en-maan": 6,
+        "h6-3-krachten-in-het-zonnestelsel": 6,
+        "h6-4-de-melkweg": 6,
+        "h6-5-onderzoek-in-het-heelal": 6,
+        "h6-begrippen": 6,
+        "h7-1-energie": 7,
+        "h7-2-rekenen-met-energie": 7,
+        "h7-3-energiegebruik-thuis": 7,
+        "h7-4-milieu": 7,
+        "h7-5-energie-in-de-toekomst": 7,
+        "h7-begrippen": 7,
         "h8-1-hefbomen": 8,
         "h8-2-rekenen-hefbomen": 8,
         "h8-3-overbrengingen": 8,
@@ -854,6 +890,8 @@ window.DURU_HOOFDSTUKKEN = {
         "3": 5,
         "4": 5,
         "5": 6,
+        "6": 6,
+        "7": 6,
         "8": 5
       },
       "aantalOnderwerpen": {
@@ -862,6 +900,8 @@ window.DURU_HOOFDSTUKKEN = {
         "3": 5,
         "4": 5,
         "5": 6,
+        "6": 6,
+        "7": 6,
         "8": 5
       }
     },
