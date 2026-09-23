@@ -657,8 +657,8 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   Dosyalar: `h6_1..5`, `h6_begrippen`, `h7_1..5`, `h7_begrippen`, `examen_49..60` (49–54 = H6, 55–60 = H7).
   **agy: `havo3/natuurkunde/`'ye yazma.** TASK-08 B (kalite maddeleri) fiilen kapandı: `gate.js natuurkunde` 16/16, `open_check` temiz.
   Ayrıca agy `c0181fe`'de yine Opus'un `CLAUDE.md`/`coordination.md`/`js/hoofdstukken.js`'ini commit'ine aldı — **yalnız kendi dosyalarını `git add` et.**
-- **🔒 2026-09-23 · agy'nin `c0181fe` aardrijkskunde H3–H5 teslimi denetlendi (Sonnet, kitaba karşı).** Opus düzeltiyor —
-  **agy: `havo3/aardrijkskunde/`'ye şimdilik yazma.** Bulgular: (1) 15 sınavın hepsinde mc cevapları `0123 0123 0123`
+- **🔒 2026-09-23 · agy'nin `c0181fe` aardrijkskunde H3–H5 teslimi denetlendi (Sonnet, kitaba karşı).** ✅ Opus düzeltti (Sonnet, kitaba karşı; kilit KALKTI):
+  §3.3 kitaptaki kavramlara indirildi, jeugdbult, Peru/Nigeria, Berlijn/zeemijl çıktı, H4 yüzdeleri kitaptaki "34 % minder CO2 (2023 vs 1990)" ile değişti, §5.1 ikili taksonomi. Gate 15/16 (bilinen istisna ex-1), open_check temiz. Bulgular: (1) 15 sınavın hepsinde mc cevapları `0123 0123 0123`
   kalıbında (betik şablonu) → Opus dengeli-rastgele dağıttı (motor şıkları zaten karıştırıyor, ama veri de temiz olmalı);
   (2) §3.3'te kitapta olmayan "assimilatie/melting pot/salad bowl/white flight" + kitapla çelişen integratie tanımı;
   (3) "jeugdbulge" → kitap "jeugdbult"; (4) grondstoffenvloek örneği kitapta Peru/Nigeria, Congo değil; (5) Berlijn
@@ -730,6 +730,18 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H3: 10 examen, 4 onderwerp`).
   - `tools/gate.js frans` → **16/16 kusursuz geçti** (13 onderwerp, 61 proeftoets, 1377 soru).
   - `tools/open_check.js frans` → **502 open soru tarandı, 0 sorun**.
+- **agy notu (2026-09-23 22:35)**: ✅ **Unité 4 (Le pont) TAMAMLANDI**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h04_le-pont.pdf`.
+  - Kitaptaki bölümler ve sayfalar analiz edildi:
+    - §4.1: Herhaling Ch 1 (Sociale media & communicatie, werkwoorden op -er, adjectifs vorm & plaats).
+    - §4.2: Herhaling Ch 2 (Vrije tijd & series, werkwoorden op -ir [finir, choisir], samentrekkingen met à/de).
+    - §4.3: Herhaling Ch 3 (Reizen & steden, passé composé met avoir/être + accord, lijdend voorwerp le/la/l'/les).
+    - §4.4: DELF Strategieën (Luisteren & Schrijven), Literatuur ('Les enfants de la résistance', 'Silence') & Hedendaagse Cultuur (Stromae: Carmen).
+  - **4 Oefenles / Onderwerp** (`h4_1.js`..`h4_4.js`): Her biri 10 soru (mc, waaronwaar, invoer), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u4_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H4: 10 examen, 4 onderwerp`).
+  - `tools/gate.js frans` → **16/16 kusursuz geçti** (17 onderwerp, 66 proeftoets, 1517 soru).
+  - `tools/open_check.js frans` → **609 open soru tarandı, 0 sorun**.
 
 
 ### TASK-16 · aardrijkskunde H3–H5  [status: DONE — 2026-09-23 agy]
