@@ -12,18 +12,17 @@ DURU.register({
   kleur: "h3-thema",
   theorie: `<h3>3.3 Gevolgen voor de bestemmingsgebieden</h3>
 <div class="info-box">
-  <b>Kernbegrippen:</b> Multiculturele samenleving, integratie, acculturatie, assimilatie, segregatie (ruimtelijk en sociaal), ontmoeting en spanningen.
+  <b>Kernbegrippen:</b> Multiculturele samenleving, acculturatie, integratie, segregatie (ruimtelijk en sociaal), ontmoeting en spanningen.
 </div>
 
 <h4>1. De multiculturele samenleving</h4>
-<p>Wanneer mensen uit diverse landen en culturen zich langdurig vestigen in een nieuw land, ontstaat een <b>multiculturele samenleving</b>. Hierin leven groepen met uiteenlopende culturele waarden, talen, godsdiensten en leefgewoonten naast en met elkaar. Dit zie je overal ter wereld vooral terug in de grote steden (zoals Amsterdam, Rotterdam, Londen, Parijs en New York), waar honderden nationaliteiten samenwonen.</p>
+<p>Doordat steeds meer verschillende groepen mensen uit verschillende culturen in hetzelfde land komen te wonen, ontstaat een <b>multiculturele samenleving</b>. Hierin leven groepen met uiteenlopende culturele waarden, talen, godsdiensten en leefgewoonten naast en met elkaar. Dit zie je overal ter wereld vooral terug in de grote steden (zoals Amsterdam, Rotterdam, Londen, Parijs en New York), waar honderden nationaliteiten samenwonen.</p>
 
 <h4>2. Cultuuroverdracht en aanpassing</h4>
-<p>Hoe gaan immigranten en de ontvangende samenleving met elkaars cultuur om? Geografen en sociologen onderscheiden drie belangrijke begrippen:</p>
+<p>Hoe gaan immigranten en de ontvangende samenleving met elkaars cultuur om? Geografen onderscheiden twee stappen:</p>
 <ul>
-  <li><b>Integratie:</b> Nieuwkomers passen zich aan de basisregels van de ontvangende samenleving aan (zoals het leren van de taal, respecteren van wetten en deelnemen aan de arbeidsmarkt), maar behouden tegelijkertijd hun eigen culturele identiteit, geloof en familietradities.</li>
-  <li><b>Assimilatie:</b> De immigrantengroep neemt de cultuur van het bestemmingsland zo volledig over dat de eigen oorspronkelijke culturele kenmerken en taal geheel verdwijnen.</li>
-  <li><b>Acculturatie:</b> Het proces van wederzijdse cultuurbeïnvloeding door langdurig contact tussen groepen. Zowel de immigranten als de autochtone bevolking nemen elementen van elkaar over (denk aan leenwoorden in de taal, eetcultuur zoals Surinaamse roti of Italiaanse pizza, en muziekstijlen).</li>
+  <li><b>Acculturatie:</b> Wanneer kenmerken van een andere cultuur worden overgenomen. Dat gebeurt bijvoorbeeld wanneer migranten de taal van het bestemmingsgebied leren, of wanneer een migrant een restaurant of winkel opent met eten uit het herkomstgebied.</li>
+  <li><b>Integratie:</b> Wanneer een migrant steeds meer gewoonten van het bestemmingsgebied overneemt.</li>
 </ul>
 
 <h4>3. Segregatie: Ruimtelijke scheiding in de stad</h4>
@@ -47,15 +46,15 @@ DURU.register({
     },
     {
         "type": "mc",
-        "vraag": "Wat is het verschil tussen <b>integratie</b> en <b>assimilatie</b>?",
+        "vraag": "Wat is het verschil tussen <b>acculturatie</b> en <b>integratie</b>?",
         "opties": [
-            "Bij integratie moet iedereen verhuizen; bij assimilatie mag iedereen blijven",
-            "Bij integratie behoudt men deels de eigen cultuur; bij assimilatie geeft men de eigen cultuur volledig op",
-            "Integratie geldt alleen voor toeristen; assimilatie voor expats",
-            "Integratie is verboden volgens de wet; assimilatie is verplicht"
+            "Acculturatie geldt alleen voor toeristen; integratie voor expats",
+            "Acculturatie betekent dat kenmerken van een andere cultuur worden overgenomen (bijvoorbeeld de taal leren); integratie betekent dat een migrant steeds meer gewoonten van het bestemmingsgebied overneemt",
+            "Acculturatie is verboden volgens de wet; integratie is verplicht",
+            "Er bestaat geen enkel verschil tussen beide begrippen"
         ],
         "antwoord": 1,
-        "uitleg": "Integratie = meedoen met behoud van eigen identiteit; assimilatie = volledige aanpassing waarbij de oorspronkelijke cultuur verdwijnt."
+        "uitleg": "Acculturatie is het overnemen van cultuurkenmerken door contact; integratie is het steeds meer overnemen van gewoonten van het bestemmingsgebied."
     },
     {
         "type": "waaronwaar",
@@ -77,9 +76,9 @@ DURU.register({
     },
     {
         "type": "invoer",
-        "vraag": "Welke term beschrijft het meedoen aan de samenleving (zoals taal leren en werken) met behoud van de eigen culturele achtergrond?",
+        "vraag": "Welke term beschrijft dat een migrant steeds meer de gewoonten van het bestemmingsgebied overneemt?",
         "antwoord": "integratie",
-        "uitleg": "Integratie is deelnemen aan de maatschappij met behoud van eigen identiteit."
+        "uitleg": "Integratie is het proces waarbij een migrant steeds meer gewoonten van het bestemmingsgebied overneemt."
     },
     {
         "type": "mc",
