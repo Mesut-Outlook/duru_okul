@@ -14,10 +14,10 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la dispute'</b>?",
       "opties": [
-        "de ontmoeting",
-        "de ruzie",
         "de toespraak",
-        "de afspraak"
+        "de ruzie",
+        "de afspraak",
+        "de ontmoeting"
       ],
       "antwoord": 1,
       "uitleg": "'La dispute' is de ruzie in het Frans."
@@ -26,36 +26,36 @@ DURU.register({
       "type": "mc",
       "vraag": "Welk bijvoeglijk naamwoord betekent <b>'moedig'</b> in het Frans?",
       "opties": [
+        "marrant",
         "paresseux",
         "énervant",
-        "courageux",
-        "marrant"
+        "courageux"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Courageux' (vrouwelijk: courageuse) betekent moedig."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse schoolterm <b>'le bac'</b>?",
       "opties": [
-        "het rapportcijfer",
+        "het eindexamen",
         "het lesrooster",
         "de schoolkantine",
-        "het eindexamen"
+        "het rapportcijfer"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Le bac' (baccalauréat) is het Franse eindexamen."
     },
     {
       "type": "mc",
       "vraag": "Wat is de Nederlandse betekenis van het Franse woord <b>'la confiance'</b>?",
       "opties": [
-        "het vertrouwen",
-        "de vriendschap",
+        "de verlegenheid",
         "de jaloezie",
-        "de verlegenheid"
+        "het vertrouwen",
+        "de vriendschap"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'La confiance' betekent het vertrouwen."
     },
     {

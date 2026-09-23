@@ -13,60 +13,60 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Waar staan in een gewone Franse zin met twee werkwoorden (zoals aller + hele werkwoord) de werkwoorden?",
       "opties": [
-        "Altijd direct bij elkaar (onderwerp + pv + infinitief)",
+        "De plaats maakt in het Frans niet uit",
         "Het hele werkwoord staat helemaal aan het einde van de zin",
         "Het hele werkwoord staat vóór het onderwerp",
-        "De plaats maakt in het Frans niet uit"
+        "Altijd direct bij elkaar (onderwerp + pv + infinitief)"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "In het Frans staan de werkwoorden altijd bij elkaar (je vais acheter un livre)."
     },
     {
       "type": "mc",
       "vraag": "Waar staat het bijwoord <b>'toujours'</b> (altijd) in een Franse zin?",
       "opties": [
-        "Helemaal aan het begin van de zin",
         "Direct na de persoonsvorm (het eerste werkwoord)",
-        "Achter het lijdend voorwerp",
-        "Altijd aan het einde van de zin"
+        "Altijd aan het einde van de zin",
+        "Helemaal aan het begin van de zin",
+        "Achter het lijdend voorwerp"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Bijwoorden zoals toujours, souvent en déjà staan direct na de persoonsvorm."
     },
     {
       "type": "mc",
       "vraag": "Welke zin heeft de JUISTE ontkenning bij een samengestelde tijd?",
       "opties": [
-        "Je ne suis allé pas en France.",
         "Je suis pas allé en France.",
         "Je ne suis pas allé en France.",
+        "Je ne suis allé pas en France.",
         "Je suis allé ne pas en France."
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Ne ... pas' omarmt de persoonsvorm (suis): 'Je ne suis pas allé'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse bijwoord <b>'souvent'</b>?",
       "opties": [
-        "nooit",
         "zelden",
-        "altijd",
-        "vaak"
+        "nooit",
+        "vaak",
+        "altijd"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Souvent' betekent vaak."
     },
     {
       "type": "mc",
       "vraag": "Welke zin is grammaticaal VOLKOMEN CORRECT?",
       "opties": [
-        "Demain, je vais acheter un cadeau.",
-        "Je vais un cadeau demain acheter.",
+        "Je vais demain un cadeau acheter.",
         "Acheter je vais un cadeau demain.",
-        "Je vais demain un cadeau acheter."
+        "Je vais un cadeau demain acheter.",
+        "Demain, je vais acheter un cadeau."
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "De werkwoorden 'vais acheter' blijven bij elkaar."
     },
     {
@@ -85,24 +85,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'énervant'</b>?",
       "opties": [
-        "rustgevend",
-        "grappig",
         "irritant / ergerlijk",
-        "spannend"
+        "rustgevend",
+        "spannend",
+        "grappig"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Énervant' betekent irritant of op de zenuwen werkend."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse zin <b>'Je me couche à dix heures'</b>?",
       "opties": [
-        "Ik sta om tien uur op.",
         "Ik ga om tien uur douchen.",
-        "Ik begin om tien uur met leren.",
-        "Ik ga om tien uur naar bed."
+        "Ik sta om tien uur op.",
+        "Ik ga om tien uur naar bed.",
+        "Ik begin om tien uur met leren."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Je me couche' betekent ik ga naar bed."
     },
     {
@@ -110,9 +110,9 @@ DURU.registerExamen({
       "vraag": "Kies de juiste vergelijking: 'Marie est ____ (sportiever dan) son frère.'",
       "opties": [
         "plus sportive que",
-        "plus sportif que",
+        "meilleur sportive que",
         "aussi sportif que",
-        "meilleur sportive que"
+        "plus sportif que"
       ],
       "antwoord": 0,
       "uitleg": "'Marie' is vrouwelijk, dus 'plus sportive que'."
@@ -121,9 +121,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le travail'</b>?",
       "opties": [
-        "de vakantie",
-        "het werk",
         "het salaris",
+        "het werk",
+        "de vakantie",
         "het contract"
       ],
       "antwoord": 1,
@@ -135,10 +135,10 @@ DURU.registerExamen({
       "opties": [
         "beginnen",
         "kiezen",
-        "verlaten",
-        "bezoeken"
+        "bezoeken",
+        "verlaten"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Quitter' betekent verlaten (bijv. quitter l'école)."
     },
     {
@@ -146,11 +146,11 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse uitdrukking <b>'parler couramment'</b>?",
       "opties": [
         "met veel fouten praten",
-        "stil blijven luisteren",
         "alleen maar korte woordjes zeggen",
-        "vloeiend en soepel spreken"
+        "vloeiend en soepel spreken",
+        "stil blijven luisteren"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Parler couramment' betekent vloeiend en vlot een taal spreken."
     },
     {

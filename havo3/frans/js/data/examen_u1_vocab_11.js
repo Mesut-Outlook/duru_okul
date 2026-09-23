@@ -13,12 +13,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de Franse werkwoordsvorm <b>'on était'</b> (imparfait van être, p. 48)?",
       "opties": [
-        "we waren / men was",
+        "we bleven",
         "we hadden",
         "we gingen",
-        "we bleven"
+        "we waren / men was"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'On était' betekent 'we waren' of 'men was' (de verleden tijd van être)."
     },
     {
@@ -26,35 +26,35 @@ DURU.registerExamen({
       "vraag": "Welke vaste Franse vraag betekent <b>'gaat het goed met je?'</b> (p. 48)?",
       "opties": [
         "où vas-tu?",
-        "tu vas bien?",
         "comment t'appelles-tu?",
+        "tu vas bien?",
         "ça te plaît?"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Tu vas bien?' betekent 'gaat het goed met je?' (informele begroeting)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het regelmatige Franse werkwoord <b>'admirer'</b> (p. 48)?",
       "opties": [
-        "waarschuwen",
-        "veroveren",
         "bewonderen",
-        "verbazen"
+        "verbazen",
+        "veroveren",
+        "waarschuwen"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Admirer' betekent 'bewonderen'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse werkwoord <b>'prouver'</b> (p. 49)?",
       "opties": [
-        "proberen",
         "goedkeuren",
+        "bewijzen",
         "ervaren",
-        "bewijzen"
+        "proberen"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Prouver' betekent 'bewijzen'."
     },
     {
@@ -73,12 +73,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de juiste Nederlandse vertaling van het Franse woord <b>'le visiteur'</b> (m, p. 49)?",
       "opties": [
-        "de bezoeker",
+        "de reiziger",
         "de gids",
-        "de bewoner",
-        "de reiziger"
+        "de bezoeker",
+        "de bewoner"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Le visiteur' betekent 'de bezoeker'."
     },
     {
@@ -97,21 +97,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de vrouwelijke vorm van het rangtelwoord <b>'premier'</b> (eerste, p. 51)?",
       "opties": [
-        "premiere",
-        "premiére",
         "première",
-        "premiers"
+        "premiers",
+        "premiére",
+        "premiere"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "De vrouwelijke vorm van 'premier' krijgt een grave accent en een -e: 'première'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'dernier'</b> (vr: dernière, p. 51)?",
       "opties": [
-        "volgende",
         "vorige",
         "belangrijkste",
+        "volgende",
         "laatste"
       ],
       "antwoord": 3,
@@ -147,8 +147,8 @@ DURU.registerExamen({
       "opties": [
         "wij waren / men was",
         "wij hebben / men heeft",
-        "wij gaan / men gaat",
-        "wij zullen zijn"
+        "wij zullen zijn",
+        "wij gaan / men gaat"
       ],
       "antwoord": 0,
       "uitleg": "'On était' is de verleden tijd (imparfait) van être en betekent 'wij waren' of 'men was'."
@@ -157,33 +157,33 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de Franse begroeting of vraag <b>'Tu vas bien?'</b> (p. 48)?",
       "opties": [
+        "Wat doe je nu?",
         "Waar ga je heen?",
         "Gaat het goed met je?",
-        "Wat doe je nu?",
         "Kom je ook mee?"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Tu vas bien?' betekent 'Gaat het goed met je?'."
     },
     {
       "type": "mc",
       "vraag": "Welk Frans bijvoeglijk naamwoord betekent <b>'groot'</b> (mannelijk enkelvoud, p. 51)?",
       "opties": [
-        "gros",
         "large",
         "grand",
+        "gros",
         "haut"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Grand' (vrouwelijk: grande) betekent 'groot'."
     },
     {
       "type": "mc",
       "vraag": "Wat is de vrouwelijke vorm van het bijvoeglijk naamwoord <b>'long'</b> (lang, p. 51)?",
       "opties": [
-        "longe",
-        "longuee",
         "longie",
+        "longuee",
+        "longe",
         "longue"
       ],
       "antwoord": 3,

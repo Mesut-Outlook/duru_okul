@@ -14,48 +14,48 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe vraag je in het Frans of iemand zakgeld krijgt?",
       "opties": [
-        "Tu as de l'argent de poche?",
-        "Combien coûte ce pantalon?",
         "Tu as acheté un nouveau vélo?",
-        "Où se trouve la banque?"
+        "Tu as de l'argent de poche?",
+        "Où se trouve la banque?",
+        "Combien coûte ce pantalon?"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Tu as de l'argent de poche?' vraagt naar zakgeld."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse zin <b>'Je paye mon abonnement de téléphone'</b>?",
       "opties": [
-        "Ik koop een nieuwe telefoon.",
-        "Ik betaal mijn telefoonabonnement.",
         "Mijn telefoon is kapot gegaan.",
-        "Ik bel mijn ouders op."
+        "Ik koop een nieuwe telefoon.",
+        "Ik bel mijn ouders op.",
+        "Ik betaal mijn telefoonabonnement."
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Abonnement de téléphone' is het telefoonabonnement."
     },
     {
       "type": "mc",
       "vraag": "Hoe zeg je in het Frans: 'Het is een soort van... '?",
       "opties": [
-        "C'est fait de...",
-        "Je ne sais pas...",
         "C'est une sorte de...",
-        "Je préfère le..."
+        "Je préfère le...",
+        "Je ne sais pas...",
+        "C'est fait de..."
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'C'est une sorte de...' betekent het is een soort van."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse zin <b>'C'est pratique pour voyager'</b>?",
       "opties": [
-        "Het is te zwaar om mee te nemen.",
-        "Het is verboden in het vliegtuig.",
         "Het kost veel geld op vakantie.",
-        "Het is handig / praktisch om mee te reizen."
+        "Het is verboden in het vliegtuig.",
+        "Het is handig / praktisch om mee te reizen.",
+        "Het is te zwaar om mee te nemen."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Pratique' betekent handig of praktisch."
     },
     {

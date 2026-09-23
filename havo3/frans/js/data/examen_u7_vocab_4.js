@@ -13,22 +13,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de regel voor de jij-vorm van de gebiedende wijs bij regelmatige werkwoorden op -er?",
       "opties": [
-        "De vorm eindigt op -e (de -s van de présens valt weg)",
-        "De vorm eindigt altijd verplicht op -es",
         "De vorm krijgt een uitroepteken achter de infinitief",
-        "Er moet altijd 'tu' vóór het werkwoord staan"
+        "Er moet altijd 'tu' vóór het werkwoord staan",
+        "De vorm eindigt altijd verplicht op -es",
+        "De vorm eindigt op -e (de -s van de présens valt weg)"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Bij regelmatige -er werkwoorden valt de slot -s weg in de jij-vorm van de impératif (bijv. Cherche! Reste!)."
     },
     {
       "type": "mc",
       "vraag": "Hoe vertaal je het bevel tegen één persoon: 'Blijf thuis!'?",
       "opties": [
-        "Restes à la maison!",
-        "Reste à la maison!",
         "Restez à la maison!",
-        "Restons à la maison!"
+        "Reste à la maison!",
+        "Restons à la maison!",
+        "Restes à la maison!"
       ],
       "antwoord": 1,
       "uitleg": "De jij-vorm van rester in de impératif is 'Reste' (zonder -s)."
@@ -37,12 +37,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de gebiedende wijs in de nous-vorm: <b>'Faisons des économies!'</b>?",
       "opties": [
-        "Jullie moeten sparen!",
-        "Zij sparen veel geld.",
         "Laten we sparen!",
-        "Ik wil gaan sparen."
+        "Zij sparen veel geld.",
+        "Ik wil gaan sparen.",
+        "Jullie moeten sparen!"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "De nous-vorm in de impératif vertaal je met 'Laten we...': Laten we sparen!"
     },
     {
@@ -51,58 +51,58 @@ DURU.registerExamen({
       "opties": [
         "Vais!",
         "Allez!",
-        "Allons!",
-        "Va!"
+        "Va!",
+        "Allons!"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "Tegen één persoon zeg je 'Va!' (zonder -s), bijvoorbeeld: 'Va à l'école!'."
     },
     {
       "type": "mc",
       "vraag": "Hoe zeg je tegen een groep vrienden (jullie): 'Kijk naar deze foto!'?",
       "opties": [
+        "Vous regardez cette photo!",
         "Regardez cette photo!",
-        "Regarde cette photo!",
         "Regardons cette photo!",
-        "Vous regardez cette photo!"
+        "Regarde cette photo!"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Tegen een groep gebruik je de vous-vorm: 'Regardez!'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste ontkennende gebiedende wijs: 'Koop geen chips!' (tegen meer personen):",
       "opties": [
-        "Ne achetez pas de chips!",
-        "N'achetez pas de chips!",
+        "N'achète pas de chips!",
         "Ne pas achetez de chips!",
-        "N'achète pas de chips!"
+        "N'achetez pas de chips!",
+        "Ne achetez pas de chips!"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "Vóór een klinker wordt ne 'n'': 'N'achetez pas de chips!'."
     },
     {
       "type": "mc",
       "vraag": "Wat is de gebiedende wijs van 'finir' tegen één persoon?",
       "opties": [
-        "Fini!",
         "Finisse!",
-        "Finis!",
-        "Finissez!"
+        "Fini!",
+        "Finissez!",
+        "Finis!"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Bij werkwoorden op -ir blijft de -s wél behouden: 'Finis tes devoirs!'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het voorstel <b>'Allons au cinéma ce soir!'</b>?",
       "opties": [
-        "Ga vanavond naar de bioscoop!",
+        "Laten we vanavond naar de bioscoop gaan!",
         "Zij gaan vanavond naar de film.",
         "Ik wil naar de bioscoop.",
-        "Laten we vanavond naar de bioscoop gaan!"
+        "Ga vanavond naar de bioscoop!"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Allons' is de nous-vorm en betekent 'laten we gaan'."
     },
     {
@@ -111,8 +111,8 @@ DURU.registerExamen({
       "opties": [
         "Nee, bij de gebiedende wijs staat er nooit een onderwerp in de zin",
         "Ja, altijd verplicht direct vóór het werkwoord",
-        "Alleen bij de nous-vorm",
-        "Alleen in ontkennende zinnen"
+        "Alleen in ontkennende zinnen",
+        "Alleen bij de nous-vorm"
       ],
       "antwoord": 0,
       "uitleg": "Bij de gebiedende wijs staat er nooit een onderwerp (geen tu, nous of vous)."
@@ -134,23 +134,23 @@ DURU.registerExamen({
       "vraag": "Hoe vertaal je: 'Laten we een oplossing zoeken!'?",
       "opties": [
         "Cherche une solution!",
+        "Nous cherchons une solution!",
         "Cherchez une solution!",
-        "Cherchons une solution!",
-        "Nous cherchons une solution!"
+        "Cherchons une solution!"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Laten we...' is de nous-vorm: 'Cherchons!'."
     },
     {
       "type": "mc",
       "vraag": "Hoe spreek je een volwassene beleefd toe met een verzoek ('Gaat u zitten!')?",
       "opties": [
-        "Assieds-toi!",
-        "Asseyez-nous!",
         "Assieds-vous!",
-        "Asseyez-vous!"
+        "Asseyez-nous!",
+        "Asseyez-vous!",
+        "Assieds-toi!"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "De beleefde vous-vorm is 'Asseyez-vous!'."
     },
     {

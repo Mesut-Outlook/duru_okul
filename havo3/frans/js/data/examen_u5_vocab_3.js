@@ -13,12 +13,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe vraag je aan je tafelgenoot wat hij of zij wil drinken?",
       "opties": [
-        "Qu'est-ce que tu veux boire?",
-        "Qu'est-ce que tu prends comme dessert?",
         "Où se trouve la cuisine?",
-        "Combien coûte ce repas?"
+        "Combien coûte ce repas?",
+        "Qu'est-ce que tu veux boire?",
+        "Qu'est-ce que tu prends comme dessert?"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Qu'est-ce que tu veux boire?' betekent 'Wat wil je drinken?'."
     },
     {
@@ -27,8 +27,8 @@ DURU.registerExamen({
       "opties": [
         "Ik kook vandaag zelf.",
         "Ik neem het dagmenu.",
-        "Ik wil alleen een toetje.",
-        "Ik vraag om de rekening."
+        "Ik vraag om de rekening.",
+        "Ik wil alleen een toetje."
       ],
       "antwoord": 1,
       "uitleg": "'Le plat du jour' is de dagschotel of het dagmenu."
@@ -37,72 +37,72 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe zeg je beleefd dat je graag een glas water wilt?",
       "opties": [
-        "Donne-moi une bière.",
+        "Une bouteille de vin rouge, s'il vous plaît.",
         "Je n'aime pas l'eau.",
-        "Je voudrais un verre d'eau.",
-        "Une bouteille de vin rouge, s'il vous plaît."
+        "Donne-moi une bière.",
+        "Je voudrais un verre d'eau."
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Je voudrais un verre d'eau' betekent 'Ik wil graag een glas water'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de vraag <b>'Tu prends aussi un dessert?'</b>?",
       "opties": [
+        "Neem je ook een toetje?",
         "Drink je ook koffie?",
         "Heb je al betaald?",
-        "Wil je nog brood?",
-        "Neem je ook een toetje?"
+        "Wil je nog brood?"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Un dessert' is een toetje of nagerecht."
     },
     {
       "type": "mc",
       "vraag": "Wat zeg je als je nog niet hebt gekozen: <b>'Je ne sais pas encore'</b>?",
       "opties": [
-        "Ik weet het nog niet.",
         "Ik heb geen honger.",
-        "Ik vind het niet lekker.",
-        "Ik wil niets bestellen."
+        "Ik weet het nog niet.",
+        "Ik wil niets bestellen.",
+        "Ik vind het niet lekker."
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Je ne sais pas encore' betekent 'Ik weet het nog niet'."
     },
     {
       "type": "mc",
       "vraag": "Hoe vraag je of er noten in een gerecht verwerkt zijn?",
       "opties": [
-        "Ce plat est très salé?",
         "Il y a des noix dans ce plat?",
-        "Vous avez de la viande bio?",
-        "C'est un plat végétarien?"
+        "C'est un plat végétarien?",
+        "Ce plat est très salé?",
+        "Vous avez de la viande bio?"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Il y a des noix dans ce plat?' vraagt naar noten in het eten."
     },
     {
       "type": "mc",
       "vraag": "Hoe meld je aan de bediening dat je frietjes koud zijn?",
       "opties": [
-        "Mes frites sont trop chaudes.",
+        "Je n'aime pas les frites.",
         "Il n'y a pas assez de sel.",
-        "Mes frites sont froides.",
-        "Je n'aime pas les frites."
+        "Mes frites sont trop chaudes.",
+        "Mes frites sont froides."
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Mes frites sont froides' betekent 'Mijn frietjes zijn koud'."
     },
     {
       "type": "mc",
       "vraag": "Wat zeg je als de ober een verkeerd gerecht brengt: <b>'Excusez-moi, il y a une erreur'</b>?",
       "opties": [
-        "Pardon, ik wil nu vertrekken.",
-        "Pardon, mag ik de menukaart zien?",
         "Pardon, waar is het toilet?",
-        "Pardon, er is een foutje / vergissing gemaakt."
+        "Pardon, mag ik de menukaart zien?",
+        "Pardon, er is een foutje / vergissing gemaakt.",
+        "Pardon, ik wil nu vertrekken."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Il y a une erreur' betekent er is een foutje gemaakt."
     },
     {
@@ -110,9 +110,9 @@ DURU.registerExamen({
       "vraag": "Hoe vraag je om mayonaise in een bistro?",
       "opties": [
         "Je peux avoir de la mayonnaise?",
-        "Donnez-moi du ketchup.",
+        "Je n'aime pas la sauce.",
         "Où est la moutarde?",
-        "Je n'aime pas la sauce."
+        "Donnez-moi du ketchup."
       ],
       "antwoord": 0,
       "uitleg": "'Je peux avoir de la mayonnaise?' is de correcte beleefde vraag."
@@ -121,9 +121,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de zin <b>'Je n'ai pas de couteau'</b>?",
       "opties": [
-        "Ik wil geen lepel.",
-        "Ik heb geen mes.",
         "Mijn vork is vies.",
+        "Ik heb geen mes.",
+        "Ik wil geen lepel.",
         "Ik heb geen servet."
       ],
       "antwoord": 1,
@@ -133,10 +133,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe vraag je om gratis kraanwater aan tafel in Frankrijk?",
       "opties": [
+        "Un café noir sans sucre.",
         "Une bouteille de soda, s'il vous plaît.",
-        "Un coca avec des glaçons.",
         "Une carafe d'eau, s'il vous plaît.",
-        "Un café noir sans sucre."
+        "Un coca avec des glaçons."
       ],
       "antwoord": 2,
       "uitleg": "'Une carafe d'eau, s'il vous plaît' levert een karaf gratis kraanwater op."
@@ -145,9 +145,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het voorstel <b>'Alors, on commande?'</b>?",
       "opties": [
-        "Zullen we nu betalen?",
         "Gaan we naar huis?",
         "Zullen we een toetje nemen?",
+        "Zullen we nu betalen?",
         "Zullen we bestellen?"
       ],
       "antwoord": 3,

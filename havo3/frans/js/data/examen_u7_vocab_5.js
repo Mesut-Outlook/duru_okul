@@ -13,24 +13,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke Franse ontkenning betekent <b>'niets'</b>?",
       "opties": [
-        "ne ... rien",
-        "ne ... plus",
         "ne ... jamais",
-        "ne ... pas encore"
+        "ne ... pas encore",
+        "ne ... plus",
+        "ne ... rien"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Ne ... rien' betekent niets (bijv. je ne comprends rien)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de ontkenning <b>'ne ... plus'</b> in het Nederlands?",
       "opties": [
-        "nooit meer",
         "niet meer",
         "nog niet",
-        "helemaal niets"
+        "helemaal niets",
+        "nooit meer"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Ne ... plus' betekent niet meer."
     },
     {
@@ -50,35 +50,35 @@ DURU.registerExamen({
       "vraag": "Wat is de ontkenning van de Franse uitdrukking <b>'il y a'</b>?",
       "opties": [
         "il y a pas",
-        "il ne y a pas",
+        "il n'y a pas",
         "il n'y pas",
-        "il n'y a pas"
+        "il ne y a pas"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "De ontkenning van il y a is 'il n'y a pas'."
     },
     {
       "type": "mc",
       "vraag": "Wat gebeurt er met 'des' in: 'J'ai des bonbons ➔ Je n'ai pas ____ bonbons.'?",
       "opties": [
-        "de",
-        "des",
+        "les",
         "du",
-        "les"
+        "des",
+        "de"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Na een ontkenning verandert 'des' in 'de' (pas de bonbons)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse zin <b>'Je n'ai jamais été en France'</b>?",
       "opties": [
-        "Ik wil niet meer naar Frankrijk.",
         "Ik ben nog nooit in Frankrijk geweest.",
-        "Ik ga binnenkort naar Frankrijk.",
-        "Ik woon al jaren in Frankrijk."
+        "Ik woon al jaren in Frankrijk.",
+        "Ik wil niet meer naar Frankrijk.",
+        "Ik ga binnenkort naar Frankrijk."
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Ne ... jamais' betekent nooit."
     },
     {
@@ -86,71 +86,71 @@ DURU.registerExamen({
       "vraag": "Kies de juiste ontkenning voor 'nog niet': 'Elle ____ (is nog niet) partie.'",
       "opties": [
         "n'est plus",
-        "n'est jamais",
         "n'est pas encore",
+        "n'est jamais",
         "n'est rien"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'N'est pas encore' betekent is nog niet."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste ontkenning van <b>'c'est'</b>?",
       "opties": [
-        "c'est pas",
         "ce pas est",
-        "ce n'est rien",
-        "ce n'est pas"
+        "c'est pas",
+        "ce n'est pas",
+        "ce n'est rien"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "De ontkenning van c'est is 'ce n'est pas'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm na de ontkenning: 'Non, je n'ai pas ____ (geld).'",
       "opties": [
-        "d'argent",
         "de l'argent",
+        "des argent",
         "du argent",
-        "des argent"
+        "d'argent"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Voor een klinker (argent) wordt 'de' verplicht 'd'': 'pas d'argent'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de zin <b>'Il n'y a pas de réduction'</b>?",
       "opties": [
+        "Waar is de korting?",
         "Er is veel korting.",
         "Er is geen korting.",
-        "De korting geldt morgen.",
-        "Waar is de korting?"
+        "De korting geldt morgen."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Il n'y a pas de réduction' betekent er is geen korting."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le casque'</b>?",
       "opties": [
-        "de microfoon",
         "het computerscherm",
         "de koptelefoon",
+        "de microfoon",
         "het hoesje"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Le casque' is de koptelefoon."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de uitroep <b>'Dommage!'</b>?",
       "opties": [
-        "Gefeliciteerd!",
+        "Jammer!",
         "Tot ziens!",
-        "Alsjeblieft!",
-        "Jammer!"
+        "Gefeliciteerd!",
+        "Alsjeblieft!"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Dommage!' betekent jammer."
     },
     {

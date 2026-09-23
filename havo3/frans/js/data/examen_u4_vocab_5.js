@@ -13,45 +13,45 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de uitdrukking <b>'rendre visite à quelqu'un'</b>?",
       "opties": [
+        "iemand uitnodigen",
         "iemand bezoeken",
         "iemand opbellen",
-        "iemand uitnodigen",
         "iemand feliciteren"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Rendre visite à' betekent iemand bezoeken."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm van het werkwoord 'partir' bij être: 'Mes cousines sont ____ (vertrokken) hier.'",
       "opties": [
+        "partie",
         "parti",
         "parties",
-        "partie",
         "partis"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Mes cousines' is vrouwelijk meervoud, dus bij être krijgt parti de uitgang -es: 'parties'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste samentrekking: 'Ils parlent souvent ____ (over de) problèmes des jeunes.'",
       "opties": [
+        "des",
         "du",
         "de la",
-        "des",
         "de l'"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Problèmes' is meervoud, dus de + les wordt 'des'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'l'aller-retour'</b> (m)?",
       "opties": [
+        "de tussenstop",
         "de enkele reis",
         "de overstap",
-        "de tussenstop",
         "het retourtje"
       ],
       "antwoord": 3,
@@ -61,48 +61,48 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vrouwelijke meervoudsvorm: 'Ce sont des sportives très ____ (actief).'",
       "opties": [
-        "actives",
+        "actifs",
         "actif",
         "active",
-        "actifs"
+        "actives"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Vrouwelijk meervoud van actif is 'actives'."
     },
     {
       "type": "mc",
       "vraag": "Vervang het lijdend voorwerp: 'Tu as fait tes devoirs? ➔ Oui, je ____ ai faits.'",
       "opties": [
-        "l'",
-        "les",
+        "le",
         "la",
-        "le"
+        "les",
+        "l'"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Tes devoirs' is meervoud, dus je gebruikt 'les'."
     },
     {
       "type": "mc",
       "vraag": "Wat is het juiste voltooid deelwoord van het werkwoord <b>'voir'</b> (zien)?",
       "opties": [
-        "voisé",
-        "voisi",
         "vu",
-        "vais"
+        "vais",
+        "voisi",
+        "voisé"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "Het voltooid deelwoord van voir is 'vu' (j'ai vu ce film)."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste samentrekking: 'Mon frère adore aller ____ (naar het) parc le weekend.'",
       "opties": [
-        "à la",
-        "aux",
         "à l'",
-        "au"
+        "au",
+        "aux",
+        "à la"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "Parc is mannelijk (le parc), dus à + le wordt 'au'."
     },
     {
@@ -110,9 +110,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse woord <b>'le quartier'</b>?",
       "opties": [
         "de wijk / de buurt",
-        "het kwartier van een uur",
+        "de supermarkt",
         "het stadhuis",
-        "de supermarkt"
+        "het kwartier van een uur"
       ],
       "antwoord": 0,
       "uitleg": "'Le quartier' betekent de wijk of de buurt."
@@ -121,12 +121,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de vervoeging van 'finir' bij 'ils' in de présent?",
       "opties": [
-        "ils finisent",
-        "ils finissent",
         "ils finissons",
-        "ils finissez"
+        "ils finissez",
+        "ils finissent",
+        "ils finisent"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "De uitgang bij ils/elles is -issent: 'finissent'."
     },
     {
@@ -134,11 +134,11 @@ DURU.registerExamen({
       "vraag": "Welke zin heeft het bijvoeglijk naamwoord op de JUISTE plaats?",
       "opties": [
         "Il a une noire voiture.",
+        "J'habite dans une moderne maison.",
         "Elle a un bleu pantalon.",
-        "C'est un beau village en France.",
-        "J'habite dans une moderne maison."
+        "C'est un beau village en France."
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Beau' staat vóór het zelfstandig naamwoord: 'un beau village'."
     },
     {
@@ -146,11 +146,11 @@ DURU.registerExamen({
       "vraag": "Wat betekent de uitdrukking <b>'en face de'</b>?",
       "opties": [
         "naast",
-        "boven",
+        "tegenover",
         "achter",
-        "tegenover"
+        "boven"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'En face de' betekent tegenover."
     },
     {

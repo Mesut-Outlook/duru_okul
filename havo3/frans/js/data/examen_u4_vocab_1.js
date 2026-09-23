@@ -13,12 +13,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le portable'</b>?",
       "opties": [
-        "de mobiele telefoon",
-        "de brievenbus",
         "de laptophoes",
+        "de brievenbus",
+        "de mobiele telefoon",
         "het tablet-toetsenbord"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Le portable' is de mobiele telefoon (smartphone)."
     },
     {
@@ -27,8 +27,8 @@ DURU.registerExamen({
       "opties": [
         "ambitieux",
         "ambitieuses",
-        "ambitieuse",
-        "ambitieus"
+        "ambitieus",
+        "ambitieuse"
       ],
       "antwoord": 1,
       "uitleg": "Vrouwelijk meervoud van ambitieux is 'ambitieuses'."
@@ -37,58 +37,58 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk bijvoeglijk naamwoord hoort volgens de regels VÓÓR het zelfstandig naamwoord te staan?",
       "opties": [
-        "intéressant",
         "algérien",
-        "vieux",
-        "sportif"
+        "sportif",
+        "intéressant",
+        "vieux"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Vieux' is een kort basisadjectief dat vóór het zelfstandig naamwoord staat (un vieux livre)."
     },
     {
       "type": "mc",
       "vraag": "Wat is de betekenis van het Franse werkwoord <b>'bavarder'</b>?",
       "opties": [
-        "huilen",
-        "schreeuwen",
+        "kletsen / gezellig praten",
         "reizen",
-        "kletsen / gezellig praten"
+        "schreeuwen",
+        "huilen"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Bavarder' betekent kletsen."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vrouwelijke vorm: 'C'est une ____ (goede) amie de ma sœur.'",
       "opties": [
+        "bonnes",
         "bonne",
-        "bon",
         "bons",
-        "bonnes"
+        "bon"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "De vrouwelijke vorm van 'bon' is 'bonne'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent <b>'l'écran'</b> (m) in het dagelijks taalgebruik?",
       "opties": [
-        "de toetsen",
-        "het beeldscherm",
         "de batterij",
-        "de oplader"
+        "de oplader",
+        "de toetsen",
+        "het beeldscherm"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'L'écran' is het beeldscherm."
     },
     {
       "type": "mc",
       "vraag": "Welke zin heeft de juiste woordvolgorde voor het bijvoeglijk naamwoord?",
       "opties": [
+        "Il a un grand nez rouge jamais.",
         "J'ai acheté une rouge voiture.",
-        "Elle porte une délicieuse robe.",
         "J'ai préparé un couscous délicieux.",
-        "Il a un grand nez rouge jamais."
+        "Elle porte une délicieuse robe."
       ],
       "antwoord": 2,
       "uitleg": "Kleur en smaak/beoordeling zoals 'délicieux' staan achter het zelfstandig naamwoord: 'un couscous délicieux'."
@@ -97,60 +97,60 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de werkwoordsvorm <b>'nous partageons'</b>?",
       "opties": [
+        "wij delen",
         "wij vertrekken",
         "wij ontmoeten",
-        "wij vergeten",
-        "wij delen"
+        "wij vergeten"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Partager' betekent delen (nous partageons des photos)."
     },
     {
       "type": "mc",
       "vraag": "Wat is de mannelijke vorm die hoort bij het vrouwelijke <b>'nouvelle'</b>?",
       "opties": [
-        "nouveau",
         "nouvels",
-        "neufe",
-        "noveau"
+        "noveau",
+        "nouveau",
+        "neufe"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Nouveau' is mannelijk, 'nouvelle' is vrouwelijk."
     },
     {
       "type": "mc",
       "vraag": "Vertaal het cursieve woord: 'Elle a reçu un <i>message</i> important.'",
       "opties": [
-        "cadeau",
-        "bericht",
+        "rapportcijfer",
         "brief",
-        "rapportcijfer"
+        "cadeau",
+        "bericht"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Un message' is een bericht."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vervoeging van 'aimer' in 'Les jeunes ____ les réseaux sociaux.'",
       "opties": [
-        "aime",
-        "aimons",
         "aiment",
+        "aimons",
+        "aime",
         "aimez"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "Bij 'les jeunes' (ils) hoort de uitgang -ent: 'aiment'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'l'appli'</b>?",
       "opties": [
-        "het telefoongesprek",
         "het wachtwoord",
+        "de mobiele applicatie",
         "de camera",
-        "de mobiele applicatie"
+        "het telefoongesprek"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'L'appli' is de afkorting voor applicatie / app."
     },
     {

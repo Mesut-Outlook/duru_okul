@@ -13,22 +13,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk document stuur je mee bij een sollicitatie om je opleiding en werkervaring te tonen?",
       "opties": [
-        "der Lebenslauf",
+        "das Studium",
         "das Praktikum",
         "die Auszeit",
-        "das Studium"
+        "der Lebenslauf"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Der Lebenslauf' is het cv."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de afkorting 'das Abi' in het Duitse onderwijssysteem?",
       "opties": [
-        "de toelatingstest voor het mbo",
+        "het getuigschrift van de basisschool",
         "het vwo-eindexamendiploma (Abitur)",
         "het stagecontract bij een bedrijf",
-        "het getuigschrift van de basisschool"
+        "de toelatingstest voor het mbo"
       ],
       "antwoord": 1,
       "uitleg": "'Das Abi' is de afkorting voor het Abitur (vwo-eindexamen)."
@@ -49,36 +49,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Duits werkwoord betekent 'solliciteren naar een baan'?",
       "opties": [
-        "sich beschäftigen mit",
-        "anfangen",
+        "sich bewerben um",
         "faulenzen",
-        "sich bewerben um"
+        "anfangen",
+        "sich beschäftigen mit"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Sich bewerben um' betekent solliciteren naar."
     },
     {
       "type": "mc",
       "vraag": "Wat is in Duitsland een 'Fachhochschule'?",
       "opties": [
+        "een muziekschool",
         "een hogeschool voor hoger beroepsonderwijs (hbo)",
-        "een internaat voor topsporters",
         "een lagere school voor beroepsoriëntatie",
-        "een muziekschool"
+        "een internaat voor topsporters"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Die Fachhochschule' is de Duitse tegenhanger van het Nederlandse hbo."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de uitdrukking 'ein Zwischenjahr einlegen'?",
       "opties": [
-        "zakken voor het eindexamen",
         "een tussenjaar nemen na het behalen van je diploma",
-        "meteen beginnen met een voltijdbaan",
-        "overstappen naar een andere schoolklas"
+        "zakken voor het eindexamen",
+        "overstappen naar een andere schoolklas",
+        "meteen beginnen met een voltijdbaan"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Ein Zwischenjahr einlegen' betekent een tussenjaar nemen."
     },
     {
@@ -110,8 +110,8 @@ DURU.registerExamen({
       "vraag": "Welk beroep wordt aangeduid met 'der Krankenpfleger'?",
       "opties": [
         "de verpleegkundige (mannelijk)",
-        "de fysiotherapeut",
         "de dierenarts",
+        "de fysiotherapeut",
         "de apotheker"
       ],
       "antwoord": 0,
@@ -121,10 +121,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat voor werkzaamheden verricht een 'Mediendesigner' hoofdzakelijk in een onderneming?",
       "opties": [
-        "het bereiden van maaltijden in de kantine",
-        "het ontwerpen van digitale media, websites en grafische uitingen",
         "het verplegen van zieke werknemers",
-        "het besturen van vrachtwagens"
+        "het ontwerpen van digitale media, websites en grafische uitingen",
+        "het besturen van vrachtwagens",
+        "het bereiden van maaltijden in de kantine"
       ],
       "antwoord": 1,
       "uitleg": "Een 'Mediendesigner' ontwerpt grafische en digitale media, lay-outs en animaties."
@@ -133,24 +133,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent 'sich kümmern um Patienten'?",
       "opties": [
-        "patienten naar huis sturen",
         "medicijnen verkopen aan patienten",
-        "zorgen voor en aandacht geven aan patiënten",
-        "patiënten administreren in het computersysteem"
+        "patiënten administreren in het computersysteem",
+        "patienten naar huis sturen",
+        "zorgen voor en aandacht geven aan patiënten"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Sich kümmern um' betekent zorgen voor."
     },
     {
       "type": "mc",
       "vraag": "Wat is 'die Oberstufe' op een Duits Gymnasium?",
       "opties": [
-        "de gymzaal op de bovenste verdieping",
-        "de eerste klas van de brugklas",
         "de kantine voor docenten",
-        "de bovenbouw van de middelbare school"
+        "de gymzaal op de bovenste verdieping",
+        "de bovenbouw van de middelbare school",
+        "de eerste klas van de brugklas"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Die Oberstufe' is de bovenbouw."
     },
     {

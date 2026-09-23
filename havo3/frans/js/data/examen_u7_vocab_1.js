@@ -14,9 +14,9 @@ DURU.registerExamen({
       "vraag": "Wat is de Nederlandse betekenis van het Franse begrip <b>'l'argent de poche'</b>?",
       "opties": [
         "het zakgeld",
-        "het kleingeld",
+        "het maandsalaris",
         "de spaarpot",
-        "het maandsalaris"
+        "het kleingeld"
       ],
       "antwoord": 0,
       "uitleg": "'L'argent de poche' is het zakgeld."
@@ -25,12 +25,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse werkwoord <b>'dépenser'</b>?",
       "opties": [
-        "sparen",
-        "uitgeven",
+        "lenen",
         "verdienen",
-        "lenen"
+        "sparen",
+        "uitgeven"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Dépenser' betekent uitgeven."
     },
     {
@@ -38,11 +38,11 @@ DURU.registerExamen({
       "vraag": "Wat betekent de uitdrukking <b>'faire des économies'</b>?",
       "opties": [
         "een winkel beginnen",
-        "schulden maken",
         "sparen / bezuinigen",
-        "economie leren"
+        "economie leren",
+        "schulden maken"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Faire des économies' betekent sparen."
     },
     {
@@ -51,10 +51,10 @@ DURU.registerExamen({
       "opties": [
         "le métier",
         "le travail",
-        "la formation",
-        "le petit boulot"
+        "le petit boulot",
+        "la formation"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Le petit boulot' is het bijbaantje."
     },
     {
@@ -62,9 +62,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse bijbaan <b>'faire du baby-sitting'</b>?",
       "opties": [
         "oppassen op kinderen",
+        "honden wassen",
         "in een café werken",
-        "kranten bezorgen",
-        "honden wassen"
+        "kranten bezorgen"
       ],
       "antwoord": 0,
       "uitleg": "'Faire du baby-sitting' betekent oppassen."
@@ -75,8 +75,8 @@ DURU.registerExamen({
       "opties": [
         "de kassa",
         "de portemonnee",
-        "het biljet",
-        "de bankpas"
+        "de bankpas",
+        "het biljet"
       ],
       "antwoord": 1,
       "uitleg": "'Le portemonnaie' is de portemonnee."
@@ -85,12 +85,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het woord <b>'gratuit'</b> (vrouwelijk: gratuite)?",
       "opties": [
-        "duur",
         "zeldzaam",
-        "gratis",
-        "kapot"
+        "kapot",
+        "duur",
+        "gratis"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Gratuit' betekent gratis."
     },
     {
@@ -99,22 +99,22 @@ DURU.registerExamen({
       "opties": [
         "goedkoop",
         "leeg",
-        "nuttig",
-        "duur"
+        "duur",
+        "nuttig"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Cher' betekent duur."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la monnaie'</b>?",
       "opties": [
-        "het kleingeld / wisselgeld",
-        "het bankafschrift",
         "de prijs",
-        "de rekening"
+        "het bankafschrift",
+        "de rekening",
+        "het kleingeld / wisselgeld"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'La monnaie' is het kleingeld of wisselgeld."
     },
     {
@@ -122,35 +122,35 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse uitdrukking <b>'remplir les rayons'</b>?",
       "opties": [
         "de vloer vegen",
+        "klanten begroeten",
         "vakken / schappen vullen in de supermarkt",
-        "de kassa bedienen",
-        "klanten begroeten"
+        "de kassa bedienen"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Remplir les rayons' is vakken vullen."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse werkwoord <b>'prêter'</b>?",
       "opties": [
-        "kopen",
-        "stelen",
         "lenen (aan iemand)",
-        "bewaren"
+        "bewaren",
+        "kopen",
+        "stelen"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Prêter' betekent uitlenen / lenen aan iemand."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'l'avenir'</b> (m)?",
       "opties": [
-        "het verleden",
         "het heden",
+        "de toekomst",
         "de jeugd",
-        "de toekomst"
+        "het verleden"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'L'avenir' is de toekomst."
     },
     {

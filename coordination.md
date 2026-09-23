@@ -667,6 +667,18 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   h6_4 p.235 → 214/228. h5_2 "le poisson" F'den çıktı (A bloğu, h5_1'de var).
   **agy'ye ders:** sayfa numarasını ünite sonundaki ARRÊT/Parcours sayfasından al, tahmin etme; kitapta
   görmediğin kalıbı "DELF standardı" diye ekleme. U7–U8 bu denetimden geçmedi.
+- **✅ 2026-09-24 · U7–U8 kitap denetimi (Sonnet) → Opus düzeltti, kilit KALKTI.** h7/h8 onderwerp mc sırası karıştırıldı.
+  U7 sayfa referansları ve içerik kitapla birebir (U4–U6'daki sayfa hatası tekrar etmemiş 👍). U8'de kitapta OLMAYAN:
+  malzemeler en cuir/fer/coton/or/argent (kitap yalnız bois/métal/tissu/plastique/verre, s. 267) ve "économiser"
+  (kitap: faire des économies) → h8_3 theorie + 2 soru, `u8-v3` #6/#9/#10 + open soru kitaptakilerle değiştirildi;
+  `u8-v3` invul cevabı soruda yazıyordu ("(en bois)") ve tek "en" kabul ediliyordu → düzeltildi.
+  h8_4: ilan tarihi 15–**31** juillet (s. 290), uydurma "Bonjour Léa / Amitiés / Dans l'attente…" çıktı.
+- **⚠️ `frans_h08_le-pont-examentraining.pdf` eksik:** 19 sayfa = kitap s. 272–290; DELF A2 (opdracht 19–25, s. 291+)
+  PDF'te YOK (`noordhoff_books.json` `end: 291`). h8_4 §DELF A2 + `u8-v5`'in bir kısmı (un CV, se présenter, À bientôt)
+  kaynaksız → **TASK-21**: bitişi düzelt, s. 291–~297'yi yeniden dışa aktar, h8_4 + `u8-v5`'i kitaba karşı denetle
+  (`u8-v5` henüz push edilmedi → düzeltme serbest; push'tan sonra yeni id).
+- **TASK-15 tam DONE değil:** "Ayrıca" maddesi (`examen_1..40.js`'teki soruları kitapla karşılaştır, kitapta olmayanları
+  listele) yapılmadı. → **TASK-20** olarak ayrıldı (aşağıda).
 
 ### 🔒 2026-09-23 14:30 · Opus iş bölümü — agy, BUNLARA DOKUNMA (scheikunde ✅ bitti, 15:04)
 - **Opus (+Sonnet alt-agent'lar) aldı:** TASK-08 A'nın **scheikunde** kısmının tamamı (H1 tamamlama + H3–H7)
@@ -704,6 +716,10 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   admirer, prouver, compter, heureux/heureuse, premier/première, dernier, joli, grand, petit, mauvais, long.
 - **Çıktı**: `examen_u1_vocab_11.js`, YENİ id `ex-h3-frans-u1-v11`, 20 soru, `hoofdstuk:1`. 6–10'a dokunulmadı.
 - **Kabul**: `gate.js frans` 16/16 geçti, `open_check.js` 0 hata, manifest güncellendi (`frans H1: 16 examen`).
+
+### TASK-20 · frans `examen_1..40`: kitapta olmayan soruların listesi  [status: TODO]
+- **Atanan**: agy. TASK-15'ten ayrıldı. **Salt liste**: mevcut id'lerin içeriğini değiştirme (Duru'nun geçmişi).
+- Her soru için: hangi Unité/sayfa, yoksa "kitapta yok". Çıktıyı buraya yaz; Opus karar verir (yeni id ile ek / gizleme).
 
 ### TASK-19 · economie: kitabın tamamı yok — H1–H3 ve §4.3 doğrulanamıyor  [status: BLOCKED — Duru'nun babasına soru]
 - **Bulgu (Opus)**: tek kaynak `Pincode 7e editie H4 Produceren 4.1–4.2` (6 sayfa, 3 Eylül). Sitedeki economie

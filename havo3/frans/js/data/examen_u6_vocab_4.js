@@ -13,32 +13,32 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm voor 'groter dan' bij een mannelijk onderwerp: 'Paul est ____ (groter dan) Pierre.'",
       "opties": [
-        "plus grand que",
+        "meilleur que",
         "plus grande que",
         "aussi grand que",
-        "meilleur que"
+        "plus grand que"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Paul' is mannelijk, dus 'plus grand que'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm voor een vrouwelijk onderwerp: 'Pauline est ____ (kleiner dan) Thomas.'",
       "opties": [
-        "plus petit que",
         "plus petite que",
+        "plus petit que",
         "aussi petit que",
         "moins petit que"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Pauline' is vrouwelijk, dus het adjectief krijgt een extra -e: 'plus petite que'."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste Franse vertaling voor 'minder sportief dan'?",
       "opties": [
-        "plus sportif que",
         "aussi sportif que",
+        "plus sportif que",
         "moins sportif que",
         "meilleur sportif que"
       ],
@@ -49,12 +49,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de constructie <b>'aussi grand que'</b>?",
       "opties": [
-        "veel groter dan",
-        "minder groot dan",
         "beter dan",
-        "even groot als"
+        "even groot als",
+        "minder groot dan",
+        "veel groter dan"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Aussi ... que' betekent 'even ... als / net zo ... als'."
     },
     {
@@ -62,9 +62,9 @@ DURU.registerExamen({
       "vraag": "Wat is de Franse vertaling van 'beter dan' (nooit 'plus bon que')?",
       "opties": [
         "meilleur que",
+        "aussi bon que",
         "plus bon que",
-        "plus meilleur que",
-        "aussi bon que"
+        "plus meilleur que"
       ],
       "antwoord": 0,
       "uitleg": "'Beter dan' is de onregelmatige vorm 'meilleur que'."
@@ -75,8 +75,8 @@ DURU.registerExamen({
       "opties": [
         "meilleur que",
         "meilleure que",
-        "plus bonne que",
-        "aussi bonne que"
+        "aussi bonne que",
+        "plus bonne que"
       ],
       "antwoord": 1,
       "uitleg": "'Moyenne' is vrouwelijk, dus 'meilleure que'."
@@ -85,8 +85,8 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat gebeurt er met 'que' voor een klinker zoals in 'Alexandre'?",
       "opties": [
-        "het wordt 'qui'",
         "het blijft 'que'",
+        "het wordt 'qui'",
         "het wordt 'qu''",
         "het valt helemaal weg"
       ],
@@ -97,9 +97,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm voor vrouwelijk meervoud: 'Ces filles sont ____ (actiever dan) les garçons.'",
       "opties": [
+        "plus actifs que",
         "plus actif que",
         "plus active que",
-        "plus actifs que",
         "plus actives que"
       ],
       "antwoord": 3,
@@ -109,12 +109,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk woord ontbreekt in de vergelijking: 'Thomas est plus fort ____ son frère.'?",
       "opties": [
-        "que",
         "qui",
-        "de",
-        "comme"
+        "comme",
+        "que",
+        "de"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "In een vergelijking gebruik je 'que' (plus fort que)."
     },
     {
@@ -133,21 +133,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm: 'Mon frère est moins ____ (serieus) que moi.'",
       "opties": [
-        "sérieuse",
-        "sérieuses",
         "sérieux",
-        "sérieusement"
+        "sérieusement",
+        "sérieuse",
+        "sérieuses"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Mon frère' is mannelijk enkelvoud, dus 'sérieux'."
     },
     {
       "type": "mc",
       "vraag": "Wat is er fout aan de zin 'Ce plat est plus bon que l'autre'?",
       "opties": [
+        "De ontkenning ontbreekt.",
         "Plat moet vrouwelijk zijn.",
         "Het werkwoord 'est' klopt niet.",
-        "De ontkenning ontbreekt.",
         "'Plus bon que' bestaat niet; het moet 'meilleur que' zijn."
       ],
       "antwoord": 3,

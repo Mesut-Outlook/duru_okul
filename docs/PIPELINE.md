@@ -81,6 +81,10 @@ kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçül�
     "Onwaar: Waar." eklemek Duru'ya **yanlış bilgi öğretir** (natuurkunde'de 28 soru; kapı: 15).
 15. **`open` sayı anahtarı noktasız biçimle birlikte** — nakijken `"21.000"`'i `"21 000"`'e çevirir;
     `21000` yazan öğrenci kaçar. `"21.000/21000"` yaz. (Kapı: 8)
+16. **mc doğru şıkkının yerini rastgele seç, döngüyle değil.** `i % 4` ya da her dosyada aynı sıra
+    (`0123 0123 0123`) dağılımı dengeli gösterir ama kalıplıdır; oefenmotor şıkları karıştırmadığı için
+    Duru "hep bir sonraki" diye tahmin edebilir. Dosya başına 0–3'ü karıştırılmış bloklarla dağıt ve
+    dosyadan dosyaya farklı olsun. (Kapı: 16; 2026-09-23'te aardrijkskunde H3–H5 + frans U4–U7'nin hepsi)
 
 ## 📌 "Test Hazırla" ve Bölüm Üretimlerinde Zorunlu Kavram / Terim Standardı (2026-08-30)
 Kullanıcı **"test hazırla"** dediğinde veya herhangi bir ders için yeni bir bölüm/hoofdstuk işlendiğinde **otomatik olarak** şu adımlar uygulanır:

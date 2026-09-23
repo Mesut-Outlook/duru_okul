@@ -14,22 +14,22 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'avoir faim'</b>?",
       "opties": [
-        "dorst hebben",
         "honger hebben",
         "het koud hebben",
-        "slaap hebben"
+        "slaap hebben",
+        "dorst hebben"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Avoir faim' betekent honger hebben in het Frans."
     },
     {
       "type": "mc",
       "vraag": "Welk Frans woord betekent <b>'het rundvlees'</b>?",
       "opties": [
-        "le poisson",
+        "le poulet",
         "la viande",
         "le bœuf",
-        "le poulet"
+        "le poisson"
       ],
       "antwoord": 2,
       "uitleg": "'Le bœuf' is het Franse woord voor rundvlees."
@@ -38,9 +38,9 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent het Franse werkwoord <b>'commander'</b> in een restaurant?",
       "opties": [
+        "betalen",
         "afwassen",
         "klaarmaken",
-        "betalen",
         "bestellen"
       ],
       "antwoord": 3,
@@ -50,12 +50,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is de juiste betekenis van het Franse woord <b>'le cuisinier'</b>?",
       "opties": [
+        "de eigenaar",
         "de kok",
-        "de ober",
         "de bakker",
-        "de eigenaar"
+        "de ober"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Le cuisinier' is de kok in de keuken."
     },
     {

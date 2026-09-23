@@ -13,34 +13,34 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de Franse zin <b>'Je me lève à sept heures'</b>?",
       "opties": [
-        "Ik sta om zeven uur op.",
         "Ik ga om zeven uur naar bed.",
+        "Ik vertrek om zeven uur.",
         "Ik ontbijt om zeven uur.",
-        "Ik vertrek om zeven uur."
+        "Ik sta om zeven uur op."
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Je me lève' betekent ik sta op."
     },
     {
       "type": "mc",
       "vraag": "Hoe laat is het als de Franse klok <b>'midi'</b> aangeeft?",
       "opties": [
-        "twaalf uur 's nachts",
         "twaalf uur 's middags",
-        "zes uur 's ochtends",
-        "drie uur 's middags"
+        "drie uur 's middags",
+        "twaalf uur 's nachts",
+        "zes uur 's ochtends"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Midi' is 12:00 uur 's middags."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse tijdstip <b>'deux heures moins le quart'</b>?",
       "opties": [
-        "kwart over twee (2:15)",
+        "twee uur precies (2:00)",
         "half twee (1:30)",
         "kwart voor twee (1:45)",
-        "twee uur precies (2:00)"
+        "kwart over twee (2:15)"
       ],
       "antwoord": 2,
       "uitleg": "'Moins le quart' betekent kwart voor."
@@ -49,72 +49,72 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat houdt de uitdrukking <b>'arriver en retard'</b> in als je naar school gaat?",
       "opties": [
-        "te vroeg zijn",
-        "op tijd arriveren",
         "niet komen opdagen",
-        "te laat komen"
+        "te laat komen",
+        "te vroeg zijn",
+        "op tijd arriveren"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'En retard' betekent te laat."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la récré'</b>?",
       "opties": [
-        "de schoolpauze",
         "het eindexamen",
         "de huiswerkopdracht",
+        "de schoolpauze",
         "de kantine"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'La récré' is de schoolpauze."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'j'en ai assez'</b>?",
       "opties": [
-        "ik heb nog dorst",
-        "ik heb er genoeg van",
+        "ik weet het niet zeker",
         "ik wil nog meer",
-        "ik weet het niet zeker"
+        "ik heb nog dorst",
+        "ik heb er genoeg van"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'J'en ai assez' betekent ik heb er genoeg van."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la note'</b> op school?",
       "opties": [
-        "het schrift",
-        "de aantekening",
+        "de bel",
         "het rapportcijfer",
-        "de bel"
+        "het schrift",
+        "de aantekening"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'La note' is het cijfer."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse opdracht <b>'assieds-toi'</b>?",
       "opties": [
+        "ga zitten",
         "sta op",
-        "wees stil",
         "kom binnen",
-        "ga zitten"
+        "wees stil"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Assieds-toi' betekent ga zitten."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het tijdstip <b>'une heure et quart'</b>?",
       "opties": [
-        "kwart over een (1:15)",
-        "kwart voor een (12:45)",
+        "drie kwartier",
         "half twee (1:30)",
-        "drie kwartier"
+        "kwart over een (1:15)",
+        "kwart voor een (12:45)"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Et quart' betekent kwart over: kwart over een."
     },
     {
@@ -133,21 +133,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'poser une question'</b>?",
       "opties": [
-        "een vraag beantwoorden",
-        "een toets maken",
         "een vraag stellen",
-        "een vraag overslaan"
+        "een toets maken",
+        "een vraag overslaan",
+        "een vraag beantwoorden"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Poser une question' betekent een vraag stellen."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'les cheveux'</b> (m mv)?",
       "opties": [
-        "de ogen",
         "de oren",
         "de tanden",
+        "de ogen",
         "het haar"
       ],
       "antwoord": 3,

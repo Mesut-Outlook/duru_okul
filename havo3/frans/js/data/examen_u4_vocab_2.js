@@ -13,60 +13,60 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste samentrekking: 'Le professeur va ____ (naar het) collège à huit heures.'",
       "opties": [
-        "au",
         "à la",
         "aux",
-        "à l'"
+        "à l'",
+        "au"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Collège is mannelijk, dus à + le wordt 'au collège'."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste vorm van 'finir' bij 'nous' in de tegenwoordige tijd?",
       "opties": [
+        "nous finis",
         "nous finissons",
         "nous finissiez",
-        "nous finis",
         "nous finissent"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Bij 'nous' krijgt finir de uitgang -issons: 'nous finissons'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'l'argent'</b> (m)?",
       "opties": [
-        "het goud",
         "het geld / zilver",
+        "het goud",
         "het koper",
         "het salaris"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'L'argent' betekent het geld of zilver."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste samentrekking van 'de + les': 'Ce sont les vélos ____ (van de) élèves.'",
       "opties": [
-        "du",
-        "des",
         "de la",
-        "de l'"
+        "de l'",
+        "des",
+        "du"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "De + les trekt altijd samen tot 'des'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'passionnant'</b>?",
       "opties": [
-        "vervelend",
-        "moeilijk",
+        "gevaarlijk",
         "boeiend / meeslepend",
-        "gevaarlijk"
+        "moeilijk",
+        "vervelend"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Passionnant' betekent boeiend of heel spannend."
     },
     {
@@ -74,9 +74,9 @@ DURU.registerExamen({
       "vraag": "Wat is het voltooid deelwoord van het werkwoord <b>'choisir'</b> in de passé composé?",
       "opties": [
         "choisié",
-        "choisu",
+        "choisis",
         "choisi",
-        "choisis"
+        "choisu"
       ],
       "antwoord": 2,
       "uitleg": "Het voltooid deelwoord van regelmatige -ir werkwoorden eindigt op -i: 'choisi'."
@@ -85,8 +85,8 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste samentrekking van 'à + les': 'Elle doit aller ____ toilettes.'",
       "opties": [
-        "à la",
         "au",
+        "à la",
         "à l'",
         "aux"
       ],
@@ -97,33 +97,33 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de Nederlandse betekenis van het Franse zelfstandig naamwoord <b>'le cerveau'</b>?",
       "opties": [
+        "de hersenen",
         "het hart",
         "de maag",
-        "de longen",
-        "de hersenen"
+        "de longen"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Le cerveau' zijn de hersenen."
     },
     {
       "type": "mc",
       "vraag": "Vul de juiste vorm in: 'Tu ____ (kiest) quel film pour ce soir?'",
       "opties": [
-        "choisis",
-        "choisit",
+        "choisissent",
         "choisissez",
-        "choisissent"
+        "choisit",
+        "choisis"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Bij 'tu' is de uitgang van een -ir werkwoord '-is': 'tu choisis'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste samentrekking: 'C'est la sœur ____ (van de) copain de Lucas.'",
       "opties": [
-        "de la",
-        "du",
         "des",
+        "du",
+        "de la",
         "de l'"
       ],
       "antwoord": 1,
@@ -133,24 +133,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de uitdrukking <b>'avoir du succès'</b>?",
       "opties": [
-        "geld verliezen",
-        "hard werken",
         "succes hebben",
-        "populair willen worden"
+        "populair willen worden",
+        "hard werken",
+        "geld verliezen"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Avoir du succès' betekent succes hebben."
     },
     {
       "type": "mc",
       "vraag": "Wat is het Franse woord voor 'de aflevering' van een televisieserie?",
       "opties": [
-        "la saison",
         "le cinéma",
         "le spectacle",
-        "l'épisode"
+        "l'épisode",
+        "la saison"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'L'épisode' is de aflevering."
     },
     {

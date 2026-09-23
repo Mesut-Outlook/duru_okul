@@ -15,9 +15,9 @@ DURU.register({
       "vraag": "Wat is de juiste gebiedende wijs (impératif) tegen één vriend van het werkwoord 'rester'?",
       "opties": [
         "Reste à la maison!",
+        "Restons à la maison!",
         "Restes à la maison!",
-        "Restez à la maison!",
-        "Restons à la maison!"
+        "Restez à la maison!"
       ],
       "antwoord": 0,
       "uitleg": "Bij regelmatige -er werkwoorden valt de -s weg in de jij-vorm van de impératif: 'Reste!'."
@@ -27,21 +27,21 @@ DURU.register({
       "vraag": "Hoe vertaal je het voorstel: 'Laten we naar het strand gaan!'?",
       "opties": [
         "Va à la plage!",
-        "Allons à la plage!",
+        "Nous allons à la plage!",
         "Allez à la plage!",
-        "Nous allons à la plage!"
+        "Allons à la plage!"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Laten we...' druk je uit met de nous-vorm van de impératif: 'Allons!'."
     },
     {
       "type": "mc",
       "vraag": "Welke Franse ontkenning betekent <b>'nooit'</b>?",
       "opties": [
-        "ne ... plus",
         "ne ... rien",
+        "ne ... pas encore",
         "ne ... jamais",
-        "ne ... pas encore"
+        "ne ... plus"
       ],
       "antwoord": 2,
       "uitleg": "'Ne ... jamais' betekent nooit."
@@ -50,12 +50,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat gebeurt er met 'du' in de ontkenning: 'Il prend du sucre ➔ Il ne prend pas ____ sucre.'?",
       "opties": [
-        "het blijft 'du'",
         "het verandert in 'des'",
-        "het wordt 'le'",
-        "het verandert in 'de'"
+        "het verandert in 'de'",
+        "het blijft 'du'",
+        "het wordt 'le'"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "Na een ontkenning verandert een delend lidwoord altijd in 'de' of 'd''."
     },
     {

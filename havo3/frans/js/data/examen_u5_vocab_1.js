@@ -14,9 +14,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse uitdrukking <b>'avoir soif'</b>?",
       "opties": [
         "dorst hebben",
-        "honger hebben",
+        "kou vatten",
         "slaap hebben",
-        "kou vatten"
+        "honger hebben"
       ],
       "antwoord": 0,
       "uitleg": "'Avoir soif' betekent dorst hebben."
@@ -39,10 +39,10 @@ DURU.registerExamen({
       "opties": [
         "de boter",
         "de jam",
-        "de kaas",
-        "het ei"
+        "het ei",
+        "de kaas"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Le fromage' is de kaas."
     },
     {
@@ -50,11 +50,11 @@ DURU.registerExamen({
       "vraag": "Wat is de betekenis van het Franse zelfstandig naamwoord <b>'le cuisinier'</b>?",
       "opties": [
         "de ober",
-        "de gastheer",
         "de bakker",
-        "de kok"
+        "de kok",
+        "de gastheer"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Le cuisinier' is de kok."
     },
     {
@@ -62,9 +62,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse uitdrukking <b>'ça me fait plaisir'</b>?",
       "opties": [
         "dat vind ik leuk / dat doet me plezier",
-        "dat vind ik vreselijk",
         "dat kost te veel geld",
-        "dat duurt te lang"
+        "dat duurt te lang",
+        "dat vind ik vreselijk"
       ],
       "antwoord": 0,
       "uitleg": "'Ça me fait plaisir' betekent dat vind ik leuk of dat doet me plezier."
@@ -85,10 +85,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het werkwoord <b>'hésiter'</b>?",
       "opties": [
-        "haasten",
+        "bestellen",
         "schreeuwen",
         "twijfelen",
-        "bestellen"
+        "haasten"
       ],
       "antwoord": 2,
       "uitleg": "'Hésiter' betekent twijfelen of aarzelen."
@@ -97,9 +97,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Frans woord betekent <b>'de maaltijd'</b>?",
       "opties": [
+        "le travail",
         "la cuisine",
         "la recette",
-        "le travail",
         "le repas"
       ],
       "antwoord": 3,
@@ -109,22 +109,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de vaste uitdrukking <b>'avoir besoin de'</b>?",
       "opties": [
-        "nodig hebben",
+        "bang zijn voor",
         "dorst hebben",
-        "zin hebben in",
-        "bang zijn voor"
+        "nodig hebben",
+        "zin hebben in"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Avoir besoin de' betekent nodig hebben."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le rêve'</b>?",
       "opties": [
-        "de werkelijkheid",
+        "de smaak",
         "de droom",
-        "de ruzie",
-        "de smaak"
+        "de werkelijkheid",
+        "de ruzie"
       ],
       "antwoord": 1,
       "uitleg": "'Le rêve' betekent de droom."
@@ -133,21 +133,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de Nederlandse vertaling van de uitdrukking <b>'il faut'</b>?",
       "opties": [
+        "je moet / het is nodig",
         "het mag",
         "het kan",
-        "je moet / het is nodig",
         "het hoeft niet"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Il faut' betekent je moet of het is nodig."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le métier'</b>?",
       "opties": [
+        "het bedrijf",
         "het salaris",
         "het diploma",
-        "het bedrijf",
         "het beroep"
       ],
       "antwoord": 3,

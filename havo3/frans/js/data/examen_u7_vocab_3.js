@@ -14,9 +14,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse vraag <b>'Tu as de l'argent de poche?'</b>?",
       "opties": [
         "Krijg jij zakgeld?",
-        "Heb jij een portemonnee bij je?",
+        "Hoeveel kost deze jas?",
         "Wil je geld lenen?",
-        "Hoeveel kost deze jas?"
+        "Heb jij een portemonnee bij je?"
       ],
       "antwoord": 0,
       "uitleg": "'Tu as de l'argent de poche?' vraagt naar zakgeld."
@@ -25,12 +25,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de reactie <b>'Non, mais j'ai un petit boulot'</b>?",
       "opties": [
+        "Nee, ik heb geen tijd voor school.",
         "Nee, ik wil geen geld sparen.",
         "Nee, maar ik heb een bijbaantje.",
-        "Nee, ik heb geen tijd voor school.",
         "Nee, ik woon niet meer thuis."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'J'ai un petit boulot' betekent ik heb een bijbaantje."
     },
     {
@@ -38,20 +38,20 @@ DURU.registerExamen({
       "vraag": "Wat antwoord je als je spaart voor een scooter: <b>'Oui, pour m'acheter un scooter'</b>?",
       "opties": [
         "Ja, ik heb gisteren een scooter gehuurd.",
-        "Nee, ik vind scooters te gevaarlijk.",
         "Ja, om een scooter voor mezelf te kopen.",
+        "Nee, ik vind scooters te gevaarlijk.",
         "Ja, mijn broer heeft een scooter gekocht."
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Pour m'acheter un scooter' betekent om een scooter te kopen."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse omschrijving <b>'C'est un truc en plastique'</b>?",
       "opties": [
+        "Het is een metalen doos.",
         "Het is een houten beeldje.",
         "Het is een glazen vaas.",
-        "Het is een metalen doos.",
         "Het is een plastic dingetje."
       ],
       "antwoord": 3,
@@ -62,9 +62,9 @@ DURU.registerExamen({
       "vraag": "Hoe vraag je in het Frans aan iemand om een voorwerp nader te omschrijven?",
       "opties": [
         "Tu peux décrire l'objet?",
+        "Où as-tu acheté ce truc?",
         "Tu peux réparer cet appareil?",
-        "Combien pèse cet objet?",
-        "Où as-tu acheté ce truc?"
+        "Combien pèse cet objet?"
       ],
       "antwoord": 0,
       "uitleg": "'Tu peux décrire...?' vraagt om iets te omschrijven."
@@ -74,47 +74,47 @@ DURU.registerExamen({
       "vraag": "Wat betekent de zin <b>'Je l'utilise pour écouter de la musique'</b>?",
       "opties": [
         "Ik koop muziek op internet.",
-        "Ik gebruik het om naar muziek te luisteren.",
+        "Ik zing graag Franse liedjes.",
         "Ik speel in een muziekbandje.",
-        "Ik zing graag Franse liedjes."
+        "Ik gebruik het om naar muziek te luisteren."
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Je l'utilise pour...' betekent ik gebruik het om..."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de uitdrukking <b>'C'est pratique'</b>?",
       "opties": [
-        "Het is goedkoop.",
         "Het is ingewikkeld.",
         "Het is handig / praktisch.",
+        "Het is goedkoop.",
         "Het is ouderwets."
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'C'est pratique' betekent het is handig."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse vraag <b>'Qu'est-ce que tu fais avec?'</b>?",
       "opties": [
-        "Wie gaat er met je mee?",
-        "Waar heb je dat vandaan?",
         "Hoeveel heeft het gekost?",
-        "Wat doe je ermee?"
+        "Wie gaat er met je mee?",
+        "Wat doe je ermee?",
+        "Waar heb je dat vandaan?"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Qu'est-ce que tu fais avec?' betekent wat doe je ermee."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'C'est une sorte de boîtier'</b>?",
       "opties": [
-        "Het is een soort van doosje / hoesje.",
-        "Het is een heel zwaar apparaat.",
         "Het is een kapotte telefoon.",
-        "Het is een cadeautje voor jou."
+        "Het is een soort van doosje / hoesje.",
+        "Het is een cadeautje voor jou.",
+        "Het is een heel zwaar apparaat."
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'C'est une sorte de...' betekent het is een soort van..."
     },
     {
@@ -122,31 +122,31 @@ DURU.registerExamen({
       "vraag": "Hoe zeg je in het Frans dat je zakgeld gebruikt om kleren te kopen?",
       "opties": [
         "Je vends mes vieux vêtements.",
-        "J'achète des vêtements.",
         "Je donne mes vêtements à mon frère.",
+        "J'achète des vêtements.",
         "Je lave mes vêtements le weekend."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'J'achète des vêtements' betekent ik koop kleren."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de zin <b>'Regarde! Il est super'</b> als je je nieuwe mobiel toont?",
       "opties": [
-        "Kijk eens! Hij is veel te duur.",
-        "Pas op! Hij valt bijna.",
         "Kijk! Hij is geweldig / super.",
-        "Wacht even! Hij doet het niet."
+        "Wacht even! Hij doet het niet.",
+        "Kijk eens! Hij is veel te duur.",
+        "Pas op! Hij valt bijna."
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Il est super' betekent hij is geweldig."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het antwoord <b>'Oui, ... euros par mois'</b> op de vraag naar zakgeld?",
       "opties": [
-        "Ja, ... euro per week.",
         "Ja, ... euro per jaar.",
+        "Ja, ... euro per week.",
         "Ja, ... euro per dag.",
         "Ja, ... euro per maand."
       ],

@@ -8,18 +8,18 @@ DURU.register({
   "korteUitleg": "De twee grammatica-pijlers van Unité 5: het delend lidwoord (du, de la, de l', des en uitzonderingen na hoeveelheden/ontkenningen) én de vervoeging van venir in de présent en passé composé.",
   "icoon": "🧀",
   "kleur": "groen",
-  "theorie": "\n    <h3>5.4 Grammaire D & H: Delend lidwoord & Werkwoord venir</h3>\n    <div class=\"info-box\">\n      <b>Grammatica Unité 5 (p. 197):</b> Twee essentiële grammaticatheorieën die elke HAVO 3-leerling foutloos moet beheersen: wanneer gebruik je <i>du, de la, de l', des</i> en hoe vervoeg je <i>venir</i>?\n    </div>\n\n    <h4>1. Het delend lidwoord (L'article partitif)</h4>\n    <p>Als je in het Nederlands géén lidwoord gebruikt bij een onbepaalde hoeveelheid (zoals <i>\"Ik koop vis, vlees en water\"</i>), staat er in het Frans <b>verplicht</b> een delend lidwoord:</p>\n    <ul>\n      <li>Mannelijk enkelvoud: <b>du</b> ➔ <i>J'achète <b>du</b> poisson / <b>du</b> fromage.</i></li>\n      <li>Vrouwelijk enkelvoud: <b>de la</b> ➔ <i>J'achète <b>de la</b> viande / <b>de la</b> confiture.</i></li>\n      <li>Vóór klinker of stomme h: <b>de l'</b> ➔ <i>J'achète <b>de l'</b>eau / <b>de l'</b>huile.</i></li>\n      <li>Meervoud: <b>des</b> ➔ <i>J'achète <b>des</b> légumes / <b>des</b> frites.</i></li>\n    </ul>\n\n    <h4>2. Uitzonderingen: wanneer verandert het in alleen de of d'?</h4>\n    <div class=\"formule-box\">\n      <b>Regel 1: Na een woord van hoeveelheid gebruik je altijd alleen DE of D' (nooit du/des)!</b><br>\n      • <i>un verre <b>d'</b>eau</i> (een glas water)<br>\n      • <i>un kilo <b>de</b> pommes</i> (een kilo appels)<br>\n      • <i>beaucoup <b>de</b> temps</i> (veel tijd) | <i>trop <b>de</b> sucre</i> (te veel suiker) | <i>un peu <b>de</b> sel</i> (een beetje zout)<br>\n      • <i>une bouteille <b>de</b> vin</i> (een fles wijn)<br><br>\n      <b>Regel 2: In een ontkenning (ne ... pas) wordt het delend lidwoord ook DE of D'!</b><br>\n      • <i>Je prends du sucre.</i> ➔ <i>Je ne prends <b>pas de</b> sucre.</i><br>\n      • <i>Elle a des amis.</i> ➔ <i>Elle n'a <b>pas d'</b>amis.</i><br><br>\n      <b>Regel 3: Na werkwoorden van waardering (aimer, adorer, préférer, détester) gebruik je LE, LA, L', LES!</b><br>\n      • <i>J'aime <b>le</b> poisson, mais je préfère <b>la</b> viande.</i> (Geen 'du', want het gaat om vis/vlees in het algemeen).\n    </div>\n\n    <h4>3. Het onregelmatige werkwoord venir (komen)</h4>\n    <p>Het werkwoord <b>venir</b> is onregelmatig. Leer deze vormen uit je hoofd:</p>\n    <table class=\"vocab-table\">\n      <thead><tr><th>Persoon</th><th>Présent (tegenwoordige tijd)</th><th>Vertaling</th></tr></thead>\n      <tbody>\n        <tr><td>je</td><td><b>viens</b></td><td>ik kom</td></tr>\n        <tr><td>tu</td><td><b>viens</b></td><td>jij komt</td></tr>\n        <tr><td>il / elle / on</td><td><b>vient</b></td><td>hij / zij / men komt</td></tr>\n        <tr><td>nous</td><td><b>venons</b></td><td>wij komen</td></tr>\n        <tr><td>vous</td><td><b>venez</b></td><td>jullie komen / u komt</td></tr>\n        <tr><td>ils / elles</td><td><b>viennent</b></td><td>zij komen</td></tr>\n      </tbody>\n    </table>\n\n    <p><b>Passé composé van venir:</b> wordt gevormd met <b>être</b> en het voltooid deelwoord <b>venu</b>. Let op het accord (geslacht en getal):</p>\n    <ul>\n      <li><i>Il est venu en train.</i> (mannelijk enkelvoud)</li>\n      <li><i>Elle est venue à trois heures.</i> (vrouwelijk enkelvoud: +e)</li>\n      <li><i>Ils sont venus ensemble.</i> (mannelijk meervoud: +s)</li>\n      <li><i>Elles sont venues en bus.</i> (vrouwelijk meervoud: +es)</li>\n    </ul>\n",
+  "theorie": "\n    <h3>5.4 Grammaire D & H: Delend lidwoord & Werkwoord venir</h3>\n    <div class=\"info-box\">\n      <b>Grammatica Unité 5 (p. 178 en 192):</b> Twee essentiële grammaticatheorieën die elke HAVO 3-leerling foutloos moet beheersen: wanneer gebruik je <i>du, de la, de l', des</i> en hoe vervoeg je <i>venir</i>?\n    </div>\n\n    <h4>1. Het delend lidwoord (L'article partitif)</h4>\n    <p>Als je in het Nederlands géén lidwoord gebruikt bij een onbepaalde hoeveelheid (zoals <i>\"Ik koop vis, vlees en water\"</i>), staat er in het Frans <b>verplicht</b> een delend lidwoord:</p>\n    <ul>\n      <li>Mannelijk enkelvoud: <b>du</b> ➔ <i>J'achète <b>du</b> poisson / <b>du</b> fromage.</i></li>\n      <li>Vrouwelijk enkelvoud: <b>de la</b> ➔ <i>J'achète <b>de la</b> viande / <b>de la</b> confiture.</i></li>\n      <li>Vóór klinker of stomme h: <b>de l'</b> ➔ <i>J'achète <b>de l'</b>eau / <b>de l'</b>huile.</i></li>\n      <li>Meervoud: <b>des</b> ➔ <i>J'achète <b>des</b> légumes / <b>des</b> frites.</i></li>\n    </ul>\n\n    <h4>2. Uitzonderingen: wanneer verandert het in alleen de of d'?</h4>\n    <div class=\"formule-box\">\n      <b>Regel 1: Na een woord van hoeveelheid gebruik je altijd alleen DE of D' (nooit du/des)!</b><br>\n      • <i>un verre <b>d'</b>eau</i> (een glas water)<br>\n      • <i>un kilo <b>de</b> pommes</i> (een kilo appels)<br>\n      • <i>beaucoup <b>de</b> temps</i> (veel tijd) | <i>trop <b>de</b> sucre</i> (te veel suiker) | <i>un peu <b>de</b> sel</i> (een beetje zout)<br>\n      • <i>une bouteille <b>de</b> vin</i> (een fles wijn)<br><br>\n      <b>Regel 2: In een ontkenning (ne ... pas) wordt het delend lidwoord ook DE of D'!</b><br>\n      • <i>Je prends du sucre.</i> ➔ <i>Je ne prends <b>pas de</b> sucre.</i><br>\n      • <i>Elle a des amis.</i> ➔ <i>Elle n'a <b>pas d'</b>amis.</i><br><br>\n      <b>Regel 3: Na werkwoorden van waardering (aimer, adorer, préférer, détester) gebruik je LE, LA, L', LES!</b><br>\n      • <i>J'aime <b>le</b> poisson, mais je préfère <b>la</b> viande.</i> (Geen 'du', want het gaat om vis/vlees in het algemeen).\n    </div>\n\n    <h4>3. Het onregelmatige werkwoord venir (komen)</h4>\n    <p>Het werkwoord <b>venir</b> is onregelmatig. Leer deze vormen uit je hoofd:</p>\n    <table class=\"vocab-table\">\n      <thead><tr><th>Persoon</th><th>Présent (tegenwoordige tijd)</th><th>Vertaling</th></tr></thead>\n      <tbody>\n        <tr><td>je</td><td><b>viens</b></td><td>ik kom</td></tr>\n        <tr><td>tu</td><td><b>viens</b></td><td>jij komt</td></tr>\n        <tr><td>il / elle / on</td><td><b>vient</b></td><td>hij / zij / men komt</td></tr>\n        <tr><td>nous</td><td><b>venons</b></td><td>wij komen</td></tr>\n        <tr><td>vous</td><td><b>venez</b></td><td>jullie komen / u komt</td></tr>\n        <tr><td>ils / elles</td><td><b>viennent</b></td><td>zij komen</td></tr>\n      </tbody>\n    </table>\n\n    <p><b>Passé composé van venir:</b> wordt gevormd met <b>être</b> en het voltooid deelwoord <b>venu</b>. Let op het accord (geslacht en getal):</p>\n    <ul>\n      <li><i>Il est venu en train.</i> (mannelijk enkelvoud)</li>\n      <li><i>Elle est venue à trois heures.</i> (vrouwelijk enkelvoud: +e)</li>\n      <li><i>Ils sont venus ensemble.</i> (mannelijk meervoud: +s)</li>\n      <li><i>Elles sont venues en bus.</i> (vrouwelijk meervoud: +es)</li>\n    </ul>\n",
   "vragen": [
     {
       "type": "mc",
       "vraag": "Kies het juiste delend lidwoord: 'Tous les matins, je bois ____ (melk, m).'",
       "opties": [
-        "de la",
         "des",
-        "de",
-        "du"
+        "de la",
+        "du",
+        "de"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Lait' is mannelijk (le lait), dus het delend lidwoord is 'du lait'."
     },
     {
@@ -27,8 +27,8 @@ DURU.register({
       "vraag": "Kies de juiste vorm na een hoeveelheid: 'Je voudrais un verre ____ (water).'",
       "opties": [
         "d'",
-        "de l'",
         "du",
+        "de l'",
         "des"
       ],
       "antwoord": 0,
@@ -52,10 +52,10 @@ DURU.register({
       "opties": [
         "ils venons",
         "ils venez",
-        "ils viennent",
-        "ils vient"
+        "ils vient",
+        "ils viennent"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Bij ils/elles is de vorm 'viennent' (ils viennent)."
     },
     {

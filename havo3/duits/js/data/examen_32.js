@@ -13,34 +13,34 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de term 'der Gleichgewichtssinn' die men traint op een slackline?",
       "opties": [
-        "het evenwichtsgevoel",
         "de spierkracht in de benen",
+        "de reactiesnelheid",
         "de ademhalingstechniek",
-        "de reactiesnelheid"
+        "het evenwichtsgevoel"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Der Gleichgewichtssinn' is het evenwichtsorgaan of het evenwichtsgevoel."
     },
     {
       "type": "mc",
       "vraag": "Welk voorwerp plak je op een klein sneetje in je vinger?",
       "opties": [
-        "eine Tablette",
         "ein Pflaster",
+        "eine Tablette",
         "eine Salbe",
         "ein Rezept"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Een pleister heet in het Duits 'das Pflaster'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de wens 'Gute Besserung!'?",
       "opties": [
-        "Gefeliciteerd met je overwinning!",
         "Goede reis naar huis!",
+        "Eet smakelijk!",
         "Van harte beterschap!",
-        "Eet smakelijk!"
+        "Gefeliciteerd met je overwinning!"
       ],
       "antwoord": 2,
       "uitleg": "'Gute Besserung!' wens je iemand toe die ziek of gewond is."
@@ -49,46 +49,46 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Duits woord betekent 'de dokterspraktijk'?",
       "opties": [
-        "das Krankenhaus",
-        "die Apotheke",
         "das Wartezimmer",
-        "die Praxis"
+        "die Praxis",
+        "die Apotheke",
+        "das Krankenhaus"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Die Praxis' is de dokterspraktijk van de behandelend arts."
     },
     {
       "type": "mc",
       "vraag": "Wat geeft een arts aan de patiënt mee om medicijnen op te halen bij de apotheek?",
       "opties": [
-        "das Rezept",
-        "die Versicherung",
         "das Pflaster",
-        "die Geste"
+        "die Geste",
+        "die Versicherung",
+        "das Rezept"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Das Rezept' is het officiële doktersvoorschrift of doktersrecept."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Duitse werkwoord 'bluten'?",
       "opties": [
-        "genezen",
         "bloeden",
-        "hoesten",
-        "ontspannen"
+        "ontspannen",
+        "genezen",
+        "hoesten"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Bluten' betekent bloeden (bijvoorbeeld uit een open wond)."
     },
     {
       "type": "mc",
       "vraag": "Hoe noemt men in het Duits 'plankenkoorts' of nervositeit voor een presentatie?",
       "opties": [
-        "der Schluckauf",
         "die Herausforderung",
+        "der Gleichgewichtssinn",
         "das Lampenfieber",
-        "der Gleichgewichtssinn"
+        "der Schluckauf"
       ],
       "antwoord": 2,
       "uitleg": "'Das Lampenfieber' is plankenkoorts of spanning voor een optreden."
@@ -98,11 +98,11 @@ DURU.registerExamen({
       "vraag": "Wat smeer je op een pijnlijke spier of een verstuikte enkel?",
       "opties": [
         "ein Rezept",
+        "eine Salbe",
         "eine Tablette",
-        "ein Pflaster",
-        "eine Salbe"
+        "ein Pflaster"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Die Salbe' is zalf."
     },
     {
@@ -121,22 +121,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Duitse werkwoord 'gelingen'?",
       "opties": [
+        "wennen",
         "mislukken",
-        "lukken / slagen",
         "vallen",
-        "wennen"
+        "lukken / slagen"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Gelingen' betekent lukken of slagen (bijv. 'Der Trick ist gelungen')."
     },
     {
       "type": "mc",
       "vraag": "Welke betekenis heeft 'der Schluckauf' in de volksmond?",
       "opties": [
-        "de verkoudheid",
+        "de koorts",
         "de spierpijn",
         "de hik",
-        "de koorts"
+        "de verkoudheid"
       ],
       "antwoord": 2,
       "uitleg": "'Der Schluckauf' is de hik."
@@ -145,12 +145,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de vraag van de dokter: 'Was fehlt Ihnen denn?'?",
       "opties": [
-        "Welke zorgverzekering heeft u?",
         "Wanneer bent u voor het laatst hier geweest?",
-        "Hoeveel weegt u op dit moment?",
-        "Wat scheelt eraan? / Waar heeft u last van?"
+        "Wat scheelt eraan? / Waar heeft u last van?",
+        "Welke zorgverzekering heeft u?",
+        "Hoeveel weegt u op dit moment?"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Was fehlt Ihnen?' is de standaardvraag van de Duitse arts: wat scheelt eraan?"
     },
     {

@@ -13,22 +13,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de vervoeging van het werkwoord 'venir' bij 'je' in de présent?",
       "opties": [
-        "je viens",
-        "je vient",
         "je venons",
-        "je venez"
+        "je vient",
+        "je venez",
+        "je viens"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Bij 'je' is de vorm 'viens' (je viens)."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste vorm van 'venir' bij 'vous' in de tegenwoordige tijd?",
       "opties": [
-        "vous vient",
-        "vous venez",
         "vous venons",
-        "vous viennent"
+        "vous venez",
+        "vous viennent",
+        "vous vient"
       ],
       "antwoord": 1,
       "uitleg": "Bij 'vous' is de vorm 'venez' (vous venez)."
@@ -37,10 +37,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Met welk hulpwerkwoord vormt 'venir' de passé composé?",
       "opties": [
-        "avoir",
+        "aller",
         "faire",
         "être",
-        "aller"
+        "avoir"
       ],
       "antwoord": 2,
       "uitleg": "Venir is een werkwoord van beweging en vormt de passé composé met être."
@@ -49,24 +49,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm van het voltooid deelwoord bij être: 'Elle est ____ (gekomen) hier soir.'",
       "opties": [
+        "venue",
         "venu",
-        "venus",
         "venues",
-        "venue"
+        "venus"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Elle' is vrouwelijk enkelvoud, dus bij être krijgt venu een extra e: 'venue'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm van het voltooid deelwoord: 'Mes amis sont ____ (gekomen) en vélo.'",
       "opties": [
-        "venus",
-        "venu",
         "venue",
-        "venues"
+        "venu",
+        "venues",
+        "venus"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Mes amis' is mannelijk meervoud, dus bij être krijgt venu een extra s: 'venus'."
     },
     {
@@ -85,10 +85,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'ce n'est pas grave'</b>?",
       "opties": [
+        "het is niet waar",
         "het is heel zwaar",
-        "het is verboden",
         "het is niet erg",
-        "het is niet waar"
+        "het is verboden"
       ],
       "antwoord": 2,
       "uitleg": "'Ce n'est pas grave' betekent het is niet erg."
@@ -97,34 +97,34 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk delend lidwoord hoort in deze zin: 'Je voudrais ____ (boter, m) pour mon pain.'?",
       "opties": [
-        "de la",
-        "des",
+        "du",
         "de",
-        "du"
+        "de la",
+        "des"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Beurre' is mannelijk, dus 'du beurre'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le pourboire'</b>?",
       "opties": [
-        "de fooi",
-        "het voorgerecht",
+        "het aperitief",
         "het dessert",
-        "het aperitief"
+        "het voorgerecht",
+        "de fooi"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Le pourboire' is de fooi."
     },
     {
       "type": "mc",
       "vraag": "Wat is de vervoeging van 'venir' bij 'ils' in de présent?",
       "opties": [
-        "ils vient",
+        "ils venez",
         "ils viennent",
-        "ils venons",
-        "ils venez"
+        "ils vient",
+        "ils venons"
       ],
       "antwoord": 1,
       "uitleg": "Bij 'ils' is de vorm 'viennent' (ils viennent)."
@@ -133,24 +133,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm van het voltooid deelwoord: 'Mes sœurs sont ____ (gekomen) en train.'",
       "opties": [
+        "venues",
         "venu",
         "venus",
-        "venues",
         "venue"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Mes sœurs' is vrouwelijk meervoud, dus bij être krijgt venu -es: 'venues'."
     },
     {
       "type": "mc",
       "vraag": "Wat vraag je als je geen mes hebt gekregen aan tafel?",
       "opties": [
-        "Je n'ai pas de fourchette.",
         "Je n'ai pas de cuillère.",
-        "Je n'ai pas de serviette.",
-        "Je n'ai pas de couteau."
+        "Je n'ai pas de fourchette.",
+        "Je n'ai pas de couteau.",
+        "Je n'ai pas de serviette."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Je n'ai pas de couteau' betekent dat je geen mes hebt."
     },
     {

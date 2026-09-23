@@ -15,48 +15,48 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la gare'</b> (p. 124)?",
       "opties": [
-        "het treinstation",
-        "de bushalte",
+        "het metrostation",
         "de luchthaven",
-        "het metrostation"
+        "de bushalte",
+        "het treinstation"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'La gare' is het Franse woord voor het treinstation."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste Nederlandse betekenis van <b>'le car'</b> (p. 124)?",
       "opties": [
+        "de tram",
         "de personenauto",
         "de streekbus / touringcar",
-        "de tram",
         "de vrachtwagen"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Le car' is de streekbus of touringcar (terwijl 'le bus' meestal de stadsbus is en 'la voiture' de auto)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent <b>'l'aller-retour'</b> (m, p. 124)?",
       "opties": [
-        "de enkele reis",
         "de reservering",
         "het retourtje",
+        "de enkele reis",
         "het perron"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'L'aller-retour' is het retourtje (retourbiljet)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse tijdsuitdrukking <b>'dans une heure'</b> (p. 124)?",
       "opties": [
+        "over een uur",
         "een uur geleden",
         "binnen tien minuten",
-        "precies om één uur",
-        "over een uur"
+        "precies om één uur"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Dans une heure' betekent over een uur."
     },
     {
@@ -75,12 +75,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het werkwoord <b>'monter'</b> (p. 124) op het perron bij de trein?",
       "opties": [
-        "instappen",
-        "uitstappen",
         "wachten",
-        "overstappen"
+        "instappen",
+        "overstappen",
+        "uitstappen"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Monter dans le train' betekent instappen in de trein."
     },
     {
@@ -88,35 +88,35 @@ DURU.registerExamen({
       "vraag": "Wat is de betekenis van het Franse woord <b>'le désert'</b> (p. 124)?",
       "opties": [
         "het toetje",
-        "de woestijn",
+        "het bos",
         "de haven",
-        "het bos"
+        "de woestijn"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Le désert' is de woestijn ('het toetje' is le dessert met dubbel s)."
     },
     {
       "type": "mc",
       "vraag": "Welk Frans zelfstandig naamwoord betekent <b>'de bestemming'</b> (p. 124)?",
       "opties": [
-        "la direction",
-        "la distance",
         "la destination",
-        "la description"
+        "la description",
+        "la direction",
+        "la distance"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'La destination' betekent de bestemming."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het werkwoord <b>'descendre'</b> (p. 124) bij het openbaar vervoer?",
       "opties": [
-        "vertrekken",
         "doorrijden",
-        "reserveren",
-        "uitstappen"
+        "vertrekken",
+        "uitstappen",
+        "reserveren"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Descendre' betekent uitstappen of afdalen."
     },
     {
@@ -147,21 +147,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent <b>'le centre-ville'</b> (p. 124)?",
       "opties": [
-        "het centrum van de stad",
-        "de buitenwijk",
+        "het winkelcentrum",
         "het stadhuis",
-        "het winkelcentrum"
+        "het centrum van de stad",
+        "de buitenwijk"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Le centre-ville' is het centrum van de stad."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le quartier'</b> (p. 124)?",
       "opties": [
-        "het kwartier van een uur",
-        "de wijk / de buurt",
         "het vierkant",
+        "de wijk / de buurt",
+        "het kwartier van een uur",
         "de vierde verdieping"
       ],
       "antwoord": 1,
@@ -171,24 +171,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de betekenis van het Franse woord <b>'le travail'</b> (p. 124)?",
       "opties": [
+        "de school",
         "de vakantie",
         "de reis",
-        "het werk",
-        "de school"
+        "het werk"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Le travail' betekent het werk."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse seizoensaanduiding <b>'au printemps'</b> (p. 124)?",
       "opties": [
+        "in het voorjaar",
         "in de zomer",
-        "in de herfst",
         "in de winter",
-        "in het voorjaar"
+        "in de herfst"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Au printemps' betekent in het voorjaar (in de lente)."
     },
     {

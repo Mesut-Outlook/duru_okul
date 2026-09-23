@@ -26,105 +26,105 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse zin <b>'Je ressemble à ma sœur'</b>?",
       "opties": [
         "Ik praat met mijn zus.",
+        "Ik help mijn zus.",
         "Ik lijk op mijn zus.",
-        "Ik wacht op mijn zus.",
-        "Ik help mijn zus."
+        "Ik wacht op mijn zus."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Ressembler à' betekent lijken op."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'un demi-frère'</b>?",
       "opties": [
-        "een tweelingbroer",
         "een neef",
-        "een halfbroer",
-        "een stiefvader"
+        "een tweelingbroer",
+        "een stiefvader",
+        "een halfbroer"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Un demi-frère' is een halfbroer."
     },
     {
       "type": "mc",
       "vraag": "Hoe zeg je in het Frans dat je goed kunt opschieten met iemand?",
       "opties": [
-        "Je me dispute avec lui.",
         "Je ne le connais pas.",
-        "Je suis jaloux de lui.",
-        "Je m'entends bien avec lui."
+        "Je m'entends bien avec lui.",
+        "Je me dispute avec lui.",
+        "Je suis jaloux de lui."
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Je m'entends bien avec' betekent ik kan goed opschieten met."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de zin <b>'Avec mon demi-frère, on se dispute tout le temps'</b>?",
       "opties": [
-        "Met mijn halfbroer maak ik de hele tijd ruzie.",
         "Mijn halfbroer helpt me altijd met huiswerk.",
+        "Mijn halfbroer is twee jaar jonger dan ik.",
         "Ik ga elke dag naar mijn halfbroer toe.",
-        "Mijn halfbroer is twee jaar jonger dan ik."
+        "Met mijn halfbroer maak ik de hele tijd ruzie."
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'On se dispute tout le temps' betekent we hebben de hele tijd ruzie."
     },
     {
       "type": "mc",
       "vraag": "Wat vraag je als je wilt weten hoe laat iemand naar school vertrekt?",
       "opties": [
-        "Tu aimes ton école?",
         "À quelle heure, tu pars à l'école?",
         "Comment tu vas au collège?",
+        "Tu aimes ton école?",
         "Pourquoi tu restes à l'école?"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'À quelle heure, tu pars à l'école?' vraagt naar het vertrektijdstip."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de vraag <b>'Qu'est-ce que tu fais après l'école?'</b>?",
       "opties": [
-        "Hoe laat begint de school?",
         "Welke lessen heb je vandaag?",
         "Wat doe jij na schooltijd?",
+        "Hoe laat begint de school?",
         "Waarom ga je niet naar school?"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Après l'école' betekent na schooltijd."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse bestemming <b>'la salle de sport'</b>?",
       "opties": [
-        "het zwembad",
-        "het voetbalveld",
         "de kantine",
-        "de sportschool"
+        "het zwembad",
+        "de sportschool",
+        "het voetbalveld"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'La salle de sport' is de sportschool of fitnesszaal."
     },
     {
       "type": "mc",
       "vraag": "Hoe zeg je in het Frans dat je van plan bent om uit te gaan in het weekend?",
       "opties": [
-        "J'aime sortir.",
-        "Je reste à la maison.",
         "Je me couche tôt.",
-        "Je range ma chambre."
+        "Je reste à la maison.",
+        "Je range ma chambre.",
+        "J'aime sortir."
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'J'aime sortir' betekent ik ga graag uit."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'mon meilleur copain'</b>?",
       "opties": [
-        "mijn broer",
+        "mijn klasgenoot",
         "mijn beste vriend",
-        "mijn buurjongen",
-        "mijn klasgenoot"
+        "mijn broer",
+        "mijn buurjongen"
       ],
       "antwoord": 1,
       "uitleg": "'Mon meilleur copain' is mijn beste vriend."
@@ -133,12 +133,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe zeg je in het Frans dat je 16 jaar bent?",
       "opties": [
-        "Je suis seize ans.",
-        "J'habite seize ans.",
         "J'ai 16 ans.",
-        "Je fais seize ans."
+        "Je fais seize ans.",
+        "J'habite seize ans.",
+        "Je suis seize ans."
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "Leeftijd druk je uit met avoir: 'J'ai 16 ans'."
     },
     {
@@ -146,11 +146,11 @@ DURU.registerExamen({
       "vraag": "Wat betekent de Franse zin <b>'Je viens d'Amsterdam, aux Pays-Bas'</b>?",
       "opties": [
         "Ik ga op reis naar Amsterdam.",
-        "Ik werk in Amsterdam.",
         "Ik studeer in Amsterdam.",
-        "Ik kom uit Amsterdam, in Nederland."
+        "Ik kom uit Amsterdam, in Nederland.",
+        "Ik werk in Amsterdam."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Je viens d'Amsterdam' betekent ik kom uit Amsterdam."
     },
     {

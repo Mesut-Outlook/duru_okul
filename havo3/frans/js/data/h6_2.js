@@ -14,34 +14,34 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe laat is het in het Frans als iemand zegt: <b>'une heure et demie'</b>?",
       "opties": [
-        "half twee (1:30)",
         "half een (12:30)",
-        "kwart over een (1:15)",
-        "kwart voor twee (1:45)"
+        "half twee (1:30)",
+        "kwart voor twee (1:45)",
+        "kwart over een (1:15)"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Une heure et demie' betekent letterlijk 'één uur en een half', oftewel half twee (1:30)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'arriver en retard'</b>?",
       "opties": [
-        "op tijd aankomen",
-        "te laat komen",
+        "de weg kwijtraken",
         "vroeg vertrekken",
-        "de weg kwijtraken"
+        "op tijd aankomen",
+        "te laat komen"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Arriver en retard' betekent te laat komen."
     },
     {
       "type": "mc",
       "vraag": "Welk tijdstip geeft het Franse woord <b>'midi'</b> aan?",
       "opties": [
-        "zes uur 's ochtends",
         "twaalf uur 's nachts",
+        "middernacht",
         "twaalf uur 's middags",
-        "middernacht"
+        "zes uur 's ochtends"
       ],
       "antwoord": 2,
       "uitleg": "'Midi' is twaalf uur overdag ('s middags). Twaalf uur 's nachts is 'minuit'."
@@ -50,12 +50,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la récré'</b> op school?",
       "opties": [
-        "het huiswerk",
-        "het examen",
+        "de schoolpauze",
         "de gymles",
-        "de schoolpauze"
+        "het examen",
+        "het huiswerk"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'La récré' (afkorting van la récréation) is de schoolpauze."
     },
     {

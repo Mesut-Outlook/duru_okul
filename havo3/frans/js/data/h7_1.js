@@ -14,12 +14,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'l'argent de poche'</b>?",
       "opties": [
-        "het zakgeld",
-        "de spaarrekening",
+        "de lening",
         "het salaris",
-        "de lening"
+        "de spaarrekening",
+        "het zakgeld"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'L'argent de poche' is het zakgeld."
     },
     {
@@ -27,35 +27,35 @@ DURU.register({
       "vraag": "Welk Frans bijbaantje betekent <b>'vakken vullen'</b> in de supermarkt?",
       "opties": [
         "faire la vaisselle",
-        "remplir les rayons",
         "sortir un chien",
+        "remplir les rayons",
         "faire du baby-sitting"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Remplir les rayons' betekent de schappen / vakken vullen."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'faire des économies'</b>?",
       "opties": [
-        "veel geld uitgeven",
         "een lening aanvragen",
         "sparen / bezuinigen",
+        "veel geld uitgeven",
         "economie studeren"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Faire des économies' betekent sparen of geld opzij leggen."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'gratuit'</b> (vrouwelijk: gratuite)?",
       "opties": [
-        "duur",
-        "waardevol",
+        "gratis",
         "uitverkocht",
-        "gratis"
+        "waardevol",
+        "duur"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Gratuit' betekent gratis."
     },
     {

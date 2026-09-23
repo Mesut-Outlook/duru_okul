@@ -13,34 +13,34 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Frans materiaal betekent <b>'van hout'</b>?",
       "opties": [
-        "en bois",
-        "en verre",
         "en métal",
-        "en tissu"
+        "en verre",
+        "en tissu",
+        "en bois"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'En bois' is van hout."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de materiaalomschrijving <b>'en verre'</b>?",
       "opties": [
-        "van plastic",
         "van glas",
+        "van plastic",
         "van ijzer",
         "van leer"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'En verre' betekent van glas."
     },
     {
       "type": "mc",
       "vraag": "Wat is de betekenis van de vorm <b>'rond'</b> (vrouwelijk: ronde)?",
       "opties": [
+        "puntig",
         "vierkant",
-        "rechthoekig",
         "rond",
-        "puntig"
+        "rechthoekig"
       ],
       "antwoord": 2,
       "uitleg": "'Rond' betekent rond."
@@ -49,36 +49,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la mémoire'</b>?",
       "opties": [
-        "het experiment",
-        "de schuld",
         "de snelheid",
-        "het geheugen"
+        "het geheugen",
+        "het experiment",
+        "de schuld"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'La mémoire' is het geheugen."
     },
     {
       "type": "mc",
       "vraag": "Wat is de vrouwelijke vorm van de kleur <b>'blanc'</b>?",
       "opties": [
-        "blanche",
-        "blance",
         "blancse",
-        "blanque"
+        "blance",
+        "blanque",
+        "blanche"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "De vrouwelijke vorm van blanc is 'blanche'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse kleur <b>'jaune'</b>?",
       "opties": [
-        "groen",
         "geel",
+        "blauw",
         "rood",
-        "blauw"
+        "groen"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Jaune' is geel."
     },
     {
@@ -86,9 +86,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse woord <b>'la frontière'</b>?",
       "opties": [
         "de bergketen",
-        "de zeehaven",
+        "de landingsbaan",
         "de grens",
-        "de landingsbaan"
+        "de zeehaven"
       ],
       "antwoord": 2,
       "uitleg": "'La frontière' betekent de grens."
@@ -98,11 +98,11 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse woord <b>'la patience'</b>?",
       "opties": [
         "het plezier",
+        "het geduld",
         "het geluk",
-        "de angst",
-        "het geduld"
+        "de angst"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'La patience' betekent het geduld."
     },
     {
@@ -110,8 +110,8 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse materiaal <b>'en tissu'</b>?",
       "opties": [
         "van stof / textiel",
-        "van karton",
         "van rubber",
+        "van karton",
         "van steen"
       ],
       "antwoord": 0,
@@ -123,8 +123,8 @@ DURU.registerExamen({
       "opties": [
         "zwaar",
         "licht van gewicht",
-        "breekbaar",
-        "sterk"
+        "sterk",
+        "breekbaar"
       ],
       "antwoord": 1,
       "uitleg": "'Léger' betekent licht van gewicht."
@@ -133,8 +133,8 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de vorm <b>'carré'</b>?",
       "opties": [
-        "ovaal",
         "rond",
+        "ovaal",
         "vierkant",
         "driehoekig"
       ],
@@ -145,8 +145,8 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la faute'</b>?",
       "opties": [
-        "de beloning",
         "de vraag",
+        "de beloning",
         "de kans",
         "de fout / schuld"
       ],

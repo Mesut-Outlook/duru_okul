@@ -14,8 +14,8 @@ DURU.register({
       "type": "mc",
       "vraag": "Kies de juiste vorm van het voltooid deelwoord bij être: 'Manon et sa sœur sont ____ (gegaan) à Paris.'",
       "opties": [
-        "allé",
         "allée",
+        "allé",
         "allés",
         "allées"
       ],
@@ -26,12 +26,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Vervang het lijdend voorwerp: 'Tu as vu le nouveau journal hier? ➔ Oui, je ____ ai vu.'",
       "opties": [
-        "l'",
-        "le",
         "la",
+        "le",
+        "l'",
         "les"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Le journal' is mannelijk, maar voor de klinker 'a' van ai verandert 'le' in 'l''."
     },
     {
@@ -50,12 +50,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Waar plaats je het lijdend voorwerp 'les' in de zin 'Je vais regarder les épisodes demain'?",
       "opties": [
+        "Direct vóór de infinitief: Je vais les regarder demain.",
         "Achteraan de zin: Je vais regarder demain les.",
         "Voor de persoonsvorm: Je les vais regarder demain.",
-        "Direct vóór de infinitief: Je vais les regarder demain.",
         "Tussen de twee werkwoorden met een koppelteken: Je vais-les-regarder."
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "Als er een infinitief in de zin staat, komt het voornaamwoord direct vóór de infinitief te staan."
     },
     {

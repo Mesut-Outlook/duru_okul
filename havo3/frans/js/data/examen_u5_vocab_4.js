@@ -13,24 +13,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies het juiste delend lidwoord: 'Mon père achète ____ (vis, m) au marché.'",
       "opties": [
-        "du",
         "de la",
         "des",
+        "du",
         "de"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Poisson' is mannelijk (le poisson), dus het delend lidwoord is 'du'."
     },
     {
       "type": "mc",
       "vraag": "Kies het juiste delend lidwoord: 'Elle mange ____ (vlees, v) le soir.'",
       "opties": [
-        "du",
-        "de la",
         "de l'",
-        "des"
+        "du",
+        "des",
+        "de la"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Viande' is vrouwelijk (la viande), dus 'de la viande'."
     },
     {
@@ -38,47 +38,47 @@ DURU.registerExamen({
       "vraag": "Kies het juiste delend lidwoord vóór een klinker: 'Je bois ____ (water) pendant le repas.'",
       "opties": [
         "du",
-        "de la",
         "de l'",
-        "des"
+        "des",
+        "de la"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "Voor een klinker (eau) gebruik je 'de l''."
     },
     {
       "type": "mc",
       "vraag": "Kies het juiste delend lidwoord voor een meervoudig woord: 'Les enfants mangent ____ (groenten, mv).'",
       "opties": [
-        "du",
+        "des",
         "de la",
-        "de l'",
-        "des"
+        "du",
+        "de l'"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "Bij meervoud (légumes) gebruik je 'des'."
     },
     {
       "type": "mc",
       "vraag": "Wat gebeurt er met het delend lidwoord na een ontkenning: 'Je ne prends pas ____ (suiker)?'",
       "opties": [
-        "de",
-        "du",
         "de la",
-        "des"
+        "du",
+        "des",
+        "de"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "Na de ontkenning 'ne ... pas' verandert het delend lidwoord in 'de'."
     },
     {
       "type": "mc",
       "vraag": "Wat gebruik je na een woord van hoeveelheid: 'Elle achète un kilo ____ (appels)?'",
       "opties": [
-        "des",
         "de",
+        "des",
         "du",
         "de la"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Na een aanduiding van hoeveelheid (un kilo) gebruik je 'de' of 'd''."
     },
     {
@@ -86,9 +86,9 @@ DURU.registerExamen({
       "vraag": "Welk lidwoord gebruik je na het werkwoord 'adorer': 'J'adore ____ (kaas, m)?'",
       "opties": [
         "du",
-        "de",
+        "de la",
         "le",
-        "de la"
+        "de"
       ],
       "antwoord": 2,
       "uitleg": "Na waarderingswerkwoorden (aimer, adorer, préférer, détester) gebruik je le, la, l', les."
@@ -98,11 +98,11 @@ DURU.registerExamen({
       "vraag": "Kies de juiste vorm: 'Il boit beaucoup ____ (thee, m) chaque jour.'",
       "opties": [
         "du",
+        "de",
         "des",
-        "de la",
-        "de"
+        "de la"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "Na 'beaucoup' gebruik je altijd 'de' (beaucoup de thé)."
     },
     {
@@ -110,9 +110,9 @@ DURU.registerExamen({
       "vraag": "Kies de juiste combinatie: 'C'est une bouteille ____ (mineraalwater).'",
       "opties": [
         "d'eau minérale",
-        "de l'eau minérale",
         "du eau minérale",
-        "des eau minérale"
+        "des eau minérale",
+        "de l'eau minérale"
       ],
       "antwoord": 0,
       "uitleg": "Na une bouteille (hoeveelheid) komt d' voor een klinker: 'une bouteille d'eau'."
@@ -121,10 +121,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies het juiste delend lidwoord: 'Tu veux ____ (kaas, m) avec ton pain?'",
       "opties": [
-        "de la",
+        "de",
         "du",
-        "des",
-        "de"
+        "de la",
+        "des"
       ],
       "antwoord": 1,
       "uitleg": "'Fromage' is mannelijk (le fromage), dus 'du fromage'."
@@ -133,12 +133,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm bij de ontkenning: 'Nous n'avons pas ____ (frietjes, mv).'",
       "opties": [
-        "des",
+        "de la",
         "du",
-        "de",
-        "de la"
+        "des",
+        "de"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Na 'ne ... pas' verandert ook een meervoudig delend lidwoord in 'de'."
     },
     {
@@ -146,11 +146,11 @@ DURU.registerExamen({
       "vraag": "Welk lidwoord hoort in deze zin: 'Je déteste ____ (vlees, v)?'",
       "opties": [
         "de la",
-        "du",
         "de",
-        "la"
+        "la",
+        "du"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "Na 'détester' gebruik je het bepaald lidwoord: 'la viande'."
     },
     {

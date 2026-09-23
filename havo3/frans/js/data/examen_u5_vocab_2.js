@@ -15,8 +15,8 @@ DURU.registerExamen({
       "opties": [
         "het mes",
         "de vork",
-        "de lepel",
-        "het bord"
+        "het bord",
+        "de lepel"
       ],
       "antwoord": 0,
       "uitleg": "'Le couteau' is het mes."
@@ -26,32 +26,32 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse woord <b>'la cuillère'</b>?",
       "opties": [
         "het glas",
-        "de lepel",
         "de vork",
+        "de lepel",
         "het servet"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'La cuillère' is de lepel."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la serviette'</b>?",
       "opties": [
-        "het tafelkleed",
         "de theedoek",
         "het servet",
-        "de menukaart"
+        "de menukaart",
+        "het tafelkleed"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'La serviette' is het servet."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'le petit boulot'</b>?",
       "opties": [
-        "de kleine rekening",
-        "de korte pauze",
         "de stageplek",
+        "de korte pauze",
+        "de kleine rekening",
         "het bijbaantje"
       ],
       "antwoord": 3,
@@ -61,32 +61,32 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Frans woord betekent <b>'de mosterd'</b>?",
       "opties": [
+        "le sel",
         "la moutarde",
         "le beurre",
-        "le poivre",
-        "le sel"
+        "le poivre"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'La moutarde' is de mosterd."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le beurre'</b>?",
       "opties": [
-        "de kaas",
         "de boter",
         "het zout",
-        "de olie"
+        "de olie",
+        "de kaas"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Le beurre' is de boter."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la pollution'</b>?",
       "opties": [
-        "de bescherming",
         "de bevolking",
+        "de bescherming",
         "de vervuiling",
         "de ontbossing"
       ],
@@ -97,9 +97,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het werkwoord <b>'menacer'</b>?",
       "opties": [
-        "beschermen",
         "redden",
         "schoonmaken",
+        "beschermen",
         "bedreigen"
       ],
       "antwoord": 3,
@@ -109,34 +109,34 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'délicieux'</b> (vrouwelijk: délicieuse)?",
       "opties": [
-        "heerlijk",
         "vies / oneetbaar",
-        "bitter",
-        "te zout"
+        "heerlijk",
+        "te zout",
+        "bitter"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Délicieux' betekent heerlijk of verrukkelijk."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse werkwoord <b>'râler'</b>?",
       "opties": [
-        "genieten",
-        "klagen / mopperen",
         "betalen",
-        "vragen"
+        "genieten",
+        "vragen",
+        "klagen / mopperen"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Râler' betekent klagen of mopperen."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het woord <b>'le pourboire'</b>?",
       "opties": [
-        "de menukaart",
         "de kassabon",
+        "het voorgerecht",
         "de fooi",
-        "het voorgerecht"
+        "de menukaart"
       ],
       "antwoord": 2,
       "uitleg": "'Le pourboire' is de fooi."
@@ -145,12 +145,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le sel'</b>?",
       "opties": [
-        "de peper",
+        "het zout",
         "de suiker",
         "de azijn",
-        "het zout"
+        "de peper"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Le sel' betekent het zout."
     },
     {

@@ -14,9 +14,9 @@ DURU.registerExamen({
       "vraag": "Wat is het juiste voltooid deelwoord van het modale hulpwerkwoord 'können'?",
       "opties": [
         "gekonnt",
+        "konnte",
         "gekönnt",
-        "gekannt",
-        "konnte"
+        "gekannt"
       ],
       "antwoord": 0,
       "uitleg": "Het voltooid deelwoord van können is 'gekonnt' (zonder umlaut)."
@@ -25,36 +25,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de afkorting 'Hbf' op Duitse stationsborden?",
       "opties": [
-        "Hafenbahnhof",
-        "Hauptbahnhof",
         "Haltestelle Bus Fernverkehr",
-        "Hochgeschwindigkeitsbahn"
+        "Hafenbahnhof",
+        "Hochgeschwindigkeitsbahn",
+        "Hauptbahnhof"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Hbf' staat voor 'Hauptbahnhof' (centraal station)."
     },
     {
       "type": "mc",
       "vraag": "Welk Duits woord betekent 'de kabelbaan' in de bergen?",
       "opties": [
-        "die Autobahn",
         "die U-Bahn",
         "die Seilbahn",
-        "die Straßenbahn"
+        "die Straßenbahn",
+        "die Autobahn"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Die Seilbahn' is de kabelbaan."
     },
     {
       "type": "mc",
       "vraag": "Kies het juiste voltooid deelwoord: 'Das habe ich wirklich nicht ____ (weten).' ",
       "opties": [
-        "gewollt",
         "gemusst",
         "gedurft",
-        "gewusst"
+        "gewusst",
+        "gewollt"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "Het voltooid deelwoord van wissen is 'gewusst'."
     },
     {
@@ -62,8 +62,8 @@ DURU.registerExamen({
       "vraag": "Wat betekent het stationsbericht 'Der ICE nach Berlin fährt heute von Gleis 5 ab'?",
       "opties": [
         "De sneltrein naar Berlijn vertrekt vandaag vanaf spoor 5.",
-        "De trein uit Berlijn arriveert met 5 minuten vertraging.",
         "Reizigers naar Berlijn moeten overstappen op perron 5.",
+        "De trein uit Berlijn arriveert met 5 minuten vertraging.",
         "De trein naar Berlijn stopt op 5 verschillende stations."
       ],
       "antwoord": 0,
@@ -73,10 +73,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de Duitse term voor een retourkaartje bij de trein?",
       "opties": [
-        "einfache Fahrt",
+        "die Auskunft",
         "Hin- und Rückfahrt",
-        "Gleiswechsel",
-        "die Auskunft"
+        "einfache Fahrt",
+        "Gleiswechsel"
       ],
       "antwoord": 1,
       "uitleg": "'Hin- und Rückfahrt' is een retourtje (heen en terug)."
@@ -85,10 +85,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Duitse werkwoord 'umsteigen'?",
       "opties": [
-        "instappen",
+        "vertrekken",
         "uitstappen",
         "overstappen",
-        "vertrekken"
+        "instappen"
       ],
       "antwoord": 2,
       "uitleg": "'Umsteigen' is overstappen op een andere trein of bus."
@@ -98,8 +98,8 @@ DURU.registerExamen({
       "vraag": "Kies het juiste voltooid deelwoord van 'wollen': 'Das hat mein Bruder so ____.'",
       "opties": [
         "gewellt",
-        "wollte",
         "gewusst",
+        "wollte",
         "gewollt"
       ],
       "antwoord": 3,
@@ -109,24 +109,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de term 'der Anschluss' bij het reizen per spoor?",
       "opties": [
+        "de restauratiewagen",
         "de aansluitende trein / aansluiting",
-        "de prijs van het ticket",
         "het bagagedepot",
-        "de restauratiewagen"
+        "de prijs van het ticket"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Der Anschluss' is de aansluiting op een volgende trein of bus."
     },
     {
       "type": "mc",
       "vraag": "Wat is het juiste voltooid deelwoord van 'müssen'?",
       "opties": [
-        "gemüsst",
         "gemusst",
-        "musste",
-        "gemacht"
+        "gemüsst",
+        "gemacht",
+        "musste"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Het voltooid deelwoord van müssen is 'gemusst' (zonder umlaut)."
     },
     {
@@ -134,9 +134,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent 'die Auskunft' in een stationshal?",
       "opties": [
         "de nooduitgang",
-        "het bagagerek",
+        "de kaartjesautomaat",
         "de inlichting / informatiedesk",
-        "de kaartjesautomaat"
+        "het bagagerek"
       ],
       "antwoord": 2,
       "uitleg": "'Die Auskunft' is de inlichting of informatiebalie."
@@ -145,8 +145,8 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het als een trein 'zehn Minuten Verspätung' heeft?",
       "opties": [
-        "De trein rijdt 10 km/h langzamer",
         "De rit duurt 10 minuten korter",
+        "De trein rijdt 10 km/h langzamer",
         "Er zijn nog 10 zitplaatsen vrij",
         "De trein arriveert 10 minuten later dan gepland"
       ],

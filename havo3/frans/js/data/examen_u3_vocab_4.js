@@ -15,48 +15,48 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Hoe vraag je aan het loket of in de trein: <i>'Is het een rechtstreekse trein?'</i> (p. 126)?",
       "opties": [
-        "C'est un train direct?",
-        "C'est le bon train?",
+        "Le train s'arrête ici?",
         "Le train part d'où?",
-        "Le train s'arrête ici?"
+        "C'est un train direct?",
+        "C'est le bon train?"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'C'est un train direct?' betekent 'Is het een rechtstreekse trein?'."
     },
     {
       "type": "mc",
       "vraag": "Hoe antwoord je in het Frans dat de reis één uur duurt (p. 126)?",
       "opties": [
+        "Il y a une heure de retard.",
         "Je pars dans une heure.",
-        "Le voyage dure une heure.",
         "Le train arrive à une heure.",
-        "Il y a une heure de retard."
+        "Le voyage dure une heure."
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Le voyage dure une heure' betekent 'De reis duurt een uur'."
     },
     {
       "type": "mc",
       "vraag": "Hoe vraag je informeel hoe iemand het hotel of de vakantieplek vindt (p. 126)?",
       "opties": [
-        "Comment tu t'appelles?",
         "Tu vas où?",
         "Comment tu le trouves?",
+        "Comment tu t'appelles?",
         "Tu es en vacances ici?"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Comment tu le trouves?' betekent 'Hoe vind je het?'."
     },
     {
       "type": "mc",
       "vraag": "Wat zeg je in een hotel als het ontbijt heel erg lekker is (p. 126)?",
       "opties": [
+        "Le petit déjeuner est très bon.",
         "Le dîner est délicieux.",
         "Je n'aime pas le déjeuner.",
-        "Le lit est confortable.",
-        "Le petit déjeuner est très bon."
+        "Le lit est confortable."
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Le petit déjeuner est très bon' betekent 'Het ontbijt is heel goed'."
     },
     {
@@ -75,12 +75,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat zeg je als een hotelkamer helaas veel te klein is (p. 126)?",
       "opties": [
-        "Par contre, la chambre est trop petite.",
-        "La chambre est très grande.",
         "Il n'y a pas de chambre.",
-        "La chambre est propre."
+        "Par contre, la chambre est trop petite.",
+        "La chambre est propre.",
+        "La chambre est très grande."
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Par contre, la chambre est trop petite' betekent 'Maar de kamer is te klein'."
     },
     {
@@ -88,23 +88,23 @@ DURU.registerExamen({
       "vraag": "Wat betekent de zin: <i>'Mon lit n'est pas confortable'</i> (p. 126)?",
       "opties": [
         "Mijn kamer is vies.",
+        "Er is geen douche.",
         "Mijn bed is niet comfortabel.",
-        "Het hotel is erg rustig.",
-        "Er is geen douche."
+        "Het hotel is erg rustig."
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Mon lit n'est pas confortable' betekent 'Mijn bed ligt niet lekker / is niet comfortabel'."
     },
     {
       "type": "mc",
       "vraag": "Hoe vraag je aan iemand of hij/zij hier op vakantie is (p. 126)?",
       "opties": [
-        "Tu restes combien de jours?",
-        "Tu aimes les vacances?",
         "Tu es en vacances ici?",
-        "Tu vas à la plage?"
+        "Tu vas à la plage?",
+        "Tu restes combien de jours?",
+        "Tu aimes les vacances?"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Tu es en vacances ici?' betekent 'Ben je hier op vakantie?'."
     },
     {
@@ -112,8 +112,8 @@ DURU.registerExamen({
       "vraag": "Wat betekent het antwoord: <i>'Oui, c'est obligatoire'</i> op de vraag <i>'Il faut réserver?'</i> (p. 126)?",
       "opties": [
         "Nee, het is volgeboekt.",
-        "Nee, het is gratis.",
         "Ja, dat is mogelijk.",
+        "Nee, het is gratis.",
         "Ja, dat is verplicht."
       ],
       "antwoord": 3,
@@ -147,36 +147,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de juiste Franse vertaling van: <i>'Hoelang duurt de reis?'</i> (p. 126)?",
       "opties": [
-        "Le voyage dure combien de temps?",
         "À quelle heure part le voyage?",
-        "Combien coûte le voyage?",
-        "Où va le voyage?"
+        "Le voyage dure combien de temps?",
+        "Où va le voyage?",
+        "Combien coûte le voyage?"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Le voyage dure combien de temps?' betekent 'Hoelang duurt de reis?'."
     },
     {
       "type": "mc",
       "vraag": "Wat zeg je in het Frans als je met de trein reist (p. 126)?",
       "opties": [
-        "Je vais par le train.",
         "Je vais en train.",
-        "Je vais avec le train.",
-        "Je vais sur le train."
+        "Je vais sur le train.",
+        "Je vais par le train.",
+        "Je vais avec le train."
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "In het Frans zeg je 'en train', 'en voiture', 'en avion'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de zin: <i>'C'est à côté de la piste de ski'</i> (p. 126)?",
       "opties": [
-        "Het is ver van de bergen.",
         "Het uitzicht is prachtig.",
-        "Het is naast de skipiste.",
-        "Er ligt geen sneeuw op de piste."
+        "Er ligt geen sneeuw op de piste.",
+        "Het is ver van de bergen.",
+        "Het is naast de skipiste."
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'À côté de la piste de ski' betekent 'naast de skipiste'."
     },
     {
@@ -184,11 +184,11 @@ DURU.registerExamen({
       "vraag": "Wat is de betekenis van: <i>'En face, il y a une patinoire'</i> (p. 126)?",
       "opties": [
         "Binnen is er een bar.",
-        "Achter het hotel is een bos.",
         "Hiernaast ligt een zwembad.",
-        "Tegenover is er een ijsbaan."
+        "Tegenover is er een ijsbaan.",
+        "Achter het hotel is een bos."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'En face, il y a une patinoire' betekent 'Tegenover is er een ijsbaan'."
     },
     {

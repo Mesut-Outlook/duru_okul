@@ -13,36 +13,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke vorm krijgt het lidwoord in de 3e naamval (Dativ) bij een mannelijk zelfstandig naamwoord?",
       "opties": [
-        "dem",
         "den",
-        "der",
-        "des"
+        "des",
+        "dem",
+        "der"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "In de 3e naamval mannelijk verandert 'der' in 'dem' (bijv. dem Mann)."
     },
     {
       "type": "mc",
       "vraag": "Wat gebeurt er met het zelfstandig naamwoord in de 3e naamval meervoud (bijv. mit den Kind...)?",
       "opties": [
-        "Het krijgt een extra -s achteraan",
         "Het krijgt een extra -n achteraan (behalve bij meervoud op -n of -s)",
-        "Het verandert helemaal niet van vorm",
-        "Het krijgt altijd een extra umlaut"
+        "Het krijgt altijd een extra umlaut",
+        "Het krijgt een extra -s achteraan",
+        "Het verandert helemaal niet van vorm"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "In de 3e naamval meervoud krijgt het zelfstandig naamwoord een extra -n (den Kindern, den Freunden)."
     },
     {
       "type": "mc",
       "vraag": "Hoe heet het traditionele christelijke voorjaarsfeest in Duitsland?",
       "opties": [
+        "Karneval",
         "Weihnachten",
         "Silvester",
-        "Ostern",
-        "Karneval"
+        "Ostern"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Pasen heet in het Duits 'Ostern'."
     },
     {
@@ -50,71 +50,71 @@ DURU.registerExamen({
       "vraag": "Wat betekent het woord 'umsonst' als het gaat om een straatfestival?",
       "opties": [
         "verboden voor minderjarigen",
+        "gratis / kosteloos toegankelijk",
         "alleen toegankelijk met reservering",
-        "heel erg duur",
-        "gratis / kosteloos toegankelijk"
+        "heel erg duur"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Umsonst' betekent gratis of kosteloos."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste Dativ-vorm van het bezittelijk voornaamwoord: 'Ich schenke ____ (mijn) Mutter ein Buch.'",
       "opties": [
-        "meiner",
-        "meine",
         "meinem",
-        "meinen"
+        "meinen",
+        "meiner",
+        "meine"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Vrouwelijk in de 3e naamval (Dativ) krijgt de uitgang -er: 'meiner Mutter'."
     },
     {
       "type": "mc",
       "vraag": "Wat is een 'Schnäppchen' in een Duitse winkel?",
       "opties": [
-        "een kassabon",
         "een voordelig koopje",
-        "een kortingsbon",
-        "een beschadigd product"
+        "een beschadigd product",
+        "een kassabon",
+        "een kortingsbon"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Das Schnäppchen' is een voordelig koopje."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm voor het meervoud in de Dativ: 'Wir reisen mit unseren ____ (vrienden).' ",
       "opties": [
-        "Freunde",
         "Freund",
-        "Freunden",
-        "Freundes"
+        "Freundes",
+        "Freunde",
+        "Freunden"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "In de Dativ meervoud krijgt het woord Freunde een extra -n: 'unseren Freunden'."
     },
     {
       "type": "mc",
       "vraag": "Wat vieren mensen in Duitsland op de avond van 31 december?",
       "opties": [
-        "Ostern",
-        "Pfingsten",
         "Weihnachten",
-        "Silvester"
+        "Silvester",
+        "Ostern",
+        "Pfingsten"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "Oud en Nieuw heet in het Duits 'Silvester'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm van het lidwoord: 'Der Lehrer hilft ____ (het) Kind bei den Aufgaben.'",
       "opties": [
-        "dem",
+        "den",
         "das",
-        "des",
-        "den"
+        "dem",
+        "des"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "Onzijdig 'das Kind' wordt in de 3e naamval (Dativ) 'dem Kind'."
     },
     {
@@ -123,8 +123,8 @@ DURU.registerExamen({
       "opties": [
         "het verdriet",
         "de passie / grote liefhebberij",
-        "de vermoeidheid",
-        "de ruzie"
+        "de ruzie",
+        "de vermoeidheid"
       ],
       "antwoord": 1,
       "uitleg": "'Die Leidenschaft' betekent de passie of grote passievolle hobby."
@@ -135,22 +135,22 @@ DURU.registerExamen({
       "opties": [
         "darstellen",
         "überzeugen",
-        "anschauen",
-        "auswählen"
+        "auswählen",
+        "anschauen"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Sich etwas anschauen' betekent iets bekijken."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de feestdag 'Weihnachten' in het Nederlands?",
       "opties": [
+        "Kerstmis",
         "Pasen",
-        "Pinksteren",
         "Hemelvaart",
-        "Kerstmis"
+        "Pinksteren"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Weihnachten' is Kerstmis."
     },
     {

@@ -107,6 +107,22 @@ const ZEGT_WAAR=/^(waar|juist|true|right|correct|richtig|vrai)\b/i, ZEGT_ONWAAR=
 check('15. waaronwaar: uitleg antwoord ile celismiyor', wow.filter(a=>{const u=norm(a.v.uitleg);
   return /^(onwaar|waar)\s*[:.]\s*(waar|onwaar)\b/i.test(u)||(ZEGT_WAAR.test(u)&&a.v.antwoord===false)||(ZEGT_ONWAAR.test(u)&&a.v.antwoord===true)})
   .map(a=>`${a.owner}#${a.n} (antwoord ${a.v.antwoord}): ${norm(a.v.uitleg).slice(0,50)}`));
+// Betikle toplu uretimde cevap sirasi sablondan gelir: "012301230123" kural 3'u (dagilim) gecer ama sira kalipli.
+// (2026-09-23: aardrijkskunde H3-H5 ve frans U4-U7.) Yalniz ≥6 mc'li dosyalar; kisa dizide rastlanti cok.
+// Sinav motoru siklari her denemede karistirir, oefenmotor KARISTIRMAZ -> onderwerp'te kalip Duru'ya gorunur.
+// Istisna (id bazli) yalniz yayindaki eski SINAVLAR icin: denemeler orijinal indeksle kayitli, sira degisirse review bozulur.
+// Onderwerp'e istisna yazma: oefenmotor soru basina cevap saklamaz, sirasi her zaman duzeltilebilir.
+const KALIP_MIN=6,sirasi=x=>(x.vragen||[]).filter(v=>v.type==='mc').map(v=>v.antwoord);
+const kalip=[],perSira={},kalipVrij=[...OO,...EE].filter(x=>vrij('16',[x.id])).length;istisna+=kalipVrij;
+[...OO,...EE].filter(x=>!vrij('16',[x.id])).forEach(x=>{const s=sirasi(x);if(s.length<KALIP_MIN)return;
+  const n=Math.max(...(x.vragen||[]).filter(v=>v.type==='mc').map(v=>(v.opties||[]).length));
+  const per=[2,3,4].find(p=>s.every((a,i)=>i<p||a===s[i-p]));
+  const stap=s.slice(1).filter((a,i)=>a===(s[i]+1)%n).length/(s.length-1);
+  if(per)kalip.push(`${x.id}: ${s.join('')} (periyot ${per})`);
+  else if(stap>=0.6)kalip.push(`${x.id}: ${s.join('')} (gecislerin %${(100*stap).toFixed(0)}'i +1)`);
+  (perSira[s.join('')]=perSira[s.join('')]||[]).push(x.id)});
+Object.entries(perSira).filter(([,ids])=>ids.length>=3).forEach(([s,ids])=>kalip.push(`${ids.length} dosyada ayni sira ${s}: ${ids.slice(0,4).join(', ')}${ids.length>4?' …':''}`));
+check('16. mc cevap sirasi kalipsiz (0123-dongusu / ayni sira yok)', kalip, kalipVrij?`${kalipVrij} yayindaki eski sinav istisna`:'');
 
 console.log(`\n  SONUC: ${passes} gecti, ${fails} kaldi`);
 process.exit(fails?1:0);

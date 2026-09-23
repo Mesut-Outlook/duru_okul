@@ -15,8 +15,8 @@ DURU.register({
       "vraag": "Kies de juiste samentrekking: 'Tous les samedis, les enfants vont ____ (naar de) piscine.'",
       "opties": [
         "à la",
-        "au",
         "aux",
+        "au",
         "à l'"
       ],
       "antwoord": 0,
@@ -26,9 +26,9 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is de juiste vorm van het werkwoord 'choisir' bij 'vous' in de tegenwoordige tijd?",
       "opties": [
-        "vous choisis",
-        "vous choisissez",
         "vous choisissons",
+        "vous choisissez",
+        "vous choisis",
         "vous choisit"
       ],
       "antwoord": 1,
@@ -38,12 +38,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Kies de juiste vorm: 'C'est le cahier ____ (van de) élève.'",
       "opties": [
-        "du",
+        "des",
         "de la",
-        "de l'",
-        "des"
+        "du",
+        "de l'"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Voor een klinker (élève) gebruik je 'de l''."
     },
     {
@@ -52,10 +52,10 @@ DURU.register({
       "opties": [
         "réussé",
         "réussu",
-        "réussissant",
-        "réussi"
+        "réussi",
+        "réussissant"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "Regelmatige werkwoorden op -ir hebben een voltooid deelwoord op -i: 'réussi'."
     },
     {

@@ -14,36 +14,36 @@ DURU.register({
       "type": "mc",
       "vraag": "Kies de juiste vrouwelijke vorm: 'Leila est une fille très ____ (sportief).'",
       "opties": [
-        "sportif",
-        "sportive",
         "sportifs",
-        "sportives"
+        "sportif",
+        "sportives",
+        "sportive"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "Bij een vrouwelijk zelfstandig naamwoord (une fille) wordt 'sportif' veranderd in 'sportive'."
     },
     {
       "type": "mc",
       "vraag": "Welk bijvoeglijk naamwoord staat in het Frans gewoonlijk VÓÓR het zelfstandig naamwoord?",
       "opties": [
-        "algérien",
         "rouge",
         "grand",
-        "délicieux"
+        "délicieux",
+        "algérien"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Grand' hoort bij de korte veelgebruikte adjectieven die vóór het zelfstandig naamwoord staan (une grande maison)."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste vorm voor 'wij kletsen' van het regelmatige werkwoord bavarder?",
       "opties": [
-        "nous bavardez",
-        "nous bavardent",
         "nous bavarde",
-        "nous bavardons"
+        "nous bavardez",
+        "nous bavardons",
+        "nous bavardent"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "De uitgang bij 'nous' in de tegenwoordige tijd van een -er werkwoord is altijd '-ons'."
     },
     {
@@ -52,8 +52,8 @@ DURU.register({
       "opties": [
         "de sociale media",
         "de mobiele abonnementen",
-        "de computerkabels",
-        "de internetbrowsers"
+        "de internetbrowsers",
+        "de computerkabels"
       ],
       "antwoord": 0,
       "uitleg": "'Les réseaux sociaux' zijn de sociale media (zoals Instagram, TikTok, Snapchat)."

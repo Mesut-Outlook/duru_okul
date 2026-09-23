@@ -4,7 +4,7 @@
 2026-08-27/28'de geschiedenis'te (840 soru) ve scheikunde'de yakalanan kusurlar bu araçlarla
 bulundu. Sözleşme: `docs/ENGINE_SPEC.md`. Kural listesi: `docs/PIPELINE.md` → "Kalite kapısı".
 
-## `gate.js` — kabul kapısı (16 kontrol: 1–15, 5 = 5a/5b)
+## `gate.js` — kabul kapısı (17 kontrol: 1–16, 5 = 5a/5b)
 
 ```bash
 node tools/gate.js <vak>          # ör. node tools/gate.js geschiedenis
@@ -30,10 +30,18 @@ Bir dersin `index.html`'ine bağlı tüm data dosyalarını yükleyip şunları 
 | 13 | Bozuk metin yok: kontrol karakteri (`\t`/`\f` = yarım kalmış `\text`/`\frac`), `($)`, `( = 900 N)`, `bash{` — shell'in yuttuğu `$`-ifadeleri |
 | 14 | `invul` sorusunda cevap `[köşeli parantez]` içinde soruda yazmıyor |
 | 15 | `waaronwaar`: `uitleg` cevapla çelişmiyor ("Onwaar: Waar." / uitleg "Waar." ama antwoord `false`) |
+| 16 | mc cevap **sırası** kalıpsız (≥6 mc'li dosyada): periyot 2–4 döngüsü (`0123 0123…`) yok, geçişlerin <%60'ı `+1`, aynı sıra ≥3 dosyada yok |
 
 12–15 2026-09-12 denetiminde eklendi: 1–11'i geçen teslimlerde (natuurkunde, economie, wiskunde,
 scheikunde) 101 LaTeX, 36 bozuk metin, 97 cevabı görünen `invul` ve 38 çelişkili `waaronwaar` vardı.
 Yeni kurallar düzeltme öncesi yedekte bunların hepsini yakaladı, 12 derste yanlış alarm vermedi.
+
+16 2026-09-23'te eklendi: betikle toplu üretimde (agy'nin `gen_*.py`'leri, eski `spread.py`) cevap sırası
+şablondan geliyor, `012301230123` kural 3'ü (dağılım) geçiyor. 12 derste 330 dosyada vardı. **Sınav motoru
+şıkları her denemede karıştırır, oefenmotor karıştırmaz**: onderwerp'te kalıp Duru'ya görünür. Yayındaki
+eski sınavlar (266) `gate_uitzonderingen.json` → `"16"`'da id bazlı istisnadır; denemeler orijinal indeksle
+kayıtlı olduğu için sıraları değiştirilemez. Onderwerp'e istisna yazılmaz (oefenmotor soru başına cevap
+saklamaz, sıra her zaman düzeltilebilir). Yeni içerikte sırayı **rastgele** üret.
 
 Çıkış kodu: ihlal varsa 1. 9 ve 10 numaralı kurallar **hedef**tir, dersin brief'inde farklı bir
 ölçü verildiyse ihlal sayılmayabilir — raporu okurken bunu ayırt et.

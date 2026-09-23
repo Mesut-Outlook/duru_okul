@@ -14,9 +14,9 @@ DURU.registerExamen({
       "vraag": "Welke naamval volgt ALTIJD na de voorzetsels: aus, bei, mit, nach, seit, von, zu?",
       "opties": [
         "de 3e naamval (Dativ)",
-        "de 4e naamval (Akkusativ)",
+        "de 2e naamval (Genitiv)",
         "de 1e naamval (Nominativ)",
-        "de 2e naamval (Genitiv)"
+        "de 4e naamval (Akkusativ)"
       ],
       "antwoord": 0,
       "uitleg": "De voorzetsels aus, bei, mit, nach, seit, von, zu worden altijd gevolgd door de 3e naamval (Dativ)."
@@ -25,9 +25,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke naamval volgt ALTIJD na de voorzetsels: bis, durch, für, gegen, ohne, um?",
       "opties": [
-        "de 3e naamval (Dativ)",
-        "de 4e naamval (Akkusativ)",
         "de 1e naamval (Nominativ)",
+        "de 4e naamval (Akkusativ)",
+        "de 3e naamval (Dativ)",
         "de 2e naamval (Genitiv)"
       ],
       "antwoord": 1,
@@ -37,12 +37,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de term 'die ehrenamtliche Arbeit'?",
       "opties": [
-        "goed betaald leidinggevend werk",
+        "stage lopen tijdens de studie",
         "parttime werk in een supermarkt",
-        "vrijwilligerswerk zonder betaling voor een goed doel",
-        "stage lopen tijdens de studie"
+        "goed betaald leidinggevend werk",
+        "vrijwilligerswerk zonder betaling voor een goed doel"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Ehrenamtliche Arbeit' is vrijwilligerswerk."
     },
     {
@@ -51,34 +51,34 @@ DURU.registerExamen({
       "opties": [
         "das",
         "den",
-        "des",
-        "dem"
+        "dem",
+        "des"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Aus' vraagt de 3e naamval. Onzijdig 'das Haus' wordt 'dem Haus'."
     },
     {
       "type": "mc",
       "vraag": "Kies het juiste lidwoord na het Akkusativ-voorzetsel 'durch': 'Der Radfahrer fährt durch ____ (de) Tunnel.'",
       "opties": [
+        "der",
         "den",
         "dem",
-        "der",
         "das"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Durch' vraagt de 4e naamval. Mannelijk 'der Tunnel' wordt 'den Tunnel'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent 'Anzeige erstatten' op het politiebureau?",
       "opties": [
-        "een paspoort verlengen",
         "aangifte doen van een misdrijf of diefstal",
+        "een getuigenverklaring intrekken",
         "een bekeuring contant betalen",
-        "een getuigenverklaring intrekken"
+        "een paspoort verlengen"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Anzeige erstatten' betekent aangifte doen bij de politie."
     },
     {
@@ -86,9 +86,9 @@ DURU.registerExamen({
       "vraag": "Welke organisatie zorgt in Duitsland voor de veiligheid en redding op en rond het water?",
       "opties": [
         "die Feuerwehr",
-        "das THW",
+        "die Polizei",
         "die DLRG",
-        "die Polizei"
+        "das THW"
       ],
       "antwoord": 2,
       "uitleg": "De DLRG (Deutsche Lebens-Rettungs-Gesellschaft) is de reddingsbrigade aan het water."
@@ -97,8 +97,8 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies de juiste vorm na 'ohne': 'Wir können ohne ____ (onze) Lehrerin nicht losgehen.'",
       "opties": [
-        "unserer",
         "unserem",
+        "unserer",
         "unser",
         "unsere"
       ],
@@ -109,12 +109,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies het juiste voorzetsel voor 'bij': 'Ich übernachte heute ____ (bij) meinem Freund.'",
       "opties": [
-        "bei",
         "durch",
+        "bei",
         "für",
         "gegen"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Bij' is in het Duits 'bei' (met de 3e naamval: meinem Freund)."
     },
     {
@@ -122,35 +122,35 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Duitse woord 'der Diebstahl'?",
       "opties": [
         "de verkeersovertreding",
+        "het ongeluk",
         "de diefstal",
-        "de ontruiming",
-        "het ongeluk"
+        "de ontruiming"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Der Diebstahl' betekent de diefstal."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de waarschuwingskreet 'Vorsicht!'?",
       "opties": [
-        "Dankjewel!",
+        "Alles veilig!",
         "Kom binnen!",
-        "Pas op! / Voorzichtig!",
-        "Alles veilig!"
+        "Dankjewel!",
+        "Pas op! / Voorzichtig!"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'Vorsicht!' betekent pas op of wees voorzichtig."
     },
     {
       "type": "mc",
       "vraag": "Wat is het Duitse woord voor de ambulance?",
       "opties": [
-        "der Unfallwagen",
-        "das Polizeiauto",
+        "der Krankenwagen",
         "das Feuerwehrboot",
-        "der Krankenwagen"
+        "das Polizeiauto",
+        "der Unfallwagen"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Der Krankenwagen' is de ziekenwagen / ambulance."
     },
     {

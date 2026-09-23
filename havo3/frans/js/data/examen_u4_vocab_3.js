@@ -13,12 +13,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Kies het juiste voltooid deelwoord bij être: 'Léa et sa mère sont ____ (aangekomen) à la gare.'",
       "opties": [
+        "arrivés",
         "arrivées",
-        "arrivé",
         "arrivée",
-        "arrivés"
+        "arrivé"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Léa et sa mère is vrouwelijk meervoud, dus bij être krijgt arrivé de uitgang -es: 'arrivées'."
     },
     {
@@ -26,21 +26,21 @@ DURU.registerExamen({
       "vraag": "Vervang het lijdend voorwerp: 'Tu aimes ces séries? ➔ Oui, je ____ adore!'",
       "opties": [
         "la",
-        "les",
         "le",
-        "l'"
+        "l'",
+        "les"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Ces séries' is meervoud, dus je vervangt het door 'les'."
     },
     {
       "type": "mc",
       "vraag": "Welk werkwoord vormt de passé composé met het hulpwerkwoord <b>être</b>?",
       "opties": [
-        "manger",
+        "acheter",
         "regarder",
         "partir",
-        "acheter"
+        "manger"
       ],
       "antwoord": 2,
       "uitleg": "'Partir' (vertrekken) is een bewegingswerkwoord en wordt vervoegd met être."
@@ -49,46 +49,46 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is het onregelmatige voltooid deelwoord van het Franse werkwoord <b>'prendre'</b>?",
       "opties": [
-        "prendu",
+        "pris",
         "prené",
-        "prendé",
-        "pris"
+        "prendu",
+        "prendé"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "Het voltooid deelwoord van prendre is 'pris' (j'ai pris le bus)."
     },
     {
       "type": "mc",
       "vraag": "Vervang het lijdend voorwerp: 'Tu regardes <u>la télé</u>? ➔ Oui, je ____ regarde tous les soirs.'",
       "opties": [
+        "l'",
         "la",
-        "le",
         "les",
-        "l'"
+        "le"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'La télé' is vrouwelijk enkelvoud, dus je gebruikt 'la'."
     },
     {
       "type": "mc",
       "vraag": "Kies het juiste hulpwerkwoord: 'Victor et son copain ____ allés à l'entraînement.'",
       "opties": [
+        "font",
         "ont",
-        "sont",
         "vont",
-        "font"
+        "sont"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Aller' wordt in de passé composé vervoegd met être: 'ils sont allés'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le centre-ville'</b>?",
       "opties": [
-        "het treinstation",
+        "het gemeentehuis",
         "de buitenwijk",
         "het stadscentrum",
-        "het gemeentehuis"
+        "het treinstation"
       ],
       "antwoord": 2,
       "uitleg": "'Le centre-ville' is het stadscentrum."
@@ -97,46 +97,46 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is het voltooid deelwoord van <b>'avoir'</b> (hebben) in de passé composé?",
       "opties": [
+        "eu",
         "avé",
-        "été",
         "avu",
-        "eu"
+        "été"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "Het voltooid deelwoord van avoir is 'eu' (j'ai eu un problème)."
     },
     {
       "type": "mc",
       "vraag": "Waar plaats je het lijdend voorwerp 'le' in een ontkennende zin met één werkwoord?",
       "opties": [
+        "Vóór ne: Je le ne connais pas.",
         "Tussen ne en de persoonsvorm: Je ne le connais pas.",
         "Helemaal achteraan: Je ne connais pas le.",
-        "Vóór ne: Je le ne connais pas.",
         "Achter het onderwerp: Le je ne connais pas."
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Het voornaamwoord staat direct vóór de persoonsvorm: 'Je ne le connais pas'."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vorm van monter bij être: 'Elles sont ____ (naar boven gegaan) au troisième étage.'",
       "opties": [
-        "monté",
         "montées",
         "montée",
+        "monté",
         "montés"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Vrouwelijk meervoud (elles) krijgt bij être de uitgang -es: 'montées'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de voorzetseluitdrukking <b>'en face de'</b>?",
       "opties": [
+        "bovenop",
         "naast",
-        "achter",
         "tegenover",
-        "bovenop"
+        "achter"
       ],
       "antwoord": 2,
       "uitleg": "'En face de' betekent tegenover."
@@ -145,9 +145,9 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is het voltooid deelwoord van <b>'être'</b> (zijn) in de passé composé?",
       "opties": [
+        "étu",
         "essé",
         "sont",
-        "étu",
         "été"
       ],
       "antwoord": 3,

@@ -14,9 +14,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent de beleefdheidsafsluiting <b>'À bientôt'</b> onderaan een Franse e-mail?",
       "opties": [
         "Tot snel! / Tot gauw!",
-        "Met vriendelijke groet,",
         "Dank voor de moeite,",
-        "Alstublieft,"
+        "Alstublieft,",
+        "Met vriendelijke groet,"
       ],
       "antwoord": 0,
       "uitleg": "'À bientôt' betekent tot snel of tot gauw."
@@ -27,8 +27,8 @@ DURU.registerExamen({
       "opties": [
         "Madame la Directrice,",
         "Cher Thomas,",
-        "Chère Julie,",
-        "À plus tard,"
+        "À plus tard,",
+        "Chère Julie,"
       ],
       "antwoord": 1,
       "uitleg": "Voor een mannelijke vriend gebruik je 'Cher ...,' (Cher Thomas)."
@@ -38,105 +38,105 @@ DURU.registerExamen({
       "vraag": "Wat is de belangrijkste Cito/DELF-strategie vóór het afspelen van een luisterfragment?",
       "opties": [
         "De antwoorden alvast willekeurig invullen",
+        "Je ogen sluiten en pas na afloop de vragen bekijken",
         "De Franse docent om de vertaling vragen",
-        "Eerst de vragen en meerkeuzeopties aandachtig doorlezen",
-        "Je ogen sluiten en pas na afloop de vragen bekijken"
+        "Eerst de vragen en meerkeuzeopties aandachtig doorlezen"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Door eerst de vragen te lezen weet je precies waar je tijdens het luisteren op moet letten."
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent het Franse woord <b>'bises'</b> onderaan een informeel berichtje?",
+      "vraag": "Wat betekent <b>'Je suis désolé(e)'</b> in een reactie op een uitnodiging?",
       "opties": [
-        "handtekening",
-        "postscriptum (ps)",
-        "telefoonnummer",
-        "liefs / kusjes"
+        "Ik ben blij",
+        "Ik ben moe",
+        "Het spijt me",
+        "Ik ben te laat"
       ],
-      "antwoord": 3,
-      "uitleg": "'Bises' betekent liefs of dikke kussen onderaan een informeel bericht."
+      "antwoord": 2,
+      "uitleg": "'Je suis désolé(e)' = het spijt me. Je gebruikt het als je een uitnodiging afslaat (p. 153)."
     },
     {
       "type": "mc",
       "vraag": "Hoe vraag je in een Franse brief beleefd 'Hoe gaat het met jou?'",
       "opties": [
-        "Comment vas-tu?",
         "Comment t'appelles-tu?",
+        "Comment vas-tu?",
         "Où habites-tu?",
         "Quel âge as-tu?"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Comment vas-tu?' betekent 'Hoe gaat het met jou?'."
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent de Franse zin <b>'Écris-moi vite!'</b> aan het einde van een e-mail?",
+      "vraag": "Wat betekent de Franse zin <b>'Réponds-moi vite!'</b> aan het einde van een e-mail?",
       "opties": [
-        "Bel me snel op!",
-        "Schrijf me snel terug!",
+        "Vergeet me niet!",
         "Kom snel op bezoek!",
-        "Vergeet me niet!"
+        "Bel me snel op!",
+        "Antwoord me snel!"
       ],
-      "antwoord": 1,
-      "uitleg": "'Écris-moi vite!' betekent 'Schrijf me snel!'."
+      "antwoord": 3,
+      "uitleg": "'Réponds-moi vite!' betekent 'Antwoord me snel!' (zo eindigt de mail van Nadia, p. 153)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'l'occupant'</b> in historische context van de Tweede Wereldoorlog?",
       "opties": [
-        "de vluchteling",
-        "de soldaat van het verzet",
         "de bezetter",
-        "de dorpsbewoner"
+        "de dorpsbewoner",
+        "de vluchteling",
+        "de soldaat van het verzet"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'L'occupant' is de bezetter."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de oproep <b>'Taisez-vous!'</b> in het klaslokaal?",
       "opties": [
-        "Ga staan!",
         "Pak je boek erbij!",
-        "Kom naar het bord!",
-        "Zwijg! / Houd je mond!"
+        "Ga staan!",
+        "Zwijg! / Houd je mond!",
+        "Kom naar het bord!"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Taisez-vous!' betekent 'wees stil' of 'houd je mond'."
     },
     {
       "type": "mc",
       "vraag": "Hoe bedank je iemand in het Frans voor een ontvangen e-mail of bericht?",
       "opties": [
-        "Merci pour ton message.",
-        "Pardon pour le retard.",
         "Je suis désolé.",
-        "Bienvenue chez moi."
+        "Bienvenue chez moi.",
+        "Pardon pour le retard.",
+        "Merci pour ton message."
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Merci pour ton message' betekent 'Bedankt voor je bericht'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le témoin'</b> in een politieverslag of ooggetuigenverslag?",
       "opties": [
-        "de dader",
         "de getuige",
+        "het slachtoffer",
         "de agent",
-        "het slachtoffer"
+        "de dader"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Le témoin' is de getuige."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'l'événement'</b> (m)?",
       "opties": [
-        "het gebouw",
         "het diploma",
+        "het landschap",
         "de gebeurtenis",
-        "het landschap"
+        "het gebouw"
       ],
       "antwoord": 2,
       "uitleg": "'L'événement' is de gebeurtenis."
@@ -146,11 +146,11 @@ DURU.registerExamen({
       "vraag": "Hoe noem je een stripboek in het Frans (afkorting BD)?",
       "opties": [
         "le roman",
+        "la bande dessinée",
         "le journal",
-        "la poésie",
-        "la bande dessinée"
+        "la poésie"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'BD' staat voor 'la bande dessinée' (het stripverhaal)."
     },
     {
@@ -191,14 +191,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee beleefde manieren om een informele Franse brief of e-mail af te sluiten.",
-      "modelantwoord": "Twee manieren zijn bijvoorbeeld: À bientôt, Bises of Amicalement.",
+      "vraag": "Je kunt niet naar het feest van je vriendin. Hoe zeg je in het Frans dat het je spijt en dat je niet kunt komen? (p. 153)",
+      "modelantwoord": "Je suis désolée, je ne peux pas venir parce que je vais chez ma grand-mère.",
       "sleutelwoorden": [
-        "À bientôt/bientot/bises/amicalement",
-        "bises/amicalement/salut"
+        "désolé/desole",
+        "ne peux pas/pas possible"
       ],
-      "minTreffers": 1,
-      "uitleg": "Informele afsluitingen zijn bijvoorbeeld 'À bientôt!', 'Bises' of 'Amicalement'."
+      "minTreffers": 2,
+      "uitleg": "Excuseren: 'Je suis désolé(e)'. Weigeren: 'Je ne peux pas venir parce que…' of 'Ce n'est pas possible…'."
     },
     {
       "type": "open",

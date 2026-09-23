@@ -15,36 +15,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de betekenis van <b>'l'inconvénient'</b> (m, p. 124)?",
       "opties": [
+        "het ongemak",
         "het nadeel",
-        "het voordeel",
         "het ongeluk",
-        "het ongemak"
+        "het voordeel"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'L'inconvénient' betekent het nadeel (tegenovergesteld aan 'l'avantage' = het voordeel)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het werkwoord <b>'ressembler à'</b> (p. 125)?",
       "opties": [
-        "verhuizen naar",
         "lijken op",
-        "terugkeren van",
-        "antwoorden op"
+        "antwoorden op",
+        "verhuizen naar",
+        "terugkeren van"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Ressembler à' betekent lijken op."
     },
     {
       "type": "mc",
       "vraag": "Hoe vertaal je: <i>'Zij hebben een rustige plek gekozen'</i> (choisir, p. 127)?",
       "opties": [
+        "Ils ont choisant",
         "Ils ont choisie",
         "Ils sont choisi",
-        "Ils ont choisi",
-        "Ils ont choisant"
+        "Ils ont choisi"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Choisir gaat met avoir en krijgt -i in het voltooid deelwoord: 'Ils ont choisi'."
     },
     {
@@ -53,10 +53,10 @@ DURU.registerExamen({
       "opties": [
         "Een retourtje kost 15 euro.",
         "Een kinderkaartje kost 15 euro.",
-        "Reserveren kost 15 euro.",
-        "Een enkele reis kost 15 euro."
+        "Een enkele reis kost 15 euro.",
+        "Reserveren kost 15 euro."
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Un aller-simple' is een enkele reis."
     },
     {
@@ -77,8 +77,8 @@ DURU.registerExamen({
       "opties": [
         "het voordeel",
         "het nadeel",
-        "de verwachting",
-        "de vooruitgang"
+        "de vooruitgang",
+        "de verwachting"
       ],
       "antwoord": 0,
       "uitleg": "'L'avantage' betekent het voordeel."
@@ -87,12 +87,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'recyclable'</b> (p. 125)?",
       "opties": [
+        "onbrandbaar",
         "onbreekbaar",
-        "recyclebaar",
         "opvouwbaar",
-        "onbrandbaar"
+        "recyclebaar"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Recyclable' betekent recyclebaar."
     },
     {
@@ -111,12 +111,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de vraag: <i>'Tu viens d'où?'</i>?",
       "opties": [
-        "Waar ga je heen?",
         "Hoe heet je?",
-        "Met wie praat je?",
-        "Waar kom je vandaan?"
+        "Waar kom je vandaan?",
+        "Waar ga je heen?",
+        "Met wie praat je?"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Tu viens d'où?' betekent 'Waar kom je vandaan?'."
     },
     {
@@ -147,22 +147,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Frans vervoermiddel is <b>'l'avion'</b> (m, p. 124)?",
       "opties": [
-        "het vliegtuig",
         "het schip",
         "de trein",
+        "het vliegtuig",
         "de bus"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'L'avion' is het vliegtuig."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent: <i>'Pas mal, il y a une piscine'</i> (p. 126)?",
       "opties": [
-        "Erg slecht, er is geen water.",
+        "Matig, het water is koud.",
         "Niet slecht, er is een zwembad.",
         "Geweldig, het zwembad is open.",
-        "Matig, het water is koud."
+        "Erg slecht, er is geen water."
       ],
       "antwoord": 1,
       "uitleg": "'Pas mal, il y a une piscine' betekent 'Niet slecht, er is een zwembad'."
@@ -171,21 +171,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welke vorm van het voltooid deelwoord hoort in: <i>'Ils sont ... à Paris'</i> (partir, p. 127)?",
       "opties": [
-        "parti",
-        "partie",
         "partis",
-        "parties"
+        "parties",
+        "parti",
+        "partie"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "Omdat 'Ils' mannelijk meervoud is, krijgt het voltooid deelwoord bij être een -s: 'Ils sont partis'."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la solution'</b> (p. 125)?",
       "opties": [
-        "de vraag",
-        "de reden",
         "de afspraak",
+        "de reden",
+        "de vraag",
         "de oplossing"
       ],
       "antwoord": 3,

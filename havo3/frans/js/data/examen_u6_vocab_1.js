@@ -13,34 +13,34 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse zelfstandig naamwoord <b>'l'émission'</b> (v)?",
       "opties": [
+        "het interview",
         "de uitzending",
-        "de bioscoopfilm",
         "de krant",
-        "het interview"
+        "de bioscoopfilm"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'L'émission' is de televisie- of radiouitzending."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'courageux'</b>?",
       "opties": [
-        "verlegen",
         "moedig",
         "lui",
-        "onvriendelijk"
+        "onvriendelijk",
+        "verlegen"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Courageux' betekent moedig."
     },
     {
       "type": "mc",
       "vraag": "Wat is de betekenis van het Franse zelfstandig naamwoord <b>'la dispute'</b>?",
       "opties": [
+        "de wedstrijd",
         "het feest",
-        "de lezing",
         "de ruzie",
-        "de wedstrijd"
+        "de lezing"
       ],
       "antwoord": 2,
       "uitleg": "'La dispute' betekent de ruzie."
@@ -61,24 +61,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'le pied'</b>?",
       "opties": [
-        "de voet",
-        "de hand",
         "de knie",
+        "de hand",
+        "de voet",
         "de arm"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Le pied' is de voet."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'paresseux'</b> (vrouwelijk: paresseuse)?",
       "opties": [
-        "sportief",
         "lui",
+        "streng",
         "aardig",
-        "streng"
+        "sportief"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "'Paresseux' betekent lui."
     },
     {
@@ -86,20 +86,20 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse woord <b>'la voix'</b>?",
       "opties": [
         "het gezicht",
-        "het oor",
         "de stem",
+        "het oor",
         "de mond"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'La voix' is de stem."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de schoolterm <b>'le bac'</b> in Frankrijk?",
       "opties": [
-        "de herkansing",
-        "de studiekeuze",
         "het lesuur",
+        "de studiekeuze",
+        "de herkansing",
         "het eindexamen"
       ],
       "antwoord": 3,
@@ -109,12 +109,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de Franse uitdrukking <b>'avoir confiance'</b>?",
       "opties": [
-        "vertrouwen hebben",
         "haast hebben",
         "gelijk hebben",
+        "vertrouwen hebben",
         "bang zijn"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Avoir confiance' betekent vertrouwen hebben."
     },
     {
@@ -123,8 +123,8 @@ DURU.registerExamen({
       "opties": [
         "moeilijk",
         "grappig",
-        "saai",
-        "gevaarlijk"
+        "gevaarlijk",
+        "saai"
       ],
       "antwoord": 1,
       "uitleg": "'Marrant' betekent grappig of lollig."
@@ -133,24 +133,24 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la banlieue'</b>?",
       "opties": [
-        "het stadscentrum",
         "het platteland",
-        "de buitenwijk",
-        "de kuststrook"
+        "de kuststrook",
+        "het stadscentrum",
+        "de buitenwijk"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "'La banlieue' is de buitenwijk."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'pourtant'</b>?",
       "opties": [
+        "toch / echter",
         "omdat",
         "daarna",
-        "plotseling",
-        "toch / echter"
+        "plotseling"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Pourtant' betekent toch of echter."
     },
     {

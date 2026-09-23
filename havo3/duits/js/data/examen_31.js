@@ -13,36 +13,36 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Duits begrip omschrijft 'de gevolgen van de opwarming van de aarde'?",
       "opties": [
-        "die Auswirkungen des Klimawandels",
-        "die Begeisterung für den Naturschutz",
+        "die Unwetter in der Großstadt",
         "die Ausblicke auf das Gebirge",
-        "die Unwetter in der Großstadt"
+        "die Auswirkungen des Klimawandels",
+        "die Begeisterung für den Naturschutz"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "'Die Auswirkungen des Klimawandels' betekent de gevolgen of uitwerkingen van de klimaatverandering."
     },
     {
       "type": "mc",
       "vraag": "Wat is de juiste Duitse uitdrukking voor 'benieuwd zijn naar de bergen'?",
       "opties": [
-        "auf die Berge klettern",
-        "gespannt sein auf die Berge",
+        "sich in den Bergen auskennen",
         "die Berge beobachten",
-        "sich in den Bergen auskennen"
+        "auf die Berge klettern",
+        "gespannt sein auf die Berge"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Gespannt sein auf' betekent benieuwd zijn naar."
     },
     {
       "type": "mc",
       "vraag": "Hoe zeg je in het Duits dat je op de camping in een tent verblijft?",
       "opties": [
-        "Wir wandern im Wald.",
-        "Wir grillen am See.",
         "Wir zelten auf dem Campingplatz.",
-        "Wir frieren am Strand."
+        "Wir frieren am Strand.",
+        "Wir wandern im Wald.",
+        "Wir grillen am See."
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Zelten' betekent kamperen in een tent."
     },
     {
@@ -50,71 +50,71 @@ DURU.registerExamen({
       "vraag": "Kies de juiste combinatie van lidwoord en voorzetsel: 'Wir fahren ____ (in het oosten) von Deutschland.'",
       "opties": [
         "am Osten",
+        "im Osten",
         "nach Osten",
-        "vom Osten",
-        "im Osten"
+        "vom Osten"
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "Bij windrichtingen gebruik je 'im' (im Osten, im Westen, im Norden, im Süden)."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent de waarschuwing 'Vorsicht, die Straße ist spiegelglatt!'?",
       "opties": [
-        "Pas op, de weg is spiegelglad door ijzel of vorst!",
-        "Kijk uit, er ligt veel modder op de rijbaan!",
         "Let op, de weg is afgesloten wegens werkzaamheden!",
-        "Pas op, er is dichte mist in de vallei!"
+        "Pas op, er is dichte mist in de vallei!",
+        "Kijk uit, er ligt veel modder op de rijbaan!",
+        "Pas op, de weg is spiegelglad door ijzel of vorst!"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Glatt' betekent glad; 'spiegelglatt' is spiegelglad."
     },
     {
       "type": "mc",
       "vraag": "Welk Duits zelfstandig naamwoord betekent 'de natuurbescherming'?",
       "opties": [
+        "der Klimawandel",
         "die Umgebung",
         "der Naturschutz",
-        "der Klimawandel",
         "das Gewitter"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Der Naturschutz' betekent de natuurbescherming."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het werkwoord 'zerstören' in een verslag over een zware storm?",
       "opties": [
-        "voorspellen",
-        "ontdekken",
         "verwoesten of vernielen",
-        "beschermen"
+        "beschermen",
+        "ontdekken",
+        "voorspellen"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Zerstören' betekent verwoesten of kapotmaken."
     },
     {
       "type": "mc",
       "vraag": "Kies de juiste vertaling: 'Van de toren heeft men een prachtig uitzicht over het dal.'",
       "opties": [
-        "Vom Turm hat man eine tolle Begeisterung.",
-        "Vom Turm hat man eine gute Nahrung.",
         "Vom Turm hat man eine ruhige Umgebung.",
-        "Vom Turm hat man einen herrlichen Ausblick über das Tal."
+        "Vom Turm hat man einen herrlichen Ausblick über das Tal.",
+        "Vom Turm hat man eine tolle Begeisterung.",
+        "Vom Turm hat man eine gute Nahrung."
       ],
-      "antwoord": 3,
+      "antwoord": 1,
       "uitleg": "'Der Ausblick' is het uitzicht."
     },
     {
       "type": "mc",
       "vraag": "Wat is het meervoud van 'der Fels' (de rots) in het Duits?",
       "opties": [
+        "die Felsenmänner",
         "die Felsen",
-        "die Felse",
         "die Felsenisse",
-        "die Felsenmänner"
+        "die Felse"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Het meervoud van 'der Fels' is 'die Felsen'."
     },
     {
@@ -122,21 +122,21 @@ DURU.registerExamen({
       "vraag": "Welk woord vult de zin correct aan: 'Er ist ein ____ (betrouwbare) Wetterexperte.'?",
       "opties": [
         "hektischer",
-        "zuverlässiger",
         "glatter",
-        "enger"
+        "enger",
+        "zuverlässiger"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Zuverlässig' betekent betrouwbaar."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het als iemand zegt: 'Ich kenne mich hier in den Bergen gut aus'?",
       "opties": [
-        "Ik ben hier nog nooit eerder geweest.",
+        "Ik vind de bergen veel te gevaarlijk.",
         "Ik wil hier zo snel mogelijk weg.",
         "Ik weet hier goed de weg en ken het gebied.",
-        "Ik vind de bergen veel te gevaarlijk."
+        "Ik ben hier nog nooit eerder geweest."
       ],
       "antwoord": 2,
       "uitleg": "'Sich auskennen' betekent goed de weg weten of ergens mee vertrouwd zijn."
@@ -145,12 +145,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Welk Duits woord betekent 'het eiland'?",
       "opties": [
-        "die Gegend",
-        "das Dorf",
+        "die Insel",
         "der Ort",
-        "die Insel"
+        "die Gegend",
+        "das Dorf"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Die Insel' betekent het eiland (bijv. Rügen of Sylt)."
     },
     {

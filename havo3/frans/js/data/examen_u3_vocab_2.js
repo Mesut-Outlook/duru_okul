@@ -16,9 +16,9 @@ DURU.registerExamen({
       "vraag": "Wat betekent het Franse woord <b>'le patron'</b> (p. 125)?",
       "opties": [
         "de baas / eigenaar",
+        "de gast",
         "de ober",
-        "de kok",
-        "de gast"
+        "de kok"
       ],
       "antwoord": 0,
       "uitleg": "'Le patron' is de baas of eigenaar."
@@ -28,31 +28,31 @@ DURU.registerExamen({
       "vraag": "Wat betekent de uitdrukking <b>'les sports d'hiver'</b> (p. 125)?",
       "opties": [
         "de zomerspelen",
-        "de wintersport",
         "de schaatswedstrijd",
+        "de wintersport",
         "de bergwandeling"
       ],
-      "antwoord": 1,
+      "antwoord": 2,
       "uitleg": "'Les sports d'hiver' betekent de wintersport."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'propre'</b> in <i>'une chambre propre'</i> (p. 125)?",
       "opties": [
-        "ruim",
-        "donker",
+        "warm",
         "schoon",
-        "warm"
+        "donker",
+        "ruim"
       ],
-      "antwoord": 2,
+      "antwoord": 1,
       "uitleg": "'Propre' betekent schoon."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse werkwoord <b>'blaguer'</b> (p. 125)?",
       "opties": [
-        "ruzie maken",
         "klagen",
+        "ruzie maken",
         "slapen",
         "grappen maken"
       ],
@@ -75,12 +75,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent <b>'le lit'</b> (p. 125) in een hotelkamer?",
       "opties": [
-        "het bed",
         "de stoel",
-        "de tafel",
-        "de kast"
+        "het bed",
+        "de kast",
+        "de tafel"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "'Le lit' betekent het bed."
     },
     {
@@ -88,23 +88,23 @@ DURU.registerExamen({
       "vraag": "Hoe zeg je <b>'heerlijk'</b> in het Frans (mannelijk enkelvoud, p. 125)?",
       "opties": [
         "délicat",
-        "délicieux",
+        "dangereux",
         "difficile",
-        "dangereux"
+        "délicieux"
       ],
-      "antwoord": 1,
+      "antwoord": 3,
       "uitleg": "'Délicieux' betekent heerlijk (vrouwelijk: délicieuse)."
     },
     {
       "type": "mc",
       "vraag": "Wat is de betekenis van het Franse woord <b>'le métier'</b> (p. 125)?",
       "opties": [
-        "de vakantie",
-        "de collega",
         "het beroep",
+        "de collega",
+        "de vakantie",
         "het bedrijf"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "'Le métier' betekent het beroep."
     },
     {
@@ -112,11 +112,11 @@ DURU.registerExamen({
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'sale'</b> (p. 125)?",
       "opties": [
         "zout",
-        "duur",
         "gevaarlijk",
-        "vies"
+        "vies",
+        "duur"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "'Sale' betekent vies of vuil."
     },
     {
@@ -147,22 +147,22 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent <b>'le rendez-vous'</b> (p. 125)?",
       "opties": [
-        "de afspraak",
-        "de ontmoetingsplek",
         "het feestje",
-        "het afscheid"
+        "de ontmoetingsplek",
+        "het afscheid",
+        "de afspraak"
       ],
-      "antwoord": 0,
+      "antwoord": 3,
       "uitleg": "'Le rendez-vous' is de afspraak."
     },
     {
       "type": "mc",
       "vraag": "Wat betekent het Franse woord <b>'la pluie'</b> (p. 125)?",
       "opties": [
-        "de wind",
-        "de regen",
         "de zon",
-        "de mist"
+        "de regen",
+        "de mist",
+        "de wind"
       ],
       "antwoord": 1,
       "uitleg": "'La pluie' betekent de regen."
@@ -171,10 +171,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het werkwoord <b>'inventer'</b> (p. 125)?",
       "opties": [
+        "slopen",
         "verbieden",
-        "kopen",
         "bedenken / uitvinden",
-        "slopen"
+        "kopen"
       ],
       "antwoord": 2,
       "uitleg": "'Inventer' betekent bedenken of uitvinden."
@@ -183,12 +183,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent het bijvoeglijk naamwoord <b>'principal(e)'</b> (p. 125)?",
       "opties": [
+        "belangrijkste",
         "eerste",
         "makkelijk",
-        "vriendelijk",
-        "belangrijkste"
+        "vriendelijk"
       ],
-      "antwoord": 3,
+      "antwoord": 0,
       "uitleg": "'Principal(e)' betekent belangrijkste."
     },
     {
