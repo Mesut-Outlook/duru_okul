@@ -237,10 +237,23 @@
   /* ---------------- Quiz ---------------- */
   var Q = null; // huidige quiz-state
 
+  var VASTE_VOLGORDE = /geen van|beide|bovenstaande|alle (?:antwoorden|opties)|all of the above|none of the above|toutes les r|keine der|alle Antworten/i;
+  function schudOpties(v) {
+    if (v.type !== "mc" || !v.opties || v.opties.some(function (o) { return VASTE_VOLGORDE.test(String(o)); })) return v;
+    var orde = shuffle(v.opties.map(function (_, i) { return i; }));
+    var kopie = {};
+    for (var k in v) kopie[k] = v[k];
+    kopie.opties = orde.map(function (i) { return v.opties[i]; });
+    kopie.antwoord = orde.indexOf(v.antwoord);
+    return kopie;
+  }
+
   function renderQuizStart(id) {
     var o = DURU.getOnderwerp(id);
     if (!o || !o.vragen.length) return renderTheorie(id);
-    var vragen = shuffle(o.vragen.slice());
+    // mc-opties per ronde schudden (net als exams.js): in de data staat het goede antwoord soms op een
+    // voorspelbare plek. Kopie met nieuwe index — de data zelf verandert niet, oefenen bewaart geen antwoorden.
+    var vragen = shuffle(o.vragen.map(schudOpties));
     Q = { onderwerp: o, vragen: vragen, i: 0, goed: 0, beantwoord: false };
     renderVraag();
   }
