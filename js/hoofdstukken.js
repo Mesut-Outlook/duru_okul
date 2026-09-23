@@ -575,7 +575,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-frans-u5-v2": 5,
         "ex-h3-frans-u5-v3": 5,
         "ex-h3-frans-u5-v4": 5,
-        "ex-h3-frans-u5-v5": 5
+        "ex-h3-frans-u5-v5": 5,
+        "ex-h3-frans-u6-v1": 6,
+        "ex-h3-frans-u6-v2": 6,
+        "ex-h3-frans-u6-v3": 6,
+        "ex-h3-frans-u6-v4": 6,
+        "ex-h3-frans-u6-v5": 6
       },
       "onderwerpHoofdstuk": {
         "fr-u1-1": 1,
@@ -598,6 +603,10 @@ window.DURU_HOOFDSTUKKEN = {
         "fr-u5-2": 5,
         "fr-u5-3": 5,
         "fr-u5-4": 5,
+        "fr-u6-1": 6,
+        "fr-u6-2": 6,
+        "fr-u6-3": 6,
+        "fr-u6-4": 6,
         "th-h3-frans-u1-vocab": 1
       },
       "aantalExamens": {
@@ -606,7 +615,7 @@ window.DURU_HOOFDSTUKKEN = {
         "3": 10,
         "4": 10,
         "5": 10,
-        "6": 5,
+        "6": 10,
         "7": 5,
         "8": 5
       },
@@ -615,7 +624,8 @@ window.DURU_HOOFDSTUKKEN = {
         "2": 4,
         "3": 4,
         "4": 4,
-        "5": 4
+        "5": 4,
+        "6": 4
       }
     },
     "geschiedenis": {

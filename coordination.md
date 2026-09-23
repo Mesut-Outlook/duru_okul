@@ -754,6 +754,18 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H5: 10 examen, 4 onderwerp`).
   - `tools/gate.js frans` → **16/16 kusursuz geçti** (21 onderwerp, 71 proeftoets, 1657 soru).
   - `tools/open_check.js frans` → **619 open soru tarandı, 0 sorun**.
+- **agy notu (2026-09-23 23:05)**: ✅ **Unité 6 (C'est moi!) TAMAMLANDI**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h06_c-est-moi.pdf`.
+  - Kitaptaki bölümler ve sayfalar analiz edildi (s. 232-236):
+    - §6.1: Vocabulaire A & B: Identiteit, media, uiterlijk & karakter (émission, célébrité, voix, adulte, confiance, courageux, paresseux, marrant, énervant, le bac, les études, la banlieue).
+    - §6.2: Vocabulaire E & F: Dagindeling, klokkijken & schoolleven (je me lève, je m'habille, arriver en retard, midi/minuit, et quart, et demie, moins le quart, la note, la récré, poser une question).
+    - §6.3: Phrases-clés C & G: Jezelf voorstellen & Praten over gewoontes (se présenter, d'origine, demi-frère, ressembler à, s'entendre bien avec, se disputer; gewoontes: à quelle heure tu pars, salle de sport, meilleur copain).
+    - §6.4: Grammaire D & H: De vergelijkingen (plus/moins/aussi...que + accord & uitzondering meilleur que) én Woordvolgorde in de zin (werkwoorden bij elkaar, ontkenning ne...pas om persoonsvorm, bijwoorden zoals toujours/souvent direct na pv).
+  - **4 Oefenles / Onderwerp** (`h6_1.js`..`h6_4.js`): Her biri 10 soru (mc, waaronwaar, invoer), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u6_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H6: 10 examen, 4 onderwerp`).
+  - `tools/gate.js frans` → **16/16 kusursuz geçti** (25 onderwerp, 76 proeftoets, 1797 soru).
+  - `tools/open_check.js frans` → **629 open soru tarandı, 0 sorun**.
 
 
 ### TASK-16 · aardrijkskunde H3–H5  [status: DONE — 2026-09-23 agy]
