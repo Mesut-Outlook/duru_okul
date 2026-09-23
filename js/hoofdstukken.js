@@ -16,6 +16,24 @@ window.DURU_HOOFDSTUKKEN = {
           "titel": "Schatkist aarde?",
           "icoon": "🌍",
           "intro": "Geologische tijdschaal van 4,6 miljard jaar, gesteentesoorten, gidsfossielen, mijnbouw en milieu (Suriname, Nigeria, Europa) en delfstoffen in Nederland (Mergel, steenkool, gas en zout)."
+        },
+        {
+          "nr": 3,
+          "titel": "Migratie",
+          "icoon": "🧳",
+          "intro": "Migratiepatronen, push- en pullfactoren, gevolgen voor herkomst- en bestemmingsgebieden, braindrain, segregatie, de Europese Unie en migratie in Nederland."
+        },
+        {
+          "nr": 4,
+          "titel": "Energietransitie",
+          "icoon": "⚡",
+          "intro": "Fossiele vs hernieuwbare energiebronnen, wind- en zonne-energie, biomassa, aardwarmte, waterkracht, energiebesparing en beleid voor een klimaatneutrale toekomst."
+        },
+        {
+          "nr": 5,
+          "titel": "Gewapende conflicten",
+          "icoon": "🕊️",
+          "intro": "Oorzaken van conflicten, geopolitiek, territorium, etniciteit en religie, grondstoffenconflicten, vluchtelingenstromen en internationale vredeshandhaving."
         }
       ],
       "examenHoofdstuk": {
@@ -28,7 +46,22 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-7": 2,
         "ex-h3-ak-8": 2,
         "ex-h3-ak-9": 2,
-        "ex-h3-ak-10": 2
+        "ex-h3-ak-10": 2,
+        "ex-h3-ak-11": 3,
+        "ex-h3-ak-12": 3,
+        "ex-h3-ak-13": 3,
+        "ex-h3-ak-14": 3,
+        "ex-h3-ak-15": 3,
+        "ex-h3-ak-16": 4,
+        "ex-h3-ak-17": 4,
+        "ex-h3-ak-18": 4,
+        "ex-h3-ak-19": 4,
+        "ex-h3-ak-20": 4,
+        "ex-h3-ak-21": 5,
+        "ex-h3-ak-22": 5,
+        "ex-h3-ak-23": 5,
+        "ex-h3-ak-24": 5,
+        "ex-h3-ak-25": 5
       },
       "onderwerpHoofdstuk": {
         "ak-h1-1": 1,
@@ -40,15 +73,36 @@ window.DURU_HOOFDSTUKKEN = {
         "ak-h2-2": 2,
         "ak-h2-3": 2,
         "ak-h2-4": 2,
-        "ak-h2-5": 2
+        "ak-h2-5": 2,
+        "ak-h3-1": 3,
+        "ak-h3-2": 3,
+        "ak-h3-3": 3,
+        "ak-h3-4": 3,
+        "ak-h3-5": 3,
+        "ak-h4-1": 4,
+        "ak-h4-2": 4,
+        "ak-h4-3": 4,
+        "ak-h4-4": 4,
+        "ak-h4-5": 4,
+        "ak-h5-1": 5,
+        "ak-h5-2": 5,
+        "ak-h5-3": 5,
+        "ak-h5-4": 5,
+        "ak-h5-5": 5
       },
       "aantalExamens": {
         "1": 5,
-        "2": 5
+        "2": 5,
+        "3": 5,
+        "4": 5,
+        "5": 5
       },
       "aantalOnderwerpen": {
         "1": 5,
-        "2": 5
+        "2": 5,
+        "3": 5,
+        "4": 5,
+        "5": 5
       }
     },
     "biologie": {
@@ -871,6 +925,36 @@ window.DURU_HOOFDSTUKKEN = {
           "titel": "Bouwstenen van stoffen",
           "icoon": "⚛️",
           "intro": "Macro- en microniveau, fasen, het periodiek systeem der elementen, metalen en niet-metalen, chemische formuletaal en atoombouw met protonen, neutronen en elektronen."
+        },
+        {
+          "nr": 3,
+          "titel": "Chemische reacties",
+          "icoon": "⚗️",
+          "intro": "Reactiekenmerken, reactievergelijkingen kloppend maken en rekenen met massaverhoudingen."
+        },
+        {
+          "nr": 4,
+          "titel": "Reacties en energie",
+          "icoon": "🔥",
+          "intro": "Verbranding, ontleding, energie en milieu, en overmaat en ondermaat bij reacties."
+        },
+        {
+          "nr": 5,
+          "titel": "Mengsels",
+          "icoon": "🥤",
+          "intro": "Scheidingsmethoden, indampen en destilleren, adsorberen en chromatograferen, en oplossingen."
+        },
+        {
+          "nr": 6,
+          "titel": "Indeling van stoffen",
+          "icoon": "🧂",
+          "intro": "Stroomgeleiding, metalen, zouten en moleculaire stoffen."
+        },
+        {
+          "nr": 7,
+          "titel": "Koolstofchemie",
+          "icoon": "🛢️",
+          "intro": "Koolwaterstoffen, systematische namen en karakteristieke groepen."
         }
       ],
       "examenHoofdstuk": {
@@ -883,23 +967,92 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h1-2": 1,
         "ex-h3-sch-h1-3": 1,
         "ex-h3-sch-h1-4": 1,
-        "ex-h3-sch-h1-5": 1
+        "ex-h3-sch-h1-5": 1,
+        "ex-h3-sch-h1-6": 1,
+        "ex-h3-sch-h1-7": 1,
+        "ex-h3-sch-h1-8": 1,
+        "ex-h3-sch-h2-6": 2,
+        "ex-h3-sch-h3-1": 3,
+        "ex-h3-sch-h3-2": 3,
+        "ex-h3-sch-h3-3": 3,
+        "ex-h3-sch-h3-4": 3,
+        "ex-h3-sch-h3-5": 3,
+        "ex-h3-sch-h4-1": 4,
+        "ex-h3-sch-h4-2": 4,
+        "ex-h3-sch-h4-3": 4,
+        "ex-h3-sch-h4-4": 4,
+        "ex-h3-sch-h4-5": 4,
+        "ex-h3-sch-h4-6": 4,
+        "ex-h3-sch-h5-1": 5,
+        "ex-h3-sch-h5-2": 5,
+        "ex-h3-sch-h5-3": 5,
+        "ex-h3-sch-h5-4": 5,
+        "ex-h3-sch-h5-5": 5,
+        "ex-h3-sch-h5-6": 5,
+        "ex-h3-sch-h6-1": 6,
+        "ex-h3-sch-h6-2": 6,
+        "ex-h3-sch-h6-3": 6,
+        "ex-h3-sch-h6-4": 6,
+        "ex-h3-sch-h6-5": 6,
+        "ex-h3-sch-h6-6": 6,
+        "ex-h3-sch-h7-1": 7,
+        "ex-h3-sch-h7-2": 7,
+        "ex-h3-sch-h7-3": 7,
+        "ex-h3-sch-h7-4": 7,
+        "ex-h3-sch-h7-5": 7
       },
       "onderwerpHoofdstuk": {
         "sch-h1-1-stofeigenschappen": 1,
+        "sch-h1-2-veiligheid": 1,
         "sch-h1-3-faseveranderingen": 1,
+        "sch-h1-4-mengsels-ph": 1,
+        "sch-h1-begrippen": 1,
         "sch-h2-1-macro-micro": 2,
         "sch-h2-2-periodiek-systeem": 2,
         "sch-h2-3-formuletaal": 2,
-        "sch-h2-4-atoombouw": 2
+        "sch-h2-4-atoombouw": 2,
+        "sch-h2-begrippen": 2,
+        "sch-h3-1-reactiekenmerken": 3,
+        "sch-h3-2-reactievergelijkingen": 3,
+        "sch-h3-3-massaverhoudingen": 3,
+        "sch-h3-begrippen": 3,
+        "sch-h4-1-verbranding": 4,
+        "sch-h4-2-ontleding": 4,
+        "sch-h4-3-energie-milieu": 4,
+        "sch-h4-4-overmaat-ondermaat": 4,
+        "sch-h4-begrippen": 4,
+        "sch-h5-1-scheidingsmethoden": 5,
+        "sch-h5-2-indampen-destilleren": 5,
+        "sch-h5-3-adsorberen-chromatograferen": 5,
+        "sch-h5-4-oplossingen": 5,
+        "sch-h5-begrippen": 5,
+        "sch-h6-1-stroomgeleiding": 6,
+        "sch-h6-2-metalen": 6,
+        "sch-h6-3-zouten": 6,
+        "sch-h6-4-moleculaire-stoffen": 6,
+        "sch-h6-begrippen": 6,
+        "sch-h7-1-koolwaterstoffen": 7,
+        "sch-h7-2-systematische-namen": 7,
+        "sch-h7-3-karakteristieke-groepen": 7,
+        "sch-h7-begrippen": 7
       },
       "aantalExamens": {
-        "1": 5,
-        "2": 5
+        "1": 8,
+        "2": 6,
+        "3": 5,
+        "4": 6,
+        "5": 6,
+        "6": 6,
+        "7": 5
       },
       "aantalOnderwerpen": {
-        "1": 2,
-        "2": 4
+        "1": 5,
+        "2": 5,
+        "3": 4,
+        "4": 5,
+        "5": 5,
+        "6": 5,
+        "7": 4
       }
     },
     "wiskunde": {

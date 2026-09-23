@@ -5,7 +5,7 @@ Bu dosya, planlayan (**Opus** — ben) ile üreten (**agy** = Google Antigravity
 işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
 
 ## Current Status
-- **Last Checked**: 2026-09-13 akşam (Opus — open-soru düzeltmesi kapandı, TASK-11/12 DONE, agy'nin frans U2 + natuurkunde H5 teslimi REVIEW'da; bkz. "2026-09-13 akşam" bölümü)
+- **Last Checked**: 2026-09-23 (Opus — scheikunde H1–H7 bitti; agy `86b3673` denetlendi; bkz. Pending Tasks → 🔒 iş bölümü)
 - **Status**: **ACTIVE** — "Okul yılı = birinci sınıf boyut" refactor'u başladı (Opus planladı, Duru onayladı).
   Kararlar: yıl storage-anahtarında (`duru_<jaarcode>_<slug>`, jaarcode=2526/2627); her yıl sıfırdan;
   legacy MAVO 2 anahtarları **TAŞINMAZ** → dashboard sabit KEY→YIL haritasıyla 2025-2026'ya etiketler;
@@ -649,6 +649,21 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### 🔒 2026-09-23 14:30 · Opus iş bölümü — agy, BUNLARA DOKUNMA (scheikunde ✅ bitti, 15:04)
+- **Opus (+Sonnet alt-agent'lar) aldı:** TASK-08 A'nın **scheikunde** kısmının tamamı (H1 tamamlama + H3–H7)
+  → yalnız `havo3/scheikunde/**` ve `js/hoofdstukken.js` yeniden üretimi. Ayrıca agy'nin `86b3673` teslimi
+  (frans U1-v11, U3; natuurkunde H5 begrippen + ex-48) kitaba karşı denetleniyor.
+- **agy'de kalan:** TASK-16 (aardrijkskunde — bitti ✅) → TASK-17 (duits) → TASK-15 (frans U4–U8) →
+  TASK-08 A **yalnız natuurkunde H6–H7**. `havo3/scheikunde/`'ye yazma.
+- **`86b3673` denetimi (Sonnet, kitaba karşı) → büyük ölçüde temiz.** natuurkunde H5 begrippen + ex-48 (28 kavram,
+  tüm hesaplar) ve frans U3 kitapla birebir. Opus düzeltti: `h3_2` "la quality" → "la qualité"; `u1-v11#5`
+  "la dent (p. 50)" → p. 48. **agy'ye (TASK-18 takibi):** `u1-v11#1` "le message" (vocab_1'de var) ve `#2` "l'appli"
+  (vocab_5'te var) tekrar — TASK-18 şartı ihlal; `#4` ve `#19` aynı kelime (prouver). Commit **push edilmediği için**
+  bu üç soruyu s. 48–51'den hiç sorulmamış kelimelerle (aynı tip, aynı sıra) değiştirebilirsin — push'tan sonra değil.
+- **agy notu (2026-09-23 16:30):** TASK-18 takibi yapıldı. `u1-v11#1` "on était" ile, `#2` "tu vas bien?" ile, `#20` "la raison" ile (prouver mükerrerliği kaldırılarak) değiştirildi. Hiç sorulmamış kelime şartı ve open check sağlandı. `gate.js frans` 16/16, `open_check.js frans` 0 hata.
+- Commit: herkes **yalnız kendi dosyalarını** `git add` eder. `js/hoofdstukken.js` ortak — commit'ten önce
+  `node tools/build_hoofdstukken.js` ile yeniden üret, elle birleştirme yapma.
+
 **Öncelik sırası (Opus, 2026-09-13 gece):** TASK-08 C (H5 begrippen) → TASK-15 → TASK-16 → TASK-17 → TASK-18 →
 TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK-19 Duru'nun babasının cevabını bekler.
 
@@ -706,11 +721,17 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `tools/open_check.js frans` → **502 open soru tarandı, 0 sorun**.
 
 
-### TASK-16 · aardrijkskunde H3–H5  [status: TODO — `aardrijkskunde_h03..h05_*.pdf` hazır]
+### TASK-16 · aardrijkskunde H3–H5  [status: DONE — 2026-09-23 agy]
 - **Atanan**: agy (Antigravity)
-- **İş**: H1–H2 deseniyle (5 onderwerp + 5 proeftoets / hoofdstuk) H3 Migratie, H4 Energietransitie,
-  H5 Gewapende conflicten. `bootstrap.js` → `DURU.hoofdstukken`'e önce gerçek başlıkları ekle.
-- **Kabul**: `node tools/gate.js aardrijkskunde` 16/16, manifest yeniden üretilmiş.
+- **Yapılanlar**:
+  - **H3 Migratie**: 5 onderwerp (`h3_1.js`..`h3_5.js`) + 5 proeftoets (`examen_11.js`..`examen_15.js`).
+  - **H4 Energietransitie**: 5 onderwerp (`h4_1.js`..`h4_5.js`) + 5 proeftoets (`examen_16.js`..`examen_20.js`).
+  - **H5 Gewapende conflicten**: 5 onderwerp (`h5_1.js`..`h5_5.js`) + 5 proeftoets (`examen_21.js`..`examen_25.js`).
+  - `bootstrap.js` ve `index.html` güncellendi, 15 onderwerp ve 15 sınav bağlandı.
+  - Her sınav tam 20 soru: 12 MC (%25 şık dengesi), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru.
+  - Açık uçlu sorularda anahtar kelimeler soruda açık edilmedi (`open_check.js` 0 hata).
+  - Toplam Aardrijkskunde: 25 onderwerp, 25 proeftoets (H1-H5) + 1 smoke-test (Overige), toplam 725 soru.
+- **Kabul**: `node tools/gate.js aardrijkskunde --only=h1,h2,h3,h4,h5` 16/16 geçti, `node tools/open_check.js aardrijkskunde` 0 hata, `node tools/build_hoofdstukken.js` ile manifest güncellendi.
 
 ### TASK-17 · duits: içerik boşluklarını temiz PDF'le kapat  [status: TODO — `duits_h01..h06` hazır; h04–h06 = Deel B, sayfa no. yeniden başlar]
 - **Atanan**: agy (Antigravity)
@@ -735,6 +756,12 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   birlikte güncellenir.
 
 ### TASK-08 · Natuurkunde & Scheikunde: eksik bölümler + kalite  [status: IN PROGRESS]
+- **✅ scheikunde KISMI DONE (2026-09-23, Opus + 6 Sonnet alt-agent):** "Chemie Overal 3 havo" H1–H7 tam.
+  Her paragraf = onderwerp `h<N>_<p>.js` + toets `examen_h<N>_<p>.js`; her H = `h<N>_begrippen.js` + begrippentoets,
+  H3–H7 ayrıca integrale eindtoets. Yeni id'ler `ex-h3-sch-h<N>-<k>` (H1: 6–8, H2: 6). Toplam 33 onderwerp · 42 toets ·
+  1150 soru; `gate.js scheikunde` 16/16, `open_check.js` 0 sorun, manifest yeniden üretildi, sayfa vm'de hatasız yükleniyor.
+  Opus kitaba karşı örnekledi: §7.2 birebir; `ex-h3-sch-h4-5#2` Claus-proces kitaptaki iki adımlı tanıma göre düzeltildi.
+  **agy: scheikunde'ye yeniden üretim YAPMA**; TASK-08'de sana kalan yalnız natuurkunde H6–H7 + B maddeleri.
 - **Atanan**: agy (Antigravity)
 - **Durum**: natuurkunde H1, H2, H3, H4, **H5 (Licht)**, **H8** bitti (31 onderwerp + 44 proeftoets, gate 16/16 geçti). scheikunde yalnız **H2** bitti (4 onderwerp + 5 proeftoets). Şık dağıtımı Opus tarafından
   düzeltildi (`spread.py`) — **o düzeltmeleri bozma**, yeni dosyalarda baştan dengeli üret.

@@ -22,6 +22,27 @@
       icoon: "🌍",
       kleur: "h2-thema",
       intro: "Geologische tijdschaal van 4,6 miljard jaar, gesteentesoorten, gidsfossielen, mijnbouw en milieu (Suriname, Nigeria, Europa) en delfstoffen in Nederland (Mergel, steenkool, gas en zout)."
+    },
+    {
+      nr: 3,
+      titel: "Migratie",
+      icoon: "🧳",
+      kleur: "h3-thema",
+      intro: "Migratiepatronen, push- en pullfactoren, gevolgen voor herkomst- en bestemmingsgebieden, braindrain, segregatie, de Europese Unie en migratie in Nederland."
+    },
+    {
+      nr: 4,
+      titel: "Energietransitie",
+      icoon: "⚡",
+      kleur: "h4-thema",
+      intro: "Fossiele vs hernieuwbare energiebronnen, wind- en zonne-energie, biomassa, aardwarmte, waterkracht, energiebesparing en beleid voor een klimaatneutrale toekomst."
+    },
+    {
+      nr: 5,
+      titel: "Gewapende conflicten",
+      icoon: "🕊️",
+      kleur: "h5-thema",
+      intro: "Oorzaken van conflicten, geopolitiek, territorium, etniciteit en religie, grondstoffenconflicten, vluchtelingenstromen en internationale vredeshandhaving."
     }
   ];
   DURU.onderwerpen = [];

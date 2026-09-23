@@ -11,27 +11,27 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat betekent het Franse woord <b>'le message'</b> (m, p. 48)?",
+      "vraag": "Wat betekent de Franse werkwoordsvorm <b>'on était'</b> (imparfait van être, p. 48)?",
       "opties": [
-        "het bericht",
-        "het beeldscherm",
-        "de melding",
-        "de brief"
+        "we waren / men was",
+        "we hadden",
+        "we gingen",
+        "we bleven"
       ],
       "antwoord": 0,
-      "uitleg": "'Le message' betekent 'het bericht' (zoals een sms of chatbericht)."
+      "uitleg": "'On était' betekent 'we waren' of 'men was' (de verleden tijd van être)."
     },
     {
       "type": "mc",
-      "vraag": "Welk Frans woord gebruikt men als informele afkorting voor <b>'de app'</b> (p. 48)?",
+      "vraag": "Welke vaste Franse vraag betekent <b>'gaat het goed met je?'</b> (p. 48)?",
       "opties": [
-        "l'ordi",
-        "l'appli",
-        "le texto",
-        "la pub"
+        "où vas-tu?",
+        "tu vas bien?",
+        "comment t'appelles-tu?",
+        "ça te plaît?"
       ],
       "antwoord": 1,
-      "uitleg": "'L'appli' is de veelgebruikte afkorting voor 'l'application' (de app)."
+      "uitleg": "'Tu vas bien?' betekent 'gaat het goed met je?' (informele begroeting)."
     },
     {
       "type": "mc",
@@ -59,7 +59,7 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Het Franse zelfstandig naamwoord <b>'la dent'</b> (v, p. 50) betekent 'de vinger'.",
+      "vraag": "Het Franse zelfstandig naamwoord <b>'la dent'</b> (v, p. 48) betekent 'de vinger'.",
       "antwoord": false,
       "uitleg": "Onwaar. 'La dent' betekent 'de tand' ('le doigt' is de vinger)."
     },
@@ -201,13 +201,13 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de Franse vertaling van het regelmatige werkwoord 'bewijzen' (infinitief, p. 49).",
+      "vraag": "Noem de Franse vertaling van 'de reden' (met vrouwelijk lidwoord la, p. 50).",
       "sleutelwoorden": [
-        "prouver"
+        "la raison/raison"
       ],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse werkwoord voor bewijzen is 'prouver'.",
-      "uitleg": "'Prouver' is het Franse werkwoord voor 'bewijzen'."
+      "modelantwoord": "Het Franse woord voor de reden is 'la raison'.",
+      "uitleg": "'La raison' betekent 'de reden' (avoir raison = gelijk hebben)."
     }
   ]
 });
