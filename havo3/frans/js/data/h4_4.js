@@ -84,7 +84,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Welke vogel (en sociaal netwerk) vergelijkt Stromae met de liefde in Carmen? Vul het Franse woord in voor 'de vogel' (l'oiseau):",
+      "vraag": "Welke vogel (en sociaal netwerk) vergelijkt Stromae met de liefde in Carmen? Vul het Franse woord in voor 'de vogel':",
       "antwoord": "l'oiseau|oiseau",
       "uitleg": "'L'oiseau' betekent de vogel (l'oiseau de Twitter)."
     },

@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het Franse woord voor 'kleren': 'J'achète des ____.' (vêtements)",
+      "vraag": "Vertaal het Franse woord voor 'kleren': 'J'achète des ____.'",
       "antwoord": "vêtements|vetements",
       "uitleg": "Kleren zijn 'des vêtements'."
     },
     {
       "type": "invoer",
-      "vraag": "Vul het ontbrekende woord in voor 'gebruiken': 'Je l'____ pour écouter de la musique.' (utilise)",
+      "vraag": "Vul het ontbrekende woord in voor 'gebruiken': 'Je l'____ pour écouter de la musique.'",
       "antwoord": "utilise",
       "uitleg": "Gebruiken is 'utiliser' ➔ 'je l'utilise'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord tussen haakjes: 'C'est un objet très (handig) au collège.' (pratique)",
+      "vraag": "Vertaal het woord tussen haakjes: 'C'est un objet très (handig) au collège.'",
       "antwoord": "pratique",
       "uitleg": "Handig is 'pratique'."
     }

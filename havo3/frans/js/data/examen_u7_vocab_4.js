@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul de gebiedende wijs in van 'parler' tegen één vriend: '____ (Praat) français!' (Parle)",
+      "vraag": "Vul de gebiedende wijs in van 'parler' tegen één vriend: '____ (Praat) français!'",
       "antwoord": "Parle|parle",
       "uitleg": "Bij -er werkwoorden valt de -s weg: 'Parle'."
     },
     {
       "type": "invul",
-      "vraag": "Vul de vorm van 'laten we' in voor 'partir': '____ (Laten we vertrekken) maintenant!' (Partons)",
+      "vraag": "Vul de vorm van 'laten we' in voor 'partir': '____ (Laten we vertrekken) maintenant!'",
       "antwoord": "Partons|partons",
       "uitleg": "De nous-vorm is 'Partons'."
     },

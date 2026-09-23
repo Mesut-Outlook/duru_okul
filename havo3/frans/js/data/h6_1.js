@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'de stem' in het Frans (vrouwelijk met lidwoord, la voix):",
+      "vraag": "Vertaal het woord voor 'de stem' in het Frans (vrouwelijk met lidwoord):",
       "antwoord": "la voix|voix",
       "uitleg": "De stem is 'la voix'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het bijvoeglijk naamwoord tussen haakjes: 'Ce garçon est très (grappig).' Vul het Franse woord in (marrant):",
+      "vraag": "Vertaal het bijvoeglijk naamwoord tussen haakjes: 'Ce garçon est très (grappig).' Vul het Franse woord in:",
       "antwoord": "marrant",
       "uitleg": "Grappig is 'marrant'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'de volwassene' in het Frans (met lidwoord, l'adulte):",
+      "vraag": "Vertaal het woord voor 'de volwassene' in het Frans (met lidwoord):",
       "antwoord": "l'adulte|adulte",
       "uitleg": "De volwassene is 'l'adulte'."
     }

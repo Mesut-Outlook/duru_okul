@@ -78,7 +78,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord tussen haakjes: 'Sie arbeitet bei einem großen (onderneming/bedrijf).' Vul het Duitse zelfstandig naamwoord in (das Unternehmen).",
+      "vraag": "Vertaal het woord tussen haakjes: 'Sie arbeitet bei einem großen (onderneming/bedrijf).' Vul het Duitse zelfstandig naamwoord in.",
       "antwoord": "Unternehmen|das Unternehmen",
       "uitleg": "Een onderneming is 'das Unternehmen'."
     },

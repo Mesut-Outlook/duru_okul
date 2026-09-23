@@ -82,8 +82,8 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het Franse woord voor 'het bord' naar het Nederlands (inclusief lidwoord).",
-      "antwoord": "het bord",
+      "vraag": "Vertaal het Franse woord 'l'assiette' naar het Nederlands (met lidwoord).",
+      "antwoord": "het bord|bord|een bord",
       "uitleg": "'L'assiette' betekent het bord."
     },
     {

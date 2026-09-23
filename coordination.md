@@ -675,7 +675,7 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   h8_4: ilan tarihi 15–**31** juillet (s. 290), uydurma "Bonjour Léa / Amitiés / Dans l'attente…" çıktı.
 - **⚠️ `frans_h08_le-pont-examentraining.pdf` eksik:** 19 sayfa = kitap s. 272–290; DELF A2 (opdracht 19–25, s. 291+)
   PDF'te YOK (`noordhoff_books.json` `end: 291`). h8_4 §DELF A2 + `u8-v5`'in bir kısmı (un CV, se présenter, À bientôt)
-  kaynaksız → **TASK-21**: bitişi düzelt, s. 291–~297'yi yeniden dışa aktar, h8_4 + `u8-v5`'i kitaba karşı denetle
+  kaynaksız → **TASK-21 ✅ DONE 2026-09-24 (Opus+Sonnet):** DELF A2 aslında `frans_extra_boite-a-gram.pdf` s. 1–9'da (kitap s. 291–299, yalnız lezen+spreken). h8_4 theorie kitaba göre yeniden yazıldı (uydurma luistervaardigheid çıktı, 'Pardon, vous pouvez répéter' → s. 297 TUYAU), `u8-v5` #8 'À bientôt' → s'inscrire (s. 296), #11 'un CV' → accessible (s. 294); Duru çözmemişti. `noordhoff_books.json` U8 sınırı end 310. Eski not:: bitişi düzelt, s. 291–~297'yi yeniden dışa aktar, h8_4 + `u8-v5`'i kitaba karşı denetle
   (`u8-v5` 2026-09-24'te push edildi → düzeltmeden önce Duru'nun bulut geçmişinde `ex-h3-frans-u8-v5`'e bak; çözülmüşse içeriğine dokunma, yeni id ile ek sınav yaz).
 - **TASK-15 tam DONE değil:** "Ayrıca" maddesi (`examen_1..40.js`'teki soruları kitapla karşılaştır, kitapta olmayanları
   listele) yapılmadı. → **TASK-20** olarak ayrıldı (aşağıda).
@@ -717,8 +717,28 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
 - **Çıktı**: `examen_u1_vocab_11.js`, YENİ id `ex-h3-frans-u1-v11`, 20 soru, `hoofdstuk:1`. 6–10'a dokunulmadı.
 - **Kabul**: `gate.js frans` 16/16 geçti, `open_check.js` 0 hata, manifest güncellendi (`frans H1: 16 examen`).
 
-### TASK-20 · frans `examen_1..40`: kitapta olmayan soruların listesi  [status: TODO]
-- **Atanan**: agy. TASK-15'ten ayrıldı. **Salt liste**: mevcut id'lerin içeriğini değiştirme (Duru'nun geçmişi).
+### ✅ 2026-09-24 · duits TASK-17 kitap denetimi + cevap sızıntısı (Opus + Sonnet)
+- **duits (agy `h*_4`, `examen_31..36`)**: 34–36 ve H1/H4/H5/H6 içerikleri kitapla birebir. Kitapta OLMAYAN iki uydurma küme
+  (OCR ile doğrulandı): H2 eczane/EHBO (Salbe, Pflaster, Verband, bluten, Wunde, "anspannen") → kitaptaki klachten
+  (Erkältung, Grippe, Heuschnupfen, Muskelkater, Fieber, Hals-/Zahnschmerzen, sich verletzen); H3 istasyon (Anschluss,
+  Auskunft, Hin- und Rückfahrt, einfache Fahrt) → Kreuzung, Kreisverkehr, Ampel, Gehweg. h2_4/h3_4 theorie + 12 soru.
+  "spiegelglatt" → "glatt". Duru bunları çözmemişti.
+- **Cevap sızıntısı (yeni kapı kuralı 14 genişletildi):** invul/invoer'da cevap düz parantezde: `'____ (praat) français!' (parle)`,
+  `(met lidwoord, la crêpe)`. **frans U4–U8'de 68 soru** (agy betiği: her sınavın #17/#18'i + onderwerp #8–#10) + duits 5 +
+  economie/scheikunde/engels/geschiedenis 7 düzeltildi (hepsi Duru tarafından çözülmemiş). 8 yanlış pozitif istisna (NL=DE cognate, "(to turn)").
+  **agy: ipucu parantezine yalnız Hollandaca anlamı yaz, Fransızca/Almanca cevabı ASLA.**
+- **Oefenmotor artık şıkları karıştırıyor** (12 `engine.js → schudOpties`, `?v=20260924`).
+
+### TASK-20 · frans `examen_1..40`: kitapta olmayan soruların listesi  [status: DONE — liste 2026-09-24 (Sonnet); karar bekliyor]
+- **Sonuç (800 soru):** olgusal hata (yanlış antwoord/çeviri/iki doğru şık) **0**. Kitapta yok ≈ **96 soru**, 8 sınavda toplanmış.
+  Kök neden: kitap gelmeden U4 ve U8 "Le pont"un tekrar ünitesi olduğu bilinmiyordu → sahte müfredat; U6'da tema kayması.
+  - `ex-h3-frans-36` (U8 vocab: school/beroepen) 20/20 · `-16` (U4 vocab: Parijs/cultuur) 19/20 · `-28` (U6 communication: kleding passen) 19/20 ·
+    `-26` (U6 vocab: kleding/mode) 17/20 · `-30` (U6 eindtoets) 8/20 · `-20` (U4 tussenbalans) 8/20 · `-32` (U7, superlatief — kitapta yalnız comparatief) 3/20 · `-35` 1/20.
+  - Tema kayması, soru bazında sayılmadı: `-19` (U4 lezen, Parijs), `-29` (U6 lezen, kleding/webshop). Belirsiz: `-7` prendre çekimi.
+  - Temiz (27): 1–6, 8–15, 17, 21–25, 27, 31, 33, 34, 37–39.
+- **Duru'nun geçmişi (bulut, 2026-09-24):** eski frans sınavlarından yalnız 1–5 çözülmüş; sorunlu 8'in hiçbiri çözülmemiş.
+- **Karar (kullanıcıya soruldu):** sorunlu sınavları kitaba göre yeniden yazmak mı (çözülmedikleri için id korunarak), yoksa bırakıp yeni id ile ek sınav mı.
+- **Atanan**: ~~agy~~ → **Opus/Sonnet aldı (2026-09-24), agy DOKUNMA.** TASK-15'ten ayrıldı. **Salt liste**: mevcut id'lerin içeriğini değiştirme (Duru'nun geçmişi).
 - Her soru için: hangi Unité/sayfa, yoksa "kitapta yok". Çıktıyı buraya yaz; Opus karar verir (yeni id ile ek / gizleme).
 
 ### TASK-19 · economie: kitabın tamamı yok — H1–H3 ve §4.3 doğrulanamıyor  [status: BLOCKED — Duru'nun babasına soru]

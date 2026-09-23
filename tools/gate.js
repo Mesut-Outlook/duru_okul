@@ -101,7 +101,16 @@ check('12. Ham LaTeX yok', teksten.filter(t=>LATEX.test(t.s)).map(t=>kort(t,t.s.
 const BOZUK=/[\x00-\x08\x0b-\x0c\x0e-\x1f\t]|\(\s*\$\s*\)|\(\s+=\s|\bbash\{/;
 check('13. Bozuk metin yok (stuurteken / yutulmus $-degisken)', teksten.filter(t=>BOZUK.test(t.s)).map(t=>kort(t,t.s.match(BOZUK))));
 // Motor [..] isaretini bosluga cevirmez: "heet de [restwaarde]" cevabi ekrana basar
-check('14. invul: cevap soruda [haken] icinde degil', alle.filter(a=>a.v.type==='invul'&&/\[[^\]]+\]/.test(a.v.vraag)).map(a=>`${a.owner}#${a.n}: ${a.v.vraag.match(/\[[^\]]+\]/)[0]}`));
+// 2026-09-24: ayni sizinti duz (haakjes) ile de: "'____ (praat) français!' (parle)", "(met lidwoord, la crêpe)".
+// Parantez "x of y" / "x/y" secimi sunuyorsa sayilmaz. Yanlis pozitif (NL=DE "rechts", "(to turn)") → istisna, kural 14.
+const lekHaakjes=v=>{if(!['invul','invoer'].includes(v.type))return null;const q=norm(v.vraag).replace(/[‘’]/g,"'");
+  const groepen=[...q.matchAll(/\(([^()]*)\)/g)].map(m=>m[1]).filter(g=>!/\bof\b|\bor\b|\/|\bou\b|\boder\b/.test(g));
+  return String(v.antwoord).split('|').map(a=>norm(a).replace(/[‘’]/g,"'")).filter(a=>a.length>=3&&!/^[\d.,\s]+$/.test(a))
+    .find(a=>groepen.some(g=>new RegExp("(^|[^\\p{L}'])"+a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+"($|[^\\p{L}])",'u').test(g)))||null};
+const lek=[...alle.filter(a=>a.v.type==='invul'&&/\[[^\]]+\]/.test(a.v.vraag)).map(a=>({k:`${a.owner}#${a.n}`,t:a.v.vraag.match(/\[[^\]]+\]/)[0]})),
+  ...alle.map(a=>({a,h:lekHaakjes(a.v)})).filter(x=>x.h).map(({a,h})=>({k:`${a.owner}#${a.n}`,t:`(… ${h} …)`}))];
+const lekVrij=lek.filter(x=>vrij('14',[x.k]));istisna+=lekVrij.length;
+check('14. invul/invoer: cevap soruda [haken] ya da (haakjes) icinde degil', lek.filter(x=>!lekVrij.includes(x)).map(x=>`${x.k}: ${x.t}`), lekVrij.length?`${lekVrij.length} bilincli istisna`:'');
 // Kapidan gecmek icin ifadeyi degistirmeden antwoord'u cevirmek: uitleg "Onwaar: Waar." ile ele verir
 const ZEGT_WAAR=/^(waar|juist|true|right|correct|richtig|vrai)\b/i, ZEGT_ONWAAR=/^(onwaar|niet waar|fout|false|wrong|incorrect|falsch|faux)\b/i;
 check('15. waaronwaar: uitleg antwoord ile celismiyor', wow.filter(a=>{const u=norm(a.v.uitleg);
@@ -109,7 +118,7 @@ check('15. waaronwaar: uitleg antwoord ile celismiyor', wow.filter(a=>{const u=n
   .map(a=>`${a.owner}#${a.n} (antwoord ${a.v.antwoord}): ${norm(a.v.uitleg).slice(0,50)}`));
 // Betikle toplu uretimde cevap sirasi sablondan gelir: "012301230123" kural 3'u (dagilim) gecer ama sira kalipli.
 // (2026-09-23: aardrijkskunde H3-H5 ve frans U4-U7.) Yalniz ≥6 mc'li dosyalar; kisa dizide rastlanti cok.
-// Sinav motoru siklari her denemede karistirir, oefenmotor KARISTIRMAZ -> onderwerp'te kalip Duru'ya gorunur.
+// Iki motor da siklari karistirir (oefen: 2026-09-24, engine.js schudOpties); kural veri temizligi icin.
 // Istisna (id bazli) yalniz yayindaki eski SINAVLAR icin: denemeler orijinal indeksle kayitli, sira degisirse review bozulur.
 // Onderwerp'e istisna yazma: oefenmotor soru basina cevap saklamaz, sirasi her zaman duzeltilebilir.
 const KALIP_MIN=6,sirasi=x=>(x.vragen||[]).filter(v=>v.type==='mc').map(v=>v.antwoord);

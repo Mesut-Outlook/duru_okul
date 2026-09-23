@@ -15,6 +15,9 @@
       "ex-h3-frans-24#13": "Okudugunu anlama: cevap (glace vanille, crepe au sucre) alintidaki menude. 2026-09-13",
       "ex-h3-frans-34#13": "Okudugunu anlama: 'tombola' hem alintida hem Nederlands'ta gecerli kelime. 2026-09-13"
     },
+    "14": {
+      "ex-h3-frans-27#19": "Yanlis pozitif: gros cogulu yine gros (degismez sifat), soru bunu olcuyor. 2026-09-24"
+    },
     "16": {
       "ex-h3-frans-10": "Yayinda eski sinav: mc sirasi eski spread.py 0123-dongusunden; motor siklari karistirir, denemeler orijinal indeksle kayitli -> sira degistirilemez. 2026-09-23",
       "ex-h3-frans-11": "Yayinda eski sinav: mc sirasi eski spread.py 0123-dongusunden; motor siklari karistirir, denemeler orijinal indeksle kayitli -> sira degistirilemez. 2026-09-23",
@@ -87,6 +90,12 @@
     }
   },
   "duits": {
+    "14": {
+      "ex-h3-duits-11#17": "Yanlis pozitif: NL ipucu (rechts) = DE cevap, cognate. 2026-09-24",
+      "ex-h3-duits-12#17": "Yanlis pozitif: NL ipucu (links) = DE cevap, cognate. 2026-09-24",
+      "ex-h3-duits-28#16": "Yanlis pozitif: parantez lemma (die Straße) veriyor, soru Akkusativ lidwoord soruyor; die=die. 2026-09-24",
+      "ex-h3-duits-7#17": "Yanlis pozitif: NL ipucu (hand) = DE cevap, cognate. 2026-09-24"
+    },
     "16": {
       "ex-h3-duits-10": "Yayinda eski sinav: mc sirasi eski spread.py 0123-dongusunden; motor siklari karistirir, denemeler orijinal indeksle kayitli -> sira degistirilemez. 2026-09-23",
       "ex-h3-duits-11": "Yayinda eski sinav: mc sirasi eski spread.py 0123-dongusunden; motor siklari karistirir, denemeler orijinal indeksle kayitli -> sira degistirilemez. 2026-09-23",
@@ -162,6 +171,11 @@
     }
   },
   "engels": {
+    "14": {
+      "ex-h3-eng-22#7": "Yanlis pozitif: (to turn) kok fiil ipucu, soru cekimi olcuyor. 2026-09-24",
+      "ex-h3-eng-22#19": "Yanlis pozitif: (to act) kok fiil ipucu. 2026-09-24",
+      "eng-h5-2#7": "Yanlis pozitif: (to turn) kok fiil ipucu. 2026-09-24"
+    },
     "16": {
       "ex-h3-eng-10": "Yayinda eski sinav: mc sirasi eski spread.py 0123-dongusunden; motor siklari karistirir, denemeler orijinal indeksle kayitli -> sira degistirilemez. 2026-09-23",
       "ex-h3-eng-11": "Yayinda eski sinav: mc sirasi eski spread.py 0123-dongusunden; motor siklari karistirir, denemeler orijinal indeksle kayitli -> sira degistirilemez. 2026-09-23",

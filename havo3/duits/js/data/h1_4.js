@@ -78,7 +78,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord tussen haakjes naar het Duits: 'Wir müssen die seltene Natur (beschermen/bescherming).' Vul het Duitse zelfstandig naamwoord in met lidwoord (der Naturschutz).",
+      "vraag": "Vertaal het woord tussen haakjes naar het Duits: 'Wir müssen die seltene Natur (beschermen/bescherming).' Vul het Duitse zelfstandig naamwoord in met lidwoord.",
       "antwoord": "der Naturschutz|Naturschutz",
       "uitleg": "Natuurbescherming is 'der Naturschutz'."
     },

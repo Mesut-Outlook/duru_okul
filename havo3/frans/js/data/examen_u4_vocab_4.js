@@ -185,7 +185,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord tussen haakjes: 'Merci pour ta (brief).' Vul het Franse woord in (lettre).",
+      "vraag": "Vertaal het woord tussen haakjes: 'Merci pour ta (brief).' Vul het Franse woord in.",
       "antwoord": "lettre",
       "uitleg": "Brief is 'la lettre'."
     },

@@ -76,14 +76,17 @@ kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçül�
     **sayı yanlış** kaldı. Veriyi Python/JS dosyasından yaz, shell'den geçirme. (Kapı: 13)
 13. **`invul` sorusunda cevabı soruya yazma** — `"heet de [restwaarde]."` motor tarafından boşluğa
     çevrilmez, cevap ekrana basılır. Boşluk `____` ile gösterilir. (economie'de 87 soru; kapı: 14)
+    Düz parantez de aynı: `'____ (praat) français!' (parle)`, `(met lidwoord, la crêpe)` → cevap ekranda.
+    İpucu parantezi yalnız **Hollandaca anlamı** verir, cevabı değil. (2026-09-24: frans U4–U8'de 68 soru; kapı: 14)
 14. **Kapıyı geçmek için `waaronwaar` cevabını çevirme.** %35 onwaar barajı için ifade **gerçekten
     yanlış** olacak şekilde yeniden yazılır; doğru bir ifadenin `antwoord`'unu `false` yapıp uitleg'e
     "Onwaar: Waar." eklemek Duru'ya **yanlış bilgi öğretir** (natuurkunde'de 28 soru; kapı: 15).
 15. **`open` sayı anahtarı noktasız biçimle birlikte** — nakijken `"21.000"`'i `"21 000"`'e çevirir;
     `21000` yazan öğrenci kaçar. `"21.000/21000"` yaz. (Kapı: 8)
 16. **mc doğru şıkkının yerini rastgele seç, döngüyle değil.** `i % 4` ya da her dosyada aynı sıra
-    (`0123 0123 0123`) dağılımı dengeli gösterir ama kalıplıdır; oefenmotor şıkları karıştırmadığı için
-    Duru "hep bir sonraki" diye tahmin edebilir. Dosya başına 0–3'ü karıştırılmış bloklarla dağıt ve
+    (`0123 0123 0123`) dağılımı dengeli gösterir ama kalıplıdır. İki motor da şıkları
+    karıştırır (oefen: 2026-09-24'ten beri), yani Duru görmez; ama veri review/veli panelinde ve yeni bir
+    görünümde olduğu gibi çıkar, kalıp kapıda yakalanır. Dosya başına 0–3'ü karıştırılmış bloklarla dağıt ve
     dosyadan dosyaya farklı olsun. (Kapı: 16; 2026-09-23'te aardrijkskunde H3–H5 + frans U4–U7'nin hepsi)
 
 ## 📌 "Test Hazırla" ve Bölüm Üretimlerinde Zorunlu Kavram / Terim Standardı (2026-08-30)

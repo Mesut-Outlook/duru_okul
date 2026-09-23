@@ -41,7 +41,7 @@
 | frans | frans_h05_au-resto.pdf | 36 | 165-200 | ✅ |  |
 | frans | frans_h06_c-est-moi.pdf | 38 | 201-238 | ✅ |  |
 | frans | frans_h07_a-tout-prix.pdf | 34 | 239-272 | ✅ |  |
-| frans | frans_h08_le-pont-examentraining.pdf | 19 | 273-291 | ✅ |  |
+| frans | frans_h08_le-pont-examentraining.pdf | 19 | 273-291 | ✅ | ⚠️ eksik: DELF A2 (s. 291-299) + Le plaisir de lire (s. 300-309) `frans_extra_boite-a-gram.pdf` s. 1-19'da; config düzeltildi (end 310), yeniden dışa aktarılmadı |
 | natuurkunde | natuurkunde_h01_kracht-en-beweging.pdf | 17 |  | ✅ |  |
 | natuurkunde | natuurkunde_h02_elektriciteit.pdf | 17 |  | ✅ |  |
 | natuurkunde | natuurkunde_h03_straling.pdf | 15 |  | ✅ |  |

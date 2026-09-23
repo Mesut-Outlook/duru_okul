@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'minder' in een vergelijking: 'Léo est ____ (minder) rapide que son frère.' (moins)",
+      "vraag": "Vertaal het woord voor 'minder' in een vergelijking: 'Léo est ____ (minder) rapide que son frère.'",
       "antwoord": "moins",
       "uitleg": "Minder ... dan is 'moins ... que'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal 'even / net zo': 'Sarah est ____ (net zo) intelligente que sa sœur.' (aussi)",
+      "vraag": "Vertaal 'even / net zo': 'Sarah est ____ (net zo) intelligente que sa sœur.'",
       "antwoord": "aussi",
       "uitleg": "Even / net zo ... als is 'aussi ... que'."
     },
     {
       "type": "invoer",
-      "vraag": "Vul de juiste vrouwelijke vorm in van 'beter': 'Sa note est ____ (beter) que la mienne.' (meilleure)",
+      "vraag": "Vul de juiste vrouwelijke vorm in van 'beter': 'Sa note est ____ (beter) que la mienne.'",
       "antwoord": "meilleure",
       "uitleg": "De vrouwelijke vorm van 'meilleur' is 'meilleure'."
     }

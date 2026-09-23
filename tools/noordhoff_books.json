@@ -12,8 +12,8 @@
       {"hoofdstuk": 5, "label": "Unité 5", "titel": "Au resto!", "start": 165, "end": 200, "slug": "au-resto", "output": "frans_h05_au-resto.pdf"},
       {"hoofdstuk": 6, "label": "Unité 6", "titel": "C'est moi", "start": 201, "end": 238, "slug": "c-est-moi", "output": "frans_h06_c-est-moi.pdf"},
       {"hoofdstuk": 7, "label": "Unité 7", "titel": "À tout prix!", "start": 239, "end": 272, "slug": "a-tout-prix", "output": "frans_h07_a-tout-prix.pdf"},
-      {"hoofdstuk": 8, "label": "Unité 8", "titel": "Le pont (Examentraining)", "start": 273, "end": 291, "slug": "le-pont-examentraining", "output": "frans_h08_le-pont-examentraining.pdf"},
-      {"hoofdstuk": null, "label": "Boîte à Gram", "titel": "Boîte à Gram & Vocabulaire", "start": 292, "end": 330, "slug": "boite-a-gram", "output": "frans_extra_boite-a-gram.pdf"}
+      {"hoofdstuk": 8, "label": "Unité 8", "titel": "Le pont (Examentraining)", "start": 273, "end": 310, "slug": "le-pont-examentraining", "_not": "2026-09-24: eskiden end 291 idi; DELF A2 (kitap s. 291-299) + Le plaisir de lire (s. 300-309) boite-a-gram PDF'ine dusmustu", "output": "frans_h08_le-pont-examentraining.pdf"},
+      {"hoofdstuk": null, "label": "Boîte à Gram", "titel": "Boîte à Gram & Vocabulaire", "start": 311, "end": 330, "slug": "boite-a-gram", "output": "frans_extra_boite-a-gram.pdf"}
     ]
   },
   "duits": {

@@ -156,7 +156,7 @@
       {
         id: "ex4_v14",
         type: "invul",
-        vraag: "In welke grote Turkse havenstad in West-Anatolië (Smyrna) landde in 1919 een Grieks veroveringsleger?",
+        vraag: "In welke grote Turkse havenstad in West-Anatolië landde in 1919 een Grieks veroveringsleger?",
         antwoord: "Izmir|Smyrna|izmir|smyrna",
         uitleg: "Smyrna (het huidige Izmir) werd in 1919 bezet door Griekse troepen."
       },

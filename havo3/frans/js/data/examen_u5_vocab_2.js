@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord voor 'de vork' in het Frans (met lidwoord, la fourchette):",
+      "vraag": "Vertaal het woord voor 'de vork' in het Frans (met lidwoord):",
       "antwoord": "la fourchette|fourchette",
       "uitleg": "De vork is 'la fourchette'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het werkwoord tussen haakjes: 'Il faut (beschermen) les océans contre le plastique.' Vul het Franse werkwoord in (protéger):",
+      "vraag": "Vertaal het werkwoord tussen haakjes: 'Il faut (beschermen) les océans contre le plastique.' Vul het Franse werkwoord in:",
       "antwoord": "protéger|proteger",
       "uitleg": "Beschermen is 'protéger'."
     },

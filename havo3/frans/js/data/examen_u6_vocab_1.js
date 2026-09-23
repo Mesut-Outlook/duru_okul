@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord voor 'het werk' in het Frans (mannelijk met lidwoord, le travail):",
+      "vraag": "Vertaal het woord voor 'het werk' in het Frans (mannelijk met lidwoord):",
       "antwoord": "le travail|travail",
       "uitleg": "Het werk is 'le travail'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het werkwoord tussen haakjes: 'Il a décidé de (stoppen) avec le football.' Vul het Franse werkwoord in (arrêter):",
+      "vraag": "Vertaal het werkwoord tussen haakjes: 'Il a décidé de (stoppen) avec le football.' Vul het Franse werkwoord in:",
       "antwoord": "arrêter|arreter",
       "uitleg": "Stoppen is 'arrêter'."
     },

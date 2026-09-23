@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het werkwoord tussen haakjes: 'Elle veut (kopen) une nouvelle veste.' Vul het Franse werkwoord in (acheter):",
+      "vraag": "Vertaal het werkwoord tussen haakjes: 'Elle veut (kopen) une nouvelle veste.' Vul het Franse werkwoord in:",
       "antwoord": "acheter",
       "uitleg": "Kopen is 'acheter'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord voor 'de ober' in het Frans (met lidwoord, le serveur):",
+      "vraag": "Vertaal het woord voor 'de ober' in het Frans (met lidwoord):",
       "antwoord": "le serveur|serveur",
       "uitleg": "De ober is 'le serveur'."
     },

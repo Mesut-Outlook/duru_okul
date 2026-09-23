@@ -84,7 +84,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord tussen haakjes: 'Il passe beaucoup de temps devant (het scherm).' Vul het Franse woord in met lidwoord (l'écran).",
+      "vraag": "Vertaal het woord tussen haakjes: 'Il passe beaucoup de temps devant (het scherm).' Vul het Franse woord in met lidwoord.",
       "antwoord": "l'écran|l'ecran|ecran|écran",
       "uitleg": "Het scherm is in het Frans 'l'écran'."
     },

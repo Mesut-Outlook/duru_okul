@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vul de juiste vorm in: 'Je ____ (lijk op) à ma mère.' Vul het Franse werkwoord in (ressemble):",
+      "vraag": "Vul de juiste vorm in: 'Je ____ (lijk op) à ma mère.' Vul het Franse werkwoord in:",
       "antwoord": "ressemble",
       "uitleg": "Lijken op is 'ressembler à' ➔ 'je ressemble'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal de Franse uitdrukking voor 'met wie': '____ qui est-ce que tu sors?' (Avec)",
+      "vraag": "Vertaal de Franse uitdrukking voor 'met wie': '____ qui est-ce que tu sors?'",
       "antwoord": "Avec|avec",
       "uitleg": "Met wie = 'avec qui'."
     },
     {
       "type": "invoer",
-      "vraag": "Vul het ontbrekende woord in voor 'beste': 'Je sors avec mon ____ copain.' (meilleur)",
+      "vraag": "Vul het ontbrekende woord in voor 'beste': 'Je sors avec mon ____ copain.'",
       "antwoord": "meilleur",
       "uitleg": "Mijn beste vriend = 'mon meilleur copain'."
     }

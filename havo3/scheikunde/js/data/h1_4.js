@@ -44,7 +44,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Hoe heet een troebel mengsel van een gas dat fijn verdeeld is in een vloeistof of vaste stof (bijvoorbeeld het schuim op bier)?",
+      "vraag": "Hoe heet een troebel mengsel van een gas dat fijn verdeeld is in een vloeistof of vaste stof (bijvoorbeeld de witte laag op een glas bier)?",
       "antwoord": "schuim",
       "uitleg": "Schuim is een mengsel van een gas fijn verdeeld in een vaste stof of vloeistof."
     },

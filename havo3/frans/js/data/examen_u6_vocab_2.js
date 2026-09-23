@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul de juiste tijdsuitdrukking in voor 'tot': 'Je travaille ____ (tot) six heures.' (jusqu'à)",
+      "vraag": "Vul de juiste tijdsuitdrukking in voor 'tot': 'Je travaille ____ (tot) six heures.'",
       "antwoord": "jusqu'à|jusqu'a|jusqua",
       "uitleg": "Tot is 'jusqu'à'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord tussen haakjes: 'Elle est très (moe) après les cours.' Vul het Franse woord in (fatiguée):",
+      "vraag": "Vertaal het woord tussen haakjes: 'Elle est très (moe) après les cours.' Vul het Franse woord in:",
       "antwoord": "fatiguée|fatiguee",
       "uitleg": "Moe voor een vrouwelijk onderwerp is 'fatiguée'."
     },

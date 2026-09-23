@@ -101,9 +101,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Fill in the term (alibi): <i>His boss confirmed his ...: he was at work until 6 PM.</i>",
+      "vraag": "Fill in the term: <i>His boss confirmed his ...: he was at work until 6 PM.</i>",
       "antwoord": "alibi",
-      "uitleg": "Alibi is het alibi."
+      "uitleg": "An alibi is proof that you were somewhere else when a crime happened (het alibi)."
     },
     {
       "type": "mc",

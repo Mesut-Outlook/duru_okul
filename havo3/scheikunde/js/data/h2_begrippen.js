@@ -92,7 +92,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Wat geeft de systematische naam van een stof precies weer (welke atoomsoorten en hoeveel hiervan)?",
+      "vraag": "Wat geeft de systematische naam van een stof precies weer?",
       "antwoord": "atoomsoorten en aantallen|welke atoomsoorten en hoeveel|atoomsoorten",
       "uitleg": "De systematische naam geeft aan welke atoomsoorten en hoeveel hiervan in een molecuul voorkomen."
     },

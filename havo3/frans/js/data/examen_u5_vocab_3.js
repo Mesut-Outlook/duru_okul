@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul het ontbrekende woord in voor 'fout/vergissing': 'Excusez-moi, il y a une ____.' (erreur)",
+      "vraag": "Vul het ontbrekende woord in voor 'fout/vergissing': 'Excusez-moi, il y a une ____.'",
       "antwoord": "erreur",
       "uitleg": "Een foutje = 'une erreur'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord tussen haakjes: 'Je voudrais une carafe (water), s'il vous plaît.' Vul het Franse woord in (d'eau):",
+      "vraag": "Vertaal het woord tussen haakjes: 'Je voudrais une carafe (water), s'il vous plaît.' Vul het Franse woord in:",
       "antwoord": "d'eau|de l'eau|eau",
       "uitleg": "Een karaf water = 'une carafe d'eau'."
     },

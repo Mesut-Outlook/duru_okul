@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul het ontbrekende woord in voor 'sparen': 'Tu fais aussi des ____?' (économies)",
+      "vraag": "Vul het ontbrekende woord in voor 'sparen': 'Tu fais aussi des ____?'",
       "antwoord": "économies|economies",
       "uitleg": "Sparen = 'faire des économies'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord tussen haakjes: 'C'est un truc en plastique (om te) charger mon portable.' (pour)",
+      "vraag": "Vertaal het woord tussen haakjes: 'C'est un truc en plastique (om te) charger mon portable.'",
       "antwoord": "pour",
       "uitleg": "Om te = 'pour'."
     },

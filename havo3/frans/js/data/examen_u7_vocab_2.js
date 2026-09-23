@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het materiaal tussen haakjes: 'Une bouteille (van plastic).' Vul de twee Franse woorden in (en plastique):",
+      "vraag": "Vertaal het materiaal tussen haakjes: 'Une bouteille (van plastic).' Vul de twee Franse woorden in:",
       "antwoord": "en plastique",
       "uitleg": "Van plastic is 'en plastique'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal de kleur tussen haakjes: 'Elle adore sa nouvelle écharpe (groen).' Vul het Franse woord in (verte):",
+      "vraag": "Vertaal de kleur tussen haakjes: 'Elle adore sa nouvelle écharpe (groen).' Vul het Franse woord in:",
       "antwoord": "verte",
       "uitleg": "De vrouwelijke vorm van vert is 'verte'."
     },

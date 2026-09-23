@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul het ontbrekende Franse bijwoord in voor 'altijd': 'Elle aide ____ (altijd) ses parents.' (toujours)",
+      "vraag": "Vul het ontbrekende Franse bijwoord in voor 'altijd': 'Elle aide ____ (altijd) ses parents.'",
       "antwoord": "toujours",
       "uitleg": "Altijd is 'toujours'."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord voor 'de schoolpauze' in het Frans (met lidwoord, la récré):",
+      "vraag": "Vertaal het woord voor 'de schoolpauze' in het Frans (met lidwoord):",
       "antwoord": "la récré|la recre|récré|recre",
       "uitleg": "De pauze is 'la récré'."
     },

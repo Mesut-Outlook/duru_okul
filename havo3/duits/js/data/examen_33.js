@@ -71,15 +71,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat is de Duitse term voor een retourkaartje bij de trein?",
+      "vraag": "Wat betekent 'die Verspätung' op een station?",
       "opties": [
-        "die Auskunft",
-        "Hin- und Rückfahrt",
-        "einfache Fahrt",
-        "Gleiswechsel"
+        "de aansluiting",
+        "de vertraging",
+        "het perron",
+        "de rotonde"
       ],
       "antwoord": 1,
-      "uitleg": "'Hin- und Rückfahrt' is een retourtje (heen en terug)."
+      "uitleg": "'Die Verspätung' is de vertraging (Wortschatz H3)."
     },
     {
       "type": "mc",
@@ -107,15 +107,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent de term 'der Anschluss' bij het reizen per spoor?",
+      "vraag": "Welk Duits woord betekent 'de rotonde'?",
       "opties": [
-        "de restauratiewagen",
-        "de aansluitende trein / aansluiting",
-        "het bagagedepot",
-        "de prijs van het ticket"
+        "der Gehweg",
+        "der Kreisverkehr",
+        "die Ampel",
+        "der Bahnhof"
       ],
       "antwoord": 1,
-      "uitleg": "'Der Anschluss' is de aansluiting op een volgende trein of bus."
+      "uitleg": "'Der Kreisverkehr' is de rotonde (Wortschatz H3)."
     },
     {
       "type": "mc",
@@ -131,15 +131,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent 'die Auskunft' in een stationshal?",
+      "vraag": "Welk Duits woord betekent 'de stoep'?",
       "opties": [
-        "de nooduitgang",
-        "de kaartjesautomaat",
-        "de inlichting / informatiedesk",
-        "het bagagerek"
+        "die Ampel",
+        "die Kreuzung",
+        "der Gehweg",
+        "der Kreisverkehr"
       ],
       "antwoord": 2,
-      "uitleg": "'Die Auskunft' is de inlichting of informatiebalie."
+      "uitleg": "'Der Gehweg' is de stoep (Wortschatz H3)."
     },
     {
       "type": "mc",
@@ -161,9 +161,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "De uitdrukking 'einfache Fahrt' betekent dat de treinreis gratis is voor kinderen.",
+      "vraag": "Het Duitse woord 'die Kreuzung' betekent de kabelbaan.",
       "antwoord": false,
-      "uitleg": "Onwaar! 'Einfache Fahrt' is een enkele reis."
+      "uitleg": "Onwaar! 'Die Kreuzung' is de kruising; de kabelbaan is 'die Seilbahn' (Wortschatz H3)."
     },
     {
       "type": "waaronwaar",

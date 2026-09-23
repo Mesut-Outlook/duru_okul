@@ -145,8 +145,8 @@
       {
         id: "ex29_v15",
         type: "invul",
-        vraag: "Hoeveel sterke industrielanden vormden in 1975 samen de G6 (Groep van Zes)?",
-        antwoord: "zes|6",
+        vraag: "Hoe heette de groep van zes sterke industrielanden die in 1975 voor het eerst samen overlegde? (afkorting)",
+        antwoord: "G6|G-6|G 6",
         uitleg: "Duitsland, Frankrijk, Groot-Brittannië, Italië, Japan en de VS vormden in 1975 samen de G6, zes sterke industrielanden."
       },
       {

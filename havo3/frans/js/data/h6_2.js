@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal de routinehandeling tussen haakjes: 'Le matin, (ik kleed me aan) rapidement.' Vul de Franse woorden in (je m'habille):",
+      "vraag": "Vertaal de routinehandeling tussen haakjes: 'Le matin, (ik kleed me aan) rapidement.' Vul de Franse woorden in:",
       "antwoord": "je m'habille|m'habille",
       "uitleg": "Aankleden is 's'habiller' ➔ 'je m'habille'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het Franse woord voor 'het schoolcijfer' (met lidwoord, la note):",
+      "vraag": "Vertaal het Franse woord voor 'het schoolcijfer' (met lidwoord):",
       "antwoord": "la note|note",
       "uitleg": "Het cijfer is 'la note'."
     },
     {
       "type": "invoer",
-      "vraag": "Welk Frans woord betekent '12 uur 's nachts' (middernacht)? Vul het Franse woord in (minuit):",
+      "vraag": "Welk Frans woord betekent '12 uur 's nachts' (middernacht)? Vul het Franse woord in:",
       "antwoord": "minuit",
       "uitleg": "Middernacht / 12 uur 's nachts is 'minuit'."
     }

@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul het juiste woord in voor 'meer / -er': 'Lucas est ____ (groter/meer) grand que son cousin.' (plus)",
+      "vraag": "Vul het juiste woord in voor 'meer / -er': 'Lucas est ____ (groter/meer) grand que son cousin.'",
       "antwoord": "plus",
       "uitleg": "Meer ... dan is 'plus ... que'."
     },
     {
       "type": "invul",
-      "vraag": "Vul de juiste vorm van 'meilleur' in voor een mannelijk onderwerp: 'Ce film est ____ (beter) que le livre.' (meilleur)",
+      "vraag": "Vul de juiste Franse vorm van 'beter' in voor een mannelijk onderwerp: 'Ce film est ____ (beter) que le livre.'",
       "antwoord": "meilleur",
       "uitleg": "Beter dan is 'meilleur que'."
     },

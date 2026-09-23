@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul de juiste ontkenning in voor 'niets': 'Il ne dit ____ (niets) pendant le cours.' (rien)",
+      "vraag": "Vul de juiste ontkenning in voor 'niets': 'Il ne dit ____ (niets) pendant le cours.'",
       "antwoord": "rien",
       "uitleg": "Niets = 'ne ... rien'."
     },
     {
       "type": "invul",
-      "vraag": "Vul de juiste vorm in na de ontkenning: 'Nous n'avons pas ____ (tijd) aujourd'hui.' (de temps)",
+      "vraag": "Vul de juiste vorm in na de ontkenning: 'Nous n'avons pas ____ (tijd) aujourd'hui.'",
       "antwoord": "de temps|de",
       "uitleg": "Na de ontkenning volgt 'de': 'pas de temps'."
     },

@@ -185,7 +185,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul het juiste signaalwoord in voor 'sinds': 'J'habite à Amsterdam ____ (sinds) deux ans.' (depuis)",
+      "vraag": "Vul het juiste signaalwoord in voor 'sinds': 'J'habite à Amsterdam ____ (sinds) deux ans.'",
       "antwoord": "depuis",
       "uitleg": "'Depuis' betekent sinds of al ... lang."
     },

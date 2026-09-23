@@ -59,15 +59,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent de waarschuwing 'Vorsicht, die Straße ist spiegelglatt!'?",
+      "vraag": "Wat betekent de waarschuwing 'Vorsicht, die Straße ist glatt!'?",
       "opties": [
         "Let op, de weg is afgesloten wegens werkzaamheden!",
         "Pas op, er is dichte mist in de vallei!",
         "Kijk uit, er ligt veel modder op de rijbaan!",
-        "Pas op, de weg is spiegelglad door ijzel of vorst!"
+        "Pas op, de weg is glad door ijzel of vorst!"
       ],
       "antwoord": 3,
-      "uitleg": "'Glatt' betekent glad; 'spiegelglatt' is spiegelglad."
+      "uitleg": "'Glatt' betekent glad; 'glatt' is glad."
     },
     {
       "type": "mc",
@@ -185,7 +185,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord tussen haakjes: 'Wir machen Ferien (in het zuiden) von Österreich.' Vul het juiste voorzetsel plus windrichting in (im Süden).",
+      "vraag": "Vertaal het woord tussen haakjes: 'Wir machen Ferien (in het zuiden) von Österreich.' Vul het juiste voorzetsel plus windrichting in.",
       "antwoord": "im Süden",
       "uitleg": "In het zuiden vertaal je met 'im Süden'."
     },

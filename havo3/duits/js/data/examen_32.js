@@ -23,15 +23,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Welk voorwerp plak je op een klein sneetje in je vinger?",
+      "vraag": "Wat heb je als je spieren de dag na het sporten pijn doen?",
       "opties": [
-        "ein Pflaster",
-        "eine Tablette",
-        "eine Salbe",
-        "ein Rezept"
+        "der Muskelkater",
+        "das Rezept",
+        "die Geste",
+        "der Schluckauf"
       ],
       "antwoord": 0,
-      "uitleg": "Een pleister heet in het Duits 'das Pflaster'."
+      "uitleg": "'Der Muskelkater' is spierpijn (Wortschatz H2)."
     },
     {
       "type": "mc",
@@ -61,7 +61,7 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat geeft een arts aan de patiënt mee om medicijnen op te halen bij de apotheek?",
       "opties": [
-        "das Pflaster",
+        "das Fieber",
         "die Geste",
         "die Versicherung",
         "das Rezept"
@@ -71,15 +71,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent het Duitse werkwoord 'bluten'?",
+      "vraag": "Wat betekent het Duitse werkwoord 'sich verletzen'?",
       "opties": [
-        "bloeden",
+        "gewond raken",
         "ontspannen",
         "genezen",
         "hoesten"
       ],
       "antwoord": 0,
-      "uitleg": "'Bluten' betekent bloeden (bijvoorbeeld uit een open wond)."
+      "uitleg": "'Sich verletzen' betekent gewond raken: 'Ich habe mich verletzt' (Wortschatz H2)."
     },
     {
       "type": "mc",
@@ -95,15 +95,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat smeer je op een pijnlijke spier of een verstuikte enkel?",
+      "vraag": "Welke klacht hoort bij niezen en een loopneus door stuifmeel in het voorjaar?",
       "opties": [
-        "ein Rezept",
-        "eine Salbe",
-        "eine Tablette",
-        "ein Pflaster"
+        "die Halsschmerzen",
+        "der Heuschnupfen",
+        "das Fieber",
+        "der Muskelkater"
       ],
       "antwoord": 1,
-      "uitleg": "'Die Salbe' is zalf."
+      "uitleg": "'Der Heuschnupfen' is hooikoorts (Wortschatz H2)."
     },
     {
       "type": "mc",
@@ -112,7 +112,7 @@ DURU.registerExamen({
         "Herausforderung",
         "Besserung",
         "Praxis",
-        "Wunde"
+        "Erkältung"
       ],
       "antwoord": 0,
       "uitleg": "'Die Herausforderung' is de uitdaging."
@@ -173,13 +173,13 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een 'Verband' wordt gebruikt om een gewricht te fixeren of een wond te verbinden.",
-      "antwoord": true,
-      "uitleg": "Waar! 'Der Verband' is het medische verband."
+      "vraag": "Het Duitse woord 'die Zahnschmerzen' betekent keelpijn.",
+      "antwoord": false,
+      "uitleg": "Onwaar! 'Die Zahnschmerzen' is kiespijn; keelpijn is 'die Halsschmerzen' (Wortschatz H2)."
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord tussen haakjes: 'Ich hole die verordneten (medicijnen) aus der Apotheke.' Vul het Duitse woord in (Medikamente).",
+      "vraag": "Vertaal het woord tussen haakjes: 'Ich hole die verordneten (medicijnen) aus der Apotheke.' Vul het Duitse woord in.",
       "antwoord": "Medikamente|die Medikamente",
       "uitleg": "Medicijnen zijn in het Duits 'die Medikamente'."
     },
@@ -202,14 +202,13 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee hulpmiddelen uit het EHBO-kistje of de apotheek bij een schaafwond.",
-      "modelantwoord": "Je gebruikt een pleister, zalf of een verband om de wond te verzorgen.",
+      "vraag": "Noem in het Duits een klacht waarmee je naar de dokter of de apotheek gaat.",
+      "modelantwoord": "Bijvoorbeeld die Erkältung, die Grippe, der Heuschnupfen of das Fieber.",
       "sleutelwoorden": [
-        "pleister/zalf/verband",
-        "Pflaster/Salbe/Verband"
+        "Erkältung/Erkaltung/Grippe/Heuschnupfen/Fieber/Muskelkater/Halsschmerzen/Zahnschmerzen"
       ],
       "minTreffers": 1,
-      "uitleg": "Medische hulpmiddelen zijn das Pflaster, die Salbe of der Verband."
+      "uitleg": "Klachten uit Wortschatz H2: Erkältung, Grippe, Heuschnupfen, Fieber, Muskelkater, Hals- en Zahnschmerzen."
     }
   ]
 });

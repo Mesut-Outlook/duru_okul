@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'het mes' in het Frans (met lidwoord, le couteau):",
+      "vraag": "Vertaal het woord voor 'het mes' in het Frans (met lidwoord):",
       "antwoord": "le couteau|couteau",
       "uitleg": "Het mes is 'le couteau'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord tussen haakjes: 'Il mange du pain avec du (boter).' Vul het Franse woord in (beurre):",
+      "vraag": "Vertaal het woord tussen haakjes: 'Il mange du pain avec du (boter).' Vul het Franse woord in:",
       "antwoord": "beurre",
       "uitleg": "Boter is 'le beurre'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'de vervuiling' in het Frans (vrouwelijk met lidwoord, la pollution):",
+      "vraag": "Vertaal het woord voor 'de vervuiling' in het Frans (vrouwelijk met lidwoord):",
       "antwoord": "la pollution|pollution",
       "uitleg": "De vervuiling is 'la pollution'."
     }

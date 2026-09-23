@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal de ontkenning voor 'niet meer': 'Je ne veux ____ (niet meer) manger.' (plus)",
+      "vraag": "Vertaal de ontkenning voor 'niet meer': 'Je ne veux ____ (niet meer) manger.'",
       "antwoord": "plus",
       "uitleg": "Niet meer = 'ne ... plus'."
     },
     {
       "type": "invoer",
-      "vraag": "Vul de gebiedende wijs in voor één persoon: '____ (Zoek) un petit boulot!' (Cherche)",
+      "vraag": "Vul de gebiedende wijs in voor één persoon: '____ (Zoek) un petit boulot!'",
       "antwoord": "Cherche|cherche",
       "uitleg": "De jij-vorm van chercher in de impératif is 'Cherche' (zonder -s)."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal de ontkenning voor 'nog niet': 'Le magasin n'est ____ (nog niet) ouvert.' (pas encore)",
+      "vraag": "Vertaal de ontkenning voor 'nog niet': 'Le magasin n'est ____ (nog niet) ouvert.'",
       "antwoord": "pas encore",
       "uitleg": "Nog niet is 'ne ... pas encore'."
     }

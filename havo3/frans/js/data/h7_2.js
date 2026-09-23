@@ -78,21 +78,21 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het materiaal 'van metaal' in het Frans (twee woorden, en métal):",
+      "vraag": "Vertaal het materiaal 'van metaal' in het Frans (twee woorden):",
       "antwoord": "en métal|en metal",
       "uitleg": "Van metaal is 'en métal'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal de kleur tussen haakjes: 'Elle porte une robe (paars).' Vul de vrouwelijke Franse vorm in (violette):",
+      "vraag": "Vertaal de kleur tussen haakjes: 'Elle porte une robe (paars).' Vul de vrouwelijke Franse vorm in:",
       "antwoord": "violette",
       "uitleg": "De vrouwelijke vorm van violet is 'violette'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'de vorm rond' (mannelijk enkelvoud, rond):",
-      "antwoord": "rond",
-      "uitleg": "Rond is in het Frans 'rond'."
+      "vraag": "Vertaal het woord voor de vorm 'vierkant' in het Frans (mannelijk enkelvoud):",
+      "antwoord": "carré",
+      "uitleg": "Vierkant is 'carré' (vrouwelijk: carrée), zie Vocabulaire E op p. 267."
     }
   ]
 });

@@ -78,7 +78,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vul het ontbrekende woord in voor 'een foutje': 'Excusez-moi, il y a une ____.' (erreur)",
+      "vraag": "Vul het ontbrekende woord in voor 'een foutje': 'Excusez-moi, il y a une ____.'",
       "antwoord": "erreur",
       "uitleg": "Er is een vergissing gemaakt = 'il y a une erreur'."
     },

@@ -28,7 +28,7 @@ Bir dersin `index.html`'ine bağlı tüm data dosyalarını yükleyip şunları 
 | 11 | Her data dosyası `index.html`'e bağlı, her referans mevcut |
 | 12 | Ham LaTeX yok (`$F_{res}$`, `\frac`, `\text`) — KaTeX/MathJax yüklü değil |
 | 13 | Bozuk metin yok: kontrol karakteri (`\t`/`\f` = yarım kalmış `\text`/`\frac`), `($)`, `( = 900 N)`, `bash{` — shell'in yuttuğu `$`-ifadeleri |
-| 14 | `invul` sorusunda cevap `[köşeli parantez]` içinde soruda yazmıyor |
+| 14 | `invul`/`invoer` sorusunda cevap soruda yazmıyor: `[köşeli parantez]` ya da düz `(parantez)` içinde ("… (parle)", "(met lidwoord, la crêpe)"); `x of y` seçimi sunan parantez sayılmaz |
 | 15 | `waaronwaar`: `uitleg` cevapla çelişmiyor ("Onwaar: Waar." / uitleg "Waar." ama antwoord `false`) |
 | 16 | mc cevap **sırası** kalıpsız (≥6 mc'li dosyada): periyot 2–4 döngüsü (`0123 0123…`) yok, geçişlerin <%60'ı `+1`, aynı sıra ≥3 dosyada yok |
 
@@ -38,7 +38,8 @@ Yeni kurallar düzeltme öncesi yedekte bunların hepsini yakaladı, 12 derste y
 
 16 2026-09-23'te eklendi: betikle toplu üretimde (agy'nin `gen_*.py`'leri, eski `spread.py`) cevap sırası
 şablondan geliyor, `012301230123` kural 3'ü (dağılım) geçiyor. 12 derste 330 dosyada vardı. **Sınav motoru
-şıkları her denemede karıştırır, oefenmotor karıştırmaz**: onderwerp'te kalıp Duru'ya görünür. Yayındaki
+şıkları her denemede karıştırır; oefenmotor da 2026-09-24'ten beri karıştırır** (`engine.js → schudOpties`),
+yani kalıp artık Duru'ya görünmez — kural veri temizliği için kalır. Yayındaki
 eski sınavlar (266) `gate_uitzonderingen.json` → `"16"`'da id bazlı istisnadır; denemeler orijinal indeksle
 kayıtlı olduğu için sıraları değiştirilemez. Onderwerp'e istisna yazılmaz (oefenmotor soru başına cevap
 saklamaz, sıra her zaman düzeltilebilir). Yeni içerikte sırayı **rastgele** üret.

@@ -185,7 +185,7 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal de uitdrukking tussen haakjes: 'J'ai très (honger), allons manger!' Vul het Franse woord in (faim):",
+      "vraag": "Vertaal de uitdrukking tussen haakjes: 'J'ai très (honger), allons manger!' Vul het Franse woord in:",
       "antwoord": "faim",
       "uitleg": "Honger hebben is 'avoir faim'."
     },

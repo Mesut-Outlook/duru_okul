@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal de uitdrukking tussen haakjes: 'J'ai très (dorst), je voudrais de l'eau.' Vul het Franse woord in (soif):",
+      "vraag": "Vertaal de uitdrukking tussen haakjes: 'J'ai très (dorst), je voudrais de l'eau.' Vul het Franse woord in:",
       "antwoord": "soif",
       "uitleg": "Dorst hebben is 'avoir soif'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het Franse woord voor 'de pannenkoek' (vrouwelijk met lidwoord, la crêpe):",
+      "vraag": "Vertaal het Franse woord voor 'de pannenkoek' (vrouwelijk met lidwoord):",
       "antwoord": "la crêpe|la crepe|crêpe|crepe",
       "uitleg": "De pannenkoek is in het Frans 'la crêpe'."
     },
     {
       "type": "invoer",
-      "vraag": "Vul de juiste vorm in: 'Ce dessert a l'____ (ziet eruit) délicieux!' Vul het ontbrekende woord in (air):",
+      "vraag": "Vul de juiste vorm in: 'Ce dessert a l'____ (ziet eruit) délicieux!' Vul het ontbrekende woord in:",
       "antwoord": "air",
       "uitleg": "Eruitzien is de vaste uitdrukking 'avoir l'air'."
     }

@@ -78,19 +78,19 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het werkwoord tussen haakjes: 'Elle doit (betalen) son nouveau smartphone.' Vul het Franse werkwoord in (payer):",
+      "vraag": "Vertaal het werkwoord tussen haakjes: 'Elle doit (betalen) son nouveau smartphone.' Vul het Franse werkwoord in:",
       "antwoord": "payer",
       "uitleg": "Betalen is 'payer'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het bijbaantje voor 'oppassen': 'faire du ____.' Vul het ontbrekende woord in (baby-sitting):",
+      "vraag": "Vertaal het bijbaantje voor 'oppassen': 'faire du ____.' Vul het ontbrekende woord in:",
       "antwoord": "baby-sitting|babysitting",
       "uitleg": "Oppassen is 'faire du baby-sitting'."
     },
     {
       "type": "invoer",
-      "vraag": "Vertaal het woord voor 'kleingeld' in het Frans (vrouwelijk met lidwoord, la monnaie):",
+      "vraag": "Vertaal het woord voor 'kleingeld' in het Frans (vrouwelijk met lidwoord):",
       "antwoord": "la monnaie|monnaie",
       "uitleg": "Het kleingeld is 'la monnaie'."
     }

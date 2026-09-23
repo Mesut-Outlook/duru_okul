@@ -179,13 +179,13 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vertaal het woord voor 'halfbroer' in het Frans (met lidwoord, un demi-frère):",
+      "vraag": "Vertaal het woord voor 'halfbroer' in het Frans (met lidwoord):",
       "antwoord": "un demi-frère|un demi-frere|demi-frère|demi-frere",
       "uitleg": "Een halfbroer is 'un demi-frère'."
     },
     {
       "type": "invul",
-      "vraag": "Vul de juiste vorm van het werkwoord in: 'Je m'____ (kan goed opschieten) bien avec ma sœur.' (entends)",
+      "vraag": "Vul de juiste vorm van het werkwoord in: 'Je m'____ (kan goed opschieten) bien avec ma sœur.'",
       "antwoord": "entends",
       "uitleg": "Goed opschieten met = 's'entendre bien avec' ➔ 'je m'entends'."
     },

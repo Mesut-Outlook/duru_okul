@@ -67,7 +67,7 @@ DURU.register({
     },
     {
       "type": "invoer",
-      "vraag": "Hoe noem je de som van alle toegevoegde waarden in een land gedurende één jaar (afkorting BBP)?",
+      "vraag": "Hoe noem je de som van alle toegevoegde waarden in een land gedurende één jaar? (Volledig of als afkorting.)",
       "antwoord": "bruto binnenlands product|BBP",
       "uitleg": "Het BBP meet de totale economische productie en waardecreatie van een land."
     },
