@@ -16,24 +16,24 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe heet de faseovergang waarbij een <b>gas direct overgaat in een vaste stof</b> (zonder vloeibaar te worden)?",
       "opties": [
-        "Rijpen",
-        "Sublimeren",
         "Condenseren",
-        "Stollen"
+        "Rijpen",
+        "Stollen",
+        "Sublimeren"
       ],
-      "antwoord": 0,
+      "antwoord": 1,
       "uitleg": "Rijpen is de directe overgang van gas naar vast (zoals rijp/ijskristallen op takken en bevroren ramen)."
     },
     {
       "type": "mc",
       "vraag": "Hoe noteer je vloeibaar water dat bevriest tot ijs op schematische wijze?",
       "opties": [
-        "water (s) → water (l)",
         "water (l) → water (s)",
         "water (g) → water (s)",
-        "water (aq) → water (s)"
+        "water (aq) → water (s)",
+        "water (s) → water (l)"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "Vloeibaar water is water (l) en ijs is vast water (s). Het stollingsproces is dus: water (l) → water (s)."
     },
     {
@@ -52,12 +52,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is het <b>absolute nulpunt</b>?",
       "opties": [
-        "0 °C (273 K), het smeltpunt van ijs",
         "-100 °C, de koudste plek op de Noordpool",
-        "0 K (-273 °C), de allerlaagste temperatuur waarbij deeltjes nagenoeg stilstaan",
-        "100 K, de temperatuur van vloeibaar gas"
+        "100 K, de temperatuur van vloeibaar gas",
+        "0 °C (273 K), het smeltpunt van ijs",
+        "0 K (-273 °C), de allerlaagste temperatuur waarbij deeltjes nagenoeg stilstaan"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "Het absolute nulpunt is 0 K = -273 °C. Kouder dan 0 K kan een stof in het heelal niet worden."
     },
     {
@@ -71,23 +71,23 @@ DURU.register({
       "vraag": "Kerosine is een mengsel van koolwaterstoffen en heeft een kooktraject van 150 °C tot 280 °C. Waarom kookt kerosine bij een traject en niet bij een vast punt?",
       "opties": [
         "Omdat de thermometer bij kerosine niet nauwkeurig werkt",
-        "Omdat kerosine ontbrandt tijdens het koken",
         "Omdat kerosine een vaste stof is bij kamertemperatuur",
-        "Omdat kerosine een mengsel is van verschillende stoffen met elk een eigen kookpunt"
+        "Omdat kerosine een mengsel is van verschillende stoffen met elk een eigen kookpunt",
+        "Omdat kerosine ontbrandt tijdens het koken"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "In een mengsel verdampen de stoffen met het laagste kookpunt eerst; hierdoor stijgt de kooktemperatuur tijdens het koken (kooktraject)."
     },
     {
       "type": "mc",
       "vraag": "Ethanol heeft een smeltpunt van -114 °C en een kookpunt van 78 °C. In welke fase bevindt ethanol zich bij een temperatuur van 20 °C?",
       "opties": [
-        "Vloeibare fase (l)",
-        "Vaste fase (s)",
         "Gasvormige fase (g)",
+        "Vaste fase (s)",
+        "Vloeibare fase (l)",
         "Opgeloste fase (aq)"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "20 °C ligt tussen het smeltpunt (-114 °C) en het kookpunt (78 °C), dus is ethanol vloeibaar (l)."
     },
     {
@@ -100,12 +100,12 @@ DURU.register({
       "type": "mc",
       "vraag": "Droogijs is vast koolstofdioxide. Bij kamertemperatuur verandert het direct in koolstofdioxidegas zonder vloeibaar te worden. Hoe heet dit proces?",
       "opties": [
-        "Rijpen",
         "Sublimeren (vervluchtigen)",
-        "Smelten",
-        "Condenseren"
+        "Rijpen",
+        "Condenseren",
+        "Smelten"
       ],
-      "antwoord": 1,
+      "antwoord": 0,
       "uitleg": "De directe overgang van vaste toestand naar gasvormige toestand heet sublimeren of vervluchtigen."
     }
   ]

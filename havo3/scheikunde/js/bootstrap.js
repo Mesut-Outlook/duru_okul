@@ -22,6 +22,41 @@
       icoon: "⚛️",
       kleur: "h2-thema",
       intro: "Macro- en microniveau, fasen, het periodiek systeem der elementen, metalen en niet-metalen, chemische formuletaal en atoombouw met protonen, neutronen en elektronen.",
+    },
+    {
+      nr: 3,
+      titel: "Chemische reacties",
+      icoon: "⚗️",
+      kleur: "h3-thema",
+      intro: "Reactiekenmerken, reactievergelijkingen kloppend maken en rekenen met massaverhoudingen.",
+    },
+    {
+      nr: 4,
+      titel: "Reacties en energie",
+      icoon: "🔥",
+      kleur: "h4-thema",
+      intro: "Verbranding, ontleding, energie en milieu, en overmaat en ondermaat bij reacties.",
+    },
+    {
+      nr: 5,
+      titel: "Mengsels",
+      icoon: "🥤",
+      kleur: "h5-thema",
+      intro: "Scheidingsmethoden, indampen en destilleren, adsorberen en chromatograferen, en oplossingen.",
+    },
+    {
+      nr: 6,
+      titel: "Indeling van stoffen",
+      icoon: "🧂",
+      kleur: "h6-thema",
+      intro: "Stroomgeleiding, metalen, zouten en moleculaire stoffen.",
+    },
+    {
+      nr: 7,
+      titel: "Koolstofchemie",
+      icoon: "🛢️",
+      kleur: "h7-thema",
+      intro: "Koolwaterstoffen, systematische namen en karakteristieke groepen.",
     }
   ];
   DURU.onderwerpen = [];

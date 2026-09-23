@@ -16,9 +16,9 @@ DURU.registerExamen({
       "vraag": "Wat is volgens het overzicht op pagina 171 de exacte definitie van het <b>brandpunt (F)</b> van een bolle lens?",
       "opties": [
         "Het punt waar alle lichtstralen die evenwijdig lopen aan de optische as na breking elkaar snijden",
-        "Het middelpunt tussen de lens en het voorwerp",
+        "Het punt waar het voorwerp moet staan om een virtueel beeld te krijgen",
         "Het punt op het netvlies waar de gele vlek zich bevindt",
-        "Het punt waar het voorwerp moet staan om een virtueel beeld te krijgen"
+        "Het middelpunt tussen de lens en het voorwerp"
       ],
       "antwoord": 0,
       "uitleg": "Het brandpunt (F) is het punt waar lichtstralen die evenwijdig lopen aan de optische as na breking samenkomen."
@@ -27,10 +27,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is het <b>nabijheidspunt</b> van het menselijk oog?",
       "opties": [
-        "Het verste punt dat je ongeaccommodeerd scherp kunt zien",
-        "Het meest nabije punt dat je scherp kunt zien door maximaal te accommoderen",
         "De vaste afstand van 10 cm voor ieder menselijk oog",
-        "De afstand tussen het hoornvlies en de ooglens"
+        "Het meest nabije punt dat je scherp kunt zien door maximaal te accommoderen",
+        "De afstand tussen het hoornvlies en de ooglens",
+        "Het verste punt dat je ongeaccommodeerd scherp kunt zien"
       ],
       "antwoord": 1,
       "uitleg": "Het nabijheidspunt is het dichtstbijzijnde punt dat je nog scherp kunt zien door je ooglens maximaal bol te maken (accommoderen)."
@@ -39,10 +39,10 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat gebeurt er met de ooglens en de oogspieren wanneer een oog <b>ongeaccommodeerd</b> is?",
       "opties": [
+        "De iris vernauwt de pupil om minder licht binnen te laten.",
         "De oogspiertjes zijn maximaal aangespannen en de lens is maximaal bol.",
-        "De ooglens wordt dikker om een boek op schoot te lezen.",
         "De oogspiertjes zijn ontspannen en de lens is zo plat mogelijk om in de verte te kijken.",
-        "De iris vernauwt de pupil om minder licht binnen te laten."
+        "De ooglens wordt dikker om een boek op schoot te lezen."
       ],
       "antwoord": 2,
       "uitleg": "In ongeaccommodeerde toestand zijn de oogspiertjes ontspannen en is de ooglens plat, waardoor het oog ontspannen in de verte kijkt."
@@ -52,8 +52,8 @@ DURU.registerExamen({
       "vraag": "Hoe luidt de <b>lenzenformule</b> waarmee je de relatie tussen voorwerpsafstand v, beeldafstand b en brandpuntsafstand f berekent?",
       "opties": [
         "v + b = f",
-        "1/v - 1/b = 1/f",
         "f = v × b",
+        "1/v - 1/b = 1/f",
         "1/v + 1/b = 1/f"
       ],
       "antwoord": 3,
@@ -76,9 +76,9 @@ DURU.registerExamen({
       "vraag": "Wat voor type beeld ontstaat er wanneer je jezelf bekijkt in een <b>vlakke spiegel</b>?",
       "opties": [
         "Een virtueel beeld dat niet op een scherm kan worden opgevangen",
-        "Een reëel beeld dat op de muur achter de spiegel wordt geprojecteerd",
         "Een omgekeerd reëel beeld",
-        "Een diffuus geprojecteerd beeld"
+        "Een diffuus geprojecteerd beeld",
+        "Een reëel beeld dat op de muur achter de spiegel wordt geprojecteerd"
       ],
       "antwoord": 0,
       "uitleg": "Een spiegelbeeld in een vlakke spiegel is een virtueel beeld: het lijkt achter de spiegel te staan maar kan niet op een scherm worden opgevangen."
@@ -99,12 +99,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat geeft de <b>vergrotingsfactor N</b> aan bij een optische beeldvorming?",
       "opties": [
-        "De sterkte van de lichtbron in lumen",
         "De kromming van het spiegeloppervlak",
-        "Hoeveel keer het beeld groter is dan het voorwerp",
-        "De brekingsindex van het glas"
+        "De brekingsindex van het glas",
+        "De sterkte van de lichtbron in lumen",
+        "Hoeveel keer het beeld groter is dan het voorwerp"
       ],
-      "antwoord": 2,
+      "antwoord": 3,
       "uitleg": "De vergrotingsfactor N geeft aan hoeveel maal het beeld groter (of kleiner) is dan het oorspronkelijke voorwerp (N = L_b / L_v = b / v)."
     },
     {
@@ -112,11 +112,11 @@ DURU.registerExamen({
       "vraag": "Lichtstralen die vanuit de lucht onder een hoek een glazen prisma binnendringen veranderen van richting. Hoe heet dit natuurkundige verschijnsel?",
       "opties": [
         "Spiegeling",
-        "Absorptie",
         "Diffusie",
-        "Breking"
+        "Breking",
+        "Absorptie"
       ],
-      "antwoord": 3,
+      "antwoord": 2,
       "uitleg": "Het van richting veranderen ('knikken') van lichtstralen bij de overgang naar een andere doorzichtige stof heet breking."
     },
     {
@@ -147,12 +147,12 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Een camera heeft een positieve lens met een brandpuntsafstand f = 0,05 m (50 mm). Wat is de lenssterkte S van deze lens?",
       "opties": [
-        "+20 dpt",
+        "+50 dpt",
         "+5 dpt",
-        "+0,2 dpt",
-        "+50 dpt"
+        "+20 dpt",
+        "+0,2 dpt"
       ],
-      "antwoord": 0,
+      "antwoord": 2,
       "uitleg": "S = 1 / f = 1 / 0,05 = +20 dioptrie (dpt)."
     },
     {
@@ -161,8 +161,8 @@ DURU.registerExamen({
       "opties": [
         "Omdat papier het licht volledig absorbeert",
         "Omdat het papieroppervlak microscopisch ruw en oneffen is",
-        "Omdat papier van zichzelf een directe lichtbron is",
-        "Omdat papier een negatieve brekingsindex heeft"
+        "Omdat papier een negatieve brekingsindex heeft",
+        "Omdat papier van zichzelf een directe lichtbron is"
       ],
       "antwoord": 1,
       "uitleg": "Door de microscopische oneffenheden en vezels van het papieroppervlak worden invallende lichtstralen in alle mogelijke richtingen verstrooid (diffuus)."
@@ -171,21 +171,21 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat is de functie van de <b>optische as</b> bij een lens?",
       "opties": [
-        "Het weerkaatsen van schadelijke ultraviolette stralen",
-        "Het vasthouden van de lens in de brillenrand",
         "Het dienen als denkbeeldige symmetrielijn loodrecht door het midden van de lens",
-        "Het opvangen van het reële beeld op het netvlies"
+        "Het opvangen van het reële beeld op het netvlies",
+        "Het vasthouden van de lens in de brillenrand",
+        "Het weerkaatsen van schadelijke ultraviolette stralen"
       ],
-      "antwoord": 2,
+      "antwoord": 0,
       "uitleg": "De optische as is de denkbeeldige loodrechte lijn door het optisch middelpunt van de lens waarlangs lichtstralen ongebroken rechtdoor gaan."
     },
     {
       "type": "mc",
       "vraag": "Welk deel van het menselijk oog vangt het gevormde beeld op en zet lichtprikkels om in elektrische signalen naar de hersenen?",
       "opties": [
+        "De ooglens",
         "Het hoornvlies",
         "De pupil",
-        "De ooglens",
         "Het netvlies"
       ],
       "antwoord": 3,
