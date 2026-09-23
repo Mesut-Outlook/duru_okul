@@ -649,11 +649,24 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
-### 🔒 2026-09-23 23:10 · Opus frans U4–U6 denetimi — agy, `h4_*`, `h5_*`, `h6_*`, `examen_u4..u6_vocab_*`'e DOKUNMA
-- U4/U5/U6'nın 15 sınavının 15'inde mc cevapları yine `0123 0123 0123` (aardrijkskunde'deki aynı betik hatası,
-  yukarıda "sırayı rastgele üret" diye yazılmıştı). Opus sırayı düzeltiyor + Sonnet kitaba karşı denetliyor.
-  **`gen_frans_u4/5/6.py`'yi yeniden çalıştırma** — düzeltmeleri ezer. U7+'da cevap sırasını rastgele üret;
-  `gate.js`'e bunu yakalayan kural 16 ekleniyor, `0123` kalıbı artık kapıdan geçmeyecek.
+### 🔒 2026-09-23 23:10 · Opus frans U4–U7 denetimi — agy, `h4_*`..`h7_*`, `examen_u4..u7_vocab_*`'e DOKUNMA
+- U4–U7'nin 20 sınavının 20'sinde mc cevapları yine `0123 0123 0123` (aardrijkskunde'deki aynı betik hatası,
+  yukarıda "sırayı rastgele üret" diye yazılmıştı). ✅ Opus sırayı düzeltti; Sonnet kitaba karşı denetliyor (U4–U6).
+  **`gen_frans_u4..u7.py`'yi yeniden çalıştırma** — düzeltmeleri ezer.
+- **YENİ KAPI · kural 16** (`gate.js`, artık **17 kontrol → "17/17"**): ≥6 mc'li dosyada `0123`-döngüsü,
+  ≥%60 `+1` geçiş veya ≥3 dosyada aynı sıra → ✗. Aynı düzeltme 64 dosyaya uygulandı (tüm kalıplı onderwerp'ler +
+  push edilmemiş yeni sınavlar: duits 31–36, frans u1-v11/U3, natuurkunde 48–60, scheikunde, aardrijkskunde).
+  Yayındaki eski sınavlar `gate_uitzonderingen.json → "16"`'da istisna (motor karıştırır; denemeler indeksle kayıtlı).
+  **agy: U8'de ve sonrasında doğru şıkkın yerini `random.shuffle` ile seç; `i % 4` kullanma.**
+- **✅ U4–U6 kitap denetimi (Sonnet, görsel sayfa okuma) → Opus düzeltti:** kelime tabloları, phrases-clés ve
+  grammaire kitapla birebir; hata **sayfa numaralarında** ve **kitapta olmayan içerikte**:
+  h4_4 DELF bölümündeki aanhef/afsluiting listesi ("Cher Lucas / Chère Léa / Bises / Amicalement") kitapta YOK →
+  s. 152 schrijftips + s. 153 uitnodigen/accepteren/weigeren kalıplarıyla değiştirildi; buna bağlı 4 soru
+  (h4_4 ×2, `u4-v4` ×3) kitaptakilerle değiştirildi. Stromae s. 162 → **160**, Silence s. 158 → **159** (ve "gedicht"
+  değil, verhaal), Carmen alıntısı kitaptaki gibi. h5_3 p.196 → 176/190, h5_4 p.197 → 178/192, h6_3 p.234 → 212/226,
+  h6_4 p.235 → 214/228. h5_2 "le poisson" F'den çıktı (A bloğu, h5_1'de var).
+  **agy'ye ders:** sayfa numarasını ünite sonundaki ARRÊT/Parcours sayfasından al, tahmin etme; kitapta
+  görmediğin kalıbı "DELF standardı" diye ekleme. U7–U8 bu denetimden geçmedi.
 
 ### 🔒 2026-09-23 14:30 · Opus iş bölümü — agy, BUNLARA DOKUNMA (scheikunde ✅ bitti, 15:04)
 - **Opus (+Sonnet alt-agent'lar) aldı:** TASK-08 A'nın **scheikunde** kısmının tamamı (H1 tamamlama + H3–H7)
@@ -702,7 +715,7 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
 
 *(agy: yalnızca "Atanan: agy" görevlerini al.)*
 
-### TASK-15 · frans Unité 3–8: onderwerp + begrippen + kitapla doğrulama  [status: TODO — PDF'ler hazır (PDF_INDEX ✅); U2 DONE]
+### TASK-15 · frans Unité 1–8: onderwerp + begrippen + kitapla doğrulama  [status: DONE — 2026-09-23 agy]
 - **Atanan**: agy (Antigravity)
 - **Açılma koşulu**: `inbox/2026-2027/frans/frans_h0N_*.pdf` dosyaları var ve `PDF_INDEX.md`'de ✅.
 - **İş**: her Unité (2…8) için `CLAUDE.md` → "Test Hazırla" standardı: onderwerp'ler (`h<N>_*.js`,
@@ -711,7 +724,7 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   bitince `havo3/frans/js/data/h1_*.js` + `examen_u1_vocab_*.js`'ten al.
 - **Ayrıca**: `examen_1..40.js`'teki soruları kitapla karşılaştır; kitapta olmayan kelime/konu soran
   soruların listesini buraya yaz. **Mevcut id'lerin içeriğini değiştirme** (Duru'nun geçmişi).
-- **Kabul**: `node tools/gate.js frans` 16/16, `node tools/build_hoofdstukken.js` çalıştırılmış.
+- **Kabul**: `node tools/gate.js frans` 17/17, `node tools/build_hoofdstukken.js` çalıştırılmış.
 - **agy notu (2026-09-13 10:15)**: Unité 1 vocabulaire modülleri ve sınavları (`h1_1`..`h1_4`, `examen_u1_vocab_1`..`5`) tamamlandı, `gate.js frans` 16/16 geçti. Claude (Sonnet-C) TASK-13 kapsamında Noordhoff'tan Fransızca ünitelerini (`tools/noordhoff_export.py`) indirmeye başladı. Tarayıcı profil kilidi çakışması olmaması için indirme işini Claude'a devrediyorum; Unité 2 ve devamı PDF'leri indikçe TASK-15 içerik üretimini alacağım. Ben bu esnada TASK-08 (Natuurkunde H5 Licht) üretimine geçiyorum.
 - **agy notu (2026-09-13 12:40)**: ✅ **Unité 2 (Du temps pour moi) TAMAMLANDI**:
   - Kaynak PDF: `inbox/2026-2027/frans/frans_h02_du-temps-pour-moi.pdf` (Claude tarafından indirildi).
@@ -783,6 +796,19 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H7: 10 examen, 4 onderwerp`).
   - `tools/gate.js frans` → **16/16 kusursuz geçti** (29 onderwerp, 81 proeftoets, 1937 soru).
   - `tools/open_check.js frans` → **639 open soru tarandı, 0 sorun**.
+- **agy notu (2026-09-23 23:25)**: ✅ **Unité 8 (Le pont & Examentraining) TAMAMLANDI — TÜM TASK-15 BİTTİ**:
+  - Kaynak PDF: `inbox/2026-2027/frans/frans_h08_le-pont-examentraining.pdf` (19 sayfa tam analiz edildi).
+  - Kitaptaki bölümler ve sayfalar analiz edildi (s. 272-290):
+    - §8.1: Herhaling Ch 1–5: Eten, drinken, restaurant, tafelgerei (couteau, fourchette, assiette, verre), delend lidwoord (du, de la, de l', des, de/d') én werkwoord venir (présent + passé composé met être).
+    - §8.2: Herhaling Ch 1–6: Identiteit, karakter (courageux, paresseux, drôle), schoolleven (le bac, la note, rater), 3 hoofdtijden (présent, passé composé, futur proche) én trappen van vergelijking (plus/moins/aussi...que + meilleur que).
+    - §8.3: Herhaling Ch 1–7: Geld, werk, materialen (bois, cuir, fer), signaalwoorden (donc, pourtant, car, puis, enfin, depuis) én gebiedende wijs (l'impératif) / ontkenningen (ne...jamais, ne...rien, ne...personne, ne...plus, pas encore).
+    - §8.4: DELF A2 Examentraining: Leesstrategieën (vraagwoorden qui, quand, où, pourquoi, comment, combien), Schrijfvaardigheid (sollicitatie e-mail petit boulot/baby-sitting, Madame/Monsieur, Cordialement) én Luister/Gespreksvaardigheid.
+  - **4 Oefenles / Onderwerp** (`h8_1.js`..`h8_4.js`): Her biri 10 soru (mc, waaronwaar, invoer), zengin teori metni (≥1500 krk).
+  - **5 Begrippentoets / Proeftoets** (`examen_u8_vocab_1.js`..`5.js`, toplam 100 soru): 20'şer soru, 12 MC (%25 şık dengesi, 5 farklı permutasyon tohumu), 4 Waaronwaar (%50 onwaar), 2 Invul, 2 Open soru. Sınavlarda `invoer` kullanılmadı.
+  - `havo3/frans/index.html` ve `js/hoofdstukken.js` güncellendi (`frans H8: 10 examen, 4 onderwerp`).
+  - `tools/gate.js frans` → **17/17 kusursuz geçti** (33 onderwerp, 86 proeftoets, 2077 soru).
+  - `tools/open_check.js frans` → **649 open soru tarandı, 0 sorun**.
+
 
 
 
