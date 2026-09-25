@@ -26,7 +26,7 @@ js/landing.js     VAKKEN dizisi + render + iframe-shell + storage-interceptor + 
 js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (vak listeleri HARD-CODED)
 server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
-tools/            soru kalite denetimi: gate.js (17 kontrol), spread.py, open_check.js (bkz. tools/README.md)
+tools/            soru kalite denetimi: gate.js (18 kontrol), spread.py, open_check.js (bkz. tools/README.md)
 inbox/            ders materyali bırakma alanı (PDF/Word/görsel)
 archief/<schooljaar>/  ARŞİV: ders yılına göre (ör. archief/2025-2026/ = MAVO 2 dersleri)
 havo3/<vak>/      HAVO 3 ders-siteleri (12 vak). Anahtar: duru_2627_<slug>_*. Doluluk için CLAUDE.md "Ders doluluk durumu"

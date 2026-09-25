@@ -113,6 +113,8 @@ kusurlardan türetildi. **Her yeni soru dosyasında bunlara uy; üretimi bitirin
     schaalvoordelen). Hesaplar hep doğru — sorun kapsam. Her kavram için kitapta sayfa gösterebilmelisin.
 14. **Sınav = TAM 20 soru. Kapı kurallarını (`tools/gate.js`) değiştirme.** Yalnız kendi dosyalarını
     `git add` et; `git add -A` yapma, push'u yapma.
+15. **(2026-09-25) Doğru şık en uzun şık olmasın** — çeldiriciler ciddi, aynı üslup ve uzunlukta; şaka şık yok. Kapı: 17.
+   Kitapta ya da sitenin `h<N>_*.js` teorisinde olmayan kavramı sorma. Her teslimi bu dosyaya yaz.
 
 **Kendi kendini denetleme:** `node tools/gate.js <vak>` bu kuralları ölçer. Opus her teslimi bu kapıdan geçiriyor; sen de geçir ki iş geri dönmesin.
 
@@ -649,6 +651,29 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### 🔒 2026-09-25 · Opus aardrijkskunde H1 (`examen_26..39`, ex-h3-ak-26…39) denetimi — agy, bu dosyalara DOKUNMA
+- agy'nin 14 sınavı (280 soru, §1.1–§1.3) `coordination.md`'ye **hiç kayıt düşülmeden** bırakılmıştı. Gate 16/16,
+  open_check temiz; Sonnet kitaba karşı denetledi → **anahtar hatası 0**, ama:
+  (1) doğru mc şıkkı **%91 en uzun şık** (127/140) — okumadan geçilir; (2) şaka çeldiriciler (zeppelin, postduif,
+  roeiers, boze geesten); (3) kitapta da `h1_*.js` teorisinde de olmayan içerik: WTO, contingent, smile curve,
+  schuldenval, Fairtrade, Rana Plaza, Piraeus, TSMC, coltan/creuseurs, Ever Given, HDI, BRICS;
+  (4) ex-33 kobalt üzerine kurulu, kitabın DR Congo örneği **koper** (s. 32–33, bron 23);
+  (5) aşırı tekrar: Gini ~15×, ruilvoet ~10×, ASML ~6×, Ever Given ~6×; (6) ex-39 "Integraal Hoofdstuk 1" ama §1.4–1.5 yok.
+- **Kapsam kararı (Duru'nun babası, 2026-09-25):** ilk toets yalnız **§1.1–§1.3** → §1.4/§1.5 için sınav **üretilmez**.
+- **Yeniden yazılamadı:** denetim sürerken `460809f` (12:48) push edildi ve Duru 12:55'ten itibaren sırayla çözmeye
+  başladı (26 ×2, 28, 29, 30, 31, 34 — 13:15 itibarıyla). Opus'un 3 Sonnet yeniden-yazım ajanı dosyalara dokunmadan
+  durduruldu. **14 id donduruldu** (kural 17'de istisna). Düzeltmeler gerekirse **yeni id'lerle** (ex-h3-ak-40+) yapılır.
+  **Ders: denetlenmemiş teslimi push etme; denetim bitmeden önce push, içerik düzeltmesini imkânsız kılıyor.**
+- **YENİ KAPI · kural 17** (`gate.js`, artık **18 kontrol**): ≥6 mc'li dosyada doğru şık dosya başına >%50 tek başına
+  en uzunsa ✗. Yayındaki eski sınavlar `gate_uitzonderingen.json → "17"`'de istisna. **agy: çeldiricileri doğruyla
+  aynı uzunlukta ve ciddi yaz; teslimini `coordination.md`'ye yaz.**
+
+### TASK-22 · 17 onderwerp'te "doğru şık en uzun" düzeltmesi  [status: TODO — agy veya Sonnet]
+- `gate_uitzonderingen.json → "17"`'de `TASK-22` gerekçeli 17 onderwerp (aardrijkskunde 9, scheikunde 7, frans 1).
+  Oefenmotor cevap saklamaz → metin serbestçe düzeltilebilir. Yalnız mc şıklarını yeniden yaz (anlam aynı, doğru
+  cevap aynı), çeldiricileri gerçekçi ve benzer uzunlukta yap, sonra istisna satırını **sil**.
+- **Kabul:** istisna listesinde `TASK-22` kalmaz, `node tools/gate.js <vak>` kural 17 ✓.
+
 ### 🔒 2026-09-23 23:10 · Opus frans U4–U7 denetimi — agy, `h4_*`..`h7_*`, `examen_u4..u7_vocab_*`'e DOKUNMA
 - U4–U7'nin 20 sınavının 20'sinde mc cevapları yine `0123 0123 0123` (aardrijkskunde'deki aynı betik hatası,
   yukarıda "sırayı rastgele üret" diye yazılmıştı). ✅ Opus sırayı düzeltti; Sonnet kitaba karşı denetliyor (U4–U6).

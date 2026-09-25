@@ -133,5 +133,17 @@ const kalip=[],perSira={},kalipVrij=[...OO,...EE].filter(x=>vrij('16',[x.id])).l
 Object.entries(perSira).filter(([,ids])=>ids.length>=3).forEach(([s,ids])=>kalip.push(`${ids.length} dosyada ayni sira ${s}: ${ids.slice(0,4).join(', ')}${ids.length>4?' …':''}`));
 check('16. mc cevap sirasi kalipsiz (0123-dongusu / ayni sira yok)', kalip, kalipVrij?`${kalipVrij} yayindaki eski sinav istisna`:'');
 
+// Uretilen mc'de dogru sik cogu zaman en uzun sik oluyor (2026-09-25: aardrijkskunde %90, engels %85):
+// Duru soruyu okumadan en uzunu secerek yuksek not alir. Karistirma bunu gizlemez. Yalniz ≥6 mc'li dosyalar;
+// dogru sik TEK BASINA en uzunsa sayilir, esik dosya basi %50 (rastlantida ~%25).
+// Istisna (id bazli) yayindaki eski sinavlar + 2026-09-25'teki onderwerp birikimi (TASK-22) icin.
+const strip=s=>String(s||'').replace(/<[^>]+>/g,'').trim();
+const langVrij=[...OO,...EE].filter(x=>vrij('17',[x.id])).length;istisna+=langVrij;
+const lang=[];[...OO,...EE].filter(x=>!vrij('17',[x.id])).forEach(x=>{const m=(x.vragen||[]).filter(v=>v.type==='mc'&&Array.isArray(v.opties));
+  if(m.length<KALIP_MIN)return;
+  const l=m.filter(v=>{const L=v.opties.map(o=>strip(o).length);return L.every((y,i)=>i===v.antwoord||y<L[v.antwoord])}).length;
+  if(l/m.length>0.5)lang.push(`${x.id}: ${l}/${m.length} mc'de dogru sik en uzun`)});
+check('17. dogru mc siki en uzun sik degil (dosya basi ≤%50)', lang, langVrij?`${langVrij} istisna (yayinda / TASK-22)`:'');
+
 console.log(`\n  SONUC: ${passes} gecti, ${fails} kaldi`);
 process.exit(fails?1:0);

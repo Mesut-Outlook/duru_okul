@@ -88,6 +88,10 @@ kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçül�
     karıştırır (oefen: 2026-09-24'ten beri), yani Duru görmez; ama veri review/veli panelinde ve yeni bir
     görünümde olduğu gibi çıkar, kalıp kapıda yakalanır. Dosya başına 0–3'ü karıştırılmış bloklarla dağıt ve
     dosyadan dosyaya farklı olsun. (Kapı: 16; 2026-09-23'te aardrijkskunde H3–H5 + frans U4–U7'nin hepsi)
+17. **Doğru şık en uzun şık olmasın.** Üretilen mc'de doğru cevap ayrıntılı ve tam, çeldiriciler kısa ya da
+    saçma yazılıyor ("zeppelin ile vervoer", "BM kurayla belirler") → Duru okumadan en uzunu seçer. Çeldirici
+    gerçek bir yanlış kavrama olmalı, doğruyla aynı üslup ve uzunlukta; doğru şık kimi zaman en kısa olsun.
+    (Kapı: 17, dosya başına ≤%50. 2026-09-25: aardrijkskunde H1 ex-26…39'da %91.)
 
 ## 📌 "Test Hazırla" ve Bölüm Üretimlerinde Zorunlu Kavram / Terim Standardı (2026-08-30)
 Kullanıcı **"test hazırla"** dediğinde veya herhangi bir ders için yeni bir bölüm/hoofdstuk işlendiğinde **otomatik olarak** şu adımlar uygulanır:

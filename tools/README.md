@@ -4,7 +4,7 @@
 2026-08-27/28'de geschiedenis'te (840 soru) ve scheikunde'de yakalanan kusurlar bu araçlarla
 bulundu. Sözleşme: `docs/ENGINE_SPEC.md`. Kural listesi: `docs/PIPELINE.md` → "Kalite kapısı".
 
-## `gate.js` — kabul kapısı (17 kontrol: 1–16, 5 = 5a/5b)
+## `gate.js` — kabul kapısı (18 kontrol: 1–17, 5 = 5a/5b)
 
 ```bash
 node tools/gate.js <vak>          # ör. node tools/gate.js geschiedenis
@@ -31,6 +31,7 @@ Bir dersin `index.html`'ine bağlı tüm data dosyalarını yükleyip şunları 
 | 14 | `invul`/`invoer` sorusunda cevap soruda yazmıyor: `[köşeli parantez]` ya da düz `(parantez)` içinde ("… (parle)", "(met lidwoord, la crêpe)"); `x of y` seçimi sunan parantez sayılmaz |
 | 15 | `waaronwaar`: `uitleg` cevapla çelişmiyor ("Onwaar: Waar." / uitleg "Waar." ama antwoord `false`) |
 | 16 | mc cevap **sırası** kalıpsız (≥6 mc'li dosyada): periyot 2–4 döngüsü (`0123 0123…`) yok, geçişlerin <%60'ı `+1`, aynı sıra ≥3 dosyada yok |
+| 17 | Doğru mc şıkkı **tek başına en uzun şık** değil (≥6 mc'li dosyada, dosya başına ≤%50; rastlantıda ~%25) |
 
 12–15 2026-09-12 denetiminde eklendi: 1–11'i geçen teslimlerde (natuurkunde, economie, wiskunde,
 scheikunde) 101 LaTeX, 36 bozuk metin, 97 cevabı görünen `invul` ve 38 çelişkili `waaronwaar` vardı.
@@ -43,6 +44,12 @@ yani kalıp artık Duru'ya görünmez — kural veri temizliği için kalır. Ya
 eski sınavlar (266) `gate_uitzonderingen.json` → `"16"`'da id bazlı istisnadır; denemeler orijinal indeksle
 kayıtlı olduğu için sıraları değiştirilemez. Onderwerp'e istisna yazılmaz (oefenmotor soru başına cevap
 saklamaz, sıra her zaman düzeltilebilir). Yeni içerikte sırayı **rastgele** üret.
+
+17 2026-09-25'te eklendi: agy'nin aardrijkskunde H1 teslimi (ex-26…39) tüm kuralları geçti ama 140 mc'nin
+127'sinde (%91) doğru şık en uzun şıktı — Duru okumadan en uzunu seçip geçer. Karıştırma bunu gizlemez.
+Tarama: aardrijkskunde %90, biologie %89, engels %85, çoğu ders ~%70, frans %48. Yayındaki 194 sınav ve
+17 onderwerp `gate_uitzonderingen.json → "17"`'de (onderwerp'ler geçici: **TASK-22**, yeniden yazılacak); agy'nin H1 teslimi ex-ak-26…39 da, çünkü denetim bitmeden yayına girip çözülmeye başladı.
+Yeni içerikte çeldiricileri doğruyla aynı üslup ve uzunlukta yaz; şaka çeldirici ("zeppelin", "postduif") yazma.
 
 Çıkış kodu: ihlal varsa 1. 9 ve 10 numaralı kurallar **hedef**tir, dersin brief'inde farklı bir
 ölçü verildiyse ihlal sayılmayabilir — raporu okurken bunu ayırt et.
