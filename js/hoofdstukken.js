@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-23",
+  "gegenereerd": "2026-09-25",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -61,7 +61,21 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-22": 5,
         "ex-h3-ak-23": 5,
         "ex-h3-ak-24": 5,
-        "ex-h3-ak-25": 5
+        "ex-h3-ak-25": 5,
+        "ex-h3-ak-26": 1,
+        "ex-h3-ak-27": 1,
+        "ex-h3-ak-28": 1,
+        "ex-h3-ak-29": 1,
+        "ex-h3-ak-30": 1,
+        "ex-h3-ak-31": 1,
+        "ex-h3-ak-32": 1,
+        "ex-h3-ak-33": 1,
+        "ex-h3-ak-34": 1,
+        "ex-h3-ak-35": 1,
+        "ex-h3-ak-36": 1,
+        "ex-h3-ak-37": 1,
+        "ex-h3-ak-38": 1,
+        "ex-h3-ak-39": 1
       },
       "onderwerpHoofdstuk": {
         "ak-h1-1": 1,
@@ -91,7 +105,7 @@ window.DURU_HOOFDSTUKKEN = {
         "ak-h5-5": 5
       },
       "aantalExamens": {
-        "1": 5,
+        "1": 19,
         "2": 5,
         "3": 5,
         "4": 5,
