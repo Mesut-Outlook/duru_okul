@@ -45,14 +45,14 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | engels | 18 | 31 | 749 | H1–H6 (+1 hersteld smoke-test, "Overige") |
 | natuurkunde | 44 | 60 | 1586 | H1–H8 **tam** (her H begrippen + begrippentoets; 5.5/6.5/7.5 plusstof) |
 | economie | 12 | 37 | 836 | H1–H4 |
-| aardrijkskunde | 25 | 52 | 1245 | H1–H5 (tam) (+1 hersteld smoke-test, "Overige"); H1 §1.1–§1.3 ekstra 12 kitap-denetimli toets (40–51) |
+| aardrijkskunde | 25 | 57 | 1345 | H1–H5 (tam) (+1 hersteld smoke-test, "Overige"); H1 §1.1–§1.3 ekstra 17 kitap-denetimli toets (40–56; 52–56 karışık) |
 | scheikunde | 33 | 42 | 1150 | H1–H7 **tam** (her § onderwerp + toets, her H begrippen + begrippentoets) |
 | wiskunde | 6 | 13 | 308 | H1 §1.1–1.2 (2 toets + begrippen, uit aantekeningen docent), H2 |
 | biologie | 2 | 5 | 116 | H10 |
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 5 | 22 | 480 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 232 onderwerp · 415 proeftoets · 10316 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 232 onderwerp · 420 proeftoets · 10416 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur en manifest'e

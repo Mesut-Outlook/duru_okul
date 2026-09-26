@@ -651,6 +651,13 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### ✅ 2026-09-26 · Opus aardrijkskunde H1 karışık sınavlar `examen_52..56` (ex-h3-ak-52…56) — DONE
+- Kullanıcı isteği: §1.1–§1.3 karışık 5 test daha. Konular: 52 oorzaak-gevolg · 53 bronnen & cijfers ·
+  54 begrippen toepassen · 55 wereldmachten/conflicten (VS-China, BRICS, graandeal) · 56 eindsprint.
+- Kaynak: kitap PDF'i (`aardrijkskunde_h01_…pdf`, görsel) tesseract ile OCR → s. 9–37 + begrippenlijst s. 52;
+  her `uitleg`'de sayfa referansı. 40–51'deki sorular tekrar edilmedi (gate kural 2 ✓).
+- Gate 17/18 (yalnız bilinen smoke-test ex-1), open_check temiz, doğru şık en uzun 0–4/10 dosya başına.
+
 ### ✅ 2026-09-26 · Opus aardrijkskunde H1 temiz sınavlar `examen_40..51` (ex-h3-ak-40…51) — DONE, kilit kalktı
 - ex-26…39'un yerine değil **yanına**: §1.1 → 40–42, §1.2 → 43–45, §1.3 → 46–48, mix §1.1–§1.3 → 49–51.
   Kitaba bağlı, kural 17'yi istisnasız geçer. `havo3/aardrijkskunde/`'ye ve `js/hoofdstukken.js`'e bu sürede yazma.
