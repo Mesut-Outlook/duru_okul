@@ -651,6 +651,17 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### ✅ 2026-09-26 · Opus/agy aardrijkskunde H1 karışık sınavlar `examen_57..61` (ex-h3-ak-57…61) — DONE
+- Kullanıcı isteği: §1.1–§1.3 karışık 5 test daha. Konular:
+  57 Productieketens & Handelsroutes (Ever Given, opgesplitste keten, spijkerbroek, Houthi, ASML chips) ·
+  58 Koloniaal Erfgoed & Wereldeconomie (handelskolonialisme, VOC, exploitatie vs vestiging, Niger, BRICS) ·
+  59 Ontwikkeling, Welvaart & Ongelijkheid (Gini, Slowakije vs Brazilië, VS paradox, SDG's, Hans Rosling) ·
+  60 Case Studies (Vietnam exporttransformatie, Niger uranium/partners, DR Congo metalen/kobalt, VS landbouw) ·
+  61 Meesterproef Hoofdstuk 1 (slowbalisering, big tech data, EU markt, graandeal, Ndola stadion, Fragile States).
+- Kaynak: buiteNLand 3 HAVO H1 (§1.1–§1.3, s. 9–37, begrippenlijst s. 52). Her soruda sayfa referanslı açıklayıcı `uitleg`.
+- Gate 17/18 (yalnız bilinen smoke-test ex-1), open_check temiz (0 bulgu), kural 17 doğru şık en uzun 0–2/10 dosya başına (57: 2/10, 58: 1/10, 59: 0/10, 60: 0/10, 61: 0/10).
+- `js/hoofdstukken.js` güncellendi (H1 sınav sayısı 36 → 41; toplam aardrijkskunde 57 → 62).
+
 ### ✅ 2026-09-26 · Opus aardrijkskunde H1 karışık sınavlar `examen_52..56` (ex-h3-ak-52…56) — DONE
 - Kullanıcı isteği: §1.1–§1.3 karışık 5 test daha. Konular: 52 oorzaak-gevolg · 53 bronnen & cijfers ·
   54 begrippen toepassen · 55 wereldmachten/conflicten (VS-China, BRICS, graandeal) · 56 eindsprint.
