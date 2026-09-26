@@ -651,6 +651,15 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### ✅ 2026-09-26 · Opus aardrijkskunde H1 temiz sınavlar `examen_40..51` (ex-h3-ak-40…51) — DONE, kilit kalktı
+- ex-26…39'un yerine değil **yanına**: §1.1 → 40–42, §1.2 → 43–45, §1.3 → 46–48, mix §1.1–§1.3 → 49–51.
+  Kitaba bağlı, kural 17'yi istisnasız geçer. `havo3/aardrijkskunde/`'ye ve `js/hoofdstukken.js`'e bu sürede yazma.
+- 4 Sonnet yazdı → 2 bağımsız Sonnet kitap denetimi → Opus düzeltti: ex-47 Slowakije Gini 0,26→**0,24** (s. 31),
+  ex-44 7 sayfa ref. p.22→**23**, ex-42 Ever Given çeldiricisi + 3× tekrar eden "China 74.413", ex-43/42 görsel-bağımlı
+  open sorular metinle tarif edildi, ex-45 iki iç tekrar, ex-50/51'de 9 soru (belirsiz sıralama, 2 SDG'li soru, tekrarlar),
+  ex-51 BRICS "2024" kitapta yok (bron 24: "inmiddels"). Gate 18/18 (yalnız bilinen ex-1), open_check temiz,
+  doğru şık en uzun 1–3/10 dosya başına. **agy: BRICS/Houthi/College voor de Rechten van de Mens kitapta VAR (s. 20, 25, 37).**
+
 ### 🔒 2026-09-25 · Opus aardrijkskunde H1 (`examen_26..39`, ex-h3-ak-26…39) denetimi — agy, bu dosyalara DOKUNMA
 - agy'nin 14 sınavı (280 soru, §1.1–§1.3) `coordination.md`'ye **hiç kayıt düşülmeden** bırakılmıştı. Gate 16/16,
   open_check temiz; Sonnet kitaba karşı denetledi → **anahtar hatası 0**, ama:
