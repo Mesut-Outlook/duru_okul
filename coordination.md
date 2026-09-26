@@ -1318,3 +1318,27 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `tools/build_hoofdstukken.js` çalıştırıldı (`aantalExamens={"1":22}`).
   - `node tools/open_check.js nederlands` → **486 open soru tarandı, 0 hata**.
   - `node tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
+
+### 2026-09-26: Aardrijkskunde H1 — 10 Yeni Proeftoets (Examen 62 t/m 71: 5 Karışık + 5 Begrippen & Vaktermen)
+- **Kapsam**:
+  - **Examen 62–66: 5 Karışık Proeftoets (§1.1–§1.3 Entegrasyonu)**:
+    - `examen_62.js`: Toets 62 — Geopolitiek, Handelsroutes & Grondstoffen (20 soru)
+    - `examen_63.js`: Toets 63 — Welvaartsverschillen & Sociale Ongelijkheid (20 soru)
+    - `examen_64.js`: Toets 64 — Van Wingewest tot Wereldmacht: Historische Lijnen (20 soru)
+    - `examen_65.js`: Toets 65 — Logistiek, Big Tech & Mondiale Stromen (20 soru)
+    - `examen_66.js`: Toets 66 — Examentraining Wereldeconomie & Ontwikkeling (20 soru)
+  - **Examen 67–71: 5 Özel Begrippen, Definities & Vaktermen Toets**:
+    - `examen_67.js`: Toets 67 — Begrippen & Definities: §1.1 Wereldhandel & Globalisering (20 soru)
+    - `examen_68.js`: Toets 68 — Begrippen & Definities: §1.2 Kolonialisme, Macht & Spanningen (20 soru)
+    - `examen_69.js`: Toets 69 — Begrippen & Definities: §1.3 Ontwikkeling, Kolonies & Welvaart (20 soru)
+    - `examen_70.js`: Toets 70 — Vaktermen, Indicatoren & Modellen: HDI, Gini & Sectoren (20 soru)
+    - `examen_71.js`: Toets 71 — De Grote Begrippentoets Hoofdstuk 1 (20 soru)
+- **Pedagojik Standartlar & Kalite Kapısı**:
+  - 10 yeni sınav x 20 soru = 200 yeni soru (Toplam Aardrijkskunde: 72 proeftoets x 20 + 5 smoke = 1445 sınav sorusu + 200 alıştırma = 1645 soru).
+  - Her sınavda 10 MC (dengeli A/B/C/D dağılımı ≤%30 dosya başı), 5 Waaronwaar (≥%35 onwaar), 3 Invul, 2 Open soru.
+  - Doğru MC şıkkı asla en uzun şık değil (0/10 dosya başı, kural 17 %100 temiz).
+  - Şablon/periyot tekrarı yok (kural 16 tam temiz).
+  - `havo3/aardrijkskunde/index.html` güncellendi (`examen_62.js` - `examen_71.js?v=4.8` eklendi).
+  - `tools/build_hoofdstukken.js` çalıştırıldı (`aardrijkskunde: aantalExamens={"1":51,"2":5,"3":5,"4":5,"5":5}`).
+  - `node tools/open_check.js aardrijkskunde` → **741 open soru tarandı, 0 hata (sorun yok)**.
+  - `node tools/gate.js aardrijkskunde` → **17 gecti, 1 kaldi** (kalan tek ihlal yayındaki 5 soruluk eski `ex-h3-aardrijkskunde-1` smoke-testi).

@@ -97,7 +97,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-58": 1,
         "ex-h3-ak-59": 1,
         "ex-h3-ak-60": 1,
-        "ex-h3-ak-61": 1
+        "ex-h3-ak-61": 1,
+        "ex-h3-ak-62": 1,
+        "ex-h3-ak-63": 1,
+        "ex-h3-ak-64": 1,
+        "ex-h3-ak-65": 1,
+        "ex-h3-ak-66": 1,
+        "ex-h3-ak-67": 1,
+        "ex-h3-ak-68": 1,
+        "ex-h3-ak-69": 1,
+        "ex-h3-ak-70": 1,
+        "ex-h3-ak-71": 1
       },
       "onderwerpHoofdstuk": {
         "ak-h1-1": 1,
@@ -127,7 +137,7 @@ window.DURU_HOOFDSTUKKEN = {
         "ak-h5-5": 5
       },
       "aantalExamens": {
-        "1": 41,
+        "1": 51,
         "2": 5,
         "3": 5,
         "4": 5,
