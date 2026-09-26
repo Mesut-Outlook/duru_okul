@@ -657,6 +657,8 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Kaynak: kitap PDF'i (`aardrijkskunde_h01_…pdf`, görsel) tesseract ile OCR → s. 9–37 + begrippenlijst s. 52;
   her `uitleg`'de sayfa referansı. 40–51'deki sorular tekrar edilmedi (gate kural 2 ✓).
 - Gate 17/18 (yalnız bilinen smoke-test ex-1), open_check temiz, doğru şık en uzun 0–4/10 dosya başına.
+- Bağımsız Sonnet kitap denetimi (OCR + sayfa görselleri: Vietnam s. 21, Niger s. 27, DR Congo s. 33): **0/100 bulgu**.
+  Duru denetim anında 52–56'dan hiçbirini çözmemişti.
 
 ### ✅ 2026-09-26 · Opus aardrijkskunde H1 temiz sınavlar `examen_40..51` (ex-h3-ak-40…51) — DONE, kilit kalktı
 - ex-26…39'un yerine değil **yanına**: §1.1 → 40–42, §1.2 → 43–45, §1.3 → 46–48, mix §1.1–§1.3 → 49–51.
