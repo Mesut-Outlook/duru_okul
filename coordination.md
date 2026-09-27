@@ -1343,6 +1343,17 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `node tools/open_check.js aardrijkskunde` → **741 open soru tarandı, 0 hata (sorun yok)**.
   - `node tools/gate.js aardrijkskunde` → **17 gecti, 1 kaldi** (kalan tek ihlal yayındaki 5 soruluk eski `ex-h3-aardrijkskunde-1` smoke-testi).
 
+### ✅ 2026-09-27 · Opus aardrijkskunde H1 `examen_82..86` (ex-h3-ak-82…86) — DONE
+- Kullanıcı: §1.1–§1.3 için 5 yeni test, **yalnız** `inbox/2026-2027/aardrijkskunde/aardrijkskunde_h01_wereldhandel-in-beweging.ocr.txt`'ten
+  ve sınavda çıkabilecek konulardan. 82 leerdoelen · 83 verbanden/hoe-hoe-zin/bronnen (bron 6, 18, 5b) ·
+  84 samenvatting-stroomdiagram + begrippentabel (s. 50–51) · 85 boek-opdrachten · 86 proefwerk (4 open).
+- **⚠️ id 72–81 KULLANMA**: dosyalar silindi ama Duru 72, 73, 74'ü çözdü (geçmişte kayıtlı) → yeni sınav 82'den başlar.
+- Opus önce yanlışlıkla 57–61 numarasıyla üretti (agy'nin mevcut dosyalarının üzerine, yalnız çalışma kopyası);
+  commit öncesi `git checkout` ile geri alındı, kayıp yok. **Ders: numara seçmeden önce `ls` + `git log` + Duru geçmişi.**
+- Gate 17/18 (yalnız ex-1), open_check temiz, doğru şık en uzun 2–4/10. Sonnet kitap denetimi (OCR + görseller):
+  içerik hatası 0; 5 sayfa-referansı virgülü düzeltildi. Yakın tekrar: 84'teki begrippentabel soruları 67–71 ile örtüşüyor
+  (kitabın kendi samenvatting alıştırması — bilerek kaldı).
+
 ### 2026-09-27: Aardrijkskunde H1 — 10 Yeni Karışık Proeftoets (Examen 72 t/m 81) Geri Alındı / Silindi
 - **Kullanıcı Talebi**: "cografyadan son yaptigin 10 testi sil..."
 - **İşlem**:
