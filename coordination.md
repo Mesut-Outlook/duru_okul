@@ -1364,3 +1364,12 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `node tools/gate.js aardrijkskunde` → 17 geçti, 1 kaldı (bilinen tek smoke-test).
   - Aardrijkskunde toplamı 72 proeftoets, 1645 soru seviyesine geri döndürüldü.
 
+### 2026-09-27: Silinen Sınavlara (72–81) Ait Çözülmüş Deneme Verilerinin Temizlenmesi
+- **Kullanıcı Talebi**: "silinen sinavlarla ilgili yapilmis deneme sinavlarini da temizle"
+- **İşlem**:
+  - Firebase `scores_v2/duru.json` düğümünden silinen testlere (`ex-h3-ak-72`, `73`, `74`) ait 5 deneme kaydı `history`, `beste` ve `laatste` alanlarından temizlendi ve güncellendi.
+  - `havo3/aardrijkskunde/js/exams.js` içine `VERWIJDERDE_TOETSEN` filtresi eklendi; `laadEx()` yerel depolamadaki bu sınavlara ait kayıtları otomatik temizleyip `localStorage`'a yazıyor.
+  - `js/landing.js` içine `schoonVerwijderdeExamensOp()` ve `mergeScoreItems()` filtresi eklendi; bulut veya yerel kaynaklardan silinen sınav ID'lerinin birleştirilmesi ve yayılması engellendi.
+  - `js/dashboard.js` ve `js/ouder_dashboard.js` içinde `loadDuruAttempts` ve öğrenci raporlama döngülerinde silinen sınav ID'leri filtrelendi.
+
+

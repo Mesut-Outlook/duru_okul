@@ -745,6 +745,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var isGitHubPages = window.location.hostname.indexOf('github.io') !== -1;
 
+  /* Ingetrokken / verwijderde toetsen: pogingen mogen niet meer meegeteld of gesynchroniseerd worden */
+  var VERWIJDERDE_EXAMENS = {
+    "ex-h3-ak-72": 1, "ex-h3-ak-73": 1, "ex-h3-ak-74": 1, "ex-h3-ak-75": 1, "ex-h3-ak-76": 1,
+    "ex-h3-ak-77": 1, "ex-h3-ak-78": 1, "ex-h3-ak-79": 1, "ex-h3-ak-80": 1, "ex-h3-ak-81": 1
+  };
+
+  function schoonVerwijderdeExamensOp() {
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && (k.indexOf("_examens_") !== -1 || k.indexOf("_examens") !== -1)) {
+          var raw = localStorage.getItem(k);
+          if (!raw) continue;
+          var hasDeleted = false;
+          Object.keys(VERWIJDERDE_EXAMENS).forEach(function (did) {
+            if (raw.indexOf(did) !== -1) hasDeleted = true;
+          });
+          if (!hasDeleted) continue;
+          var parsed = JSON.parse(raw);
+          if (!parsed) continue;
+          var dirty = false;
+          if (Array.isArray(parsed.history)) {
+            var schoon = parsed.history.filter(function (h) {
+              return !(h && h.examId && VERWIJDERDE_EXAMENS[h.examId]);
+            });
+            if (schoon.length !== parsed.history.length) {
+              parsed.history = schoon;
+              dirty = true;
+            }
+          }
+          if (parsed.beste) {
+            Object.keys(VERWIJDERDE_EXAMENS).forEach(function (did) {
+              if (parsed.beste[did] !== undefined) { delete parsed.beste[did]; dirty = true; }
+            });
+          }
+          if (parsed.laatste) {
+            Object.keys(VERWIJDERDE_EXAMENS).forEach(function (did) {
+              if (parsed.laatste[did] !== undefined) { delete parsed.laatste[did]; dirty = true; }
+            });
+          }
+          if (dirty) {
+            localStorage.setItem(k, JSON.stringify(parsed));
+          }
+        }
+      }
+    } catch (e) {
+      console.warn("Fout bij opschonen verwijderde examens:", e);
+    }
+  }
+  schoonVerwijderdeExamensOp();
+
   /* ⚠️ PURE samenvoeger: krijgt {key, val}-items uit ALLE bronnen (cloud,
      server, localStorage) en geeft {sleutel: samengevoegde waarde} terug.
      Schrijft zelf niets, zodat zowel het lees- als het schrijfpad van de sync
@@ -787,6 +838,7 @@ document.addEventListener('DOMContentLoaded', function() {
         bronnen.forEach(function(item) {
           if (item && item.key === key && item.val && Array.isArray(item.val.history)) {
             item.val.history.forEach(function(att) {
+              if (!att || !att.examId || VERWIJDERDE_EXAMENS[att.examId]) return;
               var uniqId = att.attemptId || (att.examId + '_' + att.datum + '_' + att.pct);
               uniqueAttempts[uniqId] = att;
             });
@@ -800,7 +852,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var beste = {};
         var laatste = {};
         mergedHistory.forEach(function(att) {
-          if (att.examId) {
+          if (att.examId && !VERWIJDERDE_EXAMENS[att.examId]) {
             if (laatste[att.examId] === undefined) {
               laatste[att.examId] = att.pct;
             }

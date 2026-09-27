@@ -198,11 +198,17 @@
     };
   }
 
+  var VERWIJDERDE_EXAMENS = {
+    "ex-h3-ak-72": 1, "ex-h3-ak-73": 1, "ex-h3-ak-74": 1, "ex-h3-ak-75": 1, "ex-h3-ak-76": 1,
+    "ex-h3-ak-77": 1, "ex-h3-ak-78": 1, "ex-h3-ak-79": 1, "ex-h3-ak-80": 1, "ex-h3-ak-81": 1
+  };
+
   // ── Helper parsing functions ──────────────────────────────
   function loadDuruAttempts(attemptsList, key, vakId, vakTitel, vakKleur) {
     var data = safeReadJson(key);
     if (data && data.history && Array.isArray(data.history)) {
       data.history.forEach(function (att) {
+        if (att && att.examId && VERWIJDERDE_EXAMENS[att.examId]) return;
         var ts = parseDuruDate(att.datum);
         var pct = att.pct !== undefined ? att.pct : Math.round((att.goed / att.totaal) * 100);
 

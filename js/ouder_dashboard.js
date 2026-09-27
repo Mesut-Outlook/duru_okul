@@ -21,6 +21,11 @@
     return (u === "baba" || u === "veli" || u === "mesut") ? "duru" : u;
   }
 
+  var VERWIJDERDE_EXAMENS = {
+    "ex-h3-ak-72": 1, "ex-h3-ak-73": 1, "ex-h3-ak-74": 1, "ex-h3-ak-75": 1, "ex-h3-ak-76": 1,
+    "ex-h3-ak-77": 1, "ex-h3-ak-78": 1, "ex-h3-ak-79": 1, "ex-h3-ak-80": 1, "ex-h3-ak-81": 1
+  };
+
   /* Ruwe lees: langs de prefix-override van landing.js heen.
      localStorage.getItem() plakt daar automatisch de ACTIEVE gebruiker voor de
      sleutel. Voor dit paneel is dat verkeerd: Baba kijkt, maar het rapport gaat
@@ -137,6 +142,7 @@
         });
       } else if (exData && Array.isArray(exData.history)) {
         exData.history.forEach(function (att) {
+          if (att && att.examId && VERWIJDERDE_EXAMENS[att.examId]) return;
           var pct = att.pct != null ? att.pct : Math.round((att.goed / (att.totaal || 10)) * 100);
           var c = window.DURU_CIJFER.vanPct(pct);
           var hf = window.DURU_HF ? window.DURU_HF.vanAttempt(att, vak.id) : null;

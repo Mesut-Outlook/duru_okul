@@ -28,6 +28,10 @@
 
   /* ---------- Eigen opslag (raakt de oefen-voortgang NIET) ---------- */
   var EX_SLEUTEL = "duru_2627_aardrijkskunde_examens_v1";
+  var VERWIJDERDE_TOETSEN = {
+    "ex-h3-ak-72": 1, "ex-h3-ak-73": 1, "ex-h3-ak-74": 1, "ex-h3-ak-75": 1, "ex-h3-ak-76": 1,
+    "ex-h3-ak-77": 1, "ex-h3-ak-78": 1, "ex-h3-ak-79": 1, "ex-h3-ak-80": 1, "ex-h3-ak-81": 1
+  };
   function laadEx() {
     var d = null;
     try { d = JSON.parse(localStorage.getItem(EX_SLEUTEL)); } catch (e) {}
@@ -35,11 +39,32 @@
     d.beste   = d.beste   || {};
     d.laatste = d.laatste || {};
     d.history = d.history || [];
+
+    // Verwijder resultaten van ingetrokken / verwijderde toetsen
+    var gewijzigd = false;
+    var geldigeHistory = [];
+    for (var j = 0; j < d.history.length; j++) {
+      var hItem = d.history[j];
+      if (hItem && hItem.examId && VERWIJDERDE_TOETSEN[hItem.examId]) {
+        gewijzigd = true;
+      } else {
+        geldigeHistory.push(hItem);
+      }
+    }
+    Object.keys(VERWIJDERDE_TOETSEN).forEach(function (k) {
+      if (d.beste[k] !== undefined) { delete d.beste[k]; gewijzigd = true; }
+      if (d.laatste[k] !== undefined) { delete d.laatste[k]; gewijzigd = true; }
+    });
+    if (gewijzigd) {
+      d.history = geldigeHistory;
+      try { localStorage.setItem(EX_SLEUTEL, JSON.stringify(d)); } catch (e) {}
+    }
+
     // Herstel 'beste' en 'laatste' uit de history (history is leidend, nieuwste vooraan)
     // zodat de resultaten op de kaarten nooit verloren gaan.
     for (var i = 0; i < d.history.length; i++) {
       var a = d.history[i];
-      if (!a || !a.examId || a.pct == null) continue;
+      if (!a || !a.examId || a.pct == null || VERWIJDERDE_TOETSEN[a.examId]) continue;
       if (d.beste[a.examId] == null || a.pct > d.beste[a.examId]) d.beste[a.examId] = a.pct;
       if (d.laatste[a.examId] == null) d.laatste[a.examId] = a.pct; // eerste = nieuwste poging
     }
