@@ -83,6 +83,39 @@
     return n ? som / n : 0;
   }
 
+  /* Alleen de LAATSTE poging per toets. Een toets die 8 keer gemaakt is
+     (40% … 75%) telt voor het gemiddelde als één toets met de laatste
+     score, niet als 8 cijfers — anders trekken oude pogingen het cijfer
+     omlaag terwijl Duru het nu wel kan (2026-09-27).
+     Sorteert zelf op timestamp (nieuwste eerst); zonder timestamp blijft
+     de volgorde van de lijst staan (history is al nieuwste-eerst).
+     Sleutel = vakId + examId (of titel); pogingen zonder id tellen los. */
+  function laatstePerToets(lijst) {
+    if (!lijst || !lijst.length) return [];
+    var l = lijst.slice().sort(function (a, b) {
+      return (Number(b && b.timestamp) || 0) - (Number(a && a.timestamp) || 0);
+    });
+    var gezien = {}, uit = [];
+    for (var i = 0; i < l.length; i++) {
+      var a = l[i] || {};
+      var id = a.examId || a.titel || a.examTitel || "";
+      if (id) {
+        var k = (a.vakId || "") + "|" + id;
+        if (gezien[k]) continue;
+        gezien[k] = true;
+      }
+      uit.push(l[i]);
+    }
+    return uit;
+  }
+
+  /* Gemiddelde over de laatste poging per toets — dé regel voor elk
+     gemiddelde cijfer (unit, vak, jaar, vakkaart). Trend ("gidiş") en
+     "recent" blijven op pogingen: die meten juist de vooruitgang. */
+  function gemiddeldeLaatste(lijst, veld) {
+    return gemiddelde(laatstePerToets(lijst), veld);
+  }
+
   window.DURU_CIJFER = {
     DREMPEL: DREMPEL,
     GOED: GOED,
@@ -96,6 +129,8 @@
     examenklaar: examenklaar,
     tekst: tekst,
     positie: positie,
-    gemiddelde: gemiddelde
+    gemiddelde: gemiddelde,
+    laatstePerToets: laatstePerToets,
+    gemiddeldeLaatste: gemiddeldeLaatste
   };
 })();

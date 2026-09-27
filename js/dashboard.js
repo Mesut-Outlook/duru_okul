@@ -362,7 +362,7 @@
         var exTot = window.DURU_HF ? window.DURU_HF.totaalExamens(vak.id, ch.nr) : 0;
         return {
           nr: ch.nr, titel: ch.titel, icoon: ch.icoon || "📖", vak: vak,
-          lijst: lijst, count: lijst.length, gem: C.gemiddelde(lijst, "cijfer"),
+          lijst: lijst, count: lijst.length, gem: C.gemiddeldeLaatste(lijst, "cijfer"),
           beste: lijst.length ? Math.max.apply(null, lijst.map(function (a) { return a.cijfer; })) : 0,
           laatsteDatum: lijst.length ? kortDatum(lijst[0].datumStr) : "—",
           // recent = de laatste 3 toetsen. Voor "wat nu?" telt waar je NU staat,
@@ -386,7 +386,7 @@
         var nOverig = Object.keys(uniekOverig).length;
         hfs.push({
           nr: null, titel: "Overige toetsen", icoon: "📦", vak: vak,
-          lijst: overig, count: overig.length, gem: C.gemiddelde(overig, "cijfer"),
+          lijst: overig, count: overig.length, gem: C.gemiddeldeLaatste(overig, "cijfer"),
           recent: C.gemiddelde(overig.slice(0, 3), "cijfer"),
           beste: Math.max.apply(null, overig.map(function (a) { return a.cijfer; })),
           laatsteDatum: kortDatum(overig[0].datumStr),
@@ -399,7 +399,7 @@
 
       return {
         vak: vak, pogingen: eigen, count: eigen.length,
-        gem: C.gemiddelde(eigen, "cijfer"),
+        gem: C.gemiddeldeLaatste(eigen, "cijfer"),
         beste: eigen.length ? Math.max.apply(null, eigen.map(function (a) { return a.cijfer; })) : 0,
         laatsteDatum: eigen.length ? kortDatum(eigen[0].datumStr) : "—",
         hfs: hfs, gedaan: ged, exTotaal: tot,
@@ -417,7 +417,7 @@
       vakken: vakken,
       actief: vakken.filter(function (v) { return v.count > 0; }),
       alleHf: alleHf,
-      gem: C.gemiddelde(attempts, "cijfer"),
+      gem: C.gemiddeldeLaatste(attempts, "cijfer"),
       geslaagdN: attempts.filter(function (a) { return a.geslaagd; }).length,
       week: attempts.filter(function (a) { return a.timestamp >= nu - 7 * 864e5; }),
       streak: berekenStreak(attempts, nu),

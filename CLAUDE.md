@@ -171,7 +171,7 @@ Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekme
 `body.ouder-actief` → "Hoi Duru" hero'su gizli (`dashboard.js → initTabs`). Yazdır = `window.print()`
 (`@media print` hub çerçevesini gizler). Kaldırılanlar: 1–10 cetveli, XP/rozet, 4 sekme,
 25+ maddelik güçlü/zayıf listeleri — geri ekleme, önce kullanıcıya sor.
-- **Kurallar Duru'nun sayfasıyla aynı:** "dikkat" = son 3 deneme < 5,5 veya ≥1 puan düşüş
+- **Kurallar Duru'nun sayfasıyla aynı:** ortalama = her testin son denemesi (`DURU_CIJFER.gemiddeldeLaatste`); "dikkat" = son 3 deneme < 5,5 veya ≥1 puan düşüş
   (ömür-boyu ortalama DEĞİL); gidiş = son 3 vs önceki 3 (±0,3); yapılan sınav = farklı `examId` /
   manifest (hub kartlarıyla aynı). İki panel aynı soruya farklı cevap vermemeli.
 - **⚠️ Panel her zaman ÖĞRENCİYİ gösterir:** `getActiveStudent()` veli girişinde `"duru"` döner; veli
@@ -191,7 +191,7 @@ eski kart stili). `VAKKEN` entry alanları: `id, titel, icoon, domein('talen'|'e
 beschrijving, binnenkort?, href?, sleutel?, archief?, jaar?`.
 **Kart = kapsama + not** (2026-09-22): sağ üst ve çubuk = `gedaan / totaal toetsen` (farklı `examId` /
 manifest toplamı; manifestte olmayan yapılmış sınav iki tarafa da eklenir), alt = not ortalaması
-(poging başına önce 1 ondalığa yuvarlanır — `dashboard.js` ile aynı). Eskiden çubuk "en iyi skorların
+(her testin son denemesi, poging başına önce 1 ondalığa yuvarlanır — `dashboard.js` ile aynı). Eskiden çubuk "en iyi skorların
 ortalaması"ydı: 30 sınavın 2'si yapılmış ders "%90" görünüyordu. `landingKaarten()` kartlara öneksiz
 `vakId` verir (kart `id`'si `h3-` önekli) — manifest ve derin link bununla eşleşir.
 **Derin link:** `./#vak=<vakId>` dersi iframe-shell'de açar. Her `havo3/<vak>/index.html` tek başına
@@ -226,6 +226,11 @@ Linkler **her zaman göreli** (`./...`).
 `1 + pct/100*9` formülü ve 5,5 geçme sınırı eskiden iki panoda ~20 yerde elle yazılıydı.
 Artık: `van(goed,totaal)` · `vanPct(pct)` · `geslaagd(c)` · `klasse(c,aantal)` → `goed|net|zwak|none` ·
 `examenklaar(c)` (≥8,5) · `tekst(c)` (virgüllü) · `positie(c)` (1–10 ölçeğinde %) · `gemiddelde(lijst)`.
+**Ortalama = her testin SON denemesi** (2026-09-27): `laatstePerToets(lijst)` / `gemiddeldeLaatste(lijst, veld)`.
+Aynı test 8 kez çözüldüyse (%40 … %75) ortalamaya tek test olarak son notla girer. Ünite, ders, yıl ortalaması,
+ders kartı (`landing.js`), veli paneli ve 12 ders sitesinin dashboard'u (`engine.js`, kendi yerel kopyası) bununla hesaplar.
+**Gidiş** (son 3 vs önceki 3), **`recent`/"dikkat"** ve **en iyi not** bilerek denemeler üzerinden kalır — onlar ilerlemeyi ölçer.
+Önceden tüm denemelerin ortalamasıydı: Duru'nun genel ortalaması 7,0 görünüyordu, son-deneme hesabıyla 7,6.
 Eşikler `DREMPEL/GOED/TOP` sabitlerinde. **Renk burada YOK** — her panonun kendi token'ı var
 (`--ouder-goed` vs `--groen`); paylaşılan şey sınıflandırma, biçimlendirme değil.
 

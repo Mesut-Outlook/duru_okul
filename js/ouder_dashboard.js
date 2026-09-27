@@ -166,14 +166,12 @@
       vakAttempts.sort(function (a, b) { return b.timestamp - a.timestamp; });
 
       var count = vakAttempts.length;
-      var sumC = 0;
       var maxC = 0;
       var lastC = 0;
       var lastDatum = "-";
 
       if (count > 0) {
         vakAttempts.forEach(function (a) {
-          sumC += a.cijfer;
           if (a.cijfer > maxC) maxC = a.cijfer;
           if (!window.DURU_CIJFER.geslaagd(a.cijfer)) {
             weakAreas.push({
@@ -203,7 +201,8 @@
         lastDatum = vakAttempts[0].datumStr || "-";
       }
 
-      var avgC = count > 0 ? (sumC / count) : 0;
+      // Gemiddelde = laatste poging per toets (DURU_CIJFER.gemiddeldeLaatste), zoals dashboard.js.
+      var avgC = count > 0 ? window.DURU_CIJFER.gemiddeldeLaatste(vakAttempts, "cijfer") : 0;
       var pBeste = (pData && pData.beste) ? Object.keys(pData.beste).length : 0;
       var exBeste = (exData && exData.beste) ? Object.keys(exData.beste).length : 0;
       var completionPct = count > 0 ? Math.min(100, Math.round(((pBeste + exBeste) / Math.max(1, pBeste + 5)) * 100)) : 0;
@@ -222,21 +221,19 @@
 
         var chAttempts = vakAttempts.filter(function (a) { return a.hoofdstuk === ch.nr; });
         var chCount = chAttempts.length;
-        var chSum = 0;
         var chMax = 0;
         var chLast = 0;
         var chLastDate = "-";
 
         if (chCount > 0) {
           chAttempts.forEach(function (a) {
-            chSum += a.cijfer;
             if (a.cijfer > chMax) chMax = a.cijfer;
           });
           chLast = chAttempts[0].cijfer;
           chLastDate = chAttempts.length ? kortDatum(chAttempts[0].datumStr) : "-";
         }
 
-        var chAvg = chCount > 0 ? (chSum / chCount) : 0;
+        var chAvg = chCount > 0 ? window.DURU_CIJFER.gemiddeldeLaatste(chAttempts, "cijfer") : 0;
 
         // Toetsvoortgang o.b.v. het echte aantal proeftoetsen uit het manifest
         var examIdSet = {};
@@ -297,13 +294,11 @@
         return a.hoofdstuk == null || !chapterNrs[a.hoofdstuk];
       });
       if (overigeAttempts.length > 0) {
-        var ovSum = 0;
         var ovMax = 0;
         overigeAttempts.forEach(function (a) {
-          ovSum += a.cijfer;
           if (a.cijfer > ovMax) ovMax = a.cijfer;
         });
-        var ovAvg = ovSum / overigeAttempts.length;
+        var ovAvg = window.DURU_CIJFER.gemiddeldeLaatste(overigeAttempts, "cijfer");
         var ovLast = overigeAttempts[0].cijfer;
         var ovLastDate = overigeAttempts.length ? kortDatum(overigeAttempts[0].datumStr) : "-";
 
@@ -357,9 +352,7 @@
     allAttempts.sort(function (a, b) { return b.timestamp - a.timestamp; });
 
     var overallExamCount = allAttempts.length;
-    var overallSum = 0;
-    allAttempts.forEach(function (a) { overallSum += a.cijfer; });
-    var overallAvg = overallExamCount > 0 ? (overallSum / overallExamCount) : 0;
+    var overallAvg = overallExamCount > 0 ? window.DURU_CIJFER.gemiddeldeLaatste(allAttempts, "cijfer") : 0;
     var passedExams = allAttempts.filter(function (a) { return a.geslaagd; }).length;
     var passRate = overallExamCount > 0 ? Math.round((passedExams / overallExamCount) * 100) : 0;
 

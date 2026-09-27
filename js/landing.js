@@ -483,9 +483,9 @@ var DOMEINEN = [
  *   totaal (manifest). Dit is wat de balk toont: "hoe ver ben ik".
  *   (Tot 2026-09-22 toonde de balk het gemiddelde van de beste scores — een
  *   vak met 2 van 30 toetsen gemaakt stond dan op "90%".)
- * - cijfer = gemiddelde van alle pogingen, per poging eerst afgerond op één
- *   decimaal — precies zoals js/dashboard.js het rekent, zodat kaart en
- *   statistiekenpagina hetzelfde cijfer tonen.
+ * - cijfer = gemiddelde van de LAATSTE poging per toets, per poging eerst
+ *   afgerond op één decimaal — precies zoals js/dashboard.js het rekent, zodat
+ *   kaart en statistiekenpagina hetzelfde cijfer tonen (2026-09-27).
  * Toetsen die niet (meer) in het manifest staan tellen mee als gedaan én in
  * het totaal: Duru heeft ze echt gemaakt.
  * @returns {{gedaan:number, totaal:number, cijfer:(string|null)}}
@@ -513,7 +513,10 @@ function leesVakData(vak) {
     });
 
     if (hist.length) {
-      var cijfers = hist.map(function (h) { return { c: C.vanPct(h.pct) }; });
+      // Laatste poging per toets (history is nieuwste-eerst), zoals dashboard.js.
+      var cijfers = C.laatstePerToets(hist).map(function (h) {
+        return { c: Math.round(C.vanPct(h.pct) * 10) / 10 };
+      });
       uit.cijfer = C.tekst(C.gemiddelde(cijfers, 'c'));
     }
   } catch (e) { /* corrupt/leeg → nullen */ }

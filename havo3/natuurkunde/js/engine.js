@@ -674,6 +674,20 @@
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
   function cijferStr(pct) { return (Math.round((1 + pct / 100 * 9) * 10) / 10).toFixed(1).replace(".", ","); }
 
+  // Laatste poging per toets (history is nieuwste-eerst). Gemiddelden rekenen
+  // hiermee: een toets die 8 keer gemaakt is telt als één toets met de laatste
+  // score. Beste cijfer en laatste toets kijken wel naar alle pogingen.
+  function laatstePerToets(lijst) {
+    var gezien = {};
+    return (lijst || []).filter(function (a) {
+      var k = a.examId || a.examTitel || "";
+      if (!k) return true;
+      if (gezien[k]) return false;
+      gezien[k] = true;
+      return true;
+    });
+  }
+
   function renderDashboard() {
     var EX_SLEUTEL = SLEUTEL.replace(/_v1$/, "_examens_v1");
     var exData;
@@ -691,9 +705,9 @@
     var gemiddeldCijfer = "-";
     var hoogsteCijfer = "-";
     if (aantalExamens > 0) {
-      var pcts = exData.history.map(function (h) { return h.pct || 0; });
+      var pcts = laatstePerToets(exData.history).map(function (h) { return h.pct || 0; });
       var gem = pcts.reduce(function (s, p) { return s + p; }, 0) / pcts.length;
-      var max = Math.max.apply(null, pcts);
+      var max = Math.max.apply(null, exData.history.map(function (h) { return h.pct || 0; }));
       gemiddeldCijfer = cijferStr(gem);
       hoogsteCijfer = cijferStr(max);
     }
@@ -774,15 +788,16 @@
         var hfExams = (DURU.examens || []).filter(function(ex) { return ex.hoofdstuk === h.nr; });
         var hfAttempts = (exData.history || []).filter(function(a) { return hfVanAttempt(a) === h.nr; });
 
-        var examCount = hfAttempts.length;
+        var hfLaatste = laatstePerToets(hfAttempts);
+        var examCount = hfLaatste.length;
         var sumPcts = 0;
         var maxPct = 0;
         var lastPct = 0;
         var lastDatum = "-";
 
         if (examCount > 0) {
+          hfLaatste.forEach(function(a) { sumPcts += (a.pct || 0); });
           hfAttempts.forEach(function(a) {
-            sumPcts += (a.pct || 0);
             if ((a.pct || 0) > maxPct) maxPct = a.pct;
           });
           lastPct = hfAttempts[0].pct || 0;
@@ -815,16 +830,17 @@
 
       if (overigeAttempts.length > 0) {
         var oSumPcts = 0, oMaxPct = 0, oLastPct = 0, oLastDatum = "-";
+        var oLaatste = laatstePerToets(overigeAttempts);
+        oLaatste.forEach(function(a) { oSumPcts += (a.pct || 0); });
         overigeAttempts.forEach(function(a) {
-          oSumPcts += (a.pct || 0);
           if ((a.pct || 0) > oMaxPct) oMaxPct = a.pct;
         });
         oLastPct = overigeAttempts[0].pct || 0;
         oLastDatum = (overigeAttempts[0].datum || "-").split(" ")[0];
-        var oAvgGrade = cijferStr(oSumPcts / overigeAttempts.length);
+        var oAvgGrade = cijferStr(oSumPcts / oLaatste.length);
         var oMaxGrade = cijferStr(oMaxPct);
         var oLastGrade = cijferStr(oLastPct);
-        var oAvgNum = 1 + (oSumPcts / overigeAttempts.length) / 100 * 9;
+        var oAvgNum = 1 + (oSumPcts / oLaatste.length) / 100 * 9;
         var oStatusBadge = oAvgNum >= 8.5 ? '<span style="color:var(--groen);font-weight:800;">🌟 Uitmuntend</span>'
           : oAvgNum >= 7.0 ? '<span style="color:var(--groen);font-weight:700;">👍 Goed</span>'
           : oAvgNum >= 5.5 ? '<span style="color:var(--blauw);font-weight:700;">✔️ Voldoende</span>'
@@ -833,7 +849,7 @@
         html += '<tr>';
         html += '<td style="text-align:left;font-weight:700;">📦 Overige toetsen</td>';
         html += '<td>—</td>';
-        html += '<td><strong>' + overigeAttempts.length + '</strong> gemaakt</td>';
+        html += '<td><strong>' + oLaatste.length + '</strong> gemaakt</td>';
         html += '<td><span style="font-size:15px;font-weight:800;color:' + (oAvgNum >= 5.5 ? 'var(--groen)' : 'var(--oranje)') + ';">' + oAvgGrade + '</span></td>';
         html += '<td><strong style="color:var(--groen);">' + oMaxGrade + '</strong></td>';
         html += '<td>' + oLastGrade + ' <small style="color:var(--grijs);font-size:11px;">(' + esc(oLastDatum) + ')</small></td>';
