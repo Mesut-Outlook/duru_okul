@@ -49,3 +49,4 @@ inbox/**/*_ocr.txt
 tools/update_dashboard_js.py
 tools/update_ouder_dashboard_js.py
 tools/update_ouder_breakdown.py
+graphify-out/

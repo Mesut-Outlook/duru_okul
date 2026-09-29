@@ -46,13 +46,13 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | natuurkunde | 44 | 60 | 1586 | H1–H8 **tam** (her H begrippen + begrippentoets; 5.5/6.5/7.5 plusstof) |
 | economie | 12 | 37 | 836 | H1–H4 |
 | aardrijkskunde | 25 | 77 | 1745 | H1–H5 (tam) (+1 hersteld smoke-test, "Overige"); H1 §1.1–§1.3 ekstra 37 kitap-denetimli toets (40–71, 82–86; 52–66 + 82–86 karışık, 67–71 begrippen/definities). **72–81 silindi (2026-09-27) — Duru 72–74'ü çözmüştü; id'ler tekrar kullanılmaz** |
-| scheikunde | 33 | 58 | 1470 | H1–H7 **tam** (her § onderwerp + toets, her H begrippen + begrippentoets); H2 ekstra 16 kitap-denetimli toets: §2.2 h2-7…9 tabel 2.13, h2-10…12 figuur 2.14; h2-13…22 = §2.1/§2.2/§2.3/§2.4/gemengd × 2 |
+| scheikunde | 33 | 63 | 1570 | H1–H7 **tam** (her § onderwerp + toets, her H begrippen + begrippentoets); H2 ekstra 21 kitap-denetimli toets: §2.2 h2-7…9 tabel 2.13, h2-10…12 figuur 2.14; h2-13…22 = §2.1/§2.2/§2.3/§2.4/gemengd × 2; h2-23…27 gemengd (dengeli/context/rekenen/begrippen+figuren/eindtoets-niveau) |
 | wiskunde | 6 | 13 | 308 | H1 §1.1–1.2 (2 toets + begrippen, uit aantekeningen docent), H2 |
 | biologie | 2 | 5 | 116 | H10 |
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 5 | 22 | 480 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 232 onderwerp · 456 proeftoets · 11136 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 232 onderwerp · 461 proeftoets · 11236 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur en manifest'e
