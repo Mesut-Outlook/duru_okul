@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-09-29",
+  "gegenereerd": "2026-09-30",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1112,6 +1112,21 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h1-6": 1,
         "ex-h3-sch-h1-7": 1,
         "ex-h3-sch-h1-8": 1,
+        "ex-h3-sch-h1-9": 1,
+        "ex-h3-sch-h1-10": 1,
+        "ex-h3-sch-h1-11": 1,
+        "ex-h3-sch-h1-12": 1,
+        "ex-h3-sch-h1-13": 1,
+        "ex-h3-sch-h1-14": 1,
+        "ex-h3-sch-h1-15": 1,
+        "ex-h3-sch-h1-16": 1,
+        "ex-h3-sch-h1-17": 1,
+        "ex-h3-sch-h1-18": 1,
+        "ex-h3-sch-h1-19": 1,
+        "ex-h3-sch-h1-20": 1,
+        "ex-h3-sch-h1-21": 1,
+        "ex-h3-sch-h1-22": 1,
+        "ex-h3-sch-h1-23": 1,
         "ex-h3-sch-h2-6": 2,
         "ex-h3-sch-h2-7": 2,
         "ex-h3-sch-h2-8": 2,
@@ -1134,6 +1149,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h2-25": 2,
         "ex-h3-sch-h2-26": 2,
         "ex-h3-sch-h2-27": 2,
+        "ex-h3-sch-h2-28": 2,
+        "ex-h3-sch-h2-29": 2,
+        "ex-h3-sch-h2-30": 2,
+        "ex-h3-sch-h2-31": 2,
         "ex-h3-sch-h3-1": 3,
         "ex-h3-sch-h3-2": 3,
         "ex-h3-sch-h3-3": 3,
@@ -1199,8 +1218,8 @@ window.DURU_HOOFDSTUKKEN = {
         "sch-h7-begrippen": 7
       },
       "aantalExamens": {
-        "1": 8,
-        "2": 27,
+        "1": 23,
+        "2": 31,
         "3": 5,
         "4": 6,
         "5": 6,
