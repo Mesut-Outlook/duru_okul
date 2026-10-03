@@ -47,12 +47,12 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | economie | 12 | 37 | 836 | H1–H4 |
 | aardrijkskunde | 25 | 77 | 1745 | H1–H5 (tam) (+1 hersteld smoke-test, "Overige"); H1 §1.1–§1.3 ekstra 37 kitap-denetimli toets (40–71, 82–86; 52–66 + 82–86 karışık, 67–71 begrippen/definities). **72–81 silindi (2026-09-27) — Duru 72–74'ü çözmüştü; id'ler tekrar kullanılmaz** |
 | scheikunde | 33 | 120 | 2710 | H1–H7 **tam** (H1 ekstra 35 kitap-denetimli toets: h1-9…12 + 24…28 §1.1, h1-13…16 + 29…33 §1.3, h1-17…20 + 34…38 §1.4, h1-21…23 symbolen/eenheden/definities, h1-39…43 gemengd §1.1/§1.3/§1.4; her § onderwerp + toets, her H begrippen + begrippentoets); H2 ekstra 43 kitap-denetimli toets: §2.2 h2-7…9 tabel 2.13, h2-10…12 figuur 2.14; h2-13…22 = §2.1/§2.2/§2.3/§2.4/gemengd × 2; h2-23…27 gemengd (dengeli/context/rekenen/begrippen+figuren/eindtoets-niveau); h2-28…31 symbolen: tabel 2.13, figuur 2.14, tabel 2.22 (tweeatomige elementen), gemengd; h2-32…37 §2.2 (tekst, fig. 2.11/2.15, tabel 2.12), h2-38…41 §2.3, h2-42…45 §2.4, h2-46…49 gemengde opdrachten |
-| wiskunde | 6 | 13 | 308 | H1 §1.1–1.2 (2 toets + begrippen, uit aantekeningen docent), H2 |
+| wiskunde | 6 | 19 | 428 | H1 §1.1–1.2 (2 toets + begrippen, uit aantekeningen docent) + §1.3 Formules substitueren (6 toets ex-wiskunde-h1-4…9: direct, haakjes, context, eerst herleiden, uitdagend, fouten opsporen — opgaven eerst als stappenplan-schema, algebra met code + onafhankelijk gecontroleerd), H2 |
 | biologie | 2 | 5 | 116 | H10 |
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 5 | 22 | 480 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 232 onderwerp · 538 proeftoets · 12776 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 232 onderwerp · 544 proeftoets · 12896 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur en manifest'e

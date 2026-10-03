@@ -1320,7 +1320,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h2-10": 2,
         "ex-wiskunde-h1-1": 1,
         "ex-wiskunde-h1-2": 1,
-        "ex-wiskunde-h1-3": 1
+        "ex-wiskunde-h1-3": 1,
+        "ex-wiskunde-h1-4": 1,
+        "ex-wiskunde-h1-5": 1,
+        "ex-wiskunde-h1-6": 1,
+        "ex-wiskunde-h1-7": 1,
+        "ex-wiskunde-h1-8": 1,
+        "ex-wiskunde-h1-9": 1
       },
       "onderwerpHoofdstuk": {
         "h1-begrippen": 1,
@@ -1331,7 +1337,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h2-5-steelbladdiagram": 2
       },
       "aantalExamens": {
-        "1": 3,
+        "1": 9,
         "2": 10
       },
       "aantalOnderwerpen": {
