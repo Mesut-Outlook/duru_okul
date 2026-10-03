@@ -41,7 +41,7 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 |---|---|---|---|---|
 | geschiedenis | 30 | 30 | 840 | H1–H6 (tam) |
 | frans | 33 | 86 | 2077 | H1–H8 **tam** (her Unité 4 onderwerp + 10 toets [U1: 5 onderwerp + 16 toets]) |
-| duits | 24 | 46 | 1124 | H1–H6 (tam: her H 4 onderwerp + 6 toets); H1 ekstra 10 woordenschat/Sprachmittel-toets ex-h3-duits-37…46 (Lernliste p. 48–49 + Sprachmittel, kitap görselinden) |
+| duits | 24 | 56 | 1324 | H1–H6 (tam: her H 4 onderwerp + 6 toets); H1 ekstra 10 woordenschat/Sprachmittel-toets ex-h3-duits-37…46 (Lernliste p. 48–49 + Sprachmittel, kitap görselinden); 47–50 kelime DE→NL / NL→DE, 51–54 grammatica (sein/haben Präteritum, werden Präsens), 55–56 gemengd |
 | engels | 18 | 31 | 749 | H1–H6 (+1 hersteld smoke-test, "Overige") |
 | natuurkunde | 44 | 60 | 1586 | H1–H8 **tam** (her H begrippen + begrippentoets; 5.5/6.5/7.5 plusstof) |
 | economie | 12 | 37 | 836 | H1–H4 |
@@ -52,7 +52,7 @@ teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçeri
 | maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
 | nederlands | 5 | 22 | 480 | Cursus 1 (H1: §1, §2, §4, §5) |
 
-**Toplam: 232 onderwerp · 528 proeftoets · 12576 soru.** (Satırların toplamı; 2026-09-12'de
+**Toplam: 232 onderwerp · 538 proeftoets · 12776 soru.** (Satırların toplamı; 2026-09-12'de
 elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
 `maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
 materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur en manifest'e
