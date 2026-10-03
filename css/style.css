@@ -1887,6 +1887,15 @@ html.dark #ob {
 .ob-tabel tr.ob-toetsen > td { background: var(--ob-bg2); padding: 2px 8px 8px 44px; }
 .ob-toetsen .ob-log li { font-size: 13px; padding: 6px 0; }
 .ob-legenda { margin-top: 10px; font-size: 12px; color: var(--ob-zacht); line-height: 1.8; }
+/* Açık test (2026-10-03): kolom in Dersler + lijst open toetsen per ünite */
+.ob-acik { display: inline-grid; gap: 4px; justify-items: end; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ob-acik-b { display: block; width: 90px; height: 5px; border-radius: 99px; background: var(--ob-lijn); overflow: hidden; }
+.ob-acik-b span { display: block; height: 100%; background: var(--ob-goed); }
+.ob-acik-lijst { margin: 10px 0 4px; padding: 10px 14px; border: 1px dashed var(--ob-lijn); border-radius: 10px; background: var(--ob-bg); font-size: 14px; }
+.ob-acik-lijst .ob-zacht { white-space: normal; }
+.ob-acik-lijst ol { margin: 6px 0 0; padding-left: 22px; columns: 2 260px; column-gap: 28px; }
+.ob-acik-lijst li { break-inside: avoid; padding: 1px 0; }
+.ob-klein { margin: 8px 0 0; font-size: 13px; white-space: normal; }
 
 /* 4 — son denemeler */
 .ob-log { list-style: none; margin: 0; padding: 0; }

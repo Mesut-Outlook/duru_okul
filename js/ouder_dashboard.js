@@ -615,6 +615,72 @@
     return uit;
   }
 
+  /* Open toetsen per unit (2026-10-03): manifest-id's van dit hoofdstuk minus
+     de examId's die Duru ooit gemaakt heeft. Zonder manifest (MAVO 2) totaal 0. */
+  function toetsStand(c) {
+    var HF = (selectedJaar === "2026-2027" && window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.vakken &&
+              window.DURU_HOOFDSTUKKEN.vakken[c.vakId]) || {};
+    var map = HF.examenHoofdstuk || {};
+    var ids = c.nr == null ? [] : Object.keys(map).filter(function (id) { return map[id] === c.nr; });
+    var gedaan = {};
+    (c.attempts || []).forEach(function (a) { if (a.examId) gedaan[a.examId] = 1; });
+    var open = ids.filter(function (id) { return !gedaan[id]; });
+    return { totaal: ids.length, gedaan: ids.length - open.length, open: open };
+  }
+
+  /* Toetsnamen voor de open-lijst: één keer per vak ophalen (laadExamens), daarna
+     synchroon uit titelStand. "laden" → na het ophalen opnieuw tekenen. */
+  var titelStand = {};
+  function titelsVoor(vakId) {
+    if (titelStand[vakId]) return titelStand[vakId];
+    titelStand[vakId] = "laden";
+    laadExamens(vakId).then(function (ex) {
+      var t = {};
+      Object.keys(ex).forEach(function (id) { t[id] = ex[id].titel || id; });
+      titelStand[vakId] = t;
+      renderParentDashboard();
+    }).catch(function () { titelStand[vakId] = "fout"; renderParentDashboard(); });
+    return "laden";
+  }
+
+  /* "48 / 120 açık" + balkje (gedaan deel groen). MAVO 2 zonder manifest: "N sınav". */
+  function acikHtml(dk) {
+    if (!dk) return "—";
+    if (!dk.totaal) return dk.gedaan + " sınav";
+    var open = dk.totaal - dk.gedaan;
+    return '<span class="ob-acik"><span><b class="' + (open ? "ob-kleur-net" : "ob-kleur-goed") + '">' + open +
+      '</b> / ' + dk.totaal + ' açık</span><span class="ob-acik-b" aria-hidden="true"><span style="width:' +
+      Math.round(dk.gedaan / dk.totaal * 100) + '%"></span></span></span>';
+  }
+  function acikLijstHtml(vakId, s) {
+    if (!s.totaal) return "";
+    if (!s.open.length) return '<p class="ob-acik-lijst ob-kleur-goed">✓ Bu ünitenin bütün testleri en az bir kez çözüldü.</p>';
+    var t = titelsVoor(vakId);
+    var naam = function (id) { return typeof t === "object" && t[id] ? t[id] : id; };
+    return '<div class="ob-acik-lijst"><b>Henüz çözülmemiş ' + s.open.length + ' test</b>' +
+      (t === "laden" ? ' <span class="ob-zacht">— adlar yükleniyor…</span>' : '') +
+      '<ol>' + s.open.map(function (id) { return '<li>' + escapeHtml(naam(id)) + '</li>'; }).join("") + '</ol></div>';
+  }
+
+  /* Dikkat (2026-10-03): begonnen units (≥1 toets gemaakt, nog toetsen open)
+     waar 14+ dagen niets meer gebeurd is. Nooit-begonnen units tellen niet mee:
+     dat zijn er te veel en ze zouden de echt vergeten unit verbergen. */
+  function stilleUnites(r) {
+    var uit = [];
+    r.chapters.forEach(function (c) {
+      if (c.nr == null || !c.count) return;
+      var s = toetsStand(c);
+      if (!s.gedaan || !s.open.length) return;
+      var laatst = nieuwstEerst(c.attempts)[0];
+      var dagen = Math.floor((Date.now() - (laatst.timestamp || 0)) / 864e5);
+      if (dagen < 14) return;
+      uit.push({ dagen: dagen, cls: "net", kop: c.vakIcoon + " " + c.vakTitel + " · H" + c.nr + " " + c.titel,
+        tekst: "<strong>" + dagen + " gündür</strong> çalışılmadı. Başlanmış (" + s.gedaan + "/" + s.totaal +
+               " test yapıldı), " + s.open.length + " test açık." });
+    });
+    return uit.sort(function (a, b) { return b.dagen - a.dagen; });
+  }
+
   /* Dikkat: units waarvan de laatste 3 pogingen onder 5,5 liggen, of die
      duidelijk (≥ 1 punt) zakken. Beslist op recent, NIET op het levens-
      gemiddelde (zie CLAUDE.md → "Aciliyet"). Maximaal 3. */
@@ -656,6 +722,10 @@
     var dagen = {};
     week.forEach(function (a) { dagen[new Date(a.timestamp).toDateString()] = 1; });
     var dikkat = dikkatListesi(r);
+    // Een unit die al om zijn cijfers in de lijst staat, niet nog eens als "stil" tonen.
+    var stil = stilleUnites(r).filter(function (s) {
+      return !dikkat.some(function (d) { return d.kop === s.kop; });
+    });
     var heeft = r.overallExamCount > 0;
     // Voorbij schooljaar: "deze week" en "dikkat" zeggen dan niets meer.
     var archief = selectedJaar !== (window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.jaar || "2026-2027");
@@ -679,7 +749,8 @@
     var durum = !heeft ? "Bu ders yılında henüz deneme yok. Duru bir proeftoets çözdüğünde sonuç burada görünür."
       : archief ? "Geçmiş ders yılı: " + r.overallExamCount + " deneme, yıl ortalaması " + C.tekst(r.overallAvg) + "."
       : C.geslaagd(r.overallAvg)
-        ? (dikkat.length ? "Genel durum iyi, ama aşağıda dikkat edilmesi gereken " + dikkat.length + " konu var."
+        ? (dikkat.length + stil.length ? "Genel durum iyi, ama aşağıda dikkat edilmesi gereken " +
+             (dikkat.length + Math.min(3, stil.length)) + " konu var."
                          : "Genel durum iyi. Şu an endişe edilecek bir konu yok.")
         : "Genel ortalama geçme sınırının (5,5) altında. Aşağıdaki konulara birlikte bakmak iyi olur.";
     var kl = C.klasse(r.overallAvg, r.overallExamCount);
@@ -696,25 +767,33 @@
 
     /* 2 — Dikkat */
     if (heeft && !archief) {
+      var dikkatLi = function (d) {
+        return '<li class="' + d.cls + '"><b>' + escapeHtml(d.kop) + '</b>' + d.tekst + '</li>';
+      };
       h += '<div class="ob-kaart"><h3>Dikkat edilecekler</h3>' +
-        (dikkat.length
-          ? '<ul class="ob-dikkat">' + dikkat.map(function (d) {
-              return '<li class="' + d.cls + '"><b>' + escapeHtml(d.kop) + '</b>' + d.tekst + '</li>';
-            }).join("") + '</ul>'
+        (dikkat.length || stil.length
+          ? '<ul class="ob-dikkat">' + dikkat.map(dikkatLi).join("") + stil.slice(0, 3).map(dikkatLi).join("") + '</ul>' +
+            (stil.length > 3 ? '<p class="ob-zacht ob-klein">+ ' + (stil.length - 3) +
+              ' ünite daha uzun süredir çalışılmadı (en eski 3 gösteriliyor).</p>' : '')
           : '<div class="ob-rahat">✓ Şu an tekrar gereken ünite yok.</div>') +
         '</div>';
     }
 
     /* 3 — Dersler */
-    var vakken = r.vakken.filter(function (v) { return v.count > 0; })
-      .sort(function (a, b) { return a.avgCijfer - b.avgCijfer; });
+    // Ook vakken zonder poging tonen zolang er toetsen klaarstaan: die zijn dan helemaal "açık".
+    var dekkingen = {};
+    r.vakken.forEach(function (v) {
+      var cfg = VAK_CONFIG.filter(function (x) { return x.jaar === selectedJaar && x.id === v.id; })[0] || {};
+      dekkingen[v.id] = dekking(cfg, student);
+    });
+    var vakken = r.vakken.filter(function (v) { return v.count > 0 || (dekkingen[v.id] && dekkingen[v.id].totaal > 0); })
+      .sort(function (a, b) { return (b.count > 0) - (a.count > 0) || a.avgCijfer - b.avgCijfer; });
     if (vakken.length) {
       h += '<div class="ob-kaart"><h3>Dersler</h3><table class="ob-tabel"><thead><tr>' +
            '<th>Ders</th><th class="r">Ortalama</th><th>Gidiş</th>' +
-           '<th class="r m-weg">Yapılan sınav</th><th class="r m-weg">Son çalışma</th></tr></thead><tbody>';
+           '<th class="r">Açık test</th><th class="r m-weg">Son çalışma</th></tr></thead><tbody>';
       vakken.forEach(function (v) {
-        var cfg = VAK_CONFIG.filter(function (x) { return x.jaar === selectedJaar && x.id === v.id; })[0] || {};
-        var dk = dekking(cfg, student);
+        var dk = dekkingen[v.id];
         var laatst = nieuwstEerst(v.attempts)[0];
         var open = openVak === v.id;
         h += '<tr class="ob-vak" data-vak="' + escapeHtml(v.id) + '" tabindex="0" aria-expanded="' + open + '">' +
@@ -722,28 +801,32 @@
                '<span class="ob-ok">' + (open ? "▾" : "▸") + '</span></td>' +
              '<td class="r">' + pil(v.avgCijfer, v.count) + '</td>' +
              '<td>' + gidisHtml(v.attempts) + '</td>' +
-             '<td class="r m-weg">' + (!dk ? "—" : dk.totaal ? dk.gedaan + " / " + dk.totaal : dk.gedaan + " sınav") + '</td>' +
+             '<td class="r">' + acikHtml(dk) + '</td>' +
              '<td class="r m-weg ob-zacht">' + (laatst ? gunOnce(laatst.timestamp) : "—") + '</td></tr>';
         if (open) {
-          r.chapters.filter(function (c) { return c.vakId === v.id && c.count > 0; }).forEach(function (c) {
+          r.chapters.filter(function (c) { return c.vakId === v.id && (c.count > 0 || toetsStand(c).totaal > 0); })
+          .forEach(function (c) {
             var l = nieuwstEerst(c.attempts);
+            var s = toetsStand(c);
             var sleutel = v.id + "|" + (c.nr != null ? c.nr : "overig");
             var uOpen = openUnite === sleutel;
             h += '<tr class="ob-unite" data-unite="' + escapeHtml(sleutel) + '" tabindex="0" aria-expanded="' + uOpen + '">' +
                  '<td>' + (c.nr != null ? "H" + c.nr + " · " : "") + escapeHtml(c.titel) +
                    '<span class="ob-ok">' + (uOpen ? "▾" : "▸") + '</span></td>' +
                  '<td class="r">' + pil(c.avgCijfer, c.count) + '</td><td>' + gidisHtml(c.attempts) + '</td>' +
-                 '<td class="r m-weg">' + c.count + ' deneme</td>' +
-                 '<td class="r m-weg ob-zacht">' + (l[0] ? gunOnce(l[0].timestamp) : "—") + '</td></tr>';
+                 '<td class="r">' + (s.totaal ? '<b class="' + (s.open.length ? "ob-kleur-net" : "ob-kleur-goed") + '">' +
+                   s.gedaan + ' / ' + s.totaal + '</b> <span class="ob-zacht">yapıldı</span>' : c.count + ' deneme') + '</td>' +
+                 '<td class="r m-weg ob-zacht">' + (l[0] ? gunOnce(l[0].timestamp) : "hiç başlanmadı") + '</td></tr>';
             if (uOpen) {
-              h += '<tr class="ob-toetsen"><td colspan="5"><ul class="ob-log">' +
-                   l.map(function (a) { return logItem(a, false); }).join("") + '</ul></td></tr>';
+              h += '<tr class="ob-toetsen"><td colspan="5">' +
+                   (l.length ? '<ul class="ob-log">' + l.map(function (a) { return logItem(a, false); }).join("") + '</ul>' : '') +
+                   acikLijstHtml(v.id, s) + '</td></tr>';
             }
           });
         }
       });
       h += '</tbody></table>' +
-           '<div class="ob-legenda">Derse tıklayınca üniteleri, üniteye tıklayınca sınav sonuçları açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
+           '<div class="ob-legenda">Derse tıklayınca üniteleri, üniteye tıklayınca sınav sonuçları ve henüz çözülmemiş testler açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
            '<span class="ob-pil net">5,5–6,9</span> yeterli · <span class="ob-pil zwak">&lt;5,5</span> yetersiz. ' +
            'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma.</div></div>';
     }

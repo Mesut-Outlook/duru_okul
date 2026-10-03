@@ -130,7 +130,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.7`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.8`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -150,6 +150,27 @@ Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
   `#statistieken-view` üzerinde, `html.dark #statistieken-view`'de yeniden tanımlı.
 - `renderScoreTimeline()` korundu, Overzicht sekmesine taşındı. Grafik kendi genişliğini ölçtüğü
   için **DOM'a eklendikten sonra** çağrılır.
+
+## Açık (çözülmemiş) testler — Duru + veli (2026-10-03)
+Kullanıcı isteği: "kızım ilgili ünitede çözülmemiş testleri kolayca bulabilmeli; ben de veli olarak takip edeyim".
+- **Duru: `js/open_toetsen.js` — 12 ders için TEK dosya** (12 kopya değil). Her `havo3/<vak>/index.html`'de
+  `js/exams.js`'ten hemen sonra yüklenir, `DURU.renderExamenLijst`'i sarar ve çizilmiş DOM'u zenginleştirir:
+  filtre çipleri **Alle · Nog niet gemaakt (varsayılan) · Onvoldoende · Gemaakt** (seçim `ot_filter_v1`'de —
+  bilerek `duru_` öneksiz, buluta gitmez), her ünitede "x van y gemaakt · z nog open" + ilerleme çubuğu +
+  **"▶ Volgende open toets"** (ünitenin ilk çözülmemiş testini `DURU.examenStart` ile başlatır), kartlarda
+  `ot-open/ot-zwak/ot-goed`. Grup = `details.chapter-accordion` / `.hf-accordion-card` / yoksa kart listesi —
+  12 motorun 9 farklı render'ı var, hepsinde ortak olan `.examen-card[onclick*=examenStart]`. Durum motorla
+  aynı anahtardan okunur (`duru_2627_<klasör>_examens_v1`, `beste` + `history`); hiçbir şey yazmaz.
+  Onvoldoende = cijfer < 5,5 ⇔ pct < 50. **Yeni bir ders motoru eklenirse kart sözleşmesini koru.**
+- **Veli paneli:** Dersler tablosunda "Yapılan sınav" yerine **"Açık test"** (`48 / 120 açık` + çubuk); hiç
+  denenmemiş ama testi olan dersler de listede. Derse tıkla → **manifestteki tüm üniteler** "x / y yapıldı"
+  (hiç başlanmamışlar dahil). Üniteye tıkla → denemeler + **"Henüz çözülmemiş N test"** adları
+  (`laadExamens` ile bir kez çekilir, `titelStand` önbelleği). `toetsStand(c)` = manifest id'leri − yapılan examId'ler.
+- **Dikkat'e yeni kural:** başlanmış (≥1 test yapılmış, açık test var) ama **14+ gündür** dokunulmamış ünite;
+  en eski 3 gösterilir, fazlası "+N". Hiç başlanmamış üniteler bilerek dahil değil (listeyi doldurur, gerçekten
+  unutulmuşu gömer). Not kuralıyla zaten listede olan ünite tekrar edilmez.
+- Önizleme (onaylandı): https://claude.ai/artifact/MXjYw5hS5h2mJ5ubM4tY4X. Doğrulama: headless Chrome harness,
+  12 ders × gerçek bulut verisi (sayılar buluttaki examId'lerle birebir) + veli paneli ekran görüntüsü.
 
 ## Veli paneli (`js/ouder_dashboard.js`) — sade tek sayfa (2026-09-22)
 Sadece Baba görür (`#tab-ouder-btn` varsayılan gizli). Dil **Türkçe**, ders adları Flamanca.
