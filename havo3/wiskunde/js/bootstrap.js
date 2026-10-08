@@ -14,7 +14,7 @@
       titel: "Lineaire en exponentiële formules",
       icoon: "📈",
       kleur: "#c2185b",
-      beschrijving: "§1.1 Lineaire formules opstellen (richtingscoëfficiënt, startgetal, evenwijdige lijnen), §1.2 Lijnen snijden (snijpunt berekenen) en §1.3 Formules substitueren (eerst herleiden, haakjes wegwerken, vereenvoudigen)."
+      beschrijving: "§1.1 Lineaire formules opstellen (richtingscoëfficiënt, startgetal, evenwijdige lijnen), §1.2 Lijnen snijden (snijpunt berekenen) en §1.3 Formules substitueren (eerst herleiden, haakjes wegwerken, vereenvoudigen), §1.4 Exponentiële groei (groeifactor, terugrekenen) en §1.5 Groeifactor en tijd (andere tijdseenheid)."
     },
     {
       nr: 2,

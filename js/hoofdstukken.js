@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-03",
+  "gegenereerd": "2026-10-08",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -278,7 +278,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-duits-53": 1,
         "ex-h3-duits-54": 1,
         "ex-h3-duits-55": 1,
-        "ex-h3-duits-56": 1
+        "ex-h3-duits-56": 1,
+        "ex-h3-duits-57": 1,
+        "ex-h3-duits-58": 1,
+        "ex-h3-duits-59": 1,
+        "ex-h3-duits-60": 1,
+        "ex-h3-duits-61": 1,
+        "ex-h3-duits-62": 1
       },
       "onderwerpHoofdstuk": {
         "dui-h1-1": 1,
@@ -307,7 +313,7 @@ window.DURU_HOOFDSTUKKEN = {
         "dui-h6-4": 6
       },
       "aantalExamens": {
-        "1": 26,
+        "1": 32,
         "2": 6,
         "3": 6,
         "4": 6,
@@ -1129,7 +1135,6 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h1-3": 1,
         "ex-h3-sch-h1-4": 1,
         "ex-h3-sch-h1-5": 1,
-        "ex-h3-sch-h1-6": 1,
         "ex-h3-sch-h1-7": 1,
         "ex-h3-sch-h1-8": 1,
         "ex-h3-sch-h1-9": 1,
@@ -1167,6 +1172,7 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h1-41": 1,
         "ex-h3-sch-h1-42": 1,
         "ex-h3-sch-h1-43": 1,
+        "ex-h3-sch-h1-44": 1,
         "ex-h3-sch-h2-6": 2,
         "ex-h3-sch-h2-7": 2,
         "ex-h3-sch-h2-8": 2,
@@ -1326,7 +1332,32 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h1-6": 1,
         "ex-wiskunde-h1-7": 1,
         "ex-wiskunde-h1-8": 1,
-        "ex-wiskunde-h1-9": 1
+        "ex-wiskunde-h1-9": 1,
+        "ex-wiskunde-h1-10": 1,
+        "ex-wiskunde-h1-11": 1,
+        "ex-wiskunde-h1-12": 1,
+        "ex-wiskunde-h1-13": 1,
+        "ex-wiskunde-h1-14": 1,
+        "ex-wiskunde-h1-15": 1,
+        "ex-wiskunde-h1-16": 1,
+        "ex-wiskunde-h1-17": 1,
+        "ex-wiskunde-h1-18": 1,
+        "ex-wiskunde-h1-19": 1,
+        "ex-wiskunde-h1-20": 1,
+        "ex-wiskunde-h1-21": 1,
+        "ex-wiskunde-h1-22": 1,
+        "ex-wiskunde-h1-23": 1,
+        "ex-wiskunde-h1-24": 1,
+        "ex-wiskunde-h1-25": 1,
+        "ex-wiskunde-h1-26": 1,
+        "ex-wiskunde-h1-27": 1,
+        "ex-wiskunde-h1-28": 1,
+        "ex-wiskunde-h1-29": 1,
+        "ex-wiskunde-h1-30": 1,
+        "ex-wiskunde-h1-31": 1,
+        "ex-wiskunde-h1-32": 1,
+        "ex-wiskunde-h1-33": 1,
+        "ex-wiskunde-h1-34": 1
       },
       "onderwerpHoofdstuk": {
         "h1-begrippen": 1,
@@ -1337,7 +1368,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h2-5-steelbladdiagram": 2
       },
       "aantalExamens": {
-        "1": 9,
+        "1": 34,
         "2": 10
       },
       "aantalOnderwerpen": {
