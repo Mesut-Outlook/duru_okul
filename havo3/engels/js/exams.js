@@ -231,6 +231,7 @@
       antwoorden: new Array(ex.vragen.length).fill(null),
       volgorde: ex.vragen.map(optieVolgorde),
       resterend: (ex.duurMin || 20) * 60,
+      start: Date.now(),
       interval: null,
       klaar: false
     };
@@ -438,6 +439,8 @@
       goed: goed,
       totaal: n,
       pct: pct,
+      // werkelijke tijd in seconden (wandklok, begrensd op de toetsduur) — voor het ouderpaneel
+      duurSec: Math.min(Math.round((Date.now() - T.start) / 1000), (T.ex.duurMin || 20) * 60),
       antwoorden: JSON.parse(JSON.stringify(T.antwoorden)),
       beoordelingen: JSON.parse(JSON.stringify(beoordelingen))
     };
