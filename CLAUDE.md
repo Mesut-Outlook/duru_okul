@@ -130,7 +130,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.8`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.9`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -171,6 +171,19 @@ Kullanıcı isteği: "kızım ilgili ünitede çözülmemiş testleri kolayca bu
   unutulmuşu gömer). Not kuralıyla zaten listede olan ünite tekrar edilmez.
 - Önizleme (onaylandı): https://claude.ai/artifact/MXjYw5hS5h2mJ5ubM4tY4X. Doğrulama: headless Chrome harness,
   12 ders × gerçek bulut verisi (sayılar buluttaki examId'lerle birebir) + veli paneli ekran görüntüsü.
+
+## Test süresi — Duru + veli (2026-10-09)
+Kullanıcı isteği: "testlerin ortalama kaç dakikada tamamlandığını test ve ders başına, ayrıca günlük testlerde geçirdiği vakti bilmek istiyorum".
+- **Kayıt:** 12 `havo3/<vak>/js/exams.js` → `T.start = Date.now()` (examenStart) ve history girdisinde
+  `duurSec = min(şimdi − start, duurMin·60)` (duvar saati, test süresiyle sınırlı). **9 Ekim 2026'dan önceki
+  denemelerde süre yok** ve geri hesaplanamaz (başlangıç anı hiç saklanmamıştı) → panelde "—", ortalamalara girmez.
+- **Veli paneli:** özet çipi "Bu hafta testlerde X"; **Günlük test süresi** kartı (son 14 gün sütun grafiği + çalıştığı
+  günlerin ortalaması, test başına ortalama, 14 gün toplam); Dersler tablosunda ders + ünite başına **Ort. süre**;
+  ünite açılınca **Test başına ortalama süre** tablosu (deneme sayısı, "12 dk / 20" = verilen süre `duurMin`
+  `laadExamens`'ten, son not) ve "**çok hızlı?**" = son not < 5,5 ve ort. süre < verilen sürenin ¼'ü; her deneme
+  satırında ⏱. Kod: `metDuur/gemDuur/dk/saDk/sureKaart/toetsSureHtml`, stiller `css/style.css` → `.ts-*`, `.ob-duur`.
+- Önizleme (onaylandı): https://claude.ai/artifact/3du4zDHyx2ECkxsrWP8c3m. Doğrulama: Playwright ile gerçek motor
+  `duurSec` yazıyor; panel örnek denemelerle render edildi, sayılar elle hesapla aynı.
 
 ## Veli paneli (`js/ouder_dashboard.js`) — sade tek sayfa (2026-09-22)
 Sadece Baba görür (`#tab-ouder-btn` varsayılan gizli). Dil **Türkçe**, ders adları Flamanca.

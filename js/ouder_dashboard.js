@@ -162,6 +162,7 @@
             cijfer: c,
             geslaagd: window.DURU_CIJFER.geslaagd(c),
             examId: att.examId || null,
+            duurSec: typeof att.duurSec === "number" ? att.duurSec : null,   // sinds 2026-10-09
             ruw: att            // voor de review: antwoorden + beoordelingen
           };
           vakAttempts.push(item);
@@ -429,6 +430,87 @@
     return '<span class="ob-gidis ' + g.r + '">' + (g.r === "op" ? "↑ iyileşiyor" : "↓ düşüyor") + '</span>';
   }
 
+  /* ── Toetsduur (2026-10-09) ─────────────────────────────
+     duurSec wordt pas sinds 9 oktober 2026 opgeslagen; oudere pogingen tellen
+     niet mee in gemiddelden en tonen "—". */
+  function metDuur(l) { return (l || []).filter(function (a) { return a.duurSec != null; }); }
+  function gemDuur(l) {
+    var m = metDuur(l);
+    return m.length ? m.reduce(function (s, a) { return s + a.duurSec; }, 0) / m.length : null;
+  }
+  function dk(sec) {
+    if (sec == null) return "—";
+    return sec < 60 ? "<1 dk" : Math.round(sec / 60) + " dk";
+  }
+  function saDk(sec) {
+    var m = Math.round((sec || 0) / 60);
+    return m < 60 ? m + " dk" : Math.floor(m / 60) + " sa " + (m % 60 < 10 ? "0" : "") + (m % 60) + " dk";
+  }
+  function dagSleutel(ts) { var d = new Date(ts); return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate(); }
+
+  /* Günlük test süresi: laatste 14 dagen, per dag de som van duurSec. */
+  function sureKaart(alle) {
+    var vandaag = new Date(); vandaag.setHours(0, 0, 0, 0);
+    var dagen = [];
+    for (var i = 13; i >= 0; i--) {
+      var d = new Date(vandaag.getTime() - i * 864e5);
+      dagen.push({ d: d, sec: 0, n: 0 });
+    }
+    var index = {};
+    dagen.forEach(function (x) { index[dagSleutel(x.d)] = x; });
+    var periode = metDuur(alle).filter(function (a) { return index[dagSleutel(a.timestamp)]; });
+    periode.forEach(function (a) { var x = index[dagSleutel(a.timestamp)]; x.sec += a.duurSec; x.n++; });
+    var h = '<div class="ob-kaart"><h3>Günlük test süresi</h3>';
+    if (!metDuur(alle).length) {
+      return h + '<p class="ob-zacht ob-klein">Süre ölçümü 9 Ekim 2026\'da başladı. Duru yeni bir test çözdüğünde süreler burada görünür.</p></div>';
+    }
+    var toplam = periode.reduce(function (s, a) { return s + a.duurSec; }, 0);
+    var actief = dagen.filter(function (x) { return x.n; });
+    var max = Math.max.apply(null, dagen.map(function (x) { return x.sec; })) || 1;
+    var gun = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
+    h += '<div class="ob-feiten ts-feiten">' +
+      '<span class="ob-feit">Çalıştığı günlerde ortalama <b>' + (actief.length ? saDk(toplam / actief.length) : "—") + '</b></span>' +
+      '<span class="ob-feit">Test başına ortalama <b>' + dk(gemDuur(periode)) + '</b></span>' +
+      '<span class="ob-feit">Son 14 günde toplam <b>' + saDk(toplam) + '</b></span></div>' +
+      '<div class="ts-scroll"><div class="ts-binnen"><div class="ts-grafiek">' +
+      dagen.map(function (x) {
+        var leeg = !x.sec;
+        return '<div class="ts-dag" title="' + x.d.toLocaleDateString("tr-TR") + ': ' + saDk(x.sec) + ', ' + x.n + ' test">' +
+          '<span class="ts-min' + (leeg ? " leeg" : "") + '">' + (leeg ? "0" : dk(x.sec)) + '</span>' +
+          '<span class="ts-staaf' + (leeg ? " leeg" : "") + '" style="height:' + (leeg ? 2 : Math.max(4, Math.round(x.sec / max * 130))) + 'px"></span></div>';
+      }).join("") + '</div><div class="ts-as">' +
+      dagen.map(function (x, i) {
+        return '<span' + (i === 13 ? ' class="vandaag"' : '') + '><b>' + gun[x.d.getDay()] + '</b>' + x.d.getDate() + '/' +
+          (x.d.getMonth() + 1) + '<br>' + (x.n ? x.n + " test" : "—") + '</span>';
+      }).join("") + '</div></div></div>' +
+      '<p class="ob-zacht ob-klein">Her sütun bir gün: o gün bitirdiği testlerin toplam süresi. Süre = testi açtığı andan teslim ettiği ana kadar, ' +
+      'en fazla testin süresi (20 veya 30 dk). 9 Ekim 2026\'dan önceki denemelerin süresi bilinmiyor.</p></div>';
+    return h;
+  }
+
+  /* Test başına ortalama süre binnen één unit; "/ 20" en "çok hızlı?" zodra de toetsen geladen zijn. */
+  function toetsSureHtml(vakId, attempts) {
+    var groep = {}, volg = [];
+    nieuwstEerst(attempts).forEach(function (a) {
+      var id = a.examId || a.titel;
+      if (!groep[id]) { groep[id] = []; volg.push(id); }
+      groep[id].push(a);
+    });
+    if (!volg.length) return "";
+    titelsVoor(vakId);
+    var lim = duurStand[vakId] || {};
+    return '<div class="ob-sub">Test başına ortalama süre</div><div class="ts-toets-scroll"><table class="ts-toets"><thead><tr>' +
+      '<th>Test</th><th class="r">Deneme</th><th class="r">Ort. süre</th><th class="r">Son not</th></tr></thead><tbody>' +
+      volg.map(function (id) {
+        var l = groep[id], g = gemDuur(l), max = lim[id];
+        var hizli = g != null && max && g < max * 60 / 4 && !C.geslaagd(l[0].cijfer);
+        return '<tr><td>' + escapeHtml(l[0].titel) + '</td><td class="r">' + l.length + '</td><td class="r">' +
+          (g == null ? '<span class="ob-zacht">—</span>' : '<b>' + dk(g) + '</b>' + (max ? ' <span class="ob-zacht">/ ' + max + '</span>' : '') +
+            (hizli ? ' <span class="ts-hint" title="Not yetersiz ve süre, verilen sürenin dörtte birinden az">çok hızlı?</span>' : '')) +
+          '</td><td class="r">' + pil(l[0].cijfer, 1) + '</td></tr>';
+      }).join("") + '</tbody></table></div><div class="ob-sub">Denemeler</div>';
+  }
+
   /* "22-09-2026 21:03" — veli wil zien hoe laat Duru oefende. */
   function datumTijd(a) {
     var p = ontleedDatum(a.datumStr, a.timestamp);
@@ -444,7 +526,8 @@
     return '<li' + (kan ? ' class="ob-klik" data-review="' + escapeHtml(sleutel) + '" tabindex="0" role="button" ' +
         'title="Soruları ve cevapları göster"' : '') + '>' + pil(a.cijfer, 1) + '<span class="ob-t">' +
       (metVak ? a.vakIcoon + ' ' + escapeHtml(a.vakTitel) + ' — ' : '') + escapeHtml(a.titel) +
-      '</span><span class="ob-zacht">' + escapeHtml(datumTijd(a)) + '</span>' +
+      '</span><span class="ob-duur' + (a.duurSec == null ? ' geen' : '') + '">' + (a.duurSec == null ? '—' : '⏱ ' + dk(a.duurSec)) + '</span>' +
+      '<span class="ob-zacht">' + escapeHtml(datumTijd(a)) + '</span>' +
       (kan ? '<span class="ob-pijl" aria-hidden="true">›</span>' : '') + '</li>';
   }
 
@@ -631,13 +714,15 @@
   /* Toetsnamen voor de open-lijst: één keer per vak ophalen (laadExamens), daarna
      synchroon uit titelStand. "laden" → na het ophalen opnieuw tekenen. */
   var titelStand = {};
+  var duurStand = {};   // examId → duurMin (voor "12 dk / 20")
   function titelsVoor(vakId) {
     if (titelStand[vakId]) return titelStand[vakId];
     titelStand[vakId] = "laden";
     laadExamens(vakId).then(function (ex) {
-      var t = {};
-      Object.keys(ex).forEach(function (id) { t[id] = ex[id].titel || id; });
+      var t = {}, d = {};
+      Object.keys(ex).forEach(function (id) { t[id] = ex[id].titel || id; d[id] = ex[id].duurMin || 20; });
       titelStand[vakId] = t;
+      duurStand[vakId] = d;
       renderParentDashboard();
     }).catch(function () { titelStand[vakId] = "fout"; renderParentDashboard(); });
     return "laden";
@@ -760,6 +845,8 @@
          (archief ? '</div>' : '<div class="ob-feiten">' +
            '<span class="ob-feit">Bu hafta <b>' + Object.keys(dagen).length + '</b> gün çalıştı</span>' +
            '<span class="ob-feit"><b>' + week.length + '</b> deneme (7 gün)</span>' +
+           (metDuur(alle).length ? '<span class="ob-feit">Bu hafta testlerde <b>' +
+             saDk(metDuur(week).reduce(function (s, a) { return s + a.duurSec; }, 0)) + '</b></span>' : '') +
            '<span class="ob-feit">Son çalışma: <b>' + (alle[0] ? gunOnce(alle[0].timestamp) +
              (ontleedDatum(alle[0].datumStr, alle[0].timestamp).tijd ? " " + ontleedDatum(alle[0].datumStr, alle[0].timestamp).tijd : "")
              : "—") + '</b></span>' +
@@ -779,6 +866,9 @@
         '</div>';
     }
 
+    /* 2b — Günlük test süresi */
+    if (heeft && !archief) h += sureKaart(alle);
+
     /* 3 — Dersler */
     // Ook vakken zonder poging tonen zolang er toetsen klaarstaan: die zijn dan helemaal "açık".
     var dekkingen = {};
@@ -790,10 +880,10 @@
       .sort(function (a, b) { return (b.count > 0) - (a.count > 0) || a.avgCijfer - b.avgCijfer; });
     if (vakken.length) {
       h += '<div class="ob-kaart"><h3>Dersler</h3><table class="ob-tabel"><thead><tr>' +
-           '<th>Ders</th><th class="r">Ortalama</th><th>Gidiş</th>' +
+           '<th>Ders</th><th class="r">Ortalama</th><th>Gidiş</th><th class="r">Ort. süre</th>' +
            '<th class="r">Açık test</th><th class="r m-weg">Son çalışma</th></tr></thead><tbody>';
       vakken.forEach(function (v) {
-        var dk = dekkingen[v.id];
+        var dkg = dekkingen[v.id];
         var laatst = nieuwstEerst(v.attempts)[0];
         var open = openVak === v.id;
         h += '<tr class="ob-vak" data-vak="' + escapeHtml(v.id) + '" tabindex="0" aria-expanded="' + open + '">' +
@@ -801,7 +891,8 @@
                '<span class="ob-ok">' + (open ? "▾" : "▸") + '</span></td>' +
              '<td class="r">' + pil(v.avgCijfer, v.count) + '</td>' +
              '<td>' + gidisHtml(v.attempts) + '</td>' +
-             '<td class="r">' + acikHtml(dk) + '</td>' +
+             '<td class="r ob-sure">' + dk(gemDuur(v.attempts)) + '</td>' +
+             '<td class="r">' + acikHtml(dkg) + '</td>' +
              '<td class="r m-weg ob-zacht">' + (laatst ? gunOnce(laatst.timestamp) : "—") + '</td></tr>';
         if (open) {
           r.chapters.filter(function (c) { return c.vakId === v.id && (c.count > 0 || toetsStand(c).totaal > 0); })
@@ -814,12 +905,13 @@
                  '<td>' + (c.nr != null ? "H" + c.nr + " · " : "") + escapeHtml(c.titel) +
                    '<span class="ob-ok">' + (uOpen ? "▾" : "▸") + '</span></td>' +
                  '<td class="r">' + pil(c.avgCijfer, c.count) + '</td><td>' + gidisHtml(c.attempts) + '</td>' +
+                 '<td class="r ob-sure">' + dk(gemDuur(c.attempts)) + '</td>' +
                  '<td class="r">' + (s.totaal ? '<b class="' + (s.open.length ? "ob-kleur-net" : "ob-kleur-goed") + '">' +
                    s.gedaan + ' / ' + s.totaal + '</b> <span class="ob-zacht">yapıldı</span>' : c.count + ' deneme') + '</td>' +
                  '<td class="r m-weg ob-zacht">' + (l[0] ? gunOnce(l[0].timestamp) : "hiç başlanmadı") + '</td></tr>';
             if (uOpen) {
-              h += '<tr class="ob-toetsen"><td colspan="5">' +
-                   (l.length ? '<ul class="ob-log">' + l.map(function (a) { return logItem(a, false); }).join("") + '</ul>' : '') +
+              h += '<tr class="ob-toetsen"><td colspan="6">' +
+                   (l.length ? toetsSureHtml(v.id, l) + '<ul class="ob-log">' + l.map(function (a) { return logItem(a, false); }).join("") + '</ul>' : '') +
                    acikLijstHtml(v.id, s) + '</td></tr>';
             }
           });
@@ -828,7 +920,8 @@
       h += '</tbody></table>' +
            '<div class="ob-legenda">Derse tıklayınca üniteleri, üniteye tıklayınca sınav sonuçları ve henüz çözülmemiş testler açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
            '<span class="ob-pil net">5,5–6,9</span> yeterli · <span class="ob-pil zwak">&lt;5,5</span> yetersiz. ' +
-           'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma.</div></div>';
+           'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma. Ort. süre = testi açmasından teslim etmesine kadar geçen süre ' +
+           '(9 Ekim 2026\'dan beri ölçülüyor); “/ 20” testin verilen süresi, “çok hızlı?” = not yetersiz ve süre verilen sürenin dörtte birinden az.</div></div>';
     }
 
     /* 4 — Son denemeler */

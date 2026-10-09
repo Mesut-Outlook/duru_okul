@@ -1933,6 +1933,36 @@ html.dark #ob {
 .ob-rv-rij > span { color: var(--ob-zacht); font-size: 13px; margin-right: 4px; }
 .ob-rv-uitleg { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--ob-lijn); color: var(--ob-zacht); font-size: 13px; }
 
+/* Toetsduur (2026-10-09): günlük test süresi + süre-kolommen */
+#ob { --ob-staaf: #2f7d5b; --ob-staaf-z: #cfe6da; }
+html.dark #ob { --ob-staaf: #5fc795; --ob-staaf-z: #24453a; }
+.ts-feiten { margin: 0 0 14px; }
+.ts-scroll { overflow-x: auto; }
+.ts-binnen { min-width: 520px; }
+.ts-grafiek { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 6px; align-items: end; height: 170px;
+              padding: 0 2px; border-bottom: 1px solid var(--ob-lijn); }
+.ts-dag { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 4px; min-width: 0; }
+.ts-staaf { display: block; width: 100%; max-width: 34px; background: var(--ob-staaf); border-radius: 6px 6px 2px 2px; }
+.ts-staaf.leeg { background: var(--ob-staaf-z); }
+.ts-min { font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ts-min.leeg { color: var(--ob-geen); font-weight: 400; }
+.ts-as { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 6px; padding: 6px 2px 0; }
+.ts-as span { text-align: center; font-size: 11px; color: var(--ob-zacht); line-height: 1.25; }
+.ts-as span b { display: block; color: var(--ob-tekst); font-weight: 600; }
+.ts-as span.vandaag b { color: var(--ob-goed); }
+.ob-tabel td.ob-sure { white-space: nowrap; }
+.ob-sub { margin: 10px 0 4px; font-size: 11px; font-weight: 700; color: var(--ob-zacht); text-transform: uppercase; letter-spacing: .05em; }
+.ts-toets-scroll { overflow-x: auto; }
+.ts-toets { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--ob-bg); border-radius: 10px; overflow: hidden; }
+.ts-toets th, .ts-toets td { padding: 7px 10px; border-bottom: 1px solid var(--ob-lijn); text-align: left; }
+.ts-toets th { font-size: 11px; color: var(--ob-zacht); font-weight: 600; }
+.ts-toets .r { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ts-toets tr:last-child td { border-bottom: 0; }
+.ts-hint { color: var(--ob-net); font-size: 12px; font-weight: 700; }
+.ob-duur { font-variant-numeric: tabular-nums; font-size: 12px; font-weight: 700; background: var(--ob-bg2); border-radius: 8px;
+           padding: 2px 8px; white-space: nowrap; }
+.ob-duur.geen { font-weight: 400; color: var(--ob-geen); background: none; }
+
 /* Veli sekmesi: "Hoi Duru"-hero hoort bij Duru, niet bij de ouder. */
 body.ouder-actief .hero { display: none; }
 
