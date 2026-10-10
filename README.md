@@ -1,30 +1,46 @@
 # Duru's School
 
-Eén plek met al Duru's oefensites (MAVO 2), onder één link. Alles zit in deze ene map — pure HTML/CSS/JS, geen installatie.
+Eén plek met al Duru's oefensites, onder één link. Pure HTML/CSS/JS — geen installatie, geen build.
 
-## Vakken
+**Online:** https://mesut-outlook.github.io/duru_okul/ — werkt ook op de telefoon.
 
-| Vak | Map | Inhoud |
-|-----|-----|--------|
-| Natuurkunde (NASK) | `nask/` | Hoofdstuk 4 (Snelheid) & 6 (Elektriciteit) |
-| Wiskunde | `wiskunde/` | Hoofdstuk 8 — Vergelijkingen (8.1–8.4) |
-| Economie | `economi/` | Hoofdstuk 6 (De overheid) |
-| Nederlands — Begrijpend Lezen | `nederlands/begrijpend-lezen/` | Leesteksten & vragen (Meester Max) |
+## Vakken — schooljaar 2026-2027 · HAVO 3
 
-## Starten
+Twaalf vakken, elk met uitleg per onderwerp en proeftoetsen per hoofdstuk, in `havo3/<vak>/`:
 
-Dubbelklik op **`Duru_Okul_Baslat.command`** — opent vanzelf op `http://localhost:8125/`.
+| Talen | Exact | Mens & maatschappij |
+|---|---|---|
+| Nederlands | Wiskunde | Geschiedenis |
+| Engels | Natuurkunde | Aardrijkskunde |
+| Frans | Scheikunde | Economie |
+| Duits | Biologie | Maatschappijleer |
 
-Of in de terminal: `python3 -m http.server 8125` (in deze map), daarna `http://localhost:8125/`.
+Vorige schooljaren staan in `archief/<schooljaar>/` (bv. `archief/2025-2026/` = MAVO 2) en zijn
+op de startpagina te openen via **"Archief — vorige schooljaren"**. Resultaten van toen blijven zichtbaar.
 
-**Vanaf je telefoon** (zelfde wifi, terwijl de Mac draait): `http://<mac-ip>:8125/` — ip vind je met `ipconfig getifaddr en0`.
+## Gebruiken
 
-## Navigeren
+- **Inloggen:** Duru met haar eigen knop; **Baba** (ouder) met een eigen wachtwoord.
+- Klik op een vak → de oefensite opent in de hub. Terug: **"← Terug naar de vakken"**, de **Escape**-toets
+  of de **terugknop** van de browser.
+- **Mijn prestaties:** Duru's voortgang — wat nu te oefenen, cijfers per vak en hoofdstuk, logboek.
+- **Ouderpaneel** (alleen Baba, in het Turks): gemiddelde, aandachtspunten, open toetsen, tijd per toets,
+  en per poging de vragen met Duru's antwoorden.
+- Resultaten worden via de cloud gesynchroniseerd tussen apparaten.
 
-- Klik op een vak → de oefensite opent in de hub.
-- **Terug naar het overzicht**: de knop **"← Terug naar de vakken"** bovenaan, de **Escape**-toets, of de **terugknop** van je browser.
-- **Nederlands** is een categorie: klik om de onderwerpen uit te klappen.
+## Lokaal starten
+
+Dubbelklik op **`Duru_Okul_Baslat.command`**, of in deze map:
+
+```bash
+python3 -m http.server 8125     # → http://localhost:8125/
+```
+
+Vanaf de telefoon in hetzelfde wifi-netwerk: `http://<ip-van-de-computer>:8125/`.
 
 ## Hosting
 
-Draait **lokaal / op het thuisnetwerk**. De GitHub-repo `Mesut-Outlook/duru_okul` is **alleen een backup** (`git push`) — bewust géén GitHub Pages.
+Elke `git push` naar `main` publiceert de site automatisch via GitHub Actions op GitHub Pages
+(`.github/workflows/deploy.yml`).
+
+Voor ontwikkelaars: zie `CLAUDE.md` (architectuur, regels, commando's) en `docs/`.

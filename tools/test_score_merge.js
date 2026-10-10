@@ -38,6 +38,13 @@ function slice(name) {
   throw new Error('kapanmadi: ' + name);
 }
 
+// Module-constante die de merger gebruikt (sinds 2026-09-27): ingetrokken toetsen.
+function sliceVar(name) {
+  const m = new RegExp('\\n  var ' + name + ' = \\{[\\s\\S]*?\\n  \\};').exec(src);
+  if (!m) throw new Error('var niet gevonden: ' + name);
+  return m[0];
+}
+
 const store = {};
 const localStorage = {
   getItem: k => (k in store ? store[k] : null),
@@ -47,7 +54,7 @@ const localStorage = {
   get length() { return Object.keys(store).length; }
 };
 
-const bron = slice('parseAttemptDate') + '\n' + slice('mergeScoreItems') + '\n' + slice('restoreScores');
+const bron = sliceVar('VERWIJDERDE_EXAMENS') + '\n' + slice('parseAttemptDate') + '\n' + slice('mergeScoreItems') + '\n' + slice('restoreScores');
 // originalGetItem/originalSetItem = de ongeprefixte Storage-methodes van landing.js
 // (restoreScores(data, voorGebruiker) gebruikt ze om onder user_<naam>_ te schrijven).
 const api = new Function('localStorage', 'originalGetItem', 'originalSetItem',

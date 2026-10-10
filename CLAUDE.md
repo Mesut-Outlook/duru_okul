@@ -23,18 +23,18 @@ python3 server.py                           # aynı + /api/score yerel skor yede
 python3 -m http.server 8125 --bind 0.0.0.0  # telefondan önizleme: http://<lan-ip>:8125/ (UFW: 8125/tcp)
 node tools/gate.js <vak> [--only=h2,h3]     # soru kalite kapısı — her içerik teslimi geçmeli
 node tools/build_hoofdstukken.js [--check]  # js/hoofdstukken.js manifest'i üret / bayatsa exit 1
-node tools/test_score_merge.js              # senkron/merge regresyonu (bkz. aşağıda ⚠️)
+node tools/test_score_merge.js              # senkron/merge regresyonu (20 kontrol)
 python3 tools/test_server_merge.py          # server.py voeg_samen() regresyonu (15 kontrol)
 node --check js/<dosya>.js                  # tek dosya sözdizimi
 ```
-- **⚠️ `tools/test_score_merge.js` şu an kırık** (2026-10-10): `landing.js`'ten kesip çalıştırdığı kodda
-  `VERWIJDERDE_EXAMENS` tanımsız → ilk 7 PASS'tan sonra ReferenceError. Senkron koduna dokunmadan önce onar.
+- `test_score_merge.js` fonksiyonları **ve** merger'ın kullandığı modül sabitlerini (`VERWIJDERDE_EXAMENS`,
+  `sliceVar`) `landing.js`'ten keser. Merger yeni bir modül değişkeni kullanırsa teste de `sliceVar` ekle
+  (2026-09-27 → 10-10 arası bu yüzden ReferenceError ile kırıktı).
 - UI doğrulaması: Playwright (python, kurulu) ile hub'ı aç, `localStorage`'a `user_duru_<anahtar>` yaz,
   `duru_active_user` = `duru`/`baba`; Firebase isteklerini `route(...).abort()` ile kes. Telefon = 390px viewport,
   ölçüt `document.documentElement.scrollWidth === 390`. Ders siteleri tek başına açılınca hub'a yönlenir →
   `openInIframe('./havo3/<vak>/', …)` ile iframe içinde test et.
-- Deploy: `main`'e push → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages. `README.md` hâlâ
-  MAVO 2 dönemini ve "GitHub Pages yok" diyor — bayat; CLAUDE.md geçerli.
+- Deploy: `main`'e push → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages. Canlı: https://mesut-outlook.github.io/duru_okul/
 
 ## Kanonik dokümanlar (önce bunları oku)
 - `docs/ENGINE_SPEC.md` — DURU veri sözleşmesi (register/registerExamen, soru tipleri, localStorage). **Tek doğru kaynak.**
