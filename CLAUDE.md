@@ -179,9 +179,10 @@ Kullanıcı isteği: "testlerin ortalama kaç dakikada tamamlandığını test v
   denemelerde süre yok** ve geri hesaplanamaz (başlangıç anı hiç saklanmamıştı) → panelde "—", ortalamalara girmez.
 - **Veli paneli:** özet çipi "Bu hafta testlerde X"; **Günlük test süresi** kartı (son 14 gün sütun grafiği + çalıştığı
   günlerin ortalaması, test başına ortalama, 14 gün toplam); Dersler tablosunda ders + ünite başına **Ort. süre**;
-  ünite açılınca **Test başına ortalama süre** tablosu (deneme sayısı, "12 dk / 20" = verilen süre `duurMin`
-  `laadExamens`'ten, son not) ve "**çok hızlı?**" = son not < 5,5 ve ort. süre < verilen sürenin ¼'ü; her deneme
-  satırında ⏱. Kod: `metDuur/gemDuur/dk/saDk/sureKaart/toetsSureHtml`, stiller `css/style.css` → `.ts-*`, `.ob-duur`.
+  ünite açılınca **test başına tek satır** (2026-10-10, eski süre tablosu + deneme listesi birleşti): son not, "12′ / 20′"
+  (ort. süre / verilen süre `duurMin`, `laadExamens`'ten), "**çok hızlı?**" = son not < 5,5 ve ort. süre < verilen sürenin ¼'ü;
+  altında "Önceki N:" eski notlar (tıklanınca o denemenin review'u). Kod: `metDuur/gemDuur/dk/saDk/sureKaart/toetsGroepHtml`,
+  stiller `css/style.css` → `.ts-*`, `.ob-duur`, `.ob-eerder`.
 - Önizleme (onaylandı): https://claude.ai/artifact/3du4zDHyx2ECkxsrWP8c3m. Doğrulama: Playwright ile gerçek motor
   `duurSec` yazıyor; panel örnek denemelerle render edildi, sayılar elle hesapla aynı.
 
