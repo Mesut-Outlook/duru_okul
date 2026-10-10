@@ -1,4 +1,8 @@
-# CLAUDE.md — Duru_Okul (hub)
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+# Duru_Okul (hub)
 
 Duru'nun oefensites'lerini tek link altında toplayan hub. **Saf statik, build yok, ES-module yok**
 (`file://` / `http.server` üzerinde çalışır). **Self-contained**: tüm siteler bu repoda gerçek
@@ -6,10 +10,31 @@ klasörler olarak gömülü (submodule yok; 2026-06-03'ten beri gömülü).
 
 > **Dönem:** Güncel ders yılı **2026-2027 · HAVO 3**. Duru MAVO 2 → HAVO 3'e geçti (2026-07-20).
 > **Arşiv ders yılına göre**: `archief/<schooljaar>/` (ör. `archief/2025-2026/` = MAVO 2). Bir yıl
-> bitince o yılın dersleri `archief/<o-yıl>/`'e taşınır. Yeni HAVO 3 dersleri henüz kurulmadı — önce altyapı.
+> bitince o yılın dersleri `archief/<o-yıl>/`'e taşınır. HAVO 3'ün 12 dersi `havo3/<vak>/` altında aktif.
 >
 > **Dil kuralı:** Geliştirici/koordinasyon dokümanları **Türkçe**; öğrenci-içeriği **Flamanca**.
 > Ondalık ayraç metinlerde **virgül**. Bkz. `docs/DOC_STANDARD.md`.
+
+## Komutlar
+Build/lint yok. Tarayıcıda `?v=` önbellek bump'ı dışında derleme adımı yok.
+```bash
+python3 -m http.server 8125                 # yerel çalıştır → http://localhost:8125/
+python3 server.py                           # aynı + /api/score yerel skor yedeği (scores.json'a YAZAR)
+python3 -m http.server 8125 --bind 0.0.0.0  # telefondan önizleme: http://<lan-ip>:8125/ (UFW: 8125/tcp)
+node tools/gate.js <vak> [--only=h2,h3]     # soru kalite kapısı — her içerik teslimi geçmeli
+node tools/build_hoofdstukken.js [--check]  # js/hoofdstukken.js manifest'i üret / bayatsa exit 1
+node tools/test_score_merge.js              # senkron/merge regresyonu (bkz. aşağıda ⚠️)
+python3 tools/test_server_merge.py          # server.py voeg_samen() regresyonu (15 kontrol)
+node --check js/<dosya>.js                  # tek dosya sözdizimi
+```
+- **⚠️ `tools/test_score_merge.js` şu an kırık** (2026-10-10): `landing.js`'ten kesip çalıştırdığı kodda
+  `VERWIJDERDE_EXAMENS` tanımsız → ilk 7 PASS'tan sonra ReferenceError. Senkron koduna dokunmadan önce onar.
+- UI doğrulaması: Playwright (python, kurulu) ile hub'ı aç, `localStorage`'a `user_duru_<anahtar>` yaz,
+  `duru_active_user` = `duru`/`baba`; Firebase isteklerini `route(...).abort()` ile kes. Telefon = 390px viewport,
+  ölçüt `document.documentElement.scrollWidth === 390`. Ders siteleri tek başına açılınca hub'a yönlenir →
+  `openInIframe('./havo3/<vak>/', …)` ile iframe içinde test et.
+- Deploy: `main`'e push → GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages. `README.md` hâlâ
+  MAVO 2 dönemini ve "GitHub Pages yok" diyor — bayat; CLAUDE.md geçerli.
 
 ## Kanonik dokümanlar (önce bunları oku)
 - `docs/ENGINE_SPEC.md` — DURU veri sözleşmesi (register/registerExamen, soru tipleri, localStorage). **Tek doğru kaynak.**
@@ -23,7 +48,7 @@ klasörler olarak gömülü (submodule yok; 2026-06-03'ten beri gömülü).
 index.html        landing (iframe-shell & dashboard container)
 css/style.css     vak-renkleri: blauw/groen/oranje/teal + dashboard stilleri (?v= bump'la)
 js/landing.js     VAKKEN dizisi + render + iframe-shell + storage-interceptor + multi-user login
-js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (vak listeleri HARD-CODED)
+js/dashboard.js   istatistik dashboard'u + SVG chart + examens log (ders listesi `js/vakken.js`'ten)
 server.py         yerel skor API'si (POST /api/score → scores.json)
 docs/             kanonik standartlar (yukarı bak)
 tools/            soru kalite denetimi: gate.js (18 kontrol), spread.py, open_check.js (bkz. tools/README.md)
@@ -130,7 +155,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=5.9`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.2`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -239,8 +264,7 @@ ortalaması"ydı: 30 sınavın 2'si yapılmış ders "%90" görünüyordu. `land
 `NL` tablosu), veli girişliyken Türkçe. Öğrenci senkron hapına tıklayınca modal yerine doğrudan senkron.
 `binnenkort:true` = henüz site/data yok (tıklanmaz, "Binnenkort"). Aktif ders: `binnenkort` kaldır +
 `href:'./havo3/<vak>/'` + `sleutel:'duru_2627_<vak>'` ekle → kart ilerleme/cijfer'i `leesVakData` ile gösterir.
-**Şu an 12 HAVO 3 dersi aktif** (`havo3/<vak>/`, her biri 1 proeftoets/5 soru = smoke-test); Duru materyal
-verdikçe onderwerpen + daha çok proeftoets eklenecek. Dashboard **yıl-farkında** (yukarı bak); HAVO 3
+**12 HAVO 3 dersi aktif** (`havo3/<vak>/`; içerik durumu yukarıda "Ders doluluk durumu"). Dashboard **yıl-farkında** (yukarı bak); HAVO 3
 dersleri `VAK_REGISTER`'da 2026-2027 satırları olarak kayıtlı.
 
 ## Ders ekleme/arşivleme — TEK dokunma noktası (2026-09-04'ten beri)
@@ -300,6 +324,17 @@ Ders siteleri hub'ın temasını izler. **Tek yer, 12 kopya değil:**
   ise öneksiz okuyordu). Eski değer `initTheme`'de bir kez taşınır.
 - Doğrulama: 12 ders × (ana sayfa, sınav listesi, dashboard, madalyalar) koyu modda WCAG-benzeri
   kontrast taraması → 3:1 altı yazı yok (gradyanlı hero/başlıklar ayrıca gözle kontrol edildi).
+
+## Telefon düzeni — ders siteleri + hub (2026-10-10)
+- `css/vak_mobiel.css` — 12 `havo3/<vak>/index.html`'in hepsi `vak_dark.css`'ten **sonra** yükler (tek dosya, 12 kopya değil).
+  ≤600px: üst çubuktaki 💎🔥🏅 çipleri alt satıra geçer (önce 8 derste sayfa yana taşıyordu), hoofdstuk-akkordeon düğmesi
+  başlığın altına iner, toetshistorie tablosu karta döner (ad üstte; datum · goed | cijfer · Review). 12 motorun
+  `history-table-wrapper` sütun sırası aynı (Datum, Toets, Goed, Cijfer, Actie) — değişirse buradaki `nth-child`'ları güncelle.
+- Hub: telefonda sekme "📈 Mijn prestaties" (`.hub-tab-lang` gizli), istatistik sekmeleri sayısız sığar (Logboek görünür),
+  skor grafiğinde tarih "10/10".
+- Doğrulama: Playwright 390px, 12 ders × (ana sayfa, toets listesi, sınav) + hub: `scrollWidth` = 390, taşan öğe yok.
+- **⚠️ CSS'te fazladan `}`** sonraki kuralı sessizce yutar (2026-10-10: `body.ouder-actief .hero` böyle kaybolmuştu). Kural
+  silerken `{`/`}` dengesini kontrol et.
 
 ## Storage & SVG iframe düzeltmeleri (kritik)
 1. **Storage interception:** `js/landing.js` `Storage.prototype.setItem`'ı prototip düzeyinde

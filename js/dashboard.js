@@ -1052,6 +1052,8 @@
         var x = getX(idx);
         var att = chartAttempts[idx];
         var dateOnly = (att.datumStr || "").split(" ")[0] || "";
+        var dm = /^(\d{1,2})-(\d{1,2})-/.exec(dateOnly);   // "10-10-2026," → "10/10" (telefoon)
+        if (dm) dateOnly = +dm[1] + "/" + +dm[2];
         svg += '  <text x="' + x + '" y="' + (h - 12) + '" text-anchor="middle" class="svg-chart-text" fill="var(--grijs-licht)">' + dateOnly + '</text>';
       });
     }

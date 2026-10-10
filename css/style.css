@@ -1994,6 +1994,12 @@ html.dark #ob { --ob-staaf: #5fc795; --ob-staaf-z: #24453a; }
 .ob-duur { font-variant-numeric: tabular-nums; font-size: 15px; font-weight: 700; background: var(--ob-bg2); border-radius: 8px;
            padding: 2px 8px; white-space: nowrap; }
 .ob-duur.geen { font-weight: 400; color: var(--ob-geen); background: none; }
+
+/* Telefoon (2026-10-10): hub-tabs en dashboard-tabs passen op 390px; "Logboek" viel buiten beeld */
+@media (max-width: 600px) {
+  .hub-tab .hub-tab-lang { display: none; }
+  .st-tab { flex: 1 1 auto; padding: 11px 8px; }
+  .st-tel { display: none; }   /* aantallen staan ook in de sectie zelf */
 }
 
 /* Veli sekmesi: "Hoi Duru"-hero hoort bij Duru, niet bij de ouder. */
