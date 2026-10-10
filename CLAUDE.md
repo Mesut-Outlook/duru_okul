@@ -212,6 +212,10 @@ Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekme
   cihazı `cloud_sync.js → haalLeerlingOp()` ile `/scores_v2/duru`'yu **yalnız okur**,
   `restoreScores(data, "duru")` ile `user_duru_*`'ya büyüyen-birleştirme yapar (push yok). 2026-09-22
   öncesi panel `user_baba_*`'yı, yani eski bir kopyayı okuyordu (206 poging / 7,0 vs gerçek 191 / 7,1).
+- **Telefon + okunabilirlik (2026-10-10):** yazılar büyütüldü (taban 16px, ikincil ≥14px). ≤600px'te tablolar iki satırlık
+  kart olur (ad + not / gidiş · ⏱ · açık), sayfa ekrandan taşmaz (önceden 390px'te 693px). Kısa biçimler:
+  `datumTijd` → "bugün 21:03 / dün / Pzt / 22 Eyl", `dk` → "12′", `kortTitel` "Proeftoets 30 — …" → "30 · …",
+  "Son denemeler"de ders adı `KORT_VAK` ("Aardr.", "Wisk." …). Grafik sağdan (bugünden) başlar.
 - Veri katmanı `collectParentReportData(user, jaar)` değişmedi (dışa açık); render bundan türer.
 - Stiller `css/style.css` sonunda `#ob` altında, kendi `--ob-*` token'ları + `html.dark #ob`.
   Anlam renkleri (goed/net/zwak) marka yeşilinden ayrı.
