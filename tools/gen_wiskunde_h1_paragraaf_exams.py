@@ -6,9 +6,6 @@ Gebruik: python3 tools/gen_wiskunde_h1_paragraaf_exams.py havo3/wiskunde/js/data
 import json, random, sys
 from fractions import Fraction as F
 
-OUT = sys.argv[1]
-BESTAAND = set(json.load(open(sys.argv[2])))
-GEZIEN = set(BESTAAND)
 FIG = [0]
 
 # ---------- opmaak ----------
@@ -61,10 +58,10 @@ def macht(g, e='t', dec=None): return f"{fmt(g, dec)}{str(e).translate(SUP)}"
 def keuze(rng, lst): return lst[rng.randrange(len(lst))]
 
 # ---------- SVG ----------
-def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), punten=(), xlabel=None, ylabel=None, eenheid=28):
+def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), punten=(), xlabel=None, ylabel=None, eenheid=28, rechts=0):
     FIG[0] += 1; cid = f"w1c{FIG[0]}"
     m = 30; bl = 40 if ylabel or ystap != 1 else m
-    W = bl + (xmax - xmin) / xstap * eenheid + m
+    W = bl + (xmax - xmin) / xstap * eenheid + m + rechts
     H = m + (ymax - ymin) / ystap * eenheid + (44 if xlabel else m)
     X = lambda x: bl + (x - xmin) / xstap * eenheid
     Y = lambda y: m + (ymax - y) / ystap * eenheid
@@ -785,36 +782,39 @@ def bouw(slot, prefix, rng):
     if tf: return fn(rng, tf == "T")
     return fn(rng)
 
-nr = 20; fid = 10; manifest = []
-for pi, (par, ptitel, prefix, plan) in enumerate(PARAS):
-    for k in range(5):
-        rng = random.Random(1000 * pi + k * 37 + 11)
-        vragen = []
-        for slot in plan:
-            for poging in range(200):
-                v = bouw(slot, prefix, rng)
-                if v["vraag"] not in GEZIEN:
-                    break
-            else:
-                raise SystemExit(f"geen unieke vraag voor {slot}")
-            GEZIEN.add(v["vraag"]); vragen.append(v)
-        mcs = [v for v in vragen if v["type"] == "mc"]
-        pos = iter(mc_volgorde(rng, len(mcs)))
-        for v in mcs:
-            opts = v.pop("_opts"); goed = opts[0]; rest = opts[1:]; rng.shuffle(rest)
-            i = next(pos); rest.insert(i, goed)
-            v["opties"] = rest; v["antwoord"] = i
-        for v in vragen:
-            if v["type"] == "invul": assert v["antwoord"], v
-        ex = {"id": f"ex-wiskunde-h1-{fid}", "hoofdstuk": 1, "paragraaf": par,
-              "titel": f"Proeftoets {nr} — §{par} {ptitel} ({k + 1}/5, {NIVEAU[k]})",
-              "vak": "Wiskunde · H1 Lineaire en exponentiële formules", "icoon": "📈", "duurMin": 30, "vragen": vragen}
-        with open(f"{OUT}/examen_{nr}.js", "w") as f:
-            f.write("/* =========================================================\n"
-                    f"   Duru's Wiskunde (HAVO 3) — {ex['titel']}\n"
-                    f"   Bron: Noordhoff H1 Lineaire en exponentiële formules, §{par} (opgaven uit het boek met andere getallen;\n"
-                    "   antwoorden berekend door tools-script, figuren als inline SVG)\n"
-                    "   ========================================================= */\n")
-            f.write("DURU.registerExamen(" + json.dumps(ex, ensure_ascii=False, indent=2) + ");\n")
-        manifest.append(nr); nr += 1; fid += 1
-print("geschreven:", manifest[0], "…", manifest[-1])
+if __name__ == "__main__":
+    OUT = sys.argv[1]
+    GEZIEN = set(json.load(open(sys.argv[2])))
+    nr = 20; fid = 10; manifest = []
+    for pi, (par, ptitel, prefix, plan) in enumerate(PARAS):
+        for k in range(5):
+            rng = random.Random(1000 * pi + k * 37 + 11)
+            vragen = []
+            for slot in plan:
+                for poging in range(200):
+                    v = bouw(slot, prefix, rng)
+                    if v["vraag"] not in GEZIEN:
+                        break
+                else:
+                    raise SystemExit(f"geen unieke vraag voor {slot}")
+                GEZIEN.add(v["vraag"]); vragen.append(v)
+            mcs = [v for v in vragen if v["type"] == "mc"]
+            pos = iter(mc_volgorde(rng, len(mcs)))
+            for v in mcs:
+                opts = v.pop("_opts"); goed = opts[0]; rest = opts[1:]; rng.shuffle(rest)
+                i = next(pos); rest.insert(i, goed)
+                v["opties"] = rest; v["antwoord"] = i
+            for v in vragen:
+                if v["type"] == "invul": assert v["antwoord"], v
+            ex = {"id": f"ex-wiskunde-h1-{fid}", "hoofdstuk": 1, "paragraaf": par,
+                  "titel": f"Proeftoets {nr} — §{par} {ptitel} ({k + 1}/5, {NIVEAU[k]})",
+                  "vak": "Wiskunde · H1 Lineaire en exponentiële formules", "icoon": "📈", "duurMin": 30, "vragen": vragen}
+            with open(f"{OUT}/examen_{nr}.js", "w") as f:
+                f.write("/* =========================================================\n"
+                        f"   Duru's Wiskunde (HAVO 3) — {ex['titel']}\n"
+                        f"   Bron: Noordhoff H1 Lineaire en exponentiële formules, §{par} (opgaven uit het boek met andere getallen;\n"
+                        "   antwoorden berekend door tools-script, figuren als inline SVG)\n"
+                        "   ========================================================= */\n")
+                f.write("DURU.registerExamen(" + json.dumps(ex, ensure_ascii=False, indent=2) + ");\n")
+            manifest.append(nr); nr += 1; fid += 1
+    print("geschreven:", manifest[0], "…", manifest[-1])
