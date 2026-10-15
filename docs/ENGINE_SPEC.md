@@ -88,6 +88,8 @@ olanlar (`15`, `2,0 m/s²`, `9%`) öğrencinin yazdığı ilk sayıyla sayısal 
 `tolerantie` ya da **son verilen ondalığın yarım birimi** (`12,5` → ±0,05, `1914` → ±0,5 — yıllarda %2 kuralı
 ±38 yıl verirdi). `16.000` binlik, `1,5` ondalık okunur. Metin alternatifleri eskisi gibi normalize + alt-dizi.
 Eskiden `invul` tamamen alt-diziydi: cevap `2` iken `12` ve `0,2` de doğru sayılıyordu.
+**Kesir (yalnız `havo3/wiskunde/js/exams.js`, 2026-10-15):** öğrencinin `3/2`, `−3/4` yazdığı değer bölünerek okunur
+(1,5 / −0,75). Sonlanmayan değerde anahtar `"2/3|0,67"` (kesir tam, ondalık ±0,005). `15 m/s` gibi birimler etkilenmez.
 **Sınavda opsiyonel `paragraaf`** (natuurkunde H1'den beri): `"1.3"` gibi paragraf, `"mix"` (birden çok
 paragraf) ya da `"eind"` (hoofdstuk eindtoets). Ders sitesi testleri bununla gruplar; id'den çıkarılmaz.
 **Kullanılmış bir sınav id'sinin içeriğini değiştirme** — geçmiş `examId` + soru sırasıyla saklanır.

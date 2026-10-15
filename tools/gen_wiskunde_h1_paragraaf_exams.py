@@ -58,7 +58,7 @@ def macht(g, e='t', dec=None): return f"{fmt(g, dec)}{str(e).translate(SUP)}"
 def keuze(rng, lst): return lst[rng.randrange(len(lst))]
 
 # ---------- SVG ----------
-def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), punten=(), xlabel=None, ylabel=None, eenheid=28, rechts=0):
+def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), punten=(), xlabel=None, ylabel=None, eenheid=28, rechts=0, kleuren=None):
     FIG[0] += 1; cid = f"w1c{FIG[0]}"
     m = 30; bl = 40 if ylabel or ystap != 1 else m
     W = bl + (xmax - xmin) / xstap * eenheid + m + rechts
@@ -94,9 +94,9 @@ def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), p
     o.append(f'<text x="{X(ay0)-4:.1f}" y="{Y(ymax)-10:.1f}" fill="#222" font-style="italic">{"" if ylabel else "y"}</text>')
     if xlabel: o.append(f'<text x="{(X(xmin)+X(xmax))/2:.1f}" y="{H-8:.1f}" fill="#222" text-anchor="middle">{xlabel} →</text>')
     if ylabel: o.append(f'<text x="{X(xmin):.1f}" y="{Y(ymax)-12:.1f}" fill="#222">↑ {ylabel}</text>')
-    kleuren = ['#c2185b', '#0d9488', '#1d4ed8', '#b45309']
+    kleuren = kleuren or ['#c2185b', '#0d9488', '#1d4ed8', '#b45309']
     for i, (a, b, naam) in enumerate(lijnen):
-        k = kleuren[i % 4]
+        k = kleuren[i % len(kleuren)]
         x1, x2 = xmin - 1, xmax + 1
         o.append(f'<line clip-path="url(#{cid})" x1="{X(x1):.1f}" y1="{Y(a*x1+b):.1f}" x2="{X(x2):.1f}" y2="{Y(a*x2+b):.1f}" stroke="{k}" stroke-width="2.6"/>')
         # label: rechts in beeld
@@ -105,7 +105,7 @@ def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), p
             if ymin + 0.6 <= ys <= ymax - 0.6:
                 o.append(f'<text x="{X(xs)+6:.1f}" y="{Y(ys)-8:.1f}" fill="{k}" font-weight="bold" font-style="italic" font-size="14">{naam}</text>'); break
     for i, f in enumerate(krommen):
-        k = kleuren[i % 4]; n = 80
+        k = kleuren[i % len(kleuren)]; n = 80
         pts = " ".join(f"{X(xmin+(xmax-xmin)*j/n):.1f},{Y(f(xmin+(xmax-xmin)*j/n)):.1f}" for j in range(n + 1))
         o.append(f'<polyline clip-path="url(#{cid})" points="{pts}" fill="none" stroke="{k}" stroke-width="2.6"/>')
     for (px, py, lab) in punten:

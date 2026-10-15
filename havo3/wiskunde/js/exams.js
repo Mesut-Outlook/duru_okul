@@ -319,6 +319,9 @@
   // invul nakijken (ENGINE_SPEC): getal-antwoorden numeriek, tekst-antwoorden zoals voorheen.
   // Zonder dit telde "12" of "0,2" goed bij antwoord "2" (indexOf op tekst).
   function leesGetal(s) {
+    // breuk "3/2", "−3/4", "-1/2x": zelfde waarde als de decimale sleutel (1,5 / −0,75)
+    var br = String(s == null ? "" : s).replace(/−/g, "-").match(/(-?\d+(?:[.,]\d+)?)\s*\/\s*(-?\d+(?:[.,]\d+)?)/);
+    if (br) { var t = leesGetal(br[1]), n = leesGetal(br[2]); if (n.waarde) return { waarde: t.waarde / n.waarde, decimalen: 9 }; }
     var m = String(s == null ? "" : s).replace(/−/g, "-").match(/-?\d+(?:[.,]\d+)*/);
     if (!m) return null;
     var g = m[0], dec = 0;
