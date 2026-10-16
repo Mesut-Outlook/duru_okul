@@ -1765,6 +1765,19 @@ html.dark .st-kaartknop { color: var(--hub-accent); }
 .st-leeg { padding: 32px 20px; text-align: center; font-size: 14px; color: var(--st-mut); }
 
 /* ── Backup-blok ─────────────────────────────────────── */
+/* Instellingen (2026-10-16): jaarkiezer en backup alleen achter het tandwiel */
+#statistieken-view:not(.st-inst) .backup-section { display: none; }
+.st-instknop { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; cursor: pointer;
+               background: var(--wit); border: 1px solid var(--lijn); color: var(--inkt); flex: none; }
+.st-instknop .hic { width: 21px; height: 21px; }
+.st-terug { min-height: 44px; padding: 0 12px 0 4px; border: 0; background: none; cursor: pointer;
+            font: 600 15px var(--font-tekst); color: var(--hub-hoofd); }
+html.dark .st-terug { color: var(--hub-accent); }
+.st-insttitel { font-size: 19px; }
+.st-instkaart { margin-top: 14px; padding: 18px 20px; background: var(--wit); border: 1px solid var(--lijn); border-radius: var(--st-r); }
+.st-instkaart h3 { margin: 0 0 4px; font-size: 17px; }
+.st-instkaart p { margin: 0; font-size: 14px; color: var(--st-mut); }
+.st-seg--blok { display: flex; margin-top: 12px; } .st-seg--blok .st-jaar { flex: 1; min-height: 44px; }
 .backup-section { max-width: 1080px; margin: 34px auto 0; padding: 18px 22px; text-align: center;
                   background: var(--wit); border: 1px solid var(--lijn); border-radius: var(--st-r); }
 .backup-section h4 { margin: 0 0 6px; font-family: var(--font-titel); font-size: 15px; color: var(--inkt); }

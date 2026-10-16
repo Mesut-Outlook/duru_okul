@@ -160,7 +160,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.5`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.6`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -185,6 +185,9 @@ Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
   aynı veriyi 3. kez gösteriyordu, silindi). Per vak = ders satırı (`vakRij`), dokununca üniteleri (gemaakt/totaal + not) açılır
   (`openVakRij`); başlanmamış dersler "+N vakken nog niet begonnen" altında. Ortalama tek yerde (cijferschaal kartı) + altında 3
   sayı (op rij · deze week · toetsen gedaan); tekrar eden ortalama cümlesi ve "Klaar voor de toets" kutusu kalktı.
+- **Instellingen (2026-10-16, kullanıcı isteği):** yıl seçici başlıktan kalktı; ⚙ (`#st-instknop`) → `instellingen` görünümü:
+  Schooljaar seçimi (seçince geri döner) + statik "Voortgang beheren" (yedekleme) bloğu. Yedekleme bloğu yalnız
+  `#statistieken-view.st-inst` iken görünür (index.html'de kalır ki `initBackupRestore()` düğmelerini kaybetmesin).
 - `renderScoreTimeline()` korundu, Overzicht sekmesine taşındı. Grafik kendi genişliğini ölçtüğü
   için **DOM'a eklendikten sonra** çağrılır.
 

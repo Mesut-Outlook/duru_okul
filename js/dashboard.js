@@ -335,6 +335,7 @@
   var C = window.DURU_CIJFER;
 
   var actieveTab  = "overzicht";
+  var instellingen = false;   // tandwiel: schooljaar + voortgang opslaan/laden
   var logFilter   = { q: "", vak: "" };
   var laatsteModel = null;
 
@@ -660,20 +661,32 @@
     var jaren = beschikbareJaren();
 
     var h = '<div class="st-wrap">';
+    var view = document.getElementById("statistieken-view");
+    if (view) view.classList.toggle("st-inst", instellingen);
 
-    /* Kop + jaarkiezer */
+    /* Instellingen (2026-10-16): schooljaar + voortgang opslaan/laden (het statische
+       backup-blok in index.html is alleen hier zichtbaar, via #statistieken-view.st-inst). */
+    if (instellingen) {
+      h += '<div class="st-bar"><button type="button" class="st-terug" id="st-terug">‹ Terug</button>' +
+        '<span class="st-barnaam st-insttitel">Instellingen</span></div>' +
+        '<section class="st-instkaart"><h3>Schooljaar</h3><p>Van welk schooljaar wil je je resultaten zien?</p>' +
+        (jaren.length > 1
+          ? '<div class="st-seg st-seg--blok" role="group" aria-label="Schooljaar">' + jaren.map(function (j) {
+              return '<button type="button" class="st-jaar" data-jaar="' + escHtml(j) + '" aria-pressed="' +
+                (j === window.currentJaar) + '">' + escHtml(j) + ' · ' + escHtml(JAAR_NIVEAU[j] || "") + '</button>';
+            }).join("") + '</div>'
+          : '<p><b>' + escHtml(window.currentJaar) + ' · ' + escHtml(niveau) + '</b> — er zijn nog geen andere jaren met resultaten.</p>') +
+        '</section></div>';
+      houder.innerHTML = h;
+      bindKopEvents(model);
+      return;
+    }
+
+    /* Kop */
     h += '<div class="st-bar"><div class="st-ident"><span class="st-avatar">👩‍🎓</span>' +
       '<span><span class="st-barnaam">Mijn voortgang</span>' +
-      '<span class="st-barsub">' + escHtml(window.currentJaar) + ' · ' + escHtml(niveau) + '</span></span></div>';
-    if (jaren.length > 1) {
-      h += '<div class="st-seg" role="group" aria-label="Schooljaar">';
-      jaren.forEach(function (j) {
-        h += '<button type="button" class="st-jaar" data-jaar="' + escHtml(j) + '" aria-pressed="' +
-          (j === window.currentJaar) + '">' + escHtml(j) + ' · ' + escHtml(JAAR_NIVEAU[j] || "") + '</button>';
-      });
-      h += '</div>';
-    }
-    h += '</div>';
+      '<span class="st-barsub">' + escHtml(window.currentJaar) + ' · ' + escHtml(niveau) + '</span></span></div>' +
+      '<button type="button" class="st-instknop" id="st-instknop" aria-label="Instellingen"><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></div>';
 
     /* Status */
     // Geen tweede "Hoi Duru" en geen derde keer het schooljaar: de hero van
@@ -757,6 +770,7 @@
         var j = b.getAttribute("data-jaar");
         try { localStorage.setItem("duru_dashboard_jaar", j); } catch (e) {}
         window.currentJaar = j;
+        instellingen = false;
         actieveTab = "overzicht";
         logFilter = { q: "", vak: "" };
         loadDashboardData();
@@ -766,6 +780,9 @@
     document.querySelectorAll("#voortgang-paneel [data-st-tab]").forEach(function (b) {
       b.addEventListener("click", function () { wisselTab(b.getAttribute("data-st-tab"), model); });
     });
+    var inst = document.getElementById("st-instknop"), terug = document.getElementById("st-terug");
+    if (inst) inst.addEventListener("click", function () { instellingen = true; renderVoortgang(model); window.scrollTo(0, 0); });
+    if (terug) terug.addEventListener("click", function () { instellingen = false; renderVoortgang(model); window.scrollTo(0, 0); });
   }
 
   function bindTabEvents(model) {
