@@ -30,6 +30,7 @@
     return vd.hoofdstukken.map(function (h) {
       return {
         nr: h.nr,
+        label: h.label,
         titel: h.titel,
         icoon: h.icoon || "📖",
         intro: h.intro || "",
@@ -60,8 +61,8 @@
 
   // ── vanAttempt(att, vakId): hoofdstuk van een poging, of null ──
   // Volgorde (eerste match wint, geen gokwerk):
-  //   1. att.hoofdstuk (expliciet)
-  //   2. manifest examenHoofdstuk[att.examId]
+  //   1. manifest examenHoofdstuk[att.examId] (actueel: wiskunde Statistiek ging van 2 → 90)
+  //   2. att.hoofdstuk (in de poging opgeslagen)
   //   3. att.examTitel / att.titel matcht /Hoofdstuk\s*(\d+)/i
   //   4. geen match → null (examId zegt niets: "ex-h3-..." is het niveau)
   function vanAttempt(att, vakId) {
@@ -69,14 +70,13 @@
     var vid = vakId || att.vakId;
     var nr = null;
 
-    if (att.hoofdstuk !== undefined && att.hoofdstuk !== null) {
-      nr = att.hoofdstuk;
+    var vd = vakData(vid);
+    if (vd && vd.examenHoofdstuk && att.examId !== undefined && att.examId !== null &&
+        vd.examenHoofdstuk[att.examId] !== undefined) {
+      nr = vd.examenHoofdstuk[att.examId];
     } else {
-      var vd = vakData(vid);
-
-      if (vd && vd.examenHoofdstuk && att.examId !== undefined && att.examId !== null &&
-          vd.examenHoofdstuk[att.examId] !== undefined) {
-        nr = vd.examenHoofdstuk[att.examId];
+      if (att.hoofdstuk !== undefined && att.hoofdstuk !== null) {
+        nr = att.hoofdstuk;
       } else {
         // LET OP: uit het examId valt GEEN hoofdstuk af te leiden. Alle ids zien
         // eruit als "ex-h3-<vak>-N", waarbij h3 het NIVEAU (HAVO 3) is en niet het
@@ -125,7 +125,15 @@
     return (typeof v === "number") ? v : 0;
   }
 
+  // ── kort(vakId, nr): "H2", of het label van een niet-boekhoofdstuk ("Herhaling MAVO 2") ──
+  function kort(vakId, nr) {
+    var h = (vakData(vakId) || {}).hoofdstukken || [];
+    for (var i = 0; i < h.length; i++) if (h[i].nr === nr && h[i].label) return h[i].label;
+    return "H" + nr;
+  }
+
   window.DURU_HF = {
+    kort: kort,
     lijst: lijst,
     meta: meta,
     vanAttempt: vanAttempt,

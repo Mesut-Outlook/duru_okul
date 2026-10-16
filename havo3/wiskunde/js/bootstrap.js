@@ -18,12 +18,24 @@
     },
     {
       nr: 2,
+      titel: "Parabolen",
+      icoon: "⛰️",
+      kleur: "#7c3aed",
+      beschrijving: "Hoofdstuk 2 van het HAVO 3-boek: parabolen. Oefenstof en proeftoetsen volgen."
+    },
+    {
+      // Herhaling van MAVO 2 (geen hoofdstuk uit het HAVO 3-boek). nr 90 = alleen een sleutel;
+      // overal getoond als `label`. Duru heeft deze toetsen gemaakt → ids/inhoud blijven.
+      nr: 90,
+      label: "Herhaling MAVO 2",
       titel: "Statistiek",
       icoon: "📊",
       kleur: "#0d9488",
       beschrijving: "Verhoudingstabellen, cirkeldiagrammen, frequentietabellen, staaf- en lijndiagrammen, gemiddelde, modus, mediaan en steelbladdiagrammen."
     }
   ];
+  // "Hoofdstuk 1" of het label van een niet-boekhoofdstuk ("Herhaling MAVO 2")
+  DURU.hfNaam = function (h) { return h.label || ("Hoofdstuk " + h.nr); };
   DURU.onderwerpen = [];
   DURU._byId = {};
 

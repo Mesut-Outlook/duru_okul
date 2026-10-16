@@ -3,8 +3,8 @@
    ========================================================= */
 DURU.register({
   "id": "h2-4-centrummaten",
-  "hoofdstuk": 2,
-  "paragraaf": "2.4",
+  "hoofdstuk": 90,
+  "paragraaf": "S4",
   "titel": "Centrummaten: Gemiddelde, Mediaan & Modus",
   "korteUitleg": "Het rekenkundig gemiddelde, gewogen gemiddelde, de middelste waarneming (mediaan) en de modus.",
   "icoon": "🎯",

@@ -3,8 +3,8 @@
    ========================================================= */
 DURU.register({
   "id": "h2-1-verhoudingstabel",
-  "hoofdstuk": 2,
-  "paragraaf": "2.1",
+  "hoofdstuk": 90,
+  "paragraaf": "S1",
   "titel": "Verhoudingstabel & Procenten",
   "korteUitleg": "Rekenen met verhoudingen, kruislinks vermenigvuldigen en procentuele toename of afname.",
   "icoon": "✖️",

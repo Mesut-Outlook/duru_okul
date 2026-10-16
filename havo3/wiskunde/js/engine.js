@@ -145,7 +145,7 @@
         '<div class="hf-header" onclick="DURU.toggleHoofdstuk(' + h.nr + ')">' +
           '<div class="hf-ico">' + (h.icoon || "📊") + '</div>' +
           '<div class="hf-info">' +
-            '<h3>Hoofdstuk ' + h.nr + ' — ' + esc(h.titel) + '</h3>' +
+            '<h3>' + esc(DURU.hfNaam(h)) + ' — ' + esc(h.titel) + '</h3>' +
             '<p>' + esc(h.beschrijving || h.intro || "") + '</p>' +
             '<div class="hf-meta-badges">' +
               '<span class="hf-badge oranje">📖 ' + ow.length + ' Paragrafen</span>' +
@@ -177,7 +177,7 @@
 
       // 2. Proeftoetsen
       if (exLijst.length) {
-        html += '<h4 style="margin: 24px 0 12px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📝 Proeftoetsen voor Hoofdstuk ' + h.nr + '</h4>';
+        html += '<h4 style="margin: 24px 0 12px; color: var(--donker); font-size: 16px; display: flex; align-items: center; gap: 6px;">📝 Proeftoetsen voor ' + esc(DURU.hfNaam(h)) + '</h4>';
         html += '<div class="grid cols-3">';
         exLijst.forEach(function (ex) {
           var atts = exDataHome.history.filter(function (a) { return a.examId === ex.id; });
@@ -536,11 +536,13 @@
       html += '<thead><tr><th style="text-align:left;">Hoofdstuk</th><th>Oefeningen</th><th>Proeftoetsen</th><th>Gemiddeld Cijfer</th><th>Beste Cijfer</th><th>Laatste Toets</th><th>Status</th></tr></thead><tbody>';
 
       var hfVanAttempt = function (a) {
-        if (a.hoofdstuk != null) return a.hoofdstuk;
+        // Eerst de toets zelf (actueel), pas dan het in de poging opgeslagen nummer:
+        // Statistiek was hoofdstuk 2 en is nu 90 (2 = Parabolen) — oude pogingen zeggen nog 2.
         var lijst = DURU.examens || [];
         for (var i = 0; i < lijst.length; i++) {
           if (lijst[i].id === a.examId && lijst[i].hoofdstuk != null) return lijst[i].hoofdstuk;
         }
+        if (a.hoofdstuk != null) return a.hoofdstuk;
         // Uit het examId valt GEEN hoofdstuk af te leiden: "ex-h3-<vak>-N" bevat
         // het NIVEAU (HAVO 3), niet het hoofdstuk. Alleen de titel is betrouwbaar.
         var tm = String(a.examTitel || "").match(/Hoofdstuk\s*(\d+)/i);
@@ -592,7 +594,7 @@
         }
 
         html += '<tr>';
-        html += '<td style="text-align:left;font-weight:700;">' + (h.icoon || "📖") + ' Hoofdstuk ' + h.nr + ': ' + esc(h.titel) + '</td>';
+        html += '<td style="text-align:left;font-weight:700;">' + (h.icoon || "📖") + ' ' + esc(DURU.hfNaam(h)) + ': ' + esc(h.titel) + '</td>';
         html += '<td>' + owDone + '/' + ow.length + '</td>';
         html += '<td><strong>' + examCount + '</strong> / ' + hfExams.length + ' gemaakt</td>';
         html += '<td><span style="font-size:15px;font-weight:800;color:' + (avgNum >= 5.5 ? 'var(--groen)' : (examCount > 0 ? 'var(--oranje)' : 'var(--grijs-licht)')) + ';">' + avgGrade + '</span></td>';
@@ -638,7 +640,7 @@
     DURU.hoofdstukken.forEach(function (h) {
       var ow = DURU.onderwerpenVan(h.nr);
       if (!ow.length) return;
-      html += '<p style="margin:16px 4px 8px;font-weight:800;font-size:16px;">' + h.icoon + ' Hoofdstuk ' + h.nr + ' — ' + h.titel + '</p>';
+      html += '<p style="margin:16px 4px 8px;font-weight:800;font-size:16px;">' + h.icoon + ' ' + esc(DURU.hfNaam(h)) + ' — ' + esc(h.titel) + '</p>';
       html += '<table class="nask" style="margin-bottom:18px;">';
       html += '<thead><tr><th style="text-align:left;">Onderwerp</th><th>Geoefend</th><th>Beste score</th><th>Voortgang</th></tr></thead><tbody>';
       ow.forEach(function (o) {

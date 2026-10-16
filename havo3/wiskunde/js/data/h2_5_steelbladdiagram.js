@@ -3,8 +3,8 @@
    ========================================================= */
 DURU.register({
   "id": "h2-5-steelbladdiagram",
-  "hoofdstuk": 2,
-  "paragraaf": "2.5",
+  "hoofdstuk": 90,
+  "paragraaf": "S5",
   "titel": "Steel-bladdiagrammen & Spreidingsmaten",
   "korteUitleg": "Steel-bladdiagram aflezen, minimum, maximum, spreidingsbreedte en kwartielen.",
   "icoon": "🌳",

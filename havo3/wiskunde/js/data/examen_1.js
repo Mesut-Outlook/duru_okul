@@ -3,9 +3,9 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-wiskunde-h2-1",
-  "hoofdstuk": 2,
+  "hoofdstuk": 90,
   "titel": "Proeftoets 1 — Verhoudingstabel & Cirkeldiagram",
-  "vak": "Wiskunde · H2 Statistiek",
+  "vak": "Wiskunde · Herhaling MAVO 2 · Statistiek",
   "icoon": "➗",
   "duurMin": 20,
   "vragen": [

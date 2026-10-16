@@ -3,9 +3,9 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-wiskunde-h2-8",
-  "hoofdstuk": 2,
+  "hoofdstuk": 90,
   "titel": "Proeftoets 8 — Frequentietabellen, Klassen & Relatieve Frequentie",
-  "vak": "Wiskunde · H2 Statistiek",
+  "vak": "Wiskunde · Herhaling MAVO 2 · Statistiek",
   "icoon": "📋",
   "duurMin": 20,
   "vragen": [

@@ -105,9 +105,16 @@ def svg_graph(xmin, xmax, ymin, ymax, xstap=1, ystap=1, lijnen=(), krommen=(), p
             if ymin + 0.6 <= ys <= ymax - 0.6:
                 o.append(f'<text x="{X(xs)+6:.1f}" y="{Y(ys)-8:.1f}" fill="{k}" font-weight="bold" font-style="italic" font-size="14">{naam}</text>'); break
     for i, f in enumerate(krommen):
+        naam, xl = None, None
+        if isinstance(f, tuple): f, naam, xl = (f + (None,))[:3]   # (f, naam[, x van het label])
         k = kleuren[i % len(kleuren)]; n = 80
         pts = " ".join(f"{X(xmin+(xmax-xmin)*j/n):.1f},{Y(f(xmin+(xmax-xmin)*j/n)):.1f}" for j in range(n + 1))
         o.append(f'<polyline clip-path="url(#{cid})" points="{pts}" fill="none" stroke="{k}" stroke-width="2.6"/>')
+        if naam:
+            for xs in ([xl] if xl is not None else []) + [xmax - 0.4 - j * 0.25 * xstap for j in range(int((xmax - xmin) / xstap * 4))]:
+                ys = f(xs)
+                if ymin + 0.6 * ystap <= ys <= ymax - 0.6 * ystap:
+                    o.append(f'<text x="{X(xs)+7:.1f}" y="{Y(ys)+4:.1f}" fill="{k}" font-weight="bold" font-size="14">{naam}</text>'); break
     for (px, py, lab) in punten:
         o.append(f'<circle cx="{X(px):.1f}" cy="{Y(py):.1f}" r="3.5" fill="#222"/>')
         if lab: o.append(f'<text x="{X(px)+6:.1f}" y="{Y(py)-6:.1f}" fill="#222" font-size="11">{lab}</text>')

@@ -65,7 +65,7 @@
 | wiskunde | wiskunde_extra_trefwoorden-en-herhaling.pdf | 14 | 287-300 | ✅ |  |
 | wiskunde | wiskunde_h01_lineaire-en-exponentiele-formules.pdf | 34 | 7-40 | ✅ |  |
 | wiskunde | wiskunde_h02_parabolen.pdf | 34 | 41-74 | ✅ |  |
-| wiskunde | wiskunde_h02_statistiek.pdf | 19 |  | ✅ |  |
+| wiskunde | wiskunde_extra_statistiek-mavo2.pdf | 19 |  | ✅ | MAVO 2 herhaling (site: nr 90) |
 | wiskunde | wiskunde_h03_vlakke-figuren.pdf | 34 | 87-120 | ✅ |  |
 | wiskunde | wiskunde_h04_de-abc-formule.pdf | 30 | 121-150 | ✅ |  |
 | wiskunde | wiskunde_h05_nieuwe-grafieken.pdf | 34 | 165-198 | ✅ |  |

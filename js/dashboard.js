@@ -560,7 +560,7 @@
     return { label: label, titel: titel, waarom: waarom, knop: knop, hf: hf };
   }
 
-  function hfLabel(hf) { return hf.nr != null ? " H" + hf.nr : ""; }
+  function hfLabel(hf) { return hf.nr != null ? " " + (window.DURU_HF ? window.DURU_HF.kort(hf.vak && hf.vak.id, hf.nr) : "H" + hf.nr) : ""; }
 
   /* ── Onderdelen ────────────────────────────────────────── */
   function schaalHtml(model) {
@@ -674,7 +674,7 @@
         return '<article class="st-kaart' + (letOp ? " st-kaart--letop" : "") + '">' +
           '<div class="st-kaartkop"><div>' +
             '<span class="st-kaartnr">' + (h.vak.icoon || "") + ' ' + escHtml(h.vak.titel) +
-              (h.nr != null ? " · H" + h.nr : "") + '</span>' +
+              (h.nr != null ? " · " + (window.DURU_HF ? window.DURU_HF.kort(h.vak.id, h.nr) : "H" + h.nr) : "") + '</span>' +
             '<span class="st-kaarttitel">' + escHtml(h.titel) + '</span>' +
           '</div>' + pil(h.gem, h.count) + '</div>' +
           '<div class="st-kaartstats">' +
@@ -715,7 +715,7 @@
         return '<tr><td class="st-streep" style="background:' + kleurVan(a.cijfer, 1) + '"></td>' +
           '<td class="st-num">' + escHtml(kortDatum(a.datumStr)) + '</td>' +
           '<td>' + escHtml(a.vakTitel) + '</td>' +
-          '<td><span class="st-chip">' + (a.hoofdstuk != null ? "H" + a.hoofdstuk : "—") + '</span></td>' +
+          '<td><span class="st-chip">' + (a.hoofdstuk != null ? (window.DURU_HF ? window.DURU_HF.kort(a.vakId, a.hoofdstuk) : "H" + a.hoofdstuk) : "—") + '</span></td>' +
           '<td>' + escHtml(a.titel) + '</td>' +
           '<td class="st-num">' + a.goed + '/' + a.totaal + '</td>' +
           '<td>' + pil(a.cijfer, 1) + '</td></tr>';

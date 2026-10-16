@@ -791,7 +791,7 @@
       var laatst = nieuwstEerst(c.attempts)[0];
       var dagen = Math.floor((Date.now() - (laatst.timestamp || 0)) / 864e5);
       if (dagen < 14) return;
-      uit.push({ dagen: dagen, cls: "net", kop: c.vakIcoon + " " + c.vakTitel + " · H" + c.nr + " " + c.titel,
+      uit.push({ dagen: dagen, cls: "net", kop: c.vakIcoon + " " + c.vakTitel + " · " + (window.DURU_HF ? window.DURU_HF.kort(c.vakId, c.nr) : "H" + c.nr) + " " + c.titel,
         tekst: "<strong>" + dagen + " gündür</strong> çalışılmadı. Başlanmış (" + s.gedaan + "/" + s.totaal +
                " test yapıldı), " + s.open.length + " test açık." });
     });
@@ -808,7 +808,7 @@
       var l = nieuwstEerst(h.attempts);
       var son = gem(l.slice(0, 3));
       var g = gidis(l);
-      var naam = h.vakIcoon + " " + h.vakTitel + " · H" + h.nr + " " + h.titel;
+      var naam = h.vakIcoon + " " + h.vakTitel + " · " + (window.DURU_HF ? window.DURU_HF.kort(h.vakId, h.nr) : "H" + h.nr) + " " + h.titel;
       if (!C.geslaagd(son)) {
         uit.push({ ernst: 0, son: son, cls: "zwak", kop: naam,
           tekst: "Son " + Math.min(3, l.length) + " denemenin ortalaması <strong>" + C.tekst(son) +
@@ -934,7 +934,7 @@
             var sleutel = v.id + "|" + (c.nr != null ? c.nr : "overig");
             var uOpen = openUnite === sleutel;
             h += '<tr class="ob-unite" data-unite="' + escapeHtml(sleutel) + '" tabindex="0" aria-expanded="' + uOpen + '">' +
-                 '<td>' + (c.nr != null ? "H" + c.nr + " · " : "") + escapeHtml(c.titel) +
+                 '<td>' + (c.nr != null ? (window.DURU_HF ? window.DURU_HF.kort(c.vakId, c.nr) : "H" + c.nr) + " · " : "") + escapeHtml(c.titel) +
                    '<span class="ob-ok">' + (uOpen ? "▾" : "▸") + '</span></td>' +
                  '<td class="r">' + pil(c.avgCijfer, c.count) + '</td><td>' + gidisHtml(c.attempts) + '</td>' +
                  '<td class="r ob-sure' + (gemDuur(c.attempts) == null ? ' leeg' : '') + '">' + dk(gemDuur(c.attempts)) + '</td>' +

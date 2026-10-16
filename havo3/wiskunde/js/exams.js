@@ -88,7 +88,7 @@
         '<summary class="chapter-header">' +
           '<div class="ch-icon">' + (g.hf.icoon || "📘") + '</div>' +
           '<div class="ch-info">' +
-            (g.hf.nr != null ? '<span class="ch-badge">Hoofdstuk ' + g.hf.nr + '</span>' : '') +
+            (g.hf.nr != null ? '<span class="ch-badge">' + esc(DURU.hfNaam(g.hf)) + '</span>' : '') +
             '<div class="ch-title">' + esc(g.hf.titel) + '</div>' +
           '</div>' +
           '<div class="ch-meta">' +

@@ -54,6 +54,8 @@ DURU.registerExamen({
 Değer `bootstrap.js`'teki `DURU.hoofdstukken`'de **gerçekten tanımlı** bir `nr` olmalı; tanımlı
 değilse build uyarı verir. Ünitesi henüz belli olmayan bir sınava numara **uydurma** — alanı boş
 bırak, "Overige toetsen"e düşsün (ör. `nederlands` / `maatschappijleer` smoke-test'leri).
+Kitapta olmayan bir ünite (ör. önceki yılın tekrarı) `DURU.hoofdstukken`'de `label` alır: `{ nr: 90, label: "Herhaling MAVO 2", titel: "Statistiek" }`.
+Sitede "Hoofdstuk 90" yerine label görünür (`DURU.hfNaam`, hub'da `DURU_HF.kort`); `nr` yalnız sayısal anahtardır.
 
 ## Soru tipleri
 Oefen soruları ek `niveau` (zorluk 1–3) taşır; sınav soruları taşımaz. Her soruya opsiyonel

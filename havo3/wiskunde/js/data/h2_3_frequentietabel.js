@@ -3,8 +3,8 @@
    ========================================================= */
 DURU.register({
   "id": "h2-3-frequentietabel",
-  "hoofdstuk": 2,
-  "paragraaf": "2.3",
+  "hoofdstuk": 90,
+  "paragraaf": "S3",
   "titel": "Frequentietabellen & Relatieve Frequentie",
   "korteUitleg": "Absolute frequentie, relatieve frequentie in procenten, turven en klassenindeling.",
   "icoon": "📋",

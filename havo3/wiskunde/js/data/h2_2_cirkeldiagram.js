@@ -3,8 +3,8 @@
    ========================================================= */
 DURU.register({
   "id": "h2-2-cirkeldiagram",
-  "hoofdstuk": 2,
-  "paragraaf": "2.2",
+  "hoofdstuk": 90,
+  "paragraaf": "S2",
   "titel": "Cirkeldiagrammen & Middelpuntshoeken",
   "korteUitleg": "Omrekenen van absolute aantallen en percentages naar sectorhoeken in graden (360°).",
   "icoon": "🥧",

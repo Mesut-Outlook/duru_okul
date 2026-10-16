@@ -24,7 +24,7 @@ scores_rescue_*.json
 scratch/
 tools/tessdata/
 inbox/2026-2027/wiskunde/_render/
-inbox/2026-2027/wiskunde/wiskunde_h02_statistiek.ocr.txt
+inbox/2026-2027/wiskunde/wiskunde_extra_statistiek-mavo2.ocr.txt
 
 # Python cache & tools scratch artifacts
 __pycache__/

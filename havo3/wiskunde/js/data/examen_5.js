@@ -3,9 +3,9 @@
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-wiskunde-h2-5",
-  "hoofdstuk": 2,
+  "hoofdstuk": 90,
   "titel": "Proeftoets 5 — Gemengde Eindtoets Statistiek & Procenten",
-  "vak": "Wiskunde · H2 Statistiek",
+  "vak": "Wiskunde · Herhaling MAVO 2 · Statistiek",
   "icoon": "📈",
   "duurMin": 20,
   "vragen": [

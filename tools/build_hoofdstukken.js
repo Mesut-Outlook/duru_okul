@@ -134,7 +134,7 @@ function buildVak(vak, warnings) {
   });
 
   var hoofdstukken = sandbox.DURU.hoofdstukken.map(function (h) {
-    return { nr: h.nr, titel: h.titel, icoon: h.icoon, intro: h.intro };
+    return { nr: h.nr, label: h.label, titel: h.titel, icoon: h.icoon, intro: h.intro };
   });
 
   var hoofdstukNrs = {};

@@ -1319,21 +1319,27 @@ window.DURU_HOOFDSTUKKEN = {
         },
         {
           "nr": 2,
+          "titel": "Parabolen",
+          "icoon": "⛰️"
+        },
+        {
+          "nr": 90,
+          "label": "Herhaling MAVO 2",
           "titel": "Statistiek",
           "icoon": "📊"
         }
       ],
       "examenHoofdstuk": {
-        "ex-wiskunde-h2-1": 2,
-        "ex-wiskunde-h2-2": 2,
-        "ex-wiskunde-h2-3": 2,
-        "ex-wiskunde-h2-4": 2,
-        "ex-wiskunde-h2-5": 2,
-        "ex-wiskunde-h2-6": 2,
-        "ex-wiskunde-h2-7": 2,
-        "ex-wiskunde-h2-8": 2,
-        "ex-wiskunde-h2-9": 2,
-        "ex-wiskunde-h2-10": 2,
+        "ex-wiskunde-h2-1": 90,
+        "ex-wiskunde-h2-2": 90,
+        "ex-wiskunde-h2-3": 90,
+        "ex-wiskunde-h2-4": 90,
+        "ex-wiskunde-h2-5": 90,
+        "ex-wiskunde-h2-6": 90,
+        "ex-wiskunde-h2-7": 90,
+        "ex-wiskunde-h2-8": 90,
+        "ex-wiskunde-h2-9": 90,
+        "ex-wiskunde-h2-10": 90,
         "ex-wiskunde-h1-1": 1,
         "ex-wiskunde-h1-2": 1,
         "ex-wiskunde-h1-3": 1,
@@ -1383,23 +1389,44 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h1-47": 1,
         "ex-wiskunde-h1-48": 1,
         "ex-wiskunde-h1-49": 1,
-        "ex-wiskunde-h1-50": 1
+        "ex-wiskunde-h1-50": 1,
+        "ex-wiskunde-parabolen-1": 2,
+        "ex-wiskunde-parabolen-2": 2,
+        "ex-wiskunde-parabolen-3": 2,
+        "ex-wiskunde-parabolen-4": 2,
+        "ex-wiskunde-parabolen-5": 2,
+        "ex-wiskunde-parabolen-6": 2,
+        "ex-wiskunde-parabolen-7": 2,
+        "ex-wiskunde-parabolen-8": 2,
+        "ex-wiskunde-parabolen-9": 2,
+        "ex-wiskunde-parabolen-10": 2,
+        "ex-wiskunde-parabolen-11": 2,
+        "ex-wiskunde-parabolen-12": 2,
+        "ex-wiskunde-parabolen-13": 2
       },
       "onderwerpHoofdstuk": {
         "h1-begrippen": 1,
-        "h2-1-verhoudingstabel": 2,
-        "h2-2-cirkeldiagram": 2,
-        "h2-3-frequentietabel": 2,
-        "h2-4-centrummaten": 2,
-        "h2-5-steelbladdiagram": 2
+        "h2-1-verhoudingstabel": 90,
+        "h2-2-cirkeldiagram": 90,
+        "h2-3-frequentietabel": 90,
+        "h2-4-centrummaten": 90,
+        "h2-5-steelbladdiagram": 90,
+        "h2-parabolen-1": 2,
+        "h2-parabolen-2": 2,
+        "h2-parabolen-3": 2,
+        "h2-parabolen-4": 2,
+        "h2-parabolen-5": 2,
+        "h2-parabolen-begrippen": 2
       },
       "aantalExamens": {
         "1": 50,
-        "2": 10
+        "2": 13,
+        "90": 10
       },
       "aantalOnderwerpen": {
         "1": 1,
-        "2": 5
+        "2": 6,
+        "90": 5
       }
     }
   }
