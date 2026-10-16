@@ -160,7 +160,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.4`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.5`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -181,6 +181,10 @@ Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
 - **Logboek → yanlışlar (2026-10-16):** `antwoorden`'i olan (HAVO 3) her deneme satırı tıklanabilir + "🔍 Fouten" düğmesi:
   ders iframe'de açılır, `load`'da `DURU.renderPastAttemptReview(attemptId)` çağrılır (dersin kendi toetshistorie Review'u,
   "Alleen fout/deels" filtresiyle). Telefonda düğme yatay kaydırmada kalır, bu yüzden satırın tamamı tıklanır.
+- **Sadeleştirme (2026-10-16, Claude Design onaylı):** sekmeler yalnız **Per vak · Logboek** ("Vakken"/"Hoofdstukken" sekmeleri
+  aynı veriyi 3. kez gösteriyordu, silindi). Per vak = ders satırı (`vakRij`), dokununca üniteleri (gemaakt/totaal + not) açılır
+  (`openVakRij`); başlanmamış dersler "+N vakken nog niet begonnen" altında. Ortalama tek yerde (cijferschaal kartı) + altında 3
+  sayı (op rij · deze week · toetsen gedaan); tekrar eden ortalama cümlesi ve "Klaar voor de toets" kutusu kalktı.
 - `renderScoreTimeline()` korundu, Overzicht sekmesine taşındı. Grafik kendi genişliğini ölçtüğü
   için **DOM'a eklendikten sonra** çağrılır.
 
@@ -256,6 +260,9 @@ Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekme
   Yazdır/Ctrl+P `beforeprint`'te `bolum = "hepsi"` ile **tam raporu** basar, `afterprint`'te geri döner. Bölümler
   `secties.{dikkat,sure,dersler,log}` string'leri olarak bir kez kurulur; düğmeler `tegelsHtml()`. Önizleme (onaylandı):
   https://claude.ai/artifact/K7Yjs6PBZyCMqgnNMXXJCK. Stiller `.ob-tegel*`, `.ob-t-*`.
+- **Ayarlar (2026-10-16, kullanıcı isteği "yazıcı düğmesi gereksiz, yıl seçimi en üstte olmasın"):** başlıkta yalnız ⚙ (`.ob-ayar`,
+  `data-bolum="ayarlar"`) → Ayarlar bölümü: ders yılı seçimi (seçince ana sayfaya döner) + yazdırma notu. Yazdır düğmesi her yerden
+  kalktı; Ctrl+P hâlâ `beforeprint` ile tam raporu basar. Yeni ayar = `secties.ayarlar`'a bir kart.
 - Veri katmanı `collectParentReportData(user, jaar)` değişmedi (dışa açık); render bundan türer.
 - Stiller `css/style.css` sonunda `#ob` altında, kendi `--ob-*` token'ları + `html.dark #ob`.
   Anlam renkleri (goed/net/zwak) marka yeşilinden ayrı.
@@ -356,6 +363,20 @@ Ders siteleri hub'ın temasını izler. **Tek yer, 12 kopya değil:**
   `scrollWidth` = genişlik, taşan öğe yok; 1280px masaüstü aynı düzen.
 - **⚠️ CSS'te fazladan `}`** sonraki kuralı sessizce yutar (2026-10-10: `body.ouder-actief .hero` böyle kaybolmuştu). Kural
   silerken `{`/`}` dengesini kontrol et.
+
+## Ders siteleri ortak kabuk — `js/vak_shell.js` + `css/vak_shell.css` (2026-10-16)
+Claude Design "Duru — toetsen & voortgang" (https://claude.ai/artifact/2zPoLFoKX4FBEUNCbowXoQ, sayfa 2). **12 kopya değil, tek dosya**;
+her `havo3/<vak>/index.html` CSS'i `vak_mobiel.css`'ten, JS'i `engine.js`'ten **sonra** yükler. Motorlara dokunmaz:
+- iframe'de dersin kendi `.topbar`'ı gizli (hub balkı vak adını gösteriyor; 💎🔥🏅 hep 0'dı). Alt çubuk **Leren · Toetsen · Voortgang**.
+- `DURU.gaNaar` sarılır: `home` → **Leren** (sıradaki açık toets kartı + hoofdstuk akordeonu, paragraflar satır), `dashboard`/`badges`
+  → **Voortgang** (3 sayı, hoofdstuk satırları, madalyalar, toetshistorie + "Fouten"). Eski dashboard (telefonda 751px taşıyordu)
+  ve medailles sayfası artık açılmaz. Madalyalar motorun kendi `renderBadges` çıktısından (`.badge-rij`) alınır — tanımlar motorda gizli.
+- `#app` üzerinde MutationObserver: motorun ana sayfası → Leren; toets sırasında (`.dot-nav` / quiz) alt çubuk gizli; toets listesinde
+  toetshistorie (artık Voortgang'da) ve açıklama paragrafı kaldırılır; sonuç/review **"Fout (n) / Alles"** segmenti, varsayılan Fout;
+  "🏠 Home" düğmesi gizli. Motor HTML'i (`.history-table-wrapper`, `.badge-rij`, `#review-lijst`, `.filter-rij`, `.dot-nav`,
+  `.examen-card`) 12 motorda ortak — **bir motor bu sınıfları değiştirirse kabuk sessizce eski görünüme döner.**
+- Doğrulama: 12 ders × (Leren, Toetsen, toets, sonuç, Voortgang, theorie) 390px: taşma yok, JS hatası yok. Biologie'nin inleveren'i
+  `confirm()` değil sayfa içi `toonBevestiging` kullanır.
 
 ## Storage & SVG iframe düzeltmeleri (kritik)
 1. **Storage interception:** `js/landing.js` `Storage.prototype.setItem`'ı prototip düzeyinde

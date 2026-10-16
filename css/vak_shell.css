@@ -1,0 +1,118 @@
+/* =========================================================
+   Vak-shell (2026-10-16) — hoort bij js/vak_shell.js. Eén bestand voor
+   alle 12 havo3/<vak>/-sites; gebruikt alleen de gedeelde tokens van de
+   vaksites (--paars = accent van het vak, --wit/--inkt/--lijn/--grijs),
+   zodat elk vak zijn kleur houdt en vak_dark.css ook hier werkt.
+   ========================================================= */
+html.vs-ingebed .topbar { display: none; }        /* de hub-balk toont de vaknaam al */
+body.vs-actief .app { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+.vs-weg { display: none !important; }
+
+.vs-ic { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2;
+         stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.vs-zacht { color: var(--grijs); }
+
+/* Onderbalk */
+.vs-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; justify-content: center;
+          background: var(--wit); border-top: 1px solid var(--lijn);
+          padding: 0 max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)); }
+.vs-nav button { flex: 1; max-width: 180px; height: 58px; border: 0; background: none; cursor: pointer;
+                 display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+                 font: 700 12.5px var(--font); color: var(--grijs); }
+.vs-nav button[aria-current="page"] { color: var(--paars); }
+.vs-nav button:focus-visible { outline: 3px solid var(--paars); outline-offset: -3px; border-radius: 12px; }
+body.vs-in-toets .vs-nav { display: none; }
+
+/* Pagina's */
+.vs-pagina { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.vs-kop { font: 800 13px var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--grijs); padding: 8px 4px 0; }
+.vs-kop span { text-transform: none; letter-spacing: 0; font-weight: 600; }
+.vs-kaart, .vs-hf { background: var(--wit); border: 1px solid var(--lijn); border-radius: 18px; overflow: hidden; }
+
+.vs-verder { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; cursor: pointer;
+             background: var(--paars); color: #fff; border: 0; border-radius: 18px; padding: 14px 16px; font: inherit; }
+.vs-verder-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.vs-verder-t small { font: 800 12px var(--font); letter-spacing: .07em; text-transform: uppercase; opacity: .85; }
+.vs-verder-t b { font-size: 17px; line-height: 1.3; }
+.vs-verder-t span { font-size: 13.5px; opacity: .9; }
+.vs-verder-play { width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,.2); display: grid; place-items: center; flex: none; }
+
+.vs-hfkop { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 64px; padding: 10px 14px;
+            border: 0; background: none; text-align: left; cursor: pointer; font: inherit; color: var(--inkt); }
+.vs-hft { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.vs-hft b { font-size: 16px; line-height: 1.3; }
+.vs-hft span { font-size: 13.5px; color: var(--grijs); }
+.vs-nr { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; flex: none;
+         font: 800 15px var(--font); background: var(--lijn); color: var(--grijs); }
+.vs-nr--goed { background: var(--groen-zacht); color: var(--groen); }
+.vs-nr--net { background: #fef3c7; color: #b45309; }
+.vs-nr--zwak { background: var(--rood-zacht); color: var(--rood); }
+.vs-par { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 6px 14px;
+          border: 0; border-top: 1px solid var(--lijn); background: none; text-align: left; cursor: pointer;
+          font: inherit; color: var(--inkt); }
+.vs-par:hover, .vs-hfkop:hover { background: var(--paars-zacht); }
+.vs-pnr { width: 34px; flex: none; font: 700 13.5px var(--font); color: var(--grijs); display: flex; }
+.vs-pt { flex: 1; min-width: 0; font-size: 15px; }
+.vs-par--toets { color: var(--paars); font-weight: 700; }
+.vs-par--toets .vs-pnr { color: var(--paars); }
+.vs-mini { width: 46px; height: 6px; border-radius: 99px; background: var(--lijn); overflow: hidden; flex: none; }
+.vs-mini span { display: block; height: 100%; background: var(--paars); }
+
+.vs-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.vs-stat { background: var(--wit); border: 1px solid var(--lijn); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; min-width: 0; }
+.vs-stat small { font: 800 11.5px var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--grijs); }
+.vs-stat b { font: 800 25px/1.2 var(--font); color: var(--inkt); }
+.vs-stat b i { font-style: normal; font-size: 14px; color: var(--grijs); font-weight: 600; }
+.vs-stat span { font-size: 12px; color: var(--grijs); }
+.vs-kl--goed { color: var(--groen) !important; } .vs-kl--net { color: #b45309 !important; } .vs-kl--zwak { color: var(--rood) !important; }
+
+.vs-rij { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 58px; padding: 8px 14px;
+          border: 0; border-top: 1px solid var(--lijn); background: none; text-align: left; font: inherit; color: var(--inkt); }
+.vs-kaart > .vs-rij:first-child { border-top: 0; }
+.vs-hist { cursor: pointer; }
+.vs-hist:disabled { cursor: default; }
+.vs-hist:not(:disabled):hover { background: var(--paars-zacht); }
+.vs-rt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.vs-rt b { font-size: 15px; line-height: 1.3; }
+.vs-rt > span:not(.vs-balk) { font-size: 13px; color: var(--grijs); }
+.vs-balk { display: block; height: 5px; border-radius: 99px; background: var(--lijn); overflow: hidden; margin-top: 4px; }
+.vs-balk span { display: block; height: 100%; background: var(--paars); }
+.vs-tel { font-size: 13px; color: var(--grijs); min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; }
+.vs-pil { min-width: 42px; text-align: center; font: 800 14px var(--font); border-radius: 9px; padding: 3px 6px; flex: none;
+          background: var(--lijn); color: var(--grijs); font-variant-numeric: tabular-nums; }
+.vs-pil--goed { background: var(--groen-zacht); color: var(--groen); }
+.vs-pil--net { background: #fef3c7; color: #b45309; }
+.vs-pil--zwak { background: var(--rood-zacht); color: var(--rood); }
+.vs-fout { display: flex; align-items: center; font: 700 13.5px var(--font); color: var(--paars); white-space: nowrap; }
+.vs-fout .vs-ic { width: 16px; height: 16px; }
+.vs-meer { width: 100%; min-height: 48px; border: 0; border-top: 1px solid var(--lijn); background: none; cursor: pointer;
+           font: 700 14px var(--font); color: var(--paars); }
+.vs-leeg { padding: 16px; color: var(--grijs); font-size: 14.5px; }
+.vs-reset { text-align: center; margin: 8px 0 0; }
+.vs-reset button { border: 0; background: none; color: var(--grijs-licht); font: 600 13px var(--font); text-decoration: underline; cursor: pointer; }
+
+/* Medailles: rij uit de engine, als strook */
+.vs-medailles { padding: 12px; }
+.vs-medailles .badge-rij { display: flex; gap: 8px; overflow-x: auto; margin: 0; padding: 0; scrollbar-width: thin; }
+.vs-medailles .badge { flex: 0 0 76px; min-height: 0; padding: 8px 4px; }
+.vs-medailles .b-ico { font-size: 26px; }
+.vs-medailles .b-naam { font-size: 11.5px; line-height: 1.2; }
+
+/* Resultaat: Fout (n) / Alles als segment */
+.filter-rij.vs-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--wit); border: 1px solid var(--lijn); }
+.filter-rij.vs-seg button { min-height: 40px; padding: 0 16px; border: 0; border-radius: 10px; background: none; cursor: pointer;
+                            font: 700 14px var(--font); color: var(--grijs); }
+.filter-rij.vs-seg button[aria-pressed="true"] { background: var(--inkt); color: var(--wit); }
+.resultaat .acties { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 420px; margin-left: auto; margin-right: auto; }
+.resultaat .acties .btn { width: 100%; justify-content: center; }
+.resultaat .acties .btn.ghost { background: var(--wit); }
+
+/* Toets maken: knoppen onderaan binnen bereik van de duim */
+@media (max-width: 600px) {
+  .examen-knoppen { position: sticky; bottom: 0; z-index: 5; margin: 12px -14px -14px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+                    background: var(--wit); border-top: 1px solid var(--lijn); }
+  .examen-knoppen .btn { min-height: 48px; font-size: 16px !important; padding: 10px 18px !important; }
+  .dot-nav .dot { width: 30px; height: 30px; font-size: 12px; }
+  .resultaat .emoji { font-size: 44px; }
+  .vs-stat b { font-size: 22px; }
+}

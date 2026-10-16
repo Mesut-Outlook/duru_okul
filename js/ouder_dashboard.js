@@ -1,7 +1,7 @@
 /* =========================================================
    Duru's Schoolhub — Veli / Baba Takip & İlerleme Paneli
    Sade tek sayfa (2026-09-22): özet → dikkat edilecekler → dersler
-   (tıklayınca üniteler) → son denemeler. Yazdır = window.print().
+   (tıklayınca üniteler) → son denemeler. Yazdır = Ctrl+P (beforeprint → tam rapor).
    ========================================================= */
 
 (function () {
@@ -628,8 +628,7 @@
   function renderReview(container) {
     var a = reviewPoging, att = a.ruw;
     container.innerHTML = '<div id="ob">' +
-      '<div class="ob-kop"><button type="button" class="ob-knop" id="ob-terug">← Geri</button>' +
-      '<button type="button" class="ob-knop" id="ob-print">🖨 Yazdır</button></div>' +
+      '<div class="ob-kop"><button type="button" class="ob-knop" id="ob-terug">← Geri</button></div>' +
       '<div class="ob-kaart"><div class="ob-ozet">' +
         '<div class="ob-not ob-kleur-' + C.klasse(a.cijfer, 1) + '">' + C.tekst(a.cijfer) + '</div>' +
         '<p><b>' + a.vakIcoon + ' ' + escapeHtml(a.vakTitel) + '</b> — ' + escapeHtml(kortTitel(a.titel)) + '<br>' +
@@ -836,7 +835,7 @@
   }
 
   /* ── Ana sayfa: vier grote knoppen, elk met een voorproefje van zijn sectie ── */
-  var BOLUM_AD = { dikkat: "Dikkat edilecekler", dersler: "Dersler", log: "Son denemeler", sure: "Test süresi" };
+  var BOLUM_AD = { dikkat: "Dikkat edilecekler", dersler: "Dersler", log: "Son denemeler", sure: "Test süresi", ayarlar: "Ayarlar" };
   var IKON = {
     dikkat: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
     dersler: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
@@ -956,20 +955,21 @@
     var h = '<div id="ob">';
 
     /* Kop: titel, jaar, printen (in een sectie: één balk ‹ Ana sayfa · titel · print, zie onder) */
-    var printKnop = '<button type="button" class="ob-knop ob-print" id="ob-print" aria-label="Tam raporu yazdır">' +
-      '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><span class="ob-print-t">Yazdır</span></button>';
+    // Kop (2026-10-16): geen printknop (Ctrl+P drukt nog steeds het hele rapport), jaarkeuze → Ayarlar.
+    var ayarKnop = '<button type="button" class="ob-knop ob-ayar" data-bolum="ayarlar" aria-label="Ayarlar">' +
+      '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>';
     var kopHtml = '<div class="ob-kop"><div><h2>' + escapeHtml(student.charAt(0).toUpperCase() + student.slice(1)) +
          '\'nun durumu</h2><small>' + escapeHtml(selectedJaar) + ' · ' + niveauVan(selectedJaar) + '</small></div>' +
-         '<div class="ob-kop-rechts">' +
-           '<div class="ob-seg" role="group" aria-label="Ders yılı">' +
-             ['2026-2027', '2025-2026'].map(function (j) {
-               return '<button type="button" class="ob-jaar" data-year="' + j + '" aria-pressed="' +
-                 (selectedJaar === j) + '"><span class="ob-j-lang">' + j + ' · ' + niveauVan(j) + '</span>' +
-                 '<span class="ob-j-kort">' + j.slice(0, 5) + j.slice(7) + '</span></button>';
-             }).join("") +
-           '</div>' +
-           printKnop +
-         '</div></div>';
+         ayarKnop + '</div>';
+    var secties = {};
+    secties.ayarlar = '<div class="ob-kaart"><h3>Ders yılı</h3><p class="ob-zacht ob-klein">Hangi yılın sonuçları gösterilsin?</p>' +
+      '<div class="ob-seg ob-seg--blok" role="group" aria-label="Ders yılı">' +
+      ['2026-2027', '2025-2026'].map(function (j) {
+        return '<button type="button" class="ob-jaar" data-year="' + j + '" aria-pressed="' + (selectedJaar === j) + '">' +
+          j + ' · ' + niveauVan(j) + '</button>';
+      }).join("") + '</div></div>' +
+      '<div class="ob-kaart"><h3>Rapor yazdırma</h3><p class="ob-zacht ob-klein">Tarayıcının yazdır komutu (Ctrl+P / ⌘P) ' +
+      'her zaman tam raporu basar: özet, dikkat edilecekler, test süresi, dersler ve son denemeler.</p></div>';
 
     /* 1 — Özet */
     var durum = !heeft ? "Bu ders yılında henüz deneme yok. Duru bir proeftoets çözdüğünde sonuç burada görünür."
@@ -980,7 +980,6 @@
                          : "Genel durum iyi. Şu an endişe edilecek bir konu yok.")
         : "Genel ortalama geçme sınırının (5,5) altında. Aşağıdaki konulara birlikte bakmak iyi olur.";
     var kl = C.klasse(r.overallAvg, r.overallExamCount);
-    var secties = {};
     var ozetHtml = '<div class="ob-kaart"><div class="ob-ozet">' +
            '<div class="ob-not ob-kleur-' + kl + '">' + (heeft ? C.tekst(r.overallAvg) : "—") + '</div>' +
            '<p>' + durum + '</p></div>' +
@@ -1084,7 +1083,7 @@
     } else if (bolum) {
       h += '<div class="ob-bolumbalk"><button type="button" class="ob-knop ob-ana" id="ob-ana">' +
         '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Ana sayfa</button>' +
-        '<h2>' + BOLUM_AD[bolum] + '</h2>' + printKnop + '</div><div class="ob-bolum">' + secties[bolum] + '</div>';
+        '<h2>' + BOLUM_AD[bolum] + '</h2></div><div class="ob-bolum">' + secties[bolum] + '</div>';
     } else {
       h += kopHtml + ozetHtml + tegelsHtml(secties, { dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
     }
@@ -1155,8 +1154,6 @@
       renderParentDashboard();
       window.scrollTo(0, scrollVoorReview);
     });
-    var pr = document.getElementById("ob-print");
-    if (pr) pr.addEventListener("click", function () { window.print(); });
   }
 
   function escapeHtml(str) {
