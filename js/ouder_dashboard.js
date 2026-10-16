@@ -836,10 +836,19 @@
   }
 
   /* ── Ana sayfa: vier grote knoppen, elk met een voorproefje van zijn sectie ── */
+  var BOLUM_AD = { dikkat: "Dikkat edilecekler", dersler: "Dersler", log: "Son denemeler", sure: "Test süresi" };
+  var IKON = {
+    dikkat: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+    dersler: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
+    log: '<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>',
+    sure: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'
+  };
+
   function tegel(naam, ikon, titel, inhoud, extraKlas) {
     return '<button type="button" class="ob-tegel' + (extraKlas ? " " + extraKlas : "") + '" data-bolum="' + naam + '">' +
-      '<span class="ob-t-kop"><span class="ob-t-ikon" aria-hidden="true">' + ikon + '</span>' + titel +
-      '<span class="ob-t-pijl" aria-hidden="true">›</span></span>' + inhoud + '</button>';
+      '<span class="ob-t-kop"><span class="ob-t-ikon ob-t-ikon--' + naam + '" aria-hidden="true"><svg class="hic" viewBox="0 0 24 24">' + IKON[naam] + '</svg></span>' +
+      '<span class="ob-t-naam">' + titel + '</span>' +
+      '<svg class="hic ob-t-pijl" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></span>' + inhoud + '</button>';
   }
 
   function tegelsHtml(secties, x) {
@@ -858,8 +867,10 @@
       x.vakken.forEach(function (v) { var k = x.dekkingen[v.id]; if (k) { ged += k.gedaan; tot += k.totaal; } });
       var met = x.vakken.filter(function (v) { return v.count > 0; }).sort(function (a, b) { return b.avgCijfer - a.avgCijfer; });
       t.push(tegel("dersler", "📚", "Dersler",
-        '<span class="ob-t-getal">' + x.vakken.length + ' <small>ders' + (tot ? ' · ' + ged + ' / ' + tot + ' test yapıldı' : '') + '</small></span>' +
-        (tot ? '<span class="ob-t-balk" aria-hidden="true"><span style="width:' + Math.round(ged / tot * 100) + '%"></span></span>' : '') +
+        (tot ? '<span class="ob-t-getal">' + ged + ' <small>/ ' + tot + ' test yapıldı</small></span>' +
+               '<span class="ob-t-balk" aria-hidden="true"><span style="width:' + Math.round(ged / tot * 100) + '%"></span></span>'
+             : '<span class="ob-t-getal">' + x.vakken.length + ' <small>ders</small></span>') +
+        (tot ? '<span class="ob-t-alt">' + x.vakken.length + ' ders · ' + (tot - ged) + ' test açık</span>' : '') +
         '<span class="ob-t-pillen">' + met.slice(0, 7).map(function (v) {
           return '<span title="' + escapeHtml(v.titel) + '">' + pil(v.avgCijfer, v.count) + '</span>';
         }).join("") + (met.length > 7 ? '<span class="ob-t-alt">+' + (met.length - 7) + '</span>' : '') + '</span>'));
@@ -868,10 +879,10 @@
       var a = x.alle[0];
       t.push(tegel("log", "🕑", "Son denemeler",
         '<span class="ob-t-getal ob-kleur-' + C.klasse(a.cijfer, 1) + '">' + C.tekst(a.cijfer) +
-          ' <small>' + escapeHtml(kortVak(a)) + ' · ' + escapeHtml(datumTijd(a)) + '</small></span>' +
+          ' <small>' + escapeHtml(kortVak(a)) + '<span class="ob-t-tijd"> · ' + escapeHtml(datumTijd(a)) + '</span></small></span>' +
         (x.alle.length > 1 ? '<span class="ob-t-pillen"><span class="ob-t-alt">Öncekiler:</span>' +
-          x.alle.slice(1, 5).map(function (e) { return pil(e.cijfer, 1); }).join("") + '</span>' : '') +
-        '<span class="ob-t-alt">Bir denemeye tıklayınca sorular ve yanlışlar açılır</span>'));
+          x.alle.slice(1, 4).map(function (e) { return pil(e.cijfer, 1); }).join("") + '</span>' : '') +
+        '<span class="ob-t-alt ob-t-hint">Bir denemeye tıklayınca sorular ve yanlışlar açılır</span>'));
     }
     if (secties.sure) {
       if (metDuur(x.alle).length) {
@@ -944,17 +955,20 @@
 
     var h = '<div id="ob">';
 
-    /* Kop: titel, jaar, printen */
-    h += '<div class="ob-kop"><div><h2>' + escapeHtml(student.charAt(0).toUpperCase() + student.slice(1)) +
+    /* Kop: titel, jaar, printen (in een sectie: één balk ‹ Ana sayfa · titel · print, zie onder) */
+    var printKnop = '<button type="button" class="ob-knop ob-print" id="ob-print" aria-label="Tam raporu yazdır">' +
+      '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><span class="ob-print-t">Yazdır</span></button>';
+    var kopHtml = '<div class="ob-kop"><div><h2>' + escapeHtml(student.charAt(0).toUpperCase() + student.slice(1)) +
          '\'nun durumu</h2><small>' + escapeHtml(selectedJaar) + ' · ' + niveauVan(selectedJaar) + '</small></div>' +
          '<div class="ob-kop-rechts">' +
            '<div class="ob-seg" role="group" aria-label="Ders yılı">' +
              ['2026-2027', '2025-2026'].map(function (j) {
                return '<button type="button" class="ob-jaar" data-year="' + j + '" aria-pressed="' +
-                 (selectedJaar === j) + '">' + j + ' · ' + niveauVan(j) + '</button>';
+                 (selectedJaar === j) + '"><span class="ob-j-lang">' + j + ' · ' + niveauVan(j) + '</span>' +
+                 '<span class="ob-j-kort">' + j.slice(0, 5) + j.slice(7) + '</span></button>';
              }).join("") +
            '</div>' +
-           '<button type="button" class="ob-knop" id="ob-print">🖨 Yazdır</button>' +
+           printKnop +
          '</div></div>';
 
     /* 1 — Özet */
@@ -1066,11 +1080,13 @@
 
     if (bolum && bolum !== "hepsi" && !secties[bolum]) bolum = null;   // bv. na wissel naar vorig jaar
     if (bolum === "hepsi") {
-      h += ozetHtml + ["dikkat", "sure", "dersler", "log"].map(function (k) { return secties[k] || ""; }).join("");
+      h += kopHtml + ozetHtml + ["dikkat", "sure", "dersler", "log"].map(function (k) { return secties[k] || ""; }).join("");
     } else if (bolum) {
-      h += '<div class="ob-terugbalk"><button type="button" class="ob-knop" id="ob-ana">← Ana sayfa</button></div>' + secties[bolum];
+      h += '<div class="ob-bolumbalk"><button type="button" class="ob-knop ob-ana" id="ob-ana">' +
+        '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Ana sayfa</button>' +
+        '<h2>' + BOLUM_AD[bolum] + '</h2>' + printKnop + '</div><div class="ob-bolum">' + secties[bolum] + '</div>';
     } else {
-      h += ozetHtml + tegelsHtml(secties, { dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
+      h += kopHtml + ozetHtml + tegelsHtml(secties, { dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
     }
 
     h += '</div>';

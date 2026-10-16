@@ -160,7 +160,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.3`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.4`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -347,6 +347,13 @@ Ders siteleri hub'ın temasını izler. **Tek yer, 12 kopya değil:**
 - Hub: telefonda sekme "📈 Mijn prestaties" (`.hub-tab-lang` gizli), istatistik sekmeleri sayısız sığar (Logboek görünür),
   skor grafiğinde tarih "10/10".
 - Doğrulama: Playwright 390px, 12 ders × (ana sayfa, toets listesi, sınav) + hub: `scrollWidth` = 390, taşan öğe yok.
+- **iPhone tasarımı (2026-10-16, Claude Design onaylı: https://claude.ai/artifact/2zPoLFoKX4FBEUNCbowXoQ):** hub omlukta emoji yerine
+  çizgi simgeler (`.hic` SVG; tema düğmesi `landing.js → initTheme` SVG basar). ≤600px: tek satırlık 56px üst çubuk (yalnız simge;
+  senkron durumu `#cloud-sync-btn[data-status]` renkli nokta), tek satır karşılama, tam genişlik segment sekmeler (`.ht-lang`/`.ht-kort`),
+  dersler 64px **satır** (`havo3-kaart` grid + `display:contents`; harf rozeti `data-kort` ← `landing.js → vakKort()`), Logboek tablo → kart,
+  veli: kısa yıl etiketleri, simge Yazdır, özet 2×2, 4 düğme 2×2, bölümde yapışkan `.ob-bolumbalk` (‹ Ana sayfa · başlık · yazdır;
+  masaüstünde de). Ders siteleri: karşılama kartı maskotsuz, düğmeler 2×2 (`vak_mobiel.css`). Doğrulama: 375/390/430px, açık+koyu,
+  `scrollWidth` = genişlik, taşan öğe yok; 1280px masaüstü aynı düzen.
 - **⚠️ CSS'te fazladan `}`** sonraki kuralı sessizce yutar (2026-10-10: `body.ouder-actief .hero` böyle kaybolmuştu). Kural
   silerken `{`/`}` dengesini kontrol et.
 

@@ -10,7 +10,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
 
   <!-- Google Fonts worden geladen vanuit style.css via @import -->
-  <link rel="stylesheet" href="css/style.css?v=6.3" />
+  <link rel="stylesheet" href="css/style.css?v=6.4" />
 
   <!-- Thema vroeg toepassen (voorkomt flits van verkeerde modus).
        Keuze in localStorage 'duru_hub_theme' ('light'/'dark'); zonder
@@ -33,7 +33,7 @@
   <header class="topbar">
     <div class="topbar-in">
       <a class="merk" id="merk-home" href="./" title="Terug naar de startpagina" aria-label="Terug naar de startpagina">
-        <div class="merk-logo" aria-hidden="true">🎒</div>
+        <div class="merk-logo" aria-hidden="true"><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
         <div>
           <h1>Duru's Schoolhub</h1>
           <small>Mijn vakken · HAVO 3</small>
@@ -41,14 +41,14 @@
       </a>
       <div id="user-status-container" style="display: flex; align-items: center; gap: 10px; margin-left: auto; flex-wrap: wrap;">
         <button id="cloud-sync-btn" class="cloud-sync-pill" type="button" title="Bulut Senkronizasyonu">
-          <span class="cloud-sync-icon">☁️</span>
+          <span class="cloud-sync-icon"><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span>
           <span id="cloud-sync-status-text">Bulut Senkron: Aktif</span>
         </button>
-        <button id="theme-toggle" type="button" aria-label="Wissel tussen lichte en donkere modus" title="Licht / donker">🌙</button>
+        <button id="theme-toggle" type="button" aria-label="Wissel tussen lichte en donkere modus" title="Licht / donker"><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <span id="user-display-name" class="user-display-pill">
           👤 <span id="user-display-name-text">...</span>
         </span>
-        <button id="logout-btn" class="filter-btn" style="padding: 6px 12px; font-size: 12px; margin: 0;" type="button">Çıkış Yap</button>
+        <button id="logout-btn" class="filter-btn" style="padding: 6px 12px; font-size: 12px; margin: 0;" type="button"><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span class="logout-tekst">Çıkış Yap</span></button>
       </div>
     </div>
   </header>
@@ -73,13 +73,13 @@
     <!-- ── Tab-selector ─────────────────────────────────────────── -->
     <nav class="hub-tabs" aria-label="Pagina navigatie">
       <button class="hub-tab active" data-target="vakken-view" type="button">
-        <span>📚 Mijn vakken</span>
+        <span><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span class="ht-lang">Mijn vakken</span><span class="ht-kort">Vakken</span></span>
       </button>
       <button class="hub-tab" data-target="statistieken-view" type="button">
-        <span>📈 Mijn prestaties<span class="hub-tab-lang"> &amp; statistieken</span></span>
+        <span><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg><span class="ht-lang">Mijn prestaties &amp; statistieken</span><span class="ht-kort">Prestaties</span></span>
       </button>
       <button class="hub-tab" data-target="ouder-view" type="button" id="tab-ouder-btn" style="display: none;">
-        <span>👨‍👧 Veli / Baba Takip Paneli</span>
+        <span><svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="ht-lang">Veli / Baba Takip Paneli</span><span class="ht-kort">Veli</span></span>
       </button>
     </nav>
 
@@ -290,10 +290,10 @@
   <script src="js/cijfer_util.js?v=4.8"></script>
   <script src="js/hoofdstukken.js?v=20261015"></script>
   <script src="js/hoofdstuk_util.js?v=20261015"></script>
-  <script src="js/landing.js?v=5.9"></script>
-  <script src="js/dashboard.js?v=20261016"></script>
-  <script src="js/ouder_dashboard.js?v=20261016"></script>
-  <script src="js/cloud_sync.js?v=5.0"></script>
+  <script src="js/landing.js?v=6.0"></script>
+  <script src="js/dashboard.js?v=20261016b"></script>
+  <script src="js/ouder_dashboard.js?v=20261016b"></script>
+  <script src="js/cloud_sync.js?v=5.1"></script>
 
 </body>
 </html>

@@ -35,4 +35,12 @@
   .history-table-wrapper table.nask td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right !important; font-size: 17px; }
   .history-table-wrapper table.nask td:nth-child(5) { grid-column: 2; grid-row: 3; text-align: right !important; }
   .history-table-wrapper .btn { font-size: 14px !important; padding: 8px 14px !important; }
+
+  /* Karşılama kartı (2026-10-16): maskot ve uzun metin telefonda yer kaplıyordu; düğmeler 2×2 */
+  .hero { padding: 16px !important; gap: 10px; }
+  .hero .mascotte { display: none; }
+  .hero h2 { font-size: 20px !important; margin-bottom: 4px; }
+  .hero p { font-size: 14px !important; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .hero .hero-cta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+  .hero .hero-cta .btn { width: 100%; min-height: 44px; padding: 8px 10px; font-size: 14px; justify-content: center; }
 }

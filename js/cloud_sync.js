@@ -111,6 +111,7 @@
 
   function updateStatusUI(status, message) {
     syncState.status = status;
+    if (document.getElementById("cloud-sync-btn")) document.getElementById("cloud-sync-btn").setAttribute("data-status", status);  // telefoon: gekleurd stipje i.p.v. tekst
     var pill = document.getElementById("cloud-sync-status-text");
     var btn = document.getElementById("cloud-sync-btn");
     var modalStatus = document.getElementById("cloud-modal-status");

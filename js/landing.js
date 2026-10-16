@@ -518,6 +518,7 @@ function leesVakData(vak) {
         return { c: Math.round(C.vanPct(h.pct) * 10) / 10 };
       });
       uit.cijfer = C.tekst(C.gemiddelde(cijfers, 'c'));
+      uit.klasse = C.klasse(C.gemiddelde(cijfers, 'c'), cijfers.length);
     }
   } catch (e) { /* corrupt/leeg → nullen */ }
   return uit;
@@ -529,6 +530,13 @@ function leesVakData(vak) {
  * @param {Object} vak
  * @returns {HTMLElement}
  */
+// Telefoon: lettercode i.p.v. emoji in de vakrij (Duru Okul iPhone-ontwerp, 2026-10-16).
+var VAK_KORT = { scheikunde: 'Sk', geschiedenis: 'Gs', aardrijkskunde: 'Ak', natuurkunde: 'Nk', maatschappijleer: 'Ml' };
+function vakKort(vak) {
+  var id = vak.vakId || vak.id || '';
+  return VAK_KORT[id] || (vak.titel || '?').slice(0, 2);
+}
+
 function maakVakKaartHavo3(vak) {
   var binnenkort = !!vak.binnenkort;
   var el = document.createElement(binnenkort ? 'div' : 'a');
@@ -549,7 +557,7 @@ function maakVakKaartHavo3(vak) {
     balk = '<div class="havo3-balk" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + vg +
       '" aria-label="' + d.gedaan + ' van ' + d.totaal + ' toetsen gemaakt"><div class="havo3-balk__vul" style="width:' + vg + '%"></div></div>';
     voet =
-      '<span class="havo3-kaart__cijfer">' +
+      '<span class="havo3-kaart__cijfer' + (d.klasse ? ' c-' + d.klasse : '') + '">' +
         (d.cijfer ? d.cijfer + ' <small>gem.</small>' : '<small>nog geen cijfer</small>') +
       '</span>' +
       '<span class="havo3-kaart__ga">Verder →</span>';
@@ -557,7 +565,7 @@ function maakVakKaartHavo3(vak) {
 
   el.innerHTML =
     '<div class="havo3-kaart__top">' +
-      '<span class="havo3-kaart__icoon">' + vak.icoon + '</span>' + rechtsboven +
+      '<span class="havo3-kaart__icoon" data-kort="' + vakKort(vak) + '">' + vak.icoon + '</span>' + rechtsboven +
     '</div>' +
     '<div><p class="havo3-kaart__naam">' + vak.titel + '</p>' +
       '<p class="havo3-kaart__hfd">' + (vak.beschrijving || '') + '</p></div>' +
@@ -722,7 +730,9 @@ document.addEventListener('DOMContentLoaded', function() {
       document.documentElement.classList.toggle('dark', donker);
       if (btn) {
         // Toon het icoon van de modus waar je NAARTOE schakelt.
-        btn.textContent = donker ? '☀️' : '🌙';
+        btn.innerHTML = '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true">' + (donker
+          ? '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>'
+          : '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>') + '</svg>';
         btn.setAttribute('aria-pressed', String(donker));
       }
     }
@@ -1098,7 +1108,12 @@ document.addEventListener('DOMContentLoaded', function() {
           : activeUser.charAt(0).toUpperCase() + activeUser.slice(1);
       }
       // Taal volgt de gebruiker: leerling Nederlands, ouder Turks.
-      if (logoutBtn) logoutBtn.textContent = isParentUser ? 'Çıkış Yap' : 'Uitloggen';
+      var logoutTekst = isParentUser ? 'Çıkış Yap' : 'Uitloggen';
+      if (logoutBtn) {
+        logoutBtn.querySelector('.logout-tekst').textContent = logoutTekst;
+        logoutBtn.setAttribute('aria-label', logoutTekst);
+        logoutBtn.title = logoutTekst;
+      }
 
       // Always auto-migrate any unprefixed scores created in standalone tabs
       migratePreExistingLocalScores(activeUser);
