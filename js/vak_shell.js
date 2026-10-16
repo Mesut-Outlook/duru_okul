@@ -278,6 +278,24 @@
       if (p) p.remove();
       tabel.remove();
     }
+    // Toetskaarten → smalle rijen: laatste cijfer (of leeg vakje) · titel + 20 vragen · 20 min · ›.
+    // Kaart-element en onclick blijven (open_toetsen.js filtert en telt op .examen-card).
+    var kaarten = app.querySelectorAll(".examen-card:not([data-vs])");
+    if (kaarten.length && !app.querySelector("#review-lijst")) {
+      var hist = data().hist;
+      kaarten.forEach(function (k) {
+        var m = /examenStart\('([^']+)'\)/.exec(k.getAttribute("onclick") || "");
+        var ex = m && DURU._examenById && DURU._examenById[m[1]];
+        if (!ex) return;
+        k.setAttribute("data-vs", "1");
+        var eigen = hist.filter(function (a) { return a.examId === ex.id; });
+        k.innerHTML = (eigen.length ? pil(cijfer(eigen[0].pct)) : '<span class="vs-open" aria-label="Nog niet gemaakt"></span>') +
+          '<span class="vs-rt"><b>' + esc(ex.titel) + '</b><span>' + ex.vragen.length + ' vragen · ' + (ex.duurMin || 20) + ' min' +
+          (eigen.length ? ' · ' + eigen.length + '× gemaakt' : '') + '</span></span>' + ico(IC.verder, "vs-zacht");
+        k.classList.add("vs-kort");
+      });
+    }
+
     var eerste = app.querySelector(".sectie-titel");
     if (eerste && eerste.nextElementSibling && eerste.nextElementSibling.tagName === "P" && app.querySelector(".examen-card")) {
       eerste.nextElementSibling.classList.add("vs-weg");

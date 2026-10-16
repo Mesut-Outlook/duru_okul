@@ -373,7 +373,9 @@ her `havo3/<vak>/index.html` CSS'i `vak_mobiel.css`'ten, JS'i `engine.js`'ten **
   ve medailles sayfası artık açılmaz. Madalyalar motorun kendi `renderBadges` çıktısından (`.badge-rij`) alınır — tanımlar motorda gizli.
 - `#app` üzerinde MutationObserver: motorun ana sayfası → Leren; toets sırasında (`.dot-nav` / quiz) alt çubuk gizli; toets listesinde
   toetshistorie (artık Voortgang'da) ve açıklama paragrafı kaldırılır; sonuç/review **"Fout (n) / Alles"** segmenti, varsayılan Fout;
-  "🏠 Home" düğmesi gizli. Motor HTML'i (`.history-table-wrapper`, `.badge-rij`, `#review-lijst`, `.filter-rij`, `.dot-nav`,
+  "🏠 Home" düğmesi gizli. Toets listesinde `.examen-card`'lar ince satıra çevrilir (`.vs-kort`: son not / boş kutu · ad · vragen·min·N×
+  gemaakt); kart ve `onclick` kalır, open_toetsen filtresi çalışır — **CSS'te `:not(.ot-weg)` şart**, yoksa `display:flex !important`
+  open_toetsen'in `.ot-weg{display:none!important}`'unu ezer (2026-10-16'da filtre böyle bozulmuştu). Motor HTML'i (`.history-table-wrapper`, `.badge-rij`, `#review-lijst`, `.filter-rij`, `.dot-nav`,
   `.examen-card`) 12 motorda ortak — **bir motor bu sınıfları değiştirirse kabuk sessizce eski görünüme döner.**
 - Doğrulama: 12 ders × (Leren, Toetsen, toets, sonuç, Voortgang, theorie) 390px: taşma yok, JS hatası yok. Biologie'nin inleveren'i
   `confirm()` değil sayfa içi `toonBevestiging` kullanır.

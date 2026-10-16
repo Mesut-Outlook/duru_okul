@@ -98,6 +98,17 @@ body.vs-in-toets .vs-nav { display: none; }
 .vs-medailles .b-ico { font-size: 26px; }
 .vs-medailles .b-naam { font-size: 11.5px; line-height: 1.2; }
 
+/* Toetslijst: kaarten als rijen (vak_shell.js → .vs-kort) */
+.examen-lijst:has(.vs-kort):not(.ot-weg) { display: flex !important; flex-direction: column; gap: 8px; }
+.examen-card.vs-kort:not(.ot-weg) { display: flex !important; align-items: center; gap: 12px; min-height: 58px; padding: 8px 12px !important;
+                       border-radius: 14px !important; text-align: left; transform: none !important; }
+.examen-card.vs-kort::before, .examen-card.vs-kort::after { display: none !important; }
+.examen-card.vs-kort .vs-rt b { font-size: 15px; }
+.vs-open { width: 42px; height: 28px; border-radius: 9px; border: 1.5px dashed var(--grijs-licht); flex: none; box-sizing: border-box; }
+.hf-header .hf-ico, .hf-header .hf-meta-badges, .chapter-header .ch-icon, .accordion-controls { display: none !important; }
+.hf-header h3, .chapter-header .ch-title { font-size: 16px !important; line-height: 1.3; }
+.hf-header .hf-toggle-btn { padding: 6px 12px !important; font-size: 13px !important; }
+
 /* Resultaat: Fout (n) / Alles als segment */
 .filter-rij.vs-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--wit); border: 1px solid var(--lijn); }
 .filter-rij.vs-seg button { min-height: 40px; padding: 0 16px; border: 0; border-radius: 10px; background: none; cursor: pointer;
