@@ -1995,6 +1995,36 @@ html.dark #ob { --ob-staaf: #5fc795; --ob-staaf-z: #24453a; }
            padding: 2px 8px; white-space: nowrap; }
 .ob-duur.geen { font-weight: 400; color: var(--ob-geen); background: none; }
 
+/* ── Veli ana sayfa (2026-10-16): özet + vier grote knoppen naar de secties ── */
+.ob-tegels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 16px; }
+.ob-tegel { text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--ob-bg);
+  border: 1px solid var(--ob-lijn); border-radius: 18px; padding: 18px 20px 16px; min-height: 190px;
+  display: flex; flex-direction: column; gap: 8px; box-shadow: 0 1px 2px rgba(15,40,30,.05), 0 6px 18px rgba(15,40,30,.05);
+  transition: transform .15s ease, border-color .15s ease; }
+.ob-tegel:hover { transform: translateY(-2px); border-color: var(--ob-goed); }
+.ob-tegel:focus-visible { outline: 3px solid var(--ob-goed); outline-offset: 2px; }
+.ob-tegel.ob-t-zwak { border-left: 5px solid var(--ob-zwak); }
+.ob-tegel.ob-t-net { border-left: 5px solid var(--ob-net); }
+.ob-t-kop { display: flex; align-items: center; gap: 10px; font: 700 18px var(--font-titel); }
+.ob-t-ikon { width: 40px; height: 40px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 21px; background: var(--ob-bg2); }
+.ob-t-zwak .ob-t-ikon { background: var(--ob-zwak-z); } .ob-t-net .ob-t-ikon { background: var(--ob-net-z); }
+.ob-t-pijl { margin-left: auto; color: var(--ob-zacht); font-size: 24px; transition: transform .15s ease; }
+.ob-tegel:hover .ob-t-pijl { transform: translateX(3px); color: var(--ob-goed); }
+.ob-t-getal { font: 800 30px/1.15 var(--font-titel); font-variant-numeric: tabular-nums; }
+.ob-t-getal small { font: 500 15px var(--font-tekst); color: var(--ob-zacht); }
+.ob-t-rij { font-size: 15px; line-height: 1.45; }
+.ob-t-alt { font-size: 14.5px; color: var(--ob-zacht); }
+.ob-t-pillen { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
+.ob-t-balk { display: block; height: 7px; border-radius: 99px; background: var(--ob-lijn); overflow: hidden; }
+.ob-t-balk span { display: block; height: 100%; background: var(--ob-goed); }
+.ob-t-mini { display: flex; align-items: flex-end; gap: 4px; height: 40px; }
+.ob-t-mini span { flex: 1; background: var(--ob-goed); border-radius: 3px 3px 0 0; opacity: .85; }
+.ob-t-mini span.leeg { height: 2px; background: var(--ob-lijn); }
+.ob-terugbalk { margin-bottom: 14px; }
+html.dark .ob-tegel { box-shadow: none; }
+@media (max-width: 600px) { .ob-tegels { grid-template-columns: 1fr; } .ob-tegel { min-height: 0; } }
+@media (prefers-reduced-motion: reduce) { .ob-tegel, .ob-t-pijl { transition: none; } .ob-tegel:hover { transform: none; } }
+
 /* Telefoon (2026-10-10): hub-tabs en dashboard-tabs passen op 390px; "Logboek" viel buiten beeld */
 @media (max-width: 600px) {
   .hub-tab .hub-tab-lang { display: none; }

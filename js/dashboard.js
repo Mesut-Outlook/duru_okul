@@ -227,6 +227,8 @@
           hoofdstukTitel: hf ? hf.titel : "Overige toetsen",
           hoofdstukIcoon: hf ? hf.icoon : "📦",
           examId: att.examId || "",
+          // Alleen pogingen met opgeslagen antwoorden zijn na te kijken (HAVO 3-sites).
+          attemptId: att.attemptId && Array.isArray(att.antwoorden) ? att.attemptId : "",
           titel: att.examTitel || att.titel || "Proeftoets",
           goed: att.goed !== undefined ? att.goed : 0,
           totaal: att.totaal !== undefined ? att.totaal : 20,
@@ -710,15 +712,20 @@
     }
 
     return '<table class="st-tabel"><thead><tr><th class="st-streep"></th>' +
-      '<th>Datum</th><th>Vak</th><th>H</th><th>Toets</th><th>Goed</th><th>Cijfer</th></tr></thead><tbody>' +
+      '<th>Datum</th><th>Vak</th><th>H</th><th>Toets</th><th>Goed</th><th>Cijfer</th><th></th></tr></thead><tbody>' +
       r.map(function (a) {
-        return '<tr><td class="st-streep" style="background:' + kleurVan(a.cijfer, 1) + '"></td>' +
+        // Hele rij klikbaar: op de telefoon valt de knop buiten beeld (tabel scrollt opzij).
+        var rev = a.attemptId && window.currentJaar === "2026-2027";
+        return '<tr' + (rev ? ' style="cursor:pointer" data-review-vak="' + escHtml(a.vakId) +
+            '" data-review-id="' + escHtml(a.attemptId) + '" title="Bekijk je antwoorden en wat er fout ging"' : '') +
+          '><td class="st-streep" style="background:' + kleurVan(a.cijfer, 1) + '"></td>' +
           '<td class="st-num">' + escHtml(kortDatum(a.datumStr)) + '</td>' +
           '<td>' + escHtml(a.vakTitel) + '</td>' +
           '<td><span class="st-chip">' + (a.hoofdstuk != null ? (window.DURU_HF ? window.DURU_HF.kort(a.vakId, a.hoofdstuk) : "H" + a.hoofdstuk) : "—") + '</span></td>' +
           '<td>' + escHtml(a.titel) + '</td>' +
           '<td class="st-num">' + a.goed + '/' + a.totaal + '</td>' +
-          '<td>' + pil(a.cijfer, 1) + '</td></tr>';
+          '<td>' + pil(a.cijfer, 1) + '</td>' +
+          '<td>' + (rev ? '<button type="button" class="st-kaartknop">🔍 Fouten</button>' : '') + '</td></tr>';
       }).join("") + '</tbody></table>';
   }
 
@@ -909,6 +916,24 @@
     var vakf = document.getElementById("st-vakfilter");
     var tab  = document.getElementById("st-logtabel");
     function herteken() { if (tab) tab.innerHTML = logTabelHtml(model); }
+    // "🔍 Fouten": open het vak en toon daar de review van die poging
+    // (DURU.renderPastAttemptReview, dezelfde als de Review-knop in de toetshistorie van het vak).
+    if (tab && !tab.dataset.stGebonden) {
+      tab.dataset.stGebonden = "1";
+      tab.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-review-id]");
+        if (!b) return;
+        var id = b.getAttribute("data-review-vak"), att = b.getAttribute("data-review-id");
+        var vak = null;
+        model.vakken.forEach(function (v) { if (v.vak.id === id) vak = v.vak; });
+        var frame = document.getElementById("vak-frame");
+        if (!vak || !frame || typeof window.openInIframe !== "function") return;
+        frame.addEventListener("load", function () {
+          try { frame.contentWindow.DURU.renderPastAttemptReview(att); } catch (err) { /* vak toont dan gewoon de startpagina */ }
+        }, { once: true });
+        window.openInIframe("./havo3/" + id + "/", vak.icoon || "📘", vak.titel);
+      });
+    }
     if (zoek) zoek.addEventListener("input", function () { logFilter.q = zoek.value.toLowerCase(); herteken(); });
     if (vakf) vakf.addEventListener("change", function () { logFilter.vak = vakf.value; herteken(); });
   }

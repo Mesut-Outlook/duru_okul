@@ -405,6 +405,9 @@
   var reviewIndex = {};      // data-review-sleutel → poging (per render opnieuw)
   var reviewFilterFout = false;
   var scrollVoorReview = 0;  // na "Geri" terug naar dezelfde plek in de lijst
+  // Ana sayfa (2026-10-16): null = özet + vier grote knoppen; anders één sectie
+  // ("dikkat" | "sure" | "dersler" | "log"). "hepsi" = alles onder elkaar, alleen bij printen.
+  var bolum = null;
 
   function nieuwstEerst(l) {
     return (l || []).slice().sort(function (a, b) { return (b.timestamp || 0) - (a.timestamp || 0); });
@@ -450,7 +453,7 @@
   function dagSleutel(ts) { var d = new Date(ts); return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate(); }
 
   /* Günlük test süresi: laatste 14 dagen, per dag de som van duurSec. */
-  function sureKaart(alle) {
+  function sureDagen(alle) {
     var vandaag = new Date(); vandaag.setHours(0, 0, 0, 0);
     var dagen = [];
     for (var i = 13; i >= 0; i--) {
@@ -461,13 +464,21 @@
     dagen.forEach(function (x) { index[dagSleutel(x.d)] = x; });
     var periode = metDuur(alle).filter(function (a) { return index[dagSleutel(a.timestamp)]; });
     periode.forEach(function (a) { var x = index[dagSleutel(a.timestamp)]; x.sec += a.duurSec; x.n++; });
+    return {
+      dagen: dagen, periode: periode,
+      toplam: periode.reduce(function (s, a) { return s + a.duurSec; }, 0),
+      actief: dagen.filter(function (x) { return x.n; }),
+      max: Math.max.apply(null, dagen.map(function (x) { return x.sec; })) || 1
+    };
+  }
+
+  function sureKaart(alle) {
     var h = '<div class="ob-kaart"><h3>Günlük test süresi</h3>';
     if (!metDuur(alle).length) {
       return h + '<p class="ob-zacht ob-klein">Süre ölçümü 9 Ekim 2026\'da başladı. Duru yeni bir test çözdüğünde süreler burada görünür.</p></div>';
     }
-    var toplam = periode.reduce(function (s, a) { return s + a.duurSec; }, 0);
-    var actief = dagen.filter(function (x) { return x.n; });
-    var max = Math.max.apply(null, dagen.map(function (x) { return x.sec; })) || 1;
+    var sd = sureDagen(alle);
+    var dagen = sd.dagen, periode = sd.periode, toplam = sd.toplam, actief = sd.actief, max = sd.max;
     var gun = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
     h += '<div class="ob-feiten ts-feiten">' +
       '<span class="ob-feit">Çalıştığı günlerde ortalama <b>' + (actief.length ? saDk(toplam / actief.length) : "—") + '</b></span>' +
@@ -824,6 +835,90 @@
     return uit.slice(0, 3);
   }
 
+  /* ── Ana sayfa: vier grote knoppen, elk met een voorproefje van zijn sectie ── */
+  function tegel(naam, ikon, titel, inhoud, extraKlas) {
+    return '<button type="button" class="ob-tegel' + (extraKlas ? " " + extraKlas : "") + '" data-bolum="' + naam + '">' +
+      '<span class="ob-t-kop"><span class="ob-t-ikon" aria-hidden="true">' + ikon + '</span>' + titel +
+      '<span class="ob-t-pijl" aria-hidden="true">›</span></span>' + inhoud + '</button>';
+  }
+
+  function tegelsHtml(secties, x) {
+    var t = [];
+    if (secties.dikkat) {
+      var lijst = x.dikkat.concat(x.stil.slice(0, 3)), n = lijst.length;
+      t.push(tegel("dikkat", "⚠️", "Dikkat edilecekler", n
+        ? '<span class="ob-t-getal ob-kleur-' + lijst[0].cls + '">' + n + ' <small>ünite</small></span>' +
+          '<span class="ob-t-rij">' + lijst.slice(0, 2).map(function (d) { return '<b class="ob-kleur-' + d.cls + '">●</b> ' + escapeHtml(d.kop); }).join("<br>") + '</span>' +
+          (n > 2 ? '<span class="ob-t-alt">+' + (n - 2) + ' ünite daha</span>' : '')
+        : '<span class="ob-t-getal ob-kleur-goed">✓</span><span class="ob-t-alt">Şu an tekrar gereken ünite yok.</span>',
+        n ? "ob-t-" + lijst[0].cls : ""));
+    }
+    if (secties.dersler) {
+      var ged = 0, tot = 0;
+      x.vakken.forEach(function (v) { var k = x.dekkingen[v.id]; if (k) { ged += k.gedaan; tot += k.totaal; } });
+      var met = x.vakken.filter(function (v) { return v.count > 0; }).sort(function (a, b) { return b.avgCijfer - a.avgCijfer; });
+      t.push(tegel("dersler", "📚", "Dersler",
+        '<span class="ob-t-getal">' + x.vakken.length + ' <small>ders' + (tot ? ' · ' + ged + ' / ' + tot + ' test yapıldı' : '') + '</small></span>' +
+        (tot ? '<span class="ob-t-balk" aria-hidden="true"><span style="width:' + Math.round(ged / tot * 100) + '%"></span></span>' : '') +
+        '<span class="ob-t-pillen">' + met.slice(0, 7).map(function (v) {
+          return '<span title="' + escapeHtml(v.titel) + '">' + pil(v.avgCijfer, v.count) + '</span>';
+        }).join("") + (met.length > 7 ? '<span class="ob-t-alt">+' + (met.length - 7) + '</span>' : '') + '</span>'));
+    }
+    if (secties.log) {
+      var a = x.alle[0];
+      t.push(tegel("log", "🕑", "Son denemeler",
+        '<span class="ob-t-getal ob-kleur-' + C.klasse(a.cijfer, 1) + '">' + C.tekst(a.cijfer) +
+          ' <small>' + escapeHtml(kortVak(a)) + ' · ' + escapeHtml(datumTijd(a)) + '</small></span>' +
+        (x.alle.length > 1 ? '<span class="ob-t-pillen"><span class="ob-t-alt">Öncekiler:</span>' +
+          x.alle.slice(1, 5).map(function (e) { return pil(e.cijfer, 1); }).join("") + '</span>' : '') +
+        '<span class="ob-t-alt">Bir denemeye tıklayınca sorular ve yanlışlar açılır</span>'));
+    }
+    if (secties.sure) {
+      if (metDuur(x.alle).length) {
+        var sd = sureDagen(x.alle);
+        t.push(tegel("sure", "⏱", "Test süresi",
+          '<span class="ob-t-getal">' + saDk(metDuur(x.week).reduce(function (s, a) { return s + a.duurSec; }, 0)) + ' <small>bu hafta</small></span>' +
+          '<span class="ob-t-mini" aria-hidden="true">' + sd.dagen.map(function (g) {
+            return '<span' + (g.sec ? ' style="height:' + Math.max(6, Math.round(g.sec / sd.max * 100)) + '%"' : ' class="leeg"') + '></span>';
+          }).join("") + '</span>' +
+          '<span class="ob-t-alt">Çalıştığı günlerde ortalama ' + (sd.actief.length ? saDk(sd.toplam / sd.actief.length) : "—") +
+            ' · test başına ' + dk(gemDuur(sd.periode)) + '</span>'));
+      } else {
+        t.push(tegel("sure", "⏱", "Test süresi", '<span class="ob-t-getal">—</span>' +
+          '<span class="ob-t-alt">Süre ölçümü 9 Ekim 2026\'da başladı.</span>'));
+      }
+    }
+    return t.length ? '<div class="ob-tegels">' + t.join("") + '</div>' : '';
+  }
+
+  function zetBolum(naam) {
+    if (naam === bolum) return;
+    if (naam && !bolum) history.pushState({ vakIframe: false, obBolum: naam }, "", "");   // telefoon-terug = ana sayfa
+    else if (!naam && history.state && history.state.obBolum) { history.back(); return; }  // popstate tekent
+    bolum = naam; openVak = null; openUnite = null;
+    renderParentDashboard();
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("popstate", function (e) {
+    var naam = e.state && e.state.obBolum || null;
+    if (naam === bolum && !reviewPoging) return;
+    bolum = naam; reviewPoging = null;
+    renderParentDashboard();
+    window.scrollTo(0, 0);
+  });
+
+  /* Yazdır / Ctrl+P: altijd het volledige rapport, ook vanaf de ana sayfa. */
+  var bolumVoorPrint;
+  window.addEventListener("beforeprint", function () {
+    if (!document.body.classList.contains("ouder-actief") || reviewPoging) return;
+    bolumVoorPrint = bolum; bolum = "hepsi"; renderParentDashboard();
+  });
+  window.addEventListener("afterprint", function () {
+    if (bolumVoorPrint === undefined) return;
+    bolum = bolumVoorPrint; bolumVoorPrint = undefined; renderParentDashboard();
+  });
+
   /* ── Hoofdrender ─────────────────────────────────────── */
   function renderParentDashboard() {
     var container = document.getElementById("ouder-view");
@@ -871,7 +966,8 @@
                          : "Genel durum iyi. Şu an endişe edilecek bir konu yok.")
         : "Genel ortalama geçme sınırının (5,5) altında. Aşağıdaki konulara birlikte bakmak iyi olur.";
     var kl = C.klasse(r.overallAvg, r.overallExamCount);
-    h += '<div class="ob-kaart"><div class="ob-ozet">' +
+    var secties = {};
+    var ozetHtml = '<div class="ob-kaart"><div class="ob-ozet">' +
            '<div class="ob-not ob-kleur-' + kl + '">' + (heeft ? C.tekst(r.overallAvg) : "—") + '</div>' +
            '<p>' + durum + '</p></div>' +
          (archief ? '</div>' : '<div class="ob-feiten">' +
@@ -889,7 +985,7 @@
       var dikkatLi = function (d) {
         return '<li class="' + d.cls + '"><b>' + escapeHtml(d.kop) + '</b>' + d.tekst + '</li>';
       };
-      h += '<div class="ob-kaart"><h3>Dikkat edilecekler</h3>' +
+      secties.dikkat = '<div class="ob-kaart"><h3>Dikkat edilecekler</h3>' +
         (dikkat.length || stil.length
           ? '<ul class="ob-dikkat">' + dikkat.map(dikkatLi).join("") + stil.slice(0, 3).map(dikkatLi).join("") + '</ul>' +
             (stil.length > 3 ? '<p class="ob-zacht ob-klein">+ ' + (stil.length - 3) +
@@ -899,7 +995,7 @@
     }
 
     /* 2b — Günlük test süresi */
-    if (heeft && !archief) h += sureKaart(alle);
+    if (heeft && !archief) secties.sure = sureKaart(alle);
 
     /* 3 — Dersler */
     // Ook vakken zonder poging tonen zolang er toetsen klaarstaan: die zijn dan helemaal "açık".
@@ -911,14 +1007,15 @@
     var vakken = r.vakken.filter(function (v) { return v.count > 0 || (dekkingen[v.id] && dekkingen[v.id].totaal > 0); })
       .sort(function (a, b) { return (b.count > 0) - (a.count > 0) || a.avgCijfer - b.avgCijfer; });
     if (vakken.length) {
-      h += '<div class="ob-kaart"><h3>Dersler</h3><table class="ob-tabel"><thead><tr>' +
+      var d = "";
+      d += '<div class="ob-kaart"><h3>Dersler</h3><table class="ob-tabel"><thead><tr>' +
            '<th>Ders</th><th class="r">Ortalama</th><th>Gidiş</th><th class="r">Ort. süre</th>' +
            '<th class="r">Açık test</th><th class="r m-weg">Son çalışma</th></tr></thead><tbody>';
       vakken.forEach(function (v) {
         var dkg = dekkingen[v.id];
         var laatst = nieuwstEerst(v.attempts)[0];
         var open = openVak === v.id;
-        h += '<tr class="ob-vak" data-vak="' + escapeHtml(v.id) + '" tabindex="0" aria-expanded="' + open + '">' +
+        d += '<tr class="ob-vak" data-vak="' + escapeHtml(v.id) + '" tabindex="0" aria-expanded="' + open + '">' +
              '<td class="ob-ders">' + v.icoon + ' ' + escapeHtml(v.titel) +
                '<span class="ob-ok">' + (open ? "▾" : "▸") + '</span></td>' +
              '<td class="r">' + pil(v.avgCijfer, v.count) + '</td>' +
@@ -933,7 +1030,7 @@
             var s = toetsStand(c);
             var sleutel = v.id + "|" + (c.nr != null ? c.nr : "overig");
             var uOpen = openUnite === sleutel;
-            h += '<tr class="ob-unite" data-unite="' + escapeHtml(sleutel) + '" tabindex="0" aria-expanded="' + uOpen + '">' +
+            d += '<tr class="ob-unite" data-unite="' + escapeHtml(sleutel) + '" tabindex="0" aria-expanded="' + uOpen + '">' +
                  '<td>' + (c.nr != null ? (window.DURU_HF ? window.DURU_HF.kort(c.vakId, c.nr) : "H" + c.nr) + " · " : "") + escapeHtml(c.titel) +
                    '<span class="ob-ok">' + (uOpen ? "▾" : "▸") + '</span></td>' +
                  '<td class="r">' + pil(c.avgCijfer, c.count) + '</td><td>' + gidisHtml(c.attempts) + '</td>' +
@@ -942,28 +1039,38 @@
                    s.gedaan + ' / ' + s.totaal + '</b> <span class="ob-zacht">yapıldı</span>' : c.count + ' deneme') + '</td>' +
                  '<td class="r m-weg ob-zacht">' + (l[0] ? gunOnce(l[0].timestamp) : "hiç başlanmadı") + '</td></tr>';
             if (uOpen) {
-              h += '<tr class="ob-toetsen"><td colspan="6">' +
+              d += '<tr class="ob-toetsen"><td colspan="6">' +
                    toetsGroepHtml(v.id, l) +
                    acikLijstHtml(v.id, s) + '</td></tr>';
             }
           });
         }
       });
-      h += '</tbody></table>' +
+      d += '</tbody></table>' +
            '<div class="ob-legenda">Derse tıklayınca üniteleri, üniteye tıklayınca sınav sonuçları ve henüz çözülmemiş testler açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
            '<span class="ob-pil net">5,5–6,9</span> yeterli · <span class="ob-pil zwak">&lt;5,5</span> yetersiz. ' +
            'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma. Ort. süre = testi açmasından teslim etmesine kadar geçen süre ' +
            '(9 Ekim 2026\'dan beri ölçülüyor); 12′ = 12 dakika; “/ 20′” testin verilen süresi; bir test birkaç kez çözüldüyse “Önceki” notlar altında (tıklanabilir); “çok hızlı?” = not yetersiz ve süre verilen sürenin dörtte birinden az.</div></div>';
+      secties.dersler = d;
     }
 
     /* 4 — Son denemeler */
     if (alle.length) {
       var log = toonAlleLog ? alle : alle.slice(0, 8);
-      h += '<div class="ob-kaart"><h3>Son denemeler</h3><ul class="ob-log">' +
+      secties.log = '<div class="ob-kaart"><h3>Son denemeler</h3><ul class="ob-log">' +
         log.map(function (a) { return logItem(a, true); }).join("") + '</ul>' +
         (alle.length > 8 ? '<p class="ob-meer-rij"><button type="button" class="ob-knop" id="ob-meer">' +
           (toonAlleLog ? "Daha az göster" : "Tümünü göster (" + alle.length + ")") + '</button></p>' : '') +
         '</div>';
+    }
+
+    if (bolum && bolum !== "hepsi" && !secties[bolum]) bolum = null;   // bv. na wissel naar vorig jaar
+    if (bolum === "hepsi") {
+      h += ozetHtml + ["dikkat", "sure", "dersler", "log"].map(function (k) { return secties[k] || ""; }).join("");
+    } else if (bolum) {
+      h += '<div class="ob-terugbalk"><button type="button" class="ob-knop" id="ob-ana">← Ana sayfa</button></div>' + secties[bolum];
+    } else {
+      h += ozetHtml + tegelsHtml(secties, { dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
     }
 
     h += '</div>';
@@ -978,7 +1085,7 @@
       b.addEventListener("click", function () {
         selectedJaar = b.getAttribute("data-year");
         reviewPoging = null;
-        openVak = null; openUnite = null; toonAlleLog = false;
+        openVak = null; openUnite = null; toonAlleLog = false; bolum = null;
         renderParentDashboard();
       });
     });
@@ -1005,6 +1112,11 @@
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); wissel(); }
       });
     });
+    container.querySelectorAll("[data-bolum]").forEach(function (b) {
+      b.addEventListener("click", function () { zetBolum(b.getAttribute("data-bolum")); });
+    });
+    var ana = document.getElementById("ob-ana");
+    if (ana) ana.addEventListener("click", function () { zetBolum(null); });
     var meer = document.getElementById("ob-meer");
     if (meer) meer.addEventListener("click", function () { toonAlleLog = !toonAlleLog; renderParentDashboard(); });
     container.querySelectorAll("[data-review]").forEach(function (li) {

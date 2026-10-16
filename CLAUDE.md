@@ -160,7 +160,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.2`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.3`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -178,6 +178,9 @@ Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
   Öğrenciye özgü; veli panelinde yok.
 - Renk sözleşmesi ouder ile aynı desende: `--st-goed/net/zwak` + sıcak `--st-actie`,
   `#statistieken-view` üzerinde, `html.dark #statistieken-view`'de yeniden tanımlı.
+- **Logboek → yanlışlar (2026-10-16):** `antwoorden`'i olan (HAVO 3) her deneme satırı tıklanabilir + "🔍 Fouten" düğmesi:
+  ders iframe'de açılır, `load`'da `DURU.renderPastAttemptReview(attemptId)` çağrılır (dersin kendi toetshistorie Review'u,
+  "Alleen fout/deels" filtresiyle). Telefonda düğme yatay kaydırmada kalır, bu yüzden satırın tamamı tıklanır.
 - `renderScoreTimeline()` korundu, Overzicht sekmesine taşındı. Grafik kendi genişliğini ölçtüğü
   için **DOM'a eklendikten sonra** çağrılır.
 
@@ -247,6 +250,12 @@ Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekme
   kart olur (ad + not / gidiş · ⏱ · açık), sayfa ekrandan taşmaz (önceden 390px'te 693px). Kısa biçimler:
   `datumTijd` → "bugün 21:03 / dün / Pzt / 22 Eyl", `dk` → "12′", `kortTitel` "Proeftoets 30 — …" → "30 · …",
   "Son denemeler"de ders adı `KORT_VAK` ("Aardr.", "Wisk." …). Grafik sağdan (bugünden) başlar.
+- **Ana sayfa (2026-10-16):** panel önce özet kartı + **4 büyük düğme** (Dikkat · Dersler · Son denemeler · Test süresi;
+  her biri bölümünün önizlemesini taşır) gösterir; düğme yalnız o bölümü açar, üstte "← Ana sayfa". Durum `bolum`
+  (`null` = ana sayfa); bölüm açılınca `history.pushState({obBolum})` → telefonun geri tuşu ana sayfaya döner.
+  Yazdır/Ctrl+P `beforeprint`'te `bolum = "hepsi"` ile **tam raporu** basar, `afterprint`'te geri döner. Bölümler
+  `secties.{dikkat,sure,dersler,log}` string'leri olarak bir kez kurulur; düğmeler `tegelsHtml()`. Önizleme (onaylandı):
+  https://claude.ai/artifact/K7Yjs6PBZyCMqgnNMXXJCK. Stiller `.ob-tegel*`, `.ob-t-*`.
 - Veri katmanı `collectParentReportData(user, jaar)` değişmedi (dışa açık); render bundan türer.
 - Stiller `css/style.css` sonunda `#ob` altında, kendi `--ob-*` token'ları + `html.dark #ob`.
   Anlam renkleri (goed/net/zwak) marka yeşilinden ayrı.
