@@ -21,7 +21,9 @@
 | duits | duits_h04_veranstaltungen-feiern.pdf | 40 | B:16-55 | ✅ |  |
 | duits | duits_h05_zukunft-berufe.pdf | 40 | B:56-95 | ✅ |  |
 | duits | duits_h06_in-aktion-hilfsbereitschaft.pdf | 38 | B:96-133 | ✅ |  |
+| economie | economie_h02_koopkracht-inflatie-2-3.pdf | 6 | 54-59 | ✅ |  |
 | economie | economie_h04_produceren-4-1-4-2.pdf | 6 |  | ✅ | gözle onaylı yanlış alarm: s.1 |
+| economie | economie_h04_omzet-winst-btw-4-3.pdf | 8 | 114-121 | ✅ |  |
 | engels | engels_extra_bridging-the-gap-year-2.pdf | 27 | A:10-36 | ✅ |  |
 | engels | engels_extra_bridging-the-gap-year-4.pdf | 10 | B:173-182 | ✅ |  |
 | engels | engels_extra_revision-and-enrichment-1-3.pdf | 13 | A:184-196 | ✅ |  |

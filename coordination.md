@@ -1095,6 +1095,13 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   toplu sil. inbox artık doğru; kalan tek şey commit. → DONE'a hazır.
 
 ## Done
+### 2026-10-17 · economie §2.3 + §4.3: kitap PDF'leri + 12 toets + 2 begrippen-onderwerp (Opus plan, Sonnet üretim) ✅
+- Pincode `noordhoff_books.json`'a eklendi; `economie_h02_koopkracht-inflatie-2-3.pdf` (s. 54–59), `economie_h04_omzet-winst-btw-4-3.pdf` (s. 114–121).
+- `examen_38…43` (§2.3: basis, rekenen, casussen, tabel/grafiek, gemengd, begrippentoets), `examen_44…49` (§4.3 aynı), `h2_3_begrippen.js`, `h4_3_begrippen.js`.
+  gate 18/18, manifest güncel, hesaplar betikle doğrulandı. `?v=4.4`.
+- **TASK-19 için açık bulgu (düzeltilmedi, id'ler kullanılmış olabilir):** ex-6 + h2_3 theorie CPI/deflatie/prijscompensatie anlatıyor (kitapta yok,
+  kitaptaki kosten-/bestedingsinflatie, CPB, koopkrachtplaatjes eksik); ex-12 #5 ve h4_3 theorie "9%: boeken/openbaar vervoer" (kitap: levensmiddelen,
+  geneesmiddelen, kapper, schilder); ex-12/ex-26 break-even/dekkingsbijdrage kitap §4.3'te yok; ex-26 #12 "medische behandelingen vrijgesteld".
 ### 2026-07-20 · TASK-04 · Arşiv ders yılına göre yeniden düzenlendi (Opus) ✅
 - `git mv archief/mavo2 → archief/2025-2026` (MAVO 2 = 2025-2026 ders yılı).
 - `js/landing.js`: href'ler `./archief/2025-2026/...`; arşiv entry'lerine `jaar:'2025-2026'`;

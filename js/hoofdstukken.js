@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-15",
+  "gegenereerd": "2026-10-17",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -403,7 +403,19 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-34": 4,
         "ex-h3-economie-35": 4,
         "ex-h3-economie-36": 4,
-        "ex-h3-economie-37": 4
+        "ex-h3-economie-37": 4,
+        "ex-h3-economie-38": 2,
+        "ex-h3-economie-39": 2,
+        "ex-h3-economie-40": 2,
+        "ex-h3-economie-41": 2,
+        "ex-h3-economie-42": 2,
+        "ex-h3-economie-43": 2,
+        "ex-h3-economie-44": 4,
+        "ex-h3-economie-45": 4,
+        "ex-h3-economie-46": 4,
+        "ex-h3-economie-47": 4,
+        "ex-h3-economie-48": 4,
+        "ex-h3-economie-49": 4
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -412,24 +424,26 @@ window.DURU_HOOFDSTUKKEN = {
         "h2-1": 2,
         "h2-2": 2,
         "h2-3": 2,
+        "h2-3-begrippen": 2,
         "h3-1": 3,
         "h3-2": 3,
         "h3-3": 3,
         "h4-1": 4,
         "h4-2": 4,
-        "h4-3": 4
+        "h4-3": 4,
+        "h4-3-begrippen": 4
       },
       "aantalExamens": {
         "1": 6,
-        "2": 3,
+        "2": 9,
         "3": 3,
-        "4": 25
+        "4": 31
       },
       "aantalOnderwerpen": {
         "1": 3,
-        "2": 3,
+        "2": 4,
         "3": 3,
-        "4": 3
+        "4": 4
       }
     },
     "engels": {

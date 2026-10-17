@@ -47,6 +47,14 @@
       {"hoofdstuk": null, "label": "Bridging the Gap Year 4", "titel": "Bridging the Gap Year 4", "book": "B", "start": 173, "end": 182, "slug": "bridging-the-gap-year-4", "output": "engels_extra_bridging-the-gap-year-4.pdf"}
     ]
   },
+  "economie": {
+    "course_id": "aa599ad5-b7ea-4045-870c-f990c9a98bec",
+    "ebook_id": "eedbb36f-9bd5-41c2-bd7b-4d4a970b4301",
+    "chapters": [
+      {"hoofdstuk": 2, "label": "§2.3", "titel": "Koopkracht", "start": 54, "end": 59, "slug": "koopkracht-inflatie-2-3", "output": "economie_h02_koopkracht-inflatie-2-3.pdf"},
+      {"hoofdstuk": 4, "label": "§4.3", "titel": "Omzet en winst", "start": 114, "end": 121, "slug": "omzet-winst-btw-4-3", "output": "economie_h04_omzet-winst-btw-4-3.pdf"}
+    ]
+  },
   "aardrijkskunde": {
     "course_id": "fd197c5c-1dfc-446b-bc2c-0b34e0643ef4",
     "ebook_id": "d3a1eb35-9ea6-452c-addc-d00d50a95399",
