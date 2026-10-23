@@ -651,6 +651,59 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### TASK-24 · economie: §2.3 + §4.3 karışık 6 proeftoets daha (56–61)  [status: DONE — Opus denetledi + push, 2026-10-23]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Kullanıcı isteği (2026-10-23) — TASK-23'teki `examen_50…55` ile **aynı formatta** 6 yeni karışık test.
+  50–55 push edildi (`263ef83`), Duru çözmeye başlayabilir → **o dosyalara dokunma**, yalnız yeni dosya yaz.
+- **Girdi**: kitap — `inbox/2026-2027/economie/economie_h02_koopkracht-inflatie-2-3.pdf` (Pincode s. 54–59) ve
+  `inbox/2026-2027/economie/economie_h04_omzet-winst-btw-4-3.pdf` (s. 114–121). Format şablonu: `examen_50.js`.
+  Mevcut setler (**tekrar etme**, gate kural 2 aynı/çok benzer soruyu yakalar): §2.3 = `examen_38…43.js`,
+  §4.3 = `examen_44…49.js`, karışık = `examen_50…55.js`, onderwerp `h2_3*.js` / `h4_3*.js`.
+- **Çıktı**: `havo3/economie/js/data/examen_56.js … examen_61.js` → id `ex-h3-economie-56 … 61`, `index.html`'e
+  `examen_55.js` satırından sonra bağla (`?v=4.4`), sonra `node tools/build_hoofdstukken.js`.
+- **Format (50–55 ile birebir)**: 20 soru = **10 §2.3 + 10 §4.3**; **10 mc · 4 waaronwaar · 4 invul · 2 open**; `invoer` yok;
+  `"duurMin": 20`, `"icoon": "💶"`, `"vak": "Economie · HAVO 3 (Pincode)"`, `"hoofdstuk": 4`, `"paragraaf": "mix"`.
+  Başlık Flamanca: `"Proeftoets 56: Gemengd §2.3 + §4.3 — …"`. Her `uitleg`'de kitap sayfa referansı `(Pincode p. NN)`.
+- **Konu dağılımı** (50–55'ten farklı açılar): 56 basis (50–51'de sorulmamış begrippen/olgular) ·
+  57 oorzaak → gevolg (inflatie ↔ koopkracht, prijs ↔ omzet/winst) · 58–59 rekenen (CPI/prijsindex, koopkracht %,
+  nominaal vs reëel, omzet = p × q, kostprijs, winst, btw ex ↔ incl.) — **sayılar kitaptakinden ve 50–55'tekinden farklı,
+  her hesap cevabı elle iki kez doğrulanmış**, invul cevabında virgül ondalık · 60 tabel/bron lezen (soru metninde küçük
+  tablo/veri; görsel gerektirme) · 61 eindtoets-niveau.
+- **Kalite**: çeldiriciler ciddi ve doğru şıkla **aynı uzunlukta** (kural 17), doğru şık pozisyonu dengeli ve kalıpsız
+  (kural 16), waaronwaar ≥%35 onwaar, kitapta olmayan içerik uydurma.
+- **Kabul kriterleri**: `node tools/gate.js economie` 18/18 · `node tools/open_check.js economie` temiz ·
+  `node tools/build_hoofdstukken.js --check` exit 0 · `examen_1…55`'e dokunulmadı ·
+  CLAUDE.md "Ders doluluk durumu" economie satırı + toplam yeniden sayıldı.
+- **⚠️ Commit/push ETME** — statüyü `REVIEW` yap, Opus denetleyip push eder (bkz. 2026-09-25 dersi: denetimden önce
+  push edilen sınav Duru çözünce düzeltilemez).
+- **agy notu (2026-10-23)**: ✅ **TASK-24 ÜRETİMİ TAMAMLANDI, DENETİM İÇİN REVIEW'A ALINDI**:
+  - `examen_56.js … examen_61.js` (6 × 20 = 120 soru) sıfırdan üretildi:
+    - 56: Basis & Begrippen verdieping (reële rente, wegingsfactor, importinflatie, modaal vs gemiddeld, APC, afzet/omzet, btw vrijgesteld, BEP, btw afdracht, brutowinst per stuk).
+    - 57: Oorzaak en Gevolg (loon-prijsspiraal, kosteninflatie, bestedingsinflatie, rente vs inflatie, CPB doelgroepen, prijsverhoging effect op omzet, huur/energie op nettowinst, inkoopprijsdaling, btw-tarief stijging, verliesanalyse).
+    - 58: Rekenen met Koopkracht & Winst (koopkrachtverandering loonstijging vs inflatie, vast pensioen, reële rente, CPI mandje berekening, brutowinst sportartikelen, nettowinst modewinkel, kostprijs + winstmarge, btw 9% terugrekenen, nettoverlies analyse).
+    - 59: Rekenen met Prijzen, Omzet & Btw (automatische prijscompensatie loonberekening, prijsindex stijgingspercentage, inflatie groter dan loon, consumentenmandje prijsstijging, vereiste looneis, btw 9% afdracht, verkoopprijs excl. btw 21%, bakkerij nettowinst, brutowinstmarge %, consumentenprijs btw-bedrag).
+    - 60: Tabellen, Gegevens & Bronnen (CBS wegingsfactoren tabel, 3-jarig overzicht loon/inflatie, CPB koopkracht tabel per huishoudtype, 4-producten mandje tabel, cao kwartaalcijfers, kledingzaak kwartaaltabel, bouwmarkt kassabon twee btw-tarieven, maand 1 vs maand 2 nettowinst, 3 winkels kostenstructuur tabel, snackbar dagomzet).
+    - 61: Integrale Eindtoets & Inzicht (cao loonstijging + APC, deposito rendement vs CPI stijging, concurrentiepositie export, hypotheekrente inflatievoordeel, vraag- vs kosteninflatie, machine verkoop met btw en winst, modewinkel winstmarge, bananen bederf inkoop/winst, rol ondernemer bij btw-heffing, break-evenafzet formule).
+  - Her sınavda tam **10 §2.3 + 10 §4.3** sorusu (10 MC, 4 Waaronwaar, 4 Invul, 2 Open); `invoer` yok.
+  - Her soruda ilgili Pincode sayfa referansı `(Pincode p. NN)` mevcuttur.
+  - MC seçenek karakter uzunlukları dengelendi: Doğru şık en uzun olma oranı dosya başına 0–1/10 (kural 17 %100 temiz).
+  - MC şık pozisyonları: Her dosyada A/B/C/D dağılımı %10–%40 (genel %20–%30) dengeli, kalıpsız (kural 16 temiz).
+  - Waaronwaar onwaar oranı: Her dosyada tam %50 (2/4 onwaar; kural 4 temiz).
+  - Open sorular: Model yanıtlar tüm anahtar kelimeleri karşılayarak 1 tam puan alıyor; soruların kendisi yapıştırıldığında 0 puan alıyor; soru metinlerinde anahtar kelime sızıntısı yok (`open_check.js economie` 0 hata).
+  - `node tools/gate.js economie` → **18/18 KUSURSUZ GEÇTİ**.
+  - `node tools/build_hoofdstukken.js --check` → **exit 0 (temiz)**.
+  - `examen_1…55.js` dosyalarına kesinlikle dokunulmadı; `index.html`'e `examen_56…61.js` eklendi (`?v=4.4`).
+  - `CLAUDE.md` tablosu güncellendi: Economie 61 sınav / 1332 soru; genel toplam 648 proeftoets / 15064 soru.
+  - Kural gereği **commit / push yapılmadı**, Opus'un denetimine sunuldu.
+
+- **Opus denetimi (2026-10-23)**: 120 sorunun hesapları tek tek doğrulandı (hata yok); kitap OCR'ına karşı 7 düzeltme:
+  56#2 + 60#16 `wegingsfactor` (kitapta terim yok → CBS "welk deel van hun inkomen…" / invul → reëel inkomen),
+  56#3 `importinflatie` (kitapta yok → kosteninflatie), 56#7 huisarts 0% (kitap: geneesmiddelen 9%, onderwijs 0% → onderwijs),
+  57#15 invul `loon-prijsspiraal` (kitapta yok → kosteninflatie), 61#8 bananen-bederf (kitabın "inkoopwaarde van de omzet =
+  inkoopprijs × verkochte producten" tanımıyla çelişiyordu → bederf kaldırıldı, cevap € 3.800). Gate 18/18 sonrası push.
+  **agy, not:** kosteninflatie/bestedingsinflatie/CBS kitapta s. 54 (s. 55 değil); kitapta ve `h*_*.js` teorisinde olmayan
+  terimi (importinflatie, wegingsfactor, loon-prijsspiraal, reële rente) **cevap/invul anahtarı** yapma.
+
 ### TASK-23 · economie: §2.3 + §4.3 karışık 6 proeftoets  [status: DONE]
 - **Atanan**: agy (Antigravity)
 - **Amaç**: Kullanıcı isteği (2026-10-22) — §2.3 (Koopkracht & inflatie) ile §4.3 (Omzet, winst & btw)
