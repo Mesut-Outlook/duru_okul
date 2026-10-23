@@ -651,6 +651,27 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### TASK-23 · economie: §2.3 + §4.3 karışık 6 proeftoets  [status: DONE]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Kullanıcı isteği (2026-10-22) — §2.3 (Koopkracht & inflatie) ile §4.3 (Omzet, winst & btw)
+  sorularını **aynı testte karıştıran** 6 yeni proeftoets.
+- **Girdi**: kitap — `inbox/2026-2027/economie/economie_h02_koopkracht-inflatie-2-3.pdf` (Pincode s. 54–59) ve
+  `inbox/2026-2027/economie/economie_h04_omzet-winst-btw-4-3.pdf` (s. 114–121). Mevcut setler (tekrar etme, gate kural 2):
+  §2.3 = `examen_38…43.js`, §4.3 = `examen_44…49.js`, onderwerp `h2_3*.js` / `h4_3*.js`.
+- **Çıktı**: `havo3/economie/js/data/examen_50.js … examen_55.js` → id `ex-h3-economie-50 … 55`, `index.html`'e
+  `examen_49.js` satırından sonra bağla (`?v=4.4`), sonra `node tools/build_hoofdstukken.js`.
+- **İçerik**: her test 20 soru, **yaklaşık yarı §2.3 / yarı §4.3**; mc + invul + waaronwaar + open karışık, sınavda `invoer` yok.
+  Hesap soruları (CPI/koopkracht %, omzet = p × q, kostprijs, winst, btw ex/incl.) sayıları kitaptakinden farklı, cevap
+  elle doğrulanmış. Konu dağılımı: 50–51 basis · 52–53 rekenen + context · 54 begrippen toepassen · 55 eindtoets-niveau.
+  Her `uitleg`'de kitap sayfa referansı. Başlık Flamanca: `"Proeftoets 50: Gemengd §2.3 + §4.3 — …"`.
+- **Alanlar**: `"hoofdstuk": 4`, `"paragraaf": "mix"` (registerExamen tek hoofdstuk alır; karışık test H4 altında
+  görünür, başlık iki paragrafı söyler — başka hoofdstuk numarası uydurma).
+- **Kabul kriterleri**: `node tools/gate.js economie --only=h4` temiz (18 kontrol; mc şık pozisyonu ≤%40,
+  waaronwaar ≥%35 onwaar, doğru şık en uzun değil) · `node tools/open_check.js` temiz ·
+  `node tools/build_hoofdstukken.js --check` exit 0 · **mevcut ex-h3-economie-1…49 dosyalarına dokunma** ·
+  CLAUDE.md "Ders doluluk durumu" economie satırı + toplam güncellendi.
+- **agy notu**: Görev tamamlandı (2026-10-22). `examen_50.js` … `examen_55.js` üretildi (6 × 20 = 120 soru; her testte tam 10 §2.3 ve 10 §4.3 sorusu; 10 MC, 4 Waaronwaar [%50 onwaar], 4 Invul, 2 Open). Her soruda Pincode sayfa referansı mevcut. MC şık dağılımı ≤%30 dengeli, kalıpsız ve doğru şık en uzun değil. `gate.js economie` 18/18 geçti, `open_check.js economie` 0 hata, `build_hoofdstukken.js --check` exit 0. `index.html` güncellendi (`?v=4.4`). `CLAUDE.md` tablosu güncellendi (economie 55 sınav / 1212 soru; toplam 642 sınav / 14944 soru). Mevcut `examen_1…49` dosyalarına dokunulmadı.
+
 ### ✅ 2026-09-26 · Opus/agy aardrijkskunde H1 karışık sınavlar `examen_57..61` (ex-h3-ak-57…61) — DONE
 - Kullanıcı isteği: §1.1–§1.3 karışık 5 test daha. Konular:
   57 Productieketens & Handelsroutes (Ever Given, opgesplitste keten, spijkerbroek, Houthi, ASML chips) ·

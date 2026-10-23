@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-19",
+  "gegenereerd": "2026-10-22",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -415,7 +415,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-46": 4,
         "ex-h3-economie-47": 4,
         "ex-h3-economie-48": 4,
-        "ex-h3-economie-49": 4
+        "ex-h3-economie-49": 4,
+        "ex-h3-economie-50": 4,
+        "ex-h3-economie-51": 4,
+        "ex-h3-economie-52": 4,
+        "ex-h3-economie-53": 4,
+        "ex-h3-economie-54": 4,
+        "ex-h3-economie-55": 4
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -437,7 +443,7 @@ window.DURU_HOOFDSTUKKEN = {
         "1": 6,
         "2": 9,
         "3": 3,
-        "4": 31
+        "4": 37
       },
       "aantalOnderwerpen": {
         "1": 3,
