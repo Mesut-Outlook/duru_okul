@@ -17,7 +17,7 @@ DURU.register({
       "vraag": "Wat hield de tactiek van de verschroeide aarde in tijdens historische oorlogen in Nederland?",
       "opties": [
         "Het opzettelijk verbranden van gewassen, huizen en voorraden om de oprukkende vijand te beroven van voedsel en onderdak",
-        "Het aanleggen van tunnels onder de rivieren",
+        "Het strategisch aanleggen van een geheim netwerk van ondergrondse tunnels en bunkers onder rivieren",
         "Het verhogen van de dijken met zwarte as",
         "Het beschilderen van alle forten met zwarte verf"
       ],
@@ -30,7 +30,7 @@ DURU.register({
       "opties": [
         "De Falklandoorlog",
         "De dekolonisatieoorlog in Indonesië",
-        "De Boerenoorlog",
+        "De koloniale Boerenoorlog in Zuid-Afrika",
         "De Krimoorlog"
       ],
       "antwoord": 1,
@@ -41,7 +41,7 @@ DURU.register({
       "vraag": "Waarom draagt een VN-vredesmacht vaak de bijnaam blauwhelmen?",
       "opties": [
         "Omdat de soldaten alleen op blauwe boten varen",
-        "Omdat de militairen altijd blauwe overalls dragen",
+        "Omdat de militairen altijd herkenbare felblauwe kogelwerende overalls en helmen dragen",
         "Omdat de missies altijd op zee plaatsvinden",
         "Omdat de soldaten herkenbare lichtblauwe helmen en baretten dragen met het VN-embleem"
       ],
@@ -53,7 +53,7 @@ DURU.register({
       "vraag": "Wat is een van de drie hoofdtaken van de Nederlandse krijgsmacht volgens de Grondwet?",
       "opties": [
         "Het veroveren van nieuwe grondgebieden in Afrika",
-        "Het afdwingen van handelscontracten voor Nederlandse multinationals",
+        "Het militair afdwingen van exclusieve handelsconcessies voor Nederlandse bedrijven in het buitenland",
         "Het verdedigen van het eigen en het bondgenootschappelijk grondgebied en het bevorderen van de internationale rechtsorde",
         "Het besturen van alle provincies in Nederland"
       ],
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Welke hoogwaardige militaire goederen produceert en exporteert de Nederlandse defensie-industrie veelvuldig?",
       "opties": [
-        "Zware intercontinentale ballistische raketten",
+        "Zware intercontinentale ballistische raketten en strategische kernbommen",
         "Geavanceerde marine-radarsystemen en militaire elektronica",
         "Kernonderzeeërs en atoombommen",
         "Paarden en zadels voor de cavalerie"
@@ -78,7 +78,7 @@ DURU.register({
       "opties": [
         "Er werden geen verkiezingen meer gehouden",
         "Nederland trad onmiddellijk uit de Verenigde Naties",
-        "Het leger werd met onmiddellijke ingang volledig afgeschaft",
+        "De Nederlandse krijgsmacht werd met onmiddellijke ingang door de Tweede Kamer volledig ontbonden",
         "Het Nederlandse kabinet onder leiding van premier Wim Kok diende zijn ontslag in"
       ],
       "antwoord": 3,

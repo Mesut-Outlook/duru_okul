@@ -17,7 +17,7 @@ DURU.register({
       "vraag": "Wat is het belangrijkste kenmerk van conventionele olie en gas?",
       "opties": [
         "Het ontstaat binnen enkele weken uit huishoudelijk afval",
-        "Het kan uitsluitend worden gewonnen door open mijnbouw in zandgroeven",
+        "Het kan uitsluitend worden gewonnen door open dagbouw in diepe zandgroeven en grindgaten",
         "Het is makkelijk te winnen doordat het zich verzameld heeft in een poreus reservoirgesteente",
         "Het stoot bij verbranding helemaal geen koolstofdioxide uit"
       ],
@@ -54,7 +54,7 @@ DURU.register({
       "opties": [
         "Kerncentrales zijn gratis en eenvoudig te bouwen",
         "De brandstof uranium is onuitputtelijk en groeit overal aan bomen",
-        "Er blijft na gebruik geen enkel schadelijk afval over",
+        "Er blijft na beëindiging van het splijtingsproces geen enkel radioactief afval over",
         "Er ontstaat tijdens de stroomopwekking geen directe uitstoot van CO2"
       ],
       "antwoord": 3,
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is een groot nadeel van het delven van olie uit teerzanden?",
       "opties": [
-        "Het kan alleen midden op volle zee worden uitgevoerd",
+        "Het kan alleen op volle zee worden uitgevoerd met behulp van drijvende boorplatformen",
         "Het vereist enorm veel energie en heet water en laat giftig afval achter",
         "Het veroorzaakt overmatige afkoeling van de atmosfeer",
         "Er kan helemaal geen bruikbare brandstof uit gewonnen worden"
@@ -76,7 +76,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat verstaan we onder het begrip energietransitie?",
       "opties": [
-        "Het verhogen van de gasprijzen om de staatskas aan te vullen",
+        "Het verhogen van de landelijke energiebelasting op gas en stroom om de staatskas aan te vullen",
         "Het vervangen van benzineauto s door uitsluitend dieseltreinen",
         "Het sluiten van alle fabrieken en transportbedrijven in een land",
         "De overstap van fossiele brandstoffen naar hernieuwbare en schone energiebronnen"

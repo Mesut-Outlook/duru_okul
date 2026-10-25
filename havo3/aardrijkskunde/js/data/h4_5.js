@@ -17,7 +17,7 @@ DURU.register({
       "vraag": "Waarom heeft Nederland in Europees verband van oudsher een relatief hoge CO2-uitstoot per inwoner?",
       "opties": [
         "Door een sterke chemische industrie, intensieve glastuinbouw en veel transport",
-        "Omdat alle woningen in Nederland uitsluitend op bruinkool gestookt worden",
+        "Omdat vrijwel alle woningen in Nederland uitsluitend verwarmd worden met geïmporteerde bruinkool",
         "Omdat er in Nederland geen enkele boom of bos groeit",
         "Doordat Nederlanders gemiddeld twintig keer per jaar vliegen"
       ],
@@ -29,7 +29,7 @@ DURU.register({
       "vraag": "Wat is het belangrijkste verschil tussen een energiebron en een energiedrager zoals waterstof?",
       "opties": [
         "Een energiedrager kan nooit elektriciteit leveren",
-        "Een energiebron is altijd vloeibaar terwijl een energiedrager altijd een gas is",
+        "Een energiebron is in de natuur altijd vloeibaar terwijl een energiedrager uitsluitend als gas voorkomt",
         "Een energiebron ontstaat altijd in kerncentrales; een energiedrager drijft op water",
         "Een energiedrager komt niet kant-en-klaar in de natuur voor, maar moet eerst met energie geproduceerd worden"
       ],
@@ -54,7 +54,7 @@ DURU.register({
       "opties": [
         "Er is te veel aardgas in de leidingen waardoor de druk wegvalt",
         "Het elektriciteitsnetwerk zit vol waardoor nieuwe windparken, zonnevelden of bedrijven niet aangesloten kunnen worden",
-        "De rivieren zijn overvol met vrachtschepen waardoor bruggen niet meer open kunnen",
+        "De grote rivieren liggen overvol met vrachtschepen waardoor bruggen over kanalen niet meer kunnen openen",
         "Het internet valt dagelijks uit in het hele land"
       ],
       "antwoord": 1,
@@ -66,7 +66,7 @@ DURU.register({
       "opties": [
         "Als waterstof alleen in natuurgebieden wordt gebruikt",
         "Als waterstof wordt geproduceerd via elektrolyse met duurzame stroom uit zon of wind",
-        "Als de waterstof rechtstreeks uit steenkoolmijnen wordt gepompt",
+        "Als de benodigde waterstof rechtstreeks met gascompressoren uit ondergrondse steenkoolmijnen wordt gepompt",
         "Als de waterstof is gekleurd met een milieuvriendelijke kleurstof"
       ],
       "antwoord": 1,
@@ -77,7 +77,7 @@ DURU.register({
       "vraag": "Wat regelt de Nederlandse Klimaatwet volgens het boek?",
       "opties": [
         "Dat er geen enkele wet meer nodig is voor klimaatbeleid",
-        "Dat elke Nederlander verplicht een elektrische auto moet kopen",
+        "Dat iedere huishouding in Nederland verplicht binnen drie jaar een volledig elektrische auto moet aanschaffen",
         "Dat kolencentrales per direct heropend moeten worden",
         "Dat Nederland zich houdt aan het Akkoord van Parijs door de weg naar een CO2-arm Nederland wettelijk vast te leggen"
       ],

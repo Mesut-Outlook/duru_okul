@@ -19,7 +19,7 @@ DURU.register({
       "opties": [
         "De beginstoffen verdwijnen en er ontstaan reactieproducten met andere stofeigenschappen",
         "De stof krijgt een andere temperatuur",
-        "De stof verandert van fase (vast, vloeibaar of gas)",
+        "De beginstof verandert uitsluitend van aggregatietoestand (vast, vloeibaar of gasvormig)",
         "Het volume van de stof wordt groter"
       ],
       "antwoord": 0,
@@ -30,7 +30,7 @@ DURU.register({
       "niveau": 1,
       "vraag": "Waarom is het <b>verdampen</b> van water géén chemische reactie?",
       "opties": [
-        "Omdat verdampen alleen bij precies 100 °C kan gebeuren",
+        "Omdat faseovergangen zoals verdampen alleen bij exact het kookpunt van 100 °C kunnen plaatsvinden",
         "Omdat de stofeigenschappen van water tijdens het verhitten en afkoelen niet veranderen",
         "Omdat water daarbij van kleur verandert",
         "Omdat er bij verdampen altijd een katalysator nodig is"
@@ -57,7 +57,7 @@ DURU.register({
       "opties": [
         "De temperatuur waarbij een stof altijd kookt",
         "De minimale temperatuur die nodig is voordat een reactie verloopt",
-        "De temperatuur die na afloop van een reactie wordt gemeten",
+        "De hoogste temperatuur die na afloop van een warmteontwikkelende reactie in het vat wordt gemeten",
         "De gemiddelde kamertemperatuur in een scheikundelokaal"
       ],
       "antwoord": 1,
@@ -91,7 +91,7 @@ DURU.register({
         "Soort beginstof(fen), verdelingsgraad, concentratie, temperatuur, katalysator",
         "Massa, volume, dichtheid, kleur, geur",
         "Temperatuur, druk, tijdstip, kleur, smaak",
-        "Verdelingsgraad, concentratie, temperatuur, massa, kleur"
+        "Verdelingsgraad van de stoffen, concentratie, reactietemperatuur, totale massa, kleur"
       ],
       "antwoord": 0,
       "uitleg": "De vijf factoren zijn: soort beginstof(fen), verdelingsgraad, concentratie, temperatuur en de aanwezigheid van een katalysator."
@@ -109,7 +109,7 @@ DURU.register({
       "opties": [
         "Omdat hout in blokvorm niet brandbaar is",
         "Omdat zaagsel een andere stof is dan hout",
-        "Omdat een blok hout een katalysator nodig heeft om te reageren",
+        "Omdat een massief blok hout zonder toevoeging van een chemische katalysator nooit kan ontbranden",
         "Omdat fijnverdeelde deeltjes in de lucht een veel groter contactoppervlak met zuurstof hebben, waardoor de reactie razendsnel verloopt"
       ],
       "antwoord": 3,

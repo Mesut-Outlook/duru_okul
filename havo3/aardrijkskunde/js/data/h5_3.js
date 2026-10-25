@@ -17,7 +17,7 @@ DURU.register({
       "vraag": "Wat is het formele juridische verschil tussen een vluchteling en een ontheemde (IDP)?",
       "opties": [
         "Een vluchteling is een landsgrens overgestoken; een ontheemde is binnen de eigen landsgrenzen gebleven",
-        "Een vluchteling heeft een paspoort; een ontheemde heeft geen identiteitsbewijs",
+        "Een vluchteling bezit een officieel VN-paspoort; een ontheemde heeft geen enkel geldig identiteitsbewijs bij zich",
         "Een ontheemde reist altijd per boot; een vluchteling altijd te voet",
         "Er is juridisch geen enkel verschil tussen beide begrippen"
       ],
@@ -41,7 +41,7 @@ DURU.register({
       "vraag": "Wat is de definitie van genocide volgens het internationaal recht?",
       "opties": [
         "Het doelbewust en systematisch uitroeien van een bevolkingsgroep op basis van afkomst, ras of religie",
-        "Het sluiten van een militaire alliantie tussen buurlanden",
+        "Het formeel sluiten van een bindende defensieve militaire alliantie tussen soevereine buurlanden",
         "Het voeren van een verkiezingscampagne met felle debatten",
         "Het verhogen van invoertarieven op buitenlandse goederen"
       ],
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat gebeurde er in juli 1995 in de Bosnische enclave Srebrenica?",
       "opties": [
-        "De Verenigde Naties bouwden een nieuw ziekenhuis",
+        "De vredestroepen van de Verenigde Naties bouwden er een groot internationaal militair hospitaal",
         "Bosnisch-Servische troepen vermoordden ruim 8.000 moslimmannen en -jongens in een genocide",
         "De stad werd uitgeroepen tot hoofdstad van Europa",
         "Er werd een vredesverdrag ondertekend zonder enig slachtoffer"
@@ -76,7 +76,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Waarom zijn ontheemden binnen eigen land vaak nog kwetsbaarder dan geregistreerde vluchtelingen over de grens?",
       "opties": [
-        "Omdat het weer in eigen land altijd slechter is",
+        "Omdat de humanitaire omstandigheden in kampen binnen het eigen land altijd gevaarlijker zijn dan daarbuiten",
         "Omdat de VN hen verbiedt om eten te kopen",
         "Omdat ze geen tenten kunnen opzetten",
         "Omdat ze nog steeds onder de macht vallen van dezelfde regering of milities waarvoor ze moesten vluchten"

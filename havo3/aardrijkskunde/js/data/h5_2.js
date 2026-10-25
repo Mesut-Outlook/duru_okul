@@ -16,7 +16,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat houdt de zogeheten grondstoffenvloek in bij ontwikkelingslanden?",
       "opties": [
-        "Grondstoffen kunnen in ontwikkelingslanden niet verhandeld worden",
+        "Grondstoffen kunnen in ontwikkelingslanden wegens internationale handelsembargo's niet vrij verhandeld worden op de wereldmarkt",
         "Landen met veel waardevolle delfstoffen hebben vaak meer armoede, corruptie en geweld dan landen zonder delfstoffen",
         "Mijnen stoten giftige dampen uit die iedereen betoveren",
         "Delfstoffen verdwijnen vanzelf als ze worden opgegraven"
@@ -29,7 +29,7 @@ DURU.register({
       "vraag": "Waarom veroorzaakten de grenzen die Europese koloniale machten in Afrika trokken na de dekolonisatie zoveel conflicten?",
       "opties": [
         "Omdat de grenzen elk jaar opnieuw verschoven",
-        "Omdat de grenzen met onzichtbare inkt waren getekend",
+        "Omdat de grenzen door koloniale ambtenaren destijds willekeurig op onnauwkeurige kaarten werden getekend tijdens de Conferentie van Berlijn",
         "Omdat er met linialen rechte lijnen werden getrokken dwars door traditionele leefgebieden van stammen en volkeren",
         "Omdat alle Afrikanen dezelfde taal spraken"
       ],
@@ -42,7 +42,7 @@ DURU.register({
       "opties": [
         "Een land waar de centrale overheid de openbare orde niet kan handhaven en basisvoorzieningen niet kan leveren",
         "Een land dat geen enkel leger bezit",
-        "Een staat die lid is van de Europese Unie",
+        "Een soevereine staat die als volwaardig lid is toegetreden tot de Europese Unie en de Raad van Europa in Straatsburg",
         "Een staat die uitsluitend van glas gebouwd is"
       ],
       "antwoord": 0,
@@ -54,7 +54,7 @@ DURU.register({
       "opties": [
         "Een plotselinge toename van het aantal bejaarden",
         "De verplichte militaire diensttijd voor tieners",
-        "Een tekort aan basisscholen in een vergrijzend land",
+        "Een structureel tekort aan openbare basisscholen en docenten in een snel vergrijzend westers land en gebrek aan overheidsbudget",
         "Een bevolkingsopbouw met een groot aandeel 15- tot 29-jarigen, extra riskant bij hoge jeugdwerkloosheid"
       ],
       "antwoord": 3,
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Waarom wordt klimaatverandering door defensie-experts een threat multiplier (dreigingsversterker) genoemd?",
       "opties": [
-        "Omdat het weer altijd zonnig is tijdens militaire oefeningen",
+        "Omdat extreme hitte en aanhoudende droogte militaire verplaatsingen en bevoorrading onmogelijk maken in woestijngebieden",
         "Omdat klimaatverandering bestaande problemen zoals waterschaarste, misoogsten en armoede verergert en spanningen doet escaleren",
         "Omdat soldaten niet tegen regen kunnen",
         "Omdat orkanen alleen militaire kazernes aanvallen"

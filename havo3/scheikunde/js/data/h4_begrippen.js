@@ -41,7 +41,7 @@ DURU.register({
       "vraag": "Hoe heet de reactie waarbij groene planten met zonlicht CO2 en water omzetten in glucose en zuurstof?",
       "opties": [
         "De reactie waarbij groene planten onder invloed van zonlicht CO2 en water omzetten in glucose en zuurstof",
-        "Het verbranden van biomassa in een centrale",
+        "De industriële verbranding van biomassa in een speciale energiecentrale om elektriciteit op te wekken",
         "Het smelten van ijs door zonlicht",
         "Het ontleden van water door elektriciteit"
       ],
@@ -52,7 +52,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe noemen we een mengsel van fijnstof en giftige gassen dat bij verbranding van fossiele brandstoffen ontstaat?",
       "opties": [
-        "Zure regen die rechtstreeks de bodem verzuurt",
+        "Zure neerslag die rechtstreeks vanuit vervuilde wolken neerdaalt en de bodem en meren ernstig verzuurt",
         "Een heldere blauwe lucht zonder verontreiniging",
         "Een mengsel van fijnstof en giftige gassen dat bij windstil weer kan blijven hangen",
         "Het smelten van de poolkappen"
@@ -67,7 +67,7 @@ DURU.register({
         "Een stof die het broeikaseffect versterkt",
         "Het reactieproduct met de grootste massa",
         "De beginstof(fen) die niet volledig reageren en waarvan na de reactie nog een deel over is",
-        "De beginstof die als enige meedoet aan een ontledingsreactie"
+        "De specifieke beginstof die als enige uitgangsstof meedoet aan een thermolyse- of elektrolysiereactie"
       ],
       "antwoord": 2,
       "uitleg": "Overmaat is de beginstof waarvan na afloop van de reactie nog een deel over is."
@@ -76,7 +76,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Fossiele brandstoffen zijn:",
       "opties": [
-        "Waterstofgas gemaakt door elektrolyse",
+        "Waterstofgas dat op industriële schaal is geproduceerd door elektrolyse van gezuiverd water",
         "Steenkool, aardolie en aardgas, ontstaan uit resten van dode planten en dieren",
         "Biomassa zoals hout en mais",
         "Uitsluitend windenergie en zonne-energie"

@@ -17,7 +17,7 @@ DURU.register({
       "vraag": "Hoe heet een atoom of groep atomen die een organische stof zijn typische eigenschappen geeft, zoals de OH-groep in ethanol?",
       "opties": [
         "Een karakteristieke groep",
-        "Een homologe reeks",
+        "Een homologe koolstofreeks",
         "Een fractie",
         "Een isomeer"
       ],
@@ -28,7 +28,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is een <b>halogeenalkaan</b>?",
       "opties": [
-        "Een alkanol met een -OH-groep",
+        "Een verzadigde alkanol met een karakteristieke -OH-groep aan de koolstofketen",
         "Een alkaan waarin één of meer H-atomen zijn vervangen door een halogeenatoom (F, Cl, Br of I)",
         "Een alkaan met een extra C-atoom",
         "Een alkeen met een dubbele binding"
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent het dat een stof <b>hydrofiel</b> is?",
       "opties": [
-        "De stof is een edelgas",
+        "De stof is een inert edelgas dat onder normale omstandigheden met geen enkele andere stof reageert",
         "De stof is altijd giftig",
         "De stof lost goed op in water, meestal dankzij een -OH- of -NH-groep",
         "De stof mengt nooit met water"
@@ -86,7 +86,7 @@ DURU.register({
         "Het molecuul is voor de helft van metaal",
         "Het molecuul heeft een hydrofiele kop die met water mengt en een hydrofobe staart die met olie mengt",
         "Het molecuul verdampt direct",
-        "Het molecuul reageert chemisch met beide stoffen tot een nieuwe stof"
+        "Het molecuul reageert chemisch onder invloed van een enzym met beide vloeistoffen tot een vaste stof"
       ],
       "antwoord": 1,
       "uitleg": "Een emulgatormolecuul heeft een hydrofiele kop (mengt met water) en een hydrofobe staart (mengt met olie), waardoor de emulsie gemengd blijft."

@@ -16,7 +16,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is de belangrijkste oorzaak van het versterkte broeikaseffect sinds de industriële revolutie?",
       "opties": [
-        "Het toenemende aantal vulkaanuitbarstingen wereldwijd",
+        "Het wereldwijd sterk toenemende aantal zware vulkaanuitbarstingen en aswolken",
         "Het grootschalig verbranden van fossiele brandstoffen door menselijke activiteiten",
         "Natuurlijke variaties in de baan van de aarde rond de zon",
         "Warmte die direct uit het binnenste van de aarde naar buiten lekt"
@@ -29,7 +29,7 @@ DURU.register({
       "vraag": "Welke twee processen zorgen er samen voor dat de zeespiegel wereldwijd stijgt?",
       "opties": [
         "Het smelten van landijs en gletsjers plus het uitzetten van warmer zeewater",
-        "Het smelten van zee-ijs en het toenemen van zandafzetting aan de kusten",
+        "Het afsmelten van al het noordelijke zee-ijs en het toenemen van zandafzetting aan de kusten",
         "Verhoogde verdamping boven de tropen en toegenomen regenval op zee",
         "Bodemdaling van de oceaanbodem en beweging van tektonische platen"
       ],
@@ -53,7 +53,7 @@ DURU.register({
       "vraag": "Waarom zou de opwarming van de aarde nog tientallen jaren doorgaan als vandaag alle uitstoot zou stoppen?",
       "opties": [
         "Omdat de dampkring geen gassen kan vasthouden",
-        "Omdat de aarde steeds dichter bij de zon komt te staan",
+        "Omdat de aarde in een elliptische baan steeds dichter bij de zon komt te staan in de zomer",
         "Omdat de oceanen en ijskappen veel tijd nodig hebben om zich aan te passen aan de nieuwe temperatuur",
         "Omdat planten direct stoppen met het opnemen van zonlicht"
       ],
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat verstaat men in de fysische geografie onder een piekafvoer van een rivier?",
       "opties": [
-        "De gemiddelde hoeveelheid water die een rivier per jaar afvoert",
+        "De gemiddelde totale hoeveelheid zoetwater die een rivier gedurende een heel jaar afvoert",
         "Het moment in de zomer waarop een rivier helemaal droogvalt",
         "De diepte van de rivierbedding gemeten bij de bron",
         "Een extreem hoge waterafvoer na hevige regenval of plotseling smeltwater"
@@ -76,7 +76,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe noemen we mensen die hun woongebied noodgedwongen moeten verlaten door bijvoorbeeld aanhoudende droogte of overstromingen?",
       "opties": [
-        "Kennismigranten",
+        "Kennismigranten en hoogopgeleide expats",
         "Klimaatmigranten",
         "Gastarbeiders",
         "Expats"

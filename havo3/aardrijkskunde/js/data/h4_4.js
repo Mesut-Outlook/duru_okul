@@ -18,7 +18,7 @@ DURU.register({
       "opties": [
         "Ongeveer 2,1 °C, wat bijna twee keer zo snel is als het wereldwijde gemiddelde",
         "Europa is gemiddeld juist 1,5 °C kouder geworden",
-        "Slechts 0,2 °C, omdat de Atlantische Oceaan alle warmte tegenhoudt",
+        "Slechts 0,2 °C, doordat de koele Atlantische Oceaan alle binnenkomende hittegolfwarmte absorbeert",
         "Precies evenveel als elk ander continent op aarde"
       ],
       "antwoord": 0,
@@ -29,7 +29,7 @@ DURU.register({
       "vraag": "Welke Europese regio heeft vooral te maken met ernstige waterstress, hittegolven en verwoestende bosbranden?",
       "opties": [
         "De Baltische staten",
-        "Het Scandinavische fjordenlandschap",
+        "Het uitgestrekte Scandinavische fjorden- en berglandschap",
         "De Mediterrane regio rond de Middellandse Zee",
         "De Schotse Hooglanden"
       ],
@@ -40,7 +40,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is het hoofddoel van de Europese Green Deal van de Europese Unie?",
       "opties": [
-        "Alle landbouwgronden in Europa asfalteren voor zonnecentrales",
+        "Alle beschikbare landbouwgronden in West-Europa asfalteren voor grootschalige zonnecentrales",
         "Van Europa vóór 2050 het eerste klimaatneutrale continent ter wereld maken",
         "Het verbieden van alle vormen van openbaar vervoer",
         "Alle grenzen binnen Europa permanent sluiten voor goederenvervoer"
@@ -54,7 +54,7 @@ DURU.register({
       "opties": [
         "De bergen zakken direct in zee",
         "De rivieren vriezen permanent dicht",
-        "Er groeien spontaan tropische palmbomen op de bergtoppen",
+        "Er groeien door de opwarming spontaan tropische palmbomen en oerwouden op de kale bergtoppen",
         "Er ontstaan gevaarlijke rotslawines en bergstortingen doordat los gesteente niet meer bevroren vastzit"
       ],
       "antwoord": 3,
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat verstaan we onder klimaatadaptatie in stedelijke gebieden?",
       "opties": [
-        "Het verhuizen van alle inwoners naar een ander werelddeel",
+        "Het verplicht verhuizen van kwetsbare inwoners naar een hoger gelegen en koeler werelddeel",
         "Inwoners dwingen om alleen s nachts over straat te lopen",
         "De stad inrichten met meer groen en waterberging om hitte en hoosbuien op te vangen",
         "Alle ramen in de stad dichthouden zodat er geen warmte binnenkomt"
@@ -79,7 +79,7 @@ DURU.register({
         "Omdat asfalt, steen en beton overdag veel hitte absorberen en s nachts langzaam uitstralen",
         "Omdat stadsbewoners meer ademhalen dan mensen in dorpen",
         "Omdat de zon in steden feller schijnt dan boven weilanden",
-        "Omdat de zwaartekracht in een stad hoger is dan op het platteland"
+        "Omdat de gemiddelde luchtdruk en zwaartekracht in een stad structureel hoger zijn dan op het omringende platteland"
       ],
       "antwoord": 0,
       "uitleg": "Donkere stenen oppervlakken nemen overdag veel zonnewarmte op en houden die warmte langdurig vast."

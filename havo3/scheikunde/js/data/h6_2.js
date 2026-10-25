@@ -32,7 +32,7 @@ DURU.register({
       "opties": [
         "Het vervormen van een metaal met een hamer",
         "Het proces waarbij een metaal reageert met stoffen uit de omgeving, zoals water en zuurstof",
-        "Het smelten van een metaal bij hoge temperatuur",
+        "Het gecontroleerd verhitten van een zuiver metaal tot boven het smeltpunt in een speciale hoogoven",
         "Het mengen van twee metalen tot een legering"
       ],
       "antwoord": 1,
@@ -49,7 +49,7 @@ DURU.register({
       "niveau": 1,
       "vraag": "Waaruit bestaat een metaalrooster op microniveau?",
       "opties": [
-        "Uit moleculen die door atoombindingen aan elkaar vastzitten",
+        "Uit neutrale moleculen die door sterke covalente atoombindingen permanent aan elkaar vastzitten",
         "Uit losse, ongeladen metaalatomen die vrij door elkaar bewegen",
         "Uit positieve metaalionen in een vast patroon, met daartussen vrij bewegende elektronen",
         "Uit negatieve metaalionen met daartussen vrij bewegende protonen"
@@ -78,7 +78,7 @@ DURU.register({
         "Een mengsel dat ontstaat na het in gesmolten toestand mengen van twee of meer metalen",
         "Een zuiver metaal met een extra hoog smeltpunt",
         "Een metaal dat volledig is opgelost in water",
-        "Een chemische verbinding tussen een metaal en een niet-metaal"
+        "Een homogene chemische verbinding tussen een metaal en een niet-metaal met een ionbinding"
       ],
       "antwoord": 0,
       "uitleg": "Een legering ontstaat doordat je metalen in gesmolten (vloeibare) toestand mengt; na afkoelen krijg je de legering."

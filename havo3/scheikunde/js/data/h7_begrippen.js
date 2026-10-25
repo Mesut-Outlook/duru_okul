@@ -19,7 +19,7 @@ DURU.register({
         "Een katalysator bij thermolyse",
         "Een atoom (geen C of H) of groep atomen in een koolstofverbinding die de verbinding een kenmerkende eigenschap geeft",
         "Een synoniem voor alkaan",
-        "De naam van een fractie uit aardolie"
+        "De officiële handelsnaam van een specifieke fractie die gewonnen wordt bij de destillatie van aardolie"
       ],
       "antwoord": 1,
       "uitleg": "Een karakteristieke groep is een atoom of groepje atomen (geen C of H) dat een koolstofverbinding een speciale eigenschap geeft."
@@ -29,8 +29,8 @@ DURU.register({
       "vraag": "Wat is een <b>monomeer</b>?",
       "opties": [
         "Een klein molecuul dat als bouwsteen dient voor een polymeer",
-        "Een fractie uit de destillatietoren",
-        "Een groot molecuul met honderden C-atomen",
+        "Een verzameling van stoffen met een vergelijkbaar kookpunt uit een destillatietoren",
+        "Een macromolecuul dat bestaat uit een aaneenschakeling van honderden tot duizenden C-atomen",
         "Een ander woord voor karakteristieke groep"
       ],
       "antwoord": 0,
@@ -49,7 +49,7 @@ DURU.register({
         "Water wordt aan een molecuul toegevoegd",
         "Aardolie wordt gescheiden op kookpunt",
         "Grote koolwaterstofmoleculen worden door thermolyse met een katalysator in kleinere moleculen ontleed",
-        "Kleine moleculen worden samengevoegd tot polymeren"
+        "Kleine onverzadigde moleculen worden onder hoge druk aaneengeschakeld tot synthetische polymeren"
       ],
       "antwoord": 2,
       "uitleg": "Kraken is het door thermolyse (verhitting met katalysator) ontleden van grote koolwaterstofmoleculen in kleinere moleculen."
@@ -66,7 +66,7 @@ DURU.register({
       "opties": [
         "Een grondstof die je maar één keer kunt gebruiken",
         "Een synoniem voor karakteristieke groep",
-        "Een fossiele brandstof zoals aardolie",
+        "Een fossiele brandstof zoals steenkool, aardolie of aardgas uit ondergrondse reservoirs",
         "Een grondstof die je steeds opnieuw kunt produceren, zodat hij niet opraakt"
       ],
       "antwoord": 3,
@@ -83,7 +83,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat is een <b>homologe reeks</b>?",
       "opties": [
-        "Een fractie uit de destillatietoren",
+        "Een verzameling van stoffen met een vergelijkbaar kookpunt uit een destillatietoren",
         "Een groep isomeren",
         "Een reeks stoffen met een constante verhouding tussen het aantal C- en H-atomen in de moleculen",
         "Een reeks katalysatoren"
@@ -102,7 +102,7 @@ DURU.register({
       "vraag": "Aardolie bestaat voornamelijk uit welk type stoffen?",
       "opties": [
         "Metalen",
-        "Edelgassen",
+        "Edelgassen in de atmosfeer",
         "Zouten",
         "Koolwaterstoffen"
       ],

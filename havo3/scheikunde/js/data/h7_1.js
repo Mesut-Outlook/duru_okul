@@ -16,7 +16,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat houdt <b>koolstofchemie</b> (organische chemie) in?",
       "opties": [
-        "De chemie van zuren en basen",
+        "De klassieke anorganische chemie van zuren, basen en zouten in water",
         "De chemie die zich bezighoudt met koolstofverbindingen",
         "De chemie van metalen en zouten",
         "De chemie van edelgassen"
@@ -31,7 +31,7 @@ DURU.register({
         "Het is gemaakt in een fabriek",
         "Het bestaat uitsluitend uit metalen",
         "Het is ontstaan uit de resten van dode planten en dieren die miljoenen jaren onder hoge druk in de aarde hebben gestaan",
-        "Het wordt jaarlijks opnieuw aangemaakt door planten"
+        "Het wordt jaarlijks op natuurlijke wijze opnieuw aangemaakt door levende planten en bomen via fotosynthese in de natuur"
       ],
       "antwoord": 2,
       "uitleg": "Fossiele brandstoffen zoals aardolie, aardgas en steenkool ontstaan over miljoenen jaren uit resten van organismen diep in de aarde."
@@ -49,7 +49,7 @@ DURU.register({
         "Aardolie scheiden in fracties van stoffen met een vergelijkbaar kookpunt",
         "Aardolie zuiveren tot drinkwater",
         "Aardolie omzetten in aardgas",
-        "Koolstofatomen uit aardolie verwijderen"
+        "Koolstofatomen door middel van verhitting volledig uit de ruwe aardolie verwijderen"
       ],
       "antwoord": 0,
       "uitleg": "Bij gefractioneerde destillatie wordt aardolie in een destillatietoren gescheiden in fracties: mengsels van stoffen met ongeveer hetzelfde kookpunt."
@@ -58,7 +58,7 @@ DURU.register({
       "type": "mc",
       "vraag": "In een destillatietoren wordt aardolie aangevoerd met een temperatuur van 350 °C. Waar in de toren vind je de fractie met de hoogste kookpunten, zoals residu?",
       "opties": [
-        "Altijd precies in het midden van de toren",
+        "Altijd precies in het geografische midden van de destillatietoren",
         "Buiten de toren, in een apart vat",
         "Helemaal bovenin de toren",
         "Helemaal onderin de toren, waar de temperatuur het hoogst blijft"
@@ -85,7 +85,7 @@ DURU.register({
       "opties": [
         "Er wordt water aan toegevoegd",
         "Door verhitting (~850 °C) met een katalysator breekt de grote koolwaterstof in twee of meer kleinere moleculen",
-        "De koolwaterstof wordt volledig verbrand tot CO₂ en water",
+        "De koolwaterstof wordt bij hoge temperatuur volledig verbrand tot koolstofdioxide en waterdamp onder toevoeging van zuurstofgas",
         "Het aantal koolstofatomen blijft precies gelijk, alleen de kleur verandert"
       ],
       "antwoord": 1,
@@ -102,7 +102,7 @@ DURU.register({
       "vraag": "Waarom is etheen (C₂H₄), dat onder meer bij kraken vrijkomt, een belangrijke grondstof voor de chemische industrie?",
       "opties": [
         "Omdat etheen als onverzadigde koolwaterstof gebruikt kan worden voor het maken van verf, kleding en kunststoffen zoals polyetheen",
-        "Omdat etheen alleen in de ruimtevaart wordt gebruikt",
+        "Omdat etheen als zeldzame industriële brandstof uitsluitend geschikt is voor motoren in de moderne bemande ruimtevaart",
         "Omdat etheen zelf een edelgas is",
         "Omdat etheen niet brandbaar is"
       ],

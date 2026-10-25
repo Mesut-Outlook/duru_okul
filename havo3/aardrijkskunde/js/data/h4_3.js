@@ -16,7 +16,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe noemen we energie die wordt opgewekt door gebruik te maken van de hitte diep in de aarde?",
       "opties": [
-        "Kernfusie-energie",
+        "Kernfusie-energie uit experimentele reactoren",
         "Geothermische energie (aardwarmte)",
         "Biomassa-energie",
         "Getijdenenergie"
@@ -29,7 +29,7 @@ DURU.register({
       "vraag": "Wat bespaart iemand die volgens het boek een hamburger van rundvlees inruilt voor een vegetarische burger?",
       "opties": [
         "Precies 1.000 liter benzine per hamburger",
-        "Niets, want vlees en vegetarisch eten kosten evenveel energie",
+        "Vrijwel niets, omdat de productie van vlees en plantaardig voedsel precies evenveel energie vraagt",
         "Ongeveer 7 m² natuur, water voor een douche van 10 minuten en de CO2 van een autorit van 29 kilometer",
         "Een volledige boomplantage van 500 bomen"
       ],
@@ -43,7 +43,7 @@ DURU.register({
         "Omdat er op open zee geen obstakels zoals heuvels, bomen en gebouwen zijn die wrijving veroorzaken",
         "Omdat schepen de luchtstroom kunstmatig aandrijven",
         "Omdat de zwaartekracht op zee minder krachtig is",
-        "Omdat de wolken boven zee altijd kouder zijn dan boven land"
+        "Omdat de uitgestrekte wolkenvelden boven de Noordzee altijd aanzienlijk kouder zijn dan boven land"
       ],
       "antwoord": 0,
       "uitleg": "Door het vlakke wateroppervlak is de ruwheid laag en ondervindt de wind nauwelijks wrijvingsweerstand."
@@ -53,7 +53,7 @@ DURU.register({
       "vraag": "Wat verstaat men in het internationale klimaatbeleid onder klimaatrechtvaardigheid?",
       "opties": [
         "Dat alle rechtszaken over het weer verboden worden",
-        "Dat arme landen alle kosten van de energietransitie moeten betalen",
+        "Dat ontwikkelingslanden alle opgelopen kosten van de wereldwijde energietransitie zelfstandig betalen",
         "Dat elk land precies evenveel windmolens moet plaatsen",
         "Dat rijke landen die historisch de meeste CO2 uitstootten arme kwetsbare landen financieel steunen"
       ],
@@ -67,7 +67,7 @@ DURU.register({
         "Houtsnippers, snoeiafval en dierlijke mest",
         "Ruwe aardolie uit boorplatforms",
         "Vloeibaar aardgas (LNG)",
-        "Steenkool uit diepe mijnschachten"
+        "Steenkool uit diepe ondergrondse mijnschachten en dagbouwgroeven"
       ],
       "antwoord": 0,
       "uitleg": "Biomassa bestaat uit organisch restmateriaal zoals hout, plantaardig afval en mest."
@@ -77,7 +77,7 @@ DURU.register({
       "vraag": "Wat is een belangrijk nadeel van wind- en zonne-energie ten opzichte van gascentrales?",
       "opties": [
         "Ze kunnen alleen op de Noordpool geplaatst worden",
-        "Ze stoten bij de opwekking enorme hoeveelheden zwavel uit",
+        "Ze stoten bij de opwekking van elektriciteit aanzienlijke hoeveelheden stikstof en fijnstof uit",
         "Ze veroorzaken een permanente verdwijning van de zwaartekracht",
         "Ze zijn weersafhankelijk waardoor vraag en aanbod niet altijd gelijk lopen"
       ],

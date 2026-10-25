@@ -16,7 +16,7 @@ DURU.register({
       "opties": [
         "de moeder",
         "de zus",
-        "de klasgenoot",
+        "de klasgenoot / vriend",
         "de beste vriendin"
       ],
       "antwoord": 3,
@@ -28,7 +28,7 @@ DURU.register({
       "opties": [
         "paresseux, -euse",
         "timide",
-        "marrant",
+        "marrant, marrante",
         "sympa"
       ],
       "antwoord": 0,
@@ -64,7 +64,7 @@ DURU.register({
       "opties": [
         "par an",
         "une fois par semaine",
-        "en moyenne",
+        "en moyenne par semaine",
         "tous les jours"
       ],
       "antwoord": 1,
@@ -86,7 +86,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat betekent <b>'l'argent'</b> (m)?",
       "opties": [
-        "het goud",
+        "het goud en het brons",
         "het geld / het zilver",
         "de schat",
         "de portemonnee"
@@ -100,7 +100,7 @@ DURU.register({
       "opties": [
         "pauvre",
         "mieux",
-        "américain",
+        "américain, -e",
         "cher, chère"
       ],
       "antwoord": 3,

@@ -28,7 +28,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat verstaat men in de geografie onder een natiestaat?",
       "opties": [
-        "Een verdrag tussen alle landen van de Verenigde Naties",
+        "Een internationaal vredesverdrag dat gesloten is tussen alle lidstaten van de Verenigde Naties",
         "Een eiland dat door piraten wordt bestuurd",
         "Een staat waarvan de grenzen samenvallen met het leefgebied van één duidelijk herkenbaar volk",
         "Een land zonder enige vorm van regering"
@@ -40,7 +40,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Hoe noemen we een burgeroorlog waarbij buitenlandse regeringen actief ingrijpen met troepen, wapens of militaire steun?",
       "opties": [
-        "Een lokaal grensincident",
+        "Een lokaal grensincident tussen grenswachten",
         "Een geïnternationaliseerd conflict",
         "Een koude oorlog",
         "Een cyberconflict"
@@ -53,7 +53,7 @@ DURU.register({
       "vraag": "Welke niet-militaire tactiek maakt deel uit van moderne hybride oorlogsvoering?",
       "opties": [
         "Het organiseren van sportwedstrijden tussen landen",
-        "Het bouwen van forten en loopgraven langs de grens",
+        "Het strategisch aanleggen van betonnen forten, antitankgrachten en diepe loopgraven langs de hele grens",
         "Het gebruik van middeleeuwse blijden en katapulten",
         "Grootschalige cyberaanvallen op infrastructuur en het verspreiden van desinformatie"
       ],
@@ -64,7 +64,7 @@ DURU.register({
       "type": "mc",
       "vraag": "Wat omvat het territorium van een soevereine staat naast het landoppervlak?",
       "opties": [
-        "De gehele openbare ruimte van alle buurlanden",
+        "De gehele openbare ruimte en alle aangrenzende infrastructuur van omringende soevereine buurlanden",
         "Het luchtruim boven het land en de aansluitende territoriale wateren",
         "Alle ambassades in de hele wereld",
         "Alleen de hoofdwegen en vliegvelden"
@@ -79,7 +79,7 @@ DURU.register({
         "Nooit, ook niet bij zelfverdediging",
         "Wanneer de buurman rijkere grondstoffen heeft",
         "Uitsluitend uit zelfverdediging of met een resolutie van de VN-Veiligheidsraad",
-        "Zodra een president dat via sociale media aankondigt"
+        "Zodra een staatshoofd een unilaterale oorlogsverklaring via officiële staatsmedia openbaar aankondigt"
       ],
       "antwoord": 2,
       "uitleg": "Geweld is volgens internationaal recht verboden behalve bij individuele of collectieve zelfverdediging of VN-mandaat."

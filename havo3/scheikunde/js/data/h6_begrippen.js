@@ -20,7 +20,7 @@ DURU.register({
         "De binding tussen de positieve metaalionen en de vrij bewegende elektronen in een metaal",
         "De aantrekkingskracht tussen moleculen onderling",
         "De aantrekkingskracht tussen positieve en negatieve ionen in een zout",
-        "Een binding die ontstaat doordat twee niet-metaalatomen elektronen delen"
+        "Een binding die ontstaat doordat twee niet-metaalatomen elektronen delen om de edelgasconfiguratie te bereiken"
       ],
       "antwoord": 0,
       "uitleg": "De metaalbinding is de binding tussen de positieve metaalionen en de vrij bewegende elektronen in een metaalrooster."
@@ -56,7 +56,7 @@ DURU.register({
       "niveau": 1,
       "vraag": "Welke omschrijving hoort bij een ZOUT volgens de indeling van stoffen?",
       "opties": [
-        "Geleidt stroom in zowel de vaste als de vloeibare toestand",
+        "Geleidt elektrische stroom uitstekend in zowel de vaste als de vloeibare toestand bij kamertemperatuur",
         "Heeft een hoog smelt- en kookpunt en geleidt alleen stroom in de vloeibare en opgeloste toestand",
         "Bestaat uit moleculen en geleidt geen stroom",
         "Bevat alleen een metaalsymbool in de formule"
@@ -76,7 +76,7 @@ DURU.register({
       "vraag": "Wat toont een oplosvergelijking zoals NaCl (s) → Na⁺ (aq) + Cl⁻ (aq)?",
       "opties": [
         "Dat twee moleculen samen een atoombinding vormen",
-        "Dat een metaal corrodeert door reactie met zuurstof",
+        "Dat een onedel metaal oxideert en corrodeert door chemische reactie met zuurstof en waterdamp",
         "Dat de ionen van een zout bij het oplossen los van elkaar komen te liggen",
         "Dat een metaal smelt tot een vloeistof"
       ],
@@ -91,7 +91,7 @@ DURU.register({
         "Een metaalrooster bestaat uit metaalionen met vrij bewegende elektronen ertussen; een ionrooster bestaat uit afwisselend positieve én negatieve ionen, zonder vrije elektronen",
         "Een metaalrooster komt alleen voor in de vloeibare fase",
         "Er is geen verschil, het zijn synoniemen",
-        "Een metaalrooster bevat alleen negatieve deeltjes, een ionrooster alleen positieve deeltjes"
+        "Een metaalrooster bevat volgens oude theorieën uitsluitend negatieve deeltjes, terwijl een zout ionrooster uitsluitend uit positief geladen ionen zou zijn opgebouwd"
       ],
       "antwoord": 0,
       "uitleg": "Een metaalrooster heeft metaalionen mét vrij bewegende elektronen; een ionrooster bestaat uit afwisselend positieve metaalionen en negatieve niet-metaalionen, zonder vrije elektronen."
