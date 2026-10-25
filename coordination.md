@@ -651,6 +651,128 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### TASK-28 · natuurkunde: Hoofdstuk 1 (§1.4, §1.5 & Integrale Mix) 5 yeni proeftoets (61–65)  [status: DONE]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Kullanıcı isteği (2026-10-24) — "fizik dersinde daha once hazirlanan gibi yapilan testlerdekine benzer 5 test daha uret".
+  H1'de eksik olan §1.4 (Veiligheid, Remweg & Stopafstand), §1.5 (Arbeid en Energieomzetting) ve H1 Integrale Eindtoets konularında 5 yeni sınav (`examen_61…65`).
+- **Girdi**: ders kitabı — `Overal Natuurkunde 3 havo` Hoofdstuk 1 Kracht en beweging (`inbox/2026-2027/natuurkunde/natuurkunde_h01_kracht-en-beweging.pdf`).
+- **Çıktı**: `havo3/natuurkunde/js/data/examen_61.js … examen_65.js` → id `ex-h3-natuurkunde-61 … 65`.
+  - `examen_61.js`: Toets 61 — §1.4 Veiligheid, Remweg & Stopafstand — Toets A
+  - `examen_62.js`: Toets 62 — §1.4 Veiligheid, Remweg & Stopafstand — Toets B
+  - `examen_63.js`: Toets 63 — §1.5 Arbeid en Energieomzetting — Toets A
+  - `examen_64.js`: Toets 64 — §1.5 Arbeid en Energieomzetting — Toets B
+  - `examen_65.js`: Toets 65 — Integrale Examentraining Hoofdstuk 1 (Mix §1.1 t/m §1.5)
+- **Format & Standart**:
+  - Her sınavda tam 20 soru (12 MC [tam %25 dengeli: 3'er adet 0, 1, 2, 3], 4 Waaronwaar [2 Waar, 2 Onwaar = %50], 2 Invul, 2 Open).
+  - MC seçenekleri kalıpsız ve doğru şık en uzun şık olmayacak şekilde dengelendi.
+  - Sınavlarda `invoer` yok, soru metinlerinde numara öneki yok, ipucu/sızdırma yok.
+  - Açık sorularda model cevaplar anahtar kelimelerle birebir uyumlu ve tam puan alıyor.
+- **Kalite & Doğrulama**:
+  - `node tools/gate.js natuurkunde` → **18/18 KUSURSUZ GEÇTİ** (44 onderwerp, 65 proeftoets, 1686 soru).
+  - `node tools/open_check.js natuurkunde` → **0 hata (temiz)**.
+  - `node tools/build_hoofdstukken.js --check` → **exit 0 (temiz)**.
+  - `havo3/natuurkunde/index.html`'e bağlandı (`?v=5.0`).
+  - `CLAUDE.md` tablosu güncellendi (natuurkunde 65 proeftoets / 1686 soru; toplam 663 proeftoets / 15364 soru).
+
+### TASK-27 · economie: §2.3 + §4.3 karışık 10 proeftoets daha (62–71)  [status: REVIEW]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Kullanıcı isteği (2026-10-24) — "economi dersi icin son hazirladiklarina benzer 10 yeni test daha yarat ve gonder".
+  TASK-23 (`examen_50…55`) ve TASK-24 (`examen_56…61`) ile **aynı formatta** 10 yeni karışık test (`examen_62…71`).
+- **Girdi**: kitap — `inbox/2026-2027/economie/economie_h02_koopkracht-inflatie-2-3.pdf` (Pincode s. 54–59) ve
+  `inbox/2026-2027/economie/economie_h04_omzet-winst-btw-4-3.pdf` (s. 114–121). Format şablonu: `examen_56…61.js`.
+  Mevcut setler (tekrar edilmedi): §2.3 = `examen_38…43.js`, §4.3 = `examen_44…49.js`, karışık = `examen_50…61.js`.
+- **Çıktı**: `havo3/economie/js/data/examen_62.js … examen_71.js` → id `ex-h3-economie-62 … 71`, `index.html`'e
+  `examen_61.js` satırından sonra bağlandı (`?v=4.4`), `js/hoofdstukken.js` manifest'i derlendi.
+- **Format**: Her sınavda 20 soru = **10 §2.3 + 10 §4.3**; **10 mc · 4 waaronwaar · 4 invul · 2 open**; `invoer` yok;
+  `"duurMin": 20`, `"icoon": "💶"`, `"vak": "Economie · HAVO 3 (Pincode)"`, `"hoofdstuk": 4`, `"paragraaf": "mix"`.
+  Başlık Flamanca: `"Proeftoets NN: Gemengd §2.3 + §4.3 — …"`. Her `uitleg`'de kitap sayfa referansı `(Pincode p. NN)`.
+- **Konu dağılımı**:
+  62: Prijsontwikkeling & Bedrijfsresultaat
+  63: Koopkracht, Indexcijfers & Winstmarge
+  64: Inkomensvormen, Bedrijfskosten & Btw
+  65: Prijscompensatie, Omzet & Kostprijs
+  66: Inflatiemechanismen & Break-even Analyse
+  67: Reëel Inkomen, Btw-afdracht & Afzet
+  68: Spaarrente, Accijns & Bedrijfsbeslissingen
+  69: Economische Tabellen, Prijzen & Marges
+  70: Praktijkcasussen: Winkelier & Huishouden
+  71: Grote Integrale Eindtoets
+- **Kalite & Doğrulama**:
+  - `node tools/gate.js economie` → **18/18 KUSURSUZ GEÇTİ**.
+  - `node tools/open_check.js economie` → **0 hata (temiz)**.
+  - `node tools/build_hoofdstukken.js --check` → **exit 0 (temiz)**.
+  - `examen_1…61.js` dosyalarına kesinlikle dokunulmadı; `index.html`'e `examen_62…71.js` eklendi (`?v=4.4`).
+  - `CLAUDE.md` tablosu güncellendi: Economie 71 sınav / 1532 soru; genel toplam 240 onderwerp / 658 proeftoets / 15264 soru.
+- **Opus denetimi bekliyor**: Statü `REVIEW`.
+
+### TASK-26 · wiskunde: §1.5 Groeifactor en tijd 5 toets + H2 Parabolen 5 toets  [status: TODO]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Kullanıcı isteği (2026-10-23) — **A)** §1.5 için 5 yeni test, **B)** H2 Parabolen için 5 yeni test.
+- **Mevcut set (tekrar etme, gate kural 2 yakalar)**: §1.5 = `examen_40…44.js` (ex-wiskunde-h1-30…34) +
+  `examen_79…83.js` (ex-wiskunde-h1-56…60); Parabolen = `examen_61…73.js` (ex-wiskunde-parabolen-1…13; her § 2 toets,
+  begrippentoets 71, gemengd 72–73) + onderwerp `parabolen_*.js`.
+- **Kaynak**: kitap — H1: `inbox/2026-2027/wiskunde/wiskunde_h01_lineaire-en-exponentiele-formules.ocr.txt` (§1.5 ≈ satır
+  1198 ve 1364'ten itibaren); H2: `inbox/2026-2027/wiskunde/wiskunde_h02_parabolen.pdf` (sayfa görselleri/metni
+  `inbox/2026-2027/wiskunde/_render/`). Kitapta olmayan yöntem/terim sorma.
+- **Yöntem (ZORUNLU — wiskunde sınavları elle yazılmaz)**: Python üretici betik + cevaplar `fractions.Fraction` ile kodda
+  hesaplanır ve ayrı bir kontrolle bağımsız doğrulanır (sympy yok). Mevcut yapıcıları **import ederek yeniden kullan**:
+  `tools/gen_wiskunde_h1_14_15_extra.py` (`q15_*`, `bouw`) ve `tools/gen_wiskunde_h1_paragraaf_exams.py` (`MC, WO, IN, OP,
+  fmt, svg_tabel, num_ans`); parabol için `tools/gen_wiskunde_h2_parabolen.py` (`kw, topvorm, gefact, top_van, figuur,
+  met_top, uitwerken`). **Yeni betikler**: `tools/gen_wiskunde_h1_15_extra2.py` ve `tools/gen_wiskunde_h2_parabolen_extra.py`.
+  Yeni `random.Random` seed'leri kullan (mevcutlar 6100+, 7000+, 7100+ → ör. 8000+ / 8500+); mevcut tüm soru metinlerini
+  `GEZIEN` listesine verip birebir tekrarı ele (mevcut betiklerdeki `sys.argv[2]` deseni).
+  **⚠️ Mevcut `gen_wiskunde_*.py` betiklerini ÇALIŞTIRMA** — sabit dosya adlarına yazarlar (`examen_61…73`, `examen_79…83`,
+  `parabolen_*.js`) ve Duru'nun çözdüğü sınavları ezerler. Yalnız import et.
+- **Çıktı A (§1.5)**: `havo3/wiskunde/js/data/examen_84.js … examen_88.js` → id `ex-wiskunde-h1-61 … 65`,
+  `hoofdstuk: 1`, `paragraaf: "1.5"`, başlık `"Proeftoets 84 — §1.5 Groeifactor en tijd (extra2 1/5, …)"`.
+  Sıra: basis · oefenen · contexten (rente, bevolking, afname/halvering, procent per periode) · toetsniveau · eindniveau.
+  Önceki 10 testte zayıf kalan türleri ağırlıkla: groeifactor per andere tijdseenheid (per jaar ↔ per maand/kwartaal/
+  per 10 jaar), terugrekenen, "wanneer voor het eerst" (tabel/inklemmen), formule opstellen uit tekst. Tablo/grafik `svg_tabel`/SVG.
+- **Çıktı B (Parabolen)**: `examen_89.js … examen_93.js` → id `ex-wiskunde-parabolen-14 … 18`, `hoofdstuk: 2`,
+  `paragraaf: "mix"`, başlık `"Proeftoets 89 — Gemengd H2 Parabolen (extra 1/5, …)"`. Hepsi **§2.1–§2.5 karışık**:
+  89 basis (berg/dal, symmetrieas, top aflezen) · 90 top + tekenen (tabel → grafiek, top berekenen met xt = −b/2a) ·
+  91 vorm & ligging (a-waarde, verschuiven) + drie vormen (topvorm / gefactoriseerd / standaard ↔ elkaar) ·
+  92 contexten uit het boek (baan/hoogte, maximum aflezen of berekenen) · 93 oefenproefwerk-niveau. Her testte ≥4 parabool-figuur (`figuur`).
+- **Her test**: 20 soru, `duurMin: 30`, mevcut setle aynı tip karışımı (çoğu invul + mc + waaronwaar; §1.5'te 1 open);
+  invul'de kesir ve ondalık virgül kabul (`num_ans`/`okey`), cevap metni soruda verilmez.
+- **Bağlama**: `havo3/wiskunde/index.html`'e `examen_83.js` satırından sonra 84…93 (`?v=6.0`), sonra `node tools/build_hoofdstukken.js`.
+- **Kabul kriterleri**: `node tools/gate.js wiskunde` 18/18 · `node tools/open_check.js` wiskunde bulgusu yok ·
+  `node tools/build_hoofdstukken.js --check` exit 0 · `git status`'ta **yalnız yeni dosyalar** + `index.html` +
+  `js/hoofdstukken.js` + CLAUDE.md (mevcut `examen_*.js` / `parabolen_*.js` değişmemiş olmalı) ·
+  CLAUDE.md "Ders doluluk durumu" wiskunde satırı + toplam yeniden sayıldı · agy notuna her testin bağımsız cevap
+  doğrulamasının sonucunu yaz.
+- **⚠️ Commit/push ETME** — statüyü `REVIEW` yap; Opus denetleyip push eder.
+- **agy notu**:
+
+### TASK-25 · geschiedenis H1: 5 proeftoets daha (31–35)  [status: IN_PROGRESS]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Kullanıcı isteği (2026-10-23) — Hoofdstuk 1 "De Eerste Wereldoorlog (1900–1920)" için 5 yeni test.
+  Şu an H1'de yalnız 5 test var (`examen_1…5.js`, her § bir test).
+- **Girdi (tek kaynak)**: H1 kitap PDF'i inbox'ta **yok** → kaynak sitedeki teori: `havo3/geschiedenis/js/data/h1_1_tijd.js`,
+  `h1_2_grote_oorlog.js`, `h1_3_rusland.js`, `h1_4_nieuwe_kaart.js`, `h1_5_neutraal_nederland.js`. **Yalnız bu
+  dosyalarda geçen olgu, kişi, tarih ve begrippen sorulur**; orada olmayan bir şey (kişi, tarih, savaş, sayı) ekleme.
+  Format şablonu + tekrar edilmeyecek sorular: `examen_1…5.js` (gate kural 2 aynı/çok benzer soruyu yakalar).
+- **Çıktı**: `havo3/geschiedenis/js/data/examen_31.js … examen_35.js` → id `ex-h3-geschiedenis-31 … 35`,
+  `index.html`'e `examen_30.js` satırından sonra bağla (`?v=3.8`), sonra `node tools/build_hoofdstukken.js`.
+  Not: 6–30 başka hoofdstuk'lara ait; dosya numarası 31'den devam eder, **mevcut dosyalara dokunma**.
+- **Format (`examen_1.js` ile aynı)**: `hoofdstuk: 1`, `hoofdstukTitel: "Hoofdstuk 1 — De Eerste Wereldoorlog (1900–1920)"`,
+  `vak: "Geschiedenis · Hoofdstuk 1"`, `duurMin: 20`; **20 soru**: ~10 mc · 5 waaronwaar · 4 invul · 1 open; soru `id`'leri
+  dosya içinde benzersiz (`ex31_v1` …). Başlık Flamanca: `"Proeftoets 31 — …"`. Her `uitleg` hangi §'ten geldiğini söyler (`(§1.3)`).
+- **Konu dağılımı** (1–5 her biri tek § idi; bunlar **karışık**):
+  31 · §1.1 + §1.2 + §1.3 gemengd ·
+  32 · §1.3 + §1.4 + §1.5 gemengd ·
+  33 · oorzaak en gevolg in heel H1 (waarom begon de oorlog, gevolgen van de vrede, revolutie, neutraliteit) ·
+  34 · tijdlijn & chronologie: data, volgorde van gebeurtenissen, "wat gebeurde eerst" (yalnız teoride geçen tarihler) ·
+  35 · **Begrippentoets H1**: yalnız begrippen, belangrijke personen ve gebeurtenissen/data (CLAUDE.md "Test Hazırla" kuralı 3).
+- **Kalite**: çeldiriciler ciddi ve doğru şıkla **aynı uzunlukta** (kural 17 — doğru şık en uzun ≤%50), doğru şık
+  pozisyonu dengeli ve kalıpsız (kural 16, A-yığılması yok), waaronwaar ≥%35 onwaar, şaka çeldirici yok; open sorunun
+  `modelantwoord`'u kendi puanlamasında "goed" almalı (`open_check.js`). Çok satırlı string yasak (bkz. 2026-08-28 notu).
+- **Kabul kriterleri**: `node tools/gate.js geschiedenis` 18/18 · `node tools/open_check.js` geschiedenis bulgusu yok ·
+  `node tools/build_hoofdstukken.js --check` exit 0 · `examen_1…30` ve `h*_*.js`'e dokunulmadı ·
+  CLAUDE.md "Ders doluluk durumu" geschiedenis satırı + toplam yeniden sayıldı.
+- **⚠️ Commit/push ETME** — statüyü `REVIEW` yap; Opus teoriye karşı denetleyip push eder.
+- **agy notu**:
+
 ### TASK-24 · economie: §2.3 + §4.3 karışık 6 proeftoets daha (56–61)  [status: DONE — Opus denetledi + push, 2026-10-23]
 - **Atanan**: agy (Antigravity)
 - **Amaç**: Kullanıcı isteği (2026-10-23) — TASK-23'teki `examen_50…55` ile **aynı formatta** 6 yeni karışık test.

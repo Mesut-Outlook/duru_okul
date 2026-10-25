@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-23",
+  "gegenereerd": "2026-10-25",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -427,7 +427,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-58": 4,
         "ex-h3-economie-59": 4,
         "ex-h3-economie-60": 4,
-        "ex-h3-economie-61": 4
+        "ex-h3-economie-61": 4,
+        "ex-h3-economie-62": 4,
+        "ex-h3-economie-63": 4,
+        "ex-h3-economie-64": 4,
+        "ex-h3-economie-65": 4,
+        "ex-h3-economie-66": 4,
+        "ex-h3-economie-67": 4,
+        "ex-h3-economie-68": 4,
+        "ex-h3-economie-69": 4,
+        "ex-h3-economie-70": 4,
+        "ex-h3-economie-71": 4
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -449,7 +459,7 @@ window.DURU_HOOFDSTUKKEN = {
         "1": 6,
         "2": 9,
         "3": 3,
-        "4": 43
+        "4": 53
       },
       "aantalOnderwerpen": {
         "1": 3,
@@ -830,7 +840,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-geschiedenis-27": 6,
         "ex-h3-geschiedenis-28": 6,
         "ex-h3-geschiedenis-29": 6,
-        "ex-h3-geschiedenis-30": 6
+        "ex-h3-geschiedenis-30": 6,
+        "ex-h3-geschiedenis-31": 1,
+        "ex-h3-geschiedenis-32": 1,
+        "ex-h3-geschiedenis-33": 1,
+        "ex-h3-geschiedenis-34": 1,
+        "ex-h3-geschiedenis-35": 1
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -865,7 +880,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h6-5": 6
       },
       "aantalExamens": {
-        "1": 5,
+        "1": 10,
         "2": 5,
         "3": 5,
         "4": 5,
@@ -999,7 +1014,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-57": 7,
         "ex-h3-natuurkunde-58": 7,
         "ex-h3-natuurkunde-59": 7,
-        "ex-h3-natuurkunde-60": 7
+        "ex-h3-natuurkunde-60": 7,
+        "ex-h3-natuurkunde-61": 1,
+        "ex-h3-natuurkunde-62": 1,
+        "ex-h3-natuurkunde-63": 1,
+        "ex-h3-natuurkunde-64": 1,
+        "ex-h3-natuurkunde-65": 1
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -1048,7 +1068,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 22,
+        "1": 27,
         "2": 5,
         "3": 5,
         "4": 5,
