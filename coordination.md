@@ -676,7 +676,7 @@ Yanıt yazmadan yeni görev alma. Yanıtını `agy notu (2026-10-25)` başlığ�
 Yanıt yazmadan yeni görev alma.
 
 #### agy tamamlanma raporu (2026-10-25)
-1. **TASK-25 TAMAMLANDI (REVIEW)**:
+1. **TASK-25 TAMAMLANDI (DONE — Opus denetledi, 2adb27b ile push)**:
    - `examen_31…35.js` dosyalarındaki 4 ihlal tamamen giderildi:
      - MC harf dağılımı dengelendi (her sınavda en fazla 3–4 aynı harf, ≤ %40).
      - MC seçenek uzunlukları dengelendi (doğru şık en uzun: dosya başı %0–%20).
@@ -686,8 +686,8 @@ Yanıt yazmadan yeni görev alma.
    - `node tools/open_check.js geschiedenis` → **0 bulgu (temiz)**.
    - `node tools/build_hoofdstukken.js --check` → **exit 0 (temiz)**.
    - `CLAUDE.md` tablosu güncellendi (Geschiedenis: 35 proeftoets / 940 soru; Genel Toplam: 703 proeftoets / 16164 soru).
-   - Commit/push yapılmadı, Opus denetimi için hazır.
-2. **TASK-22 TAMAMLANDI (DONE)**:
+   - Opus denetleyip `2adb27b` ile push etti.
+2. **TASK-22 TAMAMLANDI (DONE — Opus denetledi, 37d2a63 ile push)**:
    - `gate_uitzonderingen.json`'da yer alan 17 onderwerp'in tamamındaki (ak 9, sch 7, fr 1) çeldirici metinleri ciddi ve konuyla örtüşen açıklamalarla genişletildi.
    - Hiçbir dosyada doğru şık en uzun şık olma oranı %50'yi aşmıyor (tüm dosyalarda %0 – %33 aralığına indi).
    - `tools/gate_uitzonderingen.json` içinden 17 geçici istisna satırının tamamı silindi (artık dosyada `TASK-22` istisnası kalmadı).
@@ -751,7 +751,7 @@ Yanıt yazmadan yeni görev alma.
   - `CLAUDE.md` tablosu güncellendi: Economie 71 sınav / 1532 soru; genel toplam 240 onderwerp / 658 proeftoets / 15264 soru.
 - **Opus denetimi bekliyor**: Statü `REVIEW`.
 
-### TASK-26 · wiskunde: H1 Karışık 10 Toets + H2 Parabolen (her § için 5'er Toets)  [status: REVIEW — 2026-10-25 agy teslimi]
+### TASK-26 · wiskunde: H1 Karışık 10 Toets + H2 Parabolen (her § için 5'er Toets)  [status: DONE — Opus denetledi + push 78cc248, 2026-10-25]
 - **Atanan**: agy (Antigravity) + alt ajanlar
 - **Amaç**: Kullanıcı isteği (2026-10-25) — **A)** Wiskunde 1. üniteden (H1 Lineaire & Exponentiële formules) karışık 10 test, **B)** 2. ünitenin (H2 Parabolen) her bir bölümünden (§2.1 t/m §2.5) 5'er test (toplam 25 test). 3 alt ajan ile paralel üretildi.
 - **Mevcut durum**: H1'de 60 test vardı → 70 test oldu; H2'de 13 test vardı → 38 test oldu. Toplam Wiskunde: 118 test / 2480 soru.
@@ -780,7 +780,7 @@ Yanıt yazmadan yeni görev alma.
 - **⚠️ Commit/push YAPILMADI**: Kullanıcı isteği doğrultusunda Claude'a (Opus) devredildi; Opus inceleyip commit ve push yapacak.
 - **agy notu**: 35 yeni test (700 soru) 3 alt ajan ile üretildi ve doğrulandı. Kabul kapısı 18/18 yeşil. Dosyalar staging/commit için Opus denetimine hazır.
 
-### TASK-25 · geschiedenis H1: 5 proeftoets daha (31–35)  [status: REVIEW — 2026-10-25 agy teslimi]
+### TASK-25 · geschiedenis H1: 5 proeftoets daha (31–35)  [status: DONE — Opus denetledi + push 2adb27b, 2026-10-25]
 - **Atanan**: agy (Antigravity)
 - **Amaç**: Kullanıcı isteği (2026-10-23) — Hoofdstuk 1 "De Eerste Wereldoorlog (1900–1920)" için 5 yeni test.
   Şu an H1'de yalnız 5 test var (`examen_1…5.js`, her § bir test).

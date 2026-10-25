@@ -640,3 +640,57 @@ Faz 1 uygulandı.
   - `tools/gate.js nederlands` → **16/16 kusursuz tam puan**.
   - `havo3/nederlands/index.html` güncellendi (`examen_18.js` - `examen_22.js` eklendi).
   - `js/hoofdstukken.js` güncellendi (`nederlands: hoofdstukken=[1] aantalExamens={"1":22}`).
+
+## 📅 Milestone 22: Wiskunde H1 Gemengd (10 Toets) + H2 Parabolen (§2.1–§2.5 25 Toets) — 35 Yeni Proeftoets (2026-10-25)
+
+* **İstek**: "matematik testlerini (1. üniteden 10 karışık test ve 2. ünitenin her bölümünden 5'er test olmak üzere alt ajanlarla sorular uret".
+* **Kapsam**:
+  - **H1 Gemengd (10 test)**: `examen_84.js … examen_93.js` (`ex-wiskunde-h1-gemengd-1 … 10`). Her sınavda §1.1, §1.2, §1.3, §1.4, §1.5 konularından dörder soru olmak üzere tam dengeli 20 soru (Toplam 200 soru).
+  - **H2 Parabolen (§2.1–§2.5 için 5'er test, toplam 25 test)**:
+    - §2.1 Bergparabool of dalparabool (5 test): `examen_94.js … 98.js` (`ex-wiskunde-parabolen-21-1 … 5`)
+    - §2.2 Symmetrie en top (5 test): `examen_99.js … 103.js` (`ex-wiskunde-parabolen-22-1 … 5`)
+    - §2.3 Parabolen tekenen (5 test): `examen_104.js … 108.js` (`ex-wiskunde-parabolen-23-1 … 5`)
+    - §2.4 De vorm en de ligging van de parabool (5 test): `examen_109.js … 113.js` (`ex-wiskunde-parabolen-24-1 … 5`)
+    - §2.5 Drie vormen van kwadratische formules (5 test): `examen_114.js … 118.js` (`ex-wiskunde-parabolen-25-1 … 5`)
+* **Kalite & Standartlar**:
+  - Toplam 35 yeni sınav x 20 soru = 700 soru (Wiskunde toplamı: 12 onderwerp, 118 proeftoets, 2480 soru).
+  - 3 alt ajan ile paralel üretildi; tüm cebirsel çözümler `fractions.Fraction` ile tam hesaplandı.
+  - Mevcut 1780 soruya ve birbirine karşı 0 duplicate (tam tekillik).
+  - Sınavlarda `type: "invoer"` kullanılmadı (yalnız `invul`, `mc`, `waaronwaar`).
+  - MC seçenekleri dosya başına ≤ %40 dengeli ve `mc_volgorde` ile kalıpsız.
+  - Waaronwaar sorularında ≥ %35 onwaar barajı (gerçekleşen: %50–%67).
+  - `tools/gate.js wiskunde` → **18/18 kusursuz tam puan**.
+  - `tools/open_check.js wiskunde` → **0 hata**.
+  - `havo3/wiskunde/index.html`'e `examen_84.js … 118.js` (`?v=6.0`) eklendi.
+  - `js/hoofdstukken.js` güncellendi (`wiskunde: aantalExamens={"1":70,"2":38,"90":10}`).
+  - Commit `78cc248` ile main branch'ine alındı.
+
+## 📅 Milestone 23: Geschiedenis H1 — 5 Yeni Proeftoets (Toets 31 t/m 35) (2026-10-25)
+
+* **Kapsam**:
+  - `examen_31.js`: Toets 31 — Gemengd §1.1 + §1.2 + §1.3
+  - `examen_32.js`: Toets 32 — Gemengd §1.3 + §1.4 + §1.5
+  - `examen_33.js`: Toets 33 — Oorzaak en gevolg in heel H1
+  - `examen_34.js`: Toets 34 — Tijdlijn & chronologie
+  - `examen_35.js`: Toets 35 — Begrippentoets H1
+* **Kalite & Standartlar**:
+  - 5 sınav x 20 soru = 100 soru (Geschiedenis toplamı: 30 onderwerp, 35 proeftoets, 940 soru).
+  - MC harf dağılımı ≤ %40 olarak dengelendi.
+  - MC seçenek uzunlukları dengelendi (Kural 17 doğru şık en uzun: dosya başı %0–%20).
+  - Açık sorularda modelantwoord ve anahtar kelime uyumu sağlandı (`ex-32#20` 100 000 normalizasyonu tam puan alıyor, `ex-34#20` kavram sorusuna çevrildi).
+  - `tools/gate.js geschiedenis` → **18/18 kusursuz tam puan**.
+  - `tools/open_check.js geschiedenis` → **0 hata**.
+  - `havo3/geschiedenis/index.html`'e `examen_31.js … 35.js` (`?v=3.8`) bağlandı.
+  - `js/hoofdstukken.js` güncellendi (`geschiedenis: aantalExamens={"1":10,"2":5,"3":5,"4":5,"5":5,"6":5}`).
+  - Commit `2adb27b` ile main branch'ine alındı.
+
+## 📅 Milestone 24: TASK-22 — 17 Konuda "Doğru Şık En Uzun" Düzeltmesi (2026-10-25)
+
+* **Kapsam**:
+  - `gate_uitzonderingen.json`'da geçici istisna olarak listelenen 17 onderwerp (Aardrijkskunde 9: `h4_1`..`h4_5`, `h5_1`..`h5_3`, `h5_5`; Scheikunde 7: `h3_1`, `h4_begrippen`, `h6_2`, `h6_begrippen`, `h7_1`, `h7_3`, `h7_begrippen`; Frans 1: `h1_2`) elden geçirildi.
+* **Kalite & Standartlar**:
+  - Çeldirici seçenekleri ciddi pedagojik derinlikle zenginleştirildi; doğru şıkkın tek başına en uzun olma durumu %0–%33 seviyesine indirildi (%50 barajının çok altında).
+  - Komik/şaka çeldiriciler temizlendi.
+  - `tools/gate_uitzonderingen.json`'dan 17 geçici istisna satırının tamamı silindi (`TASK-22` istisnası kalmadı).
+  - Doğrulama: `gate.js frans` (18/18), `gate.js scheikunde` (18/18), `gate.js aardrijkskunde` (17/18, tek ihlal bilinen smoke-test ex-1).
+  - Commit `37d2a63` ve `02676d0` ile main branch'ine alındı.
