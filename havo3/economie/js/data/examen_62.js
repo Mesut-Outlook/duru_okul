@@ -99,12 +99,12 @@ DURU.registerExamen({
       "vraag": "Op welk type goederen of diensten geldt in Nederland het lage btw-tarief van 9%?",
       "opties": [
         "Luxe artikelen zoals smartphones, laptops en merkkleding",
-        "Eerste levensbehoeften, zoals brood, melk, groenten en medicijnen",
+        "Eerste levensbehoeften, zoals brood, melk en groenten",
         "Onderwijs en medische behandelingen door artsen in ziekenhuizen",
         "Accijnsgoederen zoals sigaretten, benzine en alcoholische dranken"
       ],
       "antwoord": 1,
-      "uitleg": "Het verlaagde btw-tarief van 9% geldt voor noodzakelijke goederen zoals voedingsmiddelen en geneesmiddelen. (Pincode p. 117)"
+      "uitleg": "Het verlaagde btw-tarief van 9% geldt voor noodzakelijke goederen zoals levensmiddelen. (Pincode p. 117)"
     },
     {
       "type": "mc",
@@ -120,15 +120,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wanneer spreekt men bij een bedrijf van een break-evenpunt (BEP)?",
+      "vraag": "Een kledingzaak heeft een omzet van € 96.000, een inkoopwaarde van de omzet van € 60.000 en bedrijfskosten van € 25.000. Hoeveel bedraagt de nettowinst?",
       "opties": [
-        "Wanneer de nettowinst maximaal is ten opzichte van de omzet",
-        "Wanneer de verkoopprijs van een product gelijk is aan het wettelijke btw-tarief",
-        "Wanneer de totale opbrengst exact gelijk is aan de totale kosten en de winst nul is",
-        "Wanneer de bedrijfskosten hoger zijn dan de gerealiseerde brutowinst"
+        "€ 36.000",
+        "€ 11.000",
+        "€ 71.000",
+        "€ 25.000"
       ],
-      "antwoord": 2,
-      "uitleg": "Bij het break-evenpunt (BEP) speelt de onderneming quitte: TO = TK en de winst is exact € 0. (Pincode p. 121)"
+      "antwoord": 1,
+      "uitleg": "Brutowinst = € 96.000 − € 60.000 = € 36.000. Nettowinst = € 36.000 − € 25.000 = € 11.000. (Pincode p. 119 en 120)"
     },
     {
       "type": "waaronwaar",

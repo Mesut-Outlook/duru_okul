@@ -53,7 +53,7 @@ DURU.registerExamen({
         "De fictieve president-directeur van het Centraal Bureau voor de Statistiek",
         "De Nederlandse burger die precies het wettelijk minimumloon verdient",
         "De denkbeeldige werknemer met het meest voorkomende inkomen in Nederland",
-        "De ondernemer die exact quitte speelt op zijn jaarlijkse break-evenpunt"
+        "De ondernemer die alle bedrijfskosten zelf betaalt"
       ],
       "antwoord": 2,
       "uitleg": "Jan Modaal vertegenwoordigt de werknemer met het modale (meest voorkomende) inkomen. (Pincode p. 56)"
@@ -101,7 +101,7 @@ DURU.registerExamen({
         "Inkoopprijs vermenigvuldigd met het aantal verkochte eenheden (afzet)",
         "Verkoopprijs vermenigvuldigd met de totale jaarlijkse afzet exclusief btw",
         "Omzet verminderd met de bedrijfskosten en de af te dragen omzetbelasting",
-        "Totale vaste bedrijfskosten gedeeld door het break-evenaantal stuks"
+        "Totale vaste bedrijfskosten gedeeld door het aantal verkochte stuks"
       ],
       "antwoord": 0,
       "uitleg": "Inkoopwaarde van de omzet = inkoopprijs × afzet (verkochte stuks). (Pincode p. 115)"

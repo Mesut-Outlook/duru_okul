@@ -100,7 +100,7 @@ DURU.registerExamen({
       "opties": [
         "De onderneming behaalt een historisch hoge winstmarge per product",
         "De omzet van de onderneming daalt automatisch tot onder nul euro",
-        "Het break-evenpunt van de onderneming wordt direct gehalveerd",
+        "De nettowinst van de onderneming wordt direct gehalveerd",
         "De onderneming lijdt een nettoverlies over de betreffende periode"
       ],
       "antwoord": 3,

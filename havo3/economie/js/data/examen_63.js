@@ -150,9 +150,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Als een bedrijf quitte speelt op het break-evenpunt, is de nettowinst gelijk aan de inkoopwaarde van de omzet.",
-      "antwoord": false,
-      "uitleg": "Onwaar. Op het break-evenpunt spelen opbrengsten en kosten quitte en is de nettowinst precies € 0. (Pincode p. 121)"
+      "vraag": "Als de bedrijfskosten van een onderneming hoger zijn dan de brutowinst, ontstaat er een nettoverlies.",
+      "antwoord": true,
+      "uitleg": "Waar. Nettowinst = brutowinst − bedrijfskosten; is die negatief, dan is er sprake van een nettoverlies. (Pincode p. 120)"
     },
     {
       "type": "invul",

@@ -40,7 +40,7 @@ DURU.registerExamen({
       "opties": [
         "De denkbeeldige burger met het meest voorkomende inkomen in Nederland",
         "De werknemer die precies het wettelijk minimumjeugdloon in Nederland ontvangt",
-        "De ondernemer die precies quitte speelt op het break-evenpunt",
+        "De ondernemer die precies zijn omzet aan personeel uitbetaalt",
         "De voorzitter van de Sociaal-Economische Raad in Den Haag"
       ],
       "antwoord": 0,

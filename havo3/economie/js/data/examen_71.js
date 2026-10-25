@@ -84,15 +84,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat is het break-evenpunt (BEP) van een onderneming?",
+      "vraag": "Wat is de brutowinst van een winkelier met een omzet van € 84.000 en een inkoopwaarde van de omzet van € 50.000?",
       "opties": [
-        "Het punt waar de verkoopprijs precies gelijk is aan de inkoopprijs per product",
-        "Het punt waar de ondernemer het maximale bedrag aan winstbelasting moet betalen",
-        "Het moment waarop de onderneming alle voorraden in het magazijn heeft uitverkocht",
-        "Het productieniveau waar de totale opbrengst exact gelijk is aan de totale kosten"
+        "€ 34.000",
+        "€ 134.000",
+        "€ 50.000",
+        "€ 84.000"
       ],
-      "antwoord": 3,
-      "uitleg": "Bij het break-evenpunt is TO = TK en is de nettowinst € 0. (Pincode p. 121)"
+      "antwoord": 0,
+      "uitleg": "Brutowinst = € 84.000 − € 50.000 = € 34.000. (Pincode p. 119)"
     },
     {
       "type": "mc",

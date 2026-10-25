@@ -150,9 +150,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Op het break-evenpunt is de totale winst van een onderneming gelijk aan nul euro.",
+      "vraag": "De nettowinst is gelijk aan de brutowinst min de bedrijfskosten.",
       "antwoord": true,
-      "uitleg": "Waar. Op het BEP zijn totale opbrengsten gelijk aan totale kosten en is de winst € 0. (Pincode p. 121)"
+      "uitleg": "Waar. Nettowinst = brutowinst − bedrijfskosten. (Pincode p. 120)"
     },
     {
       "type": "invul",

@@ -62,7 +62,7 @@ DURU.registerExamen({
       "type": "mc",
       "vraag": "Wat betekent de term 'Jan Modaal' in Nederland?",
       "opties": [
-        "De gemiddelde ondernemer die elk jaar quitte speelt op het break-evenpunt",
+        "De gemiddelde ondernemer die elk jaar zijn bedrijfskosten verdubbelt",
         "De werknemer die precies het wettelijk vastgestelde minimumloon verdient",
         "De fictieve inspecteur van de Belastingdienst die btw-aangiftes controleert",
         "De denkbeeldige burger met het inkomen dat in het land het vaakst voorkomt"
@@ -101,7 +101,7 @@ DURU.registerExamen({
         "Een nettowinst van € 7.000",
         "Een brutowinst van € 97.000",
         "Een nettoverlies van € 7.000",
-        "Het bedrijf speelt exact quitte"
+        "Het bedrijf betaalt geen btw over zijn omzet"
       ],
       "antwoord": 2,
       "uitleg": "Nettowinst = € 45.000 − € 52.000 = −€ 7.000 (een nettoverlies van € 7.000). (Pincode p. 120)"

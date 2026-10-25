@@ -96,15 +96,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat gebeurt er als een ondernemer precies op de break-evenafzet produceert?",
+      "vraag": "Een ondernemer heeft een omzet van € 40.000, een inkoopwaarde van de omzet van € 25.000 en bedrijfskosten van € 9.000. Hoeveel bedraagt de nettowinst?",
       "opties": [
-        "De totale omzet is twee keer zo groot als de totale inkoopwaarde",
-        "Het bedrijf behaalt een maximale nettowinst van 21 procent",
-        "De vaste kosten van het bedrijf zijn gedaald naar exact nul euro",
-        "De totale opbrengst dekt precies alle kosten zodat de nettowinst nul is"
+        "€ 6.000",
+        "€ 16.000",
+        "€ 9.000",
+        "€ 31.000"
       ],
-      "antwoord": 3,
-      "uitleg": "Bij de break-evenafzet is TO = TK en is de nettowinst precies € 0. (Pincode p. 121)"
+      "antwoord": 0,
+      "uitleg": "Brutowinst = € 40.000 − € 25.000 = € 15.000. Nettowinst = € 15.000 − € 9.000 = € 6.000. (Pincode p. 119 en 120)"
     },
     {
       "type": "mc",

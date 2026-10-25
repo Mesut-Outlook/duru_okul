@@ -1,11 +1,11 @@
 /* =========================================================
-   Duru's Economie (HAVO 3) — Proeftoets 66: Gemengd §2.3 + §4.3 — Inflatiemechanismen & Break-even Analyse
+   Duru's Economie (HAVO 3) — Proeftoets 66: Gemengd §2.3 + §4.3 — Inflatiemechanismen & Brutowinst
    ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-economie-66",
   "hoofdstuk": 4,
   "paragraaf": "mix",
-  "titel": "Proeftoets 66: Gemengd §2.3 + §4.3 — Inflatiemechanismen & Break-even Analyse",
+  "titel": "Proeftoets 66: Gemengd §2.3 + §4.3 — Inflatiemechanismen & Brutowinst",
   "vak": "Economie · HAVO 3 (Pincode)",
   "icoon": "💶",
   "duurMin": 20,
@@ -72,39 +72,39 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat betekent het als een ondernemer precies op zijn break-evenpunt (BEP) opereert?",
+      "vraag": "Wat is de brutowinst van een ondernemer met een omzet van € 150.000 en een inkoopwaarde van de omzet van € 90.000?",
       "opties": [
-        "De omzet is gelijk aan de btw die aan de Belastingdienst moet worden afgedragen",
-        "De inkoopwaarde van de omzet is twee keer zo hoog als de gemaakte bedrijfskosten",
-        "De winstmarge van het bedrijf is maximaal en de brutowinst bereikt een recordhoogte",
-        "De totale opbrengst is gelijk aan de totale kosten en de nettowinst is nul euro"
+        "€ 60.000",
+        "€ 240.000",
+        "€ 90.000",
+        "€ 30.000"
       ],
-      "antwoord": 3,
-      "uitleg": "Op het break-evenpunt speelt het bedrijf quitte: TO = TK en de winst is € 0. (Pincode p. 121)"
+      "antwoord": 0,
+      "uitleg": "Brutowinst = omzet − inkoopwaarde van de omzet = € 150.000 − € 90.000 = € 60.000. (Pincode p. 119)"
     },
     {
       "type": "mc",
-      "vraag": "Een fabrikant verkoopt pennen voor € 2,00 per stuk exclusief btw. De variabele inkoopkosten zijn € 0,80 per pen. De vaste kosten bedragen € 6.000 per jaar. Hoeveel pennen moet hij verkopen om break-even te draaien?",
+      "vraag": "Een fabrikant verkoopt pennen voor € 2,00 per stuk exclusief btw. De inkoopprijs is € 0,80 per pen. Hoeveel bedraagt de brutowinst bij een afzet van 5.000 pennen?",
       "opties": [
-        "3.000 pennen",
-        "5.000 pennen",
-        "7.500 pennen",
-        "2.500 pennen"
+        "€ 6.000",
+        "€ 4.000",
+        "€ 1.200",
+        "€ 10.000"
+      ],
+      "antwoord": 0,
+      "uitleg": "Brutowinst per pen = € 2,00 − € 0,80 = € 1,20. Brutowinst = 5.000 × € 1,20 = € 6.000. (Pincode p. 119)"
+    },
+    {
+      "type": "mc",
+      "vraag": "Hoe verandert de nettowinst van een kledingwinkel als de winkelhuur (een bedrijfskost) stijgt en de brutowinst gelijk blijft?",
+      "opties": [
+        "De nettowinst stijgt",
+        "De nettowinst daalt",
+        "De nettowinst verandert niet",
+        "De nettowinst wordt gelijk aan de omzet"
       ],
       "antwoord": 1,
-      "uitleg": "Brutowinst per pen = € 2,00 − € 0,80 = € 1,20. Break-evenafzet = vaste kosten / brutowinst per pen = € 6.000 / € 1,20 = 5.000 pennen. (Pincode p. 121)"
-    },
-    {
-      "type": "mc",
-      "vraag": "Hoe beïnvloedt een stijging van de winkelhuur (vaste kosten) de break-evenafzet van een kledingwinkel?",
-      "opties": [
-        "De break-evenafzet daalt, omdat het bedrijf bij hogere huur sneller winst kan maken",
-        "De break-evenafzet verandert niet, omdat huurkosten geen invloed hebben op de afzet",
-        "De break-evenafzet stijgt, omdat er meer stuks verkocht moeten worden om de kosten te dekken",
-        "De break-evenafzet verdwijnt volledig, omdat vaste kosten altijd subsidieerbaar zijn"
-      ],
-      "antwoord": 2,
-      "uitleg": "Als de vaste kosten stijgen, moeten er meer producten verkocht worden om alle kosten te dekken (TO = TK). (Pincode p. 121)"
+      "uitleg": "Nettowinst = brutowinst − bedrijfskosten. Een hogere huur verlaagt de nettowinst. (Pincode p. 120)"
     },
     {
       "type": "mc",
@@ -168,9 +168,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De situatie waarin de totale opbrengst gelijk is aan de totale kosten noemt men het ____.",
-      "antwoord": "break-evenpunt|break even punt|bep",
-      "uitleg": "Op het break-evenpunt (BEP) speelt een onderneming quitte. (Pincode p. 121)"
+      "vraag": "Het verschil tussen de omzet en de inkoopwaarde van de omzet noemt men de ____.",
+      "antwoord": "brutowinst|bruto winst",
+      "uitleg": "Brutowinst = omzet − inkoopwaarde van de omzet. (Pincode p. 119)"
     },
     {
       "type": "invul",
@@ -191,14 +191,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een startende ondernemer verkoopt handgemaakte leren tassen voor € 90 per stuk exclusief btw. De variabele kosten (leer en gespen) zijn € 40 per tas. De vaste kosten van de werkplaats zijn € 15.000 per jaar. Bereken de break-evenafzet in aantal tassen en bereken de nettowinst als de ondernemer in een jaar 450 tassen verkoopt.",
+      "vraag": "Een startende ondernemer verkoopt handgemaakte leren tassen voor € 90 per stuk exclusief btw. De inkoopwaarde per tas is € 40. De vaste kosten van de werkplaats zijn € 15.000 per jaar. Hij verkoopt in een jaar 450 tassen. Bereken de brutowinst en de nettowinst.",
       "sleutelwoorden": [
-        "300",
+        "22.500/22500",
         "7.500/7500"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Brutowinst per tas = € 90 − € 40 = € 50. Break-evenafzet = € 15.000 / € 50 = 300 tassen. Bij 450 tassen: totale brutowinst = 450 × € 50 = € 22.500. Nettowinst = € 22.500 − € 15.000 = € 7.500.",
-      "uitleg": "Break-evenafzet = 300 tassen; nettowinst bij 450 tassen = € 7.500. (Pincode p. 120 en 121)"
+      "modelantwoord": "Brutowinst = 450 × (€ 90 − € 40) = € 22.500. Nettowinst = € 22.500 − € 15.000 = € 7.500.",
+      "uitleg": "Brutowinst = omzet − inkoopwaarde; nettowinst = brutowinst − bedrijfskosten. (Pincode p. 119 en 120)"
     }
   ]
 });
