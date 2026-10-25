@@ -705,29 +705,13 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   - `CLAUDE.md` tablosu güncellendi: Economie 71 sınav / 1532 soru; genel toplam 240 onderwerp / 658 proeftoets / 15264 soru.
 - **Opus denetimi bekliyor**: Statü `REVIEW`.
 
-### TASK-26 · wiskunde: §1.5 Groeifactor en tijd 5 toets + H2 Parabolen 5 toets  [status: TODO]
-- **Atanan**: agy (Antigravity)
-- **Amaç**: Kullanıcı isteği (2026-10-23) — **A)** §1.5 için 5 yeni test, **B)** H2 Parabolen için 5 yeni test.
-- **Mevcut set (tekrar etme, gate kural 2 yakalar)**: §1.5 = `examen_40…44.js` (ex-wiskunde-h1-30…34) +
-  `examen_79…83.js` (ex-wiskunde-h1-56…60); Parabolen = `examen_61…73.js` (ex-wiskunde-parabolen-1…13; her § 2 toets,
-  begrippentoets 71, gemengd 72–73) + onderwerp `parabolen_*.js`.
-- **Kaynak**: kitap — H1: `inbox/2026-2027/wiskunde/wiskunde_h01_lineaire-en-exponentiele-formules.ocr.txt` (§1.5 ≈ satır
-  1198 ve 1364'ten itibaren); H2: `inbox/2026-2027/wiskunde/wiskunde_h02_parabolen.pdf` (sayfa görselleri/metni
-  `inbox/2026-2027/wiskunde/_render/`). Kitapta olmayan yöntem/terim sorma.
-- **Yöntem (ZORUNLU — wiskunde sınavları elle yazılmaz)**: Python üretici betik + cevaplar `fractions.Fraction` ile kodda
-  hesaplanır ve ayrı bir kontrolle bağımsız doğrulanır (sympy yok). Mevcut yapıcıları **import ederek yeniden kullan**:
-  `tools/gen_wiskunde_h1_14_15_extra.py` (`q15_*`, `bouw`) ve `tools/gen_wiskunde_h1_paragraaf_exams.py` (`MC, WO, IN, OP,
-  fmt, svg_tabel, num_ans`); parabol için `tools/gen_wiskunde_h2_parabolen.py` (`kw, topvorm, gefact, top_van, figuur,
-  met_top, uitwerken`). **Yeni betikler**: `tools/gen_wiskunde_h1_15_extra2.py` ve `tools/gen_wiskunde_h2_parabolen_extra.py`.
-  Yeni `random.Random` seed'leri kullan (mevcutlar 6100+, 7000+, 7100+ → ör. 8000+ / 8500+); mevcut tüm soru metinlerini
-  `GEZIEN` listesine verip birebir tekrarı ele (mevcut betiklerdeki `sys.argv[2]` deseni).
-  **⚠️ Mevcut `gen_wiskunde_*.py` betiklerini ÇALIŞTIRMA** — sabit dosya adlarına yazarlar (`examen_61…73`, `examen_79…83`,
-  `parabolen_*.js`) ve Duru'nun çözdüğü sınavları ezerler. Yalnız import et.
-- **Çıktı A (§1.5)**: `havo3/wiskunde/js/data/examen_84.js … examen_88.js` → id `ex-wiskunde-h1-61 … 65`,
-  `hoofdstuk: 1`, `paragraaf: "1.5"`, başlık `"Proeftoets 84 — §1.5 Groeifactor en tijd (extra2 1/5, …)"`.
-  Sıra: basis · oefenen · contexten (rente, bevolking, afname/halvering, procent per periode) · toetsniveau · eindniveau.
-  Önceki 10 testte zayıf kalan türleri ağırlıkla: groeifactor per andere tijdseenheid (per jaar ↔ per maand/kwartaal/
-  per 10 jaar), terugrekenen, "wanneer voor het eerst" (tabel/inklemmen), formule opstellen uit tekst. Tablo/grafik `svg_tabel`/SVG.
+### TASK-26 · wiskunde: H1 Karışık 10 Toets + H2 Parabolen (her § için 5'er Toets)  [status: TODO]
+- **Atanan**: agy (Antigravity) + 5 alt ajan
+- **Amaç**: Kullanıcı isteği (2026-10-25) — **A)** Wiskunde 1. üniteden (H1 Lineaire & Exponentiële formules) karışık 10 test, **B)** 2. ünitenin (H2 Parabolen) her bir bölümünden (§2.1 t/m §2.5) 5'er test (toplam 25 test). Sorular için 5 alt ajan çalıştırılacak.
+- **Mevcut durum**: H1'de 60 sınav mevcut; H2'de 13 sınav mevcut.
+- **Kaynak**: kitap — H1: `inbox/2026-2027/wiskunde/wiskunde_h01_lineaire-en-exponentiele-formules.ocr.txt`; H2: `inbox/2026-2027/wiskunde/wiskunde_h02_parabolen.pdf`.
+- **Yöntem**: 5 alt ajan ile paralel soru üretimi + `fractions.Fraction` ile tam doğrulama.
+- **Sonraki oturumda başlanacak.**
 - **Çıktı B (Parabolen)**: `examen_89.js … examen_93.js` → id `ex-wiskunde-parabolen-14 … 18`, `hoofdstuk: 2`,
   `paragraaf: "mix"`, başlık `"Proeftoets 89 — Gemengd H2 Parabolen (extra 1/5, …)"`. Hepsi **§2.1–§2.5 karışık**:
   89 basis (berg/dal, symmetrieas, top aflezen) · 90 top + tekenen (tabel → grafiek, top berekenen met xt = −b/2a) ·
