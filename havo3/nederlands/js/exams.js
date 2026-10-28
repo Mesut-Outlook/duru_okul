@@ -61,8 +61,25 @@
     var h = '<div class="terug" onclick="DURU.gaNaar(\'home\')">← Terug naar overzicht</div>';
     h += '<div class="sectie-titel"><h3>📝 Oefentoetsen</h3><div class="lijn"></div></div>';
     h += '<p style="margin:0 4px 16px;color:var(--grijs)">Doe een toets op tijd, net als op school! Je krijgt aan het eind je cijfer én bij elke vraag te zien <b>hoe je het moet doen</b>. Deze toetsen tellen los van je oefen-punten — daar gebeurt niets mee.</p>';
+    // Per hoofdstuk (ex.hoofdstuk + DURU.hoofdstukken, nooit de id); onbekend → "Overige toetsen".
+    var bekend = {};
+    var groepen = (DURU.hoofdstukken || []).map(function (hf) {
+      bekend[hf.nr] = true;
+      return { hf: hf, examens: DURU.examens.filter(function (ex) { return ex.hoofdstuk === hf.nr; }) };
+    });
+    var overig = DURU.examens.filter(function (ex) { return !bekend[ex.hoofdstuk]; });
+    if (overig.length) groepen.push({ hf: { nr: null, titel: "Overige toetsen", icoon: "📝" }, examens: overig });
+    groepen.forEach(function (g) {
+    if (!g.examens.length) return;
+    h += '<details class="chapter-accordion" open><summary class="chapter-header">' +
+      '<div class="ch-icon">' + (g.hf.icoon || "📝") + '</div>' +
+      '<div class="ch-info">' + (g.hf.nr != null ? '<span class="ch-badge">Hoofdstuk ' + g.hf.nr + '</span>' : '') +
+        '<div class="ch-title">' + esc(g.hf.titel) + '</div>' +
+        (g.hf.intro ? '<div class="ch-sub">' + esc(g.hf.intro) + '</div>' : '') + '</div>' +
+      '<div class="ch-meta"><div class="ch-stats">' + g.examens.length + ' toetsen</div><div class="ch-chevron">▼</div></div>' +
+      '</summary><div class="chapter-content">';
     h += '<div class="examen-lijst">';
-    DURU.examens.forEach(function (ex) {
+    g.examens.forEach(function (ex) {
       var best = EX.beste[ex.id];
       var laatste = (EX.laatste && EX.laatste[ex.id] !== undefined) ? EX.laatste[ex.id] : null;
       if (laatste == null && EX.history) {
@@ -100,7 +117,8 @@
         '<div style="margin-top:14px"><span class="btn klein">▶️ Start toets</span></div>' +
         '</div>';
     });
-    h += '</div>';
+    h += '</div></div></details>';
+    });
 
     // Toetshistorie & Foutanalyse sectie
     EX.history = EX.history || [];

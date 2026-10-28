@@ -15,6 +15,20 @@
       icoon: "📖",
       kleur: "h1-thema",
       intro: "Inleiding en slot (§1), argumentatiestructuren (§2), vaste tekststructuren (§4) en actief lezen (§5)."
+    },
+    {
+      nr: 5,
+      titel: "Grammatica — Zinsdelen",
+      icoon: "🧩",
+      kleur: "h5-thema",
+      intro: "Samentrekking (§3) en verwijzen (§5)."
+    },
+    {
+      nr: 7,
+      titel: "Spelling",
+      icoon: "✏️",
+      kleur: "h7-thema",
+      intro: "Trema, apostrof, accenten en cedille (§2) en met of zonder n (§3)."
     }
   ];
   DURU.onderwerpen = [];

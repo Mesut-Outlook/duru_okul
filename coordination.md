@@ -651,6 +651,61 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### 2026-10-28 · nederlands: Cursus 5 §3/§5 + Cursus 7 §2/§3 — paragraf başına 7 toets (Opus + 4 fork) ✅
+- Kullanıcı: "seçili dosyalardaki her üniteden 7'şer test üret" (4 paragraf PDF'i). `bootstrap.js` → hoofdstuk 5 "Grammatica — Zinsdelen", 7 "Spelling".
+- §7.2 examen_23…29, §7.3 30…36, §5.3 37…43, §5.5 44…50 (her biri 20 soru, 20 dk) + onderwerp `c7_2/c7_3/c5_3/c5_5.js` + begrippen `c5_begrippen/c7_begrippen.js` + begrippentoets 51 (C7), 52 (C5).
+  Üreteçler `tools/gen_nederlands_c{7_2,7_3,5_3,5_5}.py`, `tools/gen_nederlands_begrippen_c5_c7.py` (deterministik seed).
+- invul tuzağı (motor apostrofu siler + alt-dizi kabul eder): apostrof yeri ve met/zonder -n seçimleri yalnız mc.
+- `gate.js nederlands` 18/18, `open_check.js` nederlands 0 hata, manifest yeniden üretildi (`hoofdstukken.js?v=20261028`).
+- **Kalan (planın devamı, onay bekliyor):** öğretmen notları (bijv. nw -e/-n, werkwoordspelling, spellingdetective) + foutentraining.
+
+### 📝 PLAN (Opus, 2026-10-28) · nederlands: sıradaki toets, Cursus 7 §2/§3 + Cursus 5 §3/§5 + öğretmen notları  [status: KISMEN DONE — kitap paragrafları yukarıda; öğretmen notları açık]
+- **Kapsam (kullanıcı)**: `inbox/2026-2027/nederlands/nederlands_c07_s02_trema_apostrof.pdf`, `…_c07_s03_met_of_zonder_n.pdf`,
+  `…_c05_s03_samentrekking.pdf`, `…_c05_s05_verwijzen.pdf` (birleşik: `nederlands_cursus7_en_cursus5_tum_bolumler.pdf`). PDF'ler görüntü,
+  metin katmanı yok, OCR/render gerekiyor. **Ayrıca** `inbox/2026-2027/nederlands/Nederlands Notlar/` (öğretmen pptx/docx): accenten,
+  bijvoeglijk naamwoorden, met of zonder -n (+opdracht), samentrekkingen, verwijzen, werkwoordspelling (+"spellingdetective" opdracht).
+- **Önerilen yöntem (onay bekliyor)**: trema / -n-e / werkwoordspelling için kural tabanlı üreteç script'i (cevap kodla hesaplanır);
+  samentrekking / verwijzen için Sonnet + kitap denetimi; öğretmen formatları ("kies de juiste vorm", metinde fout verbeteren); sonra foutentraining.
+- **Açık soru (kullanıcıya)**: öğretmenin gerçek toets formatı nasıl? Yeni examen id'leri `ls` + Duru geçmişine bakılarak seçilecek (mevcut: examen_1…22, Cursus 1).
+- agy: bu madde onaylanıp TASK'a dönüşene kadar **başlama**.
+
+### TASK-29 · economie: Pincode kitabının kalan tüm paragraflarını ayrı PDF olarak dışa aktar  [status: DONE — Opus doğruladı 2026-10-25: 23 yeni PDF pdf_check temiz, sayfa sayıları s. aralıklarıyla uyumlu, havo3/economie değişmedi; commit yok]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Pincode 7e editie (2, 3 havo) kitabında `inbox/2026-2027/economie/` içinde henüz olmayan her hoofdstuk/paragraaf bölümünü, bölüm başına ayrı bir PDF olarak Noordhoff okuyucusundan dışa aktarmak.
+- **Girdi**:
+  - Kitap: course_id `aa599ad5-b7ea-4045-870c-f990c9a98bec`, ebook_id `eedbb36f-9bd5-41c2-bd7b-4d4a970b4301` (reader: `…/ebook/<ebook_id>?page=N`, 292 sayfa). Bölüm listesi için reader'daki "Naar overzicht" / içindekiler sayfasını kullan; sayfa aralıkları kitabın kendi sayfa numaraları (PDF sırası değil).
+  - Yöntem: `tools/noordhoff_export.py` (`--discover economie` çalışıyor, tarayıcı profili hazır) + `tools/noordhoff_books.json` → economie `chapters` listesi.
+  - Mevcut dosyalar (DOKUNMA, tekrar üretme): `economie_h02_koopkracht-inflatie-2-3.pdf` (s. 54–59), `economie_h04_omzet-winst-btw-4-3.pdf` (s. 114–121), `economie_h04_produceren-4-1-4-2.pdf`.
+  - Kapsam dışı: "Rekenen" bölümleri (hoofdstuk sonu, ör. s. 60–61, 122–123) — tek tek paragraf değil, ayrıca istenmedikçe alınmaz.
+- **Çıktı**: `inbox/2026-2027/economie/economie_h<NN>_<slug>.pdf` (her paragraf = 1 dosya; NN = hoofdstuk no, slug = paragraf başlığının kısa hali). Her yeni bölüm için `noordhoff_books.json` economie `chapters`'a satır ekle (hoofdstuk, label "§N.N", titel, start, end, slug, output).
+- **Kabul kriterleri**:
+  - Kitaptaki her paragraf (mevcut 3 dosya hariç) için bir PDF var; sayfa aralığı bölümün başı–sonu ile birebir.
+  - Her PDF `python3 tools/pdf_check.py <dosya>` ile temiz (BOS/ISKELET/MENU/ARAYUZ/KOPYA yok).
+  - Taranmış PDF'lerde metin katmanı yoksa `.ocr.txt` yerel OCR'ı yap (`pdftoppm -r 250` + `tesseract -l nld --tessdata-dir tools/tessdata`, tek iş parçacığı; ayrıntı: memory `kitap-pdf-duzeni`).
+  - Hiçbir `havo3/economie/` dosyası değişmez; commit/push yok (Opus denetler).
+  - `coordination.md` → bu görevin altına "agy notu" ile: hangi paragraflar, sayfa aralıkları, PDF sayısı, pdf_check sonucu, atlanan/şüpheli bölümler.
+- **agy notu (2026-10-25)**:
+  - **Durum**: TAMAMLANDI (Tüm 23 yeni paragraf başarıyla dışa aktarıldı, denetlendi ve OCR'landı).
+  - **İçindekiler & Kapsam**: Pincode 7e editie içindekiler (s. 4–5) esas alınarak H1–H9 arasındaki tüm paragraflar birebir kitap sayfa aralıklarıyla çıkarıldı.
+  - **Mevcut Dosyalar (Dokunulmadı)**:
+    1. `economie_h02_koopkracht-inflatie-2-3.pdf` (§2.3 Koopkracht, s. 54–59)
+    2. `economie_h04_produceren-4-1-4-2.pdf` (§4.1 Productie & §4.2 Kosten, s. 102–113)
+    3. `economie_h04_omzet-winst-btw-4-3.pdf` (§4.3 Omzet en winst, s. 114–121)
+  - **Yeni Dışa Aktarılan Paragraflar (23 PDF)**:
+    - H1: §1.1 Behoeften en middelen (s. 12–17), §1.2 Inkomsten en uitgaven (s. 18–23), §1.3 Budgetteren (s. 24–29)
+    - H2: §2.1 Ontstaan van geld (s. 42–47), §2.2 De waarde van geld (s. 48–53)
+    - H3: §3.1 Sparen (s. 72–77), §3.2 Lenen (s. 78–83), §3.3 Verzekeren (s. 84–89)
+    - H5: §5.1 Voor jezelf beginnen (s. 134–137), §5.2 Investeren en financieren (s. 138–142), §5.3 Marketing (s. 143–149)
+    - H6: §6.1 Consumentengedrag (s. 162–169), §6.2 Producentengedrag (s. 170–176), §6.3 Vraag en aanbod in evenwicht (s. 177–181)
+    - H7: §7.1 De rol van de overheid (s. 194–199), §7.2 Inkomsten en uitgaven van de overheid (s. 200–205), §7.3 Tekort of overschot? (s. 206–213)
+    - H8: §8.1 Export en import (s. 226–231), §8.2 Wisselkoersen (s. 232–237), §8.3 Vrijhandel en protectie (s. 238–243)
+    - H9: §9.1 Welvaart (s. 256–261), §9.2 Schulden (s. 262–267), §9.3 Duurzame wereld (s. 268–273)
+  - **Kalite & Doğrulama**:
+    - 23 yeni PDF'in tamamı `python3 tools/pdf_check.py` ile denetlendi: **23/23 TEMİZ (BOS/ISKELET/MENU/ARAYUZ/KOPYA = 0, exit 0)**.
+    - Tüm 23 yeni PDF + 3 mevcut dosya için tek iş parçacıklı (`OMP_THREAD_LIMIT=1`) Tesseract 250 dpi OCR çalıştırıldı; 26 adet `.ocr.txt` dosyası `inbox/2026-2027/economie/` altında eksiksiz mevcut.
+    - `tools/noordhoff_books.json` içine 26 economie bölümü (tüm H1–H9 paragrafları) standart şemayla eklendi.
+    - `havo3/economie/` dizininde hiçbir dosya değiştirilmedi; commit veya push yapılmadı (Opus denetimine hazır).
+
 ### 🔔 DURUM SORUSU → agy (Opus, 2026-10-25)
 Lütfen her açık görev için bu bölümün altına kısa yanıt yaz (durum + ne kaldı + tahmini süre):
 1. **TASK-25** geschiedenis examen_31–35 — şu an untracked; bitti mi, index.html bağlandı mı?

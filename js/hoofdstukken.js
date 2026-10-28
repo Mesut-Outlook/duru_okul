@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-25",
+  "gegenereerd": "2026-10-28",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1095,6 +1095,18 @@ window.DURU_HOOFDSTUKKEN = {
           "titel": "Meer dan lezen",
           "icoon": "📖",
           "intro": "Inleiding en slot (§1), argumentatiestructuren (§2), vaste tekststructuren (§4) en actief lezen (§5)."
+        },
+        {
+          "nr": 5,
+          "titel": "Grammatica — Zinsdelen",
+          "icoon": "🧩",
+          "intro": "Samentrekking (§3) en verwijzen (§5)."
+        },
+        {
+          "nr": 7,
+          "titel": "Spelling",
+          "icoon": "✏️",
+          "intro": "Trema, apostrof, accenten en cedille (§2) en met of zonder n (§3)."
         }
       ],
       "examenHoofdstuk": {
@@ -1119,9 +1131,45 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-19": 1,
         "ex-h3-nederlands-20": 1,
         "ex-h3-nederlands-21": 1,
-        "ex-h3-nederlands-22": 1
+        "ex-h3-nederlands-22": 1,
+        "ex-h3-nederlands-23": 7,
+        "ex-h3-nederlands-24": 7,
+        "ex-h3-nederlands-25": 7,
+        "ex-h3-nederlands-26": 7,
+        "ex-h3-nederlands-27": 7,
+        "ex-h3-nederlands-28": 7,
+        "ex-h3-nederlands-29": 7,
+        "ex-h3-nederlands-30": 7,
+        "ex-h3-nederlands-31": 7,
+        "ex-h3-nederlands-32": 7,
+        "ex-h3-nederlands-33": 7,
+        "ex-h3-nederlands-34": 7,
+        "ex-h3-nederlands-35": 7,
+        "ex-h3-nederlands-36": 7,
+        "ex-h3-nederlands-37": 5,
+        "ex-h3-nederlands-38": 5,
+        "ex-h3-nederlands-39": 5,
+        "ex-h3-nederlands-40": 5,
+        "ex-h3-nederlands-41": 5,
+        "ex-h3-nederlands-42": 5,
+        "ex-h3-nederlands-43": 5,
+        "ex-h3-nederlands-44": 5,
+        "ex-h3-nederlands-45": 5,
+        "ex-h3-nederlands-46": 5,
+        "ex-h3-nederlands-47": 5,
+        "ex-h3-nederlands-48": 5,
+        "ex-h3-nederlands-49": 5,
+        "ex-h3-nederlands-50": 5,
+        "ex-h3-nederlands-51": 7,
+        "ex-h3-nederlands-52": 5
       },
       "onderwerpHoofdstuk": {
+        "c5-3-samentrekking": 5,
+        "c5-5-verwijzen": 5,
+        "c5-begrippen": 5,
+        "c7-2-trema-apostrof": 7,
+        "c7-3-met-of-zonder-n": 7,
+        "c7-begrippen": 7,
         "h1-1-inleiding-slot": 1,
         "h1-2-argumenteren": 1,
         "h1-4-vaste-structuren": 1,
@@ -1129,10 +1177,14 @@ window.DURU_HOOFDSTUKKEN = {
         "h1-begrippen": 1
       },
       "aantalExamens": {
-        "1": 22
+        "1": 22,
+        "5": 15,
+        "7": 15
       },
       "aantalOnderwerpen": {
-        "1": 5
+        "1": 5,
+        "5": 3,
+        "7": 3
       }
     },
     "scheikunde": {
