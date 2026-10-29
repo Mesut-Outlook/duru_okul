@@ -10,7 +10,7 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
   (2026-09-22'de geri getirilen, Duru'nun çözdüğü 5 soruluk sınavlar — dokunulmaz) ve `maatschappijleer` (materyal yok).
 - **open_check**: 32 bulgu, hepsi eski yayındaki sınavlarda (scheikunde H1/H2 29, duits 37/42/44 3) → **TASK-31** (agy).
 - **Merge regresyonu**: `test_score_merge.js` + `test_server_merge.py` yeşil. `build_hoofdstukken.js --check` temiz.
-- **Son işler**: biologie H11 (Opus, 2026-10-29) · TASK-30 biologie PDF (agy) · nederlands C5/C7 (Opus, 2026-10-28).
+- **Son işler**: aardrijkskunde H1 §1.4/§1.5 (Opus, 2026-10-29) · biologie H11 (Opus, 2026-10-29) · TASK-30 biologie PDF (agy) · nederlands C5/C7 (Opus, 2026-10-28).
 - **Açık**: TASK-31 (agy) · nederlands öğretmen notları (PLAN, kullanıcı onayı bekliyor) · TASK-19 / TASK-09 BLOCKED (materyal) ·
   TASK-20 karar bekliyor.
 
@@ -703,6 +703,15 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
     - `tools/pdf_check.py --index` çalıştırılarak `inbox/2026-2027/PDF_INDEX.md` güncellendi (101 PDF, hepsi temiz).
     - `tools/noordhoff_books.json` ve `tools/noordhoff_export.py` güncellendi.
     - `havo3/biologie/` dizinine kesinlikle dokunulmadı; commit/push yapılmadı (Opus denetimine hazır).
+
+### 2026-10-29 · aardrijkskunde: H1 §1.4 + §1.5 — paragraf başına 5 toets + begrippentoets (Opus + 2 Sonnet) ✅
+- Kullanıcı: "aardrijkskunde 1.4 ve 1.5 için ayrı ayrı 5'er test hazırla" (toets kapsamı). Kaynak: `aardrijkskunde_h01_wereldhandel-in-beweging.pdf` s. 38–49 (+ begrippenlijst s. 52).
+- §1.4 ex-h3-ak-87…91, §1.5 92…96 (20 soru: 10 mc / 5 wo / 3 invul / 2 open, 20 dk; accent: begrippen, oorzaak-gevolg, bronnen, toepassen, eindniveau)
+  + onderwerp `ak-h1-45-begrippen` (`h1_45_begrippen.js`) + begrippentoets 97. `h1_4.js`/`h1_5.js` değişmedi.
+- Üreteçler `tools/gen_aardrijkskunde_h1_{4,5,45_begrippen}.py`; gate 17/18 (yalnız smoke-test), open_check 0, manifest güncel.
+- Opus denetimi: eski `examen_4/5`'teki kitap dışı konular (vier vrijheden, Schengen, Betuweroute, KOF) bilerek alınmadı. 94'te bron 32
+  birimi belirsiz ("in miljoenen") → "meer dan een miljard rozen" sorusu değiştirildi. Begrippentoets'ta §1.1/§1.3 begrippen (vrijhandel,
+  handelsbelemmering, multipolaire wereldeconomie, Gini) dışarıda — onlar 67–71'de.
 
 ### 2026-10-29 · biologie: H11 Voortplanting — paragraf başına onderwerp + 3 toets + begrippentoets (Opus + 4 Sonnet) ✅
 - Kullanıcı: "biologie H11 için test hazırla". Kaynak: TASK-30'un PDF'leri (§11.1–§11.4, s. 128–151). `bootstrap.js` → hoofdstuk 11 "Voortplanting" (kitap başlığı).

@@ -112,7 +112,18 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-83": 1,
         "ex-h3-ak-84": 1,
         "ex-h3-ak-85": 1,
-        "ex-h3-ak-86": 1
+        "ex-h3-ak-86": 1,
+        "ex-h3-ak-87": 1,
+        "ex-h3-ak-88": 1,
+        "ex-h3-ak-89": 1,
+        "ex-h3-ak-90": 1,
+        "ex-h3-ak-91": 1,
+        "ex-h3-ak-92": 1,
+        "ex-h3-ak-93": 1,
+        "ex-h3-ak-94": 1,
+        "ex-h3-ak-95": 1,
+        "ex-h3-ak-96": 1,
+        "ex-h3-ak-97": 1
       },
       "examenInfo": {
         "ex-h3-ak-1": ["Toets 1 — Economisch Wereldbeeld, Global Shift & Triade", "2026-07-21"],
@@ -190,7 +201,18 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-83": ["Proeftoets 83 — Mix §1.1–§1.3: Verbanden en bronnen lezen", "2026-09-27"],
         "ex-h3-ak-84": ["Proeftoets 84 — Mix §1.1–§1.3: Samenvatting en begrippen", "2026-09-27"],
         "ex-h3-ak-85": ["Proeftoets 85 — Mix §1.1–§1.3: Opdrachten uit het boek", "2026-09-27"],
-        "ex-h3-ak-86": ["Proeftoets 86 — Mix §1.1–§1.3: Proefwerk", "2026-09-27"]
+        "ex-h3-ak-86": ["Proeftoets 86 — Mix §1.1–§1.3: Proefwerk", "2026-09-27"],
+        "ex-h3-ak-87": ["Proeftoets 87 — §1.4 Begrippen en feiten over de EU", "2026-10-29"],
+        "ex-h3-ak-88": ["Proeftoets 88 — §1.4 Oorzaak en gevolg: industrie en vrijhandel", "2026-10-29"],
+        "ex-h3-ak-89": ["Proeftoets 89 — §1.4 Bronnen 26–30: Ruhrgebied, koopkracht en ESG", "2026-10-29"],
+        "ex-h3-ak-90": ["Proeftoets 90 — §1.4 Toepassen op nieuwe situaties", "2026-10-29"],
+        "ex-h3-ak-91": ["Proeftoets 91 — §1.4 Eindniveau: Europa in de wereldhandel", "2026-10-29"],
+        "ex-h3-ak-92": ["Proeftoets 92 — §1.5 Begrippen en feiten", "2026-10-29"],
+        "ex-h3-ak-93": ["Proeftoets 93 — §1.5 Oorzaak en gevolg", "2026-10-29"],
+        "ex-h3-ak-94": ["Proeftoets 94 — §1.5 Bronnen en kaarten", "2026-10-29"],
+        "ex-h3-ak-95": ["Proeftoets 95 — §1.5 Toepassen", "2026-10-29"],
+        "ex-h3-ak-96": ["Proeftoets 96 — §1.5 Eindniveau", "2026-10-29"],
+        "ex-h3-ak-97": ["Proeftoets 97 — Begrippentoets §1.4 en §1.5", "2026-10-29"]
       },
       "onderwerpHoofdstuk": {
         "ak-h1-1": 1,
@@ -198,6 +220,7 @@ window.DURU_HOOFDSTUKKEN = {
         "ak-h1-3": 1,
         "ak-h1-4": 1,
         "ak-h1-5": 1,
+        "ak-h1-45-begrippen": 1,
         "ak-h2-1": 2,
         "ak-h2-2": 2,
         "ak-h2-3": 2,
@@ -220,14 +243,14 @@ window.DURU_HOOFDSTUKKEN = {
         "ak-h5-5": 5
       },
       "aantalExamens": {
-        "1": 56,
+        "1": 67,
         "2": 5,
         "3": 5,
         "4": 5,
         "5": 5
       },
       "aantalOnderwerpen": {
-        "1": 5,
+        "1": 6,
         "2": 5,
         "3": 5,
         "4": 5,
