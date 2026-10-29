@@ -10,8 +10,8 @@ işi yapar, sonucu ve durumu buraya geri yazar. Politika: `docs/PIPELINE.md`.
   (2026-09-22'de geri getirilen, Duru'nun çözdüğü 5 soruluk sınavlar — dokunulmaz) ve `maatschappijleer` (materyal yok).
 - **open_check**: 32 bulgu, hepsi eski yayındaki sınavlarda (scheikunde H1/H2 29, duits 37/42/44 3) → **TASK-31** (agy).
 - **Merge regresyonu**: `test_score_merge.js` + `test_server_merge.py` yeşil. `build_hoofdstukken.js --check` temiz.
-- **Son işler**: aardrijkskunde H1 §1.4/§1.5 (Opus, 2026-10-29) · biologie H11 (Opus, 2026-10-29) · TASK-30 biologie PDF (agy) · nederlands C5/C7 (Opus, 2026-10-28).
-- **Açık**: TASK-31 (agy) · nederlands öğretmen notları (PLAN, kullanıcı onayı bekliyor) · TASK-19 / TASK-09 BLOCKED (materyal) ·
+- **Son işler**: engels H1/H2 + scheikunde H2 ek toetsler (Opus, 2026-10-29) · aardrijkskunde H1 §1.4/§1.5 (Opus, 2026-10-29) · biologie H11 (Opus, 2026-10-29) · TASK-30 biologie PDF (agy) · nederlands C5/C7 (Opus, 2026-10-28).
+- **Açık**: TASK-32/33 (agy, toets kapsamı — öncelikli) · TASK-31 (agy) · nederlands öğretmen notları (PLAN, kullanıcı onayı bekliyor) · TASK-19 / TASK-09 BLOCKED (materyal) ·
   TASK-20 karar bekliyor.
 
 ## 2026-09-20 · Bulut senkron veri kaybı (Opus) — KAPANDI, iki adım onay bekliyor
@@ -659,6 +659,42 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 3. `tools/noordhoff_books.json` / `tools/noordhoff_export.py` değişikliklerin (biologie + economie 26 + nederlands 5 bölüm, `--skip-existing`) incelendi, düzgün.
    Bunlar kullanıcının commit dışı tuttuğu dosyalar → Opus commit'lemiyor; çalışma dizininde kalıyor.
 
+### 🔔 Opus → agy (2026-10-29 21:30) — ÖNCELİK: TASK-32 ve TASK-33, TASK-31'den ÖNCE
+Kullanıcı: "tüm konularda en az 10 test olsun, agy ile paylaş". Duru'nun yaklaşan toets kapsamı: biologie 11.1–11.4, aardrijkskunde 1.4–1.5,
+economie 2.3/4.1/4.2/4.3, scheikunde 2.1–2.4, engels H1–H2. Sayım kuralı: **paragrafa özel** proeftoets (`paragraaf` alanı o paragraf;
+mix/begrippentoets sayılmaz). Paylaşım: **Opus** engels H1/H2 + scheikunde H2'yi yapıyor (bu dosyalara dokunma); **agy** aşağıdaki iki görevi yapar.
+
+**Ortak kurallar (ikisi için)**
+- Kaynak yalnız kitap OCR'ı + PDF (görsel/kaynak için sayfayı render edip bak). Kitapta olmayan bilgi yok. Öğrenci içeriği Felemenkçe, ondalık virgül.
+- Her yeni toets **20 soru, duurMin 20**, aynı derste mevcut paragraf testlerinin soru-tipi karışımı (aşağıda). Hiçbir soru (hafif değiştirilmiş hali dahil)
+  mevcut bir soruyla aynı olmayacak — önce o paragrafın **tüm** mevcut sınavlarını + onderwerp'ini oku.
+- Üretim **Python üreteçle**, şablon = o paragrafın mevcut üreteci (aşağıda). Mevcut üreteci DEĞİŞTİRME (onun ürettiği id'ler yayında);
+  yeni dosya: `tools/gen_<vak>_<x>_extra.py`. mc'ler `plaats()` ile karıştırılır, doğru şık ≤%40 en uzun (`langste_aandeel` assert).
+- waaronwaar her testte ≥2 `false`, uitleg "Waar."/"Niet waar." ile başlar. invul: cevap soruda geçmez, alternatifler `|`.
+  open: sleutelwoorden 1–2 kelime, alternatifler `/`, soruda geçmez, modelantwoord kendi anahtarlarıyla tam puan.
+- Yeni dosyaları ilgili `havo3/<vak>/index.html`'e mevcut desenle `<script>` olarak ekle (`?v=1`).
+- **Kabul**: `node tools/gate.js <vak>` (yalnız bilinen smoke-test ihlali kalabilir), `node tools/open_check.js` yeni id'lerde 0 bulgu,
+  `node tools/build_hoofdstukken.js` çalıştırıldı ve `--check` temiz. **Commit/push YOK** — Opus denetleyip commit'ler. Rapor: `agy notu (tarih)` başlığıyla görevin altına.
+
+### TASK-32 · biologie H11: her paragrafa 7 ek proeftoets (3 → 10)  [status: IN_PROGRESS]
+- **Atanan**: agy
+- §11.1 → ex-h3-biologie-19…25 (`examen_19…25.js`), §11.2 → 26…32, §11.3 → 33…39, §11.4 → 40…46. `paragraaf: "11.<n>"`, `hoofdstuk: 11`,
+  `hoofdstukTitel: "Hoofdstuk 11 — Voortplanting"`, `vak: "Biologie · HAVO 3 (H11.<n>)"`, titel `"Toets <N> — §11.<n> <deeltitel>"`.
+- Kaynak: `inbox/2026-2027/biologie/biologie_h11_*-11-<n>.{pdf,ocr.txt}`. Şablon: `tools/gen_biologie_h11_<n>.py` (yazma: `tools/gen_biologie_h11_<n>_extra.py`).
+- Karışım: 9 mc / 5 waaronwaar / 4 invul / 2 open. Mevcut: examen_6…17 (+ begrippentoets 18) ve `h11_<n>.js` — bunlarla tekrar yok.
+- 7 testin her birine ayrı vurgu (ör. begrippen, bouw/functie, processen in volgorde, bronnen/afbeeldingen, toepassen, redeneren, eindniveau).
+
+### TASK-33 · aardrijkskunde §1.4/§1.5 (+4'er) ve economie §2.3/§4.2/§4.3 eksikleri  [status: TODO]
+- **Atanan**: agy
+- **aardrijkskunde** (mevcut: §1.4 = 87…91 + eski 4, §1.5 = 92…96 + eski 5): §1.4 → ex-h3-ak-98…101, §1.5 → 102…105 (`examen_98…105.js`).
+  Kaynak: `aardrijkskunde_h01_wereldhandel-in-beweging.ocr.txt` satır 1756–2007 (§1.4, s. 38–41) ve 2008–2459 (§1.5, s. 42–49).
+  Şablon `tools/gen_aardrijkskunde_h1_{4,5}.py` (alanlar, sıra, karışım 10 mc / 5 wo / 3 invul / 2 open). Eski `examen_4/5`'teki kitap dışı
+  konular (vier vrijheden, Schengen, Betuweroute, KOF) **kullanılmaz**. ⚠️ Bron 32 (snijrozen) birimi "in miljoenen" — adet/euro diye yorumlama.
+- **economie** (paragraf testi: §2.3 = 7, §4.2 = 8, §4.3 = 9): §2.3 → ex-h3-economie-72…74, §4.2 → 75…76, §4.3 → 77 (`examen_72…77.js`).
+  Kaynak: `inbox/2026-2027/economie/economie_h02_koopkracht-inflatie-2-3`, `economie_h04_produceren-4-1-4-2`, `economie_h04_omzet-winst-btw-4-3` (.ocr.txt + pdf).
+  Alanlar/karışım: o paragrafın mevcut testleri gibi (ör. `examen_42.js`, `examen_32.js`, `examen_45.js`: `vak: "Economie · HAVO 3 (Pincode)"`).
+  ⚠️ **Break-even (BEP) kitapta YOK** (§2.3/§4.3) → hiç sorma (bkz. 7fd96ff). Hesap sorularının cevabını script içinde hesapla.
+
 ### TASK-31 · open_check: 32 açık soruda puanlama düzeltmesi (scheikunde 29 + duits 3)  [status: TODO]
 - **Atanan**: agy (Antigravity)
 - **Sorun**: `node tools/open_check.js` → modelantwoord kendi anahtarlarıyla "deels" alıyor, ya da soruyu yapıştırmak puan alıyor.
@@ -703,6 +739,16 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
     - `tools/pdf_check.py --index` çalıştırılarak `inbox/2026-2027/PDF_INDEX.md` güncellendi (101 PDF, hepsi temiz).
     - `tools/noordhoff_books.json` ve `tools/noordhoff_export.py` güncellendi.
     - `havo3/biologie/` dizinine kesinlikle dokunulmadı; commit/push yapılmadı (Opus denetimine hazır).
+
+### 2026-10-29 · engels H1/H2 + scheikunde H2 §2.1/§2.3/§2.4 — her konu ≥10 test (Opus + 4 Sonnet) ✅
+- Kullanıcı: "engels ve scheikunde 2.1 için testleri hazırla … tüm konuda en az 10 test olsun … agy ile paylaş". Kalan kısım agy'de: TASK-32/33.
+- engels: kitap PDF'leri OCR'landı (tesseract eng, `tools/tessdata/eng`). ⚠️ **Engels sayfa etiketi**: PDF sayfa n = kitap A(35+n) (H1) /
+  A(83+n) (H2) — `PDF_INDEX.md`'deki "A:37-84 / A:85-134" 1 fazla (s. 45 / 93 sayfa görüntüsüyle doğrulandı); OCR işaretçileri ve üreteçler düzeltildi.
+  H1 ex-h3-eng-31…35, H2 36…40 (20 soru, 9 mc / 5 wo / 5 invul / 1 open), eski toetslerle benzerlik < 0,8 (script assert).
+- scheikunde: h2-50…56 §2.1, 57–58 §2.3, 59–61 §2.4 (20 soru, 10/5/3/2, 30 dk). Paragraf toets sayısı: §2.1 10, §2.2 15, §2.3 10, §2.4 10.
+  S/F/Br atoommassa'ları kitap PS'sinden değil, soruda açıkça veriliyor.
+- gate engels 16/18 (yalnız smoke-test ex-h3-engels-1), scheikunde 18/18; open_check yeni id'lerde 0; manifest agy'nin denetlenmemiş biologie
+  dosyaları HARİÇ üretildi (temiz worktree).
 
 ### 2026-10-29 · aardrijkskunde: H1 §1.4 + §1.5 — paragraf başına 5 toets + begrippentoets (Opus + 2 Sonnet) ✅
 - Kullanıcı: "aardrijkskunde 1.4 ve 1.5 için ayrı ayrı 5'er test hazırla" (toets kapsamı). Kaynak: `aardrijkskunde_h01_wereldhandel-in-beweging.pdf` s. 38–49 (+ begrippenlijst s. 52).
