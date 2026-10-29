@@ -41,6 +41,23 @@ var VAKKEN = [
 
 var CHECK_MODE = process.argv.indexOf("--check") !== -1;
 
+// Toegevoegd-datum per databestand = datum van de commit die het (laatst) toevoegde.
+// Nog niet gecommit → vandaag. Voedt "Nieuw toegevoegd" op de startpagina (2026-10-28).
+var GIT_TOEGEVOEGD = (function () {
+  var uit = {};
+  try {
+    var log = require("child_process").execFileSync("git",
+      ["log", "--diff-filter=A", "--format=@@%cs", "--name-only", "--", "havo3"],
+      { cwd: ROOT, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+    var datum = null;
+    log.split("\n").forEach(function (r) {
+      if (r.indexOf("@@") === 0) datum = r.slice(2);
+      else if (r && datum && !(r in uit)) uit[r] = datum;   // nieuwste toevoeging eerst
+    });
+  } catch (e) { /* geen git → alles "vandaag" */ }
+  return uit;
+})();
+
 /* ---------- Helpers ---------- */
 
 // "Menselijke" sortering van bestandsnamen: examen_2 vóór examen_10.
@@ -124,13 +141,18 @@ function buildVak(vak, warnings) {
       .sort(naturalCompare);
   }
 
+  var examenBestand = {};
   dataFiles.forEach(function (f) {
     var fp = path.join(dataDir, f);
+    var voor = sandbox.DURU.examens.length;
     try {
       vm.runInContext(fs.readFileSync(fp, "utf8"), ctx, { filename: fp });
     } catch (e) {
       warnings.push(vak + "/js/data/" + f + ": " + e.message);
     }
+    sandbox.DURU.examens.slice(voor).forEach(function (ex) {
+      if (ex && ex.id) examenBestand[ex.id] = "havo3/" + vak + "/js/data/" + f;
+    });
   });
 
   var hoofdstukken = sandbox.DURU.hoofdstukken.map(function (h) {
@@ -141,6 +163,7 @@ function buildVak(vak, warnings) {
   hoofdstukken.forEach(function (h) { hoofdstukNrs[String(h.nr)] = true; });
 
   var examenHoofdstuk = {};
+  var examenInfo = {};   // id → [titel, toegevoegd (YYYY-MM-DD)], in registratievolgorde
   var aantalExamens = {};
   var examenZonderHoofdstuk = 0;
   sandbox.DURU.examens.forEach(function (ex) {
@@ -150,6 +173,7 @@ function buildVak(vak, warnings) {
       return;
     }
     examenHoofdstuk[ex.id] = ex.hoofdstuk;
+    examenInfo[ex.id] = [ex.titel || ex.id, GIT_TOEGEVOEGD[examenBestand[ex.id]] || todayISO()];
     var k = String(ex.hoofdstuk);
     aantalExamens[k] = (aantalExamens[k] || 0) + 1;
     if (!hoofdstukNrs[k]) {
@@ -184,6 +208,7 @@ function buildVak(vak, warnings) {
   return {
     hoofdstukken: hoofdstukken,
     examenHoofdstuk: examenHoofdstuk,
+    examenInfo: examenInfo,
     onderwerpHoofdstuk: onderwerpHoofdstuk,
     aantalExamens: aantalExamens,
     aantalOnderwerpen: aantalOnderwerpen
@@ -208,7 +233,9 @@ function main() {
   };
 
   var output = "/* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */\n"
-    + "window.DURU_HOOFDSTUKKEN = " + JSON.stringify(manifest, null, 2) + ";\n";
+    + "window.DURU_HOOFDSTUKKEN = " + JSON.stringify(manifest, null, 2)
+      // examenInfo-paren op één regel ([titel, datum]) — scheelt ~60 KB
+      .replace(/\[\n\s+("(?:[^"\\]|\\.)*"),\n\s+("\d{4}-\d\d-\d\d")\n\s+\]/g, "[$1, $2]") + ";\n";
 
   if (warnings.length > 0) {
     console.warn("Waarschuwingen (" + warnings.length + "):");

@@ -10,7 +10,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
 
   <!-- Google Fonts worden geladen vanuit style.css via @import -->
-  <link rel="stylesheet" href="css/style.css?v=6.6" />
+  <link rel="stylesheet" href="css/style.css?v=6.7" />
 
   <!-- Thema vroeg toepassen (voorkomt flits van verkeerde modus).
        Keuze in localStorage 'duru_hub_theme' ('light'/'dark'); zonder
@@ -57,15 +57,11 @@
   <div class="pagina">
 
     <!-- ── Hero-banner ───────────────────────────────────────── -->
-    <section class="hero" aria-label="Welkom">
+    <section class="hero hero--groet" aria-label="Welkom">
       <div class="hero-inner">
-        <span class="hero-emoji" aria-hidden="true">👩‍🎓</span>
         <div class="hero-tekst">
-          <h2>Hoi Duru 👋 Klaar voor HAVO 3?</h2>
-          <p>
-            Schooljaar <strong>2026-2027 · HAVO 3</strong>. Kies een vakgebied en ga aan de slag —
-            kleine stapjes, groot resultaat, elke dag een beetje! ✨
-          </p>
+          <p id="hero-datum"></p>
+          <h2>Hoi Duru</h2>
         </div>
       </div>
     </section>
@@ -85,21 +81,15 @@
 
     <!-- ── Vakken view ─────────────────────────────────────────── -->
     <div id="vakken-view" class="hub-view active">
+      <!-- ── Startpaneel (Ga verder · Deze week · Nieuw · Laatst gemaakt) — landing.js → renderStart ── -->
+      <div id="start-paneel"></div>
+
+      <h2 class="hs-vakkenkop">Al je vakken</h2>
       <!-- ── Vakken grid — wordt gevuld door landing.js ─────────── -->
       <main id="vakken-grid" aria-label="Vakken-overzicht">
         <!-- JavaScript rendert hier de vak-kaarten -->
       </main>
-
-      <!-- ── Motivatie-tip ──────────────────────────────────────── -->
-      <aside class="tip-banner" aria-label="Studeer-tip">
-        <span class="tip-banner__icoon" aria-hidden="true">💡</span>
-        <div class="tip-banner__tekst">
-          <strong>Studeer-tip</strong>
-          <p>
-            Oefen liever 15 minuten per dag dan één keer per week een uur.
-            Kleine stapjes, groot resultaat! ✨
-          </p>
-        </div>
+    </div>
       </aside>
     </div>
 
@@ -288,9 +278,9 @@
   <!-- Gedeelde bronnen eerst: de panelen lezen ze op moment van laden. -->
   <script src="js/vakken.js?v=5.0"></script>
   <script src="js/cijfer_util.js?v=4.8"></script>
-  <script src="js/hoofdstukken.js?v=20261028"></script>
+  <script src="js/hoofdstukken.js?v=20261028b"></script>
   <script src="js/hoofdstuk_util.js?v=20261015"></script>
-  <script src="js/landing.js?v=6.0"></script>
+  <script src="js/landing.js?v=6.1"></script>
   <script src="js/dashboard.js?v=20261016d"></script>
   <script src="js/ouder_dashboard.js?v=20261016c"></script>
   <script src="js/cloud_sync.js?v=5.1"></script>

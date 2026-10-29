@@ -567,7 +567,8 @@ function maakVakKaartHavo3(vak) {
     '<div class="havo3-kaart__top">' +
       '<span class="havo3-kaart__icoon" data-kort="' + vakKort(vak) + '">' + vak.icoon + '</span>' + rechtsboven +
     '</div>' +
-    '<div><p class="havo3-kaart__naam">' + vak.titel + '</p>' +
+    '<div><p class="havo3-kaart__naam">' + vak.titel +
+      (!binnenkort && NIEUW_OPEN[vak.vakId] ? ' <span class="havo3-nieuw">+' + NIEUW_OPEN[vak.vakId] + ' nieuw</span>' : '') + '</p>' +
       '<p class="havo3-kaart__hfd">' + (vak.beschrijving || '') + '</p></div>' +
     balk +
     '<div class="havo3-kaart__voet">' + voet + '</div>';
@@ -581,7 +582,223 @@ function maakVakKaartHavo3(vak) {
   return el;
 }
 
+// ── Startpagina: Ga verder · Deze week · Nieuw toegevoegd · Laatst gemaakt ──
+// Claude Design (2026-10-28): https://claude.ai/artifact/XoUZ37btF9JxP2crvVynTV
+// "Nieuw" komt uit manifest examenInfo[id][1] = git-datum waarop het databestand
+// werd toegevoegd (tools/build_hoofdstukken.js). Schrijft niets.
+var NIEUW_DAGEN = 7;
+var NIEUW_OPEN = {};   // vakId → aantal nieuwe, nog niet gemaakte toetsen (voor de vakkaart)
+var DAG_KORT = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za'];
+var MAAND_KORT = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+
+function startManifest(vakId) {
+  return (window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.vakken &&
+          window.DURU_HOOFDSTUKKEN.vakken[vakId]) || {};
+}
+// Tijdstip van een poging: att_<ms> of "28-10-2026, 20:15" — nooit new Date(tekst) (leest 10 mei).
+function pogingTijd(h) {
+  var m = /^att_(\d{12,})/.exec(h.attemptId || '');
+  if (m) return Number(m[1]);
+  m = /^(\d\d?)-(\d\d?)-(\d{4}),?\s+(\d\d?):(\d\d)/.exec(h.datum || '');
+  return m ? new Date(+m[3], m[2] - 1, +m[1], +m[4], +m[5]).getTime() : 0;
+}
+function isoDag(d) {
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+}
+function dagLabel(t, metTijd) {
+  var d = new Date(t), nu = new Date();
+  var dagen = Math.round((new Date(nu.getFullYear(), nu.getMonth(), nu.getDate()) -
+                          new Date(d.getFullYear(), d.getMonth(), d.getDate())) / 864e5);
+  var tijd = metTijd ? ' ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) : '';
+  if (dagen === 0) return 'vandaag' + tijd;
+  if (dagen === 1) return 'gisteren' + tijd;
+  if (dagen < 7) return DAG_KORT[d.getDay()] + ' ' + d.getDate() + ' ' + MAAND_KORT[d.getMonth()] + tijd;
+  return d.getDate() + ' ' + MAAND_KORT[d.getMonth()];
+}
+function escH(s) {
+  return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function startData() {
+  var vakken = VAKKEN.filter(function (v) { return !v.archief && !v.binnenkort && v.sleutel; });
+  var pogingen = [], gedaan = {};
+  vakken.forEach(function (vak) {
+    var EX = {};
+    try { EX = JSON.parse(localStorage.getItem(vak.sleutel + '_examens_v1') || '{}') || {}; } catch (e) { /* leeg */ }
+    var g = gedaan[vak.vakId] = {};
+    (EX.history || []).forEach(function (h) {
+      if (!h || typeof h.pct !== 'number') return;
+      if (h.examId) g[h.examId] = 1;
+      pogingen.push({ vak: vak, h: h, t: pogingTijd(h) });
+    });
+  });
+  pogingen.sort(function (a, b) { return b.t - a.t; });
+  return { vakken: vakken, pogingen: pogingen, gedaan: gedaan };
+}
+
+// Nieuwe toetsen van de laatste NIEUW_DAGEN dagen, per vak + hoofdstuk (datum = nieuwste toevoeging).
+function nieuweGroepen(d) {
+  var grens = new Date(); grens.setDate(grens.getDate() - NIEUW_DAGEN);
+  grens = isoDag(grens);
+  var per = {}, lijst = [];
+  d.vakken.forEach(function (vak) {
+    var M = startManifest(vak.vakId), info = M.examenInfo || {}, hf = M.examenHoofdstuk || {};
+    Object.keys(info).forEach(function (id) {
+      var datum = info[id][1];
+      if (datum <= grens) return;
+      var k = vak.vakId + '|' + hf[id];
+      if (!per[k]) lijst.push(per[k] = { vak: vak, datum: datum, nr: hf[id], ids: [], open: [] });
+      if (datum > per[k].datum) per[k].datum = datum;
+      per[k].ids.push(id);
+      if (!d.gedaan[vak.vakId][id]) per[k].open.push(id);
+    });
+  });
+  lijst.sort(function (a, b) { return a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0; });
+  return lijst;
+}
+
+function hfNaam(vakId, nr) {
+  var HF = window.DURU_HF, m = HF && HF.meta(vakId, nr);
+  if (!m) return 'Overige toetsen';
+  var k = HF.kort(vakId, nr);
+  return (k === m.titel ? '' : k + ' ') + m.titel;
+}
+
+// Ga verder: hoofdstuk van de laatste poging, eerste open toets ná die toets
+// (in manifestvolgorde). Hoofdstuk af → eerste open toets van de nieuwste groep.
+function volgendeToets(d, groepen) {
+  var p = d.pogingen[0];
+  if (p) {
+    var vakId = p.vak.vakId, M = startManifest(vakId), hf = M.examenHoofdstuk || {};
+    var nr = hf[p.h.examId] != null ? hf[p.h.examId] : p.h.hoofdstuk;
+    var ids = Object.keys(hf).filter(function (id) { return hf[id] === nr; });
+    var g = d.gedaan[vakId], i = ids.indexOf(p.h.examId);
+    var volg = ids.slice(i + 1).concat(ids.slice(0, i + 1)).filter(function (id) { return !g[id]; })[0];
+    if (volg) {
+      return { vak: p.vak, id: volg, titel: (M.examenInfo[volg] || [volg])[0], kop: hfNaam(vakId, nr),
+               klaar: ids.filter(function (id) { return g[id]; }).length, totaal: ids.length };
+    }
+  }
+  var n = groepen.filter(function (x) { return x.open.length; })[0];
+  if (!n) return null;
+  var info = startManifest(n.vak.vakId).examenInfo || {};
+  return { vak: n.vak, id: n.open[0], titel: (info[n.open[0]] || [n.open[0]])[0], kop: hfNaam(n.vak.vakId, n.nr),
+           klaar: n.ids.length - n.open.length, totaal: n.ids.length, nieuw: true };
+}
+
+function badgeHtml(vak) {
+  return '<span class="hs-badge hs-d-' + (vak.domein || 'exact') + '" aria-hidden="true">' + escH(vakKort(vak)) + '</span>';
+}
+
+function renderStart() {
+  var paneel = document.getElementById('start-paneel');
+  var datumEl = document.getElementById('hero-datum');
+  if (datumEl) {
+    var s = new Date().toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' });
+    datumEl.textContent = s.charAt(0).toUpperCase() + s.slice(1);
+  }
+  if (!paneel) return;
+  var C = window.DURU_CIJFER;
+  var d = startData(), groepen = nieuweGroepen(d), volg = volgendeToets(d, groepen);
+  NIEUW_OPEN = {};
+  groepen.forEach(function (n) { NIEUW_OPEN[n.vak.vakId] = (NIEUW_OPEN[n.vak.vakId] || 0) + n.open.length; });
+
+  var nu = new Date();
+  var maandag = new Date(nu.getFullYear(), nu.getMonth(), nu.getDate() - ((nu.getDay() + 6) % 7)).getTime();
+  var week = d.pogingen.filter(function (p) { return p.t >= maandag; });
+  var weekGem = week.length ? C.tekst(C.gemiddelde(week.map(function (p) { return { c: C.vanPct(p.h.pct) }; }), 'c')) : '—';
+  var nieuwTotaal = groepen.reduce(function (s, x) { return s + x.ids.length; }, 0);
+
+  var h = '<div class="hs-rij hs-rij--top">';
+  if (volg) {
+    var vg = volg.totaal ? Math.round(volg.klaar / volg.totaal * 100) : 0;
+    h += '<section class="hs-verder" aria-labelledby="hs-verder-kop">' +
+      '<span class="hs-over">' + (volg.nieuw ? 'Nieuw voor jou' : 'Ga verder waar je was') + '</span>' +
+      '<div><h2 id="hs-verder-kop">' + escH(volg.vak.titel) + ' · ' + escH(volg.kop) + '</h2>' +
+      '<p>Volgende toets: <b>' + escH(volg.titel) + '</b></p></div>' +
+      '<div class="hs-voortgang"><div class="hs-balk" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + vg +
+        '" aria-label="' + volg.klaar + ' van ' + volg.totaal + ' gemaakt"><div style="width:' + vg + '%"></div></div>' +
+      '<span>' + volg.klaar + ' van ' + volg.totaal + ' gemaakt</span></div>' +
+      '<div class="hs-knoppen">' +
+        '<button type="button" class="hs-knop" data-start-vak="' + escH(volg.vak.vakId) + '" data-start-id="' + escH(volg.id) + '">' +
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Start toets</button>' +
+        '<button type="button" class="hs-knop hs-knop--rand" data-open-vak="' + escH(volg.vak.vakId) + '">Naar ' + escH(volg.vak.titel) + '</button>' +
+      '</div></section>';
+  }
+  h += '<section class="hs-kaart hs-week" aria-label="Deze week">' +
+    '<span class="hs-over">Deze week</span>' +
+    '<div class="hs-getallen"><div><b>' + week.length + '</b><span>toetsen gemaakt</span></div>' +
+    '<div><b>' + weekGem + '</b><span>gemiddeld cijfer</span></div></div>' +
+    (nieuwTotaal ? '<div class="hs-nieuwtip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6 7 18.2l1.9-5.8L4 8.8h6.1z"/></svg>' +
+      '<span><b>' + nieuwTotaal + ' nieuwe toetsen</b> in de laatste ' + NIEUW_DAGEN + ' dagen</span></div>' : '') +
+    '</section></div>';
+
+  h += '<div class="hs-rij hs-rij--lijsten">';
+  if (groepen.length) {
+    h += '<section class="hs-kaart" aria-labelledby="hs-nieuw-kop"><div class="hs-kop"><h2 id="hs-nieuw-kop">Nieuw toegevoegd</h2>' +
+      '<span>laatste ' + NIEUW_DAGEN + ' dagen</span></div><ul class="hs-lijst">';
+    groepen.forEach(function (n) {
+      var klaar = !n.open.length;
+      h += '<li><button type="button" class="hs-regel" data-open-vak="' + escH(n.vak.vakId) + '" data-scherm="examens">' +
+        badgeHtml(n.vak) + '<span class="hs-tekst"><b>' + escH(n.vak.titel) + ' · ' + escH(hfNaam(n.vak.vakId, n.nr)) + '</b>' +
+        '<small>' + n.ids.length + (n.ids.length === 1 ? ' toets' : ' toetsen') + ' · ' + dagLabel(new Date(n.datum + 'T12:00:00').getTime()) + '</small></span>' +
+        '<span class="hs-chip ' + (klaar ? 'hs-chip--klaar' : 'hs-chip--open') + '">' +
+          (klaar ? 'Alles gemaakt' : (n.ids.length - n.open.length) + ' / ' + n.ids.length) + '</span></button></li>';
+    });
+    h += '</ul></section>';
+  }
+  if (d.pogingen.length) {
+    h += '<section class="hs-kaart" aria-labelledby="hs-laatst-kop"><div class="hs-kop"><h2 id="hs-laatst-kop">Laatst gemaakt</h2>' +
+      '<button type="button" class="hs-link" data-naar-logboek="1">Alle resultaten</button></div><ul class="hs-lijst hs-lijst--laatst">';
+    d.pogingen.slice(0, 6).forEach(function (p) {
+      var c = C.vanPct(p.h.pct), kan = !!(p.h.antwoorden && p.h.attemptId);
+      var duur = p.h.duurSec ? ' · ' + Math.max(1, Math.round(p.h.duurSec / 60)) + ' min' : '';
+      h += '<li><div class="hs-regel hs-regel--poging">' + badgeHtml(p.vak) +
+        '<span class="hs-tekst"><b>' + escH(p.h.examTitel || p.h.examId) + '</b>' +
+        '<small>' + escH(p.vak.titel) + ' · ' + (p.t ? dagLabel(p.t, true) : escH(p.h.datum || '')) + duur + '</small></span>' +
+        (kan ? '<button type="button" class="hs-link" data-fouten-vak="' + escH(p.vak.vakId) + '" data-fouten-id="' + escH(p.h.attemptId) + '">Fouten</button>' : '') +
+        '<span class="hs-cijfer c-' + C.klasse(c) + '">' + C.tekst(c) + '</span></div></li>';
+    });
+    h += '</ul></section>';
+  }
+  h += '</div>';
+  paneel.innerHTML = h;
+}
+
+// Opent een vak en voert daarna een actie uit in de vak-site (toets starten, review, toetslijst).
+function openVakMet(vakId, actie) {
+  var vak = VAKKEN.filter(function (v) { return !v.archief && v.vakId === vakId; })[0];
+  var frame = document.getElementById('vak-frame');
+  if (!vak || !frame) return;
+  if (actie) {
+    frame.addEventListener('load', function () {
+      try { actie(frame.contentWindow.DURU); } catch (err) { /* vak toont dan zijn startpagina */ }
+    }, { once: true });
+  }
+  openInIframe(vak.href, vak.icoon, vak.titel);
+}
+
+document.addEventListener('click', function (e) {
+  if (!e.target.closest || !e.target.closest('#start-paneel')) return;
+  var b = e.target.closest('[data-start-id],[data-fouten-id],[data-open-vak],[data-naar-logboek]');
+  if (!b) return;
+  if (b.hasAttribute('data-start-id')) {
+    var id = b.getAttribute('data-start-id');
+    openVakMet(b.getAttribute('data-start-vak'), function (DURU) { DURU.examenStart(id); });
+  } else if (b.hasAttribute('data-fouten-id')) {
+    var att = b.getAttribute('data-fouten-id');
+    openVakMet(b.getAttribute('data-fouten-vak'), function (DURU) { DURU.renderPastAttemptReview(att); });
+  } else if (b.hasAttribute('data-open-vak')) {
+    var scherm = b.getAttribute('data-scherm');
+    openVakMet(b.getAttribute('data-open-vak'), scherm ? function (DURU) { DURU.gaNaar(scherm); } : null);
+  } else {
+    var tab = document.querySelector('.hub-tab[data-target="statistieken-view"]');
+    if (tab) tab.click();
+  }
+});
+
 function renderVakken() {
+  renderStart();
   var grid = document.getElementById('vakken-grid');
   if (!grid) return;
   grid.innerHTML = '';
