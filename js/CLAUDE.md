@@ -19,6 +19,9 @@ Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'d
 `index.html`'de `#statistieken-view` artık neredeyse boş: JS `#voortgang-paneel`'e render eder,
 yalnız backup bloğu statik kalır (böylece `initBackupRestore()` düğmelerini kaybetmez).
 Okuma sırası: **"Wat nu?" → cijferschaal → momentum → sekmeler**.
+- **Veli girişinde de ÖĞRENCİYİ okur (2026-10-29):** `safeReadJson` baba/veli/mesut → `duru` (veli panelindeki
+  `getActiveStudent()` gibi). Önceden `user_baba_*`'nın eski kopyasını okuyordu → iki panel farklı not gösteriyordu.
+  Aynı veriyle iki panel birebir aynı (Playwright, bulut verisi: 8,2 / 576 deneme, her ders ve ünite).
 - **Veli panelinin kopyası DEĞİL.** Baba teşhis + yazdırılabilir rapor ister; Duru "şimdi ne
   yapmalıyım"ı ister. Bu yüzden en üstte, ölçekten bile önce, tek bir eylem durur.
 - **`watNu()` önceliği**: düşen & zayıf → zayıf → düşen ama hâlâ yeterli → 8,5'e yakın → hiç

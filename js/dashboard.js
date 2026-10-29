@@ -170,6 +170,10 @@
       actieveUser = localStorage.getItem("duru_active_user") ||
                     sessionStorage.getItem("duru_active_user");
     } catch (e) {}
+    // Ouder-login toont de LEERLING, net als ouder_dashboard.js → getActiveStudent():
+    // user_baba_* is een oude kopie, de ouder-pull vult user_duru_* (2026-10-29).
+    var u = String(actieveUser || "").trim().toLowerCase();
+    if (u === "baba" || u === "veli" || u === "mesut") actieveUser = "duru";
 
     var kandidaten = [];
     if (actieveUser) kandidaten.push("user_" + actieveUser + "_" + logicalKey);
