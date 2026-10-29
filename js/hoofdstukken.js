@@ -290,7 +290,28 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-15": 11,
         "ex-h3-biologie-16": 11,
         "ex-h3-biologie-17": 11,
-        "ex-h3-biologie-18": 11
+        "ex-h3-biologie-18": 11,
+        "ex-h3-biologie-19": 11,
+        "ex-h3-biologie-20": 11,
+        "ex-h3-biologie-21": 11,
+        "ex-h3-biologie-22": 11,
+        "ex-h3-biologie-23": 11,
+        "ex-h3-biologie-24": 11,
+        "ex-h3-biologie-25": 11,
+        "ex-h3-biologie-26": 11,
+        "ex-h3-biologie-27": 11,
+        "ex-h3-biologie-28": 11,
+        "ex-h3-biologie-29": 11,
+        "ex-h3-biologie-30": 11,
+        "ex-h3-biologie-31": 11,
+        "ex-h3-biologie-32": 11,
+        "ex-h3-biologie-33": 11,
+        "ex-h3-biologie-34": 11,
+        "ex-h3-biologie-35": 11,
+        "ex-h3-biologie-36": 11,
+        "ex-h3-biologie-37": 11,
+        "ex-h3-biologie-38": 11,
+        "ex-h3-biologie-39": 11
       },
       "examenInfo": {
         "ex-h3-biologie-1": ["Toets 1 — Levensfasen, Ontwikkeling & Hormonen", "2026-07-21"],
@@ -310,7 +331,28 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-15": ["Toets 15 — §11.4 Begrippen en bouw", "2026-10-29"],
         "ex-h3-biologie-16": ["Toets 16 — §11.4 Functies en processen", "2026-10-29"],
         "ex-h3-biologie-17": ["Toets 17 — §11.4 Toepassen en redeneren", "2026-10-29"],
-        "ex-h3-biologie-18": ["Toets 18 — Begrippentoets H11 Voortplanting", "2026-10-29"]
+        "ex-h3-biologie-18": ["Toets 18 — Begrippentoets H11 Voortplanting", "2026-10-29"],
+        "ex-h3-biologie-19": ["Toets 19 — §11.1 Mannelijke voortplantingsorganen & zaadcel", "2026-10-29"],
+        "ex-h3-biologie-20": ["Toets 20 — §11.1 De zaadlozing, zaadblaasjes & prostaat", "2026-10-29"],
+        "ex-h3-biologie-21": ["Toets 21 — §11.1 Vrouwelijke voortplantingsorganen & eicel", "2026-10-29"],
+        "ex-h3-biologie-22": ["Toets 22 — §11.1 De menstruatiecyclus van dag tot dag", "2026-10-29"],
+        "ex-h3-biologie-23": ["Toets 23 — §11.1 Hormonale regeling (FSH, LH, oestrogeen, progesteron)", "2026-10-29"],
+        "ex-h3-biologie-24": ["Toets 24 — §11.1 Dieren & voortplanting: vergelijken en toepassen", "2026-10-29"],
+        "ex-h3-biologie-25": ["Toets 25 — §11.1 Examentraining §11.1 Man en vrouw", "2026-10-29"],
+        "ex-h3-biologie-26": ["Toets 26 — §11.2 Het proces van bevruchting & celdeling", "2026-10-29"],
+        "ex-h3-biologie-27": ["Toets 27 — §11.2 Innesteling & vroege embryonale ontwikkeling", "2026-10-29"],
+        "ex-h3-biologie-28": ["Toets 28 — §11.2 HCG & de zwangerschapstest", "2026-10-29"],
+        "ex-h3-biologie-29": ["Toets 29 — §11.2 Voorbehoedmiddelen (barrière & hormonen)", "2026-10-29"],
+        "ex-h3-biologie-30": ["Toets 30 — §11.2 Spiraaltje, sterilisatie & methoden", "2026-10-29"],
+        "ex-h3-biologie-31": ["Toets 31 — §11.2 Noodgevallen: morning-afterpil, vergeten pil & abortus", "2026-10-29"],
+        "ex-h3-biologie-32": ["Toets 32 — §11.2 Ivf & examentraining §11.2 Bevruchting", "2026-10-29"],
+        "ex-h3-biologie-33": ["Toets 33 — §11.3 Embryo tot foetus & moeder", "2026-10-29"],
+        "ex-h3-biologie-34": ["Toets 34 — §11.3 Bescherming & stoffenuitwisseling", "2026-10-29"],
+        "ex-h3-biologie-35": ["Toets 35 — §11.3 Schadelijke stoffen, virussen & miskraam", "2026-10-29"],
+        "ex-h3-biologie-36": ["Toets 36 — §11.3 De drie fasen van de bevalling", "2026-10-29"],
+        "ex-h3-biologie-37": ["Toets 37 — §11.3 Navelstreng, ligging & keizersnede", "2026-10-29"],
+        "ex-h3-biologie-38": ["Toets 38 — §11.3 Tweelingen & meerlingen", "2026-10-29"],
+        "ex-h3-biologie-39": ["Toets 39 — §11.3 Vergelijken met dieren: eieren & examentraining", "2026-10-29"]
       },
       "onderwerpHoofdstuk": {
         "bio-h10-1-opgroeien": 10,
@@ -323,7 +365,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "10": 5,
-        "11": 13
+        "11": 34
       },
       "aantalOnderwerpen": {
         "10": 2,

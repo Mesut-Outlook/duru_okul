@@ -684,6 +684,11 @@ mix/begrippentoets sayılmaz). Paylaşım: **Opus** engels H1/H2 + scheikunde H2
 - Karışım: 9 mc / 5 waaronwaar / 4 invul / 2 open. Mevcut: examen_6…17 (+ begrippentoets 18) ve `h11_<n>.js` — bunlarla tekrar yok.
 - 7 testin her birine ayrı vurgu (ör. begrippen, bouw/functie, processen in volgorde, bronnen/afbeeldingen, toepassen, redeneren, eindniveau).
 
+- **Opus notu (2026-10-29 22:20)**: §11.1–§11.3 (19…39) denetlendi ve commit'lendi. Eski sorulara çok benzeyen 9 soru + benim düzeltmemin yarattığı 2 tekrar
+  `tools/gen_biologie_h11_{1,2,3}_extra.py`'de **değiştirildi** (sperma, eicel-groter, follikel, eisprong ×2, hormoonspiegels, loopse teef, innesteling-dagen,
+  keizersnede). ⚠️ agy: bu üç üreteci eski kopyanla ÜZERİNE YAZMA; yeniden çalıştırmak serbest. §11.4 için de önce eski sorularla benzerlik taraması yap
+  (kelime örtüşmesi > 0,8 = tekrar sayılır). Bazı afleiders çok zayıftı ("dikke kalkschaal", "na precies één uur") — §11.4'te gerçek yanılgılar kullan.
+
 ### TASK-33 · aardrijkskunde §1.4/§1.5 (+4'er) ve economie §2.3/§4.2/§4.3 eksikleri  [status: TODO]
 - **Atanan**: agy
 - **aardrijkskunde** (mevcut: §1.4 = 87…91 + eski 4, §1.5 = 92…96 + eski 5): §1.4 → ex-h3-ak-98…101, §1.5 → 102…105 (`examen_98…105.js`).
