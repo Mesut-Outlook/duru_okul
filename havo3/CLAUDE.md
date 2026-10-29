@@ -1,0 +1,33 @@
+# havo3/ — ders içeriği durumu
+
+Kök `CLAUDE.md`'den taşındı (2026-10-29). Genel kurallar (senkron değişmezi, sınav id'leri, hoofdstuk manifest'i, not hesabı) kökte.
+
+## Ders doluluk durumu (2026-09-26)
+Sayılar `havo3/<vak>/js/{bootstrap,data/*}.js`'i node `vm`'de çalıştırıp `DURU.onderwerpen` /
+`DURU.examens` ve `vragen` uzunluklarını sayarak çıkarılır (`tools/build_hoofdstukken.js` ile aynı
+teknik). `kapsanan hoofdstuk` = `bootstrap.js`'teki `DURU.hoofdstukken`. İçerik eklendikçe güncelle.
+
+| vak | onderwerp | proeftoets | soru | kapsanan hoofdstuk |
+|---|---|---|---|---|
+| geschiedenis | 30 | 35 | 940 | H1–H6 (tam; H1 ekstra 5 proeftoets ex-h3-geschiedenis-31…35, examen_31…35: gemengd §1.1–1.3, gemengd §1.3–1.5, oorzaak & gevolg, chronologie, begrippentoets) |
+| frans | 33 | 86 | 2077 | H1–H8 **tam** (her Unité 4 onderwerp + 10 toets [U1: 5 onderwerp + 16 toets]) |
+| duits | 24 | 72 | 1644 | H1–H6 (tam: her H 4 onderwerp + 6 toets); H1 ekstra 10 woordenschat/Sprachmittel-toets ex-h3-duits-37…46 (Lernliste p. 48–49 + Sprachmittel, kitap görselinden); 47–50 kelime DE→NL / NL→DE, 51–54 grammatica (sein/haben Präteritum, werden Präsens), 55–56 gemengd; 57–62 herhaling uit eerdere H1-toetsen (woorden DE↔NL, Lernliste in context, sein/haben/werden + vergrotende trap, weer/maanden/windrichtingen, lidwoorden/meervouden/es gibt, eindniveau); 63–72 herhaling (2) gegenereerd met `tools/gen_duits_h1_herhaling.py` (woordenbank + sein/haben/werden-vervoeging, ontdubbeld tegen alle bestaande vragen) |
+| engels | 18 | 31 | 749 | H1–H6 (+1 hersteld smoke-test, "Overige") |
+| natuurkunde | 44 | 65 | 1686 | H1–H8 **tam** (H1 ekstra §1.4/§1.5 ve integrale toetsen ex-h3-natuurkunde-61…65; her H begrippen + begrippentoets; 5.5/6.5/7.5 plusstof) |
+| economie | 14 | 71 | 1532 | H1–H4; **§2.3 + §4.3 kitap-denetimli** (Pincode s. 54–59 / 114–121, `inbox/2026-2027/economie/`): §2.3 ex-h3-economie-38…42 + begrippentoets 43, §4.3 44…48 + begrippentoets 49, onderwerp `h2-3-begrippen` / `h4-3-begrippen`; **§2.3 + §4.3 karışık 22 proeftoets** ex-h3-economie-50…55 (2026-10-22), 56…61 (2026-10-23) ve 62…71 (2026-10-24: prijsontwikkeling & bedrijfsresultaat, koopkracht & winstmarge, inkomensvormen & btw, prijscompensatie & kostprijs, inflatiemechanismen & break-even, reëel inkomen & afzet, spaarrente & accijns, economische tabellen & marges, praktijkcasussen, grote integrale eindtoets) |
+| aardrijkskunde | 25 | 77 | 1745 | H1–H5 (tam) (+1 hersteld smoke-test, "Overige"); H1 §1.1–§1.3 ekstra 37 kitap-denetimli toets (40–71, 82–86; 52–66 + 82–86 karışık, 67–71 begrippen/definities). **72–81 silindi (2026-09-27) — Duru 72–74'ü çözmüştü; id'ler tekrar kullanılmaz** |
+| scheikunde | 33 | 120 | 2710 | H1–H7 **tam** (H1 ekstra 35 kitap-denetimli toets: h1-9…12 + 24…28 §1.1, h1-13…16 + 29…33 §1.3, h1-17…20 + 34…38 §1.4, h1-21…23 symbolen/eenheden/definities, h1-39…44 gemengd §1.1/§1.3/§1.4 (h1-44 = silinen h1-6 §1.2 Veiligheid yerine, 2026-10-06 — §1.2 toetsstof değil, h1-6 hiç çözülmemişti; id tekrar kullanılmaz); her § onderwerp + toets, her H begrippen + begrippentoets); H2 ekstra 43 kitap-denetimli toets: §2.2 h2-7…9 tabel 2.13, h2-10…12 figuur 2.14; h2-13…22 = §2.1/§2.2/§2.3/§2.4/gemengd × 2; h2-23…27 gemengd (dengeli/context/rekenen/begrippen+figuren/eindtoets-niveau); h2-28…31 symbolen: tabel 2.13, figuur 2.14, tabel 2.22 (tweeatomige elementen), gemengd; h2-32…37 §2.2 (tekst, fig. 2.11/2.15, tabel 2.12), h2-38…41 §2.3, h2-42…45 §2.4, h2-46…49 gemengde opdrachten |
+| wiskunde | 12 | 118 | 2480 | **H1 Gemengd 10 proeftoets** (2026-10-25, ex-wiskunde-h1-gemengd-1…10, examen_84…93: her test §1.1–§1.5'ten 4'er soru, toplam 20 soru, tam dengeli). **H2 Parabolen 25 proeftoets per paragraaf** (2026-10-25, examen_94…118: §2.1 Berg/dal 94…98 ex-wiskunde-parabolen-21-1…5; §2.2 Symmetrie/top 99…103 ex-wiskunde-parabolen-22-1…5; §2.3 Tekenen 104…108 ex-wiskunde-parabolen-23-1…5; §2.4 Vorm & ligging 109…113 ex-wiskunde-parabolen-24-1…5; §2.5 Drie vormen 114…118 ex-wiskunde-parabolen-25-1…5; her test 20 soru, Fraction ile hesaplandı, 0 duplicate, kapı 18/18). **H1 §1.4/§1.5 extra** (2026-10-19, `tools/gen_wiskunde_h1_14_15_extra.py`): 5 toets §1.4 Lineair of exponentieel ex-wiskunde-h1-51…55 (examen_74…78) + 5 toets §1.5 Groeifactor en tijd ex-wiskunde-h1-56…60 (examen_79…83); nieuw: lineair/exponentieel/geen van beide, twee stappen terug, formule uit twee punten, "wanneer voor het eerst", procent per periode. **H2 Parabolen** (2026-10-15, `tools/gen_wiskunde_h2_parabolen.py`; kitap `inbox/2026-2027/wiskunde/wiskunde_h02_parabolen.pdf`): §2.1–§2.5 onderwerp + begrippen (`parabolen_*.js`, id `h2-parabolen-*`) + 13 toets ex-wiskunde-parabolen-1…13 (examen_61…73: her § 2, begrippentoets, 2 gemengd/oefenproefwerk; parabool-figuren, cevaplar sympy'siz Fraction-değerlendiriciyle bağımsız doğrulandı). **Statistiek = MAVO 2 herhalingi**, H2 değil: `nr: 90` + `label: "Herhaling MAVO 2"` (ex-wiskunde-h2-1…10 id'leri aynı kaldı, Duru 14 deneme yapmıştı). H1 §1.1–1.5: **6 toets in het Duru_Matematik-format ex-wiskunde-h1-45…50** (examen_55…60) + **5 foutentraining-toets ex-wiskunde-h1-40…44** (examen_50…54) + per paragraaf 5 toets ex-wiskunde-h1-10…34 (examen_20…44) + §1.2 nog 5 toets waarin ELKE vraag een grafiek heeft ex-wiskunde-h1-35…39 (examen_45…49) + §1.1–1.2 (2 toets + begrippen) + §1.3 Formules substitueren (6 toets ex-wiskunde-h1-4…9) |
+| biologie | 2 | 5 | 116 | H10 |
+| maatschappijleer | 0 | 1 | 5 | **yok** — smoke-test |
+| nederlands | 11 | 52 | 1128 | Cursus 1 (H1: §1, §2, §4, §5); **Cursus 5 Grammatica (nr 5) §3 Samentrekking + §5 Verwijzen, Cursus 7 Spelling (nr 7) §2 Trema/apostrof/accenten/cedille + §3 Met of zonder n** (2026-10-28, kitap s. 210–215 / 244–247): her § 1 onderwerp + 7 toets (§7.2 ex-h3-nederlands-23…29, §7.3 30…36, §5.3 37…43, §5.5 44…50; `tools/gen_nederlands_c{7_2,7_3,5_3,5_5}.py`) + begrippen onderwerp/begrippentoets C7 = 51, C5 = 52 (`tools/gen_nederlands_begrippen_c5_c7.py`). Öğretmen notları (bijv. nw, werkwoordspelling) henüz işlenmedi |
+
+**Toplam: 246 onderwerp · 733 proeftoets · 16812 soru.** (Satırların toplamı; 2026-09-12'de
+elle toplam iki kez bayat kaldı — tablo değişince toplamı yeniden say, üstüne ekleme.)
+`maatschappijleer` `bootstrap.js`'te `DURU.hoofdstukken = []` tutar (Duru henüz
+materyal vermedi), bu yüzden tek sınavı bilinçli olarak `hoofdstuk`'suzdur en manifest'e
+girmez → "Overige toetsen"e düşer. **Buraya ünite numarası uydurma**; materyal gelince önce
+`bootstrap.js`'e gerçek hoofdstuk'ları yaz.
+
+Bekleyen üretim işleri `coordination.md` → "Pending Tasks" (TASK-15 frans U7–U8; TASK-19 ve TASK-09 materyal/cevap bekliyor).
+Her teslim `tools/gate.js` kapısından geçmeli (bkz. `docs/PIPELINE.md` → Kalite kapısı).
