@@ -14,6 +14,13 @@
       icoon: "🧬",
       kleur: "h10-thema",
       intro: "Levensfasen, lichamelijke en geestelijke ontwikkeling, groeispurt, hypofyse en hormoonwerking (groeihormoon, testosteron, oestrogeen), botgroei in groeischijven, primaire, secundaire en tertiaire geslachtskenmerken, puberteit, acne, zweetklieren en transgender & genderdysforie."
+    },
+    {
+      nr: 11,
+      titel: "Voortplanting",
+      icoon: "👶",
+      kleur: "h11-thema",
+      intro: "Geslachtsorganen van man en vrouw, zaadcellen en eicellen, menstruatiecyclus, bevruchting, zwangerschap en bevalling, en erfelijkheid: waarom je op je ouders lijkt."
     }
   ];
 

@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-28",
+  "gegenereerd": "2026-10-29",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -241,6 +241,12 @@ window.DURU_HOOFDSTUKKEN = {
           "titel": "Je verandert",
           "icoon": "🧬",
           "intro": "Levensfasen, lichamelijke en geestelijke ontwikkeling, groeispurt, hypofyse en hormoonwerking (groeihormoon, testosteron, oestrogeen), botgroei in groeischijven, primaire, secundaire en tertiaire geslachtskenmerken, puberteit, acne, zweetklieren en transgender & genderdysforie."
+        },
+        {
+          "nr": 11,
+          "titel": "Voortplanting",
+          "icoon": "👶",
+          "intro": "Geslachtsorganen van man en vrouw, zaadcellen en eicellen, menstruatiecyclus, bevruchting, zwangerschap en bevalling, en erfelijkheid: waarom je op je ouders lijkt."
         }
       ],
       "examenHoofdstuk": {
@@ -248,24 +254,57 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-2": 10,
         "ex-h3-biologie-3": 10,
         "ex-h3-biologie-4": 10,
-        "ex-h3-biologie-5": 10
+        "ex-h3-biologie-5": 10,
+        "ex-h3-biologie-6": 11,
+        "ex-h3-biologie-7": 11,
+        "ex-h3-biologie-8": 11,
+        "ex-h3-biologie-9": 11,
+        "ex-h3-biologie-10": 11,
+        "ex-h3-biologie-11": 11,
+        "ex-h3-biologie-12": 11,
+        "ex-h3-biologie-13": 11,
+        "ex-h3-biologie-14": 11,
+        "ex-h3-biologie-15": 11,
+        "ex-h3-biologie-16": 11,
+        "ex-h3-biologie-17": 11,
+        "ex-h3-biologie-18": 11
       },
       "examenInfo": {
         "ex-h3-biologie-1": ["Toets 1 — Levensfasen, Ontwikkeling & Hormonen", "2026-07-21"],
         "ex-h3-biologie-2": ["Toets 2 — Botgroei, Groeischijven & Groeistoornissen", "2026-08-29"],
         "ex-h3-biologie-3": ["Toets 3 — Geslachtskenmerken, Hormonen & Puberteit", "2026-08-29"],
         "ex-h3-biologie-4": ["Toets 4 — Acne, Zweet, Emoties & Diergedrag", "2026-08-29"],
-        "ex-h3-biologie-5": ["Toets 5 — Transgender, Geslachtsverandering & Samenvatting", "2026-08-29"]
+        "ex-h3-biologie-5": ["Toets 5 — Transgender, Geslachtsverandering & Samenvatting", "2026-08-29"],
+        "ex-h3-biologie-6": ["Toets 6 — §11.1 Begrippen & bouw", "2026-10-29"],
+        "ex-h3-biologie-7": ["Toets 7 — §11.1 Functies & processen", "2026-10-29"],
+        "ex-h3-biologie-8": ["Toets 8 — §11.1 Toepassen & redeneren", "2026-10-29"],
+        "ex-h3-biologie-9": ["Toets 9 — §11.2 Bevruchting en innesteling", "2026-10-29"],
+        "ex-h3-biologie-10": ["Toets 10 — §11.2 Voorbehoedmiddelen en noodgevallen", "2026-10-29"],
+        "ex-h3-biologie-11": ["Toets 11 — §11.2 Embryo, HCG en ivf", "2026-10-29"],
+        "ex-h3-biologie-12": ["Toets 12 — §11.3 Begrippen en bouw", "2026-10-29"],
+        "ex-h3-biologie-13": ["Toets 13 — §11.3 Functies en processen", "2026-10-29"],
+        "ex-h3-biologie-14": ["Toets 14 — §11.3 Toepassen en redeneren", "2026-10-29"],
+        "ex-h3-biologie-15": ["Toets 15 — §11.4 Begrippen en bouw", "2026-10-29"],
+        "ex-h3-biologie-16": ["Toets 16 — §11.4 Functies en processen", "2026-10-29"],
+        "ex-h3-biologie-17": ["Toets 17 — §11.4 Toepassen en redeneren", "2026-10-29"],
+        "ex-h3-biologie-18": ["Toets 18 — Begrippentoets H11 Voortplanting", "2026-10-29"]
       },
       "onderwerpHoofdstuk": {
         "bio-h10-1-opgroeien": 10,
-        "bio-h10-2-puberteit": 10
+        "bio-h10-2-puberteit": 10,
+        "bio-h11-1-man-en-vrouw": 11,
+        "bio-h11-2-bevruchting": 11,
+        "bio-h11-3-zwangerschap": 11,
+        "bio-h11-4-je-lijkt-op": 11,
+        "bio-h11-begrippen": 11
       },
       "aantalExamens": {
-        "10": 5
+        "10": 5,
+        "11": 13
       },
       "aantalOnderwerpen": {
-        "10": 2
+        "10": 2,
+        "11": 5
       }
     },
     "duits": {
