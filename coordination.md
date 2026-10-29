@@ -651,6 +651,40 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
 ## Pending Tasks
+### TASK-30 · biologie: Hoofdstuk 11 §11.1 t/m §11.4 PDF olarak dışa aktar  [status: DONE ✅ — Opus denetledi 2026-10-29: 4 PDF doğru paragrafla başlıyor, pdf_check temiz]
+- **Atanan**: agy (Antigravity)
+- **Amaç**: Duru'nun toets kapsamındaki biologie §11.1–§11.4 paragraflarını, paragraf başına ayrı bir PDF olarak `inbox/2026-2027/biologie/`'ye koymak.
+- **Bağlam (Opus, 2026-10-29)**: Kullanıcının verdiği toets kapsamı: biologie 11.1–11.4, aardrijkskunde 1.4–1.5, economie 2.3/4.1/4.2/4.3,
+  scheikunde 2.1–2.4, engels Chapter 1–2. Klasörler denetlendi: **yalnız biologie eksik** (klasörde sadece `biologie_h10_je-verandert-10-1-10-2.pdf`).
+  Diğerleri tamam: `aardrijkskunde_h01_wereldhandel-in-beweging.pdf` (§1.4 + §1.5 içinde), `economie_h02_koopkracht-inflatie-2-3.pdf`,
+  `economie_h04_produceren-4-1-4-2.pdf`, `economie_h04_omzet-winst-btw-4-3.pdf`, `scheikunde_h02_bouwstenen-van-stoffen.pdf` (§2.1–§2.4),
+  `engels_h01_the-world-around-you.pdf`, `engels_h02_crime.pdf` — **bunlara dokunma, tekrar üretme.**
+- **Girdi**:
+  - Kitap: H10 PDF'ini veren biologie kitabı (img2pdf ile dışa aktarılmış, büyük olasılıkla Duru'nun Noordhoff kitaplığından). `tools/noordhoff_books.json`'da
+    biologie kaydı **yok** → önce `python3 tools/noordhoff_export.py --discover biologie` (economie'deki gibi) ile kitabı bul, `noordhoff_books.json`'a
+    `biologie` kaydı ekle (course/ebook id, `chapters`).
+  - Sayfa aralıkları kitabın kendi içindekiler sayfasından (PDF sırası değil). Her paragrafın başı–sonu birebir; hoofdstuk sonu "samenvatting/oefentoets" ayrıca istenmedikçe alınmaz.
+- **Çıktı**: `inbox/2026-2027/biologie/biologie_h11_<slug>-11-<n>.pdf`, paragraf başına bir dosya (§11.1, §11.2, §11.3, §11.4 → 4 PDF; slug = paragraf başlığının kısa hali),
+  her biri için `.ocr.txt` (`pdftoppm -r 250` + `tesseract -l nld --tessdata-dir tools/tessdata`, `OMP_THREAD_LIMIT=1`) ve `noordhoff_books.json` → biologie `chapters` satırı.
+- **Kabul kriterleri**:
+  - 4 PDF var, sayfa aralıkları içindekilerle uyumlu; her biri `python3 tools/pdf_check.py <dosya>` ile temiz (BOS/ISKELET/MENU/ARAYUZ/KOPYA yok).
+  - `inbox/2026-2027/PDF_INDEX.md` yenilendi (`tools/pdf_check.py --index`).
+  - `havo3/biologie/` değişmez; test üretme; commit/push yok (Opus denetler).
+  - Kitap Noordhoff kitaplığında yoksa / erişilemiyorsa: `BLOCKED` + hangi kitap ve neden (kullanıcı PDF'i elle verebilir).
+- **agy notu (2026-10-29)**:
+  - **Kitap & Keşif**: Duru'nun Noordhoff hesabında Nectar havo/vwo 2-3 FLEX (5e Ed.) kitabı keşfedildi (`course_id: 89927378-edf4-4b6b-9a17-d5a8655e1c75`, `ebook_id: 5ea730ca-4eae-4d11-a30f-bdbc2656d5e2`).
+  - **Paragraflar & Sayfa Aralıkları**: Kitabın H11 içindekiler ve bölüm başlangıç/bitiş sayfaları taranarak birebir doğrulandı:
+    1. `biologie_h11_man-en-vrouw-11-1.pdf`: §11.1 Man en vrouw (s. 128–133, 6 sayfa)
+    2. `biologie_h11_bevruchting-11-2.pdf`: §11.2 Bevruchting (s. 134–138, 5 sayfa)
+    3. `biologie_h11_zwangerschap-11-3.pdf`: §11.3 Zwangerschap (s. 139–145, 7 sayfa)
+    4. `biologie_h11_je-lijkt-op-11-4.pdf`: §11.4 Je lijkt op... (s. 146–151, 6 sayfa)
+  - **Kalite & Doğrulama**:
+    - 4 PDF'in tamamı `python3 tools/pdf_check.py` ile denetlendi: **4/4 TEMİZ (BOS/ISKELET/MENU/ARAYUZ/KOPYA = 0, exit 0)**.
+    - 4 PDF için `OMP_THREAD_LIMIT=1` ile `tesseract -l nld --tessdata-dir tools/tessdata` yerel OCR çalıştırıldı; 4 adet `.ocr.txt` dosyası `inbox/2026-2027/biologie/` altında oluşturuldu.
+    - `tools/pdf_check.py --index` çalıştırılarak `inbox/2026-2027/PDF_INDEX.md` güncellendi (101 PDF, hepsi temiz).
+    - `tools/noordhoff_books.json` ve `tools/noordhoff_export.py` güncellendi.
+    - `havo3/biologie/` dizinine kesinlikle dokunulmadı; commit/push yapılmadı (Opus denetimine hazır).
+
 ### 2026-10-28 · nederlands: Cursus 5 §3/§5 + Cursus 7 §2/§3 — paragraf başına 7 toets (Opus + 4 fork) ✅
 - Kullanıcı: "seçili dosyalardaki her üniteden 7'şer test üret" (4 paragraf PDF'i). `bootstrap.js` → hoofdstuk 5 "Grammatica — Zinsdelen", 7 "Spelling".
 - §7.2 examen_23…29, §7.3 30…36, §5.3 37…43, §5.5 44…50 (her biri 20 soru, 20 dk) + onderwerp `c7_2/c7_3/c5_3/c5_5.js` + begrippen `c5_begrippen/c7_begrippen.js` + begrippentoets 51 (C7), 52 (C5).
