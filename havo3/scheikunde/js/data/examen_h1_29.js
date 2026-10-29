@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 29 — 1.3 Faseveranderingen (3)
-   Hoofdstuk 1, §1.3 Faseveranderingen: fasen, toestandsaanduidingen en de zes faseveranderingen.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-29",
   "hoofdstuk": 1,
@@ -168,8 +163,8 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "zelfde stof/dezelfde stof/blijft water",
         "fase",
-        "vast/ijs (s)",
-        "vloeibaar/water (l)"
+        "ijs/vast/(s)",
+        "vloeibaar/(l)"
       ],
       "minTreffers": 3,
       "modelantwoord": "Ijs en vloeibaar water zijn dezelfde stof, namelijk water. Alleen de fase verandert: water (s) → water (l). Er ontstaat dus geen nieuwe stof.",

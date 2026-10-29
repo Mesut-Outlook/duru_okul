@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 45 — §2.4 Atoombouw (6)
-   Hoofdstuk 2 (Chemie Overal), §2.4 Atoombouw — isotopen, massagetal, relatieve atoommassa, ander rekenwerk
-   20 vragen · 30 minuten. Alleen wat in het boek staat.
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-45",
   "hoofdstuk": 2,
@@ -190,12 +185,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom het massagetal van een isotoop een geheel getal is, terwijl de relatieve atoommassa van de atoomsoort meestal geen geheel getal is.",
       "sleutelwoorden": [
-        "protonen en neutronen/aantal deeltjes/geheel aantal",
-        "gemiddelde/gewogen gemiddelde",
-        "isotopen/verschillende isotopen"
+        "protonen en neutronen/aantal deeltjes/tellen",
+        "gewogen gemiddelde/gemiddelde van isotopen/isotopen"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Het massagetal is het aantal protonen plus neutronen van één atoom, dus altijd een geheel getal. De relatieve atoommassa is een gewogen gemiddelde van de massa's van alle isotopen die in de natuur voorkomen, en daardoor meestal geen geheel getal.",
+      "modelantwoord": "Het massagetal is het aantal protonen en neutronen in één kern (dus een geheel getal). De relatieve atoommassa is een gewogen gemiddelde van de isotopen in de natuur.",
       "uitleg": "Massagetal telt deeltjes; relatieve atoommassa is een gemiddelde."
     },
     {

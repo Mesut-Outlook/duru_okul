@@ -180,7 +180,7 @@ DURU.registerExamen({
     {
       "type": "open",
       "vraag": "Noem in het Duits drie dingen die je in een landschap kunt vinden (met lidwoord of zonder).",
-      "modelantwoord": "der Fluss, der See und der Wald.",
+      "modelantwoord": "der Fluss, das Dorf und der Wald.",
       "sleutelwoorden": [
         "Fluss/Flüsse/Fluesse/See/Meer/Insel",
         "Dorf/Stadt/Ort/Orte",

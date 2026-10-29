@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 20 — 1.4 Mengsels en pH (eindniveau)
-   Hoofdstuk 1 (Chemie Overal), §1.4 Soorten mengsels en pH. Contextvragen over mengsels en pH, eindniveau.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-20",
   "hoofdstuk": 1,
@@ -202,12 +197,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom je met de rode kleurstof uit bloemblaadjes (rood bij pH 7 en pH 4, groen bij pH 10) geen zuur van neutraal kunt onderscheiden.",
       "sleutelwoorden": [
-        "rood/dezelfde kleur",
-        "pH 7/pH 4/neutraal/zuur",
-        "alleen pH 10/alleen bij pH 10/pas bij pH 10"
+        "dezelfde kleur/beide rood/geen verschil",
+        "alleen bij pH 10/pas bij pH 10/groen bij pH 10/basisch"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Bij pH 4 (zuur) en pH 7 (neutraal) is de kleur allebei rood, dus die twee kun je niet van elkaar onderscheiden. Alleen bij pH 10 (basisch) verandert de kleur naar groen.",
+      "modelantwoord": "Bij pH 4 en pH 7 is de kleur allebei rood, dus er is dezelfde kleur en geen verschil. Alleen bij pH 10 (basisch) verandert de kleur naar groen.",
       "uitleg": "Bij pH 4 (zuur) en pH 7 (neutraal) is de kleur allebei rood, dus die twee kun je niet van elkaar onderscheiden. Alleen bij pH 10 (basisch) verandert de kleur naar groen."
     }
   ]

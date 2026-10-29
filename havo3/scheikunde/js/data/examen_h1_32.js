@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 32 — 1.3 Smelt- en kookpunt, zuivere stof en mengsel
-   Hoofdstuk 1, §1.3: zuivere stof of mengsel herkennen aan smelt- en kookpunt of smelt- en kooktraject.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-32",
   "hoofdstuk": 1,
@@ -190,13 +185,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Beschrijf hoe de temperatuur-tijdlijn eruitziet als je een zuivere vaste stof langzaam verwarmt tot ver boven het kookpunt. Noem de horizontale stukken.",
       "sleutelwoorden": [
-        "oploopt/stijgt",
-        "smelt",
-        "kook/verdamp",
-        "horizontaal/gelijk/constant"
+        "stijgt/toeneemt/hoger wordt/verandert",
+        "kooktraject/traject"
       ],
-      "minTreffers": 3,
-      "modelantwoord": "De lijn loopt eerst schuin omhoog tot het smeltpunt, daarna volgt een horizontaal stuk tijdens het smelten. Dan loopt ze weer schuin omhoog tot het kookpunt, volgt een horizontaal stuk tijdens het koken en loopt ze daarna opnieuw omhoog.",
+      "minTreffers": 2,
+      "modelantwoord": "Wijn is een mengsel en heeft een kooktraject: tijdens het koken stijgt de temperatuur langzaam.",
       "uitleg": "Een zuivere stof heeft twee horizontale stukken: bij het smeltpunt en bij het kookpunt."
     },
     {

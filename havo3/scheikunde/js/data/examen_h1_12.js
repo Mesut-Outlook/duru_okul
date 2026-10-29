@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 12 — 1.1 Stofeigenschappen (eindniveau)
-   Hoofdstuk 1 (Scheikunde is overal), §1.1 Stofeigenschappen. Gemengde contextvragen: stofeigenschappen, dichtheid en eenheden door elkaar op eindniveau.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-12",
   "hoofdstuk": 1,
@@ -203,9 +198,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom je wel kunt zeggen dat de dichtheid van lood groter is dan die van veren, maar niet dat de massa van lood groter is dan die van veren.",
       "sleutelwoorden": [
-        "stofeigenschap/per volume/herken/stof zelf",
-        "hoeveelheid/afhankelijk/hangt af/groot",
-        "elke stof kan elke massa hebben/hoeveel"
+        "stofeigenschap/per volume",
+        "hoeveelheid/afhankelijk/hangt af/groot/grotere massa"
       ],
       "minTreffers": 2,
       "modelantwoord": "Dichtheid is een stofeigenschap en geeft de massa per volume-eenheid. Massa is geen stofeigenschap: een grote hoop veren kan een grotere massa hebben dan een klein stukje lood.",

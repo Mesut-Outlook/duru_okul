@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 40 — Gemengd 1.1, 1.3 en 1.4 (2)
-   Hoofdstuk 1 gemengd over §1.1 (7 vragen), §1.3 (7 vragen) en §1.4 (6 vragen), door elkaar.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-40",
   "hoofdstuk": 1,
@@ -203,12 +198,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een leerling verwarmt een onbekende vloeistof. Tijdens het koken loopt de temperatuur langzaam op van 64 naar 71 °C. Welke conclusie trek je?",
       "sleutelwoorden": [
-        "mengsel",
-        "kooktraject",
-        "geen kookpunt/geen vast kookpunt/geen zuivere"
+        "zuivere stof/zuiver",
+        "smeltpunt en kookpunt/vast kookpunt/kookpunt/smelttraject/kooktraject"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Een zuivere stof heeft een kookpunt. Loopt de temperatuur tijdens het koken op, dan is er een kooktraject en dus een mengsel.",
+      "modelantwoord": "Een zuivere stof herken je aan een vast smeltpunt en kookpunt; een mengsel heeft een traject.",
       "uitleg": "Het is een mengsel, want het heeft een kooktraject en geen vast kookpunt."
     }
   ]

@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 46 — Gemengde opdrachten H2 (3)
-   Hoofdstuk 2 (Chemie Overal), gemengde opdrachten — formules en namen, atoombouw, isotopen, massa, macro/micro (PDF 14–16)
-   20 vragen · 30 minuten. Gebaseerd op de soort opdrachten in het boek (eigen stoffen, getallen en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-46",
   "hoofdstuk": 2,
@@ -190,12 +185,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een vrouw moet per dag 18 mg ijzer binnenkrijgen. Een appel bevat gemiddeld 0,15 mg ijzer. Laat met een berekening zien hoeveel appels ze minimaal moet eten om alleen met appels aan de dagelijkse ijzerdosis te komen.",
       "sleutelwoorden": [
-        "18",
-        "0,15/0.15",
+        "18 / 0,15/18:0,15/18/0,15/18 gedeeld door 0,15",
         "120"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Aantal appels = 18 mg / 0,15 mg per appel = 120 appels.",
+      "modelantwoord": "Aantal appels = 18 / 0,15 = 120 appels.",
       "uitleg": "18 / 0,15 = 120 appels."
     },
     {

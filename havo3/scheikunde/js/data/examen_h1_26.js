@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 26 — 1.1 Dichtheid rekenen (2)
-   Hoofdstuk 1 §1.1 Dichtheid: rekenen met massa, volume en dichtheid, inclusief omrekenen van eenheden (boek PDF 6–8, opgaven 8–16).
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-26",
   "hoofdstuk": 1,
@@ -184,12 +179,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom je bij een dichtheidsberekening eerst eenheden moet omrekenen als het volume in liter is gegeven en de dichtheid in g/cm<sup>3</sup>.",
       "sleutelwoorden": [
-        "eenheid/eenheden",
-        "1000/liter/L/cm<sup>3</sup>",
-        "vermenigvuldig/keer/omrekenen/omgerekend"
+        "kubieke centimeter/factor 1000/1000",
+        "dezelfde eenheden/passen niet bij elkaar/anders klopt de uitkomst niet"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Massa, volume en dichtheid moeten bij dezelfde eenheden horen. Liter reken je om naar cm<sup>3</sup> met een factor 1000; anders klopt de uitkomst niet.",
+      "modelantwoord": "Massa, volume en dichtheid moeten dezelfde eenheden hebben. Liter en kubieke centimeter verschillen een factor 1000; anders klopt de uitkomst niet.",
       "uitleg": "De eenheden moeten bij elkaar passen. 1 L is 1000 cm<sup>3</sup>, dus je rekent liter om naar cm<sup>3</sup> (vermenigvuldigen met 1000) voordat je met een dichtheid in g/cm<sup>3</sup> rekent."
     },
     {

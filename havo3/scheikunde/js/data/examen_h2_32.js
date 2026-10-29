@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 32 — §2.2 Periodiek systeem (3)
-   Hoofdstuk 2 (Chemie Overal), §2.2 — opgaven 17–21, tabel 2.16, symbolen en atoomsoorten
-   20 vragen · 30 minuten. Alleen wat in het boek staat.
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-32",
   "hoofdstuk": 2,
@@ -191,10 +186,10 @@ DURU.registerExamen({
       "vraag": "Leg in je eigen woorden uit wat een atoom is en wat een verbinding is.",
       "sleutelwoorden": [
         "bouwsteen/kleinere deeltjes/molecuul",
-        "meer soorten/meerdere atoomsoorten/verschillende atoomsoorten/twee soorten"
+        "meerdere soorten/verschillende soorten/verschillende atomen/twee soorten"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Een atoom is een bouwsteen waaruit een molecuul is opgebouwd. Een verbinding is een stof waarvan de moleculen uit meerdere soorten atomen bestaan.",
+      "modelantwoord": "Een atoom is een bouwsteen van een molecuul. Een verbinding is een stof die bestaat uit meerdere soorten atomen.",
       "uitleg": "Een atoom is een bouwsteen waaruit een molecuul is opgebouwd. Een verbinding is een stof waarvan de moleculen uit meerdere soorten atomen bestaan."
     },
     {

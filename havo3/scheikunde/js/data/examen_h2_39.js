@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 39 — §2.3 Formuletaal (4)
-   Hoofdstuk 2 (Chemie Overal), §2.3 Formuletaal — formule, index, coëfficiënt, formules van belangrijke stoffen (fig. 2.21, tabel 2.22), andere stoffen en vraagvormen
-   20 vragen · 30 minuten. Gebaseerd op de soort opdrachten in het boek (eigen stoffen, getallen en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-39",
   "hoofdstuk": 2,
@@ -196,8 +191,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een molecuul bestaat uit de atoomsoorten waterstof, stikstof en zuurstof en heeft in totaal vijf atomen. Er is één waterstofatoom en één stikstofatoom. Geef de formule van dit molecuul en leg uit hoe je aan de index van zuurstof komt.",
       "sleutelwoorden": [
-        "HNO3/HNO₃",
-        "3 O/drie zuurstof/O3/5 - 2/vijf min twee/5 min 2/3 zuurstof"
+        "HNO3/HNO₃/HNO<sub>3</sub>",
+        "3 O/drie zuurstof/O3/5 - 2/5 − 2/3 zuurstofatomen"
       ],
       "minTreffers": 2,
       "modelantwoord": "De formule is HNO<sub>3</sub>. Van de vijf atomen zijn er 1 waterstof en 1 stikstof, dus 5 − 2 = 3 zuurstofatomen: index 3.",

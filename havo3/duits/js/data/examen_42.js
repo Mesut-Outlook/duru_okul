@@ -194,11 +194,8 @@ DURU.registerExamen({
       "vraag": "Noem twee Duitse woorden uit deze lijst die bij een klimtocht of grot passen.",
       "modelantwoord": "Bijvoorbeeld: der Fels en klettern.",
       "sleutelwoorden": [
-        "Fels",
-        "klettern",
-        "eng",
-        "Decke",
-        "Anzug"
+        "Fels/eng/Decke/Anzug",
+        "klettern"
       ],
       "minTreffers": 2,
       "uitleg": "Passend zijn o.a. der Fels, klettern, eng, die Decke, der Anzug."

@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 31 — 1.3 Celsius en kelvin
-   Hoofdstuk 1, §1.3: omrekenen tussen graden Celsius en kelvin (°C + 273 = K) en het absolute nulpunt.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-31",
   "hoofdstuk": 1,
@@ -190,23 +185,21 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een leerling zegt: \"Water kookt bij 100 K.\" Leg uit wat hij fout doet en geef de juiste waarde in kelvin.",
       "sleutelwoorden": [
-        "°C/graden Celsius",
-        "273",
-        "373",
-        "optellen"
+        "beginvolume/begint",
+        "stijgt/toeneemt/eindvolume",
+        "verschil/aftrekken/eindvolume min beginvolume"
       ],
-      "minTreffers": 3,
-      "modelantwoord": "Water kookt bij 100 °C, niet bij 100 K. Om te rekenen in kelvin tel je 273 op: 100 + 273 = 373 K.",
+      "minTreffers": 2,
+      "modelantwoord": "Je leest het beginvolume af van het water in de maatcilinder. Dan laat je het voorwerp erin zakken en lees je het nieuwe volume af. Het volume van het voorwerp is het verschil tussen die twee (eindvolume min beginvolume).",
       "uitleg": "Het kookpunt van water is 100 °C = 373 K."
     },
     {
       "type": "open",
       "vraag": "Wat is het absolute nulpunt? Geef de waarde in °C en in K en leg uit wat het betekent voor de temperatuur van stoffen.",
       "sleutelwoorden": [
-        "−273",
-        "0 K",
-        "kouder/lager",
-        "niet"
+        "−273/-273",
+        "0 K/nul kelvin",
+        "kouder/lager/nooit kouder"
       ],
       "minTreffers": 3,
       "modelantwoord": "Het absolute nulpunt is −273 °C, oftewel 0 K. Stoffen kunnen nooit kouder worden dan dit nulpunt.",

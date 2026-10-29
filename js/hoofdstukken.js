@@ -123,7 +123,15 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-94": 1,
         "ex-h3-ak-95": 1,
         "ex-h3-ak-96": 1,
-        "ex-h3-ak-97": 1
+        "ex-h3-ak-97": 1,
+        "ex-h3-ak-98": 1,
+        "ex-h3-ak-99": 1,
+        "ex-h3-ak-100": 1,
+        "ex-h3-ak-101": 1,
+        "ex-h3-ak-102": 1,
+        "ex-h3-ak-103": 1,
+        "ex-h3-ak-104": 1,
+        "ex-h3-ak-105": 1
       },
       "examenInfo": {
         "ex-h3-ak-1": ["Toets 1 — Economisch Wereldbeeld, Global Shift & Triade", "2026-07-21"],
@@ -212,7 +220,15 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-ak-94": ["Proeftoets 94 — §1.5 Bronnen en kaarten", "2026-10-29"],
         "ex-h3-ak-95": ["Proeftoets 95 — §1.5 Toepassen", "2026-10-29"],
         "ex-h3-ak-96": ["Proeftoets 96 — §1.5 Eindniveau", "2026-10-29"],
-        "ex-h3-ak-97": ["Proeftoets 97 — Begrippentoets §1.4 en §1.5", "2026-10-29"]
+        "ex-h3-ak-97": ["Proeftoets 97 — Begrippentoets §1.4 en §1.5", "2026-10-29"],
+        "ex-h3-ak-98": ["Proeftoets 98 — §1.4 De Europese Unie: interne markt & handelsblok", "2026-10-29"],
+        "ex-h3-ak-99": ["Proeftoets 99 — §1.4 Verschuivingen in de Europese industrie", "2026-10-29"],
+        "ex-h3-ak-100": ["Proeftoets 100 — §1.4 Welvaartsverschillen & ESG-normen", "2026-10-29"],
+        "ex-h3-ak-101": ["Proeftoets 101 — §1.4 Examentraining §1.4 Europa in de wereldhandel", "2026-10-29"],
+        "ex-h3-ak-102": ["Proeftoets 102 — §1.5 Mondiale positie, mainports & doorvoer", "2026-10-29"],
+        "ex-h3-ak-103": ["Proeftoets 103 — §1.5 Brainport Eindhoven & hightechindustrie", "2026-10-29"],
+        "ex-h3-ak-104": ["Proeftoets 104 — §1.5 Welvaart, ongelijkheid & armoede", "2026-10-29"],
+        "ex-h3-ak-105": ["Proeftoets 105 — §1.5 Handelsstromen, grondstoffen & bronnen", "2026-10-29"]
       },
       "onderwerpHoofdstuk": {
         "ak-h1-1": 1,
@@ -243,7 +259,7 @@ window.DURU_HOOFDSTUKKEN = {
         "ak-h5-5": 5
       },
       "aantalExamens": {
-        "1": 67,
+        "1": 75,
         "2": 5,
         "3": 5,
         "4": 5,
@@ -311,7 +327,14 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-36": 11,
         "ex-h3-biologie-37": 11,
         "ex-h3-biologie-38": 11,
-        "ex-h3-biologie-39": 11
+        "ex-h3-biologie-39": 11,
+        "ex-h3-biologie-40": 11,
+        "ex-h3-biologie-41": 11,
+        "ex-h3-biologie-42": 11,
+        "ex-h3-biologie-43": 11,
+        "ex-h3-biologie-44": 11,
+        "ex-h3-biologie-45": 11,
+        "ex-h3-biologie-46": 11
       },
       "examenInfo": {
         "ex-h3-biologie-1": ["Toets 1 — Levensfasen, Ontwikkeling & Hormonen", "2026-07-21"],
@@ -352,7 +375,14 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-36": ["Toets 36 — §11.3 De drie fasen van de bevalling", "2026-10-29"],
         "ex-h3-biologie-37": ["Toets 37 — §11.3 Navelstreng, ligging & keizersnede", "2026-10-29"],
         "ex-h3-biologie-38": ["Toets 38 — §11.3 Tweelingen & meerlingen", "2026-10-29"],
-        "ex-h3-biologie-39": ["Toets 39 — §11.3 Vergelijken met dieren: eieren & examentraining", "2026-10-29"]
+        "ex-h3-biologie-39": ["Toets 39 — §11.3 Vergelijken met dieren: eieren & examentraining", "2026-10-29"],
+        "ex-h3-biologie-40": ["Toets 40 — §11.4 Chromosomen, DNA & geslacht", "2026-10-29"],
+        "ex-h3-biologie-41": ["Toets 41 — §11.4 Genen, allelen & DNA-structuur", "2026-10-29"],
+        "ex-h3-biologie-42": ["Toets 42 — §11.4 Genotype & fenotype: erfelijkheid & milieu", "2026-10-29"],
+        "ex-h3-biologie-43": ["Toets 43 — §11.4 Aangeboren aandoeningen & Downsyndroom", "2026-10-29"],
+        "ex-h3-biologie-44": ["Toets 44 — §11.4 Prenataal onderzoek: punctie & vlokkentest", "2026-10-29"],
+        "ex-h3-biologie-45": ["Toets 45 — §11.4 Het OCA2-gen, oogkleur & pigment", "2026-10-29"],
+        "ex-h3-biologie-46": ["Toets 46 — §11.4 Tweelingonderzoek & examentraining", "2026-10-29"]
       },
       "onderwerpHoofdstuk": {
         "bio-h10-1-opgroeien": 10,
@@ -365,7 +395,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "10": 5,
-        "11": 34
+        "11": 41
       },
       "aantalOnderwerpen": {
         "10": 2,
@@ -700,7 +730,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-68": 4,
         "ex-h3-economie-69": 4,
         "ex-h3-economie-70": 4,
-        "ex-h3-economie-71": 4
+        "ex-h3-economie-71": 4,
+        "ex-h3-economie-72": 2,
+        "ex-h3-economie-73": 2,
+        "ex-h3-economie-74": 2,
+        "ex-h3-economie-75": 4,
+        "ex-h3-economie-76": 4,
+        "ex-h3-economie-77": 4
       },
       "examenInfo": {
         "ex-h3-economie-1": ["Proeftoets 1: Behoeften, schaarste en middelen", "2026-07-21"],
@@ -773,7 +809,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-68": ["Proeftoets 68: Gemengd §2.3 + §4.3 — Spaarrente, Accijns & Bedrijfsbeslissingen", "2026-10-25"],
         "ex-h3-economie-69": ["Proeftoets 69: Gemengd §2.3 + §4.3 — Economische Tabellen, Prijzen & Marges", "2026-10-25"],
         "ex-h3-economie-70": ["Proeftoets 70: Gemengd §2.3 + §4.3 — Praktijkcasussen: Winkelier & Huishouden", "2026-10-25"],
-        "ex-h3-economie-71": ["Proeftoets 71: Gemengd §2.3 + §4.3 — Grote Integrale Eindtoets", "2026-10-25"]
+        "ex-h3-economie-71": ["Proeftoets 71: Gemengd §2.3 + §4.3 — Grote Integrale Eindtoets", "2026-10-25"],
+        "ex-h3-economie-72": ["Proeftoets 72: Oorzaken van inflatie (kosten- en bestedingsinflatie)", "2026-10-29"],
+        "ex-h3-economie-73": ["Proeftoets 73: Nominaal vs reëel inkomen & koopkrachtberekeningen", "2026-10-29"],
+        "ex-h3-economie-74": ["Proeftoets 74: CPB, koopkrachtplaatjes & inkomensgroepen", "2026-10-29"],
+        "ex-h3-economie-75": ["Proeftoets 75: Constante en variabele bedrijfskosten", "2026-10-29"],
+        "ex-h3-economie-76": ["Proeftoets 76: Afschrijvingskosten & kapitaalgoederen", "2026-10-29"],
+        "ex-h3-economie-77": ["Proeftoets 77: Omzet, kostprijs, btw en winstberekening", "2026-10-29"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -793,9 +835,9 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 6,
-        "2": 9,
+        "2": 12,
         "3": 3,
-        "4": 53
+        "4": 56
       },
       "aantalOnderwerpen": {
         "1": 3,

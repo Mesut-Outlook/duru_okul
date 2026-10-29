@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 9 — 1.1 Stofeigenschappen (1)
-   Hoofdstuk 1 (Scheikunde is overal), §1.1 Stofeigenschappen. Begrippen uit §1.1: stof, zuivere stof, mengsel, stofeigenschap, grootheid en eenheid.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-9",
   "hoofdstuk": 1,
@@ -190,12 +185,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom een gouden ring en een gouden staaf dezelfde stofeigenschappen hebben, ook al is de staaf veel zwaarder.",
       "sleutelwoorden": [
-        "allebei goud/beide goud/allebei van goud/zelfde soort",
-        "massa/volume/hoeveelheid/groter/kleiner",
-        "geen stofeigenschap/niet van de stof/hangt af van"
+        "goud/dezelfde stof",
+        "dichtheid"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Beide zijn van dezelfde stof (goud), dus hebben ze dezelfde stofeigenschappen. Massa hangt af van de hoeveelheid en is geen stofeigenschap.",
+      "modelantwoord": "Omdat beide ringen van zuiver goud zijn, hebben ze dezelfde dichtheid (19,3 g/cm³), ongeacht de grootte.",
       "uitleg": "Beide zijn van dezelfde stof (goud), dus hebben ze dezelfde stofeigenschappen. Massa hangt af van de hoeveelheid en is geen stofeigenschap."
     },
     {

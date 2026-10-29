@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 49 — Gemengde opdrachten H2 (6)
-   Hoofdstuk 2 (Chemie Overal), Gemengde opdrachten — azuriet en malachiet, lachgas, C-14, ruimtegoud, massaspectrometrie
-   20 vragen · 30 minuten. Alleen wat in het boek staat.
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-49",
   "hoofdstuk": 2,
@@ -190,12 +185,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Malachiet bevat minder koperatomen dan azuriet, maar heeft toch een hoger massapercentage koper. Leg uit hoe dat kan.",
       "sleutelwoorden": [
-        "molecuulmassa/totale massa/massa",
-        "minder ander atomen/minder koolstof/zuurstof/lichter",
-        "groter deel/groter aandeel/verhouding"
+        "totale massa/molecuulmassa/massa",
+        "groter deel/groter percentage/hoger percentage/verhouding"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Het massapercentage koper is de massa van het koper gedeeld door de totale massa van de stof. Malachiet heeft ook veel minder andere atomen, dus een lagere totale massa. Daardoor maakt het koper een groter deel van de massa uit.",
+      "modelantwoord": "Het massapercentage koper is de massa van het koper gedeeld door de totale massa van de stof. Omdat malachiet een lagere totale massa heeft, maakt koper een groter percentage van de massa uit.",
       "uitleg": "Kleinere totale massa maakt het deel koper groter."
     },
     {

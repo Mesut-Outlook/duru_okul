@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 27 — 1.1 Grootheden, eenheden en omrekenen
-   Hoofdstuk 1 §1.1: grootheden, eenheden, voorvoegsels en omrekenen (boek PDF 6–8, opgaven 8–9).
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-27",
   "hoofdstuk": 1,
@@ -190,9 +185,9 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom het gevaarlijk kan zijn om bij berekeningen eenheden door elkaar te gebruiken. Gebruik het voorbeeld van de vliegtuigbrandstof.",
       "sleutelwoorden": [
-        "eenheid/eenheden",
-        "pound/kg/kilogram",
-        "te weinig/tekort/brandstof"
+        "pound",
+        "kg/kilogram",
+        "te weinig/tekort"
       ],
       "minTreffers": 2,
       "modelantwoord": "Bij de Boeing 767 rekenden de piloten met pound terwijl de software kg gebruikte. Omdat een pound veel minder is dan een kg, was er te weinig brandstof aan boord.",

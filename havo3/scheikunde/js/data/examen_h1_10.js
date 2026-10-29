@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 10 — 1.1 Stofeigenschappen (2)
-   Hoofdstuk 1 (Scheikunde is overal), §1.1 Stofeigenschappen. Stofeigenschappen herkennen, mengsel en zuivere stof, grootheden en eenheden omrekenen.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-10",
   "hoofdstuk": 1,
@@ -202,12 +197,12 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Beschrijf hoe je met een weegschaal en een maatcilinder de dichtheid van een onbekende vloeistof bepaalt.",
       "sleutelwoorden": [
-        "massa/weeg/weegschaal/gram",
-        "volume/maatcilinder/mL",
-        "delen/gedeeld/m / V/massa per volume"
+        "massa/weegt/gewicht",
+        "volume/inhoud/mL",
+        "delen/deel/gedeeld/per volume"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Je bepaalt de massa van de vloeistof (weegschaal) en het volume (maatcilinder). Daarna deel je de massa door het volume: ρ = m / V.",
+      "modelantwoord": "Je bepaalt de massa van de vloeistof en het volume. Daarna deel je de massa door het volume: ρ = m / V.",
       "uitleg": "Je bepaalt de massa van de vloeistof (weegschaal) en het volume (maatcilinder). Daarna deel je de massa door het volume: ρ = m / V."
     }
   ]

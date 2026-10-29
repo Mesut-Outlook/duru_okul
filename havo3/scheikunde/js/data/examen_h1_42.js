@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 42 — Gemengd 1.1, 1.3 en 1.4 (4)
-   Hoofdstuk 1, gemengd over §1.1, §1.3 en §1.4 (ongeveer 7 / 7 / 6 vragen), door elkaar.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-42",
   "hoofdstuk": 1,
@@ -48,9 +43,8 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "wit/kleur",
         "vast",
-        "oplosbaar/lost op",
-        "smaak/zout",
-        "smeltpunt"
+        "oplosbaar/lost op/lost goed op",
+        "smaak/zout/smeltpunt"
       ],
       "minTreffers": 3,
       "modelantwoord": "Bijvoorbeeld: keukenzout is een witte, vaste stof, lost goed op in water en heeft een zoute smaak.",
@@ -66,13 +60,13 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Een ijsblok van −20 °C wordt in een pan verwarmd tot alle water verdampt is. Beschrijf welke faseveranderingen achtereenvolgens plaatsvinden en bij welke temperaturen in °C.",
       "sleutelwoorden": [
-        "smelten",
-        "0 °C",
-        "verdampen",
-        "100 °C"
+        "smelt/smelten",
+        "0 °C/0 graden",
+        "kookt/koken/verdamping",
+        "100 °C/100 graden"
       ],
       "minTreffers": 3,
-      "modelantwoord": "Het ijs smelt eerst bij 0 °C tot vloeibaar water: water (s) → water (l). Daarna verdampt het water bij 100 °C: water (l) → water (g).",
+      "modelantwoord": "Het ijs smelt eerst bij 0 °C tot vloeibaar water: water (s) → water (l). Daarna kookt en verdampt het water bij 100 °C: water (l) → water (g).",
       "uitleg": "Vast, vloeibaar en gas worden gescheiden door het smeltpunt (0 °C) en het kookpunt (100 °C)."
     },
     {

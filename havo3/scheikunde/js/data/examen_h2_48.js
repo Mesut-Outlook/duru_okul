@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 48 — Gemengde opdrachten H2 (5)
-   Hoofdstuk 2 (Chemie Overal), Gemengde opdrachten — stevia, appel en appelstroop, tennessine, naamgeving, TU Delft
-   20 vragen · 30 minuten. Alleen wat in het boek staat.
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-48",
   "hoofdstuk": 2,
@@ -203,12 +198,11 @@ DURU.registerExamen({
       "vraag": "Beschrijf hoe een modeltekening op microniveau eruitziet van een beetje steviolglycoside in een glas water.",
       "sleutelwoorden": [
         "rondjes/bolletjes",
-        "verschillende kleuren/twee kleuren/verschillende soorten",
-        "door elkaar/omringd/watermoleculen",
-        "steviolglycosidemoleculen"
+        "tussen/omringd/los van elkaar",
+        "watermoleculen"
       ],
-      "minTreffers": 3,
-      "modelantwoord": "Je tekent veel gekleurde rondjes voor de watermoleculen en in een andere kleur een paar rondjes voor steviolglycosidemoleculen. De steviolglycosidemoleculen liggen los van elkaar tussen de watermoleculen en worden daardoor omringd.",
+      "minTreffers": 2,
+      "modelantwoord": "Je tekent rondjes voor de watermoleculen en in een andere kleur een paar rondjes voor steviolglycoside. Deze liggen los van elkaar tussen de watermoleculen en worden daardoor omringd.",
       "uitleg": "Twee kleuren rondjes, steviolglycoside los tussen water."
     }
   ]

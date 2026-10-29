@@ -1,9 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 44 — Gemengd 1.1, 1.3 en 1.4 (6)
-   Hoofdstuk 1 gemengd: 7 vragen §1.1, 7 vragen §1.3 en 6 vragen §1.4, door elkaar, eindtoetsniveau.
-   Vervangt de verwijderde Toets 6 (§1.2 Veiligheid hoort niet bij de toetsstof).
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-44",
   "hoofdstuk": 1,
@@ -197,13 +191,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Je hebt twee kleurloze, heldere vloeistoffen: zuiver water en een zoutoplossing. Beschrijf een proef met een faseverandering waarmee je kunt bepalen welke vloeistof het mengsel is.",
       "sleutelwoorden": [
-        "verwarmen/koken",
-        "temperatuur meten",
-        "kookpunt/constant",
-        "kooktraject/stijgt"
+        "kookpunt/kooktraject",
+        "thermometer/temperatuur/meten"
       ],
-      "minTreffers": 3,
-      "modelantwoord": "Verwarm beide vloeistoffen tot ze koken en meet de temperatuur tijdens het koken. Bij zuiver water blijft de temperatuur constant (kookpunt). Bij de zoutoplossing loopt de temperatuur langzaam op (kooktraject): dat is het mengsel.",
+      "minTreffers": 2,
+      "modelantwoord": "Door de vloeistof te laten koken en met een thermometer de temperatuur te meten: een zuivere stof heeft een vast kookpunt, een mengsel een kooktraject.",
       "uitleg": "Verwarm beide vloeistoffen tot ze koken en meet de temperatuur tijdens het koken. Bij zuiver water blijft de temperatuur constant (kookpunt). Bij de zoutoplossing loopt de temperatuur langzaam op (kooktraject): dat is het mengsel."
     }
   ]

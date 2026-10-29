@@ -194,9 +194,8 @@ DURU.registerExamen({
       "vraag": "Noem in het Duits twee dingen die je in de natuur kunt doen (uit de woordenlijst).",
       "modelantwoord": "Bijvoorbeeld: zelten und wandern.",
       "sleutelwoorden": [
-        "zelten",
-        "wandern",
-        "grillen"
+        "zelten/grillen",
+        "wandern"
       ],
       "minTreffers": 2,
       "uitleg": "Uit de lijst: zelten, wandern, grillen."

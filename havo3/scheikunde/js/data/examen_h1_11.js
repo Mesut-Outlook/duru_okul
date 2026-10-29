@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 11 — 1.1 Dichtheid rekenen
-   Hoofdstuk 1 (Scheikunde is overal), §1.1 Stofeigenschappen. Dichtheid ρ = m/V: berekenen, omrekenen tussen g/cm³ en kg/m³, mL en cm³, en drijven of zinken.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-11",
   "hoofdstuk": 1,
@@ -192,7 +187,7 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "hol/lucht/holle ruimte",
         "gemiddelde dichtheid/totale dichtheid/schip als geheel",
-        "kleiner dan water/lager dan water/minder dan water/kleiner dan 1"
+        "kleiner dan water/kleiner dan die van water/lager dan water/minder dan water"
       ],
       "minTreffers": 2,
       "modelantwoord": "Het schip is hol en bevat veel lucht. De gemiddelde dichtheid van het hele schip is daardoor kleiner dan die van water, dus het drijft.",

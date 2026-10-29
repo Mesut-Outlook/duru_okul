@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 44 — §2.4 Atoombouw (5)
-   Hoofdstuk 2 (Chemie Overal), §2.4 Atoombouw — Rutherford, isotopen, massagetal, relatieve atoommassa
-   20 vragen · 30 minuten. Alleen wat in het boek staat.
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-44",
   "hoofdstuk": 2,
@@ -190,9 +185,8 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Leg uit waarom de isotopen C-12 en C-14 allebei koolstofatomen zijn.",
       "sleutelwoorden": [
-        "6 protonen/zes protonen/zelfde aantal protonen/hetzelfde atoomnummer",
-        "neutronen/verschillend aantal neutronen",
-        "alleen neutronen/alleen het aantal neutronen"
+        "6 protonen/zes protonen/hetzelfde atoomnummer",
+        "neutronen/verschillend aantal neutronen"
       ],
       "minTreffers": 2,
       "modelantwoord": "Beide atomen hebben 6 protonen, dus hetzelfde atoomnummer en daarmee dezelfde atoomsoort. Ze verschillen alleen in het aantal neutronen: 6 bij C-12 en 8 bij C-14.",
@@ -202,12 +196,11 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "In het periodiek systeem is de relatieve atoommassa van koolstof 12,01 u. Leg uit waaruit je kunt afleiden dat bijna alle koolstofatomen in de natuur C-12 zijn.",
       "sleutelwoorden": [
-        "gewogen gemiddelde/gemiddelde",
-        "dicht bij 12/bijna 12/12,01",
-        "C-13 en C-14 komen weinig voor/zelden/nauwelijks"
+        "gemiddelde/gewogen gemiddelde",
+        "12/12,01/C-12"
       ],
       "minTreffers": 2,
-      "modelantwoord": "De relatieve atoommassa is een gewogen gemiddelde. Het gemiddelde ligt vlak bij 12, de massa van C-12. Dus de zwaardere isotopen C-13 en C-14 komen maar weinig voor.",
+      "modelantwoord": "De relatieve atoommassa van 12,01 u is een gewogen gemiddelde dat heel dicht bij 12 ligt, de massa van C-12. Dus C-12 komt veruit het meeste voor.",
       "uitleg": "12,01 ligt bij 12, dus vrijwel alleen C-12."
     }
   ]

@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 29 — periodiek systeem (figuur 2.14)
-   Hoofdstuk 2 (Bouwstenen van stoffen). 20 vragen · 30 minuten.
-   Bron: boek H2, §2.2 (eigen formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-29",
   "hoofdstuk": 2,
@@ -196,12 +191,12 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Fluor, chloor, broom en jood staan in figuur 2.14 onder elkaar. Noem het nummer en de speciale naam van deze groep en leg uit wat dat betekent voor de eigenschappen van stoffen die uit deze atoomsoorten bestaan.",
       "sleutelwoorden": [
-        "17",
+        "17/zeventien",
         "halogenen/halogeen",
-        "vergelijkbaar/overeenkomst/lijken op elkaar/dezelfde eigenschappen"
+        "vergelijkbare eigenschappen/chemische eigenschappen"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Deze atoomsoorten staan in groep 17, de halogenen. Stoffen die uit één atoomsoort bestaan en in dezelfde groep staan, hebben vergelijkbare eigenschappen.",
+      "modelantwoord": "Het is groep 17, de halogenen. Deze elementen hebben vergelijkbare chemische eigenschappen.",
       "uitleg": "Groep 17, de halogenen. Stoffen die bestaan uit atoomsoorten uit dezelfde groep hebben vergelijkbare eigenschappen."
     }
   ]

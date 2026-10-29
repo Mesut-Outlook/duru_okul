@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 43 — §2.4 Atoombouw (4)
-   Hoofdstuk 2 (Chemie Overal), §2.4 Atoombouw — deeltjes, lading, atoomnummer, Rutherford
-   20 vragen · 30 minuten. Alleen wat in het boek staat.
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h2-43",
   "hoofdstuk": 2,
@@ -203,11 +198,10 @@ DURU.registerExamen({
       "vraag": "Een natriumdeeltje (atoomnummer 11) heeft 10 elektronen. Leg uit of dit deeltje neutraal is en geef de lading.",
       "sleutelwoorden": [
         "11 protonen/protonen",
-        "meer protonen/een elektron minder/1 elektron te weinig",
         "1+/positief/niet neutraal"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Het deeltje heeft 11 protonen (1+) maar slechts 10 elektronen (1–). Er is één positieve lading over: het deeltje is niet neutraal maar heeft lading 1+.",
+      "modelantwoord": "Het deeltje heeft 11 protonen (1+) maar slechts 10 elektronen. Er is één positieve lading over: het deeltje is niet neutraal maar heeft lading 1+.",
       "uitleg": "11 protonen tegenover 10 elektronen geeft lading 1+."
     }
   ]

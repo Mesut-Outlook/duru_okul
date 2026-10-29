@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 30 — 1.3 Faseveranderingen (4)
-   Hoofdstuk 1, §1.3 Faseveranderingen: fase bepalen met temperatuurlijn, smeltpunt en kookpunt (tabel 1.20).
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-30",
   "hoofdstuk": 1,
@@ -194,10 +189,9 @@ DURU.registerExamen({
       "sleutelwoorden": [
         "hoogste",
         "laagste",
-        "overlap/tussen",
         "boven/onder"
       ],
-      "minTreffers": 3,
+      "minTreffers": 2,
       "modelantwoord": "Alle drie moeten vloeibaar zijn: de temperatuur moet boven het hoogste smeltpunt (290 K) en onder het laagste kookpunt (353 K) liggen. Het gebied is dus 290 K tot 353 K.",
       "uitleg": "Het overlappende gebied begint bij het hoogste smeltpunt en eindigt bij het laagste kookpunt."
     },

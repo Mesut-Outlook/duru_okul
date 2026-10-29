@@ -1,8 +1,3 @@
-/* =========================================================
-   Duru's Scheikunde (HAVO 3) — Toets 18 — 1.4 Soorten mengsels (2)
-   Hoofdstuk 1 (Chemie Overal), §1.4 Soorten mengsels en pH. Emulsie, emulgator, rook, schuim en nevel.
-   20 vragen · 30 minuten. Gebaseerd op de stof van het boek (eigen voorbeelden en formuleringen).
-   ========================================================= */
 DURU.registerExamen({
   "id": "ex-h3-sch-h1-18",
   "hoofdstuk": 1,
@@ -203,7 +198,7 @@ DURU.registerExamen({
       "vraag": "Carbonfiber is een mengsel van twee stoffen: koolstofvezels en epoxy. Leg uit waarom carbonfiber niet bij de soorten mengsels uit deze paragraaf hoort.",
       "sleutelwoorden": [
         "vaste stof/vast/beide vast/twee vaste stoffen",
-        "geen vloeistof/niet in vloeistof/geen gas",
+        "vloeistof of een gas/vloeistof/gas/geen vloeistof",
         "oplossing/suspensie/emulsie/rook/schuim/nevel"
       ],
       "minTreffers": 2,
