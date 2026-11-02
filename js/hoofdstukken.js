@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-10-29",
+  "gegenereerd": "2026-11-01",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -736,7 +736,25 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-74": 2,
         "ex-h3-economie-75": 4,
         "ex-h3-economie-76": 4,
-        "ex-h3-economie-77": 4
+        "ex-h3-economie-77": 4,
+        "ex-h3-economie-78": 2,
+        "ex-h3-economie-79": 2,
+        "ex-h3-economie-80": 2,
+        "ex-h3-economie-81": 2,
+        "ex-h3-economie-82": 2,
+        "ex-h3-economie-83": 2,
+        "ex-h3-economie-84": 4,
+        "ex-h3-economie-85": 4,
+        "ex-h3-economie-86": 4,
+        "ex-h3-economie-87": 4,
+        "ex-h3-economie-88": 4,
+        "ex-h3-economie-89": 4,
+        "ex-h3-economie-90": 4,
+        "ex-h3-economie-91": 4,
+        "ex-h3-economie-92": 4,
+        "ex-h3-economie-93": 4,
+        "ex-h3-economie-94": 4,
+        "ex-h3-economie-95": 4
       },
       "examenInfo": {
         "ex-h3-economie-1": ["Proeftoets 1: Behoeften, schaarste en middelen", "2026-07-21"],
@@ -815,7 +833,25 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-74": ["Proeftoets 74: CPB, koopkrachtplaatjes & inkomensgroepen", "2026-10-29"],
         "ex-h3-economie-75": ["Proeftoets 75: Constante en variabele bedrijfskosten", "2026-10-29"],
         "ex-h3-economie-76": ["Proeftoets 76: Afschrijvingskosten & kapitaalgoederen", "2026-10-29"],
-        "ex-h3-economie-77": ["Proeftoets 77: Omzet, kostprijs, btw en winstberekening", "2026-10-29"]
+        "ex-h3-economie-77": ["Proeftoets 77: Omzet, kostprijs, btw en winstberekening", "2026-10-29"],
+        "ex-h3-economie-78": ["Proeftoets 78: Wat is inflatie en hoe meet het CBS dat?", "2026-11-01"],
+        "ex-h3-economie-79": ["Proeftoets 79: Kosteninflatie of bestedingsinflatie herkennen", "2026-11-01"],
+        "ex-h3-economie-80": ["Proeftoets 80: Redeneren met prijzen, inkomen en koopkracht", "2026-11-01"],
+        "ex-h3-economie-81": ["Proeftoets 81: Koopkrachtplaatjes en verschillen tussen groepen", "2026-11-01"],
+        "ex-h3-economie-82": ["Proeftoets 82: Rekenen met nominaal en reëel inkomen", "2026-11-01"],
+        "ex-h3-economie-83": ["Proeftoets 83: Tabellen en grafieken over inflatie en koopkracht", "2026-11-01"],
+        "ex-h3-economie-84": ["Proeftoets 84: Produceren, consumeren en de kringloop", "2026-11-01"],
+        "ex-h3-economie-85": ["Proeftoets 85: Bedrijfskolom en toegevoegde waarde berekenen", "2026-11-01"],
+        "ex-h3-economie-86": ["Proeftoets 86: De vier productiefactoren toepassen", "2026-11-01"],
+        "ex-h3-economie-87": ["Proeftoets 87: Productieonderneming, handelsonderneming of dienstverlener", "2026-11-01"],
+        "ex-h3-economie-88": ["Proeftoets 88: Mechanisatie, automatisering en robotisering", "2026-11-01"],
+        "ex-h3-economie-89": ["Proeftoets 89: Arbeidsproductiviteit berekenen", "2026-11-01"],
+        "ex-h3-economie-90": ["Proeftoets 90: Inkoopwaarde van de omzet of bedrijfskosten", "2026-11-01"],
+        "ex-h3-economie-91": ["Proeftoets 91: Constante of variabele kosten herkennen", "2026-11-01"],
+        "ex-h3-economie-92": ["Proeftoets 92: Rekenen met constante en variabele kosten", "2026-11-01"],
+        "ex-h3-economie-93": ["Proeftoets 93: Soorten bedrijfskosten (loon, huisvesting, verkoop, rente)", "2026-11-01"],
+        "ex-h3-economie-94": ["Proeftoets 94: Kapitaalgoederen, afschrijven en restwaarde", "2026-11-01"],
+        "ex-h3-economie-95": ["Proeftoets 95: Afschrijvingskosten berekenen", "2026-11-01"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -829,21 +865,23 @@ window.DURU_HOOFDSTUKKEN = {
         "h3-2": 3,
         "h3-3": 3,
         "h4-1": 4,
+        "h4-1-begrippen": 4,
         "h4-2": 4,
+        "h4-2-begrippen": 4,
         "h4-3": 4,
         "h4-3-begrippen": 4
       },
       "aantalExamens": {
         "1": 6,
-        "2": 12,
+        "2": 18,
         "3": 3,
-        "4": 56
+        "4": 68
       },
       "aantalOnderwerpen": {
         "1": 3,
         "2": 4,
         "3": 3,
-        "4": 4
+        "4": 6
       }
     },
     "engels": {
@@ -1363,7 +1401,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-geschiedenis-32": 1,
         "ex-h3-geschiedenis-33": 1,
         "ex-h3-geschiedenis-34": 1,
-        "ex-h3-geschiedenis-35": 1
+        "ex-h3-geschiedenis-35": 1,
+        "ex-h3-geschiedenis-36": 1,
+        "ex-h3-geschiedenis-37": 1,
+        "ex-h3-geschiedenis-38": 1,
+        "ex-h3-geschiedenis-39": 1,
+        "ex-h3-geschiedenis-40": 1,
+        "ex-h3-geschiedenis-41": 1,
+        "ex-h3-geschiedenis-42": 1,
+        "ex-h3-geschiedenis-43": 1,
+        "ex-h3-geschiedenis-44": 1,
+        "ex-h3-geschiedenis-45": 1
       },
       "examenInfo": {
         "ex-h3-geschiedenis-1": ["Proeftoets 1 — 1.1 Beleving van tijd & 1.2 De Grote Oorlog (Oorzaken)", "2026-07-21"],
@@ -1400,7 +1448,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-geschiedenis-32": ["Proeftoets 32 — Gemengd §1.3 + §1.4 + §1.5", "2026-10-25"],
         "ex-h3-geschiedenis-33": ["Proeftoets 33 — Oorzaak en Gevolg in Hoofdstuk 1", "2026-10-25"],
         "ex-h3-geschiedenis-34": ["Proeftoets 34 — Tijdlijn & Chronologie (1900–1920)", "2026-10-25"],
-        "ex-h3-geschiedenis-35": ["Proeftoets 35 — Begrippentoets Hoofdstuk 1", "2026-10-25"]
+        "ex-h3-geschiedenis-35": ["Proeftoets 35 — Begrippentoets Hoofdstuk 1", "2026-10-25"],
+        "ex-h3-geschiedenis-36": ["Proeftoets 36 — Van zonnetijd naar tijdzones", "2026-11-01"],
+        "ex-h3-geschiedenis-37": ["Proeftoets 37 — La belle époque en de Olympische Spelen", "2026-11-01"],
+        "ex-h3-geschiedenis-38": ["Proeftoets 38 — Oorzaken en aanleiding van de Grote Oorlog", "2026-11-01"],
+        "ex-h3-geschiedenis-39": ["Proeftoets 39 — Het verloop van de Grote Oorlog", "2026-11-01"],
+        "ex-h3-geschiedenis-40": ["Proeftoets 40 — Het tsarenrijk en de Februarirevolutie", "2026-11-01"],
+        "ex-h3-geschiedenis-41": ["Proeftoets 41 — Van Oktoberrevolutie tot Sovjet-Unie", "2026-11-01"],
+        "ex-h3-geschiedenis-42": ["Proeftoets 42 — De Vrede van Versailles en de Volkenbond", "2026-11-01"],
+        "ex-h3-geschiedenis-43": ["Proeftoets 43 — Nieuwe staten en de Republiek Turkije", "2026-11-01"],
+        "ex-h3-geschiedenis-44": ["Proeftoets 44 — Neutraal Nederland in oorlogstijd", "2026-11-01"],
+        "ex-h3-geschiedenis-45": ["Proeftoets 45 — Grondwet van 1917, Troelstra en De Stijl", "2026-11-01"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -1408,6 +1466,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h1-3": 1,
         "h1-4": 1,
         "h1-5": 1,
+        "h1-begrippen": 1,
         "h2-1": 2,
         "h2-2": 2,
         "h2-3": 2,
@@ -1435,7 +1494,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h6-5": 6
       },
       "aantalExamens": {
-        "1": 10,
+        "1": 20,
         "2": 5,
         "3": 5,
         "4": 5,
@@ -1443,7 +1502,7 @@ window.DURU_HOOFDSTUKKEN = {
         "6": 5
       },
       "aantalOnderwerpen": {
-        "1": 5,
+        "1": 6,
         "2": 5,
         "3": 5,
         "4": 5,

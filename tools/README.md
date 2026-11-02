@@ -4,6 +4,15 @@
 2026-08-27/28'de geschiedenis'te (840 soru) ve scheikunde'de yakalanan kusurlar bu araçlarla
 bulundu. Sözleşme: `docs/ENGINE_SPEC.md`. Kural listesi: `docs/PIPELINE.md` → "Kalite kapısı".
 
+## `teslim_check.js` — gate'in ölçmediği üç şey (yeni sınavlar)
+
+```bash
+node tools/teslim_check.js <vak> <ilk-sınav-no> ["yasak|terim|regex"]
+```
+
+Doğru şık tek başına en kısa (dosya başına ≤%40), yakın kopya (kelime benzerliği ≥0,7, mevcut sorulara karşı da) ve kitap dışı terim.
+Bulgu varsa exit 1. 2026-11-01'de economie 78…95'te kapı 18/18 iken 15 dosya, 32 kopya ve 42 terim buldu.
+
 ## `gate.js` — kabul kapısı (18 kontrol: 1–17, 5 = 5a/5b)
 
 ```bash

@@ -92,6 +92,11 @@ kusursuzdu ama içerik olarak çöptü. Her teslim `tools/gate.js` ile ölçül�
     saçma yazılıyor ("zeppelin ile vervoer", "BM kurayla belirler") → Duru okumadan en uzunu seçer. Çeldirici
     gerçek bir yanlış kavrama olmalı, doğruyla aynı üslup ve uzunlukta; doğru şık kimi zaman en kısa olsun.
     (Kapı: 17, dosya başına ≤%50. 2026-09-25: aardrijkskunde H1 ex-26…39'da %91.)
+18. **Doğru şık en kısa şık da olmasın; çeldiriciyi şişirme.** Kapı 17'yi çeldiricilere kuyruk ekleyerek geçmek ters ipucu üretir:
+    2026-11-01'de economie 78…95'te doğru şık 126/180 mc'de (%70) tek başına en kısaydı, en uzun hiç değildi. Şıklar benzer uzunlukta olsun.
+19. **Aynı testin bir sorusu başka sorunun cevabını vermesin.** Tek konulu testte en sık kusur bu: invul cevabı başka sorunun şıkkında
+    ya da waaronwaar ifadesinde duruyor (geschiedenis 37'de Athene 3 kez). Kapı ölçemez, gözle okunur.
+20. **Her teslimden sonra `node tools/teslim_check.js <vak> <ilk-no> "<yasak|terim>"`** temiz olmalı: en kısa şık ≤%40, yakın kopya, kitap dışı terim.
 
 ## 📌 "Test Hazırla" ve Bölüm Üretimlerinde Zorunlu Kavram / Terim Standardı (2026-08-30)
 Kullanıcı **"test hazırla"** dediğinde veya herhangi bir ders için yeni bir bölüm/hoofdstuk işlendiğinde **otomatik olarak** şu adımlar uygulanır:

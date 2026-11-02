@@ -22,6 +22,7 @@ python3 -m http.server 8125                 # yerel çalıştır → http://loca
 python3 server.py                           # aynı + /api/score yerel skor yedeği (scores.json'a YAZAR)
 python3 -m http.server 8125 --bind 0.0.0.0  # telefondan önizleme: http://<lan-ip>:8125/ (UFW: 8125/tcp)
 node tools/gate.js <vak> [--only=h2,h3]     # soru kalite kapısı — her içerik teslimi geçmeli
+node tools/teslim_check.js <vak> <ilk-no> ["yasak|terim"]  # yeni toets: en kısa şık, yakın kopya, kitap dışı terim
 node tools/build_hoofdstukken.js [--check]  # js/hoofdstukken.js manifest'i üret / bayatsa exit 1
 node tools/test_score_merge.js              # senkron/merge regresyonu (20 kontrol)
 python3 tools/test_server_merge.py          # server.py voeg_samen() regresyonu (15 kontrol)
