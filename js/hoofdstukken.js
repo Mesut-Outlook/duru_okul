@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-02",
+  "gegenereerd": "2026-11-04",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1788,7 +1788,7 @@ window.DURU_HOOFDSTUKKEN = {
           "nr": 7,
           "titel": "Spelling",
           "icoon": "✏️",
-          "intro": "Trema, apostrof, accenten en cedille (§2) en met of zonder n (§3)."
+          "intro": "Trema, apostrof, accenten en cedille (§2), met of zonder n en bijvoeglijk naamwoord -e (§3), werkwoordspelling (§9), Engelse werkwoorden (§10) en homofone werkwoordsvormen (§11)."
         }
       ],
       "examenHoofdstuk": {
@@ -1843,7 +1843,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-49": 5,
         "ex-h3-nederlands-50": 5,
         "ex-h3-nederlands-51": 7,
-        "ex-h3-nederlands-52": 5
+        "ex-h3-nederlands-52": 5,
+        "ex-h3-nederlands-53": 7,
+        "ex-h3-nederlands-54": 7,
+        "ex-h3-nederlands-55": 7,
+        "ex-h3-nederlands-56": 7,
+        "ex-h3-nederlands-57": 7,
+        "ex-h3-nederlands-58": 7,
+        "ex-h3-nederlands-59": 7,
+        "ex-h3-nederlands-60": 7,
+        "ex-h3-nederlands-61": 5,
+        "ex-h3-nederlands-62": 7
       },
       "examenInfo": {
         "ex-h3-nederlands-1": ["Toets 1 — Officiële Proeftoets Lezen (Tekst 1 & 2)", "2026-07-21"],
@@ -1897,7 +1907,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-49": ["Toets 49 — §5.5 Gemengd", "2026-10-28"],
         "ex-h3-nederlands-50": ["Toets 50 — §5.5 Eindtoets verwijzen", "2026-10-28"],
         "ex-h3-nederlands-51": ["Toets 51 — Begrippentoets Cursus 7 (§2 & §3)", "2026-10-28"],
-        "ex-h3-nederlands-52": ["Toets 52 — Begrippentoets Cursus 5 (§3 & §5)", "2026-10-28"]
+        "ex-h3-nederlands-52": ["Toets 52 — Begrippentoets Cursus 5 (§3 & §5)", "2026-10-28"],
+        "ex-h3-nederlands-53": ["Toets 53 — §9 Werkwoordspelling: tegenwoordige tijd", "2026-11-04"],
+        "ex-h3-nederlands-54": ["Toets 54 — §9 Werkwoordspelling: verleden tijd", "2026-11-04"],
+        "ex-h3-nederlands-55": ["Toets 55 — §9 Werkwoordspelling: voltooid deelwoord", "2026-11-04"],
+        "ex-h3-nederlands-56": ["Toets 56 — §11 Homofone werkwoordsvormen", "2026-11-04"],
+        "ex-h3-nederlands-57": ["Toets 57 — §10 Engelse werkwoorden", "2026-11-04"],
+        "ex-h3-nederlands-58": ["Toets 58 — Bijvoeglijk naamwoord: met of zonder -e?", "2026-11-04"],
+        "ex-h3-nederlands-59": ["Toets 59 — Spellingdetective: verbeter de werkwoorden", "2026-11-04"],
+        "ex-h3-nederlands-60": ["Toets 60 — Mix lesnotities: -n, trema, apostrof en accenten", "2026-11-04"],
+        "ex-h3-nederlands-61": ["Toets 61 — Mix lesnotities: samentrekking en verwijzen", "2026-11-04"],
+        "ex-h3-nederlands-62": ["Toets 62 — Begrippentoets werkwoordspelling (§9–§11)", "2026-11-04"]
       },
       "onderwerpHoofdstuk": {
         "c5-3-samentrekking": 5,
@@ -1905,7 +1925,12 @@ window.DURU_HOOFDSTUKKEN = {
         "c5-begrippen": 5,
         "c7-2-trema-apostrof": 7,
         "c7-3-met-of-zonder-n": 7,
+        "c7-3-bijvoeglijk-naamwoord-e": 7,
+        "c7-9-werkwoordspelling": 7,
+        "c7-10-engelse-werkwoorden": 7,
+        "c7-11-homofone-werkwoordsvormen": 7,
         "c7-begrippen": 7,
+        "c7-werkwoorden-begrippen": 7,
         "h1-1-inleiding-slot": 1,
         "h1-2-argumenteren": 1,
         "h1-4-vaste-structuren": 1,
@@ -1914,13 +1939,13 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 22,
-        "5": 15,
-        "7": 15
+        "5": 16,
+        "7": 24
       },
       "aantalOnderwerpen": {
         "1": 5,
         "5": 3,
-        "7": 3
+        "7": 8
       }
     },
     "scheikunde": {

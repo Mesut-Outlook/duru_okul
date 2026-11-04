@@ -896,6 +896,13 @@ mix/begrippentoets sayılmaz). Paylaşım: **Opus** engels H1/H2 + scheikunde H2
 - §11.1 examen_6…8, §11.2 9…11, §11.3 12…14, §11.4 15…17 (20 soru, 20 dk) + onderwerp `h11_1…4.js` + begrippen `h11_begrippen.js` + begrippentoets 18.
 - Üreteçler `tools/gen_biologie_h11_{1,2,3,4,begrippen}.py`; gate 18/18, open_check 0, manifest güncel. Opus örnek denetimi: kitap dışı bilgi yok; begrippentoets'taki bir açık soru examen_6 ile çakışıyordu → embryo/foetus ile değiştirildi.
 
+### 2026-11-04 · nederlands: öğretmen notları → onderwerpen + toets 53–62 (Opus) ✅
+- Kullanıcı: Nederlands Notlar'dan hazırlanan çalışma notu + 10 testi projeye çevir. Kaynak: `inbox/2026-2027/nederlands/Nederlands Notlar/` (pptx/docx) + kitap içindekiler (Cursus 7 §9 Herhaling werkwoorden, §10 Engelse werkwoorden, §11 Homofone werkwoordsvormen).
+- Onderwerp: `c7_3_bijvoeglijk.js`, `c7_9.js`, `c7_10.js`, `c7_11.js`, `c7_werkwoorden_begrippen.js`. Toets (20 soru, 20 dk): 53 tt, 54 vt, 55 vd (§7.9), 56 homofonen (§7.11), 57 Engelse ww (§7.10), 58 bijv. nw -e (§7.3), 59 spellingdetective (mix), 60 C7 mix (-n/trema/apostrof), 61 C5 mix (samentrekking/verwijzen), 62 begrippentoets werkwoordspelling.
+- Üreteç `tools/gen_nederlands_lesnotities.py` (seed sabit). **Motor:** `havo3/nederlands/js/exams.js → invulGoed` yeni opsiyonel `exact:true` (tam eşleşme); spelling-invul'leri bunu taşır, eski sorular etkilenmez (`exams.js?v=20261104`). UI testi: 'wordt' (cevap word), 'Fietst', 'Maakt', 'wachtt' reddedildi; büyük harf + nokta kabul.
+- `gate.js nederlands` 18/18, `teslim_check.js nederlands 53` temiz, `open_check` 0, manifest yeniden üretildi (`hoofdstukken.js?v=20261104`).
+- Kalan: foutentraining (plan maddesi) açık.
+
 ### 2026-10-28 · nederlands: Cursus 5 §3/§5 + Cursus 7 §2/§3 — paragraf başına 7 toets (Opus + 4 fork) ✅
 - Kullanıcı: "seçili dosyalardaki her üniteden 7'şer test üret" (4 paragraf PDF'i). `bootstrap.js` → hoofdstuk 5 "Grammatica — Zinsdelen", 7 "Spelling".
 - §7.2 examen_23…29, §7.3 30…36, §5.3 37…43, §5.5 44…50 (her biri 20 soru, 20 dk) + onderwerp `c7_2/c7_3/c5_3/c5_5.js` + begrippen `c5_begrippen/c7_begrippen.js` + begrippentoets 51 (C7), 52 (C5).

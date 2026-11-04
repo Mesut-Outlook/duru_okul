@@ -694,3 +694,7 @@ Faz 1 uygulandı.
   - `tools/gate_uitzonderingen.json`'dan 17 geçici istisna satırının tamamı silindi (`TASK-22` istisnası kalmadı).
   - Doğrulama: `gate.js frans` (18/18), `gate.js scheikunde` (18/18), `gate.js aardrijkskunde` (17/18, tek ihlal bilinen smoke-test ex-1).
   - Commit `37d2a63` ve `02676d0` ile main branch'ine alındı.
+
+### 2026-11-04 · nederlands: öğretmen notları işlendi + `exact` invul
+- Nederlands Notlar (pptx/docx) → 5 onderwerp (`c7_3_bijvoeglijk`, `c7_9`, `c7_10`, `c7_11`, `c7_werkwoorden_begrippen`) + toets 53–62. Üreteç `tools/gen_nederlands_lesnotities.py`.
+- `havo3/nederlands/js/exams.js → invulGoed`: opsiyonel `exact:true` = yalnız tam eşleşme (spelling'de alt-dizi kuralı `vind`→`vindt`'i doğru sayıyordu). Eski sorular değişmedi. Ayrıntı: `docs/ENGINE_SPEC.md`, `coordination.md`.

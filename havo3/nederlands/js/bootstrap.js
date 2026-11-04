@@ -28,7 +28,7 @@
       titel: "Spelling",
       icoon: "✏️",
       kleur: "h7-thema",
-      intro: "Trema, apostrof, accenten en cedille (§2) en met of zonder n (§3)."
+      intro: "Trema, apostrof, accenten en cedille (§2), met of zonder n en bijvoeglijk naamwoord -e (§3), werkwoordspelling (§9), Engelse werkwoorden (§10) en homofone werkwoordsvormen (§11)."
     }
   ];
   DURU.onderwerpen = [];

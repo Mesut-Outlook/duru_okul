@@ -314,6 +314,11 @@
   function invulGoed(antw, v) {
     var inv = normaliseer(antw);
     if (inv === "") return false;
+    // exact:true (spelling): alleen een volledige match telt. Zonder exact zou 'vind' goed zijn in 'vindt'
+    // en 'gedownload' in 'gedownloadt' (substring). Zie docs/ENGINE_SPEC.md.
+    if (v.exact) {
+      return String(v.antwoord).split("|").some(function (a) { return normaliseer(a) === inv; });
+    }
     var getal = leesGetal(antw);
     var tekstAlts = [];
     var goed = String(v.antwoord).split("|").some(function (a) {
