@@ -4,68 +4,614 @@
     "course_id": "fe9559e5-2325-407a-a4a8-bcc3b16708da",
     "ebook_id": "23a8e547-a7d7-46e9-b45a-1895c6e5f429",
     "chapters": [
-      {"hoofdstuk": null, "label": "Unité 0", "titel": "On y va", "start": 10, "end": 16, "slug": "on-y-va", "output": "frans_extra_on-y-va.pdf"},
-      {"hoofdstuk": 1, "label": "Unité 1", "titel": "Poste, like, partage", "start": 17, "end": 54, "slug": "poste-like-partage", "output": "frans_h01_poste-like-partage.pdf"},
-      {"hoofdstuk": 2, "label": "Unité 2", "titel": "Du temps pour moi", "start": 55, "end": 92, "slug": "du-temps-pour-moi", "output": "frans_h02_du-temps-pour-moi.pdf"},
-      {"hoofdstuk": 3, "label": "Unité 3", "titel": "En route!", "start": 93, "end": 130, "slug": "en-route", "output": "frans_h03_en-route.pdf"},
-      {"hoofdstuk": 4, "label": "Unité 4", "titel": "Le pont", "start": 131, "end": 164, "slug": "le-pont", "output": "frans_h04_le-pont.pdf"},
-      {"hoofdstuk": 5, "label": "Unité 5", "titel": "Au resto!", "start": 165, "end": 200, "slug": "au-resto", "output": "frans_h05_au-resto.pdf"},
-      {"hoofdstuk": 6, "label": "Unité 6", "titel": "C'est moi", "start": 201, "end": 238, "slug": "c-est-moi", "output": "frans_h06_c-est-moi.pdf"},
-      {"hoofdstuk": 7, "label": "Unité 7", "titel": "À tout prix!", "start": 239, "end": 272, "slug": "a-tout-prix", "output": "frans_h07_a-tout-prix.pdf"},
-      {"hoofdstuk": 8, "label": "Unité 8", "titel": "Le pont (Examentraining)", "start": 273, "end": 310, "slug": "le-pont-examentraining", "_not": "2026-09-24: eskiden end 291 idi; DELF A2 (kitap s. 291-299) + Le plaisir de lire (s. 300-309) boite-a-gram PDF'ine dusmustu", "output": "frans_h08_le-pont-examentraining.pdf"},
-      {"hoofdstuk": null, "label": "Boîte à Gram", "titel": "Boîte à Gram & Vocabulaire", "start": 311, "end": 330, "slug": "boite-a-gram", "output": "frans_extra_boite-a-gram.pdf"}
+      {
+        "hoofdstuk": null,
+        "label": "Unité 0",
+        "titel": "On y va",
+        "start": 10,
+        "end": 16,
+        "slug": "on-y-va",
+        "output": "frans_extra_on-y-va.pdf"
+      },
+      {
+        "hoofdstuk": 1,
+        "label": "Unité 1",
+        "titel": "Poste, like, partage",
+        "start": 17,
+        "end": 54,
+        "slug": "poste-like-partage",
+        "output": "frans_h01_poste-like-partage.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "Unité 2",
+        "titel": "Du temps pour moi",
+        "start": 55,
+        "end": 92,
+        "slug": "du-temps-pour-moi",
+        "output": "frans_h02_du-temps-pour-moi.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "Unité 3",
+        "titel": "En route!",
+        "start": 93,
+        "end": 130,
+        "slug": "en-route",
+        "output": "frans_h03_en-route.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "Unité 4",
+        "titel": "Le pont",
+        "start": 131,
+        "end": 164,
+        "slug": "le-pont",
+        "output": "frans_h04_le-pont.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Unité 5",
+        "titel": "Au resto!",
+        "start": 165,
+        "end": 200,
+        "slug": "au-resto",
+        "output": "frans_h05_au-resto.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "Unité 6",
+        "titel": "C'est moi",
+        "start": 201,
+        "end": 238,
+        "slug": "c-est-moi",
+        "output": "frans_h06_c-est-moi.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "Unité 7",
+        "titel": "À tout prix!",
+        "start": 239,
+        "end": 272,
+        "slug": "a-tout-prix",
+        "output": "frans_h07_a-tout-prix.pdf"
+      },
+      {
+        "hoofdstuk": 8,
+        "label": "Unité 8",
+        "titel": "Le pont (Examentraining)",
+        "start": 273,
+        "end": 310,
+        "slug": "le-pont-examentraining",
+        "_not": "2026-09-24: eskiden end 291 idi; DELF A2 (kitap s. 291-299) + Le plaisir de lire (s. 300-309) boite-a-gram PDF'ine dusmustu",
+        "output": "frans_h08_le-pont-examentraining.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Boîte à Gram",
+        "titel": "Boîte à Gram & Vocabulaire",
+        "start": 311,
+        "end": 330,
+        "slug": "boite-a-gram",
+        "output": "frans_extra_boite-a-gram.pdf"
+      }
     ]
   },
   "duits": {
     "course_id": "b5ae3b67-6f8f-47d7-92b7-e3057c772724",
-    "books": {"A": "8e824d31-cf14-4f42-876a-b25a84b47f33", "B": "7e751e87-5f77-454d-9866-a82dff6724e0"},
+    "books": {
+      "A": "8e824d31-cf14-4f42-876a-b25a84b47f33",
+      "B": "7e751e87-5f77-454d-9866-a82dff6724e0"
+    },
     "chapters": [
-      {"hoofdstuk": null, "label": "Brückenschlag 1", "titel": "Sich Vorstellen", "book": "A", "start": 8, "end": 15, "slug": "brueckenschlag-1-sich-vorstellen", "output": "duits_extra_brueckenschlag-1-sich-vorstellen.pdf"},
-      {"hoofdstuk": 1, "label": "Kapitel 1", "titel": "Umgebung & Wetter", "book": "A", "start": 16, "end": 55, "slug": "umgebung-wetter", "output": "duits_h01_umgebung-wetter.pdf"},
-      {"hoofdstuk": 2, "label": "Kapitel 2", "titel": "Gesundheit & Körper", "book": "A", "start": 56, "end": 95, "slug": "gesundheit-korper", "output": "duits_h02_gesundheit-korper.pdf"},
-      {"hoofdstuk": 3, "label": "Kapitel 3", "titel": "Unterwegs & Reisen", "book": "A", "start": 96, "end": 133, "slug": "unterwegs-reisen", "output": "duits_h03_unterwegs-reisen.pdf"},
-      {"hoofdstuk": 4, "label": "Kapitel 4", "titel": "Veranstaltungen & Feiern", "book": "B", "start": 16, "end": 55, "slug": "veranstaltungen-feiern", "output": "duits_h04_veranstaltungen-feiern.pdf"},
-      {"hoofdstuk": 5, "label": "Kapitel 5", "titel": "Zukunft & Berufe", "book": "B", "start": 56, "end": 95, "slug": "zukunft-berufe", "output": "duits_h05_zukunft-berufe.pdf"},
-      {"hoofdstuk": 6, "label": "Kapitel 6", "titel": "In Aktion & Hilfsbereitschaft", "book": "B", "start": 96, "end": 133, "slug": "in-aktion-hilfsbereitschaft", "output": "duits_h06_in-aktion-hilfsbereitschaft.pdf"},
-      {"hoofdstuk": null, "label": "Wiederholung A", "titel": "Wiederholung & Grammatikübersicht A", "book": "A", "start": 134, "end": 160, "slug": "wiederholung-a", "output": "duits_extra_wiederholung-a.pdf"},
-      {"hoofdstuk": null, "label": "Wiederholung B", "titel": "Wiederholung & Grammatikübersicht B", "book": "B", "start": 134, "end": 166, "slug": "wiederholung-b", "output": "duits_extra_wiederholung-b.pdf"}
+      {
+        "hoofdstuk": null,
+        "label": "Brückenschlag 1",
+        "titel": "Sich Vorstellen",
+        "book": "A",
+        "start": 8,
+        "end": 15,
+        "slug": "brueckenschlag-1-sich-vorstellen",
+        "output": "duits_extra_brueckenschlag-1-sich-vorstellen.pdf"
+      },
+      {
+        "hoofdstuk": 1,
+        "label": "Kapitel 1",
+        "titel": "Umgebung & Wetter",
+        "book": "A",
+        "start": 16,
+        "end": 55,
+        "slug": "umgebung-wetter",
+        "output": "duits_h01_umgebung-wetter.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "Kapitel 2",
+        "titel": "Gesundheit & Körper",
+        "book": "A",
+        "start": 56,
+        "end": 95,
+        "slug": "gesundheit-korper",
+        "output": "duits_h02_gesundheit-korper.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "Kapitel 3",
+        "titel": "Unterwegs & Reisen",
+        "book": "A",
+        "start": 96,
+        "end": 133,
+        "slug": "unterwegs-reisen",
+        "output": "duits_h03_unterwegs-reisen.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "Kapitel 4",
+        "titel": "Veranstaltungen & Feiern",
+        "book": "B",
+        "start": 16,
+        "end": 55,
+        "slug": "veranstaltungen-feiern",
+        "output": "duits_h04_veranstaltungen-feiern.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Kapitel 5",
+        "titel": "Zukunft & Berufe",
+        "book": "B",
+        "start": 56,
+        "end": 95,
+        "slug": "zukunft-berufe",
+        "output": "duits_h05_zukunft-berufe.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "Kapitel 6",
+        "titel": "In Aktion & Hilfsbereitschaft",
+        "book": "B",
+        "start": 96,
+        "end": 133,
+        "slug": "in-aktion-hilfsbereitschaft",
+        "output": "duits_h06_in-aktion-hilfsbereitschaft.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Wiederholung A",
+        "titel": "Wiederholung & Grammatikübersicht A",
+        "book": "A",
+        "start": 134,
+        "end": 160,
+        "slug": "wiederholung-a",
+        "output": "duits_extra_wiederholung-a.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Wiederholung B",
+        "titel": "Wiederholung & Grammatikübersicht B",
+        "book": "B",
+        "start": 134,
+        "end": 166,
+        "slug": "wiederholung-b",
+        "output": "duits_extra_wiederholung-b.pdf"
+      }
     ]
   },
   "engels": {
     "course_id": "a7fecc29-5ede-4046-8d65-65cc4f19344b",
-    "books": {"A": "6a1457cf-1943-482a-bdbd-120b3e5934c3", "B": "6e5c48d6-ea83-40f5-a528-654dc6fa9d50"},
+    "books": {
+      "A": "6a1457cf-1943-482a-bdbd-120b3e5934c3",
+      "B": "6e5c48d6-ea83-40f5-a528-654dc6fa9d50"
+    },
     "chapters": [
-      {"hoofdstuk": null, "label": "Bridging the Gap Year 2", "titel": "Show What You Know & Bridging the Gap Year 2", "book": "A", "start": 10, "end": 36, "slug": "bridging-the-gap-year-2", "output": "engels_extra_bridging-the-gap-year-2.pdf"},
-      {"hoofdstuk": 1, "label": "Hoofdstuk 1", "titel": "The world around you", "book": "A", "start": 37, "end": 84, "slug": "the-world-around-you", "output": "engels_h01_the-world-around-you.pdf"},
-      {"hoofdstuk": 2, "label": "Hoofdstuk 2", "titel": "Crime", "book": "A", "start": 85, "end": 134, "slug": "crime", "output": "engels_h02_crime.pdf"},
-      {"hoofdstuk": 3, "label": "Hoofdstuk 3", "titel": "Science & technology", "book": "A", "start": 135, "end": 183, "slug": "science-and-technology", "output": "engels_h03_science-and-technology.pdf"},
-      {"hoofdstuk": null, "label": "Revision & Enrichment 1-3", "titel": "Revision & Enrichment 1-3", "book": "A", "start": 184, "end": 196, "slug": "revision-and-enrichment-1-3", "output": "engels_extra_revision-and-enrichment-1-3.pdf"},
-      {"hoofdstuk": 4, "label": "Hoofdstuk 4", "titel": "To the extreme", "book": "B", "start": 7, "end": 54, "slug": "to-the-extreme", "output": "engels_h04_to-the-extreme.pdf"},
-      {"hoofdstuk": 5, "label": "Hoofdstuk 5", "titel": "Going green", "book": "B", "start": 55, "end": 104, "slug": "going-green", "output": "engels_h05_going-green.pdf"},
-      {"hoofdstuk": 6, "label": "Hoofdstuk 6", "titel": "Your future", "book": "B", "start": 105, "end": 153, "slug": "your-future", "output": "engels_h06_your-future.pdf"},
-      {"hoofdstuk": null, "label": "Revision & Enrichment 1-6", "titel": "Revision & Enrichment 1-6", "book": "B", "start": 154, "end": 172, "slug": "revision-and-enrichment-1-6", "output": "engels_extra_revision-and-enrichment-1-6.pdf"},
-      {"hoofdstuk": null, "label": "Bridging the Gap Year 4", "titel": "Bridging the Gap Year 4", "book": "B", "start": 173, "end": 182, "slug": "bridging-the-gap-year-4", "output": "engels_extra_bridging-the-gap-year-4.pdf"}
+      {
+        "hoofdstuk": null,
+        "label": "Bridging the Gap Year 2",
+        "titel": "Show What You Know & Bridging the Gap Year 2",
+        "book": "A",
+        "start": 10,
+        "end": 36,
+        "slug": "bridging-the-gap-year-2",
+        "output": "engels_extra_bridging-the-gap-year-2.pdf"
+      },
+      {
+        "hoofdstuk": 1,
+        "label": "Hoofdstuk 1",
+        "titel": "The world around you",
+        "book": "A",
+        "start": 37,
+        "end": 84,
+        "slug": "the-world-around-you",
+        "output": "engels_h01_the-world-around-you.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "Hoofdstuk 2",
+        "titel": "Crime",
+        "book": "A",
+        "start": 85,
+        "end": 134,
+        "slug": "crime",
+        "output": "engels_h02_crime.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "Hoofdstuk 3",
+        "titel": "Science & technology",
+        "book": "A",
+        "start": 135,
+        "end": 183,
+        "slug": "science-and-technology",
+        "output": "engels_h03_science-and-technology.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Revision & Enrichment 1-3",
+        "titel": "Revision & Enrichment 1-3",
+        "book": "A",
+        "start": 184,
+        "end": 196,
+        "slug": "revision-and-enrichment-1-3",
+        "output": "engels_extra_revision-and-enrichment-1-3.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "Hoofdstuk 4",
+        "titel": "To the extreme",
+        "book": "B",
+        "start": 7,
+        "end": 54,
+        "slug": "to-the-extreme",
+        "output": "engels_h04_to-the-extreme.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Hoofdstuk 5",
+        "titel": "Going green",
+        "book": "B",
+        "start": 55,
+        "end": 104,
+        "slug": "going-green",
+        "output": "engels_h05_going-green.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "Hoofdstuk 6",
+        "titel": "Your future",
+        "book": "B",
+        "start": 105,
+        "end": 153,
+        "slug": "your-future",
+        "output": "engels_h06_your-future.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Revision & Enrichment 1-6",
+        "titel": "Revision & Enrichment 1-6",
+        "book": "B",
+        "start": 154,
+        "end": 172,
+        "slug": "revision-and-enrichment-1-6",
+        "output": "engels_extra_revision-and-enrichment-1-6.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Bridging the Gap Year 4",
+        "titel": "Bridging the Gap Year 4",
+        "book": "B",
+        "start": 173,
+        "end": 182,
+        "slug": "bridging-the-gap-year-4",
+        "output": "engels_extra_bridging-the-gap-year-4.pdf"
+      }
     ]
   },
   "economie": {
     "course_id": "aa599ad5-b7ea-4045-870c-f990c9a98bec",
     "ebook_id": "eedbb36f-9bd5-41c2-bd7b-4d4a970b4301",
     "chapters": [
-      {"hoofdstuk": 2, "label": "§2.3", "titel": "Koopkracht", "start": 54, "end": 59, "slug": "koopkracht-inflatie-2-3", "output": "economie_h02_koopkracht-inflatie-2-3.pdf"},
-      {"hoofdstuk": 4, "label": "§4.3", "titel": "Omzet en winst", "start": 114, "end": 121, "slug": "omzet-winst-btw-4-3", "output": "economie_h04_omzet-winst-btw-4-3.pdf"}
+      {
+        "hoofdstuk": 1,
+        "label": "§1.1",
+        "titel": "Behoeften en middelen",
+        "start": 12,
+        "end": 17,
+        "slug": "behoeften-en-middelen-1-1",
+        "output": "economie_h01_behoeften-en-middelen-1-1.pdf"
+      },
+      {
+        "hoofdstuk": 1,
+        "label": "§1.2",
+        "titel": "Inkomsten en uitgaven",
+        "start": 18,
+        "end": 23,
+        "slug": "inkomsten-en-uitgaven-1-2",
+        "output": "economie_h01_inkomsten-en-uitgaven-1-2.pdf"
+      },
+      {
+        "hoofdstuk": 1,
+        "label": "§1.3",
+        "titel": "Budgetteren",
+        "start": 24,
+        "end": 29,
+        "slug": "budgetteren-1-3",
+        "output": "economie_h01_budgetteren-1-3.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "§2.1",
+        "titel": "Ontstaan van geld",
+        "start": 42,
+        "end": 47,
+        "slug": "ontstaan-van-geld-2-1",
+        "output": "economie_h02_ontstaan-van-geld-2-1.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "§2.2",
+        "titel": "De waarde van geld",
+        "start": 48,
+        "end": 53,
+        "slug": "de-waarde-van-geld-2-2",
+        "output": "economie_h02_de-waarde-van-geld-2-2.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "§2.3",
+        "titel": "Koopkracht",
+        "start": 54,
+        "end": 59,
+        "slug": "koopkracht-inflatie-2-3",
+        "output": "economie_h02_koopkracht-inflatie-2-3.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "§3.1",
+        "titel": "Sparen",
+        "start": 72,
+        "end": 77,
+        "slug": "sparen-3-1",
+        "output": "economie_h03_sparen-3-1.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "§3.2",
+        "titel": "Lenen",
+        "start": 78,
+        "end": 83,
+        "slug": "lenen-3-2",
+        "output": "economie_h03_lenen-3-2.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "§3.3",
+        "titel": "Verzekeren",
+        "start": 84,
+        "end": 89,
+        "slug": "verzekeren-3-3",
+        "output": "economie_h03_verzekeren-3-3.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "§4.1-4.2",
+        "titel": "Productie en kosten",
+        "start": 102,
+        "end": 113,
+        "slug": "produceren-4-1-4-2",
+        "output": "economie_h04_produceren-4-1-4-2.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "§4.3",
+        "titel": "Omzet en winst",
+        "start": 114,
+        "end": 121,
+        "slug": "omzet-winst-btw-4-3",
+        "output": "economie_h04_omzet-winst-btw-4-3.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "§5.1",
+        "titel": "Voor jezelf beginnen",
+        "start": 134,
+        "end": 137,
+        "slug": "voor-jezelf-beginnen-5-1",
+        "output": "economie_h05_voor-jezelf-beginnen-5-1.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "§5.2",
+        "titel": "Investeren en financieren",
+        "start": 138,
+        "end": 142,
+        "slug": "investeren-en-financieren-5-2",
+        "output": "economie_h05_investeren-en-financieren-5-2.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "§5.3",
+        "titel": "Marketing",
+        "start": 143,
+        "end": 149,
+        "slug": "marketing-5-3",
+        "output": "economie_h05_marketing-5-3.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "§6.1",
+        "titel": "Consumentengedrag",
+        "start": 162,
+        "end": 169,
+        "slug": "consumentengedrag-6-1",
+        "output": "economie_h06_consumentengedrag-6-1.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "§6.2",
+        "titel": "Producentengedrag",
+        "start": 170,
+        "end": 176,
+        "slug": "producentengedrag-6-2",
+        "output": "economie_h06_producentengedrag-6-2.pdf"
+      },
+      {
+        "hoofdstuk": 6,
+        "label": "§6.3",
+        "titel": "Vraag en aanbod in evenwicht",
+        "start": 177,
+        "end": 181,
+        "slug": "vraag-en-aanbod-in-evenwicht-6-3",
+        "output": "economie_h06_vraag-en-aanbod-in-evenwicht-6-3.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "§7.1",
+        "titel": "De rol van de overheid",
+        "start": 194,
+        "end": 199,
+        "slug": "de-rol-van-de-overheid-7-1",
+        "output": "economie_h07_de-rol-van-de-overheid-7-1.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "§7.2",
+        "titel": "Inkomsten en uitgaven van de overheid",
+        "start": 200,
+        "end": 205,
+        "slug": "inkomsten-en-uitgaven-van-de-overheid-7-2",
+        "output": "economie_h07_inkomsten-en-uitgaven-van-de-overheid-7-2.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "§7.3",
+        "titel": "Tekort of overschot?",
+        "start": 206,
+        "end": 213,
+        "slug": "tekort-of-overschot-7-3",
+        "output": "economie_h07_tekort-of-overschot-7-3.pdf"
+      },
+      {
+        "hoofdstuk": 8,
+        "label": "§8.1",
+        "titel": "Export en import",
+        "start": 226,
+        "end": 231,
+        "slug": "export-en-import-8-1",
+        "output": "economie_h08_export-en-import-8-1.pdf"
+      },
+      {
+        "hoofdstuk": 8,
+        "label": "§8.2",
+        "titel": "Wisselkoersen",
+        "start": 232,
+        "end": 237,
+        "slug": "wisselkoersen-8-2",
+        "output": "economie_h08_wisselkoersen-8-2.pdf"
+      },
+      {
+        "hoofdstuk": 8,
+        "label": "§8.3",
+        "titel": "Vrijhandel en protectie",
+        "start": 238,
+        "end": 243,
+        "slug": "vrijhandel-en-protectie-8-3",
+        "output": "economie_h08_vrijhandel-en-protectie-8-3.pdf"
+      },
+      {
+        "hoofdstuk": 9,
+        "label": "§9.1",
+        "titel": "Welvaart",
+        "start": 256,
+        "end": 261,
+        "slug": "welvaart-9-1",
+        "output": "economie_h09_welvaart-9-1.pdf"
+      },
+      {
+        "hoofdstuk": 9,
+        "label": "§9.2",
+        "titel": "Schulden",
+        "start": 262,
+        "end": 267,
+        "slug": "schulden-9-2",
+        "output": "economie_h09_schulden-9-2.pdf"
+      },
+      {
+        "hoofdstuk": 9,
+        "label": "§9.3",
+        "titel": "Duurzame wereld",
+        "start": 268,
+        "end": 273,
+        "slug": "duurzame-wereld-9-3",
+        "output": "economie_h09_duurzame-wereld-9-3.pdf"
+      }
     ]
   },
   "aardrijkskunde": {
     "course_id": "fd197c5c-1dfc-446b-bc2c-0b34e0643ef4",
     "ebook_id": "d3a1eb35-9ea6-452c-addc-d00d50a95399",
     "chapters": [
-      {"hoofdstuk": null, "label": "Welkom", "titel": "Welkom & Introductie", "start": 1, "end": 9, "slug": "welkom-introductie", "output": "aardrijkskunde_extra_welkom.pdf"},
-      {"hoofdstuk": 1, "label": "Hoofdstuk 1", "titel": "Wereldhandel in beweging", "start": 10, "end": 55, "slug": "wereldhandel-in-beweging", "output": "aardrijkskunde_h01_wereldhandel-in-beweging.pdf"},
-      {"hoofdstuk": 2, "label": "Hoofdstuk 2", "titel": "Schatkist aarde?", "start": 56, "end": 101, "slug": "schatkist-aarde", "output": "aardrijkskunde_h02_schatkist-aarde.pdf"},
-      {"hoofdstuk": 3, "label": "Hoofdstuk 3", "titel": "Migratie", "start": 102, "end": 147, "slug": "migratie", "output": "aardrijkskunde_h03_migratie.pdf"},
-      {"hoofdstuk": 4, "label": "Hoofdstuk 4", "titel": "Energietransitie", "start": 148, "end": 193, "slug": "energietransitie", "output": "aardrijkskunde_h04_energietransitie.pdf"},
-      {"hoofdstuk": 5, "label": "Hoofdstuk 5", "titel": "Gewapende conflicten", "start": 194, "end": 235, "slug": "gewapende-conflicten", "output": "aardrijkskunde_h05_gewapende-conflicten.pdf"},
-      {"hoofdstuk": null, "label": "Topografie", "titel": "Topografie", "start": 236, "end": 243, "slug": "topografie", "output": "aardrijkskunde_extra_topografie.pdf"}
+      {
+        "hoofdstuk": null,
+        "label": "Welkom",
+        "titel": "Welkom & Introductie",
+        "start": 1,
+        "end": 9,
+        "slug": "welkom-introductie",
+        "output": "aardrijkskunde_extra_welkom.pdf"
+      },
+      {
+        "hoofdstuk": 1,
+        "label": "Hoofdstuk 1",
+        "titel": "Wereldhandel in beweging",
+        "start": 10,
+        "end": 55,
+        "slug": "wereldhandel-in-beweging",
+        "output": "aardrijkskunde_h01_wereldhandel-in-beweging.pdf"
+      },
+      {
+        "hoofdstuk": 2,
+        "label": "Hoofdstuk 2",
+        "titel": "Schatkist aarde?",
+        "start": 56,
+        "end": 101,
+        "slug": "schatkist-aarde",
+        "output": "aardrijkskunde_h02_schatkist-aarde.pdf"
+      },
+      {
+        "hoofdstuk": 3,
+        "label": "Hoofdstuk 3",
+        "titel": "Migratie",
+        "start": 102,
+        "end": 147,
+        "slug": "migratie",
+        "output": "aardrijkskunde_h03_migratie.pdf"
+      },
+      {
+        "hoofdstuk": 4,
+        "label": "Hoofdstuk 4",
+        "titel": "Energietransitie",
+        "start": 148,
+        "end": 193,
+        "slug": "energietransitie",
+        "output": "aardrijkskunde_h04_energietransitie.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Hoofdstuk 5",
+        "titel": "Gewapende conflicten",
+        "start": 194,
+        "end": 235,
+        "slug": "gewapende-conflicten",
+        "output": "aardrijkskunde_h05_gewapende-conflicten.pdf"
+      },
+      {
+        "hoofdstuk": null,
+        "label": "Topografie",
+        "titel": "Topografie",
+        "start": 236,
+        "end": 243,
+        "slug": "topografie",
+        "output": "aardrijkskunde_extra_topografie.pdf"
+      }
     ]
   },
   "nederlands": {
@@ -80,6 +626,42 @@
         "end": 49,
         "slug": "meer-dan-lezen",
         "output": "nederlands_h01_meer-dan-lezen.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Cursus 5 §3",
+        "titel": "Samentrekking",
+        "start": 210,
+        "end": 212,
+        "slug": "cursus5-samentrekking",
+        "output": "nederlands_c05_s03_samentrekking.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "Cursus 7 §2",
+        "titel": "Trema, apostrof, accenten en cedille",
+        "start": 244,
+        "end": 246,
+        "slug": "cursus7-trema-apostrof",
+        "output": "nederlands_c07_s02_trema_apostrof.pdf"
+      },
+      {
+        "hoofdstuk": 7,
+        "label": "Cursus 7 §3",
+        "titel": "Met of zonder n?",
+        "start": 247,
+        "end": 248,
+        "slug": "cursus7-met-of-zonder-n",
+        "output": "nederlands_c07_s03_met_of_zonder_n.pdf"
+      },
+      {
+        "hoofdstuk": 5,
+        "label": "Cursus 5 §5",
+        "titel": "Verwijzen",
+        "start": 214,
+        "end": 216,
+        "slug": "cursus5-verwijzen",
+        "output": "nederlands_c05_s05_verwijzen.pdf"
       }
     ]
   },
@@ -185,6 +767,48 @@
         "end": 300,
         "slug": "trefwoorden-en-herhaling",
         "output": "wiskunde_extra_trefwoorden-en-herhaling.pdf"
+      }
+    ]
+  },
+  "biologie": {
+    "course_id": "89927378-edf4-4b6b-9a17-d5a8655e1c75",
+    "ebook_id": "5ea730ca-4eae-4d11-a30f-bdbc2656d5e2",
+    "chapters": [
+      {
+        "hoofdstuk": 11,
+        "label": "§11.1",
+        "titel": "Man en vrouw",
+        "start": 128,
+        "end": 133,
+        "slug": "man-en-vrouw-11-1",
+        "output": "biologie_h11_man-en-vrouw-11-1.pdf"
+      },
+      {
+        "hoofdstuk": 11,
+        "label": "§11.2",
+        "titel": "Bevruchting",
+        "start": 134,
+        "end": 138,
+        "slug": "bevruchting-11-2",
+        "output": "biologie_h11_bevruchting-11-2.pdf"
+      },
+      {
+        "hoofdstuk": 11,
+        "label": "§11.3",
+        "titel": "Zwangerschap",
+        "start": 139,
+        "end": 145,
+        "slug": "zwangerschap-11-3",
+        "output": "biologie_h11_zwangerschap-11-3.pdf"
+      },
+      {
+        "hoofdstuk": 11,
+        "label": "§11.4",
+        "titel": "Je lijkt op...",
+        "start": 146,
+        "end": 151,
+        "slug": "je-lijkt-op-11-4",
+        "output": "biologie_h11_je-lijkt-op-11-4.pdf"
       }
     ]
   }

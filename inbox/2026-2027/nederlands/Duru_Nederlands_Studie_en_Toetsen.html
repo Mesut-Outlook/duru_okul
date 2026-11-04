@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nederlands HAVO 3 – Duru</title>
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1f2328; --muted:#5d6570; --line:#e3ded3;
+  --accent:#e4572e; --accent-soft:#fde7df; --blue:#2463b5; --blue-soft:#e3edfa;
+  --green:#1d8a4e; --green-soft:#e1f4e9; --red:#c0392b; --red-soft:#fbe4e1;
+  --yellow-soft:#fff5d6; --yellow:#8a6500;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16181c; --card:#1f2228; --ink:#eceef1; --muted:#a3aab4; --line:#33373f;
+    --accent:#ff7a52; --accent-soft:#3a2620; --blue:#7fb0f0; --blue-soft:#1d2a3d;
+    --green:#5fd193; --green-soft:#18301f; --red:#ff8a7c; --red-soft:#3a1f1c;
+    --yellow-soft:#332b14; --yellow:#f0cd6a;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16181c; --card:#1f2228; --ink:#eceef1; --muted:#a3aab4; --line:#33373f;
+  --accent:#ff7a52; --accent-soft:#3a2620; --blue:#7fb0f0; --blue-soft:#1d2a3d;
+  --green:#5fd193; --green-soft:#18301f; --red:#ff8a7c; --red-soft:#3a1f1c;
+  --yellow-soft:#332b14; --yellow:#f0cd6a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px 80px}
+header.top{padding:28px 0 8px}
+header.top h1{font-size:1.7rem;margin:0 0 4px;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--muted)}
+nav.tabs{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:8px;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:20px;overflow-x:auto}
+nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:999px;font:inherit;font-size:.95rem;cursor:pointer}
+nav.tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chips a{text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:.9rem}
+section.topic{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;margin:0 0 22px}
+section.topic h2{margin:0 0 4px;font-size:1.35rem}
+section.topic .sub{color:var(--muted);margin:0 0 14px;font-size:.95rem}
+h3{font-size:1.08rem;margin:22px 0 8px}
+.rule{background:var(--blue-soft);border-left:4px solid var(--blue);padding:12px 14px;border-radius:8px;margin:12px 0}
+.tip{background:var(--yellow-soft);border-left:4px solid var(--yellow);padding:12px 14px;border-radius:8px;margin:12px 0}
+.warn{background:var(--red-soft);border-left:4px solid var(--red);padding:12px 14px;border-radius:8px;margin:12px 0}
+.rule b:first-child,.tip b:first-child,.warn b:first-child{display:block;margin-bottom:4px}
+.nl{font-style:italic}
+.ok{color:var(--green);font-weight:600}
+.no{color:var(--red);font-weight:600;text-decoration:line-through}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--bg)}
+.tblwrap{overflow-x:auto}
+ul{padding-left:22px;margin:8px 0}
+li{margin:3px 0}
+details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;background:var(--bg)}
+details summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 2px}
+.kof{font-family:ui-monospace,Menlo,monospace;font-size:1.1rem;letter-spacing:.06em;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:6px}
+/* tests */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.tcard:hover{border-color:var(--accent)}
+.tcard .n{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tcard .t{font-weight:700;margin:2px 0 6px}
+.tcard .s{font-size:.88rem;color:var(--muted)}
+.badge{display:inline-block;font-size:.8rem;padding:2px 8px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.badge.good{background:var(--green-soft);color:var(--green);border-color:transparent}
+.badge.mid{background:var(--yellow-soft);color:var(--yellow);border-color:transparent}
+.badge.low{background:var(--red-soft);color:var(--red);border-color:transparent}
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.bar{height:6px;background:var(--bg);border-radius:6px;overflow:hidden;margin:6px 0 18px}
+.bar i{display:block;height:100%;background:var(--accent);transition:width .25s}
+.qtext{font-size:1.12rem;margin:0 0 14px}
+.opts{display:grid;gap:8px}
+.opt{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:11px 14px;text-align:left;font:inherit;cursor:pointer}
+.opt:hover:not([disabled]){border-color:var(--blue)}
+.opt.sel{border-color:var(--blue);background:var(--blue-soft)}
+.opt.right{border-color:var(--green);background:var(--green-soft)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)}
+input.ans{width:100%;font:inherit;padding:11px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+input.ans.right{border-color:var(--green);background:var(--green-soft)}
+input.ans.wrong{border-color:var(--red);background:var(--red-soft)}
+.hint{font-size:.88rem;color:var(--muted);margin-top:6px}
+.fb{margin-top:14px;padding:12px 14px;border-radius:10px;display:none}
+.fb.show{display:block}
+.fb.good{background:var(--green-soft)}
+.fb.bad{background:var(--red-soft)}
+.actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn{font:inherit;border:none;border-radius:10px;padding:11px 18px;cursor:pointer;background:var(--accent);color:#fff;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn[disabled]{opacity:.45;cursor:default}
+.score{font-size:2.4rem;font-weight:800;margin:4px 0}
+.review{margin-top:16px}
+.review .item{border-top:1px solid var(--line);padding:10px 0;font-size:.95rem}
+.special{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.special button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
+.hidden{display:none}
+footer{color:var(--muted);font-size:.85rem;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>Nederlands – HAVO 3 🇳🇱</h1>
+  <p>Duru için çalışma notları + 10 test · Werkwoordspelling · Met of zonder -n · Trema &amp; apostrof · Samentrekking · Verwijzen</p>
+</header>
+
+<nav class="tabs">
+  <button data-tab="notes" class="on">📘 Çalışma notları</button>
+  <button data-tab="tests">✏️ 10 Test</button>
+  <button data-tab="words">📖 Kavramlar</button>
+</nav>
+
+<!-- ===================== NOTES ===================== -->
+<main id="tab-notes">
+<div class="chips">
+  <a href="#ww">1. Werkwoordspelling</a>
+  <a href="#eng">2. Engelse werkwoorden</a>
+  <a href="#n">3. Met of zonder -n</a>
+  <a href="#trema">4. Trema, apostrof, accenten</a>
+  <a href="#samen">5. Samentrekking</a>
+  <a href="#verw">6. Verwijzen</a>
+</div>
+
+<div class="tip"><b>Nasıl çalışmalı?</b>Her konuyu oku → kutulardaki kuralı yüksek sesle söyle → "Kendini dene" sorularına önce kendin cevap ver, sonra aç. Sonra o konunun testini çöz. Yanlış yaptığın sorunun açıklamasını mutlaka oku.</div>
+
+<!-- 1 -->
+<section class="topic" id="ww">
+  <h2>1. Werkwoordspelling</h2>
+  <p class="sub">Fiil yazımı: şimdiki zaman, geçmiş zaman ve voltooid deelwoord (Test 1, 2, 3)</p>
+
+  <h3>Önce: stam (fiil kökü) nedir?</h3>
+  <p>Stam = <b>hele werkwoord − en</b>, sonra okunuşa göre düzelt.</p>
+  <ul>
+    <li><span class="nl">werken</span> → <b>werk</b> · <span class="nl">lopen</span> → <b>loop</b> (uzun ünlü korunur) · <span class="nl">zetten</span> → <b>zet</b> (çift harf teke iner)</li>
+    <li><span class="nl">leven</span> → <b>leef</b> · <span class="nl">verhuizen</span> → <b>verhuis</b> (kelime sonunda v→f, z→s olur)</li>
+    <li><span class="nl">vinden</span> → <b>vind</b> · <span class="nl">worden</span> → <b>word</b> (d duyulmasa da yazılır!)</li>
+  </ul>
+  <p>Kolay yol: stam = <b>"ik"</b> ile kullandığın hal: <span class="nl">ik werk, ik loop, ik vind</span>.</p>
+
+  <h3>A. Tegenwoordige tijd (şimdiki zaman)</h3>
+  <div class="tblwrap"><table>
+    <tr><th>Persoon</th><th>Kural</th><th>Örnek (tekenen)</th><th>Örnek (vinden)</th></tr>
+    <tr><td>ik</td><td>stam</td><td>ik teken</td><td>ik vind</td></tr>
+    <tr><td>jij / je</td><td>stam + t</td><td>jij tekent</td><td>jij vindt</td></tr>
+    <tr><td>jij / je <b>sonra gelirse</b> (soru)</td><td>stam (t YOK)</td><td>Teken jij?</td><td>Vind jij?</td></tr>
+    <tr><td>hij / zij / het / u</td><td>stam + t</td><td>hij tekent</td><td>zij vindt</td></tr>
+    <tr><td>wij / jullie / zij (çoğul)</td><td>hele werkwoord</td><td>wij tekenen</td><td>zij vinden</td></tr>
+  </table></div>
+  <div class="rule"><b>Altın kural</b>Stam <b>d</b> ile bitiyorsa ve +t gerekiyorsa <b>dt</b> yazılır: <span class="nl">hij vindt, Tim snijdt, het meisje rijdt, jij antwoordt</span>. Stam zaten <b>t</b> ile bitiyorsa ikinci t eklenmez: <span class="nl">hij zet, hij wacht</span>.</div>
+  <div class="warn"><b>Dikkat: "u" ve "jij" farkı</b><b>jij/je</b> fiilden sonra gelince t düşer: <span class="nl">Word jij later dokter?</span>. Ama <b>u</b> ile t hiç düşmez: <span class="nl">Wordt u al geholpen?</span></div>
+  <div class="tip"><b>Hile: "lopen" testi</b>Emin değilsen, fiilin yerine <i>lopen</i> koy. <span class="nl">Hij loopt</span> → t duyuyorsun → <span class="nl">hij vindt</span>. <span class="nl">Loop jij?</span> → t yok → <span class="nl">Vind jij?</span></div>
+
+  <h3>B. Verleden tijd (geçmiş zaman)</h3>
+  <p><b>Zwakke (düzenli) fiiller:</b> stam'ın son harfine bak. Bu harf <span class="kof">'t kofschip X</span> içinde mi?</p>
+  <ul>
+    <li>Harfler: <b>t, k, f, s, ch, p, x</b></li>
+    <li>Evet → stam + <b>te / ten</b>: <span class="nl">werken → werkte, fietsen → fietste, zetten → zette, praten → praatte, verwoesten → verwoestte</span></li>
+    <li>Hayır → stam + <b>de / den</b>: <span class="nl">horen → hoorde, staren → staarden, branden → brandde, verheugen → verheugde</span></li>
+  </ul>
+  <div class="warn"><b>En çok yapılan hata: v ve z</b>Hele werkwoord'a bak! <span class="nl">leven</span> → v (kofschip'te yok) → <b>leefde</b>. <span class="nl">verhuizen</span> → z (yok) → <b>verhuisde</b>. Stam'da f/s görünse bile <b>de</b> alır.</div>
+  <p><b>Sterke (düzensiz) fiiller:</b> ünlü değişir, ek yok. Tekil: sadece yeni kök; çoğul: + en.</p>
+  <ul><li><span class="nl">lopen → ik liep, wij liepen · vinden → hij vond, zij vonden · worden → hij werd, zij werden</span></li></ul>
+
+  <h3>C. Voltooid deelwoord (geçmiş ortaç: heb/is ... gewerkt)</h3>
+  <div class="rule"><b>Kural</b><b>ge + stam + t</b> (kofschip harfi) veya <b>ge + stam + d</b> (diğerleri). Sterke fiiller: <b>ge + ... + en</b>.<br>
+  <span class="nl">werken → gewerkt · fietsen → gefietst · horen → gehoord · leven → geleefd · vinden → gevonden</span></div>
+  <ul>
+    <li><b>be-, ge-, her-, ont-, ver-, er-</b> ile başlayan fiiller ekstra <i>ge-</i> almaz: <span class="nl">veranderen → veranderd, ontruimen → ontruimd, verbouwen → verbouwd</span></li>
+    <li>Ayrılabilen fiiller: ge ortaya girer: <span class="nl">opruimen → opgeruimd, binnenkomen → binnengekomen</span></li>
+    <li>Stam zaten d/t ile bitiyorsa ekstra harf yok: <span class="nl">voorbereiden → voorbereid, zetten → gezet</span></li>
+  </ul>
+  <div class="tip"><b>d mi t mi? → Uzat!</b>Voltooid deelwoord'u sıfat gibi uzat: <span class="nl">gebeur<b>d</b> → het gebeur<b>d</b>e ongeluk</span>; <span class="nl">gewerk<b>t</b> → het gewerk<b>t</b>e uur</span>. Uzatınca duyduğun harfi yaz.</div>
+
+  <h3>D. Aynı okunan biçimler (homofonen)</h3>
+  <div class="tblwrap"><table>
+    <tr><th>Persoonsvorm (tt, hij)</th><th>Voltooid deelwoord</th><th>Nasıl ayırırım?</th></tr>
+    <tr><td><span class="nl">Wat gebeur<b>t</b> er?</span></td><td><span class="nl">Wat is er gebeur<b>d</b>?</span></td><td rowspan="3">Cümlede <b>heb/heeft/is/zijn/wordt</b> var ve kelime sonda mı? → voltooid deelwoord (uzat: gebeurde → d). Tek fiil o mu? → persoonsvorm (lopen-testi: <i>het loopt</i> → t).</td></tr>
+    <tr><td><span class="nl">Het weer verander<b>t</b>.</span></td><td><span class="nl">Ik heb het verander<b>d</b>.</span></td></tr>
+    <tr><td><span class="nl">Hij word<b>t</b> moe.</span></td><td><span class="nl">Hij is moe geword<b>en</b>.</span></td></tr>
+  </table></div>
+
+  <h3>Kendini dene</h3>
+  <details><summary>Mijn broer … (vinden) het huiswerk saai.</summary><p><b>vindt</b> – hij/zij → stam (vind) + t.</p></details>
+  <details><summary>Wij … (leven) vroeger in Turkije. (verleden tijd)</summary><p><b>leefden</b> – leven → v kofschip'te yok → de/den.</p></details>
+  <details><summary>Ik heb de instellingen … (veranderen).</summary><p><b>veranderd</b> – voltooid deelwoord, uzat: de veranderde instellingen → d.</p></details>
+</section>
+
+<!-- 2 -->
+<section class="topic" id="eng">
+  <h2>2. Engelse werkwoorden</h2>
+  <p class="sub">updaten, downloaden, liken, appen... (Test 4)</p>
+  <div class="rule"><b>3 adım</b>
+  1. Stam = hele werkwoord − en, <b>İngilizce yazımı koru</b>: <span class="nl">updaten → update, liken → like, crashen → crash, back-uppen → back-up</span><br>
+  2. 't kofschip X'e bakarken <b>son duyduğun sese</b> bak (son yazılan harfe değil!): update → "…deyt" → <b>t</b>; like → "…layk" → <b>k</b><br>
+  3. Hollandaca kuralların aynısını uygula.</div>
+  <div class="tblwrap"><table>
+    <tr><th>Werkwoord</th><th>Stam</th><th>Son ses</th><th>Hij (tt)</th><th>Verleden tijd</th><th>Voltooid deelwoord</th></tr>
+    <tr><td>updaten</td><td>update</td><td>t</td><td>updatet</td><td>updatete</td><td>geüpdatet</td></tr>
+    <tr><td>liken</td><td>like</td><td>k</td><td>liket</td><td>likete</td><td>geliket</td></tr>
+    <tr><td>skaten</td><td>skate</td><td>t</td><td>skatet</td><td>skatete</td><td>geskatet</td></tr>
+    <tr><td>checken</td><td>check</td><td>k</td><td>checkt</td><td>checkte</td><td>gecheckt</td></tr>
+    <tr><td>crashen</td><td>crash</td><td>sj (sch)</td><td>crasht</td><td>crashte</td><td>gecrasht</td></tr>
+    <tr><td>appen</td><td>app</td><td>p</td><td>appt</td><td>appte</td><td>geappt</td></tr>
+    <tr><td>back-uppen</td><td>back-up</td><td>p</td><td>back-upt</td><td>back-upte</td><td>geback-upt</td></tr>
+    <tr><td>downloaden</td><td>download</td><td>d</td><td>downloadt</td><td>downloadde</td><td>gedownload</td></tr>
+    <tr><td>uploaden</td><td>upload</td><td>d</td><td>uploadt</td><td>uploadde</td><td>geüpload</td></tr>
+    <tr><td>streamen</td><td>stream</td><td>m</td><td>streamt</td><td>streamde</td><td>gestreamd</td></tr>
+  </table></div>
+  <div class="warn"><b>Dikkat</b><span class="nl">geüpload, geüpdatet</span> → <b>ge + u</b> yan yana ayrı okunur, bu yüzden <b>trema</b> (ü) gelir. <span class="nl">gedownloa<b>d</b></span> → stam zaten d ile bitiyor, ekstra d yok (<span class="no">gedownloadt</span>).</div>
+  <h3>Kendini dene</h3>
+  <details><summary>Gisteren … (updaten) ik de app.</summary><p><b>updatete</b> – son ses t → te.</p></details>
+  <details><summary>Iedereen heeft mijn foto … (liken).</summary><p><b>geliket</b> – son ses k → ge + like + t.</p></details>
+</section>
+
+<!-- 3 -->
+<section class="topic" id="n">
+  <h2>3. Met of zonder -n (ve -e)</h2>
+  <p class="sub">Bijvoeglijke naamwoorden (sıfatlar) ve telwoorden (sayı sözcükleri) (Test 5, 6)</p>
+
+  <h3>A. Sıfat -e alır mı?</h3>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>-e alır</th><th>-e almaz</th></tr>
+    <tr><td><b>de-woord</b></td><td>her zaman: <span class="nl">de leuke vriend, een leuke vriend, geen leuke vriend, elke leuke vriend</span></td><td>–</td></tr>
+    <tr><td><b>het-woord</b></td><td>het / dit / dat / mijn / ons… önünde: <span class="nl">het nieuwe spel, mijn nieuwe spel</span></td><td>een / geen / elk / ieder / veel önünde veya tek başına: <span class="nl">een nieuw spel, elk nieuw spel, mooi weer</span></td></tr>
+    <tr><td><b>meervoud</b></td><td>her zaman: <span class="nl">nieuwe spellen, de dure horloges</span></td><td>–</td></tr>
+  </table></div>
+  <div class="tip"><b>Hızlı test</b>Kelime <b>het</b>-kelimesi mi ve önünde <b>een/geen/elk/ieder</b> mi var? → -e yok. Diğer her durumda → -e. <span class="nl">een duur horloge · een interessant artikel · een prachtig cadeau</span></div>
+  <div class="warn"><b>Zaten -en ile biten sıfatlar</b> ekstra -e almaz: <span class="nl">de ervaren medewerkers, een open deur, gebakken eieren</span> (<span class="no">ervarene</span>).</div>
+
+  <h3>B. Stoffelijke bijvoeglijke naamwoorden (malzeme sıfatları)</h3>
+  <div class="rule"><b>Kural</b>Bir şeyin <b>neyden yapıldığını</b> söyleyen sıfatlar <b>her zaman -en</b> ile biter: <span class="nl">een houten lepel, een gouden ring, een zilveren ketting, een stalen buis, glazen flessen, een leren tas, kartonnen dozen, een wollen trui, een stenen muur</span>.<br>Asla: <span class="no">houte</span>, <span class="no">zilvere</span>, <span class="no">glaze</span>, <span class="no">kartonne</span>.</div>
+
+  <h3>C. Zelfstandig gebruikte bijvoeglijke naamwoorden</h3>
+  <p>"Zelfstandig" = sıfatın arkasında isim <b>yok</b>, sıfat isim gibi kullanılıyor.</p>
+  <ul>
+    <li><b>Kişileri</b> gösteriyorsa: tekil <b>-e</b>, çoğul <b>-en</b>.<br><span class="nl">Als gepensioneerd<b>e</b> heb je tijd voor eenzame oudere<b>n</b>. · De arm<b>en</b> kregen hulp. · De jongst<b>en</b> van de klas mochten beginnen. · Ik zag veel bekend<b>en</b>.</span></li>
+    <li><b>Şeyleri</b> gösteriyorsa: <b>-e</b> (n yok): <span class="nl">In de etalage lagen vijf horloges: drie peperdur<b>e</b> en twee goedkop<b>e</b>.</span></li>
+    <li>Ama malzeme sıfatıysa yine <b>-en</b>: <span class="nl">meer dan dertig zilver<b>en</b> en enkele kostbare goud<b>en</b></span>.</li>
+  </ul>
+  <div class="tip"><b>Kontrol sorusu</b>Arkasına <i>mensen</i> eklenebiliyor mu ve cümle çoğul mu? → <b>-n</b>. <span class="nl">De besten (= de beste mensen) kregen een medaille.</span></div>
+
+  <h3>D. Telwoorden (alle, enkele, sommige, vele, weinige, beide)</h3>
+  <div class="rule"><b>Kural</b><b>Zelfstandig</b> (arkasında isim yok) <b>VE kişileri</b> gösteriyor → <b>-n</b>: <span class="nl">Allen waren tevreden. Enkelen waren te laat. Sommigen kwamen niet.</span><br>
+  Arkasında isim var <b>veya</b> şeyleri gösteriyor → <b>n yok</b>: <span class="nl">Alle deelnemers kregen een certificaat. Enkele van de maatregelen bleken te duur.</span></div>
+  <p><b>tientallen, honderden, duizenden, miljoenen</b> her zaman -n alır: <span class="nl">Er kwamen honderden mensen.</span></p>
+  <p class="nl">Kısa: mensen + zelfstandig = -n · anders = geen -n</p>
+
+  <h3>Kendini dene</h3>
+  <details><summary>Ik kocht een … (duur) horloge.</summary><p><b>duur</b> – het horloge + een → -e yok.</p></details>
+  <details><summary>Enkele / Enkelen van hen bleven nog even.</summary><p><b>Enkelen</b> – zelfstandig + kişiler.</p></details>
+  <details><summary>Een houte / houten tafel.</summary><p><b>houten</b> – malzeme → her zaman -en.</p></details>
+</section>
+
+<!-- 4 -->
+<section class="topic" id="trema">
+  <h2>4. Trema, apostrof, accenten en cedille</h2>
+  <p class="sub">Telaffuz problemlerini önleyen işaretler (Test 7)</p>
+  <h3>Trema (ë, ï, ü)</h3>
+  <div class="rule"><b>Ne zaman?</b>İki ünlü yan yana gelince tek ses gibi okunmasın diye, <b>ikinci yeni hecenin</b> ilk ünlüsüne konur: <span class="nl">kopiëren, beëindigen, Azië, ideeën, egoïsme, reünie, beïnvloeden, Indiër, geüpload</span>.<br>Bazı ödünç kelimelerde de: <span class="nl">conciërge, föhn, patiënt</span>.</div>
+  <ul>
+    <li>Yanlış okunma riski yoksa trema yok: <span class="nl">beantwoord, deodorant, ontdooiing</span>.</li>
+    <li><b>Birleşik kelimelerde</b> trema yerine <b>koppelteken (-)</b>: <span class="nl">auto-eigenaar, bio-economie, zee-egel</span> (<span class="no">autoëigenaar</span>).</li>
+  </ul>
+  <h3>Apostrof (')</h3>
+  <ul>
+    <li><b>Telaffuz:</b> tek ünlü <b>a, i, o, u, y</b> ile biten kelimeye -s eklenince: <span class="nl">auto's, kiwi's, ski's, buggy's, Emma's boek, Hanna's fiets</span>. (Diğer ünlülerde yok: <span class="nl">Lines tas, niveaus, loverboys</span>.)</li>
+    <li><b>Weglatingsteken (kısaltma):</b> <span class="nl">'s avonds, 's morgens, 's-Hertogenbosch, Hans' gitaar</span> (-s ile biten isim → sadece ').</li>
+    <li><b>Kısaltmalar:</b> <span class="nl">cd's, pc's, sms'je, dvd'tje, wc's</span>.</li>
+    <li><b>-y ile biten ve önünde ünsüz olan</b> küçültme: <span class="nl">baby'tje, pony'tje</span> — ama önünde ünlü varsa yok: <span class="nl">displaytje, spraytje</span>.</li>
+  </ul>
+  <h3>Accenten (çoğunlukla e üzerinde)</h3>
+  <div class="tblwrap"><table>
+    <tr><th>Accent</th><th>Örnek</th><th>Not</th></tr>
+    <tr><td>aigu é</td><td>café, cliché, passé</td><td>uzun okunur; ayrıca <b>vurgu</b> için: <span class="nl">Dat is dé plek. Je moet een ongeluk zien te voorkómen.</span></td></tr>
+    <tr><td>grave è</td><td>crème, barrière, caissière</td><td>kısa/açık okunur</td></tr>
+    <tr><td>circonflexe ê</td><td>crêpe, enquête, gemêleerd</td><td>çoğunlukla Fransızca kelimelerde</td></tr>
+  </table></div>
+  <p>Vurgu için <b>één</b> sadece "1 tane" anlamında: <span class="nl">Ik heb één broer</span>. "Een" = bir (belirsiz) → accent yok.</p>
+  <h3>Cedille (ç)</h3>
+  <p>c harfi a, o, u önünde normalde <b>k</b> okunur (cacao, cursus). <b>ç</b> → <b>s</b> okunur: <span class="nl">Curaçao, François, reçu</span>.</p>
+  <h3>Kendini dene</h3>
+  <details><summary>Meervoud van "foto"?</summary><p><b>foto's</b> – tek o ile bitiyor.</p></details>
+  <details><summary>idee → meervoud?</summary><p><b>ideeën</b> – ee + en karışmasın diye trema.</p></details>
+</section>
+
+<!-- 5 -->
+<section class="topic" id="samen">
+  <h2>5. Samentrekking</h2>
+  <p class="sub">Cümlede tekrar eden kelimeyi bir kez atmak (Test 8)</p>
+  <p>Cümlede bir kelime (parçası) iki kez geçiyorsa birini atabilirsin. Buna <b>samentrekking</b> denir: <span class="nl">een vrouwelijke hond en een mannelijke (hond)</span>.</p>
+  <h3>İki yön</h3>
+  <ul>
+    <li><b>Voorwaarts</b> (ileri): ortak kısım <b>önce</b> söylenir, sonra atılır: <span class="nl">Ik heb de voorste rij gereserveerd in plaats van de achterste (rij). · theepot en -doos</span></li>
+    <li><b>Achterwaarts</b> (geri): ortak kısım <b>sonda</b> söylenir, önce atılır: <span class="nl">zowel de snel- als de stoptrein · binnen- en buitenland · in- en uitademen</span></li>
+  </ul>
+  <h3>Üç seviye</h3>
+  <div class="tblwrap"><table>
+    <tr><th>Niveau</th><th>Ne atılır?</th><th>Örnek</th></tr>
+    <tr><td>Woordniveau</td><td>kelime <b>parçası</b> → <b>streepje (-)</b> yazılır</td><td class="nl">ochtend- en middagkrant, voor- en nadelen</td></tr>
+    <tr><td>Woordgroepsniveau</td><td>woordgroep içinde <b>tam kelime</b>, çizgi yok</td><td class="nl">leren tassen en (leren) schoenen, gele en rode paprika's</td></tr>
+    <tr><td>Zinsniveau</td><td><b>zinsdeel</b> (pv, onderwerp, lv...), çizgi yok</td><td class="nl">Didi bakt pannenkoeken en Ivan (bakt) een pizza.</td></tr>
+  </table></div>
+  <div class="rule"><b>Samentrekking SADECE şu 3 şart varsa doğrudur</b>
+  Atılan kelime ile kalan kelime:<br>
+  1. aynı <b>işleve</b> (functie: onderwerp / lijdend voorwerp...) sahip,<br>
+  2. aynı <b>anlama</b> (betekenis) sahip,<br>
+  3. aynı <b>sayıda</b> (getal: enkelvoud / meervoud).</div>
+  <div class="tblwrap"><table>
+    <tr><th>Yanlış</th><th>Doğru</th><th>Neden?</th></tr>
+    <tr><td class="nl">Die cola bevat geen koolzuur meer en vind ik niet lekker.</td><td class="nl">… en <b>die cola</b> vind ik niet lekker.</td><td>İşlev farklı: 1. kısımda onderwerp, 2. kısımda lijdend voorwerp.</td></tr>
+    <tr><td class="nl">Paco haalde een goed cijfer en Lola de update binnen.</td><td class="nl">… en Lola <b>haalde</b> de update binnen.</td><td>Anlam farklı: <i>halen</i> ≠ <i>binnenhalen</i>.</td></tr>
+    <tr><td class="nl">Er wordt een tribune opgebouwd en toiletten geplaatst.</td><td class="nl">… en <b>worden</b> toiletten geplaatst.</td><td>Sayı farklı: wordt (tekil) ≠ worden (çoğul).</td></tr>
+  </table></div>
+  <h3>Kendini dene</h3>
+  <details><summary>"Het meisje fietst en de jongens naar school." Doğru mu?</summary><p><b>Yanlış</b> – fietst (tekil) ≠ fietsen (çoğul). Doğrusu: … en de jongens <b>fietsen</b> naar school.</p></details>
+</section>
+
+<!-- 6 -->
+<section class="topic" id="verw">
+  <h2>6. Verwijzen</h2>
+  <p class="sub">Daha önce geçen kelimeye (antecedent) doğru zamirle geri dönmek (Test 9)</p>
+  <div class="tblwrap"><table>
+    <tr><th>Antecedent</th><th>Kişi/iyelik zamiri</th><th>Gösterme / ilgi</th></tr>
+    <tr><td>tekil, <b>mannelijk</b></td><td>hij, hem, zijn</td><td>deze, die</td></tr>
+    <tr><td>tekil, <b>vrouwelijk</b></td><td>zij, ze, haar</td><td>deze, die</td></tr>
+    <tr><td>tekil, <b>onzijdig</b> (het-woord)</td><td>het, zijn</td><td>dit, dat</td></tr>
+    <tr><td><b>meervoud</b></td><td>zij, ze, hen, hun</td><td>deze, die</td></tr>
+  </table></div>
+  <h3>Hangi kelime hangi cins?</h3>
+  <ul>
+    <li><b>Onzijdig:</b> tüm het-woorden, <b>ülke, il, şehir, kulüp</b> isimleri, <b>küçültmeler</b>: <span class="nl">Nederland en zijn grachten · Ajax en zijn spelers · het meisje dat … · het boekje dat …</span></li>
+    <li><b>Vrouwelijk:</b> kadın kişi/hayvanlar (<span class="nl">de actrice, de wolvin</span>) ve şu eklerle biten de-woorden: <b>-heid, -ie, -nis, -ij, -ing, -iek, -schap, -theek, -st, -teit, -te, -tuur, -de</b><br><span class="nl">de regering en haar plannen · de fabriek en haar werknemers · de televisie, die …</span></li>
+    <li>Diğer de-woorden: emin değilsen <b>mannelijk</b> say (hij/zijn).</li>
+  </ul>
+  <div class="rule"><b>hen mi hun mu?</b>
+  <b>hen</b> = lijdend voorwerp (kimi?) ve <b>edattan sonra</b>: <span class="nl">Ik bezoek hen vaak. Water was gevaarlijk voor hen.</span><br>
+  <b>hun</b> = meewerkend voorwerp (kime?, edatsız) ve iyelik: <span class="nl">Ik geef hun een cadeau. Hun huis is groot.</span><br>
+  <span class="no">Hun hebben</span> → özne asla "hun" olmaz: <span class="ok">Zij hebben</span>.</div>
+  <div class="rule"><b>wat</b>
+  Bütün bir cümleye, <b>alles / niets / iets / het enige</b>'ye veya en üstünlük derecesine (het mooiste) dönerken: <span class="nl">Er stond een file, wat erg tegenviel. · Alles wat hij zei … · Het mooiste wat ik ken …</span></div>
+  <div class="rule"><b>Kişiler ↔ şeyler + edat</b>
+  Kişiler: <b>edat + wie</b>: <span class="nl">de man bij wie ik boodschappen doe · naast wie hij wil zitten</span><br>
+  Şeyler/hayvanlar: <b>waar + edat</b>: <span class="nl">de auto waarmee hij rijdt · de pen waarmee ik schrijf</span></div>
+  <div class="warn"><b>Öğretmenin örnekleri</b>
+  <span class="no">waarnaast hij wil zitten</span> → <span class="ok">naast wie</span> (kişi).<br>
+  <span class="no">gevaarlijk voor hun</span> → <span class="ok">voor hen</span> (edattan sonra).</div>
+  <h3>Kendini dene</h3>
+  <details><summary>Het meisje die / dat naast mij zit.</summary><p><b>dat</b> – het meisje = onzijdig.</p></details>
+  <details><summary>De vriendschap en zijn / haar waarde.</summary><p><b>haar</b> – -schap → vrouwelijk.</p></details>
+</section>
+</main>
+
+<!-- ===================== TESTS ===================== -->
+<main id="tab-tests" class="hidden">
+  <div id="testlist">
+    <p>Her test 10 soru. Cevabını yaz veya seç → <b>Kontrol et</b> → açıklamayı oku. En iyi skorun bu cihazda saklanır.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div id="quiz" class="quiz hidden"></div>
+</main>
+
+<!-- ===================== WORDS ===================== -->
+<main id="tab-words" class="hidden">
+<section class="topic">
+  <h2>Kavramlar (begrippen)</h2>
+  <p class="sub">Ödevlerde ve sınavda geçen terimler</p>
+  <div class="tblwrap"><table>
+    <tr><th>Nederlands</th><th>Türkçe</th><th>Örnek</th></tr>
+    <tr><td>werkwoord</td><td>fiil</td><td class="nl">lopen, werken</td></tr>
+    <tr><td>hele werkwoord</td><td>mastar</td><td class="nl">vinden</td></tr>
+    <tr><td>stam</td><td>fiil kökü</td><td class="nl">vind</td></tr>
+    <tr><td>persoonsvorm (pv)</td><td>çekimli fiil (zamanla değişen)</td><td class="nl">Hij <b>vindt</b> het leuk.</td></tr>
+    <tr><td>tegenwoordige / verleden tijd</td><td>şimdiki / geçmiş zaman</td><td class="nl">werkt / werkte</td></tr>
+    <tr><td>voltooid deelwoord</td><td>geçmiş ortaç (heb/is ile)</td><td class="nl">heb <b>gewerkt</b></td></tr>
+    <tr><td>zwak / sterk werkwoord</td><td>düzenli / düzensiz fiil</td><td class="nl">werkte / liep</td></tr>
+    <tr><td>zelfstandig naamwoord</td><td>isim</td><td class="nl">de tafel</td></tr>
+    <tr><td>bijvoeglijk naamwoord</td><td>sıfat</td><td class="nl">een <b>mooie</b> tafel</td></tr>
+    <tr><td>stoffelijk bijv. nw.</td><td>malzeme sıfatı</td><td class="nl">houten, gouden</td></tr>
+    <tr><td>telwoord</td><td>sayı / miktar sözcüğü</td><td class="nl">alle, enkele, drie</td></tr>
+    <tr><td>lidwoord (de / het / een)</td><td>tanımlık</td><td class="nl">de, het, een</td></tr>
+    <tr><td>onderwerp</td><td>özne</td><td class="nl"><b>Ik</b> lees.</td></tr>
+    <tr><td>lijdend voorwerp (lv)</td><td>nesne (kimi/neyi?)</td><td class="nl">Ik lees <b>een boek</b>.</td></tr>
+    <tr><td>meewerkend voorwerp (mv)</td><td>dolaylı nesne (kime?)</td><td class="nl">Ik geef <b>hun</b> een boek.</td></tr>
+    <tr><td>antecedent</td><td>zamirin geri döndüğü kelime</td><td class="nl"><b>De telefoon</b>, die …</td></tr>
+    <tr><td>verwijswoord</td><td>gönderme sözcüğü (zamir)</td><td class="nl">die, dat, hij, haar</td></tr>
+    <tr><td>mannelijk / vrouwelijk / onzijdig</td><td>eril / dişil / cinssiz</td><td class="nl">hij / zij / het</td></tr>
+    <tr><td>enkelvoud / meervoud</td><td>tekil / çoğul</td><td class="nl">boek / boeken</td></tr>
+    <tr><td>samentrekking</td><td>tekrar edeni atarak kısaltma</td><td class="nl">voor- en nadelen</td></tr>
+    <tr><td>klinker / medeklinker</td><td>ünlü / ünsüz</td><td class="nl">a, e, i / b, k, t</td></tr>
+  </table></div>
+</section>
+</main>
+
+<footer>Duru'nun Nederlands notlarından (3 HAVO, Cursus 5 &amp; 7) hazırlandı. Succes, Duru! 💪</footer>
+</div>
+
+<script>
+const TESTS = [
+{ title:"Tegenwoordige tijd", topic:"#ww", desc:"d/t, vragen, u vs jij", qs:[
+ {q:"Hij … (vinden) het boek spannend.", type:"in", a:["vindt"], e:"hij → stam + t. Stam = vind → vindt. Lopen-testi: hij loopt."},
+ {q:"… jij morgen naar school? (fietsen)", type:"in", a:["fiets"], e:"jij fiilden SONRA geliyor → t yok: Fiets jij?"},
+ {q:"Ik … (worden) hier niet goed van.", type:"in", a:["word"], e:"ik → sadece stam: word. (d duyulmaz ama yazılır)"},
+ {q:"Wanneer … (worden) je zestien?", type:"mc", o:["word","wordt","worden"], a:0, e:"je fiilden sonra → t düşer: Wanneer word je zestien?"},
+ {q:"Tim … (snijden) de groenten klein.", type:"in", a:["snijdt"], e:"Tim = hij → stam (snijd) + t = snijdt."},
+ {q:"Jij … (antwoorden) altijd heel snel.", type:"in", a:["antwoordt"], e:"jij önde → stam (antwoord) + t = antwoordt."},
+ {q:"… u al geholpen? (worden)", type:"mc", o:["Word","Wordt","Worden"], a:1, e:"u ile t hiç düşmez: Wordt u al geholpen?"},
+ {q:"Het meisje … (rijden) elke zaterdag paard.", type:"in", a:["rijdt"], e:"het meisje = hij/zij → stam (rijd) + t."},
+ {q:"Welke zin is goed?", type:"mc", o:["Vindt jij dat ook?","Vind jij dat ook?","Vint jij dat ook?"], a:1, e:"Soru cümlesi, jij fiilden sonra → t yok. Stam'daki d kalır: Vind jij?"},
+ {q:"Mijn vader … (wachten) al een uur op de bus.", type:"in", a:["wacht"], e:"Stam (wacht) zaten t ile bitiyor → ekstra t yok: hij wacht."}
+]},
+{ title:"Verleden tijd", topic:"#ww", desc:"'t kofschip X & sterke ww", qs:[
+ {q:"Wij … (verhuizen) vorig jaar naar Amsterdam.", type:"in", a:["verhuisden"], e:"Hele ww: verhuizen → z kofschip'te YOK → de/den. Çoğul → verhuisden."},
+ {q:"De storm … (verwoesten) ons tuinhuisje.", type:"in", a:["verwoestte"], e:"Stam verwoest → t kofschip'te VAR → te: verwoest + te = verwoestte."},
+ {q:"De meisjes … (staren) me al een tijdje aan.", type:"in", a:["staarden"], e:"Stam staar → r yok → den (çoğul): staarden."},
+ {q:"Ik … (fietsen) gisteren naar huis.", type:"in", a:["fietste"], e:"Stam fiets → s var → te: fietste."},
+ {q:"Mijn opa … (leven) vroeger in Adana.", type:"in", a:["leefde"], e:"Hele ww: leven → v YOK → de: leefde. (f'ye aldanma!)"},
+ {q:"Zij … (verheugen) zich heel erg op het feestje.", type:"in", a:["verheugde"], e:"Stam verheug → g kofschip'te yok → de."},
+ {q:"Wij … (lopen) samen naar het station.", type:"in", a:["liepen"], e:"Lopen sterke werkwoord: liep → çoğul liepen."},
+ {q:"Jij … (praten) gisteren veel te hard.", type:"in", a:["praatte"], e:"Stam praat → t var → te: praat + te = praatte."},
+ {q:"Het oude huis … (branden) helemaal af.", type:"mc", o:["brande","brandde","brandte"], a:1, e:"Stam brand → d kofschip'te yok → de: brand + de = brandde."},
+ {q:"Welke letters horen bij 't kofschip X?", type:"mc", o:["t, k, f, s, ch, p, x","t, k, v, z, ch, p, x","d, k, f, s, ch, p, x"], a:0, e:"'t kofschip X: t, k, f, s, ch, p, x. v ve z içinde DEĞİL."}
+]},
+{ title:"Voltooid deelwoord", topic:"#ww", desc:"ge…d/t, gebeurd/gebeurt", qs:[
+ {q:"Ik heb mijn kamer … (opruimen).", type:"in", a:["opgeruimd"], e:"Ayrılabilen fiil: op + ge + ruim + d (m kofschip'te yok)."},
+ {q:"Tien woningen zijn … (ontruimen).", type:"in", a:["ontruimd"], e:"ont- ile başlıyor → ekstra ge yok. ontruim + d."},
+ {q:"Het pakketje is … (vinden) in de voortuin.", type:"in", a:["gevonden"], e:"Vinden sterk: gevonden."},
+ {q:"Wat is er … (gebeuren)?", type:"mc", o:["gebeurt","gebeurd","gebeurdt"], a:1, e:"'is' + sonda → voltooid deelwoord. Uzat: het gebeurde → d."},
+ {q:"Wat … (gebeuren) er nu buiten?", type:"mc", o:["gebeurt","gebeurd","gebeurdt"], a:0, e:"Tek fiil = persoonsvorm, tt, het → stam + t = gebeurt."},
+ {q:"Ik heb de instellingen … (veranderen).", type:"in", a:["veranderd"], e:"ver- → ge yok. Uzat: de veranderde instellingen → d."},
+ {q:"Het weer … (veranderen) elke dag.", type:"in", a:["verandert"], e:"Persoonsvorm (het) → stam + t = verandert."},
+ {q:"We hebben alles goed … (voorbereiden).", type:"in", a:["voorbereid"], e:"Stam voorbereid zaten d ile bitiyor → ekstra harf yok: voorbereid (voorbereidt değil!)."},
+ {q:"Osdorp wordt … (teisteren) door veel explosies.", type:"in", a:["geteisterd"], e:"ge + teister + d (r yok)."},
+ {q:"De melding … (binnenkomen) rond 20.30 uur. (verleden tijd)", type:"mc", o:["kwam binnen","binnenkwam","komde binnen"], a:0, e:"Ana cümlede ayrılabilen fiil ayrılır: De melding kwam rond 20.30 uur binnen. (sterk: komen → kwam)"}
+]},
+{ title:"Engelse werkwoorden", topic:"#eng", desc:"updaten, liken, appen…", qs:[
+ {q:"Gisteren … (updaten) ik de website.", type:"in", a:["updatete"], e:"Stam update, son SES t → te: updatete."},
+ {q:"Zij heeft het bestand … (downloaden).", type:"in", a:["gedownload"], e:"Stam download, d ile bitiyor → ge + download (ekstra d yok)."},
+ {q:"Vorige week … (streamen) we een wedstrijd.", type:"in", a:["streamden"], e:"Son ses m → den (çoğul we): streamden."},
+ {q:"De video is gisteren … (uploaden).", type:"mc", o:["geupload","geüpload","geuploadt"], a:1, e:"ge + upload; g-e ve u ayrı okunmalı → trema: geüpload."},
+ {q:"Ik heb de politie … (appen).", type:"in", a:["geappt"], e:"Stam app, p kofschip'te → ge + app + t = geappt."},
+ {q:"Iedereen heeft mijn post … (liken).", type:"in", a:["geliket"], e:"Stam like, son ses k → t: geliket."},
+ {q:"De game … (crashen) steeds. (verleden tijd)", type:"in", a:["crashte"], e:"Stam crash, son ses 'sj' (sch gibi) → te: crashte."},
+ {q:"De politie heeft de omgeving … (checken).", type:"in", a:["gecheckt"], e:"Stam check → k → ge + check + t."},
+ {q:"Gelukkig heb ik alles … (back-uppen).", type:"mc", o:["gebackupt","geback-upt","ge-back-upt"], a:1, e:"Stam back-up (çizgi kalır) → ge + back-up + t = geback-upt."},
+ {q:"Mijn broer … (skaten) elke middag in het park.", type:"in", a:["skatet"], e:"hij → stam (skate) + t = skatet."}
+]},
+{ title:"Bijvoeglijk nw: -e of niet?", topic:"#n", desc:"de/het, een, stoffelijk", qs:[
+ {q:"Mijn broer kocht een … horloge.", type:"mc", o:["duur","dure"], a:0, e:"het horloge + een → -e yok."},
+ {q:"Ik heb een … artikel gelezen.", type:"mc", o:["interessant","interessante"], a:0, e:"het artikel + een → -e yok."},
+ {q:"Het … boek ligt op tafel.", type:"mc", o:["zacht","zachte"], a:1, e:"Önünde 'het' var → -e: het zachte boek."},
+ {q:"Elk … spel heeft nieuwe regels.", type:"mc", o:["nieuw","nieuwe"], a:0, e:"het spel + elk → -e yok."},
+ {q:"Dat is een … vriend van mij.", type:"mc", o:["leuk","leuke"], a:1, e:"de vriend → de-woord her zaman -e."},
+ {q:"De … tafel staat al jaren in de kamer.", type:"mc", o:["houten","houte","houtene"], a:0, e:"Malzeme (hout) → her zaman -en: houten."},
+ {q:"Zij droeg een … ketting.", type:"mc", o:["zilvere","zilveren"], a:1, e:"Malzeme → -en: zilveren."},
+ {q:"De … dozen op de gang moeten weg.", type:"mc", o:["kartonne","kartonnen"], a:1, e:"Malzeme (karton) → -en: kartonnen."},
+ {q:"Hij gaf zijn vriendin een … cadeau.", type:"mc", o:["prachtig","prachtige"], a:0, e:"het cadeau + een → -e yok."},
+ {q:"De … medewerkers begeleidden de nieuwe collega's.", type:"mc", o:["ervaren","ervarene"], a:0, e:"Zaten -en ile biten sıfat → ekstra -e yok: ervaren."}
+]},
+{ title:"Met of zonder -n", topic:"#n", desc:"zelfstandig & telwoorden", qs:[
+ {q:"Tijdens de voorstelling zagen we veel … uit de buurt.", type:"mc", o:["bekende","bekenden"], a:1, e:"Zelfstandig, kişiler, çoğul (veel) → -n: bekenden."},
+ {q:"De … van de klas mochten als eerste beginnen.", type:"mc", o:["jongste","jongsten"], a:1, e:"Kişiler, çoğul (mochten) → jongsten."},
+ {q:"De … kregen hulp van vrijwilligers.", type:"mc", o:["arme","armen"], a:1, e:"Kişiler, çoğul (kregen) → armen."},
+ {q:"Als … heb je tijd voor vrijwilligerswerk.", type:"mc", o:["gepensioneerde","gepensioneerden"], a:0, e:"Kişi ama TEKİL (als … heb je) → -e."},
+ {q:"… deelnemers kregen een certificaat.", type:"mc", o:["Alle","Allen"], a:0, e:"Arkasında isim var (deelnemers) → n yok."},
+ {q:"… van hen bleven nog even napraten.", type:"mc", o:["Enkele","Enkelen"], a:1, e:"Zelfstandig + kişiler (hen) → -n."},
+ {q:"… van de voorgestelde maatregelen bleken te duur.", type:"mc", o:["Enkele","Enkelen"], a:0, e:"Şeyler (maatregelen) → n yok."},
+ {q:"In de etalage lagen vijf horloges: drie … en twee goedkope.", type:"mc", o:["peperdure","peperduren"], a:0, e:"Zelfstandig ama ŞEYLER → sadece -e."},
+ {q:"Er kwamen … mensen naar het concert.", type:"mc", o:["honderde","honderden"], a:1, e:"honderden, duizenden, tientallen her zaman -n."},
+ {q:"De bezoekers kregen een formulier. … moesten het bij de uitgang inleveren.", type:"mc", o:["Alle","Allen"], a:1, e:"Zelfstandig (arkasında isim yok) + kişiler → Allen."}
+]},
+{ title:"Trema, apostrof, accenten", topic:"#trema", desc:"ë, ', é è ê, ç", qs:[
+ {q:"Welke spelling is goed?", type:"mc", o:["ideeen","ideeën","ideëen"], a:1, e:"ee + en: ikinci heceyi ayırmak için trema yeni hecenin ilk harfine: ideeën."},
+ {q:"Welke spelling is goed?", type:"mc", o:["autoëigenaar","auto-eigenaar","autoeigenaar"], a:1, e:"Birleşik kelimede trema değil koppelteken: auto-eigenaar."},
+ {q:"Meervoud van 'kiwi':", type:"mc", o:["kiwis","kiwi's","kiwies"], a:1, e:"Tek i ile bitiyor → apostrof + s (yoksa 'kiwis' yanlış okunur)."},
+ {q:"Welke spelling is goed?", type:"mc", o:["savonds","'s avonds","s'avonds"], a:1, e:"Weglatingsteken: 's avonds (= des avonds)."},
+ {q:"Verkleinwoord van 'baby':", type:"mc", o:["babytje","baby'tje","babietje"], a:1, e:"-y + önünde ünsüz (b) → apostrof: baby'tje."},
+ {q:"Verkleinwoord van 'display':", type:"mc", o:["display'tje","displaytje"], a:1, e:"-y'nin önünde ünlü (a) → apostrof yok: displaytje."},
+ {q:"De gitaar van Hans is:", type:"mc", o:["Hans's gitaar","Hans' gitaar","Hansen gitaar"], a:1, e:"-s ile biten isim → sadece apostrof: Hans' gitaar."},
+ {q:"Welk woord heeft GEEN trema nodig?", type:"mc", o:["beïnvloeden","beantwoord","kopiëren"], a:1, e:"be-antwoord: 'ea' tek ses gibi okunma riski yok → trema gerekmez."},
+ {q:"Wat doet de cedille in 'Curaçao'?", type:"mc", o:["De c klinkt als s","De c klinkt als k","De a wordt langer"], a:0, e:"ç → s okunur. Normalde a/o/u önünde c = k."},
+ {q:"In welke zin is het accent goed gebruikt?", type:"mc", o:["Ik heb één broer en twee zussen.","Ik heb éen broer.","Kan één van jullie helpen? (= iemand)"], a:0, e:"één = '1 tane' anlamını vurgular (iki değil, bir). 'Kan een van jullie…' cümlesinde een zaten sadece 1 anlamına gelir → accent gereksiz. 'éen' yanlış yazım."}
+]},
+{ title:"Samentrekking", topic:"#samen", desc:"voor/achterwaarts, 3 voorwaarden", qs:[
+ {q:"'voor- en nadelen' is een samentrekking op …", type:"mc", o:["woordniveau, achterwaarts","woordniveau, voorwaarts","zinsniveau, voorwaarts"], a:0, e:"Kelime parçası (-delen) + çizgi → woordniveau. Ortak kısım sonda → achterwaarts."},
+ {q:"'Ik heb de voorste rij gereserveerd in plaats van de achterste.' Wat voor samentrekking?", type:"mc", o:["voorwaarts","achterwaarts"], a:0, e:"'rij' önce söyleniyor, sonra atılıyor → voorwaarts."},
+ {q:"'Didi bakt pannenkoeken en Ivan een pizza.' Is de samentrekking goed?", type:"mc", o:["Ja, op zinsniveau","Nee, verkeerd getal","Nee, andere betekenis"], a:0, e:"'bakt' iki kısımda da aynı işlev, anlam ve sayı → doğru, zinsniveau."},
+ {q:"'Die cola bevat geen koolzuur meer en vind ik niet lekker.' Wat is fout?", type:"mc", o:["Functie verschilt","Getal verschilt","Niets"], a:0, e:"'die cola' 1. kısımda onderwerp, 2. kısımda lijdend voorwerp → farklı işlev."},
+ {q:"'Paco haalde een goed cijfer en Lola de nieuwste update binnen.' Wat is fout?", type:"mc", o:["Getal verschilt","Betekenis verschilt","Functie verschilt"], a:1, e:"'halen' (cijfer) ≠ 'binnenhalen' → anlam farklı."},
+ {q:"'Er wordt een tribune opgebouwd en toiletten geplaatst.' Wat is fout?", type:"mc", o:["Betekenis verschilt","Getal verschilt","Niets"], a:1, e:"wordt (tekil) ≠ worden (çoğul toiletten) → sayı farklı."},
+ {q:"Kies de goede verbetering van vraag 6:", type:"mc", o:["…en wordt toiletten geplaatst.","…en worden toiletten geplaatst.","…en toiletten worden opgebouwd."], a:1, e:"Eksik çoğul fiili ekle: en worden toiletten geplaatst."},
+ {q:"'Ik ga zowel met de snel- als de stoptrein.' Wat voor samentrekking?", type:"mc", o:["voorwaarts","achterwaarts"], a:1, e:"'trein' sonda söyleniyor, önce atılmış → achterwaarts (woordniveau)."},
+ {q:"'De leerlingen hebben hun huiswerk gemaakt en de docent nagekeken.' Goed of fout?", type:"mc", o:["Goed","Fout: getal","Fout: functie"], a:1, e:"hebben (çoğul) ≠ heeft (de docent, tekil) → fout. Doğrusu: … en de docent heeft het nagekeken."},
+ {q:"Welke is GEEN voorwaarde voor een goede samentrekking?", type:"mc", o:["zelfde functie","zelfde betekenis","zelfde getal","zelfde aantal letters"], a:3, e:"3 şart: functie, betekenis, getal. Harf sayısının önemi yok."}
+]},
+{ title:"Verwijzen", topic:"#verw", desc:"die/dat, hen/hun, wat, wie", qs:[
+ {q:"Het meisje … naast mij zit, heet Lotte.", type:"mc", o:["die","dat"], a:1, e:"het meisje = het-woord (onzijdig) → dat."},
+ {q:"De regering heeft … plannen bekendgemaakt.", type:"mc", o:["zijn","haar","hun"], a:1, e:"-ing → vrouwelijk → haar."},
+ {q:"Nederland is bekend om … grachten en molens.", type:"mc", o:["zijn","haar","hun"], a:0, e:"Ülke isimleri onzijdig → zijn."},
+ {q:"De fabriek ontsloeg veel van … werknemers.", type:"mc", o:["zijn","haar"], a:1, e:"-iek → vrouwelijk → haar."},
+ {q:"Mijn ouders wonen vlakbij; ik bezoek … vaak.", type:"mc", o:["hen","hun"], a:0, e:"Kimi ziyaret ediyorum? → lijdend voorwerp → hen."},
+ {q:"Ik geef … elke week een bos bloemen.", type:"mc", o:["hen","hun"], a:1, e:"Kime veriyorum? (edatsız) → meewerkend voorwerp → hun."},
+ {q:"In de middeleeuwen was water gevaarlijk voor …", type:"mc", o:["hun","hen"], a:1, e:"Edattan (voor) sonra → hen."},
+ {q:"Er stond een lange file, … erg tegenviel.", type:"mc", o:["die","dat","wat"], a:2, e:"Bütün cümleye dönüyor → wat."},
+ {q:"De man … ik boodschappen doe, heeft een luxe auto.", type:"mc", o:["waarbij","bij wie","bij die"], a:1, e:"Kişi + edat → edat + wie: bij wie."},
+ {q:"Iedereen mag kiezen … hij wil zitten.", type:"mc", o:["waarnaast","naast wie","naast die"], a:1, e:"Kişinin yanına oturuluyor → naast wie (waarnaast sadece şeyler için)."}
+]},
+{ title:"Mix: alles door elkaar", topic:"#ww", desc:"Sınav provası – tüm konular", qs:[
+ {q:"Gisteren … (bellen) ik mijn oma in Turkije.", type:"in", a:["belde"], e:"Stam bel → l yok → de: belde."},
+ {q:"Wat is er met je fiets … (gebeuren)?", type:"in", a:["gebeurd"], e:"'is' + sonda → voltooid deelwoord, uzat: gebeurde → d."},
+ {q:"Ik heb de foto op Instagram … (posten).", type:"in", a:["gepost"], e:"Stam post → t → ge + post (zaten t ile bitiyor)."},
+ {q:"… jij vanavond ook naar de training? (gaan)", type:"in", a:["ga"], e:"jij fiilden sonra → sadece stam: Ga jij?"},
+ {q:"Wij kochten een … huis aan de rand van de stad.", type:"mc", o:["oud","oude"], a:0, e:"het huis + een → -e yok."},
+ {q:"Kies de goede spelling:", type:"mc", o:["kopieren","kopiëren","kopïeren"], a:1, e:"i-e ayrı okunur → trema e üzerine: kopiëren."},
+ {q:"Meervoud van 'auto':", type:"mc", o:["autos","auto's","autoos"], a:1, e:"Tek o ile bitiyor → auto's."},
+ {q:"Welke samentrekking is FOUT?", type:"mc", o:["Ik at een appel en mijn broer een peer.","Het meisje fietst en de jongens naar school.","Ochtend- en avondkranten."], a:1, e:"fietst (tekil) ≠ fietsen (çoğul) → getal fout."},
+ {q:"De commissie heeft … besluit genomen.", type:"mc", o:["zijn","haar","hun"], a:1, e:"-ie → vrouwelijk → haar."},
+ {q:"… van de leerlingen staken hun hand op.", type:"mc", o:["Enkele","Enkelen"], a:1, e:"Telwoord'un hemen arkasında isim yok ('van de leerlingen' sonradan açıklıyor) ve kişiler kastediliyor → Enkelen."}
+]}
+];
+
+/* storage (safe) */
+const store = {
+  get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+let best = store.get("duru_nl_best") || {};
+
+/* tabs */
+document.querySelectorAll("nav.tabs button").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    ["notes","tests","words"].forEach(t=>document.getElementById("tab-"+t).classList.toggle("hidden", t!==b.dataset.tab));
+    if(b.dataset.tab==="tests") showList();
+    window.scrollTo(0,0);
+  };
+});
+function gotoNote(anchor){
+  document.querySelector('nav.tabs button[data-tab="notes"]').click();
+  setTimeout(()=>{ const el=document.querySelector(anchor); if(el) el.scrollIntoView({behavior:"smooth"}); },50);
+}
+
+function badge(i){
+  const s = best[i];
+  if(s===undefined || s===null) return '<span class="badge">Henüz çözülmedi</span>';
+  const cls = s>=8?"good":s>=6?"mid":"low";
+  return `<span class="badge ${cls}">En iyi: ${s}/10</span>`;
+}
+function showList(){
+  document.getElementById("quiz").classList.add("hidden");
+  document.getElementById("testlist").classList.remove("hidden");
+  const g=document.getElementById("grid"); g.innerHTML="";
+  TESTS.forEach((t,i)=>{
+    const c=document.createElement("button"); c.className="tcard";
+    c.innerHTML=`<div class="n">Test ${i+1}</div><div class="t">${t.title}</div><div class="s">${t.desc}</div><div style="margin-top:8px">${badge(i)}</div>`;
+    c.onclick=()=>startTest(i);
+    g.appendChild(c);
+  });
+}
+
+function norm(s){ return (s||"").trim().toLowerCase().replace(/[.!?]+$/,"").replace(/\s+/g," ").replace(/[’`]/g,"'"); }
+function esc(s){ return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+let cur=null;
+function startTest(i){
+  cur={i, n:0, score:0, wrong:[]};
+  document.getElementById("testlist").classList.add("hidden");
+  document.getElementById("quiz").classList.remove("hidden");
+  renderQ(); window.scrollTo(0,0);
+}
+function renderQ(){
+  const t=TESTS[cur.i], q=t.qs[cur.n], box=document.getElementById("quiz");
+  let body="";
+  if(q.type==="mc"){
+    body='<div class="opts">'+q.o.map((o,k)=>`<button class="opt" data-k="${k}">${esc(o)}</button>`).join("")+'</div>';
+  }else{
+    body=`<input class="ans" id="ans" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Cevabını yaz…">
+    <div class="special">${["ë","ï","ü","é","'"].map(c=>`<button data-c="${c}">${c}</button>`).join("")}</div>
+    <div class="hint">Sadece boşluğa gelen kelime(ler)i yaz. Enter = kontrol.</div>`;
+  }
+  box.innerHTML=`
+   <div class="qhead"><b>Test ${cur.i+1}: ${t.title}</b><span class="badge">Soru ${cur.n+1}/10 · ✔ ${cur.score}</span></div>
+   <div class="bar"><i style="width:${cur.n*10}%"></i></div>
+   <p class="qtext">${esc(q.q)}</p>${body}
+   <div class="fb" id="fb"></div>
+   <div class="actions">
+     <button class="btn" id="check" ${q.type==="mc"?"disabled":""}>Kontrol et</button>
+     <button class="btn hidden" id="next">${cur.n<9?"Sonraki →":"Sonucu gör"}</button>
+     <button class="btn ghost" id="quit">Testlere dön</button>
+   </div>`;
+  let chosen=null;
+  if(q.type==="mc"){
+    box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+      box.querySelectorAll(".opt").forEach(x=>x.classList.remove("sel"));
+      b.classList.add("sel"); chosen=+b.dataset.k; document.getElementById("check").disabled=false;
+    });
+  }else{
+    const inp=document.getElementById("ans"); inp.focus();
+    inp.onkeydown=e=>{ if(e.key==="Enter"){ const c=document.getElementById("check"); if(!c.classList.contains("hidden")) c.click(); else document.getElementById("next").click(); } };
+    box.querySelectorAll(".special button").forEach(b=>b.onclick=()=>{ inp.value+=b.dataset.c; inp.focus(); });
+  }
+  document.getElementById("quit").onclick=showList;
+  document.getElementById("check").onclick=()=>{
+    let ok, given, rightTxt;
+    if(q.type==="mc"){
+      ok = chosen===q.a; given=q.o[chosen]; rightTxt=q.o[q.a];
+      box.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const k=+b.dataset.k;
+        if(k===q.a) b.classList.add("right"); else if(k===chosen) b.classList.add("wrong"); });
+    }else{
+      const inp=document.getElementById("ans"); given=inp.value;
+      ok = q.a.map(norm).includes(norm(given)); rightTxt=q.a[0];
+      inp.disabled=true; inp.classList.add(ok?"right":"wrong");
+    }
+    if(ok) cur.score++; else cur.wrong.push({q:q.q, given:given||"(boş)", right:rightTxt, e:q.e});
+    const fb=document.getElementById("fb");
+    fb.className="fb show "+(ok?"good":"bad");
+    fb.innerHTML=(ok?"✅ <b>Doğru!</b> ":"❌ <b>Doğru cevap: "+esc(rightTxt)+"</b><br>")+esc(q.e);
+    document.getElementById("check").classList.add("hidden");
+    const nx=document.getElementById("next"); nx.classList.remove("hidden"); nx.focus();
+  };
+  document.getElementById("next").onclick=()=>{ cur.n++; if(cur.n<10) renderQ(); else finish(); };
+}
+function finish(){
+  const t=TESTS[cur.i];
+  if(best[cur.i]===undefined || cur.score>best[cur.i]){ best[cur.i]=cur.score; store.set("duru_nl_best",best); }
+  const msg = cur.score===10?"Mükemmel! 🎉 Perfect score!":cur.score>=8?"Çok iyi! 👏 Bijna perfect.":cur.score>=6?"İyi gidiyor 👍 Yanlışlara bak ve tekrar çöz.":"Önce notları tekrar oku, sonra yeniden dene 💪";
+  const box=document.getElementById("quiz");
+  box.innerHTML=`<b>Test ${cur.i+1}: ${t.title}</b>
+   <div class="score">${cur.score}/10</div><p>${msg}</p>
+   <div class="actions">
+     <button class="btn" id="again">Tekrar çöz</button>
+     <button class="btn ghost" id="note">Konu notunu aç</button>
+     <button class="btn ghost" id="back">Tüm testler</button>
+   </div>
+   ${cur.wrong.length?'<div class="review"><h3>Yanlışların</h3>'+cur.wrong.map(w=>`<div class="item"><div>${esc(w.q)}</div><div>Senin cevabın: <span class="no">${esc(w.given)}</span> · Doğru: <span class="ok">${esc(w.right)}</span></div><div class="hint">${esc(w.e)}</div></div>`).join("")+'</div>':''}`;
+  document.getElementById("again").onclick=()=>startTest(cur.i);
+  document.getElementById("note").onclick=()=>gotoNote(t.topic);
+  document.getElementById("back").onclick=showList;
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

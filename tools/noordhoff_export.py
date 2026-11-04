@@ -269,7 +269,7 @@ def export_chapter(page, vak, vak_cfg, chapter):
 
     vak_titles = {"frans": "Frans", "duits": "Duits", "engels": "Engels",
                   "aardrijkskunde": "Aardrijkskunde", "nederlands": "Nederlands",
-                  "wiskunde": "Wiskunde"}
+                  "wiskunde": "Wiskunde", "economie": "Economie", "biologie": "Biologie"}
     pdf_title = f"{vak_titles.get(vak, vak)} · {label} · {titel}"
 
     log(f"\n--- {vak} / {label} ({titel}) — kitap sayfa {start}-{end} ---")
@@ -336,7 +336,7 @@ def cmd_discover(vak):
         pw.stop()
 
 
-def cmd_export(vak, hoofdstuk=None, label=None, only_output=None):
+def cmd_export(vak, hoofdstuk=None, label=None, only_output=None, skip_existing=False):
     cfg = load_config()
     if vak not in cfg:
         log(f"HATA: '{vak}' tools/noordhoff_books.json içinde tanımlı değil.")
@@ -362,6 +362,11 @@ def cmd_export(vak, hoofdstuk=None, label=None, only_output=None):
     results = []
     try:
         for chapter in selected:
+            out_p = INBOX / vak / chapter["output"]
+            if skip_existing and out_p.exists():
+                log(f"\n--- {vak} / {chapter['label']} ({chapter['titel']}) -> ATLANDI ({chapter['output']} zaten var) ---")
+                results.append({"chapter": chapter, "output": str(out_p), "missing": [], "status": "ok"})
+                continue
             res = export_chapter(page, vak, vak_cfg, chapter)
             results.append(res)
     finally:
@@ -379,10 +384,11 @@ def cmd_export(vak, hoofdstuk=None, label=None, only_output=None):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--vak", help="frans | duits | engels | aardrijkskunde | nederlands")
+    ap.add_argument("--vak", help="frans | duits | engels | aardrijkskunde | nederlands | wiskunde | economie | biologie")
     ap.add_argument("--hoofdstuk", type=int, default=None, help="Yalnız bu hoofdstuk numarası")
     ap.add_argument("--label", default=None, help="Label'da geçen metne göre filtre (örn. 'Unité 2')")
     ap.add_argument("--output", default=None, help="Yalnız bu çıktı dosya adını üret")
+    ap.add_argument("--skip-existing", action="store_true", help="Zaten üretilmiş PDF dosyalarını atla")
     ap.add_argument("--discover", metavar="VAK", help="Bookshelf'ten course_id/ebook_id keşfet (yazmaz, yalnız yazdırır)")
     args = ap.parse_args()
 
@@ -394,7 +400,7 @@ def main():
         ap.print_help()
         sys.exit(2)
 
-    cmd_export(args.vak, hoofdstuk=args.hoofdstuk, label=args.label, only_output=args.output)
+    cmd_export(args.vak, hoofdstuk=args.hoofdstuk, label=args.label, only_output=args.output, skip_existing=args.skip_existing)
 
 
 if __name__ == "__main__":
