@@ -40,6 +40,9 @@ docs/books_pdf/
 # Ders kitabi PDF'leri (telifli kaynak materyal — repoya girmez, Pages'te yayinlanmaz)
 havo3/*/pdf/
 inbox/**/*.pdf
+inbox/**/*.pptx
+inbox/**/*.docx
+inbox/**/.directory
 # Kitap OCR metinleri de telifli tam metin — Pages'te yayınlanmaz (2026-09-13: 6 dosya yayındaydı)
 inbox/**/*.ocr.txt
 inbox/**/*_ocr.txt
