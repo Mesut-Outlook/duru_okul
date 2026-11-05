@@ -645,7 +645,48 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
   ⚠️ `tools/build_natuurkunde_h5.py` **bayat** (yalnız 2 sınav,
   41 yarım) — yeniden çalıştırılırsa examen_41'i bozar ve 42–44'ü üretmez. **agy: bu betiği çalıştırma.**
 
+### 2026-11-05 · biologie §11.1–§11.4 + aardrijkskunde §1.1–§1.5: her §'a 5 toets (Opus + Sonnet) ✅
+- biologie ex-h3-biologie-47…66, aardrijkskunde ex-h3-ak-106…130 (`tools/gen_{biologie_h11,aardrijkskunde_h1}_<n>_extra2.py`); index.html bağlı, manifest güncel. gate biologie 18/18, aardrijkskunde 17/18 (yalnız eski smoke-test kural 9), open_check 0, teslim_check temiz.
+- Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
+
 ## Pending Tasks
+### TASK-35 · economie: §2.3, §4.1, §4.2, §4.3 her birine 5 yeni proeftoets (96–115)  [status: IN PROGRESS]
+- **Atanan**: agy · **Denetim**: Opus (kitaba karşı okur, commit'ler)
+- **Amaç**: kullanıcı (2026-11-05) "ekonomi işini agy'ye ver, sen kontrol yap": toets kapsamındaki her paragrafa 5 yeni test (biologie/aardrijkskunde'de aynı gün Sonnet ile yapıldı).
+- **Kaynak (tek)**: `inbox/2026-2027/economie/economie_h02_koopkracht-inflatie-2-3.{ocr.txt,pdf}`, `economie_h04_produceren-4-1-4-2.{ocr.txt,pdf}`, `economie_h04_omzet-winst-btw-4-3.{ocr.txt,pdf}`. Grafik/tablo değerini OCR'dan ALMA — PDF sayfasını render edip bak.
+- **Kitapta olmayan hiçbir şey yok** (TASK-34 listesi geçerli): BBP, MVO, schaalvoordelen, **break-even/BEP** (§4.3'te yok!), prijsindex/CPI, overheidsbeleid tegen inflatie, arbeidsmarkt-teorisi, beloningen productiefactoren (loon/pacht/rente/winst eşlemesi kitapta yok). Kostprijs YALNIZ §4.3'te. Tanımlar kitabın kelimeleriyle.
+- **Tekrar yok**: önce o §'ın TÜM mevcut sınavlarının `"vraag"` satırlarını oku (§2.3: 6, 38–43, 72–74, 78–83 + mix 50–71; §4.1: 10, 16, 18, 19, 21, 23, 27–30, 84–89; §4.2: 11, 17, 20, 22, 24, 31–33, 75, 76, 90–95; §4.3: 12, 25, 26, 44–49, 77). Aynı soru ya da sayıları değiştirilmiş kopyası yasak; `teslim_check.js` KOPYA vermemeli.
+- **Testler** (her biri tek konu, 20 soru = 10 mc / 5 waaronwaar (≥2 gerçekten onwaar) / 3 invul / 2 open; hesap testlerinde cevap script'te hesaplanır, ondalık virgül, € 1.234,50):
+
+| id | § | titel |
+|---|---|---|
+| 96 | 2.3 | Proeftoets 96: Casussen — koopkracht van gezinnen en jongeren |
+| 97 | 2.3 | Proeftoets 97: Oorzaak en gevolg — van prijsstijging tot koopkracht |
+| 98 | 2.3 | Proeftoets 98: Rekenen met inflatie en koopkracht (nieuwe situaties) |
+| 99 | 2.3 | Proeftoets 99: Juist of onjuist — misverstanden over inflatie |
+| 100 | 2.3 | Proeftoets 100: Eindtoets §2.3 (alle leerdoelen) |
+| 101 | 4.1 | Proeftoets 101: Casussen — een product door de bedrijfskolom volgen |
+| 102 | 4.1 | Proeftoets 102: Productiefactoren herkennen in bedrijven |
+| 103 | 4.1 | Proeftoets 103: Toegevoegde waarde en arbeidsproductiviteit (nieuwe situaties) |
+| 104 | 4.1 | Proeftoets 104: Juist of onjuist — produceren en ondernemingen |
+| 105 | 4.1 | Proeftoets 105: Eindtoets §4.1 (alle leerdoelen) |
+| 106 | 4.2 | Proeftoets 106: Casussen — de kosten van een bedrijf indelen |
+| 107 | 4.2 | Proeftoets 107: Wat gebeurt er met de kosten als de productie verandert? |
+| 108 | 4.2 | Proeftoets 108: Rekenen met kosten en afschrijving (nieuwe situaties) |
+| 109 | 4.2 | Proeftoets 109: Juist of onjuist — kosten en kapitaalgoederen |
+| 110 | 4.2 | Proeftoets 110: Eindtoets §4.2 (alle leerdoelen) |
+| 111 | 4.3 | Proeftoets 111: Omzet berekenen (ook zakelijke dienstverlening) |
+| 112 | 4.3 | Proeftoets 112: Van kostprijs naar verkoopprijs — de winstmarge |
+| 113 | 4.3 | Proeftoets 113: Btw en accijns — prijs inclusief en exclusief |
+| 114 | 4.3 | Proeftoets 114: Brutowinst en nettowinst berekenen |
+| 115 | 4.3 | Proeftoets 115: Eindtoets §4.3 (alle leerdoelen) |
+
+- **Çıktı**: `tools/gen_economie_toetsen_96_115.py` (şablon `tools/gen_economie_paragraaf_toetsen.py` / `gen_economie_extra.py`: `M/W/I/O` + `plaats()` + `langste_aandeel`; mevcut script'leri DEĞİŞTİRME) → `havo3/economie/js/data/examen_96…115.js`, `DURU.registerExamen(...)`. Alanlar: `id ex-h3-economie-<n>`, `hoofdstuk` 2/4, `paragraaf`, `titel`, `vak: "Economie · HAVO 3 (Pincode)"`, `icoon`, `duurMin: 20`.
+- **Çeldirici**: kitaptan gerçek yanlış kavrama, doğruyla aynı uzunluk/üslup. Şaka şık ve dolgu kuyruk yasak. Doğru şık ne en uzun (≤%40) ne tek başına en kısa (≤%40) — TASK-34'te 0/10 en uzun ama %70 en kısaydı, tekrarlama.
+- **Kural 19 (2026-11-05 biologie/ak denetiminde en sık kusur)**: aynı testte bir sorunun cevabı başka sorunun metninde/şıkkında okunmasın. Tipik hata: mc şıkkı "Indonesië, India en Bangladesh" + invul "Indonesië, India en ____". invul'ü mc'nin tekrarı olarak yazma; uitleg'deki değer serbest.
+- **Bağla**: `havo3/economie/index.html`'de `examen_95.js` satırından sonra `examen_96…115.js?v=1`; sonra `node tools/build_hoofdstukken.js`.
+- **Kabul**: her dosyada `node --check` · `node tools/gate.js economie` 18/18 · `node tools/open_check.js economie` 0 · `node tools/teslim_check.js economie 96 "break-even|BEP|BBP|MVO|schaalvoordel|prijsindex"` temiz · `node tools/build_hoofdstukken.js --check` exit 0 · `examen_1…95` ve `h*_*.js`'e dokunulmadı. **Commit/push YOK**; statü `REVIEW`, rapor bu görevin altına `agy notu (tarih)`.
+
 ### ✅ Opus (2026-11-01) — TASK-34 kapandı
 agy'nin ilk teslimi kapıdan geçti ama reddedildi: doğru şık 126/180 en kısa, 42 kitap dışı terim, 32 yakın kopya; ayrıca arbeidsintensief, boekwaarde, OZB, gemiddelde kosten per pizza (= kostprijs) vb. REWORK 30 dk alınmadığı için 3 Sonnet ajanı 18 testi + iki begrippen'i kitaba karşı satır satır yeniden yazdı. Son durum: gate 18/18, open_check 0, `teslim_check` temiz, doğru şık en kısa %16 / en uzun %18, 82/85/92/95 hesapları Opus kontrol etti, arayüzde 390 px açıldı.
 **agy'ye kalıcı not**: kapıyı metni şişirerek geçme; bundan sonra teslimden önce `tools/teslim_check.js` zorunlu (PIPELINE 18–20).
