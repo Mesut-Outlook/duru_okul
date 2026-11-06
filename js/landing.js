@@ -1347,37 +1347,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // Always auto-migrate any unprefixed scores created in standalone tabs
       migratePreExistingLocalScores(activeUser);
 
-      // If active user is duru, ensure historical backup data is imported
-      var backupDone = localStorage.getItem('duru_backup_imported');
-      if (activeUser.toLowerCase() === 'duru' && !backupDone) {
-        fetch('./scores_backup.json')
-          .then(function(res) {
-            if (!res.ok) throw new Error('Backup niet gevonden.');
-            return res.json();
-          })
-          .then(function(data) {
-            if (data && data.encrypted && data.data) {
-              var decryptedText = xorCipher(atob(data.data), 'duru:12341234');
-              decryptedText = decryptedText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, '–');
-              var parsedScores = JSON.parse(decryptedText);
-              if (parsedScores && Array.isArray(parsedScores)) {
-                restoreScores(parsedScores);
-                localStorage.setItem('duru_backup_imported', 'true');
-                renderVakken();
-                if (typeof window.loadDashboardData === 'function') {
-                  window.loadDashboardData();
-                }
-                if (typeof window.renderParentDashboard === 'function') {
-                  window.renderParentDashboard();
-                }
-              }
-            }
-          })
-          .catch(function(err) {
-            console.warn('Auto backup import kon niet worden voltooid:', err);
-          });
-      }
-
       var ouderTab = document.getElementById('tab-ouder-btn');
       if (isParentUser) {
         if (ouderTab) ouderTab.style.display = 'inline-flex';
@@ -1539,22 +1508,24 @@ document.addEventListener('DOMContentLoaded', function() {
               } else {
                 // First time login - try to decrypt scores_backup.json
                 if (submitBtn) submitBtn.textContent = 'Voortgang laden...';
+                // scores_backup.json is van de site gehaald (2026-11-06, was publiek); de voortgang komt
+                // nu uit de cloud-sync. Bestaat het bestand lokaal nog (server.py), dan wordt het gebruikt.
                 fetch('./scores_backup.json')
-                  .then(function(res) {
-                    if (!res.ok) throw new Error('Yedek dosyası bulunamadı.');
-                    return res.json();
-                  })
+                  .then(function(res) { return res.ok ? res.json() : null; })
+                  .catch(function() { return null; })
                   .then(function(data) {
-                    if (data && data.encrypted && data.data) {
+                    if (!(data && data.encrypted && data.data)) data = null;
                       try {
-                        // Decrypt
+                        var parsedScores = [];
+                        if (data) {
                         var decryptedText = xorCipher(atob(data.data), 'duru:12341234');
                         // Oudere backup-export verloor niet-Latin1 tekens (bv. een "–" in
                         // examtitels) door een lossy Latin1-omzetting; die bytes komen terug
                         // als ongeldige controle-tekens die JSON.parse() laten crashen.
                         decryptedText = decryptedText.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, '–');
-                        var parsedScores = JSON.parse(decryptedText);
+                        parsedScores = JSON.parse(decryptedText);
                         if (!parsedScores || !Array.isArray(parsedScores)) parsedScores = [];
+                        }
 
                         // Import local pre-existing unprefixed keys
                         var originalGetItem = window.Storage.prototype.getItem;
@@ -1613,15 +1584,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         clearActiveUser();
                         if (submitBtn) submitBtn.textContent = 'Giriş Yap';
                       }
-                    } else {
-                      showError('Ongeldig backup bestand.');
-                      if (submitBtn) submitBtn.textContent = 'Giriş Yap';
-                    }
-                  })
-                  .catch(function(err) {
-                    console.error(err);
-                    showError('Kan voortgangsbestand niet ophalen. Controleer je internetverbinding.');
-                    if (submitBtn) submitBtn.textContent = 'Giriş Yap';
                   });
               }
             } else {
