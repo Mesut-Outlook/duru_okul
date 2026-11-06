@@ -54,7 +54,7 @@ const localStorage = {
   get length() { return Object.keys(store).length; }
 };
 
-const bron = sliceVar('VERWIJDERDE_EXAMENS') + '\n' + slice('parseAttemptDate') + '\n' + slice('mergeScoreItems') + '\n' + slice('restoreScores');
+const bron = sliceVar('VERWIJDERDE_EXAMENS') + '\n' + sliceVar('VERWIJDERDE_POGINGEN') + '\n' + slice('isVerwijderd') + '\n' + slice('parseAttemptDate') + '\n' + slice('mergeScoreItems') + '\n' + slice('restoreScores');
 // originalGetItem/originalSetItem = de ongeprefixte Storage-methodes van landing.js
 // (restoreScores(data, voorGebruiker) gebruikt ze om onder user_<naam>_ te schrijven).
 const api = new Function('localStorage', 'originalGetItem', 'originalSetItem',
@@ -148,6 +148,14 @@ ok('ouder: user_duru_ büyüdü (48)', JSON.parse(store['user_duru_' + K9]).hist
 ok('ouder: aktif kullanıcı anahtarı değişmedi', JSON.parse(store[K9]).history.length, 0);
 fn([{ key: K9, val: h1 }], 'duru');
 ok('ouder: küçük bulut küçültmüyor', JSON.parse(store['user_duru_' + K9]).history.length, 48);
+
+/* ── 10) verwijderde poging (VERWIJDERDE_POGINGEN) valt weg, ook als een bron hem nog heeft;
+         beste/laatste van die toets verdwijnen mee (2026-11-06 lege testpogingen) ── */
+const nep = { attemptId: 'att_1793987724267', examId: 'ex-wiskunde-parabolen-25-5', pct: 0, datum: '06-11-2026, 18:55' };
+const echt = { attemptId: 'att_1793987963322', examId: 'ex-wiskunde-parabolen-11', pct: 80, datum: '06-11-2026, 18:59' };
+let p10 = merge([{ key: K9, val: { beste: { 'ex-wiskunde-parabolen-25-5': 0 }, history: [nep, echt] } }])[K9];
+ok('verwijderde poging valt weg', p10.history.map(h => h.attemptId), ['att_1793987963322']);
+ok('beste van verwijderde poging weg', p10.beste['ex-wiskunde-parabolen-25-5'], undefined);
 
 console.log(fail === 0 ? '\nTUM TESTLER GECTI' : '\n' + fail + ' TEST BASARISIZ');
 process.exit(fail ? 1 : 0);

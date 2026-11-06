@@ -977,6 +977,18 @@ document.addEventListener('DOMContentLoaded', function() {
     "ex-h3-ak-72": 1, "ex-h3-ak-73": 1, "ex-h3-ak-74": 1, "ex-h3-ak-75": 1, "ex-h3-ak-76": 1,
     "ex-h3-ak-77": 1, "ex-h3-ak-78": 1, "ex-h3-ak-79": 1, "ex-h3-ak-80": 1, "ex-h3-ak-81": 1
   };
+  /* Losse pogingen die nooit door Duru gemaakt zijn (2026-11-06: headless testrun van de
+     ontwikkelaar synchroniseerde 10 lege 0/20-pogingen naar scores_v2/duru). Per attemptId,
+     zodat de samenvoeger ze op elk apparaat laat vallen — gewoon wissen in de cloud werkt niet,
+     elk apparaat met een lokale kopie zou ze terugzetten (samenvoegen = union). */
+  var VERWIJDERDE_POGINGEN = {
+    "att_1793987724267": 1, "att_1793987726393": 1, "att_1793987728408": 1, "att_1793987730563": 1,
+    "att_1793987732614": 1, "att_1793987734657": 1, "att_1793987736705": 1, "att_1793987738978": 1,
+    "att_1793987741156": 1, "att_1793987743245": 1
+  };
+  function isVerwijderd(att) {
+    return !att || !att.examId || VERWIJDERDE_EXAMENS[att.examId] || VERWIJDERDE_POGINGEN[att.attemptId];
+  }
 
   function schoonVerwijderdeExamensOp() {
     try {
@@ -986,7 +998,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var raw = localStorage.getItem(k);
           if (!raw) continue;
           var hasDeleted = false;
-          Object.keys(VERWIJDERDE_EXAMENS).forEach(function (did) {
+          Object.keys(VERWIJDERDE_EXAMENS).concat(Object.keys(VERWIJDERDE_POGINGEN)).forEach(function (did) {
             if (raw.indexOf(did) !== -1) hasDeleted = true;
           });
           if (!hasDeleted) continue;
@@ -995,7 +1007,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var dirty = false;
           if (Array.isArray(parsed.history)) {
             var schoon = parsed.history.filter(function (h) {
-              return !(h && h.examId && VERWIJDERDE_EXAMENS[h.examId]);
+              return !(h && (VERWIJDERDE_EXAMENS[h.examId] || VERWIJDERDE_POGINGEN[h.attemptId]));
             });
             if (schoon.length !== parsed.history.length) {
               parsed.history = schoon;
@@ -1065,7 +1077,7 @@ document.addEventListener('DOMContentLoaded', function() {
         bronnen.forEach(function(item) {
           if (item && item.key === key && item.val && Array.isArray(item.val.history)) {
             item.val.history.forEach(function(att) {
-              if (!att || !att.examId || VERWIJDERDE_EXAMENS[att.examId]) return;
+              if (isVerwijderd(att)) return;
               var uniqId = att.attemptId || (att.examId + '_' + att.datum + '_' + att.pct);
               uniqueAttempts[uniqId] = att;
             });
