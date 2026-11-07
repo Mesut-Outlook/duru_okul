@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-05",
+  "gegenereerd": "2026-11-07",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -2582,7 +2582,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-parabolen-25-2": 2,
         "ex-wiskunde-parabolen-25-3": 2,
         "ex-wiskunde-parabolen-25-4": 2,
-        "ex-wiskunde-parabolen-25-5": 2
+        "ex-wiskunde-parabolen-25-5": 2,
+        "ex-wiskunde-parabolen-22-6": 2,
+        "ex-wiskunde-parabolen-22-7": 2,
+        "ex-wiskunde-parabolen-22-8": 2,
+        "ex-wiskunde-parabolen-22-9": 2,
+        "ex-wiskunde-parabolen-22-10": 2
       },
       "examenInfo": {
         "ex-wiskunde-h2-1": ["Proeftoets 1 — Verhoudingstabel & Cirkeldiagram", "2026-07-21"],
@@ -2702,7 +2707,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-parabolen-25-2": ["Proeftoets 115 — §2.5 Drie vormen van kwadratische formules (2/5, oefenen)", "2026-10-25"],
         "ex-wiskunde-parabolen-25-3": ["Proeftoets 116 — §2.5 Drie vormen van kwadratische formules (3/5, gemengd)", "2026-10-25"],
         "ex-wiskunde-parabolen-25-4": ["Proeftoets 117 — §2.5 Drie vormen van kwadratische formules (4/5, toetsniveau)", "2026-10-25"],
-        "ex-wiskunde-parabolen-25-5": ["Proeftoets 118 — §2.5 Drie vormen van kwadratische formules (5/5, eindniveau)", "2026-10-25"]
+        "ex-wiskunde-parabolen-25-5": ["Proeftoets 118 — §2.5 Drie vormen van kwadratische formules (5/5, eindniveau)", "2026-10-25"],
+        "ex-wiskunde-parabolen-22-6": ["Proeftoets 119 — §2.2 Symmetrie en top (6/10, basis)", "2026-11-07"],
+        "ex-wiskunde-parabolen-22-7": ["Proeftoets 120 — §2.2 Symmetrie en top (7/10, oefenen)", "2026-11-07"],
+        "ex-wiskunde-parabolen-22-8": ["Proeftoets 121 — §2.2 Symmetrie en top (8/10, gemengd)", "2026-11-07"],
+        "ex-wiskunde-parabolen-22-9": ["Proeftoets 122 — §2.2 Symmetrie en top (9/10, toetsniveau)", "2026-11-07"],
+        "ex-wiskunde-parabolen-22-10": ["Proeftoets 123 — §2.2 Symmetrie en top (10/10, eindniveau)", "2026-11-07"]
       },
       "onderwerpHoofdstuk": {
         "h1-begrippen": 1,
@@ -2720,7 +2730,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 70,
-        "2": 38,
+        "2": 43,
         "90": 10
       },
       "aantalOnderwerpen": {
