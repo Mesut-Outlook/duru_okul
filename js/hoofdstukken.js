@@ -2587,7 +2587,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-parabolen-22-7": 2,
         "ex-wiskunde-parabolen-22-8": 2,
         "ex-wiskunde-parabolen-22-9": 2,
-        "ex-wiskunde-parabolen-22-10": 2
+        "ex-wiskunde-parabolen-22-10": 2,
+        "ex-wiskunde-h1h2-gemengd-1": 2,
+        "ex-wiskunde-h1h2-gemengd-2": 2,
+        "ex-wiskunde-h1h2-gemengd-3": 2,
+        "ex-wiskunde-h1h2-gemengd-4": 2,
+        "ex-wiskunde-h1h2-gemengd-5": 2
       },
       "examenInfo": {
         "ex-wiskunde-h2-1": ["Proeftoets 1 — Verhoudingstabel & Cirkeldiagram", "2026-07-21"],
@@ -2712,7 +2717,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-parabolen-22-7": ["Proeftoets 120 — §2.2 Symmetrie en top (7/10, oefenen)", "2026-11-07"],
         "ex-wiskunde-parabolen-22-8": ["Proeftoets 121 — §2.2 Symmetrie en top (8/10, gemengd)", "2026-11-07"],
         "ex-wiskunde-parabolen-22-9": ["Proeftoets 122 — §2.2 Symmetrie en top (9/10, toetsniveau)", "2026-11-07"],
-        "ex-wiskunde-parabolen-22-10": ["Proeftoets 123 — §2.2 Symmetrie en top (10/10, eindniveau)", "2026-11-07"]
+        "ex-wiskunde-parabolen-22-10": ["Proeftoets 123 — §2.2 Symmetrie en top (10/10, eindniveau)", "2026-11-07"],
+        "ex-wiskunde-h1h2-gemengd-1": ["Proeftoets 124 — Gemengd H1 + H2 (1/5)", "2026-11-07"],
+        "ex-wiskunde-h1h2-gemengd-2": ["Proeftoets 125 — Gemengd H1 + H2 (2/5)", "2026-11-07"],
+        "ex-wiskunde-h1h2-gemengd-3": ["Proeftoets 126 — Gemengd H1 + H2 (3/5)", "2026-11-07"],
+        "ex-wiskunde-h1h2-gemengd-4": ["Proeftoets 127 — Gemengd H1 + H2 (4/5)", "2026-11-07"],
+        "ex-wiskunde-h1h2-gemengd-5": ["Proeftoets 128 — Gemengd H1 + H2 (5/5)", "2026-11-07"]
       },
       "onderwerpHoofdstuk": {
         "h1-begrippen": 1,
@@ -2730,7 +2740,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 70,
-        "2": 43,
+        "2": 48,
         "90": 10
       },
       "aantalOnderwerpen": {
