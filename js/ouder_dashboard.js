@@ -835,13 +835,74 @@
   }
 
   /* ── Ana sayfa: vier grote knoppen, elk met een voorproefje van zijn sectie ── */
-  var BOLUM_AD = { dikkat: "Dikkat edilecekler", dersler: "Dersler", log: "Son denemeler", sure: "Test süresi", ayarlar: "Ayarlar" };
+  var BOLUM_AD = { analiz: "Gelişim analizi", dikkat: "Dikkat edilecekler", dersler: "Dersler", log: "Son denemeler", sure: "Test süresi", ayarlar: "Ayarlar" };
   var IKON = {
     dikkat: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
     dersler: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
     log: '<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>',
-    sure: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'
+    sure: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+    analiz: '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>'
   };
+
+  /* ── Gelişim analizi (2026-11-08) — data uit js/ouder_analyse.js (DURU_ANALYSE) ── */
+  var openAnaliz = {};   // vakId → open (blijft open bij de 20-s cloud-hertekening)
+  function analizData(alle) {
+    if (!window.DURU_ANALYSE) return null;
+    var per = {};
+    alle.forEach(function (a) { (per[a.vakId] = per[a.vakId] || { titel: a.vakTitel, l: [] }).l.push(a); });
+    var vakken = Object.keys(per).map(function (id) {
+      var r = window.DURU_ANALYSE.vak(id, per[id].l); r.titel = per[id].titel; return r;
+    }).filter(function (r) { return r.hoofdstukken.length; });
+    if (!vakken.length) return null;
+    var telt = function (v) { return v.punten.filter(function (p) { return p.ernst !== "goed"; }).length; };
+    vakken.sort(function (a, b) { return telt(b) - telt(a); });
+    return { vakken: vakken, ov: window.DURU_ANALYSE.overzicht(vakken), telt: telt };
+  }
+  function analizLi(p) {
+    return '<li class="' + p.ernst + '">' + (p.vak ? '<span class="oa-etiket">' + escapeHtml(p.vak) + '</span>' : '') +
+      (p.notitie ? '<span class="oa-etiket oa-notu" title="' + escapeHtml(p.notitie) + '">Analiz notu</span>' : '') +
+      escapeHtml(p.tekst) + '</li>';
+  }
+  function analizHtml(A) {
+    var t1 = function (c) { return c == null ? "–" : C.tekst(c); };
+    var dikkat = A.ov.punten.slice(0, 6);
+    // eigen wrapper: .ob-bolum > .ob-kaart:first-child > h3 verbergt anders "Genel tablo" (≠ balktitel)
+    var h = '<div class="oa"><div class="ob-kaart"><h3>Genel tablo</h3>' + (A.ov.algemeen.length
+        ? '<ul class="oa-punten">' + A.ov.algemeen.map(analizLi).join("") + '</ul>'
+        : '<p class="ob-rahat">Derslerin geneline yayılan bir sorun görünmüyor.</p>') + '</div>' +
+      '<div class="ob-kaart"><h3>Önce bunlara dikkat</h3>' + (dikkat.length
+        ? '<ul class="oa-punten">' + dikkat.map(analizLi).join("") + '</ul>'
+        : '<p class="ob-rahat">Şu an öne çıkan bir konu yok.</p>') + '</div>' +
+      '<div class="ob-kaart"><h3>Derslere göre</h3><div class="oa-lejant">' +
+        '<span class="oa-l-klaar">Sınava hazır (≥ 8,5)</span><span class="oa-l-goed">İyi</span><span class="oa-l-net">Sınırda (&lt; 7)</span>' +
+        '<span class="oa-l-zwak">Zayıf (&lt; 5,5)</span><span class="oa-l-leeg">Henüz çalışılmadı</span></div>';
+    A.vakken.forEach(function (v) {
+      var n = A.telt(v), pars = [];
+      v.hoofdstukken.forEach(function (hf) { hf.paragrafen.forEach(function (p) { if (/^\d/.test(p.p)) pars.push(p); }); });
+      var klaar = pars.filter(function (p) { return p.status === "klaar"; }).length;
+      h += '<details class="oa-vak" data-oa="' + v.vakId + '"' + (openAnaliz[v.vakId] || bolum === "hepsi" ? ' open' : '') + '><summary>' +
+        '<span><b>' + escapeHtml(v.titel) + '</b><small>' +
+          (pars.length ? klaar + ' / ' + pars.length + ' paragraf sınava hazır' : v.hoofdstukken.length + ' ünite') +
+          ' · boş soru %' + v.leegPct + (v.openN ? ' · açık soru boş %' + v.openLeegPct : '') + '</small></span>' +
+        pil(v.cijfer, v.pogingen) +
+        '<span class="oa-sayac' + (n ? '' : ' yok') + '">' + (n ? n + ' dikkat' : '✓') + '</span></summary><div class="oa-detay">' +
+        v.hoofdstukken.map(function (hf) {
+          return '<div><h4>' + escapeHtml(hf.naam) + ' <small>' + escapeHtml(hf.titel || "") + ' · ort. ' + t1(hf.cijfer) + '</small></h4><div class="oa-parlar">' +
+            hf.paragrafen.map(function (p) {
+              return '<div class="oa-par ' + p.status + '"><b>' + escapeHtml(p.label) + '</b><span class="oa-c">' + (p.gemaakt ? t1(p.cijfer) : "–") +
+                '</span> <span class="ob-zacht">' + p.gemaakt + '/' + p.toetsen + ' test</span>' +
+                (p.gemaakt && p.leegPct >= 15 ? '<span class="oa-bos">%' + p.leegPct + ' boş</span>' : '') + '</div>';
+            }).join("") + '</div></div>';
+        }).join("") +
+        '<div class="ob-feiten"><span class="ob-feit">Boş soru <b>%' + v.leegPct + '</b></span>' +
+          '<span class="ob-feit">Testin başı → sonu <b>%' + v.leegBegin + ' → %' + v.leegEind + '</b></span>' +
+          (v.openN ? '<span class="ob-feit">Açık sorular boş <b>%' + v.openLeegPct + '</b></span>' : '') + '</div>' +
+        (v.punten.length ? '<ul class="oa-punten">' + v.punten.map(analizLi).join("") + '</ul>' : '') +
+        '</div></details>';
+    });
+    return h + '<div class="ob-legenda">Not = her testin son denemesi. "Boş" = cevapsız bırakılan soru (açık sorular ayrı sayılır). ' +
+      '"Analiz notu" = soru soru yapılan hata analizinden (son güncelleme tarihi üzerinde). Paragraf "sınava hazır" = en az 2 test, ortalama ≥ 8,5.</div></div></div>';
+  }
 
   function tegel(naam, ikon, titel, inhoud, extraKlas) {
     return '<button type="button" class="ob-tegel' + (extraKlas ? " " + extraKlas : "") + '" data-bolum="' + naam + '">' +
@@ -852,6 +913,16 @@
 
   function tegelsHtml(secties, x) {
     var t = [];
+    if (secties.analiz && x.analiz) {
+      var A = x.analiz, ilk = A.ov.algemeen.concat(A.ov.punten).slice(0, 2);
+      var hoog = A.ov.algemeen.concat(A.ov.punten).filter(function (p) { return p.ernst === "hoog"; }).length;
+      t.push(tegel("analiz", "📈", "Gelişim analizi",
+        '<span class="ob-t-rij">' + (ilk.length ? ilk.map(function (p) {
+          return '<b class="ob-kleur-' + (p.ernst === "hoog" ? "zwak" : "net") + '">●</b> ' + escapeHtml((p.vak ? p.vak + ": " : "") + p.tekst);
+        }).join("<br>") : "Öne çıkan bir sorun yok.") + '</span>' +
+        '<span class="ob-t-alt">Ders → ünite → paragraf: neresi hazır, neresi çalışılmalı' + (hoog ? ' · ' + hoog + ' önemli nokta' : '') + '</span>',
+        "ob-t-breed" + (hoog ? " ob-t-zwak" : "")));
+    }
     if (secties.dikkat) {
       var lijst = x.dikkat.concat(x.stil.slice(0, 3)), n = lijst.length;
       t.push(tegel("dikkat", "⚠️", "Dikkat edilecekler", n
@@ -1077,15 +1148,18 @@
         '</div>';
     }
 
+    var analiz = heeft && !archief ? analizData(alle) : null;
+    if (analiz) secties.analiz = analizHtml(analiz);
+
     if (bolum && bolum !== "hepsi" && !secties[bolum]) bolum = null;   // bv. na wissel naar vorig jaar
     if (bolum === "hepsi") {
-      h += kopHtml + ozetHtml + ["dikkat", "sure", "dersler", "log"].map(function (k) { return secties[k] || ""; }).join("");
+      h += kopHtml + ozetHtml + ["analiz", "dikkat", "sure", "dersler", "log"].map(function (k) { return secties[k] || ""; }).join("");
     } else if (bolum) {
       h += '<div class="ob-bolumbalk"><button type="button" class="ob-knop ob-ana" id="ob-ana">' +
         '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Ana sayfa</button>' +
         '<h2>' + BOLUM_AD[bolum] + '</h2></div><div class="ob-bolum">' + secties[bolum] + '</div>';
     } else {
-      h += kopHtml + ozetHtml + tegelsHtml(secties, { dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
+      h += kopHtml + ozetHtml + tegelsHtml(secties, { analiz: analiz, dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
     }
 
     h += '</div>';
@@ -1126,6 +1200,9 @@
       tr.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); wissel(); }
       });
+    });
+    container.querySelectorAll("details[data-oa]").forEach(function (d) {
+      d.addEventListener("toggle", function () { openAnaliz[d.getAttribute("data-oa")] = d.open; });
     });
     container.querySelectorAll("[data-bolum]").forEach(function (b) {
       b.addEventListener("click", function () { zetBolum(b.getAttribute("data-bolum")); });

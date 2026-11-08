@@ -49,7 +49,7 @@ node --check js/<dosya>.js                  # tek dosya sözdizimi
   İçerik ekleyince orayı güncelle; yeni sınav id'si seçmeden önce oku.
 - `js/CLAUDE.md` — hub arayüzü: Duru'nun ilerleme sayfası, veli paneli, startpaneel/landing, açık testler, test süresi,
   koyu tema, telefon düzeni, `vak_shell`. Arayüze dokunmadan önce oku.
-- CSS/JS değişince `index.html`'de `?v=`'i bump'la (şu an `style.css?v=6.7`).
+- CSS/JS değişince `index.html`'de `?v=`'i bump'la (şu an `style.css?v=6.9`).
 - **⚠️ CSS'te fazladan `}`** sonraki kuralı sessizce yutar (2026-10-10: `body.ouder-actief .hero` böyle kaybolmuştu). Kural
   silerken `{`/`}` dengesini kontrol et.
 
@@ -58,6 +58,10 @@ Kullanıcı **"test hazırla"** dediğinde veya herhangi bir ders için yeni bir
 1. **Kavram, Kişi ve Olayların Çıkarımı**: O bölümdeki tüm tanım kelimeleri/kavramlar (*begrippen*), önemli şahsiyetler (*belangrijke personen*), özel olaylar/tarihler (*gebeurtenissen/data*) ve sınavda çıkabilecek tüm terimler eksiksiz çıkarılır.
 2. **Özel Bölüm (Begrippen & Kernconcepten)**: Her ders ve her bölüm (hoofdstuk) için ayrı ayrı olmak şartıyla o bölüme ait tüm bu kavramları içeren özel bir konu/sözlük modülü eklenir.
 3. **Özel Kavram Testi (Begrippentoets)**: SADECE bu kelimeleri/kavramları/kişileri/olayları doğrudan soran bağımsız bir test/sınav (mc, invul, open) hazırlanır.
+4. **Zayıflık analizi (ilk test grubundan sonra)**: Duru o ünitede ≥ 3 test çözdüyse yeni testler **önce hata analizi**
+   (`python3 tools/zwakte.py <vak> --hf=N [--fouten]`) ile üretilir: boş bıraktığı/yanlış yaptığı kavramlara ağırlık,
+   ama ünitenin diğer §'leri de kapsanır; her turda yeniden ölçülür (her § son deneme ≥ 8,5 olana dek).
+   Ayrıntı ve ne zaman sorulacağı: `.claude/skills/zwakte-toetsen/SKILL.md`.
 
 ## Model & agent politikası (ÖNEMLİ)
 - **Planlama HER ZAMAN Opus** (ben). Kapsam, mimari, doğrulama bende.

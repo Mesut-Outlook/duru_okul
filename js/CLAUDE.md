@@ -12,7 +12,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.7`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.9`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -124,6 +124,26 @@ Yıl seçici kalır; geçmiş yılda "bu hafta" ve "dikkat" gizlenir. Veli sekme
 - Veri katmanı `collectParentReportData(user, jaar)` değişmedi (dışa açık); render bundan türer.
 - Stiller `css/style.css` sonunda `#ob` altında, kendi `--ob-*` token'ları + `html.dark #ob`.
   Anlam renkleri (goed/net/zwak) marka yeşilinden ayrı.
+
+## Veli: Gelişim analizi (2026-11-08)
+Kullanıcı isteği: "veli analiz sayfası — gelişim, testlerdeki dikkat edilecek noktalar, konu bazlı; nerelere daha fazla dikkat gerek".
+- Ana sayfada **ilk, tam genişlik düğme** (`.ob-t-breed`) → `secties.analiz`: **Genel tablo** (tüm derslere yayılan kalıplar: açık
+  sorular boş, testin sonunda boş artışı) · **Önce bunlara dikkat** (en fazla 6 somut madde) · **Derslere göre** (`<details>`; ünite →
+  paragraf kutuları: son-deneme ort., gemaakt/toetsen, boş %; durum klaar ≥ 8,5 & ≥ 2 test / goed / net < 7 / zwak < 5,5 / leeg).
+  Açık dersler `openAnaliz`'de tutulur (20 sn'lik bulut yeniden çizimi kapatmasın); yazdırırken hepsi açık.
+- Mantık **`js/ouder_analyse.js` → `DURU_ANALYSE.vak(vakId, items)` / `.overzicht(lijst)`**, saf (hiçbir şey yazmaz); girdi
+  `collectParentReportData`'nın deneme item'ları. Paragraf ve soru tipleri manifestten: `examenInfo[id] = [titel, datum, paragraaf, typen]`
+  (`typen` = soru başına harf `m/w/i/o/x`; soru sayısı denemeyle tutmazsa tip kullanılmaz). Paragrafsız dersler (duits/engels/frans) → "Genel".
+- **"Analiz notu"** maddeleri elle: `js/ouder_notities.js` (`DURU_OUDER_NOTITIES[vak] = {datum, punten:[{ernst,tekst}]}`), zwakte-analizi
+  sonrası yazılır (skill `zwakte-toetsen` adım 5). Düzelen maddeyi sil.
+- Yükleme: `hoofdstukken.js → hoofdstuk_util.js → … → ouder_notities.js → ouder_analyse.js → ouder_dashboard.js`.
+- Önizleme (onaylandı): https://claude.ai/artifact/QVhgDTw1DruauLt61xxexH. Doğrulama: Playwright (sistem Chrome), gerçek bulut verisi,
+  Firebase regex ile kesik; 1280 / 390 açık+koyu, `scrollWidth` = genişlik, JS hatası yok.
+- **Yan düzeltme (kök neden):** `b1a0cd9` (startpaneel, 2026-10-28) studeer-tip'i silerken `</aside></div>` artığını bıraktı → bu `</div>`
+  `.pagina`'yı erken kapatıyordu; `#statistieken-view` ve `#ouder-view` 11 gün `.pagina` dışında kaldı (masaüstünde sol kenara yapışık, genişlik
+  sınırı yok; telefonda `.ob-bolumbalk`'ın `-18px`'i — `.pagina`'nın 18px padding'ine göre — sayfayı 408px'e taşırıyordu). Artık silindi;
+  `index.html`'de div dengesi 34/34. Bir bölüme ilk kartın h3'ü bölüm adından farklıysa kartları sarmala
+  (`.ob-bolum > .ob-kaart:first-child > h3:first-child` gizlenir — analiz `<div class="oa">` kullanır).
 
 ## Landing düzeni (HAVO 3 — sıcak, alan-gruplu)
 **Startpaneel (2026-10-28, Claude Design onaylı: https://claude.ai/artifact/XoUZ37btF9JxP2crvVynTV):** "Mijn vakken"in üstünde

@@ -163,7 +163,10 @@ function buildVak(vak, warnings) {
   hoofdstukken.forEach(function (h) { hoofdstukNrs[String(h.nr)] = true; });
 
   var examenHoofdstuk = {};
-  var examenInfo = {};   // id → [titel, toegevoegd (YYYY-MM-DD)], in registratievolgorde
+  // id → [titel, toegevoegd (YYYY-MM-DD), paragraaf ("" = geen), vraagtypen (1 letter per vraag:
+  // m=mc w=waaronwaar i=invul/invoer o=open x=anders)], in registratievolgorde. Index 2/3 voeden de
+  // ouder-analyse (js/ouder_analyse.js: per § + "open vragen leeg").
+  var examenInfo = {};
   var aantalExamens = {};
   var examenZonderHoofdstuk = 0;
   sandbox.DURU.examens.forEach(function (ex) {
@@ -173,7 +176,11 @@ function buildVak(vak, warnings) {
       return;
     }
     examenHoofdstuk[ex.id] = ex.hoofdstuk;
-    examenInfo[ex.id] = [ex.titel || ex.id, GIT_TOEGEVOEGD[examenBestand[ex.id]] || todayISO()];
+    var typen = (ex.vragen || []).map(function (q) {
+      return { mc: "m", waaronwaar: "w", invul: "i", invoer: "i", open: "o" }[q && q.type] || "x";
+    }).join("");
+    examenInfo[ex.id] = [ex.titel || ex.id, GIT_TOEGEVOEGD[examenBestand[ex.id]] || todayISO(),
+      ex.paragraaf !== undefined && ex.paragraaf !== null ? String(ex.paragraaf) : "", typen];
     var k = String(ex.hoofdstuk);
     aantalExamens[k] = (aantalExamens[k] || 0) + 1;
     if (!hoofdstukNrs[k]) {
@@ -234,8 +241,8 @@ function main() {
 
   var output = "/* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */\n"
     + "window.DURU_HOOFDSTUKKEN = " + JSON.stringify(manifest, null, 2)
-      // examenInfo-paren op één regel ([titel, datum]) — scheelt ~60 KB
-      .replace(/\[\n\s+("(?:[^"\\]|\\.)*"),\n\s+("\d{4}-\d\d-\d\d")\n\s+\]/g, "[$1, $2]") + ";\n";
+      // examenInfo op één regel ([titel, datum, paragraaf, typen]) — scheelt ~100 KB
+      .replace(/\[\n\s+("(?:[^"\\]|\\.)*"),\n\s+("\d{4}-\d\d-\d\d"),\n\s+("[^"\n]*"),\n\s+("[mwiox]*")\n\s+\]/g, "[$1, $2, $3, $4]") + ";\n";
 
   if (warnings.length > 0) {
     console.warn("Waarschuwingen (" + warnings.length + "):");
