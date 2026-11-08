@@ -2018,7 +2018,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-64": 7,
         "ex-h3-nederlands-65": 7,
         "ex-h3-nederlands-66": 7,
-        "ex-h3-nederlands-67": 7
+        "ex-h3-nederlands-67": 7,
+        "ex-h3-nederlands-68": 7,
+        "ex-h3-nederlands-69": 7,
+        "ex-h3-nederlands-70": 7
       },
       "examenInfo": {
         "ex-h3-nederlands-1": ["Toets 1 — Officiële Proeftoets Lezen (Tekst 1 & 2)", "2026-07-21", "mix", "mmmmoomoowimmmmwoiom"],
@@ -2087,7 +2090,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-64": ["Toets 64 — §7.3 Met of zonder -n en bijvoeglijk naamwoord (-e / -en)", "2026-11-08", "7.3", "mmmmmmmmmmmmwwwwiiio"],
         "ex-h3-nederlands-65": ["Toets 65 — §7.9 Werkwoordspelling: alle tijden gemengd", "2026-11-08", "7.9", "iiiiiiiimmmmmmmmwwwo"],
         "ex-h3-nederlands-66": ["Toets 66 — §7.10 & §7.11 Engelse werkwoorden en homofonen", "2026-11-08", "7.10", "iiiiiiiimmmmmmmmwwwo"],
-        "ex-h3-nederlands-67": ["Toets 67 — Foutentraining & Eindtoets Cursus 7 Spelling", "2026-11-08", "eind", "iiiiiimmmmmmmmwwwwoo"]
+        "ex-h3-nederlands-67": ["Toets 67 — Foutentraining & Eindtoets Cursus 7 Spelling", "2026-11-08", "eind", "iiiiiimmmmmmmmwwwwoo"],
+        "ex-h3-nederlands-68": ["Toets 68 — Oefenproefwerk A: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imwiimomiwmiwmoimwmm"],
+        "ex-h3-nederlands-69": ["Toets 69 — Oefenproefwerk B: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imiwmiomiwmiwmoimwmi"],
+        "ex-h3-nederlands-70": ["Toets 70 — Oefenproefwerk C: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imiwimomiwmiwmoimwmm"]
       },
       "onderwerpHoofdstuk": {
         "c5-3-samentrekking": 5,
@@ -2110,7 +2116,7 @@ window.DURU_HOOFDSTUKKEN = {
       "aantalExamens": {
         "1": 22,
         "5": 16,
-        "7": 29
+        "7": 32
       },
       "aantalOnderwerpen": {
         "1": 5,
