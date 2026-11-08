@@ -2013,7 +2013,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-59": 7,
         "ex-h3-nederlands-60": 7,
         "ex-h3-nederlands-61": 5,
-        "ex-h3-nederlands-62": 7
+        "ex-h3-nederlands-62": 7,
+        "ex-h3-nederlands-63": 7,
+        "ex-h3-nederlands-64": 7,
+        "ex-h3-nederlands-65": 7,
+        "ex-h3-nederlands-66": 7,
+        "ex-h3-nederlands-67": 7
       },
       "examenInfo": {
         "ex-h3-nederlands-1": ["Toets 1 — Officiële Proeftoets Lezen (Tekst 1 & 2)", "2026-07-21"],
@@ -2077,7 +2082,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-59": ["Toets 59 — Spellingdetective: verbeter de werkwoorden", "2026-11-04"],
         "ex-h3-nederlands-60": ["Toets 60 — Mix lesnotities: -n, trema, apostrof en accenten", "2026-11-04"],
         "ex-h3-nederlands-61": ["Toets 61 — Mix lesnotities: samentrekking en verwijzen", "2026-11-04"],
-        "ex-h3-nederlands-62": ["Toets 62 — Begrippentoets werkwoordspelling (§9–§11)", "2026-11-04"]
+        "ex-h3-nederlands-62": ["Toets 62 — Begrippentoets werkwoordspelling (§9–§11)", "2026-11-04"],
+        "ex-h3-nederlands-63": ["Toets 63 — §7.2 Trema, apostrof, accenten en cedille: verdieping", "2026-11-08"],
+        "ex-h3-nederlands-64": ["Toets 64 — §7.3 Met of zonder -n en bijvoeglijk naamwoord (-e / -en)", "2026-11-08"],
+        "ex-h3-nederlands-65": ["Toets 65 — §7.9 Werkwoordspelling: alle tijden gemengd", "2026-11-08"],
+        "ex-h3-nederlands-66": ["Toets 66 — §7.10 & §7.11 Engelse werkwoorden en homofonen", "2026-11-08"],
+        "ex-h3-nederlands-67": ["Toets 67 — Foutentraining & Eindtoets Cursus 7 Spelling", "2026-11-08"]
       },
       "onderwerpHoofdstuk": {
         "c5-3-samentrekking": 5,
@@ -2100,7 +2110,7 @@ window.DURU_HOOFDSTUKKEN = {
       "aantalExamens": {
         "1": 22,
         "5": 16,
-        "7": 24
+        "7": 29
       },
       "aantalOnderwerpen": {
         "1": 5,

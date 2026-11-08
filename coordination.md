@@ -650,6 +650,27 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### TASK-36 · nederlands Cursus 7 (H7 Spelling): 5 yeni proeftoets (63–67)  [status: DONE ✅ — 2026-11-08, Opus denetimi: 100 soru c7_*.js teorisine karşı okundu; 6 düzeltme script'te (şaka şıklar 65#9/10/12/15 → Hout/Rijt/reisde/vastgehoud; 66#11 anlamsız cümle "back-uppen / steunen" → foto's back-uppen; 67#11 "verhuisd" 67#4 cevabını ele veriyordu (kural 19) → gereisd; 67#20 noktalı virgül → iki nokta); gate 18/18, open_check 0, teslim_check temiz; push edildi]
+- **Atanan**: agy · **Denetim & Commit/Push**: Opus
+- **Amaç**: Kullanıcı talebi (2026-11-08) — "hollnadaca h7 spellingden 5 yeni test yarat.... ardindan opusa kontrol etmesini ilet ardindan commit ve push etsin opus.."
+- **Üretilen dosyalar**:
+  - `tools/gen_nederlands_c7_extra.py` (deterministik seed ile üreteç; mevcut script'lere ve `examen_1…62.js` dosyalarına dokunulmadı)
+  - `havo3/nederlands/js/data/examen_63.js` (`ex-h3-nederlands-63`, `paragraaf: "7.2"`): Toets 63 — §7.2 Trema, apostrof, accenten en cedille: verdieping (20 soru)
+  - `havo3/nederlands/js/data/examen_64.js` (`ex-h3-nederlands-64`, `paragraaf: "7.3"`): Toets 64 — §7.3 Met of zonder -n en bijvoeglijk naamwoord (-e / -en) (20 soru)
+  - `havo3/nederlands/js/data/examen_65.js` (`ex-h3-nederlands-65`, `paragraaf: "7.9"`): Toets 65 — §7.9 Werkwoordspelling: alle tijden gemengd (20 soru)
+  - `havo3/nederlands/js/data/examen_66.js` (`ex-h3-nederlands-66`, `paragraaf: "7.10"`): Toets 66 — §7.10 & §7.11 Engelse werkwoorden en homofonen (20 soru)
+  - `havo3/nederlands/js/data/examen_67.js` (`ex-h3-nederlands-67`, `paragraaf: "eind"`): Toets 67 — Foutentraining & Eindtoets Cursus 7 Spelling (20 soru)
+- **Kalite & Doğrulama**:
+  - Tüm `invul` sorularında `"exact": true` kullanıldı; apostrof soruları `invul` yerine yalnız `mc`/`waaronwaar` olarak soruldu.
+  - Kural 19 kontrolü: hiçbir `invul` cevabı aynı sınavdaki başka bir sorunun `vraag` veya `opties` metninde geçmiyor (`0` çakışma).
+  - MC şık uzunlukları: doğru şık en uzun `0–3/12` (`≤%25`) ve tek başına en kısa `0–2/12` (`≤%25`).
+  - `node tools/gate.js nederlands` → **18/18 geçti (`18 gecti, 0 kaldi`, 16 onderwerp · 67 proeftoets · 1475 soru)**.
+  - `node tools/open_check.js` → **1546 open soru tarandı, 0 sorun**.
+  - `node tools/teslim_check.js nederlands 63` → **`temiz` (exit 0, 0 yakın kopya, 0 kısa şık ihlali)**.
+  - `havo3/nederlands/index.html` (`examen_63…67.js`), `js/hoofdstukken.js` (`--check` exit 0), `index.html` (`?v=20261108`) ve `havo3/CLAUDE.md` güncellendi.
+  - **Opus denetimi (2026-11-08)**: yukarıdaki 6 düzeltme `tools/gen_nederlands_c7_extra.py`'de yapıldı ve dosyalar yeniden üretildi; Engelse ww (gedeletet, leasete, gefacetimed, racete, geliket) c7_10 kuralıyla tutarlı.
+  - **Opus'a not (eski)**: Kullanıcı kontrol edip ardından commit ve push etmeni istedi (çalışma dizininde önceki oturumdan kalan untracked `natuurkunde` dosyaları var; yalnız `nederlands` + manifest/doküman dosyalarını sahnele).
+
 ### TASK-35 · economie: §2.3, §4.1, §4.2, §4.3 her birine 5 yeni proeftoets (96–115)  [status: DONE ✅ — 2026-11-05, Opus denetimi: Sonnet reviewer 27 soru düzeltti (kitap dışı 3, hesap tutarsızlığı 1 (113#8), kural 19 ~20, şaka şık 2); hesaplar yeniden yapıldı; push edildi]
 - **Atanan**: agy · **Denetim**: Opus (kitaba karşı okur, commit'ler)
 - **Amaç**: kullanıcı (2026-11-05) "ekonomi işini agy'ye ver, sen kontrol yap": toets kapsamındaki her paragrafa 5 yeni test (biologie/aardrijkskunde'de aynı gün Sonnet ile yapıldı).
