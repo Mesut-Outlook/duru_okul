@@ -14,27 +14,27 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat zijn de coördinaten van de top van de parabool bij y = 2x² + 20x + 43?",
-      "uitleg": "1 Uit x = 0 volgt y = 43. 2 2x² + 20x + 43 = 43 → 2x² + 20x = 0 → x(2x + 20) = 0 → x = 0 of x = −10. 3 De x-coördinaat van de top ligt midden tussen 0 en −10: x = −5. 4 y = 2·(−5)² + 20 · (−5) + 43 = −7. 5 De top is (−5, −7).",
+      "vraag": "Twee posities op dezelfde parabool bereiken dezelfde hoogte: de grafiek y = −x² + 10x + 5 snijdt de y-as in (0, 5). Welke x-waarde heeft het andere punt met functiewaarde 5?",
       "opties": [
-        "(−5, 43)",
-        "(5, −7)",
-        "(−5, 193)",
-        "(−5, −7)"
+        "−10",
+        "5",
+        "10",
+        "−5"
       ],
-      "antwoord": 3
+      "antwoord": 2,
+      "uitleg": "Stap 1: Stel y = 5:\n−x² + 10x + 5 = 5.\nStap 2: Trek 5 af:\n−x² + 10x = 0.\nStap 3: Ontbind in factoren:\nx(−x + 10) = 0.\nDit geeft x = 0 of x = 10."
     },
     {
       "type": "invul",
-      "vraag": "Bereken de y-coördinaat van de top van de parabool bij y = (x + 6)(x − 8).",
-      "antwoord": "-49",
-      "uitleg": "(x + 6)(x − 8) = 0 → x = −6 of x = 8: de snijpunten met de x-as zijn (−6, 0) en (8, 0). De top ligt midden tussen x = −6 en x = 8: x = (−6 + 8) / 2 = 1. y = (1 − (−6))(1 − 8) = −49. Top (1, −49)."
+      "vraag": "Bij een fonteininstallatie stroomt water volgens h = −0,4x² + 2,4x + 0,45, waarin afmetingen in meters zijn. Hoeveel cm hoog bevindt zich het mondstuk van de fontein (bij x = 0)?",
+      "antwoord": "45",
+      "uitleg": "Stap 1: Vul x = 0 in:\nh = −0,4 · 0² + 2,4 · 0 + 0,45 = 0,45 meter.\nStap 2: Reken om naar centimeters:\n0,45 · 100 = 45 cm."
     },
     {
       "type": "invul",
-      "vraag": "Geef de formule van de symmetrieas van de parabool bij y = 2x² + 8x + 6. Vul in: x = …",
-      "antwoord": "-2",
-      "uitleg": "1 Uit x = 0 volgt y = 6. 2 2x² + 8x + 6 = 6 → 2x² + 8x = 0 → x(2x + 8) = 0 → x = 0 of x = −4. 3 De x-coördinaat van de top ligt midden tussen 0 en −4: x = −2. 4 y = 2·(−2)² + 8 · (−2) + 6 = −2. 5 De top is (−2, −2). De symmetrieas is de verticale lijn door de top: x = −2."
+      "vraag": "Een weggeschoten bal volgt de paraboolbaan h = −0,15x² + 1,8x, waarin h en x in meters zijn gemeten. Bereken de hoogte van het hoogste punt van de bal (in meters).",
+      "antwoord": "5,4",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −1,8 / (2 · −0,15) = 6 meter.\nStap 2: Vul x = 6 in:\nh = −0,15 · 6² + 1,8 · 6 = −5,4 + 10,8 = 5,4 meter."
     },
     {
       "type": "invul",
@@ -98,15 +98,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de coördinaten van de top van de parabool bij y = 2x² − 16x + 41?",
-      "uitleg": "1 Uit x = 0 volgt y = 41. 2 2x² − 16x + 41 = 41 → 2x² − 16x = 0 → x(2x − 16) = 0 → x = 0 of x = 8. 3 De x-coördinaat van de top ligt midden tussen 0 en 8: x = 4. 4 y = 2·4² − 16 · 4 + 41 = 9. 5 De top is (4, 9).",
+      "vraag": "In een diagram staat een bergparabool met top (3, 5) getekend die door (0, −4) gaat. Welke formule hoort bij deze parabool?",
       "opties": [
-        "(4, 41)",
-        "(4, 137)",
-        "(4, 9)",
-        "(−4, 9)"
+        "y = x² − 6x − 4",
+        "y = −x² − 6x − 4",
+        "y = −x² + 6x + 5",
+        "y = −x² + 6x − 4"
       ],
-      "antwoord": 2
+      "antwoord": 3,
+      "uitleg": "Stap 1: Gebruik de topvorm met top (3, 5):\ny = a(x − 3)² + 5.\nStap 2: Vul (0, −4) in:\n−4 = 9a + 5 → a = −1.\nStap 3: Werk de haakjes uit:\ny = −1(x² − 6x + 9) + 5 = −x² + 6x − 4."
     },
     {
       "type": "invul",

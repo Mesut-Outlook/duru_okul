@@ -25,15 +25,15 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = ½x(x + 2) in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "1",
-      "uitleg": "(x + 2)x = x² + 2x; keer 0,5 geeft y = ½x² + x, dus b = 1."
+      "vraag": "Schrijf het functievoorschrift y = (7x + 1)² − 27x² om naar een vorm zonder haakjes. Welk getal staat er uiteindelijk voor x²?",
+      "antwoord": "22",
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(7x + 1)² = 49x² + 14x + 1.\nStap 2: Trek 27x² af:\ny = 49x² + 14x + 1 − 27x² = 22x² + 14x + 1.\nVoor x² staat het getal 22."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −2(x − 5)(x + 3) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "30",
-      "uitleg": "(x − 5)(x + 3) = x² − 2x − 15; keer −2 geeft y = −2x² + 4x + 30, dus c = 30."
+      "vraag": "De stalen draagkabel van een hangbrug hangt volgens h = 0,02x² − 0,8x + 14,2, met h en x in meters. Bereken de minimale hoogte bij de top van de kabel (in meters).",
+      "antwoord": "6,2",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −(−0,8) / (2 · 0,02) = 20 meter.\nStap 2: Vul x = 20 in:\nh = 0,02 · 20² − 0,8 · 20 + 14,2 = 8 − 16 + 14,2 = 6,2 meter."
     },
     {
       "type": "mc",
@@ -49,15 +49,15 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = ¼(x + 4)² − 11 in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "2",
-      "uitleg": "(x + 4)² = x² + 8x + 16; keer 0,25 → ¼x² + 2x + 4; − 11 → y = ¼x² + 2x − 7. Dus b = 2."
+      "vraag": "Een getekende dalparabool met top (7, −2) heeft als snijpunt met de y-as (0, 47). Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "-14",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (7, −2):\ny = a(x − 7)² − 2.\nStap 2: Vul (0, 47) in:\n47 = 49a − 2 → 49a = 49 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 14x + 49) − 2 = x² − 14x + 47.\nVoor x staat het getal b = −14."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x − 4)² − 10 in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "54",
-      "uitleg": "(x − 4)² = x² − 8x + 16; keer 4 → 4x² − 32x + 64; − 10 → y = 4x² − 32x + 54. Dus c = 54."
+      "vraag": "Een atleet lanceert een speer volgens h = −0,04x² + 0,8x + 1,75, waarin h en x in meters zijn. Hoeveel cm hoog bevindt de speer zich bij het loslaten (bij x = 0)?",
+      "antwoord": "175",
+      "uitleg": "Stap 1: Vul x = 0 in de formule in:\nh = −0,04 · 0² + 0,8 · 0 + 1,75 = 1,75 meter.\nStap 2: Reken om naar centimeters:\n1,75 · 100 = 175 cm."
     },
     {
       "type": "waaronwaar",
@@ -109,21 +109,21 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Bereken de x-coördinaat van de top van de parabool bij y = −(x + 1)(x + 2).",
-      "antwoord": "-1,5",
-      "uitleg": "De snijpunten met de x-as zijn x = −1 en x = −2. De top ligt precies in het midden: x = (−1 + (−2)) : 2 = −1,5."
+      "vraag": "Twee punten op dezelfde parabool bereiken dezelfde hoogte: de grafiek y = −2x² + 22x + 8 snijdt de y-as in (0, 8). Bereken de x-coördinaat van het andere snijpunt met de lijn y = 8.",
+      "antwoord": "11",
+      "uitleg": "Stap 1: Stel y = 8:\n−2x² + 22x + 8 = 8.\nStap 2: Trek 8 af:\n−2x² + 22x = 0.\nStap 3: Ontbind in factoren:\n−2x(x − 11) = 0.\nDit geeft x = 0 of x = 11."
     },
     {
       "type": "mc",
-      "vraag": "Wat is de formule van de symmetrieas van de parabool bij y = ¼(x − 6)² − 14?",
-      "uitleg": "De symmetrieas is een verticale lijn door de top (p, q), dus heeft als vergelijking x = 6.",
+      "vraag": "Herleid het product y = (2x + 3)(x − 4) naar een vorm zonder haakjes. Welke coëfficiënt staat er voor x?",
       "opties": [
-        "x = 6",
-        "x = −6",
-        "x = −14",
-        "y = −14"
+        "−5",
+        "5",
+        "−12",
+        "2"
       ],
-      "antwoord": 0
+      "antwoord": 0,
+      "uitleg": "Stap 1: Werk de haakjes uit:\n(2x + 3)(x − 4) = 2x² − 8x + 3x − 12 = 2x² − 5x − 12.\nVoor x staat het getal −5."
     },
     {
       "type": "invul",

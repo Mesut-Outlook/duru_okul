@@ -26,15 +26,15 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x − 5)(x − 7) in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "-48",
-      "uitleg": "(x − 5)(x − 7) = x² − 12x + 35; keer 4 geeft y = 4x² − 48x + 140, dus b = −48."
+      "vraag": "Herleid de tweeterm-formule y = (6x + 1)² − 19x² door de uitdrukking te schrijven zonder haakjes. Welk coëfficiënt-getal staat er uiteindelijk voor x²?",
+      "antwoord": "17",
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(6x + 1)² = 36x² + 12x + 1.\nStap 2: Trek 19x² af:\ny = 36x² + 12x + 1 − 19x² = 17x² + 12x + 1.\nVoor x² staat het getal 17."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x − 4)(x − 5) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "80",
-      "uitleg": "(x − 4)(x − 5) = x² − 9x + 20; keer 4 geeft y = 4x² − 36x + 80, dus c = 80."
+      "vraag": "De gebogen doorgang van een spoorwegtunnel volgt h = −0,4x² + 2,4x, waarin h de hoogte in meters is en x de afstand over het wegdek. Bereken de hoogte van het hoogste punt van de tunnel (in meters).",
+      "antwoord": "3,6",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −2,4 / (2 · −0,4) = 3 meter.\nStap 2: Vul x = 3 in de formule in:\nh = −0,4 · 3² + 2,4 · 3 = −3,6 + 7,2 = 3,6 meter."
     },
     {
       "type": "mc",
@@ -128,9 +128,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −3(x − 2)(x − 7) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "-42",
-      "uitleg": "(x − 2)(x − 7) = x² − 9x + 14; keer −3 geeft y = −3x² + 27x − 42, dus c = −42."
+      "vraag": "Een getekende dalparabool met top (5, −6) passeert de verticale as in (0, 19). Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "-10",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (5, −6):\ny = a(x − 5)² − 6.\nStap 2: Vul (0, 19) in:\n19 = 25a − 6 → 25a = 25 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 10x + 25) − 6 = x² − 10x + 19.\nVoor x staat het getal b = −10."
     },
     {
       "type": "invul",

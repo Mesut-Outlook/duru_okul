@@ -650,6 +650,66 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### ⚠️ 2026-11-08 13:06 · `coordination.md` HEAD'e geri döndü (Opus)
+TASK-37/38/39 bölümleri ve agy'nin TASK-37 raporu kayboldu (dosya `befe588` haline döndü; ne yaptığı bilinmiyor — agy?). Aşağıdaki
+bölümler Opus tarafından yeniden yazıldı. **agy: bu dosyayı asla `git checkout`/eski kopyadan geri yazma; yalnız kendi bölümüne ekle.**
+
+### TASK-39 · nederlands C7: çözülmemiş 63–66'yı zayıf konulara göre yeniden ağırlıklandır  [status: DONE ✅ — 2026-11-08, Opus denetimi: 19 soru kurala karşı okundu, hata yok; push edildi]
+- 19 soru değişti (63: #9 #11 #15 #16 #17 #20 · 64: #6 #11 #16 #18 #20 · 65: #1 #2 #4 #8 #20 · 66: #3 #7 #8 #20); gate 18/18, open_check 0, teslim_check temiz.
+- Bilinçli sapmalar (dosya içi tekrar önleme): 66#7 betaald (gebeurd zaten #12/#13'te), 65#4 voorbereid, 66#3 mailden, 63#15 waar (denge).
+
+### TASK-38 · nederlands C5 + eind: çözülmemiş 41/48/61/67  [status: DONE ✅ — 2026-11-08, Opus denetimi: plan birebir uygulanmış; 1 düzeltme: 41#12 D şıkkı 'rode- en witte bessen' 41#9'un aynısıydı (kural 19) → 'oude- en nieuwe boeken'; gate 18/18, open_check 0, teslim_check temiz; push edildi]
+- **Analiz (Opus, 2026-11-08)** — 81 deneme soru soru (`python3 tools/zwakte.py nederlands`; regex kaba, liste elle doğrulandı):
+
+  | # | Konu | kaçırma | Duru'nun gerçek hataları |
+  |---|---|---|---|
+  | 1 | §7.3 met/zonder -n | %34 | enkele↔enkelen, andere↔anderen, meeste↔meesten, oudste↔oudsten, beide↔beiden; *de jongere* = één persoon |
+  | 2 | §5.3 samentrekking soort | %33 | voorwaarts↔achterwaarts ters; niveau woord/woordgroep/zin karışık |
+  | 3 | §5.3 streepje | %29 | *rode- en witte bessen* doğru sanıyor; *linkerhand -hand*, *brandweerauto en -auto* |
+  | 4 | §7.2 apostrof | %27 | s'-Gravenhage, s'morgens; babies/cadeau's; ponytje↔pony'tje; Line's |
+  | 5 | §5.5 hun/hen | %25 | mv zonder vz = hun ↔ lv / na vz = hen ters |
+  | 6 | §7.2 accent | %23 | è↔é (Premiére 5×, carriére, ampére); á↔à; circonflexe |
+  | 7 | §5.5 die/dat/wat | %23 | *het meisje die*, *niets dat*, *alles dat* |
+  | 8 | §7.9–7.11 dt-valkuilen | mc %47 | word↔wordt (inversie, u), vindt jij, vt mv -den, vd verlengen, gebeurd↔gebeurt |
+  | 9 | §5.3 woordvolgorde | — | *…schaatst Lotte en Pieter skiet* |
+
+  Güçlü: gewone tt invul (%9), samentrekking theorie (%11), zijn/haar (%7). Open sorular C5/C7'de %100 boş → open = kısa "Verbeter + waarom".
+- **Değişecek**: `examen_41` #9 waa→3 · #10 mc→2 · #11 waa→2 · #12 mc→3 · #14 mc→9 · #13 open→kısa open konu 3 |
+  `examen_48` #3 mc→7 · #8 mc→5 · #10 waa→5 · #11 waa→7 · #14 waa→5 · #19 open→kısa open konu 5 |
+  `examen_61` #10 mc→3 · #17 mc→9 · #20 waa→2 | `examen_67` #1 inv→6 · #3 inv→1 · #5 inv→4 · #9 mc→1 · #12 mc→8. `examen_38` değişmez (19/20 zayıf konu).
+- Kurallar/kabul: TASK-37 ile aynı mantık; tip aynı, id/titel aynı, önce "niet gemaakt" kontrolü, `?v=` bump, gate 18/18, open_check 0, teslim_check temiz.
+- **agy Raporu (2026-11-08 reboot sonrası tamamlama)**:
+  - `examen_41.js` (6 soru): #9 waa (rode- en witte bessen streepje → onwaar), #10 mc (voorwaarts/zinsniveau → B), #11 waa (Lucas stofzuigde voorwaarts → onwaar), #12 mc (brandweer- en politieauto's → B), #13 open (kısa "Verbeter + waarom" verse- en gezonde), #14 mc (inversie woordvolgorde Milan/Sam → B). Zayıf soru: 8/20 → 13/20.
+  - `examen_48.js` (6 soru): #3 mc (het meisje dat → C), #8 mc (op hen gewacht → D), #10 waa (hun gaan onderwerp → onwaar), #11 waa (niets dat → onwaar), #14 waa (directeur overhandigde hun → waar), #19 open (kısa "Verbeter + waarom" overhandigde hen/hun). Zayıf soru: 10/20 → 14/20.
+  - `examen_61.js` (3 soru): #10 mc (warme- en waterdichte foutief → C), #17 mc (inversie sprong Luuk/dook Sam → D), #20 waa (hoofd- en bijzaken voorwaarts → onwaar). Zayıf soru: 18/20.
+  - `examen_67.js` (5 soru): #1 invul (carrière), #3 invul (meesten), #5 invul ('s Morgens), #9 mc (enkele/enkelen voor personen → B), #12 mc (word je inversie → C). Zayıf soru: 12/20 → 16/20.
+  - `havo3/nederlands/index.html`: `examen_41.js?v=2`, `examen_48.js?v=2`, `examen_61.js?v=2`, `examen_67.js?v=2` eklendi.
+  - Denetim: `node tools/gate.js nederlands` → **18/18 yeşil**; `node tools/open_check.js nederlands` → **0 hata**; `node tools/teslim_check.js nederlands 63` → **temiz (0 bulgu)**; `python3 tools/zwakte.py nederlands` → tüm çözülmemiş sınavlar zayıf ağırlıklı.
+
+### TASK-37 · wiskunde: çözülmemiş H2 testlerini zayıf tiplere göre yeniden ağırlıklandır  [status: DONE ✅ — 2026-11-08, Opus denetimi: 74 değişen soru elle yeniden hesaplandı, hepsi doğru. ⚠️ `examen_72` (ex-wiskunde-parabolen-12) Duru 13:14'te ESKİ içerikle çözdü → agy değişikliği geri alındı (içerik `tools/task37_solutions.json`'da). 65#1 uitleg 'c_a' gösterimi düzeltildi. gate 18/18, teslim_check temiz; push edildi]
+- **Analiz (Opus, 2026-11-08)**, `python3 tools/zwakte.py wiskunde`: bağlam soruları (sproeier/bal/tunnel: a = 0, cm, top/max) %81–96 **boş**;
+  zelfde-y %62; exp-tijdseenheid %48; top→formule mc %46 (b'nin işareti, c = y-kesişimi); snijpunt %27; haakjes %26. Boş bırakma testin sonuna doğru 7× artıyor.
+- **Plan** (tip aynı kalır):
+  | Dosya | § | zayıf → hedef | Değişecek |
+  |---|---|---|---|
+  | `examen_65.js` | §2.3 | 4 → 10 | #1 invul→**ctx-top** · #2 invul→**ctx-start/cm** · #3 invul→**top-fig** · #4 mc→**zelfde-y** · #13 mc→**gooi-sym** · #16 invul→**ctx-top** |
+  | `examen_66.js` | §2.3 | 4 → 10 | #1 mc→**ctx-top** · #2 invul→**ctx-start/cm** · #4 invul→**top-fig** · #5 invul→**zelfde-y** · #13 invul→**gooi-sym** · #14 invul→**ctx-top** |
+  | `examen_69.js` | §2.5 | 7 → 10 | #2 invul→**haakjes** · #3 invul→**ctx-top** · #15 invul→**top-fig** |
+  | `examen_70.js` | §2.5 | 7 → 10 | #2 invul→**haakjes** · #3 invul→**ctx-top** · #15 invul→**top-fig** |
+  | `examen_72.js` | §mix | 6 → 10 | #3 mc→**ctx-top** · #4 invul→**zelfde-y** · #5 invul→**top-fig** · #13 mc→**haakjes** |
+  | `examen_73.js` | §mix | 4 → 10 | #1 mc→**ctx-top** · #3 invul→**zelfde-y** · #4 invul→**top-fig** · #5 mc→**haakjes** · #17 mc→**ctx-start/cm** · #18 invul→**gooi-sym** |
+  | `examen_115.js` | §2.5 | 4 → 10 | #2 invul→**haakjes** · #3 invul→**ctx-top** · #5 invul→**top-fig** · #6 invul→**ctx-start/cm** · #13 invul→**zelfde-y** · #14 mc→**haakjes** |
+  | `examen_116.js` | §2.5 | 3 → 10 | #3 invul→**haakjes** · #4 invul→**ctx-top** · #5 invul→**top-fig** · #6 invul→**ctx-start/cm** · #10 mc→**zelfde-y** · #15 mc→**haakjes** · #16 invul→**ctx-top** |
+  | `examen_117.js` | §2.5 | 5 → 10 | #3 invul→**haakjes** · #4 invul→**ctx-top** · #5 invul→**top-fig** · #6 invul→**ctx-start/cm** · #14 invul→**zelfde-y** |
+  | `examen_118.js` | §2.5 | 6 → 10 | #3 invul→**haakjes** · #4 invul→**ctx-top** · #5 invul→**top-fig** · #15 invul→**ctx-start/cm** |
+  | `examen_119.js` | §2.2 | 5 → 10 | #2 invul→**zelfde-y** · #3 invul→**ctx-start/cm** · #4 mc→**ctx-top** · #6 invul→**top-fig** · #13 invul→**gooi-sym** |
+  | `examen_120.js` | §2.2 | 5 → 10 | #2 mc→**zelfde-y** · #4 invul→**ctx-start/cm** · #5 invul→**ctx-top** · #6 mc→**top-fig** · #13 invul→**gooi-sym** |
+  | `examen_121.js` | §2.2 | 6 → 10 | #1 mc→**zelfde-y** · #2 invul→**ctx-start/cm** · #3 invul→**ctx-top** · #13 mc→**top-fig** |
+  | `examen_122.js` | §2.2 | 5 → 10 | #1 invul→**zelfde-y** · #2 mc→**ctx-start/cm** · #3 invul→**ctx-top** · #5 invul→**top-fig** · #14 invul→**gooi-sym** |
+  | `examen_123.js` | §2.2 | 5 → 10 | #1 invul→**zelfde-y** · #2 mc→**ctx-start/cm** · #4 invul→**ctx-top** · #8 invul→**top-fig** · #13 invul→**gooi-sym** |
+  | `examen_128.js` | §mix | 5 → 10 | #5 invul→**H1-exp-tijdeenh** · #6 mc→**H1-snijpunt** · #8 invul→**ctx-top** · #9 mc→**zelfde-y** · #13 invul→**H1-groeif-tijd** |
+- examen_128: Duru 2026-11-08'de çözdü → agy doğru olarak atladı. agy raporu dosya geri dönünce kayboldu; Opus denetimi aşağıda.
+
 ### TASK-36 · nederlands Cursus 7 (H7 Spelling): 5 yeni proeftoets (63–67)  [status: DONE ✅ — 2026-11-08, Opus denetimi: 100 soru c7_*.js teorisine karşı okundu; 6 düzeltme script'te (şaka şıklar 65#9/10/12/15 → Hout/Rijt/reisde/vastgehoud; 66#11 anlamsız cümle "back-uppen / steunen" → foto's back-uppen; 67#11 "verhuisd" 67#4 cevabını ele veriyordu (kural 19) → gereisd; 67#20 noktalı virgül → iki nokta); gate 18/18, open_check 0, teslim_check temiz; push edildi]
 - **Atanan**: agy · **Denetim & Commit/Push**: Opus
 - **Amaç**: Kullanıcı talebi (2026-11-08) — "hollnadaca h7 spellingden 5 yeni test yarat.... ardindan opusa kontrol etmesini ilet ardindan commit ve push etsin opus.."

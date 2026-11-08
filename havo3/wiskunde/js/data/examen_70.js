@@ -26,15 +26,15 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 2(x + 9)(x + 7) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "126",
-      "uitleg": "(x + 9)(x + 7) = x² + 16x + 63; keer 2 geeft y = 2x² + 32x + 126, dus c = 126."
+      "vraag": "Herleid de algebraïsche formule y = (2x − 5)² + 6 tot de basisvorm zonder haakjes. Welk los getal zonder variabele x ontstaat er na vereenvoudiging?",
+      "antwoord": "31",
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(2x − 5)² = 4x² − 20x + 25.\nStap 2: Tel 6 op:\ny = 4x² − 20x + 25 + 6 = 4x² − 20x + 31.\nHet losse getal zonder x is 31."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x + 1)² + 8 in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "8",
-      "uitleg": "(x + 1)² = x² + 2x + 1; keer 4 → 4x² + 8x + 4; + 8 → y = 4x² + 8x + 12. Dus b = 8."
+      "vraag": "Bij een veldwedstrijd volgt een weggeslagen hockeybal de baan h = −0,1x² + 1,6x, waarbij h en x in meters zijn gegeven. Bereken de hoogte van het hoogste punt van de bal (in meters).",
+      "antwoord": "6,4",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −1,6 / (2 · −0,1) = 8 meter.\nStap 2: Vul x = 8 in om de maximale hoogte te berekenen:\nh = −0,1 · 8² + 1,6 · 8 = −6,4 + 12,8 = 6,4 meter."
     },
     {
       "type": "mc",
@@ -122,9 +122,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x + 2)² − 1 in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "15",
-      "uitleg": "(x + 2)² = x² + 4x + 4; keer 4 → 4x² + 16x + 16; − 1 → y = 4x² + 16x + 15. Dus c = 15."
+      "vraag": "Een symmetrische dalparabool met top (7, −4) snijdt de y-as in het snijpunt (0, 45). Welke formule hoort bij de gedaante y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "-14",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (7, −4):\ny = a(x − 7)² − 4.\nStap 2: Vul (0, 45) in:\n45 = 49a − 4 → 49a = 49 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 14x + 49) − 4 = x² − 14x + 45.\nVoor x staat het getal b = −14."
     },
     {
       "type": "mc",

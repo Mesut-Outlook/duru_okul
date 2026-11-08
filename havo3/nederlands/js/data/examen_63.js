@@ -107,15 +107,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Kies de juiste spelling: <i>De voorzitter wilde een nieuw ____ voorkomen door op tijd in te grijpen.</i>",
+      "vraag": "Kies de juiste spelling: <i>De hele cast liep over de rode loper voor de ____ van de nieuwe film.</i>",
       "opties": [
-        "conflict",
-        "cónflict",
-        "conflíct",
-        "cônflict"
+        "première",
+        "premiére",
+        "premiere",
+        "prémière"
       ],
       "antwoord": 0,
-      "uitleg": "Een klemtoonteken zet je alleen als er verwarring mogelijk is; bij conflict is geen accent nodig."
+      "uitleg": "Première eindigt op -ière en krijgt een accent grave (è), net als caissière. Een accent aigu (é) is hier fout."
     },
     {
       "type": "mc",
@@ -131,15 +131,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Waarom staat er in het woord <i>reçu</i> (betalingsbewijs) een cedille onder de c?",
+      "vraag": "Welke schrijfwijze van de Brabantse stad (ook wel Den Bosch genoemd) is juist: <i>Mijn oma woont al jaren in ____.</i>",
       "opties": [
-        "Omdat de laatste lettergreep van het woord de klemtoon krijgt.",
-        "Omdat de c vóór de klinker u als een k moet klinken.",
-        "Omdat de c vóór de klinker u als een s moet klinken.",
-        "Omdat er na de c een nieuwe lettergreep begint."
+        "s'-Hertogenbosch",
+        "'s Hertogenbosch",
+        "'s-Hertogenbosch",
+        "s-Hertogenbosch"
       ],
       "antwoord": 2,
-      "uitleg": "Vóór a, o en u klinkt de c normaal als k; de cedille (ç) zorgt ervoor dat de c als s klinkt."
+      "uitleg": "De apostrof is een weglatingsteken (voor des) en staat vóór de s: 's-Hertogenbosch. Je schrijft een koppelteken en niet s'."
     },
     {
       "type": "mc",
@@ -167,22 +167,22 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "In het woord <i>geïllustreerd</i> staat een trema op de i om te voorkomen dat je 'ei' als één klank leest.",
+      "vraag": "Het woord <i>caissière</i> schrijf je met een accent grave (è) op de e, en niet met een accent aigu (é).",
       "antwoord": true,
-      "uitleg": "Waar. Ge- is een voorvoegsel; het trema op de i laat zien dat bij -illustreerd een nieuwe lettergreep begint."
+      "uitleg": "Waar. In caissière staat een accent grave (è), net als in andere woorden op -ière."
     },
     {
       "type": "waaronwaar",
-      "vraag": "In het woord <i>clubrecord</i> moet een cedille onder de eerste c staan, omdat er een u na komt.",
+      "vraag": "Het verkleinwoord van <i>spray</i> schrijf je met een apostrof: <i>spray'tje</i>.",
       "antwoord": false,
-      "uitleg": "Niet waar. In clubrecord staat een l na de eerste c en een o na de tweede c, en beide klinken gewoon als k."
+      "uitleg": "Niet waar. Vóór de y staat een klinker (a), dus er is geen uitspraakprobleem: spraytje. Alleen bij pony'tje (medeklinker + y) komt een apostrof."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf het woord met het ontbrekende trema correct over: <i>officiele</i> (zoals in: de ____ opening).",
-      "antwoord": "officiële",
+      "vraag": "Schrijf het woord met het juiste accent correct over: <i>carriere</i> (zoals in: ze maakte een mooie ____ als arts).",
+      "antwoord": "carrière",
       "exact": true,
-      "uitleg": "Of-fi-ci-ë-le: het trema op de eerste e na de i laat zien dat daar een nieuwe lettergreep begint."
+      "uitleg": "Carrière eindigt op -ière en krijgt een accent grave (è), niet een accent aigu."
     },
     {
       "type": "invul",
@@ -200,14 +200,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je in <i>camera's</i> wél een apostrof schrijft, maar in <i>etages</i> niet.",
+      "vraag": "Verbeter de fout en zeg in één zin waarom: <i>Mijn zusje gaat s'morgens altijd op de fiets naar school.</i>",
       "sleutelwoorden": [
-        "enkele klinker/op een a/kort",
-        "op een e/geen uitspraakprobleem"
+        "apostrof/weglatingsteken",
+        "weggelaten/des/vóór de s"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Camera eindigt op de enkele klinker a; zonder apostrof zou je die kort uitspreken. Etage eindigt op een e en daar is geen uitspraakprobleem.",
-      "uitleg": "Bij -s na de enkele klinkers a, i, o, u en y schrijf je een apostrof; na een e niet."
+      "modelantwoord": "Het moet 's morgens: de apostrof is een weglatingsteken voor de weggelaten letters (des) en staat vóór de s.",
+      "uitleg": "Het weglatingsteken staat vóór de s: 's morgens (voor des morgens)."
     }
   ]
 });

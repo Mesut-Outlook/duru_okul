@@ -37,27 +37,27 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x + 1)(x + 5) in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "24",
-      "uitleg": "(x + 1)(x + 5) = x² + 6x + 5; keer 4 geeft y = 4x² + 24x + 20, dus b = 24."
+      "vraag": "Herleid de formule y = (4x − 3)² + 5x² door alle haakjes uit te werken tot een vorm zonder haakjes. Welk getal staat er voor x?",
+      "antwoord": "-24",
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(4x − 3)² = 16x² − 24x + 9.\nStap 2: Tel 5x² op:\ny = 16x² − 24x + 9 + 5x² = 21x² − 24x + 9.\nVoor x staat het getal −24."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −(x − 6)² + 8 in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "12",
-      "uitleg": "(x − 6)² = x² − 12x + 36; keer −1 → −x² + 12x − 36; + 8 → y = −x² + 12x − 28. Dus b = 12."
+      "vraag": "Een cirkelsproeier op een sportveld spuit water volgens h = −0,2a² + 2,4a + 1,2, met h en a in meters. Bereken de hoogte van het hoogste punt van de waterstraal (in meters).",
+      "antwoord": "8,4",
+      "uitleg": "Stap 1: Bereken de a-waarde van de top:\na = −2,4 / (2 · −0,2) = 6 meter.\nStap 2: Vul a = 6 in de formule in:\nh = −0,2 · 36 + 2,4 · 6 + 1,2 = −7,2 + 14,4 + 1,2 = 8,4 meter."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −2(x − 1)(x + 9) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "18",
-      "uitleg": "(x − 1)(x + 9) = x² + 8x − 9; keer −2 geeft y = −2x² − 16x + 18, dus c = 18."
+      "vraag": "In de wiskundeles zie je een dalparabool met top (9, −6) die door (0, 75) gaat. Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "-18",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (9, −6):\ny = a(x − 9)² − 6.\nStap 2: Vul (0, 75) in:\n75 = 81a − 6 → 81a = 81 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 18x + 81) − 6 = x² − 18x + 75.\nVoor x staat het getal b = −18."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 2(x + 5)² − 8 in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "42",
-      "uitleg": "(x + 5)² = x² + 10x + 25; keer 2 → 2x² + 20x + 50; − 8 → y = 2x² + 20x + 42. Dus c = 42."
+      "vraag": "Een tennisbal wordt omhoog geslagen volgens de kromme h = −0,2x² + 1,4x + 0,35, met h en x in meters. Hoeveel cm hoog bevindt de bal zich bij x = 0?",
+      "antwoord": "35",
+      "uitleg": "Stap 1: Vul x = 0 in de formule in:\nh = −0,2 · 0² + 1,4 · 0 + 0,35 = 0,35 meter.\nStap 2: Reken om naar centimeters:\n0,35 · 100 = 35 cm."
     },
     {
       "type": "waaronwaar",
@@ -79,15 +79,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de coördinaten van de top van de parabool bij y = 2(x + 4)² + 20?",
-      "uitleg": "Bij x = −4 is (x + 4)² = 0; dat is de kleinste (of grootste) waarde van de term met x. Dan is y = 20. De top is (−4, 20).",
+      "vraag": "Twee posities op dezelfde parabool bezitten dezelfde hoogte: de grafiek y = −x² + 17x + 4 heeft y-waarde 4 bij de y-as. Welke x-waarde heeft het andere punt met dezelfde uitkomst?",
       "opties": [
-        "(−4, 20)",
-        "(−4, −20)",
-        "(4, −20)",
-        "(4, 20)"
+        "17",
+        "−17",
+        "8,5",
+        "4"
       ],
-      "antwoord": 0
+      "antwoord": 0,
+      "uitleg": "Stap 1: Stel y = 4:\n−x² + 17x + 4 = 4.\nStap 2: Trek 4 af:\n−x² + 17x = 0.\nStap 3: Ontbind in factoren:\nx(−x + 17) = 0.\nDit geeft x = 0 of x = 17."
     },
     {
       "type": "invul",
@@ -115,21 +115,21 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat is de formule van de symmetrieas van de parabool bij y = −(x − 6)² − 4?",
-      "uitleg": "De symmetrieas is een verticale lijn door de top (p, q), dus heeft als vergelijking x = 6.",
+      "vraag": "Schrijf de expressie y = (2x + 7)² − 15 zonder haakjes. Welke constante term zonder x blijft er over in het antwoord?",
       "opties": [
-        "x = 6",
-        "y = −4",
-        "x = −6",
-        "x = −4"
+        "49",
+        "34",
+        "15",
+        "28"
       ],
-      "antwoord": 0
+      "antwoord": 1,
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(2x + 7)² = 4x² + 28x + 49.\nStap 2: Trek 15 af:\ny = 4x² + 28x + 34.\nHet losse getal is 34."
     },
     {
       "type": "invul",
-      "vraag": "Tussen twee bomen hangt een hangmat volgens de formule h = 0,3(a − 2)² + 0,65 (h en a in meters, a vanaf de linkerboom). Wat is de hoogte van het laagste punt in cm boven de grond?",
-      "antwoord": "65",
-      "uitleg": "Het laagste punt is de top (a = 2): h = 0,65 m = 65 cm. Bij de boom (a = 0): h = 0,3 · 2² + 0,65 = 1,85 m. De andere boom staat even ver aan de andere kant: a = 4 m."
+      "vraag": "Een geworpen speer beweegt volgens de paraboolbaan h = −0,05x² + 1,4x + 1,6, met afstanden in meters. Bereken de hoogte van het hoogste punt van de speer (in meters).",
+      "antwoord": "11,4",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −1,4 / (2 · −0,05) = 14 meter.\nStap 2: Vul x = 14 in de formule in:\nh = −0,05 · 14² + 1,4 · 14 + 1,6 = −9,8 + 19,6 + 1,6 = 11,4 meter."
     },
     {
       "type": "invul",

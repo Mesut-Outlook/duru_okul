@@ -11,17 +11,17 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "invul",
-      "vraag": "De conducteur ____ (controleren) in de trein alle vervoersbewijzen.",
-      "antwoord": "controleert",
+      "vraag": "De buren ____ (bouwen) vorig jaar zelf een grote schuur achter het huis.",
+      "antwoord": "bouwden",
       "exact": true,
-      "uitleg": "De conducteur = hij (tegenwoordige tijd) → stam (controleer) + t = controleert."
+      "uitleg": "Meervoud verleden tijd: de w zit niet in 't kofschip X → stam bouw + den = bouwden."
     },
     {
       "type": "invul",
-      "vraag": "____ (antwoorden) jij straks nog even op het bericht van de trainer?",
-      "antwoord": "Antwoord",
+      "vraag": "____ (worden) jij ook zo moe van dit warme weer?",
+      "antwoord": "Word",
       "exact": true,
-      "uitleg": "Jij staat achter de persoonsvorm (inversie) → alleen de stam, zonder t: Antwoord jij?"
+      "uitleg": "Jij staat achter de persoonsvorm (inversie) → alleen de stam, zonder t: Word jij?"
     },
     {
       "type": "invul",
@@ -32,10 +32,10 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Tijdens het kamperen ____ (branden) het kampvuur nog urenlang door.",
-      "antwoord": "brandde",
+      "vraag": "De spelers hebben zich de hele week goed ____ (voorbereiden) op de finale.",
+      "antwoord": "voorbereid",
       "exact": true,
-      "uitleg": "Verleden tijd enkelvoud: stam brand → de d zit niet in 't kofschip X → brand + de = brandde."
+      "uitleg": "Voltooid deelwoord: verleng het (de voorbereide spelers) → je hoort een d: voorbereid, niet voorbereidt."
     },
     {
       "type": "invul",
@@ -60,10 +60,10 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De burgemeester heeft het nieuwe sportpark gisteren feestelijk ____ (openen).",
-      "antwoord": "geopend",
+      "vraag": "____ (vinden) jij het ook zo koud in de klas?",
+      "antwoord": "Vind",
       "exact": true,
-      "uitleg": "Voltooid deelwoord: stam open → n zit niet in 't kofschip X → ge + open + d = geopend."
+      "uitleg": "Jij staat achter de persoonsvorm (inversie) → alleen de stam, zonder t: Vind jij?"
     },
     {
       "type": "mc",
@@ -181,14 +181,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je in <i>Wij geloofden zijn verhaal</i> de uitgang <i>-den</i> schrijft, terwijl er in de stam <i>geloof</i> een f staat.",
+      "vraag": "Verbeter de fout en zeg in één zin waarom: <i>De leraren controleerde de toetsen in het weekend.</i>",
       "sleutelwoorden": [
-        "hele werkwoord/geloven",
-        "v/kofschip"
+        "controleerden/den/-n",
+        "meervoud/leraren"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Je kijkt naar het hele werkwoord geloven met een v. De letter v zit niet in 't kofschip X, dus krijgt de verleden tijd -de/-den: geloofden.",
-      "uitleg": "Kijk bij werkwoorden met v/f of z/s naar het hele werkwoord (geloven → v niet in 't kofschip → -den)."
+      "modelantwoord": "Het moet controleerden: het onderwerp (de leraren) is meervoud, dus de verleden tijd eindigt op -den.",
+      "uitleg": "Meervoud onderwerp in de verleden tijd → -den (stam controleer + den)."
     }
   ]
 });

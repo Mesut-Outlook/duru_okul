@@ -20,15 +20,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de coördinaten van de top van de parabool bij y = −3x² − 24x − 52?",
-      "uitleg": "1 Uit x = 0 volgt y = −52. 2 −3x² − 24x − 52 = −52 → −3x² − 24x = 0 → x(−3x − 24) = 0 → x = 0 of x = −8. 3 De x-coördinaat van de top ligt midden tussen 0 en −8: x = −4. 4 y = −3·(−4)² − 24 · (−4) − 52 = −4. 5 De top is (−4, −4).",
+      "vraag": "Twee posities op dezelfde parabool bereiken dezelfde hoogte: de grafiek y = −2x² + 10x + 7 snijdt de verticale as in (0, 7). Welke x-waarde heeft het andere punt met dezelfde uitkomst 7?",
       "opties": [
-        "(4, −4)",
-        "(−4, −4)",
-        "(−4, −196)",
-        "(−4, −52)"
+        "−5",
+        "5",
+        "2,5",
+        "7"
       ],
-      "antwoord": 1
+      "antwoord": 1,
+      "uitleg": "Stap 1: Stel y = 7:\n−2x² + 10x + 7 = 7.\nStap 2: Trek 7 af:\n−2x² + 10x = 0.\nStap 3: Ontbind in factoren:\nx(−2x + 10) = 0.\nDit geeft x = 0 of −2x + 10 = 0 → x = 5."
     },
     {
       "type": "invul",
@@ -38,27 +38,27 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Bereken de y-coördinaat van de top van de parabool bij de formule y = −½x² + 4x − 10.",
-      "antwoord": "-2",
-      "uitleg": "1 Uit x = 0 volgt y = −10. 2 −½x² + 4x − 10 = −10 → −½x² + 4x = 0 → x(−½x + 4) = 0 → x = 0 of x = 8. 3 De x-coördinaat van de top ligt midden tussen 0 en 8: x = 4. 4 y = −½·4² + 4 · 4 − 10 = −2. 5 De top is (4, −2)."
+      "vraag": "Een geworpen speer volgt een paraboolbaan h = −0,05x² + x + 1,65, waarin h en x in meters staan. Hoeveel cm hoog bevindt de speerpunt zich bij het werpmoment (bij x = 0)?",
+      "antwoord": "165",
+      "uitleg": "Stap 1: Vul x = 0 in:\nh = −0,05 · 0² + 1 · 0 + 1,65 = 1,65 meter.\nStap 2: Reken om naar centimeters:\n1,65 · 100 = 165 cm."
     },
     {
       "type": "invul",
-      "vraag": "Bereken de x-coördinaat van de top van de parabool bij y = −2(x + 5)(x + 8). Een breuk of decimaal getal mag.",
-      "antwoord": "-6,5",
-      "uitleg": "−2(x + 5)(x + 8) = 0 → x = −5 of x = −8: de snijpunten met de x-as zijn (−5, 0) en (−8, 0). De top ligt midden tussen x = −5 en x = −8: x = (−5 + (−8)) / 2 = −6,5. y = −2 · (−6,5 − (−5))(−6,5 − (−8)) = 4,5. Top (−6,5, 4,5)."
+      "vraag": "Een gazonsproeier spuit water volgens h = −0,2a² + 2a + 0,5, waarin h en a in meters zijn. Bereken de hoogte van het hoogste punt van de waterstraal (in meters).",
+      "antwoord": "5,5",
+      "uitleg": "Stap 1: Bereken de a-waarde van de top:\na = −2 / (2 · −0,2) = 5 meter.\nStap 2: Vul a = 5 in:\nh = −0,2 · 5² + 2 · 5 + 0,5 = −5 + 10 + 0,5 = 5,5 meter."
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de snijpunten van de parabool bij y = ½(x + 6)(x − 4) met de x-as?",
-      "uitleg": "Los ½(x + 6)(x − 4) = 0 op: (x + 6) = 0 of (x − 4) = 0, dus x = −6 of x = 4. Let op het teken: bij (x + 3) hoort x = −3.",
+      "vraag": "In een assenstelsel zie je een dalparabool met top (2, −4) die door de oorsprong (0, 0) loopt. Welke formule hoort bij deze parabool?",
       "opties": [
-        "(6, 0) en (−4, 0)",
-        "(−6, 0) en (−4, 0)",
-        "(−6, 0) en (4, 0)",
-        "(0, −6) en (0, 4)"
+        "y = x² + 4x",
+        "y = −x² + 4x",
+        "y = x² − 4x",
+        "y = x² − 4x + 4"
       ],
-      "antwoord": 2
+      "antwoord": 2,
+      "uitleg": "Stap 1: Gebruik de topvorm:\ny = a(x − 2)² − 4.\nStap 2: Vul (0, 0) in:\n0 = 4a − 4 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 4x + 4) − 4 = x² − 4x."
     },
     {
       "type": "waaronwaar",
@@ -104,9 +104,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De formule h = 3,2a − 0,8a² hoort bij de hoogte van een tunnelboog (h in meters, a in meters vanaf de linkermuur). Hoeveel meter hoog is de tunnel in het midden?",
-      "antwoord": "3,2",
-      "uitleg": "3,2a − 0,8a² = 0 → a(3,2 − 0,8a) = 0 → a = 0 of a = 3,2 / 0,8 = 4. De tunnel is 4 m breed. Midden: a = 2, h = 3,2 · 2 − 0,8 · 2² = 3,2 m."
+      "vraag": "Bij een service slaat Lisa een volleybal weg. Na 22 meter afstand bevindt de bal zich weer op dezelfde hoogte van 1,8 meter als bij het slaan. Bepaal de x-coördinaat van de symmetrieas.",
+      "antwoord": "11",
+      "uitleg": "Stap 1: De bal bevindt zich op gelijke hoogte bij x = 0 en x = 22 meter.\nStap 2: De symmetrieas ligt precies in het midden:\nx = 22 / 2 = 11 meter."
     },
     {
       "type": "invul",

@@ -20,27 +20,27 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Bereken de x-coördinaat van de top van de parabool bij de formule y = −x² − 8x − 20.",
-      "antwoord": "-4",
-      "uitleg": "1 Uit x = 0 volgt y = −20. 2 −x² − 8x − 20 = −20 → −x² − 8x = 0 → x(−x − 8) = 0 → x = 0 of x = −8. 3 De x-coördinaat van de top ligt midden tussen 0 en −8: x = −4. 4 y = −(−4)² − 8 · (−4) − 20 = −4. 5 De top is (−4, −4)."
+      "vraag": "Twee posities op dezelfde parabool bereiken dezelfde hoogte: de bergparabool y = −x² + 13x + 11 gaat door (0, 11). Bepaal de x-coördinaat van de andere positie met y = 11.",
+      "antwoord": "13",
+      "uitleg": "Stap 1: Stel y = 11:\n−x² + 13x + 11 = 11.\nStap 2: Trek 11 af:\n−x² + 13x = 0.\nStap 3: Ontbind in factoren:\nx(−x + 13) = 0.\nDit geeft x = 0 of x = 13."
     },
     {
       "type": "invul",
-      "vraag": "Bereken de y-coördinaat van de top van de parabool bij de formule y = 3x² − 6x − 4.",
-      "antwoord": "-7",
-      "uitleg": "1 Uit x = 0 volgt y = −4. 2 3x² − 6x − 4 = −4 → 3x² − 6x = 0 → x(3x − 6) = 0 → x = 0 of x = 2. 3 De x-coördinaat van de top ligt midden tussen 0 en 2: x = 1. 4 y = 3·1² − 6 · 1 − 4 = −7. 5 De top is (1, −7)."
+      "vraag": "Bij een tuinornament spuit water omhoog volgens h = −0,25x² + 1,5x + 0,55, waarin h en x in meters zijn. Hoeveel cm hoog bevindt zich de wateruitlaat (bij x = 0)?",
+      "antwoord": "55",
+      "uitleg": "Stap 1: Vul x = 0 in:\nh = −0,25 · 0² + 1,5 · 0 + 0,55 = 0,55 meter.\nStap 2: Reken om naar centimeters:\n0,55 · 100 = 55 cm."
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de coördinaten van de top van de parabool bij y = −3x² − 12x − 19?",
-      "uitleg": "1 Uit x = 0 volgt y = −19. 2 −3x² − 12x − 19 = −19 → −3x² − 12x = 0 → x(−3x − 12) = 0 → x = 0 of x = −4. 3 De x-coördinaat van de top ligt midden tussen 0 en −4: x = −2. 4 y = −3·(−2)² − 12 · (−2) − 19 = −7. 5 De top is (−2, −7).",
+      "vraag": "Een weggeschoten tennisbal beweegt langs de baan h = −0,2x² + 1,6x + 1,2, waarin h en x in meters zijn. Wat is de hoogte van het hoogste punt van de bal?",
       "opties": [
-        "(2, −7)",
-        "(−2, −19)",
-        "(−2, −55)",
-        "(−2, −7)"
+        "4 meter",
+        "1,2 meter",
+        "5,2 meter",
+        "4,4 meter"
       ],
-      "antwoord": 3
+      "antwoord": 3,
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −1,6 / (2 · −0,2) = 4 meter.\nStap 2: Vul x = 4 in:\nh = −0,2 · 4² + 1,6 · 4 + 1,2 = −3,2 + 6,4 + 1,2 = 4,4 meter."
     },
     {
       "type": "invul",
@@ -50,9 +50,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Geef de formule van de symmetrieas van de parabool bij y = x² + 10x + 32. Vul in: x = …",
-      "antwoord": "-5",
-      "uitleg": "1 Uit x = 0 volgt y = 32. 2 x² + 10x + 32 = 32 → x² + 10x = 0 → x(x + 10) = 0 → x = 0 of x = −10. 3 De x-coördinaat van de top ligt midden tussen 0 en −10: x = −5. 4 y = (−5)² + 10 · (−5) + 32 = 7. 5 De top is (−5, 7). De symmetrieas is de verticale lijn door de top: x = −5."
+      "vraag": "Een getekende dalparabool met top (7, −5) snijdt de y-as in (0, 44). Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "-14",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (7, −5):\ny = a(x − 7)² − 5.\nStap 2: Vul (0, 44) in:\n44 = 49a − 5 → 49a = 49 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 14x + 49) − 5 = x² − 14x + 44.\nVoor x staat het getal b = −14."
     },
     {
       "type": "waaronwaar",
@@ -104,9 +104,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Bereken de y-coördinaat van de top van de parabool bij de formule y = 2x² − 8x + 10.",
-      "antwoord": "2",
-      "uitleg": "1 Uit x = 0 volgt y = 10. 2 2x² − 8x + 10 = 10 → 2x² − 8x = 0 → x(2x − 8) = 0 → x = 0 of x = 4. 3 De x-coördinaat van de top ligt midden tussen 0 en 4: x = 2. 4 y = 2·2² − 8 · 2 + 10 = 2. 5 De top is (2, 2)."
+      "vraag": "Tijdens een worp gooit Daan een basketbal omhoog. Na 22 meter afstand bereikt de bal weer dezelfde hoogte van 2 meter als bij de start. Bereken de x-coördinaat van de symmetrieas.",
+      "antwoord": "11",
+      "uitleg": "Stap 1: De bal is op gelijke hoogte bij x = 0 en x = 22 meter.\nStap 2: De symmetrieas ligt precies halverwege:\nx = 22 / 2 = 11 meter."
     },
     {
       "type": "waaronwaar",

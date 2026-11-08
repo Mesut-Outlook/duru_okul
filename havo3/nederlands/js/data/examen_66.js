@@ -25,10 +25,10 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Heb jij je oude winterjas al op die tweedehandssite ____ (plaatsen)?",
-      "antwoord": "geplaatst",
+      "vraag": "De collega's ____ (mailen) de offerte gisteren naar alle klanten.",
+      "antwoord": "mailden",
       "exact": true,
-      "uitleg": "Stam plaats → s zit in 't kofschip X → ge + plaats + t = geplaatst."
+      "uitleg": "Meervoud verleden tijd: de l zit niet in 't kofschip X → stam mail + den = mailden."
     },
     {
       "type": "invul",
@@ -53,17 +53,17 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "De scholieren hebben het klaslokaal voor het afscheid prachtig ____ (versieren).",
-      "antwoord": "versierd",
+      "vraag": "De rekening is door mijn oom al ____ (betalen).",
+      "antwoord": "betaald",
       "exact": true,
-      "uitleg": "Hebben + voltooid deelwoord. Ver- krijgt geen ge-; verleng: het versierde lokaal → d: versierd."
+      "uitleg": "Hulpwerkwoord 'is' → voltooid deelwoord. Verleng: de betaalde rekening → je hoort een d: betaald."
     },
     {
       "type": "invul",
-      "vraag": "De directeur ____ (beantwoorden) tijdens de ouderavond alle vragen van de ouders.",
-      "antwoord": "beantwoordt",
+      "vraag": "____ (worden) u ook elke ochtend door de wekker wakker?",
+      "antwoord": "Wordt",
       "exact": true,
-      "uitleg": "Persoonsvorm in de tegenwoordige tijd bij 'de directeur' (hij) → stam beantwoord + t = beantwoordt."
+      "uitleg": "Bij 'u' blijft de t altijd staan, ook bij inversie: stam word + t = Wordt u?"
     },
     {
       "type": "mc",
@@ -181,14 +181,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je met de <b>lopen-test</b> en met <b>verlengen</b> het verschil bepaalt tussen <i>bepaalt</i> en <i>bepaald</i>.",
+      "vraag": "Verbeter de fout en zeg in één zin waarom: <i>Mijn zusje heeft de tekening netjes ingekleurt.</i>",
       "sleutelwoorden": [
-        "persoonsvorm/loopt",
-        "voltooid deelwoord/bepaalde/bijvoeglijk"
+        "voltooid deelwoord/heeft/hulpwerkwoord",
+        "verlengen/ingekleurde/d"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Bij de persoonsvorm gebruik je de lopen-test: hij loopt → hij bepaalt (met t). Bij het voltooid deelwoord verleng je het woord tot een bijvoeglijk naamwoord: het bepaalde bedrag → je hoort een d.",
-      "uitleg": "Persoonsvorm = lopen-test (t); voltooid deelwoord = verlengen tot bijvoeglijk naamwoord (d)."
+      "modelantwoord": "Het moet ingekleurd: het is een voltooid deelwoord (na heeft). Verleng: de ingekleurde tekening → je hoort een d.",
+      "uitleg": "Voltooid deelwoord = verlengen tot bijvoeglijk naamwoord (d)."
     }
   ]
 });

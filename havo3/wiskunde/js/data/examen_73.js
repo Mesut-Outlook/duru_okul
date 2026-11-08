@@ -14,15 +14,15 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "mc",
-      "vraag": "Wat voor grafiek hoort bij de formule y = (5 − x)(5 + x) − x²?",
-      "uitleg": "(5 − x)(5 + x) = −x² + 25. Samen met −x²: y = −2x² + 25.",
+      "vraag": "Bij een trapwedstrijd vliegt een voetbal volgens h = −0,2x² + 2x + 1, waarin h en x in meters staan. Wat is de hoogte van het hoogste punt van de bal?",
       "opties": [
-        "een bergparabool, want na haakjes wegwerken staat er −2x²",
-        "een dalparabool, want na haakjes wegwerken staat er 2x²",
-        "een dalparabool, want de formule begint met een plusteken",
-        "een rechte lijn, want er staan haakjes in de formule"
+        "5 meter",
+        "1 meter",
+        "6 meter",
+        "7 meter"
       ],
-      "antwoord": 0
+      "antwoord": 2,
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −2 / (2 · −0,2) = 5 meter.\nStap 2: Vul x = 5 in:\nh = −0,2 · 5² + 2 · 5 + 1 = −5 + 10 + 1 = 6 meter."
     },
     {
       "type": "mc",
@@ -39,27 +39,27 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Bereken de x-coördinaat van de top van de parabool bij de formule y = −2x² − 12x − 19.",
-      "antwoord": "-3",
-      "uitleg": "1 Uit x = 0 volgt y = −19. 2 −2x² − 12x − 19 = −19 → −2x² − 12x = 0 → x(−2x − 12) = 0 → x = 0 of x = −6. 3 De x-coördinaat van de top ligt midden tussen 0 en −6: x = −3. 4 y = −2·(−3)² − 12 · (−3) − 19 = −1. 5 De top is (−3, −1)."
+      "vraag": "Twee posities op dezelfde parabool bereiken exact dezelfde hoogte: de dalende tak y = −2x² + 22x + 5 snijdt de y-as in (0, 5). Bereken de x-waarde van het andere punt op de parabool met y = 5.",
+      "antwoord": "11",
+      "uitleg": "Stap 1: Stel y = 5:\n−2x² + 22x + 5 = 5.\nStap 2: Trek 5 af:\n−2x² + 22x = 0.\nStap 3: Ontbind in factoren:\nx(−2x + 22) = 0.\nDit geeft x = 0 of −2x + 22 = 0 → x = 11."
     },
     {
       "type": "invul",
-      "vraag": "Bereken de y-coördinaat van de top van de parabool bij y = ½x(x + 2). Een breuk of decimaal getal mag.",
-      "antwoord": "-0,5",
-      "uitleg": "½x(x + 2) = 0 → x = 0 of x = −2: de snijpunten met de x-as zijn (0, 0) en (−2, 0). De top ligt midden tussen x = 0 en x = −2: x = (0 + (−2)) / 2 = −1. y = ½ · (−1 − 0)(−1 − (−2)) = −0,5. Top (−1, −0,5)."
+      "vraag": "In een assenstelsel ligt een dalparabool met top (8, −5) die de verticale as snijdt in (0, 59). Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "-16",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (8, −5):\ny = a(x − 8)² − 5.\nStap 2: Vul (0, 59) in:\n59 = 64a − 5 → 64a = 64 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 16x + 64) − 5 = x² − 16x + 59.\nVoor x staat het getal b = −16."
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de snijpunten van de parabool bij y = ½(x + 5)(x − 1) met de x-as?",
-      "uitleg": "Los ½(x + 5)(x − 1) = 0 op: (x + 5) = 0 of (x − 1) = 0, dus x = −5 of x = 1. Let op het teken: bij (x + 3) hoort x = −3.",
+      "vraag": "Schrijf de expressie y = (3x − 2)² − 5x² na herleiding zonder haakjes. Welk getal staat er voor de lineaire term x?",
       "opties": [
-        "(0, −5) en (0, 1)",
-        "(−5, 0) en (1, 0)",
-        "(−5, 0) en (−1, 0)",
-        "(5, 0) en (−1, 0)"
+        "−16",
+        "−10",
+        "−14",
+        "−12"
       ],
-      "antwoord": 1
+      "antwoord": 3,
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(3x − 2)² = 9x² − 12x + 4.\nStap 2: Trek 5x² af:\ny = 4x² − 12x + 4.\nVoor x staat het getal −12."
     },
     {
       "type": "invul",
@@ -155,21 +155,21 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Wat zijn de coördinaten van de top van de parabool bij y = ½x² + 3?",
-      "uitleg": "Er is geen term met x (b = 0), dus de top ligt op de y-as: (0, 3).",
+      "vraag": "In een stadspark spuit een fontein water omhoog volgens h = −0,4x² + 1,6x + 0,85, met x en h in meters. Hoeveel cm hoog is de sproeimond van de fontein zelf (bij x = 0)?",
       "opties": [
-        "(3, 0)",
-        "(0, −3)",
-        "(0,5, 3)",
-        "(0, 3)"
+        "8,5 cm",
+        "160 cm",
+        "85 cm",
+        "0,85 cm"
       ],
-      "antwoord": 3
+      "antwoord": 2,
+      "uitleg": "Stap 1: Vul x = 0 in de formule in:\nh = −0,4 · 0² + 1,6 · 0 + 0,85 = 0,85 meter.\nStap 2: Reken om naar centimeters:\n0,85 · 100 = 85 cm."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 4(x − 2)² − 8 in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "-16",
-      "uitleg": "(x − 2)² = x² − 4x + 4; keer 4 → 4x² − 16x + 16; − 8 → y = 4x² − 16x + 8. Dus b = −16."
+      "vraag": "Tijdens een oefening gooit Daan een basketbal naar de ring. Na 26 meter afstand heeft de bal weer dezelfde hoogte van 2,1 meter als bij aanvang. Bepaal de x-coördinaat van de symmetrieas.",
+      "antwoord": "13",
+      "uitleg": "Stap 1: De bal bevindt zich op gelijke hoogte bij x = 0 en x = 26 meter.\nStap 2: De symmetrieas ligt precies halverwege:\nx = 26 / 2 = 13 meter."
     },
     {
       "type": "invul",

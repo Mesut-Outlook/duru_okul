@@ -117,15 +117,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Welke is GEEN voorwaarde voor een goede samentrekking?",
+      "vraag": "In welke zin is het weglatingsstreepje <b>foutief</b> gebruikt?",
       "opties": [
-        "dezelfde functie",
-        "hetzelfde aantal letters",
-        "dezelfde betekenis",
-        "hetzelfde getal"
+        "We bezochten zowel museum- als kunstgaleries.",
+        "In de garage stonden personen- en vrachtwagens.",
+        "In de herfst dragen we warme- en waterdichte jassen.",
+        "Zowel wis- als natuurkundeboeken lagen op tafel."
       ],
-      "antwoord": 1,
-      "uitleg": "De drie voorwaarden: functie, betekenis en getal."
+      "antwoord": 2,
+      "uitleg": "'Warme' en 'waterdichte' zijn losse bijvoeglijke naamwoorden (woordgroepsniveau). Er valt een heel woord ('jassen') weg, dus je gebruikt geen streepje: warme en waterdichte jassen."
     },
     {
       "type": "mc",
@@ -201,15 +201,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Kies het goede verwijswoord: <i>Er stond een lange file, ____ erg tegenviel.</i>",
+      "vraag": "In welke zin is de woordvolgorde <b>correct</b> na samentrekking van de bepaling vooraan?",
       "opties": [
-        "dat",
-        "wie",
-        "wat",
-        "die"
+        "Na de lunch ruimt Tom de tafel af en Lisa wast de borden af.",
+        "Gisteren fietste Bo naar de markt en Sem kocht een zak appels.",
+        "In het weekend bakt papa pannenkoeken en mama zet koffie.",
+        "Tijdens de gymles sprong Luuk over de bok en dook Sam op de mat."
       ],
-      "antwoord": 2,
-      "uitleg": "Je verwijst naar de hele zin → wat."
+      "antwoord": 3,
+      "uitleg": "De tijdsbepaling vooraan ('Tijdens de gymles') veroorzaakt inversie (sprong Luuk). Als je die bepaling samentrekt, moet het tweede deel óók inversie hebben: 'dook Sam' (niet 'Sam dook'). In zinnen A, B en C ontbreekt de inversie in het tweede deel."
     },
     {
       "type": "mc",
@@ -231,9 +231,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Met <i>waarnaast</i> verwijs je naar een persoon: <i>Iedereen mag kiezen waarnaast hij zit.</i>",
+      "vraag": "In <i>hoofd- en bijzaken</i> is 'zaken' weggelaten in het eerste woorddeel; dit is een voorwaartse samentrekking.",
       "antwoord": false,
-      "uitleg": "Niet waar. Bij personen gebruik je voorzetsel + wie: naast wie."
+      "uitleg": "Niet waar. Het gemeenschappelijke deel 'zaken' staat achteraan (bij bijzaken). Dat is een achterwaartse samentrekking op woordniveau."
     }
   ]
 });

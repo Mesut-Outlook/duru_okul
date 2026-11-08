@@ -35,15 +35,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Verbeter het verwijswoord: <i>De regering heeft zijn plannen voor het onderwijs gepresenteerd.</i>",
+      "vraag": "Kies het juiste betrekkelijk voornaamwoord: <i>Het meisje ____ gisteren de gouden medaille won, traint zes dagen per week.</i>",
       "opties": [
-        "hun",
-        "het",
-        "haar",
-        "hem"
+        "wie",
+        "die",
+        "dat",
+        "wat"
       ],
       "antwoord": 2,
-      "uitleg": "<i>Regering</i> eindigt op -ing en is vrouwelijk: <i>haar plannen</i>."
+      "uitleg": "<i>Het meisje</i> is een verkleinwoord en dus een het-woord (onzijdig). Naar een het-woord verwijs je met <i>dat</i> (niet met <i>die</i>)."
     },
     {
       "type": "mc",
@@ -95,15 +95,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "In welke zin over organisaties staat een <b>fout</b> verwijswoord?",
+      "vraag": "In welke zin is <b>hen</b> of <b>hun</b> <u>juist</u> gebruikt?",
       "opties": [
-        "Ajax heeft zijn selectie bekendgemaakt.",
-        "De apotheek heeft haar openingstijden aangepast.",
-        "De gemeente heeft zijn begroting rond.",
-        "Het restaurant heeft zijn menukaart vernieuwd."
+        "Hun hebben gisteren de hele middag in de tuin gewerkt.",
+        "Ik heb hen vorige week een lange brief geschreven.",
+        "De leraar zag hun vanochtend bij de bushalte staan.",
+        "We hebben urenlang op hen gewacht bij het station."
       ],
-      "antwoord": 2,
-      "uitleg": "<i>Gemeente</i> eindigt op -te en is vrouwelijk: <i>haar begroting</i>. De andere zinnen zijn correct."
+      "antwoord": 3,
+      "uitleg": "Na een voorzetsel ('op') gebruik je altijd <i>hen</i>. 'Hun' kan nooit onderwerp zijn (zin A), bij meewerkend voorwerp zonder voorzetsel gebruik je 'hun' (zin B) en bij lijdend voorwerp 'hen' (zin C)."
     },
     {
       "type": "mc",
@@ -119,15 +119,15 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Deze zin is correct: <i>De vereniging viert dit jaar haar vijftigjarig bestaan.</i>",
-      "antwoord": true,
-      "uitleg": "Waar. <i>Vereniging</i> eindigt op -ing en is vrouwelijk, dus <i>haar</i> klopt."
+      "vraag": "Deze zin is grammaticaal correct: <i>Hun gaan morgen met de hele klas naar Amsterdam.</i>",
+      "antwoord": false,
+      "uitleg": "Niet waar. <i>Hun</i> mag nooit het onderwerp van de zin zijn. Het moet zijn: <i>Zij gaan morgen met de hele klas naar Amsterdam.</i>"
     },
     {
       "type": "waaronwaar",
-      "vraag": "Deze zin is correct: <i>Het kind pakte haar rugtas en liep naar buiten.</i>",
+      "vraag": "Deze zin is grammaticaal correct: <i>Er is werkelijk niets dat mij van dit plan kan afbrengen.</i>",
       "antwoord": false,
-      "uitleg": "Niet waar. <i>Het kind</i> is een het-woord: <i>zijn rugtas</i>."
+      "uitleg": "Niet waar. Na onbepaalde voornaamwoorden zoals <i>alles</i>, <i>iets</i> en <i>niets</i> gebruik je altijd <i>wat</i>: <i>niets wat mij kan afbrengen</i>."
     },
     {
       "type": "waaronwaar",
@@ -143,9 +143,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Deze zin is correct: <i>De boeken? Ik heb ze vanochtend teruggebracht naar de bibliotheek.</i>",
+      "vraag": "Deze zin is grammaticaal correct: <i>De directeur overhandigde hun het officiële diploma.</i>",
       "antwoord": true,
-      "uitleg": "Waar. Bij zaken in het meervoud gebruik je <i>ze</i>."
+      "uitleg": "Waar. Aan wie overhandigde de directeur het diploma? Het is een meewerkend voorwerp zonder voorzetsel, dus <i>hun</i> is correct."
     },
     {
       "type": "waaronwaar",
@@ -173,14 +173,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Verbeter de fout en leg uit: <i>Mijn telefoon is gevallen; ik breng haar morgen naar de reparateur.</i>",
+      "vraag": "In de zin staat een fout met <i>hen/hun</i>: <i>De burgemeester feliciteerde de winnaars en overhandigde hen de beker.</i> Verbeter het foute woord en leg in één zin uit waarom.",
       "sleutelwoorden": [
-        "hem",
-        "mannelijk"
+        "hun",
+        "meewerkend voorwerp/meewerkend/aan wie/zonder voorzetsel"
       ],
-      "minTreffers": 1,
-      "modelantwoord": "Haar moet hem zijn: de telefoon is een mannelijk woord.",
-      "uitleg": "<i>De telefoon</i> is mannelijk; als lijdend voorwerp: <i>hem</i>."
+      "minTreffers": 2,
+      "modelantwoord": "Verbetering: 'hen' moet 'hun' zijn. Uitleg: Het is een meewerkend voorwerp zonder voorzetsel ('aan wie' overhandigde hij de beker?).",
+      "uitleg": "Bij een meewerkend voorwerp zonder voorzetsel gebruik je <i>hun</i>: de burgemeester overhandigde <i>hun</i> de beker."
     },
     {
       "type": "open",

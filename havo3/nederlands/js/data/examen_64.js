@@ -71,15 +71,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Kies de juiste vorm: <i>De archeologen vonden twee ____ munten en drie ____ kruiken in de grond.</i>",
+      "vraag": "Kies de juiste combinatie: <i>De politie sprak met vijf getuigen: ____ wilden anoniem blijven. Van de gestolen fietsen vond ze er maar ____ terug.</i>",
       "opties": [
-        "bronzen – aardewerken",
-        "bronzene – aardewerkene",
-        "bronzen – aardewerkene",
-        "bronzene – aardewerken"
+        "enkele – enkelen",
+        "enkelen – enkelen",
+        "enkelen – enkele",
+        "enkele – enkele"
       ],
-      "antwoord": 0,
-      "uitleg": "Bronzen en aardewerken zijn stoffelijke bijvoeglijke naamwoorden (materiaal) en eindigen altijd op -en."
+      "antwoord": 2,
+      "uitleg": "Enkelen verwijst naar personen (getuigen) → met n. Enkele verwijst naar zaken (fietsen) → zonder n."
     },
     {
       "type": "mc",
@@ -131,15 +131,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Kies de juiste vorm: <i>De ____ monteurs repareerden de kapotte motor binnen een uur.</i>",
+      "vraag": "Kies de juiste combinatie: <i>Ik kocht een jas en een muts, maar ____ zijn te klein. Mijn opa en oma wonen nog ____ in hetzelfde dorp.</i>",
       "opties": [
-        "ervarenen",
-        "ervarene",
-        "ervaren",
-        "ervarig"
+        "beiden – beide",
+        "beide – beiden",
+        "beiden – beiden",
+        "beide – beide"
       ],
-      "antwoord": 2,
-      "uitleg": "Bijvoeglijke naamwoorden die al op -en eindigen (zoals ervaren, open, eigen), krijgen geen extra -e."
+      "antwoord": 1,
+      "uitleg": "Beide verwijst naar dingen (jas en muts) → zonder n. Beiden verwijst naar personen (opa en oma) → met n."
     },
     {
       "type": "mc",
@@ -173,9 +173,9 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "Een stoffelijk bijvoeglijk naamwoord krijgt bij een de-woord altijd een -e en bij een het-woord altijd -en.",
+      "vraag": "In de zin <i>De agent sprak de jongere streng toe</i> gaat het om meerdere personen.",
       "antwoord": false,
-      "uitleg": "Niet waar. Een stoffelijk bijvoeglijk naamwoord (houten, glazen, wollen) eindigt altijd op -en, ongeacht het lidwoord."
+      "uitleg": "Niet waar. De jongere is enkelvoud (één persoon). Voor meerdere personen schrijf je de jongeren."
     },
     {
       "type": "invul",
@@ -186,10 +186,10 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Vul het stoffelijk bijvoeglijk naamwoord van <i>ijzer</i> in: <i>De tuin heeft een zwaar ____ hek.</i>",
-      "antwoord": "ijzeren",
+      "vraag": "Schrijf het woord <i>enkel</i> in de juiste vorm: <i>Van de honderd sporters haalden maar ____ de finale (personen).</i>",
+      "antwoord": "enkelen",
       "exact": true,
-      "uitleg": "Materiaal (ijzer) → stoffelijk bijvoeglijk naamwoord op -en: een ijzeren hek."
+      "uitleg": "Zelfstandig gebruikt voor meerdere personen → met n: enkelen."
     },
     {
       "type": "invul",
@@ -200,14 +200,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je in <i>Sommigen bleven na de les zitten</i> een n schrijft, maar in <i>Sommige stoelen waren bezet</i> niet.",
+      "vraag": "Verbeter de fout en zeg in één zin waarom: <i>Alle gelovige in het dorp kwamen naar de mis.</i>",
       "sleutelwoorden": [
-        "personen/mensen",
-        "zelfstandig/bijvoeglijk/naamwoord"
+        "gelovigen/met n/-n",
+        "personen/mensen/meervoud"
       ],
       "minTreffers": 2,
-      "modelantwoord": "In de eerste zin is sommigen zelfstandig gebruikt en verwijst het naar personen. In de tweede zin staat het bijvoeglijk vóór het zelfstandig naamwoord stoelen.",
-      "uitleg": "Zelfstandig gebruikt + personen = met n; bijvoeglijk gebruikt (vóór een zelfstandig naamwoord) = zonder n."
+      "modelantwoord": "Het moet gelovigen: het woord is zelfstandig gebruikt voor meerdere personen, dus met n.",
+      "uitleg": "Zelfstandig gebruikt + meerdere personen = met n."
     }
   ]
 });

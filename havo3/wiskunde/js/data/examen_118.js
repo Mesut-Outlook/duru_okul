@@ -37,21 +37,21 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = ½(x − 4)(x + 6) in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "1",
-      "uitleg": "(x − 4)(x + 6) = x² + 2x − 24; keer 0,5 geeft y = ½x² + x − 12, dus b = 1."
+      "vraag": "Vereenvoudig de veelterm y = (x + 15)(x − 2) − x² tot een uitdrukking zonder haakjes. Welk getal staat er voor x?",
+      "antwoord": "13",
+      "uitleg": "Stap 1: Werk de haakjes uit:\n(x + 15)(x − 2) = x² − 2x + 15x − 30 = x² + 13x − 30.\nStap 2: Trek x² af:\ny = 13x − 30.\nVoor x staat het getal 13."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −3(x + 2)² − 3 in de vorm y = ax² + bx + c. Hoe groot is b?",
+      "vraag": "De gebogen overkapping van een voetgangerstunnel volgt h = −0,5x² + 3x, waarin afmetingen in meters zijn. Bereken de hoogte van het hoogste punt van de tunnel (in meters).",
+      "antwoord": "4,5",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −3 / (2 · −0,5) = 3 meter.\nStap 2: Vul x = 3 in:\nh = −0,5 · 3² + 3 · 3 = −4,5 + 9 = 4,5 meter."
+    },
+    {
+      "type": "invul",
+      "vraag": "In een diagram zie je een dalparabool met top (6, −7) die door het punt (0, 29) gaat. Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
       "antwoord": "-12",
-      "uitleg": "(x + 2)² = x² + 4x + 4; keer −3 → −3x² − 12x − 12; − 3 → y = −3x² − 12x − 15. Dus b = −12."
-    },
-    {
-      "type": "invul",
-      "vraag": "Schrijf y = 4(x + 9)(x + 2) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "72",
-      "uitleg": "(x + 9)(x + 2) = x² + 11x + 18; keer 4 geeft y = 4x² + 44x + 72, dus c = 72."
+      "uitleg": "Stap 1: Gebruik de topvorm met top (6, −7):\ny = a(x − 6)² − 7.\nStap 2: Vul (0, 29) in:\n29 = 36a − 7 → 36a = 36 → a = 1.\nStap 3: Werk de haakjes uit:\ny = 1(x² − 12x + 36) − 7 = x² − 12x + 29.\nVoor x staat het getal b = −12."
     },
     {
       "type": "invul",
@@ -115,9 +115,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een hangmat hangt volgens h = 0,2(a − 2)² + 0,35 (h en a in meters, a vanaf de linkerboom, symmetrisch tussen de bomen). Hoeveel meter staan de bomen uit elkaar?",
-      "antwoord": "4",
-      "uitleg": "Het laagste punt is de top (a = 2): h = 0,35 m = 35 cm. Bij de boom (a = 0): h = 0,2 · 2² + 0,35 = 1,15 m. De andere boom staat even ver aan de andere kant: a = 4 m."
+      "vraag": "Een automatische tuinsproeier verspreidt water volgens h = −0,3a² + 1,8a + 0,6, met h en a in meters. Hoeveel cm hoog staat de sproeier zelf boven het maaiveld (bij a = 0)?",
+      "antwoord": "60",
+      "uitleg": "Stap 1: Vul a = 0 in de formule in:\nh = −0,3 · 0² + 1,8 · 0 + 0,6 = 0,6 meter.\nStap 2: Reken om naar centimeters:\n0,6 · 100 = 60 cm."
     },
     {
       "type": "invul",

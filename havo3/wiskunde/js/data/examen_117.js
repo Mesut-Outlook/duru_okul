@@ -37,27 +37,27 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −½(x + 3)(x + 1) in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "-2",
-      "uitleg": "(x + 3)(x + 1) = x² + 4x + 3; keer −0,5 geeft y = −½x² − 2x − 1,5, dus b = −2."
+      "vraag": "Werk de kwadratische formule y = (5x − 2)² − 12x² uit tot een vorm zonder haakjes. Welk getal staat er voor x²?",
+      "antwoord": "13",
+      "uitleg": "Stap 1: Werk het kwadraat uit:\n(5x − 2)² = 25x² − 20x + 4.\nStap 2: Trek 12x² af:\ny = 25x² − 20x + 4 − 12x² = 13x² − 20x + 4.\nVoor x² staat het getal 13."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = 3(x − 4)(x − 6) in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "72",
-      "uitleg": "(x − 4)(x − 6) = x² − 10x + 24; keer 3 geeft y = 3x² − 30x + 72, dus c = 72."
+      "vraag": "In een fonteinbassin stroomt een waterstraal volgens h = −0,25x² + 2x + 1,2, met h en x in meters. Bereken de hoogte van het hoogste punt van de waterstraal (in meters).",
+      "antwoord": "5,2",
+      "uitleg": "Stap 1: Bereken de x-coördinaat van de top:\nx = −2 / (2 · −0,25) = 4 meter.\nStap 2: Vul x = 4 in de formule in:\nh = −0,25 · 16 + 2 · 4 + 1,2 = −4 + 8 + 1,2 = 5,2 meter."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = ½(x + 6)² − 4 in de vorm y = ax² + bx + c. Hoe groot is b?",
-      "antwoord": "6",
-      "uitleg": "(x + 6)² = x² + 12x + 36; keer 0,5 → ½x² + 6x + 18; − 4 → y = ½x² + 6x + 14. Dus b = 6."
+      "vraag": "In een wiskundig model zie je een bergparabool met top (8, 15) die de y-as snijdt in (0, −49). Welke formule heeft de vorm y = ax² + bx + c? Bereken de waarde van b.",
+      "antwoord": "16",
+      "uitleg": "Stap 1: Gebruik de topvorm met top (8, 15):\ny = a(x − 8)² + 15.\nStap 2: Vul (0, −49) in:\n−49 = 64a + 15 → 64a = −64 → a = −1.\nStap 3: Werk de haakjes uit:\ny = −1(x² − 16x + 64) + 15 = −x² + 16x − 49.\nVoor x staat het getal b = 16."
     },
     {
       "type": "invul",
-      "vraag": "Schrijf y = −3(x + 1)² − 4 in de vorm y = ax² + bx + c. Hoe groot is c?",
-      "antwoord": "-7",
-      "uitleg": "(x + 1)² = x² + 2x + 1; keer −3 → −3x² − 6x − 3; − 4 → y = −3x² − 6x − 7. Dus c = −7."
+      "vraag": "Een volleybal wordt geserveerd volgens de baan h = −0,1x² + 1,2x + 0,9, waarbij h en x in meters zijn. Hoeveel cm hoog bevindt de bal zich bij het loslaten (bij x = 0)?",
+      "antwoord": "90",
+      "uitleg": "Stap 1: Vul x = 0 in de formule in:\nh = −0,1 · 0² + 1,2 · 0 + 0,9 = 0,9 meter.\nStap 2: Reken om naar centimeters:\n0,9 · 100 = 90 cm."
     },
     {
       "type": "waaronwaar",
@@ -115,9 +115,9 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Een hangmat hangt volgens h = 0,25(a − 2,8)² + 0,45 (h en a in meters, a vanaf de linkerboom). Op welke hoogte in meters is de hangmat aan de boom vastgeknoopt?",
-      "antwoord": "2,41",
-      "uitleg": "Het laagste punt is de top (a = 2,8): h = 0,45 m = 45 cm. Bij de boom (a = 0): h = 0,25 · 2,8² + 0,45 = 2,41 m. De andere boom staat even ver aan de andere kant: a = 5,6 m."
+      "vraag": "Twee posities op dezelfde parabool hebben dezelfde hoogte: de grafiek y = −x² + 18x + 3 gaat door (0, 3). Bereken de x-coördinaat van de tweede positie met y = 3.",
+      "antwoord": "18",
+      "uitleg": "Stap 1: Stel y = 3:\n−x² + 18x + 3 = 3.\nStap 2: Trek 3 af:\n−x² + 18x = 0.\nStap 3: Ontbind in factoren:\nx(−x + 18) = 0.\nDit geeft x = 0 of x = 18."
     },
     {
       "type": "invul",

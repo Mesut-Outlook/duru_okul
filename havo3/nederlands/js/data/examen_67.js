@@ -11,10 +11,10 @@ DURU.registerExamen({
   "vragen": [
     {
       "type": "invul",
-      "vraag": "Verbeter het fout gespelde woord in de zin: <i>Mijn oom heeft gisteren de nieuwe software gedownloadt.</i>",
-      "antwoord": "gedownload",
+      "vraag": "Verbeter het fout gespelde accent in de zin: <i>Na een glansrijke carriére nam de zangeres gisteren afscheid van het publiek.</i>",
+      "antwoord": "carrière",
       "exact": true,
-      "uitleg": "De stam download eindigt al op een d; bij het voltooid deelwoord komt er geen t achter: gedownload."
+      "uitleg": "Carrière schrijf je met een accent grave (è), niet met een accent aigu (é): carrière."
     },
     {
       "type": "invul",
@@ -25,10 +25,10 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Verbeter het fout gespelde woord in de zin: <i>De voorzitter heeft alle binnengekomen klachten gisteren beantwoordt.</i>",
-      "antwoord": "beantwoord",
+      "vraag": "Verbeter het fout gespelde woord in de zin: <i>Er waren veel sollicitanten voor de baan, maar de meeste werden helaas afgewezen.</i>",
+      "antwoord": "meesten",
       "exact": true,
-      "uitleg": "Heeft + voltooid deelwoord; de stam beantwoord eindigt al op een d, dus er komt geen t bij: beantwoord."
+      "uitleg": "Meesten is hier zelfstandig gebruikt en verwijst naar personen (de meeste mensen) → met -n: meesten."
     },
     {
       "type": "invul",
@@ -39,10 +39,10 @@ DURU.registerExamen({
     },
     {
       "type": "invul",
-      "vraag": "Verbeter het fout gespelde woord in de zin: <i>De scholiere heeft haar boekverslag gisteravond naar het portaal geupload.</i>",
-      "antwoord": "geüpload",
+      "vraag": "Verbeter het fout gespelde woord in de zin: <i>S' morgens vroeg wandelt de boswachter al door de ontwakende natuur.</i>",
+      "antwoord": "'s Morgens|'s morgens",
       "exact": true,
-      "uitleg": "Bij ge + upload spreek je de e en de u los van elkaar uit; daarom moet er een trema op de u staan: geüpload."
+      "uitleg": "De afkorting van 'des morgens' schrijf je met de apostrof vooraan: 's Morgens (en niet s' morgens)."
     },
     {
       "type": "invul",
@@ -77,15 +77,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Welk woord in deze zin is <b>fout</b> gespeld? <i>Na het auto-ongeluk belde de geschrokken autoeigenaar direct het alarmnummer op zijn telefoon.</i>",
+      "vraag": "In welke zin is het woord op <b>-e(n)</b> <u>onjuist</u> gespeld?",
       "opties": [
-        "geschrokken",
-        "autoeigenaar",
-        "belde",
-        "auto-ongeluk"
+        "Er kwamen honderd gasten op het feest en allen kregen een welkomstdrankje.",
+        "De docent vroeg wie er meeging en enkele staken hun vinger op.",
+        "We bekeken zes laptops, maar alle waren helaas veel te duur voor ons budget.",
+        "De twee broers houden van sport en beiden trainen intensief."
       ],
       "antwoord": 1,
-      "uitleg": "In de samenstelling auto + eigenaar botsen de o en de e → met een koppelteken: auto-eigenaar."
+      "uitleg": "'Enkele' verwijst hier zelfstandig naar personen (leerlingen/gasten die hun vinger opsteken) en krijgt daarom een -n: enkelen. In zin C gaat het om zaken (laptops → alle zonder -n)."
     },
     {
       "type": "mc",
@@ -113,15 +113,15 @@ DURU.registerExamen({
     },
     {
       "type": "mc",
-      "vraag": "Kies de zin waarin alle woorden <b>helemaal goed</b> zijn gespeld.",
+      "vraag": "In welke zin is de werkwoordspelling <b>helemaal juist</b>?",
       "opties": [
-        "Vele dachten dat het een makkelijk examen zou worden, maar sommigen vonden het best lastig.",
-        "Velen dachten dat het een makkelijk examen zou worden, maar sommigen vonden het best lastig.",
-        "Velen dachten dat het een makkelijke examen zou worden, maar sommigen vonden het best lastig.",
-        "Velen dachten dat het een makkelijk examen zou worden, maar sommige vonden het best lastig."
+        "Vindt jij ook dat de burgemeester de situatie uitstekend heeft aangepakt?",
+        "Gisteren verhuisde de buren hun meubels naar het nieuwe appartement.",
+        "Als je goed oplet, word je vanzelf een stuk handiger in de wiskundeles.",
+        "De politie vermoed dat de inbreker via het kelderraam is binnengedrongen."
       ],
-      "antwoord": 1,
-      "uitleg": "Velen en sommigen zijn zelfstandig gebruikt voor personen → met n. Het examen is een het-woord na 'een' → makkelijk (zonder -e)."
+      "antwoord": 2,
+      "uitleg": "In 'word je' staat het onderwerp 'je' achter de persoonsvorm (inversie) → alleen de stam 'word' (zonder t). In A moet het zijn 'Vind jij' (geen t bij inversie met jij), in B 'verhuisden' (onderwerp 'de buren' is meervoud) en in D 'vermoedt' (derde persoon enkelvoud: stam + t)."
     },
     {
       "type": "mc",

@@ -88,61 +88,62 @@ DURU.registerExamen({
     },
     {
       "type": "waaronwaar",
-      "vraag": "In 'Hij at een appel en zij een banaan' is de samentrekking correct, omdat 'at' in beide delen dezelfde vorm heeft.",
-      "antwoord": true,
-      "uitleg": "Waar. Zij (at) een banaan: het weggelaten woord is precies hetzelfde."
+      "vraag": "In de woordgroep 'rode- en witte bessen' is het weglatingsstreepje na 'rode' verplicht.",
+      "antwoord": false,
+      "uitleg": "Niet waar. 'Rode' en 'witte' zijn losse bijvoeglijke naamwoorden (woordgroepsniveau). Er valt een heel woord ('bessen') weg, dus je schrijft geen streepje: rode en witte bessen."
     },
     {
       "type": "mc",
-      "vraag": "In welke zin is de samentrekking fout, omdat het weggelaten woord niet precies hetzelfde is?",
+      "vraag": "In de zin <i>Samira kookte de soep en Yasmin de rijst</i> is 'kookte' weggelaten. Welke omschrijving van deze samentrekking is juist?",
       "opties": [
-        "Ik heb een hond en mijn ouders een kat.",
-        "Ik heb een hond en een kat.",
-        "Wij hebben een hond en onze buren een kat.",
-        "Mijn opa heeft een hond en mijn oma een kat."
+        "Het is een achterwaartse samentrekking op woordniveau.",
+        "Het is een voorwaartse samentrekking op zinsniveau.",
+        "Het is een voorwaartse samentrekking op woordgroepsniveau.",
+        "Het is een achterwaartse samentrekking op zinsniveau."
       ],
-      "uitleg": "Aanvullen geeft 'mijn ouders (heb) een kat', maar het moet 'hebben' zijn. Je mag alleen identieke woorden weglaten.",
-      "antwoord": 0
+      "uitleg": "'Kookte' staat vooraan in het eerste deel en wordt in het tweede deel weggelaten → voorwaarts. Omdat er een persoonsvorm in een deelzin wordt weggelaten, is dit zinsniveau.",
+      "antwoord": 1
     },
     {
       "type": "waaronwaar",
-      "vraag": "Je mag bij samentrekking alleen woorden of woorddelen weglaten die precies hetzelfde zijn als wat wel genoemd wordt.",
-      "antwoord": true,
-      "uitleg": "Waar. Samentrekking betekent: identieke (delen van) woorden of zinsdelen weglaten."
+      "vraag": "In de zin <i>Eerst stofzuigde Lucas en dweilde daarna de keuken</i> is sprake van een achterwaartse samentrekking, omdat het onderwerp achteraan staat.",
+      "antwoord": false,
+      "uitleg": "Niet waar. Het gemeenschappelijke onderwerp 'Lucas' staat in de eerste deelzin en wordt in de tweede weggelaten. Dat is een voorwaartse samentrekking (zinsniveau)."
     },
     {
       "type": "mc",
-      "vraag": "Welke samentrekking is gelijkwaardig?",
+      "vraag": "In welke samenstelling is het weglatingsstreepje <b>juist</b> gebruikt?",
       "opties": [
-        "zowel kleine- als ijsberen",
-        "van de basis- naar de middelbare school",
-        "zowel zure- als karnemelk",
-        "zowel kleine als grote beren"
+        "linkerhand en -hand (bedoeld: linker- en rechterhand)",
+        "brandweer- en politieauto's (beide samenstellingen op -auto)",
+        "korte- en lange broeken (weglating op woordgroepsniveau)",
+        "oude- en nieuwe boeken (weglating van een los zelfstandig naamwoord)"
       ],
-      "uitleg": "In 'zowel kleine als grote beren' is 'beren' twee keer een los woord. De andere drie mengen een woorddeel met een los woord.",
-      "antwoord": 3
+      "uitleg": "Brandweerauto en politieauto zijn samenstellingen die eindigen op hetzelfde woorddeel (-auto). Het streepje achter brandweer- vervangt het weggelaten deel: brandweer- en politieauto's.",
+      "antwoord": 1
     },
     {
       "type": "open",
-      "vraag": "Vind jij het goed dat een samentrekking als 'zowel bruine- als ijsberen' tegenwoordig geaccepteerd wordt? Geef je mening en een reden.",
+      "vraag": "In de zin staat een fout weglatingsstreepje: <i>We verkopen uitsluitend verse- en gezonde maaltijden.</i> Verbeter de woordgroep en leg in één zin uit waarom er geen streepje mag staan.",
       "sleutelwoorden": [
-        "korter/kort/onduidelijk/verwarrend/begrijpelijk/handig/lezen/snap/logisch"
+        "verse en gezonde maaltijden/verse en gezonde",
+        "los woord/woordgroep/geen samenstelling/heel woord/losse woorden/woordgroepsniveau"
       ],
-      "minTreffers": 1,
-      "modelantwoord": "Ja, want het is korter en iedereen begrijpt wat er bedoeld wordt. (Of: nee, want het is verwarrend dat 'beren' een keer los en een keer vast hoort.)",
-      "uitleg": "Een mening met een reden is goed, bijvoorbeeld dat het korter is of juist verwarrend."
+      "minTreffers": 2,
+      "modelantwoord": "Verbetering: 'verse en gezonde maaltijden'. Uitleg: 'verse' en 'gezonde' zijn losse bijvoeglijke naamwoorden (woordgroep), dus je laat een heel woord weg en gebruikt geen streepje.",
+      "uitleg": "Op woordgroepsniveau (bij losse woorden vóór een zelfstandig naamwoord) gebruik je nooit een weglatingsstreepje: verse en gezonde maaltijden."
     },
     {
       "type": "mc",
-      "vraag": "Welke zin bevat een ongelijkwaardige samentrekking?",
+      "vraag": "In welke samengestelde zin is de woordvolgorde na het voegwoord <b>onjuist</b>?",
       "opties": [
-        "We verkopen zowel diepvries- als blikgroenten.",
-        "We verkopen verse groenten en ook diepvriesvis.",
-        "We verkopen zowel verse- als diepvriesgroenten.",
-        "We verkopen zowel verse als bevroren groenten."
+        "Gisterochtend zwom Amir in het meer en wandelde Nora door het bos.",
+        "Tijdens de vakantie leest Milan een boek en Sam luistert naar podcasts.",
+        "Vorige week kocht Noor nieuwe schoenen en paste Levi een warme jas.",
+        "Elke zondag bakt vader pannenkoeken en zet moeder verse thee."
       ],
-      "uitleg": "'Groenten' is na 'verse' een los woord, maar na 'diepvries' een deel van een samenstelling.",
-      "antwoord": 2
+      "uitleg": "De bepaling 'Tijdens de vakantie' staat vooraan en veroorzaakt inversie (leest Milan). Als je die bepaling samentrekt, moet het tweede deel ook inversie hebben: 'en luistert Sam', niet 'en Sam luistert'.",
+      "antwoord": 1
     },
     {
       "type": "waaronwaar",
