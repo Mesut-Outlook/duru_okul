@@ -2021,7 +2021,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-67": 7,
         "ex-h3-nederlands-68": 7,
         "ex-h3-nederlands-69": 7,
-        "ex-h3-nederlands-70": 7
+        "ex-h3-nederlands-70": 7,
+        "ex-h3-nederlands-71": 7,
+        "ex-h3-nederlands-72": 7,
+        "ex-h3-nederlands-73": 7
       },
       "examenInfo": {
         "ex-h3-nederlands-1": ["Toets 1 — Officiële Proeftoets Lezen (Tekst 1 & 2)", "2026-07-21", "mix", "mmmmoomoowimmmmwoiom"],
@@ -2093,7 +2096,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-67": ["Toets 67 — Foutentraining & Eindtoets Cursus 7 Spelling", "2026-11-08", "eind", "iiiiiimmmmmmmmwwwwoo"],
         "ex-h3-nederlands-68": ["Toets 68 — Oefenproefwerk A: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imwiimomiwmiwmoimwmm"],
         "ex-h3-nederlands-69": ["Toets 69 — Oefenproefwerk B: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imiwmiomiwmiwmoimwmi"],
-        "ex-h3-nederlands-70": ["Toets 70 — Oefenproefwerk C: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imiwimomiwmiwmoimwmm"]
+        "ex-h3-nederlands-70": ["Toets 70 — Oefenproefwerk C: Spelling (C7) + Grammatica (C5)", "2026-11-08", "eind", "imiwimomiwmiwmoimwmm"],
+        "ex-h3-nederlands-71": ["Toets 71 — Foutentraining A: jouw fouten uit de laatste 10 toetsen", "2026-11-08", "mix", "mmmwmmommwmowimiwimi"],
+        "ex-h3-nederlands-72": ["Toets 72 — Foutentraining B: jouw fouten uit de laatste 10 toetsen", "2026-11-08", "mix", "mmwmmmommwmmwoimiwim"],
+        "ex-h3-nederlands-73": ["Toets 73 — Foutentraining C: jouw fouten uit de laatste 10 toetsen", "2026-11-08", "mix", "mmwmmmommwmmwomiwimi"]
       },
       "onderwerpHoofdstuk": {
         "c5-3-samentrekking": 5,
@@ -2116,7 +2122,7 @@ window.DURU_HOOFDSTUKKEN = {
       "aantalExamens": {
         "1": 22,
         "5": 16,
-        "7": 32
+        "7": 35
       },
       "aantalOnderwerpen": {
         "1": 5,

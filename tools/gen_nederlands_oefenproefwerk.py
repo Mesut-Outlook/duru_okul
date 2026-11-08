@@ -303,34 +303,44 @@ def schrijf(pad, kop, obj, fn):
 
 KOP = "/* Examen conform DURU ENGINE_SPEC (HAVO 3 Nederlands · Oefenproefwerk C5 + C7) — gegenereerd door tools/gen_nederlands_oefenproefwerk.py */"
 
-alle_vragen = set()
-for i, t in enumerate(TOETSEN):
-    nr = EERSTE + i
-    assert len(t["vragen"]) == 20, (nr, len(t["vragen"]))
-    vragen = bouw(t["vragen"])
-    controleer_regel_19(nr, vragen)
-    for v in vragen:
-        assert v["vraag"] not in alle_vragen, v["vraag"]
-        alle_vragen.add(v["vraag"])
-        assert v.get("uitleg") and len(kaal(v["uitleg"])) >= 15, v["vraag"]
-        if v["type"] == "open":
-            q = kaal(v["vraag"]).lower()
-            for s in v["sleutelwoorden"]:
-                for w in s.split("/"):
-                    assert not (len(w) > 2 and w.lower() in q), (nr, w, q)
-    m = [v for v in vragen if v["type"] == "mc"]
-    lang, kort = sum(langste(v) for v in m), sum(kortste(v) for v in m)
-    wo = [v for v in vragen if v["type"] == "waaronwaar"]
-    onw = sum(not v["antwoord"] for v in wo)
-    print(f"examen_{nr}: mc {len(m)} (langste {lang}, kortste {kort}), wow {len(wo)} (onwaar {onw}), "
-          f"invul {sum(v['type'] == 'invul' for v in vragen)}, open {sum(v['type'] == 'open' for v in vragen)}, "
-          f"volgorde {''.join(str(v['antwoord']) for v in m)}")
-    assert lang / len(m) <= 0.4, (nr, "langste", lang, len(m))
-    assert kort / len(m) <= 0.4, (nr, "kortste", kort, len(m))
-    assert onw / len(wo) >= 0.35, (nr, "onwaar", onw, len(wo))
-    schrijf(os.path.join(ROOT, f"examen_{nr}.js"), KOP,
-            {"id": f"ex-h3-nederlands-{nr}", "hoofdstuk": 7, "hoofdstukTitel": "Cursus 7 — Spelling",
-             "paragraaf": "eind",
-             "titel": f"Toets {nr} — Oefenproefwerk {t['letter']}: Spelling (C7) + Grammatica (C5)",
-             "vak": "Nederlands · HAVO 3 (Cursus 5 + 7)", "icoon": "📝", "duurMin": 20, "vragen": vragen},
-           "DURU.registerExamen")
+
+def genereer(toetsen, eerste, kop, titel, paragraaf="eind", icoon="📝"):
+    """Bouwt + valideert + schrijft examen_<eerste+i>.js. Ook gebruikt door gen_nederlands_foutentraining.py."""
+    _genereer(toetsen, eerste, kop, titel, paragraaf, icoon)
+
+
+def _genereer(TOETSEN, EERSTE, KOP, titel, paragraaf, icoon):
+    alle_vragen = set()
+    for i, t in enumerate(TOETSEN):
+      nr = EERSTE + i
+      assert len(t["vragen"]) == 20, (nr, len(t["vragen"]))
+      vragen = bouw(t["vragen"])
+      controleer_regel_19(nr, vragen)
+      for v in vragen:
+          assert v["vraag"] not in alle_vragen, v["vraag"]
+          alle_vragen.add(v["vraag"])
+          assert v.get("uitleg") and len(kaal(v["uitleg"])) >= 15, v["vraag"]
+          if v["type"] == "open":
+              q = kaal(v["vraag"]).lower()
+              for s in v["sleutelwoorden"]:
+                  for w in s.split("/"):
+                      assert not (len(w) > 2 and w.lower() in q), (nr, w, q)
+      m = [v for v in vragen if v["type"] == "mc"]
+      lang, kort = sum(langste(v) for v in m), sum(kortste(v) for v in m)
+      wo = [v for v in vragen if v["type"] == "waaronwaar"]
+      onw = sum(not v["antwoord"] for v in wo)
+      print(f"examen_{nr}: mc {len(m)} (langste {lang}, kortste {kort}), wow {len(wo)} (onwaar {onw}), "
+            f"invul {sum(v['type'] == 'invul' for v in vragen)}, open {sum(v['type'] == 'open' for v in vragen)}, "
+            f"volgorde {''.join(str(v['antwoord']) for v in m)}")
+      assert lang / len(m) <= 0.4, (nr, "langste", lang, len(m))
+      assert kort / len(m) <= 0.4, (nr, "kortste", kort, len(m))
+      assert onw / len(wo) >= 0.35, (nr, "onwaar", onw, len(wo))
+      schrijf(os.path.join(ROOT, f"examen_{nr}.js"), KOP,
+              {"id": f"ex-h3-nederlands-{nr}", "hoofdstuk": 7, "hoofdstukTitel": "Cursus 7 — Spelling",
+               "paragraaf": paragraaf, "titel": titel.format(nr=nr, letter=t["letter"]),
+               "vak": "Nederlands · HAVO 3 (Cursus 5 + 7)", "icoon": icoon, "duurMin": 20, "vragen": vragen},
+             "DURU.registerExamen")
+
+
+if __name__ == "__main__":
+    genereer(TOETSEN, EERSTE, KOP, "Toets {nr} — Oefenproefwerk {letter}: Spelling (C7) + Grammatica (C5)")

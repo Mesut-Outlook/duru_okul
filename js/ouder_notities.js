@@ -12,7 +12,9 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "mid", tekst: "Üstel büyümede zaman birimi dönüşümünde (aylık ↔ yıllık) hata yapıyor (%48)." }
   ] },
   nederlands: { datum: "2026-11-08", punten: [
-    { ernst: "mid", tekst: "-n kuralı (enkele/enkelen, andere/anderen) ve samentrekking (streepje, voor-/achterwaarts) en çok hata yaptığı konular (%29–34)." },
-    { ernst: "mid", tekst: "hun/hen, apostrof ('s morgens, baby's) ve aksanlarda (è/é) tekrar eden hatalar (%23–27)." }
+    { ernst: "hoog", tekst: "Samentrekking’de voorwaarts/achterwaarts'ı sistematik olarak ters yapıyor (son 10 testte 11 kez): kelimenin durduğu yere değil boşluğun yerine bakıyor." },
+    { ernst: "hoog", tekst: "Açık 'verbeter + waarom' sorularında yalnız düzeltilmiş cümleyi yazıyor, nedenini hiç yazmıyor → hep yarım puan." },
+    { ernst: "mid", tekst: "Verwijzen: 'het meisje die' (doğrusu dat), regering/gemeente/politie için 'zijn/hun' (doğrusu haar), eşyalar için 'het' (doğrusu hem); hun/hen karışık." },
+    { ernst: "mid", tekst: "Gerçek sınav provası (Oefenproefwerk 68–70): 10–14 / 20. Foutentraining 71–73 tam bu hatalara göre hazırlandı." }
   ] }
 };
