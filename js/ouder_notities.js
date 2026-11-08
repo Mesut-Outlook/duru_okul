@@ -15,6 +15,7 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "hoog", tekst: "Samentrekking’de voorwaarts/achterwaarts'ı sistematik olarak ters yapıyor (son 10 testte 11 kez): kelimenin durduğu yere değil boşluğun yerine bakıyor." },
     { ernst: "hoog", tekst: "Açık 'verbeter + waarom' sorularında yalnız düzeltilmiş cümleyi yazıyor, nedenini hiç yazmıyor → hep yarım puan." },
     { ernst: "mid", tekst: "Verwijzen: 'het meisje die' (doğrusu dat), regering/gemeente/politie için 'zijn/hun' (doğrusu haar), eşyalar için 'het' (doğrusu hem); hun/hen karışık." },
-    { ernst: "mid", tekst: "Gerçek sınav provası (Oefenproefwerk 68–70): 10–14 / 20. Foutentraining 71–73 tam bu hatalara göre hazırlandı." }
+    { ernst: "hoog", tekst: "Toets 72'yi üç kez aynı yanlış cevaplarla çözdü: sonuçtaki açıklamaları okumuyor. 'het meisje dat' (lidwoord karar verir, cinsiyet değil), eşyalar için 'hem', regering için 'haar' kurallarını birlikte konuşmak faydalı olur." },
+    { ernst: "mid", tekst: "Prova sınavları (68–70): 10–14 / 20. Foutentraining 71–73: 9–16 / 20. 74–75 aynı hatalara farklı yoldan (adım adım, karşılaştırmalı) gidiyor." }
   ] }
 };
