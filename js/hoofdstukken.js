@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-07",
+  "gegenereerd": "2026-11-08",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1764,7 +1764,22 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-62": 1,
         "ex-h3-natuurkunde-63": 1,
         "ex-h3-natuurkunde-64": 1,
-        "ex-h3-natuurkunde-65": 1
+        "ex-h3-natuurkunde-65": 1,
+        "ex-h3-natuurkunde-66": 1,
+        "ex-h3-natuurkunde-67": 1,
+        "ex-h3-natuurkunde-68": 1,
+        "ex-h3-natuurkunde-69": 1,
+        "ex-h3-natuurkunde-70": 1,
+        "ex-h3-natuurkunde-71": 1,
+        "ex-h3-natuurkunde-72": 1,
+        "ex-h3-natuurkunde-73": 1,
+        "ex-h3-natuurkunde-74": 1,
+        "ex-h3-natuurkunde-75": 1,
+        "ex-h3-natuurkunde-76": 1,
+        "ex-h3-natuurkunde-77": 1,
+        "ex-h3-natuurkunde-78": 1,
+        "ex-h3-natuurkunde-79": 1,
+        "ex-h3-natuurkunde-80": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21"],
@@ -1831,7 +1846,22 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-62": ["Toets 62 — §1.4 Veiligheid, Remweg & Stopafstand — Toets B", "2026-10-25"],
         "ex-h3-natuurkunde-63": ["Toets 63 — §1.5 Arbeid en Energieomzetting — Toets A", "2026-10-25"],
         "ex-h3-natuurkunde-64": ["Toets 64 — §1.5 Arbeid en Energieomzetting — Toets B", "2026-10-25"],
-        "ex-h3-natuurkunde-65": ["Toets 65 — Integrale Examentraining Hoofdstuk 1 (Mix §1.1 t/m §1.5)", "2026-10-25"]
+        "ex-h3-natuurkunde-65": ["Toets 65 — Integrale Examentraining Hoofdstuk 1 (Mix §1.1 t/m §1.5)", "2026-10-25"],
+        "ex-h3-natuurkunde-66": ["Toets 66 — §1.1 Kracht bij beweging — Toets E", "2026-11-08"],
+        "ex-h3-natuurkunde-67": ["Toets 67 — §1.1 Kracht bij beweging — Toets F", "2026-11-08"],
+        "ex-h3-natuurkunde-68": ["Toets 68 — §1.1 Kracht bij beweging — Toets G", "2026-11-08"],
+        "ex-h3-natuurkunde-69": ["Toets 69 — §1.2 Soorten beweging & Diagrammen — Toets E", "2026-11-08"],
+        "ex-h3-natuurkunde-70": ["Toets 70 — §1.2 Soorten beweging & Diagrammen — Toets F", "2026-11-08"],
+        "ex-h3-natuurkunde-71": ["Toets 71 — §1.2 Soorten beweging & Diagrammen — Toets G", "2026-11-08"],
+        "ex-h3-natuurkunde-72": ["Toets 72 — §1.3 Kracht en versnelling — Toets E", "2026-11-08"],
+        "ex-h3-natuurkunde-73": ["Toets 73 — §1.3 Kracht en versnelling — Toets F", "2026-11-08"],
+        "ex-h3-natuurkunde-74": ["Toets 74 — §1.3 Kracht en versnelling — Toets G", "2026-11-08"],
+        "ex-h3-natuurkunde-75": ["Toets 75 — §1.4 Veiligheid, Remweg & Stopafstand — Toets C", "2026-11-08"],
+        "ex-h3-natuurkunde-76": ["Toets 76 — §1.4 Veiligheid, Remweg & Stopafstand — Toets D", "2026-11-08"],
+        "ex-h3-natuurkunde-77": ["Toets 77 — §1.4 Veiligheid, Remweg & Stopafstand — Toets E", "2026-11-08"],
+        "ex-h3-natuurkunde-78": ["Toets 78 — §1.5 Arbeid en Energieomzetting — Toets C", "2026-11-08"],
+        "ex-h3-natuurkunde-79": ["Toets 79 — §1.5 Arbeid en Energieomzetting — Toets D", "2026-11-08"],
+        "ex-h3-natuurkunde-80": ["Toets 80 — §1.5 Arbeid en Energieomzetting — Toets E", "2026-11-08"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -1880,7 +1910,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 27,
+        "1": 42,
         "2": 5,
         "3": 5,
         "4": 5,
