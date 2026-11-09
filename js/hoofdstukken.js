@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-08",
+  "gegenereerd": "2026-11-09",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -404,7 +404,15 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-63": 11,
         "ex-h3-biologie-64": 11,
         "ex-h3-biologie-65": 11,
-        "ex-h3-biologie-66": 11
+        "ex-h3-biologie-66": 11,
+        "ex-h3-biologie-71": 11,
+        "ex-h3-biologie-72": 11,
+        "ex-h3-biologie-73": 11,
+        "ex-h3-biologie-74": 11,
+        "ex-h3-biologie-75": 11,
+        "ex-h3-biologie-76": 11,
+        "ex-h3-biologie-77": 11,
+        "ex-h3-biologie-78": 11
       },
       "examenInfo": {
         "ex-h3-biologie-1": ["Toets 1 — Levensfasen, Ontwikkeling & Hormonen", "2026-07-21", "", "mmwimmimwimmwimwmioo"],
@@ -472,7 +480,15 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-63": ["Toets 63 — §11.4 Van gen tot eigenschap", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-64": ["Toets 64 — §11.4 Erfelijk of omgeving?", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-65": ["Toets 65 — §11.4 Aangeboren aandoeningen & bron 9", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
-        "ex-h3-biologie-66": ["Toets 66 — §11.4 Tweelingonderzoek & bron 13", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"]
+        "ex-h3-biologie-66": ["Toets 66 — §11.4 Tweelingonderzoek & bron 13", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-71": ["Toets 71 — §11.3 Navelstreng, placenta en schadelijke stoffen", "2026-11-09", "11.3", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-72": ["Toets 72 — §11.3 Embryo, foetus en bevalling", "2026-11-09", "11.3", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-73": ["Toets 73 — §11.4 Chromosomen, geslacht en genen", "2026-11-09", "11.4", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-74": ["Toets 74 — §11.4 Genotype, fenotype en aandoeningen", "2026-11-09", "11.4", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-75": ["Toets 75 — H11 gemengd A: proefwerk Voortplanting", "2026-11-09", "mix", "mwmimwomimmwoimwmimw"],
+        "ex-h3-biologie-76": ["Toets 76 — H11 gemengd B: proefwerk Voortplanting", "2026-11-09", "mix", "mmoiwmwmimwmomimwmwi"],
+        "ex-h3-biologie-77": ["Toets 77 — H11 gemengd C: proefwerk Voortplanting", "2026-11-09", "mix", "wmmimmwmoimwmomwimwi"],
+        "ex-h3-biologie-78": ["Toets 78 — H11 gemengd D: proefwerk Voortplanting", "2026-11-09", "mix", "mimowmwimmimwmwmomwi"]
       },
       "onderwerpHoofdstuk": {
         "bio-h10-1-opgroeien": 10,
@@ -485,7 +501,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "10": 5,
-        "11": 61
+        "11": 69
       },
       "aantalOnderwerpen": {
         "10": 2,
