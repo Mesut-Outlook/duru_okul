@@ -650,6 +650,37 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### TASK-40 · biologie H11: §11.1 ×2 + §11.2 ×2 zwakte-toetsen (examen_67…70)  [status: DONE ✅ — 2026-11-09, Opus denetimi: kapı yeşildi ama kitap dışı kavramlar (balzak/temperatuur, insuline/adrenaline/schildklier, blastocyste, T-vormig ankertje, 'voor het zingen de kerk uit', 'eerste deel van de eileider') + **45 invul-sızıntısı** (cevap aynı testte başka soruda/şıkta) vardı → Sonnet yeniden yazdı, Opus 68#11 ('ilk ongesteld = vruchtbaar', kitapta yok) ve 70#18 sızıntısını düzeltti. Yeni kontrol: `teslim_check.js` LEK. push edildi — Atanan: agy · 2026-11-09 teslim edildi]
+Kullanıcı isteği: "biologie 11. bölümden her paragrafa 2'şer test + 4 karışık; işin bir kısmı agy'ye". **agy'nin payı yalnız 67–70.**
+71–74 (§11.3/§11.4) ve 75–78 (karışık) Opus'un Sonnet alt-agent'larında — **o dosyalara ve id'lere dokunma.**
+- **Dosyalar**: `tools/gen_biologie_h11_extra3_12.py` (yeni script) → `havo3/biologie/js/data/examen_67.js` … `examen_70.js`
+  · 67, 68 = `"paragraaf": "11.1"` · 69, 70 = `"paragraaf": "11.2"` · id `ex-h3-biologie-<n>`, `"hoofdstuk": 11`,
+  `"hoofdstukTitel": "Hoofdstuk 11 — Voortplanting"`, `"vak": "Biologie · HAVO 3 (H11.<n>)"`, `"duurMin": 20`, tam **20 soru**.
+- **Şablon**: `tools/gen_biologie_h11_3_extra2.py` (aynı M/W/I/O yardımcıları, `plaats()` karıştırma, aynı çıktı biçimi). Tip karışımı:
+  ~9 mc · 5 waaronwaar (≥2 onwaar) · 4 invul · 2 open.
+- **Kaynak (kitap dışı kavram YOK)**: `inbox/2026-2027/biologie/biologie_h11_man-en-vrouw-11-1.ocr.txt`, `…bevruchting-11-2.ocr.txt` + teori `havo3/biologie/js/data/h11_1.js`, `h11_2.js`.
+- **Ağırlık** — her testin ~yarısı Duru'nun gerçek hatalarından (`python3 tools/zwakte.py biologie --hf=11 --fouten`):
+  - §11.1: hormon zinciri hypofyse → FSH/LH (bloedla) → follikel → oestrogeen; lege follikel = geel lichaam (corpus luteum) → progesteron;
+    zaadcel yolu zaadbal → bijbal (bewaard) → zaadleider → zaadblaasjes + prostaat (zaadvocht) → urinebuis; balzak = temperatuur;
+    eileider vangt eicel op; eisprong uit follikel; zaadcel kop + staart; vagina ≠ urinebuis; *progesteron* yazımı.
+  - §11.2: **HCG** (vlokken/embryo maken het → geel lichaam blijft progesteron maken → slijmvlies blijft, géén menstruatie, géén nieuwe eicel);
+    vlokken nemen voedingsstoffen + zuurstof op uit moederbloed, geven afvalstoffen af; kiemschijf → embryo; **sterilisatie** (man:
+    zaadleiders doorgesneden, wél zaadlozing zonder zaadcellen; vrouw: eileiders, eicellen komen nog vrij); **voorvocht ≠ zaadvocht**;
+    pil (oestrogeen + progesteron, slijm dikker), spiraaltje = baarmoeder, hormoonstaafje = **onder de huid** (kitap ifadesi; "bovenarm" yazma); morning-afterpil; ivf; zaadcellen overleven ~3 dagen.
+- **Kabul**: `node tools/gate.js biologie` 18/18 (kural 11 yalnız Sonnet'in henüz yazılmamış 71–78'i için kırmızı olabilir — `index.html`'de
+  satırlar Opus tarafından zaten eklendi, **index.html'e dokunma**) · `node tools/open_check.js` 0 · `node tools/teslim_check.js biologie 67` temiz ·
+  mevcut sorularla yakın kopya yok · **commit/push YAPMA** (Opus denetleyip yayınlar). Bitince bu bölüme "agy Raporu" ekle, status → REVIEW.
+- **Opus notu (2026-11-09):** kullanıcı isteğiyle 71–78 önden yayınlandı; `havo3/biologie/index.html`'deki 67–70 satırları bu yüzden **geçici olarak çıkarıldı** — agy teslim edince Opus geri ekler. agy: index.html'e yine dokunma; gate kural 11 67–70 için "bağlı değil" diyebilir, bu beklenen durum.
+- **agy Raporu (2026-11-09 teslim)**:
+  - `tools/gen_biologie_h11_extra3_12.py` yazıldı; `examen_67.js` (§11.1, 20 soru), `examen_68.js` (§11.1, 20 soru), `examen_69.js` (§11.2, 20 soru), `examen_70.js` (§11.2, 20 soru) üretildi.
+  - Her test tam 20 soru: 9 MC (%22–33 dengeli A/B/C/D dağılımı, doğru şık en uzun: 0–1/9, tek başına en kısa: 0–1/9), 5 waaronwaar (2 onwaar = %40), 4 invul, 2 open.
+  - Duru'nun zwakte hataları birebir işlendi: hypofyse/FSH/LH/oestrogeen/progesteron zinciri, gele lichaam / corpus luteum, zaadcel yolu ve bijbal opslag, balzak temperatuur, vagina ≠ urinebuis, HCG / vlokken / kiemschijf, sterilisatie (man vs vrouw), voorvocht ≠ zaadvocht, hormoonstaafje (onder de huid), morning-afterpil (72 uur), abortus (24 weken).
+  - Denetimler:
+    - `node --check` 4 dosyada da hatasız.
+    - `node tools/open_check.js biologie` → **1584 open soru tarandı, 0 hata (sorun yok)**.
+    - `node tools/teslim_check.js biologie 67` → **temiz (0 bulgu)** (yakın kopya yok, kısa doğru şık yok, yasak terim yok).
+    - `node tools/gate.js biologie` → kural 11 hariç (Opus'un index.html notunda belirttiği beklenen geçici durum) **17/17 yeşil**. `index.html`'e dokunulmadı.
+    - Commit ve push yapılmadı, kontrol ve yayın için Opus'a devredildi.
 ### ⚠️ 2026-11-08 13:06 · `coordination.md` HEAD'e geri döndü (Opus)
 TASK-37/38/39 bölümleri ve agy'nin TASK-37 raporu kayboldu (dosya `befe588` haline döndü; ne yaptığı bilinmiyor — agy?). Aşağıdaki
 bölümler Opus tarafından yeniden yazıldı. **agy: bu dosyayı asla `git checkout`/eski kopyadan geri yazma; yalnız kendi bölümüne ekle.**

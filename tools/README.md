@@ -13,6 +13,8 @@ node tools/teslim_check.js <vak> <ilk-sınav-no> ["yasak|terim|regex"]
 Doğru şık tek başına en kısa (dosya başına ≤%40), yakın kopya (kelime benzerliği ≥0,7, mevcut sorulara karşı da) ve kitap dışı terim.
 Bulgu varsa exit 1. 2026-11-01'de economie 78…95'te kapı 18/18 iken 15 dosya, 32 kopya ve 42 terim buldu.
 
+- **4 · LEK (2026-11-09):** `invul` cevabı (≥4 harf, tam kelime) aynı sınavın başka bir sorusunda ya da şıkkında geçiyorsa bulgu — öğrenci cevabı oradan okur. agy (biologie 67–70: 45 bulgu) ve Sonnet teslimlerinde elle bulunmuştu; `gate.js` bunu ölçmez.
+
 ## `gate.js` — kabul kapısı (18 kontrol: 1–17, 5 = 5a/5b)
 
 ```bash

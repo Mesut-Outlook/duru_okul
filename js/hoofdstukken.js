@@ -405,6 +405,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-64": 11,
         "ex-h3-biologie-65": 11,
         "ex-h3-biologie-66": 11,
+        "ex-h3-biologie-67": 11,
+        "ex-h3-biologie-68": 11,
+        "ex-h3-biologie-69": 11,
+        "ex-h3-biologie-70": 11,
         "ex-h3-biologie-71": 11,
         "ex-h3-biologie-72": 11,
         "ex-h3-biologie-73": 11,
@@ -481,6 +485,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-64": ["Toets 64 — §11.4 Erfelijk of omgeving?", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-65": ["Toets 65 — §11.4 Aangeboren aandoeningen & bron 9", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-66": ["Toets 66 — §11.4 Tweelingonderzoek & bron 13", "2026-11-05", "11.4", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-67": ["Toets 67 — §11.1 De mannelijke geslachtsorganen, zaadcellen en erectie", "2026-11-09", "11.1", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-68": ["Toets 68 — §11.1 De vrouwelijke organen, eicellen en de hormooncyclus", "2026-11-09", "11.1", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-69": ["Toets 69 — §11.2 Bevruchting, deling, kiemschijf, vlokken en HCG", "2026-11-09", "11.2", "mmmmmmmmmwwwwwiiiioo"],
+        "ex-h3-biologie-70": ["Toets 70 — §11.2 Anticonceptie, voorbehoedmiddelen en noodgevallen", "2026-11-09", "11.2", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-71": ["Toets 71 — §11.3 Navelstreng, placenta en schadelijke stoffen", "2026-11-09", "11.3", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-72": ["Toets 72 — §11.3 Embryo, foetus en bevalling", "2026-11-09", "11.3", "mmmmmmmmmwwwwwiiiioo"],
         "ex-h3-biologie-73": ["Toets 73 — §11.4 Chromosomen, geslacht en genen", "2026-11-09", "11.4", "mmmmmmmmmwwwwwiiiioo"],
@@ -501,7 +509,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "10": 5,
-        "11": 69
+        "11": 73
       },
       "aantalOnderwerpen": {
         "10": 2,

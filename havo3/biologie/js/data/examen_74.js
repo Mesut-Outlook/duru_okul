@@ -89,7 +89,7 @@ DURU.registerExamen({
         "Bij een keizersnede",
         "Bij een vlokkentest",
         "Bij een echo met de echoscoop",
-        "Bij een bloedonderzoek van de moeder"
+        "Bij een bloedonderzoek van de zwangere vrouw"
       ],
       "antwoord": 1
     },
@@ -101,7 +101,7 @@ DURU.registerExamen({
         "De baarmoedermond, op hoe ver die open is",
         "De placenta, op hoe groot die al is",
         "Cellen van de foetus, op fouten in de chromosomen",
-        "Het bloed van de moeder, op ziekteverwekkers"
+        "Het bloed van de zwangere vrouw, op ziekteverwekkers"
       ],
       "antwoord": 2
     },

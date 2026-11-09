@@ -4,6 +4,8 @@
    1. Doğru şık tek başına en kısa, dosya başına ≤%40 (kapı 17'nin tersi: çeldiriciyi şişirerek geçmeyi yakalar)
    2. Yakın kopya: mevcut ya da başka yeni bir soruyla kelime benzerliği ≥0,7 (gate kural 2 yalnız birebir)
    3. Yasak terim: kitapta olmayan kavramlar, soru/şık/cevap/uitleg'in hepsinde
+   4. Sızıntı (2026-11-09): invul cevabı aynı sınavın başka bir sorusunda/şıkkında tam kelime olarak geçiyor
+      (öğrenci cevabı orada okur). agy + Sonnet teslimlerinde üç kez elle bulundu, kapı ölçmüyordu.
    Bulgu varsa exit 1. */
 const fs = require('fs'), vm = require('vm'), path = require('path');
 const [vak, ilk, yasak] = process.argv.slice(2);
@@ -29,6 +31,17 @@ for (const o of D.onderwerpen) o.vragen.forEach((v, i) => alle.push({ k: `${o.id
 alle.forEach((a, i) => { if (a.w.size >= 4) alle.forEach((b, j) => {
   if (a.n && (!b.n || i < j) && a !== b && b.w.size >= 4 && sim(a.w, b.w) >= 0.7) meld(`KOPYA ${a.k} ~ ${b.k}: ${a.s.slice(0, 70)} || ${b.s.slice(0, 70)}`);
 }); });
+const kaal = s => String(s).replace(/<[^>]+>/g, ' ');
+for (const e of D.examens.filter(yeni)) e.vragen.forEach((v, i) => {
+  if (v.type !== 'invul') return;
+  String(v.antwoord).split('|').map(a => a.trim()).filter(a => a.length >= 4).forEach(a => {
+    const re = new RegExp('(^|[^a-zà-ÿ0-9])' + a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^a-zà-ÿ0-9])', 'i');
+    e.vragen.forEach((w, j) => {
+      if (j !== i && [w.vraag, ...(w.opties || [])].some(t => re.test(kaal(t))))
+        meld(`LEK ${no(e)}#${i + 1} "${a}" staat in #${j + 1}: ${kaal(w.vraag).slice(0, 70)}`);
+    });
+  });
+});
 if (yasak) { const re = new RegExp(yasak, 'i');
   for (const e of D.examens.filter(yeni)) e.vragen.forEach((v, i) => {
     const m = [v.vraag, ...(v.opties || []), v.antwoord, v.modelantwoord, v.uitleg].join(' ').match(re);
