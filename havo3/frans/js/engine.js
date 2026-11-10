@@ -353,7 +353,7 @@
   }
 
   function normaliseer(s) {
-    return String(s).toLowerCase().trim()
+    return String(s).replace(/\u0130/g, "I").toLowerCase().trim()
       .replace(",", ".").replace(/\s+/g, "")
       .replace("km/u", "km/h");
   }

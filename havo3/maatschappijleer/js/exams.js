@@ -290,7 +290,7 @@
 
   /* ---------- Nakijken ---------- */
   function normaliseer(s) {
-    return String(s == null ? "" : s).toLowerCase()
+    return String(s == null ? "" : s).replace(/\u0130/g, "I").toLowerCase()
       .replace(/[.,;:!?'"()·\u2018\u2019\u201c\u201d\u02bc`\u00b4]/g, " ")
       .replace(/\s+/g, " ").trim();
   }
