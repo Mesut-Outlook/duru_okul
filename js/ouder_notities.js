@@ -26,6 +26,7 @@ window.DURU_OUDER_NOTITIES = {
   geschiedenis: { datum: "2026-11-10", punten: [
     { ernst: "hoog", tekst: "H1 kronolojisi zayıf: Versailles 1919, Türkiye 1923, Kanlı Pazar 1905, SSCB 1922 gibi yılları karıştırıyor; Sarajevo suikastine '11 november 1918' yazdı (karışık test 34: 20 sorudan 9'u yanlış)." },
     { ernst: "mid", tekst: "Benzer adları karıştırıyor: Volkenbond ↔ Vrede van Versailles, Brest-Litovsk ↔ Versailles, tsaar ↔ Lenin, Marne ↔ Somme." },
-    { ernst: "mid", tekst: "Kavramları kendi kelimesiyle yazıyor ama kabul edilmiyor: 'op de bon' (distributiestelsel), 'illegale' (zwarte markt), 'prikkeldraad' (elektrocutie). Yeni testler 46–65 bunlara gidiyor." }
+    { ernst: "mid", tekst: "Kavramları kendi kelimesiyle yazıyor ama kabul edilmiyor: 'op de bon' (distributiestelsel), 'illegale' (zwarte markt), 'prikkeldraad' (elektrocutie). Yeni testler 46–65 bunlara gidiyor." },
+    { ernst: "mid", tekst: "10 Kasım akşamı 10 denemeyi 25 dakikada yaptı (deneme başı 2–3 dk); toets 43'ü üst üste 4 kez çözdü (7→12→12→17/20) — ezber/tahmin olabilir. §1.4 en zayıf: Kemal 'sultan' (doğrusu president), Anatolië, Hongarije, Baltische staten, Poolse Corridor, goudmarken. Herhaling toetsen 66–75 bunlara gidiyor." }
   ] }
 };

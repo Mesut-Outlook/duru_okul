@@ -650,7 +650,7 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
-### TASK-44 · geschiedenis H1: son 10 denemenin yanlışlarından her §'a 2 toets (examen_66…75)  [status: IN_PROGRESS — agy payı: 72…75]
+### TASK-44 · geschiedenis H1: son 10 denemenin yanlışlarından her §'a 2 toets (examen_66…75)  [status: DONE ✅ 2026-11-10 — agy payı: 72…75 TAMAMLANDI ✅]
 Kullanıcı isteği (2026-11-10): "Duru'nun tarihte son 10 sınavda yaptığı yanlış sorulardan ve konulardan oluşan, her bölümde 2'şer yeni test; agy ile Sonnet paylaşsın".
 Son 10 deneme (bugün 20:27–20:51): 45, 43 (×4), 37, 35, 32, 55 (×2) → 60 yanlış/boş. **Ağırlık: bu yanlışlar** (aynı kavram, YENİ cümle/bağlam/biçim — eski soruyu kopyalama);
 bir §'ta son 10'da az yanlış varsa TASK-42'deki o § zayıf listesinden tamamla. 46…65 ile de aynı cümleyi kurma (`teslim_check` KOPYA).
@@ -675,6 +675,27 @@ Başlık: `"Proeftoets 66 — §1.1 Herhaling A: <konu>"`, `"… Herhaling B: �
 
 **Kabul:** `node tools/gate.js geschiedenis` (index.html'i Opus bağlar; kural 11 kırmızı olabilir) · `node tools/open_check.js geschiedenis` 0 ·
 `node tools/teslim_check.js geschiedenis 66` temiz · **commit/push YAPMA** · kendi id'lerin dışına dokunma. agy: bitince "agy Raporu" ekle, status → REVIEW.
+- **agy Raporu (2026-11-10 teslim — 72…75)**:
+  - `tools/gen_geschiedenis_h1_h.py` yazıldı; `examen_72.js` t/m `examen_75.js` (§1.4 ve §1.5) üretildi.
+  - Test kapsamı:
+    - 72: Proeftoets 72 — §1.4 Herhaling A: Verdrag van Versailles en bepalingen voor Duitsland (Versailles 1919 [niet 1918], Clemenceau zwaarste straffen, herstelbetalingen in goudmarken [niet euro's/goud], verbod op duikboten/tanks/luchtmacht, leger max 100.000 man beroepssoldaten, art. 231 alleenschuld, Poolse Corridor en scheiding Oost-Pruisen, VS-Congres weigerde Volkenbond, Rijnland gedemilitariseerd, zelfbeschikkingsrecht Wilson)
+    - 73: Proeftoets 73 — §1.4 Herhaling B: De nieuwe kaart van Europa en het Midden-Oosten (Baltische staten Estland/Letland/Litouwen uit tsarenrijk, Oostenrijk klein Duitstalig staatje [niet mandaatgebied], O-H uiteenvallen in Hongarije en Tsjecho-Slowakije, Joegoslavië voor Zuid-Slaven [Serviërs, Kroaten, Slovenen, Bosniërs], Smyrna 1919 geallieerde verdeling, Kemal bevrijdt geheel Anatolië [niet alleen Smyrna], sultanaat afgeschaft [niet mandaatgebied], Republiek Turkije 1923 en Kemal president [niet sultan], Vrede van Lausanne 1923 met volkenruil ±1,7 mln waarvan 1,2 mln Grieken uit Turkije en 500.000 Turken uit Griekenland)
+    - 74: Proeftoets 74 — §1.5 Herhaling A: Neutraal Nederland, vluchtelingen en mobilisatie (Mobilisatie 200.000 militairen paraat aan grens, >1 mln Belgische vluchtelingen waarvan ±100.000 bleven, Draad des Doods met 2000V elektrocutie [niet prikkeldraad], Rotterdam haven stilgevallen door blokkade, distributiebonnen zijn géén gratis voedsel maar aankooprecht tegen maximumprijs, zwarte markt met woekerprijzen, nijpend steenkooltekort, N.O.T., gevaar van zeemijnen en U-boten)
+    - 75: Proeftoets 75 — §1.5 Herhaling B: Grondwet 1917, Troelstra en De Stijl (Pacificatie 1917 loste twee kwesties op: schoolstrijd financiële gelijkstelling + algemeen mannenkiesrecht; vrouwen passief 1917 en actief 1919 [niet tegelijk in 1917]; Troelstra socialistische revolutie 1918 mislukt door gebrek aan steun; massademonstratie Malieveld Den Haag voor koningin Wilhelmina; De Stijl 1917 met primaire kleuren rood/geel/blauw + wit/grijs/zwart; Gerrit Rietveld Rood-blauwe leunstoel meubelmaker én architect; Piet Mondriaan schilder o.a. Victory Boogie Woogie)
+  - Biçim ve Denge:
+    - Her test tam 20 soru: 10 MC · 5 Waaronwaar (tam 2 onwaar = %40) · 4 Invul · 1 Open.
+    - Doğru MC şıkkı en uzun: 72: 0/10, 73: 2/10, 74: 1/10, 75: 0/10 (tümü ≤ %40 kuralı dahilinde).
+    - Doğru MC şıkkı tek başına en kısa: 72: 2/10, 73: 1/10, 74: 1/10, 75: 2/10 (tümü ≤ %40, teslim_check KISA kuralına uygun).
+    - Şık dağılımı: A/B/C/D dengeli dağıtıldı (her pozisyon ≤ %40).
+    - Open sorular kısa: tek şey sorulur, vraag sonu " <i>(Eén korte zin is genoeg.)</i>", modelantwoord ≤ 20 kelime, 1–2 sleutelwoord (alternatifler / ile, min=1).
+  - Denetimler:
+    - `node --check havo3/geschiedenis/js/data/examen_{72..75}.js` → hatasız.
+    - `node tools/open_check.js geschiedenis` → 1652 open soru, **0 sorun (temiz)**.
+    - `node tools/teslim_check.js geschiedenis 66` → **temiz (0 LEK, 0 KOPYA, 0 KISA)**.
+    - `node tools/gate.js geschiedenis` → 17/18 geçti (yalnız kural 11, Opus'un index.html satırlarını eklemesi bekleniyor).
+  - Git: commit/push yapılmadı. Opus'a devredildi.
+
+- **Opus denetimi (2026-11-10):** 66–71 Sonnet (69 "wapenstilstand = overgave" → november 1918), 72–75 agy: teori dışı Spiegelzaal/Rijnland/Saint-Germain/Genève/Veertien Punten/Pacificatie/leunstoel/dienstplicht/Klein-Azië/U-boten çıkarıldı (Grote Drie, Rietveld-stoel, openbaar onderwijs), 72 open "Noem twee" → één, 72#10 kopya + 72#16 LEK düzeltildi. open_check 0, teslim_check temiz.
 
 ### TASK-43 · scheikunde H1: her §'a 3 toets + 5 gemengde (examen_h1_45…58)  [status: DONE ✅ 2026-11-10 — agy payı: 51…53 TAMAMLANDI ✅]
 Kullanıcı isteği (2026-11-10): "Kimyada da aynısını yap (1. ünitede her §'a 3 test + 5 karışık), agy ve Sonnet arasında paylaştır".

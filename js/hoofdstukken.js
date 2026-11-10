@@ -1633,7 +1633,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-geschiedenis-62": 1,
         "ex-h3-geschiedenis-63": 1,
         "ex-h3-geschiedenis-64": 1,
-        "ex-h3-geschiedenis-65": 1
+        "ex-h3-geschiedenis-65": 1,
+        "ex-h3-geschiedenis-66": 1,
+        "ex-h3-geschiedenis-67": 1,
+        "ex-h3-geschiedenis-68": 1,
+        "ex-h3-geschiedenis-69": 1,
+        "ex-h3-geschiedenis-70": 1,
+        "ex-h3-geschiedenis-71": 1,
+        "ex-h3-geschiedenis-72": 1,
+        "ex-h3-geschiedenis-73": 1,
+        "ex-h3-geschiedenis-74": 1,
+        "ex-h3-geschiedenis-75": 1
       },
       "examenInfo": {
         "ex-h3-geschiedenis-1": ["Proeftoets 1 — 1.1 Beleving van tijd & 1.2 De Grote Oorlog (Oorzaken)", "2026-07-21", "", "miwmmwmimmwimmwmiwmo"],
@@ -1700,7 +1710,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-geschiedenis-62": ["Proeftoets 62 — Gemengd B: chronologie", "2026-11-10", "mix", "mmmmmmmmmmwwwwwiiiio"],
         "ex-h3-geschiedenis-63": ["Proeftoets 63 — Gemengd C: begrippen", "2026-11-10", "mix", "mmmmmmmmmmwwwwwiiiio"],
         "ex-h3-geschiedenis-64": ["Proeftoets 64 — Gemengd D: personen & plaatsen", "2026-11-10", "mix", "mmmmmmmmmmwwwwwiiiio"],
-        "ex-h3-geschiedenis-65": ["Proeftoets 65 — Gemengd E: eindtoets-niveau", "2026-11-10", "mix", "mmmmmmmmmmwwwwwiiiio"]
+        "ex-h3-geschiedenis-65": ["Proeftoets 65 — Gemengd E: eindtoets-niveau", "2026-11-10", "mix", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-66": ["Proeftoets 66 — §1.1 Herhaling A: La belle époque, cultuur en stopwatch", "2026-11-10", "1.1", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-67": ["Proeftoets 67 — §1.1 Herhaling B: Zonnetijd, zomertijd en tijdzones", "2026-11-10", "1.1", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-68": ["Proeftoets 68 — §1.2 Herhaling A: Oorzaken en de moord in Sarajevo", "2026-11-10", "1.2", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-69": ["Proeftoets 69 — §1.2 Herhaling B: Het verloop van de oorlog", "2026-11-10", "1.2", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-70": ["Proeftoets 70 — §1.3 Herhaling A: Het tsarenrijk en de Februarirevolutie", "2026-11-10", "1.3", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-71": ["Proeftoets 71 — §1.3 Herhaling B: Lenin, de Oktoberrevolutie en de Sovjet-Unie", "2026-11-10", "1.3", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-72": ["Proeftoets 72 — §1.4 Herhaling A: Verdrag van Versailles en bepalingen voor Duitsland", "2026-11-10", "1.4", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-73": ["Proeftoets 73 — §1.4 Herhaling B: De nieuwe kaart van Europa en het Midden-Oosten", "2026-11-10", "1.4", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-74": ["Proeftoets 74 — §1.5 Herhaling A: Neutraal Nederland, vluchtelingen en mobilisatie", "2026-11-10", "1.5", "mmmmmmmmmmwwwwwiiiio"],
+        "ex-h3-geschiedenis-75": ["Proeftoets 75 — §1.5 Herhaling B: Grondwet 1917, Troelstra en De Stijl", "2026-11-10", "1.5", "mmmmmmmmmmwwwwwiiiio"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -1736,7 +1756,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h6-5": 6
       },
       "aantalExamens": {
-        "1": 40,
+        "1": 50,
         "2": 5,
         "3": 5,
         "4": 5,
