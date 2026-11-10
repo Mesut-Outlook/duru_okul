@@ -187,22 +187,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welk begrip beschrijft een mengsel dat ontstaat door twee of meer metalen in gesmolten toestand te mengen?",
-      "sleutelwoorden": [
-        "legering"
-      ],
+      "vraag": "Welk begrip beschrijft een mengsel van twee of meer metalen in gesmolten toestand? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["legering"],
       "minTreffers": 1,
-      "modelantwoord": "Dit mengsel van metalen heet een legering.",
+      "modelantwoord": "Dat heet een legering.",
       "uitleg": "Een mengsel van gesmolten en weer afgekoelde metalen heet een legering."
     },
     {
       "type": "open",
-      "vraag": "Geef het begrip dat hoort bij de omschrijving: 'proces waarbij metalen reageren met stoffen uit de omgeving, zoals water en zuurstof'.",
-      "sleutelwoorden": [
-        "corrosie"
-      ],
+      "vraag": "Hoe heet het proces waarbij metalen reageren met stoffen uit de omgeving, zoals water en zuurstof? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["corrosie/roest"],
       "minTreffers": 1,
-      "modelantwoord": "Dit proces heet corrosie.",
+      "modelantwoord": "Dat heet corrosie.",
       "uitleg": "Het reageren van een metaal met water en zuurstof uit de omgeving heet corrosie."
     }
   ]

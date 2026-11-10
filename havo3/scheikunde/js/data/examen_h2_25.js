@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken het massapercentage koolstof in glucose, C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (C = 12,01 u; H = 1,008 u; O = 16,00 u). Rond af op één decimaal en laat je berekening zien.",
-      "sleutelwoorden": [
-        "180,16/180,2",
-        "40,0/40"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Molecuulmassa C6H12O6 = 6 × 12,01 + 12 × 1,008 + 6 × 16,00 = 180,16 u. Massa van de koolstofatomen = 6 × 12,01 = 72,06 u. Massapercentage C = 72,06 / 180,16 × 100% = 40,0%.",
+      "vraag": "Bereken het massapercentage koolstof in C₆H₁₂O₆ (C = 12,01 u; H = 1,008 u; O = 16,00 u; één decimaal). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["40 0/40"],
+      "minTreffers": 1,
+      "modelantwoord": "Het massapercentage koolstof is 40,0%.",
       "uitleg": "Eerst de totale molecuulmassa (180,16 u), dan de massa van de gevraagde atoomsoort (6 × 12,01 = 72,06 u) delen door de molecuulmassa en vermenigvuldigen met 100%: 40,0%."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf op microniveau hoe de moleculen zich gedragen in een vaste stof, in een vloeistof en in een gas.",
-      "sleutelwoorden": [
-        "trillen/dicht op elkaar/gestapeld/op hun plek",
-        "langs elkaar/vrij/tegen elkaar",
-        "grote afstand/ver uit elkaar/snel"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "In een vaste stof zitten de moleculen dicht op elkaar gestapeld en trillen ze op hun plek. In een vloeistof bewegen de moleculen vrij langs elkaar, maar ze zitten wel tegen elkaar. In een gas bewegen de moleculen heel snel en op grote afstand van elkaar; ze raken elkaar niet.",
+      "vraag": "Hoe bewegen de moleculen in een gas? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["snel/grote afstand/ver uit elkaar/vrij"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze bewegen heel snel en ver uit elkaar.",
       "uitleg": "Vast: gestapeld en trillend op hun plek. Vloeistof: vrij langs elkaar, wel tegen elkaar. Gas: snel en ver uit elkaar."
     }
   ]

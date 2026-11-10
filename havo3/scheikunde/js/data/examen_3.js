@@ -161,26 +161,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef de systematische namen van de volgende drie stoffen: 1) SO₂, 2) N₂O, 3) SF₆.",
-      "sleutelwoorden": [
-        "zwaveldioxide",
-        "distikstofmonoxide/distikstofmono-oxide/lachgas",
-        "zwavelhexafluoride"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. SO₂ = zwaveldioxide, 2. N₂O = distikstofmonoxide (ook bekend als lachgas), 3. SF₆ = zwavelhexafluoride.",
+      "vraag": "Wat is de systematische naam van SO₂? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["zwaveldioxide"],
+      "minTreffers": 1,
+      "modelantwoord": "SO₂ heet zwaveldioxide.",
       "uitleg": "Systematische naamgeving met Griekse voorvoegsels."
     },
     {
       "type": "open",
-      "vraag": "Bekijk de formule 3 C₂H₆O (drie moleculen ethanol/alcohol). Bepaal van elke atoomsoort hoeveel atomen er in totaal aanwezig zijn.",
-      "sleutelwoorden": [
-        "koolstof / C: 6 atomen",
-        "waterstof / H: 18 atomen",
-        "zuurstof / O: 3 atomen"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "In 3 C₂H₆O: Koolstofatomen (C): 3 × 2 = 6 atomen; Waterstofatomen (H): 3 × 6 = 18 atomen; Zuurstofatomen (O): 3 × 1 = 3 atomen.",
+      "vraag": "Hoeveel waterstofatomen zijn er in totaal in 3 C₂H₆O? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["18/achttien"],
+      "minTreffers": 1,
+      "modelantwoord": "Er zijn 18 waterstofatomen (3 × 6).",
       "uitleg": "Coëfficiënt vermenigvuldigen met de index van elke atoomsoort."
     }
   ]

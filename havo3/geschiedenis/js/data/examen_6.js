@@ -203,19 +203,19 @@
       {
         id: "ex6_v19",
         type: "open",
-        vraag: "Leg uit waarom de beurskrach van 1929 in de Verenigde Staten uiteindelijk ook in Europa tot een economische crisis leidde.",
-        sleutelwoorden: ["handel/handelscontacten/wereldeconomie", "banken/leningen/lenen"],
+        vraag: "Waardoor verspreidde de crisis uit de VS zich naar Europa? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["handel/leningen/lenen/verbonden/wereldeconomie"],
         minTreffers: 1,
-        modelantwoord: "Doordat landen wereldwijd economisch met elkaar verbonden waren door handel en leningen, verspreidde de crisis in de VS zich via de wereldeconomie naar Europa: banken en bedrijven gingen ook daar failliet en de werkloosheid liep op.",
+        modelantwoord: "Landen waren verbonden door handel en leningen.",
         uitleg: "De VS en Europa waren nauw verbonden door internationale handel en Amerikaanse leningen, waardoor de crisis zich als een olievlek verspreidde."
       },
       {
         id: "ex6_v20",
         type: "open",
-        vraag: "Beschrijf twee concrete maatregelen die president Roosevelt met de New Deal nam om de Amerikaanse economie uit de crisis te helpen.",
-        sleutelwoorden: ["openbare werken/wegen/dammen/parken", "subsidie/boeren", "toezicht/banken", "vakbond/rechten"],
-        minTreffers: 2,
-        modelantwoord: "Roosevelt liet miljoenen werklozen aan de slag gaan bij openbare werken zoals de aanleg van wegen, stuwdammen en parken. Daarnaast kregen boeren die hun productie beperkten subsidie, kwam er overheidstoezicht op de banken en kregen vakbonden meer rechten.",
+        vraag: "Noem één maatregel van Roosevelts New Deal tegen de crisis. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["openbare werken/werklozen/subsidie/toezicht/vakbond/wegen/dammen/banken"],
+        minTreffers: 1,
+        modelantwoord: "Werklozen kregen werk bij openbare werken zoals wegen.",
         uitleg: "De New Deal bestond uit een combinatie van maatregelen waarbij de overheid actief investeerde in werkgelegenheid en toezicht hield op de economie."
       }
     ]

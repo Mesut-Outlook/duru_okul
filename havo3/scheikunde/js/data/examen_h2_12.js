@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit welke drie categorieën atoomsoorten je in figuur 2.14 kunt onderscheiden en met welke kleur ze zijn weergegeven.",
-      "sleutelwoorden": [
-        "geel",
-        "blauw",
-        "oranje"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Metalen zijn geel, metalloïden zijn blauw en niet-metalen zijn oranje gekleurd.",
+      "vraag": "Welke kleur hebben de metalen in figuur 2.14? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["geel"],
+      "minTreffers": 1,
+      "modelantwoord": "Metalen zijn geel.",
       "uitleg": "Metalen zijn geel, metalloïden zijn blauw en niet-metalen zijn oranje gekleurd."
     },
     {
       "type": "open",
-      "vraag": "Waarom staan er in het huidige periodiek systeem meer atoomsoorten dan in het overzicht van Mendelejev?",
-      "sleutelwoorden": [
-        "ontdekt",
-        "sinds/later/daarna"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Er zijn sinds die tijd (1869) nog veel atoomsoorten ontdekt, dus het huidige periodiek systeem bevat er meer dan dat van Mendelejev.",
+      "vraag": "Waarom bevat het huidige periodiek systeem meer atoomsoorten dan dat van Mendelejev? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ontdekt/gevonden/later/sinds/daarna"],
+      "minTreffers": 1,
+      "modelantwoord": "Er zijn later nog nieuwe atoomsoorten ontdekt.",
       "uitleg": "Er zijn sinds die tijd (1869) nog veel atoomsoorten ontdekt, dus het huidige periodiek systeem bevat er meer dan dat van Mendelejev."
     }
   ]

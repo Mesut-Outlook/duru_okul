@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bij het kloppend maken van C<sub>2</sub>H<sub>6</sub> (g) + O<sub>2</sub> (g) → 2 CO<sub>2</sub> (g) + 3 H<sub>2</sub>O (g) kom je eerst uit op een coëfficiënt 3½ vóór O2. Leg uit wat je vervolgens met alle coëfficiënten in de vergelijking moet doen, en waarom dat nodig is.",
-      "sleutelwoorden": [
-        "vermenigvuldigen/keer 2/x2",
-        "geheel getal/gehele getallen/geen breuk"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je moet alle coëfficiënten in de vergelijking met 2 vermenigvuldigen (dus ook de onzichtbare coëfficiënt 1 vóór C2H6), zodat de breuk 3½ verdwijnt en alle coëfficiënten gehele getallen worden. Dat geeft: 2 C2H6 (g) + 7 O2 (g) → 4 CO2 (g) + 6 H2O (g).",
+      "vraag": "Bij het kloppend maken van C<sub>2</sub>H<sub>6</sub> + O<sub>2</sub> kom je op een coëfficiënt 3½ vóór O<sub>2</sub>. Wat doe je dan met alle coëfficiënten? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vermenigvuldig/keer 2/maal 2/verdubbel"],
+      "minTreffers": 1,
+      "modelantwoord": "Je vermenigvuldigt alle coëfficiënten met 2.",
       "uitleg": "Een reactievergelijking mag geen breuk als coëfficiënt bevatten; vermenigvuldig alles met 2 om van 3½ een geheel getal te maken."
     }
   ]

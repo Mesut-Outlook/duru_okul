@@ -185,28 +185,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef voor een atoom van Fosfor-31 (³¹₁₅P) het aantal: 1) protonen, 2) neutronen, 3) elektronen, 4) de elektronenverdeling over de schillen (K, L, M).",
-      "sleutelwoorden": [
-        "15 protonen/protonen 15/15",
-        "16 neutronen/neutronen 16/16",
-        "15 elektronen/elektronen 15/15",
-        "2 8 5/schilverdeling 2 8 5"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Voor Fosfor-31 (³¹₁₅P): 1. Aantal protonen = atoomnummer = 15, 2. Aantal neutronen = massagetal - atoomnummer = 31 - 15 = 16, 3. Aantal elektronen = aantal protonen = 15, 4. Elektronenverdeling: K-schil: 2, L-schil: 8, M-schil: 5 (notatie: 2, 8, 5).",
+      "vraag": "Hoeveel neutronen heeft een atoom Fosfor-31 (³¹₁₅P)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["16/zestien"],
+      "minTreffers": 1,
+      "modelantwoord": "Het atoom heeft 16 neutronen (31 − 15).",
       "uitleg": "Bepaling van kernsamenstelling en schillenverdeling."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf in chronologische volgorde de vier grote wetenschappelijke stappen in het denken over de bouw van het atoom van de 19e tot de 20e eeuw.",
-      "sleutelwoorden": [
-        "Dalton/massief/bol",
-        "Thomson/krentenbol/elektron",
-        "Rutherford/kern/leeg",
-        "Bohr/schillen"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Dalton (1803): Het atoom is een massief en ondeelbaar bolletje per element. 2. Thomson (1897): Ontdekte het elektron; het atoom is een positieve bol waarin negatieve elektronen zitten als krenten in een krentenbol. 3. Rutherford (1911): Ontdekte via goudfolie dat het atoom grotendeels leeg is, met een extreem kleine, zware positieve atoomkern en elektronen eromheen. 4. Bohr (1913): Verfijnde dit door aan te tonen dat elektronen in vaste schillen (K, L, M) om de kern draaien.",
+      "vraag": "Welke wetenschapper ontdekte met goudfolie dat het atoom grotendeels leeg is? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["rutherford"],
+      "minTreffers": 1,
+      "modelantwoord": "Rutherford ontdekte dat via goudfolie.",
       "uitleg": "De 4 klassieke atoommodellen in chronologische volgorde."
     }
   ]

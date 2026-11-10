@@ -207,14 +207,10 @@ DURU.registerExamen({
     {
       "id": "ex36_v20",
       "type": "open",
-      "vraag": "Leg uit waarom het groeiende treinverkeer een probleem werd voor steden die elk hun eigen klok volgden.",
-      "sleutelwoorden": [
-        "dienstregeling/regeling",
-        "zonnetijd/zon",
-        "landelijke/standaardtijd"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Elke plaats had zijn eigen zonnetijd, waardoor spoorwegen geen strakke dienstregeling konden maken; ze hadden één landelijke standaardtijd nodig.",
+      "vraag": "Waarom waren de verschillende klokken een probleem voor het treinverkeer? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["dienstregeling/regeling/tijdschema/vertrektijd"],
+      "minTreffers": 1,
+      "modelantwoord": "Er kon geen vaste dienstregeling worden gemaakt.",
       "uitleg": "Zonder gelijke tijd was geen strakke dienstregeling mogelijk (§1.1)."
     }
   ]

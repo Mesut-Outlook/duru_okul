@@ -203,25 +203,19 @@
       {
         id: "ex24_v19",
         type: "open",
-        vraag: "Leg uit waarom de integratie van de Molukse gemeenschap in Nederland aanvankelijk moeilijker verliep dan die van de Indische Nederlanders.",
-        sleutelwoorden: [
-          "opvangkampen/eigen wijken/afstand",
-          "RMS/republiek/terugkeer"
-        ],
+        vraag: "Waarop rekenden de Molukkers en de regering aanvankelijk, waardoor integratie moeilijk was? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["terugkeer/republiek/RMS"],
         minTreffers: 1,
-        modelantwoord: "De Molukkers werden ondergebracht in opvangkampen en later in eigen wijken omdat zijzelf en de Nederlandse regering aanvankelijk op terugkeer naar een eigen Molukse republiek (de RMS) rekenden, waardoor de afstand tot andere Nederlanders groot bleef.",
+        modelantwoord: "Op terugkeer naar een eigen Molukse republiek.",
         uitleg: "Doordat zowel de Molukkers als de regering aanvankelijk uitgingen van terugkeer naar de RMS, bleven ze apart wonen en verliep de integratie moeizamer dan bij de Indische Nederlanders."
       },
       {
         id: "ex24_v20",
         type: "open",
-        vraag: "Leg uit hoe de integratie van Turkse en Marokkaanse gastarbeiders door het onderwijs juist werd bevorderd, ondanks de grote cultuurverschillen.",
-        sleutelwoorden: [
-          "meisjes/dochters",
-          "school/presteerde/succesvol"
-        ],
+        vraag: "Welke groep Turkse en Marokkaanse jongeren deed het vooral goed op school? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["meisjes/dochters/vrouwen"],
         minTreffers: 1,
-        modelantwoord: "Vooral meisjes met een Turkse of Marokkaanse achtergrond deden het op school goed, waardoor de jonge generatie via het onderwijs beter integreerde dan hun ouders, ondanks de grote cultuurverschillen tussen hun herkomstland en Nederland.",
+        modelantwoord: "Vooral meisjes.",
         uitleg: "Vooral meisjes met een Turkse en Marokkaanse achtergrond deden het heel goed op school, wat de integratie van de jonge generatie bevorderde."
       }
     ]

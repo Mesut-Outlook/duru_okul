@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Twee blauwe viltstiften lijken dezelfde kleur te hebben. Leg uit hoe je met dunnelaagchromatografie kunt onderzoeken of beide stiften precies dezelfde blauwe kleurstof bevatten, en wat je in het chromatogram vergelijkt om dit te bepalen.",
-      "sleutelwoorden": [
-        "Rf-waarde/Rf-waarden",
-        "aantal vlekken/aantal kleuren"
-      ],
+      "vraag": "Welke waarde van de vlekken vergelijk je in een chromatogram om te zien of twee kleurstoffen gelijk zijn? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["Rf-waarde/Rf waarde/Rf-waarden/Rf"],
       "minTreffers": 1,
-      "modelantwoord": "Je brengt van beide stiften een stip inkt aan op de basislijn van een plaatje met silicagel en zet dit in een loopvloeistof. Na de scheiding vergelijk je het aantal vlekken en de Rf-waarde van elke vlek: zijn het evenveel vlekken met dezelfde Rf-waarden, dan bevatten de stiften dezelfde kleurstof(fen); zijn er verschillen, dan niet.",
+      "modelantwoord": "Je vergelijkt de Rf-waarde van de vlekken.",
       "uitleg": "Bij chromatografie herken je een stof aan zijn Rf-waarde; gelijke chromatogrammen (zelfde aantal vlekken, zelfde Rf-waarden) betekenen dezelfde kleurstoffen."
     }
   ]

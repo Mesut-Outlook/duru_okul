@@ -186,18 +186,18 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg met een voorbeeld uit waarom je bij het berekenen van de hoeveelheid gevormd reactieproduct altijd van de stof in ondermaat moet uitgaan.",
-      sleutelwoorden: ["stopt"],
+      vraag: "Waarom ga je bij berekeningen uit van de stof in ondermaat? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["stopt/stoppen/op is/opgebruikt/raakt op"],
       minTreffers: 1,
-      modelantwoord: "De stof in ondermaat raakt volledig op; zodra deze op is, stopt de reactie, dus die stof bepaalt hoeveel product er maximaal kan ontstaan.",
+      modelantwoord: "Als die stof op is, stopt de reactie.",
       uitleg: "Zodra de stof in ondermaat volledig heeft gereageerd, stopt de reactie — ook als er nog van de andere stof (de overmaat) over is."
     },
     {
       type: "open",
-      vraag: "Leg uit waarom de verbranding van biomassa (zoals houtsnippers) vaak als CO2-neutraal wordt beschouwd, ook al komt er koolstofdioxide vrij.",
+      vraag: "Biomassa wordt vaak als CO<sub>2</sub>-neutraal gezien. Welk proces van planten neemt tijdens hun groei CO<sub>2</sub> op? <i>(Eén korte zin is genoeg.)</i>",
       sleutelwoorden: ["fotosynthese"],
       minTreffers: 1,
-      modelantwoord: "De bomen en planten waaruit de biomassa bestaat, hebben tijdens hun groei via fotosynthese ongeveer evenveel CO2 opgenomen als er nu bij verbranding vrijkomt.",
+      modelantwoord: "Dat is fotosynthese.",
       uitleg: "Zolang een nieuw bos evenveel CO2 opneemt als het oude bos heeft uitgestoten, is de netto-uitstoot van CO2 ongeveer nul: CO2-neutraal."
     }
   ]

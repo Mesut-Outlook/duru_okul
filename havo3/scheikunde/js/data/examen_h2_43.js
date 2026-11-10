@@ -183,25 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je met behulp van het periodiek systeem kunt bepalen hoeveel elektronen een neutraal atoom heeft.",
-      "sleutelwoorden": [
-        "atoomnummer",
-        "protonen",
-        "gelijk/evenveel/neutraal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het atoomnummer geeft het aantal protonen. Een neutraal atoom heeft evenveel elektronen als protonen, dus het aantal elektronen is gelijk aan het atoomnummer.",
+      "vraag": "Welk getal in het periodiek systeem geeft het aantal elektronen van een neutraal atoom? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["atoomnummer"],
+      "minTreffers": 1,
+      "modelantwoord": "Het atoomnummer.",
       "uitleg": "Atoomnummer = protonen = elektronen bij een neutraal atoom."
     },
     {
       "type": "open",
-      "vraag": "Een natriumdeeltje (atoomnummer 11) heeft 10 elektronen. Leg uit of dit deeltje neutraal is en geef de lading.",
-      "sleutelwoorden": [
-        "11 protonen/protonen",
-        "1+/positief/niet neutraal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het deeltje heeft 11 protonen (1+) maar slechts 10 elektronen. Er is één positieve lading over: het deeltje is niet neutraal maar heeft lading 1+.",
+      "vraag": "Is een natriumdeeltje (atoomnummer 11) met 10 elektronen neutraal? Geef de lading. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["positief/1+"],
+      "minTreffers": 1,
+      "modelantwoord": "Nee, het is positief geladen (1+).",
       "uitleg": "11 protonen tegenover 10 elektronen geeft lading 1+."
     }
   ]

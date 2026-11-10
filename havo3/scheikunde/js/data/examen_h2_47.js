@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een atoom magnesium heeft atoomnummer 12 en massagetal 24. Geef het aantal protonen, neutronen en elektronen van een neutraal atoom en van een Mg<sup>2+</sup>-deeltje.",
-      "sleutelwoorden": [
-        "12 protonen/12 p",
-        "12 neutronen/12 n",
-        "12 elektronen/12 e",
-        "10 elektronen/10 e"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Neutraal atoom: 12 protonen, 12 neutronen (24 − 12) en 12 elektronen. Mg<sup>2+</sup>: 12 protonen, 12 neutronen en 10 elektronen (twee elektronen minder dan protonen).",
+      "vraag": "Hoeveel elektronen heeft een Mg<sup>2+</sup>-deeltje (atoomnummer 12)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["10/tien"],
+      "minTreffers": 1,
+      "modelantwoord": "Een Mg<sup>2+</sup>-deeltje heeft 10 elektronen (12 − 2).",
       "uitleg": "Atoomnummer = protonen. Neutronen = massagetal − protonen. Een lading van 2+ betekent 2 elektronen minder dan protonen."
     },
     {
       "type": "open",
-      "vraag": "Iemand berekent bij glucose de massapercentages: koolstof 40,00%, waterstof 6,71% en zuurstof 53,29%. Hoe controleer je snel, zonder opnieuw te rekenen, of deze uitkomsten kunnen kloppen?",
-      "sleutelwoorden": [
-        "optellen/som/samen/opgeteld",
-        "100"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Tel de massapercentages op: 40,00 + 6,71 + 53,29 = 100,00%. Alle atoomsoorten samen vormen het hele molecuul, dus de som moet 100% zijn.",
+      "vraag": "Je controleert massapercentages van 40,00%, 6,71% en 53,29% zonder opnieuw te rekenen. Waar moeten ze samen op uitkomen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["100/honderd"],
+      "minTreffers": 1,
+      "modelantwoord": "Samen moeten ze 100% zijn.",
       "uitleg": "De massapercentages van alle atoomsoorten tellen op tot 100%."
     }
   ]

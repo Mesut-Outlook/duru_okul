@@ -188,25 +188,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen microniveau en macroniveau. Gebruik aceton en glucose als voorbeeld.",
-      "sleutelwoorden": [
-        "moleculen",
-        "stofeigenschappen/eigenschappen",
-        "verschillende"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Op microniveau bestaan aceton en glucose uit verschillende moleculen; daardoor hebben ze op macroniveau verschillende stofeigenschappen.",
+      "vraag": "Wat verschilt er op microniveau tussen aceton en glucose? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["moleculen/molecuul"],
+      "minTreffers": 1,
+      "modelantwoord": "Het zijn verschillende moleculen.",
       "uitleg": "Op microniveau bestaan aceton en glucose uit verschillende moleculen; daardoor hebben ze op macroniveau verschillende stofeigenschappen."
     },
     {
       "type": "open",
-      "vraag": "Waarom voldoet het simpele bolletjesmodel niet om het verschil tussen ruiken van water en alcohol te begrijpen? Wat is er dan nodig?",
-      "sleutelwoorden": [
-        "verschillen tussen stoffen/geen verschillen",
-        "ingewikkelder model/atomen/uit atomen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Met het simpele model kun je geen verschillen tussen stoffen verklaren. Je hebt een ingewikkelder model nodig waarin moleculen uit verschillende atomen bestaan.",
+      "vraag": "Wat heb je nodig om het verschil tussen de geur van water en alcohol te begrijpen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ingewikkelder/complexer/atomen"],
+      "minTreffers": 1,
+      "modelantwoord": "Een ingewikkelder model met moleculen opgebouwd uit atomen.",
       "uitleg": "Met het simpele model kun je geen verschillen tussen stoffen verklaren. Je hebt een ingewikkelder model nodig waarin moleculen uit verschillende atomen bestaan."
     }
   ]

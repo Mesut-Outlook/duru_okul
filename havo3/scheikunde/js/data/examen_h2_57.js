@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een klasgenoot zegt dat 5 H<sub>2</sub>O (figuur 2.20) één groot molecuul met vijftien atomen is. Leg uit wat er niet klopt.",
-      "sleutelwoorden": [
-        "losse/aparte/afzonderlijke/vijf moleculen/5 moleculen",
-        "coëfficiënt/coefficient",
-        "3 atomen/drie atomen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het getal 5 vóór de formule is de coëfficiënt en geeft het aantal moleculen aan. Het zijn dus vijf losse watermoleculen met elk drie atomen (twee H en één O), samen vijftien atomen.",
+      "vraag": "Een klasgenoot zegt dat 5 H<sub>2</sub>O één groot molecuul is. Hoeveel watermoleculen zijn het echt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["vijf/5 moleculen/5 watermoleculen"],
+      "minTreffers": 1,
+      "modelantwoord": "Het zijn vijf losse watermoleculen.",
       "uitleg": "De coëfficiënt geeft het aantal moleculen aan: het zijn vijf losse moleculen met elk drie atomen, geen één groot molecuul."
     },
     {
       "type": "open",
-      "vraag": "Noem twee voordelen van het gebruik van een formule in plaats van telkens een modelvoorstelling te tekenen.",
-      "sleutelwoorden": [
-        "sneller/snel/eenvoudiger/makkelijker/simpeler",
-        "taalonafhankelijk/wereldwijd/in alle talen/overal ter wereld/internationaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een formule is sneller en eenvoudiger op te schrijven dan een tekening, en ze is taalonafhankelijk: H<sub>2</sub>O betekent over de hele wereld hetzelfde.",
+      "vraag": "Noem één voordeel van een formule ten opzichte van een modeltekening. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["sneller/snel/eenvoudiger/makkelijker/simpeler/taalonafhankelijk/wereldwijd/internationaal/in alle talen"],
+      "minTreffers": 1,
+      "modelantwoord": "Een formule is sneller op te schrijven.",
       "uitleg": "Het boek noemt: een formule is een snellere en eenvoudigere manier om stoffen weer te geven en ze is taalonafhankelijk."
     }
   ]

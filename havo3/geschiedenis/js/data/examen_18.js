@@ -203,25 +203,19 @@
       {
         id: "ex18_v19",
         type: "open",
-        vraag: "Leg uit hoe de auto het dagelijks leven van Amerikaanse gezinnen in de jaren 1950 veranderde.",
-        sleutelwoorden: [
-          "voorsteden/wonen",
-          "fastfoodrestaurants/pretparken/uitstapjes"
-        ],
+        vraag: "Waarom werd de auto in de jaren 1950 onmisbaar voor Amerikaanse gezinnen? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["voorsteden/voorstad/openbaar vervoer/woonden/verhuisd"],
         minTreffers: 1,
-        modelantwoord: "Doordat het openbaar vervoer werd verwaarloosd, werd de auto onmisbaar om naar het werk te gaan en verhuisden veel gezinnen naar voorsteden; ook gebruikten gezinnen de auto voor uitstapjes naar zee, pretparken en fastfoodrestaurants.",
+        modelantwoord: "Veel gezinnen woonden in voorsteden en moesten met de auto naar het werk.",
         uitleg: "De auto maakte het leven in de voorsteden mogelijk en werd ook gebruikt voor gezinsuitstapjes naar pretparken en fastfoodrestaurants."
       },
       {
         id: "ex18_v20",
         type: "open",
-        vraag: "Beschrijf hoe de burgerrechtenbeweging in de jaren 1950 en 1960 uiteindelijk zorgde voor een wettelijk einde aan de segregatie.",
-        sleutelwoorden: [
-          "demonstraties/massale acties/King",
-          "Burgerrechtenwet/wet van 1964"
-        ],
+        vraag: "Welke leider van de burgerrechtenbeweging hield beroemde toespraken tegen segregatie? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["king/luther"],
         minTreffers: 1,
-        modelantwoord: "Door massale demonstraties en de toespraken van leiders zoals Martin Luther King groeide de druk op de federale overheid, waardoor het Congres in 1964 de Burgerrechtenwet aannam die alle discriminerende wetten ongeldig maakte.",
+        modelantwoord: "Martin Luther King.",
         uitleg: "Massale demonstraties en de druk van de burgerrechtenbeweging leidden ertoe dat het Congres in 1964 de Burgerrechtenwet aannam."
       }
     ]

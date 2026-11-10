@@ -207,15 +207,10 @@ DURU.registerExamen({
     {
       "id": "ex45_v20",
       "type": "open",
-      "vraag": "Wat gebeurde er nadat Troelstra in november 1918 opriep tot een revolutie, en waaruit bleek dat hij zich vergiste?",
-      "sleutelwoorden": [
-        "steun",
-        "Wilhelmina/koningin",
-        "Malieveld/Den Haag",
-        "betoog/betoogden/betoging"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Troelstra kreeg amper steun; duizenden mensen betoogden op het Malieveld in Den Haag juist hun steun aan koningin Wilhelmina.",
+      "vraag": "Wie steunden duizenden mensen juist op het Malieveld nadat Troelstra in 1918 opriep tot revolutie? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["wilhelmina/koningin/oranje"],
+      "minTreffers": 1,
+      "modelantwoord": "Koningin Wilhelmina.",
       "uitleg": "Troelstra kreeg amper steun, terwijl duizenden mensen de koningin steunden (§1.5)."
     }
   ]

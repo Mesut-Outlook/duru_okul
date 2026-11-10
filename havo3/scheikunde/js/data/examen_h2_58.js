@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken het massapercentage broom in Br<sub>2</sub>S (Br = 79,90 u; S = 32,07 u; één decimaal). Laat zien hoe je rekent.",
-      "sleutelwoorden": [
-        "191,87/191.87",
-        "159,80/159,8/159.80",
-        "83,3/83.3"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Molecuulmassa Br<sub>2</sub>S = 2 × 79,90 + 32,07 = 191,87 u. Massa broom = 2 × 79,90 = 159,80 u. Massapercentage = 159,80 / 191,87 × 100% = 83,3%.",
+      "vraag": "Bereken het massapercentage broom in Br<sub>2</sub>S (Br = 79,90 u; S = 32,07 u; één decimaal). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["83 3"],
+      "minTreffers": 1,
+      "modelantwoord": "159,80 / 191,87 × 100% = 83,3%.",
       "uitleg": "Eerst de molecuulmassa (191,87 u), dan de massa van broom (159,80 u), delen en × 100%: 83,3%."
     },
     {
       "type": "open",
-      "vraag": "Leg stap voor stap uit hoe je de systematische naam van N<sub>2</sub>S<sub>3</sub> afleidt uit de formule.",
-      "sleutelwoorden": [
-        "indexen/index",
-        "voorvoegsel/voorvoegsels/di/tri",
-        "achtervoegsel/-ide/sulfide"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je kijkt naar de symbolen en indexen: N heeft index 2 (voorvoegsel di) en S heeft index 3 (voorvoegsel tri). De tweede atoomsoort krijgt het achtervoegsel -ide. De naam is distikstoftrisulfide.",
+      "vraag": "Geef de systematische naam van N<sub>2</sub>S<sub>3</sub>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["distikstoftrisulfide/distikstof trisulfide/distikstoftrisulfid"],
+      "minTreffers": 1,
+      "modelantwoord": "De naam is distikstoftrisulfide.",
       "uitleg": "Met de indexen kies je de numerieke voorvoegsels (di, tri); de tweede atoomsoort krijgt een achtervoegsel (sulfide): distikstoftrisulfide."
     }
   ]

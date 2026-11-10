@@ -183,24 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de isotopen C-12 en C-14 allebei koolstofatomen zijn.",
-      "sleutelwoorden": [
-        "6 protonen/zes protonen/hetzelfde atoomnummer",
-        "neutronen/verschillend aantal neutronen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Beide atomen hebben 6 protonen, dus hetzelfde atoomnummer en daarmee dezelfde atoomsoort. Ze verschillen alleen in het aantal neutronen: 6 bij C-12 en 8 bij C-14.",
+      "vraag": "Hoeveel protonen hebben C-12 en C-14 allebei? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["6/zes"],
+      "minTreffers": 1,
+      "modelantwoord": "Beide hebben 6 protonen.",
       "uitleg": "Zelfde protonen = zelfde atoomsoort; neutronen verschillen."
     },
     {
       "type": "open",
-      "vraag": "In het periodiek systeem is de relatieve atoommassa van koolstof 12,01 u. Leg uit waaruit je kunt afleiden dat bijna alle koolstofatomen in de natuur C-12 zijn.",
-      "sleutelwoorden": [
-        "gemiddelde/gewogen gemiddelde",
-        "12/12,01/C-12"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De relatieve atoommassa van 12,01 u is een gewogen gemiddelde dat heel dicht bij 12 ligt, de massa van C-12. Dus C-12 komt veruit het meeste voor.",
+      "vraag": "Wat voor soort gemiddelde is de relatieve atoommassa 12,01 u van koolstof? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gewogen"],
+      "minTreffers": 1,
+      "modelantwoord": "Het is een gewogen gemiddelde.",
       "uitleg": "12,01 ligt bij 12, dus vrijwel alleen C-12."
     }
   ]

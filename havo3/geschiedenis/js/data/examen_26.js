@@ -173,25 +173,19 @@
       {
         id: "ex26_v19",
         type: "open",
-        vraag: "Leg uit waarom er in de meeste nieuwe staten in het Midden-Oosten en Noord-Afrika na de dekolonisatie geen sterke democratie tot ontwikkeling kwam.",
-        sleutelwoorden: [
-          "oligarchie/autocratie/alleenheerschappij",
-          "militairen/staatsgreep/leger grepen de macht"
-        ],
+        vraag: "Wie greep na de dekolonisatie vaak de macht in nieuwe staten in het Midden-Oosten en Noord-Afrika? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["militair/leger/generaal/dictator"],
         minTreffers: 1,
-        modelantwoord: "In veel nieuwe staten grepen groepjes militairen de macht en ontstond een oligarchie of autocratie in plaats van een democratie; vrije verkiezingen en persvrijheid bleven vaak uit. Alleen in Israël, Libanon en Turkije kwam de democratie wel goed tot ontwikkeling.",
+        modelantwoord: "Militairen grepen de macht.",
         uitleg: "Op enkele uitzonderingen na werden de nieuwe staten alleenheerschappijen, waarin vaak het leger de echte macht had."
       },
       {
         id: "ex26_v20",
         type: "open",
-        vraag: "Leg uit welk verband er bestaat tussen de Arabische Lente en het ontstaan van de burgeroorlog in Syrië.",
-        sleutelwoorden: [
-          "opstand/verzet/protest",
-          "verwoestend/jarenlang/miljoenen"
-        ],
+        vraag: "Tegen wie liep het verzet in Syrië tijdens de Arabische Lente? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["assad/dictator"],
         minTreffers: 1,
-        modelantwoord: "De volksopstanden van de Arabische Lente sloegen ook over naar Syrië, waar het verzet tegen dictator Assad uitgroeide tot een jarenlange, verwoestende burgeroorlog waarin Assad met buitenlandse steun zijn vijanden versloeg.",
+        modelantwoord: "Tegen dictator Assad.",
         uitleg: "De Arabische Lente begon met protesten, maar escaleerde in Syrië tot een langdurige, verwoestende burgeroorlog."
       }
     ]

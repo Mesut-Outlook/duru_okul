@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van de begrippen 'katalysator' en 'reactiesnelheid' uit waarom een auto een katalysator in de uitlaat heeft.",
-      "sleutelwoorden": [
-        "versnelt de reactie/versnelt reacties",
-        "schadelijke stoffen/minder schadelijk"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De katalysator in de uitlaat versnelt de reactie waarbij schadelijke uitlaatgassen worden omgezet in minder schadelijke stoffen, zonder dat de katalysator zelf verbruikt wordt. Dit verhoogt de reactiesnelheid van die omzetting, zodat het milieu minder belast wordt.",
+      "vraag": "Wat doet een katalysator in de uitlaat van een auto met de reactiesnelheid? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["versnelt/versnelling/sneller/verhoogt/groter"],
+      "minTreffers": 1,
+      "modelantwoord": "Hij versnelt de reactie.",
       "uitleg": "De katalysator versnelt de omzetting van schadelijke uitlaatgassen in minder schadelijke stoffen."
     }
   ]

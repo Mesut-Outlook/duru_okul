@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een leerling zegt: 'Een helder mengsel kan geen mengsel zijn van twee stoffen.' Leg uit waarom dat niet klopt.",
-      "sleutelwoorden": [
-        "oplossing",
-        "moleculen",
-        "verdeeld/gelijkmatig"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een oplossing is helder, maar het is wel een mengsel: de moleculen van beide stoffen zijn gelijkmatig verdeeld.",
+      "vraag": "Een leerling zegt dat een helder mengsel nooit een mengsel van twee stoffen kan zijn. Hoe heet zo'n helder mengsel wel? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["oplossing"],
+      "minTreffers": 1,
+      "modelantwoord": "Een helder mengsel is een oplossing.",
       "uitleg": "Een oplossing is helder, maar het is wel een mengsel: de moleculen van beide stoffen zijn gelijkmatig verdeeld."
     },
     {
       "type": "open",
-      "vraag": "Geef een voorbeeld van twee stoffen die slecht mengen en leg uit hoe de moleculen dan op microniveau zitten.",
-      "sleutelwoorden": [
-        "olijfolie/wasbenzine/ether",
-        "laag/lagen",
-        "niet/verspreiden"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Olijfolie en water mengen slecht: de moleculen verspreiden zich niet door elkaar maar vormen twee lagen.",
+      "vraag": "Geef een voorbeeld van twee stoffen die slecht mengen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["olijfolie/wasbenzine/ether/olie/benzine"],
+      "minTreffers": 1,
+      "modelantwoord": "Olijfolie en water mengen slecht.",
       "uitleg": "Olijfolie en water mengen slecht: de moleculen verspreiden zich niet door elkaar maar vormen twee lagen."
     }
   ]

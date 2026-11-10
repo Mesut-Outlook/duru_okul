@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een watermolecuul (H<sub>2</sub>O) een ontleedbare stof is, terwijl waterstofgas (H<sub>2</sub>) dat niet is.",
-      "sleutelwoorden": [
-        "twee soorten/twee atoomsoorten/meerdere/verschillende atomen",
-        "één soort/één atoomsoort/alleen waterstof"
-      ],
+      "vraag": "Waarom is water ontleedbaar? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["twee soorten/twee atoomsoorten/meerdere/verschillende/meer dan één/meer dan een"],
       "minTreffers": 1,
-      "modelantwoord": "Een ontleedbare stof bestaat uit meerdere soorten atomen: water bestaat uit waterstof en zuurstof. Waterstofgas bestaat maar uit één soort atoom (H) en kan dus niet verder ontleed worden.",
+      "modelantwoord": "Water bestaat uit meerdere soorten atomen.",
       "uitleg": "Ontleedbaar = meerdere atoomsoorten (verbinding); niet-ontleedbaar = één atoomsoort."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf hoe een atoom volgens het atoommodel van Rutherford is opgebouwd: waar zitten de protonen, neutronen en elektronen en welke lading hebben ze?",
-      "sleutelwoorden": [
-        "kern",
-        "wolk/schil/eromheen",
-        "positief/1+/geladen",
-        "negatief/1-/1−"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een atoom heeft een kleine, compacte kern met protonen (lading 1+) en neutronen (neutraal). In een wolk om de kern bevinden zich de elektronen (lading 1−).",
+      "vraag": "Waar zitten de elektronen volgens het atoommodel van Rutherford? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["wolk/schil/eromheen/rondom/buiten"],
+      "minTreffers": 1,
+      "modelantwoord": "In een wolk rondom de kern.",
       "uitleg": "Rutherford: compacte kern (protonen + neutronen), elektronenwolk eromheen."
     }
   ]

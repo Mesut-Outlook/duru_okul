@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen een hydrofiele en een hydrofobe stof, en geef aan welke karakteristieke groep hydrofiele stoffen kenmerkt.",
-      "sleutelwoorden": [
-        "oplosbaar in water",
-        "OH-groep/NH-groep"
-      ],
+      "vraag": "Welke eigenschap heeft een hydrofiele stof ten opzichte van water? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["oplosbaar/lost op/oplossen/mengt goed"],
       "minTreffers": 1,
-      "modelantwoord": "Hydrofiele stoffen zijn goed oplosbaar in water, herkenbaar aan een -OH- of -NH-groep in de structuurformule. Hydrofobe stoffen missen zo'n groep en mengen niet met water.",
+      "modelantwoord": "Een hydrofiele stof is goed oplosbaar in water.",
       "uitleg": "Hydrofiel = oplosbaar in water dankzij een -OH- of -NH-groep; hydrofoob = mengt niet met water (bijvoorbeeld halogeenalkanen en alkenen)."
     }
   ]

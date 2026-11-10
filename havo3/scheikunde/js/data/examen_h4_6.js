@@ -198,10 +198,10 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg in eigen woorden het verschil uit tussen 'overmaat' en 'ondermaat' bij een reactie.",
-      sleutelwoorden: ["raakt op/is verbruikt", "blijft over/nog aanwezig"],
+      vraag: "Wat gebeurt er met de stof in ondermaat bij een reactie? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["raakt op/verbruikt/gebruikt/helemaal op/volledig"],
       minTreffers: 1,
-      modelantwoord: "De stof in ondermaat raakt op en reageert volledig; de stof in overmaat blijft over, want daarvan is na de reactie nog een deel aanwezig.",
+      modelantwoord: "De stof in ondermaat raakt op.",
       uitleg: "Ondermaat = raakt volledig op; overmaat = blijft er na de reactie nog van over."
     }
   ]

@@ -203,25 +203,19 @@
       {
         id: "ex19_v19",
         type: "open",
-        vraag: "Leg uit waarom de samenwerking tussen Frankrijk en de Bondsrepubliek Duitsland na 1945 zo bijzonder was, gezien de geschiedenis van beide landen.",
-        sleutelwoorden: [
-          "vijandschap/oorlogen sinds 1870",
-          "vrede/vriendschap"
-        ],
+        vraag: "Hoe kozen Frankrijk en Duitsland na 1945 na hun oorlogen om met elkaar om te gaan? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["samenwerk/vriendschap/vrede/verzoen"],
         minTreffers: 1,
-        modelantwoord: "Frankrijk en Duitsland hadden sinds 1870 drie verwoestende oorlogen tegen elkaar gevoerd, maar na 1945 kozen hun leiders bewust voor samenwerking en vriendschap in plaats van vijandschap, wat leidde tot het vriendschapsverdrag van 1963.",
+        modelantwoord: "Ze kozen voor samenwerking en vriendschap.",
         uitleg: "Na eeuwenlange vijandschap en drie oorlogen sinds 1870 kozen beide landen na 1945 juist voor nauwe samenwerking en vriendschap."
       },
       {
         id: "ex19_v20",
         type: "open",
-        vraag: "Beschrijf het verband tussen democratie en economisch succes in West-Europa na 1945, zoals dat in West-Duitsland te zien was.",
-        sleutelwoorden: [
-          "welvaart/wirtschaftswunder",
-          "stabiel/rust"
-        ],
+        vraag: "Wat voor ontwikkeling in de economie ging in West-Duitsland samen met de democratie? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["welvaart/groei/wirtschaftswunder/rijker"],
         minTreffers: 1,
-        modelantwoord: "In West-Duitsland ging de democratie samen met snelle economische groei en welvaart (het Wirtschaftswunder) in plaats van met chaos en verarming zoals in de Weimarrepubliek, waardoor de democratie stabiel bleef.",
+        modelantwoord: "Snelle groei en welvaart (het Wirtschaftswunder).",
         uitleg: "Doordat de democratie samenging met groeiende welvaart in plaats van chaos, bleef de democratie in West-Duitsland stabiel."
       }
     ]

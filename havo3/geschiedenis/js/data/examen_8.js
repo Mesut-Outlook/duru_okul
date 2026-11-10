@@ -203,19 +203,19 @@
       {
         id: "ex8_v19",
         type: "open",
-        vraag: "Leg uit wat de 'dolkstootlegende' inhield en waarom deze het vertrouwen van veel Duitsers in de democratie ondermijnde.",
-        sleutelwoorden: ["leger/niet verslagen", "verraad/verraden/democraten/politici"],
-        minTreffers: 2,
-        modelantwoord: "De dolkstootlegende was de onjuiste bewering dat het Duitse leger in de Eerste Wereldoorlog niet echt verslagen was, maar 'in de rug gestoken' werd door democratische politici die de wapenstilstand en de Vrede van Versailles tekenden. Veel Duitsers geloofden dit en voelden zich verraden door hun eigen democratische regering.",
+        vraag: "Wat beweerde de 'dolkstootlegende' over het Duitse leger in de Eerste Wereldoorlog? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["niet verslagen/onverslagen/verraad/in de rug/verraden"],
+        minTreffers: 1,
+        modelantwoord: "Dat het leger niet verslagen was maar verraden werd.",
         uitleg: "Deze mythe zorgde ervoor dat veel Duitsers de schuld van de nederlaag niet bij het leger, maar bij de democratie legden."
       },
       {
         id: "ex8_v20",
         type: "open",
-        vraag: "Beschrijf twee manieren waarop Hitler na de Machtigingswet van 1933 zijn dictatuur in Duitsland vestigde.",
-        sleutelwoorden: ["SA/SS/geheime politie/concentratiekamp", "propaganda/Goebbels/media", "persoonsverheerlijking/Hitlergroet/Führer"],
-        minTreffers: 2,
-        modelantwoord: "Hitler zette de SA en de SS in om tegenstanders te intimideren en gevangen te zetten in concentratiekampen, richtte een ministerie van Propaganda op onder Goebbels dat alle media controleerde, en liet zichzelf als Führer vereren tijdens massabijeenkomsten.",
+        vraag: "Noem één manier waarop Hitler na 1933 zijn dictatuur vestigde. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["propaganda/goebbels/concentratiekamp/geheime politie/führer/media/intimid"],
+        minTreffers: 1,
+        modelantwoord: "Hij gebruikte propaganda via de media.",
         uitleg: "Door terreur, propaganda en persoonsverheerlijking bouwde Hitler een totalitaire dictatuur op."
       }
     ]

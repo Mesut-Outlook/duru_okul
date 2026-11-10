@@ -188,25 +188,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit dat metalen niet uit moleculen bestaan.",
-      "sleutelwoorden": [
-        "losse atomen/atomen",
-        "stapeling",
-        "niet gekoppeld/niet aan elkaar/geen moleculen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Metalen bestaan uit een stapeling van losse atomen; de atomen zijn niet aan elkaar gekoppeld tot moleculen.",
+      "vraag": "Waaruit bestaat een metaal, als het geen moleculen is? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["atomen/stapel/stapeling"],
+      "minTreffers": 1,
+      "modelantwoord": "Een metaal is een stapeling van losse atomen.",
       "uitleg": "Metalen bestaan uit een stapeling van losse atomen; de atomen zijn niet aan elkaar gekoppeld tot moleculen."
     },
     {
       "type": "open",
-      "vraag": "Iemand met bloedarmoede heeft een ijzertekort. Leg uit waarom het eten van spijkers geen oplossing is.",
-      "sleutelwoorden": [
-        "moleculen/hemoglobine",
-        "atomen/stapeling/losse"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In het bloed zitten moleculen die ijzeratomen bevatten (hemoglobine). Een spijker is een stapeling losse ijzeratomen, geen moleculen, en het lichaam kan daar niet mee uit de voeten.",
+      "vraag": "Welke ijzerhoudende stof (opgebouwd uit moleculen) zit er in het bloed? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["hemoglobine"],
+      "minTreffers": 1,
+      "modelantwoord": "Hemoglobine.",
       "uitleg": "In het bloed zitten moleculen die ijzeratomen bevatten (hemoglobine). Een spijker is een stapeling losse ijzeratomen, geen moleculen, en het lichaam kan daar niet mee uit de voeten."
     }
   ]

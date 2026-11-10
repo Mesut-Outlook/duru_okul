@@ -183,25 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de systematische naam van CO<sub>2</sub> koolstofdioxide is en niet monokoolstofdioxide.",
-      "sleutelwoorden": [
-        "eerste atoomsoort/eerste atoom/eerste element",
-        "één keer/maar één/1 keer/één atoom"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij de eerste atoomsoort in de formule gebruik je geen 'mono' als die maar één keer voorkomt. Koolstof komt maar één keer voor in het molecuul, dus 'mono' laat je weg.",
+      "vraag": "Waarom schrijf je bij CO₂ geen 'mono' voor koolstof? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["één keer/een keer/maar één/1 keer/eerste atoom"],
+      "minTreffers": 1,
+      "modelantwoord": "Koolstof komt maar één keer voor en staat vooraan.",
       "uitleg": "Komt de eerste atoomsoort in de formule maar één keer voor, dan zet je er geen 'mono' voor. Bij de tweede atoomsoort (mono-oxide) moet 'mono' wel."
     },
     {
       "type": "open",
-      "vraag": "Bereken het massapercentage zuurstof in CO<sub>2</sub> (C = 12,01 u; O = 16,00 u; twee decimalen). Laat zien hoe je rekent.",
-      "sleutelwoorden": [
-        "44,01/44.01",
-        "32,00/32",
-        "72,71/72,7/72.71"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Molecuulmassa CO<sub>2</sub> = 12,01 + 2 × 16,00 = 44,01 u. Massa zuurstof = 2 × 16,00 = 32,00 u. Massapercentage O = 32,00 / 44,01 × 100% = 72,71%.",
+      "vraag": "Bereken het massapercentage zuurstof in CO₂ (C = 12,01 u; O = 16,00 u; twee decimalen). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["72 71/72 7/72 71"],
+      "minTreffers": 1,
+      "modelantwoord": "Het massapercentage zuurstof is 72,71%.",
       "uitleg": "Eerst de totale molecuulmassa (44,01 u), dan de massa van de gevraagde atoomsoort (32,00 u), deel en vermenigvuldig met 100%: 72,71%."
     }
   ]

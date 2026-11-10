@@ -98,14 +98,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bij het klussen zegt je broer: \"Een koperen waterleiding bestaat uit koperen moleculen.\" Leg uit of dit klopt.",
-      "sleutelwoorden": [
-        "atomen",
-        "geen moleculen/niet uit moleculen/geen enkele molecule",
-        "metaal/metalen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Dat klopt niet. Koper is een metaal en metalen bestaan niet uit moleculen, maar uit losse atomen.",
+      "vraag": "Waaruit bestaat koper, als het geen moleculen is? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["atomen/stapel/stapeling"],
+      "minTreffers": 1,
+      "modelantwoord": "Koper bestaat uit losse atomen.",
       "uitleg": "Metalen bestaan uit losse atomen die niet tot moleculen zijn gekoppeld; het symbool Cu staat dus voor één atoom, niet voor een molecuul."
     },
     {
@@ -195,14 +191,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Na het wrijven van een ballon over je haar blijft de ballon aan de muur plakken. Leg uit waarom een atoom zelf toch elektrisch neutraal is, terwijl het uit geladen deeltjes bestaat.",
-      "sleutelwoorden": [
-        "evenveel/gelijk aantal/even veel/zelfde aantal",
-        "positief/1+",
-        "negatief/1-/1−"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een atoom heeft evenveel protonen (positief, lading 1+) als elektronen (negatief, lading 1−). De ladingen heffen elkaar op, dus het atoom is als geheel neutraal.",
+      "vraag": "Waarom is een atoom als geheel neutraal, ook al bestaat het uit geladen deeltjes? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["evenveel/gelijk/even veel/zelfde aantal/heffen/opheffen"],
+      "minTreffers": 1,
+      "modelantwoord": "Er zijn evenveel protonen als elektronen, dus de ladingen heffen elkaar op.",
       "uitleg": "Aantal protonen = aantal elektronen; hun tegengestelde ladingen compenseren elkaar."
     }
   ]

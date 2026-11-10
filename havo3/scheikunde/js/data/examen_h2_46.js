@@ -183,24 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een vrouw moet per dag 18 mg ijzer binnenkrijgen. Een appel bevat gemiddeld 0,15 mg ijzer. Laat met een berekening zien hoeveel appels ze minimaal moet eten om alleen met appels aan de dagelijkse ijzerdosis te komen.",
-      "sleutelwoorden": [
-        "18 / 0,15/18:0,15/18/0,15/18 gedeeld door 0,15",
-        "120"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Aantal appels = 18 / 0,15 = 120 appels.",
+      "vraag": "Een vrouw heeft per dag 18 mg ijzer nodig; een appel bevat 0,15 mg ijzer. Hoeveel appels moet ze minimaal eten? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["120/honderdtwintig"],
+      "minTreffers": 1,
+      "modelantwoord": "18 gedeeld door 0,15 is 120 appels.",
       "uitleg": "18 / 0,15 = 120 appels."
     },
     {
       "type": "open",
-      "vraag": "Een lithiumdeeltje heeft 3 protonen en 2 elektronen. Leg uit of het deeltje neutraal, positief of negatief geladen is, en geef de lading.",
-      "sleutelwoorden": [
-        "meer protonen/protonen meer/één proton meer/1 proton meer",
-        "1+/1 plus/één plus"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het deeltje heeft 3 protonen (3+) en 2 elektronen (2−). Er is dus 1 proton meer dan elektronen, dus het deeltje is positief geladen met een lading van 1+.",
+      "vraag": "Een lithiumdeeltje heeft 3 protonen en 2 elektronen. Welke lading heeft het deeltje? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["positief/1+/1 plus/één plus"],
+      "minTreffers": 1,
+      "modelantwoord": "Het deeltje is positief geladen: 1+.",
       "uitleg": "3+ en 2− geeft 1+: positief."
     }
   ]

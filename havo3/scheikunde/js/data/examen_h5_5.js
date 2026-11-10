@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Je krijgt een troebel mengsel van zand, keukenzout en water. Beschrijf in twee stappen, elk met de juiste scheidingsmethode, hoe je hieruit apart zand, zout en water kunt terugwinnen.",
-      "sleutelwoorden": [
-        "filtreren",
-        "indampen/destilleren"
-      ],
+      "vraag": "Welke scheidingsmethode gebruik je eerst om zand uit een troebel mengsel van zand, zout en water te halen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["filtreren/filtratie/filter"],
       "minTreffers": 1,
-      "modelantwoord": "Stap 1: filtreren. Het zand blijft als residu op het filter achter, de zoute oplossing loopt als filtraat door het filter. Stap 2: indampen of destilleren van het filtraat — bij indampen houd je alleen het zout over als vaste stof, bij destilleren vang je ook het water terug als destillaat.",
+      "modelantwoord": "Eerst filtreren.",
       "uitleg": "Eerst scheid je het onopgeloste zand er met filtreren uit; daarna scheid je het opgeloste zout van het water met indampen (alleen zout terug) of destilleren (zout en water terug)."
     }
   ]

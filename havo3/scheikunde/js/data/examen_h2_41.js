@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken het massapercentage waterstof in glucose, C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (C = 12,01 u; H = 1,008 u; O = 16,00 u; twee decimalen). Laat zien hoe je rekent.",
-      "sleutelwoorden": [
-        "180,16/180.16",
-        "12,096/12096/12.096",
-        "6,71/6.71"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Molecuulmassa = 6 × 12,01 + 12 × 1,008 + 6 × 16,00 = 180,16 u. Massa H = 12 × 1,008 = 12,096 u. Massapercentage H = 12,096 / 180,16 × 100% = 6,71%.",
+      "vraag": "Bereken het massapercentage waterstof in C₆H₁₂O₆ (C = 12,01 u; H = 1,008 u; O = 16,00 u; twee decimalen). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["6 7"],
+      "minTreffers": 1,
+      "modelantwoord": "Het massapercentage waterstof is 6,71%.",
       "uitleg": "Eerst de molecuulmassa (180,16 u), dan de massa van waterstof (12,096 u), delen en maal 100%: 6,71%."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het massapercentage koolstof in één molecuul glucose even groot is als in 2 moleculen glucose.",
-      "sleutelwoorden": [
-        "verdubbel/twee keer/dubbel/beide/zowel",
-        "verhouding/breuk/gedeeld/delen/deel/percentage"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij 2 moleculen worden zowel de massa van koolstof als de totale massa twee keer zo groot. De verhouding (het deel van het geheel) blijft gelijk, dus ook het massapercentage.",
+      "vraag": "Waarom blijft het massapercentage koolstof in glucose gelijk als je het aantal moleculen verdubbelt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verhouding/breuk/deel van het geheel/gedeeld"],
+      "minTreffers": 1,
+      "modelantwoord": "De verhouding tussen de massa's blijft hetzelfde.",
       "uitleg": "Het massapercentage is een verhouding; teller en noemer worden allebei twee keer zo groot."
     }
   ]

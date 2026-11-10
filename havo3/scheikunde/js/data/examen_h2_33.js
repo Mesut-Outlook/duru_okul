@@ -188,25 +188,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van het periodiek systeem uit welke atoomsoort niet in het rijtje thuishoort: broom, koolstof, mangaan, zwavel.",
-      "sleutelwoorden": [
-        "metaal",
-        "niet-metalen/niet-metaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Mangaan hoort er niet bij: het is een metaal, terwijl broom, koolstof en zwavel niet-metalen zijn.",
+      "vraag": "Waarom hoort mangaan niet bij broom, koolstof en zwavel? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["metaal"],
+      "minTreffers": 1,
+      "modelantwoord": "Mangaan is een metaal, de andere zijn niet-metalen.",
       "uitleg": "Mangaan hoort er niet bij: het is een metaal, terwijl broom, koolstof en zwavel niet-metalen zijn."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom niet voor alle atoomsoorten in groep 1 geldt dat de stoffen vergelijkbare eigenschappen hebben.",
-      "sleutelwoorden": [
-        "waterstof",
-        "niet-metaal/gas",
-        "metalen/metaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Waterstof staat in groep 1, maar is een niet-metaal; de andere atoomsoorten in groep 1 zijn metalen.",
+      "vraag": "Welke atoomsoort in groep 1 is geen metaal? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["waterstof"],
+      "minTreffers": 1,
+      "modelantwoord": "Waterstof.",
       "uitleg": "Waterstof staat in groep 1, maar is een niet-metaal; de andere atoomsoorten in groep 1 zijn metalen."
     }
   ]

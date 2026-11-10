@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen een periode en een groep in het periodiek systeem.",
-      "sleutelwoorden": [
-        "rij/rijen/horizontaal",
-        "kolom/kolommen/verticaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een periode is een genummerde rij (horizontaal), een groep is een genummerde kolom (verticaal).",
+      "vraag": "Wat is een periode in het periodiek systeem? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["rij/horizontal/waterrecht"],
+      "minTreffers": 1,
+      "modelantwoord": "Een periode is een horizontale rij.",
       "uitleg": "Een periode is een genummerde rij (horizontaal), een groep is een genummerde kolom (verticaal)."
     },
     {
       "type": "open",
-      "vraag": "Noem de speciale namen van de groepen 1, 2, 17 en 18.",
-      "sleutelwoorden": [
-        "alkalimetalen",
-        "aardalkalimetalen",
-        "halogenen",
-        "edelgassen"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Groep 1: alkalimetalen; groep 2: aardalkalimetalen; groep 17: halogenen; groep 18: edelgassen.",
+      "vraag": "Hoe heet groep 17 in het periodiek systeem? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["halogenen/halogeen"],
+      "minTreffers": 1,
+      "modelantwoord": "De halogenen.",
       "uitleg": "Groep 1: alkalimetalen; groep 2: aardalkalimetalen; groep 17: halogenen; groep 18: edelgassen."
     }
   ]

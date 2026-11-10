@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beschrijf wat er op microniveau verschilt tussen water als ijs en water als vloeistof.",
-      "sleutelwoorden": [
-        "trillen/trilt",
-        "vrij",
-        "langs elkaar/tegen elkaar"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In ijs trillen de moleculen op hun plek; in vloeibaar water kunnen de moleculen vrij langs elkaar bewegen, terwijl ze nog tegen elkaar aan zitten.",
+      "vraag": "Hoe bewegen de moleculen in ijs? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["trillen/trilt/trilling/op hun plek/vaste plek"],
+      "minTreffers": 1,
+      "modelantwoord": "In ijs trillen de moleculen op hun plek.",
       "uitleg": "In ijs trillen de moleculen op hun plek; in vloeibaar water kunnen de moleculen vrij langs elkaar bewegen, terwijl ze nog tegen elkaar aan zitten."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf hoe moleculen zich gedragen in een gas en wat er gebeurt als ze elkaar tegenkomen.",
-      "sleutelwoorden": [
-        "snel/snelheid",
-        "afstand",
-        "botsen/botsing/botsten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In een gas bewegen de moleculen op grote snelheid en afstand van elkaar. Komen ze elkaar tegen, dan botsen ze, maar ze blijven niet bij elkaar.",
+      "vraag": "Wat doen gasmoleculen als ze elkaar tegenkomen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["botsen/botsing/botsten/stuiteren"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze botsen tegen elkaar en gaan weer weg.",
       "uitleg": "In een gas bewegen de moleculen op grote snelheid en afstand van elkaar. Komen ze elkaar tegen, dan botsen ze, maar ze blijven niet bij elkaar."
     }
   ]

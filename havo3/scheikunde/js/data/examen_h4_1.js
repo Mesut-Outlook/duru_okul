@@ -198,10 +198,10 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "In het scheikundelokaal wordt een prullenbak met brandend papier snel gedoofd door er een deksel op te leggen. Welke van de drie voorwaarden voor verbranding wordt hiermee weggenomen?",
-      sleutelwoorden: ["zuurstof/zuurstoftoevoer"],
+      vraag: "Een brandende prullenbak wordt gedoofd met een deksel. Welke van de drie voorwaarden voor verbranding is dan weggenomen? <i>(Alleen het antwoord is genoeg.)</i>",
+      sleutelwoorden: ["zuurstof"],
       minTreffers: 1,
-      modelantwoord: "De zuurstof(toevoer) wordt weggenomen, waardoor de brandbare stof niet meer met zuurstof kan reageren.",
+      modelantwoord: "De zuurstof wordt weggenomen.",
       uitleg: "Een deksel sluit de zuurstoftoevoer af; zonder zuurstof kan de verbranding niet doorgaan."
     }
   ]

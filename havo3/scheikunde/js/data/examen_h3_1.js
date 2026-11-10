@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Twee identieke reageerbuizen bevatten dezelfde hoeveelheid en concentratie zoutzuur. In buis A wordt fijn ijzerpoeder toegevoegd, in buis B een even zwaar, groot stukje ijzer. Leg met een scheikundig begrip uit waarom de reactie in buis A sneller verloopt.",
-      "sleutelwoorden": [
-        "verdelingsgraad",
-        "contactoppervlak/oppervlak"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In buis A verloopt de reactie sneller omdat het fijne ijzerpoeder een grotere verdelingsgraad heeft dan het grote stuk ijzer. Een grotere verdelingsgraad geeft een groter contactoppervlak tussen het ijzer en het zoutzuur, waardoor de reactie sneller verloopt.",
+      "vraag": "Fijn ijzerpoeder reageert sneller met zoutzuur dan één stuk ijzer. Welk begrip is bij het poeder groter? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verdelingsgraad/contactoppervlak/oppervlak"],
+      "minTreffers": 1,
+      "modelantwoord": "Het poeder heeft een grotere verdelingsgraad.",
       "uitleg": "Fijner verdeeld ijzer (grotere verdelingsgraad) heeft een groter contactoppervlak met het zuur, wat de reactiesnelheid verhoogt."
     }
   ]

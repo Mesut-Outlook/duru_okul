@@ -203,25 +203,19 @@
       {
         id: "ex17_v19",
         type: "open",
-        vraag: "Leg uit hoe de wapenwedloop tussen de VS en de Sovjet-Unie tijdens de Koude Oorlog verliep.",
-        sleutelwoorden: [
-          "kernwapens/kernraketten/atoomwapens",
-          "steeds meer/verwoestender/opbouwen"
-        ],
+        vraag: "Welk soort wapens ontwikkelden de VS en de Sovjet-Unie steeds meer in de wapenwedloop? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["kernwapen/kernraket/atoomwapen/atoombom/nucleair"],
         minTreffers: 1,
-        modelantwoord: "Beide supermachten bleven steeds meer en steeds verwoestender kernwapens en kernraketten ontwikkelen, waarmee ze elkaars grondgebied overal konden treffen, ook tijdens periodes van ontspanning.",
+        modelantwoord: "Ze ontwikkelden steeds meer kernwapens.",
         uitleg: "Ondanks periodes van ontspanning ontwikkelden beide supermachten steeds meer en krachtigere kernwapens en raketten."
       },
       {
         id: "ex17_v20",
         type: "open",
-        vraag: "Verklaar waarom het openen van de Berlijnse Muur in 1989 uiteindelijk leidde tot het einde van de DDR, terwijl de DDR-leiders daarmee juist rust hadden gehoopt te krijgen.",
-        sleutelwoorden: [
-          "protesten/demonstraties",
-          "opgeheven/hereniging/slop"
-        ],
+        vraag: "Wat deden mensen in 1989 nadat de DDR-leiders de Muur openden, wat uiteindelijk het einde van de DDR werd? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["slop/protest/demonstr/doorbr"],
         minTreffers: 1,
-        modelantwoord: "De DDR-leiders hoopten dat het openen van de grens de protesten zou stoppen, maar in plaats daarvan begonnen mensen meteen de Muur te slopen en gingen de protesten door totdat de DDR in 1990 werd opgeheven en opging in de Bondsrepubliek.",
+        modelantwoord: "Ze begonnen de Muur te slopen en bleven protesteren.",
         uitleg: "Het openen van de grens gaf de bevolking juist meer moed om te blijven protesteren, wat leidde tot de sloop van de Muur en de opheffing van de DDR."
       }
     ]

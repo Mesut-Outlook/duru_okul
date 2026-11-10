@@ -175,21 +175,16 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van het begrip 'ionen' uit waarom een zoutoplossing elektrische stroom geleidt, terwijl het vaste zout dat niet doet.",
-      "sleutelwoorden": [
-        "los van elkaar/losgekomen/vrij bewegen"
-      ],
+      "vraag": "Waarom geleidt een zoutoplossing wel stroom? Wat kunnen de ionen dan? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["bewegen/beweeglijk/vrij"],
       "minTreffers": 1,
-      "modelantwoord": "In het vaste zout zitten de ionen vast in het ionrooster. Zodra het zout oplost, komen de ionen los van elkaar en kunnen ze vrij door het water bewegen, waardoor de oplossing stroom kan geleiden.",
+      "modelantwoord": "De ionen kunnen vrij door het water bewegen.",
       "uitleg": "De ionen kunnen pas stroom geleiden zodra ze zich vrij kunnen bewegen — dat gebeurt zodra ze loskomen van het rooster bij het oplossen."
     },
     {
       "type": "open",
-      "vraag": "Kaliumjodide (KI) is opgebouwd uit een kaliumion en een jodide-ion. Schrijf de oplosvergelijking voor het oplossen van kaliumjodide in water, in dezelfde notatie als bij keukenzout (met (s) en (aq)).",
-      "sleutelwoorden": [
-        "k+",
-        "i-"
-      ],
+      "vraag": "Schrijf de oplosvergelijking van kaliumjodide (KI) in water, met (s) en (aq). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["K+","I-/I−"],
       "minTreffers": 1,
       "modelantwoord": "KI (s) → K+ (aq) + I- (aq)",
       "uitleg": "Net als bij NaCl vallen bij het oplossen van KI de ionbindingen weg: KI (s) → K+ (aq) + I- (aq)."

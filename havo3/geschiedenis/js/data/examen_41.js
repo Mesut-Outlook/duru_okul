@@ -207,15 +207,10 @@ DURU.registerExamen({
     {
       "id": "ex41_v20",
       "type": "open",
-      "vraag": "Leg uit met welke middelen Lenin zijn macht na de Oktoberrevolutie veiligstelde.",
-      "sleutelwoorden": [
-        "verbood/verbod",
-        "tsjeka/geheime dienst",
-        "vermoord/opsloot/doodgeschoten",
-        "dictatuur/eenpartij"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Lenin verbood alle andere partijen en vestigde een dictatuur. Hij zette de Tsjeka in, een geheime dienst, die tegenstanders vermoordde of opsloot.",
+      "vraag": "Noem één middel waarmee Lenin zijn macht na de Oktoberrevolutie veiligstelde. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verbood/verbod/tsjeka/geheime dienst/dictatuur/eenpartij"],
+      "minTreffers": 1,
+      "modelantwoord": "Hij verbood alle andere partijen.",
       "uitleg": "Lenin verbood andere partijen en gebruikte terreur via de Tsjeka (§1.3)."
     }
   ]

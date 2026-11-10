@@ -183,26 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een wetenschapsjournalist schrijft dat de formule van vijftien Ts-atomen Ts<sub>15</sub> is. Leg uit waarom dit niet correct is en geef de juiste notatie.",
-      "sleutelwoorden": [
-        "index/rechtsonder",
-        "molecuul/één deeltje/bij elkaar",
-        "15 Ts/coëfficiënt/getal ervoor"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een getal rechtsonder (index) hoort bij een molecuul: Ts<sub>15</sub> zou één molecuul van 15 atomen zijn. Voor vijftien losse atomen zet je een coëfficiënt ervoor: 15 Ts.",
+      "vraag": "Wat is de juiste notatie voor vijftien losse Ts-atomen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["15 Ts/15Ts"],
+      "minTreffers": 1,
+      "modelantwoord": "De juiste notatie is 15 Ts.",
       "uitleg": "Index = atomen in één molecuul; coëfficiënt = aantal losse deeltjes."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf hoe een modeltekening op microniveau eruitziet van een beetje steviolglycoside in een glas water.",
-      "sleutelwoorden": [
-        "rondjes/bolletjes",
-        "tussen/omringd/los van elkaar",
-        "watermoleculen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je tekent rondjes voor de watermoleculen en in een andere kleur een paar rondjes voor steviolglycoside. Deze liggen los van elkaar tussen de watermoleculen en worden daardoor omringd.",
+      "vraag": "Hoe liggen de steviolglycoside-moleculen in de modeltekening ten opzichte van de watermoleculen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["tussen/omringd/los van elkaar/verspreid"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze liggen los van elkaar tussen de watermoleculen.",
       "uitleg": "Twee kleuren rondjes, steviolglycoside los tussen water."
     }
   ]

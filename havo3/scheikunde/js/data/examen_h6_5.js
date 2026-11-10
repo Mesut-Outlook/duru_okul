@@ -181,23 +181,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een stof geleidt in de vaste fase geen stroom, wél zodra hij vloeibaar is, en lost bovendien niet op in water. Tot welke van de drie groepen uit dit hoofdstuk behoort deze stof? Geef alleen de groepsnaam en verklaar kort met het kenmerk dat de doorslag geeft.",
-      "sleutelwoorden": [
-        "metaal"
-      ],
+      "vraag": "Een stof geleidt zowel vast als vloeibaar stroom en lost niet op in water. Tot welke van de drie stofgroepen hoort die? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["metaal"],
       "minTreffers": 1,
-      "modelantwoord": "Dit is een metaal: metalen geleiden zowel vast als vloeibaar stroom (in tegenstelling tot zouten, die vast niet geleiden) en lossen normaal gesproken niet op in water.",
+      "modelantwoord": "Het is een metaal.",
       "uitleg": "Alleen metalen geleiden al in de vaste fase stroom; dat onderscheidt ze meteen van zouten en moleculaire stoffen."
     },
     {
       "type": "open",
-      "vraag": "Leg met één zin uit waarom je aan de formule Fe₂O₃ (roest) kunt zien dat het een zout is en geen moleculaire stof.",
-      "sleutelwoorden": [
-        "metaal",
-        "niet-metaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De formule bevat zowel het metaal ijzer (Fe) als het niet-metaal zuurstof (O); die combinatie is kenmerkend voor een zout, terwijl een moleculaire stof uitsluitend niet-metaalatomen bevat.",
+      "vraag": "Fe<sub>2</sub>O<sub>3</sub> is een zout. Welk soort atoom zit er naast het metaal ijzer in de formule? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["niet-metaal/niet metaal/zuurstof"],
+      "minTreffers": 1,
+      "modelantwoord": "Zuurstof, een niet-metaal.",
       "uitleg": "Fe (metaal) + O (niet-metaal) samen in de formule is het kenmerk van een zout; een moleculaire stof bevat uitsluitend niet-metalen."
     },
     {

@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je de systematische naam '2-methylpentaan' kunt herleiden tot een structuurformule: wat vertelt 'pentaan' je over de hoofdketen en wat vertelt '2-methyl' je over de vertakking?",
-      "sleutelwoorden": [
-        "vijf C-atomen",
-        "methylgroep aan C2"
-      ],
+      "vraag": "Hoeveel C-atomen heeft de hoofdketen van 2-methylpentaan? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["vijf/5"],
       "minTreffers": 1,
-      "modelantwoord": "'Pentaan' vertelt dat de hoofdketen (de langste onvertakte keten) uit vijf C-atomen bestaat. '2-methyl' vertelt dat er een methylgroep aan C2 (het tweede C-atoom van die hoofdketen) zit.",
+      "modelantwoord": "De hoofdketen heeft vijf C-atomen.",
       "uitleg": "De stamnaam (pentaan) geeft het aantal C-atomen van de hoofdketen aan; het voorvoegsel geeft de plaats (cijfer) en het soort vertakking (methyl) aan."
     }
   ]

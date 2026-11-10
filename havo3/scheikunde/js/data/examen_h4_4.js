@@ -198,10 +198,10 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Bij het ontkalken van een waterkoker met een overmaat azijn blijft er na de reactie altijd wat azijn over. Leg uit waarom je hiervoor bewust een overmaat azijn gebruikt in plaats van precies de juiste hoeveelheid.",
-      sleutelwoorden: ["volledig weg"],
+      vraag: "Waarom gebruik je bij het ontkalken van een waterkoker bewust een overmaat azijn? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["volledig/helemaal/alle kalk"],
       minTreffers: 1,
-      modelantwoord: "Een overmaat azijn zorgt ervoor dat de kalkaanslag (de ondermaat) gegarandeerd volledig wegreageert, ook al is de precieze hoeveelheid kalk niet exact bekend.",
+      modelantwoord: "Zodat alle kalk volledig wegreageert.",
       uitleg: "Door een overmaat van de ene stof te gebruiken, weet je zeker dat de andere stof (de ondermaat) volledig wegreageert."
     }
   ]

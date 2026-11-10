@@ -194,13 +194,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een leerling beweert dat 2 NH<sub>3</sub> hetzelfde is als N<sub>2</sub>H<sub>6</sub>. Leg uit waarom dit niet klopt.",
-      "sleutelwoorden": [
-        "coëfficiënt/getal vóór/aantal moleculen/twee moleculen",
-        "één molecuul/ieder molecuul/aparte moleculen/losse moleculen/index/in een molecuul"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "2 NH<sub>3</sub> zijn twee losse moleculen, elk met één stikstofatoom en drie waterstofatomen. In N<sub>2</sub>H<sub>6</sub> zouden de atomen samen in één molecuul zitten. Het getal vóór de formule (coëfficiënt) geeft het aantal moleculen aan, de index het aantal atomen in één molecuul.",
+      "vraag": "Wat geeft het getal 2 vóór NH₃ aan? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["moleculen/molecuul/coëfficiënt"],
+      "minTreffers": 1,
+      "modelantwoord": "Het geeft aan dat het om twee moleculen gaat.",
       "uitleg": "De coëfficiënt telt moleculen, de index telt atomen in één molecuul. Het totale aantal atomen is gelijk, maar het zijn andere deeltjes."
     }
   ]

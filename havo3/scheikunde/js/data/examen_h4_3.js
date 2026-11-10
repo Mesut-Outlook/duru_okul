@@ -198,10 +198,10 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Een stad wil de luchtkwaliteit verbeteren. Noem één maatregel die de uitstoot van schadelijke stoffen door het verkeer kan beperken.",
-      sleutelwoorden: ["roetfilter/katalysator/adblue/elektrisch rijden"],
+      vraag: "Noem één maatregel die de uitstoot van schadelijke stoffen door het verkeer beperkt. <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["roetfilter/katalysator/adblue/elektrisch/elektrische auto"],
       minTreffers: 1,
-      modelantwoord: "Bijvoorbeeld een roetfilter op dieselauto's, een katalysator, het gebruik van AdBlue, of overstappen op elektrisch rijden.",
+      modelantwoord: "Bijvoorbeeld een roetfilter op dieselauto's.",
       uitleg: "Roetfilters, katalysatoren, AdBlue en elektrisch vervoer beperken allemaal de uitstoot van schadelijke stoffen door verkeer."
     }
   ]

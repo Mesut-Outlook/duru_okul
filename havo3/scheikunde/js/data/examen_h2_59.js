@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe het experiment met het gouden folie liet zien dat het atoommodel van Thomson niet kon kloppen.",
-      "sleutelwoorden": [
-        "recht door/doorheen/gingen door/dwars door",
-        "ondoordringbar/dichte laag/geen lege ruimte",
-        "lege ruimte/leeg"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bijna alle deeltjes gingen recht door het folie. Als atomen zoals bij Thomson massief waren, zouden de goudatomen een ondoordringbare laag vormen. Het atoom moet dus grotendeels uit lege ruimte bestaan.",
+      "vraag": "Wat gebeurde er met bijna alle deeltjes in het experiment met het gouden folie? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["recht door/doorheen/gingen door/dwars door/door het folie"],
+      "minTreffers": 1,
+      "modelantwoord": "Bijna alle deeltjes gingen recht door het folie.",
       "uitleg": "Doordat bijna alle deeltjes door het folie gingen, kan een atoom geen dichte, ondoordringbare bol zijn: het bestaat voor meer dan 99% uit lege ruimte."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom atomen volgens het model van Rutherford elektrisch neutraal zijn.",
-      "sleutelwoorden": [
-        "protonen/proton",
-        "elektronen/elektron",
-        "evenveel/gelijk aantal/even veel/even groot/opheffen/compenseren"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een atoom heeft evenveel protonen (1+) als elektronen (1–). De positieve en negatieve ladingen zijn even groot en heffen elkaar op.",
+      "vraag": "Volgens Rutherford is een atoom neutraal. Waaraan is het aantal protonen dan gelijk? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["elektronen/elektron"],
+      "minTreffers": 1,
+      "modelantwoord": "Het aantal elektronen is gelijk aan het aantal protonen.",
       "uitleg": "Het aantal protonen is gelijk aan het aantal elektronen en de ladingen zijn even groot maar tegengesteld, dus het atoom is neutraal."
     }
   ]

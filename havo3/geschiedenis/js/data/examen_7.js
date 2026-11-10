@@ -203,19 +203,19 @@
       {
         id: "ex7_v19",
         type: "open",
-        vraag: "Leg uit wat wordt bedoeld met 'totalitair' als kenmerk van zowel het fascisme als het communisme onder Stalin.",
-        sleutelwoorden: ["overheid/staat", "volledig/alles/samenleving"],
-        minTreffers: 2,
-        modelantwoord: "Totalitair betekent dat de overheid of staat volledige controle wil over alle aspecten van het leven van de burgers: hun denken, werk, vrije tijd en opvoeding, zonder ruimte voor tegenspraak.",
+        vraag: "Wat betekent 'totalitair' voor de controle van de staat over het leven van burgers? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["volledig/totale/alles/alle aspecten/hele leven"],
+        minTreffers: 1,
+        modelantwoord: "De staat heeft volledige controle over alles.",
         uitleg: "Zowel Mussolini als Stalin wilden dat de staat alles beheerste, van propaganda tot privéleven."
       },
       {
         id: "ex7_v20",
         type: "open",
-        vraag: "Beschrijf hoe de Sovjetregering onder Stalin probeerde de bevolking ervan te overtuigen dat Stalin een goede leider was, ondanks de slechte omstandigheden waarin veel mensen leefden.",
-        sleutelwoorden: ["propaganda", "portret/standbeeld/persoonsverheerlijking"],
+        vraag: "Welk middel gebruikte Stalin om het volk te overtuigen dat hij een goede leider was? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["propaganda/portret/standbeeld/verheerlijk/cultus"],
         minTreffers: 1,
-        modelantwoord: "Door staatspropaganda en persoonsverheerlijking: overal hingen portretten en stonden standbeelden van Stalin, en het volk werd voorgehouden dat 'vadertje Stalin' zorgde voor hun welzijn, terwijl de werkelijke omstandigheden vaak slecht waren.",
+        modelantwoord: "Propaganda, bijvoorbeeld portretten en standbeelden.",
         uitleg: "Propaganda en de verheerlijking van Stalin zorgden ervoor dat veel Sovjetburgers ondanks de armoede in hem geloofden."
       }
     ]

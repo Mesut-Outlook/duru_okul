@@ -203,26 +203,19 @@
       {
         id: "ex16_v19",
         type: "open",
-        vraag: "Leg uit waarom de Tweede Wereldoorlog een belangrijke oorzaak was voor de snelle dekolonisatie in Azië.",
-        sleutelwoorden: [
-          "Japan/Japanse bezetting",
-          "nationalisme/nationalistisch",
-          "Europ/verzwakt"
-        ],
-        minTreffers: 2,
-        modelantwoord: "Japan versloeg de westerse koloniale machten en zette de inheemse bevolking op tegen het Westen, waardoor het nationalisme in Azië na de Japanse capitulatie sterk opbloeide. Bovendien waren de Europese landen zelf verzwakt door de oorlog en waren de nieuwe supermachten VS en Sovjet-Unie tegen kolonialisme.",
+        vraag: "Welk land versloeg tijdens de Tweede Wereldoorlog de westerse koloniale machten in Azië? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["japan"],
+        minTreffers: 1,
+        modelantwoord: "Japan versloeg de westerse koloniale machten.",
         uitleg: "De Japanse bezetting brak de westerse macht in Azië en wakkerde het nationalisme aan, terwijl de verzwakte Europese landen minder in staat waren hun koloniën vast te houden."
       },
       {
         id: "ex16_v20",
         type: "open",
-        vraag: "Beschrijf wat er gebeurde met de Palestijnse bevolking nadat de staat Israël in 1948 werd uitgeroepen en de Arabische buurlanden werden verslagen.",
-        sleutelwoorden: [
-          "vluchten/vlucht/verdreven",
-          "honderdduizenden/veel mensen"
-        ],
+        vraag: "Wat deden honderdduizenden Palestijnen in 1948? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["vlucht/vluchtten/verdreven/vertrok"],
         minTreffers: 1,
-        modelantwoord: "Honderdduizenden Palestijnen sloegen op de vlucht naar buurlanden nadat de Israëliërs bijna heel Palestina veroverden; slechts een minderheid bleef in Israël wonen.",
+        modelantwoord: "Ze sloegen op de vlucht naar buurlanden.",
         uitleg: "Doordat Israël militair superieur was en bijna heel Palestina veroverde, sloegen honderdduizenden Palestijnen op de vlucht naar buurlanden."
       }
     ]

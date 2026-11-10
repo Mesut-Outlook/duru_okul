@@ -207,15 +207,10 @@ DURU.registerExamen({
     {
       "id": "ex40_v20",
       "type": "open",
-      "vraag": "Leg uit hoe de Eerste Wereldoorlog bijdroeg aan het einde van het tsarenrijk.",
-      "sleutelwoorden": [
-        "honger/hongersnood",
-        "verliezen/gesneuveld",
-        "staking",
-        "soldaten/meemuit/weigerden"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Door de oorlog ontstond hongersnood in de steden en leed het leger zware verliezen aan het front. In februari 1917 braken stakingen uit en soldaten weigerden op demonstranten te schieten, waarna de tsaar aftrad.",
+      "vraag": "Noem één gevolg van de Eerste Wereldoorlog dat bijdroeg aan het einde van het tsarenrijk. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["honger/verlies/gesneuveld/staking/weigerden/dood"],
+      "minTreffers": 1,
+      "modelantwoord": "Er ontstond hongersnood in de steden.",
       "uitleg": "De oorlog zorgde voor honger, verliezen, stakingen en meeuiten van soldaten (§1.3)."
     }
   ]

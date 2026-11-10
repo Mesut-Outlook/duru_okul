@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat betekent 5 H<sub>2</sub>O? Leg uit om hoeveel moleculen het gaat en hoeveel atomen van elke atoomsoort er in totaal bij horen.",
-      "sleutelwoorden": [
-        "5 moleculen/vijf moleculen/5 watermoleculen/vijf watermoleculen",
-        "10 waterstof/tien waterstof",
-        "5 zuurstof/vijf zuurstof"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het getal 5 (de coëfficiënt) staat voor vijf watermoleculen. Elk molecuul heeft 2 waterstofatomen en 1 zuurstofatoom, dus in totaal 10 waterstofatomen en 5 zuurstofatomen.",
+      "vraag": "Hoeveel waterstofatomen zijn er in totaal in 5 H₂O? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["10/tien"],
+      "minTreffers": 1,
+      "modelantwoord": "Er zijn 10 waterstofatomen.",
       "uitleg": "De coëfficiënt geeft het aantal moleculen aan; de index geeft het aantal atomen per molecuul. In totaal: 10 waterstofatomen en 5 zuurstofatomen."
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is als het gaat over de zuurstof met symbool O en de zuurstof met formule O<sub>2</sub>.",
-      "sleutelwoorden": [
-        "atoom/atomen",
-        "molecuul/moleculen",
-        "twee/2"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "O gaat over de atoomsoort zuurstof, dus over losse zuurstofatomen. O<sub>2</sub> gaat over zuurstofmoleculen: elk molecuul bestaat uit twee zuurstofatomen.",
+      "vraag": "Waaruit bestaat een molecuul O₂? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["twee/atomen"],
+      "minTreffers": 1,
+      "modelantwoord": "Een O₂-molecuul bestaat uit twee zuurstofatomen.",
       "uitleg": "Gaat het over de atoomsoort zuurstof, dan worden losse atomen (O) bedoeld; gaat het over zuurstofmoleculen, dan is het O<sub>2</sub>: twee atomen samen in een molecuul."
     }
   ]

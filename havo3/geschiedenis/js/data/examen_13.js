@@ -117,13 +117,10 @@
       {
         id: "ex13_v11",
         type: "open",
-        vraag: "Leg uit welk risico onderduikers en de mensen die hen hielpen tijdens de bezetting liepen.",
-        sleutelwoorden: [
-          "arrestatie/opgepakt/verraden",
-          "concentratiekamp/deportatie/gestraft/executie"
-        ],
+        vraag: "Welk risico liepen onderduikers en hun helpers? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["opgepakt/arrest/concentratiekamp/gedeporteerd/vermoord/executie/gestraft/dood"],
         minTreffers: 1,
-        modelantwoord: "Als onderduikers of hun helpers werden ontdekt of verraden, konden zij door de Duitsers worden opgepakt en gedeporteerd naar een concentratiekamp, of zelfs worden geëxecuteerd.",
+        modelantwoord: "Ze konden worden opgepakt en naar een concentratiekamp gebracht.",
         uitleg: "Onderduiken en het helpen van onderduikers was levensgevaarlijk, omdat ontdekking kon leiden tot deportatie of executie."
       },
       {
@@ -202,13 +199,10 @@
       {
         id: "ex13_v19",
         type: "open",
-        vraag: "Noem twee manieren waarop gewone Nederlanders, naast NSB'ers, met de Duitse bezetter konden samenwerken.",
-        sleutelwoorden: [
-          "bunkers/aannemer/bouw",
-          "politie/arresteren/spoorwegen/deportatie"
-        ],
+        vraag: "Noem één manier waarop gewone Nederlanders met de Duitse bezetter samenwerkten. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["bunker/aannemer/politie/arresteer/spoorweg"],
         minTreffers: 1,
-        modelantwoord: "Sommige aannemers bouwden bunkers voor de Duitsers, politiemensen hielpen bij het arresteren van joden en dwangarbeiders, en de Nederlandse Spoorwegen werkten mee aan het vervoer van gedeporteerden.",
+        modelantwoord: "Aannemers bouwden bunkers voor de Duitsers.",
         uitleg: "Collaboratie kwam niet alleen van NSB'ers, maar ook van bijvoorbeeld aannemers, politiemensen en de spoorwegen."
       },
       {

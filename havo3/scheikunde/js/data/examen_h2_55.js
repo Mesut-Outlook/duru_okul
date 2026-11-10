@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem één voordeel en één nadeel van het gebruik van modellen.",
-      "sleutelwoorden": [
-        "voorstellen/verklaren/uitleggen/voorspellen",
-        "versimpeld/vereenvoudigd/niet exact/niet precies"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Voordeel: je kunt je iets voorstellen bij moleculen en waarnemingen verklaren. Nadeel: een model is versimpeld, dus niet exact.",
+      "vraag": "Noem één voordeel van het gebruik van modellen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["voorstellen/verklaren/uitleggen/voorspellen/begrijpen"],
+      "minTreffers": 1,
+      "modelantwoord": "Met een model kun je je iets voorstellen bij moleculen.",
       "uitleg": "Voordeel: je kunt je iets voorstellen bij moleculen en waarnemingen verklaren. Nadeel: een model is versimpeld, dus niet exact."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de zin 'Bij het samenvoegen van water en ether ontstaat een tweelagensysteem' een beschrijving op macroniveau is.",
-      "sleutelwoorden": [
-        "zintuigen/zintuig",
-        "waarnemen/waarneembaar/zien/ogen",
-        "moleculen/deeltjes"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je kunt het tweelagensysteem met je zintuigen waarnemen (zien); de zin gaat niet over losse moleculen.",
+      "vraag": "Waarmee neem je op macroniveau een tweelagensysteem van water en ether waar? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["zintuigen/zintuig/ogen/zien"],
+      "minTreffers": 1,
+      "modelantwoord": "Met je zintuigen, bijvoorbeeld je ogen.",
       "uitleg": "Je kunt het tweelagensysteem met je zintuigen waarnemen (zien); de zin gaat niet over losse moleculen."
     }
   ]

@@ -203,25 +203,19 @@
       {
         id: "ex25_v19",
         type: "open",
-        vraag: "Leg uit het verschil tussen burgerlijk recht en bestuursrecht, met voor elk een voorbeeld uit de tekst.",
-        sleutelwoorden: [
-          "burgers onderling/koopcontract",
-          "burger tegen overheid/vergunning"
-        ],
+        vraag: "Tussen wie zijn de conflicten in het burgerlijk recht? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["burgers onderling/onderling/burgers"],
         minTreffers: 1,
-        modelantwoord: "Burgerlijk recht gaat over conflicten tussen burgers onderling, bijvoorbeeld een ruzie over een koopcontract, terwijl bestuursrecht gaat over conflicten tussen een burger en de overheid, bijvoorbeeld wanneer een gemeente een bouwvergunning weigert.",
+        modelantwoord: "Tussen burgers onderling.",
         uitleg: "Burgerlijk recht regelt zaken tussen burgers, bestuursrecht regelt conflicten tussen burgers en de overheid."
       },
       {
         id: "ex25_v20",
         type: "open",
-        vraag: "Leg uit waarom de Puttense moordzaak een voorbeeld is van een rechterlijke dwaling die uiteindelijk werd hersteld.",
-        sleutelwoorden: [
-          "onschuldig/ten onrechte veroordeeld",
-          "Hoge Raad/zaak overdoen/vrijgesproken"
-        ],
+        vraag: "Wat bleek er uiteindelijk over de twee mannen in de Puttense moordzaak? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["onschuldig/ten onrechte/vrijgesproken"],
         minTreffers: 1,
-        modelantwoord: "De twee mannen werden ten onrechte veroordeeld op basis van onder druk afgelegde, gedeeltelijke bekentenissen zonder technisch bewijs; pas nadat de Hoge Raad in 2001 opdracht gaf de zaak over te doen, werden ze alsnog vrijgesproken en schadeloos gesteld.",
+        modelantwoord: "Ze waren onschuldig en werden vrijgesproken.",
         uitleg: "Doordat de zaak later werd overgedaan, kwam aan het licht dat de twee mannen onterecht waren veroordeeld en werden ze alsnog vrijgesproken."
       }
     ]

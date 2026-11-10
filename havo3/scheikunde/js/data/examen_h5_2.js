@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van het begrip kookpunt uit waarom destilleren bij het maken van drinkwater uit zeewater wel werkt en indampen niet. Beschrijf in je antwoord ook wat er met de damp gebeurt en wat er in de kolf achterblijft.",
-      "sleutelwoorden": [
-        "condenseert/condensatie",
-        "zout achterblijft/pekel achterblijft"
-      ],
+      "vraag": "Wat blijft er achter in de kolf als je zeewater destilleert? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["zout/pekel"],
       "minTreffers": 1,
-      "modelantwoord": "Bij indampen ben je de verdampte vloeistof (het water) kwijt, terwijl je bij het maken van drinkwater juist dat water wilt overhouden. Bij destilleren wordt de damp in de koeler afgekoeld, waarbij hij condenseert tot vloeibaar water dat je opvangt als destillaat, zodat het zout achterblijft in de kolf als residu.",
+      "modelantwoord": "Het zout blijft achter in de kolf.",
       "uitleg": "Destilleren vangt de verdampte vloeistof (het gewenste drinkwater) op als destillaat; bij indampen zou je die vloeistof juist verliezen. Het zout blijft bij destilleren achter als residu."
     }
   ]

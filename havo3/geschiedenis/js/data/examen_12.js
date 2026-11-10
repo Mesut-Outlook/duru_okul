@@ -110,13 +110,10 @@
       {
         id: "ex12_v10",
         type: "open",
-        vraag: "Leg uit hoe Japanse soldaten in de Tweede Wereldoorlog over zichzelf en over de Chinese bevolking dachten, en welk gevolg dat had.",
-        sleutelwoorden: [
-          "superieur/goddelijk ras/minderwaardig",
-          "geweld/wreedheden/moord/verkrachting"
-        ],
+        vraag: "Hoe dachten Japanse soldaten over de Chinese bevolking? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["minderwaardig/inferieur/lager/slechter"],
         minTreffers: 1,
-        modelantwoord: "Japanse soldaten hadden op school geleerd dat zijzelf tot een superieur, bijna goddelijk volk behoorden en dat Chinezen minderwaardig waren. Hierdoor voelden zij zich vrij om op grote schaal geweld te gebruiken tegen de Chinese bevolking, met massale moordpartijen en verkrachtingen tot gevolg.",
+        modelantwoord: "Ze vonden Chinezen minderwaardig.",
         uitleg: "Het idee van eigen superioriteit maakte het voor Japanse soldaten makkelijker om extreem gewelddadig tegen Chinese burgers op te treden."
       },
       {
@@ -208,13 +205,10 @@
       {
         id: "ex12_v19",
         type: "open",
-        vraag: "Leg uit waarom de Amerikaanse oorlogsindustrie zo belangrijk was voor de uiteindelijke overwinning van de geallieerden.",
-        sleutelwoorden: [
-          "productie/materieel/wapens/vliegtuigen",
-          "overmacht/overtreffen"
-        ],
+        vraag: "Waarom was de Amerikaanse oorlogsindustrie zo belangrijk voor de geallieerden? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["produceer/productie/wapens/vliegtuigen/materieel"],
         minTreffers: 1,
-        modelantwoord: "Doordat de Amerikaanse industrie al vanaf 1942 meer oorlogsmaterieel produceerde dan alle asmogendheden samen, konden de geallieerden hun tegenstanders qua wapens, vliegtuigen en tanks steeds verder overtreffen, wat uiteindelijk de doorslag gaf.",
+        modelantwoord: "Ze produceerde veel meer wapens en vliegtuigen dan de vijand.",
         uitleg: "De enorme Amerikaanse productiecapaciteit zorgde voor een materiële overmacht die de asmogendheden niet konden evenaren."
       },
       {

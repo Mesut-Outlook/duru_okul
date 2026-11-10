@@ -209,13 +209,10 @@
     {
       "id": "ex32_v20",
       "type": "open",
-      "vraag": "Noem twee zware militaire of financiële sancties die de overwinnaars in het Verdrag van Versailles aan Duitsland oplegden.",
-      "sleutelwoorden": [
-        "herstelbetalingen/goudmarken/schadevergoeding",
-        "100 000/100.000/100000/ontwapening/geen zware wapens/geen tanks/geen vliegtuigen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Duitsland kreeg herstelbetalingen opgelegd en mocht een leger van maximaal 100 000 man zonder tanks of vliegtuigen bezitten.",
+      "vraag": "Noem één sanctie die Duitsland in het Verdrag van Versailles kreeg opgelegd. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["herstelbetaling/schadevergoeding/betalen/ontwapen/leger/100 000/100.000/100000"],
+      "minTreffers": 1,
+      "modelantwoord": "Duitsland moest herstelbetalingen betalen.",
       "uitleg": "Duitsland kreeg zware herstelbetalingen opgelegd en mocht slechts een klein beroepsleger van 100.000 man zonder zware wapens hebben. (§1.4)"
     }
   ]

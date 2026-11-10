@@ -77,13 +77,10 @@
       {
         id: "ex14_v7",
         type: "open",
-        vraag: "Leg uit waarom de nazi's vanaf 1942 vernietigingskampen gingen bouwen in plaats van alleen massa-executies uit te blijven voeren.",
-        sleutelwoorden: [
-          "efficiënt/sneller/meer mensen tegelijk",
-          "heel Europa/overal joden ophalen"
-        ],
+        vraag: "Waarom bouwden de nazi's vanaf 1942 vernietigingskampen? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["efficiënt/efficient/sneller/snel/langzaam/omslachtig"],
         minTreffers: 1,
-        modelantwoord: "De massa-executies door moordcommando's waren voor de nazi's te langzaam en te omslachtig. Door vernietigingskampen te bouwen, konden zij het moorden efficiënter organiseren en joden uit heel Europa er per trein naartoe brengen.",
+        modelantwoord: "Zo konden ze sneller en efficiënter veel mensen vermoorden.",
         uitleg: "De nazi's wilden het moorden industrialiseren om zoveel mogelijk mensen zo snel mogelijk te kunnen vermoorden."
       },
       {
@@ -156,13 +153,10 @@
       {
         id: "ex14_v15",
         type: "open",
-        vraag: "Wat gebeurde er met de kinderen van David Sanders, nadat hij mishandeld was om hun onderduikadressen te achterhalen?",
-        sleutelwoorden: [
-          "opgepakt/gearresteerd",
-          "vermoord/gedood/omgekomen"
-        ],
+        vraag: "Wat gebeurde er met de kinderen van David Sanders? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["opgepakt/gearresteerd/arrest/vermoord/gedood/omgekomen/auschwitz"],
         minTreffers: 1,
-        modelantwoord: "Zijn jongste twee kinderen, Marleentje en Bertje, werden dezelfde dag nog gearresteerd, en ook zijn dochter Elly werd opgepakt. Kort daarna werd het hele gezin in Auschwitz vermoord.",
+        modelantwoord: "Ze werden gearresteerd en later in Auschwitz vermoord.",
         uitleg: "Door grof geweld van jodenjagers werden de onderduikadressen van de kinderen prijsgegeven, waarna het hele gezin in Auschwitz werd vermoord."
       },
       {

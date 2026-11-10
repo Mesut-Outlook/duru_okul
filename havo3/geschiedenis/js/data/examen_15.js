@@ -97,13 +97,10 @@
       {
         id: "ex15_v9",
         type: "open",
-        vraag: "Leg uit wat de Veiligheidsraad van de VN kan doen als een land zich niet aan internationale afspraken houdt.",
-        sleutelwoorden: [
-          "strafmaatregelen/sancties",
-          "vredestroepen/soldaten sturen"
-        ],
+        vraag: "Noem één ding dat de Veiligheidsraad van de VN kan doen tegen een land dat zich niet aan afspraken houdt. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["sanctie/strafmaatregel/vredestroepen/soldaten/straf"],
         minTreffers: 1,
-        modelantwoord: "De Veiligheidsraad kan bindende besluiten nemen, bijvoorbeeld door strafmaatregelen (sancties) op te leggen aan het betreffende land, of door vredestroepen te sturen.",
+        modelantwoord: "Hij kan sancties opleggen.",
         uitleg: "Anders dan de machteloze Volkenbond kan de Veiligheidsraad bindende besluiten afdwingen, met sancties of vredestroepen."
       },
       {
@@ -169,13 +166,10 @@
       {
         id: "ex15_v16",
         type: "open",
-        vraag: "Leg uit waarom de plek waar NSB-leider Mussert in 1946 werd geëxecuteerd, de Scheveningse duinen, een symbolische betekenis had.",
-        sleutelwoorden: [
-          "verzet/verzetsmensen/verzetsvrouwen",
-          "terechtgesteld/geexecuteerd/gefusilleerd/doodgeschoten"
-        ],
+        vraag: "Wie executeerden de Duitsers in de Scheveningse duinen, waar later ook Mussert werd geëxecuteerd? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["verzet"],
         minTreffers: 1,
-        modelantwoord: "Op diezelfde plek in de Scheveningse duinen hadden de Duitsers tijdens de bezetting juist veel Nederlandse verzetsmannen en -vrouwen geëxecuteerd, waardoor het symbolisch was dat de landverrader Mussert er nu zelf werd terechtgesteld.",
+        modelantwoord: "Nederlandse verzetsmensen.",
         uitleg: "De plek symboliseerde de omkering van de rollen: waar eerst het verzet werd gefusilleerd, werd nu de collaborateur terechtgesteld."
       },
       {

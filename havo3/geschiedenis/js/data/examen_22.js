@@ -203,25 +203,19 @@
       {
         id: "ex22_v19",
         type: "open",
-        vraag: "Leg uit waarom het parlement een wetsvoorstel van de regering moet goedkeuren voordat het een wet wordt.",
-        sleutelwoorden: [
-          "controleert/controle",
-          "Tweede en Eerste Kamer/beide kamers"
-        ],
+        vraag: "Waarom moet het parlement een wetsvoorstel van de regering goedkeuren? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["controle/controleer/toezicht/democra"],
         minTreffers: 1,
-        modelantwoord: "Het parlement (Tweede en Eerste Kamer) controleert de regering en moet een wetsvoorstel goedkeuren, zodat wetten niet alleen door de regering worden bepaald maar ook democratisch worden gecontroleerd.",
+        modelantwoord: "Het parlement controleert de regering.",
         uitleg: "De goedkeuring door het parlement zorgt voor democratische controle op wetgeving van de regering."
       },
       {
         id: "ex22_v20",
         type: "open",
-        vraag: "Leg uit welk compromis het kabinet-Den Uyl sloot over de Oosterschelde en waarom.",
-        sleutelwoorden: [
-          "dam met schuiven/stormvloedkering",
-          "milieu/open houden"
-        ],
+        vraag: "Wat kwam er in het compromis van kabinet-Den Uyl in de Oosterschelde? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["stormvloed/schuiven/kering"],
         minTreffers: 1,
-        modelantwoord: "Het kabinet besloot de Oosterschelde niet helemaal af te sluiten en ook niet helemaal open te houden: er kwam een stormvloedkering met schuiven die normaal open staan maar bij hoogwater dichtgaan, zodat het milieu beschermd bleef.",
+        modelantwoord: "Een stormvloedkering met schuiven.",
         uitleg: "Zo bleef zowel de veiligheid tegen overstromingen als het milieu van de Oosterschelde behouden."
       }
     ]

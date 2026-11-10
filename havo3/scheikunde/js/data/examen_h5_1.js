@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Je hebt een mengsel van zand en zout, beide als vaste stof door elkaar gemengd (er is geen water toegevoegd). Beschrijf in twee stappen, elk met de juiste scheidingsmethode uit deze paragraaf, hoe je dit mengsel volledig scheidt in zand en zout.",
-      "sleutelwoorden": [
-        "extraheren/extractie",
-        "filtreren"
-      ],
+      "vraag": "Hoe heet de scheidingsmethode waarbij je water toevoegt aan een mengsel van vast zand en zout, zodat alleen het zout oplost? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["extraheren/extractie"],
       "minTreffers": 1,
-      "modelantwoord": "Stap 1: voeg water toe aan het mengsel (extraheren) — het zout lost op in het water, het zand niet. Stap 2: filtreren — het zand blijft als residu op het filter achter, de zoute oplossing loopt als filtraat door het filter.",
+      "modelantwoord": "Dat heet extraheren.",
       "uitleg": "Eerst extraheer je met water (zout lost op, zand niet), daarna filtreer je om het onopgeloste zand van de zoute oplossing te scheiden."
     }
   ]

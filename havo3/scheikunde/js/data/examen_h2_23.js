@@ -62,14 +62,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een flesje met geurstokjes verspreidt een geur door een kamer, ook als je ver van het flesje af staat. Leg uit welke conclusie je hieruit kunt trekken over de bouw van de geurstof.",
-      "sleutelwoorden": [
-        "deeltjes/moleculen",
-        "klein/onzichtbaar/niet te zien",
-        "bewegen/beweegt/verplaats/reizen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De geurstof moet uit heel kleine, onzichtbare deeltjes (moleculen) bestaan die vrij kunnen bewegen. Ze verplaatsen zich van het flesje naar je neus.",
+      "vraag": "Wat concludeer je over de deeltjes van de geurstof, omdat je ze ook ver weg ruikt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["bewegen/beweegt/verplaats/reizen/verspreid"],
+      "minTreffers": 1,
+      "modelantwoord": "De geurstof bestaat uit deeltjes die vrij bewegen.",
       "uitleg": "Je kunt de geur niet verklaren met waarneembare kenmerken. Op microniveau bestaat de stof uit kleine deeltjes die vrij kunnen bewegen en zo in je neus komen."
     },
     {
@@ -146,14 +142,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je een stof liever met een formule weergeeft dan telkens een modelvoorstelling van het molecuul te tekenen.",
-      "sleutelwoorden": [
-        "sneller/snel/minder tijd/gemakkelijker/eenvoudiger",
-        "atoomsoorten/symbolen",
-        "index/aantal/hoeveel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een formule is een snellere en eenvoudigere manier dan tekenen. Met de symbolen zie je uit welke atoomsoorten de stof bestaat, en de index geeft aan hoeveel atomen van elke soort in een molecuul zitten.",
+      "vraag": "Noem één voordeel van een formule boven het tekenen van een modelvoorstelling. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["snel/eenvoudiger/gemakkelijker/minder tijd/korter"],
+      "minTreffers": 1,
+      "modelantwoord": "Een formule is sneller.",
       "uitleg": "Een modelvoorstelling tekenen kost veel tijd. Een formule laat met symbolen en indexen zien uit welke atoomsoorten een stof bestaat en hoe vaak elke atoomsoort in een molecuul voorkomt."
     },
     {

@@ -182,27 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken de relatieve atoommassa van een atoomsoort die voor 70% uit een isotoop met een massa van 10 u bestaat en voor 30% uit een isotoop met een massa van 11 u. Laat zien hoe je rekent.",
-      "sleutelwoorden": [
-        "7,0/7.0",
-        "3,3/3.3",
-        "10,3/10.3"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Gewogen gemiddelde: 0,70 × 10 + 0,30 × 11 = 7,0 + 3,3 = 10,3 u.",
+      "vraag": "Bereken de relatieve atoommassa van een atoomsoort die voor 70% uit een isotoop van 10 u bestaat en voor 30% uit een isotoop van 11 u. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["10 3"],
+      "minTreffers": 1,
+      "modelantwoord": "0,70 × 10 + 0,30 × 11 = 10,3 u.",
       "uitleg": "Vermenigvuldig elke isotoopmassa met het aandeel en tel op: 7,0 + 3,3 = 10,3 u."
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je in het vakje van een atoomsoort in het periodiek systeem het atoomnummer en de relatieve atoommassa van elkaar onderscheidt en wat elk getal betekent.",
-      "sleutelwoorden": [
-        "linksonder/onder het symbool",
-        "linksboven/boven het symbool/boven",
-        "protonen/proton",
-        "gewogen gemiddelde/gemiddelde/isotopen"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Het atoomnummer staat linksonder het symbool en geeft het aantal protonen aan. De relatieve atoommassa staat linksboven in het vakje en is een gewogen gemiddelde van de massa's van de isotopen.",
+      "vraag": "Waar staat het atoomnummer in het vakje van een atoomsoort in het periodiek systeem? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["linksonder/links onder/onder het symbool"],
+      "minTreffers": 1,
+      "modelantwoord": "Het atoomnummer staat linksonder het symbool.",
       "uitleg": "Atoomnummer = aantal protonen (onder het symbool); relatieve atoommassa = gewogen gemiddelde van de isotopen (boven het symbool)."
     }
   ]

@@ -193,25 +193,19 @@
       {
         id: "ex28_v19",
         type: "open",
-        vraag: "Leg uit waarom stabiliteit in het Midden-Oosten na de Koude Oorlog belangrijk bleef voor het buitenlands beleid van de VS.",
-        sleutelwoorden: [
-          "olie/olie-import",
-          "veiligheid/eigen (economisch) belang"
-        ],
+        vraag: "Welke grondstof uit het Midden-Oosten hadden de VS nodig? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["olie"],
         minTreffers: 1,
-        modelantwoord: "De VS waren voor een groot deel van hun energievoorziening afhankelijk van olie-import uit het Midden-Oosten, dus stabiliteit in die regio was belangrijk voor de Amerikaanse economie en veiligheid; daarom bemoeiden Amerikaanse presidenten zich actief met vrede in het gebied.",
+        modelantwoord: "Ze waren afhankelijk van olie.",
         uitleg: "Olie-belangen waren een belangrijke reden voor de actieve Amerikaanse bemoeienis met vrede in het Midden-Oosten."
       },
       {
         id: "ex28_v20",
         type: "open",
-        vraag: "Leg uit wat het verschil is tussen vluchtelingen en economische migranten.",
-        sleutelwoorden: [
-          "vervolging/oorlog/geweld/gedwongen",
-          "levensstandaard verbeteren/vrijwillig"
-        ],
+        vraag: "Waarom verlaten vluchtelingen hun land, anders dan economische migranten? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["vervolging/oorlog/geweld/gedwongen/onveilig"],
         minTreffers: 1,
-        modelantwoord: "Vluchtelingen zijn gedwongen hun land te verlaten door vervolging, oorlog of geweld, terwijl economische migranten vrijwillig vertrekken om hun levensstandaard in een ander land te verbeteren.",
+        modelantwoord: "Ze zijn gedwongen te vluchten door oorlog of vervolging.",
         uitleg: "Het kernverschil is dwang: vluchtelingen hebben geen keuze, economische migranten wel."
       }
     ]

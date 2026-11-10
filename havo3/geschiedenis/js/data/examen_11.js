@@ -97,13 +97,10 @@
       {
         id: "ex11_v9",
         type: "open",
-        vraag: "Leg uit wat Hitler met 'Lebensraum' bedoelde en in welke richting hij dit wilde veroveren.",
-        sleutelwoorden: [
-          "leefruimte/ruimte/grondgebied",
-          "oosten/Sovjet-Unie/Oost-Europa"
-        ],
+        vraag: "In welke richting wilde Hitler 'Lebensraum' veroveren? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["oosten/sovjet/oost-europa"],
         minTreffers: 1,
-        modelantwoord: "Hitler vond dat het Duitse volk meer leefruimte nodig had om zich te voeden en over Europa te heersen. Deze extra ruimte wilde hij in het oosten veroveren, vooral ten koste van de Sovjet-Unie.",
+        modelantwoord: "In het oosten, ten koste van de Sovjet-Unie.",
         uitleg: "Lebensraum betekende dat Duitsland volgens Hitler grondgebied in het oosten nodig had, wat een belangrijke reden was voor de aanval op de Sovjet-Unie."
       },
       {
@@ -202,13 +199,10 @@
       {
         id: "ex11_v19",
         type: "open",
-        vraag: "Leg uit waarom de westerse geallieerden vanaf 1943 op zee en in de lucht sterker waren dan Duitsland, en wat dit betekende voor Duitse steden.",
-        sleutelwoorden: [
-          "materieel/industrie/overmacht/productie",
-          "bombard/verwoest"
-        ],
+        vraag: "Wat konden geallieerde vliegtuigen vanaf 1943 doen met Duitse steden? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["bombard/verwoest/aanval"],
         minTreffers: 1,
-        modelantwoord: "De Amerikaanse en Britse industrie produceerde veel meer vliegtuigen en schepen dan Duitsland kon bijhouden. Daardoor konden Amerikaanse en Britse vliegtuigen vanaf 1943 ongehinderd Duitse militaire doelen én steden bombarderen.",
+        modelantwoord: "Ze bombardeerden Duitse steden.",
         uitleg: "Door hun industriële overmacht konden de geallieerden vanaf 1943 vrijwel ongestoord bommenwerpers boven Duitsland inzetten."
       },
       {

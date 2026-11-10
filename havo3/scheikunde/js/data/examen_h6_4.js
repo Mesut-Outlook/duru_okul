@@ -175,22 +175,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Twee verschillende hydrofobe stoffen worden bij elkaar gedaan. Voorspel wat er met het mengsel gebeurt en leg dit kort uit.",
-      "sleutelwoorden": [
-        "mengen onderling goed"
-      ],
+      "vraag": "Wat gebeurt er als je twee hydrofobe stoffen bij elkaar doet? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["mengen goed/goed mengen/mengen onderling goed"],
       "minTreffers": 1,
-      "modelantwoord": "Ja, twee hydrofobe stoffen mengen onderling goed: stoffen van dezelfde soort (beide hydrofoob of beide hydrofiel) mengen altijd goed met elkaar.",
+      "modelantwoord": "Ze mengen goed met elkaar.",
       "uitleg": "Hydrofobe stoffen mengen onderling goed; alleen de combinatie hydrofiel + hydrofoob mengt slecht."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een moleculaire stof, ook als hij is opgelost in water, nog steeds geen elektrische stroom geleidt.",
-      "sleutelwoorden": [
-        "geen ionen/ongeladen"
-      ],
+      "vraag": "Waarom geleidt een opgeloste moleculaire stof geen stroom? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["geen ionen/ongeladen/niet geladen/geen geladen"],
       "minTreffers": 1,
-      "modelantwoord": "De moleculen van een moleculaire stof zijn als geheel ongeladen; er ontstaan bij het oplossen geen vrij bewegende ionen, dus kan de stof geen stroom geleiden.",
+      "modelantwoord": "Er ontstaan geen ionen; de moleculen blijven ongeladen.",
       "uitleg": "Een moleculaire stof valt bij het oplossen niet uiteen in ionen — de moleculen blijven ongeladen, dus er kan geen stroom worden geleid."
     },
     {

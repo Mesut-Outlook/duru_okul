@@ -182,24 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Het zuurstofmolecuul in figuur 2.11c bestaat uit twee rode bolletjes, het acetonmolecuul in figuur 2.11a uit bolletjes in drie kleuren. Leg uit welke van de twee stoffen een ontleedbare stof is.",
-      "sleutelwoorden": [
-        "verschillende/meerdere",
-        "één soort/een soort/dezelfde/gelijke"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Aceton is een ontleedbare stof (verbinding), omdat het molecuul uit meerdere verschillende soorten atomen bestaat. Het zuurstofmolecuul bestaat maar uit één soort atoom en is dus niet-ontleedbaar.",
+      "vraag": "Waarom is aceton ontleedbaar? Denk aan de kleuren van de bolletjes. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verschillende/meerdere/drie soorten"],
+      "minTreffers": 1,
+      "modelantwoord": "Het molecuul bestaat uit meerdere verschillende atoomsoorten.",
       "uitleg": "Een ontleedbare stof (verbinding) bevat meerdere atoomsoorten; een niet-ontleedbare stof bestaat uit één atoomsoort."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waar bijna alle massa van een atoom zit en waarom het experiment met gouden folie niet paste bij het model van Thomson.",
-      "sleutelwoorden": [
-        "kern/protonen",
-        "rechtdoor/doorheen/lege ruimte/gingen door"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bijna alle massa zit in de kleine, compacte atoomkern met de protonen en neutronen. Volgens Thomson zit de lading verdeeld door het hele atoom, maar bijna alle deeltjes gingen rechtdoor door de folie heen: een atoom bestaat dus grotendeels uit lege ruimte.",
+      "vraag": "Waar zit bijna alle massa van een atoom? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kern/atoomkern"],
+      "minTreffers": 1,
+      "modelantwoord": "In de atoomkern.",
       "uitleg": "Rutherford: een compacte kern met bijna alle massa, en daaromheen een wolk elektronen; het atoom bestaat voor 99% uit lege ruimte."
     }
   ]

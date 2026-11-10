@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Je moet lucht tekenen met 50 bolletjes. Leg uit hoeveel bolletjes je van elke soort tekent.",
-      "sleutelwoorden": [
-        "10",
-        "40"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Lucht bestaat voor 20% uit zuurstof: 10 bolletjes, en voor 80% uit stikstof: 40 bolletjes.",
+      "vraag": "Lucht bestaat uit 20% zuurstof en 80% stikstof. Hoeveel van de 50 bolletjes teken je als zuurstof? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["10/tien"],
+      "minTreffers": 1,
+      "modelantwoord": "20% van 50 is 10 bolletjes.",
       "uitleg": "Lucht bestaat voor 20% uit zuurstof: 10 bolletjes, en voor 80% uit stikstof: 40 bolletjes."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het microbeeld van een kom suiker in een liter water er anders uitziet dan dat van één suikerkorrel in een liter water.",
-      "sleutelwoorden": [
-        "meer/veel/groter",
-        "moleculen/deeltjes",
-        "verhouding/drukker/dichter"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In de kom zitten veel meer suikermoleculen; die zitten dan in dezelfde hoeveelheid water, dus de verhouding verandert en het is drukker.",
+      "vraag": "Wat is er op microniveau anders bij een kom suiker in een liter water dan bij één korrel? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["meer/veel/groter/talrijker"],
+      "minTreffers": 1,
+      "modelantwoord": "Er zitten veel meer suikermoleculen in het water.",
       "uitleg": "In de kom zitten veel meer suikermoleculen; die zitten dan in dezelfde hoeveelheid water, dus de verhouding verandert en het is drukker."
     }
   ]

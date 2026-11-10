@@ -203,19 +203,19 @@
       {
         id: "ex9_v19",
         type: "open",
-        vraag: "Leg uit waarom de Nederlandse totalitaire partijen zoals de NSB in het interbellum, in tegenstelling tot in Duitsland en Italië, weinig aanhang kregen.",
-        sleutelwoorden: ["niet ontwricht/geen woede/geen verlies", "zuil/zuilen/kerk", "Colijn/sterke man"],
+        vraag: "Noem één reden waarom de NSB in het interbellum weinig aanhang kreeg. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["zuil/kerk/colijn/sterke man/niet ontwricht/geen woede"],
         minTreffers: 1,
-        modelantwoord: "Nederland was niet ontwricht geraakt door de Eerste Wereldoorlog en had geen woede over een nederlaag zoals Duitsland en Italië. Bovendien voelden de meeste Nederlanders zich thuis in hun eigen zuil, verboden kerken het lidmaatschap van de NSB, en had Nederland met Colijn al een 'sterke man'.",
+        modelantwoord: "De meeste Nederlanders voelden zich thuis in hun eigen zuil.",
         uitleg: "Een combinatie van politieke stabiliteit, verzuiling en tegenmaatregelen hield de NSB klein."
       },
       {
         id: "ex9_v20",
         type: "open",
-        vraag: "Beschrijf hoe het leven van een werkloze Nederlander er in de crisisjaren van de jaren 1930 ongeveer uitzag.",
-        sleutelwoorden: ["stempellokaal/stempelen", "uitkering"],
+        vraag: "Waar meldde een werkloze zich in de jaren 1930 regelmatig om zijn kaart te laten controleren? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["stempel"],
         minTreffers: 1,
-        modelantwoord: "Een werkloze moest twee keer per dag naar een stempellokaal om zijn kaart te laten afstempelen, om te voorkomen dat hij stiekem zwart werkte. Daarvoor kreeg hij een kleine uitkering waarmee hij net kon rondkomen.",
+        modelantwoord: "Bij het stempellokaal.",
         uitleg: "Het stempelsysteem en de karige uitkering waren kenmerkend voor het dagelijks leven van werklozen in de crisisjaren."
       }
     ]

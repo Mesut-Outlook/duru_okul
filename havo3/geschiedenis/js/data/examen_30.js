@@ -188,25 +188,19 @@
       {
         id: "ex30_v19",
         type: "open",
-        vraag: "Leg uit waarom veel landen na de kernramp in Tsjernobyl in 1986 stopten met het bouwen van nieuwe kerncentrales, ook al gold kernenergie eerder als schoon alternatief.",
-        sleutelwoorden: [
-          "risico's/gevaar/onveilig",
-          "vertrouwen/angst"
-        ],
+        vraag: "Welk gevaar van kernenergie bleek na de ramp in Tsjernobyl in 1986? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["straling/radioactiv/onbewoonbaar/onveilig/ongeluk"],
         minTreffers: 1,
-        modelantwoord: "Tegenstanders van kernenergie hadden altijd al gewezen op de risico's van een ongeluk. Toen de kernramp in Tsjernobyl in 1986 door radioactieve straling een groot gebied onbewoonbaar maakte, kregen zij gelijk en verloren veel landen het vertrouwen in de veiligheid van kernenergie, waardoor de bouw van nieuwe centrales stopte.",
+        modelantwoord: "Radioactieve straling maakte een groot gebied onbewoonbaar.",
         uitleg: "De ramp in Tsjernobyl bevestigde de gevreesde risico's van kernenergie, waardoor het vertrouwen in nieuwe centrales instortte."
       },
       {
         id: "ex30_v20",
         type: "open",
-        vraag: "Leg uit wat volgens Al Gores film uit 2006 een gevaarlijk gevolg is van het smelten van het poolijs door klimaatverandering.",
-        sleutelwoorden: [
-          "zeewaterspiegel/zeespiegel",
-          "kustgebied/laaggelegen"
-        ],
+        vraag: "Wat gebeurt er volgens Al Gores film uit 2006 als het poolijs smelt? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["zeespiegel/zeewaterspiegel/overstrom/stijgt"],
         minTreffers: 1,
-        modelantwoord: "Als het poolijs smelt, stijgt de zeewaterspiegel. Dat is gevaarlijk voor de vele mensen die in laaggelegen kustgebieden wonen, omdat hun land kan overstromen.",
+        modelantwoord: "De zeespiegel stijgt, waardoor laaggelegen kustgebieden overstromen.",
         uitleg: "Al Gore liet zien dat het smelten van het poolijs kan leiden tot een voor veel mensen gevaarlijke stijging van de zeewaterspiegel."
       }
     ]

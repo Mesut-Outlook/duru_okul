@@ -203,25 +203,19 @@
       {
         id: "ex21_v19",
         type: "open",
-        vraag: "Leg uit hoe de opkomst van televisie na 1951 bijdroeg aan het verdwijnen van de verzuiling in Nederland.",
-        sleutelwoorden: [
-          "andere culturen/levensbeschouwingen/buitenlandse programma's",
-          "opvattingen/veranderden"
-        ],
+        vraag: "Waarmee maakten mensen via televisie kennis, waardoor de verzuiling verdween? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["cultur/levensbeschouwing/meningen/opvattingen/buitenland"],
         minTreffers: 1,
-        modelantwoord: "Doordat mensen via televisie kennismaakten met andere culturen, levensbeschouwingen en meningen buiten hun eigen zuil, gingen hun opvattingen veranderen en verloren de kerk en de zuil aan invloed.",
+        modelantwoord: "Met andere culturen en meningen buiten hun eigen zuil.",
         uitleg: "Televisie liet mensen kennismaken met ideeën buiten hun eigen zuil, waardoor de verzuiling geleidelijk verdween."
       },
       {
         id: "ex21_v20",
         type: "open",
-        vraag: "Beschrijf twee manieren waarop de individualisering vanaf de jaren 1960 het leven van jongeren veranderde.",
-        sleutelwoorden: [
-          "eigen keuzes/zelf beslissen",
-          "minder gehoorzaam/minder volgen van autoriteiten"
-        ],
+        vraag: "Noem één verandering voor jongeren door de individualisering vanaf de jaren 1960. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["eigen keuze/zelf/gehoorzaam/autoriteit"],
         minTreffers: 1,
-        modelantwoord: "Jongeren gingen meer hun eigen keuzes maken in plaats van de normen van bijvoorbeeld de pastoor of dominee te volgen, en ze werden minder gehoorzaam aan traditionele autoriteiten zoals hun ouders of politieke leiders.",
+        modelantwoord: "Jongeren maakten meer hun eigen keuzes.",
         uitleg: "Individualisering zorgde ervoor dat jongeren zelf gingen nadenken over hun moraal en minder autoriteiten klakkeloos volgden."
       }
     ]

@@ -203,25 +203,19 @@
       {
         id: "ex20_v19",
         type: "open",
-        vraag: "Leg uit hoe het mislukken van de Grote Sprong Voorwaarts in China tot een enorme hongersnood leidde.",
-        sleutelwoorden: [
-          "communes/gedwongen",
-          "hoogovens/megaprojecten/land niet bewerkt"
-        ],
+        vraag: "Wat moesten Chinese boeren tijdens de Grote Sprong Voorwaarts doen, waardoor hongersnood ontstond? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["commune/hoogovens/megaproject/dammen/gedwongen"],
         minTreffers: 1,
-        modelantwoord: "Boeren werden gedwongen in communes te gaan werken aan hoogovens en megaprojecten zoals dammen, waardoor ze hun land niet goed konden bewerken en er al snel een hongersnood uitbrak waaraan tientallen miljoenen mensen stierven.",
+        modelantwoord: "Ze werden gedwongen in communes te werken aan hoogovens.",
         uitleg: "Doordat boeren gedwongen werden aan megaprojecten en hoogovens te werken in plaats van hun land te bewerken, ontstond een enorme hongersnood."
       },
       {
         id: "ex20_v20",
         type: "open",
-        vraag: "Vergelijk in het kort de economische aanpak van Zuid-Korea met die van India na de Tweede Wereldoorlog.",
-        sleutelwoorden: [
-          "export/exportindustrie",
-          "binnenlandse markt/eigen industrie"
-        ],
+        vraag: "Waarop richtte Zuid-Korea zich vooral in zijn economie na de Tweede Wereldoorlog? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["export"],
         minTreffers: 1,
-        modelantwoord: "Zuid-Korea richtte zich onder Park vooral op de exportindustrie en steunde grote bedrijven met goedkope leningen, terwijl India zich meer richtte op industrie en landbouw voor de eigen, binnenlandse markt.",
+        modelantwoord: "Op de exportindustrie.",
         uitleg: "Zuid-Korea koos voor exportgerichte industrialisatie, terwijl India vooral zijn eigen binnenlandse industrie en landbouw beschermde en steunde."
       }
     ]

@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom aardolie een fossiele brandstof wordt genoemd en waarom dit, in tegenstelling tot bijvoorbeeld zetmeel, een niet-hernieuwbare grondstof is.",
-      "sleutelwoorden": [
-        "miljoenen jaren",
-        "raakt op/niet hernieuwbaar"
-      ],
+      "vraag": "Aardolie is een fossiele brandstof. Hoe lang geleden is het ontstaan? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["miljoen"],
       "minTreffers": 1,
-      "modelantwoord": "Aardolie is miljoenen jaren geleden ontstaan uit de resten van dode planten en dieren die onder hoge druk diep in de aarde hebben gestaan. Omdat de voorraad beperkt is en er op korte termijn geen nieuwe aardolie bijkomt, raakt op den duur de hele voorraad op: aardolie is dus niet hernieuwbaar — in tegenstelling tot zetmeel of koolzaadolie, die je jaarlijks opnieuw kunt verbouwen.",
+      "modelantwoord": "Aardolie is miljoenen jaren geleden ontstaan.",
       "uitleg": "Aardolie ontstaat uit resten van organismen die miljoenen jaren onder hoge druk in de aarde hebben gelegen; de voorraad is eindig en raakt op, terwijl hernieuwbare grondstoffen jaarlijks opnieuw geproduceerd kunnen worden."
     }
   ]

@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Iemand beweert: \"Water bevat waterstof en zuurstof, dus water is een mengsel van waterstofgas en zuurstofgas.\" Leg uit waarom dit niet klopt. Gebruik het microniveau.",
-      "sleutelwoorden": [
-        "zuivere stof/één soort molecuul/dezelfde moleculen",
-        "gebonden/vastzitten/aan elkaar/binding",
-        "verbinding/ontleedbaar/geen losse"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Water bestaat uit één soort moleculen, H<sub>2</sub>O. In elk watermolecuul zitten de waterstof- en zuurstofatomen aan elkaar vast; er zijn geen losse moleculen waterstofgas en zuurstofgas naast elkaar. Water is dus een verbinding (zuivere stof), geen mengsel.",
+      "vraag": "Is water op microniveau een mengsel of een zuivere stof? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verbinding/één soort molecuul/een soort molecuul"],
+      "minTreffers": 1,
+      "modelantwoord": "Water is een zuivere stof, een verbinding.",
       "uitleg": "Water is een verbinding: de atomen zitten in hetzelfde molecuul. Een mengsel bevat meerdere soorten moleculen naast elkaar."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je bij het massagetal van een atoom alleen de protonen en neutronen optelt en de elektronen niet meetelt.",
-      "sleutelwoorden": [
-        "verwaarloosbaar/veel lichter/heel klein/nauwelijks",
-        "kern"
-      ],
+      "vraag": "Waarom tel je elektronen niet mee bij het massagetal? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verwaarloosbaar/veel lichter/heel klein/nauwelijks/weinig massa/lichter"],
       "minTreffers": 1,
-      "modelantwoord": "De massa van een elektron is verwaarloosbaar klein vergeleken met die van een proton of neutron. Bijna alle massa van een atoom zit in de kern, dus het massagetal is het aantal protonen plus het aantal neutronen.",
+      "modelantwoord": "De massa van een elektron is verwaarloosbaar klein.",
       "uitleg": "Het massagetal is per definitie protonen + neutronen; elektronen zijn zo licht dat ze de massa nauwelijks beïnvloeden."
     }
   ]

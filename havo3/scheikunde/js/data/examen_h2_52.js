@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beschrijf hoe je met een modeltekening laat zien dat alcohol en water een heldere oplossing vormen.",
-      "sleutelwoorden": [
-        "kleur/kleuren",
-        "door elkaar/gelijkmatig/verdeeld/gemengd",
-        "bolletjes/rondjes"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je gebruikt bolletjes van twee kleuren (alcohol en water) en tekent ze gelijkmatig door elkaar verdeeld.",
+      "vraag": "Hoe liggen de alcohol- en watermoleculen in de modeltekening van een heldere oplossing? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["door elkaar/gelijkmatig/verdeeld/gemengd"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze liggen gelijkmatig door elkaar verdeeld.",
       "uitleg": "Je gebruikt bolletjes van twee kleuren (alcohol en water) en tekent ze gelijkmatig door elkaar verdeeld."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf hoe je de moleculen tekent in een emulsie van wasbenzine en water die ontmengt.",
-      "sleutelwoorden": [
-        "laag/lagen",
-        "twee",
-        "kleur/kleuren/soorten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je tekent twee lagen: een laag met bolletjes van de ene kleur (water) en daarop een laag met bolletjes van de andere kleur (wasbenzine).",
+      "vraag": "Hoeveel lagen teken je in een ontmengde emulsie van wasbenzine en water? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["twee/2 lagen"],
+      "minTreffers": 1,
+      "modelantwoord": "Je tekent twee lagen.",
       "uitleg": "Je tekent twee lagen: een laag met bolletjes van de ene kleur (water) en daarop een laag met bolletjes van de andere kleur (wasbenzine)."
     }
   ]

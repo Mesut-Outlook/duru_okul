@@ -207,15 +207,10 @@ DURU.registerExamen({
     {
       "id": "ex44_v20",
       "type": "open",
-      "vraag": "Leg uit welke problemen de Eerste Wereldoorlog voor Nederland veroorzaakte, ook al bleef het land neutraal.",
-      "sleutelwoorden": [
-        "vluchtelingen/Belgen",
-        "schaarste/tekort",
-        "bon/distributie",
-        "zwarte markt/honger"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Er kwamen Belgische vluchtelingen, door de blokkade ontstond schaarste, de overheid voerde distributie op de bon in en door de honger kwam er een zwarte markt.",
+      "vraag": "Noem één probleem dat Nederland in de Eerste Wereldoorlog kreeg, ondanks zijn neutraliteit. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vluchtelingen/schaarste/tekort/bon/distributie/zwarte markt/honger"],
+      "minTreffers": 1,
+      "modelantwoord": "Er ontstond schaarste aan voedsel.",
       "uitleg": "Nederland had last van vluchtelingen, schaarste, distributie en een zwarte markt (§1.5)."
     }
   ]

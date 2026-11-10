@@ -183,25 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het massagetal van een isotoop een geheel getal is, terwijl de relatieve atoommassa van de atoomsoort meestal geen geheel getal is.",
-      "sleutelwoorden": [
-        "protonen en neutronen/aantal deeltjes/tellen",
-        "gewogen gemiddelde/gemiddelde van isotopen/isotopen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het massagetal is het aantal protonen en neutronen in één kern (dus een geheel getal). De relatieve atoommassa is een gewogen gemiddelde van de isotopen in de natuur.",
+      "vraag": "Waarom is de relatieve atoommassa van een atoomsoort meestal geen geheel getal? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gewogen/gemiddelde/isotopen"],
+      "minTreffers": 1,
+      "modelantwoord": "Het is een gewogen gemiddelde van isotopen.",
       "uitleg": "Massagetal telt deeltjes; relatieve atoommassa is een gemiddelde."
     },
     {
       "type": "open",
-      "vraag": "Een leerling zegt: \"Een lithiumatoom heeft altijd 3 protonen, dus ook altijd 3 neutronen.\" Leg uit of dit klopt.",
-      "sleutelwoorden": [
-        "klopt niet/onjuist/nee",
-        "isotopen/verschillend aantal neutronen",
-        "protonen blijven gelijk/hetzelfde aantal protonen/atoomnummer"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Dit klopt niet. Een lithiumatoom heeft altijd 3 protonen (atoomnummer 3), maar het aantal neutronen kan verschillen: er bestaan isotopen met een ander massagetal.",
+      "vraag": "Waardoor kan het aantal neutronen in lithiumatomen verschillen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["isotopen/isotoop"],
+      "minTreffers": 1,
+      "modelantwoord": "Er bestaan isotopen met een ander massagetal.",
       "uitleg": "Protonen vast, neutronen variëren (isotopen)."
     }
   ]

@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken het massapercentage chloor in koolstoftetrachloride, CCl<sub>4</sub> (C = 12,01 u; Cl = 35,45 u; één decimaal). Laat zien hoe je rekent.",
-      "sleutelwoorden": [
-        "153,81/153.81",
-        "141,8/141.8/141,80",
-        "92,2/92.2"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Molecuulmassa CCl<sub>4</sub> = 12,01 + 4 × 35,45 = 153,81 u. Massa Cl = 4 × 35,45 = 141,80 u. Massapercentage Cl = 141,80 / 153,81 × 100% = 92,2%.",
+      "vraag": "Bereken het massapercentage chloor in CCl₄ (C = 12,01 u; Cl = 35,45 u; één decimaal). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["92 2/92"],
+      "minTreffers": 1,
+      "modelantwoord": "Het massapercentage chloor is 92,2%.",
       "uitleg": "Eerst de molecuulmassa (153,81 u), dan de massa van chloor (141,80 u), delen en maal 100%: 92,2%."
     },
     {
       "type": "open",
-      "vraag": "Een leerling noemt P<sub>2</sub>O<sub>5</sub> 'fosforpentaoxide'. Leg uit wat er in deze naam ontbreekt.",
-      "sleutelwoorden": [
-        "di/twee fosforatomen/twee P",
-        "eerste atoomsoort/fosfor/index 2/voorvoegsel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De eerste atoomsoort komt twee keer voor, dus daar hoort het voorvoegsel di: difosforpentaoxide. 'Mono' laat je alleen weg als de eerste atoomsoort één keer voorkomt.",
+      "vraag": "Welk voorvoegsel mist er voor fosfor in de naam 'fosforpentaoxide' van P₂O₅? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["di/difosfor"],
+      "minTreffers": 1,
+      "modelantwoord": "Het voorvoegsel di: difosforpentaoxide.",
       "uitleg": "Bij index 2 hoort het voorvoegsel di-, ook bij de eerste atoomsoort: difosforpentaoxide."
     }
   ]

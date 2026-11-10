@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bepaal voor een neutraal atoom <sup>131</sup><sub>53</sub>I het aantal protonen, neutronen en elektronen.",
-      "sleutelwoorden": [
-        "53 protonen/protonen 53/53 p",
-        "78 neutronen/neutronen 78/78 n",
-        "53 elektronen/elektronen 53"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Het atoom heeft 53 protonen (atoomnummer), 78 neutronen (131 – 53) en 53 elektronen (neutraal: evenveel als protonen).",
+      "vraag": "Hoeveel neutronen heeft een neutraal atoom ¹³¹₅₃I? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["78/achtenzeventig"],
+      "minTreffers": 1,
+      "modelantwoord": "Het atoom heeft 78 neutronen (131 − 53).",
       "uitleg": "Protonen = atoomnummer, neutronen = massagetal – atoomnummer, elektronen = protonen."
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil tussen het atoommodel van Thomson en dat van Rutherford?",
-      "sleutelwoorden": [
-        "atoomkern/kern",
-        "lege ruimte/leeg",
-        "wolk/rondom/eromheen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij Thomson zitten de elektronen verdeeld in het atoom (krentenbol); bij Rutherford zit alle positieve lading (protonen) in een kleine atoomkern in het midden, met daaromheen een wolk van elektronen en verder lege ruimte.",
+      "vraag": "Wat zit er volgens Rutherford in het midden van een atoom? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kern/atoomkern"],
+      "minTreffers": 1,
+      "modelantwoord": "Een kleine, zware, positieve atoomkern.",
       "uitleg": "Thomson: krentenbol; Rutherford: kleine kern + elektronenwolk + lege ruimte."
     }
   ]

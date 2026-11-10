@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit tussen de begrippen 'filtraat' en 'destillaat': bij welke scheidingsmethode hoort elk begrip, en wat is precies het verschil?",
-      "sleutelwoorden": [
-        "filtreren",
-        "destilleren/koken"
-      ],
+      "vraag": "Bij welke scheidingsmethode hoort het begrip 'destillaat'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["destilleren/destillatie/koken"],
       "minTreffers": 1,
-      "modelantwoord": "Het filtraat is de vloeistof die bij filtreren door het filter loopt (verschil in deeltjesgrootte). Het destillaat is de vloeistof die bij destilleren wordt opgevangen na verdamping en condensatie (verschil in kookpunt). Beide zijn dus de 'doorgelaten' of 'opgevangen' vloeistof, maar bij een andere scheidingsmethode.",
+      "modelantwoord": "Bij destilleren.",
       "uitleg": "Filtraat hoort bij filtreren (deeltjesgrootte), destillaat hoort bij destilleren (kookpunt)."
     }
   ]

@@ -177,25 +177,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je aan de formule C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> niet kunt zien hoe een glucosemolecuul eruitziet.",
-      "sleutelwoorden": [
-        "soort/aantal/hoeveel/atoomsoorten",
-        "niet/geen/alleen",
-        "uitzien/vorm/bouw/verbonden/rangschikking/model/tekening"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een formule laat alleen zien welke atoomsoorten in het molecuul zitten en hoeveel atomen van elke soort. Hoe de atomen aan elkaar zitten en welke vorm het molecuul heeft, staat er niet in; daarvoor heb je een modelvoorstelling nodig.",
+      "vraag": "Welke informatie over het molecuul geeft de formule C₆H₁₂O₆ niet? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vorm/bouw/rangschikking/aan elkaar/verbonden"],
+      "minTreffers": 1,
+      "modelantwoord": "Hoe de atomen aan elkaar zitten, dus de vorm.",
       "uitleg": "Formule: soort en aantal atomen. Bouw/vorm: modelvoorstelling."
     },
     {
       "type": "open",
-      "vraag": "Een molecuul bestaat uit de atoomsoorten waterstof, stikstof en zuurstof en heeft in totaal vijf atomen. Er is één waterstofatoom en één stikstofatoom. Geef de formule van dit molecuul en leg uit hoe je aan de index van zuurstof komt.",
-      "sleutelwoorden": [
-        "HNO3/HNO₃/HNO<sub>3</sub>",
-        "3 O/drie zuurstof/O3/5 - 2/5 − 2/3 zuurstofatomen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De formule is HNO<sub>3</sub>. Van de vijf atomen zijn er 1 waterstof en 1 stikstof, dus 5 − 2 = 3 zuurstofatomen: index 3.",
+      "vraag": "Een molecuul heeft vijf atomen: één waterstof-, één stikstof- en de rest zuurstofatomen. Geef de formule. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["hno3"],
+      "minTreffers": 1,
+      "modelantwoord": "De formule is HNO3.",
       "uitleg": "Zuurstof = totaal − waterstof − stikstof = 5 − 1 − 1 = 3: HNO<sub>3</sub>."
     }
   ]

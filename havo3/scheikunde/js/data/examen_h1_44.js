@@ -177,25 +177,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In een fles slaolie met azijn zie je na een tijdje twee lagen. Leg uit welk soort mengsel dit was en waarom de olie bovenop drijft.",
-      "sleutelwoorden": [
-        "emulsie",
-        "ontmengt/lagen",
-        "dichtheid/lager/lichter"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het is een emulsie: een troebel mengsel van twee vloeistoffen. Een emulsie ontmengt na een tijdje. De olie drijft bovenop omdat olie een lagere dichtheid heeft dan azijn.",
+      "vraag": "Hoe heet een mengsel van twee vloeistoffen dat na een tijd ontmengt, zoals olie met azijn? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["emulsie"],
+      "minTreffers": 1,
+      "modelantwoord": "Het is een emulsie.",
       "uitleg": "Het is een emulsie: een troebel mengsel van twee vloeistoffen. Een emulsie ontmengt na een tijdje. De olie drijft bovenop omdat olie een lagere dichtheid heeft dan azijn."
     },
     {
       "type": "open",
-      "vraag": "Je hebt twee kleurloze, heldere vloeistoffen: zuiver water en een zoutoplossing. Beschrijf een proef met een faseverandering waarmee je kunt bepalen welke vloeistof het mengsel is.",
-      "sleutelwoorden": [
-        "kookpunt/kooktraject",
-        "thermometer/temperatuur/meten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door de vloeistof te laten koken en met een thermometer de temperatuur te meten: een zuivere stof heeft een vast kookpunt, een mengsel een kooktraject.",
+      "vraag": "Wat meet je tijdens het koken om te zien welke vloeistof zuiver water is? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kookpunt/kooktraject/temperatuur"],
+      "minTreffers": 1,
+      "modelantwoord": "Je meet de temperatuur: het kookpunt of kooktraject.",
       "uitleg": "Verwarm beide vloeistoffen tot ze koken en meet de temperatuur tijdens het koken. Bij zuiver water blijft de temperatuur constant (kookpunt). Bij de zoutoplossing loopt de temperatuur langzaam op (kooktraject): dat is het mengsel."
     }
   ]

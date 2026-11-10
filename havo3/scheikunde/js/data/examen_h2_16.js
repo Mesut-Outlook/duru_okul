@@ -182,28 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In een nieuwsartikel staat dat iemand met bloedarmoede een ijzertekort heeft. Leg uit waarom deze beschrijving verwarrend kan zijn en wat er in werkelijkheid in het bloed zit.",
-      "sleutelwoorden": [
-        "moleculen",
-        "ijzeratomen",
-        "hemoglobine/verbinding"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je kunt denken dat er stukjes ijzer (losse ijzeratomen) in je bloed zitten, maar in werkelijkheid zitten er moleculen die ijzeratomen bevatten. Deze verbinding heet hemoglobine.",
+      "vraag": "Welke verbinding met ijzeratomen zit er in het bloed? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["hemoglobine"],
+      "minTreffers": 1,
+      "modelantwoord": "Dat is hemoglobine.",
       "uitleg": "Je kunt denken dat er stukjes ijzer (losse ijzeratomen) in je bloed zitten, maar in werkelijkheid zitten er moleculen die ijzeratomen bevatten. Deze verbinding heet hemoglobine."
     },
     {
       "type": "open",
-      "vraag": "Beschrijf in het kort hoe Miller in zijn experiment te werk ging en wat hij daarmee liet zien.",
-      "sleutelwoorden": [
-        "waterdamp/water verdampt",
-        "gasmengsel/methaan/ammoniak",
-        "hoge spanning",
-        "afkoelen/vloeibaar",
-        "grotere moleculen/aminozuren/suikers"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Miller verdampte water en bracht de waterdamp in contact met een gasmengsel (methaan, ammoniak). Hij zette het gasmengsel onder hoge spanning (nabootsing van bliksem), koelde het af en ving de vloeibaar geworden stoffen op. Na een paar weken waren er grotere moleculen ontstaan, waaronder suikers en aminozuren.",
+      "vraag": "Welke stoffen ontstonden er in Millers experiment? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["aminozuren/aminozuur/suikers/suiker"],
+      "minTreffers": 1,
+      "modelantwoord": "Er ontstonden aminozuren en suikers.",
       "uitleg": "Miller verdampte water en bracht de waterdamp in contact met een gasmengsel (methaan, ammoniak). Hij zette het gasmengsel onder hoge spanning (nabootsing van bliksem), koelde het af en ving de vloeibaar geworden stoffen op. Na een paar weken waren er grotere moleculen ontstaan, waaronder suikers en aminozuren."
     }
   ]

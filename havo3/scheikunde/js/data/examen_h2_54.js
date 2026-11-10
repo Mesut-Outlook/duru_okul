@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom cola op microniveau een mengsel is en geen zuivere stof.",
-      "sleutelwoorden": [
-        "verschillende/meerdere",
-        "soorten",
-        "moleculen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Cola bevat verschillende soorten moleculen (water, suiker, fosforzuur), een zuivere stof heeft maar één soort.",
+      "vraag": "Waarom is cola op microniveau een mengsel en geen zuivere stof? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verschillende/meerdere/meer dan één/twee of meer"],
+      "minTreffers": 1,
+      "modelantwoord": "Cola bevat verschillende soorten moleculen.",
       "uitleg": "Cola bevat verschillende soorten moleculen (water, suiker, fosforzuur), een zuivere stof heeft maar één soort."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het fönnen van een blauwe hond de blauwe kleur laat verdwijnen.",
-      "sleutelwoorden": [
-        "water",
-        "verdampen/verdampt/droog/weg",
-        "wit"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het water in de vacht verdampt, waardoor het blauwe kopersulfaat weer wit wordt.",
+      "vraag": "Welke stof verdwijnt uit de vacht van een blauwe hond als je hem föhnt, zodat de blauwe kleur verdwijnt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["water"],
+      "minTreffers": 1,
+      "modelantwoord": "Het water verdampt uit de vacht.",
       "uitleg": "Het water in de vacht verdampt, waardoor het blauwe kopersulfaat weer wit wordt."
     }
   ]

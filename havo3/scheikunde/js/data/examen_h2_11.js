@@ -182,27 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat zegt de tekst over de eigenschappen van stoffen die uit één atoomsoort bestaan als die atoomsoort in een bepaalde groep staat? Geef een voorbeeld van zo'n groep.",
-      "sleutelwoorden": [
-        "vergelijkbare eigenschappen",
-        "dezelfde groep",
-        "halogenen/alkalimetalen/edelgassen/aardalkalimetalen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Stoffen die uit maar één atoomsoort bestaan, hebben vergelijkbare eigenschappen als de atoomsoorten in dezelfde groep. Voorbeeld: de halogenen (groep 17).",
+      "vraag": "Welke eigenschappen hebben stoffen die uit atoomsoorten van dezelfde groep bestaan? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vergelijkbare/vergelijkbaar/overeenkomst/gelijk/lijken op"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze hebben vergelijkbare eigenschappen.",
       "uitleg": "Stoffen die uit maar één atoomsoort bestaan, hebben vergelijkbare eigenschappen als de atoomsoorten in dezelfde groep. Voorbeeld: de halogenen (groep 17)."
     },
     {
       "type": "open",
-      "vraag": "Waar staan de lanthaniden en de actiniden in figuur 2.14 en welke atoomnummers hebben ze?",
-      "sleutelwoorden": [
-        "58",
-        "71",
-        "90",
-        "103"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Ze staan als twee aparte rijen onder het periodiek systeem: de lanthaniden 58 t/m 71 (Ce t/m Lu) en de actiniden 90 t/m 103 (Th t/m Lr).",
+      "vraag": "Wat is het eerste atoomnummer van de lanthaniden? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["58/achtenvijftig"],
+      "minTreffers": 1,
+      "modelantwoord": "Het eerste atoomnummer is 58.",
       "uitleg": "Ze staan als twee aparte rijen onder het periodiek systeem: de lanthaniden 58 t/m 71 (Ce t/m Lu) en de actiniden 90 t/m 103 (Th t/m Lr)."
     }
   ]

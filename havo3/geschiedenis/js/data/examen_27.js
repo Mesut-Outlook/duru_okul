@@ -168,25 +168,19 @@
       {
         id: "ex27_v19",
         type: "open",
-        vraag: "Leg uit waarom bondskanselier Kohl na de val van de Berlijnse Muur juist méér Europese integratie voorstelde in plaats van minder.",
-        sleutelwoorden: [
-          "angst/vrees/bang",
-          "veranker/bind"
-        ],
+        vraag: "Wat vreesden andere Europese landen na de hereniging van Duitsland? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["machtig/groter/sterker/dominant"],
         minTreffers: 1,
-        modelantwoord: "Andere Europese landen waren bang voor een te machtig herenigd Duitsland. Door de Europese samenwerking te versterken, liet Kohl zien dat een groter Duitsland geen bedreiging vormde, maar juist stevig verankerd bleef in een sterker Europa.",
+        modelantwoord: "Dat Duitsland te machtig zou worden.",
         uitleg: "Kohl wilde de vrees voor Duitse dominantie wegnemen door zich actief in te zetten voor méér Europese eenheid."
       },
       {
         id: "ex27_v20",
         type: "open",
-        vraag: "Leg uit hoe de machtspositie van Rusland in Europa veranderde tussen de jaren negentig en het beleid onder Poetin vanaf 2000.",
-        sleutelwoorden: [
-          "verzwakt/verarmd in de jaren negentig",
-          "herstel/versterkte leger onder Poetin"
-        ],
+        vraag: "Wat deed Poetin vanaf 2000 met het Russische leger? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["versterk/moderniseer/uitbreid/herstel"],
         minTreffers: 1,
-        modelantwoord: "In de jaren negentig was Rusland verarmd en verzwakt en kon het weinig doen tegen de uitbreiding van NAVO en EU naar het oosten. Vanaf 2000 herstelde het land zich economisch onder Poetin, die het leger versterkte en probeerde voormalige Sovjetgebieden weer onder Russische invloed te krijgen.",
+        modelantwoord: "Hij versterkte het leger.",
         uitleg: "Poetins Rusland trad vanaf 2000 veel assertiever op dan het verzwakte Rusland van de jaren negentig."
       }
     ]

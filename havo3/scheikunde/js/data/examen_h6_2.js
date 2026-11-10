@@ -175,23 +175,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe heet de vaste, regelmatige rangschikking van metaalionen in een metaal?",
-      "sleutelwoorden": [
-        "metaalrooster"
-      ],
+      "vraag": "Hoe heet de vaste, regelmatige rangschikking van metaalionen in een metaal? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["rooster"],
       "minTreffers": 1,
-      "modelantwoord": "Deze regelmatige rangschikking van metaalatomen/-ionen in een metaal heet het metaalrooster.",
+      "modelantwoord": "Het metaalrooster.",
       "uitleg": "De regelmatige rangschikking van metaalionen in een metaal heet het metaalrooster."
     },
     {
       "type": "open",
-      "vraag": "Een fabrikant wil ijzer beter bestand maken tegen corrosie voor gebruik in de bouw. Leg uit welke oplossing hiervoor in het hoofdstuk wordt genoemd en waarom dat werkt.",
-      "sleutelwoorden": [
-        "legeren met chroom",
-        "roestvast staal"
-      ],
+      "vraag": "Met welk metaal legeer je ijzer om het beter bestand te maken tegen corrosie? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["chroom/nikkel"],
       "minTreffers": 1,
-      "modelantwoord": "Je kunt ijzer legeren met chroom (en soms nikkel) tot roestvast staal. Deze legering is veel minder gevoelig voor corrosie dan zuiver ijzer.",
+      "modelantwoord": "Met chroom.",
       "uitleg": "IJzer legeren met chroom (roestvast staal) maakt het veel beter bestand tegen corrosie dan zuiver ijzer."
     },
     {

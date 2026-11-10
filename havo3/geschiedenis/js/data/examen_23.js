@@ -203,25 +203,19 @@
       {
         id: "ex23_v19",
         type: "open",
-        vraag: "Leg uit waarom Nederland vanaf 1973 industriebanen verloor, terwijl het tegelijk een postindustriële samenleving werd.",
-        sleutelwoorden: [
-          "lagelonenlanden/verplaatsen",
-          "dienstensector/diensten"
-        ],
+        vraag: "In welke sector groeide het aantal banen juist sterk toen industriebanen verdwenen? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["dienst"],
         minTreffers: 1,
-        modelantwoord: "Veel industriebedrijven sloten of verplaatsten hun productie naar lagelonenlanden, terwijl het aantal banen in de dienstensector juist sterk groeide, waardoor de dienstensector belangrijker werd dan de industrie.",
+        modelantwoord: "In de dienstensector.",
         uitleg: "Het verlies van industriebanen ging samen met sterke groei van de dienstensector, wat de postindustriële samenleving kenmerkt."
       },
       {
         id: "ex23_v20",
         type: "open",
-        vraag: "Leg uit wat koning Willem-Alexander in zijn troonrede van 2013 bedoelde met de 'participatiesamenleving'.",
-        sleutelwoorden: [
-          "eigen verantwoordelijkheid/zelf verantwoordelijk",
-          "familie/buren/minder overheidszorg"
-        ],
+        vraag: "Wat bedoelde de koning in 2013 met de 'participatiesamenleving'? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["eigen verantwoordelijk/zelf verantwoordelijk/zelf regelen/zelf doen/familie/buren"],
         minTreffers: 1,
-        modelantwoord: "Hij bedoelde dat mensen die daartoe in staat zijn, zelf verantwoordelijkheid moeten nemen voor hun leven en omgeving, in plaats van dat de overheid als verzorgingsstaat alle zorg overneemt, zodat bijvoorbeeld ouderen eerst hulp vragen aan familie en buren.",
+        modelantwoord: "Mensen nemen meer zelf verantwoordelijkheid in plaats van de overheid.",
         uitleg: "De participatiesamenleving betekent minder overheidszorg en meer eigen verantwoordelijkheid en onderlinge hulp."
       }
     ]

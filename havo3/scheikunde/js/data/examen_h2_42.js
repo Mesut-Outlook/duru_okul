@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil tussen het atoommodel van Dalton en dat van Thomson?",
-      "sleutelwoorden": [
-        "deelbaar/te delen/niet massief/uit kleinere deeltjes",
-        "elektron/elektronen/negatief",
-        "massief/ondeelbaar/bolletje/krentenbol"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Volgens Dalton is een atoom een massief, ondeelbaar bolletje. Volgens Thomson is een atoom wel deelbaar en bevat het elektronen (krentenbol).",
+      "vraag": "Welk negatief deeltje zit volgens Thomson in het atoom, maar niet bij Dalton? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["elektron"],
+      "minTreffers": 1,
+      "modelantwoord": "Het elektron.",
       "uitleg": "Dalton: ondeelbaar bolletje. Thomson: wel deelbaar, met elektronen."
     },
     {
       "type": "open",
-      "vraag": "Noem de drie bouwstenen van een atoom volgens Rutherford, met hun symbool en hun lading.",
-      "sleutelwoorden": [
-        "proton/p/1+",
-        "neutron/n/0/geen lading",
-        "elektron/e/1–/1-/negatief"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Proton (p, lading 1+), neutron (n, lading 0) en elektron (e<sup>–</sup>, lading 1–).",
+      "vraag": "Noem één bouwsteen van een atoom volgens Rutherford met zijn lading. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["proton/neutron/elektron"],
+      "minTreffers": 1,
+      "modelantwoord": "Proton, lading 1+.",
       "uitleg": "Protonen 1+, neutronen 0, elektronen 1–."
     }
   ]

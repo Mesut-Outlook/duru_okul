@@ -209,13 +209,10 @@
     {
       "id": "ex33_v20",
       "type": "open",
-      "vraag": "Leg uit waarom de industrialisatie en nieuwe wapens ervoor zorgden dat de Eerste Wereldoorlog veel dodelijker werd dan eerdere oorlogen.",
-      "sleutelwoorden": [
-        "machinegeweren/gifgas/artillerie/granaten/tanks",
-        "massaproductie/fabrieken/miljoenen/loopgraven/doden"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Fabrieken konden wapens zoals machinegeweren, gifgas en granaten in massaproductie maken. Deze moderne wapens maaiden aanvallende soldaten massaal neer in de loopgraven.",
+      "vraag": "Noem één wapen dat de Eerste Wereldoorlog zo dodelijk maakte. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["machinegewe/gifgas/artillerie/granaten/tank"],
+      "minTreffers": 1,
+      "modelantwoord": "Bijvoorbeeld machinegeweren.",
       "uitleg": "Industriële massaproductie van machinegeweren, granaten en gifgas leidde tot ongekende slachtingen aan het front. (§1.2)"
     }
   ]

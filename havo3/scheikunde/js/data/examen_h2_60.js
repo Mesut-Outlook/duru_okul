@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een deeltje heeft 16 protonen, 16 neutronen en 18 elektronen. Bepaal het massagetal en de lading van dit deeltje en leg uit hoe je dat doet.",
-      "sleutelwoorden": [
-        "32",
-        "2–/2-/2 negatief/tweevoudig negatief/2 min",
-        "optellen/som/bij elkaar"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je telt de protonen en neutronen bij elkaar op: 16 + 16 = 32. Lading = 16 positieve lading – 18 negatieve lading = 2–.",
+      "vraag": "Een deeltje heeft 16 protonen, 16 neutronen en 18 elektronen. Wat is de lading van dit deeltje? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["2 negatief/2 min/2-/2–/tweevoudig negatief/dubbel negatief"],
+      "minTreffers": 1,
+      "modelantwoord": "De lading is 2 negatief (2–).",
       "uitleg": "Het massagetal is 32 (16 + 16). Met 16 protonen en 18 elektronen is het deeltje 2– geladen."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de massa van een atoom vrijwel helemaal in de atoomkern zit.",
-      "sleutelwoorden": [
-        "protonen/proton",
-        "neutronen/neutron",
-        "0 u/geen massa/verwaarloosbaar/bijna niets/nagenoeg niets/afgerond 0"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Protonen en neutronen hebben elk een massa van ongeveer 1 u en zitten in de atoomkern. Elektronen hebben een massa van afgerond 0 u, dus ze voegen vrijwel niets toe.",
+      "vraag": "Welke deeltjes van een atoom hebben vrijwel geen massa, zodat de massa bijna helemaal in de kern zit? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["elektronen/elektron"],
+      "minTreffers": 1,
+      "modelantwoord": "Elektronen hebben vrijwel geen massa.",
       "uitleg": "De kern bevat de protonen en neutronen (elk ongeveer 1 u); de elektronen wegen afgerond 0 u."
     }
   ]

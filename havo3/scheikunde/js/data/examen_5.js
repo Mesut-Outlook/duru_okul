@@ -161,26 +161,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de eigenschappen van een samengestelde stof (zoals keukenzout, NaCl) totaal anders zijn dan de eigenschappen van de samenstellende delen (het zachte, brandbare metaal natrium en het giftige chloorgas).",
-      "sleutelwoorden": [
-        "hergroeperen/elektronenoverdracht/edelgasstructuur",
-        "stofeigenschappen/nieuwe stof/geheel anders",
-        "stabiel/rooster/ionrooster/kristal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij het ontstaan van natriumchloride (NaCl) gaan de atomen een chemische binding aan en hergroeperen ze tot een stabiel ionrooster met edelgasstructuur. Doordat de deeltjes nu op een geheel nieuwe manier gerangschikt zijn, veranderen de stofeigenschappen totaal in een ongevaarlijk, wit zout dat we veilig kunnen consumeren.",
+      "vraag": "Waarom heeft keukenzout totaal andere eigenschappen dan natrium en chloor? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["hergroeper/nieuwe stof/ionrooster/rooster/binding/gebonden/reactie"],
+      "minTreffers": 1,
+      "modelantwoord": "De atomen hergroeperen tot een nieuwe stof (ionrooster) met andere eigenschappen.",
       "uitleg": "Verbindingen hebben compleet andere eigenschappen dan de losse elementen."
     },
     {
       "type": "open",
-      "vraag": "Geef voor de nucliden ¹⁴₆C en ¹⁴₇N de precieze deeltjessamenstelling (deeltjes in kern en wolk). Leg uit waarom dit twee verschillende elementen zijn ondanks hetzelfde massagetal.",
-      "sleutelwoorden": [
-        "6 p/8 n/6 e",
-        "7 p/7 n/7 e",
-        "kernlading/atoomnummer/protonen"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Koolstof-14 (¹⁴₆C): 6 protonen, 8 neutronen, 6 elektronen. Stikstof-14 (¹⁴₇N): 7 protonen, 7 neutronen, 7 elektronen. Verklaring: De identiteit van een element wordt uitsluitend bepaald door het atoomnummer (het aantal protonen / de kernlading). Omdat het aantal protonen verschilt (6 vs 7), zijn het fundamenteel verschillende elementen.",
+      "vraag": "Waarom zijn ¹⁴₆C en ¹⁴₇N verschillende elementen, ondanks hetzelfde massagetal? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["protonen/atoomnummer/kernlading"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze hebben een verschillend aantal protonen (atoomnummer 6 en 7).",
       "uitleg": "Aantal protonen (atoomnummer) definieert het element."
     }
   ]

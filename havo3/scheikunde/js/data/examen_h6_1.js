@@ -175,22 +175,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een zuivere stof geleidt in de vaste fase geen stroom, maar wel zodra hij oplost in water. Tot welke van de drie groepen uit dit hoofdstuk behoort deze stof? Geef alleen de groepsnaam.",
-      "sleutelwoorden": [
-        "zout"
-      ],
+      "vraag": "Een stof geleidt vast geen stroom, maar opgelost in water wel. Tot welke van de drie stofgroepen hoort die? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["zout/zouten"],
       "minTreffers": 1,
-      "modelantwoord": "Deze stof is een zout: zouten geleiden niet in de vaste fase, maar wel in de vloeibare en de opgeloste fase.",
+      "modelantwoord": "Het is een zout.",
       "uitleg": "Alleen zouten geleiden niet vast, maar wel vloeibaar/opgelost — dat is het kenmerkende patroon van een zout."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een moleculaire stof zoals kaarsvet, ook als hij gesmolten (vloeibaar) is, geen elektrische stroom geleidt.",
-      "sleutelwoorden": [
-        "ongeladen/geen ionen"
-      ],
+      "vraag": "Waarom geleidt vloeibaar kaarsvet geen stroom? Noem één reden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ongeladen/geen ionen/niet geladen/geen geladen/geen vrij"],
       "minTreffers": 1,
-      "modelantwoord": "Kaarsvet bestaat uit ongeladen moleculen; er zijn geen vrij bewegende geladen deeltjes aanwezig, dus kan de stof geen stroom geleiden, ook niet in de vloeibare fase.",
+      "modelantwoord": "De moleculen zijn ongeladen.",
       "uitleg": "Moleculaire stoffen bevatten geen geladen deeltjes (ionen of vrije elektronen), ook niet als ze gesmolten zijn — daarom geleiden ze nooit stroom."
     },
     {

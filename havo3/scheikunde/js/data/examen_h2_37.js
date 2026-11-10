@@ -188,26 +188,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het misleidend is om bij de stikstofcrisis te denken aan het gas stikstof en bij een ijzertekort aan stukjes ijzer in het bloed.",
-      "sleutelwoorden": [
-        "atoomsoort",
-        "verbinding/verbindingen/moleculen",
-        "stikstofdioxide/ammoniak/hemoglobine"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In beide gevallen gaat het om een atoomsoort die in verbindingen zit: stikstofdioxide en ammoniak, en hemoglobine met ijzeratomen. Niet om het gas stikstof of stukjes ijzer.",
+      "vraag": "Waar zit het ijzer in het bloed in? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["hemoglobine/moleculen/verbinding"],
+      "minTreffers": 1,
+      "modelantwoord": "Het ijzer zit in moleculen, namelijk hemoglobine.",
       "uitleg": "In beide gevallen gaat het om een atoomsoort die in verbindingen zit: stikstofdioxide en ammoniak, en hemoglobine met ijzeratomen. Niet om het gas stikstof of stukjes ijzer."
     },
     {
       "type": "open",
-      "vraag": "Magnesium en calcium staan in dezelfde groep. Geef die groep, de speciale naam en wat dit zegt over de stoffen magnesium en calcium.",
-      "sleutelwoorden": [
-        "groep 2",
-        "aardalkalimetalen",
-        "vergelijkbare eigenschappen/overeenkomst"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Ze staan in groep 2, de aardalkalimetalen; stoffen die uit één atoomsoort bestaan hebben vergelijkbare eigenschappen als de atoomsoorten in dezelfde groep staan.",
+      "vraag": "Wat is de speciale naam van de groep waar magnesium en calcium in staan? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["aardalkali"],
+      "minTreffers": 1,
+      "modelantwoord": "De aardalkalimetalen.",
       "uitleg": "Ze staan in groep 2, de aardalkalimetalen; stoffen die uit één atoomsoort bestaan hebben vergelijkbare eigenschappen als de atoomsoorten in dezelfde groep staan."
     }
   ]

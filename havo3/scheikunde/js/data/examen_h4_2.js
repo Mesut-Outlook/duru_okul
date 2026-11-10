@@ -198,10 +198,10 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Elektrolyse van bauxiet (aluminiumproductie) vraagt aanhoudend elektrische stroom. Wat betekent dit voor de kostprijs van aluminium vergeleken met een metaal dat je zonder elektrolyse uit erts kunt winnen?",
-      sleutelwoorden: ["duurder/hogere kostprijs"],
+      vraag: "Aluminium wordt met elektrolyse gemaakt, wat veel stroom kost. Wat betekent dat voor de kostprijs? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["duurder/hoger/hogere/stijgt/duur"],
       minTreffers: 1,
-      modelantwoord: "Aluminium is duurder, omdat de elektrolyse veel dure elektrische stroom kost.",
+      modelantwoord: "Aluminium is duurder.",
       uitleg: "Omdat elektrolyse veel elektrische energie (stroom) kost en stroom geld kost, is aluminium relatief duur."
     }
   ]

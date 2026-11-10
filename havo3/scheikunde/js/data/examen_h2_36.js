@@ -188,24 +188,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het woord \"element\" verwarrend is.",
-      "sleutelwoorden": [
-        "niet-ontleedbare stof",
-        "geen stoffen/atoomsoorten/bouwstenen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Element werd vroeger gebruikt voor niet-ontleedbare stof, maar in het periodiek systeem staan geen stoffen, alleen atoomsoorten, de bouwstenen van stoffen.",
+      "vraag": "Waarvoor werd het woord 'element' vroeger gebruikt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ontleedbare/ontleedbaar"],
+      "minTreffers": 1,
+      "modelantwoord": "Voor een niet-ontleedbare stof.",
       "uitleg": "Element werd vroeger gebruikt voor niet-ontleedbare stof, maar in het periodiek systeem staan geen stoffen, alleen atoomsoorten, de bouwstenen van stoffen."
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen het gas stikstof en de stoffen waar het bij de stikstofcrisis om gaat.",
-      "sleutelwoorden": [
-        "stikstofdioxide/ammoniak",
-        "verbinding/verbindingen/andere atomen/moleculen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij de stikstofcrisis gaat het niet om het gas stikstof, maar om verbindingen met stikstofatomen, zoals stikstofdioxide en ammoniak, waarin stikstof aan andere atomen is gebonden.",
+      "vraag": "Noem één stof waar het bij de stikstofcrisis om gaat (geen stikstofgas). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["stikstofdioxide/ammoniak/no2/nh3"],
+      "minTreffers": 1,
+      "modelantwoord": "Stikstofdioxide.",
       "uitleg": "Bij de stikstofcrisis gaat het niet om het gas stikstof, maar om verbindingen met stikstofatomen, zoals stikstofdioxide en ammoniak, waarin stikstof aan andere atomen is gebonden."
     }
   ]

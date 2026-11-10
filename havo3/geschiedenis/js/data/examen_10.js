@@ -203,26 +203,19 @@
       {
         id: "ex10_v19",
         type: "open",
-        vraag: "Leg uit wat Gandhi bedoelde met 'non-coöperatie' als methode om de Britten onder druk te zetten.",
-        sleutelwoorden: [
-          "meewerk/weiger/boycot",
-          "geweld/vreedzaam"
-        ],
+        vraag: "Wat deden de Indiërs bij Gandhi's 'non-coöperatie' tegenover de Britten? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["weiger/meewerk/boycot/gehoorzaam"],
         minTreffers: 1,
-        modelantwoord: "Non-coöperatie betekende dat de Indiërs weigerden met de Britse overheersers samen te werken: ze gehoorzaamden hun wetten niet en kochten geen Britse producten meer, maar deden dit zonder geweld te gebruiken.",
+        modelantwoord: "Ze weigerden mee te werken met de Britten.",
         uitleg: "Door niet mee te werken zonder geweld te gebruiken, zette Gandhi de Britten onder druk terwijl hij het conflict probeerde te beperken."
       },
       {
         id: "ex10_v20",
         type: "open",
-        vraag: "Beschrijf twee manieren waarop Europese landen in het interbellum nog macht uitoefenden over gebieden in Afrika en Azië.",
-        sleutelwoorden: [
-          "kolonie/koloniën",
-          "mandaatgebied/mandaat",
-          "invloedssfeer"
-        ],
-        minTreffers: 2,
-        modelantwoord: "Europese landen bestuurden gebieden rechtstreeks als kolonie, zoals Brits-Indië en Nederlands-Indië. Daarnaast bestuurden ze na de Eerste Wereldoorlog nieuwe mandaatgebieden zoals Palestina en Syrië, en hielden ze via een invloedssfeer grip op formeel onafhankelijke landen zoals Egypte en Irak.",
+        vraag: "Noem één manier waarop Europese landen in het interbellum nog macht uitoefenden over gebieden in Afrika en Azië. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["kolonie/koloniën/mandaat/invloedssfeer"],
+        minTreffers: 1,
+        modelantwoord: "Ze bestuurden gebieden als kolonie.",
         uitleg: "Kolonies, mandaatgebieden en invloedssferen waren drie manieren waarop Europa in het interbellum macht bleef uitoefenen buiten Europa."
       }
     ]

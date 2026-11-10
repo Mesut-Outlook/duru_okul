@@ -173,25 +173,19 @@
       {
         id: "ex29_v19",
         type: "open",
-        vraag: "Leg uit waarom multinationals hun productie vanaf de jaren 1960 verplaatsten naar landen als Indonesië, Vietnam en Bangladesh.",
-        sleutelwoorden: [
-          "lagere lonen/goedkoper produceren",
-          "goedko/lagelonenland"
-        ],
+        vraag: "Waarom verplaatsten multinationals hun productie naar landen als Vietnam en Bangladesh? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["lonen/loon/goedkoper/goedkoop/kosten"],
         minTreffers: 1,
-        modelantwoord: "Multinationals wilden dezelfde producten goedkoper maken en verplaatsten hun productie daarom naar landen met veel lagere lonen dan in het Westen, zoals Indonesië, Vietnam en Bangladesh.",
+        modelantwoord: "Daar zijn de lonen lager, dus produceren is goedkoper.",
         uitleg: "Productie in lagelonenlanden maakte dezelfde producten veel goedkoper dan productie in het Westen."
       },
       {
         id: "ex29_v20",
         type: "open",
-        vraag: "Leg uit waarom de wereldwijde crisis van 2007-2012 minder verwoestend uitpakte dan de crisis van de jaren 1930.",
-        sleutelwoorden: [
-          "internationaal/ingrijp",
-          "overheidssteun/vrijhandel"
-        ],
+        vraag: "Wat deden overheden in de crisis van 2007-2012 sneller dan in de jaren 1930? <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["grepen in/ingrijp/steun/redden/internationaal/samenwerk"],
         minTreffers: 1,
-        modelantwoord: "Anders dan in de jaren 1930 grepen overheden nu snel in en werkten ze internationaal samen: banken werden met overheidssteun gered en landen bleven vrijhandel bevorderen in plaats van hun economie tegen het buitenland af te schermen.",
+        modelantwoord: "Ze grepen snel in en redden banken met steun.",
         uitleg: "De les uit de jaren 1930 was dat internationale samenwerking en overheidsingrijpen een crisis minder verwoestend maken."
       }
     ]

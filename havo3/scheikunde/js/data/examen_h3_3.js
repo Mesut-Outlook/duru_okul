@@ -187,13 +187,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bij een reactie ontstaat een reactieproduct waarvan de gemeten massa kleiner is dan de som van de gemeten massa's van de beginstoffen. Leg uit wat hiervan de meest waarschijnlijke oorzaak is, gebruikmakend van wat je weet over toestandsaanduidingen.",
-      "sleutelwoorden": [
-        "gasvormige reactieproducten/gassen",
-        "niet meegewogen/niet meegeteld"
-      ],
+      "vraag": "De gemeten massa van het reactieproduct is kleiner dan die van de beginstoffen. Wat voor soort reactieproduct ontsnapt waarschijnlijk uit het vat? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gas/gasvormig"],
       "minTreffers": 1,
-      "modelantwoord": "Waarschijnlijk ontstaan er bij deze reactie ook gasvormige reactieproducten die uit het open reactievat de lucht in ontsnappen en daardoor niet meegewogen worden. Tel je de massa van deze ontsnapte gassen wél mee, dan is de totale massa gelijk aan de massa van de beginstoffen, precies zoals de wet van behoud van massa voorspelt.",
+      "modelantwoord": "Gasvormige reactieproducten ontsnappen uit het open vat.",
       "uitleg": "Een gasvormig product dat ontsnapt, wordt niet meegewogen, waardoor de gemeten massa lager lijkt terwijl de totale massa wel behouden blijft."
     }
   ]

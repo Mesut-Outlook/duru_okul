@@ -209,12 +209,10 @@
     {
       "id": "ex34_v20",
       "type": "open",
-      "vraag": "Welke communistische staatsgreep bracht in het najaar van 1917 de bolsjewieken onder leiding van Lenin aan de macht in Rusland?",
-      "sleutelwoorden": [
-        "oktoberrevolutie/bolsjewistische revolutie/staatsgreep van lenin"
-      ],
+      "vraag": "Hoe heet de machtsovername van de bolsjewieken onder Lenin in het najaar van 1917? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["oktoberrevolutie/oktober/bolsjewistische revolutie"],
       "minTreffers": 1,
-      "modelantwoord": "De Oktoberrevolutie (de staatsgreep waarbij de bolsjewieken de Voorlopige Regering afzetten).",
+      "modelantwoord": "De Oktoberrevolutie.",
       "uitleg": "In het najaar van 1917 grepen de bolsjewieken onder leiding van Lenin de macht tijdens de Oktoberrevolutie. (§1.3)"
     }
   ]

@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van de begrippen 'hoofdketen' en 'vertakking' uit hoe je de systematische naam van een vertakt alkaan opbouwt.",
-      "sleutelwoorden": [
-        "langste keten",
-        "laagst mogelijke nummer"
-      ],
+      "vraag": "Welke keten zoek je eerst op om de systematische naam van een vertakt alkaan op te bouwen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["langste/hoofdketen"],
       "minTreffers": 1,
-      "modelantwoord": "Je zoekt eerst de langste keten op, ook wel de hoofdketen genoemd; de naam daarvan is gelijk aan het overeenkomstige onvertakte alkaan. Daarna benoem je de vertakkingen (alkylgroepen) en nummer je de hoofdketen zo, dat de vertakkingen het laagst mogelijke nummer krijgen; dat nummer en de naam van de vertakking zet je vóór de naam van de hoofdketen.",
+      "modelantwoord": "Je zoekt eerst de langste keten op.",
       "uitleg": "De hoofdketen bepaalt de stamnaam; de vertakkingen worden benoemd en genummerd volgens het laagste-nummer-principe."
     }
   ]

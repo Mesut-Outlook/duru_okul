@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beschrijf de bouw van een atoom volgens het atoommodel van Dalton.",
-      "sleutelwoorden": [
-        "massief/bolletje/bol",
-        "niet deelbaar/niet verder deelbaar/ondeelbaar/niet op te delen",
-        "omvang/diameter/grootte"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Volgens Dalton is een atoom een massief bolletje dat niet verder deelbaar is; de atomen van verschillende atoomsoorten hebben een verschillende omvang (diameter).",
+      "vraag": "Hoe ziet een atoom eruit volgens het atoommodel van Dalton? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["massief/bolletje/bol/ondeelbaar"],
+      "minTreffers": 1,
+      "modelantwoord": "Een massief bolletje.",
       "uitleg": "Dalton: massieve, ondeelbare bolletjes, per atoomsoort verschillend van omvang."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een atoom een positieve lading krijgt als er een elektron uit wordt gehaald (model van Thomson).",
-      "sleutelwoorden": [
-        "neutraal/evenveel/gelijk",
-        "positief deeltje/overblijft/blijft over/overgehouden",
-        "negatief/negatieve"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een atoom is neutraal: positieve en negatieve lading heffen elkaar op. Haal je er een negatief geladen elektron uit, dan blijft er een positief deeltje over.",
+      "vraag": "Welke lading krijgt een atoom als je er een elektron uit haalt (model van Thomson)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["positief/positieve"],
+      "minTreffers": 1,
+      "modelantwoord": "Het atoom wordt positief geladen.",
       "uitleg": "Neutraal atoom min een negatief elektron = positief deeltje."
     }
   ]

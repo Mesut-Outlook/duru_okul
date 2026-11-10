@@ -183,25 +183,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Malachiet bevat minder koperatomen dan azuriet, maar heeft toch een hoger massapercentage koper. Leg uit hoe dat kan.",
-      "sleutelwoorden": [
-        "totale massa/molecuulmassa/massa",
-        "groter deel/groter percentage/hoger percentage/verhouding"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het massapercentage koper is de massa van het koper gedeeld door de totale massa van de stof. Omdat malachiet een lagere totale massa heeft, maakt koper een groter percentage van de massa uit.",
+      "vraag": "Malachiet bevat minder koperatomen dan azuriet, maar koper vormt er toch een groter deel van. Wat is bij malachiet ook lager? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["totale massa/molecuulmassa/massa/gewicht"],
+      "minTreffers": 1,
+      "modelantwoord": "De totale massa van malachiet is lager.",
       "uitleg": "Kleinere totale massa maakt het deel koper groter."
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van het atoommodel van Rutherford uit wat het verschil is tussen een C-12 atoom en een C-14 atoom.",
-      "sleutelwoorden": [
-        "6 protonen/zes protonen/zelfde aantal protonen",
-        "neutronen/6 neutronen en 8 neutronen",
-        "elektronen/6 elektronen/zelfde aantal elektronen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Beide atomen hebben 6 protonen in de kern en 6 elektronen in de elektronenwolk. C-12 heeft 6 neutronen in de kern, C-14 heeft 8 neutronen.",
+      "vraag": "Welk deeltje in de atoomkern verschilt tussen een C-12 atoom en een C-14 atoom? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["neutronen/neutron"],
+      "minTreffers": 1,
+      "modelantwoord": "Het aantal neutronen: 6 bij C-12 en 8 bij C-14.",
       "uitleg": "Alleen het aantal neutronen verschilt (6 versus 8)."
     }
   ]

@@ -182,25 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In het nieuws ging het over de \"stikstofcrisis\", maar het gas dat de crisis veroorzaakt bestaat niet uit N<sub>2</sub>. Het gaat om stikstofdioxide (NO<sub>2</sub>) en ammoniak (NH<sub>3</sub>). Leg uit dat de naam \"stikstof\" hier twee dingen door elkaar haalt: leg het verschil uit tussen het stikstof in de stof N<sub>2</sub> en het stikstof in NO<sub>2</sub> en NH<sub>3</sub>.",
-      "sleutelwoorden": [
-        "atoomsoort/soort atoom/atoom",
-        "gebonden/verbonden/aan elkaar/vastzitten/gekoppeld",
-        "zuurstof/waterstof/andere atomen/verbinding"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Stikstof is de naam van een atoomsoort (N). In N<sub>2</sub> zitten alleen stikstofatomen aan elkaar gebonden; dat is de niet-ontleedbare stof stikstofgas. In NO<sub>2</sub> en NH<sub>3</sub> zitten stikstofatomen gebonden aan andere atomen, zuurstof of waterstof. Dat zijn verbindingen: andere stoffen met andere eigenschappen.",
+      "vraag": "Waaraan zijn de stikstofatomen in NO₂ en NH₃ gebonden? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["zuurstof/waterstof/andere atomen"],
+      "minTreffers": 1,
+      "modelantwoord": "Aan zuurstof (NO₂) of waterstof (NH₃).",
       "uitleg": "Een atoomsoort is niet hetzelfde als een stof. Dezelfde atoomsoort kan in verschillende stoffen zitten: een niet-ontleedbare stof (N<sub>2</sub>) of verbindingen (NO<sub>2</sub>, NH<sub>3</sub>)."
     },
     {
       "type": "open",
-      "vraag": "Cl-35 en Cl-37 hebben een verschillend massagetal, maar het zijn toch allebei chlooratomen. Leg uit hoe dat kan en waarin deze twee atomen wel verschillen.",
-      "sleutelwoorden": [
-        "protonen/atoomnummer/17",
-        "neutronen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het aantal protonen (het atoomnummer, 17) bepaalt de atoomsoort, en dat is bij beide gelijk. Ze verschillen in het aantal neutronen: Cl-35 heeft er 18 en Cl-37 heeft er 20. Het zijn isotopen van chloor.",
+      "vraag": "Waarin verschillen Cl-35 en Cl-37? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["neutronen/neutron"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze verschillen in het aantal neutronen.",
       "uitleg": "De atoomsoort wordt bepaald door het atoomnummer (aantal protonen). Isotopen verschillen alleen in het aantal neutronen, en dus in massagetal."
     }
   ]

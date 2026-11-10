@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een leerling lost bij kamertemperatuur zout op in een glas water totdat er geen zout meer oplost en er nog een beetje ongelost zout op de bodem ligt. Leg uit hoe deze oplossing heet, en beschrijf wat er zou gebeuren als de leerling het glas water flink verwarmt terwijl het ongeloste zout er nog in zit.",
-      "sleutelwoorden": [
-        "verzadigde oplossing/verzadigd",
-        "oplosbaarheid groter/beter oplossen"
-      ],
+      "vraag": "Hoe heet een oplossing waarin bij kamertemperatuur geen zout meer oplost en er zout op de bodem ligt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["verzadigd"],
       "minTreffers": 1,
-      "modelantwoord": "Dit is een verzadigde oplossing: er kan bij deze temperatuur geen zout meer bij oplossen. Als je het water verwarmt, wordt de oplosbaarheid groter, waardoor het ongeloste zout op de bodem (gedeeltelijk) alsnog oplost.",
+      "modelantwoord": "Dat is een verzadigde oplossing.",
       "uitleg": "Bij een vaste stof zoals zout stijgt de oplosbaarheid met de temperatuur, dus bij verwarmen kan er meer zout oplossen dan bij kamertemperatuur."
     }
   ]

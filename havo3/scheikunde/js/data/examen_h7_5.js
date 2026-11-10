@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen 'hydrofiel' en 'hydrofoob', met een voorbeeld van elk type stof uit dit hoofdstuk.",
-      "sleutelwoorden": [
-        "OH-groep/NH-groep",
-        "halogeenalkaan/alkeen"
-      ],
+      "vraag": "Noem één voorbeeld van een hydrofobe stof uit dit hoofdstuk. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["halogeenalkaan/alkeen/alkaan/halogeen"],
       "minTreffers": 1,
-      "modelantwoord": "Hydrofiele stoffen (zoals alcoholen, met een -OH-groep) lossen goed op in water. Hydrofobe stoffen, zonder -OH- of -NH-groep, mengen niet met water; een voorbeeld hiervan is een halogeenalkaan of een alkeen.",
+      "modelantwoord": "Een alkeen is hydrofoob.",
       "uitleg": "Hydrofiel = oplosbaar in water dankzij -OH/-NH; hydrofoob = mengt niet met water, zoals halogeenalkanen en alkenen."
     }
   ]

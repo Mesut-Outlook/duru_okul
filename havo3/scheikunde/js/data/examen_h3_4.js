@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bij het verbranden van een kaars (was) ontstaan koolstofdioxide en waterdamp, die beide de omgevingslucht in verdwijnen. Als je alleen de overgebleven vaste was zou wegen, lijkt de massa na de reactie veel kleiner dan de massa van de was ervoor. Leg uit hoe dit toch te rijmen is met de wet van behoud van massa.",
-      "sleutelwoorden": [
-        "gasvormige reactieproducten/gassen",
-        "niet meegewogen/niet meegeteld"
-      ],
+      "vraag": "Bij het verbranden van een kaars lijkt de massa van de overgebleven was veel kleiner. Wat voor soort stoffen ontsnappen er in de lucht? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gas/gasvormig/damp/koolstofdioxide"],
       "minTreffers": 1,
-      "modelantwoord": "De koolstofdioxide en waterdamp die ontstaan, zijn gasvormige reactieproducten die de lucht in ontsnappen en niet meegewogen worden. Tel je de massa van deze gassen wél mee, dan is de totale massa van alle reactieproducten samen gelijk aan de massa van de was vóór de reactie, precies zoals de wet van behoud van massa voorspelt.",
+      "modelantwoord": "Gasvormige stoffen zoals koolstofdioxide en waterdamp ontsnappen.",
       "uitleg": "Zonder de ontsnapte gassen mee te wegen, lijkt de massa af te nemen; inclusief die gassen blijft de totale massa gelijk."
     }
   ]
