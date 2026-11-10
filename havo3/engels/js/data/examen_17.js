@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain the clear distinction between telling someone that an action is forbidden versus stating that it is not required.",
-      "sleutelwoorden": [
-        "must not/mustn t/prohibit/banned/illegal/not allowed",
-        "don t have to/do not have to/doesn t have to/no obligation/optional/unnecessary"
-      ],
+      "vraag": "Which modal verb construction do you use to say that an action is not permitted? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["must not/mustn t/may not/can t/cannot"],
       "minTreffers": 1,
-      "modelantwoord": "'Must not' is a strict prohibition (forbidden), while 'don't have to' means there is no obligation (it is optional).",
+      "modelantwoord": "You use must not for a prohibition.",
       "uitleg": "Must not is een verbod; don't have to betekent dat het niet verplicht is."
     },
     {

@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het bbp per hoofd in een land met grote olie-exporten een misleidend beeld kan geven van de levensstandaard van gewone gezinnen.",
-      "sleutelwoorden": [
-        "gemiddelde/vertekend beeld/wiskundig",
-        "elite/machthebbers/staatskas/kleine groep",
-        "ongelijke verdeling/kloof/weinig profijt"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het bbp per hoofd is een rekenkundig gemiddelde dat ontstaat door de totale miljardenopbrengst van olie te delen door het aantal inwoners. In de praktijk verdwijnt die olierijkdom vaak naar een kleine elite of de staatskas, waardoor gewone gezinnen door de ongelijke verdeling nauwelijks profiteren van de welvaart.",
+      "vraag": "Waarom kan het bbp per hoofd in een olieland een misleidend beeld van de levensstandaard geven? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gemiddelde/elite/ongelijk/verdeling/kleine groep/staatskas"],
+      "minTreffers": 1,
+      "modelantwoord": "Het is een gemiddelde en de olierijkdom gaat naar een kleine elite.",
       "uitleg": "Een hoog gemiddeld inkomen kan grote verborgen armoede maskeren wanneer olie-inkomsten niet doorsijpelen naar het volk. (boek p. 29, 31)"
     },
     {
       "type": "open",
-      "vraag": "Beredeneer hoe structurele overheidsinvesteringen in gratis openbaar basisonderwijs op de lange termijn kunnen leiden tot een lagere Gini-coëfficiënt.",
-      "sleutelwoorden": [
-        "kansen voor arme kinderen/gelijke kansen/toegankelijk",
-        "hogere opleiding/vakmanschap/betere banen",
-        "hoger inkomen/kloof verkleinen/meer verdienen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Gratis basisonderwijs biedt gelijke kansen aan kinderen uit arme gezinnen om te leren lezen, schrijven en door te stromen naar een hogere opleiding. Hierdoor kunnen zij later betere banen vinden en een hoger inkomen verdienen, waardoor de inkomenskloof krimpt en de Gini-score daalt.",
+      "vraag": "Noem één manier waarop gratis basisonderwijs de Gini-coëfficiënt kan verlagen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gelijke kansen/betere banen/hoger inkomen/hogere opleiding/kloof/verdienen"],
+      "minTreffers": 1,
+      "modelantwoord": "Arme kinderen krijgen gelijke kansen op betere banen.",
       "uitleg": "Onderwijs verhoogt de verdiencapaciteit van arme bevolkingsgroepen en vermindert op lange termijn de inkomensongelijkheid. (boek p. 28-29, 31)"
     }
   ]

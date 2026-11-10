@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom toenemende politieke spanningen tussen grote handelsmachten kunnen leiden tot het verschijnsel dat economen slowbalisering noemen.",
-      "sleutelwoorden": [
-        "handelsbelemmeringen/invoerrechten/tarieven/sancties",
-        "voorzichtig/minder handel/onzekerheid/afremmen",
-        "ketens inkorten/dichterbij produceren/nearshoring/toeleveringsketens"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Wanneer grootmachten met elkaar in conflict raken, voeren zij handelsbelemmeringen en sancties in. Hierdoor worden bedrijven uiterst voorzichtig met buitenlandse investeringen en kiezen zij ervoor om ketens in te korten of toeleveringsketens dichterbij te organiseren (nearshoring), waardoor de handelsgroei sterk afremt.",
+      "vraag": "Noem één manier waarop politieke spanningen tussen handelsmachten slowbalisering veroorzaken. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["handelsbelemmering/invoerrecht/tarief/tarieven/sanctie/voorzichtig/nearshoring"],
+      "minTreffers": 1,
+      "modelantwoord": "Landen voeren handelsbelemmeringen en sancties in.",
       "uitleg": "Conflicten en protectionisme vertragen de wereldwijde economische integratie (slowbalisering). (boek p. 23, 26)"
     },
     {
       "type": "open",
-      "vraag": "Beredeneer waarom de blokkade van een zeestraat zoals de Rode Zee sneller leidt tot prijsstijgingen bij verse landbouwproducten dan bij industriële elektronica.",
-      "sleutelwoorden": [
-        "bederfelijk/beperkte houdbaarheid/over datum",
-        "omvaren/extra vaartijd/weken vertraging",
-        "uitval/verlies van oogst/schaarste"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Verse landbouwproducten zoals avocado's en gember zijn zeer bederfelijk en hebben een beperkte houdbaarheid. Door het omvaren rond Afrika lopen schepen weken vertraging op, waardoor een deel van de oogst verloren gaat en er acute schaarste ontstaat die de prijzen direct opdrijft.",
+      "vraag": "Waarom stijgen bij een blokkade van de Rode Zee de prijzen van verse landbouwproducten sneller dan die van elektronica? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["bederf/houdbaar/schaarste/vertraging/omvaren"],
+      "minTreffers": 1,
+      "modelantwoord": "Verse producten zijn bederfelijk en hebben een beperkte houdbaarheid.",
       "uitleg": "Lange vertragingen bedreigen direct de houdbaarheid van bederfelijke verswaren, wat leidt tot acute tekorten en prijsstijgingen. (boek p. 20, bron 10)"
     }
   ]

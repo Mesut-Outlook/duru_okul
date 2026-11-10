@@ -161,26 +161,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg aan de hand van stroom en spanning uit waarom apparaten in huis parallel worden aangesloten en niet in serie.",
-      "sleutelwoorden": [
-        "230 V/gelijke spanning/volledige spanning",
-        "uitschakelt/losstaand/eigen stroomtak",
-        "onafhankelijk/alles uit/serie verdeelt"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Spanning: In een parallelschakeling staat over elk apparaat de volle 230 V netspanning, zodat elk apparaat op zijn ontwerpspanning werkt. (In serie zou de 230 V zich verdelen en krijgen apparaten te weinig spanning).\n2. Onafhankelijkheid: Elk apparaat heeft een eigen stroomtak. Als je één apparaat uitschakelt of als een lamp kapotgaat, blijven alle andere apparaten gewoon werken.",
+      "vraag": "Hoeveel volt staat er over elk apparaat in huis dat parallel is aangesloten? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["230"],
+      "minTreffers": 1,
+      "modelantwoord": "Over elk apparaat staat de volle netspanning van 230 V.",
       "uitleg": "Twee hoofdredenen: constante 230 V spanning overal + onafhankelijke bediening per apparaat."
     },
     {
       "type": "open",
-      "vraag": "In een stekkerdoos sluit iemand tegelijkertijd een waterkoker (9 A), een broodrooster (4 A) en een frituurpan (8 A) aan op dezelfde 16 A groep. Beredeneer of de zekering uitschakelt.",
-      "sleutelwoorden": [
-        "21 A/21",
-        "maximaal 16/> 16/groter dan 16",
-        "overbelasting/uitschakelen/te veel stroom"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Omdat de apparaten parallel staan op de groep, tellen de stromen bij elkaar op: I_tot = 9 A + 4 A + 8 A = 21 A. De zekering van de groep is berekend op maximaal 16 A. Omdat 21 A > 16 A is er sprake van overbelasting en zal de zekering (groepsschakelaar) direct uitschakelen om oververhitting van de bedrading te voorkomen.",
+      "vraag": "Waterkoker (9 A), broodrooster (4 A) en frituurpan (8 A) staan op dezelfde 16 A groep. Hoe groot is de totale stroom? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["21"],
+      "minTreffers": 1,
+      "modelantwoord": "9 A + 4 A + 8 A = 21 A.",
       "uitleg": "Totale stroom = 21 A; dit overschrijdt de 16 A grens van de zekering."
     }
   ]

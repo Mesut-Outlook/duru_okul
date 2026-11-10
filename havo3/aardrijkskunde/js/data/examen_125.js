@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Vergelijk de economische ontwikkeling van oude West-Europese industriegebieden met die van Polen en Tsjechië.",
-      "sleutelwoorden": [
-        "werkloosheid/sluiten/sluiting/krimp",
-        "groei"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In oude West-Europese industriegebieden sloten bedrijven en liep de werkloosheid op, terwijl Polen en Tsjechië groeiden.",
+      "vraag": "Wat gebeurde er in oude West-Europese industriegebieden, terwijl Polen en Tsjechië economisch groeiden? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["werkloosheid/sloten/sluiting/krimp"],
+      "minTreffers": 1,
+      "modelantwoord": "Bedrijven sloten en de werkloosheid liep op.",
       "uitleg": "Krimp en werkloosheid in het westen, groei in Polen en Tsjechië. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee regels of maatregelen vanuit de EU waar bedrijven of inwoners iets van merken.",
-      "sleutelwoorden": [
-        "rapporteren/ESG",
-        "stikstof/stikstofmaatregelen",
-        "controle/investeringen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bedrijven moeten rapporteren over ESG, boeren krijgen stikstofmaatregelen en de EU controleert buitenlandse investeringen.",
+      "vraag": "Noem één regel of maatregel vanuit de EU waar bedrijven of inwoners iets van merken. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["rapporteer/esg/stikstof/controle/investeringen"],
+      "minTreffers": 1,
+      "modelantwoord": "Bedrijven moeten rapporteren over ESG.",
       "uitleg": "ESG-rapportage, stikstofmaatregelen en controle op investeringen. (boek p. 39)"
     }
   ]

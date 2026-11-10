@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat voeg je toe aan het Franse voltooid deelwoord bij het hulpwerkwoord être als het onderwerp vrouwelijk meervoud (zoals 'elles') is?",
-      "modelantwoord": "Je voegt de uitgang -es toe aan het voltooid deelwoord.",
-      "sleutelwoorden": [
-        "es/-es",
-        "uitgang/toevoeging/accord"
-      ],
+      "vraag": "Wat voeg je toe aan het voltooid deelwoord bij être als het onderwerp vrouwelijk meervoud is (zoals 'elles')? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Je voegt -es toe.",
+      "sleutelwoorden": ["es/-es"],
       "minTreffers": 1,
       "uitleg": "Bij vrouwelijk meervoud voeg je -es toe aan het voltooid deelwoord bij het hulpwerkwoord être (bijvoorbeeld elles sont allées, elles zijn gegaan)."
     },
     {
       "type": "open",
-      "vraag": "Noem het Franse voltooid deelwoord van de onregelmatige werkwoorden 'faire' en 'prendre'.",
-      "modelantwoord": "De voltooide deelwoorden zijn fait en pris.",
-      "sleutelwoorden": [
-        "fait",
-        "pris"
-      ],
-      "minTreffers": 2,
+      "vraag": "Noem het Franse voltooid deelwoord van het onregelmatige werkwoord 'faire'. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het voltooid deelwoord is fait.",
+      "sleutelwoorden": ["fait"],
+      "minTreffers": 1,
       "uitleg": "Het voltooid deelwoord van faire is fait en van prendre is pris."
     }
   ]

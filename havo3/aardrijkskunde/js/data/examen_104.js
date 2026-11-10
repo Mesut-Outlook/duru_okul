@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom leidt toenemende sociale ongelijkheid volgens economen en geografen tot problemen?",
-      "sleutelwoorden": [
-        "spanning/onrust",
-        "belemmer/groei"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het kan leiden tot sociale spanningen en die belemmeren de gezonde groei van economie en samenleving.",
+      "vraag": "Noem één probleem dat toenemende sociale ongelijkheid volgens economen en geografen veroorzaakt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["spanning/onrust/belemmer"],
+      "minTreffers": 1,
+      "modelantwoord": "Het veroorzaakt sociale spanningen.",
       "uitleg": "Ongelijkheid leidt tot sociale spanningen en remt de economische groei. (boek p. 43)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee terreinen waarin de Nederlandse overheid investeert om kansenongelijkheid terug te dringen.",
-      "sleutelwoorden": [
-        "onderwijs/scholen",
-        "gezondheidszorg/zorg/gelijke kansen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De overheid investeert in kwalitatief onderwijs en goede gezondheidszorg.",
+      "vraag": "Noem één terrein waarin de Nederlandse overheid investeert om kansenongelijkheid terug te dringen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["onderwijs/scholen/gezondheidszorg/zorg"],
+      "minTreffers": 1,
+      "modelantwoord": "De overheid investeert in kwalitatief onderwijs.",
       "uitleg": "Onderwijs en gezondheidszorg. (boek p. 43)"
     }
   ]

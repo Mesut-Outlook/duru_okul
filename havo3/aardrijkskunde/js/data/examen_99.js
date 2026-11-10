@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee oorzaken waardoor West-Europese zware industriegebieden na 1990 in de problemen kwamen.",
-      "sleutelwoorden": [
-        "lagelonenlanden/concurrentie",
-        "alternatieve grondstoffen/sluiting mijnen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij hadden zware concurrentie uit lagelonenlanden en kregen te maken met alternatieve grondstoffen en energiebronnen.",
+      "vraag": "Noem één oorzaak waardoor West-Europese zware industriegebieden na 1990 in de problemen kwamen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["lagelonenlanden/concurrent/alternatieve grondstoffen/sluiting"],
+      "minTreffers": 1,
+      "modelantwoord": "Zij kregen concurrentie uit lagelonenlanden.",
       "uitleg": "Concurrentie uit lagelonenlanden en alternatieve grondstoffen. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Waarom verhuisden veel industriële bedrijven na 2004 naar landen als Polen en Tsjechië?",
-      "sleutelwoorden": [
-        "lagere loonkosten/lonen",
-        "vrijhandel/open grenzen/EU"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Vanwege de lagere loonkosten en de vrije toegang tot de Europese markt na toetreding tot de EU.",
+      "vraag": "Waarom verhuisden veel industriële bedrijven na 2004 naar landen als Polen en Tsjechië? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["loonkosten/lonen/goedkoper/vrijhandel/open grenzen"],
+      "minTreffers": 1,
+      "modelantwoord": "Vanwege de lagere loonkosten.",
       "uitleg": "Lagere lonen en vrijhandel binnen de EU. (boek p. 39)"
     }
   ]

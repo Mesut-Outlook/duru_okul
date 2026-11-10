@@ -119,15 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in het Nederlands uit hoe je in Frankrijk aan een loket vraagt: <i>'Mag ik twee retourtjes naar Parijs in de tweede klas?'</i>",
-      "sleutelwoorden": [
-        "deux/2",
-        "aller-retour/allers-retours",
-        "paris",
-        "deuxième/seconde/classe"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "'Je voudrais deux allers-retours pour Paris en deuxième classe, s'il vous plaît.'",
+      "vraag": "Hoe vraag je in het Frans om <i>'twee retourtjes naar Parijs'</i>? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["deux","aller-retour/allers-retours/aller retour/allers retours"],
+      "minTreffers": 1,
+      "modelantwoord": "Je voudrais deux allers-retours pour Paris.",
       "uitleg": "Deux allers-retours pour Paris en deuxième classe, s'il vous plaît."
     },
     {

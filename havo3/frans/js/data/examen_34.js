@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Lees: <i>'Pour financer leur voyage scolaire à Rome, les élèves ont vendu des gâteaux et organisé une tombola.'</i><br>Welke twee acties hebben de leerlingen ondernomen om hun schoolreis te financieren?",
-      "sleutelwoorden": [
-        "taarten/cakes/gebak/gâteaux",
-        "tombola/loterij"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Ze hebben taarten/gebak verkocht en een tombola (loterij) georganiseerd.",
+      "vraag": "Lees: <i>'Pour financer leur voyage scolaire à Rome, les élèves ont vendu des gâteaux et organisé une tombola.'</i><br>Noem één actie van de leerlingen om hun schoolreis te financieren. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["taart/cake/gebak/gâteaux/tombola/loterij"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze verkochten taarten.",
       "uitleg": "Vente de gâteaux en tombola."
     },
     {

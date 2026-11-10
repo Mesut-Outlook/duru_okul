@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Vertaal de volgende zin naar correct Frans in de futur composé: <i>'Morgen gaan wij trainen in het park.'</i>",
-      "sleutelwoorden": [
-        "demain/nous allons/on va",
-        "entraîner/sentrainer/faire/sport"
-      ],
+      "vraag": "Vertaal in het Frans met de futur composé: <i>'Morgen gaan wij trainen in het park.'</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["demain","nous allons/on va"],
       "minTreffers": 1,
-      "modelantwoord": "Demain, nous allons nous entraîner dans le parc. (of: Demain, on va s'entraîner dans le parc.)",
+      "modelantwoord": "Demain, nous allons nous entraîner dans le parc.",
       "uitleg": "Futur composé: nous allons + s'entraîner / aller s'entraîner."
     },
     {

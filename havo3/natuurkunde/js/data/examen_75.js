@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het voor de veiligheid van de inzittenden gunstig is dat de voorkant van een auto bij een botsing indeukt.",
-      "modelantwoord": "Doordat de voorkant indeukt, duurt de botsing langer. Daardoor is de vertraging van de auto en van de inzittenden kleiner. Omdat F = m · a is ook de kracht op de inzittenden dan kleiner.",
+      "vraag": "Wat gebeurt er met de botstijd als de voorkant van een auto indeukt? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "De botstijd wordt langer, dus de vertraging en de kracht op de inzittenden zijn kleiner.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "botstijd/tijdsduur/langer",
-        "vertraging/versnelling"
-      ],
+      "sleutelwoorden": ["langer/toe/groter"],
       "uitleg": "De kreukelzone verlengt de botstijd, waardoor de vertraging en dus de kracht kleiner worden."
     }
   ]

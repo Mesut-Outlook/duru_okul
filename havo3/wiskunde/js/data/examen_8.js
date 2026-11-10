@@ -191,26 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In een sportteam hebben 5 spelers schoenmaat 41, 8 spelers maat 42, 5 spelers maat 43 en 2 spelers maat 44. Bereken de gemiddelde schoenmaat van dit team.",
-      "sleutelwoorden": [
-        "= 20/20 spelers",
-        "844/20",
-        "42,2/42.2"
-      ],
+      "vraag": "In een sportteam hebben 5 spelers schoenmaat 41, 8 spelers maat 42, 5 spelers maat 43 en 2 spelers maat 44. Wat is de gemiddelde schoenmaat? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["42 2"],
       "minTreffers": 1,
-      "modelantwoord": "Totaal aantal spelers = 5 + 8 + 5 + 2 = 20. Som = (5×41) + (8×42) + (5×43) + (2×44) = 205 + 336 + 215 + 88 = 844. Gemiddelde = 844 / 20 = 42,2.",
+      "modelantwoord": "De gemiddelde schoenmaat is 42,2.",
       "uitleg": "Gewogen gemiddelde = totale som gedeeld door totale frequentie (844 / 20 = 42,2)."
     },
     {
       "type": "open",
-      "vraag": "Geef de definitie van de relatieve frequentie en noem de formule om deze in procenten te berekenen.",
-      "sleutelwoorden": [
-        "deel van het totaal/aandeel",
-        "absolute frequentie/totaal",
-        "100%/keer 100"
-      ],
+      "vraag": "Hoe bereken je de relatieve frequentie in procenten? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["totaal/aantal waarnemingen/delen door"],
       "minTreffers": 1,
-      "modelantwoord": "Definitie: Het aandeel van een bepaalde waarneming ten opzichte van het totaal. Formule: Relatieve frequentie = (Absolute frequentie / Totaal aantal waarnemingen) × 100%.",
+      "modelantwoord": "Je deelt de absolute frequentie door het totaal en doet keer 100%.",
       "uitleg": "(Aantal / Totaal) × 100%."
     }
   ]

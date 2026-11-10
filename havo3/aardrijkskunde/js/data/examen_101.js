@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee manieren waarop de EU haar eigen interne markt in de toekomst beter kan gaan beschermen.",
-      "sleutelwoorden": [
-        "buitenlandse investeringen/investeringen",
-        "exportcontroles/importcontroles/controles"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door de controle op buitenlandse investeringen te verstevigen en de export- en importcontroles aan de grens aan te scherpen.",
+      "vraag": "Noem één manier waarop de EU haar interne markt in de toekomst beter kan beschermen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["investeringen/exportcontrole/importcontrole/controle"],
+      "minTreffers": 1,
+      "modelantwoord": "Door de controle op buitenlandse investeringen te verstevigen.",
       "uitleg": "Controle op buitenlandse investeringen en betere exportcontroles. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom consumenten in Europa het kunnen gaan merken als de EU de eigen markt strenger beschermt.",
-      "sleutelwoorden": [
-        "aankopen duurder/pakketjes duurder/AliExpress/Temu",
-        "invoerrechten/heffingen/controles"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Aankopen op goedkope buitenlandse platforms zoals Temu of AliExpress worden duurder door strengere controles en invoerrechten.",
+      "vraag": "Wat gebeurt er met de prijs van aankopen op goedkope buitenlandse platforms als de EU de eigen markt strenger beschermt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["duurder/duur/stijgen"],
+      "minTreffers": 1,
+      "modelantwoord": "Die aankopen worden duurder.",
       "uitleg": "Aankopen op buitenlandse webshops worden duurder door heffingen en controles. (boek p. 39)"
     }
   ]

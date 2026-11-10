@@ -119,13 +119,9 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beschrijf in het Frans kort het uiterlijk van een meisje met blond haar en blauwe ogen.",
-      "sleutelwoorden": [
-        "elle a",
-        "cheveux/blonds",
-        "yeux/bleus"
-      ],
-      "minTreffers": 2,
+      "vraag": "Schrijf één Franse zin over een meisje met blond haar en blauwe ogen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["cheveux/blonds","yeux/bleus"],
+      "minTreffers": 1,
       "modelantwoord": "Elle a les cheveux blonds et les yeux bleus.",
       "uitleg": "'Elle a les cheveux blonds et les yeux bleus.'"
     },

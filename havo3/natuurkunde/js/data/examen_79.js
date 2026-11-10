@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een skater rijdt met constante snelheid over een vlakke weg. Leg uit waarom zijn bewegingsenergie niet verandert, terwijl hij steeds kracht zet.",
-      "modelantwoord": "De voorwaartse kracht is even groot als de weerstandskracht. De positieve arbeid van de voorwaartse kracht is even groot als de negatieve arbeid van de weerstandskracht, dus de totale arbeid is nul. De energie die hij toevoert wordt omgezet in warmte.",
+      "vraag": "Hoe groot is de totale arbeid op een skater die met constante snelheid over een vlakke weg rijdt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De totale arbeid is nul (0 J), want positieve en negatieve arbeid zijn even groot.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "even groot/gelijk/evenwicht",
-        "negatieve/tegengesteld/warmte"
-      ],
+      "sleutelwoorden": ["nul/0"],
       "uitleg": "De totale arbeid is nul, dus de bewegingsenergie blijft gelijk; de toegevoerde energie eindigt als warmte."
     }
   ]

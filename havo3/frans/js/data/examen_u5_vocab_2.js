@@ -191,25 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de Franse benamingen voor de drie belangrijkste basisonderdelen van het bestek (mes, vork en lepel).",
-      "modelantwoord": "Dat zijn le couteau, la fourchette en la cuillère.",
-      "sleutelwoorden": [
-        "couteau",
-        "fourchette",
-        "cuillère/cuillere"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is het Franse woord voor 'de vork'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "La fourchette.",
+      "sleutelwoorden": ["fourchette"],
+      "minTreffers": 1,
       "uitleg": "Het bestek bestaat uit le couteau (mes), la fourchette (vork) en la cuillère (lepel)."
     },
     {
       "type": "open",
-      "vraag": "Welke twee smaakmakers vind je vrijwel altijd samen in een stelletje op een Franse eettafel?",
-      "modelantwoord": "Dat zijn peper en zout, oftewel le sel en le poivre.",
-      "sleutelwoorden": [
-        "sel",
-        "poivre"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is het Franse woord voor 'peper'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Le poivre.",
+      "sleutelwoorden": ["poivre"],
+      "minTreffers": 1,
       "uitleg": "Op tafel staan le sel (zout) en le poivre (peper)."
     }
   ]

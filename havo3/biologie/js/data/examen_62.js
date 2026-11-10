@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een jongen heeft de geslachtschromosomen XY en zijn zus XX. Leg uit van welke ouder ieder van hen die geslachtschromosomen kreeg.",
-      "sleutelwoorden": [
-        "moeder/eicel",
-        "vader/zaadcel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Allebei hebben ze een X van hun moeder, via de eicel. De jongen kreeg zijn Y van zijn vader via de zaadcel; het meisje kreeg een X van haar vader, ook via de zaadcel.",
+      "vraag": "Een jongen heeft de geslachtschromosomen XY. Van welke ouder kreeg hij zijn Y? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["vader/zaadcel/papa/pa"],
+      "minTreffers": 1,
+      "modelantwoord": "Zijn Y kreeg hij van zijn vader, via de zaadcel.",
       "uitleg": "Ieder kind krijgt een X van de moeder (eicel); de vader (zaadcel) geeft aan de jongen een Y en aan het meisje een X."
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe het kan dat ouders met allebei 46 chromosomen een kind krijgen dat ook 46 chromosomen in zijn cellen heeft.",
-      "sleutelwoorden": [
-        "helft/23",
-        "bevruchting/samensmelten/smelten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Elke ouder geeft de helft van zijn chromosomen door, 23 stuks, via een eicel of zaadcel. Bij de bevruchting smelten die kernen samen, zodat het kind weer 46 chromosomen heeft.",
+      "vraag": "Ouders hebben allebei 46 chromosomen. Hoeveel chromosomen geeft elke ouder door aan een kind? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["23/helft"],
+      "minTreffers": 1,
+      "modelantwoord": "Elke ouder geeft 23 chromosomen door, de helft van 46.",
       "uitleg": "Eicel en zaadcel hebben de helft (23); bij de bevruchting smelten ze samen tot 46."
     }
   ]

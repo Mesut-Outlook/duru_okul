@@ -167,26 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom water uitermate geschikt is als transportmiddel in een centrale verwarmingsinstallatie (cv) in woonhuizen. Betrek daarin de <b>soortelijke warmte</b> van water.",
-      "sleutelwoorden": [
-        "4180/j per kg/veel warmte-energie",
-        "hoge soortelijke warmte/veel warmte",
-        "transporteren/radiatoren/afkoelen langzaam"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Water heeft een uitzonderlijk hoge soortelijke warmte (4180 J/kg·K). Dit betekent dat een relatief kleine hoeveelheid rondgepompt water in de cv-ketel een enorme hoeveelheid warmte-energie kan opnemen en transporteren naar de radiatoren in de kamers zonder snel drastisch af te koelen. Bovendien is water goedkoop, vloeibaar en veilig.",
+      "vraag": "Wat is de soortelijke warmte van water in J/kg·K? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["4180"],
+      "minTreffers": 1,
+      "modelantwoord": "De soortelijke warmte van water is 4180 J per kg per K.",
       "uitleg": "Hoge warmtecapaciteit maakt water ideaal voor efficiënt warmtetransport."
     },
     {
       "type": "open",
-      "vraag": "Een warm stuk koper van 200 gram met een temperatuur van 90 °C wordt in een bekerglas met 300 gram water van 20 °C gelegd. Leg uit wat er gebeurt met de warmte en de eindtemperatuur van het mengsel.",
-      "sleutelwoorden": [
-        "warmte af/afgestaan/warmte stroomt",
-        "koelt/temperatuur stijgt/warmt op",
-        "thermisch evenwicht/dezelfde temperatuur/gelijke temperatuur"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het hete koper staat warmte af aan het koudere water. Omdat energie behouden blijft (Q_afgestaan = Q_opgenomen), koelt het koper af en stijgt de temperatuur van het water totdat beide stoffen dezelfde eindtemperatuur bereiken (thermisch evenwicht). Omdat water een veel grotere soortelijke warmte en massa heeft, ligt de eindtemperatuur veel dichter bij de 20 °C van het water dan bij de 90 °C van het koper.",
+      "vraag": "Een warm stuk koper wordt in koud water gelegd. Wat gebeurt er met de temperatuur van het water? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["stijgt/warmer/omhoog/hoger"],
+      "minTreffers": 1,
+      "modelantwoord": "De temperatuur van het water stijgt doordat het koper warmte afstaat.",
       "uitleg": "Warmteoverdracht tot thermisch evenwicht; water bepaalt grotendeels de eindtemperatuur door hoge c."
     }
   ]

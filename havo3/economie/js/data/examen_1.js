@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een economisch goed schaars wordt genoemd, ook al liggen de winkelrekken er vol mee.",
-      "sleutelwoorden": [
-        "productiemiddelen/arbeid/tijd",
-        "opgeofferd/inzet/kost"
-      ],
+      "vraag": "Noem één reden waarom economische goederen schaars zijn, ook als de winkelrekken vol liggen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["productiemiddelen/arbeid/tijd/grondstoffen/opgeofferd/kost"],
       "minTreffers": 1,
-      "modelantwoord": "Een goed is economisch schaars omdat er productiemiddelen (tijd, arbeid, grondstoffen) voor zijn opgeofferd om het te maken.",
+      "modelantwoord": "Er zijn productiemiddelen en arbeid voor opgeofferd om het te maken.",
       "uitleg": "Schaarste in de economie betekent dat iets niet vanzelf ontstaat maar middelen kost."
     },
     {
       "type": "open",
-      "vraag": "Noem twee concrete voorbeelden van secundaire behoeften van een middelbare scholier.",
-      "sleutelwoorden": [
-        "smartphone/telefoon",
-        "merkkleding/scooter/gaming/bioscoop"
-      ],
+      "vraag": "Noem één voorbeeld van een secundaire behoefte van een middelbare scholier. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["smartphone/telefoon/merkkleding/scooter/gaming/spelcomputer/bioscoop"],
       "minTreffers": 1,
-      "modelantwoord": "Bijvoorbeeld een smartphone, merkkleding, spelcomputer, bioscoopbezoek of een scooter.",
+      "modelantwoord": "Een smartphone.",
       "uitleg": "Dit zijn luxe behoeften die het leven aangenamer maken maar niet van levensbelang zijn."
     }
   ]

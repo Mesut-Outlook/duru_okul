@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee politieke redenen waarom landen onderling geen handel drijven.",
-      "sleutelwoorden": [
-        "oorlog/conflict/spanning",
-        "mensenrechten/handelsconflict/chip/macht"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bijvoorbeeld door oorlog of conflict tussen de landen, of door een handelsconflict zoals de chipoorlog.",
+      "vraag": "Noem één politieke reden waarom landen onderling geen handel drijven. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["oorlog/conflict/spanning/chip"],
+      "minTreffers": 1,
+      "modelantwoord": "Bijvoorbeeld oorlog of conflict tussen de landen.",
       "uitleg": "Een oorlog of conflict en een handelsconflict zoals de chipoorlog. (boek p. 24)"
     },
     {
       "type": "open",
-      "vraag": "Beschrijf in een redenering hoe de oorlog tussen Rusland en Oekraïne kan leiden tot problemen in minder welvarende landen.",
-      "sleutelwoorden": [
-        "graan/export",
-        "voedselprijzen/prijzen/voedselzekerheid"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De export van Oekraïens graan komt in gevaar, daardoor stijgen de voedselprijzen en komt de voedselzekerheid in minder welvarende landen in gevaar.",
+      "vraag": "Noem één probleem dat de oorlog tussen Rusland en Oekraïne veroorzaakt in minder welvarende landen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["prijzen/voedselzekerheid/graan"],
+      "minTreffers": 1,
+      "modelantwoord": "Door minder export van Oekraïens graan stijgen de voedselprijzen.",
       "uitleg": "Als de graanexport stokt, stijgen de voedselprijzen en lopen arme landen risico op voedselzekerheid. (boek p. 26)"
     }
   ]

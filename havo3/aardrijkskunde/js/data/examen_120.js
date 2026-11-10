@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke zorg heeft hoogleraar Rob de Wijk over de uitbreiding van de BRICS en waarom?",
-      "sleutelwoorden": [
-        "antiwesters/antiwesterse",
-        "mensenrechten",
-        "dictatoriale/dictatoriaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Hij vindt het zorgelijk omdat de nieuwe leden een antiwesterse houding hebben; dictatoriale landen worden belangrijker en mensenrechten staan niet hoog op de agenda.",
+      "vraag": "Welke zorg heeft hoogleraar Rob de Wijk over de uitbreiding van de BRICS? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["antiwesters/dictatoriaal/dictatoriale/mensenrechten"],
+      "minTreffers": 1,
+      "modelantwoord": "De nieuwe leden hebben een antiwesterse houding.",
       "uitleg": "De nieuwe leden zijn antiwesters en dictatoriaal, mensenrechten krijgen weinig aandacht. (boek p. 37)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom landbouw voor de VS economisch weinig belangrijk is, ook al zijn zij de grootste landbouwexporteur.",
-      "sleutelwoorden": [
-        "1 procent/één procent",
-        "auto's/machineonderdelen/fossiele brandstoffen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Landbouw is maar 1 procent van de totale exportwaarde; de rest komt uit andere export zoals auto's, machineonderdelen en fossiele brandstoffen.",
+      "vraag": "Hoeveel procent van de totale exportwaarde van de VS is landbouw, ook al zijn zij de grootste landbouwexporteur? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["1 procent/één procent/1%"],
+      "minTreffers": 1,
+      "modelantwoord": "Landbouw is maar 1 procent van de totale exportwaarde.",
       "uitleg": "Het is maar 1 procent; de rest zijn auto's en machineonderdelen. (boek p. 34)"
     }
   ]

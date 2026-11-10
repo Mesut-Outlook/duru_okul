@@ -198,12 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken hoeveel joule 2,5 kWh is.",
-      "sleutelwoorden": [
-        "9000000"
-      ],
+      "vraag": "Bereken hoeveel joule 2,5 kWh is. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["9000000/9 000 000/9 miljoen"],
       "minTreffers": 1,
-      "modelantwoord": "2,5 kWh = 2,5 × 3.600.000 J = 9000000 J.",
+      "modelantwoord": "2,5 kWh is 2,5 × 3600000 J = 9000000 J.",
       "uitleg": "1 kWh is 3.600.000 J, dus 2,5 kWh is 2,5 × 3.600.000 = 9.000.000 J."
     }
   ]

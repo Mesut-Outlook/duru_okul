@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Marieke kookt elke avond voor haar gezin. Haar zus werkt als kok in een restaurant. Leg uit welke van de twee in economische zin produceert en welke niet.",
-      "sleutelwoorden": [
-        "eigen/gezin/zichzelf/zelfvoorziening",
-        "anderen/klanten/gasten/betalen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Marieke kookt voor haar eigen gezin en produceert dus niet, haar zus maakt als kok maaltijden voor anderen die daarvoor betalen en produceert dus wel.",
+      "vraag": "Marieke kookt elke avond voor haar gezin. Haar zus werkt als kok in een restaurant. Waarom produceert Marieke in economische zin niet? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["eigen/betaal/zelfvoorziening"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze kookt voor haar eigen gezin en niemand betaalt ervoor.",
       "uitleg": "Produceren is maken voor anderen door bedrijven, koken voor je eigen gezin is voor eigen gebruik."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom bedrijven consumenten nodig hebben en consumenten bedrijven.",
-      "sleutelwoorden": [
-        "betalen/kopen/geld",
-        "arbeid/werken/loon"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Consumenten betalen bedrijven voor goederen en diensten, en bedrijven hebben de arbeid van mensen nodig en betalen daarvoor loon.",
+      "vraag": "Waarom hebben bedrijven consumenten nodig? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kopen/betalen/geld/omzet/klanten/verkopen/afzet"],
+      "minTreffers": 1,
+      "modelantwoord": "Consumenten kopen de producten en betalen daarvoor.",
       "uitleg": "Beide partijen ruilen met elkaar: geld voor goederen en diensten, en arbeid voor loon."
     }
   ]

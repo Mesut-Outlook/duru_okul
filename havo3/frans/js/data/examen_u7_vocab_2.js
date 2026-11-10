@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee Franse materialen die beginnen met het voorzetsel 'en' (bijvoorbeeld voor hout of metaal).",
-      "modelantwoord": "Twee voorbeelden zijn en bois, en métal, en verre of en plastique.",
-      "sleutelwoorden": [
-        "en bois/en métal/en metal",
-        "en verre/en plastique/en tissu"
-      ],
+      "vraag": "Noem één Frans materiaal met het voorzetsel 'en' (bijvoorbeeld voor hout of metaal). <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld en bois.",
+      "sleutelwoorden": ["en bois/en métal/en metal/en verre/en plastique/en tissu"],
       "minTreffers": 1,
       "uitleg": "Materialen worden aangeduid met en bois (hout), en métal (metaal), en verre (glas) of en plastique (plastic)."
     },
     {
       "type": "open",
-      "vraag": "Geef de twee Franse bijvoeglijk naamwoorden die respectievelijk een ronde en een vierkante vorm aanduiden.",
-      "modelantwoord": "Dat zijn de woorden rond en carré.",
-      "sleutelwoorden": [
-        "rond",
-        "carré/carre"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans bijvoeglijk naamwoord betekent 'vierkant'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is carré.",
+      "sleutelwoorden": ["carré/carre"],
+      "minTreffers": 1,
       "uitleg": "Rond is 'rond' en vierkant is 'carré'."
     }
   ]

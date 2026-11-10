@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is proper thermal clothing essential for mountaineers attempting to survive high-altitude blizzards?",
-      "sleutelwoorden": [
-        "warmth/temperature/body/protect",
-        "hypothermia/frostbite/freezing/cold"
-      ],
+      "vraag": "Why is proper thermal clothing essential for mountaineers in high-altitude blizzards? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["warm/body heat/hypothermia/frostbite/freezing/cold/protect"],
       "minTreffers": 1,
-      "modelantwoord": "Thermal clothing keeps body heat in and prevents dangerous hypothermia and frostbite in freezing weather.",
+      "modelantwoord": "It keeps body heat in and prevents hypothermia.",
       "uitleg": "Thermokleding houdt lichaamswarmte vast en voorkomt onderkoeling en bevriezing."
     },
     {

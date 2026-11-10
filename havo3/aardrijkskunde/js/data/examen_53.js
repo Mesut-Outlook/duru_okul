@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bron 23 laat zien dat Dem. Rep. Congo vooral koperproducten exporteert en de VS een veel gevarieerder exportpakket hebben. Leg uit welk soort kolonie beide landen vroeger waren en hoe je dat aan de export kunt zien.",
-      "sleutelwoorden": [
-        "exploitatiekolonie",
-        "vestigingskolonie",
-        "grondstof/onbewerkt/metalen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Dem. Rep. Congo was een exploitatiekolonie: het land exporteert nog steeds vooral onbewerkte grondstoffen zoals metalen. De VS waren een vestigingskolonie: kolonisten richtten het land in naar Europees voorbeeld, en nu exporteert het veel verschillende bewerkte producten, zoals auto's en machineonderdelen.",
+      "vraag": "Bron 23 laat zien dat Dem. Rep. Congo vooral koperproducten exporteert. Wat voor soort kolonie was Congo vroeger? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["exploitatie"],
+      "minTreffers": 1,
+      "modelantwoord": "Congo was een exploitatiekolonie.",
       "uitleg": "Voormalige exploitatiekolonies exporteren vooral onbewerkte grondstoffen; voormalige vestigingskolonies hebben nu een hoge welvaart en een gevarieerde export. (boek p. 28, 32–33)"
     },
     {
       "type": "open",
-      "vraag": "Tussen 1995 en 2022 werd de export van Niger ruim zeven keer zo groot, en in 2022 staan ook China en de Verenigde Arabische Emiraten tussen de exportpartners. Verklaar deze veranderingen met twee begrippen uit §1.1.",
-      "sleutelwoorden": [
-        "global shift",
-        "vrijhandel/handelsbelemmeringen",
-        "multipolair"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door vrijhandel zijn handelsbelemmeringen weggenomen, waardoor Niger makkelijker met meer landen kan handelen en de export groeit. Door de global shift zijn Aziatische landen zoals China belangrijker geworden in de wereldeconomie; daarom zijn zij nu ook exportpartners van Niger. Er is een multipolaire wereldeconomie ontstaan.",
+      "vraag": "De export van Niger werd tussen 1995 en 2022 ruim zeven keer zo groot, ook naar China en de VAE. Noem één begrip uit §1.1 dat dit verklaart. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["global shift/vrijhandel/handelsbelemmeringen/multipolair"],
+      "minTreffers": 1,
+      "modelantwoord": "Door vrijhandel kan Niger met meer landen handelen.",
       "uitleg": "Vrijhandel verklaart de groei van de exportwaarde; de global shift en de multipolaire wereldeconomie verklaren de nieuwe partners. (boek p. 17, 26–27)"
     }
   ]

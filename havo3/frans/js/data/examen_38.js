@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem drie belangrijke Franse signaalwoorden: één voor tegenstelling, één voor oorzaak, en één voor gevolg.",
-      "sleutelwoorden": [
-        "mais/pourtant/cependant",
-        "car/parce que",
-        "donc/alors/ainsi"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Tegenstelling: 'mais' (maar), Oorzaak: 'parce que' (omdat), Gevolg: 'donc' (dus).",
+      "vraag": "Noem één Frans signaalwoord voor een tegenstelling. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["mais/pourtant/cependant"],
+      "minTreffers": 1,
+      "modelantwoord": "Mais (maar).",
       "uitleg": "Mais (tegenstelling), parce que/car (oorzaak), donc (gevolg)."
     },
     {

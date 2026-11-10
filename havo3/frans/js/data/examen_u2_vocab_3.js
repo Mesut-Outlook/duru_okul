@@ -193,25 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef de Franse vertaling van de vraag: <b>'Wat doe je in het weekend?'</b>",
-      "sleutelwoorden": [
-        "qu'est-ce que tu fais/fais-tu",
-        "le weekend/le week-end"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Qu'est-ce que tu fais le weekend?",
+      "vraag": "Geef de Franse vertaling van de vraag: <b>'Wat doe je in het weekend?'</b> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["est-ce que tu fais/fais-tu/que fais-tu/tu fais"],
+      "minTreffers": 1,
+      "modelantwoord": "Qu'est-ce que tu fais le weekend ?",
       "uitleg": "'Qu'est-ce que tu fais le weekend?' is de standaardvraag."
     },
     {
       "type": "open",
-      "vraag": "Vertaal naar het Frans: <b>'Omdat ik met mijn vrienden sport.'</b>",
-      "sleutelwoorden": [
-        "parce que",
-        "fais du sport/sport",
-        "mes amis/copains"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Parce que je fais du sport avec mes amis (of: avec mes copains).",
+      "vraag": "Vertaal naar het Frans: <b>'Omdat ik met mijn vrienden sport.'</b> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["parce que","amis/copains"],
+      "minTreffers": 1,
+      "modelantwoord": "Parce que je fais du sport avec mes amis.",
       "uitleg": "'Parce que je fais du sport avec mes amis.'"
     }
   ]

@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een kapitaal van € 500 groeit in jaar 1 met 10% en in jaar 2 met 20%. Bereken het eindbedrag en toon de twee groeifactoren.",
-      "sleutelwoorden": [
-        "1,10",
-        "1,20",
-        "660"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Groeifactoren zijn 1,10 en 1,20. Eindbedrag = 500 × 1,10 × 1,20 = 550 × 1,20 = € 660,-.",
+      "vraag": "Een kapitaal van € 500 groeit in jaar 1 met 10% en in jaar 2 met 20%. Wat is het eindbedrag? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["660"],
+      "minTreffers": 1,
+      "modelantwoord": "Het eindbedrag is 660 euro.",
       "uitleg": "500 × 1,10 × 1,20 = € 660,-."
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je met de formule ((Nieuw - Oud) / Oud) × 100% berekent dat een krimp van 80 naar 60 overeenkomt met een percentage van -25%.",
-      "sleutelwoorden": [
-        "-20",
-        "-0,25",
-        "minteken/afname/daling"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "((60 - 80) / 80) × 100% = (-20 / 80) × 100% = -0,25 × 100% = -25%. Het minteken geeft aan dat het een daling (afname) is van 25%.",
+      "vraag": "Een aantal krimpt van 80 naar 60. Hoeveel procent is de verandering? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["-25/25/min 25"],
+      "minTreffers": 1,
+      "modelantwoord": "De verandering is -25%.",
       "uitleg": "((60 - 80) / 80) × 100% = -25%."
     }
   ]

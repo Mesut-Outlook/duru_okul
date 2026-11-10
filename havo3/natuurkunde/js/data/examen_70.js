@@ -193,14 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een (v,t)-diagram toont eerst een stijgende rechte lijn, dan een horizontale lijn en daarna een dalende rechte lijn. Beschrijf de beweging in drie delen.",
-      "modelantwoord": "In het eerste deel versnelt het voorwerp eenparig: de snelheid neemt gelijkmatig toe. In het tweede deel is de snelheid constant en beweegt het voorwerp eenparig. In het derde deel vertraagt het voorwerp eenparig: de snelheid neemt gelijkmatig af.",
+      "vraag": "Wat betekent een stijgende rechte lijn in een (v,t)-diagram voor de beweging? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Het voorwerp versnelt eenparig: de snelheid neemt toe.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "versnelt/versneld/toeneemt",
-        "constant/gelijk",
-        "vertraagt/vertraagd/afneemt"
-      ],
+      "sleutelwoorden": ["versnel/toeneem/sneller/stijgt"],
       "uitleg": "Stijgende lijn = versnellen, horizontale lijn = constante snelheid, dalende lijn = vertragen."
     }
   ]

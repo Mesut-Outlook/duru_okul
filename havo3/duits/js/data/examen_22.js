@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is de vervoeging van het werkwoord 'sprechen' bij de personen 'du' en 'er'?",
-      "modelantwoord": "Du sprichst en er spricht.",
-      "sleutelwoorden": [
-        "sprichst",
-        "spricht"
-      ],
+      "vraag": "Wat is de vervoeging van het werkwoord 'sprechen' bij de persoon 'du'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Du sprichst.",
+      "sleutelwoorden": ["sprichst"],
       "minTreffers": 1,
       "uitleg": "Du sprichst en er spricht (met e→i klinkerwisseling)."
     },
     {
       "type": "open",
-      "vraag": "Welke twee documenten stuur je traditioneel mee bij een Duitse sollicitatie?",
-      "modelantwoord": "Het cv (der Lebenslauf) en de sollicitatiebrief (das Anschreiben / die Bewerbung).",
-      "sleutelwoorden": [
-        "Lebenslauf",
-        "Bewerbung/Anschreiben",
-        "cv"
-      ],
+      "vraag": "Noem één document dat je bij een Duitse sollicitatie meestuurt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het cv (der Lebenslauf).",
+      "sleutelwoorden": ["lebenslauf/cv/anschreiben/brief/bewerbung"],
       "minTreffers": 1,
       "uitleg": "Der Lebenslauf en die Bewerbung."
     }

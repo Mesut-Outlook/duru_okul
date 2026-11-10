@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate into English: <i>De hulpdiensten moeten de toeschouwers waarschuwen.</i>",
-      "sleutelwoorden": [
-        "emergency services",
-        "onlookers/onlooker/bystanders/spectators",
-        "warn/alert"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "The emergency services must warn the onlookers.",
+      "vraag": "Translate into English: <i>de toeschouwers</i>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["onlookers/onlooker/bystanders/spectators"],
+      "minTreffers": 1,
+      "modelantwoord": "The toeschouwers are the onlookers.",
       "uitleg": "Emergency services = hulpdiensten; onlooker = toeschouwer; to warn/alert = waarschuwen/alarmeren (boek p.A125)."
     },
     {

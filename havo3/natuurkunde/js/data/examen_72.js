@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een auto rijdt met een constante snelheid van 90 km/h over een rechte weg terwijl de motor wel een kracht levert. Leg uit hoe dat mogelijk is.",
-      "modelantwoord": "De motorkracht (voorwaarts) is even groot als de tegenwerkende krachten (wrijving en luchtweerstand). De resulterende kracht is daardoor 0 N, dus de versnelling is 0 m/s² en de snelheid blijft constant.",
+      "vraag": "Een auto rijdt met constante snelheid terwijl de motor een kracht levert. Hoe groot is de resulterende kracht? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De resulterende kracht is 0 N, want motorkracht en tegenwerkende krachten zijn even groot.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "resulterende kracht/nettokracht",
-        "weerstand/wrijving/tegenwerkende"
-      ],
+      "sleutelwoorden": ["0/nul/geen"],
       "uitleg": "De motorkracht houdt de tegenwerkende krachten in evenwicht: F<sub>res</sub> = 0 N, dus a = 0 en de snelheid verandert niet."
     }
   ]

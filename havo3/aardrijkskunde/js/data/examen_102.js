@@ -179,25 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat een brainport is. Gebruik de regio rond Eindhoven als voorbeeld.",
-      "sleutelwoorden": [
-        "kennis/kenniseconomie",
-        "hightech/technische/technologie",
-        "universiteit/onderzoek"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een brainport is een gebied dat een grote rol speelt in de kenniseconomie, met veel hightechbedrijven, universiteiten en onderzoeksinstituten. Rond Eindhoven zitten bijvoorbeeld ASML en de Technische Universiteit.",
+      "vraag": "Leg in één korte zin uit wat een brainport is, bijvoorbeeld de regio rond Eindhoven. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kennis/kenniseconomie","hightech/technologie/universiteit/onderzoek"],
+      "minTreffers": 1,
+      "modelantwoord": "Een brainport is een gebied met een grote rol in de kenniseconomie en veel hightechbedrijven.",
       "uitleg": "Brainport = gebied met een grote rol in de kenniseconomie: veel hightechbedrijven, universiteiten en onderzoeksinstituten (begrippenlijst p. 52). (boek p. 42)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee Nederlandse mainports die essentieel zijn voor de internationale handel.",
-      "sleutelwoorden": [
-        "haven van Rotterdam/Rotterdam",
-        "Schiphol/luchthaven Schiphol"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De haven van Rotterdam en luchthaven Schiphol.",
+      "vraag": "Noem één Nederlandse mainport die essentieel is voor de internationale handel. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["rotterdam/schiphol/haven/luchthaven"],
+      "minTreffers": 1,
+      "modelantwoord": "De haven van Rotterdam.",
       "uitleg": "Rotterdam en Schiphol. (boek p. 42)"
     }
   ]

@@ -179,26 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je aan iemand of vrijdag voor hem of haar schikt voor een afspraak?",
+      "vraag": "Hoe vraag je in het Duits of vrijdag jou schikt voor een afspraak? <i>(Eén korte zin is genoeg.)</i>",
       "modelantwoord": "Passt es dir am Freitag?",
-      "sleutelwoorden": [
-        "Passt es dir",
-        "am Freitag",
-        "Freitag"
-      ],
+      "sleutelwoorden": ["passt es dir/passt dir/passt es"],
       "minTreffers": 1,
       "uitleg": "Je vraagt 'Passt es dir am Freitag?'."
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil in uitspraak tussen de ch in 'ich' en de ch in 'Buch'?",
-      "modelantwoord": "In ich is het de zachte Ich-Laut (voorin de mond) en in Buch is het de harde Ach-Laut (keelklank).",
-      "sleutelwoorden": [
-        "zacht",
-        "hard/keelklank",
-        "Ich-Laut",
-        "Ach-Laut"
-      ],
+      "vraag": "Hoe heet de ch-klank in het woord 'ich' in het Duits? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is de zachte Ich-Laut.",
+      "sleutelwoorden": ["ich-laut/ich laut/ichlaut/zacht"],
       "minTreffers": 1,
       "uitleg": "Ich = zacht voorin; Buch = harde keelklank."
     }

@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef de twee Franse benamingen voor exact twaalf uur overdag en exact twaalf uur 's nachts.",
-      "modelantwoord": "Dat zijn midi voor overdag en minuit voor 's nachts.",
-      "sleutelwoorden": [
-        "midi",
-        "minuit"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is het Franse woord voor exact twaalf uur overdag? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is midi.",
+      "sleutelwoorden": ["midi"],
+      "minTreffers": 1,
       "uitleg": "Twaalf uur overdag is midi, en twaalf uur 's nachts is minuit."
     },
     {
       "type": "open",
-      "vraag": "Welke twee Franse werkwoorden uit Blok E geven respectievelijk aan dat je opstaat uit bed en dat je 's avonds naar bed gaat?",
-      "modelantwoord": "Dat zijn se lever (je me lève) en se coucher (je me couche).",
-      "sleutelwoorden": [
-        "lever/lève/leve",
-        "coucher/couche"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans werkwoord uit Blok E betekent 'opstaan uit bed'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is se lever (je me lève).",
+      "sleutelwoorden": ["lever/lève/leve"],
+      "minTreffers": 1,
       "uitleg": "Opstaan is se lever (je me lève) en naar bed gaan is se coucher (je me couche)."
     }
   ]

@@ -191,23 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke twee studierichtingen worden in het Duits aangeduid met de termen 'Jura' en 'Medizin'?",
-      "modelantwoord": "Dat zijn de studies rechten en geneeskunde.",
-      "sleutelwoorden": [
-        "rechten/recht",
-        "geneeskunde/medicijnen"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke studierichting wordt in het Duits aangeduid met de term 'Jura'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Jura is rechten.",
+      "sleutelwoorden": ["rechten/recht"],
+      "minTreffers": 1,
       "uitleg": "Jura is rechten en Medizin is geneeskunde."
     },
     {
       "type": "open",
-      "vraag": "Wat stuurt een sollicitant op naar een bedrijf als hij solliciteert naar een vacature?",
-      "modelantwoord": "Een sollicitant stuurt een motivatiebrief en een cv oftewel Lebenslauf.",
-      "sleutelwoorden": [
-        "Lebenslauf/cv",
-        "Bewerbung/brief"
-      ],
+      "vraag": "Noem één ding dat een sollicitant naar een bedrijf opstuurt bij een sollicitatie. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Een sollicitant stuurt een cv (Lebenslauf) op.",
+      "sleutelwoorden": ["lebenslauf/cv/brief/anschreiben/bewerbung"],
       "minTreffers": 1,
       "uitleg": "Bij een sollicitatie stuur je een 'Bewerbung' met 'Lebenslauf' (cv)."
     }

@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Complete with the past perfect form of the verb: <i>When officers arrived, the criminal ____ (to destroy) the evidence.</i>",
-      "sleutelwoorden": [
-        "had destroyed"
-      ],
+      "vraag": "Complete with the past perfect form of the verb: <i>When officers arrived, the criminal ____ (to destroy) the evidence.</i> <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["had destroyed"],
       "minTreffers": 1,
       "modelantwoord": "When officers arrived, the criminal had destroyed the evidence.",
       "uitleg": "Past perfect: had + regular past participle destroyed (boek p.A102)."

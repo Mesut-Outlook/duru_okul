@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write one present perfect question and one present perfect negation about a friend.",
-      "sleutelwoorden": [
-        "has/have",
-        "hasn't/haven't/has not/have not"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Has she finished her homework? She hasn't finished her homework.",
+      "vraag": "Write one present perfect question about a friend. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["has/have"],
+      "minTreffers": 1,
+      "modelantwoord": "Has she finished her homework?",
       "uitleg": "Present perfect volgt Rule 1: have/has vooraan, of have/has + not/n't (boek p.A71)."
     },
     {

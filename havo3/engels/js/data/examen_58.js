@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate into English using vocabulary from C Reading: <i>het aankunnen</i>.",
-      "sleutelwoorden": [
-        "cope with/to cope with"
-      ],
+      "vraag": "Translate into English using vocabulary from C Reading: <i>het aankunnen</i>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["cope with/to cope with"],
       "minTreffers": 1,
       "modelantwoord": "to cope with",
       "uitleg": "To cope with = aankunnen (Vocabulary C Reading, boek p.A125)."

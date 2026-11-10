@@ -193,23 +193,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Frans naar iemands favoriete serie?",
-      "sleutelwoorden": [
-        "quelle est",
-        "série préférée/serie preferee"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Quelle est ta série préférée?",
+      "vraag": "Hoe vraag je in het Frans naar iemands favoriete serie? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["quelle est","série préférée/serie preferee"],
+      "minTreffers": 1,
+      "modelantwoord": "Quelle est ta série préférée ?",
       "uitleg": "'Quelle est ta série préférée?' is de vaste formulering."
     },
     {
       "type": "open",
-      "vraag": "Vertaal naar het Frans: <b>'Ik vind het leuk om te sporten.'</b>",
-      "sleutelwoorden": [
-        "j'aime",
-        "faire du sport/le sport"
-      ],
-      "minTreffers": 2,
+      "vraag": "Vertaal naar het Frans: <b>'Ik vind het leuk om te sporten.'</b> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["j'aime/jaime"],
+      "minTreffers": 1,
       "modelantwoord": "J'aime faire du sport.",
       "uitleg": "'J'aime faire du sport' betekent 'Ik vind het leuk om te sporten'."
     }

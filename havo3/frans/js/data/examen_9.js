@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Lees: <i>'Pour participer à la randonnée en montagne, il est obligatoire d'avoir de bonnes chaussures de marche et une gourde d'eau.'</i><br>Welke twee dingen zijn verplicht mee te nemen?",
-      "sleutelwoorden": [
-        "goede wandelschoenen/schoenen/chaussures",
-        "fles water/waterfles/water/bidon/gourde"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Goede wandelschoenen en een veldfles / waterfles met water.",
+      "vraag": "Lees: <i>'Pour participer à la randonnée en montagne, il est obligatoire d'avoir de bonnes chaussures de marche et une gourde d'eau.'</i><br>Noem één ding dat verplicht is mee te nemen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["wandelschoenen/schoenen/chaussures/water/waterfles/gourde/fles"],
+      "minTreffers": 1,
+      "modelantwoord": "Goede wandelschoenen.",
       "uitleg": "Verplicht zijn: 'bonnes chaussures de marche' en 'une gourde d'eau'."
     },
     {

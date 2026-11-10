@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem een voordeel én een nadeel voor een bedrijf wanneer het medewerkers in vaste dienst heeft in plaats van op een nulurencontract.",
-      "sleutelwoorden": [
-        "ervaren/zekerheid/beschikbaar/vaste",
-        "doorbetalen/rustig/weinig werk/constante kosten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Voordeel: het bedrijf heeft altijd vaste, ervaren medewerkers beschikbaar. Nadeel: als het rustig is en er weinig wordt verkocht, moet het bedrijf hun loon (constante kosten) toch gewoon doorbetalen.",
+      "vraag": "Noem één voordeel voor een bedrijf van medewerkers in vaste dienst in plaats van op een nulurencontract. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ervaren/zekerheid/beschikbaar/altijd/betrouwbaar/vertrouwd/binding"],
+      "minTreffers": 1,
+      "modelantwoord": "Het bedrijf heeft altijd ervaren medewerkers beschikbaar.",
       "uitleg": "Voordeel: vaste/betrouwbare krachten beschikbaar; nadeel: loonkosten lopen door als er weinig werk is."
     },
     {
       "type": "open",
-      "vraag": "Een fietsenwinkel heeft in een maand de volgende uitgaven: 40 ingekochte fietsen, salaris van de verkoper, huur van de winkel en een advertentie in de lokale krant. Deel deze vier uitgaven eerst in bij 'inkoopwaarde van de omzet' of 'bedrijfskosten', en geef bij de drie bedrijfskosten ook de juiste soort bedrijfskost aan.",
-      "sleutelwoorden": [
-        "loonkosten",
-        "huisvestingskosten",
-        "verkoopkosten"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Inkoopwaarde van de omzet: de 40 ingekochte fietsen. Bedrijfskosten: salaris verkoper = loonkosten; huur van de winkel = huisvestingskosten; advertentie in de krant = verkoopkosten.",
+      "vraag": "Een fietsenwinkel betaalt het salaris van de verkoper. Tot welke soort bedrijfskosten hoort dit salaris? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["loonkosten/loon"],
+      "minTreffers": 1,
+      "modelantwoord": "Loonkosten.",
       "uitleg": "40 fietsen = inkoopwaarde; salaris = loonkosten; huur = huisvestingskosten; advertentie = verkoopkosten."
     }
   ]

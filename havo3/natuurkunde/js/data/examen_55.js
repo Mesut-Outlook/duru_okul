@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee redenen waarom Nederland overstapt van fossiele brandstoffen naar duurzame energiebronnen zoals zon en wind.",
-      "sleutelwoorden": [
-        "raken op/eindig",
-        "geen CO2/nauwelijks CO2"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Fossiele brandstoffen raken op, terwijl duurzame bronnen zoals zon en wind niet opraken; bovendien stoten duurzame bronnen geen of nauwelijks CO2 uit.",
+      "vraag": "Noem één reden waarom Nederland overstapt van fossiele brandstoffen naar zon en wind. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["raken op/opraken/eindig/co2"],
+      "minTreffers": 1,
+      "modelantwoord": "Fossiele brandstoffen raken op.",
       "uitleg": "Fossiele brandstoffen zijn eindig en hun verbranding stoot CO2 uit; duurzame bronnen raken niet op en veroorzaken geen of nauwelijks CO2."
     }
   ]

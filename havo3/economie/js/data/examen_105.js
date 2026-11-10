@@ -180,27 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de vier productiefactoren en geef bij elk van de vier aan wat ermee wordt bedoeld.",
-      "sleutelwoorden": [
-        "kapitaal",
-        "arbeid",
-        "natuur",
-        "ondernemerschap"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Kapitaal: machines, gebouwen, gereedschappen, hulpmiddelen en geld (kapitaalgoederen). 2. Arbeid: de werknemers die het werk verrichten. 3. Natuur: onbewerkte stoffen uit de natuur (zoals hout), de vestigingsplaats en energie. 4. Ondernemerschap: het zo efficiënt mogelijk combineren van de productiefactoren.",
+      "vraag": "Noem één van de vier productiefactoren. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["kapitaal/arbeid/natuur/ondernemerschap"],
+      "minTreffers": 1,
+      "modelantwoord": "Arbeid.",
       "uitleg": "Noem kapitaal, arbeid, natuur en ondernemerschap met hun betekenis."
     },
     {
       "type": "open",
-      "vraag": "Een meubelmakerij maakte vorig jaar met 15 medewerkers 1.800 tafels. Dit jaar maken dezelfde 15 medewerkers met betere zaagmachines 2.160 tafels. Bereken de arbeidsproductiviteit per medewerker in beide jaren en leg uit waarom de kosten per tafel hierdoor dalen.",
-      "sleutelwoorden": [
-        "120",
-        "144",
-        "verdelen/meerdere producten/meer tafels"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Vorig jaar: 1.800 / 15 = 120 tafels per medewerker. Dit jaar: 2.160 / 15 = 144 tafels per medewerker. Omdat elke medewerker in dezelfde tijd meer tafels maakt, kan het bedrijf de kosten verdelen over meer tafels en dalen de kosten per tafel.",
+      "vraag": "Een meubelmakerij maakt dit jaar met 15 medewerkers 2.160 tafels. Bereken de arbeidsproductiviteit per medewerker dit jaar. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["144"],
+      "minTreffers": 1,
+      "modelantwoord": "144 tafels per medewerker.",
       "uitleg": "Arbeidsproductiviteit stijgt van 120 naar 144 tafels per medewerker; kosten worden over meer producten verdeeld."
     }
   ]

@@ -167,27 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de gloeidraad van een lampje bij het inschakelen (als hij nog koud is) een lagere weerstand heeft dan wanneer de lamp fel brandt.",
-      "sleutelwoorden": [
-        "koude toestand/lage weerstand/lage temperatuur",
-        "heet/warmte atomen trillen harder",
-        "elektronen botsen/botsen vaker/meer weerstand"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In koude toestand trillen de metaalatomen in de gloeidraad relatief rustig, waardoor elektronen er makkelijk langs bewegen (lage weerstand). Zodra de lamp brandt en de draad gloeiend heet wordt (ca. 2500 °C), trillen de metaalatomen zeer hevig. De elektronen botsen daardoor veel vaker tegen de atomen, waardoor de weerstand sterk toeneemt.",
+      "vraag": "Wat gebeurt er met de weerstand van een gloeidraad als hij heet wordt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["toe/groter/hoger/stijgt/omhoog"],
+      "minTreffers": 1,
+      "modelantwoord": "De weerstand neemt toe, omdat de atomen harder trillen.",
       "uitleg": "Hogere temperatuur leidt tot hevigere atoomtrillingen en meer botsingen voor elektronen, dus hogere weerstand (PTC-effect)."
     },
     {
       "type": "open",
-      "vraag": "Twee weerstandsdraden A en B zijn gemaakt van hetzelfde materiaal. Draad A is 1,0 m lang en heeft een doorsnede van 0,2 mm². Draad B is 2,0 m lang en heeft een doorsnede van 0,8 mm². Beredeneer welke draad de grootste weerstand heeft.",
-      "sleutelwoorden": [
-        "draad a heeft/grotere weerstand/meeste weerstand",
-        "zo lang/2x zo lang/lengte factor 2",
-        "zo grote doorsnede/grotere doorsnede/doorsnede factor 4",
-        "helft/0,5/factor 0,5"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Draad B is 2× zo lang (weerstand 2× groter), maar heeft een 4× zo grote doorsnede (weerstand 4× kleiner). De totale weerstand van B is dus 2/4 = 0,5× (de helft) van die van A. Draad A heeft dus de grootste weerstand (twee keer zo groot als die van draad B).",
+      "vraag": "Twee draden van hetzelfde materiaal: A is 1,0 m lang met doorsnede 0,2 mm², B is 2,0 m lang met doorsnede 0,8 mm². Welke draad heeft de grootste weerstand? Antwoord als 'draad …'. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["draad a/a heeft"],
+      "minTreffers": 1,
+      "modelantwoord": "Draad A heeft de grootste weerstand.",
       "uitleg": "Verhouding R ~ l / A: Draad A heeft 1,0 / 0,2 = 5; Draad B heeft 2,0 / 0,8 = 2,5. Draad A heeft de grootste weerstand."
     }
   ]

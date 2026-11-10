@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beschrijf de kenmerken van twee fasen van de wereldhandel uit deze paragraaf.",
-      "sleutelwoorden": [
-        "grondstoffen/kolonie",
-        "onafhankelijk/dekolonisatie/chip/spanning"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In het handelskolonialisme moesten kolonies grondstoffen leveren; later werden de kolonies onafhankelijk en nu spelen politieke spanningen zoals de chipoorlog.",
+      "vraag": "Noem één kenmerk van een fase van de wereldhandel uit deze paragraaf. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["grondstoffen/kolonie/onafhankelijk/dekolonisatie/chip/spanning"],
+      "minTreffers": 1,
+      "modelantwoord": "In het handelskolonialisme moesten kolonies grondstoffen leveren.",
       "uitleg": "Kolonies leverden grondstoffen, daarna werden ze onafhankelijk, nu zijn er spanningen. (boek p. 22)"
     },
     {
       "type": "open",
-      "vraag": "Vat in twee zinnen samen hoe de invloed van landen over hun grenzen heen is veranderd.",
-      "sleutelwoorden": [
-        "grondstoffen/overheers",
-        "multinational/investering"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Vroeger overheersten landen overzeese gebieden voor grondstoffen; nu gaat het via multinationals en investeringen.",
+      "vraag": "Hoe oefenen landen nu invloed over hun grenzen heen uit, in plaats van het vroegere overheersen van overzeese gebieden? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["multinational/investering"],
+      "minTreffers": 1,
+      "modelantwoord": "Nu gaat het via multinationals en investeringen.",
       "uitleg": "Eerst overheersing voor grondstoffen, nu via multinationals en investeringen. (boek p. 22)"
     }
   ]

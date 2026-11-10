@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit tussen een actieve inkomensbron en een inkomensbron uit vermogen aan de hand van twee duidelijke voorbeelden.",
-      "sleutelwoorden": [
-        "arbeid/loon/salaris",
-        "bezit/rente/huur/dividend"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Inkomen uit arbeid is beloning voor werk (bijv. loon of salaris), terwijl inkomen uit bezit beloning is voor vermogen (bijv. spaarrente, dividend of huuropbrengst).",
+      "vraag": "Geef één voorbeeld van een inkomensbron uit vermogen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["rente/huur/dividend/bezit/verhuur/aandelen"],
+      "minTreffers": 1,
+      "modelantwoord": "Spaarrente.",
       "uitleg": "Arbeid vraagt een actieve inspanning; bezit levert rendement op over vermogen."
     },
     {
       "type": "open",
-      "vraag": "Noem de drie hoofdgroepen van gezinsuitgaven en geef bij elk één concreet voorbeeld.",
-      "sleutelwoorden": [
-        "vaste lasten",
-        "huishoudelijke",
-        "incidentele"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Vaste lasten (huur), 2. Huishoudelijke uitgaven (boodschappen), 3. Incidentele uitgaven (wasmachine/vakantie).",
+      "vraag": "Noem één van de drie hoofdgroepen van gezinsuitgaven. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["vaste lasten/huishoudelijke/incidentele"],
+      "minTreffers": 1,
+      "modelantwoord": "Vaste lasten.",
       "uitleg": "Dit zijn de drie standaardcategorieën van het NIBUD."
     }
   ]

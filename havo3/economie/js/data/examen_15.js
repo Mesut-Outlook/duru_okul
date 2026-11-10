@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Duru krijgt € 18 zakgeld per week en verdient € 30 per week met oppassen. Bereken haar totale gemiddelde inkomsten per maand. Schrijf je tussenstappen op.",
-      "sleutelwoorden": [
-        "48/18 + 30",
-        "208"
-      ],
+      "vraag": "Duru krijgt € 18 zakgeld per week en verdient € 30 per week met oppassen. Bereken haar gemiddelde inkomsten per maand (een jaar heeft 52 weken). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["208"],
       "minTreffers": 1,
-      "modelantwoord": "Totale weekinkomsten = € 18 + € 30 = € 48 per week. Per jaar = € 48 × 52 = € 2.496. Per maand = € 2.496 / 12 = € 208.",
+      "modelantwoord": "€ 208 per maand.",
       "uitleg": "(48 × 52) / 12 = € 208 per maand."
     },
     {
       "type": "open",
-      "vraag": "Noem drie concrete tips die het NIBUD geeft om grip te houden op je maandelijkse geldzaken.",
-      "sleutelwoorden": [
-        "begroting/overzicht maken/budgetplan",
-        "reserveer/buffer/noodbuffer",
-        "vaste lasten/abonnementen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Maak maandelijks een begroting (overzicht van inkomsten en uitgaven). 2. Reserveer maandelijks geld voor onverwachte uitgaven (noodbuffer). 3. Controleer regelmatig vaste lasten en zeg ongebruikte abonnementen op.",
+      "vraag": "Noem één tip van het NIBUD om grip te houden op je maandelijkse geldzaken. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["begroting/overzicht/budget/noodbuffer/reserveer/buffer/vaste lasten/abonnement"],
+      "minTreffers": 1,
+      "modelantwoord": "Maak een begroting.",
       "uitleg": "Overzicht, buffers en scherpte op vaste lasten zijn de pijlers van gezond financieel beheer."
     }
   ]

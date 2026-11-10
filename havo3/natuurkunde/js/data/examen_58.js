@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat er gebeurt met de CO2 die vrijkomt bij het gebruik van biomassa, en waarom voorstanders biomassa daarom als duurzaam beschouwen.",
-      "sleutelwoorden": [
-        "opgenomen/opneemt",
-        "planten/gewassen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De CO2 die vrijkomt bij het gebruik van biomassa wordt weer opgenomen door de planten die voor biomassa gekweekt worden, waardoor voorstanders biomassa als duurzame energiebron beschouwen.",
+      "vraag": "Door wat wordt de CO2 die vrijkomt bij het gebruik van biomassa weer opgenomen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["planten/gewassen/bomen"],
+      "minTreffers": 1,
+      "modelantwoord": "De CO2 wordt weer opgenomen door de planten die voor biomassa gekweekt worden.",
       "uitleg": "De vrijgekomen CO2 wordt weer opgenomen door nieuw gekweekte planten, wat het als duurzaam laat gelden."
     }
   ]

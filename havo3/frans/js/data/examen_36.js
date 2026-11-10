@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe de cijferbeoordeling op Franse scholen werkt (maximumscore en voldoende-grens).",
-      "sleutelwoorden": [
-        "20/twintig/schaal van 20",
-        "10/tien/voldoende/moyenne"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Franse scholen beoordelen op een schaal van 0 tot 20. Een score van 10/20 (la moyenne) geldt als de minimale voldoende.",
+      "vraag": "Op welke schaal (maximumscore) geven Franse scholen cijfers? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["20/twintig"],
+      "minTreffers": 1,
+      "modelantwoord": "Op een schaal van 0 tot 20.",
       "uitleg": "Cijfers lopen van 0 tot 20, waarbij 10/20 de voldoende is."
     },
     {

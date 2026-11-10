@@ -193,25 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil in betekenis tussen <b>'faire les magasins'</b> en <b>'faire les courses'</b>?",
-      "sleutelwoorden": [
-        "winkelen/kleding/shoppen",
-        "boodschappen/eten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "'Faire les magasins' betekent winkelen of shoppen (voor kleding en plezier), terwijl 'faire les courses' specifiek boodschappen doen betekent (zoals eten in de supermarkt).",
+      "vraag": "Wat betekent <b>'faire les courses'</b>? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["boodschappen"],
+      "minTreffers": 1,
+      "modelantwoord": "Boodschappen doen.",
       "uitleg": "'Faire les magasins' is shoppen; 'faire les courses' is boodschappen doen."
     },
     {
       "type": "open",
-      "vraag": "Vertaal de zin <b>'Je déteste sortir quand il pleut'</b> naar goed Nederlands.",
-      "sleutelwoorden": [
-        "hekel/haat",
-        "gaan/uitgaan/naar buiten",
-        "regent"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Ik heb er een hekel aan om uit te gaan als het regent.",
+      "vraag": "Vertaal de zin <b>'Je déteste sortir quand il pleut'</b> naar goed Nederlands. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["hekel/haat/verafschuw","regent"],
+      "minTreffers": 1,
+      "modelantwoord": "Ik heb een hekel aan uitgaan als het regent.",
       "uitleg": "'Je déteste sortir quand il pleut' = Ik haat het om uit te gaan als het regent."
     }
   ]

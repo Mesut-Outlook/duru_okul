@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Link these events into one sentence using <i>after</i> and the past perfect: <i>The detective found the clue. Then he called his partner.</i>",
-      "sleutelwoorden": [
-        "had found"
-      ],
+      "vraag": "Link these events into one sentence using <i>after</i> and the past perfect: <i>The detective found the clue. Then he called his partner.</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["had found"],
       "minTreffers": 1,
       "modelantwoord": "After the detective had found the clue, he called his partner.",
       "uitleg": "The first action takes the past perfect (had found), the second takes the past simple (called) (boek p.A102)."

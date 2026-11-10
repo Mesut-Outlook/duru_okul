@@ -198,12 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je in een auto op waterstof kunt rijden zonder dat er schadelijke stoffen vrijkomen.",
-      "sleutelwoorden": [
-        "h2o"
-      ],
+      "vraag": "Een brandstofcel-auto rijdt op H<sub>2</sub>-gas. Welke ongevaarlijke stof komt als enig product uit de uitlaat? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["h2o/water"],
       "minTreffers": 1,
-      "modelantwoord": "In de brandstofcel reageert waterstof met zuurstof en ontstaat alleen water (H2O) als product; dat is volledig schoon, er komen geen schadelijke stoffen vrij.",
+      "modelantwoord": "Er ontstaat alleen water (H2O) als product.",
       "uitleg": "Bij de reactie van waterstof met zuurstof in de brandstofcel ontstaat alleen water als product, dus geen schadelijke uitstoot."
     }
   ]

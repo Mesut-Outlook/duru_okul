@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Amira maakt houten vogelhuisjes en verkoopt die op een markt. Haar constante kosten per jaar zijn € 450 (kraamhuur en gereedschap). Haar variabele kosten voor het hele jaar samen zijn € 750 (hout, schroeven en verf). Ze maakt 200 vogelhuisjes per jaar en rekent een winstmarge van 50% van de kostprijs. Bereken de kostprijs én de verkoopprijs van één vogelhuisje.",
-      "sleutelwoorden": [
-        "6/6,00",
-        "9/9,00"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Constante kosten per huisje = € 450 / 200 = € 2,25. Variabele kosten per huisje = € 750 / 200 = € 3,75. Kostprijs = € 2,25 + € 3,75 = € 6,00. Verkoopprijs = € 6,00 × 1,50 = € 9,00.",
+      "vraag": "Amira heeft € 450 constante kosten per jaar en € 750 variabele kosten per jaar, en maakt 200 vogelhuisjes. Bereken de kostprijs van één vogelhuisje. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["6"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 6 per vogelhuisje.",
       "uitleg": "Kostprijs = (€ 450 + € 750) / 200 = € 6,00; verkoopprijs = € 6,00 + 50% = € 9,00."
     },
     {
       "type": "open",
-      "vraag": "Een product heeft een kostprijs van € 40 en de winstmarge is 35% van de kostprijs. Bereken de winst per product en de totale winst als er 800 producten worden verkocht.",
-      "sleutelwoorden": [
-        "14/14,00",
-        "11.200/11200"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Winst per product = 35% × € 40 = € 14. Totale winst = 800 × € 14 = € 11.200.",
+      "vraag": "Een product heeft een kostprijs van € 40 en een winstmarge van 35% van de kostprijs. Bereken de winst per product. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["14"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 14 per product.",
       "uitleg": "€ 14 per product; € 11.200 bij 800 stuks."
     }
   ]

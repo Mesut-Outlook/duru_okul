@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain why the Past Continuous is used in: <i>'At 10 PM last night, I was studying for my English exam.'</i>",
-      "sleutelwoorden": [
-        "in progress/ongoing/happening/specific time/past"
-      ],
+      "vraag": "Why is the Past Continuous used in: <i>'At 10 PM last night, I was studying for my English exam.'</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["in progress/ongoing/happening/at that moment/specific"],
       "minTreffers": 1,
-      "modelantwoord": "The Past Continuous is used because the action was ongoing/in progress at that exact specific moment in the past (10 PM).",
+      "modelantwoord": "Because the action was in progress at that moment.",
       "uitleg": "De Past Continuous geeft aan dat de handeling op dat exacte tijdstip in het verleden aan de gang was."
     },
     {

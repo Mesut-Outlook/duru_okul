@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een fabriekshal daalde in één jaar in waarde van € 450.000 naar € 440.000, doordat er jaarlijks een vast percentage van 2% van de nieuwwaarde wordt afgeschreven. Bereken de oorspronkelijke nieuwwaarde van deze fabriekshal én hoeveel jaar er inmiddels op is afgeschreven.",
-      "sleutelwoorden": [
-        "500.000/500000",
-        "6 jaar/6"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Jaarlijkse afschrijving = € 450.000 − € 440.000 = € 10.000, dat is 2% van de nieuwwaarde: € 10.000 / 0,02 = € 500.000. Totaal afgeschreven = € 500.000 − € 440.000 = € 60.000, dus € 60.000 / € 10.000 = 6 jaar.",
+      "vraag": "Een fabriekshal daalde in één jaar in waarde van € 450.000 naar € 440.000, doordat er jaarlijks 2% van de nieuwwaarde wordt afgeschreven. Bereken de oorspronkelijke nieuwwaarde. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["500 000/500000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 500.000",
       "uitleg": "Nieuwwaarde = 10.000 / 0,02 = € 500.000; afgeschreven 60.000 / 10.000 = 6 jaar."
     },
     {
       "type": "open",
-      "vraag": "Een tassenfabriek heeft bij een productie van 6.000 tassen per jaar in totaal € 150.000 aan kosten (constante + variabele kosten). De variabele kosten bedragen € 9 per tas. Bereken eerst de totale constante kosten en bereken daarna de totale kosten wanneer de fabriek 12.000 tassen per jaar maakt.",
-      "sleutelwoorden": [
-        "96.000/96000",
-        "204.000/204000"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij 6.000 tassen zijn de variabele kosten 6.000 × € 9 = € 54.000. De totale constante kosten zijn € 150.000 − € 54.000 = € 96.000. Bij 12.000 tassen zijn de totale kosten € 96.000 + (12.000 × € 9) = € 96.000 + € 108.000 = € 204.000.",
+      "vraag": "Een tassenfabriek heeft bij 6.000 tassen per jaar € 150.000 aan totale kosten, met € 9 variabele kosten per tas. Bereken de totale constante kosten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["96 000/96000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 96.000",
       "uitleg": "Totale constante kosten = € 96.000; totale kosten bij 12.000 tassen = € 96.000 + € 108.000 = € 204.000."
     }
   ]

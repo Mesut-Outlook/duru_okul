@@ -167,25 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je in het practicumlokaal met een meetinstrument en een maatglas de soortelijke massa (rho) van een steentje bepaalt. Noem de handelingen en de berekening.",
-      "sleutelwoorden": [
-        "weegschaal/massa wegen/weeg het",
-        "onderdompelmethode/maatcilinder",
-        "massa delen door volume/formule/gram per cm3"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Weeg het droge steentje op de weegschaal om de massa (m in gram) te bepalen. 2. Vul een maatcilinder met water en lees het beginvolume af (V_begin). Dompel het steentje onder en lees het nieuwe niveau af (V_eind). Het volume van het steentje is V = V_eind - V_begin (in cm³ of mL). 3. Bereken de dichtheid met de formule ρ = m / V (in g/cm³).",
+      "vraag": "Met welk meetinstrument bepaal je de massa van het steentje? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["weegschaal/balans"],
+      "minTreffers": 1,
+      "modelantwoord": "Je bepaalt de massa met een weegschaal.",
       "uitleg": "Massa meten + onderdompelmethode + dichtheidsformule."
     },
     {
       "type": "open",
-      "vraag": "Verklaar waarom een mens in het water makkelijker blijft drijven na een diepe ademhaling.",
-      "sleutelwoorden": [
-        "borstkas/volume neemt toe/uitzetting",
-        "dichtheid/lichter drijven/minder dicht"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Met ingeademde longen zet de borstkas uit en neemt het totale volume van het lichaam toe terwijl de massa nauwelijks verandert. Hierdoor wordt de gemiddelde dichtheid van het lichaam kleiner dan die van water (ρ < 1,0 g/cm³), waardoor je drijft. Bij uitademen neemt het volume af, waardoor de gemiddelde dichtheid boven 1,0 g/cm³ stijgt en het lichaam naar beneden zinkt.",
+      "vraag": "Wat gebeurt er met het volume van je lichaam als je diep inademt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["toe/groter/uitzet"],
+      "minTreffers": 1,
+      "modelantwoord": "Het volume neemt toe, dus je gemiddelde dichtheid wordt kleiner en je drijft makkelijker.",
       "uitleg": "Verandering van lichaamsvolume beïnvloedt de gemiddelde dichtheid t.o.v. water."
     }
   ]

@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Schrijf een korte zin in het Frans waarin je aan de verkoper vraagt of ze deze trui in maat M (moyen) hebben.",
-      "sleutelwoorden": [
-        "avez-vous/vous avez",
-        "pull",
-        "taille/m"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bonjour, avez-vous ce pull en taille M, s'il vous plaît ?",
+      "vraag": "Vraag in het Frans in één korte zin of ze deze trui in maat M hebben. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["avez-vous/vous avez/avez vous","pull"],
+      "minTreffers": 1,
+      "modelantwoord": "Avez-vous ce pull en taille M ?",
       "uitleg": "'Avez-vous ce pull en taille M, s'il vous plaît ?'."
     },
     {

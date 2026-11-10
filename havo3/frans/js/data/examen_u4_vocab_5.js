@@ -191,26 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de vier Franse vormen van het lijdend voorwerp (COD) die de woorden 'hem', 'haar', 'het' en 'hen/ze' vertalen.",
-      "modelantwoord": "Dat zijn de voornaamwoorden le, la, l' en les.",
-      "sleutelwoorden": [
-        "le",
-        "la",
-        "l'",
-        "les"
-      ],
-      "minTreffers": 3,
+      "vraag": "Welk Frans voornaamwoord (COD) vertaalt 'hem' bij een mannelijk woord? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het voornaamwoord is le.",
+      "sleutelwoorden": ["le"],
+      "minTreffers": 1,
       "uitleg": "De vier vormen zijn le, la, l' en les."
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat er gebeurt met het voorzetsel à wanneer het gecombineerd wordt met de lidwoorden le en les.",
-      "modelantwoord": "De combinaties trekken samen tot respectievelijk au en aux.",
-      "sleutelwoorden": [
-        "au",
-        "aux"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke samentrekking krijg je bij het voorzetsel <b>à</b> gevolgd door <b>les</b>? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het wordt aux.",
+      "sleutelwoorden": ["aux"],
+      "minTreffers": 1,
       "uitleg": "à + le wordt au, en à + les wordt aux."
     }
   ]

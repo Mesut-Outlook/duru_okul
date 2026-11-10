@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een kantoor verwerkt met 12 medewerkers 3.000 aanvragen per maand. Na de aanschaf van een nieuw computerprogramma verwerken dezelfde 12 medewerkers 3.600 aanvragen per maand. Bereken de arbeidsproductiviteit in beide situaties en met hoeveel procent die is gestegen.",
-      "sleutelwoorden": [
-        "250",
-        "300",
-        "20%/20 procent"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Eerst: 3.000 / 12 = 250 aanvragen per medewerker. Daarna: 3.600 / 12 = 300 aanvragen per medewerker. Stijging = (300 − 250) / 250 × 100% = 20%.",
+      "vraag": "Een kantoor verwerkt na de aanschaf van een nieuw computerprogramma met 12 medewerkers 3.600 aanvragen per maand. Bereken de arbeidsproductiviteit in deze situatie. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["300"],
+      "minTreffers": 1,
+      "modelantwoord": "300 aanvragen per medewerker per maand.",
       "uitleg": "250 → 300 aanvragen per medewerker: een stijging van 20%."
     },
     {
       "type": "open",
-      "vraag": "Op een andere afdeling werken 25 medewerkers die samen 1.500 dossiers per week behandelen. Na een reorganisatie behandelen 20 medewerkers samen 1.600 dossiers per week. Is de arbeidsproductiviteit per medewerker gestegen of gedaald? Bereken beide waarden.",
-      "sleutelwoorden": [
-        "60",
-        "80"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Eerst: 1.500 / 25 = 60 dossiers per medewerker per week. Daarna: 1.600 / 20 = 80 dossiers per medewerker per week. De arbeidsproductiviteit is gestegen.",
+      "vraag": "Na een reorganisatie behandelen 20 medewerkers samen 1.600 dossiers per week. Bereken de arbeidsproductiviteit per medewerker. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["80"],
+      "minTreffers": 1,
+      "modelantwoord": "80 dossiers per medewerker per week.",
       "uitleg": "60 → 80 dossiers per medewerker per week: gestegen."
     }
   ]

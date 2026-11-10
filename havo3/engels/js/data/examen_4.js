@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Name two visual elements that can help you understand the main topic of an English article before reading the full text.",
-      "sleutelwoorden": [
-        "headline/title/heading",
-        "pictures/photos/captions/subheadings/diagrams"
-      ],
+      "vraag": "Name one visual element that helps you understand the main topic of an English article before reading the full text. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["headline/title/heading/pictures/photos/captions/subheadings/diagrams"],
       "minTreffers": 1,
-      "modelantwoord": "Headlines/titles and pictures or photos with captions give immediate clues about the article topic.",
+      "modelantwoord": "A headline gives a clue about the topic.",
       "uitleg": "Koppen, tussenkopjes en afbeeldingen geven direct inzicht in het onderwerp."
     },
     {

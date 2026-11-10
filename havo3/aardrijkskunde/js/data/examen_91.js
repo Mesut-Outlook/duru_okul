@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem drie uitdagingen voor de toekomst van de Europese handel.",
-      "sleutelwoorden": [
-        "politieke spanning",
-        "duurzaam",
-        "klimaat",
-        "technologisch/technologie"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Politieke spanningen, duurzaamheid, klimaatvraagstukken en technologische ontwikkelingen; de EU kan de eigen markt meer beschermen.",
+      "vraag": "Noem één uitdaging voor de toekomst van de Europese handel. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["politieke/spanning/duurzaam/klimaat/technolog"],
+      "minTreffers": 1,
+      "modelantwoord": "Politieke spanningen zijn een grote uitdaging.",
       "uitleg": "De toekomst hangt af van politieke spanningen, duurzaamheid, klimaatvraagstukken en technologische ontwikkelingen. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Een klasgenoot zegt: ‘De EU is alleen maar goed voor de handel.’ Geef één argument vóór en één argument tegen.",
-      "sleutelwoorden": [
-        "belemmering/vrijhandel",
-        "traag/regels"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Voor: handelsbelemmeringen zijn weggenomen en er is vrijhandel. Tegen: de besluitvorming verloopt vaak traag en inwoners moeten regels volgen waar ze het niet mee eens zijn.",
+      "vraag": "Een klasgenoot zegt: ‘De EU is alleen maar goed voor de handel.’ Geef één argument tegen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["traag/regels/besluitvorming"],
+      "minTreffers": 1,
+      "modelantwoord": "Besluiten gaan vaak traag en inwoners moeten regels volgen.",
       "uitleg": "Voor: er zijn handelsbelemmeringen weggenomen. Tegen: de besluitvorming is traag en er zijn regels waar mensen het niet mee eens zijn. (boek p. 38)"
     }
   ]

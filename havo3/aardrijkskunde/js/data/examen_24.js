@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de welvarende regio in het noordoosten van Spanje waar al jarenlang een sterke onafhankelijkheidsbeweging actief is.",
-      "sleutelwoorden": [
-        "Catalonie/Catalonië"
-      ],
+      "vraag": "Welke welvarende regio in het noordoosten van Spanje heeft een sterke onafhankelijkheidsbeweging? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["catalonie/catalonië/catalunya"],
       "minTreffers": 1,
-      "modelantwoord": "In Catalonië is een grote onafhankelijkheidsbeweging actief.",
+      "modelantwoord": "Dat is Catalonië.",
       "uitleg": "Catalonië streeft naar een zelfstandige Catalaanse republiek."
     },
     {
       "type": "open",
-      "vraag": "Geef een reden waarom de Europese integratie na 1945 wordt beschouwd als een groot stabiliteitsproject.",
-      "sleutelwoorden": [
-        "oorlog/samenwerking/economie/handel/vrede/overleg"
-      ],
+      "vraag": "Noem één reden waarom Europese integratie na 1945 een stabiliteitsproject wordt genoemd. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["oorlog/vrede/samenwerking/economie/handel/overleg"],
       "minTreffers": 1,
-      "modelantwoord": "Door hechte economische samenwerking en overleg is er tussen de lidstaten al decennialang geen oorlog meer geweest.",
+      "modelantwoord": "Door samenwerking is er geen oorlog meer tussen lidstaten.",
       "uitleg": "Economische integratie maakte gewapende strijd tussen aartsvijanden onrendabel en onmogelijk."
     }
   ]

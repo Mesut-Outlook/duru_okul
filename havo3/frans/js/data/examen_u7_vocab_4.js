@@ -191,26 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Aan welke drie grammaticale personen kun je in het Frans een gebiedende wijs (impératif) richten?",
-      "modelantwoord": "Aan de jij-vorm (tu), de wij-vorm (nous voor 'laten we') en de jullie/u-vorm (vous).",
-      "sleutelwoorden": [
-        "tu/jij",
-        "nous/wij",
-        "vous/jullie/u"
-      ],
-      "minTreffers": 2,
+      "vraag": "Noem één grammaticale persoon waaraan je in het Frans een gebiedende wijs (impératif) kunt richten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld de jij-vorm (tu).",
+      "sleutelwoorden": ["tu/nous/vous/jij/jullie/wij-vorm"],
+      "minTreffers": 1,
       "uitleg": "De impératif bestaat voor tu (jij), nous (laten we) en vous (jullie / u)."
     },
     {
       "type": "open",
-      "vraag": "Welke bijzondere spellingsregel geldt voor regelmatige Franse werkwoorden op -er in de jij-vorm van de gebiedende wijs?",
-      "modelantwoord": "Bij de jij-vorm valt de eindletter -s van de tegenwoordige tijd weg.",
-      "sleutelwoorden": [
-        "eindletter/letter/slotletter",
-        "s/-s",
-        "wegvalt/verdwijnt/weg"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke letter valt bij regelmatige -er werkwoorden weg in de jij-vorm van de gebiedende wijs? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De eindletter s valt weg.",
+      "sleutelwoorden": ["s"],
+      "minTreffers": 1,
       "uitleg": "In de jij-vorm van een werkwoord op -er valt de slot -s weg (bijv. Chante!, Regarde!)."
     }
   ]

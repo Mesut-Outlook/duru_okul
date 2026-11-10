@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is high battery capacity considered an essential quality for modern electronic gadgets?",
-      "sleutelwoorden": [
-        "portability/hours/usage/long/without/recharge"
-      ],
+      "vraag": "Why is high battery capacity important for modern electronic gadgets? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["portability/hours/usage/long/without/recharge/all day"],
       "minTreffers": 1,
-      "modelantwoord": "High battery capacity allows users to use their portable devices all day long without needing frequent recharging.",
+      "modelantwoord": "Users can use their devices all day without recharging.",
       "uitleg": "Lange accuduur zorgt voor continu gebruik zonder steeds te hoeven opladen."
     },
     {

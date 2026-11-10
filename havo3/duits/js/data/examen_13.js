@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe zeg je in het Duits dat je met de bus naar school reist?",
+      "vraag": "Hoe zeg je in het Duits dat je met de bus naar school reist? <i>(Eén korte zin is genoeg.)</i>",
       "modelantwoord": "Ich fahre mit dem Bus zur Schule.",
-      "sleutelwoorden": [
-        "mit dem Bus",
-        "fahre mit dem Bus"
-      ],
+      "sleutelwoorden": ["mit dem bus"],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'mit dem Bus'."
     },
     {
       "type": "open",
-      "vraag": "Waarom zeg je 'mit dem Zug' en niet 'mit den Zug' in het Duits?",
-      "modelantwoord": "Omdat het voorzetsel mit altijd de 3e naamval (Dativ) regeert.",
-      "sleutelwoorden": [
-        "3e naamval",
-        "Dativ",
-        "voorzetsel mit"
-      ],
+      "vraag": "Waarom zeg je 'mit dem Zug' en niet 'mit den Zug' in het Duits? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Omdat mit altijd de 3e naamval (Dativ) krijgt.",
+      "sleutelwoorden": ["3e naamval/derde naamval/dativ/datief"],
       "minTreffers": 1,
       "uitleg": "Het voorzetsel mit eist altijd de 3e naamval (Dativ)."
     }

@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in het Nederlands uit wat het verschil is tussen de werkwoorden <i>'prêter'</i> en <i>'emprunter'</i>.",
-      "sleutelwoorden": [
-        "uitlenen/geven",
-        "lenen/krijgen/ontvangen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "'Prêter' betekent 'uitlenen' (aan iemand geven), terwijl 'emprunter' 'lenen' (van iemand ontvangen) betekent.",
+      "vraag": "Wat betekent het werkwoord <i>'prêter'</i> in het Nederlands? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["uitlenen/uitleen/aan iemand lenen"],
+      "minTreffers": 1,
+      "modelantwoord": "Uitlenen.",
       "uitleg": "Prêter = uitlenen; emprunter = lenen."
     },
     {

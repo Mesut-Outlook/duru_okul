@@ -192,24 +192,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de twee belangrijkste eigenschappen van het spiegelbeeld dat ontstaat bij een vlakke spiegel (denk aan type beeld en afstand).",
-      "sleutelwoorden": [
-        "virtueel/virtuele",
-        "even ver/gelijke afstand"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het beeld is een virtueel beeld en staat even ver achter de spiegel als het voorwerp ervoor staat (d_voorwerp = d_beeld).",
+      "vraag": "Wat geldt voor de afstand van het beeld achter een vlakke spiegel ten opzichte van de afstand van het voorwerp voor de spiegel? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["even ver/gelijk/zelfde"],
+      "minTreffers": 1,
+      "modelantwoord": "Het beeld staat even ver achter de spiegel als het voorwerp ervoor.",
       "uitleg": "Een vlakke spiegel levert een virtueel beeld op dezelfde afstand achter de spiegel op."
     },
     {
       "type": "open",
-      "vraag": "Leg in eigen woorden uit waarom een bioscoopscherm juist een ruw, diffuus weerkaatsend oppervlak moet hebben in plaats van een gladde spiegel.",
-      "sleutelwoorden": [
-        "alle richtingen/overal",
-        "bezoekers/publiek/iedereen/alle plekken"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door diffuse weerkaatsing wordt het geprojecteerde licht in alle richtingen verstrooid, zodat bezoekers op alle zitplaatsen in de zaal het beeld duidelijk kunnen zien.",
+      "vraag": "Hoe wordt het licht door een ruw bioscoopscherm teruggekaatst? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["alle richtingen/verstrooid/alle kanten"],
+      "minTreffers": 1,
+      "modelantwoord": "Het licht wordt in alle richtingen verstrooid.",
       "uitleg": "Een spiegeloppervlak zou slechts één felle reflectie naar één plek sturen, terwijl diffuus oppervlak de film voor iedereen zichtbaar maakt."
     }
   ]

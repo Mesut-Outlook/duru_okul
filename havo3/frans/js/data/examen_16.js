@@ -119,15 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee landen (buiten Frankrijk) waar Frans een officiële taal is.",
-      "sleutelwoorden": [
-        "belgië/belgique",
-        "zwitserland/suisse",
-        "canada/québec/quebec",
-        "senegal/marokko/maroc/luxemburg/luxembourg"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "België (Belgique), Zwitserland (Suisse), Canada of Luxemburg.",
+      "vraag": "Noem één land buiten Frankrijk waar Frans een officiële taal is. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["belgi/belgique/zwitserland/suisse/canada/québec/quebec/luxemburg/luxembourg/senegal/marokko/maroc"],
+      "minTreffers": 1,
+      "modelantwoord": "België.",
       "uitleg": "Landen van de Francofonie zijn o.a. België, Zwitserland, Canada, Luxemburg, Monaco, Senegal."
     },
     {

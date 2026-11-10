@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een kledingwinkel verkoopt in de uitverkoop drie keer zoveel als normaal. Wat gebeurt er met de huur en wat met de inkoopwaarde van de omzet? Leg uit.",
-      "sleutelwoorden": [
-        "gelijk/hetzelfde/onveranderd",
-        "stijgt/stijgen/toeneemt/hoger"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De huur blijft gelijk, want die hangt niet af van de verkoop; de inkoopwaarde van de omzet stijgt, want er wordt meer verkocht.",
+      "vraag": "Een kledingwinkel verkoopt in de uitverkoop drie keer zoveel als normaal. Wat gebeurt er dan met de huur? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gelijk/hetzelfde/verandert niet/onveranderd/constant"],
+      "minTreffers": 1,
+      "modelantwoord": "De huur blijft gelijk.",
       "uitleg": "Huur is constant en blijft gelijk; de inkoopwaarde van de omzet is variabel en stijgt met de verkoop."
     },
     {
       "type": "open",
-      "vraag": "Loonkosten kunnen constant of variabel zijn. Leg uit wanneer loonkosten variabel zijn.",
-      "sleutelwoorden": [
-        "uitzendkrachten/oproepkrachten/nulurencontract",
-        "uren/oproep"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Loonkosten zijn variabel als personeel, zoals uitzendkrachten, alleen wordt betaald voor de uren dat het wordt ingezet.",
+      "vraag": "Loonkosten kunnen constant of variabel zijn. Noem één voorbeeld van personeel met variabele loonkosten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["uitzend/oproep/nulurencontract/flex"],
+      "minTreffers": 1,
+      "modelantwoord": "Uitzendkrachten.",
       "uitleg": "Bij uitzendkrachten betaalt het bedrijf alleen de uren waarvoor ze worden opgeroepen, dus de loonkosten bewegen mee met het werk."
     }
   ]

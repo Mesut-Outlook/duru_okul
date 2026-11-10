@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Which verb form follows <i>to love</i> and <i>to miss</i>? Answer in one English sentence.",
-      "sleutelwoorden": [
-        "gerund/-ing/ing"
-      ],
+      "vraag": "Which verb form follows <i>to love</i> and <i>to miss</i>? Answer in one English sentence. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gerund/-ing/ing form/verb ing/verb+ing"],
       "minTreffers": 1,
-      "modelantwoord": "After to love and to miss you use a gerund (verb + -ing).",
+      "modelantwoord": "After to love and to miss you use a gerund.",
       "uitleg": "To avoid wordt gevolgd door een gerund (verb + -ing), zoals in 'We avoid travelling during rush hour' (boek p.A56)."
     },
     {

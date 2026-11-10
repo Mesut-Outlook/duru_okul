@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem een voorbeeld van een biologische reststof die kan worden benut als biomassa voor energieopwekking.",
-      "sleutelwoorden": [
-        "hout/houtsnippers/mest/gft/frituurvet/plantenresten"
-      ],
+      "vraag": "Noem één biologische reststof die als biomassa voor energieopwekking kan dienen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["hout/mest/gft/frituurvet/plantenresten"],
       "minTreffers": 1,
-      "modelantwoord": "Houtsnippers, mest of gft-afval zijn veelgebruikte grondstoffen voor biomassa.",
+      "modelantwoord": "Houtsnippers, mest of gft-afval kan als biomassa dienen.",
       "uitleg": "Biomassa benut organisch afvalmateriaal om warmte of biobrandstoffen te produceren."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom rijke westerse landen volgens het principe van klimaatrechtvaardigheid een grotere financiële bijdrage moeten leveren aan klimaatmaatregelen.",
-      "sleutelwoorden": [
-        "historisch/verleden/meeste/uitstoot/geld/vervuiler"
-      ],
+      "vraag": "Noem één reden waarom rijke westerse landen volgens klimaatrechtvaardigheid meer moeten betalen voor klimaatmaatregelen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["historisch/verleden/meeste/uitstoot/vervuiler/geld"],
       "minTreffers": 1,
-      "modelantwoord": "Rijke landen hebben historisch gezien sinds de industriële revolutie de meeste CO2 uitgestoten en beschikken over meer financiële middelen.",
+      "modelantwoord": "Rijke landen hebben in het verleden de meeste CO2 uitgestoten.",
       "uitleg": "De historische vervuilers dragen de morele en financiële verantwoordelijkheid voor de aangerichte schade."
     }
   ]

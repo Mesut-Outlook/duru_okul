@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke twee lidwoorden veranderen in de 4e naamval (Akkusativ) als het zelfstandig naamwoord mannelijk is?",
-      "modelantwoord": "Der wordt den en ein wordt einen.",
-      "sleutelwoorden": [
-        "den",
-        "einen"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke vorm krijgt 'der' in de 4e naamval bij een mannelijk zelfstandig naamwoord? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Der wordt den.",
+      "sleutelwoorden": ["den"],
+      "minTreffers": 1,
       "uitleg": "Der verandert in den en ein verandert in einen."
     },
     {
       "type": "open",
-      "vraag": "Hoe reageer je enthousiast op een Duitse uitnodiging voor een feest?",
-      "modelantwoord": "Ja gerne! Das klingt toll! (of Ich komme gerne!)",
-      "sleutelwoorden": [
-        "Ja gerne",
-        "Das klingt toll",
-        "Ich komme"
-      ],
+      "vraag": "Hoe reageer je enthousiast op een Duitse uitnodiging voor een feest? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Ja gerne, das klingt toll!",
+      "sleutelwoorden": ["ja gerne/klingt toll/ich komme/gern"],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'Ja gerne!' of 'Das klingt toll!'."
     }

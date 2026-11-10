@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een elektronicawinkel verkoopt een koptelefoon voor € 72,60 inclusief 21% btw. Bereken de prijs exclusief btw en het btw-bedrag.",
-      "sleutelwoorden": [
-        "60,00/60 euro/€ 60",
-        "12,60/12.60"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Prijs exclusief btw = € 72,60 / 1,21 = € 60,00. Btw-bedrag = € 72,60 − € 60,00 = € 12,60.",
+      "vraag": "Een koptelefoon kost € 72,60 inclusief 21% btw. Bereken het btw-bedrag. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["12 60"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 12,60",
       "uitleg": "Excl. btw € 60,00; btw € 12,60."
     },
     {
       "type": "open",
-      "vraag": "Bekijk de opbouw van de LPG-prijs op blz. 119: productie € 0,660, winst € 0,264, accijns € 0,171 en btw € 0,224 (totaal € 1,319 per liter). Bereken hoeveel procent van de totale literprijs van LPG uit belastingen (accijns + btw) bestaat. Rond je antwoord af op één decimaal.",
-      "sleutelwoorden": [
-        "0,395/39,5",
-        "29,9%/29,9 procent/30%"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Totale belasting per liter LPG = € 0,171 + € 0,224 = € 0,395. Als percentage van de totaalprijs: (€ 0,395 / € 1,319) × 100% = 29,946...% ≈ 29,9%.",
+      "vraag": "De LPG-prijs bestaat uit productie € 0,660, winst € 0,264, accijns € 0,171 en btw € 0,224 (totaal € 1,319 per liter). Bereken hoeveel procent van de literprijs uit belastingen bestaat (afgerond op één decimaal). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["29 9"],
+      "minTreffers": 1,
+      "modelantwoord": "29,9%",
       "uitleg": "Accijns + btw = € 0,395; € 0,395 / € 1,319 × 100% = 29,9%."
     }
   ]

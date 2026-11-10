@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "What character qualities are essential for an explorer surviving stranded in the wilderness?",
-      "sleutelwoorden": [
-        "resourceful/clever/mindset/smart",
-        "determination/patience/courage/perseverance/calm"
-      ],
+      "vraag": "Name one character quality that helps an explorer survive when stranded in the wilderness. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["resourceful/clever/mindset/smart/determination/patience/courage/perseverance/calm"],
       "minTreffers": 1,
-      "modelantwoord": "Resourcefulness, mental calmness, determination, and perseverance are critical qualities for wilderness survival.",
+      "modelantwoord": "An explorer needs determination.",
       "uitleg": "Vindingrijkheid, kalmte, vastberadenheid en doorzettingsvermogen zijn cruciaal."
     },
     {

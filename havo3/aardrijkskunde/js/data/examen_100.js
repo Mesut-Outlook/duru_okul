@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom maken sommige Europese bedrijven zich zorgen over de invoering van strenge ESG-regels?",
-      "sleutelwoorden": [
-        "achterstand/concurrentie",
-        "buiten de EU/China/minder regels"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij vrezen een concurrentieachterstand ten opzichte van bedrijven buiten de EU (zoals in China) die minder last hebben van strenge regels.",
+      "vraag": "Noem één reden waarom Europese bedrijven zich zorgen maken over strenge ESG-regels. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["achterstand/concurrentie"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze vrezen een concurrentieachterstand ten opzichte van bedrijven buiten de EU.",
       "uitleg": "Zij zijn bang op achterstand te worden gezet door concurrenten buiten de EU. (boek p. 40)"
     },
     {
       "type": "open",
-      "vraag": "Geef één voorbeeld van een maatregel die valt onder de 'E' (Environmental) en één onder de 'S' (Social) van ESG.",
-      "sleutelwoorden": [
-        "CO2-uitstoot/grondstoffen/duurzaamheid",
-        "veiligheid/werkomgeving/mensenrechten/diversiteit"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Onder milieu valt het verminderen van CO2-uitstoot en onder sociaal het zorgen voor een veilige werkomgeving en mensenrechten.",
+      "vraag": "Noem één voorbeeld van een maatregel die onder de 'E' (Environmental) van ESG valt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["co2/grondstoffen/duurzaam/uitstoot"],
+      "minTreffers": 1,
+      "modelantwoord": "Het verminderen van de CO2-uitstoot.",
       "uitleg": "Milieu: CO2-uitstoot of grondstoffen; Sociaal: veilige werkomgeving of mensenrechten. (boek p. 40)"
     }
   ]

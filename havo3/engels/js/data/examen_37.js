@@ -167,14 +167,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate into English: <i>De dader probeerde zijn geheim te verbergen.</i>",
-      "sleutelwoorden": [
-        "culprit/perpetrator/offender",
-        "conceal/hide",
-        "secret"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "The culprit tried to conceal his secret.",
+      "vraag": "Translate into English: <i>dader</i> (as in <i>De dader probeerde zijn geheim te verbergen.</i>) <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["culprit/perpetrator/offender"],
+      "minTreffers": 1,
+      "modelantwoord": "The word is culprit.",
       "uitleg": "Dader = culprit (of perpetrator); verbergen = to conceal (boek p. A124-A126)."
     },
     {

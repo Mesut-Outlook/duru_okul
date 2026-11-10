@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Schrijf een korte Franse aanbeveling waarin je een vriend adviseert om 's avonds de verlichte Eiffeltoren te gaan bekijken.",
-      "sleutelwoorden": [
-        "tour eiffel",
-        "soir/illuminée/lumières/nuit",
-        "conseille/magnifique/recommande/regarder/voir"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je te conseille d'aller voir la Tour Eiffel le soir, elle est magnifiquement illuminée !",
+      "vraag": "Schrijf een korte Franse zin waarin je een vriend adviseert 's avonds de verlichte Eiffeltoren te gaan bekijken. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["tour eiffel","soir/nuit"],
+      "minTreffers": 1,
+      "modelantwoord": "Je te conseille de voir la Tour Eiffel le soir.",
       "uitleg": "Adviseer met 'Je te conseille de voir la Tour Eiffel le soir...'."
     },
     {

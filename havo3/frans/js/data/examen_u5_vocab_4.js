@@ -191,26 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de vier basisvormen van het Franse delend lidwoord in het enkelvoud en meervoud.",
-      "modelantwoord": "De vier vormen zijn du, de la, de l' en des.",
-      "sleutelwoorden": [
-        "du",
-        "de la",
-        "de l'",
-        "des"
-      ],
-      "minTreffers": 3,
+      "vraag": "Noem één vorm van het Franse delend lidwoord. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld du.",
+      "sleutelwoorden": ["du/de la/des"],
+      "minTreffers": 1,
       "uitleg": "De vier vormen van het delend lidwoord zijn du, de la, de l' en des."
     },
     {
       "type": "open",
-      "vraag": "In welke twee belangrijke grammatica-situaties verandert het delend lidwoord verplicht in alleen de of d'?",
-      "modelantwoord": "Dat gebeurt na een ontkenning (zoals ne...pas) en na een aanduiding van hoeveelheid (zoals un verre de, beaucoup de).",
-      "sleutelwoorden": [
-        "ontkenning/ontkennende/pas",
-        "hoeveelheid/hoeveelheden/kilo/verre/beaucoup"
-      ],
-      "minTreffers": 2,
+      "vraag": "Noem één situatie waarin het delend lidwoord verplicht verandert in alleen <i>de</i> of <i>d'</i>. <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Na een ontkenning, zoals ne pas.",
+      "sleutelwoorden": ["ontkenn/hoeveelheid/beaucoup/kilo"],
+      "minTreffers": 1,
       "uitleg": "Het delend lidwoord wordt de/d' na een ontkenning en na een aanduiding van hoeveelheid."
     }
   ]

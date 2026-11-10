@@ -191,25 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Gegeven zijn de cijfers: 4, 9, 6, 7, 9, 8, 6, 7, 7. Bepaal het gemiddelde, de mediaan en de modus van deze cijfers.",
-      "sleutelwoorden": [
-        "63/gemiddelde 7",
-        "5e getal/mediaan 7",
-        "modus = 7/modus 7"
-      ],
+      "vraag": "Gegeven zijn de cijfers: 4, 9, 6, 7, 9, 8, 6, 7, 7. Hoe vaak komt de modus voor? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["3/drie"],
       "minTreffers": 1,
-      "modelantwoord": "Geordend: 4, 6, 6, 7, 7, 7, 8, 9, 9 (n = 9). Som = 63. Gemiddelde = 63 / 9 = 7. Mediaan = 5e getal = 7. Modus = 7 (komt 3 keer voor).",
+      "modelantwoord": "De modus 7 komt 3 keer voor.",
       "uitleg": "Som is 63 / 9 = 7; middelste getal is 7; meest voorkomende getal is 7."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een makelaar bij huizenprijzen in een wijk liever de mediaan vermeldt dan het gemiddelde.",
-      "sleutelwoorden": [
-        "uitschieter/villa/miljoenenwoning/duur huis",
-        "betrouwbaarder/omhoog trekt/vertekend"
-      ],
+      "vraag": "Waarom vermeldt een makelaar bij huizenprijzen in een wijk liever de mediaan dan het gemiddelde? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["uitschieter/extreem/duur huis/villa/landhuis"],
       "minTreffers": 1,
-      "modelantwoord": "Als er in een wijk één extreem duur landhuis van 3 miljoen euro staat, trekt dat het gemiddelde enorm omhoog. De mediaan trekt zich niets aan van die ene uitschieter en geeft een veel betrouwbaarder beeld van wat een 'normale' woning in die wijk kost.",
+      "modelantwoord": "Omdat één extreem duur huis het gemiddelde omhoog trekt, maar de mediaan niet.",
       "uitleg": "De mediaan is ongevoelig voor extreme uitschieters."
     }
   ]

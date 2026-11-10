@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de regio Eindhoven zo aantrekkelijk is voor hightechbedrijven.",
-      "sleutelwoorden": [
-        "aanvullen/ondersteunen/broedplaats",
-        "opgeleid/beroepsbevolking",
-        "40 miljoen/koopkracht"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bedrijven ondersteunen elkaar, er is een goed opgeleide technische beroepsbevolking en er zijn afzetmarkten met veel koopkracht in de buurt.",
+      "vraag": "Noem één reden waarom de regio Eindhoven aantrekkelijk is voor hightechbedrijven. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ondersteun/aanvullen/broedplaats/opgeleid/beroepsbevolking/koopkracht/40 miljoen"],
+      "minTreffers": 1,
+      "modelantwoord": "Er is een goed opgeleide technische beroepsbevolking.",
       "uitleg": "Bedrijven vullen elkaar aan en ondersteunen elkaar, er is een goed opgeleide technische beroepsbevolking en er wonen 40 miljoen mensen met veel koopkracht dichtbij. (boek p. 42-43)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe ongelijkheid en armoede de economie kunnen schaden en wat de overheid daartegen doet.",
-      "sleutelwoorden": [
-        "spanning",
-        "groei",
-        "onderwijs/gezondheidszorg/gelijke kansen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Ongelijkheid en armoede geven sociale spanningen en belemmeren de groei. De overheid investeert in gezondheidszorg, onderwijs en gelijke kansen.",
+      "vraag": "Noem één manier waarop ongelijkheid en armoede de economie schaden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["spanning/groei/onrust"],
+      "minTreffers": 1,
+      "modelantwoord": "Het geeft sociale spanningen en remt de groei.",
       "uitleg": "Er ontstaan sociale spanningen die de groei belemmeren. De overheid investeert in onderwijs, gezondheidszorg en gelijke kansen. (boek p. 43)"
     }
   ]

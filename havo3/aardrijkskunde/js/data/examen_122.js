@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de komst van fabrieken goed is voor het ontvangende land maar nadelig voor het land van herkomst.",
-      "sleutelwoorden": [
-        "economische groei/groei",
-        "banen/werkgelegenheid"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het ontvangende land krijgt economische groei en banen erbij, het land van herkomst verliest banen.",
+      "vraag": "Noem één voordeel van de komst van fabrieken voor het ontvangende land. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["groei/banen/werkgelegenheid"],
+      "minTreffers": 1,
+      "modelantwoord": "Het ontvangende land krijgt economische groei en banen erbij.",
       "uitleg": "Groei en banen voor het ene land, verlies van banen voor het andere. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Welk verband bestaat er tussen het verdwijnen van de industrie in een regio en de arbeidsmarkt?",
-      "sleutelwoorden": [
-        "werkloosheid/werklozen/werkloos",
-        "mijnen/hoogovens/fabrieken"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Als mijnen, hoogovens en fabrieken verdwijnen, loopt de werkloosheid op.",
+      "vraag": "Wat gebeurt er op de arbeidsmarkt van een regio als de industrie daar verdwijnt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["werkloos/werklozen"],
+      "minTreffers": 1,
+      "modelantwoord": "De werkloosheid loopt op.",
       "uitleg": "Door het sluiten van fabrieken loopt de werkloosheid op. (boek p. 39)"
     }
   ]

@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke twee veranderingen vanaf 1986 maakten het mogelijk dat de export van Vietnam zo sterk steeg?",
-      "sleutelwoorden": [
-        "multinationals/buitenlandse bedrijven",
-        "handelsbelemmeringen/vrijhandel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Buitenlandse multinationals waren welkom om te investeren en veel handelsbelemmeringen werden opgeheven, waardoor vrijhandel mogelijk werd.",
+      "vraag": "Noem één verandering vanaf 1986 die de export van Vietnam zo sterk deed stijgen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["multinational/buitenlandse bedrijven/handelsbelemmering/vrijhandel"],
+      "minTreffers": 1,
+      "modelantwoord": "Buitenlandse multinationals mochten in Vietnam investeren.",
       "uitleg": "Multinationals mochten investeren en handelsbelemmeringen werden opgeheven. (boek p. 20)"
     },
     {
       "type": "open",
-      "vraag": "Hoe laten bron 11 en de kaart met oude en nieuwe economische centra samen zien in welke richting het wereldbeeld verschuift?",
-      "sleutelwoorden": [
-        "global shift",
-        "Azië/Zuidoost-Azië/Oost-Azië",
-        "productie/industrie"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Vietnam in Zuidoost-Azië groeit in industriële productie; dat is de global shift van het economisch zwaartepunt naar Azië.",
+      "vraag": "Naar welk werelddeel verschuift het economisch zwaartepunt volgens bron 11 en de kaart met oude en nieuwe economische centra? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["azië/azie/zuidoost"],
+      "minTreffers": 1,
+      "modelantwoord": "Naar Azië.",
       "uitleg": "De global shift: industriële productie verschuift naar Azië, zoals Vietnam laat zien. (boek p. 21)"
     }
   ]

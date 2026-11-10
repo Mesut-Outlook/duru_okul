@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain two practical ways a teenager can reduce their personal emissions in daily life.",
-      "sleutelwoorden": [
-        "cycle/bike/walk/bus/public transport",
-        "recycle/energy/lights/meat/less"
-      ],
+      "vraag": "Name one practical way a teenager can reduce their personal emissions in daily life. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["cycle/bike/walk/bus/public transport/recycle/energy/lights/meat/less"],
       "minTreffers": 1,
-      "modelantwoord": "Teenagers can cycle or use public transport instead of cars, and reduce energy use by turning off lights and recycling.",
+      "modelantwoord": "A teenager can cycle instead of taking the car.",
       "uitleg": "Fietsen/OV gebruiken en energie besparen (licht uitdoen, recyclen) verlagen de CO2-voetafdruk."
     },
     {

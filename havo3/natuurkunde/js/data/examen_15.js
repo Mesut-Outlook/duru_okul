@@ -167,28 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg stap voor stap uit hoe in een kerncentrale elektrische stroom wordt opgewekt, vanaf de kernsplijting tot de elektriciteit op het hoogspanningsnet.",
-      "sleutelwoorden": [
-        "reactorvat/warmte-energie/uranium",
-        "stoomgenerator/koelwater/stoom onder druk",
-        "turbine/ronddraaien/schoepen",
-        "generator/dynamo/elektrische energie"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. In het reactorvat vindt gecontroleerde kernsplijting van uranium plaats, waarbij een enorme hoeveelheid warmte-energie vrijkomt.\n2. Deze warmte verhit het koelwater, dat via een stoomgenerator water in een tweede circuit omzet in stoom onder hoge druk.\n3. De krachtige stoom blaast tegen de schoepen van een stoomturbine en laat deze met hoge snelheid ronddraaien.\n4. De as van de turbine drijft een generator (dynamo) aan, die de mechanische draaienergie via elektromagnetische inductie omzet in elektrische wisselspanning voor het stroomnet.",
+      "vraag": "Welk apparaat in een kerncentrale zet de draaibeweging van de turbine om in elektrische energie? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["generator/dynamo"],
+      "minTreffers": 1,
+      "modelantwoord": "De generator (dynamo) zet de draaiing van de turbine om in elektriciteit.",
       "uitleg": "Kernenergie -> warmte -> stoom -> turbine (beweging) -> generator (elektriciteit)."
     },
     {
       "type": "open",
-      "vraag": "Bespreek de voor- en nadelen van kernenergie in het kader van het klimaat en de energievoorziening. Noem minimaal twee duidelijke voordelen en twee duidelijke nadelen/risico's.",
-      "sleutelwoorden": [
-        "uitstoot/broeikaseffect/co2 arm",
-        "betrouwbaar/continu/leveringszekerheid/weersonafhankelijk/hoge opbrengst",
-        "kernafval/radioactief afval/opslag van afval",
-        "ongeluk/ongeval/meltdown/ramp/veiligheidsrisico/hoge bouwkosten/dure bouw"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Voordelen:\n1. Geen directe CO₂-uitstoot tijdens energieproductie (draagt niet bij aan het broeikaseffect).\n2. Hoge leveringszekerheid: levert continu en weersonafhankelijk grote hoeveelheden basislast-stroom.\n\nNadelen:\n1. Hoogradioactief kernafval dat duizenden jaren extreem veilig opgeslagen moet worden.\n2. Kans op catastrofale kernongevallen (meltdown, vrijkomen van straling) en zeer hoge kosten/lange bouwtijd voor nieuwe reactoren.",
+      "vraag": "Noem één voordeel van kernenergie voor het klimaat. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["co2/uitstoot/broeikas"],
+      "minTreffers": 1,
+      "modelantwoord": "Kernenergie heeft geen directe CO2-uitstoot.",
       "uitleg": "Evenwichtige bespreking van CO2-vrije betrouwbare stroom vs. kernafval, veiligheidsrisico's en bouwkosten."
     }
   ]

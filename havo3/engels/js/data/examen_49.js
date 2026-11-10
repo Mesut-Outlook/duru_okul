@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Turn <i>The cat was sleeping on the sofa.</i> into a question and into a negation.",
-      "sleutelwoorden": [
-        "was the cat sleeping/was the cat",
-        "wasn't/was not"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Was the cat sleeping on the sofa? The cat wasn't sleeping on the sofa.",
+      "vraag": "Turn <i>The cat was sleeping on the sofa.</i> into a question. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["was the cat sleeping/was the cat"],
+      "minTreffers": 1,
+      "modelantwoord": "Was the cat sleeping on the sofa?",
       "uitleg": "Past continuous = Rule 1: was vooraan, of was + n't (boek p.A71)."
     },
     {

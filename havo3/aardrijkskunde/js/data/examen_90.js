@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een Duitse autofabrikant verplaatst een deel van zijn productie naar Tsjechië. Beschrijf één gevolg voor Duitsland en één voor Tsjechië.",
-      "sleutelwoorden": [
-        "banen",
-        "groei"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In Duitsland verdwijnen banen; in Tsjechië groeit de auto-industrie en groeit de economie.",
+      "vraag": "Een Duitse autofabrikant verplaatst een deel van zijn productie naar Tsjechië. Beschrijf één gevolg voor Duitsland. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["banen/werkloosheid/werkgelegenheid"],
+      "minTreffers": 1,
+      "modelantwoord": "In Duitsland verdwijnen banen.",
       "uitleg": "Voor Duitsland verdwijnen er banen, voor Tsjechië groeit de economie en de auto-industrie. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Je bestelt regelmatig spullen op Temu of AliExpress. Leg uit waarom je dit misschien merkt als de EU de eigen markt meer gaat beschermen.",
-      "sleutelwoorden": [
-        "duurder",
-        "controle"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De EU verstevigt de controle op buitenlandse investeringen en exportcontroles; hierdoor worden aankopen op Temu of AliExpress duurder.",
+      "vraag": "Je bestelt regelmatig op Temu of AliExpress. Wat merk je als de EU de eigen markt meer beschermt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["duurder/prijs/controle/hogere"],
+      "minTreffers": 1,
+      "modelantwoord": "Je aankopen worden duurder.",
       "uitleg": "Door meer controle op buitenlandse investeringen en exportcontroles worden aankopen duurder. (boek p. 39)"
     }
   ]

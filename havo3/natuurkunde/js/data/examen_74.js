@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een bal wordt recht omhoog gegooid. Leg uit waarom de snelheid van de bal afneemt terwijl hij nog steeds omhoog beweegt.",
-      "modelantwoord": "Op de bal werkt de zwaartekracht naar beneden. Die kracht wijst tegen de bewegingsrichting in, dus de resulterende kracht is naar beneden en de bal krijgt een vertraging. Daardoor neemt de snelheid af, ook al beweegt de bal nog omhoog.",
+      "vraag": "Welke kracht remt een recht omhoog gegooide bal af? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De zwaartekracht werkt naar beneden en remt de bal af.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "zwaartekracht/gravitatie",
-        "vertraging/negatieve versnelling/afremmen"
-      ],
+      "sleutelwoorden": ["zwaartekracht/gravitatie"],
       "uitleg": "Snelheid en kracht kunnen tegengesteld gericht zijn. De zwaartekracht geeft een vertraging omhoog, tot de snelheid 0 is en de bal weer valt."
     }
   ]

@@ -167,24 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beredeneer waarom een hefboom met een driemaal langere arm de benodigde handkracht met een factor drie verlaagt bij gelijkblijvende last.",
-      "sleutelwoorden": [
-        "momentenwet/kracht maal arm",
-        "driemaal kleiner/drie keer kleiner/kracht is kleiner"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Volgens de momentenwet geldt F1 × r1 = F2 × r2: kracht maal arm is aan beide kanten gelijk. Het moment van de last verandert niet. Is de arm van de handkracht drie keer zo lang, dan is een drie keer zo kleine kracht genoeg voor hetzelfde moment: de benodigde kracht is driemaal kleiner.",
+      "vraag": "Wat is bij een hefboom in evenwicht aan beide kanten gelijk? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["moment/kracht maal arm/kracht × arm"],
+      "minTreffers": 1,
+      "modelantwoord": "Het moment (kracht maal arm) is aan beide kanten gelijk.",
       "uitleg": "Momentenwet: F1 × r1 = F2 × r2. Een 3× langere arm betekent een 3× kleinere kracht."
     },
     {
       "type": "open",
-      "vraag": "Verklaar hoe een tandwieloverbrenging met verhouding 1:4 het toerental en koppel van een motor transformeert.",
-      "sleutelwoorden": [
-        "4x kleiner/vier keer langzamer/trager",
-        "4x groter/koppel groter/sterker"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij een overbrenging van 1:4 draait de uitgaande as vier keer langzamer dan de motor: het toerental wordt 4x kleiner. Het vermogen blijft (bijna) gelijk, dus het koppel (draaimoment) wordt 4x groter. Je ruilt snelheid in voor kracht.",
+      "vraag": "Wat gebeurt er met het toerental van de uitgaande as bij een tandwieloverbrenging met verhouding 1:4? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kleiner/langzamer/trager/lager"],
+      "minTreffers": 1,
+      "modelantwoord": "Het toerental wordt 4x kleiner: de as draait vier keer langzamer.",
       "uitleg": "Een tandwieloverbrenging ruilt toerental tegen koppel: 4x trager draaien geeft 4x meer draaimoment."
     }
   ]

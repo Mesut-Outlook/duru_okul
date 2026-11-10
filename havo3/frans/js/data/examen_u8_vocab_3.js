@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe zeg je in het Frans 'sparen' en 'uitgeven'? Noem beide.",
-      "modelantwoord": "Sparen is 'faire des économies', uitgeven is 'dépenser'.",
-      "sleutelwoorden": [
-        "économies/economies",
-        "dépenser/depenser/dépense/depense"
-      ],
-      "minTreffers": 2,
+      "vraag": "Hoe zeg je in het Frans 'sparen'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Faire des économies.",
+      "sleutelwoorden": ["économies/economies"],
+      "minTreffers": 1,
       "uitleg": "Sparen = faire des économies, uitgeven = dépenser (Unité 7)."
     },
     {
       "type": "open",
-      "vraag": "Noem twee Franse signaalwoorden die een reden of verklaring aangeven (vertaling van 'want' of 'omdat').",
-      "modelantwoord": "Dat zijn car (want) en parce que (omdat).",
-      "sleutelwoorden": [
-        "car",
-        "parce que"
-      ],
-      "minTreffers": 2,
+      "vraag": "Noem één Frans signaalwoord dat een reden aangeeft (vertaling van 'want' of 'omdat'). <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld car (want).",
+      "sleutelwoorden": ["car/parce que"],
+      "minTreffers": 1,
       "uitleg": "De signaalwoorden voor reden zijn car en parce que."
     }
   ]

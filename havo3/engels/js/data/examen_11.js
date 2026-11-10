@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain how artificial intelligence (AI) can assist doctors in diagnosing medical conditions.",
-      "sleutelwoorden": [
-        "scans/x-rays/images/faster/patterns/accurate/detect"
-      ],
+      "vraag": "Name one way in which artificial intelligence (AI) can help doctors diagnose medical conditions. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["scans/x-rays/images/faster/patterns/accurate/detect"],
       "minTreffers": 1,
-      "modelantwoord": "AI can quickly analyze thousands of medical scans and data to detect disease patterns faster and accurately.",
+      "modelantwoord": "AI can analyze medical scans quickly.",
       "uitleg": "AI kan medische scans en data razendsnel analyseren op afwijkingen."
     },
     {

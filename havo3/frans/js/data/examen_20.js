@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen <i>'notre maison'</i> en <i>'nos maisons'</i> in het Frans.",
-      "sleutelwoorden": [
-        "ons/één huis/enkelvoud",
-        "onze/meerdere huizen/meervoud"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "'Notre maison' betekent 'ons huis' (enkelvoud), terwijl 'nos maisons' 'onze huizen' (meervoud) betekent.",
+      "vraag": "Wat betekent <i>'nos maisons'</i> in het Nederlands? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["onze"],
+      "minTreffers": 1,
+      "modelantwoord": "Onze huizen.",
       "uitleg": "Notre = enkelvoud; nos = meervoud."
     },
     {

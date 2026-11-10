@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain why identifying an author's bias is important when reading articles about energy subsidies.",
-      "sleutelwoorden": [
-        "financial/interests/sponsor/money",
-        "critical/objective/perspective/fairness"
-      ],
+      "vraag": "Why is it important to notice an author's bias in articles about energy subsidies? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["financial/interests/sponsor/money/critical/objective/perspective/fairness/fair"],
       "minTreffers": 1,
-      "modelantwoord": "Recognizing bias helps readers understand if the author has financial or political interests, allowing for a critical evaluation of the arguments.",
+      "modelantwoord": "The author may have financial interests.",
       "uitleg": "Het herkennen van partijdigheid helpt om argumenten kritisch te beoordelen op eventuele belangenverstrengeling."
     },
     {

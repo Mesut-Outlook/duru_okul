@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain in English why laughter is important for people, according to the text No laughing matter.",
-      "sleutelwoorden": [
-        "bond/belong/belonging/connected",
-        "others/each other/together"
-      ],
+      "vraag": "According to the text <i>No laughing matter</i>, why is laughter important for people? Give one reason in English. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["bond/belong/belonging/connected/together/others/each other"],
       "minTreffers": 1,
-      "modelantwoord": "Laughing helps us bond with others and gives us a sense of belonging.",
+      "modelantwoord": "Laughing helps us bond with others.",
       "uitleg": "Laughing makes us feel connected and creates a sense of belonging (paragraph 3, boek p.A47)."
     },
     {

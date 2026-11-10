@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain the difference between stealing secretly versus taking items through violent threats.",
-      "sleutelwoorden": [
-        "theft/thief/burglar/shoplift/without violence/no violence",
-        "robbery/robber/mugging/weapon/force/intimidat"
-      ],
+      "vraag": "What is the English word for stealing something secretly, without violence? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["theft/thief/burglar/shoplift"],
       "minTreffers": 1,
-      "modelantwoord": "Theft involves secretly taking someone's property, whereas robbery specifically relies on physical violence or intimidation against a person.",
+      "modelantwoord": "It is called theft.",
       "uitleg": "Theft is diefstal van eigendommen; robbery is een gewelddadige overval met bedreiging."
     },
     {

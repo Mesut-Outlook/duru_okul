@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee manieren waarop je elektrische energie in huis kunt besparen zonder een nieuw apparaat te kopen.",
-      "sleutelwoorden": [
-        "stand-by/stand by",
-        "vol/volle machine"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Je kunt apparatuur helemaal uitzetten in plaats van op stand-by laten staan, en de vaatwasser pas aanzetten als hij helemaal vol zit.",
+      "vraag": "Noem één manier om elektrische energie in huis te besparen zonder een nieuw apparaat te kopen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["stand-by/stand by/vol/uitzetten/uitschakel"],
+      "minTreffers": 1,
+      "modelantwoord": "Zet apparaten helemaal uit in plaats van op stand-by.",
       "uitleg": "Apparaten niet op stand-by laten staan en pas een volle vaatwasser aanzetten, bespaart energie zonder kosten."
     }
   ]

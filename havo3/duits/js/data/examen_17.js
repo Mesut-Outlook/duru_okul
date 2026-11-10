@@ -179,23 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Duits hoe laat een feestje of concert begint?",
-      "modelantwoord": "Um wie viel Uhr fängt die Party / das Konzert an?",
-      "sleutelwoorden": [
-        "um wie viel uhr/wann beginnt/fängt"
-      ],
+      "vraag": "Hoe vraag je in het Duits hoe laat een feestje begint? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Um wie viel Uhr fängt die Party an?",
+      "sleutelwoorden": ["um wie viel uhr/wie viel uhr/wieviel uhr/wann beginnt/wann fängt/wann fangt"],
       "minTreffers": 1,
       "uitleg": "Je vraagt 'Um wie viel Uhr fängt es an?'."
     },
     {
       "type": "open",
-      "vraag": "Waarom verandert het lidwoord van 'die Musik' niet in de 4e naamval?",
-      "modelantwoord": "Omdat vrouwelijke woorden in de 4e naamval hetzelfde blijven als in de 1e naamval (die blijft die).",
-      "sleutelwoorden": [
-        "vrouwelijk",
-        "hetzelfde/gelijk",
-        "die blijft die"
-      ],
+      "vraag": "Waarom verandert het lidwoord van 'die Musik' niet in de 4e naamval? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Omdat het een vrouwelijk woord is.",
+      "sleutelwoorden": ["vrouwelijk/vrouw"],
       "minTreffers": 1,
       "uitleg": "Vrouwelijke zelfstandige naamwoorden behouden het lidwoord 'die' in de 4e naamval."
     }

@@ -173,26 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een storing in de haven van Rotterdam gevolgen heeft voor andere landen dan alleen Nederland.",
-      "sleutelwoorden": [
-        "doorvoer/doorgevoerd/doorvoeren",
-        "ingevoerd/invoer/import",
-        "wereld/overal/internationaal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Veel producten uit de hele wereld worden in Rotterdam ingevoerd en daarna doorgevoerd naar andere landen. Die landen zijn daar dus van afhankelijk.",
+      "vraag": "Waarom heeft een storing in de haven van Rotterdam gevolgen voor andere landen dan alleen Nederland? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["doorgevoerd/doorvoer/ingevoerd/invoer"],
+      "minTreffers": 1,
+      "modelantwoord": "Producten worden in Rotterdam ingevoerd en doorgevoerd naar andere landen.",
       "uitleg": "Rotterdam is een mainport: producten worden ingevoerd en doorgevoerd naar andere Europese landen. (boek p. 42)"
     },
     {
       "type": "open",
-      "vraag": "Waarom is de haven van Amsterdam een belangrijke haven, hoewel ze kleiner is dan die van Rotterdam?",
-      "sleutelwoorden": [
-        "vierde/4e",
-        "handelswaar/goederen/overgezet",
-        "doorgevoerd/doorvoer"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Amsterdam is de vierde haven van Europa door de hoeveelheid handelswaar die er wordt overgezet. Producten worden hier ingevoerd en doorgevoerd.",
+      "vraag": "De haven van Amsterdam is kleiner dan die van Rotterdam. De hoeveelste haven van Europa is Amsterdam? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["vierde/4e/4"],
+      "minTreffers": 1,
+      "modelantwoord": "Amsterdam is de vierde haven van Europa.",
       "uitleg": "Amsterdam is de vierde haven van Europa, gezien de hoeveelheid handelswaar (p. 42). (boek p. 42)"
     }
   ]

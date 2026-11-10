@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain how learning English fluently in secondary school creates valuable advantages for higher education and future employment across the world.",
-      "sleutelwoorden": [
-        "international/worldwide/multinational/abroad/foreign",
-        "opportunity/career/profession/study/doors"
-      ],
+      "vraag": "Name one advantage that fluent English from secondary school gives you for higher education or a future job. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["international/worldwide/multinational/abroad/foreign/opportunit/career/profession/doors/work"],
       "minTreffers": 1,
-      "modelantwoord": "English is the global language of business, science, and higher education, opening doors to study abroad and international career opportunities.",
+      "modelantwoord": "It gives you better career opportunities abroad.",
       "uitleg": "Engels is de wereldtaal van wetenschap en internationale handel en biedt toegang tot buitenlandse studies en carrières."
     },
     {

@@ -131,12 +131,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Maak de zin af: <i>In 'De trainer gaf hen een compliment' moet hen 'hun' zijn, want …</i>",
-      "sleutelwoorden": [
-        "meewerkend/geen voorzetsel/zonder voorzetsel"
-      ],
+      "vraag": "Maak de zin af: <i>In 'De trainer gaf hen een compliment' moet hen 'hun' zijn, want …</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["meewerkend/geen voorzetsel/zonder voorzetsel/aan wie"],
       "minTreffers": 1,
-      "modelantwoord": "… want het is een meewerkend voorwerp zonder voorzetsel (aan wie gaf de trainer een compliment?).",
+      "modelantwoord": "Want het is een meewerkend voorwerp, zonder voorzetsel.",
       "uitleg": "Meewerkend voorwerp zonder voorzetsel → hun. Na een voorzetsel → hen."
     },
     {

@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe meer bescherming van de Europese markt gevolgen kan hebben voor de industrie en voor jouw eigen aankopen.",
-      "sleutelwoorden": [
-        "werkgelegenheid/banen",
-        "duurder"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Industrie en werkgelegenheid blijven behouden, maar aankopen bij buitenlandse webwinkels worden duurder.",
+      "vraag": "Noem één gevolg van meer bescherming van de Europese markt voor jouw eigen aankopen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["duurder/duur"],
+      "minTreffers": 1,
+      "modelantwoord": "Aankopen bij buitenlandse webwinkels worden duurder.",
       "uitleg": "Het behoudt banen, maar aankopen worden duurder. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee redenen waarom de EU een sterke positie heeft in de wereldhandel.",
-      "sleutelwoorden": [
-        "vrijhandelsverdragen/verdragen",
-        "hoogwaardige/industriegoederen/medicijnen/farmaceutische"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door vrijhandelsverdragen met meer dan veertig landen en door de export van hoogwaardige industriegoederen en medicijnen.",
+      "vraag": "Noem één reden waarom de EU een sterke positie heeft in de wereldhandel. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vrijhandelsverdragen/verdragen/industriegoederen/medicijnen/hoogwaardige"],
+      "minTreffers": 1,
+      "modelantwoord": "De EU heeft vrijhandelsverdragen met meer dan veertig landen.",
       "uitleg": "Vrijhandelsverdragen en hoogwaardige industriegoederen. (boek p. 38)"
     }
   ]

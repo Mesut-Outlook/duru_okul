@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Rewrite into one sentence using the past perfect: <i>The guard fell asleep. Then the prisoner climbed the fence.</i>",
-      "sleutelwoorden": [
-        "had fallen"
-      ],
+      "vraag": "Rewrite into one sentence using the past perfect: <i>The guard fell asleep. Then the prisoner climbed the fence.</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["had fallen"],
       "minTreffers": 1,
       "modelantwoord": "After the guard had fallen asleep, the prisoner climbed the fence.",
       "uitleg": "The first action takes the past perfect (had fallen), the second takes the past simple (climbed) (boek p.A102)."

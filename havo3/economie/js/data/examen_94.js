@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een bakkerij schrijft ieder jaar € 2.000 af op haar oven. Leg uit waarom dit bedrag gelijk blijft als de bakkerij in een drukke maand twee keer zoveel brood bakt.",
-      "sleutelwoorden": [
-        "niet afhankelijk/onafhankelijk/niet afhangen",
-        "productie/verkoop/omvang"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het afschrijvingsbedrag is niet afhankelijk van de productie of de verkoop; het is ieder jaar gelijk.",
+      "vraag": "Een bakkerij schrijft ieder jaar € 2.000 af op haar oven. Waarom blijft dit bedrag gelijk als er in een drukke maand twee keer zoveel brood wordt gebakken? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["afhankelijk/niet afhangen/hangt niet af"],
+      "minTreffers": 1,
+      "modelantwoord": "Afschrijving is niet afhankelijk van de productie.",
       "uitleg": "Afschrijvingskosten zijn niet afhankelijk van de omvang van de productie of verkoop en dus constant."
     },
     {
       "type": "open",
-      "vraag": "Een bedrijf wil de afschrijvingskosten per jaar van een nieuwe machine berekenen. Welke drie gegevens heeft het nodig?",
-      "sleutelwoorden": [
-        "aanschafwaarde",
-        "restwaarde",
-        "jaren/gebruiksduur"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Het bedrijf heeft de aanschafwaarde, de restwaarde en het aantal jaren dat de machine wordt gebruikt nodig.",
+      "vraag": "Noem één gegeven dat nodig is om de afschrijvingskosten per jaar van een machine te berekenen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["aanschafwaarde/restwaarde/jaren/gebruiksduur/levensduur"],
+      "minTreffers": 1,
+      "modelantwoord": "De restwaarde.",
       "uitleg": "Aanschafwaarde, restwaarde en aantal gebruiksjaren: (aanschafwaarde - restwaarde) / aantal jaren."
     }
   ]

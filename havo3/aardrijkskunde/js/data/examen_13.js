@@ -194,20 +194,16 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe noemen we het proces waarbij een migrant in het bestemmingsgebied steeds meer de plaatselijke gewoonten overneemt?",
-      "sleutelwoorden": [
-        "integratie"
-      ],
+      "vraag": "Hoe noemen we het proces waarbij een migrant in het bestemmingsgebied steeds meer de plaatselijke gewoonten overneemt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["integratie"],
       "minTreffers": 1,
       "modelantwoord": "Dit proces heet integratie.",
       "uitleg": "Integratie is het proces waarbij een migrant steeds meer de gewoonten van het bestemmingsgebied overneemt (boek §3.3)."
     },
     {
       "type": "open",
-      "vraag": "Wat is het geografische begrip voor het proces van wederzijdse cultuurbeïnvloeding door langdurig direct contact tussen bevolkingsgroepen?",
-      "sleutelwoorden": [
-        "acculturatie"
-      ],
+      "vraag": "Wat is het geografische begrip voor het proces van wederzijdse cultuurbeïnvloeding door langdurig direct contact tussen bevolkingsgroepen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["acculturatie"],
       "minTreffers": 1,
       "modelantwoord": "Dit proces heet acculturatie.",
       "uitleg": "Acculturatie is de wederzijdse beïnvloeding van culturen."

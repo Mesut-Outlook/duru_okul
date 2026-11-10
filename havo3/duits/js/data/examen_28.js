@@ -179,25 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe zeg je in het Duits dat niemand gewond is geraakt bij een ongeluk?",
-      "modelantwoord": "Niemand wurde verletzt (of Niemand ist verletzt).",
-      "sleutelwoorden": [
-        "Niemand wurde verletzt",
-        "Niemand ist verletzt",
-        "verletzt"
-      ],
+      "vraag": "Hoe zeg je in het Duits dat niemand gewond is geraakt bij een ongeluk? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Niemand wurde verletzt.",
+      "sleutelwoorden": ["niemand wurde verletzt/niemand ist verletzt/verletzt"],
       "minTreffers": 1,
       "uitleg": "Je zegt 'Niemand wurde verletzt'."
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil in lidwoord in de 3e naamval tussen een mannelijk woord (der Mann) en een vrouwelijk woord (die Frau)?",
-      "modelantwoord": "Mannelijk wordt 'dem Mann' en vrouwelijk wordt 'der Frau'.",
-      "sleutelwoorden": [
-        "dem",
-        "der"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk lidwoord krijgt 'der Mann' in de 3e naamval? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dem Mann.",
+      "sleutelwoorden": ["dem"],
+      "minTreffers": 1,
       "uitleg": "Dem Mann (mannelijk) en der Frau (vrouwelijk)."
     }
   ]

@@ -179,25 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de lidwoorden van de der-Gruppe in de 3e naamval (Dativ) voor mannelijk, vrouwelijk en onzijdig.",
-      "modelantwoord": "Mannelijk: dem; vrouwelijk: der; onzijdig: dem.",
-      "sleutelwoorden": [
-        "dem",
-        "der"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk lidwoord uit de der-Gruppe hoort bij een mannelijk woord in de 3e naamval (Dativ)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het lidwoord is dem.",
+      "sleutelwoorden": ["dem"],
+      "minTreffers": 1,
       "uitleg": "Dem (mannelijk), der (vrouwelijk), dem (onzijdig)."
     },
     {
       "type": "open",
-      "vraag": "Welke 5 W-vragen stel je bij het melden van een noodgeval via 112?",
-      "modelantwoord": "Wo? Was? Wie viele? Welche Verletzungen? Warten auf Rückfragen!",
-      "sleutelwoorden": [
-        "Wo",
-        "Was",
-        "Wie viele",
-        "Warten"
-      ],
+      "vraag": "Noem één van de W-vragen die je stelt bij het melden van een noodgeval via 112. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld Wo of Was.",
+      "sleutelwoorden": ["wo/was/wie viele/welche/warten"],
       "minTreffers": 1,
       "uitleg": "Wo, Was, Wie viele, Welche, Warten."
     }

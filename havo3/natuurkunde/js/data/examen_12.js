@@ -179,27 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Vergelijk <b>alfastraling</b> en <b>gammastraling</b> op de volgende twee eigenschappen: 1) het ioniserend vermogen, 2) het doordringend vermogen.",
-      "sleutelwoorden": [
-        "groot ioniserend/veel ionisatie/sterk ioniserend",
-        "klein ioniserend/weinig ionisatie/zwak ioniserend",
-        "klein doordringend/weinig doordringend/laag doordringend vermogen",
-        "groot doordringend/sterk doordringend/hoog doordringend vermogen"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Ioniserend vermogen: Alfastraling heeft een zeer groot ioniserend vermogen (richt door zijn dubbele lading en massa veel schade aan over korte afstand). Gammastraling heeft een relatief klein ioniserend vermogen.\n2. Doordringend vermogen: Alfastraling heeft een zeer klein doordringend vermogen (wordt gestopt door papier of huid). Gammastraling heeft juist een extreem groot doordringend vermogen (gaat door het hele lichaam heen en vereist dik lood/beton).",
+      "vraag": "Noem één ding dat alfastraling al tegenhoudt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["papier/huid"],
+      "minTreffers": 1,
+      "modelantwoord": "Alfastraling wordt al gestopt door een vel papier of door je huid.",
       "uitleg": "Tegengestelde eigenschappen: alfa = hoog ioniserend/laag doordringend; gamma = laag ioniserend/hoog doordringend."
     },
     {
       "type": "open",
-      "vraag": "In een laboratorium wordt de activiteit van een onbekende radioactieve stof gemeten. Op t = 0 is de activiteit 1200 Bq. Na 45 minuten is de activiteit gedaald naar 150 Bq. Bereken de <b>halveringstijd</b> van deze stof.",
-      "sleutelwoorden": [
-        "3 halveringstijden",
-        "600/300",
-        "15 minuten/15 min"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De activiteit halveert van 1200 -> 600 (1x) -> 300 (2x) -> 150 Bq (3x). Er zijn dus 3 halveringstijden verstreken in 45 minuten. De halveringstijd is dus: t₁/₂ = 45 minuten / 3 = 15 minuten.",
+      "vraag": "Op t = 0 is de activiteit van een stof 1200 Bq. Na 45 minuten is die 150 Bq. Bereken de halveringstijd in minuten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["15"],
+      "minTreffers": 1,
+      "modelantwoord": "De activiteit halveert 3 keer in 45 minuten, dus de halveringstijd is 15 minuten.",
       "uitleg": "Drie opeenvolgende halveringen in 45 min -> halveringstijd is 15 minuten."
     }
   ]

@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het gas dat bij de verbranding van fossiele brandstoffen het meest wordt uitgestoten en de grootste bijdrage levert aan de opwarming van de aarde.",
-      "sleutelwoorden": [
-        "koolstofdioxide/CO2/koolzuurgas"
-      ],
+      "vraag": "Noem het gas dat bij de verbranding van fossiele brandstoffen het meest wordt uitgestoten en de grootste bijdrage levert aan de opwarming van de aarde. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["koolstofdioxide/co2/koolzuurgas"],
       "minTreffers": 1,
-      "modelantwoord": "Koolstofdioxide (CO2) is het belangrijkste broeikasgas dat vrijkomt bij de verbranding van fossiele brandstoffen.",
+      "modelantwoord": "Koolstofdioxide, ofwel CO2.",
       "uitleg": "Koolstofdioxide (CO2) ontstaat bij verbranding van kolen, olie en gas."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het natuurlijke effect van broeikasgassen in de atmosfeer noodzakelijk is voor het leven op aarde.",
-      "sleutelwoorden": [
-        "koud/koude/temperatuur/warmte/leefbaar"
-      ],
+      "vraag": "Wat zou er zonder het natuurlijke broeikaseffect met de temperatuur op aarde gebeuren? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["koud/koude"],
       "minTreffers": 1,
-      "modelantwoord": "Zonder het natuurlijke broeikaseffect zou de aarde veel te koud zijn (circa -18 graden) waardoor er geen leven mogelijk zou zijn.",
+      "modelantwoord": "De aarde zou veel te koud zijn, circa -18 graden.",
       "uitleg": "Het natuurlijke broeikaseffect houdt voldoende warmte vast om een leefbare gemiddelde temperatuur van 15 graden te garanderen."
     }
   ]

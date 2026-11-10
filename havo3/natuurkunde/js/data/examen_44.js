@@ -192,26 +192,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef de lenzenformule en leg uit waar de letters f, v en b voor staan.",
-      "sleutelwoorden": [
-        "f = 1/f=1/v + 1/v+1",
-        "brandpuntsafstand/brandpunt",
-        "voorwerpsafstand",
-        "beeldafstand"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "De formule is 1/f = 1/v + 1/b. Hierin is f de brandpuntsafstand, v de voorwerpsafstand en b de beeldafstand.",
+      "vraag": "Waar staat de letter b voor in de lenzenformule 1/f = 1/v + 1/b? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["beeldafstand"],
+      "minTreffers": 1,
+      "modelantwoord": "De letter b staat voor de beeldafstand.",
       "uitleg": "De formule verbindt de brandpuntsafstand (f), voorwerpsafstand (v) en beeldafstand (b)."
     },
     {
       "type": "open",
-      "vraag": "Bereken in stappen de beeldafstand b als gegeven is dat f = 20 cm en v = 30 cm.",
-      "sleutelwoorden": [
-        "b = 60/b=60/60 cm",
-        "20 - 1/20-1/60 - 2/60-2"
-      ],
+      "vraag": "Bereken de beeldafstand b in cm als f = 20 cm en v = 30 cm. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["60"],
       "minTreffers": 1,
-      "modelantwoord": "1/b = 1/f - 1/v = 1/20 - 1/30 = 3/60 - 2/60 = 1/60. Hieruit volgt b = 60 cm.",
+      "modelantwoord": "1/b = 1/20 - 1/30 = 1/60, dus b = 60 cm.",
       "uitleg": "1/b = 1/20 - 1/30 = 1/60, dus b = 60 cm."
     }
   ]

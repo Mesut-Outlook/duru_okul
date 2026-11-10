@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Voor een lampenfabriek met € 14.400 aan constante kosten en € 18 variabele kosten per lamp: bereken de totale variabele kosten en de totale kosten bij een productie van 500 lampen.",
-      "sleutelwoorden": [
-        "9.000/9000",
-        "23.400/23400"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De totale variabele kosten zijn € 9.000 en de totale kosten zijn € 23.400.",
+      "vraag": "Een lampenfabriek heeft € 14.400 aan constante kosten en € 18 variabele kosten per lamp. Bereken de totale kosten bij 500 lampen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["23 400/23400"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 23.400",
       "uitleg": "Totale variabele kosten = 500 × € 18 = € 9.000. Totale kosten = € 14.400 + € 9.000 = € 23.400."
     },
     {
       "type": "open",
-      "vraag": "Laat met een berekening zien hoe de constante kosten per paar veranderen wanneer een schoenenfabriek met € 45.000 aan constante kosten haar productie opvoert van 3.000 naar 5.000 paar.",
-      "sleutelwoorden": [
-        "15/15,00",
-        "9/9,00"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij 3.000 paar: € 45.000 / 3.000 = € 15 per paar. Bij 5.000 paar: € 45.000 / 5.000 = € 9 per paar. De kosten per paar dalen.",
+      "vraag": "Een schoenenfabriek heeft € 45.000 aan constante kosten. Bereken de constante kosten per paar bij een productie van 5.000 paar. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["9"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 9 per paar.",
       "uitleg": "Constante kosten per paar = constante kosten / aantal paren: eerst € 15, daarna € 9."
     }
   ]

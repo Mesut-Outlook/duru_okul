@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate into English: <i>De dader verborg het rekwisiet.</i>",
-      "sleutelwoorden": [
-        "culprit/perpetrator",
-        "concealed/hid/hidden",
-        "prop"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "The culprit concealed the prop.",
+      "vraag": "Translate into English: <i>het rekwisiet</i>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["prop"],
+      "minTreffers": 1,
+      "modelantwoord": "The word is prop.",
       "uitleg": "Dader = culprit; verbergen = to conceal; rekwisiet = prop (boek p.A125)."
     },
     {

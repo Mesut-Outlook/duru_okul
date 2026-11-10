@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit welk probleem aanvallen op schepen veroorzaken voor Nederlandse importeurs van vers fruit.",
-      "sleutelwoorden": [
-        "andere route/omweg/langere route",
-        "houdbaarheid/houdbaar/bederven"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De schepen moeten een andere, langere route varen en daardoor komt de houdbaarheidsdatum van de producten in gevaar.",
+      "vraag": "Noem één probleem dat aanvallen op schepen veroorzaken voor Nederlandse importeurs van vers fruit. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["route/omweg/houdbaar/bederf/bederven"],
+      "minTreffers": 1,
+      "modelantwoord": "De schepen varen een langere route, waardoor de houdbaarheid in gevaar komt.",
       "uitleg": "Schepen moeten een omweg varen en daardoor kan het fruit bederven voordat het aankomt. (boek p. 20)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom Nederlandse importeurs avocado's niet uit eigen land halen, maar uit Kenia.",
-      "sleutelwoorden": [
-        "klimaat/warm/warmte/temperatuur",
-        "groeien/kweken/verbouwen/geteeld"
-      ],
+      "vraag": "Waarom halen Nederlandse importeurs avocado's niet uit eigen land, maar uit Kenia? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["klimaat/warm/temperatuur/groeien/kweken"],
       "minTreffers": 1,
-      "modelantwoord": "Avocado's groeien in warme omstandigheden, dus het klimaat in Nederland is daarvoor niet geschikt.",
+      "modelantwoord": "Avocado's groeien in warme omstandigheden en het klimaat in Nederland is daarvoor niet geschikt.",
       "uitleg": "Avocado's groeien alleen in warme omstandigheden en het klimaat in Nederland is daarvoor niet geschikt. (boek p. 20)"
     }
   ]

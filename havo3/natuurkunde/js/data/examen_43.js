@@ -192,24 +192,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een bril met negatieve (holle) glazen helpt bij iemand die bijziend is.",
-      "sleutelwoorden": [
-        "spreidt/spreiden/diverg",
-        "netvlies/naar achteren/brandpunt schuift"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het bijziende oog breekt te sterk en vormt het beeld vóór het netvlies. De negatieve lens spreidt (divergeert) de lichtstralen vooraf een beetje, waardoor het brandpunt verder naar achteren schuift en precies op het netvlies terechtkomt.",
+      "vraag": "Wat doet de negatieve lens in een bril met de lichtstralen voordat ze het oog binnenkomen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["spreid/diverg/uit elkaar"],
+      "minTreffers": 1,
+      "modelantwoord": "De negatieve lens spreidt (divergeert) de lichtstralen een beetje.",
       "uitleg": "De negatieve lens divergeert het licht zodat het brandpunt precies op het netvlies valt."
     },
     {
       "type": "open",
-      "vraag": "Noem het verschil tussen verziendheid en oudziendheid wat betreft de anatomische oorzaak.",
-      "sleutelwoorden": [
-        "oogbol/te kort/vorm van het oog",
-        "elasticiteit/minder elastisch/stugger"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij verziendheid is de oogbol anatomisch te kort (aangeboren afwijking van de vorm), terwijl bij oudziendheid de ooglens door veroudering zijn elasticiteit verliest en niet meer bol kan worden.",
+      "vraag": "Wat is de anatomische oorzaak van verziendheid? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["te kort/oogbol/vorm"],
+      "minTreffers": 1,
+      "modelantwoord": "De oogbol is te kort.",
       "uitleg": "Verziendheid = te korte oogbol; oudziendheid = verlies van lenselasticiteit door ouderdom."
     }
   ]

@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is sending a short follow-up note after an interview considered good professional practice?",
-      "sleutelwoorden": [
-        "gratitude/appreciation/polite/manner/courtesy",
-        "reiterate/interest/impression/enthusiasm/candidate"
-      ],
+      "vraag": "Why is sending a short follow-up note after an interview good professional practice? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["gratitude/appreciation/polite/manner/courtesy/thank/impression/interest/enthusiasm/reiterate/candidate"],
       "minTreffers": 1,
-      "modelantwoord": "It shows polite gratitude for the interviewer's time, leaves a positive lasting impression, and reaffirms your enthusiasm for the position.",
+      "modelantwoord": "It shows gratitude and leaves a good impression.",
       "uitleg": "Een bedankmail toont beleefdheid, laat een goede indruk achter en onderstreept je enthousiasme."
     },
     {

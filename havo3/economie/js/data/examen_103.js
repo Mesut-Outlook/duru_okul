@@ -180,27 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een tomatenkwekerij produceerde vorig jaar met 25 medewerkers 400.000 kilo tomaten. Dit jaar werken er 20 medewerkers en wordt er met nieuwe oogstmachines 360.000 kilo geoogst. Bereken de arbeidsproductiviteit per medewerker in beide jaren en bereken met hoeveel procent deze is veranderd.",
-      "sleutelwoorden": [
-        "16.000/16000",
-        "18.000/18000",
-        "12,5%/12,5 procent"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Vorig jaar: 400.000 / 25 = 16.000 kilo per medewerker. Dit jaar: 360.000 / 20 = 18.000 kilo per medewerker. Procentuele stijging: (18.000 − 16.000) / 16.000 × 100% = 12,5%.",
+      "vraag": "Een tomatenkwekerij produceert dit jaar met 20 medewerkers 360.000 kilo tomaten. Bereken de arbeidsproductiviteit per medewerker dit jaar. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["18 000/18000"],
+      "minTreffers": 1,
+      "modelantwoord": "18.000 kilo per medewerker.",
       "uitleg": "Oud: 16.000 kilo/medewerker; nieuw: 18.000 kilo/medewerker; verandering: +12,5%."
     },
     {
       "type": "open",
-      "vraag": "In een bedrijfskolom koopt een meelfabriek graan in voor € 150 en verkoopt het meel voor € 240 aan een koekjesfabriek. De koekjesfabriek verkoopt de koekjes voor € 420 aan een supermarkt. Bereken voor beide fabrieken de toegevoegde waarde in euro's én als percentage van hun eigen inkoopprijs.",
-      "sleutelwoorden": [
-        "90",
-        "60%/60 procent",
-        "180",
-        "75%/75 procent"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Meelfabriek: € 240 − € 150 = € 90 toegevoegde waarde, dat is (€ 90 / € 150) × 100% = 60%. Koekjesfabriek: € 420 − € 240 = € 180 toegevoegde waarde, dat is (€ 180 / € 240) × 100% = 75%.",
+      "vraag": "Een meelfabriek koopt graan in voor € 150 en verkoopt het meel voor € 240. Bereken de toegevoegde waarde van de meelfabriek in euro's. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["90"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 90",
       "uitleg": "Meelfabriek: € 90 (60%). Koekjesfabriek: € 180 (75%)."
     }
   ]

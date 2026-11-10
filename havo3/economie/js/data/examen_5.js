@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de drie functies van geld en geef bij elke functie een kort voorbeeld.",
-      "sleutelwoorden": [
-        "ruilmiddel",
-        "rekenmiddel",
-        "oppotmiddel/spaarmiddel"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Ruilmiddel (brood betalen), 2. Rekenmiddel (prijzen vergelijken), 3. Oppotmiddel (sparen voor later).",
+      "vraag": "Noem één van de drie functies van geld. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["ruilmiddel/rekenmiddel/oppotmiddel/spaarmiddel"],
+      "minTreffers": 1,
+      "modelantwoord": "Ruilmiddel.",
       "uitleg": "Dit zijn de drie kernfuncties van geld."
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat er zou gebeuren als de intrinsieke waarde van een 1-euromunt zou stijgen naar 1,50 euro.",
-      "sleutelwoorden": [
-        "omsmelten/verkopen als metaal",
-        "verdwijnen/circulatie"
-      ],
+      "vraag": "Wat gebeurt er met 1-euromunten als hun intrinsieke waarde stijgt naar 1,50 euro? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["smelt/verkocht als metaal/verdwijn/uit omloop/circulatie/roulatie/verzamel"],
       "minTreffers": 1,
-      "modelantwoord": "Mensen zouden de munten massaal verzamelen en omsmelten om het metaal voor 1,50 euro te verkopen, waardoor de munten uit de roulatie verdwijnen.",
+      "modelantwoord": "Mensen smelten ze om, waardoor ze uit de roulatie verdwijnen.",
       "uitleg": "Dit fenomeen heet de wet van Gresham."
     }
   ]

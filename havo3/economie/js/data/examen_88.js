@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit tussen mechanisatie en robotisering.",
-      "sleutelwoorden": [
-        "machine/machines/technische hulpmiddelen",
-        "robots/een robot"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij mechanisatie vervangen machines en technische hulpmiddelen arbeidskrachten, bij robotisering vervangen robots werknemers.",
+      "vraag": "Wat vervangt arbeidskrachten bij mechanisatie? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["machine/technische hulpmiddelen/apparaten"],
+      "minTreffers": 1,
+      "modelantwoord": "Machines.",
       "uitleg": "Mechanisatie gebruikt machines en hulpmiddelen, robotisering gebruikt robots die het werk van werknemers overnemen."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een bedrijf met een hogere arbeidsproductiviteit meer kan verdienen aan zijn producten.",
-      "sleutelwoorden": [
-        "kosten/goedkoper/lager",
-        "verdelen/verdeeld/meer producten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De kosten worden verdeeld over meer producten, waardoor de kosten per product dalen en het bedrijf meer kan verdienen.",
+      "vraag": "Waarom kan een bedrijf met een hogere arbeidsproductiviteit meer winst maken? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kosten/goedkoper/lager/verdeel/meer geproduceerd"],
+      "minTreffers": 1,
+      "modelantwoord": "De kosten per product worden lager.",
       "uitleg": "Per product zijn er minder kosten doordat de kosten over meer producten worden verdeeld."
     }
   ]

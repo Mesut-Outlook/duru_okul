@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom zijn Chinese investeringen voor veel landen aantrekkelijk, terwijl westerse landen en buurlanden er argwanend naar kijken?",
-      "sleutelwoorden": [
-        "welkom/aantrekkelijk/mensenrechten",
-        "militair/macht/invloed"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Landen zijn blij met de investeringen omdat China zich niet met mensenrechten bemoeit, maar buurlanden zien de groeiende macht en de militaire aanwezigheid met argwaan.",
+      "vraag": "Waarom kijken buurlanden argwanend naar de Chinese investeringen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["militair/macht"],
+      "minTreffers": 1,
+      "modelantwoord": "Buurlanden zien de groeiende macht en de militaire aanwezigheid van China met argwaan.",
       "uitleg": "De investeringen zijn welkom door het ontbreken van bemoeienis met mensenrechten, maar de militaire macht en invloed van China maken anderen argwanend. (boek p. 23)"
     },
     {
       "type": "open",
-      "vraag": "Beschrijf hoe de invloed van de VS zich over de wereld uitstrekt en hoe die van China.",
-      "sleutelwoorden": [
-        "multinational/bedrijven",
-        "investering/infrastructuur"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De VS zijn zichtbaar via multinationals als McDonald's, Nike en Apple; China breidt zijn invloed uit met grote investeringen in infrastructuur.",
+      "vraag": "Hoe breidt China zijn invloed in de wereld uit? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["investering/infrastructuur"],
+      "minTreffers": 1,
+      "modelantwoord": "Met grote investeringen in infrastructuur.",
       "uitleg": "De VS via multinationals, China via investeringen in infrastructuur. (boek p. 23)"
     }
   ]

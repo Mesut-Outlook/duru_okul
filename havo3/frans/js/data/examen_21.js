@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de drie gangen van een traditioneel Frans driegangenmenu in de juiste volgorde in het Frans.",
-      "sleutelwoorden": [
-        "entrée/entree",
-        "plat/principal",
-        "dessert"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. L'entrée (voorgerecht), 2. Le plat principal (hoofdgerecht), 3. Le dessert (nagerecht).",
+      "vraag": "Noem in het Frans de eerste gang van een traditioneel Frans driegangenmenu. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["entrée/entree"],
+      "minTreffers": 1,
+      "modelantwoord": "L'entrée (het voorgerecht).",
       "uitleg": "Volgorde: l'entrée -> le plat principal -> le dessert."
     },
     {

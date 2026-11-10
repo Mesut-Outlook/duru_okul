@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom begonnen zes Europese landen oorspronkelijk met economische samenwerking na de oorlog?",
-      "sleutelwoorden": [
-        "steenkool/kolen",
-        "ijzererts/staal"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij wilden de onderlinge handel in steenkool en ijzererts reguleren om vrede en welvaart te bevorderen.",
+      "vraag": "Waarom begonnen zes Europese landen na de oorlog met economische samenwerking? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["steenkool/kolen/ijzererts/staal/vrede"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze wilden de handel in steenkool en ijzererts regelen.",
       "uitleg": "Om samen te werken op het gebied van steenkool en ijzererts. (boek p. 38)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee kritiekpunten die burgers of bedrijven hebben op het functioneren van de EU.",
-      "sleutelwoorden": [
-        "traag/trage",
-        "strenge regels/duurzaamheid/stikstof"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De besluitvorming verloopt vaak traag en bedrijven ervaren strengere regels rondom stikstof en duurzaamheid.",
+      "vraag": "Noem één kritiekpunt van burgers of bedrijven op het functioneren van de EU. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["traag/trage/regels/stikstof/duurzaamheid"],
+      "minTreffers": 1,
+      "modelantwoord": "De besluitvorming verloopt vaak traag.",
       "uitleg": "Besluitvorming is traag en men heeft last van strenge regels. (boek p. 38)"
     }
   ]

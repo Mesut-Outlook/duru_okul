@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met behulp van het voorbeeld van de Zuid-Afrikaanse druivenplukker uit wat globalisering precies inhoudt.",
-      "sleutelwoorden": [
-        "meerdere landen/internationaal",
-        "producten/keten",
-        "verweven/afhankelijk"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Globalisering betekent dat landen en producten wereldwijd steeds meer met elkaar verweven raken. De druivenplukker draagt kleding van een Amerikaans merk gemaakt in Indonesië en gebruikt een Zuid-Koreaanse telefoon die in China is gemaakt, terwijl zijn eigen druiven weer als wijn naar Europa worden geëxporteerd: producten en landen zijn dus internationaal met elkaar verbonden.",
+      "vraag": "Wat is globalisering? Gebruik het voorbeeld van de Zuid-Afrikaanse druivenplukker. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verweven/verbonden/afhankelijk/internationaal/wereldwijd/meerdere landen"],
+      "minTreffers": 1,
+      "modelantwoord": "Landen en producten raken wereldwijd steeds meer met elkaar verweven.",
       "uitleg": "Het voorbeeld laat zien hoe producten via internationale ketens door meerdere landen heen reizen voordat ze bij de consument terechtkomen."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom sommige experts, zoals hoogleraar Rob de Wijk, kritisch zijn over de uitbreiding van de BRICS met landen als Iran en Ethiopië.",
-      "sleutelwoorden": [
-        "antiwesters",
-        "dictatuur/dictatoriaal",
-        "mensenrechten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Rob de Wijk vindt de uitbreiding zorgelijk omdat de nieuwe BRICS-leden vaak een antiwesterse houding hebben. Het zijn regelmatig landen met een dictatoriaal bestuur, waar mensenrechten niet hoog op de agenda staan, waardoor het verbond volgens hem minder democratisch en minder betrouwbaar wordt.",
+      "vraag": "Waarom is hoogleraar Rob de Wijk kritisch over de uitbreiding van de BRICS met landen als Iran en Ethiopië? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["antiwest/dictatoriaal/dictatuur/mensenrechten/democratisch"],
+      "minTreffers": 1,
+      "modelantwoord": "De nieuwe leden zijn vaak antiwesters en dictatoriaal bestuurd.",
       "uitleg": "De kritiek richt zich op de antiwesterse houding en het gebrekkige respect voor mensenrechten in een deel van de nieuwe BRICS-landen."
     }
   ]

@@ -167,25 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beredeneer waarom een hijsinstallatie met 4 dragende touwen minder spierkracht vereist om een zware last te verplaatsen.",
-      "sleutelwoorden": [
-        "spankracht/vier delen",
-        "krachtvoordeel/factor 4"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij een takel met 4 dragende touwdelen wordt het gewicht van de last verdeeld over 4 touwdelen: in elk touwdeel staat een spankracht van een kwart van de last. Je krachtvoordeel is dus een factor 4 (een last van 800 N vraagt 200 N spierkracht). Volgens de Gouden Regel moet je daarvoor wel 4x zoveel touw binnenhalen.",
+      "vraag": "Een last van 800 N hangt aan een takel met 4 dragende touwen. Hoe groot is de spierkracht? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["200"],
+      "minTreffers": 1,
+      "modelantwoord": "In elk touwdeel staat 200 N, een kwart van 800 N.",
       "uitleg": "Vergelijking van hefwerktuigen."
     },
     {
       "type": "open",
-      "vraag": "Een olifant van 36.000 N staat op 4 poten (elk 450 cm²). Een circusartieste van 540 N balanceert op de punt van één stilettohak (0,30 cm²). Bereken voor beide de druk in N/cm² en leg uit wie van de twee de grootste kans heeft om een houten parketvloer te beschadigen (deukjes te maken).",
-      "sleutelwoorden": [
-        "20",
-        "1800",
-        "vrouw/hak/deukjes/grootste druk/puntbelasting"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Olifant: totaal oppervlak = 4 × 450 = 1800 cm². Druk = F / A = 36.000 N / 1800 cm² = 20 N/cm². Artieste op stilettohak: oppervlak = 0,30 cm². Druk = F / A = 540 N / 0,30 cm² = 1800 N/cm². Conclusie: de druk onder de stilettohak (1800 N/cm²) is 90 keer zo groot als onder de poten van de olifant (20 N/cm²). De vrouw op de hak maakt dus veel eerder deukjes in het parket.",
+      "vraag": "Een artieste van 540 N balanceert op de punt van één stilettohak (0,30 cm²). Bereken de druk in N/cm². <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["1800"],
+      "minTreffers": 1,
+      "modelantwoord": "Druk = 540 N / 0,30 cm² = 1800 N/cm².",
       "uitleg": "Drukvergelijking tussen grote kracht / groot oppervlak en kleine kracht / miniem oppervlak."
     }
   ]

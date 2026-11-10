@@ -173,26 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe een arts met een <b>radioactieve tracer</b> en een <b>gammacamera</b> een nieraandoening kan opsporen bij een patiënt.",
-      "sleutelwoorden": [
-        "bloedbaan/tracer inspuiten/spuit tracer",
-        "gammastraling/straling dringt/door het lichaam",
-        "zichtbaar/ophopen/afgevoerd"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De arts spuit een kleine hoeveelheid van een gammastralende tracer met korte halveringstijd in de bloedbaan. De nieren filteren deze stof uit het bloed. Omdat gammastraling makkelijk door het lichaam heen dringt, registreert de externe gammacamera waar en hoe snel de tracer zich ophoopt en wordt afgevoerd. Een verstopping of slecht functionerende nier is zo direct zichtbaar.",
+      "vraag": "Waar spuit de arts de tracer in om de nieren te onderzoeken? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["bloedbaan/bloed/ader"],
+      "minTreffers": 1,
+      "modelantwoord": "De arts spuit de tracer in de bloedbaan.",
       "uitleg": "Tracer -> orgaanopname -> gammastraling naar buiten -> camera maakt functie en doorstroming zichtbaar."
     },
     {
       "type": "open",
-      "vraag": "Waarom is een <b>MRI-scan</b> voor het onderzoeken van zachte weefsels (zoals hersenen en spieren) vaak veiliger en geschikter dan een CT-scan?",
-      "sleutelwoorden": [
-        "geen ioniserende straling/magneetveld/onschadelijk",
-        "zacht weefsel/contrast/hersenen",
-        "geen stralingsbelasting"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een MRI-scan maakt gebruik van een sterk magneetveld en radiogolven (geen ioniserende straling), waardoor er geen stralingsbelasting of risico op DNA-schade is. Bovendien geeft MRI een veel scherper contrast en meer detail bij zachte weefsels (zoals hersenen, pezen, kraakbeen en spieren) vergeleken met röntgen- of CT-scans.",
+      "vraag": "Noem één reden waarom een MRI-scan veiliger is dan een CT-scan. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ioniserend/geen straling/stralingsbelasting/magneetveld"],
+      "minTreffers": 1,
+      "modelantwoord": "Een MRI gebruikt een magneetveld en geen ioniserende straling, dus er is geen stralingsbelasting.",
       "uitleg": "Geen stralingsrisico + superieur contrast bij weke delen."
     }
   ]

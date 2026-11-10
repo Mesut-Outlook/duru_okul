@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom verplichte ESG-regels een Europees bedrijf kunnen benadelen ten opzichte van een Chinees bedrijf.",
-      "sleutelwoorden": [
-        "achterstand/concurrentie",
-        "minder last/minder regels/minder strenge"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een Europees bedrijf kan op achterstand komen, omdat bedrijven buiten de EU minder last hebben van regels.",
+      "vraag": "Waarom kunnen verplichte ESG-regels een Europees bedrijf benadelen ten opzichte van een Chinees bedrijf? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["achterstand/concurrentie/minder last"],
+      "minTreffers": 1,
+      "modelantwoord": "Bedrijven buiten de EU hebben minder last van regels, dus Europese bedrijven komen op achterstand.",
       "uitleg": "Een achterstand in de concurrentie, want Chinese bedrijven hebben minder last van regels. (boek p. 40)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee manieren waarop duurzaamheid een rol speelt in de Europese handel volgens deze paragraaf.",
-      "sleutelwoorden": [
-        "ESG/rapporteren/rapportage",
-        "klimaat/uitdaging/toekomst"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bedrijven moeten rapporteren over ESG, en klimaat en duurzaamheid zijn een uitdaging voor de toekomst van de EU-handel.",
+      "vraag": "Noem één manier waarop duurzaamheid een rol speelt in de Europese handel volgens deze paragraaf. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["esg/rapporteer/rapportage/klimaat"],
+      "minTreffers": 1,
+      "modelantwoord": "Bedrijven moeten rapporteren over ESG.",
       "uitleg": "ESG-rapportage en klimaat als uitdaging voor de toekomst. (boek p. 40)"
     }
   ]

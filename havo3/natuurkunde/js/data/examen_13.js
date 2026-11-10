@@ -173,26 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een holle negatieve lens bijziendheid corrigeert en schets het pad van de lichtstralen vóór en na het hoornvlies.",
-      "sleutelwoorden": [
-        "netvlies",
-        "uit elkaar/divergen/spreid/uiteen",
-        "te sterk/vóór het netvlies/voor het netvlies/te lang/te bol"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij bijziendheid breekt het oog het licht te sterk: de lichtstralen komen vóór het netvlies samen. Een holle (negatieve) lens laat de evenwijdige lichtstralen eerst uit elkaar lopen (divergeren). Daardoor komen ze na het hoornvlies en de ooglens later samen, precies op het netvlies, en zie je veraf weer scherp.",
+      "vraag": "Waar komen de lichtstralen bij een bijziend oog samen zonder bril? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vóór het netvlies/voor het netvlies"],
+      "minTreffers": 1,
+      "modelantwoord": "De lichtstralen komen vóór het netvlies samen.",
       "uitleg": "Een negatieve (holle) lens spreidt het licht. Vóór de lens: evenwijdige stralen; na de lens: uiteenlopende stralen; na hoornvlies en ooglens: samenkomend op het netvlies in plaats van ervoor."
     },
     {
       "type": "open",
-      "vraag": "Noem de drie belangrijkste maatregelen om de stralingsdosis voor werknemers in een ziekenhuis zo laag mogelijk te houden en licht bij elk kort toe hoe het werkt.",
-      "sleutelwoorden": [
-        "afstand vergroten",
-        "tijd verkorten",
-        "afscherming/lood gebruiken"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Afstand vergroten: Door afstand te houden van de bron daalt de stralingsintensiteit kwadratisch (omgekeerde kwadratenwet).\n2. Tijd verkorten: Door zo kort mogelijk in de buurt van de stralingsbron te verblijven, is de totale opgenomen dosis minimaal (dosis = tempo × tijd).\n3. Afscherming: Door loden schorten, loden schermen of dikke wanden te gebruiken, wordt de straling geabsorbeerd voordat deze het lichaam bereikt.",
+      "vraag": "Noem één maatregel om de stralingsdosis voor werknemers in een ziekenhuis zo laag mogelijk te houden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["afstand/tijd/afscherming/lood"],
+      "minTreffers": 1,
+      "modelantwoord": "Je kunt afstand houden tot de stralingsbron.",
       "uitleg": "De 3 pijlers van stralingsbescherming: Afstand, Tijd en Afscherming."
     }
   ]

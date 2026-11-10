@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Benoem de drie bronnen van inkomen en geef voor een gezin bij elke bron één passend praktijkvoorbeeld.",
-      "sleutelwoorden": [
-        "arbeid/salaris/loon",
-        "bezit/rente/huur/dividend",
-        "overdracht/kinderbijslag/zakgeld/zorgtoeslag"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Inkomen uit arbeid: het maandsalaris van een ouder. 2. Inkomen uit bezit: ontvangen rente op de spaarrekening of huur van een garagebox. 3. Overdrachtsinkomen: kinderbijslag of zorgtoeslag ontvangen van de overheid.",
+      "vraag": "Noem één van de drie bronnen van inkomen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["arbeid/bezit/overdracht"],
+      "minTreffers": 1,
+      "modelantwoord": "Inkomen uit arbeid.",
       "uitleg": "Dit zijn de drie standaard economische inkomenscategorieën."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom bezuinigen op huishoudelijke uitgaven op korte termijn veel makkelijker is dan bezuinigen op vaste lasten.",
-      "sleutelwoorden": [
-        "contracten/termijn/opzegtermijn/vastzitten",
-        "direct/boodschappen/goedkoper merk/flexibel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Aan vaste lasten (zoals een huurcontract of jaarabonnement) zit je contractueel vast met opzegtermijnen. Huishoudelijke uitgaven (zoals boodschappen) doe je wekelijks en kun je direct verlagen door goedkopere huismerken te kopen of minder luxe snacks te halen.",
+      "vraag": "Waarom is bezuinigen op vaste lasten op korte termijn lastig? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["contract/opzeg/vastzitten/gebonden"],
+      "minTreffers": 1,
+      "modelantwoord": "Je zit vast aan contracten met een opzegtermijn.",
       "uitleg": "Vaste lasten vergen contractwijzigingen of verhuizing; dagelijkse boodschappen zijn direct aanpasbaar."
     }
   ]

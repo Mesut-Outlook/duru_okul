@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de kleur van een ster iets zegt over de temperatuur van die ster. Noem de kleur die hoort bij een erg hete ster en de kleur die hoort bij een koele ster.",
-      "sleutelwoorden": [
-        "blauw",
-        "rood"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Hoe heter een ster is, hoe blauwer de kleur licht is die hij uitzendt; een koele ster straalt juist rood licht uit. De zon zit daar met een gele kleur tussenin.",
+      "vraag": "Welke kleur heeft een erg hete ster? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["blauw"],
+      "minTreffers": 1,
+      "modelantwoord": "Een erg hete ster geeft blauw licht.",
       "uitleg": "De temperatuur van een ster bepaalt de kleur: heet is blauw, koel is rood, met oranje en geel daartussenin (zoals de zon)."
     }
   ]

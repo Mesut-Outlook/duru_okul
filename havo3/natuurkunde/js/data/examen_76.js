@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom iemand die tijdens het rijden een berichtje typt een grotere stopafstand heeft, terwijl de remweg van de auto niet verandert.",
-      "modelantwoord": "Door de afleiding is de reactietijd langer. In die tijd rijdt de auto nog met dezelfde constante snelheid door, dus de reactieafstand wordt groter. De remweg hangt alleen af van snelheid, remkracht en wegdek. De stopafstand is de som van beide en wordt dus groter.",
+      "vraag": "Iemand typt tijdens het rijden een berichtje en heeft een grotere stopafstand. Welke tijd wordt daardoor langer? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De reactietijd wordt langer, dus de auto legt meer afstand af voordat er geremd wordt.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "reactietijd/reactie",
-        "constante snelheid/doorrijdt/doorrijden"
-      ],
+      "sleutelwoorden": ["reactietijd/reactie"],
       "uitleg": "Afleiding verlengt de reactietijd en dus de reactieafstand; de remweg blijft gelijk."
     }
   ]

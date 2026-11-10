@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Je schopt een bal over een vlakke grasmat. De snelheid van de bal wordt steeds kleiner totdat hij stilligt. Leg uit welke kracht daarvoor zorgt.",
-      "modelantwoord": "Er werkt een tegenwerkende wrijvingskracht (rolweerstand en luchtweerstand) op de bal, tegen de bewegingsrichting in. Daardoor is de resulterende kracht tegen de beweging in en krijgt de bal een vertraging, totdat hij stilstaat.",
+      "vraag": "Welke kracht remt de rollende bal af op de grasmat? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De wrijvingskracht (rolweerstand en luchtweerstand) remt de bal af.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "wrijving/rolweerstand/weerstand",
-        "vertraging/afremmen"
-      ],
+      "sleutelwoorden": ["wrijving/rolweerstand/luchtweerstand"],
       "uitleg": "Zonder tegenwerkende wrijving zou de bal met constante snelheid doorrollen. De wrijving geeft een Fres tegen de beweging in en dus een vertraging."
     }
   ]

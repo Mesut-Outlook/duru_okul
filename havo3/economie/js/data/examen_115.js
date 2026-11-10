@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een bedrijf heeft vaste kosten van € 6.000 per jaar en variabele kosten van € 2,50 per product. Het bedrijf maakt 4.000 producten per jaar en hanteert een winstmarge van 25% van de kostprijs. Bereken eerst de kostprijs per product en daarna de verkoopprijs exclusief btw.",
-      "sleutelwoorden": [
-        "4/4,00",
-        "5/5,00"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Kostprijs = (€ 6.000 / 4.000) + € 2,50 = € 1,50 + € 2,50 = € 4,00. Verkoopprijs = € 4,00 + (25% van € 4,00) = € 4,00 + € 1,00 = € 5,00.",
+      "vraag": "Een bedrijf heeft een kostprijs van € 4,00 per product en een winstmarge van 25% van de kostprijs. Bereken de verkoopprijs exclusief btw. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["5"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 5",
       "uitleg": "Kostprijs = € 1,50 + € 2,50 = € 4,00; verkoopprijs = € 4,00 × 1,25 = € 5,00."
     },
     {
       "type": "open",
-      "vraag": "Een winkel in sportartikelen verkoopt in een jaar 2.000 trainingspakken voor € 60 per stuk (exclusief btw). De winkel heeft de pakken ingekocht voor € 35 per stuk. De bedrijfskosten (loonkosten, huur, verkoopkosten en afschrijving) bedragen in totaal € 32.000. Bereken de omzet, de brutowinst en de nettowinst.",
-      "sleutelwoorden": [
-        "120.000/120000",
-        "50.000/50000",
-        "18.000/18000"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Omzet = 2.000 × € 60 = € 120.000. Inkoopwaarde van de omzet = 2.000 × € 35 = € 70.000. Brutowinst = € 120.000 − € 70.000 = € 50.000. Nettowinst = € 50.000 − € 32.000 = € 18.000.",
+      "vraag": "Een winkel verkoopt 2.000 trainingspakken voor € 60 en kocht ze in voor € 35. De bedrijfskosten zijn € 32.000. Bereken de nettowinst. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["18 000/18000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 18.000",
       "uitleg": "Omzet = € 120.000; inkoopwaarde = € 70.000; brutowinst = € 50.000; nettowinst = € 18.000."
     }
   ]

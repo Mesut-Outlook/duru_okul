@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe een eenparige beweging en een eenparig versnelde beweging er in een (v,t)-diagram verschillend uitzien.",
-      "modelantwoord": "Bij een eenparige beweging is de snelheid constant: de grafiek is een horizontale lijn. Bij een eenparig versnelde beweging is er sprake van een snelheid die gelijkmatig toeneemt: de grafiek is een schuin oplopende rechte lijn.",
+      "vraag": "Hoe ziet de (v,t)-grafiek van een eenparige beweging eruit? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Een horizontale lijn, want de snelheid is constant.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "horizontaal/horizontale",
-        "toeneemt/stijgt/oploopt"
-      ],
+      "sleutelwoorden": ["horizontaal/horizontale/vlak/waterpas"],
       "uitleg": "Constante snelheid geeft een horizontale lijn; gelijkmatig toenemende snelheid geeft een schuin oplopende rechte lijn."
     }
   ]

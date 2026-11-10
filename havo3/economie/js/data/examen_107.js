@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een bedrijf dat sporttassen maakt heeft € 60.000 aan constante kosten per jaar en € 8 aan variabele kosten per tas. Laat met een berekening zien wat er met de constante kosten per tas gebeurt als de productie stijgt van 5.000 naar 10.000 tassen per jaar.",
-      "sleutelwoorden": [
-        "12",
-        "6",
-        "halveren/helft/daalt"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij 5.000 tassen zijn de constante kosten per tas € 60.000 / 5.000 = € 12. Bij 10.000 tassen zijn de constante kosten per tas € 60.000 / 10.000 = € 6. De constante kosten per tas halveren dus (dalen met € 6).",
+      "vraag": "Een bedrijf heeft € 60.000 aan constante kosten per jaar. Bereken de constante kosten per tas bij een productie van 10.000 tassen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["6"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 6 per tas.",
       "uitleg": "Bij 5.000 tassen: € 12 per tas; bij 10.000 tassen: € 6 per tas (halvering)."
     },
     {
       "type": "open",
-      "vraag": "Een fabriek heeft € 42.000 aan constante kosten per jaar en € 4 aan variabele kosten per product. Bereken de totale kosten én de totale kosten per product bij een productie van 3.000 producten.",
-      "sleutelwoorden": [
-        "54.000/54000",
-        "18/18,00"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Totale kosten = € 42.000 + (3.000 × € 4) = € 42.000 + € 12.000 = € 54.000. Per product: € 54.000 / 3.000 = € 18.",
+      "vraag": "Een fabriek heeft € 42.000 aan constante kosten per jaar en € 4 aan variabele kosten per product. Bereken de totale kosten bij 3.000 producten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["54 000/54000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 54.000",
       "uitleg": "Totale kosten € 54.000; per product € 18."
     }
   ]

@@ -199,13 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit tussen een 'meteoor' en een 'meteoriet'.",
-      "sleutelwoorden": [
-        "lichtspoor",
-        "grond"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een meteoor is het lichtspoor dat je ziet als gruis in de dampkring verbrandt (een vallende ster); een meteoriet is het gesteente dat niet volledig verdampt en de grond bereikt.",
+      "vraag": "Wat zie je aan de hemel bij een meteoor? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["lichtspoor/vallende ster/lichtflits"],
+      "minTreffers": 1,
+      "modelantwoord": "Je ziet een lichtspoor, een vallende ster.",
       "uitleg": "Een meteoor is het lichtspoor van verbrandend gruis in de dampkring; een meteoriet is het gesteente dat daadwerkelijk de grond bereikt."
     }
   ]

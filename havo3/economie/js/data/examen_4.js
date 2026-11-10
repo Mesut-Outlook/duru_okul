@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee nadelen van directe ruil vergeleken met betalen met geld.",
-      "sleutelwoorden": [
-        "dubbele samenval/wensen vinden",
-        "bederfelijk/niet houdbaar/ondeelbaar"
-      ],
+      "vraag": "Noem één nadeel van directe ruil vergeleken met betalen met geld. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["dubbele samenval/wensen/bederv/houdbaar/ondeelbaar/verdelen"],
       "minTreffers": 1,
-      "modelantwoord": "1. Moeilijk iemand te vinden die elkaars goederen wil hebben (dubbele samenval van wensen), 2. Goederen zijn bederfelijk of lastig te verdelen.",
+      "modelantwoord": "Je moet iemand vinden die jouw goederen ook wil hebben (dubbele samenval van wensen).",
       "uitleg": "Directe ruil kost veel transactietijd en goederen bederven."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom vertrouwen essentieel is voor het functioneren van ons huidige geldsysteem.",
-      "sleutelwoorden": [
-        "intrinsieke/materiaalwaarde laag",
-        "vertrouwt/betaalmiddel accepteert"
-      ],
+      "vraag": "Waarom hebben mensen vertrouwen nodig in ons huidige geldsysteem? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["intrinsiek/eigen waarde/materiaalwaarde/accepteert/accepteren"],
       "minTreffers": 1,
-      "modelantwoord": "Omdat bankbiljetten en digitaal geld nauwelijks intrinsieke materiaalwaarde hebben; het werkt alleen als iedereen erop vertrouwt dat een ander het ook als betaalmiddel accepteert.",
+      "modelantwoord": "Geld heeft bijna geen eigen waarde; het werkt alleen als iedereen het accepteert.",
       "uitleg": "Fiduciair geld staat of valt bij maatschappelijk acceptatievertrouwen."
     }
   ]

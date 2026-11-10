@@ -168,18 +168,18 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit waarom de ontdekking van een dunne laag iridiumrijk sediment wereldwijd in gesteenten van 66 miljoen jaar oud het bewijs leverde voor de meteorietinslag aan het einde van het Krijt.",
-      sleutelwoorden: ["zeldzaam", "meteorieten", "wereldwijde stofwolk/kleilaag"],
-      minTreffers: 2,
-      modelantwoord: "Het metaal iridium is uiterst zeldzaam in de aardkorst omdat het tijdens de vorming van de aarde naar de kern is gezonken, maar komt wel in hoge concentraties voor in meteorieten. De vondst van een wereldwijde dunne kleilaag met een extreem hoog iridiumgehalte precies op de grens tussen Krijt en Tertiair bewees dat een enorme ruimterots is ingeslagen en verpulverd tot een wereldwijde stofwolk.",
+      vraag: "Waarom bewees de iridiumrijke laag in gesteente van 66 miljoen jaar oud een meteorietinslag? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["zeldzaam/kern/ruimterots/stofwolk"],
+      minTreffers: 1,
+      modelantwoord: "Iridium is zeldzaam op aarde maar komt veel voor in meteorieten.",
       uitleg: "Iridium-piek op de Krijt-Tertiair grens vormt de onweerlegbare chemische vingerafdruk van de meteoriet."
     },
     {
       type: "open",
-      vraag: "Leg uit hoe geologen met behulp van fossielen en het superpositiebeginsel de relatieve ouderdom van verschillende gesteentelagen in een bergketen vaststellen.",
-      sleutelwoorden: ["ouder dan/onderste", "gidsfossielen", "correleren/correlatie"],
-      minTreffers: 2,
-      modelantwoord: "Volgens het superpositiebeginsel zijn de onderste sedimentlagen ouder dan de bovenliggende lagen. Door te kijken welke specifieke gidsfossielen (organismen die slechts in één specifieke periode leefden) in de verschillende lagen voorkomen, kunnen geologen lagen in verschillende bergen met elkaar correleren en bepalen welke formatie eerder of later is afgezet.",
+      vraag: "Hoe weet je met het superpositiebeginsel welke gesteentelaag het oudst is? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["onderste/onderaan/diepste"],
+      minTreffers: 1,
+      modelantwoord: "De onderste laag is het oudst.",
       uitleg: "Superpositie geeft verticale volgorde; gidsfossielen maken datering en correlatie tussen locaties mogelijk."
     }
   ]

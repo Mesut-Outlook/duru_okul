@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Lees: <i>'Le recyclage des déchets et la réduction de l'utilisation du plastique sont les deux priorités environnementales de la commune.'</i><br>Wat zijn de twee milieuprioriteiten van de gemeente?",
-      "sleutelwoorden": [
-        "recycling/afval/afvalscheiding/déchets",
-        "plastic/gebruik/vermindering/reductie"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Afvalrecycling (le recyclage des déchets), 2. Vermindering van plasticgebruik (la réduction du plastique).",
+      "vraag": "Lees: <i>'Le recyclage des déchets et la réduction de l'utilisation du plastique sont les deux priorités environnementales de la commune.'</i><br>Noem één milieuprioriteit van de gemeente. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["recycling/recyclage/afval/déchets/plastic/vermindering/reductie"],
+      "minTreffers": 1,
+      "modelantwoord": "Het recyclen van afval (le recyclage des déchets).",
       "uitleg": "Recyclage des déchets en réduction du plastique."
     },
     {

@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Complete this conditional sentence with a logical result: <i>'If our school installs solar panels on the roof, ...'</i>",
-      "sleutelwoorden": [
-        "generate/clean/electricity/power",
-        "reduce/energy/bills/cost/save"
-      ],
+      "vraag": "Complete with one logical result: <i>'If our school installs solar panels on the roof, ...'</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["generate/clean/electricity/power/reduce/energy/bills/cost/save/less"],
       "minTreffers": 1,
-      "modelantwoord": "If our school installs solar panels on the roof, we will generate clean electricity and reduce our energy bills.",
+      "modelantwoord": "If our school installs solar panels on the roof, we will generate clean electricity.",
       "uitleg": "Het resultaatdeel moet 'will + hele werkwoord' bevatten met een logisch gevolg."
     },
     {

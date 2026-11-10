@@ -191,23 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Je kunt niet naar het feest van je vriendin. Hoe zeg je in het Frans dat het je spijt en dat je niet kunt komen? (p. 153)",
-      "modelantwoord": "Je suis désolée, je ne peux pas venir parce que je vais chez ma grand-mère.",
-      "sleutelwoorden": [
-        "désolé/desole",
-        "ne peux pas/pas possible"
-      ],
-      "minTreffers": 2,
+      "vraag": "Je kunt niet naar het feest van je vriendin. Welk Frans woord zegt dat het je spijt? (p. 153) <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Je suis désolée.",
+      "sleutelwoorden": ["désolé/desole"],
+      "minTreffers": 1,
       "uitleg": "Excuseren: 'Je suis désolé(e)'. Weigeren: 'Je ne peux pas venir parce que…' of 'Ce n'est pas possible…'."
     },
     {
       "type": "open",
-      "vraag": "Waarom is het verstandig om bij Cito- en DELF-luistertoetsen de opgaven vooraf grondig door te nemen?",
-      "modelantwoord": "Hierdoor weet je al op welke specifieke details of kernwoorden je moet letten tijdens het luisterfragment.",
-      "sleutelwoorden": [
-        "detail/kernwoord/focus/gericht",
-        "weten/letten/aandacht/audio"
-      ],
+      "vraag": "Waarom lees je bij Cito- en DELF-luistertoetsen de opgaven vooraf? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Dan weet je op welke details je moet letten.",
+      "sleutelwoorden": ["detail/kernwoord/letten/gericht/focus"],
       "minTreffers": 1,
       "uitleg": "Door vooraf de opgaven te lezen weet je precies op welke aspecten je in het audiofragment moet letten."
     }

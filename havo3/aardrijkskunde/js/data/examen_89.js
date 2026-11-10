@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beschrijf aan de hand van bron 28 hoe de verdeling van de beroepsbevolking in het Ruhrgebied tussen 1965 en 2023 is veranderd.",
-      "sleutelwoorden": [
-        "industrie",
-        "diensten",
-        "steenkool"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het aandeel mensen in industrie en mijnbouw is sterk gedaald, het aandeel in de diensten is flink gegroeid en de steenkoolproductie daalde naar vrijwel nul.",
+      "vraag": "Beschrijf aan de hand van bron 28 één verandering in de beroepsbevolking van het Ruhrgebied tussen 1965 en 2023. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["industrie/diensten/steenkool/mijnbouw"],
+      "minTreffers": 1,
+      "modelantwoord": "Het aandeel mensen in de industrie is sterk gedaald.",
       "uitleg": "Het aandeel in de industrie nam sterk af, het aandeel in de diensten nam toe. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Beschrijf aan de hand van bron 27 waar de koopkracht in Europa gemiddeld het hoogst en waar het laagst is.",
-      "sleutelwoorden": [
-        "noordwest",
-        "oost",
-        "zuid"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De koopkracht is het hoogst in het noordwesten en lager in het zuiden en het oosten.",
+      "vraag": "Beschrijf aan de hand van bron 27 waar de koopkracht in Europa gemiddeld het hoogst is. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["noordwest/noord"],
+      "minTreffers": 1,
+      "modelantwoord": "De koopkracht is het hoogst in het noordwesten.",
       "uitleg": "In het noordwesten liggen de inkomens en koopkracht hoger dan in het zuiden en oosten. (boek p. 38)"
     }
   ]

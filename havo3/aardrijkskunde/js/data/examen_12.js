@@ -194,20 +194,16 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe noemt men het positieve effect waarbij terugkerende migranten nieuwe vaardigheden en investeringen meebrengen naar hun herkomstland?",
-      "sleutelwoorden": [
-        "braingain/brain gain"
-      ],
+      "vraag": "Hoe noemt men het positieve effect waarbij terugkerende migranten nieuwe vaardigheden en investeringen meebrengen naar hun herkomstland? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["braingain/brain gain"],
       "minTreffers": 1,
       "modelantwoord": "Dit positieve effect heet braingain.",
       "uitleg": "Braingain is het tegenovergestelde van braindrain."
     },
     {
       "type": "open",
-      "vraag": "Welke term gebruiken we voor de overboekingen van verdiend salaris door migranten naar hun familie thuis?",
-      "sleutelwoorden": [
-        "remittances/geldzendingen"
-      ],
+      "vraag": "Welke term gebruiken we voor de overboekingen van verdiend salaris door migranten naar hun familie thuis? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["remittances/geldzendingen"],
       "minTreffers": 1,
       "modelantwoord": "Dit noemen we geldzendingen of remittances.",
       "uitleg": "Geldzendingen ondersteunen miljoenen gezinnen in ontwikkelingslanden."

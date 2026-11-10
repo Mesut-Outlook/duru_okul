@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke twee Duitse werkwoorden gebruik je om aan te geven dat je ergens pijn hebt?",
-      "modelantwoord": "Weh tun (tut weh) en Schmerzen haben.",
-      "sleutelwoorden": [
-        "weh tun",
-        "Schmerzen haben",
-        "Schmerzen"
-      ],
+      "vraag": "Geef één Duitse manier om te zeggen dat je ergens pijn hebt. <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Ich habe Schmerzen.",
+      "sleutelwoorden": ["weh tun/tut weh/tun weh/schmerzen"],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'weh tun' of 'Schmerzen haben'."
     },
     {
       "type": "open",
-      "vraag": "Wat betekent de Duitse term 'die Krankenkasse' in het zorgsysteem?",
-      "modelantwoord": "De zorgverzekeraar of het ziekenfonds.",
-      "sleutelwoorden": [
-        "zorgverzekeraar/verzeker",
-        "ziekenfonds"
-      ],
+      "vraag": "Wat is 'die Krankenkasse' in het zorgsysteem? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het is de zorgverzekeraar.",
+      "sleutelwoorden": ["zorgverzeker/verzeker/ziekenfonds"],
       "minTreffers": 1,
       "uitleg": "Die Krankenkasse is de Duitse zorgverzekeraar."
     }

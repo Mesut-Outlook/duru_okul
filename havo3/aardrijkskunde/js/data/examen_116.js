@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een voormalige exploitatiekolonie met haar huidige export vaak weinig verdient.",
-      "sleutelwoorden": [
-        "onbewerkt/onbewerkte",
-        "minder/lager"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij exporteert vooral onbewerkte grondstoffen en daarmee verdient een land minder dan met bewerkte producten.",
+      "vraag": "Waarom verdient een voormalige exploitatiekolonie met haar huidige export vaak weinig? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["onbewerkt/grondstoffen"],
+      "minTreffers": 1,
+      "modelantwoord": "Zij exporteert vooral onbewerkte grondstoffen.",
       "uitleg": "Ze exporteren onbewerkte grondstoffen; dat levert minder op dan bewerkte producten. (boek p. 28)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee verschillen tussen een exploitatiekolonie en een vestigingskolonie.",
-      "sleutelwoorden": [
-        "hulpbronnen/grondstoffen",
-        "immigranten/kolonisten",
-        "moederland"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In een exploitatiekolonie werden de hulpbronnen opgeëist; in een vestigingskolonie vestigden immigranten zich en richtten het land in naar het moederland.",
+      "vraag": "Noem één verschil tussen een exploitatiekolonie en een vestigingskolonie. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["hulpbronnen/grondstoffen/immigranten/kolonisten/moederland"],
+      "minTreffers": 1,
+      "modelantwoord": "In een vestigingskolonie vestigden immigranten zich.",
       "uitleg": "Bij de ene gaat het om hulpbronnen, bij de andere vestigen immigranten zich. (boek p. 28)"
     }
   ]

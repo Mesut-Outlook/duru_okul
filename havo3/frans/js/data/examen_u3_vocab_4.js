@@ -193,22 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Frans informeel 'Waar ga je heen?' (drie woorden, p. 126)?",
-      "sleutelwoorden": [
-        "tu vas ou/tu vas où"
-      ],
+      "vraag": "Hoe vraag je in het Frans informeel 'Waar ga je heen?' (drie woorden, p. 126)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["tu vas où/tu vas ou"],
       "minTreffers": 1,
-      "modelantwoord": "De vraag is 'Tu vas où?'.",
+      "modelantwoord": "De vraag is Tu vas où ?",
       "uitleg": "'Tu vas où?' betekent 'Waar ga je heen?'."
     },
     {
       "type": "open",
-      "vraag": "Hoe zeg je in het Frans dat reserveren verplicht is: 'Oui, c'est ...' (één woord voor 'verplicht', p. 126)?",
-      "sleutelwoorden": [
-        "obligatoire"
-      ],
+      "vraag": "Hoe zeg je in het Frans dat reserveren verplicht is: 'Oui, c'est ...' (één woord voor 'verplicht', p. 126)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["obligatoire"],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse woord voor verplicht is 'obligatoire'.",
+      "modelantwoord": "Het Franse woord voor verplicht is obligatoire.",
       "uitleg": "'Obligatoire' betekent verplicht."
     }
   ]

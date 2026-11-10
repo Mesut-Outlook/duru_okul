@@ -179,25 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bron 34 toont dat vooral twee landen fossiele brandstoffen uit Nederland afnemen. Verklaar waarom Duitsland en België de grootste exportpartners zijn.",
-      "sleutelwoorden": [
-        "buur",
-        "grens/dichtbij/nabij"
-      ],
+      "vraag": "Bron 34 toont dat vooral Duitsland en België fossiele brandstoffen uit Nederland afnemen. Waarom zijn zij de grootste exportpartners? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["buur/dichtbij/nabij/grens"],
       "minTreffers": 1,
-      "modelantwoord": "Het zijn buurlanden die dichtbij liggen, dus vervoer is gemakkelijk.",
+      "modelantwoord": "Het zijn buurlanden die dichtbij liggen.",
       "uitleg": "Het zijn buurlanden van Nederland: ze liggen dichtbij, dus de producten zijn gemakkelijk te vervoeren. (boek p. 42)"
     },
     {
       "type": "open",
-      "vraag": "Nederland haalt zelf niet genoeg fossiele brandstoffen uit de grond, maar 16 procent van de export bestaat er wel uit. Hoe kan dat?",
-      "sleutelwoorden": [
-        "haven/Rotterdam",
-        "import/invoer/ingevoerd",
-        "doorvo/doorgevoer"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Brandstoffen worden in de havens ingevoerd en daarna doorgevoerd naar andere landen, zodat ze toch in de export tellen.",
+      "vraag": "Nederland haalt zelf niet genoeg fossiele brandstoffen uit de grond, maar 16 procent van de export bestaat er wel uit. Hoe kan dat? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["doorvoer/doorgevoerd/ingevoerd/invoer/import/haven"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze worden ingevoerd in de havens en doorgevoerd naar andere landen.",
       "uitleg": "Via de haven van Rotterdam worden veel brandstoffen ingevoerd (import) en doorgevoerd naar landen binnen Europa. (boek p. 45)"
     }
   ]

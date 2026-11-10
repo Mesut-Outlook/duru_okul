@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write a short persuasive argument for banning single-use water containers in the cafeteria.",
-      "sleutelwoorden": [
-        "waste/plastic/pollution/ocean",
-        "refillable/reusable/bottles/clean/environment"
-      ],
+      "vraag": "Write one short argument for banning single-use water containers in the cafeteria. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["waste/plastic/pollution/ocean/refillable/reusable/bottles/clean/environment"],
       "minTreffers": 1,
-      "modelantwoord": "Banning single-use plastic bottles drastically reduces plastic waste, and students can easily refill reusable bottles at water stations.",
+      "modelantwoord": "Single-use plastic bottles create a lot of plastic waste.",
       "uitleg": "Een overtuigend argument benoemt de vermindering van afval en het herbruikbare alternatief."
     },
     {

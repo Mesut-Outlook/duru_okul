@@ -167,14 +167,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Last Friday evening, a man was climbing through your neighbour's window. You phone the police. What do you say? Write 2 sentences in English and use Stone 3.",
-      "sleutelwoorden": [
-        "report/incident",
-        "saw/noticed",
-        "suspicious/suspiciously/broke in/force/forced/after he had"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "I'd like to report a crime. Last night I noticed a man acting suspiciously at my neighbour's house; I saw that he entered the house after he had forced the window.",
+      "vraag": "A man was climbing through your neighbour's window last Friday evening. You phone the police. Write one sentence in English and use Stone 3. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["report/incident/saw/noticed/suspicious/broke in/force/forced/after he had"],
+      "minTreffers": 1,
+      "modelantwoord": "I would like to report that I noticed a man acting suspiciously at my neighbour's house.",
       "uitleg": "Stone 3 Reporting a crime: 'I'd like to report a crime', 'I noticed someone acting suspiciously', 'I saw that he entered ... after he had forced the door open' (boek p. A98)."
     },
     {

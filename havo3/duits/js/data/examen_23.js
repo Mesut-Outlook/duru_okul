@@ -179,26 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de cijferschaal van het Duitse schoolsysteem (beste cijfer en slechtste cijfer).",
-      "modelantwoord": "Cijfer 1 is het beste cijfer (sehr gut) en cijfer 6 is het slechtste cijfer (ungenügend).",
-      "sleutelwoorden": [
-        "1",
-        "6",
-        "sehr gut",
-        "ungenügend"
-      ],
+      "vraag": "Welk cijfer is in het Duitse schoolsysteem het beste cijfer? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het beste cijfer is 1 (sehr gut).",
+      "sleutelwoorden": ["1/sehr gut/één"],
       "minTreffers": 1,
       "uitleg": "1 is het beste cijfer en 6 is het slechtste cijfer."
     },
     {
       "type": "open",
-      "vraag": "Wat is het meervoud van vrouwelijke beroepen zoals 'Lehrerin' of 'Ärztin'?",
-      "modelantwoord": "Die Lehrerinnen en die Ärztinnen (met de uitgang -nen).",
-      "sleutelwoorden": [
-        "Lehrerinnen",
-        "Ärztinnen",
-        "-innen/-nen"
-      ],
+      "vraag": "Wat is het meervoud van het vrouwelijke beroep 'Lehrerin'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het meervoud is die Lehrerinnen.",
+      "sleutelwoorden": ["lehrerinnen"],
       "minTreffers": 1,
       "uitleg": "Het meervoud eindigt op -innen (Lehrerinnen, Ärztinnen)."
     }

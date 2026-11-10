@@ -179,24 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee gunstige vestigingsplaatsfactoren voor hightechbedrijven in de regio Brainport Eindhoven.",
-      "sleutelwoorden": [
-        "aanvullende/broedplaats/campus",
-        "opgeleid/universiteit/afzetmarkt"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Aanwezigheid van aanvullende bedrijven (broedplaatsen zoals High Tech Campus) en een goed opgeleide technische beroepsbevolking.",
+      "vraag": "Noem één gunstige vestigingsplaatsfactor voor hightechbedrijven in de regio Brainport Eindhoven. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["aanvullende/broedplaats/campus/opgeleid/universiteit/technische"],
+      "minTreffers": 1,
+      "modelantwoord": "Er is een goed opgeleide technische beroepsbevolking.",
       "uitleg": "Aanwezigheid van broedplaatsen en een goed opgeleide beroepsbevolking. (boek p. 42)"
     },
     {
       "type": "open",
-      "vraag": "Waarom is de afzetmarkt van Brainport Eindhoven zo gunstig gelegen?",
-      "sleutelwoorden": [
-        "150 kilometer/straal",
-        "40 miljoen mensen/hoge koopkracht"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Omdat er binnen een straal van 150 kilometer rondom Eindhoven maar liefst 40 miljoen mensen met een hoge koopkracht wonen.",
+      "vraag": "Hoeveel mensen wonen binnen 150 kilometer rondom Brainport Eindhoven? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["40 miljoen/veertig miljoen"],
+      "minTreffers": 1,
+      "modelantwoord": "Ongeveer 40 miljoen mensen.",
       "uitleg": "Binnen 150 km wonen 40 miljoen mensen met een hoge koopkracht. (boek p. 43)"
     }
   ]

@@ -167,14 +167,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In English: what is a <b>mock trial</b> at school and what do the students do? (See the text 'School court in session!')",
-      "sleutelwoorden": [
-        "fake/pretend/not real/role",
-        "judge/lawyer/witness/suspect/jury",
-        "case/theft/crime"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "A mock trial is a fake trial: students play the roles of judge, lawyer and witness and try a case, for example a theft.",
+      "vraag": "In English: what is a <b>mock trial</b> at school? (See the text 'School court in session!') <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["fake/pretend/not real/role/play/practice"],
+      "minTreffers": 1,
+      "modelantwoord": "A mock trial is a fake trial where students play roles.",
       "uitleg": "Mock trial = nep-rechtszaak: leerlingen spelen de rollen en behandelen een zaak, bijvoorbeeld de diefstal van een handtas (boek p. A93)."
     },
     {

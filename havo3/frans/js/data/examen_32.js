@@ -119,14 +119,9 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Vertaal de volgende zin naar correct Frans met een vergelijking: <i>'Deze jurk is mooier dan die broek.'</i>",
-      "sleutelwoorden": [
-        "robe",
-        "plus belle/plus jolie",
-        "que",
-        "pantalon"
-      ],
-      "minTreffers": 2,
+      "vraag": "Vertaal in het Frans met een vergelijking: <i>'Deze jurk is mooier dan die broek.'</i> <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["plus belle/plus jolie","pantalon"],
+      "minTreffers": 1,
       "modelantwoord": "Cette robe est plus belle que ce pantalon.",
       "uitleg": "'Cette robe est plus belle que ce pantalon.'"
     },

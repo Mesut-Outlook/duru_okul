@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de twee Franse vraagwoorden die in leesteksten informeren naar respectievelijk een plaats (waar) en een tijdstip (wanneer).",
-      "modelantwoord": "Dat zijn où (waar) en quand (wanneer).",
-      "sleutelwoorden": [
-        "où/ou",
-        "quand"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans vraagwoord vraagt naar een plaats ('waar')? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is où (waar).",
+      "sleutelwoorden": ["où/ou"],
+      "minTreffers": 1,
       "uitleg": "Waar is où en wanneer is quand."
     },
     {
       "type": "open",
-      "vraag": "Welke formele Franse aanhef (twee woorden) gebruik je bovenaan een zakelijke brief wanneer de naam van de geadresseerde niet bekend is?",
-      "modelantwoord": "Dat is de aanhef Madame, Monsieur,.",
-      "sleutelwoorden": [
-        "Madame",
-        "Monsieur"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke formele Franse aanhef (twee woorden) gebruik je in een zakelijke brief als de naam onbekend is? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is de aanhef Madame, Monsieur.",
+      "sleutelwoorden": ["madame monsieur/monsieur madame"],
+      "minTreffers": 1,
       "uitleg": "De formele aanhef is Madame, Monsieur,."
     }
   ]

@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Duits beleefd de weg naar het station?",
+      "vraag": "Hoe vraag je in het Duits beleefd de weg naar het station? <i>(Eén korte zin is genoeg.)</i>",
       "modelantwoord": "Entschuldigung, wie komme ich zum Bahnhof?",
-      "sleutelwoorden": [
-        "wie komme ich",
-        "zum Bahnhof",
-        "Bahnhof"
-      ],
+      "sleutelwoorden": ["wie komme ich/zum bahnhof/zum hauptbahnhof/bahnhof"],
       "minTreffers": 1,
       "uitleg": "De vaste vraag is 'Entschuldigung, wie komme ich zum Bahnhof?'."
     },
     {
       "type": "open",
-      "vraag": "Welke verleden tijdsvormen hebben de modale werkwoorden 'können' en 'müssen' bij de persoon 'ich'?",
-      "modelantwoord": "Ich konnte en ich musste.",
-      "sleutelwoorden": [
-        "konnte",
-        "musste"
-      ],
+      "vraag": "Wat is de verleden tijd van het modale werkwoord 'können' bij de persoon 'ich'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Ich konnte.",
+      "sleutelwoorden": ["konnte"],
       "minTreffers": 1,
       "uitleg": "Konnte en musste."
     }

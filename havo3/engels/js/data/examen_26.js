@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why are interpersonal qualities like problem-solving and communication increasingly valued alongside academic certificates?",
-      "sleutelwoorden": [
-        "colleagues/clients/flexible/adapt/team",
-        "workplace/practical/collaboration/real"
-      ],
+      "vraag": "Why do employers value problem-solving and communication skills besides diplomas? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["colleagues/clients/flexible/adapt/team/workplace/practical/collaboration/real"],
       "minTreffers": 1,
-      "modelantwoord": "Soft skills allow employees to adapt, communicate clearly with clients and colleagues, and solve unexpected workplace problems effectively.",
+      "modelantwoord": "Employees must adapt and cooperate with colleagues and clients.",
       "uitleg": "Sociale vaardigheden en flexibiliteit zijn onmisbaar om goed samen te werken en problemen op te lossen."
     },
     {

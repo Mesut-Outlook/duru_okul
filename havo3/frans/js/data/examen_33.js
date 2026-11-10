@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Schrijf een korte reactie op een online advertentie waarin je interesse toont in een tweedehands fiets en vraagt of de prijs bespreekbaar is.",
-      "sleutelwoorden": [
-        "vélo/velo",
-        "intéressé/interesse/disponible",
-        "prix/négociable/negociable/réduction"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bonjour, je suis très intéressé par votre vélo. Le prix est-il négociable ?",
+      "vraag": "Schrijf een korte Franse zin waarin je vraagt of de prijs van een tweedehands fiets bespreekbaar is. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["prix","négociable/negociable/réduction/reduction/baisser"],
+      "minTreffers": 1,
+      "modelantwoord": "Le prix est-il négociable ?",
       "uitleg": "'Je suis intéressé par votre vélo. Le prix est-il négociable ?'"
     },
     {

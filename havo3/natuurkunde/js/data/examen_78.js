@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een curlingsteen glijdt over het ijs. Leg uit waarom spelers soms voor de steen uit vegen.",
-      "modelantwoord": "Door te vegen wordt het ijs gladder en wordt de schuifwrijvingskracht kleiner. De wrijving verricht dan minder negatieve arbeid, dus verliest de steen minder bewegingsenergie en glijdt hij verder.",
+      "vraag": "Wat gebeurt er met de wrijvingskracht op een curlingsteen als spelers voor de steen uit vegen? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "De wrijvingskracht wordt kleiner, doordat het ijs gladder wordt.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "wrijving/wrijvingskracht/schuifwrijvingskracht",
-        "verder/minder energie/minder bewegingsenergie"
-      ],
+      "sleutelwoorden": ["kleiner/minder/lager/afneem"],
       "uitleg": "Vegen verkleint de wrijving; daardoor is er minder negatieve arbeid en glijdt de steen verder door."
     }
   ]

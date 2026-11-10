@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het Afrikaanse land waar in 1994 een beruchte volkenmoord plaatsvond tussen de Hutu-meerderheid en de Tutsi-minderheid.",
-      "sleutelwoorden": [
-        "Rwanda"
-      ],
+      "vraag": "In welk Afrikaans land vond in 1994 de volkenmoord tussen Hutu's en Tutsi's plaats? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["rwanda"],
       "minTreffers": 1,
-      "modelantwoord": "In Rwanda vond in 1994 de genocide plaats.",
+      "modelantwoord": "Dat gebeurde in Rwanda.",
       "uitleg": "De genocide in Rwanda kostte aan circa 800.000 mensen het leven."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom klimaatopwarming in defensiekringen wordt getypeerd als een dreigingsversterker.",
-      "sleutelwoorden": [
-        "droogte/schaarste/water/voedsel/versterkt/spanning/conflicten"
-      ],
+      "vraag": "Waarom wordt klimaatopwarming een dreigingsversterker genoemd? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["schaarste/droogte/spanning/conflict/water/voedsel"],
       "minTreffers": 1,
-      "modelantwoord": "Klimaatverandering verergert bestaande schaarste aan water en voedsel en wakkert daarmee spanningen en conflicten aan.",
+      "modelantwoord": "Het zorgt voor schaarste aan water en voedsel, wat tot conflicten leidt.",
       "uitleg": "Klimaatstress vergroot de concurrentie om schaarse basisbehoeften."
     }
   ]

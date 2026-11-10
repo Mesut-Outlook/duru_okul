@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Schrijf een kort Frans berichtje waarin je een vriend uitnodigt om zaterdag om 14:00 uur te gaan voetballen in het park.",
-      "sleutelwoorden": [
-        "samedi/14h/quatorze",
-        "football/foot/parc/jouer/on va"
-      ],
+      "vraag": "Schrijf een korte Franse zin waarin je een vriend uitnodigt om zaterdag om 14:00 uur te gaan voetballen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["samedi","14h/14 h/quatorze"],
       "minTreffers": 1,
-      "modelantwoord": "Salut ! Ça te dit de jouer au foot samedi à 14h dans le parc ?",
+      "modelantwoord": "Ça te dit de jouer au foot samedi à 14h ?",
       "uitleg": "Gebruik 'Ça te dit de...' of 'On va jouer au foot samedi à 14h...'."
     },
     {

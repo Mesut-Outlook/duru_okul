@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het radioactieve chemische element dat in kerncentrales als splijtstof wordt benut.",
-      "sleutelwoorden": [
-        "uranium"
-      ],
+      "vraag": "Noem het radioactieve element dat in kerncentrales als splijtstof wordt gebruikt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["uranium"],
       "minTreffers": 1,
-      "modelantwoord": "In kerncentrales wordt uranium gebruikt als splijtstof.",
+      "modelantwoord": "Uranium is de splijtstof in kerncentrales.",
       "uitleg": "Uranium is het zware metaal waarvan de isotopen (zoals U-235) worden gespleten."
     },
     {
       "type": "open",
-      "vraag": "Noem een belangrijk nadeel van het gebruik van kernenergie voor toekomstige generaties.",
-      "sleutelwoorden": [
-        "afval/radioactief/straling/kernafval"
-      ],
+      "vraag": "Noem één nadeel van kernenergie voor toekomstige generaties. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["afval/radioactie/straling/kernafval"],
       "minTreffers": 1,
-      "modelantwoord": "Het hoogradioactieve afval blijft tienduizenden jaren gevaarlijk en moet veilig worden opgeslagen.",
+      "modelantwoord": "Het radioactieve afval blijft tienduizenden jaren gevaarlijk.",
       "uitleg": "Radioactief afval vormt een langdurig risico voor de volksgezondheid en het milieu."
     }
   ]

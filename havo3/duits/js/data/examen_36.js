@@ -191,33 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het vaste rijtje van zeven voorzetsels die altijd de 3e naamval (Dativ) krijgen.",
-      "modelantwoord": "De zeven voorzetsels met de derde naamval zijn aus, bei, mit, nach, seit, von en zu.",
-      "sleutelwoorden": [
-        "aus",
-        "bei",
-        "mit",
-        "nach",
-        "seit",
-        "von",
-        "zu"
-      ],
-      "minTreffers": 4,
+      "vraag": "Noem één voorzetsel dat altijd de 3e naamval (Dativ) krijgt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld mit of nach.",
+      "sleutelwoorden": ["aus/bei/mit/nach/seit/von/zu"],
+      "minTreffers": 1,
       "uitleg": "De vaste Dativ-voorzetsels zijn: aus, bei, mit, nach, seit, von, zu."
     },
     {
       "type": "open",
-      "vraag": "Noem het vaste rijtje van zes voorzetsels die altijd de 4e naamval (Akkusativ) krijgen.",
-      "modelantwoord": "De zes voorzetsels met de vierde naamval zijn bis, durch, für, gegen, ohne en um.",
-      "sleutelwoorden": [
-        "bis",
-        "durch",
-        "für",
-        "gegen",
-        "ohne",
-        "um"
-      ],
-      "minTreffers": 4,
+      "vraag": "Noem één voorzetsel dat altijd de 4e naamval (Akkusativ) krijgt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld für of ohne.",
+      "sleutelwoorden": ["bis/durch/für/fur/gegen/ohne/um"],
+      "minTreffers": 1,
       "uitleg": "De vaste Akkusativ-voorzetsels zijn: bis, durch, für, gegen, ohne, um."
     }
   ]

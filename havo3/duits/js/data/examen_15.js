@@ -179,23 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee verschillende Duitse woorden voor verkeerssituaties (bijvoorbeeld kruising of stoplicht).",
-      "modelantwoord": "Die Ampel (stoplicht), die Kreuzung (kruising) of die Brücke (brug).",
-      "sleutelwoorden": [
-        "Ampel",
-        "Kreuzung",
-        "Brücke"
-      ],
+      "vraag": "Noem één Duits woord voor iets in het verkeer, zoals een stoplicht of kruising. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld die Ampel of die Kreuzung.",
+      "sleutelwoorden": ["ampel/kreuzung/brücke/brucke"],
       "minTreffers": 1,
       "uitleg": "Je kunt Ampel, Kreuzung of Brücke noemen."
     },
     {
       "type": "open",
-      "vraag": "Wat gebeurt er met de klinkers ö en ü van modale werkwoorden in de verleden tijd?",
-      "modelantwoord": "Ze verliezen hun Umlaut (ö wordt o, ü wordt u).",
-      "sleutelwoorden": [
-        "verlie/zonder umlaut/geen umlaut"
-      ],
+      "vraag": "Wat gebeurt er met de klinkers ö en ü van modale werkwoorden in de verleden tijd? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Ze verliezen hun umlaut: ö wordt o en ü wordt u.",
+      "sleutelwoorden": ["verlie/verdwijn/geen umlaut/zonder umlaut/valt weg/vallen weg"],
       "minTreffers": 1,
       "uitleg": "De Umlaut verdwijnt in de verleden tijd (können → konnte, müssen → musste)."
     }

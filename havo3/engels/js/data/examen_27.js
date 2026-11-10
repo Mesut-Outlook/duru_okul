@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Rewrite this active sentence into the passive voice: <i>'The director approved the new budget yesterday.'</i>",
-      "sleutelwoorden": [
-        "the new budget was approved by the director yesterday/was approved"
-      ],
+      "vraag": "Rewrite this active sentence into the passive voice: <i>'The director approved the new budget yesterday.'</i> <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["the new budget was approved by the director yesterday/was approved"],
       "minTreffers": 1,
       "modelantwoord": "The new budget was approved by the director yesterday.",
       "uitleg": "Lijdende vorm: The new budget was approved by the director yesterday."

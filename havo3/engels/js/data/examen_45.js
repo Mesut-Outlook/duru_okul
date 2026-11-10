@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "What is an <i>acquaintance</i>? Answer in one English sentence.",
-      "sleutelwoorden": [
-        "know/met/not close",
-        "someone/person/somebody"
-      ],
+      "vraag": "What is an <i>acquaintance</i>? Answer in one English sentence. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["know/met/not close/not a friend"],
       "minTreffers": 1,
-      "modelantwoord": "An acquaintance is someone you know a little, but who is not a close friend.",
+      "modelantwoord": "An acquaintance is someone you know a little, but not a close friend.",
       "uitleg": "Acquaintance = kennis: iemand die je kent, maar geen goede vriend (boek p.A76)."
     },
     {

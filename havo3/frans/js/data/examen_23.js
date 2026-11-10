@@ -119,15 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Schrijf een korte dialoog waarin je een drankje en een hoofdgerecht bestelt bij de ober in een Frans restaurant.",
-      "sleutelwoorden": [
-        "voudrais/prends",
-        "eau/coca/boisson/jus",
-        "plat/steak/poulet/pizza/pâtes",
-        "s'il vous plaît/merci"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bonjour, je voudrais une carafe d'eau et le poulet-frites, s'il vous plaît.",
+      "vraag": "Schrijf een korte Franse zin waarin je bij de ober een hoofdgerecht bestelt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["voudrais/prends/prendrai","plat/steak/poulet/pizza/pâtes/frites"],
+      "minTreffers": 1,
+      "modelantwoord": "Je voudrais le poulet-frites, s'il vous plaît.",
       "uitleg": "Gebruik 'Je voudrais [drankje] et [gerecht], s'il vous plaît.'"
     },
     {

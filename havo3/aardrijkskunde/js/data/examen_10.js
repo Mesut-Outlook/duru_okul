@@ -168,18 +168,18 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit hoe de geologische opbouw van Groningen (poreus reservoir, ondoordringbare afsluitlaag) zorgde voor het ontstaan en vasthouden van het aardgasveld.",
-      sleutelwoorden: ["moedergesteente", "reservoirgesteente", "zechstein/zoutlaag"],
-      minTreffers: 2,
-      modelantwoord: "Diep in de ondergrond vormden de Carboon-steenkoollagen onder hoge temperatuur en druk het aardgas (moedergesteente). Dit gas steeg op en verzamelde zich in de poriën van de bovenliggende zandsteenlaag uit het Perm (reservoirgesteente). Bovenop dit zandsteen lag een dikke, volkomen dichte zoutlaag (Zechstein), die als afsluitend gesteente fungeerde en voorkwam dat het gas naar de oppervlakte kon ontsnappen.",
+      vraag: "Welke dichte gesteentelaag hield in Groningen het aardgas vast, zodat het niet kon ontsnappen? <i>(Alleen het antwoord is genoeg.)</i>",
+      sleutelwoorden: ["zout/zechstein"],
+      minTreffers: 1,
+      modelantwoord: "Een dikke zoutlaag (Zechstein).",
       uitleg: "Combinatie van Carboon-steenkool (bron), Perm-zandsteen (reservoir) en Zechstein-zout (afsluiting) maakte het gasveld mogelijk."
     },
     {
       type: "open",
-      vraag: "Beredeneer waarom de sluiting van de Limburgse steenkoolmijnen in de jaren 1960/1970 leidde tot grote sociaaleconomische problemen in de regio en hoe de overheid dit probeerde op te vangen.",
-      sleutelwoorden: ["werkloosheid", "economische neergang/neergang", "cbs/daf/rijksdiensten"],
-      minTreffers: 2,
-      modelantwoord: "Tienduizenden mijnwerkers en toeleveranciers verloren in korte tijd hun baan, waardoor Zuid-Limburg kampte met torenhoge werkloosheid en economische neergang. Om dit verlies te compenseren, verhuisde de overheid rijksdiensten naar Limburg (zoals het CBS naar Heerlen en het ABP) en stimuleerde zij nieuwe bedrijven zoals de DAF-autofabriek (later NedCar) in Born.",
+      vraag: "Wat was het grootste sociaaleconomische gevolg van de sluiting van de Limburgse steenkoolmijnen voor de bevolking? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["werkloos/banen"],
+      minTreffers: 1,
+      modelantwoord: "Veel mijnwerkers verloren hun baan, waardoor de werkloosheid hoog werd.",
       uitleg: "Mijnsluiting veroorzaakte massale werkloosheid; spreiding van rijksdiensten en industriële subsidies moesten de regio herstellen."
     }
   ]

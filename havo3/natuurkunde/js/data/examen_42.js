@@ -192,24 +192,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de twee constructiestralen die het eenvoudigst te tekenen zijn om het beeld van een voorwerppunt te construeren bij een positieve lens.",
-      "sleutelwoorden": [
-        "evenwijdig/brandpunt",
-        "optisch middelpunt/rechtdoor"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. De straal evenwijdig aan de optische as die na de lens door het brandpunt F gaat. 2. De straal door het optisch middelpunt die ongebroken rechtdoor gaat.",
+      "vraag": "Noem één van de twee eenvoudigste constructiestralen bij een positieve lens. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["evenwijdig/brandpunt/middelpunt/rechtdoor"],
+      "minTreffers": 1,
+      "modelantwoord": "De straal evenwijdig aan de optische as gaat na de lens door het brandpunt.",
       "uitleg": "Dit zijn de twee standaard constructiestralen om een beeldpunt te bepalen."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de lens in een fotocamera naar voren geschoven moet worden als je een voorwerp van dichtbij wilt fotograferen.",
-      "sleutelwoorden": [
-        "voorwerpsafstand kleiner/dichterbij",
-        "beeldafstand groter/verder"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Als het voorwerp dichterbij komt (v wordt kleiner), wordt de beeldafstand b groter volgens de lenzenformule. De lens moet daarom verder van de beeldsensor af bewegen om het beeld scherp te houden.",
+      "vraag": "Wat gebeurt er met de beeldafstand b als het voorwerp dichterbij komt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["groter/toe/verder/vergroot"],
+      "minTreffers": 1,
+      "modelantwoord": "De beeldafstand wordt groter.",
       "uitleg": "Kleine v betekent grotere b, dus de lens moet verder naar voren schuiven."
     }
   ]

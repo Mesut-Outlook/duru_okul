@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Bereken de maandelijkse kosten van een zorgverzekering die € 390 per kwartaal bedraagt. Geef de berekening.",
-      "sleutelwoorden": [
-        "per maand",
-        "130"
-      ],
+      "vraag": "Bereken de maandelijkse kosten van een zorgverzekering van € 390 per kwartaal. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["130"],
       "minTreffers": 1,
-      "modelantwoord": "390 / 3 = € 130 per maand.",
+      "modelantwoord": "€ 130 per maand.",
       "uitleg": "Een kwartaal telt 3 maanden; dus 390 delen door 3 is 130 euro per maand."
     },
     {
       "type": "open",
-      "vraag": "Noem twee maatregelen die een gezin kan nemen om een begrotingstekort op te lossen.",
-      "sleutelwoorden": [
-        "bezuinigen/uitgaven verlagen/besparen",
-        "extra inkomsten/overwerken/bijbaan"
-      ],
+      "vraag": "Noem één maatregel die een gezin kan nemen om een begrotingstekort op te lossen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["bezuinig/uitgaven verlagen/besparen/extra inkomsten/overwerk/bijbaan/meer verdienen"],
       "minTreffers": 1,
-      "modelantwoord": "1. Bezuinigen op variabele of incidentele uitgaven (abonnementen opzeggen), 2. Extra inkomsten genereren (overwerken, bijbaan).",
+      "modelantwoord": "Bezuinigen op uitgaven.",
       "uitleg": "Een tekort los je op door kosten te drukken of inkomsten te verhogen."
     }
   ]

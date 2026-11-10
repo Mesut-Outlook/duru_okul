@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef twee redenen uit het boek waarom de koopkrachtontwikkeling van een 16-jarige scholier anders is dan die van een gezin van 35 jaar met twee jonge kinderen.",
-      "sleutelwoorden": [
-        "koopt/kopen/uitgaven/auto/huis/thuis/opvoeding",
-        "inkomen/loon"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij kopen niet dezelfde goederen en diensten (een 16-jarige woont thuis en koopt geen huis of auto, een gezin geeft veel uit aan wonen en de opvoeding van kinderen) en hun inkomen stijgt niet in dezelfde mate.",
+      "vraag": "Noem één reden uit het boek waarom de koopkrachtontwikkeling van een 16-jarige scholier anders is dan die van een gezin met jonge kinderen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["koopt/kopen/uitgaven/auto/huis/inkomen/loon/opvoeding"],
+      "minTreffers": 1,
+      "modelantwoord": "Zij kopen niet dezelfde goederen en diensten.",
       "uitleg": "Noem het verschil in wat zij kopen (uitgavenpatroon) én het verschil in hoe hun inkomen zich ontwikkelt."
     },
     {
       "type": "open",
-      "vraag": "In 2022 was de koopkrachtontwikkeling in de CPB-tabel voor bijna alle groepen sterk negatief (−7,1%, −6,6% en −6,8%), terwijl die in 2023 voor alle vier de groepen positief was. Leg aan de hand van de inflatie uit hoe dit verschil tussen 2022 en 2023 te verklaren is.",
-      "sleutelwoorden": [
-        "10,0%/10%/hoger/hoog",
-        "lager/gedaald/sterker stegen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In 2022 was de inflatie veel hoger (10,0%) dan de inkomensstijging waardoor de koopkracht daalde, terwijl de inflatie in 2023 lager was en de inkomens sterker stegen dan de prijzen.",
+      "vraag": "De koopkracht daalde in 2022 sterk en steeg in 2023. Wat was het verschil in inflatie tussen die twee jaren? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["lager/afgenomen/minder"],
+      "minTreffers": 1,
+      "modelantwoord": "De inflatie was in 2023 lager dan in 2022.",
       "uitleg": "In 2022 lag de inflatie veel hoger dan in 2023, waardoor de lonen de prijsstijging in 2022 niet bijhielden en in 2023 wel."
     }
   ]

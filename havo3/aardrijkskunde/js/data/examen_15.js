@@ -194,20 +194,16 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe werd een buitenlandse werknemer genoemd die in de jaren 1960 door overheid en bedrijven werd aangetrokken voor tijdelijk werk?",
-      "sleutelwoorden": [
-        "gastarbeider/gastarbeiders"
-      ],
+      "vraag": "Hoe werd een buitenlandse werknemer genoemd die in de jaren 1960 door overheid en bedrijven werd aangetrokken voor tijdelijk werk? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["gastarbeider"],
       "minTreffers": 1,
       "modelantwoord": "Deze werknemers werden gastarbeiders genoemd.",
       "uitleg": "Zij werden destijds gastarbeiders genoemd."
     },
     {
       "type": "open",
-      "vraag": "Noem de generatie waartoe iemand behoort die zelf in het buitenland geboren is en later naar Nederland verhuisde.",
-      "sleutelwoorden": [
-        "eerste generatie/eerste/1e"
-      ],
+      "vraag": "Noem de generatie waartoe iemand behoort die zelf in het buitenland geboren is en later naar Nederland verhuisde. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["eerste/1e"],
       "minTreffers": 1,
       "modelantwoord": "Dit is de eerste generatie migrant.",
       "uitleg": "Zelf in het buitenland geboren = eerste generatie."

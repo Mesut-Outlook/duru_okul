@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de term voor het overbrengen van reeds bestaande gezinsleden (zoals partner of minderjarige kinderen) naar het land waar de migrant al woont.",
-      "sleutelwoorden": [
-        "gezinshereniging"
-      ],
+      "vraag": "Noem de term voor het overbrengen van reeds bestaande gezinsleden (zoals partner of minderjarige kinderen) naar het land waar de migrant al woont. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["gezinshereniging"],
       "minTreffers": 1,
       "modelantwoord": "Deze vorm van migratie heet gezinshereniging.",
       "uitleg": "Gezinshereniging herenigt gezinsleden die al een gezin vormden voor de migratie."
     },
     {
       "type": "open",
-      "vraag": "Hoe noemt men de afstotende factoren in een herkomstgebied die mensen stimuleren om hun woonplaats te verlaten?",
-      "sleutelwoorden": [
-        "pushfactoren/pushfactor/push"
-      ],
+      "vraag": "Hoe noemt men de afstotende factoren in een herkomstgebied die mensen stimuleren om hun woonplaats te verlaten? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["pushfactoren/pushfactor/push"],
       "minTreffers": 1,
-      "modelantwoord": "Dit worden pushfactoren (of afstotende factoren) genoemd.",
+      "modelantwoord": "Dit worden pushfactoren genoemd.",
       "uitleg": "Pushfactoren duwen mensen weg uit hun herkomstland."
     }
   ]

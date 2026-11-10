@@ -193,22 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het Franse zelfstandig naamwoord voor 'het retourtje' (p. 124). Geef het woord met koppelteken.",
-      "sleutelwoorden": [
-        "aller-retour"
-      ],
+      "vraag": "Noem het Franse zelfstandig naamwoord voor 'het retourtje' (p. 124). Geef het woord met koppelteken. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["aller-retour/aller retour/allers-retours"],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse woord voor een retourtje is 'l'aller-retour'.",
+      "modelantwoord": "Het woord is l'aller-retour.",
       "uitleg": "'L'aller-retour' is het Franse woord voor een retourtje."
     },
     {
       "type": "open",
-      "vraag": "Vertaal de Franse uitdrukking voor 'tegenover' (p. 124, drie woorden: en ... de).",
-      "sleutelwoorden": [
-        "en face de/en face"
-      ],
+      "vraag": "Vertaal de Franse uitdrukking voor 'tegenover' (p. 124, drie woorden: en ... de). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["face"],
       "minTreffers": 1,
-      "modelantwoord": "De Franse uitdrukking voor tegenover is 'en face de'.",
+      "modelantwoord": "De uitdrukking is en face de.",
       "uitleg": "'En face de' betekent tegenover."
     }
   ]

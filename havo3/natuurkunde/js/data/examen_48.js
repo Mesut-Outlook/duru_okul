@@ -193,20 +193,16 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een projector heeft een lens met brandpuntsafstand f = 10 cm. Het beeldje staat op voorwerpsafstand v = 12 cm. Bereken met de lenzenformule de beeldafstand b in centimeters (cm). Geef het getal.",
-      "sleutelwoorden": [
-        "60"
-      ],
+      "vraag": "Een projector heeft een lens met brandpuntsafstand f = 10 cm. Het beeldje staat op v = 12 cm. Bereken de beeldafstand b in cm. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["60"],
       "minTreffers": 1,
-      "modelantwoord": "1/b = 1/f - 1/v = 1/10 - 1/12 = 6/60 - 5/60 = 1/60, dus b = 60 cm.",
+      "modelantwoord": "1/b = 1/f - 1/v = 1/10 - 1/12 = 1/60, dus b = 60 cm.",
       "uitleg": "1/b = 1/10 - 1/12 = 1/60, dus de beeldafstand b is 60 cm."
     },
     {
       "type": "open",
-      "vraag": "Hoe noemt men de oogafwijking waarbij iemand dichtbij wel scherp ziet, maar in de verte onscherp omdat de ooglens te sterk breekt?",
-      "sleutelwoorden": [
-        "bijziend/bijziendheid"
-      ],
+      "vraag": "Hoe noemt men de oogafwijking waarbij iemand dichtbij wel scherp ziet, maar in de verte onscherp omdat de ooglens te sterk breekt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["bijziend/myopie"],
       "minTreffers": 1,
       "modelantwoord": "Deze oogafwijking heet bijziendheid (of myopie).",
       "uitleg": "Bijziendheid betekent dat men dichtbij goed ziet, maar veraf onscherp; dit wordt gecorrigeerd met een negatieve lens."

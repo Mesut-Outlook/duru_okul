@@ -173,27 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het werkingsprincipe van een <b>hydraulisch remsysteem</b> in een auto uit. Vertel wat er gebeurt vanaf het intrappen van het rempedaal tot het klemmen van de remblokken op de wielen.",
-      "sleutelwoorden": [
-        "hoofdremcilinder/kleine zuiger",
-        "remvloeistof/remolie/druk",
-        "grotere zuiger/remblokken"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Wanneer de bestuurder op het rempedaal trapt, duwt een hefboom een kleine zuiger in de hoofdremcilinder naar binnen. 2. De remvloeistof (remolie) wordt samengeperst; omdat vloeistoffen niet samendrukbaar zijn, plant deze druk zich ogenblikkelijk en gelijkmatig door alle remleidingen voort naar de wielen. 3. Bij de wielen duwt de vloeistofdruk tegen grotere wielremcilinders (remklauwen). Doordat deze zuigers een groter oppervlak hebben, ontstaat er een sterk vergrote klemkracht waarmee de remblokken tegen de remschijven worden gedrukt om de auto af te remmen.",
+      "vraag": "Waarmee wordt de druk van het rempedaal door de remleidingen doorgegeven? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["remvloeistof/remolie/vloeistof/olie"],
+      "minTreffers": 1,
+      "modelantwoord": "De druk wordt doorgegeven door de remvloeistof (remolie).",
       "uitleg": "Hydraulische krachtvergroting in voertuigremmen."
     },
     {
       "type": "open",
-      "vraag": "Een bergwandelaar van 80 kg zakt met zijn wandelschoenen (totaal oppervlak A = 400 cm²) diep weg in het zachte ijs. Hij besluit sneeuwschoenen onder te binden (totaal oppervlak A = 2000 cm²). Bereken voor beide situaties de druk in N/cm² en leg uit waarom hij nu niet meer wegzakt. (neem g = 10 N/kg)",
-      "sleutelwoorden": [
-        "800",
-        "2/2,0",
-        "0,4",
-        "kleiner/5x"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Gewicht wandelaar: Fz = m × g = 80 kg × 10 N/kg = 800 N. 1. Met gewone wandelschoenen: p = F / A = 800 N / 400 cm² = 2,0 N/cm² (oftewel 20.000 Pa). 2. Met sneeuwschoenen: p = F / A = 800 N / 2000 cm² = 0,4 N/cm² (oftewel 4000 Pa). Verklaring: doordat het oppervlak 5x zo groot is, is de druk op de sneeuw 5x kleiner geworden, van 2,0 naar 0,4 N/cm². Die druk is lager dan wat het sneeuwdek kan dragen, dus hij zakt niet meer weg.",
+      "vraag": "Een wandelaar van 80 kg staat op sneeuwschoenen (A = 2000 cm², g = 10 N/kg). Bereken de druk in N/cm². <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["0 4"],
+      "minTreffers": 1,
+      "modelantwoord": "p = 800 N / 2000 cm² = 0,4 N/cm².",
       "uitleg": "Drukberekening en vergelijking bij sneeuwschoenen."
     }
   ]

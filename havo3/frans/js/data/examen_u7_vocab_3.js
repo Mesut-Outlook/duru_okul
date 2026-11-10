@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Frans aan een vriend of hij of zij maandelijks zakgeld ontvangt?",
-      "modelantwoord": "Dat vraag je met: Tu as de l'argent de poche?",
-      "sleutelwoorden": [
-        "argent de poche",
-        "tu as/as-tu"
-      ],
+      "vraag": "Hoe vraag je in het Frans aan een vriend of hij of zij maandelijks zakgeld ontvangt? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Tu as de l'argent de poche ?",
+      "sleutelwoorden": ["argent de poche","tu as/as-tu"],
       "minTreffers": 1,
       "uitleg": "De vraag luidt: 'Tu as de l'argent de poche?'."
     },
     {
       "type": "open",
-      "vraag": "Noem de Franse zin waarmee je aangeeft dat een bepaald voorwerp erg handig is voor op reis.",
-      "modelantwoord": "Dat zeg je met: C'est pratique pour voyager.",
-      "sleutelwoorden": [
-        "pratique",
-        "pour voyager/voyager"
-      ],
-      "minTreffers": 2,
+      "vraag": "Zeg in het Frans dat een voorwerp erg handig is voor op reis. <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "C'est pratique pour voyager.",
+      "sleutelwoorden": ["pratique","voyager"],
+      "minTreffers": 1,
       "uitleg": "Je zegt: 'C'est pratique pour voyager.'."
     }
   ]

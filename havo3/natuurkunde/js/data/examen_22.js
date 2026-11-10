@@ -161,26 +161,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een liniaal van 100 cm balanceert op een spil in het midden bij 50 cm. Aan zijde A hangt bij 20 cm een massa van 200 gram. Aan zijde B hangt bij 70 cm een massa van 150 gram. Toon met een berekening aan naar welke zijde de lat gaat draaien (neem g = 10 N/kg).",
-      "sleutelwoorden": [
-        "0,6/0,60/60",
-        "0,3/0,30/30",
-        "naar links/kantelt/draait links"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Berekening links: - Massa links: m₁ = 0,20 kg -> F₁ = 2,0 N; arm r₁ = 50 - 20 = 30 cm = 0,30 m. - Moment linksom: M_links = 2,0 N × 0,30 m = 0,60 Nm. Berekening rechts: - Massa rechts: m₂ = 0,15 kg -> F₂ = 1,5 N; arm r₂ = 70 - 50 = 20 cm = 0,20 m. - Moment rechtsom: M_rechts = 1,5 N × 0,20 m = 0,30 Nm. Conclusie: M_links (0,60 Nm) > M_rechts (0,30 Nm), dus de liniaal is niet in evenwicht en zal naar links kantelen.",
+      "vraag": "Een liniaal van 100 cm draait om een spil bij 50 cm. Op 20 cm hangt 200 gram (g = 10 N/kg). Bereken het moment van deze massa in Nm. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["0 6/0 60"],
+      "minTreffers": 1,
+      "modelantwoord": "F = 2,0 N en arm = 0,30 m, dus het moment is 0,60 Nm.",
       "uitleg": "Vergelijking van links- en rechtsdraaiende momenten."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een torenkraan op een bouwplaats zware betonnen ballastblokken aan de achterzijde heeft en hoe de verplaatsing daarvan stabiliteit waarborgt.",
-      "sleutelwoorden": [
-        "tegenmoment/tegengesteld moment",
-        "balans/kantelt/bezwijkt",
-        "tegengewicht/compenseren/draaimoment"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De contragewichten leveren een tegenmoment aan de achterkant van de kraan om het moment van de gehesen last (aan de voorkant) te compenseren. Hierdoor blijft de totale som van de momenten in balans en kantelt of bezwijkt de kraan niet. Wanneer een zwaardere last of een last op grotere afstand van de mast wordt gehesen, kan het contragewicht naar achteren worden verplaatst om de arm te vergroten, zodat het tegenmoment precies overeenkomt met de belasting.",
+      "vraag": "Waarom hebben torenkranen zware betonblokken aan de achterzijde? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["tegenmoment/compenseer/kantel/omval/balans"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze leveren een tegenmoment, zodat de kraan niet kantelt.",
       "uitleg": "Stabiliteit en momentenbalans bij torenkranen."
     }
   ]

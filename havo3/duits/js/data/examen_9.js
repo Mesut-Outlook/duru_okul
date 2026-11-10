@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe zeg je in het Duits dat je je helemaal niet lekker voelt?",
-      "modelantwoord": "Ich fühle mich gar nicht wohl (of mir ist schlecht).",
-      "sleutelwoorden": [
-        "fühle mich",
-        "nicht wohl",
-        "schlecht"
-      ],
+      "vraag": "Hoe zeg je in het Duits dat je je helemaal niet lekker voelt? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Ich fühle mich gar nicht wohl.",
+      "sleutelwoorden": ["fühle mich/fuhle mich/nicht wohl/mir ist schlecht"],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'Ich fühle mich nicht wohl' of 'Mir ist schlecht'."
     },
     {
       "type": "open",
-      "vraag": "Wat is het meervoud van 'das Auge' (het oog) in het Duits?",
+      "vraag": "Wat is het meervoud van 'das Auge' (het oog) in het Duits? <i>(Alleen het antwoord is genoeg.)</i>",
       "modelantwoord": "Die Augen.",
-      "sleutelwoorden": [
-        "Augen",
-        "die Augen"
-      ],
+      "sleutelwoorden": ["augen"],
       "minTreffers": 1,
       "uitleg": "Het meervoud is 'die Augen'."
     }

@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je bij het loket beleefd of je moet overstappen voor de reis naar Hamburg?",
+      "vraag": "Hoe vraag je bij het loket beleefd of je moet overstappen op de reis naar Hamburg? <i>(Eén korte zin is genoeg.)</i>",
       "modelantwoord": "Muss ich bei der Fahrt nach Hamburg umsteigen?",
-      "sleutelwoorden": [
-        "umsteigen",
-        "Muss ich/muss man"
-      ],
+      "sleutelwoorden": ["umsteigen"],
       "minTreffers": 1,
       "uitleg": "Vraag met 'umsteigen', bijvoorbeeld: 'Muss ich nach Hamburg umsteigen?'."
     },
     {
       "type": "open",
-      "vraag": "Noem het Duitse voltooid deelwoord van de werkwoorden 'können' en 'wissen'.",
-      "modelantwoord": "De voltooide deelwoorden zijn gekonnt en gewusst.",
-      "sleutelwoorden": [
-        "gekonnt",
-        "gewusst"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is het voltooid deelwoord van het werkwoord 'wissen'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het voltooid deelwoord is gewusst.",
+      "sleutelwoorden": ["gewusst"],
+      "minTreffers": 1,
       "uitleg": "De voltooide deelwoorden zijn gekonnt en gewusst."
     }
   ]

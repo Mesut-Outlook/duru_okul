@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Fietser A en fietser B vertrekken tegelijk. A beweegt eenparig, B trekt eenparig versneld op. Beschrijf hoe hun (s,t)-grafieken verschillen.",
-      "modelantwoord": "De grafiek van A is een rechte lijn met constante helling. De grafiek van B is een kromme lijn die steeds steiler omhoog loopt, omdat de snelheid van B toeneemt.",
+      "vraag": "Hoe ziet de (s,t)-grafiek eruit van fietser B, die eenparig versneld optrekt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De grafiek van B is een kromme lijn die steeds steiler loopt.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "rechte lijn/recht",
-        "kromme/gekromd/bocht"
-      ],
+      "sleutelwoorden": ["kromme/gekromd/bocht/parabool"],
       "uitleg": "Constante snelheid geeft een rechte lijn, toenemende snelheid een steeds steilere kromme lijn."
     }
   ]

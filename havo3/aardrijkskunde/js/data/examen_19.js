@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem een maatregel die een gemeente kan nemen om wateroverlast door hevige hoosbuien in een woonwijk te verminderen.",
-      "sleutelwoorden": [
-        "wadi/groen/waterberging/ontstenen/regenpijp/vijver/dak"
-      ],
+      "vraag": "Noem één maatregel waarmee een gemeente wateroverlast door hevige hoosbuien in een woonwijk kan verminderen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["wadi/groen/waterberging/ontstenen/vijver/dak"],
       "minTreffers": 1,
-      "modelantwoord": "Het aanleggen van wadi s, groene daken of waterpleinen helpt om overtollig regenwater op te vangen.",
+      "modelantwoord": "Een gemeente kan wadi's of groene daken aanleggen.",
       "uitleg": "Meer groen en waterberging ontlasten het riool bij hevige stortbuien."
     },
     {
       "type": "open",
-      "vraag": "Waarom leidt het verdwijnen van de permafrost in berghellingen tot gevaarlijke puinlawines?",
-      "sleutelwoorden": [
-        "ontdooien/smelten/dooi/dooien/smelt"
-      ],
+      "vraag": "Waarom leidt het verdwijnen van de permafrost in berghellingen tot puinlawines? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ontdooi/smelt/dooi"],
       "minTreffers": 1,
-      "modelantwoord": "Het ijs in de ondergrond gaat ontdooien waardoor de losse stenen naar beneden storten.",
+      "modelantwoord": "Het ijs in de ondergrond ontdooit, waardoor losse stenen naar beneden storten.",
       "uitleg": "Permafrost houdt los gesteente vast; door opwarming smelt dit bindmiddel weg."
     }
   ]

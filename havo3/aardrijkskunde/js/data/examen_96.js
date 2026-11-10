@@ -179,27 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Nederland is een klein land maar speelt een grote rol in de wereldhandel. Geef twee verklaringen uit de paragraaf.",
-      "sleutelwoorden": [
-        "haven/Rotterdam/Schiphol/mainport",
-        "Eindhoven/ASML/hightech/brainport",
-        "multinational",
-        "open"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Nederland heeft mainports als Rotterdam en Schiphol, hightechbedrijven in brainport Eindhoven, veel multinationals en een open economie.",
+      "vraag": "Nederland is klein maar speelt een grote rol in de wereldhandel. Noem één verklaring uit de paragraaf. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["haven/rotterdam/schiphol/mainport/eindhoven/asml/hightech/brainport/multinational/open economie"],
+      "minTreffers": 1,
+      "modelantwoord": "Nederland heeft mainports zoals de haven van Rotterdam.",
       "uitleg": "Nederland heeft mainports zoals de haven van Rotterdam en Schiphol, hightech in Eindhoven, en een open economie. (boek p. 42)"
     },
     {
       "type": "open",
-      "vraag": "Beoordeel de stelling: Nederland profiteert van de wereldhandel, dus iedereen in Nederland heeft er evenveel voordeel van.",
-      "sleutelwoorden": [
-        "armoede/ongelijk",
-        "voedselbank/energierekening",
-        "grote steden/wijken"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De stelling klopt niet. Er is armoede en ongelijkheid; in grote steden zijn de verschillen tussen wijken groot en sommigen gebruiken de voedselbank.",
+      "vraag": "Beoordeel de stelling: ‘Iedereen in Nederland profiteert evenveel van de wereldhandel.’ Noem één reden waarom dit niet klopt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["armoede/ongelijk/voedselbank/energierekening/verschillen"],
+      "minTreffers": 1,
+      "modelantwoord": "Er is armoede in Nederland, dus niet iedereen profiteert evenveel.",
       "uitleg": "Niet iedereen profiteert: er is armoede en ongelijkheid, vooral in grote steden, waar mensen naar de voedselbank gaan. (boek p. 43)"
     }
   ]

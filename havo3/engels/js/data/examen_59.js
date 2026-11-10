@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Rewrite in the passive voice: <i>The police found the stolen car.</i>",
-      "sleutelwoorden": [
-        "was found/been found/is found"
-      ],
+      "vraag": "Rewrite in the passive voice: <i>The police found the stolen car.</i> <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["was found/been found/is found"],
       "minTreffers": 1,
-      "modelantwoord": "The stolen car was found (by the police).",
+      "modelantwoord": "The stolen car was found by the police.",
       "uitleg": "Past simple passive: object becomes subject + was found (boek p.A119)."
     },
     {

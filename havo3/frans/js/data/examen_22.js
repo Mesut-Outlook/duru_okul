@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit tussen <i>'Je mange du gâteau'</i> en <i>'J'aime le gâteau'</i>.",
-      "sleutelwoorden": [
-        "du/deel/stuk/portie/eten",
-        "le/algemeen/voorkeur/houden van"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "'Je mange du gâteau' betekent dat je een deel/portie taart eet (delend lidwoord), terwijl 'J'aime le gâteau' betekent dat je in het algemeen van taart houdt (bepaald lidwoord).",
+      "vraag": "Wat drukt het lidwoord <i>'du'</i> uit in <i>'Je mange du gâteau'</i>? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["deel/stuk/portie/hoeveelheid"],
+      "minTreffers": 1,
+      "modelantwoord": "Een deel of stuk van de taart.",
       "uitleg": "Delend lidwoord du = een onbepaalde hoeveelheid; le = in het algemeen na aimer."
     },
     {

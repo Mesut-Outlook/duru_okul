@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Pluto werd vroeger als planeet beschouwd, maar wordt tegenwoordig een dwergplaneet genoemd. Welke eigenschap van een dwergplaneet, zoals in het boek beschreven, maakt dat deze niet als volwaardige planeet telt?",
-      "sleutelwoorden": [
-        "bolvormig",
-        "kleiner"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een dwergplaneet is net als een planeet bolvormig, maar is veel kleiner dan een planeet.",
+      "vraag": "Pluto is een dwergplaneet en geen volwaardige planeet. Hoe is een dwergplaneet qua grootte vergeleken met een planeet? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kleiner/klein"],
+      "minTreffers": 1,
+      "modelantwoord": "Een dwergplaneet is veel kleiner dan een planeet.",
       "uitleg": "Volgens het overzicht is een dwergplaneet weliswaar bolvormig zoals een planeet, maar veel kleiner dan een planeet, en telt daarom niet als volwaardige planeet."
     }
   ]

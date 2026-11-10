@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een fietser valt en slaat met zijn hoofd tegen de straat. Leg uit hoe de schuimlaag in zijn helm de kracht op het hoofd verkleint.",
-      "modelantwoord": "De schuimlaag deukt in (indeukt) tijdens de klap. Daardoor duurt het langer voordat het hoofd stilstaat en is de remweg groter. De vertraging is dan kleiner en dus ook de kracht (F = m · a). De helm verdeelt de kracht bovendien over een groter oppervlak.",
+      "vraag": "Wat doet de schuimlaag in een helm tijdens de klap met de vertraging van het hoofd? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "De vertraging van het hoofd wordt kleiner, dus ook de kracht (F = m · a).",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "indeuken/indeukt/vervormt",
-        "botstijd/tijdsduur/langer"
-      ],
+      "sleutelwoorden": ["kleiner/lager/minder"],
       "uitleg": "Het indeuken verlengt de botstijd; de vertraging en dus de kracht worden kleiner."
     }
   ]

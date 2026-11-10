@@ -191,23 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee Franse adjectieven die volgens de regels vóór het zelfstandig naamwoord geplaatst worden.",
-      "modelantwoord": "Twee voorbeelden zijn grand, petit, beau, bon of vieux.",
-      "sleutelwoorden": [
-        "grand/petit/beau/bon/vieux/joli",
-        "petit/grand/beau/bon/vieux/joli"
-      ],
+      "vraag": "Noem één Frans adjectief dat volgens de regels vóór het zelfstandig naamwoord geplaatst wordt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld grand.",
+      "sleutelwoorden": ["grand/petit/beau/bon/vieux/joli"],
       "minTreffers": 1,
       "uitleg": "Korte adjectieven zoals grand, petit, beau, bon, vieux staan vóór het zelfstandig naamwoord."
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe de vrouwelijke vorm van een Frans bijvoeglijk naamwoord dat eindigt op -eux (zoals ambitieux) gevormd wordt.",
-      "modelantwoord": "De uitgang -eux verandert in -euse, zoals ambitieuse of délicieuse.",
-      "sleutelwoorden": [
-        "euse",
-        "ambitieuse/délicieuse/verandert"
-      ],
+      "vraag": "Welke uitgang krijgt een Frans bijvoeglijk naamwoord op -eux in de vrouwelijke vorm, zoals ambitieux? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het krijgt de uitgang euse.",
+      "sleutelwoorden": ["euse"],
       "minTreffers": 1,
       "uitleg": "Mannelijk -eux wordt vrouwelijk -euse (bijv. ambitieuse)."
     }

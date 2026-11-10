@@ -168,18 +168,18 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Vergelijk de milieugevolgen van de goudwinning in Suriname met de oliewinning in Nigeria.",
-      sleutelwoorden: ["kwikvergiftiging/ontbossing", "lekkende leidingen/mangrovebossen", "vervuiling/viswateren"],
-      minTreffers: 2,
-      modelantwoord: "In Suriname leidt vooral illegale kleinschalige goudwinning tot grootschalige ontbossing van het regenwoud en zware kwikvergiftiging van rivieren en visbestanden. In Nigeria veroorzaakt de grootschalige oliewinning door lekkende leidingen en lozingen ernstige bodemvervuiling, vernietiging van kwetsbare mangrovebossen en vervuiling van viswateren in de dichtbevolkte Nigerdelta.",
+      vraag: "Noem één milieugevolg van goudwinning in Suriname. <i>(Alleen het antwoord is genoeg.)</i>",
+      sleutelwoorden: ["kwik/ontbossing/ontbost/regenwoud"],
+      minTreffers: 1,
+      modelantwoord: "Goudwinning veroorzaakt ontbossing en kwikvergiftiging.",
       uitleg: "Suriname = ontbossing + kwik; Nigeria = olielozingen + vernietiging mangrove-ecosystemen."
     },
     {
       type: "open",
-      vraag: "Leg uit waarom de overgang naar duurzame energie (windmolens, elektrische auto's) leidt tot een verschuiving in de geopolitieke vraag naar delfstoffen.",
-      sleutelwoorden: ["minder fossiele brandstoffen/olie en gas", "meer vraag naar kritieke metalen/lithium/kobalt", "afhankelijkheid van nieuwe exportlanden/China"],
-      minTreffers: 2,
-      modelantwoord: "Voor de energietransitie zijn veel minder fossiele brandstoffen (zoals aardolie en steenkool) nodig, maar juist gigantisch veel meer kritieke metalen zoals lithium, kobalt, koper en zeldzame aardmetalen voor accu's, windmolens en elektriciteitsnetten. Hierdoor verschuift de geopolitieke afhankelijkheid van traditionele oliestaten (in het Midden-Oosten) naar landen met grote metaalvoorraden en verwerkingscapaciteit (zoals China en Congo).",
+      vraag: "Naar welke delfstoffen groeit de vraag door windmolens en elektrische auto's? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["metalen/lithium/kobalt/koper/aardmetalen"],
+      minTreffers: 1,
+      modelantwoord: "De vraag naar kritieke metalen zoals lithium en kobalt groeit.",
       uitleg: "Fossiele afhankelijkheid maakt plaats voor kritieke metaalafhankelijkheid in de geopolitiek."
     }
   ]

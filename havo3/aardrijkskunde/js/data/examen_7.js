@@ -168,18 +168,18 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit waarom fossielen vrijwel uitsluitend worden aangetroffen in sedimentgesteente en waarom ze ontbreken in stollings- en metamorf gesteente.",
-      sleutelwoorden: ["bedekt/afgesloten van zuurstof", "verbrandt/magma", "verpletterd/herkristalliseerd"],
-      minTreffers: 2,
-      modelantwoord: "In sedimentgesteente worden dode organismen snel bedekt onder lagen zand, klei of kalk, waardoor ze worden afgesloten van zuurstof en kunnen fossiliseren. In stollingsgesteente ontbreekt elk fossiel omdat vloeibaar magma van 1000 °C alle organische resten direct verbrandt. Bij metamorfe gesteenten worden eventuele fossiele resten door de extreme druk en vervorming geheel verpletterd en onherkenbaar herkristalliseerd.",
+      vraag: "Waarom vind je fossielen vrijwel alleen in sedimentgesteente? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["bedekt/afgesloten/zuurstof"],
+      minTreffers: 1,
+      modelantwoord: "Dode organismen worden snel bedekt en afgesloten van zuurstof.",
       uitleg: "Zachte afzetting behoudt fossielen; hitte en deformatie vernietigen organische structuren."
     },
     {
       type: "open",
-      vraag: "Leg uit waarom gidsfossielen onmisbaar zijn om gesteentelagen die duizenden kilometers uit elkaar liggen aan hetzelfde tijdvak te koppelen.",
-      sleutelwoorden: ["korte geologische periode/uitstierven", "wijdverspreid/oceanen", "kalklaag/zekerheid"],
-      minTreffers: 2,
-      modelantwoord: "Gidsfossielen zijn afkomstig van diersoorten die wereldwijd wijdverspreid leefden in de oceanen, maar slechts gedurende een heel korte geologische periode bestonden voordat ze uitstierven. Als een geoloog in Europa en een geoloog in Zuid-Amerika exact hetzelfde gidsfossiel in een kalklaag aantreffen, weten zij met zekerheid dat beide lagen in exact hetzelfde tijdvak zijn gevormd.",
+      vraag: "Waarom zijn gidsfossielen nuttig om gesteentelagen ver uit elkaar aan hetzelfde tijdvak te koppelen? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["korte tijd/kort geleefd/kort bestaan/wijdverspreid/wereldwijd/uitgestorven/uitstierven"],
+      minTreffers: 1,
+      modelantwoord: "Ze leefden wereldwijd maar slechts korte tijd.",
       uitleg: "Korte bestaansperiode + wereldwijde spreiding = perfecte universele geologische tijdsmarkering."
     }
   ]

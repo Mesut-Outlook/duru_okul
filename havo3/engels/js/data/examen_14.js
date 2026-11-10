@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is it important for readers to verify the credibility of a news article found online?",
-      "sleutelwoorden": [
-        "misinformation/fake/accurate/reliable/facts/trusted/evidence"
-      ],
+      "vraag": "Why should readers verify an online news article? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["misinformation/fake/accurate/reliable/facts/trusted/trustworthy/evidence"],
       "minTreffers": 1,
-      "modelantwoord": "Verifying the source prevents the spread of fake news and ensures that the scientific information is accurate and trustworthy.",
+      "modelantwoord": "Verifying prevents the spread of fake news.",
       "uitleg": "Het controleren van bronnen voorkomt desinformatie en waarborgt betrouwbaarheid."
     },
     {

@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is it important for an applicant to align their motivation letter with the criteria listed in a job advert?",
-      "sleutelwoorden": [
-        "show/prove/demonstrate/match/fit/suitable/qualif/requirements",
-        "employer/stand out/hiring/shortlist/selection/interview/chance"
-      ],
+      "vraag": "Why should a motivation letter fit the criteria in the job advert? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["show/prove/demonstrate/suitable/qualif/requirements/employer/stand out/hiring/shortlist/selection/interview/chance"],
       "minTreffers": 1,
-      "modelantwoord": "Matching keywords shows the employer clearly that your profile satisfies their exact requirements and criteria.",
+      "modelantwoord": "It shows the employer that you meet the requirements.",
       "uitleg": "Trefwoorden laten de werkgever direct zien dat jouw profiel aansluit op de functie-eisen."
     },
     {

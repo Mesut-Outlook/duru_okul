@@ -179,23 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee verschillende beroepen in het Duits in de mannelijke en vrouwelijke vorm.",
-      "modelantwoord": "Der Lehrer / die Lehrerin en der Arzt / die Ärztin (of der Polizist / die Polizistin).",
-      "sleutelwoorden": [
-        "Lehrer/Lehrerin/Arzt/Ärztin/Polizist/Polizistin/Verkäufer/Verkäuferin"
-      ],
+      "vraag": "Noem één beroep in het Duits, in de mannelijke of vrouwelijke vorm. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld der Lehrer of die Lehrerin.",
+      "sleutelwoorden": ["lehrer/arzt/ärztin/arztin/polizist/verkäufer/verkaufer"],
       "minTreffers": 1,
       "uitleg": "Bijvoorbeeld Lehrer/Lehrerin en Arzt/Ärztin."
     },
     {
       "type": "open",
-      "vraag": "Wat betekent het begrip 'Duales System' in het Duitse onderwijs?",
-      "modelantwoord": "Leren op school (Berufsschule) combineren met betaald praktijkwerk in een bedrijf.",
-      "sleutelwoorden": [
-        "school",
-        "praktijk/bedrijf/werk",
-        "Berufsschule"
-      ],
+      "vraag": "Wat is het 'Duales System' in het Duitse onderwijs? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Je combineert leren op school met praktijkwerk in een bedrijf.",
+      "sleutelwoorden": ["school/praktijk/bedrijf"],
       "minTreffers": 1,
       "uitleg": "Het combineren van theorie op de vakschool met praktijkwerk bij een leerbedrijf."
     }

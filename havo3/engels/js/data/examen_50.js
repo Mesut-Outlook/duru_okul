@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write two English sentences: one in which you agree with someone and one in which you disagree. Use a Theme word or phrase in each.",
-      "sleutelwoorden": [
-        "absolutely/exactly/for sure/that's right/of course/good point/me neither",
-        "beg to differ/on the contrary/not necessarily/out of the question/object/doubt"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Absolutely, that is a good idea. / I beg to differ, I prefer to go by bike.",
+      "vraag": "Write one English sentence in which you agree with someone. Use a Theme word or phrase. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["absolutely/exactly/for sure/that s right/of course/good point/me neither"],
+      "minTreffers": 1,
+      "modelantwoord": "Absolutely, that is a good idea.",
       "uitleg": "Instemmen: absolutely, exactly, for sure, that's right, of course, good point, me neither. Tegenspreken: to beg to differ, on the contrary, not necessarily, out of the question (boek p.A76)."
     },
     {

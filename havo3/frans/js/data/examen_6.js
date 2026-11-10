@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit in Frans taalgebruik tussen <i>'jouer au football'</i> en <i>'faire du football'</i>.",
-      "sleutelwoorden": [
-        "sport/spel/jouer",
-        "beoefenen/doen/faire"
-      ],
+      "vraag": "Wat betekent <i>'jouer au football'</i> in het Nederlands? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["voetbal"],
       "minTreffers": 1,
-      "modelantwoord": "Beide betekenen voetballen, maar bij 'jouer à' ligt de nadruk op het spelen van de balsport, en bij 'faire de' op sportbeoefening in het algemeen.",
+      "modelantwoord": "Voetbal spelen.",
       "uitleg": "'Jouer au foot' en 'faire du foot' zijn beide correct in het Frans."
     },
     {

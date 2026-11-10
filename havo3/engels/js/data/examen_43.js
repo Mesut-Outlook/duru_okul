@@ -119,12 +119,9 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write one English sentence about a chore that people hate: use the compound for <i>niemand</i> and a verb + gerund.",
-      "sleutelwoorden": [
-        "nobody/no one",
-        "ing"
-      ],
-      "minTreffers": 2,
+      "vraag": "Write one English sentence about a chore that people hate, with the word for <i>niemand</i> and a verb + gerund. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["nobody/no one"],
+      "minTreffers": 1,
       "modelantwoord": "Nobody likes cleaning the bathroom.",
       "uitleg": "No- + -body = niemand; to like + gerund (boek p.A54 en p.A56)."
     },

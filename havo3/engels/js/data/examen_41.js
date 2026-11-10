@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write one English sentence with the compound you make from <i>no</i> + <i>where</i> and tell what it refers to.",
-      "sleutelwoorden": [
-        "nowhere",
-        "place/places"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "I could find my keys nowhere. Nowhere refers to a place.",
+      "vraag": "Write one English sentence with the compound you make from <i>no</i> + <i>where</i>. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["nowhere"],
+      "minTreffers": 1,
+      "modelantwoord": "I could find my keys nowhere.",
       "uitleg": "Nowhere = no + where: het verwijst naar een plaats (boek p.A54)."
     },
     {

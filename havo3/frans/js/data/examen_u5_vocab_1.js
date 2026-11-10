@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee Franse zelfstandige naamwoorden voor vlees- of visproducten uit de woordenlijst van Unité 5.",
-      "modelantwoord": "Twee voorbeelden zijn la viande, le bœuf of le poisson.",
-      "sleutelwoorden": [
-        "viande/boeuf/bœuf/poisson",
-        "poisson/boeuf/bœuf/viande"
-      ],
+      "vraag": "Noem één Frans zelfstandig naamwoord voor vlees of vis uit de woordenlijst van Unité 5. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld la viande.",
+      "sleutelwoorden": ["viande/boeuf/bœuf/poisson"],
       "minTreffers": 1,
       "uitleg": "Woorden voor dierlijke etenswaren zijn bijvoorbeeld la viande (vlees), le bœuf (rundvlees) en le poisson (vis)."
     },
     {
       "type": "open",
-      "vraag": "Welke twee vaste Franse uitdrukkingen met het werkwoord 'avoir' gebruik je om aan te geven dat je behoefte hebt aan eten of drinken?",
-      "modelantwoord": "Dat zijn avoir faim en avoir soif.",
-      "sleutelwoorden": [
-        "faim",
-        "soif"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is de Franse uitdrukking met <i>avoir</i> voor 'honger hebben'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Avoir faim.",
+      "sleutelwoorden": ["faim"],
+      "minTreffers": 1,
       "uitleg": "De uitdrukkingen zijn avoir faim (honger hebben) en avoir soif (dorst hebben)."
     }
   ]

@@ -173,26 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je met behulp van een geodriehoek de <b>arm van een kracht</b> correct opmeet in een natuurkundige tekening.",
-      "sleutelwoorden": [
-        "werklijn",
-        "loodlijn/loodrecht",
-        "lengte/arm van de kracht/meten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Teken of verleng de werklijn van de kracht met een stippellijn in beide richtingen. 2. Leg de nullijn van de geodriehoek langs de werklijn en schuif totdat de liniaal door het draaipunt (D) gaat. 3. Teken een loodrechte lijn (hoek van 90°) vanuit het draaipunt naar de werklijn. 4. Meet de lengte van deze loodlijn op; dat is de arm van de kracht (r).",
+      "vraag": "Hoe heet de lijn die je in het verlengde van de kracht tekent om de arm van de kracht te meten? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["werklijn"],
+      "minTreffers": 1,
+      "modelantwoord": "Je tekent de werklijn van de kracht.",
       "uitleg": "De arm is altijd de loodrechte afstand van draaipunt tot werklijn."
     },
     {
       "type": "open",
-      "vraag": "Een kraan tilt een zware last. Beredeneer met de hefboomwet waarom het gevaarte dreigt om te slaan en hoe dit mechanisch voorkomen wordt.",
-      "sleutelwoorden": [
-        "moment/kracht x arm/kracht maal arm/kracht × arm",
-        "arm/afstand",
-        "contragewicht/tegengewicht/steunpo/ballast"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De last hangt ver van het kantelpunt, dus aan een lange arm: het moment (kracht × arm) van de last is groot. Is dat moment groter dan het tegenwerkende moment van de kraan zelf, dan slaat de kraan om. Dit voorkom je met een contragewicht aan de andere kant van het draaipunt en met uitgeschoven steunpoten, zodat het tegenmoment groter wordt (moment links = moment rechts).",
+      "vraag": "Welk gewicht aan de andere kant van het draaipunt voorkomt dat een kraan omslaat? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["contragewicht/tegengewicht/ballast"],
+      "minTreffers": 1,
+      "modelantwoord": "Een contragewicht voorkomt dat de kraan omslaat.",
       "uitleg": "Hefboomwet: F1 × r1 = F2 × r2. De kraan blijft staan zolang het moment van het contragewicht (plus het eigen gewicht van de kraan) minstens even groot is als het moment van de last."
     }
   ]

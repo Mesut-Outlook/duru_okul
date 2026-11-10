@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Sem zegt: 'Dankzij Nederland hebben de kolonies Suriname en Indonesië zich kunnen ontwikkelen.' Ben je het hiermee eens of oneens? Onderbouw je antwoord met wat je weet over het handelskolonialisme.",
-      "sleutelwoorden": [
-        "uitbuiting/wingewest",
-        "grondstoffen",
-        "eigen winst/moederland"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Oneens: tijdens het handelskolonialisme werd een kolonie vooral als wingewest gebruikt. Kolonies moesten grondstoffen aan het moederland leveren, en de winst ging vooral naar de kolonisator zelf. De ontwikkeling van de kolonie zelf stond niet voorop, en de lokale bevolking werd onderdrukt in plaats van gelijk behandeld.",
+      "vraag": "Sem zegt: 'Dankzij Nederland hebben de kolonies Suriname en Indonesië zich kunnen ontwikkelen.' Ben je het eens of oneens? Geef één reden uit het handelskolonialisme. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["wingewest/uitbuit/uitgebuit/grondstoffen/moederland/winst"],
+      "minTreffers": 1,
+      "modelantwoord": "Oneens: kolonies werden uitgebuit als wingewest voor het moederland.",
       "uitleg": "Kolonies werden tijdens het handelskolonialisme vooral gebruikt om grondstoffen en winst voor het moederland te leveren, niet om de kolonie zelf te ontwikkelen. (boek p. 22)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de sterke groei van de Nigerese uitvoer tussen 1995 en 2022, en de verschuiving naar nieuwe handelspartners, goed past bij het beeld van een multipolaire wereldeconomie.",
-      "sleutelwoorden": [
-        "meerdere machtscentra",
-        "afhankelijkheid/Frankrijk",
-        "diversifiëren/spreiding"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Niger is niet meer voornamelijk afhankelijk van zijn voormalige kolonisator Frankrijk, maar exporteert nu naar veel meer verschillende landen, zoals de Verenigde Arabische Emiraten. Dat zorgt voor spreiding van de handel en past bij een multipolaire wereldeconomie, waarin de economische macht over meerdere machtscentra verdeeld is in plaats van bij één machtig centrum.",
+      "vraag": "Waarom past de verschuiving naar nieuwe handelspartners van Niger bij een multipolaire wereldeconomie? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["afhankelijk/frankrijk/machtscentra/spreiding"],
+      "minTreffers": 1,
+      "modelantwoord": "Niger handelt met veel landen en is minder afhankelijk van Frankrijk.",
       "uitleg": "De verschuiving in Nigers handelspartners laat zien hoe de wereldeconomie steeds meer verdeeld is over meerdere machtscentra. (boek p. 27)"
     }
   ]

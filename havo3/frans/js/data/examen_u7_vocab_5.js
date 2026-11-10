@@ -191,23 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de twee Franse ontkenningswoorden die samen 'niet meer' en 'nooit' betekenen (elk gecombineerd met ne).",
-      "modelantwoord": "Dat zijn plus (voor niet meer) en jamais (voor nooit).",
-      "sleutelwoorden": [
-        "plus",
-        "jamais"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans ontkenningswoord betekent 'niet meer' (gecombineerd met ne)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is plus.",
+      "sleutelwoorden": ["plus"],
+      "minTreffers": 1,
       "uitleg": "De ontkenningen zijn ne...plus (niet meer) en ne...jamais (nooit)."
     },
     {
       "type": "open",
-      "vraag": "Noem het Franse woordje dat onbepaalde lidwoorden vervangt na een ontkenning zoals 'pas'.",
+      "vraag": "Noem het Franse woordje dat onbepaalde lidwoorden vervangt na een ontkenning zoals 'pas'. <i>(Alleen het antwoord is genoeg.)</i>",
       "modelantwoord": "Dat is het woordje de (of d' voor een klinker).",
-      "sleutelwoorden": [
-        "de",
-        "d'"
-      ],
+      "sleutelwoorden": ["de/d'"],
       "minTreffers": 1,
       "uitleg": "In een ontkenning veranderen onbepaalde lidwoorden in de of d'."
     }

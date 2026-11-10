@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is it crucial for an eyewitness to give their statement as soon as possible after an incident?",
-      "sleutelwoorden": [
-        "fresh/memory/forget/details/accurate/clear"
-      ],
+      "vraag": "Why is it crucial for an eyewitness to give a statement soon after an incident? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["fresh/memory/forget/details/accurate/clear"],
       "minTreffers": 1,
-      "modelantwoord": "Memories fade quickly, so giving a statement immediately ensures the details are fresh, accurate, and reliable.",
+      "modelantwoord": "Memories fade quickly, so the details are still fresh.",
       "uitleg": "Herinneringen vervagen snel; direct verslag doen waarborgt de betrouwbaarheid van details."
     },
     {

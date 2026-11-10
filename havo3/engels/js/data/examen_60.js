@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Rewrite in the passive voice: <i>The police are searching the house.</i>",
-      "sleutelwoorden": [
-        "is being searched/are being searched"
-      ],
+      "vraag": "Rewrite in the passive voice: <i>The police are searching the house.</i> <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["is being searched/are being searched/being searched"],
       "minTreffers": 1,
-      "modelantwoord": "The house is being searched (by the police).",
+      "modelantwoord": "The house is being searched by the police.",
       "uitleg": "Present continuous passive: is being + past participle (boek p.A119)."
     },
     {

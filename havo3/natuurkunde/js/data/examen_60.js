@@ -199,12 +199,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg aan de hand van de wet van behoud van energie uit waarom een rendement van 100% in de praktijk niet bestaat.",
-      "sleutelwoorden": [
-        "ongewenste energie/warmte"
-      ],
+      "vraag": "Welke energievorm ontstaat bij elke energieomzetting naast nuttige energie, waardoor het rendement nooit 100% is? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["warmte/hitte"],
       "minTreffers": 1,
-      "modelantwoord": "Bij elke energieomzetting ontstaat naast nuttige energie ook ongewenste energie (meestal warmte); nuttige en ongewenste energie samen zijn gelijk aan de totale energie, dus kan nooit alle energie nuttig zijn.",
+      "modelantwoord": "Er ontstaat ook ongewenste energie, meestal warmte.",
       "uitleg": "Omdat er bij elke omzetting altijd een deel ongewenste energie ontstaat, is 100% rendement in de praktijk onmogelijk."
     }
   ]

@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een kopieermachine kost € 12.000. Na 4 jaar wordt de machine verkocht voor een restwaarde van € 2.000. Bereken de afschrijvingskosten per jaar en laat zien hoeveel de machine aan het eind van jaar 2 nog waard is.",
-      "sleutelwoorden": [
-        "2.500/2500",
-        "7.000/7000"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Afschrijvingskosten per jaar = (€ 12.000 − € 2.000) / 4 = € 2.500. Na 2 jaar: € 12.000 − (2 × € 2.500) = € 7.000.",
+      "vraag": "Een kopieermachine kost € 12.000 en wordt na 4 jaar verkocht voor een restwaarde van € 2.000. Bereken de afschrijvingskosten per jaar. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["2 500/2500"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 2.500 per jaar.",
       "uitleg": "€ 2.500 per jaar; waarde aan het eind van jaar 2 = € 7.000."
     },
     {
       "type": "open",
-      "vraag": "Een bakkerij heeft € 30.000 aan constante kosten per jaar en € 2 aan variabele kosten per brood. Bereken de totale kosten én de totale kosten per brood bij een productie van 15.000 broden.",
-      "sleutelwoorden": [
-        "60.000/60000",
-        "4/4,00"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Totale kosten = € 30.000 + (15.000 × € 2) = € 30.000 + € 30.000 = € 60.000. Per brood: € 60.000 / 15.000 = € 4.",
+      "vraag": "Een bakkerij heeft € 30.000 aan constante kosten per jaar en € 2 aan variabele kosten per brood. Bereken de totale kosten bij 15.000 broden. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["60 000/60000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 60.000",
       "uitleg": "Totale kosten € 60.000; per brood € 4."
     }
   ]

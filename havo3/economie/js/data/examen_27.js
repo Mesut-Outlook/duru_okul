@@ -192,26 +192,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de vier letters van het ezelsbruggetje KANO en geef bij elke letter de bijbehorende productiefactor.",
-      "sleutelwoorden": [
-        "kapitaal",
-        "arbeid",
-        "natuur",
-        "ondernemerschap"
-      ],
-      "minTreffers": 4,
-      "modelantwoord": "K = Kapitaal, A = Arbeid, N = Natuur, O = Ondernemerschap.",
+      "vraag": "Welke productiefactor hoort bij de letter N van het ezelsbruggetje KANO? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["natuur"],
+      "minTreffers": 1,
+      "modelantwoord": "Natuur.",
       "uitleg": "KANO staat voor de vier productiefactoren: Kapitaal, Arbeid, Natuur en Ondernemerschap."
     },
     {
       "type": "open",
-      "vraag": "Een bakkerij produceert 10.000 broden per maand. De totale constante kosten zijn € 6.000 per maand. De variabele kosten bedragen € 0,80 per brood. Bereken de kostprijs per brood. Toon de berekening.",
-      "sleutelwoorden": [
-        "14.000/veertienduizend/14000",
-        "1,40/1.40"
-      ],
+      "vraag": "Een bakkerij maakt 10.000 broden per maand met € 6.000 constante kosten per maand en € 0,80 variabele kosten per brood. Bereken de kostprijs per brood. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["1 40"],
       "minTreffers": 1,
-      "modelantwoord": "Totale variabele kosten = 10.000 × € 0,80 = € 8.000. Totale kosten = € 6.000 + € 8.000 = € 14.000. Kostprijs per brood = € 14.000 / 10.000 = € 1,40 per brood.",
+      "modelantwoord": "€ 1,40 per brood.",
       "uitleg": "Kostprijs = Totale kosten / Productieomvang (TK / q)."
     }
   ]

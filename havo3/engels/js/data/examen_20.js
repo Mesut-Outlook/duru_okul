@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is keeping a calm mindset essential when dealing with an emergency in the wilderness?",
-      "sleutelwoorden": [
-        "panic/prevent/mistakes/clear/think",
-        "rational/decisions/safe/smart"
-      ],
+      "vraag": "Why is a calm mindset essential in an emergency in the wilderness? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["panic/prevent/mistakes/clear/think/rational/decisions/safe/smart"],
       "minTreffers": 1,
-      "modelantwoord": "Staying calm prevents panic, allows you to think clearly, and helps you make safe, smart survival decisions.",
+      "modelantwoord": "Staying calm prevents panic and helps you think clearly.",
       "uitleg": "Kalmte voorkomt paniek en stelt je in staat om verstandige beslissingen te nemen."
     },
     {

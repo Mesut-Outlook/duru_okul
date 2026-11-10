@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een Belgisch bedrijf nu gemakkelijker aan Duitse klanten verkoopt dan voor de EU-samenwerking.",
-      "sleutelwoorden": [
-        "belemmeringen/handelsbelemmeringen",
-        "open grenzen/grenzen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door de samenwerking zijn de handelsbelemmeringen weggenomen en de open grenzen maken handel gemakkelijker.",
+      "vraag": "Waarom verkoopt een Belgisch bedrijf nu gemakkelijker aan Duitse klanten dan voor de EU-samenwerking? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["belemmering/grenzen"],
+      "minTreffers": 1,
+      "modelantwoord": "De handelsbelemmeringen zijn weggenomen.",
       "uitleg": "Handelsbelemmeringen zijn weggenomen en er zijn open grenzen tussen de EU-landen. (boek p. 38)"
     },
     {
       "type": "open",
-      "vraag": "Welk probleem zien critici in de snelheid van EU-besluiten en welke beroepsgroep protesteerde in 2023?",
-      "sleutelwoorden": [
-        "traag/langzaam",
-        "boeren/agrariërs"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De besluitvorming verloopt vaak traag terwijl de gevolgen groot zijn, en boeren protesteerden in Brussel.",
+      "vraag": "Welke beroepsgroep protesteerde in 2023 in Brussel tegen EU-besluiten die traag verlopen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["boeren/agrariërs"],
+      "minTreffers": 1,
+      "modelantwoord": "De boeren.",
       "uitleg": "De besluitvorming is traag en de boeren protesteerden. (boek p. 38)"
     }
   ]

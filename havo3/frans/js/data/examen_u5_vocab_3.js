@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Frans aan de ober of je mayonaise mag krijgen?",
-      "modelantwoord": "Je zegt: Je peux avoir de la mayonnaise?",
-      "sleutelwoorden": [
-        "peux avoir",
-        "mayonnaise"
-      ],
-      "minTreffers": 2,
+      "vraag": "Hoe vraag je in het Frans aan de ober of je mayonaise mag krijgen? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Je peux avoir de la mayonnaise ?",
+      "sleutelwoorden": ["peux avoir"],
+      "minTreffers": 1,
       "uitleg": "De vraag luidt: 'Je peux avoir de la mayonnaise?'."
     },
     {
       "type": "open",
-      "vraag": "Noem de Franse zin waarmee je aan de bediening meldt dat jouw frietjes koud geserveerd zijn.",
-      "modelantwoord": "Dat zeg je met: Mes frites sont froides.",
-      "sleutelwoorden": [
-        "frites",
-        "froides"
-      ],
-      "minTreffers": 2,
+      "vraag": "Zeg in het Frans dat jouw frietjes koud zijn. <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Mes frites sont froides.",
+      "sleutelwoorden": ["froid"],
+      "minTreffers": 1,
       "uitleg": "Je meldt dit met 'Mes frites sont froides.'."
     }
   ]

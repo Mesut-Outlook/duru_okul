@@ -168,18 +168,18 @@ DURU.registerExamen({
     },
     {
       type: "open",
-      vraag: "Leg uit hoe de Europese interne markt bijdraagt aan de welvaart van consumenten in Europese lidstaten.",
-      sleutelwoorden: ["lagere prijzen/meer concurrentie", "groter aanbod/aanbod", "invoerrechten/productiekosten"],
-      minTreffers: 2,
-      modelantwoord: "Door het wegvallen van invoerrechten en handelsbelemmeringen kunnen bedrijven hun producten in de hele EU verkopen. Dit leidt tot meer onderlinge concurrentie, schaalvoordelen en lagere productiekosten. Consumenten profiteren daardoor van een veel groter aanbod aan goederen en diensten tegen lagere prijzen en met strikte Europese kwaliteits- en veiligheidsgaranties.",
+      vraag: "Noem één manier waarop de Europese interne markt consumenten voordeel geeft. <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["lagere prijzen/goedkoper/concurrentie/groter aanbod/meer keuze"],
+      minTreffers: 1,
+      modelantwoord: "Door meer concurrentie krijgen consumenten lagere prijzen en meer keuze.",
       uitleg: "Interne markt vergroot concurrentie, verlaagt transactiekosten en verbreedt de keuze voor consumenten."
     },
     {
       type: "open",
-      vraag: "Beredeneer waarom het gemeenschappelijk buitentarief noodzakelijk is om de interne markt van de EU goed te laten functioneren.",
-      sleutelwoorden: ["allerlaagste invoerheffing/laagste heffing", "handelsverlegging/tolvrij", "gelijkmatig/oneerlijke route"],
-      minTreffers: 2,
-      modelantwoord: "Zonder een gemeenschappelijk buitentarief zou een land buiten de EU zijn goederen exporteren naar het EU-land met de allerlaagste invoerheffing. Eenmaal binnen de EU kunnen die goederen immers tolvrij doorstromen naar alle andere lidstaten. Het gezamenlijke buitentarief voorkomt deze oneerlijke route (handelsverlegging) en beschermt alle lidstaten gelijkmatig.",
+      vraag: "Waarom is een gemeenschappelijk buitentarief nodig voor de interne markt van de EU? <i>(Eén korte zin is genoeg.)</i>",
+      sleutelwoorden: ["laagste/goedkoopste/tolvrij/handelsverlegging/omweg"],
+      minTreffers: 1,
+      modelantwoord: "Anders voeren bedrijven goederen in via het land met de laagste heffing.",
       uitleg: "Uniform buitentarief voorkomt dat goederen via het goedkoopste douanegat belastingvrij de hele unie overspoelen."
     }
   ]

@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de twee persoonsvormen van het werkwoord 'venir' in de tegenwoordige tijd voor de meervoudsvormen 'wij' en 'jullie/u'.",
-      "modelantwoord": "Dat zijn venons (nous venons) en venez (vous venez).",
-      "sleutelwoorden": [
-        "venons",
-        "venez"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is de vorm van het werkwoord 'venir' bij 'wij' in de tegenwoordige tijd? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Nous venons.",
+      "sleutelwoorden": ["venons"],
+      "minTreffers": 1,
       "uitleg": "Bij nous is de vorm venons, en bij vous is de vorm venez."
     },
     {
       "type": "open",
-      "vraag": "Leg uit welk hulpwerkwoord je gebruikt bij de passé composé van 'venir' en wat het Franse mannelijk enkelvoudige voltooid deelwoord is.",
-      "modelantwoord": "Je gebruikt het hulpwerkwoord être en het voltooid deelwoord is venu.",
-      "sleutelwoorden": [
-        "être/etre",
-        "venu"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk hulpwerkwoord gebruik je bij de passé composé van 'venir'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Je gebruikt être.",
+      "sleutelwoorden": ["être/etre"],
+      "minTreffers": 1,
       "uitleg": "De passé composé van venir wordt gevormd met être en het deelwoord venu (bijv. il est venu)."
     }
   ]

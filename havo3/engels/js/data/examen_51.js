@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain in English what the <i>hongi</i> is.",
-      "sleutelwoorden": [
-        "greeting/greet",
-        "nose/forehead",
-        "breath/Maori"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "The hongi is a traditional Maori greeting in which people press their nose and forehead together, sharing breath.",
+      "vraag": "What is the <i>hongi</i>? Answer in one English sentence. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["greeting/greet/nose/forehead/breath/maori"],
+      "minTreffers": 1,
+      "modelantwoord": "The hongi is a traditional Maori greeting.",
       "uitleg": "Hongi = traditionele Maori-begroeting: neus en voorhoofd tegen elkaar, 'sharing of breath' (boek p.A58)."
     },
     {

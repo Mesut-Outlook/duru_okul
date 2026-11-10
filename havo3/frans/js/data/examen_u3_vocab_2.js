@@ -193,22 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Vertaal het werkwoord 'blijven' naar het Frans (hele werkwoord, p. 125).",
-      "sleutelwoorden": [
-        "rester"
-      ],
+      "vraag": "Vertaal het werkwoord 'blijven' naar het Frans (hele werkwoord, p. 125). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["rester"],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse werkwoord voor blijven is 'rester'.",
+      "modelantwoord": "Het Franse werkwoord voor blijven is rester.",
       "uitleg": "'Rester' betekent blijven."
     },
     {
       "type": "open",
-      "vraag": "Vertaal de Franse uitdrukking voor 'op de camping' (p. 125, twee woorden: au ...).",
-      "sleutelwoorden": [
-        "au camping"
-      ],
+      "vraag": "Vertaal de Franse uitdrukking voor 'op de camping' (p. 125, twee woorden: au ...). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["au camping"],
       "minTreffers": 1,
-      "modelantwoord": "De Franse uitdrukking is 'au camping'.",
+      "modelantwoord": "De uitdrukking is au camping.",
       "uitleg": "'Au camping' betekent op de camping."
     }
   ]

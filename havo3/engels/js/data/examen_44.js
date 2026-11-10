@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain in one English sentence the difference between <i>sensible</i> and <i>sensitive</i>.",
-      "sleutelwoorden": [
-        "wise/reasonable/practical/good sense/clever/verstandig",
-        "feelings/emotional/easily hurt/gevoelig/cry"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Sensible means that you have good sense and make wise choices; sensitive means that you have strong feelings and are easily hurt.",
+      "vraag": "What does <i>sensible</i> mean? Answer in one English sentence. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["wise/reasonable/practical/good sense/common sense/clever/verstandig/logical"],
+      "minTreffers": 1,
+      "modelantwoord": "Sensible means that you make wise choices.",
       "uitleg": "Sensible = verstandig; sensitive = gevoelig (boek p.A76)."
     },
     {

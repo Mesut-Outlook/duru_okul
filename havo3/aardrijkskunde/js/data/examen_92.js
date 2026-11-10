@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is een afzetmarkt? Leg ook uit waarom de regio rond Eindhoven een interessante afzetmarkt heeft.",
-      "sleutelwoorden": [
-        "verkop",
-        "40 miljoen",
-        "koopkracht"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een afzetmarkt is een gebied waar bedrijven hun producten verkopen. Binnen 150 kilometer rond Eindhoven wonen 40 miljoen mensen met een bovengemiddelde koopkracht.",
+      "vraag": "Wat is een afzetmarkt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verkop/klanten/kopers"],
+      "minTreffers": 1,
+      "modelantwoord": "Een afzetmarkt is een gebied waar bedrijven hun producten verkopen.",
       "uitleg": "Een gebied waar bedrijven hun producten verkopen. Rond Eindhoven wonen 40 miljoen mensen met veel koopkracht. (boek p. 43)"
     },
     {
       "type": "open",
-      "vraag": "Noem drie multinationals die in brainport Eindhoven zijn gevestigd.",
-      "sleutelwoorden": [
-        "ASML",
-        "DAF",
-        "Philips"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Genoemd worden ASML, DAF en Philips.",
+      "vraag": "Noem één multinational die in brainport Eindhoven is gevestigd. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["asml/daf/philips"],
+      "minTreffers": 1,
+      "modelantwoord": "ASML is gevestigd in brainport Eindhoven.",
       "uitleg": "ASML, DAF en Philips. (boek p. 42)"
     }
   ]

@@ -173,27 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een klein land als Nederland toch een grote rol speelt in de wereld. Geef twee verklaringen uit de paragraaf.",
-      "sleutelwoorden": [
-        "globaliseringsindex/top 3",
-        "multinational",
-        "import/importeren/export/exporteren",
-        "haven/mainport/schiphol"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Nederland staat al jaren in de top 3 van de globaliseringsindex. Er zijn veel multinationals gevestigd en we importeren en exporteren veel, onder meer via de haven van Rotterdam.",
+      "vraag": "Noem één verklaring waarom een klein land als Nederland toch een grote rol speelt in de wereld. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["globaliseringsindex/top 3/multinational/import/export/haven/mainport/schiphol"],
+      "minTreffers": 1,
+      "modelantwoord": "Nederland staat al jaren in de top 3 van de globaliseringsindex.",
       "uitleg": "Verklaringen: top 3 van de globaliseringsindex, veel multinationals, veel import en export, mainports. (boek p. 42)"
     },
     {
       "type": "open",
-      "vraag": "Waarom is Nederland als handelsland gebaat bij weinig handelsbelemmeringen?",
-      "sleutelwoorden": [
-        "export/exporteren/afzet",
-        "import/importeren/invoer",
-        "haven/mainport/doorvoer"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Nederland exporteert veel en heeft afzetmarkten nodig. Daarnaast importeren we veel producten en gaat er via de haven veel handel door Nederland.",
+      "vraag": "Noem één reden waarom Nederland als handelsland gebaat is bij weinig handelsbelemmeringen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["export/afzet/import/invoer/haven/doorvoer"],
+      "minTreffers": 1,
+      "modelantwoord": "Nederland exporteert veel en heeft afzetmarkten nodig.",
       "uitleg": "Een open economie leeft van import, export en doorvoer; handelsbelemmeringen vormen dan een bedreiging. (boek p. 42)"
     }
   ]

@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke twee tafelgerei-voorwerpen gebruik je gewoonlijk om een biefstuk op je bord te snijden en naar je mond te brengen?",
-      "modelantwoord": "Dat zijn le couteau (het mes) en la fourchette (de vork).",
-      "sleutelwoorden": [
-        "couteau",
-        "fourchette"
-      ],
-      "minTreffers": 2,
+      "vraag": "Wat is het Franse woord voor het tafelgerei waarmee je een biefstuk snijdt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Le couteau (het mes).",
+      "sleutelwoorden": ["couteau"],
+      "minTreffers": 1,
       "uitleg": "Het mes is le couteau en de vork is la fourchette."
     },
     {
       "type": "open",
-      "vraag": "Noem de twee Franse uitdrukkingen met avoir die aangeven dat iemand dringend eten respectievelijk drinken nodig heeft.",
-      "modelantwoord": "Dat zijn avoir faim en avoir soif.",
-      "sleutelwoorden": [
-        "avoir faim/faim",
-        "avoir soif/soif"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke Franse uitdrukking met avoir geeft aan dat iemand dringend moet drinken? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Avoir soif.",
+      "sleutelwoorden": ["soif"],
+      "minTreffers": 1,
       "uitleg": "Honger hebben is avoir faim en dorst hebben is avoir soif."
     }
   ]

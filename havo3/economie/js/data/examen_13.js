@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg aan de hand van het begrip 'schaarste' uit waarom ook een miljardair toch economische keuzes moet maken.",
-      "sleutelwoorden": [
-        "tijd/uren/beperkt",
-        "oneindig/keuzes maken"
-      ],
+      "vraag": "Noem één reden waarom ook een miljardair keuzes moet maken (denk aan schaarste). <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["tijd/beperkt/uren"],
       "minTreffers": 1,
-      "modelantwoord": "Hoewel een miljardair enorm veel geld bezit, is zijn tijd beperkt (slechts 24 uur per dag). Omdat tijd schaars is en niet oneindig, moet ook een rijk persoon keuzes maken tussen verschillende activiteiten.",
+      "modelantwoord": "Zijn tijd is beperkt.",
       "uitleg": "Schaarste betreft niet alleen geld, maar ook tijd en energie: je kunt op hetzelfde moment maar op één plek tegelijk zijn."
     },
     {
       "type": "open",
-      "vraag": "Geef één voorbeeld van een primair goed en één voorbeeld van een primaire dienst die onmisbaar zijn in het dagelijks leven.",
-      "sleutelwoorden": [
-        "water/brood/voedsel/kleding/woning",
-        "arts/ziekenhuis/chirurg/huisarts/brandweer/drinkwatervoorziening"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Primair goed: drinkwater of basisvoedsel (zoals brood). Primaire dienst: acute medische zorg door een arts of de inzet van de brandweer bij nood.",
+      "vraag": "Noem één voorbeeld van een primaire dienst. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["arts/ziekenhuis/chirurg/huisarts/brandweer/drinkwater/politie/zorg"],
+      "minTreffers": 1,
+      "modelantwoord": "Een arts.",
       "uitleg": "Zowel stoffelijke zaken (voeding) als diensten (levensreddende gezondheidszorg) kunnen eerste levensbehoeften zijn."
     }
   ]

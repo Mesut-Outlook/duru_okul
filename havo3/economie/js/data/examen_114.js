@@ -180,26 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Kledingwinkel Modehoek had in 2023 een omzet van € 300.000. De inkoopwaarde van de omzet was € 195.000. De bedrijfskosten bestonden uit: loonkosten € 42.000, huisvestingskosten € 21.000, verkoopkosten € 6.000 en afschrijvingskosten € 6.000. Bereken de brutowinst in euro's, de nettowinst in euro's én de nettowinst als percentage van de omzet.",
-      "sleutelwoorden": [
-        "105.000/105000",
-        "30.000/30000",
-        "10%/10 procent/10,0%"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Brutowinst = € 300.000 − € 195.000 = € 105.000. Totale bedrijfskosten = € 42.000 + € 21.000 + € 6.000 + € 6.000 = € 75.000. Nettowinst = € 105.000 − € 75.000 = € 30.000. Als percentage van de omzet: (€ 30.000 / € 300.000) × 100% = 10%.",
+      "vraag": "Modehoek had een omzet van € 300.000, een inkoopwaarde van de omzet van € 195.000 en € 75.000 aan totale bedrijfskosten. Bereken de nettowinst in euro's. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["30 000/30000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 30.000",
       "uitleg": "Brutowinst = € 105.000; bedrijfskosten = € 75.000; nettowinst = € 30.000 (= 10% van € 300.000)."
     },
     {
       "type": "open",
-      "vraag": "Een groothandel koopt kratten olijfolie in voor € 25 per krat en verkoopt ze voor € 40 per krat (exclusief btw). In een jaar worden 8.000 kratten verkocht. De overige bedrijfskosten bedragen € 72.000. Bereken achtereenvolgens de omzet, de brutowinst en de nettowinst.",
-      "sleutelwoorden": [
-        "320.000/320000",
-        "120.000/120000",
-        "48.000/48000"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Omzet = 8.000 × € 40 = € 320.000. Inkoopwaarde van de omzet = 8.000 × € 25 = € 200.000. Brutowinst = € 320.000 − € 200.000 = € 120.000. Nettowinst = € 120.000 − € 72.000 = € 48.000.",
+      "vraag": "Een groothandel koopt kratten in voor € 25 en verkoopt ze voor € 40. Bij 8.000 verkochte kratten is dat een omzet van € 320.000. Bereken de brutowinst. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["120 000/120000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 120.000",
       "uitleg": "Omzet = € 320.000; brutowinst = € 120.000; nettowinst = € 48.000."
     }
   ]

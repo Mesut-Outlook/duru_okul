@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een fietsenwinkel maakt zelf geen fietsen. Leg uit hoe de winkel toch waarde toevoegt en hoe je die waarde berekent.",
-      "sleutelwoorden": [
-        "samenbrengen/bij elkaar/samen",
-        "min/verschil/aftrekken/verminderen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De winkel brengt fietsen en accessoires samen en voegt zo waarde toe, de toegevoegde waarde is de verkoopprijs min de inkoopprijs.",
+      "vraag": "Een fietsenwinkel maakt zelf geen fietsen maar voegt toch waarde toe. Hoe bereken je die waarde? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["min/minus/verschil/aftrek/trek"],
+      "minTreffers": 1,
+      "modelantwoord": "Verkoopprijs min inkoopprijs.",
       "uitleg": "Door producten samen te brengen voegt de winkel waarde toe en je berekent dat als verkoopprijs min inkoopprijs."
     },
     {
       "type": "open",
-      "vraag": "Een fietsenfabriek koopt onderdelen voor € 800 en verkoopt fietsen voor € 1.400 aan een groothandel. De groothandel verkoopt ze voor € 1.750 aan een winkel. Bereken de toegevoegde waarde van beide bedrijven in euro's en bereken ook procentueel hoeveel de fabriek toevoegt aan het inkoopbedrag.",
-      "sleutelwoorden": [
-        "600",
-        "350",
-        "75%/75 procent"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Fabriek: € 1.400 - € 800 = € 600, groothandel: € 1.750 - € 1.400 = € 350, en de fabriek voegt 600 / 800 x 100 = 75% toe.",
+      "vraag": "Een fietsenfabriek verkoopt fietsen voor € 1.400 aan een groothandel, die ze voor € 1.750 aan een winkel verkoopt. Bereken de toegevoegde waarde van de groothandel in euro's. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["350"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 350",
       "uitleg": "De fabriek voegt € 600 toe (75% van € 800) en de groothandel € 350."
     }
   ]

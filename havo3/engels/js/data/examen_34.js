@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "In the article, Megan has 'veto power'. Explain in your own words what this means for her mother's online sharing.",
-      "sleutelwoorden": [
-        "stop/refuse/forbid/say no/block/prevent",
-        "post/picture/photo/upload"
-      ],
+      "vraag": "In the article, Megan has 'veto power'. What can she do with her mother's online posts? Answer in one short English sentence. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["stop/refuse/forbid/say no/block/prevent"],
       "minTreffers": 1,
-      "modelantwoord": "Megan can stop her mother from posting pictures of her; she can say no.",
+      "modelantwoord": "Megan can say no to her mother's posts.",
       "uitleg": "Veto power = het recht om iets te verbieden: haar moeder vertelt het vooraf en Megan mag nee zeggen (boek p.A63/A65)."
     },
     {

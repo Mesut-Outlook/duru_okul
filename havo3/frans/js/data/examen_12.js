@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Vertaal de zin naar het Frans in de passé composé: <i>'Gisteren heb ik mijn trein gemist.'</i>",
-      "sleutelwoorden": [
-        "hier",
-        "j'ai raté/j'ai manqué/perdu",
-        "mon train/le train"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Hier, j'ai raté mon train. (of: Hier, j'ai manqué mon train.)",
+      "vraag": "Vertaal in het Frans (passé composé): <i>'Gisteren heb ik mijn trein gemist.'</i> <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["ai raté/ai rate/ai manqué/ai manque","mon train/le train"],
+      "minTreffers": 1,
+      "modelantwoord": "Hier, j'ai raté mon train.",
       "uitleg": "Hier = gisteren; j'ai raté = ik heb gemist; mon train = mijn trein."
     },
     {

@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee Franse bijvoeglijk naamwoorden uit de woordenlijst van Unité 6 die een positieve of grappige karaktereigenschap beschrijven.",
-      "modelantwoord": "Twee voorbeelden zijn courageux, marrant of mignon.",
-      "sleutelwoorden": [
-        "courageux/marrant/mignon",
-        "marrant/courageux/mignon"
-      ],
+      "vraag": "Noem één Frans bijvoeglijk naamwoord uit Unité 6 voor een positieve of grappige karaktereigenschap. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld marrant.",
+      "sleutelwoorden": ["courageux/marrant/mignon"],
       "minTreffers": 1,
       "uitleg": "Positieve karakterwoorden zijn bijvoorbeeld courageux (moedig), marrant (grappig) en mignon (schattig/lief)."
     },
     {
       "type": "open",
-      "vraag": "Welke twee Franse werkwoorden uit Blok B betekenen respectievelijk 'weigeren' en 'verlaten'?",
-      "modelantwoord": "Dat zijn refuser en quitter.",
-      "sleutelwoorden": [
-        "refuser",
-        "quitter"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans werkwoord uit Blok B betekent 'weigeren'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het werkwoord is refuser.",
+      "sleutelwoorden": ["refuser"],
+      "minTreffers": 1,
       "uitleg": "De werkwoorden zijn refuser (weigeren) en quitter (verlaten)."
     }
   ]

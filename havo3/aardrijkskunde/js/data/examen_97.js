@@ -179,28 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil tussen een <b>mainport</b> en een <b>brainport</b>? Noem van elk een Nederlands voorbeeld.",
-      "sleutelwoorden": [
-        "haven/luchthaven",
-        "rotterdam/schiphol",
-        "kennis/hightech/universiteit",
-        "eindhoven"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Een mainport is een belangrijke haven of luchthaven voor de internationale handel, zoals de haven van Rotterdam of Schiphol. Een brainport is een gebied met veel kennis: hightechbedrijven, universiteiten en onderzoeksinstituten, zoals de regio Eindhoven.",
+      "vraag": "Wat is een <b>mainport</b>? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["haven/luchthaven/vliegveld"],
+      "minTreffers": 1,
+      "modelantwoord": "Een mainport is een belangrijke haven of luchthaven voor de handel.",
       "uitleg": "Mainport = haven/luchthaven voor wereldhandel (Rotterdam, Schiphol); brainport = kenniseconomie met hightechbedrijven (Eindhoven). (boek p. 42, 52)"
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil tussen een <b>lidstaat</b> en een <b>kandidaat-lidstaat</b> van de EU? Noem ook drie dingen waar zo'n land eerst aan moet voldoen.",
-      "sleutelwoorden": [
-        "wil/willen/nog niet",
-        "financiën/financien/geld",
-        "corruptie",
-        "democratie"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Een lidstaat is al lid van de EU. Een kandidaat-lidstaat wil lid worden maar is het nog niet. Daarvoor moet het land eerst voldoen aan strenge regels op het gebied van financiën, corruptie en democratie.",
+      "vraag": "Noem één ding waar een kandidaat-lidstaat van de EU eerst aan moet voldoen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["financi/corruptie/democratie/geld"],
+      "minTreffers": 1,
+      "modelantwoord": "Het land moet onder meer corruptie bestrijden.",
       "uitleg": "Kandidaat-lidstaten moeten voldoen aan strenge regels op het gebied van financiën, corruptie en democratie. (boek p. 38)"
     }
   ]

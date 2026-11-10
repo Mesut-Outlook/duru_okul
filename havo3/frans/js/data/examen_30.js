@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je in een Franse winkel vraagt of je een jas mag passen en waar de paskamers zijn.",
-      "sleutelwoorden": [
-        "essayer/veste/manteau",
-        "cabines/essayage/où/ou"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bonjour, puis-je essayer cette veste ? Où sont les cabines d'essayage, s'il vous plaît ?",
+      "vraag": "Hoe vraag je in een Franse winkel of je een jas mag passen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["essayer","veste/manteau"],
+      "minTreffers": 1,
+      "modelantwoord": "Puis-je essayer cette veste, s'il vous plaît ?",
       "uitleg": "'Puis-je essayer cette veste ? Où sont les cabines d'essayage ?'."
     },
     {

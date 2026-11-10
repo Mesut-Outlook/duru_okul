@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe de aanwezigheid van waardevolle delfstoffen zoals kobalt en goud in DR Congo gewapende conflicten in stand houdt.",
-      "sleutelwoorden": [
-        "rebellen/milities",
-        "wapens/munitie",
-        "mijnen/illegale verkoop"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Gewapende rebellen en milities veroveren en controleren afgelegen mijnen met bruut geweld. Door de illegale verkoop van de gedolven ertsen aan tussenhandelaren verdienen zij miljoenen euro's. Met dit geld kopen zij nieuwe wapens en munitie, waardoor de gewelddadige burgeroorlogen en instabiliteit jarenlang voortduren.",
+      "vraag": "Noem één manier waarop delfstoffen in DR Congo gewapende conflicten in stand houden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["rebellen/milities/wapens/munitie/geld/verkoop"],
+      "minTreffers": 1,
+      "modelantwoord": "Milities verkopen delfstoffen en kopen met het geld wapens.",
       "uitleg": "Delfstoffen leveren de brandstof en financiering voor voortdurend geweld en rebellengroepen."
     },
     {
       "type": "open",
-      "vraag": "Noem twee maatregelen die westerse tech-bedrijven en overheden kunnen nemen om te voorkomen dat er conflictmineralen in onze smartphones belanden.",
-      "sleutelwoorden": [
-        "traceerbaarheid/certificering",
-        "controles/audits",
-        "kinderarbeid/milities"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bedrijven moeten zorgen voor strikte traceerbaarheid en certificering van alle gebruikte grondstoffen van mijn tot eindproduct. Daarnaast moeten overheden onafhankelijke controles en audits verplichten om te controleren dat leveranciers niet inkopen bij mijnen waar sprake is van milities of kinderarbeid.",
+      "vraag": "Noem één maatregel waarmee bedrijven of overheden conflictmineralen uit smartphones kunnen weren. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["traceer/certificer/controle/audit/herkomst"],
+      "minTreffers": 1,
+      "modelantwoord": "Bedrijven moeten de herkomst van grondstoffen controleren.",
       "uitleg": "Transparantie en strenge ketenverantwoordelijkheid kunnen de illegale mineralenhandel droogleggen."
     }
   ]

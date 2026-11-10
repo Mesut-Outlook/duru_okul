@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je in het Frans vraagt of je een tafeltje voor twee personen kunt krijgen bij het raam.",
-      "sleutelwoorden": [
-        "table",
-        "deux/2/personnes",
-        "fenêtre/fenetre/près/pres"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bonjour, une table pour deux personnes près de la fenêtre, s'il vous plaît.",
+      "vraag": "Hoe vraag je in het Frans om een tafeltje voor twee personen bij het raam? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["table","fenêtre/fenetre"],
+      "minTreffers": 1,
+      "modelantwoord": "Une table pour deux personnes près de la fenêtre, s'il vous plaît.",
       "uitleg": "Une table pour deux près de la fenêtre, s'il vous plaît."
     },
     {

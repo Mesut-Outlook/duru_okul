@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de lidwoorden van de der-Gruppe in de 4e naamval voor mannelijk, vrouwelijk en onzijdig.",
-      "modelantwoord": "Mannelijk: den; vrouwelijk: die; onzijdig: das.",
-      "sleutelwoorden": [
-        "den",
-        "die",
-        "das"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk lidwoord uit de der-Gruppe hoort bij een onzijdig woord in de 4e naamval? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het lidwoord is das.",
+      "sleutelwoorden": ["das"],
+      "minTreffers": 1,
       "uitleg": "Den (mannelijk), die (vrouwelijk), das (onzijdig)."
     },
     {
       "type": "open",
-      "vraag": "In welke stad klinkt tijdens de optocht de bekende kreet 'Kölle Alaaf' en wat wordt er gevierd?",
-      "modelantwoord": "Het is de traditionele carnavalsgroet in de stad Keulen (Köln).",
-      "sleutelwoorden": [
-        "Keulen/Köln",
-        "carnaval/carnavalsgroet"
-      ],
+      "vraag": "In welke stad klinkt de carnavalskreet 'Kölle Alaaf'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "In Keulen (Köln).",
+      "sleutelwoorden": ["keulen/köln/koln/cologne"],
       "minTreffers": 1,
       "uitleg": "Dit is de carnavalsgroet in Keulen."
     }

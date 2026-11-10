@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom zich weinig multinationals vestigen in een land waar één persoon alle macht heeft.",
-      "sleutelwoorden": [
-        "corruptie",
-        "vrijheden/vrijheid",
-        "investeerders/investeringen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Mensen hebben er weinig vrijheden en er is corruptie. Buitenlandse investeerders en toeristen blijven weg.",
+      "vraag": "Noem één reden waarom zich weinig multinationals vestigen in een land waar één persoon alle macht heeft. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["corruptie/vrijheid/vrijheden/investeerders"],
+      "minTreffers": 1,
+      "modelantwoord": "Er is corruptie in zulke landen.",
       "uitleg": "Er is weinig vrijheid en er is corruptie, dus investeerders blijven weg. (boek p. 28)"
     },
     {
       "type": "open",
-      "vraag": "Geef een voorbeeld van een interne en een externe oorzaak van verschillen tussen landen.",
-      "sleutelwoorden": [
-        "onderwijs/rechten/bestuur",
-        "grondstoffen/kolonialisme/verleden"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Intern: de manier waarop het onderwijs is geregeld. Extern: de export van onbewerkte grondstoffen door een voormalige kolonie door het koloniale verleden.",
+      "vraag": "Geef één voorbeeld van een interne oorzaak van verschillen tussen landen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["onderwijs/rechten/bestuur"],
+      "minTreffers": 1,
+      "modelantwoord": "De manier waarop het onderwijs is geregeld.",
       "uitleg": "Intern is het onderwijs; extern is het koloniale verleden met de export van grondstoffen. (boek p. 28)"
     }
   ]

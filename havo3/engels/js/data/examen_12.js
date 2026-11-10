@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain the difference between losing keys in the past versus currently missing keys.",
-      "sleutelwoorden": [
-        "finished/yesterday/lost",
-        "result/still/now"
-      ],
+      "vraag": "Which tense do you use when your keys are still missing now? Answer in one short English sentence. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["present perfect/have lost/has lost"],
       "minTreffers": 1,
-      "modelantwoord": "'I lost my keys' is past, while 'I have lost my keys' has a direct result in the present (they are still missing now).",
+      "modelantwoord": "I use the present perfect: I have lost my keys.",
       "uitleg": "De Present Perfect toont een direct resultaat in het heden (ik ben ze nu nog kwijt)."
     },
     {

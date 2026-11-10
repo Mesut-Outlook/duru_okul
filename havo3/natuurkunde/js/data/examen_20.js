@@ -167,27 +167,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe een <b>automatische brandmelder</b> met een <b>NTC-weerstand</b> werkt wanneer er brand uitbreekt in een kamer.",
-      "sleutelwoorden": [
-        "kamertemperatuur/hitte/stijgt snel",
-        "daalt de weerstand/weerstand van de ntc/ntc-sensor",
-        "stroomsterkte/stroom neemt toe/deelspanning verandert",
-        "schakeling activeert sirene/alarm"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Wanneer er brand uitbreekt, stijgt de kamertemperatuur snel. Door de hitte daalt de weerstand van de NTC-sensor sterk. Hierdoor neemt de stroomsterkte in de sensorserieketen toe (of verandert de deelspanning over de sensor). Een elektronische schakeling detecteert dat de grenswaarde wordt overschreden en stuurt direct een stroom naar de alarmsirene.",
+      "vraag": "Wat gebeurt er met de weerstand van een NTC-weerstand als de temperatuur stijgt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["daalt/kleiner/lager/neemt af/afneemt"],
+      "minTreffers": 1,
+      "modelantwoord": "De weerstand daalt.",
       "uitleg": "Hitte -> weerstand NTC daalt -> stroom stijgt / spanning kantelt -> sirene gaat af."
     },
     {
       "type": "open",
-      "vraag": "Vergelijk een koperen kookpan met een dikke aluminium kookpan op het gebied van <b>warmtegeleiding</b>, <b>massa</b> en <b>warmtecapaciteit</b>.",
-      "sleutelwoorden": [
-        "sneller/warmtegeleidingscoëfficiënt/betere geleider",
-        "lichter/lagere dichtheid/handzamer",
-        "soortelijke warmte"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Warmtegeleiding: Koper heeft een hogere warmtegeleidingscoëfficiënt dan aluminium en verdeelt de warmte vanaf de vlam nog sneller en gelijkmatiger over de panbodem. 2. Massa: Aluminium heeft een veel lagere dichtheid (2,7 g/cm³ vs. 8,9 g/cm³), waardoor een aluminium pan veel lichter en handzamer is. 3. Warmtecapaciteit: Aluminium heeft een hogere soortelijke warmte (880 J/kg·K vs. 390 J/kg·K), waardoor het relatief veel warmte vasthoudt.",
+      "vraag": "Noem één voordeel van een aluminium kookpan boven een koperen kookpan. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["licht/handzaam/warmte vast"],
+      "minTreffers": 1,
+      "modelantwoord": "Een aluminium pan is lichter en handzamer.",
       "uitleg": "Vergelijking op geleiding (λ), dichtheid (massa) en soortelijke warmte (c)."
     }
   ]

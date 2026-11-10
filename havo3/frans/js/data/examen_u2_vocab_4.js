@@ -193,24 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit welke samentrekkingen ontstaan wanneer het voorzetsel <b>à</b> wordt gevolgd door <b>le</b> en wanneer het wordt gevolgd door <b>les</b>.",
-      "sleutelwoorden": [
-        "au",
-        "aux"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "à + le wordt samengetrokken tot 'au' en à + les wordt samengetrokken tot 'aux'.",
+      "vraag": "Welke samentrekking ontstaat uit het voorzetsel <b>à</b> gevolgd door <b>le</b>? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["au"],
+      "minTreffers": 1,
+      "modelantwoord": "Het wordt au.",
       "uitleg": "à + le = au; à + les = aux."
     },
     {
       "type": "open",
-      "vraag": "Geef de vervoeging van het werkwoord <b>choisir</b> bij de personen <b>nous</b> en <b>vous</b> in de tegenwoordige tijd.",
-      "sleutelwoorden": [
-        "nous choisissons",
-        "vous choisissez"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Nous choisissons en vous choisissez.",
+      "vraag": "Geef de vervoeging van het werkwoord <b>choisir</b> bij <b>nous</b> in de tegenwoordige tijd. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["choisissons"],
+      "minTreffers": 1,
+      "modelantwoord": "Nous choisissons.",
       "uitleg": "De vormen zijn nous choisissons en vous choisissez."
     }
   ]

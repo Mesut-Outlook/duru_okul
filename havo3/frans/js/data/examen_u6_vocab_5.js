@@ -191,23 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waar plaatsen Franstaligen bijwoorden van tijd en frequentie zoals 'souvent' (vaak) en 'toujours' (altijd) in een gewone zin?",
-      "modelantwoord": "Zij plaatsen deze bijwoorden direct na de persoonsvorm (het eerste werkwoord).",
-      "sleutelwoorden": [
-        "persoonsvorm/eerste werkwoord/verbo",
-        "direct/meteen/achter"
-      ],
+      "vraag": "Waar in de zin plaats je een bijwoord als 'souvent' of 'toujours'? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Direct na de persoonsvorm (het eerste werkwoord).",
+      "sleutelwoorden": ["persoonsvorm/eerste werkwoord"],
       "minTreffers": 1,
       "uitleg": "Bijwoorden zoals souvent en toujours staan direct achter de persoonsvorm in de zin."
     },
     {
       "type": "open",
-      "vraag": "Leg uit op welke positie de werkwoorden staan in een Franse toekomende tijd zoals 'aller + infinitif' (bijvoorbeeld 'je vais acheter').",
-      "modelantwoord": "De werkwoorden blijven altijd direct bij elkaar staan in de zin.",
-      "sleutelwoorden": [
-        "elkaar/samen/aaneen",
-        "direct/naast"
-      ],
+      "vraag": "Wat valt op aan de plaats van de twee werkwoorden in <i>'je vais acheter'</i>? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Ze staan direct naast elkaar.",
+      "sleutelwoorden": ["elkaar/samen/naast/direct/aaneen"],
       "minTreffers": 1,
       "uitleg": "In het Frans blijven de persoonsvorm en de infinitief altijd direct bij elkaar staan."
     }

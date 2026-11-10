@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een totale maansverduistering duurt vaak wel anderhalf uur, een totale zonsverduistering hooguit zeven minuten. Verklaar dit verschil met een eigenschap van de maan ten opzichte van de aarde.",
-      "sleutelwoorden": [
-        "kleiner",
-        "schaduw"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De maan is veel kleiner dan de aarde, waardoor ook de schaduw van de maan veel kleiner is dan de schaduw van de aarde. Daardoor gaat de kleine maanschaduw snel over het aardoppervlak heen en duurt een totale zonsverduistering veel korter dan een totale maansverduistering.",
+      "vraag": "Een totale zonsverduistering duurt veel korter dan een totale maansverduistering. Hoe is de maan qua grootte ten opzichte van de aarde? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kleiner/klein"],
+      "minTreffers": 1,
+      "modelantwoord": "De maan is veel kleiner dan de aarde, dus haar schaduw is ook kleiner.",
       "uitleg": "Doordat de maan veel kleiner is dan de aarde, is ook haar schaduw veel kleiner, waardoor totale zonsverduisteringen minder vaak voorkomen en korter duren dan totale maansverduisteringen."
     }
   ]

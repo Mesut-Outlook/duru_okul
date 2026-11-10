@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een verfmachine kost € 52.000 en wordt 5 jaar gebruikt. De restwaarde is € 7.000. Bereken de afschrijving per jaar en de waarde aan het eind van jaar 2.",
-      "sleutelwoorden": [
-        "9.000/9000",
-        "34.000/34000"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De afschrijving is € 9.000 per jaar en de waarde aan het eind van jaar 2 is € 34.000.",
+      "vraag": "Een verfmachine kost € 52.000, wordt 5 jaar gebruikt en heeft een restwaarde van € 7.000. Bereken de afschrijving per jaar. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["9 000/9000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 9.000 per jaar.",
       "uitleg": "(€ 52.000 - € 7.000) / 5 = € 9.000 per jaar. Na 2 jaar: € 52.000 - € 18.000 = € 34.000."
     },
     {
       "type": "open",
-      "vraag": "Een bestelauto kost € 36.000, heeft een restwaarde van € 6.000 en wordt ieder jaar met € 6.000 afgeschreven. Bereken het af te schrijven bedrag en het aantal jaren dat de auto wordt gebruikt.",
-      "sleutelwoorden": [
-        "30.000/30000",
-        "5 jaar/vijf jaar/vijf"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het af te schrijven bedrag is € 30.000 en de auto wordt 5 jaar gebruikt.",
+      "vraag": "Een bestelauto kost € 36.000 en heeft een restwaarde van € 6.000. Bereken het af te schrijven bedrag. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["30 000/30000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 30.000",
       "uitleg": "Af te schrijven = € 36.000 - € 6.000 = € 30.000. Aantal jaren = € 30.000 / € 6.000 = 5 jaar."
     }
   ]

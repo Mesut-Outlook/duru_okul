@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de SDG's laten zien dat ook rijke landen zich nog moeten ontwikkelen.",
-      "sleutelwoorden": [
-        "ongelijkheid",
-        "milieu/klimaat/duurzaam"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De SDG's gaan over minder ongelijkheid en meer rekening houden met het milieu, en daar hebben ook hoge-inkomenslanden nog een flinke slag te slaan.",
+      "vraag": "Noem één onderwerp waarover de SDG's laten zien dat ook rijke landen zich nog moeten ontwikkelen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ongelijkheid/milieu/klimaat/duurzaam"],
+      "minTreffers": 1,
+      "modelantwoord": "Minder ongelijkheid en meer rekening houden met het milieu.",
       "uitleg": "Ook rijke landen hebben ongelijkheid en milieuproblemen waaraan ze moeten werken. (boek p. 29)"
     },
     {
       "type": "open",
-      "vraag": "Noem twee gevolgen die het onderwijzen van meisjes volgens Rosling heeft voor een samenleving.",
-      "sleutelwoorden": [
-        "divers/diverser",
-        "minder kinderen",
-        "investeren/tijd en energie"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De beroepsbevolking wordt meer divers en goed opgeleide moeders krijgen minder kinderen; er wordt ook meer tijd en energie in het onderwijs van elk kind geïnvesteerd.",
+      "vraag": "Noem één gevolg dat het onderwijzen van meisjes volgens Rosling heeft voor een samenleving. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["divers/minder kinderen/investeren/tijd en energie"],
+      "minTreffers": 1,
+      "modelantwoord": "Goed opgeleide moeders krijgen minder kinderen.",
       "uitleg": "Meer diverse beroepsbevolking en minder kinderen per moeder. (boek p. 31)"
     }
   ]

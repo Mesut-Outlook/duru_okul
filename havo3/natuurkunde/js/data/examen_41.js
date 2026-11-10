@@ -192,24 +192,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een vis in een aquarium voor iemand die er van bovenaf schuin in kijkt, op een minder diepe plek lijkt te zwemmen dan in werkelijkheid.",
-      "sleutelwoorden": [
-        "breken/breekt/breking/buigt af",
-        "normaal af/oog"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De lichtstralen die van de vis komen breken bij het verlaten van het wateroppervlak van de normaal af naar het oog van de waarnemer. De hersenen trekken deze lichtstralen in een rechte lijn terug, waardoor de vis schijnbaar hoger in het water ligt.",
+      "vraag": "Wat doen de lichtstralen van de vis bij het wateroppervlak? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["breek/brek/buig/knik"],
+      "minTreffers": 1,
+      "modelantwoord": "De lichtstralen breken bij het wateroppervlak van de normaal af.",
       "uitleg": "Door breking van de normaal af lijkt de vis minder diep te zwemmen dan hij werkelijk is."
     },
     {
       "type": "open",
-      "vraag": "Noem het verschil tussen de werking van een positieve lens en een negatieve lens op een evenwijdige bundel lichtstralen.",
-      "sleutelwoorden": [
-        "convergerend/naar elkaar",
-        "divergerend/uit elkaar"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een positieve lens werkt convergerend en buigt de lichtstralen naar elkaar toe in het brandpunt, terwijl een negatieve lens divergerend werkt en de lichtstralen uit elkaar buigt.",
+      "vraag": "Wat doet een negatieve lens met een evenwijdige bundel lichtstralen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["uit elkaar/diverg/spreid"],
+      "minTreffers": 1,
+      "modelantwoord": "Een negatieve lens buigt de lichtstralen uit elkaar (divergerend).",
       "uitleg": "Positief = convergerend (bundelend); negatief = divergerend (spreidend)."
     }
   ]

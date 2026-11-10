@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke twee tegenovergestelde karaktereigenschappen betekenen in het Frans respectievelijk 'lui' en 'moedig'?",
-      "modelantwoord": "Dat zijn paresseux (lui) en courageux (moedig).",
-      "sleutelwoorden": [
-        "paresseux",
-        "courageux"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans woord betekent 'lui' als karaktereigenschap? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is paresseux.",
+      "sleutelwoorden": ["paresseux"],
+      "minTreffers": 1,
       "uitleg": "Paresseux is lui en courageux is moedig."
     },
     {
       "type": "open",
-      "vraag": "Noem de twee onderdelen waaruit de Franse 'futur proche' (nabije toekomst) is opgebouwd.",
-      "modelantwoord": "De futur proche bestaat uit een vorm van het werkwoord aller en een heel werkwoord (infinitief).",
-      "sleutelwoorden": [
-        "aller",
-        "infinitief/hele werkwoord"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk werkwoord is het eerste deel van de Franse 'futur proche' (nabije toekomst)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is aller.",
+      "sleutelwoorden": ["aller"],
+      "minTreffers": 1,
       "uitleg": "De futur proche bestaat uit aller + infinitief."
     }
   ]

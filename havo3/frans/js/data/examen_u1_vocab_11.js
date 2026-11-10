@@ -191,22 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe schrijf je in het Frans dat een meisje of vrouw 'geboren' is (voltooid deelwoord van naître voor vrouwelijk enkelvoud, p. 50)?",
-      "sleutelwoorden": [
-        "nee/née"
-      ],
+      "vraag": "Wat is het voltooid deelwoord van <i>naître</i> bij een vrouwelijk enkelvoudig onderwerp (p. 50)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["née/nee"],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse woord voor een vrouw of meisje dat geboren is, is 'née'.",
+      "modelantwoord": "Het woord is née.",
       "uitleg": "Voor een vrouw/meisje schrijf je 'née' (mannelijk is 'né')."
     },
     {
       "type": "open",
-      "vraag": "Noem de Franse vertaling van 'de reden' (met vrouwelijk lidwoord la, p. 50).",
-      "sleutelwoorden": [
-        "la raison/raison"
-      ],
+      "vraag": "Noem de Franse vertaling van 'de reden' (met vrouwelijk lidwoord la, p. 50). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["raison"],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse woord voor de reden is 'la raison'.",
+      "modelantwoord": "La raison.",
       "uitleg": "'La raison' betekent 'de reden' (avoir raison = gelijk hebben)."
     }
   ]

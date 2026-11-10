@@ -179,25 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe zeg je in het Duits dat je later arts wilt worden?",
-      "modelantwoord": "Ich möchte später Arzt (of Ärztin) werden.",
-      "sleutelwoorden": [
-        "Arzt",
-        "Ärztin",
-        "möchte/später"
-      ],
+      "vraag": "Hoe zeg je in het Duits dat je later arts wilt worden? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Ich möchte später Arzt werden.",
+      "sleutelwoorden": ["arzt/ärztin/arztin"],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'Ich möchte Arzt/Ärztin werden'."
     },
     {
       "type": "open",
-      "vraag": "Wat betekent de term 'das Zeugnis' op een Duitse school?",
-      "modelantwoord": "Het schoolrapport of getuigschrift/diploma.",
-      "sleutelwoorden": [
-        "rapport",
-        "getuigschrift",
-        "diploma"
-      ],
+      "vraag": "Wat betekent de term 'das Zeugnis' op een Duitse school? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het betekent rapport.",
+      "sleutelwoorden": ["rapport/getuigschrift/diploma"],
       "minTreffers": 1,
       "uitleg": "Das Zeugnis is het rapport of getuigschrift."
     }

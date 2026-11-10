@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen <i>'un aller simple'</i> en <i>'un aller-retour'</i> bij het kopen van een treinkaartje.",
-      "sleutelwoorden": [
-        "enkele reis/heen",
-        "terug/heen en terug"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een 'aller simple' is alleen een heentreis (enkele reis), terwijl een 'aller-retour' een ticket is voor de heen- én terugreis (retour).",
+      "vraag": "Wat betekent <i>'un aller-retour'</i> bij het kopen van een treinkaartje? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["terug"],
+      "minTreffers": 1,
+      "modelantwoord": "Een kaartje voor heen en terug.",
       "uitleg": "Aller simple = enkele reis; aller-retour = retour."
     },
     {

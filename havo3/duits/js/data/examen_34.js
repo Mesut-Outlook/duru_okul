@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom 'mit den Freunden' een extra n achteraan krijgt in het Duits.",
-      "modelantwoord": "In de derde naamval meervoud krijgt het zelfstandig naamwoord een extra n.",
-      "sleutelwoorden": [
-        "derde naamval/Dativ",
-        "meervoud"
-      ],
+      "vraag": "Waarom krijgt 'Freunden' in 'mit den Freunden' een extra n achteraan? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Omdat het zelfstandig naamwoord in de derde naamval meervoud een extra n krijgt.",
+      "sleutelwoorden": ["meervoud/derde naamval/3e naamval/dativ"],
       "minTreffers": 1,
       "uitleg": "In de Dativ meervoud krijgt het zelfstandig naamwoord een extra -n (den Freunden)."
     },
     {
       "type": "open",
-      "vraag": "Welke twee lidwoorden gebruik je in de 3e naamval enkelvoud voor respectievelijk mannelijk en vrouwelijk?",
-      "modelantwoord": "Voor mannelijk gebruik je dem en voor vrouwelijk gebruik je der.",
-      "sleutelwoorden": [
-        "dem",
-        "der"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk lidwoord gebruik je in de 3e naamval enkelvoud bij een vrouwelijk woord? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bij een vrouwelijk woord gebruik je der.",
+      "sleutelwoorden": ["der"],
+      "minTreffers": 1,
       "uitleg": "De Dativ-lidwoorden zijn dem (mannelijk) en der (vrouwelijk)."
     }
   ]

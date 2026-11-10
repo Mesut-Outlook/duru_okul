@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in eigen woorden uit wat het verschil is tussen de inkoopwaarde van de omzet en de bedrijfskosten van een winkel.",
-      "sleutelwoorden": [
-        "ingekocht/inkopen",
-        "overige/lonen/huur/personeel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De inkoopwaarde van de omzet is het bedrag waarvoor de producten zijn ingekocht; de bedrijfskosten zijn alle overige kosten, zoals lonen en huur.",
+      "vraag": "Wat is de inkoopwaarde van de omzet van een winkel? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["ingekocht/gekocht/betaald"],
+      "minTreffers": 1,
+      "modelantwoord": "Het bedrag waarvoor de verkochte producten zijn ingekocht.",
       "uitleg": "Inkoopwaarde = bedrag van de ingekochte producten; bedrijfskosten = alle overige kosten."
     },
     {
       "type": "open",
-      "vraag": "Een schoenenwinkel had in een jaar € 62.000 aan inkoopwaarde van de omzet en € 28.500 aan bedrijfskosten. Bereken de totale kosten en schrijf op welke bewerking je gebruikt.",
-      "sleutelwoorden": [
-        "90.500/90500",
-        "optellen/opgeteld/plus"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Ik moet de twee bedragen optellen: € 62.000 + € 28.500 = € 90.500.",
+      "vraag": "Een schoenenwinkel had € 62.000 aan inkoopwaarde van de omzet en € 28.500 aan bedrijfskosten. Bereken de totale kosten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["90 500/90500"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 90.500",
       "uitleg": "Totale kosten = inkoopwaarde van de omzet + bedrijfskosten = € 90.500."
     }
   ]

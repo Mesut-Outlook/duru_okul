@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write three essential safety rules for hikers walking on high mountain trails.",
-      "sleutelwoorden": [
-        "marked/stay/follow/path",
-        "water/hydration/thermal/gear/forecast"
-      ],
+      "vraag": "Write one essential safety rule for hikers on high mountain trails. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["marked/stay/follow/path/water/hydration/thermal/gear/forecast/weather"],
       "minTreffers": 1,
-      "modelantwoord": "1. Always stay on marked trails. 2. Carry plenty of water and thermal gear. 3. Check the weather forecast before leaving.",
+      "modelantwoord": "Always stay on the marked path.",
       "uitleg": "Goede bergregels: blijf op het pad, neem water/uitrusting mee en controleer het weer."
     },
     {

@@ -193,13 +193,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een auto remt met een kleinere remkracht dan eerst, vanaf dezelfde snelheid. Leg uit waarom de remweg dan langer wordt.",
-      "modelantwoord": "De auto heeft dezelfde bewegingsenergie, en die moet door de negatieve arbeid van de remkracht verdwijnen. Arbeid is W = F × s. Bij een kleinere kracht is dus een grotere afstand nodig om dezelfde energie in warmte om te zetten.",
+      "vraag": "Een auto remt met een kleinere remkracht vanaf dezelfde snelheid. Welke grootheid in W = F × s moet daardoor groter worden? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De afstand s moet groter worden, want dezelfde bewegingsenergie moet door een kleinere kracht verdwijnen.",
       "minTreffers": 1,
-      "sleutelwoorden": [
-        "bewegingsenergie/energie",
-        "afstand/verplaatsing"
-      ],
+      "sleutelwoorden": ["afstand/verplaatsing"],
       "uitleg": "Dezelfde bewegingsenergie moet door W = F × s worden weggenomen; kleinere F betekent grotere s."
     }
   ]

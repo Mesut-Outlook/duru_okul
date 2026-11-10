@@ -179,25 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een Amerikaans bedrijf overweegt zich in Nederland te vestigen. Welke twee argumenten kun je geven om voor de regio Eindhoven te kiezen?",
-      "sleutelwoorden": [
-        "opgeleid/beroepsbevolking",
-        "koopkracht/40 miljoen",
-        "aanvullen/ondersteunen/broedplaats"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Er is een goed opgeleide technische beroepsbevolking, bedrijven ondersteunen elkaar en er wonen 40 miljoen mensen met veel koopkracht dichtbij.",
+      "vraag": "Een Amerikaans bedrijf overweegt zich in Nederland te vestigen. Noem één argument om voor de regio Eindhoven te kiezen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["opgeleid/beroepsbevolking/koopkracht/40 miljoen/ondersteun/aanvullen/broedplaats"],
+      "minTreffers": 1,
+      "modelantwoord": "Er is een goed opgeleide technische beroepsbevolking.",
       "uitleg": "Er is een goed opgeleide technische beroepsbevolking en dichtbij wonen 40 miljoen mensen met veel koopkracht; bedrijven ondersteunen elkaar. (boek p. 42-43)"
     },
     {
       "type": "open",
-      "vraag": "Niet iedereen in Nederland profiteert van de rol in de wereldhandel. Leg dit uit met een voorbeeld.",
-      "sleutelwoorden": [
-        "ongelijk/verschil",
-        "armoede/voedselbank/energierekening"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Hoewel Nederland welvarend is, blijft er armoede en nemen de verschillen toe. Sommigen kunnen de energierekening niet betalen.",
+      "vraag": "Niet iedereen in Nederland profiteert van de rol in de wereldhandel. Geef één voorbeeld. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["armoede/voedselbank/energierekening/ongelijk"],
+      "minTreffers": 1,
+      "modelantwoord": "Sommige mensen leven in armoede en gebruiken de voedselbank.",
       "uitleg": "Er blijft armoede en de ongelijkheid groeit: sommige mensen kunnen hun energierekening niet betalen en gaan naar de voedselbank. (boek p. 43)"
     }
   ]

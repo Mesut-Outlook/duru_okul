@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg met een getal uit het boek uit of de sociale ongelijkheid in Nederland groot of klein is.",
-      "sleutelwoorden": [
-        "0,26/0.26",
-        "gini",
-        "laag/klein"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "De Gini-coëfficiënt van Nederland is 0,26. Dat is laag, dus de sociale ongelijkheid is klein.",
+      "vraag": "Welke Gini-coëfficiënt heeft Nederland volgens het boek? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["0 26"],
+      "minTreffers": 1,
+      "modelantwoord": "De Gini-coëfficiënt van Nederland is 0,26.",
       "uitleg": "Nederland heeft een Gini-coëfficiënt van 0,26: de sociale ongelijkheid is laag. (boek p. 43)"
     },
     {
       "type": "open",
-      "vraag": "Waarom fungeert een bedrijf als Dutch Flower Group als spil in de sierteeltketen?",
-      "sleutelwoorden": [
-        "importeert/import/invoer",
-        "kenia/afrika/lagelonenland",
-        "exporteert/export/duitsland"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het importeert snijrozen uit lagelonenlanden zoals Kenia en exporteert deze door naar afzetmarkten zoals Duitsland.",
+      "vraag": "Noem één ding dat Dutch Flower Group als spil in de sierteeltketen doet met snijrozen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["import/invoer/export/uitvoer"],
+      "minTreffers": 1,
+      "modelantwoord": "Het importeert snijrozen uit Kenia en exporteert ze door naar Duitsland.",
       "uitleg": "Het importeert bloemen uit Afrika en exporteert ze naar Duitsland en Europa. (boek p. 44)"
     }
   ]

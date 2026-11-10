@@ -180,26 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een biologische bakkerij bakt brood van graan in een elektrische oven. In de winkel staan twee medewerkers en de eigenaar stuurt het bedrijf aan. Geef uit deze beschrijving voor elk van de vier productiefactoren één concreet voorbeeld.",
-      "sleutelwoorden": [
-        "kapitaal",
-        "arbeid",
-        "natuur",
-        "ondernemerschap"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Kapitaal: de oven en het winkelgebouw; Arbeid: de twee medewerkers; Natuur: het graan en de elektriciteit; Ondernemerschap: de eigenaar die het bedrijf aanstuurt.",
+      "vraag": "Een biologische bakkerij bakt brood van graan in een elektrische oven. In de winkel staan twee medewerkers en de eigenaar stuurt het bedrijf aan. Bij welke productiefactor hoort de eigenaar? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["ondernemer"],
+      "minTreffers": 1,
+      "modelantwoord": "Ondernemerschap.",
       "uitleg": "Noem bij elk van de vier factoren (kapitaal, arbeid, natuur, ondernemerschap) het juiste onderdeel uit de tekst."
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het verschil is tussen de vestigingsplaats van een winkel en het winkelgebouw zelf als je kijkt naar de productiefactoren waar zij bij horen.",
-      "sleutelwoorden": [
-        "natuur",
-        "kapitaal/kapitaalgoed"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De vestigingsplaats (de plek waar het bedrijf ligt) hoort bij de productiefactor natuur, terwijl het gebouw zelf door mensen is gebouwd en bij de productiefactor kapitaal (kapitaalgoederen) hoort.",
+      "vraag": "Bij welke productiefactor hoort de vestigingsplaats van een winkel? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["natuur"],
+      "minTreffers": 1,
+      "modelantwoord": "Natuur.",
       "uitleg": "Vestigingsplaats = natuur; het gebouw zelf = kapitaal (kapitaalgoederen)."
     }
   ]

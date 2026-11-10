@@ -173,26 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Een leerling zegt: 'Nederland is rijk, dus niemand heeft hier geldzorgen.' Leg uit waarom dit niet klopt.",
-      "sleutelwoorden": [
-        "relatieve armoede/armoede",
-        "energierekening/voedselbank",
-        "gemiddeld/verschillen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Er is nog steeds relatieve armoede. Sommige mensen kunnen de energierekening niet betalen en gaan naar de voedselbank. Het gemiddelde zegt niets over de verschillen.",
+      "vraag": "Een leerling zegt: 'Nederland is rijk, dus niemand heeft hier geldzorgen.' Noem één reden waarom dit niet klopt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["relatieve armoede/armoede/energierekening/voedselbank/verschillen"],
+      "minTreffers": 1,
+      "modelantwoord": "Er is nog steeds relatieve armoede.",
       "uitleg": "Ook in een welvarend land is er relatieve armoede; sommigen hebben moeite met de energierekening en gebruiken de voedselbank. (boek p. 43)"
     },
     {
       "type": "open",
-      "vraag": "Waarom zegt een Gini-coëfficiënt van 0,26 niet dat alle Nederlanders even rijk zijn?",
-      "sleutelwoorden": [
-        "verschil/verschillen/ongelijkheid",
-        "relatieve armoede/armoede",
-        "nul"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Alleen bij nul is iedereen gelijk. 0,26 is laag, maar er blijven verschillen en er is relatieve armoede.",
+      "vraag": "Bij welke waarde van de Gini-coëfficiënt is iedereen precies even rijk? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["nul/0"],
+      "minTreffers": 1,
+      "modelantwoord": "Alleen bij nul is iedereen gelijk.",
       "uitleg": "Gini 0 betekent volledige gelijkheid; 0,26 is laag maar niet nul. (boek p. 43)"
     }
   ]

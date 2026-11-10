@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het meervoudslidwoord in de 1e, 3e en 4e naamval in het Duits?",
-      "modelantwoord": "1e naamval: die; 3e naamval: den; 4e naamval: die.",
-      "sleutelwoorden": [
-        "die",
-        "den",
-        "die"
-      ],
+      "vraag": "Wat is het lidwoord voor het meervoud in de 3e naamval in het Duits? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "In de 3e naamval is het den.",
+      "sleutelwoorden": ["den"],
       "minTreffers": 1,
       "uitleg": "Die (1e nv), den (3e nv), die (4e nv)."
     },
     {
       "type": "open",
-      "vraag": "Wat betekent de afkorting 'DRK' in Duitsland?",
-      "modelantwoord": "Deutsches Rotes Kreuz (Duitse Rode Kruis).",
-      "sleutelwoorden": [
-        "Deutsches Rotes Kreuz",
-        "Rode Kruis"
-      ],
+      "vraag": "Waar staat de afkorting 'DRK' voor in Duitsland? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het staat voor Deutsches Rotes Kreuz, het Duitse Rode Kruis.",
+      "sleutelwoorden": ["deutsches rotes kreuz/rode kruis"],
       "minTreffers": 1,
       "uitleg": "Het Deutsches Rotes Kreuz."
     }

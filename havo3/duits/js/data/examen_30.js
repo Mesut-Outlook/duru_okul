@@ -179,28 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het stappenplan in 3 vragen om te bepalen welke naamval je in een Duitse zin moet gebruiken.",
-      "modelantwoord": "1. Wie doet het? (1e naamval - onderwerp). 2. Wie/wat ondergaat het? (4e naamval - lijdend voorwerp). 3. Aan wie/voor wie? (3e naamval - meewerkend voorwerp).",
-      "sleutelwoorden": [
-        "onderwerp",
-        "lijdend voorwerp",
-        "meewerkend voorwerp",
-        "1e",
-        "3e",
-        "4e"
-      ],
+      "vraag": "Welke naamval gebruik je in een Duitse zin voor het lijdend voorwerp? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het lijdend voorwerp staat in de 4e naamval.",
+      "sleutelwoorden": ["4e/vierde/akkusativ/accusatief"],
       "minTreffers": 1,
       "uitleg": "Onderwerp (1e nv), lijdend voorwerp (4e nv), meewerkend voorwerp (3e nv)."
     },
     {
       "type": "open",
-      "vraag": "Noem de drie Duitstalige DACH-landen en hun hoofdsteden.",
-      "modelantwoord": "Duitsland (Berlijn), Oostenrijk (Wenen) en Zwitserland (Bern).",
-      "sleutelwoorden": [
-        "Berlin/Berlijn",
-        "Wien/Wenen",
-        "Bern"
-      ],
+      "vraag": "Wat is de hoofdstad van Oostenrijk? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De hoofdstad is Wenen (Wien).",
+      "sleutelwoorden": ["wien/wenen/vienna"],
       "minTreffers": 1,
       "uitleg": "Duitsland (Berlijn), Oostenrijk (Wenen), Zwitserland (Bern)."
     }

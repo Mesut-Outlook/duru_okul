@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate into English using vocabulary from A Watching: <i>het mysterie ontrafelen</i>.",
-      "sleutelwoorden": [
-        "unravel the mystery/unravel"
-      ],
+      "vraag": "Translate into English using vocabulary from A Watching: <i>het mysterie ontrafelen</i>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["unravel the mystery/unravel"],
       "minTreffers": 1,
       "modelantwoord": "unravel the mystery",
       "uitleg": "To unravel the mystery = het mysterie ontrafelen of oplossen (Vocabulary A Watching, boek p.A124)."

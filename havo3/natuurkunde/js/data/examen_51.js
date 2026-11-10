@@ -198,13 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Astronauten in het ISS voelen zich gewichtsloos, hoewel de zwaartekracht nog wel op hen werkt. Leg uit waardoor dit komt.",
-      "sleutelwoorden": [
-        "kromme baan",
-        "ondergrond"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De astronauten bewegen samen met het ruimtestation mee in een kromme baan rond de aarde; hierbij duwen ze niet tegen een ondergrond, waardoor ze gewichtsloos zijn, ook al werkt de zwaartekracht nog gewoon op hen.",
+      "vraag": "In wat voor baan bewegen astronauten samen met het ISS? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kromme/gebogen/cirkel"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze bewegen samen met het station in een kromme baan.",
       "uitleg": "De zwaartekracht zorgt er juist voor dat het ISS in een kromme baan blijft; doordat de astronauten daarbij niet tegen een ondergrond duwen, voelen ze zich gewichtsloos."
     }
   ]

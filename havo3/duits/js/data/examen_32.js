@@ -191,22 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke standaardvraag stelt een Duitse arts aan het begin van het consult?",
-      "modelantwoord": "De arts vraagt naar je klachten met de vaste vraag: Was fehlt Ihnen?",
-      "sleutelwoorden": [
-        "Was fehlt Ihnen/fehlt",
-        "klachten/Beschwerden"
-      ],
+      "vraag": "Welke vaste vraag stelt een Duitse arts aan het begin van het consult? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Was fehlt Ihnen?",
+      "sleutelwoorden": ["fehlt"],
       "minTreffers": 1,
       "uitleg": "De vaste vraag van de arts luidt 'Was fehlt Ihnen?' (Wat scheelt eraan?)."
     },
     {
       "type": "open",
-      "vraag": "Noem in het Duits een klacht waarmee je naar de dokter of de apotheek gaat.",
-      "modelantwoord": "Bijvoorbeeld die Erkältung, die Grippe, der Heuschnupfen of das Fieber.",
-      "sleutelwoorden": [
-        "Erkältung/Erkaltung/Grippe/Heuschnupfen/Fieber/Muskelkater/Halsschmerzen/Zahnschmerzen"
-      ],
+      "vraag": "Noem in het Duits een klacht waarmee je naar de dokter of de apotheek gaat. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld die Erkältung of das Fieber.",
+      "sleutelwoorden": ["erkältung/erkaltung/grippe/heuschnupfen/fieber/muskelkater/halsschmerzen/zahnschmerzen"],
       "minTreffers": 1,
       "uitleg": "Klachten uit Wortschatz H2: Erkältung, Grippe, Heuschnupfen, Fieber, Muskelkater, Hals- en Zahnschmerzen."
     }

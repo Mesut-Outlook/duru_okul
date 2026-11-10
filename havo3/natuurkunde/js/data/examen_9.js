@@ -161,26 +161,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom het vervangen van oude 50 W halogeenspots door 5 W LED-lampen op jaarbasis veel geld bespaart, terwijl de lichtopbrengst hetzelfde blijft.",
-      "sleutelwoorden": [
-        "zo laag/vermogen laag/minder watt",
-        "minder kilowattuur/kwh/minder energie",
-        "rendement/minder warmte"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een 5 W LED levert evenveel nuttig licht als een 50 W halogeenlamp omdat LED-verlichting een veel hoger rendement heeft (verliest nauwelijks energie aan warmte). Omdat het vermogen 10 keer zo laag is (5 W i.p.v. 50 W), verbruikt de lamp volgens E = P × t tien keer minder kilowattuur (kWh) aan energie over dezelfde branduren, waardoor de elektriciteitskosten met 90% dalen.",
+      "vraag": "Hoeveel keer minder energie verbruikt een LED van 5 W dan een halogeenlamp van 50 W? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["10/tien"],
+      "minTreffers": 1,
+      "modelantwoord": "De LED verbruikt tien keer minder energie.",
       "uitleg": "Hoger rendement -> lager elektrisch vermogen voor zelfde licht -> drastisch minder kWh-verbruik."
     },
     {
       "type": "open",
-      "vraag": "Een apparaat staat het hele jaar onnodig in de <b>stand-by-stand</b> met een continu vermogen van 10 W. Bereken het jaarverbruik in kWh (1 jaar = 8760 uur) en leg uit waarom sluipverbruik een probleem is.",
-      "sleutelwoorden": [
-        "87,6 kWh/88 kWh/87,6",
-        "0,010 kW/0,01 kW",
-        "verspilling/kosten/geld/energieverlies"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "P = 10 W = 0,010 kW. E = P × t = 0,010 kW × 8760 uur = 87,6 kWh per jaar. Bij € 0,35 per kWh kost dit apparaat jaarlijks circa € 30,- aan ongebruikte stand-by-stroom. Sluipverbruik van meerdere apparaten bij elkaar telt op tot honderden kilowatturen per jaar, wat zorgt voor onnodige energiekosten en extra belasting van het milieu.",
+      "vraag": "Bereken het jaarverbruik in kWh van een apparaat op stand-by met 10 W (1 jaar = 8760 uur). <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["87 6/88"],
+      "minTreffers": 1,
+      "modelantwoord": "E = 0,010 kW × 8760 uur = 87,6 kWh per jaar.",
       "uitleg": "Jaarlijks 87,6 kWh continu verlies; vermenigvuldigd over meerdere apparaten leidt dat tot flinke kosten."
     }
   ]

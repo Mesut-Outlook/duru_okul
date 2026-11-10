@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee Franse werkwoorden uit Blok A die respectievelijk 'uitgeven' en 'betalen' betekenen.",
-      "modelantwoord": "Dat zijn de werkwoorden dépenser en payer.",
-      "sleutelwoorden": [
-        "dépenser/depenser",
-        "payer"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans werkwoord uit Blok A betekent 'uitgeven' (geld)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is dépenser.",
+      "sleutelwoorden": ["dépenser/depenser"],
+      "minTreffers": 1,
       "uitleg": "Uitgeven is dépenser en betalen is payer."
     },
     {
       "type": "open",
-      "vraag": "Welke twee populaire bijbaantjes voor scholieren uit Blok A hebben betrekking op dieren en kleine kinderen?",
-      "modelantwoord": "Dat zijn sortir un chien (hond uitlaten) en faire du baby-sitting (oppassen).",
-      "sleutelwoorden": [
-        "chien/sortir un chien",
-        "baby-sitting/babysitting"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk bijbaantje uit Blok A heeft met kleine kinderen te maken? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Faire du baby-sitting (oppassen).",
+      "sleutelwoorden": ["baby-sit/babysit/baby sit"],
+      "minTreffers": 1,
       "uitleg": "De bijbaantjes zijn sortir un chien en faire du baby-sitting."
     }
   ]

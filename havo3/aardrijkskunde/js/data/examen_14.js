@@ -194,20 +194,16 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het verdrag waarmee de vaste paspoortcontroles aan de binnengrenzen tussen de meeste Europese landen zijn afgeschaft.",
-      "sleutelwoorden": [
-        "schengen/schengenverdrag/verdrag van schengen"
-      ],
+      "vraag": "Noem het verdrag waarmee de vaste paspoortcontroles aan de binnengrenzen tussen de meeste Europese landen zijn afgeschaft. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["schengen"],
       "minTreffers": 1,
       "modelantwoord": "Dit is het Verdrag van Schengen.",
       "uitleg": "Schengen regelt het vrije personenverkeer."
     },
     {
       "type": "open",
-      "vraag": "Welke kritische benaming wordt gebruikt voor het strenge grens- en afweerbeleid aan de buitengrenzen van de EU?",
-      "sleutelwoorden": [
-        "fort europa"
-      ],
+      "vraag": "Welke kritische benaming wordt gebruikt voor het strenge grens- en afweerbeleid aan de buitengrenzen van de EU? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["fort europa"],
       "minTreffers": 1,
       "modelantwoord": "Dit wordt Fort Europa genoemd.",
       "uitleg": "Fort Europa verwijst naar de zwaar beveiligde buitengrens."

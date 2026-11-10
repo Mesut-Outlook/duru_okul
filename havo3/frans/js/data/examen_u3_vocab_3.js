@@ -193,22 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het onregelmatige voltooid deelwoord (participe passé) van het werkwoord 'prendre' (p. 127)?",
-      "sleutelwoorden": [
-        "pris"
-      ],
+      "vraag": "Wat is het onregelmatige voltooid deelwoord (participe passé) van het werkwoord 'prendre' (p. 127)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["pris"],
       "minTreffers": 1,
-      "modelantwoord": "Het voltooid deelwoord van prendre is 'pris'.",
+      "modelantwoord": "Het voltooid deelwoord van prendre is pris.",
       "uitleg": "'Pris' is het voltooid deelwoord van prendre (j'ai pris)."
     },
     {
       "type": "open",
-      "vraag": "Welke twee letters voeg je achteraan toe aan het voltooid deelwoord bij 'être' als het onderwerp vrouwelijk meervoud is (zoals in: elles sont resté...)? Geef alleen de twee letters.",
-      "sleutelwoorden": [
-        "es"
-      ],
+      "vraag": "Welke twee letters voeg je toe aan het voltooid deelwoord bij 'être' bij een vrouwelijk meervoudig onderwerp (elles sont resté...)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["es"],
       "minTreffers": 1,
-      "modelantwoord": "Je voegt de letters 'es' toe (vrouwelijk meervoud).",
+      "modelantwoord": "Je voegt de letters es toe.",
       "uitleg": "Vrouwelijk meervoud krijgt +es bij het hulpwerkwoord être."
     }
   ]

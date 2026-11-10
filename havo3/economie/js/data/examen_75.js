@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom verdubbelen de totale kosten van een onderneming niet wanneer de afzet verdubbelt?",
-      "sleutelwoorden": [
-        "constante/vaste",
-        "variabele/meeveranderen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Omdat de constante kosten gelijk blijven en alleen de variabele kosten toenemen.",
+      "vraag": "Waarom verdubbelen de totale kosten van een onderneming niet als de afzet verdubbelt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["constante/vaste/blijven gelijk"],
+      "minTreffers": 1,
+      "modelantwoord": "De constante kosten blijven gelijk.",
       "uitleg": "Constante kosten blijven gelijk en alleen de variabele kosten nemen toe."
     },
     {
       "type": "open",
-      "vraag": "Noem één constante en één variabele kostenpost voor een horecagelegenheid.",
-      "sleutelwoorden": [
-        "huur/vast loon/verzekering",
-        "ingrediënten/ingredienten/drank/inkoop"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Constante kosten zijn de huur van het pand en variabele kosten zijn de ingrediënten voor de maaltijden.",
+      "vraag": "Noem één variabele kostenpost voor een horecagelegenheid. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["ingredi/drank/inkoop/eten/voedsel/grondstoffen"],
+      "minTreffers": 1,
+      "modelantwoord": "Ingrediënten.",
       "uitleg": "Huur is constant en ingrediënten zijn variabel."
     }
   ]

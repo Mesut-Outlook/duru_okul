@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate the courtroom phrase to English: <i>vrijgelaten worden</i>.",
-      "sleutelwoorden": [
-        "to be released/be released"
-      ],
+      "vraag": "Translate the courtroom phrase to English: <i>vrijgelaten worden</i>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["to be released/be released"],
       "minTreffers": 1,
       "modelantwoord": "to be released",
       "uitleg": "To be released = vrijgelaten worden (Theme words, boek p.A92, p.A124)."

@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de eicel van een mens veel kleiner is dan de eicel van een kip.",
-      "sleutelwoorden": [
-        "placenta/moeder/baarmoeder",
-        "voedingsstoffen/uitwisseling/voeding"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een menselijk embryo krijgt voedingsstoffen van de moeder via de placenta, terwijl een kuiken alle voeding uit het ei zelf moet halen.",
+      "vraag": "Waarom is de eicel van een mens veel kleiner dan de eicel van een kip? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["moeder/placenta/baarmoeder"],
+      "minTreffers": 1,
+      "modelantwoord": "Een mensenembryo krijgt voedingsstoffen van de moeder via de placenta; een kuiken haalt alles uit het ei.",
       "uitleg": "Het menselijk embryo wordt gevoed via de placenta, terwijl een kuiken op de dooier moet teren."
     },
     {
       "type": "open",
-      "vraag": "Welke twee functies heeft het eiwit in een kippenei?",
-      "sleutelwoorden": [
-        "vocht/water",
-        "stoten/schokken/beschermen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het eiwit beschermt het embryo tegen stoten en levert vocht aan het embryo.",
+      "vraag": "Noem één functie van het eiwit in een kippenei. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["vocht/water/stoten/schokken/bescherm"],
+      "minTreffers": 1,
+      "modelantwoord": "Het eiwit beschermt het embryo tegen stoten.",
       "uitleg": "Het beschermt tegen stoten en levert vocht."
     }
   ]

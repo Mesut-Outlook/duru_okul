@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Translate into English: <i>De politieagent kon het geweld voorkomen.</i>",
-      "sleutelwoorden": [
-        "police constable/PC/police officer/policeman",
-        "violence",
-        "prevent"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "The police constable could prevent the violence.",
+      "vraag": "Translate into English: <i>het geweld voorkomen</i>. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["prevent/avoid/stop"],
+      "minTreffers": 1,
+      "modelantwoord": "To prevent the violence.",
       "uitleg": "Politieagent = PC / police officer; geweld = violence; voorkomen = to prevent (boek p.A125)."
     },
     {

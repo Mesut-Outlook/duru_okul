@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Rewrite in the passive voice and say in one sentence why <i>by someone</i> can be left out: <i>Someone stole my bike last night.</i>",
-      "sleutelwoorden": [
-        "was stolen",
-        "unknown/not known/not important/don't know/doesn't matter/do not know"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "My bike was stolen last night. The doer is unknown, so by someone is not needed.",
+      "vraag": "Rewrite in the passive voice, without <i>by someone</i>: <i>Someone stole my bike last night.</i> <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["was stolen"],
+      "minTreffers": 1,
+      "modelantwoord": "My bike was stolen last night.",
       "uitleg": "Past simple passive; the doer is left out when it is unknown or not important (boek p.A119)."
     },
     {

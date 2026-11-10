@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Gegeven zijn de meetwaarden: 5, 8, 12, 14, 17, 20, 25. Bepaal het minimum, het maximum, de spreidingsbreedte en de kwartielafstand van deze reeks.",
-      "sleutelwoorden": [
-        "= 20/spreidingsbreedte 20",
-        "= 12/kwartielafstand 12"
-      ],
+      "vraag": "Gegeven zijn de meetwaarden: 4, 8, 12, 14, 17, 20, 25. Bepaal de spreidingsbreedte. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["21"],
       "minTreffers": 1,
-      "modelantwoord": "Minimum = 5, Maximum = 25. Spreidingsbreedte = 25 - 5 = 20. Mediaan (Q₂) = 14. Q₁ = 8, Q₃ = 20. Kwartielafstand = Q₃ - Q₁ = 20 - 8 = 12.",
+      "modelantwoord": "De spreidingsbreedte is 25 min 4 is 21.",
       "uitleg": "Spreidingsbreedte = 25 - 5 = 20; Kwartielafstand = 20 - 8 = 12."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de legenda bij een steel-bladdiagram onmisbaar is.",
-      "sleutelwoorden": [
-        "betekenen/betekenis",
-        "470/47"
-      ],
+      "vraag": "Wat geeft de legenda bij een steel-bladdiagram aan? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["betekenis/betekenen/betekent"],
       "minTreffers": 1,
-      "modelantwoord": "Zonder legenda weet de lezer niet of bijvoorbeeld '4 | 7' staat voor het getal 47, voor 4,7 of voor 470. De legenda geeft aan wat de steel en het blad precies betekenen.",
+      "modelantwoord": "Wat de steel en het blad betekenen.",
       "uitleg": "De legenda bepaalt de schaal en decimale waarde van de cijfers."
     }
   ]

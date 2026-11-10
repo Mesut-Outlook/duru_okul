@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de drie soorten bedrijven die het boek onderscheidt en geef bij elk soort een eigen voorbeeld.",
-      "sleutelwoorden": [
-        "productie/fabriek",
-        "handel/winkel/webshop",
-        "dienst/kapper/fietsenmaker/transport"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Productieonderneming (een fietsenfabriek), handelsonderneming (een telefoonwinkel) en dienstverlener (een kapper).",
+      "vraag": "Noem één van de drie soorten bedrijven die het boek onderscheidt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["productie/handel/dienst"],
+      "minTreffers": 1,
+      "modelantwoord": "Een handelsonderneming.",
       "uitleg": "Productie: fabriek; handel: winkel; dienstverlening: kapper."
     },
     {
       "type": "open",
-      "vraag": "Een fietsenwinkel verkoopt fietsen en repareert ook kapotte fietsen. Leg uit waarom deze winkel twee soorten bedrijf is.",
-      "sleutelwoorden": [
-        "handel/handelsonderneming/inkopen/doorverkopen",
-        "dienst/dienstverlener/reparatie/repareren"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Het doorverkopen van ingekochte fietsen is handel en de reparatie is een dienst.",
+      "vraag": "Een fietsenwinkel verkoopt fietsen en repareert ook kapotte fietsen. Welke tweede soort bedrijf is de winkel door het repareren? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["dienst"],
+      "minTreffers": 1,
+      "modelantwoord": "Een dienstverlener.",
       "uitleg": "Als verkoper van ingekochte fietsen is het een handelsonderneming, als reparateur een dienstverlener."
     }
   ]

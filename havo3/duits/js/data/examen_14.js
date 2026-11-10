@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je op het station naar de vertrektijd van de trein naar München?",
+      "vraag": "Hoe vraag je in het Duits wanneer de trein naar München vertrekt? <i>(Eén korte zin is genoeg.)</i>",
       "modelantwoord": "Wann fährt der Zug nach München ab?",
-      "sleutelwoorden": [
-        "Wann fährt",
-        "Zug nach München",
-        "ab"
-      ],
+      "sleutelwoorden": ["fährt/fahrt/geht/abfahrt"],
       "minTreffers": 1,
       "uitleg": "Je vraagt 'Wann fährt der Zug nach München ab?'."
     },
     {
       "type": "open",
-      "vraag": "Wat betekent de Duitse reisterm 'hin und zurück'?",
-      "modelantwoord": "Heen en terug (een retourtje).",
-      "sleutelwoorden": [
-        "retour/retourtje",
-        "heen en terug"
-      ],
+      "vraag": "Wat betekent de Duitse reisterm 'hin und zurück'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het betekent heen en terug, een retourtje.",
+      "sleutelwoorden": ["retour/retourtje/heen en terug"],
       "minTreffers": 1,
       "uitleg": "Dit betekent een retourticket (heen en terug)."
     }

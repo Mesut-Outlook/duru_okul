@@ -179,25 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe feliciteer je iemand in het Duits van harte met zijn verjaardag?",
-      "modelantwoord": "Herzlichen Glückwunsch zum Geburtstag! (of Alles Gute zum Geburtstag!)",
-      "sleutelwoorden": [
-        "Herzlichen Glückwunsch",
-        "Alles Gute",
-        "Geburtstag"
-      ],
+      "vraag": "Hoe feliciteer je iemand in het Duits van harte met zijn verjaardag? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Herzlichen Glückwunsch zum Geburtstag!",
+      "sleutelwoorden": ["herzlichen glückwunsch/herzlichen gluckwunsch/glückwunsch/gluckwunsch/alles gute"],
       "minTreffers": 1,
       "uitleg": "Je gebruikt 'Herzlichen Glückwunsch zum Geburtstag!' of 'Alles Gute zum Geburtstag!'."
     },
     {
       "type": "open",
-      "vraag": "Welke twee lidwoorden horen bij de ein-Gruppe in de 1e naamval voor mannelijk en vrouwelijk?",
-      "modelantwoord": "Ein voor mannelijk en eine voor vrouwelijk.",
-      "sleutelwoorden": [
-        "ein",
-        "eine"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk lidwoord uit de ein-Gruppe hoort bij een vrouwelijk woord in de 1e naamval? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bij een vrouwelijk woord hoort eine.",
+      "sleutelwoorden": ["eine"],
+      "minTreffers": 1,
       "uitleg": "Ein (mannelijk) en eine (vrouwelijk)."
     }
   ]

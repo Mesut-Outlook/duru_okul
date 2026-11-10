@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg aan de hand van de olijvenkraam op de markt uit waarom deze kraam een handelsonderneming is en géén productieonderneming.",
-      "sleutelwoorden": [
-        "koopt/inkoopt/doorverkoopt",
-        "veranderen/verandert niets/maakt niet"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De olijvenkraam koopt de olijven in en verkoopt ze weer door aan klanten zonder iets aan het product te veranderen; een productieonderneming maakt zelf producten van grondstoffen.",
+      "vraag": "Waarom is de olijvenkraam op de markt een handelsonderneming en geen productieonderneming? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["koopt/inkoopt/ingekocht/doorverkoopt/verkoopt door/niets verandert/maakt niet"],
+      "minTreffers": 1,
+      "modelantwoord": "De kraam koopt olijven in en verkoopt ze door zonder ze te veranderen.",
       "uitleg": "Een handelsonderneming koopt producten in en verkoopt ze door zonder ze te veranderen."
     },
     {
       "type": "open",
-      "vraag": "In de bedrijfskolom van een kast verkoopt een houtzagerij planken voor € 200 aan een meubelmaker. De meubelmaker verkoopt de kast voor € 480 aan een woonwinkel en de woonwinkel verkoopt de kast voor € 720 aan een klant. Bereken voor de meubelmaker én voor de woonwinkel de toegevoegde waarde als percentage van hun eigen inkoopprijs.",
-      "sleutelwoorden": [
-        "140%/140 procent",
-        "50%/50 procent"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Meubelmaker: (€ 480 − € 200) / € 200 × 100% = € 280 / € 200 × 100% = 140%. Woonwinkel: (€ 720 − € 480) / € 480 × 100% = € 240 / € 480 × 100% = 50%.",
+      "vraag": "In de bedrijfskolom van een kast verkoopt een houtzagerij planken voor € 200 aan een meubelmaker. De meubelmaker verkoopt de kast voor € 480 aan een woonwinkel. Bereken de toegevoegde waarde van de meubelmaker als percentage van zijn inkoopprijs. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["140"],
+      "minTreffers": 1,
+      "modelantwoord": "140%",
       "uitleg": "Meubelmaker: 280 / 200 × 100% = 140%. Woonwinkel: 240 / 480 × 100% = 50%."
     }
   ]

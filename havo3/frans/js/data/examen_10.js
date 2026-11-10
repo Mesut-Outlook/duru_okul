@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de constructie <i>'Je vais jouer'</i> de futur composé wordt genoemd en wat het uitdrukt.",
-      "sleutelwoorden": [
-        "aller/infinitif/hele werkwoord",
-        "toekomst/nabije toekomst/plannen/gaan doen"
-      ],
+      "vraag": "Welk Frans werkwoord gebruik je om de futur composé te vormen, zoals in <i>'Je vais jouer'</i>? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["aller"],
       "minTreffers": 1,
-      "modelantwoord": "Het bestaat uit de tegenwoordige tijd van aller + infinitif en drukt een gebeurtenis uit die in de nabije toekomst gaat plaatsvinden.",
+      "modelantwoord": "Het werkwoord aller, gevolgd door een infinitief.",
       "uitleg": "Futur composé = aller + infinitief, geeft toekomstige handelingen weer."
     },
     {

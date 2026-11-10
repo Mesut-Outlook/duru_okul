@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in eigen woorden uit waarom de totale kosten van een onderneming NIET verdubbelen wanneer het aantal geproduceerde producten verdubbelt.",
-      "sleutelwoorden": [
-        "constante kosten/vaste kosten",
-        "gelijk/veranderen niet",
-        "variabele kosten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De totale kosten bestaan uit constante en variabele kosten. Als de productie verdubbelt, verdubbelen alleen de variabele kosten; de totale constante kosten (zoals de huur) blijven gelijk.",
+      "vraag": "Waarom verdubbelen de totale kosten van een onderneming niet als de productie verdubbelt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["constante/vaste/blijven gelijk/veranderen niet"],
+      "minTreffers": 1,
+      "modelantwoord": "De constante kosten blijven gelijk, alleen de variabele kosten stijgen.",
       "uitleg": "Alleen de variabele kosten verdubbelen mee; de constante kosten blijven gelijk."
     },
     {
       "type": "open",
-      "vraag": "Een schilderbedrijf koopt een hoogwerker voor € 35.000. Na 5 jaar wordt de hoogwerker verkocht voor een restwaarde van € 5.000. Bereken de jaarlijkse afschrijvingskosten in euro's én als percentage van de aanschafwaarde (rond het percentage af op één decimaal).",
-      "sleutelwoorden": [
-        "6.000/6000",
-        "17,1%/17,1 procent"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Jaarlijkse afschrijvingskosten: (€ 35.000 − € 5.000) / 5 = € 6.000 per jaar. Als percentage van de aanschafwaarde: (€ 6.000 / € 35.000) × 100% = 17,1%.",
+      "vraag": "Een hoogwerker kost € 35.000 en wordt na 5 jaar verkocht voor een restwaarde van € 5.000. Bereken de jaarlijkse afschrijvingskosten in euro's. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["6 000/6000"],
+      "minTreffers": 1,
+      "modelantwoord": "€ 6.000 per jaar.",
       "uitleg": "Afschrijving per jaar = € 6.000; als % van aanschafwaarde = 6.000 / 35.000 × 100% = 17,1%."
     }
   ]

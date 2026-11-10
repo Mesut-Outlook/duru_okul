@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in het kort uit wat de twee belangrijkste verschillen zijn tussen de <b>passé composé met avoir</b> en de <b>passé composé met être</b>.",
-      "sleutelwoorden": [
-        "meeste/geen aanpassing",
-        "être/beweging/huis/accord/past zich aan/vrouwelijk/meervoud"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1. Werkwoorden met être zijn bewegingswerkwoorden (of wederkerend), terwijl de meeste andere werkwoorden met avoir gaan. 2. Bij être past het voltooid deelwoord zich aan aan het onderwerp (+e bij vrouwelijk, +s bij meervoud), bij avoir niet.",
+      "vraag": "Wat gebeurt er met het voltooid deelwoord bij <b>être</b> maar niet bij <b>avoir</b>? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["past zich/aanpas/accord/uitgang"],
+      "minTreffers": 1,
+      "modelantwoord": "Het deelwoord past zich aan het onderwerp aan.",
       "uitleg": "Être = bewegingswerkwoorden + accord met onderwerp; Avoir = meeste werkwoorden, geen accord met onderwerp."
     },
     {

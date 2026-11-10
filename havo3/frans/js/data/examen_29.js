@@ -119,12 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Lees: <i>'Pour bien entretenir vos baskets blanches, nettoyez-les avec un chiffon humide et évitez absolument le sèche-linge.'</i><br>Wat moet je absoluut vermijden volgens dit onderhoudsadvies?",
-      "sleutelwoorden": [
-        "wasdroger/droger/droogtrommel/sèche-linge/seche linge"
-      ],
+      "vraag": "Lees: <i>'Pour bien entretenir vos baskets blanches, nettoyez-les avec un chiffon humide et évitez absolument le sèche-linge.'</i><br>Wat mag je volgens dit advies absoluut niet gebruiken? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["wasdroger/droger/droogtrommel/sèche-linge/seche linge"],
       "minTreffers": 1,
-      "modelantwoord": "De wasdroger (le sèche-linge) moet absoluut vermeden worden.",
+      "modelantwoord": "De wasdroger (le sèche-linge).",
       "uitleg": "'Évitez absolument le sèche-linge' (wasdroger vermijden)."
     },
     {

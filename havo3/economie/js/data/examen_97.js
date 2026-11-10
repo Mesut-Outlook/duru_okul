@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg in twee stappen uit hoe een sterke stijging van de gasprijs ertoe kan leiden dat het reëel inkomen van een gezin met een gelijkblijvend salaris daalt.",
-      "sleutelwoorden": [
-        "doorberekenen/kosteninflatie/duurder",
-        "minder/koopkracht daalt/achteruit"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bedrijven berekenen de hogere gaskosten door in hun prijzen waardoor producten duurder worden (kosteninflatie); omdat het salaris gelijk blijft, kan het gezin met hetzelfde inkomen minder goederen kopen.",
+      "vraag": "Waarom daalt het reëel inkomen van een gezin met gelijkblijvend salaris als de gasprijs sterk stijgt? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["duurder/doorberekend/doorberekenen/hogere prijzen/minder kopen/minder kunnen"],
+      "minTreffers": 1,
+      "modelantwoord": "Producten worden duurder, dus het gezin kan met hetzelfde salaris minder kopen.",
       "uitleg": "Stap 1: bedrijven berekenen hogere energiekosten door → hogere prijzen (kosteninflatie). Stap 2: bij gelijk loon kun je minder kopen → reëel inkomen daalt."
     },
     {
       "type": "open",
-      "vraag": "Het nominale loon van Pieter stijgt met 2,5%, terwijl de prijzen in de winkels gemiddeld met 4,5% stijgen. Bereken met hoeveel procent zijn reëel inkomen verandert en leg uit wat dit betekent voor wat hij kan kopen.",
-      "sleutelwoorden": [
-        "2%/2,0%/2 procent",
-        "daalt/minder/achteruit"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Procentuele verandering reëel inkomen = 2,5% − 4,5% = −2,0%. Zijn koopkracht daalt: hij kan met zijn inkomen 2% minder goederen en diensten kopen.",
+      "vraag": "Het nominale loon van Pieter stijgt met 2,5%, terwijl de prijzen gemiddeld met 4,5% stijgen. Met hoeveel procent verandert zijn reëel inkomen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["2 0/2 procent/2%"],
+      "minTreffers": 1,
+      "modelantwoord": "Het reëel inkomen daalt met 2 procent.",
       "uitleg": "2,5% − 4,5% = −2,0%: zijn koopkracht daalt met 2%."
     }
   ]

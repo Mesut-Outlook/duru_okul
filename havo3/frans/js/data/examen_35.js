@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de zin <i>'Ce vélo est plus bon que le mien'</i> fout is in het Frans en verbeter de zin.",
-      "sleutelwoorden": [
-        "fout/onjuist/bestaat niet",
-        "meilleur/meilleur que"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "'Plus bon' bestaat niet in het Frans; de correcte vorm is 'Ce vélo est meilleur que le mien.'",
+      "vraag": "Welk Frans woord gebruik je in plaats van <i>'plus bon'</i> in <i>'Ce vélo est plus bon que le mien'</i>? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["meilleur"],
+      "minTreffers": 1,
+      "modelantwoord": "Je gebruikt meilleur.",
       "uitleg": "Plus bon -> meilleur."
     },
     {

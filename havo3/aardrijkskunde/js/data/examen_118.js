@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een land met een hoog bbp per hoofd toch een grote sociale ongelijkheid kan hebben.",
-      "sleutelwoorden": [
-        "verdeeld/verdeling",
-        "profiteren/weinig mensen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Niet in alle landen is de welvaart even goed verdeeld. Bij grote ongelijkheid profiteren maar weinig mensen van de groeiende welvaart.",
+      "vraag": "Waarom kan een land met een hoog bbp per hoofd toch een grote sociale ongelijkheid hebben? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verdeeld/verdeling/profiteren/weinig mensen"],
+      "minTreffers": 1,
+      "modelantwoord": "De welvaart is niet goed verdeeld en maar weinig mensen profiteren ervan.",
       "uitleg": "De welvaart is slecht verdeeld, dus weinig mensen profiteren ervan. (boek p. 29)"
     },
     {
       "type": "open",
-      "vraag": "Land A heeft een Gini-coëfficiënt van 0,50 en land B van 0,25. Leg uit wat dit zegt over de sociale ongelijkheid in beide landen.",
-      "sleutelwoorden": [
-        "groter/hoger",
-        "dichter bij 0/dichter bij nul/kleiner"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In land A is de sociale ongelijkheid groter, want hoe dichter bij 0 de Gini-coëfficiënt ligt, hoe kleiner de ongelijkheid.",
+      "vraag": "Wat zegt een hoge Gini-coëfficiënt (bijvoorbeeld 0,50) over de sociale ongelijkheid in een land? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["groot/grote/veel/hoog/sterk"],
+      "minTreffers": 1,
+      "modelantwoord": "De ongelijkheid is groot: een hogere Gini-coëfficiënt betekent meer ongelijkheid.",
       "uitleg": "In land A is de ongelijkheid groter; dichter bij 0 is kleiner. (boek p. 29)"
     }
   ]

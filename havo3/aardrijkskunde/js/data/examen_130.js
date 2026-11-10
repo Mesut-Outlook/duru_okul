@@ -173,25 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat het betekent dat Nederland sterk op het buitenland gericht is. Gebruik één voorbeeld met bloemen of chipmachines.",
-      "sleutelwoorden": [
-        "export/exporteert/exporteren/uitvoer",
-        "import/importeert/importeren/invoer",
-        "afzetmarkt/klanten/kopers"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Nederland importeert en exporteert veel. ASML exporteert 95 procent van zijn chipmachines en Dutch Flower Group importeert rozen uit Kenia om ze naar klanten in Duitsland te exporteren.",
+      "vraag": "Geef één voorbeeld van hoe Nederland sterk op het buitenland gericht is, met bloemen of chipmachines. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["export/import/uitvoer/invoer"],
+      "minTreffers": 1,
+      "modelantwoord": "ASML exporteert 95 procent van zijn chipmachines.",
       "uitleg": "Nederland importeert en exporteert veel; bedrijven als ASML hebben vooral klanten in het buitenland. (boek p. 43)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom een bloemenbedrijf als Dutch Flower Group kiest voor kantoren in zowel Kenia als Duitsland.",
-      "sleutelwoorden": [
-        "klimaat/teelt/kwekers",
-        "afzetmarkt/verkopen/klanten"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "In Kenia is het klimaat ideaal voor de teelt van rozen. In Duitsland zit een grote afzetmarkt met klanten die de rozen kopen.",
+      "vraag": "Waarom heeft een bloemenbedrijf als Dutch Flower Group een kantoor in Kenia? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["klimaat/teelt/kwekers"],
+      "minTreffers": 1,
+      "modelantwoord": "In Kenia is het klimaat ideaal voor de teelt van rozen.",
       "uitleg": "Kenia heeft een ideaal klimaat voor de teelt; Duitsland is een belangrijke afzetmarkt. (boek p. 44)"
     }
   ]

@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom zijn eeneiige tweelingen geschikter voor erfelijkheidsonderzoek dan twee-eiige tweelingen?",
-      "sleutelwoorden": [
-        "hetzelfde genotype/genotype gelijk/zelfde genotype",
-        "omgeving/milieu"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Eeneiige tweelingen hebben exact hetzelfde genotype, waardoor eventuele verschillen altijd door de omgeving moeten komen.",
+      "vraag": "Waarom zijn eeneiige tweelingen handig voor erfelijkheidsonderzoek? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["hetzelfde genotype/zelfde genotype/genotype gelijk/genotype hetzelfde/zelfde genen/dezelfde genen"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze hebben hetzelfde genotype, dus verschillen komen door de omgeving.",
       "uitleg": "Omdat hun genotype identiek is en verschillen dus door de omgeving worden veroorzaakt."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom twee-eiige tweelingen net zo veel op elkaar lijken als gewone broers en zussen.",
-      "sleutelwoorden": [
-        "twee verschillende eicellen/verschillend genotype",
-        "zaadcellen/bevruchting"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij ontstaan uit twee verschillende eicellen en zaadcellen en hebben daardoor een verschillend genotype.",
+      "vraag": "Waarom lijken twee-eiige tweelingen net zoveel op elkaar als gewone broers en zussen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verschillende eicellen/twee eicellen/verschillend genotype/verschillende genotype"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze ontstaan uit twee verschillende eicellen en hebben dus een verschillend genotype.",
       "uitleg": "Ze ontstaan uit twee aparte eicellen en zaadcellen en hebben een verschillend genotype."
     }
   ]

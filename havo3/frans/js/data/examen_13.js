@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Schrijf een Franse dialoogzin waarin je aan de conducteur vraagt of deze trein rechtstreeks naar Parijs rijdt.",
-      "sleutelwoorden": [
-        "train",
-        "direct/paris",
-        "est-ce que/va"
-      ],
+      "vraag": "Vraag in het Frans aan de conducteur of deze trein rechtstreeks naar Parijs rijdt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["train","direct"],
       "minTreffers": 1,
-      "modelantwoord": "Excusez-moi, est-ce que ce train est direct pour Paris ?",
+      "modelantwoord": "Ce train est direct pour Paris ?",
       "uitleg": "'Ce train est direct pour Paris ?' is een heldere en natuurlijke vraag."
     },
     {

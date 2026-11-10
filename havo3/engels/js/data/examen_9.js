@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is establishing an accurate chronological sequence of hours essential for detectives solving a mystery?",
-      "sleutelwoorden": [
-        "verify/check/confirm/whereabouts",
-        "suspect/alibi/present/evidence"
-      ],
+      "vraag": "Why do detectives need an accurate timeline of the hours when solving a mystery? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["verify/check/confirm/whereabouts/suspect/alibi/present/evidence"],
       "minTreffers": 1,
-      "modelantwoord": "An accurate timeline allows detectives to verify suspects' alibis and determine who was present at the crime scene.",
+      "modelantwoord": "It helps detectives check the alibis of suspects.",
       "uitleg": "Een tijdlijn maakt het mogelijk om alibi's te controleren en verdachten uit te sluiten."
     },
     {

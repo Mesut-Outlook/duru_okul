@@ -179,23 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat zijn de twee Duitse noodnummers en waarvoor bel je elk nummer?",
-      "modelantwoord": "112 voor ambulance en brandweer; 110 voor de politie.",
-      "sleutelwoorden": [
-        "112/Feuerwehr",
-        "110/Polizei"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Duits noodnummer bel je voor de politie? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Je belt 110 voor de politie.",
+      "sleutelwoorden": ["110"],
+      "minTreffers": 1,
       "uitleg": "112 voor brandweer/ambulance en 110 voor politie."
     },
     {
       "type": "open",
-      "vraag": "Welke vorm heeft het persoonlijk voornaamwoord 'wij' in de 1e, 3e en 4e naamval?",
-      "modelantwoord": "1e naamval: wir; 3e naamval: uns; 4e naamval: uns.",
-      "sleutelwoorden": [
-        "wir",
-        "uns"
-      ],
+      "vraag": "Welke vorm heeft het persoonlijk voornaamwoord 'wij' in de 3e naamval? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Wij wordt uns.",
+      "sleutelwoorden": ["uns"],
       "minTreffers": 1,
       "uitleg": "Wir (1e nv) en uns (3e en 4e nv)."
     }

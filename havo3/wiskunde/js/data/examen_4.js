@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe je stapsgewijs het eerste kwartiel (Q1) en derde kwartiel (Q3) bepaalt uit een geordende getallenreeks.",
-      "sleutelwoorden": [
-        "mediaan",
-        "linkerhelft",
-        "rechterhelft"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "1) Bepaal eerst de algehele mediaan (Q2) die de rij in twee helften splitst. 2) Bepaal de mediaan van de linkerhelft (dit is Q1). 3) Bepaal de mediaan van de rechterhelft (dit is Q3).",
+      "vraag": "Van welk deel van de geordende rij is Q1 de mediaan? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["linkerhelft/linker helft/linkerdeel/onderste helft/eerste helft"],
+      "minTreffers": 1,
+      "modelantwoord": "Q1 is de mediaan van de linkerhelft.",
       "uitleg": "Q1 is mediaan van linkerhelft, Q3 is mediaan van rechterhelft."
     },
     {
       "type": "open",
-      "vraag": "Gegeven de scores: 10, 12, 14, 16, 18, 20, 22. Bereken Q1, Mediaan (Q2) en Q3.",
-      "sleutelwoorden": [
-        "q1 = 12",
-        "q2 = 16",
-        "q3 = 20"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Mediaan (Q2) = 16. Linkerhelft is 10, 12, 14 -> Q1 = 12. Rechterhelft is 18, 20, 22 -> Q3 = 20.",
+      "vraag": "Gegeven zijn de scores: 10, 12, 14, 16, 18, 20, 22, 24. Wat is de mediaan? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["17"],
+      "minTreffers": 1,
+      "modelantwoord": "De mediaan is het gemiddelde van 16 en 18, dus 17.",
       "uitleg": "Q1 = 12, Q2 = 16, Q3 = 20."
     }
   ]

@@ -173,26 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de nabijheid van een afzetmarkt belangrijk is voor een producent van machines.",
-      "sleutelwoorden": [
-        "kopers/klanten/verkopen",
-        "koopkracht/geld",
-        "afstand/dichtbij/transport"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een producent wil zijn machines verkopen aan veel kopers met voldoende koopkracht. Als die kopers dichtbij zitten, is het transport korter.",
+      "vraag": "Noem één reden waarom de nabijheid van een afzetmarkt belangrijk is voor een producent van machines. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["kopers/klanten/verkopen/koopkracht/transport"],
+      "minTreffers": 1,
+      "modelantwoord": "Dan zitten de kopers dichtbij en is het transport korter.",
       "uitleg": "Een afzetmarkt is een gebied waar bedrijven hun producten verkopen; bij Eindhoven wonen veel mensen met hoge koopkracht. (boek p. 43)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe de samenwerking tussen bedrijven, universiteit en overheid brainport Eindhoven sterker maakt.",
-      "sleutelwoorden": [
-        "onderzoek/vernieuwing/innovatie",
-        "opgeleid/personeel/kennis",
-        "steun/gesteund/subsidie"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bedrijven en universiteit werken samen aan onderzoek en vernieuwing. Er is goed opgeleid personeel en de overheid steunt dit.",
+      "vraag": "Noem één manier waarop samenwerking tussen bedrijven, universiteit en overheid brainport Eindhoven sterker maakt. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["onderzoek/vernieuwing/innovatie/opgeleid/personeel/steun/subsidie"],
+      "minTreffers": 1,
+      "modelantwoord": "Bedrijven en universiteit werken samen aan onderzoek en vernieuwing.",
       "uitleg": "Samenwerking zorgt voor vernieuwing en goed opgeleid personeel, gesteund door de overheid. (boek p. 43)"
     }
   ]

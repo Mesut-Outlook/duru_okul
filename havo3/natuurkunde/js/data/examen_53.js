@@ -198,14 +198,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem minstens twee van de vier eisen waaraan volgens het boek een planeet moet voldoen om, zoals de aarde, geschikt te zijn voor het ontstaan van leven.",
-      "sleutelwoorden": [
-        "rotsachtig",
-        "atmosfeer",
-        "vloeibaar water"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De planeet moet rotsachtig zijn, een atmosfeer hebben, op de juiste afstand van haar ster staan (niet te heet, niet te koud) en een aanzienlijke hoeveelheid vloeibaar water op haar oppervlak hebben.",
+      "vraag": "Noem één eis waaraan volgens het boek een planeet moet voldoen om geschikt te zijn voor het ontstaan van leven. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["rotsachtig/atmosfeer/water/juiste afstand"],
+      "minTreffers": 1,
+      "modelantwoord": "De planeet moet een atmosfeer hebben.",
       "uitleg": "De vier eisen zijn: rotsachtig zijn, een atmosfeer hebben, op de juiste afstand van de ster staan, en een aanzienlijke hoeveelheid vloeibaar water hebben."
     }
   ]

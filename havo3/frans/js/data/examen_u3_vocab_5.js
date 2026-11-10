@@ -193,22 +193,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het Franse woord voor 'het voordeel' (p. 124)?",
-      "sleutelwoorden": [
-        "avantage/l'avantage"
-      ],
+      "vraag": "Wat is het Franse woord voor 'het voordeel' (p. 124)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["avantage"],
       "minTreffers": 1,
-      "modelantwoord": "Het Franse woord voor het voordeel is 'l'avantage'.",
+      "modelantwoord": "Het Franse woord voor het voordeel is l'avantage.",
       "uitleg": "'L'avantage' betekent het voordeel."
     },
     {
       "type": "open",
-      "vraag": "Wat is het onregelmatige voltooid deelwoord van het werkwoord 'avoir' (p. 127)?",
-      "sleutelwoorden": [
-        "eu"
-      ],
+      "vraag": "Wat is het onregelmatige voltooid deelwoord van het werkwoord 'avoir' (p. 127)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["eu"],
       "minTreffers": 1,
-      "modelantwoord": "Het voltooid deelwoord van avoir is 'eu'.",
+      "modelantwoord": "Het voltooid deelwoord van avoir is eu.",
       "uitleg": "'Eu' is het voltooid deelwoord van avoir (j'ai eu)."
     }
   ]

@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Why is international cooperation crucial to tackling climate challenges?",
-      "sleutelwoorden": [
-        "worldwide/borders/share/atmosphere/pollution",
-        "cooperate/together/treaty/collective/planet"
-      ],
+      "vraag": "Why is international cooperation crucial to tackling climate challenges? Give one reason. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["worldwide/borders/share/atmosphere/pollution/global/planet/all countries/every country"],
       "minTreffers": 1,
-      "modelantwoord": "Greenhouse gases and pollution affect the entire planet across national borders, so all countries must cooperate to cut global emissions.",
+      "modelantwoord": "Pollution crosses national borders, so every country is affected.",
       "uitleg": "Klimaatverandering treft de hele aarde grensoverschrijdend; gezamenlijke actie is noodzakelijk."
     },
     {

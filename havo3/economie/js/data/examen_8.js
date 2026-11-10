@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Duru koopt een scooter van € 2.000. Ze betaalt 24 maanden lang € 95 per maand. Bereken de totale kredietkosten.",
-      "sleutelwoorden": [
-        "2.280/2280",
-        "280"
-      ],
+      "vraag": "Duru koopt een scooter van € 2.000 en betaalt 24 maanden lang € 95 per maand. Bereken de totale kredietkosten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["280"],
       "minTreffers": 1,
-      "modelantwoord": "Totaal betaald = 24 × € 95 = € 2.280. Kredietkosten = € 2.280 - € 2.000 = € 280.",
+      "modelantwoord": "€ 280",
       "uitleg": "Kredietkosten = Totale termijnen minus de aanschafwaarde."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de bank bij een hypotheeklening een lager rentepercentage vraagt dan bij een persoonlijke lening.",
-      "sleutelwoorden": [
-        "onderpand/woning als zekerheid",
-        "risico voor de bank/veel lager"
-      ],
+      "vraag": "Waarom vraagt de bank bij een hypotheeklening een lager rentepercentage dan bij een persoonlijke lening? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["onderpand/zekerheid/huis verkopen"],
       "minTreffers": 1,
-      "modelantwoord": "Omdat de bank het huis als onderpand heeft. Als de klant niet betaalt, kan de bank het huis verkopen. Het risico voor de bank is daardoor veel lager.",
+      "modelantwoord": "De bank heeft het huis als onderpand.",
       "uitleg": "Onderpand verlaagt het wanbetalingsrisico voor de kredietverstrekker."
     }
   ]

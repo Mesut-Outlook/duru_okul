@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Geef de twee Franse samentrekkingen die ontstaan uit de voorzetsels à en de gecombineerd met het mannelijk enkelvoudig lidwoord le.",
-      "modelantwoord": "Dat zijn de vormen au en du.",
-      "sleutelwoorden": [
-        "au",
-        "du"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke samentrekking ontstaat uit het voorzetsel <b>à</b> gevolgd door het lidwoord <b>le</b>? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is au.",
+      "sleutelwoorden": ["au"],
+      "minTreffers": 1,
       "uitleg": "à + le = au en de + le = du."
     },
     {
       "type": "open",
-      "vraag": "Welke twee vaste uitgangen krijgen regelmatige Franse werkwoorden op -ir bij de meervoudsvormen 'nous' en 'vous' in de présent?",
-      "modelantwoord": "De uitgangen zijn -issons en -issez.",
-      "sleutelwoorden": [
-        "issons/-issons",
-        "issez/-issez"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welke vaste uitgang krijgen regelmatige Franse werkwoorden op -ir bij 'nous' in de présent? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De uitgang is issons.",
+      "sleutelwoorden": ["issons"],
+      "minTreffers": 1,
       "uitleg": "Bij regelmatige werkwoorden op -ir zijn de uitgangen bij nous en vous respectievelijk -issons en -issez (zoals nous finissons, vous choisissez)."
     }
   ]

@@ -180,27 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Welke vier soorten bedrijfskosten komen bij veel ondernemingen voor? Noem ze alle vier.",
-      "sleutelwoorden": [
-        "loonkosten/loon",
-        "huisvestingskosten/huisvesting",
-        "verkoopkosten/verkoop",
-        "rentekosten/rente"
-      ],
-      "minTreffers": 4,
-      "modelantwoord": "Loonkosten, huisvestingskosten, verkoopkosten en rentekosten.",
+      "vraag": "Noem één van de vier soorten bedrijfskosten. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["loonkosten/huisvestingskosten/verkoopkosten/rentekosten/loon/huisvesting/rente/verkoop"],
+      "minTreffers": 1,
+      "modelantwoord": "Loonkosten.",
       "uitleg": "De vier soorten zijn loonkosten, huisvestingskosten, verkoopkosten en rentekosten."
     },
     {
       "type": "open",
-      "vraag": "Een bakkerij betaalt de huur van de winkel, de salarissen van de bakkers en een advertentie in de krant. Geef bij elke uitgave aan tot welke soort bedrijfskosten zij behoort.",
-      "sleutelwoorden": [
-        "huisvestingskosten",
-        "loonkosten",
-        "verkoopkosten"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "De huur is huisvestingskosten, de salarissen zijn loonkosten en de advertentie hoort bij de verkoopkosten.",
+      "vraag": "Een bakkerij betaalt de huur van de winkel, de salarissen van de bakkers en een advertentie in de krant. Tot welke soort bedrijfskosten behoort de huur? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["huisvesting"],
+      "minTreffers": 1,
+      "modelantwoord": "Huisvestingskosten.",
       "uitleg": "Huur = huisvestingskosten, salarissen = loonkosten, advertentie = verkoopkosten."
     }
   ]

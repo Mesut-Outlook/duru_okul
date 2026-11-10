@@ -179,23 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem twee sterke Duitse werkwoorden die bij 'du' en 'er/sie/es' een klinkerwisseling van a naar ä krijgen.",
-      "modelantwoord": "Fahren, schlafen, tragen of waschen.",
-      "sleutelwoorden": [
-        "fahren/schlafen/tragen/waschen/laufen"
-      ],
+      "vraag": "Noem één sterk Duits werkwoord met klinkerwisseling van a naar ä bij 'du' en 'er'. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bijvoorbeeld fahren of schlafen.",
+      "sleutelwoorden": ["fahren/schlafen/tragen/waschen/laufen"],
       "minTreffers": 1,
       "uitleg": "Je kunt fahren, schlafen, tragen, waschen of laufen noemen."
     },
     {
       "type": "open",
-      "vraag": "Waarvoor gebruik je het werkwoord 'studieren' in tegenstelling tot 'lernen'?",
-      "modelantwoord": "Studieren gebruik je alleen voor een studie aan een hogeschool/universiteit; lernen gebruik je voor schoolwerk of woordjes leren.",
-      "sleutelwoorden": [
-        "universiteit/hogeschool",
-        "schoolwerk/huiswerk",
-        "woordjes/vocabulaire"
-      ],
+      "vraag": "Waarvoor gebruik je het werkwoord 'studieren' in plaats van 'lernen'? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Studieren gebruik je voor een studie aan een universiteit of hogeschool.",
+      "sleutelwoorden": ["universiteit/hogeschool/hochschule/universität"],
       "minTreffers": 1,
       "uitleg": "Studieren = hogeschool/universiteit; lernen = schoolwerk."
     }

@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Waarom wordt waterstof geclassificeerd als een drager en niet als een primaire bron?",
-      "sleutelwoorden": [
-        "produceren/geproduceerd/maken/gemaakt/fabriceren"
-      ],
+      "vraag": "Waarom is waterstof een drager en geen primaire bron? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["produce/maken/gemaakt/fabriceren"],
       "minTreffers": 1,
-      "modelantwoord": "Waterstof komt niet kant-en-klaar voor en moet eerst kunstmatig geproduceerd worden.",
+      "modelantwoord": "Waterstof moet eerst geproduceerd worden en komt niet kant-en-klaar voor.",
       "uitleg": "Je moet waterstof eerst vervaardigen met stroom voordat het als energieopslag kan dienen."
     },
     {
       "type": "open",
-      "vraag": "Noem een oorzaak waarom omwonenden bezwaar kunnen maken tegen de bouw van een windmolenpark vlak bij hun woning.",
-      "sleutelwoorden": [
-        "geluid/slagschaduw/horizon/uitzicht/waardedaling"
-      ],
+      "vraag": "Noem één reden waarom omwonenden bezwaar maken tegen een windmolenpark vlak bij hun woning. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["geluid/slagschaduw/horizon/uitzicht/waardedaling"],
       "minTreffers": 1,
-      "modelantwoord": "Omwonenden vrezen voor geluidsoverlast, periodieke slagschaduw op hun ramen of horizonvervuiling.",
+      "modelantwoord": "Omwonenden vrezen geluidsoverlast.",
       "uitleg": "Slagschaduw, geluid en aantasting van het landschap zijn de voornaamste bezwaren."
     }
   ]

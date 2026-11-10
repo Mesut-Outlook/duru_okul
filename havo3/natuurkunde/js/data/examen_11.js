@@ -173,27 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Rangschik de volgende vier stralingssoorten van de laagste naar de hoogste frequentie: radio, warmtestraling (IR), het voor ons oog waarneembare licht, en medische foto-straling (X-ray). Licht je keuze toe.",
-      "sleutelwoorden": [
-        "golflengte/korte golflengte/frequentie omgekeerd",
-        "hogere energie/meer energie/energierijk",
-        "volgorde/rangschikking"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "Volgorde (van laagste naar hoogste energie / langste naar kortste golflengte):\n1. Radiogolven (laagste frequentie, langste golflengte)\n2. Infrarood\n3. Zichtbaar licht\n4. Röntgenstraling (hoogste frequentie, kortste golflengte, meest energierijk/ioniserend).",
+      "vraag": "Wat is de golflengte van röntgenstraling vergeleken met zichtbaar licht? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["korter/kleiner"],
+      "minTreffers": 1,
+      "modelantwoord": "Röntgenstraling heeft een kortere golflengte dan zichtbaar licht, want de frequentie is hoger.",
       "uitleg": "In het elektromagnetisch spectrum geldt: hoe korter de golflengte, hoe hoger de frequentie en dus hoe meer energie. Radiogolven hebben de langste golflengte en de laagste energie, röntgenstraling de kortste golflengte en de hoogste energie."
     },
     {
       "type": "open",
-      "vraag": "Noem de twee uiterste stralingssoorten van het complete spectrum (de laagste en hoogste frequentie) en geef van elk een medische of technische toepassing.",
-      "sleutelwoorden": [
-        "radio",
-        "gamma",
-        "telefoon/televisie/tv/mri/zender/communicatie/wifi",
-        "kanker/tumor/sterilis/radiotherapie/bestralen/bestraling"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "De laagste frequentie heeft radiostraling (radiogolven): die gebruik je voor radio, tv en mobiele telefoons (en bij een MRI-scan). De hoogste frequentie heeft gammastraling: daarmee bestraal je kankercellen (radiotherapie) of steriliseer je medische instrumenten.",
+      "vraag": "Welke stralingssoort heeft de hoogste frequentie van het complete spectrum? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["gamma"],
+      "minTreffers": 1,
+      "modelantwoord": "Gammastraling heeft de hoogste frequentie.",
       "uitleg": "Het elektromagnetisch spectrum loopt van radiogolven (lange golflengte, laagste frequentie) via microgolven, infrarood, zichtbaar licht, uv en röntgenstraling naar gammastraling (kortste golflengte, hoogste frequentie en de meeste energie)."
     }
   ]

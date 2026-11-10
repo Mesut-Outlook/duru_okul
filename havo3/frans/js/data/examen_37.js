@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de twee zinnen <i>'Paul est parti'</i> en <i>'Sophie et Emma sont parties'</i> verschillende uitgangen hebben op het voltooid deelwoord.",
-      "sleutelwoorden": [
-        "paul/mannelijk enkelvoud/geen extra e",
-        "sophie en emma/vrouwelijk meervoud/es/extra e en s",
-        "être/accord/aanpassen"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Omdat bij het hulpwerkwoord être het voltooid deelwoord zich aanpast aan het onderwerp: Paul is mannelijk enkelvoud (parti), terwijl Sophie en Emma vrouwelijk meervoud zijn (+es -> parties).",
+      "vraag": "Waarom heeft <i>'Sophie et Emma sont parties'</i> een extra uitgang op het voltooid deelwoord, anders dan <i>'Paul est parti'</i>? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vrouwelijk/vrouwen/meisjes/meervoud"],
+      "minTreffers": 1,
+      "modelantwoord": "Omdat het onderwerp vrouwelijk meervoud is.",
       "uitleg": "Accord bij être: mannelijk enkelvoud = parti, vrouwelijk meervoud = parties."
     },
     {

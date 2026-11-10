@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit wat je mag concluderen als een eigenschap bij eeneiige tweelingen niet vaker bij beide voorkomt dan bij twee-eiige tweelingen.",
-      "sleutelwoorden": [
-        "omgeving",
-        "niet erfelijk/geen erfelijke"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Dan wordt de eigenschap vooral door de omgeving bepaald en is ze niet erfelijk, want hogere genetische gelijkheid van eeneiige tweelingen maakt geen verschil.",
+      "vraag": "Wat concludeer je als een eigenschap bij eeneiige tweelingen niet vaker bij beide voorkomt dan bij twee-eiige tweelingen? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["niet erfelijk/geen erfelijke/omgeving/milieu"],
+      "minTreffers": 1,
+      "modelantwoord": "De eigenschap is niet erfelijk maar wordt bepaald door de omgeving.",
       "uitleg": "De eigenschap is niet erfelijk maar komt door de omgeving."
     },
     {
       "type": "open",
-      "vraag": "Vergelijk in bron 13 het verschil in lichaamsgewicht bij eeneiige tweelingen die apart en die samen zijn opgegroeid. Wat leid je daaruit af?",
-      "sleutelwoorden": [
-        "groter/meer/hoger",
-        "omgeving/milieu"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Bij apart opgegroeide tweelingen is het verschil groter (4,9 kg tegen 2,0 kg). Hun genotype is gelijk, dus de omgeving heeft invloed op het lichaamsgewicht.",
+      "vraag": "Volgens bron 13 verschillen apart opgegroeide eeneiige tweelingen meer in gewicht (4,9 kg) dan samen opgegroeide (2,0 kg). Wat leid je daaruit af? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["omgeving/milieu"],
+      "minTreffers": 1,
+      "modelantwoord": "De omgeving heeft invloed op het lichaamsgewicht.",
       "uitleg": "Het verschil is groter bij apart opgegroeide tweelingen, dus de omgeving speelt een rol."
     }
   ]

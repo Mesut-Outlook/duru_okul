@@ -119,10 +119,8 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write one short English sentence in which you change the subject with a Theme phrase from <i>Keeping a conversation going</i> (not the one for <i>hoe dan ook</i>).",
-      "sleutelwoorden": [
-        "by the way/speaking of/that reminds me/you know what"
-      ],
+      "vraag": "Change the subject in one short English sentence with a Theme phrase from <i>Keeping a conversation going</i> (not the one for <i>hoe dan ook</i>). <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["by the way/speaking of/that reminds me/you know what"],
       "minTreffers": 1,
       "modelantwoord": "By the way, did you see the new film?",
       "uitleg": "By the way = trouwens; speaking of = over ... gesproken (boek p.A76)."

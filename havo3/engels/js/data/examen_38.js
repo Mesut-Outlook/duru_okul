@@ -167,14 +167,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Explain in your own words when you use the passive voice instead of the active voice.",
-      "sleutelwoorden": [
-        "action",
-        "not known/unknown/not important/don't know/doesn't matter",
-        "focus"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "You use the passive voice when the focus is on the action and it is not known or not important who does it.",
+      "vraag": "When do you use the passive voice instead of the active voice? Give one situation in English. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["not known/unknown/not important/don t know/doesn t matter/focus/action"],
+      "minTreffers": 1,
+      "modelantwoord": "You use it when it is not important or not known who does the action.",
       "uitleg": "Passive: focus on the action; used when it is not known or not important who or what does the action (boek p. A119)."
     },
     {

@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem het minimumaantal dodelijke slachtoffers in een jaar dat vereist is om formeel te spreken van een gewapend conflict.",
-      "sleutelwoorden": [
-        "25/vijfentwintig"
-      ],
+      "vraag": "Hoeveel dodelijke slachtoffers in een jaar zijn minstens nodig om van een gewapend conflict te spreken? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["25/vijfentwintig"],
       "minTreffers": 1,
-      "modelantwoord": "Er moeten ten minste 25 dodelijke slachtoffers vallen in één kalenderjaar.",
+      "modelantwoord": "Er zijn minstens 25 dodelijke slachtoffers nodig.",
       "uitleg": "De internationale Uppsala-norm hanteert 25 slachtoffers per jaar als ondergrens."
     },
     {
       "type": "open",
-      "vraag": "Geef een voorbeeld van een niet-militair middel dat gebruikt kan worden bij moderne hybride oorlogsvoering.",
-      "sleutelwoorden": [
-        "cyber/desinformatie/propaganda/sanctie/nepnieuws/hacken"
-      ],
+      "vraag": "Noem één niet-militair middel bij moderne hybride oorlogsvoering. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["cyber/desinformatie/propaganda/sanctie/nepnieuws/hacken"],
       "minTreffers": 1,
-      "modelantwoord": "Cyberaanvallen, desinformatiecampagnes of economische sancties zijn vormen van hybride oorlogsvoering.",
+      "modelantwoord": "Een cyberaanval is een voorbeeld.",
       "uitleg": "Hybride oorlogsvoering omvat digitale ontwrichting, desinformatie en economische sabotage."
     }
   ]

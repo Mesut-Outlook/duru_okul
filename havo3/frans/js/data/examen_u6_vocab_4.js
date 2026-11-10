@@ -191,25 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de drie Franse signaalwoorden waarmee je respectievelijk 'meer...dan', 'minder...dan' en 'even...als' uitdrukt vóór een adjectief.",
-      "modelantwoord": "Dat zijn de woorden plus, moins en aussi (elk gevolgd door que).",
-      "sleutelwoorden": [
-        "plus",
-        "moins",
-        "aussi"
-      ],
-      "minTreffers": 3,
+      "vraag": "Welk Frans woord gebruik je vóór een adjectief voor 'meer...dan'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is plus.",
+      "sleutelwoorden": ["plus"],
+      "minTreffers": 1,
       "uitleg": "De drie woorden zijn plus (meer), moins (minder) en aussi (even/net zo)."
     },
     {
       "type": "open",
-      "vraag": "Waarom mag je in het Frans nooit 'plus bon que' zeggen als je 'beter dan' bedoelt, en welke speciale vorm moet je altijd gebruiken?",
-      "modelantwoord": "De combinatie 'plus bon que' is grammaticaal onjuist; in het Frans moet je altijd de vorm meilleur que gebruiken.",
-      "sleutelwoorden": [
-        "onjuist/fout/verboden",
-        "meilleur"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans woord gebruik je voor 'beter' in een vergelijking, in plaats van 'plus bon'? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Je gebruikt meilleur que.",
+      "sleutelwoorden": ["meilleur"],
+      "minTreffers": 1,
       "uitleg": "In plaats van het foutieve 'plus bon que' gebruik je de vorm 'meilleur que' (beter dan)."
     }
   ]

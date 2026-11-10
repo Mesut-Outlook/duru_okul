@@ -54,13 +54,10 @@
       {
         id: "maats1_v5",
         type: "open",
-        vraag: "Leg in je eigen woorden uit waarom onafhankelijke rechters belangrijk zijn in een samenleving.",
-        sleutelwoorden: [
-          "eerlijk/onpartijdig/zonder beïnvloeding",
-          "politiek/overheid/macht/bescherming"
-        ],
+        vraag: "Waarom zijn onafhankelijke rechters belangrijk in een samenleving? Geef één reden. <i>(Eén korte zin is genoeg.)</i>",
+        sleutelwoorden: ["eerlijk/onpartijdig/neutraal/politiek/overheid"],
         minTreffers: 1,
-        modelantwoord: "Onafhankelijke rechters beoordelen zaken eerlijk en onpartijdig, zonder dat de overheid of politici invloed op de uitspraak kunnen uitoefenen.",
+        modelantwoord: "Zij beoordelen zaken eerlijk en onpartijdig, zonder invloed van de overheid.",
         uitleg: "Rechterlijke onafhankelijkheid garandeert dat burgers beschermd worden en dat iedereen een eerlijk proces krijgt."
       }
     ]

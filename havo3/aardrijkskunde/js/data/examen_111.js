@@ -173,24 +173,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit hoe kolonisatoren aan hun overzeese gebieden veel geld verdienden.",
-      "sleutelwoorden": [
-        "grondstoffen/handelswaar",
-        "onderdruk/overheers/uitbuit"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zij dwongen de gebieden om grondstoffen zoals thee, koffie en suiker te leveren en overheersden en onderdrukten de bevolking.",
+      "vraag": "Noem één manier waarop kolonisatoren veel geld verdienden aan hun overzeese gebieden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["grondstoffen/handelswaar/onderdruk/overheers/uitbuit/thee/koffie/suiker"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze lieten de gebieden grondstoffen zoals thee, koffie en suiker leveren.",
       "uitleg": "Het geld kwam uit verplichte grondstoffen en uit het onderdrukken van de bevolking. (boek p. 22)"
     },
     {
       "type": "open",
-      "vraag": "Vergelijk de huidige positie in de wereldeconomie van een voormalige kolonisator en van een voormalige handelskolonie.",
-      "sleutelwoorden": [
-        "multinational/hoge-inkomen/grote rol",
-        "achter/laag"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een voormalige kolonisator is vaak een hoge-inkomensland met multinationals, terwijl de welvaart in veel voormalige handelskolonies nog achterblijft.",
+      "vraag": "Wat geldt voor de welvaart in veel voormalige handelskolonies, vergeleken met die van de voormalige kolonisator? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["achter/laag/lager/minder"],
+      "minTreffers": 1,
+      "modelantwoord": "De welvaart blijft achter bij die van de voormalige kolonisator.",
       "uitleg": "Voormalige kolonisatoren hebben een grote rol, in veel voormalige kolonies blijft de welvaart achter. (boek p. 22)"
     }
   ]

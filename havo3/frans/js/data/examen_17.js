@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom je in het Frans <i>'mon école'</i> zegt en niet <i>'ma école'</i>, hoewel 'école' een vrouwelijk woord is.",
-      "sleutelwoorden": [
-        "klinker/klinkers/vowel",
-        "uitspraak/klank/botsen/klinkerbotsing"
-      ],
+      "vraag": "Waarom zeg je in het Frans <i>'mon école'</i> en niet <i>'ma école'</i>? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["klinker/klinkers/vocaal/vowel"],
       "minTreffers": 1,
-      "modelantwoord": "Omdat 'école' begint met een klinker. Om klinkerbotsing te voorkomen verandert 'ma' in 'mon' (mon école).",
+      "modelantwoord": "Omdat école met een klinker begint.",
       "uitleg": "Vóór een klinker of stomme h gebruik je mon/ton/son om de uitspraak vloeiend te houden."
     },
     {

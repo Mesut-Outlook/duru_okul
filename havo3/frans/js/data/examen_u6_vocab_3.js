@@ -191,24 +191,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Frans aan iemand hoe laat hij of zij 's ochtends opstaat?",
-      "modelantwoord": "Dat vraag je met: Tu te lèves à quelle heure?",
-      "sleutelwoorden": [
-        "lèves/leves",
-        "heure"
-      ],
-      "minTreffers": 2,
+      "vraag": "Hoe vraag je in het Frans aan iemand hoe laat hij of zij 's ochtends opstaat? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Tu te lèves à quelle heure ?",
+      "sleutelwoorden": ["lèves/leves","heure"],
+      "minTreffers": 1,
       "uitleg": "De vraag luidt: 'Tu te lèves à quelle heure?'."
     },
     {
       "type": "open",
-      "vraag": "Noem de Franse zin waarmee je aangeeft dat je goed kunt opschieten met je jongere zusje.",
-      "modelantwoord": "Dat zeg je met: Je m'entends bien avec ma petite sœur.",
-      "sleutelwoorden": [
-        "entends bien",
-        "petite sœur/petite soeur/sœur/soeur"
-      ],
-      "minTreffers": 2,
+      "vraag": "Zeg in het Frans dat je goed kunt opschieten met je jongere zusje. <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Je m'entends bien avec ma petite sœur.",
+      "sleutelwoorden": ["entends bien","sœur/soeur"],
+      "minTreffers": 1,
       "uitleg": "De zin is: 'Je m'entends bien avec ma petite sœur.'."
     }
   ]

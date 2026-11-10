@@ -180,24 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg het verschil uit tussen een inboedelverzekering en een opstalverzekering.",
-      "sleutelwoorden": [
-        "inboedel: losse spullen/meubels",
-        "opstal: huis zelf/nagelvast/muren"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Een inboedelverzekering dekt schade aan losse verhuisbare spullen in huis (meubels, tv); een opstalverzekering dekt schade aan het huis zelf en alles wat nagelvast aan de woning zit (dak, muren, leidingen).",
+      "vraag": "Wat dekt een opstalverzekering? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["huis/woning/nagelvast/muren/dak/gebouw"],
+      "minTreffers": 1,
+      "modelantwoord": "Schade aan het huis zelf en wat nagelvast is.",
       "uitleg": "Inboedel = roerend; opstal = onroerend goed."
     },
     {
       "type": "open",
-      "vraag": "Waarom hanteren verzekeraars een eigen risico bij schadeverzekeringen? Noem twee redenen.",
-      "sleutelwoorden": [
-        "premie/verlaagt",
-        "wissewasje/voorzichtiger"
-      ],
+      "vraag": "Noem één reden waarom verzekeraars een eigen risico hanteren. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["premie/wissewasje/voorzichtig/kleine schade/declareren"],
       "minTreffers": 1,
-      "modelantwoord": "1. Het verlaagt de maandelijkse premie voor de klant, 2. Het voorkomt dat mensen voor elk klein wissewasje declareren en stimuleert voorzichtiger gedrag.",
+      "modelantwoord": "Het verlaagt de premie voor de klant.",
       "uitleg": "Eigen risico vermindert administratielast en moreel wangedrag."
     }
   ]

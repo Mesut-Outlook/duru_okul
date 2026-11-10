@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Turn <i>Mia likes pizza.</i> into a question and say which verb you add.",
-      "sleutelwoorden": [
-        "does",
-        "like pizza/infinitive/do"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Does Mia like pizza? I add 'does' and the main verb stays in the infinitive (like).",
+      "vraag": "Turn <i>Mia likes pizza.</i> into a question. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["does mia like/does she like"],
+      "minTreffers": 1,
+      "modelantwoord": "Does Mia like pizza?",
       "uitleg": "Rule 2: does + infinitief (boek p.A71)."
     },
     {

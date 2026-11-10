@@ -179,24 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is een 'Rettungsgasse' op de Duitse snelweg en waarvoor dient deze?",
-      "modelantwoord": "Een vrije doorgang tussen rijstroken bij file zodat hulpdiensten (ambulance/brandweer) er snel door kunnen.",
-      "sleutelwoorden": [
-        "vrije doorgang",
-        "hulpdiensten/ambulance",
-        "file"
-      ],
+      "vraag": "Voor wie maken automobilisten een 'Rettungsgasse' vrij op de Duitse snelweg? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Voor hulpdiensten zoals de ambulance.",
+      "sleutelwoorden": ["hulpdienst/ambulance/brandweer/politie"],
       "minTreffers": 1,
       "uitleg": "Een vrije doorgangsstrook voor hulpdiensten bij file."
     },
     {
       "type": "open",
-      "vraag": "Welke lidwoorden van de ein-Gruppe horen bij de 3e naamval voor mannelijk en vrouwelijk?",
-      "modelantwoord": "Einem voor mannelijk en einer voor vrouwelijk.",
-      "sleutelwoorden": [
-        "einem",
-        "einer"
-      ],
+      "vraag": "Welk lidwoord uit de ein-Gruppe hoort bij een vrouwelijk woord in de 3e naamval? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Bij een vrouwelijk woord hoort einer.",
+      "sleutelwoorden": ["einer"],
       "minTreffers": 1,
       "uitleg": "Einem (mannelijk) en einer (vrouwelijk)."
     }

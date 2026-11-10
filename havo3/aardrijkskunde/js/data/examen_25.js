@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de naam van het Nederlandse legerbataljon dat in juli 1995 belast was met de beveiliging van Srebrenica.",
-      "sleutelwoorden": [
-        "Dutchbat"
-      ],
+      "vraag": "Hoe heette het Nederlandse bataljon dat in juli 1995 Srebrenica moest beveiligen? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["dutchbat"],
       "minTreffers": 1,
-      "modelantwoord": "Dutchbat was het Nederlandse VN-bataljon in Srebrenica.",
+      "modelantwoord": "Dat was Dutchbat.",
       "uitleg": "Dutchbat was gestationeerd in de Bosnische enclave."
     },
     {
       "type": "open",
-      "vraag": "Geef een reden waarom de Nederlandse staat strenge vergunningseisen stelt aan de export van militaire goederen.",
-      "sleutelwoorden": [
-        "mensenrechten/misbruik/oorlog/conflict/embargo/vrede/regering"
-      ],
+      "vraag": "Noem één reden waarom Nederland strenge eisen stelt aan de export van militaire goederen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["mensenrechten/misbruik/oorlog/conflict/vrede/embargo"],
       "minTreffers": 1,
-      "modelantwoord": "Om te voorkomen dat wapens worden ingezet voor mensenrechtenschendingen of in escalerende oorlogsgebieden.",
+      "modelantwoord": "Zodat wapens niet voor mensenrechtenschendingen of oorlog worden gebruikt.",
       "uitleg": "Wapenexportcontrole voorkomt dat militair materieel in verkeerde handen valt."
     }
   ]

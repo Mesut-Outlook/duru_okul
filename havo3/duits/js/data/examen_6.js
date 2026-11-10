@@ -179,23 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil in functie tussen de 4e naamval (Akkusativ) en de 3e naamval (Dativ)?",
-      "modelantwoord": "De 4e naamval is het lijdend voorwerp en de 3e naamval is het meewerkend voorwerp.",
-      "sleutelwoorden": [
-        "lijdend voorwerp",
-        "meewerkend voorwerp"
-      ],
+      "vraag": "Welke functie heeft de 4e naamval (Akkusativ) in de zin? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "De 4e naamval is het lijdend voorwerp.",
+      "sleutelwoorden": ["lijdend voorwerp"],
       "minTreffers": 1,
       "uitleg": "4e naamval = lijdend voorwerp; 3e naamval = meewerkend voorwerp."
     },
     {
       "type": "open",
-      "vraag": "Welke twee voornaamwoorden gebruik je voor 'hem' (als lijdend voorwerp en als meewerkend voorwerp)?",
-      "modelantwoord": "Ihn voor de 4e naamval en ihm voor de 3e naamval.",
-      "sleutelwoorden": [
-        "ihn",
-        "ihm"
-      ],
+      "vraag": "Wat is het persoonlijk voornaamwoord 'hem' als lijdend voorwerp (4e naamval)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Het is ihn.",
+      "sleutelwoorden": ["ihn"],
       "minTreffers": 1,
       "uitleg": "Ihn (4e nv) en ihm (3e nv)."
     }

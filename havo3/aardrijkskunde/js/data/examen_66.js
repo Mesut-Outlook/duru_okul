@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de combinatie van een koloniaal verleden als wingewest en een gebrek aan onderwijsinvesteringen een vicieuze cirkel van armoede in stand houdt.",
-      "sleutelwoorden": [
-        "onbewerkte grondstoffen/export van grondstoffen/lage opbrengst/grondstofexport",
-        "geen geschoolde arbeiders/weinig scholing/gebrek aan kennis/lage lonen",
-        "geen eigen industrie/weinig industrie/geen toegevoegde waarde/verwerking"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door het verleden blijft het land afhankelijk van de export van onbewerkte grondstoffen met een lage opbrengst. Door te weinig scholing zijn er geen geschoolde arbeiders om een eigen industrie op te bouwen, waardoor het land geen toegevoegde waarde creëert en inkomens laag blijven.",
+      "vraag": "Noem één reden waarom een koloniaal verleden en weinig onderwijs tot een vicieuze cirkel van armoede leiden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["grondstoffen/scholing/geschoold/industrie/toegevoegde waarde/lage lonen"],
+      "minTreffers": 1,
+      "modelantwoord": "Zonder scholing is er geen geschoolde arbeid en geen eigen industrie.",
       "uitleg": "Externe grondstofafhankelijkheid en interne onderwijstekorten versterken elkaar en blokkeren industriële groei. (boek p. 28)"
     },
     {
       "type": "open",
-      "vraag": "Beredeneer waarom een land met gigantische bodemschatten aan kobalt en koper (zoals DR Congo) toch zeer laag kan scoren op de Human Development Index.",
-      "sleutelwoorden": [
-        "corruptie/winst verdwijnt/elite verrijkt",
-        "geen investering in scholen/gezondheidszorg/drinkwater",
-        "conflicten/onveiligheid/armoede onder bevolking"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De inkomsten uit de mijnbouw komen door corruptie en zwak bestuur terecht bij buitenlandse bedrijven en een kleine elite. De overheid investeert nauwelijks in schoon drinkwater, gezondheidszorg en scholen, terwijl aanhoudende gewapende conflicten de bevolking in diepe armoede houden.",
+      "vraag": "Noem één reden waarom DR Congo ondanks zijn bodemschatten laag scoort op de Human Development Index. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["corruptie/elite/conflict/investeer"],
+      "minTreffers": 1,
+      "modelantwoord": "De inkomsten verdwijnen door corruptie naar een kleine elite.",
       "uitleg": "Rijkdom aan grondstoffen leidt zonder goed bestuur en sociale investeringen niet tot menselijk welzijn. (boek p. 28-29, 32-33)"
     }
   ]

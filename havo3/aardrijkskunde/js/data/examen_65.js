@@ -182,26 +182,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom de invoering van de gestandaardiseerde zeecontainer een enorme stimulans is geweest voor de wereldwijde economische globalisering.",
-      "sleutelwoorden": [
-        "overslag/sneller laden en lossen/kraan/laadkist",
-        "transportkosten omlaag/veel goedkoper/schaalvoordelen/lage kosten",
-        "trein/vrachtwagen/multimodaal/vervoermiddel"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "De standaardcontainer maakte het overslagproces in havens ongekend snel en efficiënt door het gebruik van havenkranen. Hierdoor gingen de transportkosten omlaag en werd vervoer veel goedkoper, terwijl containers naadloos konden worden overgezet op de trein en vrachtwagen.",
+      "vraag": "Waarom stimuleerde de standaard zeecontainer de globalisering? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["goedkoper/transportkosten/sneller/overslag/kosten"],
+      "minTreffers": 1,
+      "modelantwoord": "Vervoer werd goedkoper en het laden en lossen ging sneller.",
       "uitleg": "Snelle overslag en lage transportkosten per container maakten wereldwijde handel winstgevend voor vrijwel elk product. (boek p. 9, 16-17)"
     },
     {
       "type": "open",
-      "vraag": "Beredeneer hoe het verzamelen van online gebruikersgegevens door Big Tech-ondernemingen uiteindelijk invloed heeft op het consumptiegedrag in Nederland.",
-      "sleutelwoorden": [
-        "data/zoekgedrag/profiel/interesses",
-        "gepersonaliseerde advertenties/gerichte reclame",
-        "meer kopen/verleiden/aankopen stimuleren"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Big Tech-bedrijven verzamelen continu data over het zoekgedrag, de interesses en de voorkeuren van gebruikers. Met deze gegevens verkopen zij gepersonaliseerde advertenties aan ondernemingen, waardoor Nederlandse consumenten gerichte reclames te zien krijgen die hen verleiden om sneller producten te kopen.",
+      "vraag": "Hoe beïnvloedt het verzamelen van online gegevens door Big Tech het consumptiegedrag in Nederland? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["advertenties/reclame/gepersonaliseerd/gerichte"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze tonen gerichte reclame, waardoor mensen sneller kopen.",
       "uitleg": "Gerichte advertenties op basis van verzamelde consumentendata sturen het koopgedrag van miljoenen consumenten. (boek p. 17, 18)"
     }
   ]

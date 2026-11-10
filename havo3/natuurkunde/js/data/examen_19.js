@@ -161,26 +161,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Beredeneer met behulp van de formule R = (ρ · l) / A wat er gebeurt met de weerstand van een draad als je: 1) de lengte verdrievoudigt, 2) de doorsnede verdubbelt, 3) beide tegelijk doet.",
-      "sleutelwoorden": [
-        "3 keer zo groot/drie keer groter/drie keer zo groot",
-        "gehalveerd/half zo groot/0,5 keer",
-        "1,5 keer zo groot/anderhalf keer/1,5x"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Lengte verdrievoudigen: Omdat R ~ l, wordt de weerstand 3 keer zo groot (3×). 2. Doorsnede verdubbelen: Omdat R ~ 1/A, wordt de weerstand gehalveerd (0,5×). 3. Beide tegelijk: De nieuwe weerstand wordt 3 / 2 = 1,5 keer zo groot als de oorspronkelijke weerstand.",
+      "vraag": "Hoeveel keer zo groot wordt de weerstand van een draad als je de lengte verdrievoudigt? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["3/driemaal/drie keer"],
+      "minTreffers": 1,
+      "modelantwoord": "De weerstand wordt 3 keer zo groot.",
       "uitleg": "Evenredigheden in de draadweerstandsformule."
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom hoogspanningskabels vaak van aluminium met een stalen kern gemaakt worden in plaats van massief koper, ondanks dat koper een iets betere geleider is.",
-      "sleutelwoorden": [
-        "licht/lagere dichtheid/lichter",
-        "treksterkte/binnenkern/mechanische sterkte",
-        "koper te zwaar/duur"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Koper heeft een hoge dichtheid (8,9 g/cm³) en is erg zwaar en duur. Aluminium heeft een veel lagere dichtheid (2,7 g/cm³) en is ruim drie keer zo licht. Hierdoor kunnen hoogspanningsmasten veel verder uit elkaar staan zonder dat de kabels door hun eigen gewicht breken. De stalen binnenkern zorgt voor de nodige mechanische treksterkte, terwijl het aluminium de stroom geleidt.",
+      "vraag": "Noem één voordeel van aluminium boven koper voor hoogspanningskabels. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["licht/goedkoper/lager gewicht"],
+      "minTreffers": 1,
+      "modelantwoord": "Aluminium is veel lichter dan koper.",
       "uitleg": "Afweging tussen elektrische geleidbaarheid, gewicht (dichtheid), mechanische sterkte en kosten."
     }
   ]

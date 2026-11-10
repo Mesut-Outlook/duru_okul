@@ -194,22 +194,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de Zwitserse stad waar de beroemde verdragen inzake het humanitair oorlogsrecht zijn gesloten.",
-      "sleutelwoorden": [
-        "Geneve/Genève"
-      ],
+      "vraag": "In welke Zwitserse stad zijn de verdragen over het humanitair oorlogsrecht gesloten? <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["geneve/genève"],
       "minTreffers": 1,
-      "modelantwoord": "De Verdragen van Genève vormen de kern van het oorlogsrecht.",
+      "modelantwoord": "Dat is de stad Genève.",
       "uitleg": "In Genève werden de vier verdragen en aanvullende protocollen ondertekend."
     },
     {
       "type": "open",
-      "vraag": "Wat is het formele geografische onderscheid tussen een vluchteling en een ontheemde?",
-      "sleutelwoorden": [
-        "grens/landsgrens/buitenland/binnenland"
-      ],
+      "vraag": "Wat onderscheidt een vluchteling van een ontheemde? <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["grens/landsgrens/buitenland/binnenland"],
       "minTreffers": 1,
-      "modelantwoord": "Een vluchteling is een internationale landsgrens overgestoken, terwijl een ontheemde in het eigen land blijft.",
+      "modelantwoord": "Een vluchteling is de landsgrens overgestoken, een ontheemde niet.",
       "uitleg": "Het oversteken van een staatsgrens bepaalt het juridische verschil tussen beiden."
     }
   ]

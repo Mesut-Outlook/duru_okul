@@ -119,13 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Lees: <i>'Les crêpes et le cidre sont les spécialités culinaires les plus réputées de la région Bretagne.'</i><br>Welke twee bekende streekspecialiteiten uit Bretagne worden hier genoemd?",
-      "sleutelwoorden": [
-        "crêpes/crepes/crêpe/crepe/pannenkoeken/pannekoeken",
-        "cidre/cider/appelwijn"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Crêpes (pannenkoeken) en cidre (cider).",
+      "vraag": "Lees: <i>'Les crêpes et le cidre sont les spécialités culinaires les plus réputées de la région Bretagne.'</i><br>Noem één streekspecialiteit uit Bretagne die hier genoemd wordt. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["crêpe/crepe/pannenkoek/pannekoek/cidre/cider/appelwijn"],
+      "minTreffers": 1,
+      "modelantwoord": "Crêpes (pannenkoeken).",
       "uitleg": "De tekst noemt 'les crêpes' en 'le cidre'."
     },
     {

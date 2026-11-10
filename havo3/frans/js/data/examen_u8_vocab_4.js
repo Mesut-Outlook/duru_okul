@@ -191,22 +191,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de twee Franse ontkenningswoorden die respectievelijk 'nooit' en 'niet meer' uitdrukken (elk gecombineerd met ne).",
-      "modelantwoord": "Dat zijn jamais (nooit) en plus (niet meer).",
-      "sleutelwoorden": [
-        "jamais",
-        "plus"
-      ],
-      "minTreffers": 2,
+      "vraag": "Welk Frans ontkenningswoord drukt 'nooit' uit (gecombineerd met ne)? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Dat is jamais.",
+      "sleutelwoorden": ["jamais"],
+      "minTreffers": 1,
       "uitleg": "De ontkenningen zijn ne...jamais (nooit) en ne...plus (niet meer)."
     },
     {
       "type": "open",
-      "vraag": "Noem het hulpwerkwoord waarmee bewegingswerkwoorden zoals aller, venir en partir in de passé composé worden vervoegd.",
+      "vraag": "Welk hulpwerkwoord gebruik je bij bewegingswerkwoorden zoals aller, venir en partir in de passé composé? <i>(Alleen het antwoord is genoeg.)</i>",
       "modelantwoord": "Dat hulpwerkwoord is être (zijn).",
-      "sleutelwoorden": [
-        "être/etre"
-      ],
+      "sleutelwoorden": ["être/etre"],
       "minTreffers": 1,
       "uitleg": "Bewegingswerkwoorden worden in de passé composé met être vervoegd."
     }

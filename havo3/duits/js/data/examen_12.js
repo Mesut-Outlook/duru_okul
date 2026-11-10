@@ -179,25 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil in het Duits tussen 'einsteigen', 'aussteigen' en 'umsteigen'?",
-      "modelantwoord": "Einsteigen = instappen; aussteigen = uitstappen; umsteigen = overstappen.",
-      "sleutelwoorden": [
-        "instappen",
-        "uitstappen",
-        "overstappen"
-      ],
+      "vraag": "Wat betekent 'umsteigen' in het Nederlands? <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Umsteigen betekent overstappen.",
+      "sleutelwoorden": ["overstappen"],
       "minTreffers": 1,
       "uitleg": "Einsteigen (in), aussteigen (uit), umsteigen (over)."
     },
     {
       "type": "open",
-      "vraag": "Welke drie landen vormen samen de DACH-regio?",
-      "modelantwoord": "Duitsland (Deutschland), Oostenrijk (Österreich) en Zwitserland (Schweiz).",
-      "sleutelwoorden": [
-        "Deutschland/Duitsland",
-        "Österreich/Oostenrijk",
-        "Schweiz/Zwitserland"
-      ],
+      "vraag": "Noem één van de drie landen van de DACH-regio. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Oostenrijk (Österreich) hoort erbij.",
+      "sleutelwoorden": ["deutschland/duitsland/österreich/oostenrijk/schweiz/zwitserland"],
       "minTreffers": 1,
       "uitleg": "Duitsland, Oostenrijk en Zwitserland."
     }

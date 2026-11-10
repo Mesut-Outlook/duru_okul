@@ -180,25 +180,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Noem de drie motieven om te sparen en geef bij elk motief een voorbeeld.",
-      "sleutelwoorden": [
-        "voor een doel",
-        "uit voorzorg",
-        "voor het rendement/rente"
-      ],
-      "minTreffers": 3,
-      "modelantwoord": "1. Sparen voor een doel (vakantie/scooter), 2. Sparen uit voorzorg (onverwachte reparatie wasmachine), 3. Sparen voor het rendement (extra inkomsten via rente).",
+      "vraag": "Noem één van de drie motieven om te sparen. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["doel/voorzorg/rendement/rente"],
+      "minTreffers": 1,
+      "modelantwoord": "Sparen voor een doel.",
       "uitleg": "Dit zijn de drie klassieke spaarmotieven."
     },
     {
       "type": "open",
-      "vraag": "Bereken de enkelvoudige rente na 9 maanden over een spaarbedrag van € 6.000 bij een rente van 2% per jaar. Toon de berekening.",
-      "sleutelwoorden": [
-        "108.000/108000",
-        "90"
-      ],
+      "vraag": "Bereken de enkelvoudige rente na 9 maanden over € 6.000 bij 2% rente per jaar. <i>(Alleen het antwoord is genoeg.)</i>",
+      "sleutelwoorden": ["90"],
       "minTreffers": 1,
-      "modelantwoord": "(6.000 × 2 × 9) / (100 × 12) = 108.000 / 1.200 = € 90 rente.",
+      "modelantwoord": "€ 90",
       "uitleg": "Formule: (Kapitaal × Percentage × Maanden) / (100 × 12)."
     }
   ]

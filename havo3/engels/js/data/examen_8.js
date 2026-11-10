@@ -119,14 +119,10 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Write a short physical description of a suspect based on: age (mid-30s), hair (short dark), clothing (blue jacket).",
-      "sleutelwoorden": [
-        "thirties/35",
-        "wearing/wore/dressed in/had on",
-        "dark hair/short hair/hair is short/hair is dark"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "The suspect was in his mid-thirties, with short dark hair, and was wearing a blue jacket.",
+      "vraag": "Write one English sentence describing the clothing of a suspect who wears a blue jacket. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["wearing/wore/dressed in/had on"],
+      "minTreffers": 1,
+      "modelantwoord": "The suspect was wearing a blue jacket.",
       "uitleg": "Een complete beschrijving combineert leeftijd, haar en kleding helder."
     },
     {

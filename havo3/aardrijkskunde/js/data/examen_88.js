@@ -179,26 +179,18 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom veel West-Europese industriegebieden na 1990 in de problemen kwamen.",
-      "sleutelwoorden": [
-        "lagelonenlanden/lage lonen",
-        "concurrent",
-        "werkloosheid"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Zware industrie en arbeidsintensieve bedrijven kregen concurrentie uit lagelonenlanden en van alternatieve grondstoffen; fabrieken en mijnen sloten en de werkloosheid liep op.",
+      "vraag": "Noem één reden waarom West-Europese industriegebieden na 1990 in de problemen kwamen. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["lagelonenlanden/lage lonen/concurrentie/concurrent/werkloosheid/sluiting"],
+      "minTreffers": 1,
+      "modelantwoord": "Ze kregen concurrentie uit lagelonenlanden.",
       "uitleg": "Zware industrie en arbeidsintensieve bedrijven hadden last van concurrentie uit lagelonenlanden en alternatieve grondstoffen; mijnen en fabrieken sloten en de werkloosheid liep op. (boek p. 39)"
     },
     {
       "type": "open",
-      "vraag": "Leg uit waarom Oost-Europese landen als Polen en Roemenië economisch groeiden.",
-      "sleutelwoorden": [
-        "vrijhandel",
-        "lidmaatschap",
-        "fabrieken/auto-industrie"
-      ],
-      "minTreffers": 2,
-      "modelantwoord": "Door hun EU-lidmaatschap profiteerden ze van de vrijhandel in de EU; fabrieken, zoals in de auto-industrie, werden daarheen verplaatst.",
+      "vraag": "Noem één reden waarom Oost-Europese landen als Polen en Roemenië economisch groeiden. <i>(Eén korte zin is genoeg.)</i>",
+      "sleutelwoorden": ["vrijhandel/lidmaatschap/fabrieken/auto-industrie"],
+      "minTreffers": 1,
+      "modelantwoord": "Door hun EU-lidmaatschap kwam er vrijhandel en kwamen er fabrieken.",
       "uitleg": "Mede door hun EU-lidmaatschap hebben ze geprofiteerd van de vrijhandel; zo groeide in Tsjechië de auto-industrie doordat fabrieken werden verplaatst. (boek p. 39)"
     }
   ]

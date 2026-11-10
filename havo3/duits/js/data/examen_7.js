@@ -179,26 +179,17 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Hoe vraag je in het Duits aan een vriend hoe het met hem of haar gaat?",
-      "modelantwoord": "Wie geht es dir? (of Wie geht's?)",
-      "sleutelwoorden": [
-        "Wie geht es dir",
-        "Wie geht's",
-        "dir"
-      ],
+      "vraag": "Hoe vraag je in het Duits aan een vriend hoe het met hem of haar gaat? <i>(Eén korte zin is genoeg.)</i>",
+      "modelantwoord": "Wie geht es dir?",
+      "sleutelwoorden": ["wie geht"],
       "minTreffers": 1,
       "uitleg": "De vaste vraag is 'Wie geht es dir?'."
     },
     {
       "type": "open",
-      "vraag": "Noem twee verschillende lichaamsdelen in het Duits die horen bij het gezicht.",
-      "modelantwoord": "Die Nase, das Auge, das Ohr of der Mund.",
-      "sleutelwoorden": [
-        "Nase",
-        "Auge",
-        "Mund",
-        "Ohr"
-      ],
+      "vraag": "Noem één lichaamsdeel in het Duits dat bij het gezicht hoort. <i>(Alleen het antwoord is genoeg.)</i>",
+      "modelantwoord": "Die Nase.",
+      "sleutelwoorden": ["nase/auge/mund/ohr"],
       "minTreffers": 1,
       "uitleg": "Je kunt Nase, Auge, Ohr of Mund noemen."
     }
