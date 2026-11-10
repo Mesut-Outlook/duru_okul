@@ -650,6 +650,87 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### TASK-44 · geschiedenis H1: son 10 denemenin yanlışlarından her §'a 2 toets (examen_66…75)  [status: IN_PROGRESS — agy payı: 72…75]
+Kullanıcı isteği (2026-11-10): "Duru'nun tarihte son 10 sınavda yaptığı yanlış sorulardan ve konulardan oluşan, her bölümde 2'şer yeni test; agy ile Sonnet paylaşsın".
+Son 10 deneme (bugün 20:27–20:51): 45, 43 (×4), 37, 35, 32, 55 (×2) → 60 yanlış/boş. **Ağırlık: bu yanlışlar** (aynı kavram, YENİ cümle/bağlam/biçim — eski soruyu kopyalama);
+bir §'ta son 10'da az yanlış varsa TASK-42'deki o § zayıf listesinden tamamla. 46…65 ile de aynı cümleyi kurma (`teslim_check` KOPYA).
+
+| id | § | Kim |
+|---|---|---|
+| 66–67 | §1.1 | Sonnet |
+| 68–69 | §1.2 | Sonnet |
+| 70–71 | §1.3 | Sonnet |
+| **72–73** | **§1.4** | **agy** |
+| **74–75** | **§1.5** | **agy** |
+
+Başlık: `"Proeftoets 66 — §1.1 Herhaling A: <konu>"`, `"… Herhaling B: …"`. **Biçim, kaynak ve kabul TASK-42 ile aynı** (aşağıda): `tools/gen_geschiedenis_h1_lib.py` → `schrijf(EXAMENS, seed)`,
+10 mc · 5 waaronwaar (≥2 onwaar) · 4 invul · 1 KISA open; kaynak yalnız `havo3/geschiedenis/js/data/h1_*.js`. Script: Sonnet `tools/gen_geschiedenis_h1_g.py` (66–71) · agy `tools/gen_geschiedenis_h1_h.py` (72–75).
+
+**Son 10 denemede Duru'nun yanlışları (çeldirici = Duru'nun gerçek cevabı):**
+- §1.1: Tolstoi, Hugo en **Dickens** (Duru: Dostojevski); stopwatch tot op **tienden** (Duru: meters); belle époque: werkdagen korter + lonen hoger, hygiëne → minder ziektes.
+- §1.2: **Centralen** (boş) — + TASK-42 §1.2 listesi (Marne ≠ Somme, Sarajevo 28 juni 1914, wapenwedloop/vloot, militarisme, Italië 1915, VS 1917).
+- §1.3: **Doema = parlement (1905)** ≠ Okhrana = geheime politie (Duru karıştırdı); absolute heerser = **tsaar** (Duru: Lenin) — + TASK-42 §1.3 listesi.
+- §1.4 (en zayıf, 43'ü 4 kez denedi: 7→12→12→17): Baltische staten **Estland, Letland, Litouwen** uit Russische Rijk (Duru: Polen/Oostenrijk/Joegoslavië); Oostenrijk = **klein Duitstalig staatje** (Duru: mandaatgebied); Smyrna 1919 = Geallieerden wilden Turks gebied verdelen; volkenruil **±1,7 mln** totaal (Duru: 2,2), grootste groep = **Grieken uit Turkije**; Kemal = **president** (Duru: sultan, sultanaat), **niet** sultan; Grieken verdreven uit **Anatolië** (Duru: Smyrna/Turkije); O-H → **Hongarije** + Tsjecho-Slowakije (Duru: Joegoslavië); **sultanaat** afgeschaft (Duru: mandaatgebied); Polen niet alleen uit O-H; Joegoslavië = Serviërs, Kroaten, Slovenen, Bosniërs (Duru koos Tsjecho-Slowakije); Versailles **1919** (Duru: 1918); verbod op luchtmacht (Duru: onwaar), **duikboten** (Duru: leger), leger max **100.000** (open boş, 2×); herstelbetalingen in **goudmarken** (Duru: euro's, goud); **Clemenceau** (Duru yazımı: Clemencau, 2×); **Poolse Corridor** (Duru: gebied, Pruisen, boş); alleenschuld.
+- §1.5: **Rietveld → Rietveld-stoel** ≠ Mondriaan → Victory Boogie Woogie (Duru karıştırdı 2×); De Stijl: rood/geel/blauw + **wit, grijs, zwart**; Grondwet 1917 loste **twee** kwesties op (schoolstrijd + kiesrecht); betoging op het **Malieveld** (Duru: Binnenhof) voor **koningin Wilhelmina** (open boş); distributiebonnen ≠ gratis (bon = recht om te kopen, je betaalt wel).
+
+**Kabul:** `node tools/gate.js geschiedenis` (index.html'i Opus bağlar; kural 11 kırmızı olabilir) · `node tools/open_check.js geschiedenis` 0 ·
+`node tools/teslim_check.js geschiedenis 66` temiz · **commit/push YAPMA** · kendi id'lerin dışına dokunma. agy: bitince "agy Raporu" ekle, status → REVIEW.
+
+### TASK-43 · scheikunde H1: her §'a 3 toets + 5 gemengde (examen_h1_45…58)  [status: DONE ✅ 2026-11-10 — agy payı: 51…53 TAMAMLANDI ✅]
+Kullanıcı isteği (2026-11-10): "Kimyada da aynısını yap (1. ünitede her §'a 3 test + 5 karışık), agy ve Sonnet arasında paylaştır".
+Duru H1'de 42 test çözdü (§1.1 ort. 7,6 · §1.3 7,9 · §1.4 7,4 · mix 7,1) → **zayıflık-odaklı** (skill `zwakte-toetsen`): ~10 soru zayıf kavram, ~6 diğer §'ler, ~4 aralıklı tekrar.
+§1.2 Veiligheid toetsstof DEĞİL (CLAUDE.md, h1-44 notu) → yok.
+
+| id | § | Kim |
+|---|---|---|
+| 45–47 | §1.1 Stofeigenschappen & dichtheid | Sonnet |
+| 48–50 | §1.3 Fasen, faseveranderingen & temperatuur | Sonnet |
+| **51–53** | **§1.4 Soorten mengsels en pH** | **agy** |
+| 54–58 | gemengd §1.1/§1.3/§1.4 (`"paragraaf": "mix"`) | Sonnet |
+
+**Kaynak (kitap dışı feit/terim YOK):** `inbox/2026-2027/scheikunde/scheikunde_h01_scheikunde-is-overal.ocr.txt` (kitap metni; tablo değerlerini OCR'dan alma, onderwerp'ten al) +
+`havo3/scheikunde/js/data/h1_1.js`, `h1_3.js`, `h1_4.js`, `h1_begrippen.js`. Mevcut H1 testleriyle (`examen_h1_*.js`) **aynı cümleyi kopyalama** — yeni bağlam/sayılar.
+
+**Biçim** — `tools/gen_scheikunde_h1_lib.py`: `from gen_scheikunde_h1_lib import M, W, I, O, schrijf, KORT, GETAL`;
+`EXAMENS = {nr: (paragraaf, titel, icoon, [20 vraag])}`; `schrijf(EXAMENS, seed)` → `examen_h1_<nr>.js`, **10 mc · 5 waaronwaar (≥2 onwaar) · 4 invul · 1 open**, doğru şık en uzun ≤ %40.
+İmzalar: `M(vraag, goed, [3 fout], uitleg)` · `W(vraag, True/False, uitleg)` · `I(vraag, "ant|variant", uitleg)` · `O(vraag, [sleutels], min, model, uitleg)`.
+Başlık: `"Toets 45 — §1.1 A: <konu>"`, `"… §1.1 B: …"`, `"Toets 54 — Gemengd A: …"`. Her uitleg sonunda `(§1.x)`. Ondalık **virgül**.
+Script: agy `tools/gen_scheikunde_h1_d.py` (51–53) · Sonnet `tools/gen_scheikunde_h1_e.py` (45–50) · `tools/gen_scheikunde_h1_f.py` (54–58). `tools/`'tan çalıştır.
+- **Open = KISA:** tek şey sor, tek cümle; vraag sonu `KORT`; 1–2 sleutel (alternatif `/`, ≥3 harf, soruda geçmeyen kelime, `kort` değil), `min=1`, modelantwoord ≤ 20 kelime, düz metin (alt simge yok: `cm3` değil `cm³` olabilir ama `H₂O` yazma).
+- **Invul hesap:** cevap sayı → hem virgül hem nokta kabul: `"0,75|0.75"`; birim istemiyorsan vraag sonu `GETAL`; birimli varyantları da ekle (`"273|273 K"`). Negatif: `"-183|−183|-183 °C"`.
+- **Sızıntı yok:** invul cevabı aynı testte başka soru/şıkta geçmesin (`teslim_check` LEK).
+- Hesap sorularında **sayıları elle kontrol et** (uitleg'de işlemi yaz: `ρ = m / V = 84 / 30 = 2,8 g/cm³`).
+
+**Duru'nun zayıf kavramları (2026-11-10, 318 kaçırılmış soru — ağırlık ver; gerçek yanlış cevabını çeldirici yap):**
+- §1.1 dichtheid: **V = m / ρ ve m = ρ · V** (Duru 18/24 → 432 çarptı; 300 g / 1,25 → 375 çarptı; 1,8 kg / 0,90 → 1,62); **g/cm³ → kg/m³ = ×1000** (Duru: 7,8 → 7,8; 0,85 → 8,5; "delen door 1000" doğru sandı); **L ↔ mL ↔ cm³** (0,35 L → Duru 35; 2400 cm³ → 2400000; 250 mL; 1 mL = 1 cm³; 1 m³ = 1000 L); kg ↔ g (1,8 kg = 1800 g önce!); **dichtheid = stofeigenschap, hoeveelheid-onafhankelijk** (doorzagen, glas vs zwembad, massa verdubbelt → dichtheid gelijk; "kilogram veren lichter"); metaal herkennen uit tabel (ρ berekenen, sonra tabel); drijven/zinken: ρ < 1,0 g/cm³ drijft — massa önemli değil (500 kg); milli = duizendste.
+- §1.3: **°C ↔ K: K = °C + 273, °C = K − 273** (Duru: 0 °C → −273; 4 K → 277; 90 K → 363; 21 °C → −252 → yön/işaret karışıyor); **fase bij temperatuur** (smelt- en kookpunt verilip, özellikle biri K diğeri °C: kwik 234 K/630 K; kamfer 180/204 °C; ethanol −114/78 °C; lood 328 °C → kamertemperatuur vast); namen: **rijpen** (g→s) vs sublimeren (s→g), condenseren (g→l), stollen, verdampen; notatie `stof (s) → stof (l)`; zuivere stof = vast smeltpunt (horizontaal stuk) vs mengsel = **smelttraject**; hoeveelheid verandert smeltpunt niet; ijzel/mist/rijp örnekleri.
+- §1.4: soorten mengsels — **oplossing (helder, mag gekleurd)**, **suspensie (vaste stof in vloeistof, troebel)**, **emulsie (vloeistof in vloeistof, troebel)**, **nevel (vloeistof in gas)**, **rook (vaste stof in gas)**, **schuim (gas in vloeistof/vaste stof)** (Duru: nevel/rook/emulsie/suspensie karıştırıyor; "oplossing altijd kleurloos" doğru sandı; "helder" ≠ "kleurloos"); **emulgator houdt emulsie stabiel** (maakt geen oplossing, maakt suspensie niet helder); zonder emulgator ontmengt emulsie (olie boven → kleinere dichtheid); bier/limonade = oplossing; **pH**: <7 zuur, 7 neutraal, >7 basisch; **lager = zuurder** (pH 3 zuurder dan 5; pH 9 niet zuurder dan 3); geconcentreerd zoutzuur → lagere pH dan azijn; pH-papier / indicator; ammonia basisch.
+- Gemengde toetsen: ≥3 **meerstaps-rekensommen** (eenheid omrekenen + dichtheid) ve ≥2 K/°C + fase sorusu.
+
+**Kabul:** `node tools/gate.js scheikunde` (index.html script satırlarını **Opus ekler**; kural 11 kırmızı olabilir) ·
+`node tools/open_check.js scheikunde` 0 · `node tools/teslim_check.js scheikunde 45 2>&1 | grep "h1-\(4[5-9]\|5[0-8]\)"` temiz · **commit/push YAPMA**. Kendi id'lerin dışındaki dosyalara dokunma.
+agy: bitince bu bölüme "agy Raporu" ekle, status → REVIEW.
+- **agy Raporu (2026-11-10 teslim — 51…53)**:
+  - `tools/gen_scheikunde_h1_d.py` yazıldı; `examen_h1_51.js` t/m `examen_h1_53.js` (§1.4 Soorten mengsels en pH) üretildi.
+  - Test kapsamı:
+    - 51: Toets 51 — §1.4 A: Oplossingen, suspensies en troebele mengsels (oplossing helder mag gekleurd zijn [thee/limonade], suspensie troebel en bezinkt [krijt/vruchtvlees/schuurmiddel], nevel [mist/haarlak], rook [houtkachel], schuim [afwas/slagroom], dichtheid interleaving 0,80 g/cm³, rijpen gas→vast)
+    - 52: Toets 52 — §1.4 B: Emulsies, emulgatoren en ontmengen (emulsie troebel twee vloeistoffen [olie/water, melk, crème], ontmengen in twee lagen, kleinste dichtheid drijft bovenop, emulgator [eigeel/lecithine] voorkomt ontmengen maar maakt geen oplossing, carbonfiber is composiet geen emulsie, stoltraject kaarsvet)
+    - 53: Toets 53 — §1.4 C: De pH-schaal, zuren, basen en indicatoren (pH-schaal 0–14, neutraal pH 7 [zuiver water], zuur < 7 en lager = zuurder [pH 1 zuurder dan pH 4], basisch > 7 [ammonia, ontstopper], verdunnen met water brengt pH richting 7, pH-papier vergelijken met doosje [rood=zuur, blauw/paars=basisch], zoutzuur vs azijn agressiviteit, rodekoolsap indicator)
+  - Biçim ve Denge:
+    - Her test tam 20 soru: 10 MC · 5 Waaronwaar (tam 2 onwaar = %40) · 4 Invul · 1 Open.
+    - Doğru MC şıkkı en uzun: 51: 4/10, 52: 0/10, 53: 3/10 (tümü ≤ %40 kuralı dahilinde).
+    - Doğru MC şıkkı tek başına en kısa: 51: 2/10, 52: 1/10, 53: 2/10 (tümü ≤ %40, teslim_check KISA kuralına uygun).
+    - Şık dağılımı: A/B/C/D dengeli dağıtıldı (her pozisyon ≤ %40).
+    - Open sorular kısa: tek şey sorulur, vraag sonu " <i>(Eén korte zin is genoeg.)</i>", modelantwoord ≤ 20 kelime, 1–2 sleutelwoord (alternatifler / ile, min=1).
+  - Denetimler:
+    - `node --check havo3/scheikunde/js/data/examen_h1_{51..53}.js` → hatasız.
+    - `node tools/open_check.js scheikunde` → 1642 open soru, **0 sorun (temiz)**.
+    - `node tools/teslim_check.js scheikunde 45 2>&1 | grep "h1-\(4[5-9]\|5[0-8]\)"` → **temiz (0 LEK, 0 KOPYA, 0 KISA)**.
+    - `node tools/gate.js scheikunde` → **18/18 geçti (tam yeşil)**.
+  - Git: commit/push yapılmadı. Opus'a devredildi.
+
+- **Opus denetimi (2026-11-10):** 45–50 + 54–58 Sonnet, 51–53 agy. Düzeltmeler: ethanol smeltpunt 150 K → 159 K (48, 50); gietijzer 7,2 ≠ ijzer 7,9 (56); 52 "zuiver kaarsvet … stoltraject" çelişkisi; 53 open = 53#3 mc'nin kopyası → pH-papier blauw sorusu. gate 18/18, open_check 0, teslim_check temiz; index.html + manifest bağlı.
+
 ### TASK-42 · geschiedenis H1: her §'a 3 toets + 5 gemengde (examen_46…65)  [status: DONE ✅ 2026-11-10 — agy payı: 55…60 TAMAMLANDI ✅]
 Kullanıcı isteği (2026-11-10): "Tarihte 1. ünitede hem ayrı ayrı 3'er test hem de karışık 5 test; agy ve Sonnet arasında paylaştır".
 Duru H1'de 12 test çözdü (ort. 7,5) → **zayıflık-odaklı** (skill `zwakte-toetsen`): ~10 soru zayıf kavram, ~6 diğer §'ler, ~4 aralıklı tekrar.
