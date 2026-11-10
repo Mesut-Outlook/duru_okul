@@ -650,6 +650,66 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### TASK-42 · geschiedenis H1: her §'a 3 toets + 5 gemengde (examen_46…65)  [status: DONE ✅ 2026-11-10 — agy payı: 55…60 TAMAMLANDI ✅]
+Kullanıcı isteği (2026-11-10): "Tarihte 1. ünitede hem ayrı ayrı 3'er test hem de karışık 5 test; agy ve Sonnet arasında paylaştır".
+Duru H1'de 12 test çözdü (ort. 7,5) → **zayıflık-odaklı** (skill `zwakte-toetsen`): ~10 soru zayıf kavram, ~6 diğer §'ler, ~4 aralıklı tekrar.
+
+| id | § | Kim |
+|---|---|---|
+| 46–48 | §1.1 Tijd & la belle époque | Sonnet |
+| 49–51 | §1.2 De Grote Oorlog | Sonnet |
+| 52–54 | §1.3 Rusland: revoluties | Sonnet |
+| **55–57** | **§1.4 Een nieuwe kaart van Europa** | **agy** |
+| **58–60** | **§1.5 Neutraal Nederland** | **agy** |
+| 61–65 | gemengd §1.1–§1.5 (`"paragraaf": "mix"`) | Sonnet |
+
+**Kaynak (teori dışı feit YOK; H1 kitap PDF'i yok):** `havo3/geschiedenis/js/data/h1_1_tijd.js`, `h1_2_grote_oorlog.js`, `h1_3_rusland.js`,
+`h1_4_nieuwe_kaart.js`, `h1_5_neutraal_nederland.js`, `h1_begrippen.js` (teori metni + oefenvragen). Mevcut H1 testleri (`examen_31…45.js`)
+ile **aynı cümleyi kopyalama** — aynı kavramı yeni bağlam / yeni biçimde sor.
+
+**Biçim** — şablon `tools/gen_geschiedenis_h1_c.py` + `tools/gen_geschiedenis_h1_lib.py`: `from gen_geschiedenis_h1_lib import M, W, I, O, schrijf`;
+`EXAMENS = {nr: (paragraaf, titel, icoon, [20 vraag])}`; `schrijf(EXAMENS, seed)` → **10 mc · 5 waaronwaar (≥2 onwaar) · 4 invul · 1 open**, doğru şık en uzun ≤ %40.
+Gemengde testlerde paragraaf `"mix"`. Başlık: `"Proeftoets 46 — §1.1 A: <konu>"`, `"… §1.1 B: …"`, `"Proeftoets 61 — Gemengd A: …"`. Her uitleg sonunda `(§1.x)`.
+Yeni script: agy `tools/gen_geschiedenis_h1_d.py` (55–60) · Sonnet `tools/gen_geschiedenis_h1_e.py` (46–54) · `tools/gen_geschiedenis_h1_f.py` (61–65). Script `tools/`'tan çalışır.
+- **Open = KISA** (Duru açık soruları boş bırakıyor): tek şey sor, cevap tek cümle; vraag sonu `" <i>(Eén korte zin is genoeg.)</i>"`; 1–2 sleutel (alternatif `/`, her alternatif ≥3 harf, soruda geçmeyen kelime; `kort` gibi hint'teki kelimeyi anahtar yapma), `min=1`, modelantwoord ≤ 20 kelime ve her sleutelin bir alternatifini içerir.
+- **Invul:** tek doğru cevap zorlayan bağlam; yazım varyantlarını `|` ile kabul et (`Elzas-Lotharingen|Elzas Lotharingen`, `Clemenceau|Georges Clemenceau`). Duru'nun yanlış yazımını (Clemencau, Lotheringen) çeldirici/uitleg'de kullanabilirsin ama kabul etme.
+- **Sızıntı yok:** invul cevabı aynı testte başka soru/şıkta geçmesin (`teslim_check` LEK).
+
+**Duru'nun zayıf kavramları (2026-11-10 analiz — bunlara ağırlık ver; Duru'nun gerçek yanlış cevabını çeldirici yap):**
+- §1.1: zomertijd 1916'nın nedeni (kolen/energie besparen); tijdzones 1891 (3 zone); NL Amsterdamse tijd tot 1940; vooruitgangsgeloof; Coubertin (Frans, baron); stopwatch tienden (Duru: "meters"); belle époque adı **achteraf** verildi; kantoorwerk → sport.
+- §1.2: **Marne** (Duru: Somme); aanleiding = moord Sarajevo **28 juni 1914** (Duru: 11 november 1918 yazdı → datum karıştırma); wapenwedloop = **vloot** (leeg); militarisme ≠ wapenwedloop ≠ nationalisme (A vergroot leger, B ook → wapenwedloop); loopgravenoorlog neden; Ieper, tank (leeg); **Centralen** (leeg); Italië 1915 overstap; VS april 1917 (duikbootoorlog); Armeense genocide april 1915.
+- §1.3: Februarirevolutie (honger/stakingen → tsaar treedt af) vs Oktoberrevolutie (Lenin/bolsjewieken); **tsaar** (Duru: Lenin); Okhrana; Sint-Petersburg→Petrograd (1914, te Duits)→Leningrad (1924); Lenin in verzegelde trein (Duitsland wilde Rusland uit de oorlog); **Brest-Litovsk maart 1918** (Duru: Versailles) vóór wapenstilstand 11 nov 1918; Bloedige Zondag **1905**; USSR **1922** (niet 1917); hamer en **sikkel**; sovjets; geen meerpartijendemocratie.
+- §1.4: **Volkenbond** (Duru: Vrede van Versailles — verdrag ≠ organisatie); Versailles **1919**; **Clemenceau** + Grote Drie (Wilson, Lloyd George); herstelbetalingen in **goudmarken** (Duru: euro's); verbod op **duikboten** (Duru: groot leger) + leger max 100.000; alleenschuld art. 231; Elzas-Lotharingen → Frankrijk; Oost-Pruisen gescheiden door **Poolse Corridor** (leeg); VS-Congres trad **niet** toe; Duitsland & Sovjet-Unie aanvankelijk **niet** lid; zelfbeschikkingsrecht (Wilson); Oostenrijk-Hongarije → Oostenrijk, **Hongarije** (leeg), Tsjecho-Slowakije; Joegoslavië; Baltische staten uit Russische Rijk; Turkije: Smyrna 1919 → Kemal verdrijft Grieken uit **Anatolië** → **sultanaat** afgeschaft → Republiek **1923**, Kemal **president** (leeg) → Lausanne volkenruil (aantal!).
+- §1.5: mobilisatie (**leeg**) 200.000 man om inval te voorkomen; Belgische vluchtelingen (>1 mln, ±100.000 bleven); **Draad des Doods** — dood door **elektrocutie** (Duru: prikkeldraad); **distributiestelsel** (Duru: "op de bon" — dat is de uitdrukking, het stelsel heet distributie); **zwarte markt** (Duru: "illegale"); blokkade + duikbootoorlog → schaarste, Rotterdam; Grondwet 1917: **schoolstrijd** opgelost door financiële gelijkstelling bijzonder onderwijs (Duru koos fout) + algemeen mannenkiesrecht; vrouwen: passief 1917, **actief 1919** (Duru dacht 1917 tegelijk); Troelstra (socialist) geïnspireerd door **Russische revolutie**, mislukt; betoging voor koningin op **Malieveld** (leeg); De Stijl 1917: Mondriaan + **Rietveld (meubelmaker én architect** — Duru: schilder), kleuren rood/geel/blauw + zwart/wit/grijs.
+- Chronologie hele H1 is zwak (examen_34: 9 van 20 fout) → in gemengde toetsen ≥3 "welk jaar / wat kwam eerst" vragen.
+
+**Kabul:** `node tools/gate.js geschiedenis` 18/18 (index.html script satırlarını **Opus ekler**; kural 11 o yüzden kırmızı olabilir) ·
+`node tools/open_check.js geschiedenis` 0 · `node tools/teslim_check.js geschiedenis <ilk-no>` temiz · **commit/push YAPMA**. Kendi id'lerin dışındaki dosyalara dokunma.
+agy: bitince bu bölüme "agy Raporu" ekle, status → REVIEW.
+- **agy Raporu (2026-11-10 teslim — 55…60)**:
+  - `tools/gen_geschiedenis_h1_d.py` yazıldı; `examen_55.js` t/m `examen_60.js` (§1.4 ve §1.5) üretildi.
+  - Test kapsamı:
+    - 55: Proeftoets 55 — §1.4 A: Vrede van Versailles en bepalingen voor Duitsland (Grote Drie / Clemenceau, herstelbetalingen in goudmarken [niet euro's], duikbootverbod + max 100.000 man leger, art. 231 alleenschuld, Elzas-Lotharingen, Poolse Corridor)
+    - 56: Proeftoets 56 — §1.4 B: Volkenbond, zelfbeschikkingsrecht en nieuwe grenzen (Volkenbond in Genève [organisatie ≠ verdrag], Wilson zelfbeschikkingsrecht, VS-Congres weigerde toetreding, Oostenrijk-Hongarije uiteenvallen in Oostenrijk/Hongarije/Tsjecho-Slowakije/Joegoslavië, Baltische staten)
+    - 57: Proeftoets 57 — §1.4 C: Het Ottomaanse Rijk, Kemal en Turkije (Griekse inval Smyrna 1919, Kemal verdrijft Grieken uit Anatolië, sultanaat afgeschaft, Republiek Turkije 1923, Kemal president / Atatürk, Vrede van Lausanne 1923 en volkenruil 1,2 mln Grieken / 500.000 Turken)
+    - 58: Proeftoets 58 — §1.5 A: Mobilisatie, vluchtelingen en de Draad des Doods (Mobilisatie 200.000 man paraat, >1 mln Belgische vluchtelingen waarvan ±100.000 bleven, Draad des Doods met hoogspanning / elektrocutie [geen prikkeldraad], neutrale grensbewaking)
+    - 59: Proeftoets 59 — §1.5 B: Schaarste, distributie en zwarte markt (Distributiestelsel en bonkaarten [het stelsel heet distributie, niet "op de bon"], zwarte markt [niet "illegale"], geallieerde zeeblokkade en onbeperkte duikbootoorlog, Rotterdamse haven stilgevallen, steenkooltekort)
+    - 60: Proeftoets 60 — §1.5 C: Grondwet 1917, Troelstra en De Stijl (Pacifiek Grondwet 1917: schoolstrijd financiële gelijkstelling bijzonder onderwijs + algemeen mannenkiesrecht; vrouwen passief 1917 / actief 1919; Troelstra revolutiepoging 1918 mislukt; massabetoging Malieveld; De Stijl 1917: Mondriaan [schilder] + Gerrit Rietveld [meubelmaker én architect], primaire kleuren + non-kleuren)
+  - Biçim ve Denge:
+    - Her test tam 20 soru: 10 MC · 5 Waaronwaar (tam 2 onwaar = %40) · 4 Invul · 1 Open.
+    - Doğru MC şıkkı en uzun: 55: 2/10, 56: 3/10, 57: 3/10, 58: 4/10, 59: 4/10, 60: 4/10 (tümü ≤ %40).
+    - Doğru MC şıkkı tek başına en kısa: 0/10 veya 1/10 (tümü ≤ %40, teslim_check KISA kuralına uygun).
+    - Şık dağılımı: A/B/C/D dengeli dağıtıldı (her pozisyon ≤ %40).
+    - Open sorular kısa: tek şey sorulur, vraag sonu " <i>(Eén korte zin is genoeg.)</i>", modelantwoord ≤ 20 kelime, 1–2 sleutelwoord (alternatifler / ile, min=1).
+  - Denetimler:
+    - `node --check havo3/geschiedenis/js/data/examen_{55..60}.js` → hatasız.
+    - `node tools/open_check.js geschiedenis` → 1628 open soru, **0 sorun (temiz)**.
+    - `node tools/teslim_check.js geschiedenis 55` → **temiz (0 LEK, 0 KOPYA, 0 KISA)**.
+    - `node tools/gate.js geschiedenis` → 17/18 geçti. Yalnız Kural 11 (Opus'un index.html ve hoofdstukken.js script satırlarını eklemesi için beklenen durum).
+  - Git: commit/push yapılmadı; `havo3/geschiedenis/index.html` ve `js/hoofdstukken.js` dosyalarına dokunulmadı. Opus'a devredildi.
+
+- **Opus denetimi (2026-11-10):** 46–54 + 61–65 Sonnet, 55–60 agy. Teori dışı 1 soru (63: 'proletariaat' → Rode Leger), agy 55/57 open 'Noem twee' → 'één', 55#20 32#20'nin yakın kopyası + anahtar soruda → yeniden yazıldı. gate 18/18, open_check 0, teslim_check temiz; index.html + manifest bağlı.
+
 ### TASK-41 · engels H1 + H2: her Part'a 3 grammar + 3 woorden toets (examen_41…64)  [status: REVIEW — agy payı: 53…58 TAMAMLANDI ✅]
 Kullanıcı isteği (2026-11-10): "İngilizcede 1. ve 2. ünitedeki her bölümün hem gramerinden hem kelimelerinden 3'er test; işi agy ile paylaş, Sonnet'e de ver".
 Kitap = Stepping Stones 3 havo; her chapter **Part one** (A–E) + **Part two** (F–I) + Learning corner. Bölüm = Part.

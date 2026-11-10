@@ -17,5 +17,10 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "mid", tekst: "Verwijzen: 'het meisje die' (doğrusu dat), regering/gemeente/politie için 'zijn/hun' (doğrusu haar), eşyalar için 'het' (doğrusu hem); hun/hen karışık." },
     { ernst: "hoog", tekst: "Toets 72'yi üç kez aynı yanlış cevaplarla çözdü: sonuçtaki açıklamaları okumuyor. 'het meisje dat' (lidwoord karar verir, cinsiyet değil), eşyalar için 'hem', regering için 'haar' kurallarını birlikte konuşmak faydalı olur." },
     { ernst: "mid", tekst: "Prova sınavları (68–70): 10–14 / 20. Foutentraining 71–73: 9–16 / 20. 74–75 aynı hatalara farklı yoldan (adım adım, karşılaştırmalı) gidiyor." }
+  ] },
+  geschiedenis: { datum: "2026-11-10", punten: [
+    { ernst: "hoog", tekst: "H1 kronolojisi zayıf: Versailles 1919, Türkiye 1923, Kanlı Pazar 1905, SSCB 1922 gibi yılları karıştırıyor; Sarajevo suikastine '11 november 1918' yazdı (karışık test 34: 20 sorudan 9'u yanlış)." },
+    { ernst: "mid", tekst: "Benzer adları karıştırıyor: Volkenbond ↔ Vrede van Versailles, Brest-Litovsk ↔ Versailles, tsaar ↔ Lenin, Marne ↔ Somme." },
+    { ernst: "mid", tekst: "Kavramları kendi kelimesiyle yazıyor ama kabul edilmiyor: 'op de bon' (distributiestelsel), 'illegale' (zwarte markt), 'prikkeldraad' (elektrocutie). Yeni testler 46–65 bunlara gidiyor." }
   ] }
 };
