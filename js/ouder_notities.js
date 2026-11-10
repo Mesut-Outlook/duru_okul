@@ -21,7 +21,8 @@ window.DURU_OUDER_NOTITIES = {
   scheikunde: { datum: "2026-11-10", punten: [
     { ernst: "hoog", tekst: "Yoğunluk hesabında formülü ters kuruyor: V = m / ρ yerine çarpıyor (18 g / 24 cm³ → 432 yazdı); g/cm³ → kg/m³ için ×1000 yapmıyor (7,8 → 7,8); L ↔ cm³ dönüşümünü karıştırıyor (0,35 L → 35)." },
     { ernst: "mid", tekst: "°C ↔ K dönüşümünde yön/işaret hatası: 0 °C → −273, 4 K → 277, 21 °C → −252. Erime/kaynama noktası K ve °C karışık verilince maddenin halini bulamıyor." },
-    { ernst: "mid", tekst: "Karışım türlerini karıştırıyor (nevel ↔ rook ↔ emulsie ↔ suspensie); 'çözelti hep renksizdir' sanıyor; emülgatörün çözelti yaptığını düşünüyor. Yeni testler h1-45…58 bunlara gidiyor." }
+    { ernst: "mid", tekst: "Karışım türlerini karıştırıyor (nevel ↔ rook ↔ emulsie ↔ suspensie); 'çözelti hep renksizdir' sanıyor; emülgatörün çözelti yaptığını düşünüyor. Yeni testler h1-45…58 bunlara gidiyor." },
+    { ernst: "mid", tekst: "H2 §2.1 (son 10 deneme): katı maddede moleküllerin 'tamamen durduğunu' sanıyor (doğrusu: yerinde titreşir), sublimeren ↔ condenseren karıştırıyor, triljoen = 18 sıfır (6/12 yazdı), mikro ↔ makro düzey karışık; açık soruların çoğu boş. Herhaling toetsen h1-59…60, h2-62…67 bunlara gidiyor." }
   ] },
   geschiedenis: { datum: "2026-11-10", punten: [
     { ernst: "hoog", tekst: "H1 kronolojisi zayıf: Versailles 1919, Türkiye 1923, Kanlı Pazar 1905, SSCB 1922 gibi yılları karıştırıyor; Sarajevo suikastine '11 november 1918' yazdı (karışık test 34: 20 sorudan 9'u yanlış)." },

@@ -650,6 +650,49 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### TASK-45 · scheikunde: son 10 denemenin yanlışlarından herhaling toetsen (h1-59…60, h2-62…67)  [status: DONE ✅ 2026-11-10 — agy payı: h2-64…67 TAMAMLANDI ✅]
+Kullanıcı isteği (2026-11-10): "Kimyada da son 10 sınavdaki yanlışlardan test üret" (tarih TASK-44 gibi: hata olan her bölüme 2 test; agy + Sonnet).
+Son 10 deneme (06-10 → 11-10): h2-32, h1-3, h1-32, h2-15, h2-50 (×2), h2-13, h2-14, h2-6, h2-51 → 56 yanlış/boş. Açık sorular çoğunlukla **boş** → kısa open.
+**Ağırlık: aşağıdaki yanlışlar**, YENİ cümle/bağlam/biçim (mevcut `examen_h1_*`/`examen_h2_*` cümlelerini kopyalama). Kitap-metni ayrıntısı (Blauwe honden, K'Nex, "achter in het boek", "opgave 18") **sorma** — kavrama git.
+
+| id | dosya | § | Kim |
+|---|---|---|---|
+| h1-59–60 | `examen_h1_59/60.js` | §1.3 | Sonnet |
+| h2-62–63 | `examen_h2_62/63.js` | §2.1 | Sonnet |
+| **h2-64–65** | `examen_h2_64/65.js` | **§2.2** | **agy (TAMAMLANDI ✅)** |
+| **h2-66–67** | `examen_h2_66/67.js` | **H2 gemengd + begrippen (`"mix"`)** | **agy (TAMAMLANDI ✅)** |
+
+**Biçim** = TASK-43 (`tools/gen_scheikunde_h1_lib.py`; H2 için `schrijf(EXAMENS, seed, hf=2)`). Başlık `"Toets 59 — §1.3 Herhaling A: …"`, `"Toets 64 — §2.2 Herhaling A: …"`, `"Toets 66 — H2 Herhaling gemengd A: …"`.
+Script: Sonnet `tools/gen_scheikunde_herh_s.py` · agy `tools/gen_scheikunde_herh_a.py`. **Kaynak:** `inbox/2026-2027/scheikunde/scheikunde_h01_*.ocr.txt`, `scheikunde_h02_*.ocr.txt` + `havo3/scheikunde/js/data/h1_3.js`, `h2_*.js`, `h2_begrippen.js`. Kitap dışı terim YOK.
+
+**Duru'nun yanlışları (çeldirici = gerçek cevabı):**
+- §1.3: mengsel stolt → temperatuur **zakt langzaam** (Duru: stijgt eerst, blijft gelijk); meetreeks 20, 35, 50, 50, 50, 65 → smeltpunt **50** (Duru: 65 = laatste getal); tijdens koken van een mengsel temperatuur **stijgt** (Duru: gelijk); **kookpunt** (boş); temperatuur-tijddiagram zuivere stof (horizontaal) vs mengsel (schuin) — open boş (2×); notatie verdampen `alcohol (l) → alcohol (g)` (boş).
+- §2.1: **vaste stof: moleculen trillen op hun plek** (Duru 2×: staan helemaal stil / bewegen niet); **vloeistof: moleculen raken elkaar nog** (Duru: onwaar), bewegen langs elkaar → schenkbaar; **gas: moleculen botsen en gaan weer weg** (Duru: bewegen snel); model "dicht gestapeld + trillen" → stof die niet van vorm verandert (Duru: schenkbaar); **sublimeren** (vast→gas) ≠ condenseren (Duru 2×); **smelten** (boş); **microniveau** = deeltjes die je niet kunt zien, ook niet met microscoop (Duru: met loep/microscoop); **macroniveau** = met zintuigen/meten (kookpunt) (Duru koos "één soort moleculen"); geurstokje → kleine onzichtbare deeltjes bewegen vrij (Duru: één groot deeltje); zuiver water → **alle moleculen hetzelfde** (Duru: allemaal verschillend); **drie soorten moleculen = mengsel** (Duru: niet-ontleedbare stof); suiker bestaat uit **suikermoleculen**; **triljoen = 1 met 18 nullen** (Duru: 12, 6, 10000 — 3×).
+- §2.2: moleculen zijn **niet** de kleinste deeltjes (atomen) (Duru: waar); **ball-stick** vs **space-filling** model (atomen tegen elkaar) (Duru: atoommodel / periodiek systeem); **118** atoomsoorten (Duru: meer dan 118 = waar); symbolen met andere letter dan naam: ijzer Fe, goud Au, zilver Ag, kwik Hg, lood Pb (boş); aceton en glucose zelfde atoomsoorten maar andere moleculen (aantallen/rangschikking) (boş); glucose 3 atoomsoorten (C, H, O).
+- H2 begrippen: elke atoomsoort heeft een **eigen symbool** (Duru: dezelfde relatieve atoommassa); met relatieve atoommassa's bereken je de **molecuulmassa** (Duru: aantal protonen); **isotoop** = zelfde atoomnummer, ander aantal neutronen → atoommassa in PS is gemiddelde (boş); macro/micro + waarom model (moleculen te klein).
+
+**Kabul:** `node tools/gate.js scheikunde` (index.html'i Opus bağlar) · `node tools/open_check.js scheikunde` 0 ·
+`node tools/teslim_check.js scheikunde 59 2>&1 | grep "h1-\(59\|60\)\|h2-6[2-7]"` boş · **commit/push YAPMA** · yalnız kendi id'lerin. agy: bitince "agy Raporu", status → REVIEW.
+
+#### agy Raporu (2026-11-10) — h2-64…67 TAMAMLANDI ✅
+- **Üretilen Sınavlar:**
+  - `examen_h2_64.js` (§2.2 Herhaling A: Bouw van moleculen en atomen) — 20 soru (10 MC, 5 W/O, 4 Invul, 1 Open)
+  - `examen_h2_65.js` (§2.2 Herhaling B: Modellen, symbolen en formules) — 20 soru (10 MC, 5 W/O, 4 Invul, 1 Open)
+  - `examen_h2_66.js` (H2 Herhaling gemengd A: Begrippen, macro en micro, `"paragraaf": "mix"`) — 20 soru (10 MC, 5 W/O, 4 Invul, 1 Open)
+  - `examen_h2_67.js` (H2 Herhaling gemengd B: Atomen, isotopen en massa, `"paragraaf": "mix"`) — 20 soru (10 MC, 5 W/O, 4 Invul, 1 Open)
+- **Betiği:** `tools/gen_scheikunde_herh_a.py` (deterministik seed: 20261110, `hf=2`).
+- **Duru'nun Yanılgı Kapsamı:** 118 atoomsoorten, molecuul vs atoom, aceton vs glucose (3 atoomsoorten, rangschikking), Dalton atoomtheorie, ball-and-stick vs space-filling (stokjes vs bollen tegen elkaar), afwijkende symbolen (Fe, Au, Ag, Hg, Pb, Sn, Cu), coëfficiënt vs index, BrINClHOF, macro vs micro, triljoen = 10^18, mengsel vs zuivere stof, kookpunt/kooktraject/smeltpunt, molecuulmassa (H2O, CO2, NH3, CH4), isotopen (protonen vs neutronen), gewogen gemiddelde Cl (35,45 u), kerndeeltjes ve ladingen.
+- **Doğrulama Sonuçları:**
+  - Doğru şık en uzun aandeel: 64 (%30 - 3/10), 65 (%30 - 3/10), 66 (%30 - 3/10), 67 (%30 - 3/10) — hepsi $\le 40\%$.
+  - Doğru şık tek başına en kısa: 64 (%20 - 2/10), 65 (%0 - 0/10), 66 (%0 - 0/10), 67 (%0 - 0/10) — hepsi $\le 40\%$.
+  - `node --check havo3/scheikunde/js/data/examen_h2_{64..67}.js`: Sözdizimi hatasız.
+  - `node tools/open_check.js scheikunde`: 1660 open soru tarandı, 0 ihlal (`✓ sorun yok`). Model cevaplar tam doğru (`"goed"`), soru metni yapıştırma 0 puan.
+  - `node tools/teslim_check.js scheikunde 59 2>&1 | grep -E '\b6[4-7]#'`: 0 bulgu (0 LEK, 0 KOPYA, 0 TERİM).
+  - `node tools/gate.js scheikunde`: agy testlerinde hiçbir ihlal yok (kural 7'deki 3 ihlal Sonnet'in dosyalarında, kural 11 index.html entegrasyonu Opus'a ait).
+- **Devir:** `havo3/scheikunde/index.html` bağlantısı, genel entegrasyon kontrolü, commit ve push işlemleri için Opus'a devredildi.
+
+- **Opus denetimi (2026-11-10):** Sonnet h1-60#5 (yalnız kookpunt → fase belirsiz; smeltpunt eklendi). agy: kitap dışı Latince adlar (Argentum/Plumbum/Cuprum/…) ve "ruimtevullend" çıkarıldı; h2-66#17 cevabı soruda (10^18) → "triljoen"; h2-64#16 "118" ~ şık → Ag; h2-65 Cu-invul = W#14 cevabı → H2O2 atoomaantal. open_check 0, teslim_check temiz.
+
 ### TASK-44 · geschiedenis H1: son 10 denemenin yanlışlarından her §'a 2 toets (examen_66…75)  [status: DONE ✅ 2026-11-10 — agy payı: 72…75 TAMAMLANDI ✅]
 Kullanıcı isteği (2026-11-10): "Duru'nun tarihte son 10 sınavda yaptığı yanlış sorulardan ve konulardan oluşan, her bölümde 2'şer yeni test; agy ile Sonnet paylaşsın".
 Son 10 deneme (bugün 20:27–20:51): 45, 43 (×4), 37, 35, 32, 55 (×2) → 60 yanlış/boş. **Ağırlık: bu yanlışlar** (aynı kavram, YENİ cümle/bağlam/biçim — eski soruyu kopyalama);

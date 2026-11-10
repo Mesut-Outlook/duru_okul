@@ -9,8 +9,8 @@ KORT = " <i>(Eén korte zin is genoeg.)</i>"
 GETAL = " <i>(Alleen het getal.)</i>"
 
 
-def schrijf(examens, seed):
-    """examens = {nr: (paragraaf, titel, icoon, [vragen])}; schrijft examen_h1_<nr>.js."""
+def schrijf(examens, seed, hf=1):
+    """examens = {nr: (paragraaf, titel, icoon, [vragen])}; schrijft examen_h<hf>_<nr>.js (hf=2 voor H2)."""
     rng = random.Random(seed)
     for nr, (par, titel, icoon, vr) in examens.items():
         t = [v["type"] for v in vr]
@@ -18,20 +18,20 @@ def schrijf(examens, seed):
         assert sum(v["type"] == "waaronwaar" and v["antwoord"] is False for v in vr) >= 2, nr
         vr = plaats([dict(v) for v in vr], rng)
         n, tot = langste_aandeel(vr)
-        assert n / tot <= 0.4, f"examen_h1_{nr}: juiste optie {n}/{tot} keer langste"
+        assert n / tot <= 0.4, f"examen_h{hf}_{nr}: juiste optie {n}/{tot} keer langste"
         for i, v in enumerate(vr, 1):
-            vr[i - 1] = {"id": f"sch-h1-{nr}_v{i}", **v}
+            vr[i - 1] = {"id": f"sch-h{hf}-{nr}_v{i}", **v}
         ex = {
-            "id": f"ex-h3-sch-h1-{nr}",
+            "id": f"ex-h3-sch-h{hf}-{nr}",
             "titel": titel,
-            "vak": "Scheikunde · HAVO 3 (H1)",
-            "hoofdstuk": 1,
+            "vak": f"Scheikunde · HAVO 3 (H{hf})",
+            "hoofdstuk": hf,
             "paragraaf": par,
             "icoon": icoon,
             "duurMin": 25,
             "vragen": vr,
         }
         kop = f"/* =========================================================\n   Duru's Scheikunde (HAVO 3) — {titel}\n   ========================================================= */\n"
-        with open(os.path.join(ROOT, f"examen_h1_{nr}.js"), 'w', encoding='utf-8') as f:
+        with open(os.path.join(ROOT, f"examen_h{hf}_{nr}.js"), 'w', encoding='utf-8') as f:
             f.write(kop + "DURU.registerExamen(" + json.dumps(ex, ensure_ascii=False, indent=2) + ");\n")
-        print(f"examen_h1_{nr}: 20 vragen, juiste optie langste {n}/{tot}")
+        print(f"examen_h{hf}_{nr}: 20 vragen, juiste optie langste {n}/{tot}")
