@@ -650,6 +650,65 @@ Yeni sınavlar: 20 soru, nokta. Ayrıca yalnız kendi dosyalarını `git add` et
 - Opus denetimi: bron 4/9/13 (bio), bron 11/21/23 (ak) PDF'e karşı doğrulandı. **Kural 19 en sık kusurdu** (invul cevabı mc şıkkında): bir Sonnet reviewer 40 testte düzeltti; 116–120 §1.2 etiketiyle yazılmıştı → düzeltildi. Kalan: bazı waaronwaar ifadeleri mc doğrusunu tekrar ediyor (bio 48, 49, 52, 54, 58).
 
 ## Pending Tasks
+### TASK-41 · engels H1 + H2: her Part'a 3 grammar + 3 woorden toets (examen_41…64)  [status: REVIEW — agy payı: 53…58 TAMAMLANDI ✅]
+Kullanıcı isteği (2026-11-10): "İngilizcede 1. ve 2. ünitedeki her bölümün hem gramerinden hem kelimelerinden 3'er test; işi agy ile paylaş, Sonnet'e de ver".
+Kitap = Stepping Stones 3 havo; her chapter **Part one** (A–E) + **Part two** (F–I) + Learning corner. Bölüm = Part.
+
+| id | Chapter / Part | İçerik | Kim |
+|---|---|---|---|
+| 41–43 | H1 Part one | Grammar: compounds some-/any-/every-/no- + gerund vs to-infinitive | Sonnet |
+| 44–46 | H1 Part one | Woorden: Theme words Describing people, Social interactions, Keeping a conversation going (+ A Watching/C Reading kelimeleri) | Sonnet |
+| 47–49 | H1 Part two | Grammar: questions and negations (present & past, to be / to do / modals) | Sonnet |
+| 50–52 | H1 Part two | Woorden: Theme words Expressing (dis)agreement + Countries & Cultures / F Listening / G Reading kelimeleri | Sonnet |
+| **53–55** | **H2 Part one** | **Grammar: past perfect + prepositions of time and place** | **agy** |
+| **56–58** | **H2 Part one** | **Woorden: Theme words crime & courtroom (Part one) + Watching/Reading kelimeleri** | **agy** |
+| 59–61 | H2 Part two | Grammar: active vs passive voice | Sonnet |
+| 62–64 | H2 Part two | Woorden: Theme words Part two + Listening/Reading kelimeleri | Sonnet |
+
+**Kaynak (kitap dışı kelime/kural YOK):** `inbox/2026-2027/engels/engels_h01_the-world-around-you.ocr.txt` — Part one satır 63–1170 (p.A38–A57), Part two 1172–2113 (A58–A75),
+Learning corner Vocabulary 2114–2327 (Theme words listesi NL karşılıklarıyla, A76–A77), Grammar özeti 2383–2460 (A79).
+`engels_h02_crime.ocr.txt` — Part one 1–1062 (A84–A105), Part two 1063–1828 (A106–…), Vocabulary 1829–2098, Grammar özeti 2143–sonu.
+Hangi Theme word'ün hangi Part'a ait olduğunu Part içindeki "THEME WORDS" kutularından çıkar; Learning corner listesindeki NL çeviriyi kullan.
+OCR bozuk kelimelerde emin değilsen o kelimeyi kullanma.
+
+**Biçim** — şablon `tools/gen_engels_h1_boek.py`: aynı `M/W/I/O`, `plaats()`, `rangschik()` (PATROON: 9 mc · 5 waaronwaar (≥2 onwaar) · 5 invul · 1 open = 20), `langste_aandeel` ≤ 0,4.
+Yardımcıları kopyala veya `from gen_engels_h1_boek import M, W, I, O, plaats, rangschik, langste_aandeel` (script `tools/`'tan çalışır; dosya `__main__` korumalı).
+Yeni script: `tools/gen_engels_h<ch>_part<1|2>.py` → `havo3/engels/js/data/examen_<n>.js`; id `ex-h3-eng-<n>`, `"hoofdstuk": <ch>`,
+`"hoofdstukTitel"` mevcut testlerdeki gibi ("Hoofdstuk 1 — The world around you" / "Hoofdstuk 2 — Crime"), `"vak": "Engels · HAVO 3 (H<ch>)"`, `"duurMin": 25`.
+Başlık: `"Part one · Grammar A — compounds & gerunds (boek)"`, `"… Grammar B — …"`, `"… Grammar C — …"`, `"Part one · Woorden A — …"` vb. (A/B/C = 3 test).
+- Grammar testleri: kitabın kuralları ve örnek türleri (kitaptaki cümleleri kopyalama, yeni cümle kur). Fiil formu invul'da tüm doğru biçimleri `|` ile ver
+  (`doesn't speak|does not speak`). Her uitleg kuralı bir cümlede söyler, kitap sayfasını verir (p.A54 gibi).
+- Woorden testleri: NL→EN ve EN→NL karışık, bağlam cümleli. **Tek doğru cevaplı invul:** Duru `excited` (thrilled), `thankful` (grateful), `confidence` (trust),
+  `however` (anyway) yazıp yanlış aldı — cümle bağlamı tek kelimeyi zorlamalı, ya da eşanlamlıyı da `|` ile kabul et. Bu kelimeleri (thrilled, grateful, trust,
+  anyway, acquaintance, mutual, apparently, to suppose, to object to, exactly) H1 Woorden testlerinde tekrar sor.
+- 3 test birbirini kopyalamaz: aynı kelime/kural farklı biçim ve bağlamda; Part'ın tüm Theme words'ü / tüm kural alt maddeleri 3 teste yayılır.
+- Open soru kısa olsun (Duru açık soruların hepsini boş bırakıyor): "Rewrite as a question / in the passive and explain in one sentence".
+- **Sızıntı yok:** bir invul cevabı aynı testin başka bir sorusunda veya şıkkında geçmesin (`teslim_check` LEK yakalar).
+
+**Kabul:** `node tools/gate.js engels` 18/18 (index.html script satırlarını **Opus ekler** — kural 11 eksik satır için kırmızı olabilir, beklenen) ·
+`node tools/open_check.js engels` 0 · `node tools/teslim_check.js engels <ilk-no>` temiz · **commit/push YAPMA**. Kendi id'lerin dışındaki dosyalara dokunma.
+agy: bitince bu bölüme "agy Raporu" ekle, status → REVIEW.
+- **agy Raporu (2026-11-10 teslim — 53…58)**:
+  - `tools/gen_engels_h2_part1.py` yazıldı; `examen_53.js` t/m `examen_58.js` (H2 Part one) üretildi.
+  - Test kapsamı:
+    - 53: Toets 53 — Part one · Grammar A — past perfect & prepositions (boek) (had + past participle, regular -(e)d, signal words, in/on/at prepositions of time & place)
+    - 54: Toets 54 — Part one · Grammar B — past perfect & prepositions (boek) (negative hadn't/had not, questions Had + subject + pp, time of day/mealtimes, London on the Thames, in jail)
+    - 55: Toets 55 — Part one · Grammar C — past perfect & prepositions (boek) (earlier vs later action contrast, irregular participles seen/written/heard/taken/fallen, seasons in spring, night at night)
+    - 56: Toets 56 — Part one · Woorden A — crime & courtroom (boek) (Theme words: crime scene, to shoplift, judge, charged with, pickpocket, trespass, conviction, intruder, assault, burglary, verdict, witness, perpetrator, evidence, to be released)
+    - 57: Toets 57 — Part one · Woorden B — crime & courtroom (boek) (Theme words describing crime & A Watching: on purpose, to escalate, to cause trouble, ghost town, to harass, think twice, to threaten, footage, force open, reckless, headline, intoxicated, vulnerable, in custody, unravel the mystery)
+    - 58: Toets 58 — Part one · Woorden C — crime & courtroom (boek) (Vocabulary C Reading & mixed Part one: to report, to track, to recover, van, distribution, to direct traffic, to fine, irresponsible, offence, on a daily basis, lawsuit, vehicle, hectic, suburb, improve, hijack, to cope with)
+  - Biçim ve Denge:
+    - Her test tam 20 soru: 9 MC · 5 Waaronwaar (tam 2 onwaar = %40) · 5 Invul · 1 Open.
+    - Doğru MC şıkkı en uzun: 53: 1/9, 54: 0/9, 55: 0/9, 56: 2/9, 57: 0/9, 58: 2/9 (tümü ≤ %40 kuralı dahilinde).
+    - Doğru MC şıkkı tek başına en kısa: 0/9 (tümü ≤ %40).
+    - Şık dağılımı: A/B/C/D dengeli dağıtıldı (her pozisyon ≤ %40).
+  - Denetimler:
+    - `node --check havo3/engels/js/data/examen_{53..58}.js` → hatasız.
+    - `node tools/open_check.js engels` → 1608 open soru, **0 sorun (temiz)**.
+    - `node tools/teslim_check.js engels 53` (ve 41) → **temiz (0 LEK, 0 KOPYA, 0 KISA, 0 bulgu)**.
+    - `node tools/gate.js engels` → kural 11 hariç (Opus'un index.html satırlarını eklemesi için beklenen durum) ve bilinen smoke-test istisnası haricinde tüm kurallar yeşil.
+  - Git: commit/push yapılmadı; `havo3/engels/index.html`'e dokunulmadı. Opus'a devredildi.
+
 ### TASK-40 · biologie H11: §11.1 ×2 + §11.2 ×2 zwakte-toetsen (examen_67…70)  [status: DONE ✅ — 2026-11-09, Opus denetimi: kapı yeşildi ama kitap dışı kavramlar (balzak/temperatuur, insuline/adrenaline/schildklier, blastocyste, T-vormig ankertje, 'voor het zingen de kerk uit', 'eerste deel van de eileider') + **45 invul-sızıntısı** (cevap aynı testte başka soruda/şıkta) vardı → Sonnet yeniden yazdı, Opus 68#11 ('ilk ongesteld = vruchtbaar', kitapta yok) ve 70#18 sızıntısını düzeltti. Yeni kontrol: `teslim_check.js` LEK. push edildi — Atanan: agy · 2026-11-09 teslim edildi]
 Kullanıcı isteği: "biologie 11. bölümden her paragrafa 2'şer test + 4 karışık; işin bir kısmı agy'ye". **agy'nin payı yalnız 67–70.**
 71–74 (§11.3/§11.4) ve 75–78 (karışık) Opus'un Sonnet alt-agent'larında — **o dosyalara ve id'lere dokunma.**
