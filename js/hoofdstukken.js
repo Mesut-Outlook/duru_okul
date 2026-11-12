@@ -790,7 +790,9 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-122": 2,
         "ex-h3-economie-123": 2,
         "ex-h3-economie-124": 2,
-        "ex-h3-economie-125": 2
+        "ex-h3-economie-125": 2,
+        "ex-h3-economie-126": 2,
+        "ex-h3-economie-127": 2
       },
       "examenInfo": {
         "ex-h3-economie-1": ["Proeftoets 1: Behoeften, schaarste en middelen", "2026-07-21", "1.1", "mmmmmmmmmmwwwwiiiioo"],
@@ -917,7 +919,9 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-122": ["Proeftoets 122: Als alles daalt, en de formule andersom", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
         "ex-h3-economie-123": ["Proeftoets 123: Stijgt of daalt de koopkracht?", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
         "ex-h3-economie-124": ["Proeftoets 124: Koopkrachtplaatjes en groepen mensen", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
-        "ex-h3-economie-125": ["Proeftoets 125: Herhaling — inflatie en koopkracht door elkaar", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"]
+        "ex-h3-economie-125": ["Proeftoets 125: Herhaling — inflatie en koopkracht door elkaar", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
+        "ex-h3-economie-126": ["Proeftoets 126: Min min wordt plus — stap voor stap", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
+        "ex-h3-economie-127": ["Proeftoets 127: De formule omdraaien en de richting van de koopkracht", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -939,7 +943,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 6,
-        "2": 33,
+        "2": 35,
         "3": 3,
         "4": 83
       },
