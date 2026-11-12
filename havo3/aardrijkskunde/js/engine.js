@@ -13,7 +13,7 @@
   function laad() {
     try {
       var d = JSON.parse(localStorage.getItem(SLEUTEL));
-      if (d) return d;
+      if (d) { ["badges", "beste", "gedaan", "pogingen", "titels"].forEach(function (k) { if (!d[k]) d[k] = {}; }); return d; }  // eksik alan (ör. yalnız xp+streak) açılışta çökertmesin
     } catch (e) {}
     return { xp: 0, streak: 0, badges: {}, beste: {}, gedaan: {}, pogingen: {}, titels: {} };
   }

@@ -444,11 +444,11 @@
   /* Kort (2026-10-10, telefoon): "12′" i.p.v. "12 dk", "1 sa 5′" i.p.v. "1 sa 05 dk". */
   function dk(sec) {
     if (sec == null) return "—";
-    return sec < 60 ? "<1′" : Math.round(sec / 60) + "′";
+    return sec < 60 ? "<1 dk" : Math.round(sec / 60) + " dk";
   }
   function saDk(sec) {
     var m = Math.round((sec || 0) / 60);
-    return m < 60 ? m + "′" : Math.floor(m / 60) + " sa" + (m % 60 ? " " + (m % 60) + "′" : "");
+    return m < 60 ? m + " dk" : Math.floor(m / 60) + " sa" + (m % 60 ? " " + (m % 60) + " dk" : "");
   }
   function dagSleutel(ts) { var d = new Date(ts); return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate(); }
 
@@ -863,15 +863,15 @@
       (p.notitie ? '<span class="oa-etiket oa-notu" title="' + escapeHtml(p.notitie) + '">Analiz notu</span>' : '') +
       escapeHtml(p.tekst) + '</li>';
   }
-  function analizHtml(A) {
+  function analizHtml(A, dikkatKaart) {
     var t1 = function (c) { return c == null ? "–" : C.tekst(c); };
-    var dikkat = A.ov.punten.slice(0, 6);
+    var punten = A.ov.punten.slice(0, 6);
     // eigen wrapper: .ob-bolum > .ob-kaart:first-child > h3 verbergt anders "Genel tablo" (≠ balktitel)
-    var h = '<div class="oa"><div class="ob-kaart"><h3>Genel tablo</h3>' + (A.ov.algemeen.length
+    var h = '<div class="oa">' + dikkatKaart.replace("Dikkat edilecekler", "Önce bunlara dikkat") + '<div class="ob-kaart"><h3>Genel tablo</h3>' + (A.ov.algemeen.length
         ? '<ul class="oa-punten">' + A.ov.algemeen.map(analizLi).join("") + '</ul>'
         : '<p class="ob-rahat">Derslerin geneline yayılan bir sorun görünmüyor.</p>') + '</div>' +
-      '<div class="ob-kaart"><h3>Önce bunlara dikkat</h3>' + (dikkat.length
-        ? '<ul class="oa-punten">' + dikkat.map(analizLi).join("") + '</ul>'
+      '<div class="ob-kaart"><h3>Nedenleri ve ayrıntılar</h3>' + (punten.length
+        ? '<ul class="oa-punten">' + punten.map(analizLi).join("") + '</ul>'
         : '<p class="ob-rahat">Şu an öne çıkan bir konu yok.</p>') + '</div>' +
       '<div class="ob-kaart"><h3>Derslere göre</h3><div class="oa-lejant">' +
         '<span class="oa-l-klaar">Sınava hazır (≥ 8,5)</span><span class="oa-l-goed">İyi</span><span class="oa-l-net">Sınırda (&lt; 7)</span>' +
@@ -914,14 +914,15 @@
   function tegelsHtml(secties, x) {
     var t = [];
     if (secties.analiz && x.analiz) {
-      var A = x.analiz, ilk = A.ov.algemeen.concat(A.ov.punten).slice(0, 2);
+      var A = x.analiz;
       var hoog = A.ov.algemeen.concat(A.ov.punten).filter(function (p) { return p.ernst === "hoog"; }).length;
+      var lijst = x.dikkat.concat(x.stil.slice(0, 3)), n = lijst.length, p1 = A.ov.algemeen[0] || A.ov.punten[0];
       t.push(tegel("analiz", "📈", "Gelişim analizi",
-        '<span class="ob-t-rij">' + (ilk.length ? ilk.map(function (p) {
-          return '<b class="ob-kleur-' + (p.ernst === "hoog" ? "zwak" : "net") + '">●</b> ' + escapeHtml((p.vak ? p.vak + ": " : "") + p.tekst);
-        }).join("<br>") : "Öne çıkan bir sorun yok.") + '</span>' +
-        '<span class="ob-t-alt">Ders → ünite → paragraf: neresi hazır, neresi çalışılmalı' + (hoog ? ' · ' + hoog + ' önemli nokta' : '') + '</span>',
-        "ob-t-breed" + (hoog ? " ob-t-zwak" : "")));
+        (n ? '<span class="ob-t-getal ob-kleur-' + lijst[0].cls + '">' + n + ' <small>ünite dikkat istiyor</small></span>' +
+          '<span class="ob-t-rij">' + lijst.slice(0, 2).map(function (d) { return '<b class="ob-kleur-' + d.cls + '">●</b> ' + escapeHtml(d.kop); }).join("<br>") + '</span>'
+          : '<span class="ob-t-getal ob-kleur-goed">✓</span>') +
+        '<span class="ob-t-alt">' + (p1 ? escapeHtml((p1.vak ? p1.vak + ": " : "") + p1.tekst) : "Öne çıkan bir sorun yok.") + '</span>',
+        "ob-t-breed" + (n ? " ob-t-" + lijst[0].cls : hoog ? " ob-t-zwak" : "")));
     }
     if (secties.dikkat) {
       var lijst = x.dikkat.concat(x.stil.slice(0, 3)), n = lijst.length;
@@ -1011,7 +1012,8 @@
     var student = getActiveStudent();
     var r = collectParentReportData(student, selectedJaar);
     var alle = nieuwstEerst(r.allAttempts);
-    var week = alle.filter(function (a) { return a.timestamp >= Date.now() - 7 * 864e5; });
+    var nuD = new Date(), maandag = new Date(nuD.getFullYear(), nuD.getMonth(), nuD.getDate() - ((nuD.getDay() + 6) % 7)).getTime();   // zelfde venster als hub: sinds maandag
+    var week = alle.filter(function (a) { return a.timestamp >= maandag; });
     var dagen = {};
     week.forEach(function (a) { dagen[new Date(a.timestamp).toDateString()] = 1; });
     var dikkat = dikkatListesi(r);
@@ -1024,6 +1026,7 @@
     var archief = selectedJaar !== (window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.jaar || "2026-2027");
 
     var h = '<div id="ob">';
+    var analiz = heeft && !archief ? analizData(alle) : null, analizVar = !!analiz;
 
     /* Kop: titel, jaar, printen (in een sectie: één balk ‹ Ana sayfa · titel · print, zie onder) */
     // Kop (2026-10-16): geen printknop (Ctrl+P drukt nog steeds het hele rapport), jaarkeuze → Ayarlar.
@@ -1046,7 +1049,7 @@
     var durum = !heeft ? "Bu ders yılında henüz deneme yok. Duru bir proeftoets çözdüğünde sonuç burada görünür."
       : archief ? "Geçmiş ders yılı: " + r.overallExamCount + " deneme, yıl ortalaması " + C.tekst(r.overallAvg) + "."
       : C.geslaagd(r.overallAvg)
-        ? (dikkat.length + stil.length ? "Genel durum iyi, ama aşağıda dikkat edilmesi gereken " +
+        ? (dikkat.length + stil.length ? "Genel durum iyi, ama " + (analizVar ? "Gelişim analizi bölümünde" : "aşağıda") + " dikkat edilmesi gereken " +
              (dikkat.length + Math.min(3, stil.length)) + " konu var."
                          : "Genel durum iyi. Şu an endişe edilecek bir konu yok.")
         : "Genel ortalama geçme sınırının (5,5) altında. Aşağıdaki konulara birlikte bakmak iyi olur.";
@@ -1056,7 +1059,7 @@
            '<p>' + durum + '</p></div>' +
          (archief ? '</div>' : '<div class="ob-feiten">' +
            '<span class="ob-feit">Bu hafta <b>' + Object.keys(dagen).length + '</b> gün çalıştı</span>' +
-           '<span class="ob-feit"><b>' + week.length + '</b> deneme (7 gün)</span>' +
+           '<span class="ob-feit"><b>' + week.length + '</b> deneme (pazartesiden beri)</span>' +
            (metDuur(alle).length ? '<span class="ob-feit">Bu hafta testlerde <b>' +
              saDk(metDuur(week).reduce(function (s, a) { return s + a.duurSec; }, 0)) + '</b></span>' : '') +
            '<span class="ob-feit">Son çalışma: <b>' + (alle[0] ? gunOnce(alle[0].timestamp) +
@@ -1131,10 +1134,11 @@
         }
       });
       d += '</tbody></table>' +
+           '<details class="ob-legenda-det"><summary>Tablo nasıl okunur?</summary>' +
            '<div class="ob-legenda">Derse tıklayınca üniteleri, üniteye tıklayınca sınav sonuçları ve henüz çözülmemiş testler açılır. Renkler: <span class="ob-pil goed">7+</span> iyi · ' +
            '<span class="ob-pil net">5,5–6,9</span> yeterli · <span class="ob-pil zwak">&lt;5,5</span> yetersiz. ' +
            'Gidiş = son 3 deneme, önceki 3 ile karşılaştırma. Ort. süre = testi açmasından teslim etmesine kadar geçen süre ' +
-           '(9 Ekim 2026\'dan beri ölçülüyor); 12′ = 12 dakika; “/ 20′” testin verilen süresi; bir test birkaç kez çözüldüyse “Önceki” notlar altında (tıklanabilir); “çok hızlı?” = not yetersiz ve süre verilen sürenin dörtte birinden az.</div></div>';
+           '(9 Ekim 2026\'dan beri ölçülüyor); “/ 20 dk” testin verilen süresi; bir test birkaç kez çözüldüyse “Önceki” notlar altında (tıklanabilir); “çok hızlı?” = not yetersiz ve süre verilen sürenin dörtte birinden az.</div></details></div>';
       secties.dersler = d;
     }
 
@@ -1148,16 +1152,21 @@
         '</div>';
     }
 
-    var analiz = heeft && !archief ? analizData(alle) : null;
-    if (analiz) secties.analiz = analizHtml(analiz);
+    if (analiz) { secties.analiz = analizHtml(analiz, secties.dikkat); delete secties.dikkat; }   // Dikkat leeft in analiz; los alleen als terugval
 
     if (bolum && bolum !== "hepsi" && !secties[bolum]) bolum = null;   // bv. na wissel naar vorig jaar
     if (bolum === "hepsi") {
       h += kopHtml + ozetHtml + ["analiz", "dikkat", "sure", "dersler", "log"].map(function (k) { return secties[k] || ""; }).join("");
     } else if (bolum) {
+      var bolumSirasi = ["analiz", "dikkat", "dersler", "sure", "log"].filter(function (k) { return !!secties[k]; });
+      var bolumTabs = bolum !== "ayarlar" && bolumSirasi.length > 1
+        ? '<nav class="ob-bolumtabs" aria-label="Bölümler">' + bolumSirasi.map(function (k) {
+            return '<button type="button" class="ob-bolumtab' + (k === bolum ? ' actief' : '') + '" data-bolum="' + k + '" aria-current="' + (k === bolum ? 'page' : 'false') + '">' + BOLUM_AD[k] + '</button>';
+          }).join("") + '</nav>'
+        : '';
       h += '<div class="ob-bolumbalk"><button type="button" class="ob-knop ob-ana" id="ob-ana">' +
         '<svg class="hic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Ana sayfa</button>' +
-        '<h2>' + BOLUM_AD[bolum] + '</h2></div><div class="ob-bolum">' + secties[bolum] + '</div>';
+        '<h2>' + BOLUM_AD[bolum] + '</h2></div>' + bolumTabs + '<div class="ob-bolum">' + secties[bolum] + '</div>';
     } else {
       h += kopHtml + ozetHtml + tegelsHtml(secties, { analiz: analiz, dikkat: dikkat, stil: stil, alle: alle, week: week, vakken: vakken, dekkingen: dekkingen });
     }

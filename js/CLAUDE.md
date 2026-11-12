@@ -12,7 +12,7 @@ Veri katmanı (`loadDuruAttempts` / `loadBegrijpendLezenAttempts` / `safeReadJso
 2025-2026 (MAVO 2) anahtarları **yılsız ve donmuş** (`duru_nask_v1` …) — `DURU_VAKKEN`'de sabit
 `jaar:'2025-2026'` ile etiketli, asla değiştirilmez.
 Yeni yıllar `duru_<jaarcode>_<slug>_v1`/`_examens_v1` (jaarcode: `2026-2027→2627`).
-Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=6.9`).
+Cijfer = `1 + pct/100*9` (geslaagd ≥ 5,5). **CSS/JS değişince `index.html`'de `style.css?v=`'i bump'la** (şu an `v=7.3`).
 
 ## Öğrenci ilerleme sayfası (`js/dashboard.js`) — 2026-09 yeniden tasarımı
 "Mijn prestaties & statistieken" görünümü. Dil **Flamanca** (Duru'nun gördüğü her yer).
@@ -224,3 +224,28 @@ her `havo3/<vak>/index.html` CSS'i `vak_mobiel.css`'ten, JS'i `engine.js`'ten **
   `.examen-card`) 12 motorda ortak — **bir motor bu sınıfları değiştirirse kabuk sessizce eski görünüme döner.**
 - Doğrulama: 12 ders × (Leren, Toetsen, toets, sonuç, Voortgang, theorie) 390px: taşma yok, JS hatası yok. Biologie'nin inleveren'i
   `confirm()` değil sayfa içi `toonBevestiging` kullanır.
+
+## Görsel birleştirme turu (2026-11-12)
+Kullanıcı isteği: "tekrar eden, yanlış olan, daha modern olacak şeyler". Denetim: iki tasarım dili (hub ≠ ders siteleri), derslere ulaşmak
+için telefonda 2,5 ekran kaydırma, aynı ada farklı sayı, rengin durum yerine alan anlatması, üç ikon sistemi.
+- **Ders siteleri hub'ın dilinde — tek yer `css/vak_shell.css`** (en son yüklenir): `html:not(.dark)` altında token ezme (`--font` Inter,
+  `--font-kop` Plus Jakarta Sans, `--paars` #064e3b, radius 10/14/18, düz zemin). 12 dersin kendi `css/style.css`'ine dokunulmadı.
+  Engels/frans mavi tonunu korur. Font yığını uzun bir `html :is(...)` listesiyle uygulanır — **motor yeni bir sınıf eklerse listeye ekle**,
+  yoksa Inter'de kalır. Çözülmemiş test kartı artık nötr satır (turuncu çerçeve yok), birincil düğmeler koyu yeşil.
+- `js/vak_shell.js` gözlemcisi: teoride başlıkla aynı olan ilk iç başlığı gizler, "VRAAG 1" → "Vraag 1", bölüm başlıklarının başındaki
+  emojiyi siler. Leren'de paragraf satırı = **oefenvragen en iyi skoru** (% + kısa çubuk). Teori metni 70ch, ortalı. Telefonda `.dot-nav` tek satır, yatay kayar.
+- **Vakken**: "Nieuw toegevoegd" 4 satır (telefonda 3) + "Toon alle N"; "Laatst gemaakt" 4 / 2; "Deze week" telefonda tek satır. Hedef ölçü:
+  "Al je vakken" başlığı 1280×800'de ≤ 760px, 390×844'te ≤ 1000px (önce ~1100 / ~2150). Kart çubuğu her alanda yeşil (alan rengi yalnız üst şerit +
+  rozet + bölüm çizgisi); masaüstünde de harf rozeti (emoji kartta basılmaz, `icoon` veride kalır); "Verder →" ve footer ipucu kalktı.
+- **Sayı adları**: deneme = "pogingen" / "deneme", farklı test = "toetsen". **"Deze week" her yerde pazartesiden beri** (hub, Prestaties, veli).
+- **646 ↔ 647 (kök neden)**: `dashboard.js → bouwModel` ünite sayısını `Math.min(gedaan, exTotaal)` ile kırpıyordu; manifestte artık olmayan ama
+  çözülmüş test (aardrijkskunde `ex-h3-ak-115`) Duru'nun sayfasında sayılmıyordu. Artık hub kartı ve veli paneliyle aynı kural: iki tarafa da eklenir.
+- **"omlaag" kırmızı yalnız ders ortalaması < 6,5 iken**; yoksa gri (`.st-neer-zacht`). Score verloop: hepsi aynı gündeyse eksen HH:MM.
+- **Veli: Dikkat + Gelişim analizi birleşti.** Analiz sayfası: "Önce bunlara dikkat" (eski Dikkat listesi, `dikkatLi`) → Genel tablo →
+  "Nedenleri ve ayrıntılar" (eski madde listesi; filtrelenmedi — maddelerde güvenilir ünite anahtarı yok) → Derslere göre. Ana sayfada Dikkat düğmesi
+  yok; analiz düğmesi "N ünite dikkat istiyor" + ilk iki üniteyi taşır. **Yedek yol:** analiz verisi yoksa (`ouder_analyse.js` yüklenmediyse) eski
+  Dikkat düğmesi/bölümü aynen görünür (Playwright ile doğrulandı).
+- **Motor koruması (12 `engine.js → laad`)**: kayıtta `badges/beste/gedaan/pogingen/titels` eksikse `{}` ile doldurulur. Duru'nun engels kaydı yalnız
+  `xp + streak` taşıyordu → `updateStats` açılışta `Object.keys(undefined)` ile çöküyordu.
+- Doğrulama: uydurma kullanıcı `testbot` + Firebase regex ile kesik; 12 ders × 390/1280 × açık/koyu taşma + JS hatası taraması, değişiklik öncesi
+  sürümle (git worktree) karşılaştırma; `test_score_merge.js` + `test_server_merge.py` geçti.

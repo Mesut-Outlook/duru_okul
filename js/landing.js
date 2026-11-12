@@ -266,14 +266,18 @@ var _iframeActief = false;
  * @param {string} titel - Naam van het vak/onderwerp
  */
 function openInIframe(href, icoon, titel) {
-  var shell  = document.getElementById('iframe-shell');
-  var frame  = document.getElementById('vak-frame');
-  var label  = document.getElementById('terugbalk-vak');
+  var shell   = document.getElementById('iframe-shell');
+  var frame   = document.getElementById('vak-frame');
+  var label   = document.getElementById('terugbalk-vak');
+  var loading = document.getElementById('vak-loading');
 
   if (!shell || !frame || !label) return;
 
   // Label instellen
   label.textContent = icoon + ' ' + titel;  // nbsp voor iets ruimte
+
+  // Laadindicator tonen totdat het vak geladen is
+  if (loading) loading.classList.add('actief');
 
   // Iframe src pas nu zetten (lazy load)
   frame.src = href;
@@ -299,10 +303,13 @@ function openInIframe(href, icoon, titel) {
  * @param {boolean} [viaPop] - true als aangeroepen vanuit popstate handler
  */
 function sluitIframe(viaPop) {
-  var shell = document.getElementById('iframe-shell');
-  var frame = document.getElementById('vak-frame');
+  var shell   = document.getElementById('iframe-shell');
+  var frame   = document.getElementById('vak-frame');
+  var loading = document.getElementById('vak-loading');
 
   if (!shell || !frame) return;
+
+  if (loading) loading.classList.remove('actief');
 
   // Iframe stoppen (about:blank zodat sub-site niet op achtergrond draait
   // én de iframe niet per ongeluk de hub-pagina zelf herlaadt)
@@ -472,9 +479,9 @@ function bouwKaart(vak) {
 
 // Vakgebieden — bepaalt de logische groepering + volgorde op de landing.
 var DOMEINEN = [
-  { id: 'talen', titel: '🗣️ Talen',                 sub: 'lezen, schrijven & spreken' },
-  { id: 'exact', titel: '🔬 Exact & Natuur',         sub: 'rekenen, meten & onderzoeken' },
-  { id: 'mens',  titel: '🌍 Mens & Maatschappij',    sub: 'de wereld om je heen' }
+  { id: 'talen', titel: 'Talen',                 sub: 'lezen, schrijven & spreken' },
+  { id: 'exact', titel: 'Exact & Natuur',         sub: 'rekenen, meten & onderzoeken' },
+  { id: 'mens',  titel: 'Mens & Maatschappij',    sub: 'de wereld om je heen' }
 ];
 
 /**
@@ -559,13 +566,12 @@ function maakVakKaartHavo3(vak) {
     voet =
       '<span class="havo3-kaart__cijfer' + (d.klasse ? ' c-' + d.klasse : '') + '">' +
         (d.cijfer ? d.cijfer + ' <small>gem.</small>' : '<small>nog geen cijfer</small>') +
-      '</span>' +
-      '<span class="havo3-kaart__ga">Verder →</span>';
+      '</span>';
   }
 
   el.innerHTML =
     '<div class="havo3-kaart__top">' +
-      '<span class="havo3-kaart__icoon" data-kort="' + vakKort(vak) + '">' + vak.icoon + '</span>' + rechtsboven +
+      '<span class="havo3-kaart__icoon" data-kort="' + vakKort(vak) + '" aria-hidden="true">' + escH(vakKort(vak)) + '</span>' + rechtsboven +
     '</div>' +
     '<div><p class="havo3-kaart__naam">' + vak.titel +
       (!binnenkort && NIEUW_OPEN[vak.vakId] ? ' <span class="havo3-nieuw">+' + NIEUW_OPEN[vak.vakId] + ' nieuw</span>' : '') + '</p>' +
@@ -690,6 +696,20 @@ function badgeHtml(vak) {
   return '<span class="hs-badge hs-d-' + (vak.domein || 'exact') + '" aria-hidden="true">' + escH(vakKort(vak)) + '</span>';
 }
 
+function berekenDagStreak(pogingen) {
+  if (!pogingen || !pogingen.length) return 0;
+  var dagen = {};
+  pogingen.forEach(function (p) { if (p.t) dagen[isoDag(new Date(p.t))] = 1; });
+  var d = new Date();
+  if (!dagen[isoDag(d)]) d.setDate(d.getDate() - 1);
+  var streak = 0;
+  while (dagen[isoDag(d)]) {
+    streak++;
+    d.setDate(d.getDate() - 1);
+  }
+  return streak;
+}
+
 function renderStart() {
   var paneel = document.getElementById('start-paneel');
   var datumEl = document.getElementById('hero-datum');
@@ -707,6 +727,7 @@ function renderStart() {
   var maandag = new Date(nu.getFullYear(), nu.getMonth(), nu.getDate() - ((nu.getDay() + 6) % 7)).getTime();
   var week = d.pogingen.filter(function (p) { return p.t >= maandag; });
   var weekGem = week.length ? C.tekst(C.gemiddelde(week.map(function (p) { return { c: C.vanPct(p.h.pct) }; }), 'c')) : '—';
+  var streak = berekenDagStreak(d.pogingen);
   var nieuwTotaal = groepen.reduce(function (s, x) { return s + x.ids.length; }, 0);
 
   var h = '<div class="hs-rij hs-rij--top">';
@@ -727,8 +748,9 @@ function renderStart() {
   }
   h += '<section class="hs-kaart hs-week" aria-label="Deze week">' +
     '<span class="hs-over">Deze week</span>' +
-    '<div class="hs-getallen"><div><b>' + week.length + '</b><span>toetsen gemaakt</span></div>' +
-    '<div><b>' + weekGem + '</b><span>gemiddeld cijfer</span></div></div>' +
+    '<div class="hs-getallen hs-getallen--3"><div><b>' + week.length + '</b><span>pogingen</span></div>' +
+    '<div><b>' + weekGem + '</b><span>gemiddeld cijfer</span></div>' +
+    '<div><b>' + (streak ? '🔥 ' + streak : '0') + '</b><span>' + (streak === 1 ? 'dag op rij' : 'dagen op rij') + '</span></div></div>' +
     (nieuwTotaal ? '<div class="hs-nieuwtip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6 7 18.2l1.9-5.8L4 8.8h6.1z"/></svg>' +
       '<span><b>' + nieuwTotaal + ' nieuwe toetsen</b> in de laatste ' + NIEUW_DAGEN + ' dagen</span></div>' : '') +
     '</section></div>';
@@ -736,10 +758,11 @@ function renderStart() {
   h += '<div class="hs-rij hs-rij--lijsten">';
   if (groepen.length) {
     h += '<section class="hs-kaart" aria-labelledby="hs-nieuw-kop"><div class="hs-kop"><h2 id="hs-nieuw-kop">Nieuw toegevoegd</h2>' +
-      '<span>laatste ' + NIEUW_DAGEN + ' dagen</span></div><ul class="hs-lijst">';
-    groepen.forEach(function (n) {
+      (groepen.length > 3 ? '<button type="button" class="hs-link hs-meer" data-meer="1" aria-expanded="false">Toon alle ' + groepen.length + '</button>'
+        : '<span>laatste ' + NIEUW_DAGEN + ' dagen</span>') + '</div><ul class="hs-lijst hs-lijst--nieuw">';
+    groepen.forEach(function (n, i) {
       var klaar = !n.open.length;
-      h += '<li><button type="button" class="hs-regel" data-open-vak="' + escH(n.vak.vakId) + '" data-scherm="examens">' +
+      h += '<li' + (i >= 3 ? ' class="hs-x' + (i >= 4 ? '' : '3') + '"' : '') + '><button type="button" class="hs-regel" data-open-vak="' + escH(n.vak.vakId) + '" data-scherm="examens">' +
         badgeHtml(n.vak) + '<span class="hs-tekst"><b>' + escH(n.vak.titel) + ' · ' + escH(hfNaam(n.vak.vakId, n.nr)) + '</b>' +
         '<small>' + n.ids.length + (n.ids.length === 1 ? ' toets' : ' toetsen') + ' · ' + dagLabel(new Date(n.datum + 'T12:00:00').getTime()) + '</small></span>' +
         '<span class="hs-chip ' + (klaar ? 'hs-chip--klaar' : 'hs-chip--open') + '">' +
@@ -750,7 +773,7 @@ function renderStart() {
   if (d.pogingen.length) {
     h += '<section class="hs-kaart" aria-labelledby="hs-laatst-kop"><div class="hs-kop"><h2 id="hs-laatst-kop">Laatst gemaakt</h2>' +
       '<button type="button" class="hs-link" data-naar-logboek="1">Alle resultaten</button></div><ul class="hs-lijst hs-lijst--laatst">';
-    d.pogingen.slice(0, 6).forEach(function (p) {
+    d.pogingen.slice(0, 4).forEach(function (p) {
       var c = C.vanPct(p.h.pct), kan = !!(p.h.antwoorden && p.h.attemptId);
       var duur = p.h.duurSec ? ' · ' + Math.max(1, Math.round(p.h.duurSec / 60)) + ' min' : '';
       h += '<li><div class="hs-regel hs-regel--poging">' + badgeHtml(p.vak) +
@@ -780,9 +803,13 @@ function openVakMet(vakId, actie) {
 
 document.addEventListener('click', function (e) {
   if (!e.target.closest || !e.target.closest('#start-paneel')) return;
-  var b = e.target.closest('[data-start-id],[data-fouten-id],[data-open-vak],[data-naar-logboek]');
+  var b = e.target.closest('[data-start-id],[data-fouten-id],[data-open-vak],[data-naar-logboek],[data-meer]');
   if (!b) return;
-  if (b.hasAttribute('data-start-id')) {
+  if (b.hasAttribute('data-meer')) {
+    var open = b.closest('.hs-kaart').classList.toggle('hs-alle');
+    b.setAttribute('aria-expanded', open);
+    b.textContent = open ? 'Toon minder' : 'Toon alle ' + b.closest('.hs-kaart').querySelectorAll('li').length;
+  } else if (b.hasAttribute('data-start-id')) {
     var id = b.getAttribute('data-start-id');
     openVakMet(b.getAttribute('data-start-vak'), function (DURU) { DURU.examenStart(id); });
   } else if (b.hasAttribute('data-fouten-id')) {
@@ -796,6 +823,41 @@ document.addEventListener('click', function (e) {
     if (tab) tab.click();
   }
 });
+
+var ACTIEF_DOMEIN = 'alle';
+
+function renderDomeinFilter(grid) {
+  var vakkenKop = document.querySelector('.hs-vakkenkop');
+  if (!vakkenKop) return;
+  var bar = document.getElementById('domein-filter-rij');
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.id = 'domein-filter-rij';
+    bar.className = 'hs-filter-rij';
+    bar.setAttribute('role', 'group');
+    bar.setAttribute('aria-label', 'Filter vakken op gebied');
+    vakkenKop.insertAdjacentElement('afterend', bar);
+  }
+  var opties = [{ id: 'alle', titel: 'Alle' }].concat(DOMEINEN.map(function (d) {
+    return { id: d.id, titel: d.titel };
+  }));
+  bar.innerHTML = opties.map(function (o) {
+    var aan = ACTIEF_DOMEIN === o.id;
+    return '<button type="button" class="hs-filter-pill' + (aan ? ' actief' : '') + '" data-domein="' + escH(o.id) + '" aria-pressed="' + aan + '">' + escH(o.titel) + '</button>';
+  }).join('');
+  bar.querySelectorAll('.hs-filter-pill').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      ACTIEF_DOMEIN = btn.getAttribute('data-domein') || 'alle';
+      renderDomeinFilter(grid);
+      grid.querySelectorAll('.havo3-domein').forEach(function (sec) {
+        sec.hidden = ACTIEF_DOMEIN !== 'alle' && !sec.classList.contains('d-' + ACTIEF_DOMEIN);
+      });
+    });
+  });
+  grid.querySelectorAll('.havo3-domein').forEach(function (sec) {
+    sec.hidden = ACTIEF_DOMEIN !== 'alle' && !sec.classList.contains('d-' + ACTIEF_DOMEIN);
+  });
+}
 
 function renderVakken() {
   renderStart();
@@ -841,6 +903,7 @@ function renderVakken() {
       sectie.appendChild(g);
       grid.appendChild(sectie);
     });
+    renderDomeinFilter(grid);
   }
 
   // Arşiv (MAVO 2) — inklapbare sectie onder het grid.
@@ -882,7 +945,7 @@ function renderArchief(archief) {
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-controls', 'archief-inhoud');
   toggle.innerHTML =
-    '<span class="archief-toggle__label">🗄️ Archief — vorige schooljaren</span>' +
+    '<span class="archief-toggle__label">Archief — vorige schooljaren</span>' +
     '<span class="archief-pijl" aria-hidden="true">▾</span>';
 
   var inhoud = document.createElement('div');
@@ -894,7 +957,7 @@ function renderArchief(archief) {
     var groep = document.createElement('div');
     groep.className = 'archief-jaar';
     var niveau = JAAR_NIVEAU[j] ? ' · ' + JAAR_NIVEAU[j] : '';
-    groep.innerHTML = '<h3 class="archief-jaar__kop">📚 ' + j + niveau + '</h3>';
+    groep.innerHTML = '<h3 class="archief-jaar__kop">' + j + niveau + '</h3>';
 
     var g = document.createElement('div');
     g.className = 'archief-grid';
@@ -1387,6 +1450,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 2. Tab switching
+    var passLabel = document.getElementById('auth-pass-label');
+    var togglePassBtn = document.getElementById('auth-toggle-pass');
+
+    if (togglePassBtn && passwordInput) {
+      togglePassBtn.addEventListener('click', function() {
+        var isPwd = passwordInput.type === 'password';
+        passwordInput.type = isPwd ? 'text' : 'password';
+        togglePassBtn.setAttribute('aria-pressed', isPwd ? 'true' : 'false');
+      });
+    }
+
     if (tabLogin && tabRegister) {
       tabLogin.addEventListener('click', function() {
         isRegisterMode = false;
@@ -1396,6 +1470,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tabRegister.style.borderBottom = '2px solid transparent';
         tabRegister.style.color = '#6e6e73';
         tabRegister.style.fontWeight = '400';
+        if (passLabel) passLabel.textContent = 'Şifre:';
         if (confirmContainer) confirmContainer.style.display = 'none';
         if (rememberContainer) rememberContainer.style.display = 'flex';
         if (submitBtn) submitBtn.textContent = 'Giriş Yap';
@@ -1411,6 +1486,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tabLogin.style.borderBottom = '2px solid transparent';
         tabLogin.style.color = '#6e6e73';
         tabLogin.style.fontWeight = '400';
+        if (passLabel) passLabel.textContent = 'Şifre (Min. 8 rakam/karakter):';
         if (confirmContainer) confirmContainer.style.display = 'flex';
         if (rememberContainer) rememberContainer.style.display = 'none';
         if (submitBtn) submitBtn.textContent = 'Kayıt Ol';
@@ -1625,6 +1701,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var frame = document.getElementById('vak-frame');
   if (frame) {
     frame.addEventListener('load', function() {
+      var loading = document.getElementById('vak-loading');
+      if (loading) loading.classList.remove('actief');
       try {
         var win = frame.contentWindow;
         if (!win || !win.Storage) return;

@@ -100,7 +100,7 @@
         '<span>' + v.ex.vragen.length + ' vragen · ' + (v.ex.duurMin || 20) + ' min</span></span>' +
         '<span class="vs-verder-play">' + ico(IC.play) + '</span></button>';
     }
-    h += '<div class="vs-kop">Hoofdstukken</div>';
+    h += '<div class="vs-kop">Hoofdstukken <span class="vs-uitleg">· % = beste score oefenvragen</span></div>';
     var getoond = 0;
     hfs.forEach(function (hf) {
       var ow = DURU.onderwerpenVan ? DURU.onderwerpenVan(hf.nr) : [];
@@ -125,7 +125,8 @@
           var b = (d.P.beste || {})[o.id] || 0;
           h += '<button type="button" class="vs-par" onclick="DURU.gaNaar(\'theorie\',\'' + esc(o.id) + '\')">' +
             '<span class="vs-pnr">' + esc(o.paragraaf || "") + '</span><span class="vs-pt">' + esc(o.titel) + '</span>' +
-            '<span class="vs-mini" title="Beste score oefenvragen: ' + b + '%"><span style="width:' + b + '%"></span></span></button>';
+            '<span class="vs-mini" title="Beste score oefenvragen: ' + b + '%" aria-label="Beste score oefenvragen: ' + b + '%">' +
+            '<i>' + (b ? b + '%' : '–') + '</i><b><span style="width:' + b + '%"></span></b></span></button>';
         });
         if (ex.length) {
           h += '<button type="button" class="vs-par vs-par--toets" onclick="DURU.vsNaarToetsen()">' +
@@ -137,7 +138,7 @@
     });
     // Vak zonder hoofdstukken (bv. maatschappijleer zolang er geen materiaal is): alles in één lijst.
     if (!getoond) {
-      h = h.replace('<div class="vs-kop">Hoofdstukken</div>', '<div class="vs-kop">Oefenen</div>');
+      h = h.replace(/<div class="vs-kop">Hoofdstukken .*?<\/div>/, '<div class="vs-kop">Oefenen <span class="vs-uitleg">· % = beste score oefenvragen</span></div>');
       h += '<section class="vs-hf">' + (DURU.onderwerpen || []).map(function (o) {
         return '<button type="button" class="vs-par" onclick="DURU.gaNaar(\'theorie\',\'' + esc(o.id) + '\')">' +
           '<span class="vs-pnr">' + esc(o.paragraaf || "") + '</span><span class="vs-pt">' + esc(o.titel) + '</span></button>';
@@ -300,6 +301,33 @@
     if (eerste && eerste.nextElementSibling && eerste.nextElementSibling.tagName === "P" && app.querySelector(".examen-card")) {
       eerste.nextElementSibling.classList.add("vs-weg");
     }
+
+    // Theorie: de eerste kop in de inhoud staat al als paginatitel boven → niet dubbel tonen.
+    var th = app.querySelector(".theorie");
+    if (th && !th.dataset.vs) {
+      th.dataset.vs = "1";
+      var norm = function (x) { return (x || "").toLowerCase().replace(/[^a-z0-9à-ÿ]+/g, ""); };
+      var koppen = th.querySelectorAll("h1,h2,h3,h4");
+      if (koppen.length > 1) {
+        var titel = norm(koppen[0].textContent), eerste = norm(koppen[1].textContent);
+        if (eerste.length > 3 && titel.slice(-eerste.length) === eerste) koppen[1].classList.add("vs-weg");
+      }
+    }
+    // Sectiekoppen: emoji vooraan weg (🎉 en medailles blijven, die staan niet in .sectie-titel h3).
+    app.querySelectorAll(".sectie-titel h3").forEach(function (k) {
+      var t = k.textContent, n = t.replace(/^[\u2600-\u27BF\u{1F000}-\u{1FAFF}\uFE0F\s]+/u, "");
+      if (n !== t && n) k.textContent = n;
+    });
+    // Hoofdletter-labels uit de engine ("VRAAG 1") → gewone zin, zonder letterafstand.
+    app.querySelectorAll('[style*="letter-spacing"]').forEach(function (k) {
+      if (k.children.length) return;
+      var t = k.textContent;
+      if (t === t.toUpperCase() && /[A-Z]{3}/.test(t)) k.textContent = t.charAt(0) + t.slice(1).toLowerCase();
+      k.style.letterSpacing = "0";
+    });
+    // Vraagnavigatie (telefoon: één scrolrij): huidige vraag in beeld.
+    var dh = app.querySelector(".dot.huidig");
+    if (dh && dh.scrollIntoView) { try { dh.scrollIntoView({ block: "nearest", inline: "center" }); } catch (e) {} }
 
     // Resultaat/review: standaard alleen fouten; knoppen Fout (n) / Alles.
     var lijst = app.querySelector("#review-lijst");

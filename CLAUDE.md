@@ -49,7 +49,7 @@ node --check js/<dosya>.js                  # tek dosya sözdizimi
   İçerik ekleyince orayı güncelle; yeni sınav id'si seçmeden önce oku.
 - `js/CLAUDE.md` — hub arayüzü: Duru'nun ilerleme sayfası, veli paneli, startpaneel/landing, açık testler, test süresi,
   koyu tema, telefon düzeni, `vak_shell`. Arayüze dokunmadan önce oku.
-- CSS/JS değişince `index.html`'de `?v=`'i bump'la (şu an `style.css?v=6.9`).
+- CSS/JS değişince `index.html`'de `?v=`'i bump'la (şu an `style.css?v=7.3`).
 - **⚠️ CSS'te fazladan `}`** sonraki kuralı sessizce yutar (2026-10-10: `body.ouder-actief .hero` böyle kaybolmuştu). Kural
   silerken `{`/`}` dengesini kontrol et.
 

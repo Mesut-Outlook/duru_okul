@@ -50,8 +50,12 @@
     var tabs = document.querySelectorAll(".hub-tab");
     tabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
-        tabs.forEach(function (t) { t.classList.remove("active"); });
+        tabs.forEach(function (t) {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
         tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
 
         var views = document.querySelectorAll(".hub-view");
         views.forEach(function (v) { v.classList.remove("active"); });
@@ -373,6 +377,10 @@
         lijst.forEach(function (a) { uniek[a.examId || a.titel] = 1; });
         var gedaan = Object.keys(uniek).length;
         var exTot = window.DURU_HF ? window.DURU_HF.totaalExamens(vak.id, ch.nr) : 0;
+        // Gemaakte toets die niet (meer) in het manifest staat telt aan beide kanten mee
+        // (zelfde regel als de vakkaart en het veli-paneel); anders kapt min() hem hieronder af.
+        var inM = ((window.DURU_HOOFDSTUKKEN && window.DURU_HOOFDSTUKKEN.vakken[vak.id]) || {}).examenHoofdstuk || {};
+        exTot += Object.keys(uniek).filter(function (id) { return !(id in inM); }).length;
         return {
           nr: ch.nr, titel: ch.titel, icoon: ch.icoon || "📖", vak: vak,
           lijst: lijst, count: lijst.length, gem: C.gemiddeldeLaatste(lijst, "cijfer"),
@@ -432,7 +440,7 @@
       alleHf: alleHf,
       gem: C.gemiddeldeLaatste(attempts, "cijfer"),
       geslaagdN: attempts.filter(function (a) { return a.geslaagd; }).length,
-      week: attempts.filter(function (a) { return a.timestamp >= nu - 7 * 864e5; }),
+      week: attempts.filter(function (a) { var n = new Date(); return a.timestamp >= new Date(n.getFullYear(), n.getMonth(), n.getDate() - ((n.getDay() + 6) % 7)).getTime(); }),
       streak: berekenStreak(attempts, nu),
       open: vakken.reduce(function (s, v) { return s + Math.max(0, v.exTotaal - v.gedaan); }, 0)
     };
@@ -561,7 +569,7 @@
       '<button type="button" class="st-vakrij" data-toggle-vak="' + escHtml(v.vak.id) + '" aria-expanded="' + open + '">' +
       '<span class="st-vakchip st-vakchip--' + escHtml(v.vak.kleur || "groen") + '" aria-hidden="true">' + escHtml(kort) + '</span>' +
       '<span class="st-vaktekst"><span class="st-vaktitel">' + escHtml(v.vak.titel) + '</span>' +
-        '<span class="st-vakmeta">' + (t && t.r === "neer" ? '<b class="st-neer">↓ omlaag</b> · ' : t && t.r === "op" ? '<b class="st-op">↑ omhoog</b> · ' : '') +
+        '<span class="st-vakmeta">' + (t && t.r === "neer" ? '<b class="' + (v.gem < 6.5 ? "st-neer" : "st-neer-zacht") + '">↓ omlaag</b> · ' : t && t.r === "op" ? '<b class="st-op">↑ omhoog</b> · ' : '') +
         (v.exTotaal ? v.gedaan + " / " + v.exTotaal + " toetsen" : v.count + " pogingen") + '</span></span>' +
       pil(v.gem, v.count, v.count ? null : "—") +
       '<span class="st-chev" aria-hidden="true">' + (open ? "▴" : "▾") + '</span></button>';
@@ -714,7 +722,7 @@
       '<span class="st-schaal-cijfer" style="color:' + kleurVan(model.gem, model.attempts.length) + '">' +
         (heeft ? fmtC(model.gem) : "–") + '</span>' +
       '<span class="st-schaal-label">jouw gemiddelde · <b>' + model.attempts.length +
-        '</b> toetsen · <b>' +
+        '</b> pogingen · <b>' +
         (heeft ? Math.round(model.geslaagdN / model.attempts.length * 100) : 0) +
         '%</b> voldoende</span></div>' +
       '<div class="st-schaal">' + schaalHtml(model) + '</div>' +
@@ -727,7 +735,7 @@
     var exGed = model.vakken.reduce(function (s, v) { return s + v.gedaan; }, 0);
     h = h.replace("__FEITEN__", '<div class="st-feiten">' +
       '<div class="st-feit"><b>' + st + ' ' + (st === 1 ? "dag" : "dagen") + '</b>op rij' + (st >= 2 ? " 🔥" : "") + '</div>' +
-      '<div class="st-feit"><b>' + model.week.length + '</b>deze week</div>' +
+      '<div class="st-feit"><b>' + model.week.length + '</b>pogingen deze week</div>' +
       '<div class="st-feit"><b>' + exGed + '<small> / ' + exTot + '</small></b>toetsen gedaan</div></div>');
 
     /* Tabs */
@@ -970,6 +978,8 @@
     });
 
     if (chartAttempts.length > 0) {
+      var dagVan = function (a) { return new Date(a.timestamp).toDateString(); };
+      var eenDag = dagVan(chartAttempts[0]) === dagVan(chartAttempts[chartAttempts.length - 1]);
       var labelIndices = [];
       if (chartAttempts.length === 1) {
         labelIndices = [0];
@@ -985,6 +995,7 @@
         var dateOnly = (att.datumStr || "").split(" ")[0] || "";
         var dm = /^(\d{1,2})-(\d{1,2})-/.exec(dateOnly);   // "10-10-2026," → "10/10" (telefoon)
         if (dm) dateOnly = +dm[1] + "/" + +dm[2];
+        if (eenDag && att.timestamp) { var tt = new Date(att.timestamp); dateOnly = ("0" + tt.getHours()).slice(-2) + ":" + ("0" + tt.getMinutes()).slice(-2); }
         svg += '  <text x="' + x + '" y="' + (h - 12) + '" text-anchor="middle" class="svg-chart-text" fill="var(--grijs-licht)">' + dateOnly + '</text>';
       });
     }
