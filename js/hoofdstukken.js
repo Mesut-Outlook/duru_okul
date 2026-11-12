@@ -785,7 +785,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-117": 2,
         "ex-h3-economie-118": 2,
         "ex-h3-economie-119": 2,
-        "ex-h3-economie-120": 2
+        "ex-h3-economie-120": 2,
+        "ex-h3-economie-121": 2,
+        "ex-h3-economie-122": 2,
+        "ex-h3-economie-123": 2,
+        "ex-h3-economie-124": 2,
+        "ex-h3-economie-125": 2
       },
       "examenInfo": {
         "ex-h3-economie-1": ["Proeftoets 1: Behoeften, schaarste en middelen", "2026-07-21", "1.1", "mmmmmmmmmmwwwwiiiioo"],
@@ -907,7 +912,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-117": ["Proeftoets 117: Bestedingsinflatie of kosteninflatie?", "2026-11-12", "2.3", "mmmmmmwwwiimmmwommio"],
         "ex-h3-economie-118": ["Proeftoets 118: Hoe meet het CBS de inflatie?", "2026-11-12", "2.3", "mmmmmmmwwiimmmwomwio"],
         "ex-h3-economie-119": ["Proeftoets 119: Begrippen uit elkaar houden — koopkracht, nominaal, reëel, CPB", "2026-11-12", "2.3", "mmmmmmwwwiimmmmomwio"],
-        "ex-h3-economie-120": ["Proeftoets 120: Herhaling — alle zwakke plekken van §2.3", "2026-11-12", "2.3", "mmmmmmwwiimmmmwomwio"]
+        "ex-h3-economie-120": ["Proeftoets 120: Herhaling — alle zwakke plekken van §2.3", "2026-11-12", "2.3", "mmmmmmwwiimmmmwomwio"],
+        "ex-h3-economie-121": ["Proeftoets 121: Van euro's naar procenten", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
+        "ex-h3-economie-122": ["Proeftoets 122: Als alles daalt, en de formule andersom", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
+        "ex-h3-economie-123": ["Proeftoets 123: Stijgt of daalt de koopkracht?", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
+        "ex-h3-economie-124": ["Proeftoets 124: Koopkrachtplaatjes en groepen mensen", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"],
+        "ex-h3-economie-125": ["Proeftoets 125: Herhaling — inflatie en koopkracht door elkaar", "2026-11-12", "2.3", "mmmmmmmmmmmwwwwiiioo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -929,7 +939,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 6,
-        "2": 28,
+        "2": 33,
         "3": 3,
         "4": 83
       },

@@ -21,7 +21,8 @@ window.DURU_OUDER_NOTITIES = {
   economie: { datum: "2026-11-12", punten: [
     { ernst: "mid", tekst: "§2.3 (19 test, son deneme ort. %79): reel gelir hesabında eksi işaretini unutuyor (−0,9 yerine 0,9) ve ücret/fiyat tablosunda en yüksek çubuğa bakıyor, farka (ücret − fiyat) bakmıyor." },
     { ernst: "mid", tekst: "Bestedingsinflatie'yi 'çok fazla arz' sanıyor (doğrusu: çok fazla talep/vraag); kosteninflatie ile karıştırıyor. CBS'in çok harcanan ürünleri 'daha ağır' saydığını ve enflasyonun bir ortalama olduğunu kaçırıyor." },
-    { ernst: "mid", tekst: "CPB (koopkrachtplaatjes) ↔ CBS (enflasyonu ölçer) karışık; 'modaal' ve 'inflatiecijfer' boş. Açık soruların çoğu boş (53'ün 41'i). Yeni testler 116–120 bunlara gidiyor." }
+    { ernst: "mid", tekst: "CPB (koopkrachtplaatjes) ↔ CBS (enflasyonu ölçer) karışık; 'modaal' ve 'inflatiecijfer' boş. Açık soruların çoğu boş (53'ün 41'i). Yeni testler 116–120 bunlara gidiyor." },
+    { ernst: "mid", tekst: "Yeni denemelerde (examen_96–100): euro tutardan yüzdeye geçemiyor (önce yeni−eski / eski × 100%, sonra enflasyonu çıkarmak gerekiyor); ücret ve fiyat ikisi de düşünce işareti karıştırıyor; formülü tersine kullanamıyor (nominal = reel + enflasyon); 7 − 5,5 yerine 7 + 5,5 = 12,5 topluyor; fiyat düşünce alım gücünün arttığını kaçırıyor. Testler 121–125 bunlara gidiyor; 116–120 henüz çözülmedi." }
   ] },
   scheikunde: { datum: "2026-11-10", punten: [
     { ernst: "hoog", tekst: "Yoğunluk hesabında formülü ters kuruyor: V = m / ρ yerine çarpıyor (18 g / 24 cm³ → 432 yazdı); g/cm³ → kg/m³ için ×1000 yapmıyor (7,8 → 7,8); L ↔ cm³ dönüşümünü karıştırıyor (0,35 L → 35)." },
