@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-11",
+  "gegenereerd": "2026-11-12",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -780,7 +780,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-112": 4,
         "ex-h3-economie-113": 4,
         "ex-h3-economie-114": 4,
-        "ex-h3-economie-115": 4
+        "ex-h3-economie-115": 4,
+        "ex-h3-economie-116": 2,
+        "ex-h3-economie-117": 2,
+        "ex-h3-economie-118": 2,
+        "ex-h3-economie-119": 2,
+        "ex-h3-economie-120": 2
       },
       "examenInfo": {
         "ex-h3-economie-1": ["Proeftoets 1: Behoeften, schaarste en middelen", "2026-07-21", "1.1", "mmmmmmmmmmwwwwiiiioo"],
@@ -897,7 +902,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-economie-112": ["Proeftoets 112: Van kostprijs naar verkoopprijs — de winstmarge", "2026-11-05", "4.3", "mmmmmmmmmmwwwwwiiioo"],
         "ex-h3-economie-113": ["Proeftoets 113: Btw en accijns — prijs inclusief en exclusief", "2026-11-05", "4.3", "mmmmmmmmmmwwwwwiiioo"],
         "ex-h3-economie-114": ["Proeftoets 114: Brutowinst en nettowinst berekenen", "2026-11-05", "4.3", "mmmmmmmmmmwwwwwiiioo"],
-        "ex-h3-economie-115": ["Proeftoets 115: Eindtoets §4.3 (alle leerdoelen)", "2026-11-05", "4.3", "mmmmmmmmmmwwwwwiiioo"]
+        "ex-h3-economie-115": ["Proeftoets 115: Eindtoets §4.3 (alle leerdoelen)", "2026-11-05", "4.3", "mmmmmmmmmmwwwwwiiioo"],
+        "ex-h3-economie-116": ["Proeftoets 116: Reëel inkomen stap voor stap — plus of min?", "2026-11-12", "2.3", "mmmmmmwwwiimmmwommio"],
+        "ex-h3-economie-117": ["Proeftoets 117: Bestedingsinflatie of kosteninflatie?", "2026-11-12", "2.3", "mmmmmmwwwiimmmwommio"],
+        "ex-h3-economie-118": ["Proeftoets 118: Hoe meet het CBS de inflatie?", "2026-11-12", "2.3", "mmmmmmmwwiimmmwomwio"],
+        "ex-h3-economie-119": ["Proeftoets 119: Begrippen uit elkaar houden — koopkracht, nominaal, reëel, CPB", "2026-11-12", "2.3", "mmmmmmwwwiimmmmomwio"],
+        "ex-h3-economie-120": ["Proeftoets 120: Herhaling — alle zwakke plekken van §2.3", "2026-11-12", "2.3", "mmmmmmwwiimmmmwomwio"]
       },
       "onderwerpHoofdstuk": {
         "h1-1": 1,
@@ -919,7 +929,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 6,
-        "2": 23,
+        "2": 28,
         "3": 3,
         "4": 83
       },

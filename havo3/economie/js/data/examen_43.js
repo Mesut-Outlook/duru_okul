@@ -134,7 +134,7 @@ DURU.registerExamen({
       "type": "invul",
       "vraag": "De procentuele verandering van het reële inkomen is de procentuele verandering van het ____ inkomen min het inflatiepercentage.",
       "antwoord": "nominaal|nominale",
-      "uitleg": "Formule: reîl = nominaal − inflatiepercentage."
+      "uitleg": "Formule: reëel = nominaal − inflatiepercentage."
     },
     {
       "type": "invul",
@@ -157,7 +157,7 @@ DURU.registerExamen({
     {
       "type": "invul",
       "vraag": "Het ____ inkomen geeft aan hoeveel goederen je met je inkomen kunt kopen.",
-      "antwoord": "reîl|reële|reeel|reele",
+      "antwoord": "reëel|reeel|reel|reële|reele",
       "uitleg": "Dat is het reële inkomen."
     },
     {
@@ -179,14 +179,14 @@ DURU.registerExamen({
     },
     {
       "type": "open",
-      "vraag": "Wat is het verschil tussen nominaal en reîl inkomen?",
+      "vraag": "Wat is het verschil tussen nominaal en reëel inkomen?",
       "sleutelwoorden": [
         "euro/euro’s",
         "kopen/goederen"
       ],
       "minTreffers": 2,
       "modelantwoord": "Nominaal inkomen is het bedrag in euro’s. Reîl inkomen geeft aan hoeveel goederen je ermee kunt kopen.",
-      "uitleg": "Nominaal = in euro’s; reîl = wat je ervoor kunt kopen."
+      "uitleg": "Nominaal = in euro’s; reëel = wat je ervoor kunt kopen."
     },
     {
       "type": "open",
@@ -196,7 +196,7 @@ DURU.registerExamen({
         "inflatie"
       ],
       "minTreffers": 2,
-      "modelantwoord": "Procentuele verandering reîl inkomen = procentuele verandering nominaal inkomen − inflatiepercentage.",
+      "modelantwoord": "Procentuele verandering reëel inkomen = procentuele verandering nominaal inkomen − inflatiepercentage.",
       "uitleg": "Van de nominale verandering haal je de inflatie af."
     },
     {

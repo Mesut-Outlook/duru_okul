@@ -55,7 +55,7 @@ DURU.register({
     },
     {
       "type": "mc",
-      "vraag": "Wat is het verschil tussen nominaal en reëel inkomen?",
+      "vraag": "Waarin verschilt het nominaal inkomen van het reëel inkomen?",
       "opties": [
         "Nominaal is het bedrag in euro's; reëel is wat je ervoor kunt kopen (koopkracht).",
         "Nominaal is inclusief rente; reëel is exclusief vakantiegeld.",

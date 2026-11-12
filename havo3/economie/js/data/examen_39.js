@@ -20,7 +20,7 @@ DURU.registerExamen({
         "De koopkracht stijgt met 2,5%."
       ],
       "antwoord": 3,
-      "uitleg": "Procentuele verandering reîl inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. 4% − 1,5% = 2,5%: de koopkracht stijgt."
+      "uitleg": "Procentuele verandering reëel inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. 4% − 1,5% = 2,5%: de koopkracht stijgt."
     },
     {
       "type": "mc",
@@ -32,7 +32,7 @@ DURU.registerExamen({
         "De koopkracht blijft gelijk."
       ],
       "antwoord": 1,
-      "uitleg": "Procentuele verandering reîl inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. 2% − 5,5% = −3,5%: de koopkracht daalt."
+      "uitleg": "Procentuele verandering reëel inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. 2% − 5,5% = −3,5%: de koopkracht daalt."
     },
     {
       "type": "mc",
@@ -44,7 +44,7 @@ DURU.registerExamen({
         "Zij daalt met 1,5%."
       ],
       "antwoord": 2,
-      "uitleg": "Procentuele verandering reîl inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. 0% − 3% = −3%."
+      "uitleg": "Procentuele verandering reëel inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. 0% − 3% = −3%."
     },
     {
       "type": "mc",
@@ -56,7 +56,7 @@ DURU.registerExamen({
         "De koopkracht blijft gelijk."
       ],
       "antwoord": 0,
-      "uitleg": "Procentuele verandering reîl inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. −2% − (−4%) = +2%: de prijzen dalen harder dan het inkomen."
+      "uitleg": "Procentuele verandering reëel inkomen = procentuele verandering nominaal inkomen − inflatiepercentage. −2% − (−4%) = +2%: de prijzen dalen harder dan het inkomen."
     },
     {
       "type": "mc",

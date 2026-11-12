@@ -32,7 +32,7 @@ DURU.registerExamen({
         "Zij stijgt met 1,5%."
       ],
       "antwoord": 3,
-      "uitleg": "Nominaal 3%; reîl 3% − 1,5% = 1,5%."
+      "uitleg": "Nominaal 3%; reëel 3% − 1,5% = 1,5%."
     },
     {
       "type": "mc",
@@ -185,7 +185,7 @@ DURU.registerExamen({
       ],
       "minTreffers": 2,
       "modelantwoord": "Nominaal: 84 ÷ 2.800 × 100% = 3%. Reîl: 3% − 5% = −2%; haar reële inkomen daalt met 2%.",
-      "uitleg": "Nominaal 3%, reîl 3% − 5% = −2%."
+      "uitleg": "Nominaal 3%, reëel 3% − 5% = −2%."
     },
     {
       "type": "open",

@@ -18,6 +18,11 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "hoog", tekst: "Toets 72'yi üç kez aynı yanlış cevaplarla çözdü: sonuçtaki açıklamaları okumuyor. 'het meisje dat' (lidwoord karar verir, cinsiyet değil), eşyalar için 'hem', regering için 'haar' kurallarını birlikte konuşmak faydalı olur." },
     { ernst: "mid", tekst: "Prova sınavları (68–70): 10–14 / 20. Foutentraining 71–73: 9–16 / 20. 74–75 aynı hatalara farklı yoldan (adım adım, karşılaştırmalı) gidiyor." }
   ] },
+  economie: { datum: "2026-11-12", punten: [
+    { ernst: "mid", tekst: "§2.3 (19 test, son deneme ort. %79): reel gelir hesabında eksi işaretini unutuyor (−0,9 yerine 0,9) ve ücret/fiyat tablosunda en yüksek çubuğa bakıyor, farka (ücret − fiyat) bakmıyor." },
+    { ernst: "mid", tekst: "Bestedingsinflatie'yi 'çok fazla arz' sanıyor (doğrusu: çok fazla talep/vraag); kosteninflatie ile karıştırıyor. CBS'in çok harcanan ürünleri 'daha ağır' saydığını ve enflasyonun bir ortalama olduğunu kaçırıyor." },
+    { ernst: "mid", tekst: "CPB (koopkrachtplaatjes) ↔ CBS (enflasyonu ölçer) karışık; 'modaal' ve 'inflatiecijfer' boş. Açık soruların çoğu boş (53'ün 41'i). Yeni testler 116–120 bunlara gidiyor." }
+  ] },
   scheikunde: { datum: "2026-11-10", punten: [
     { ernst: "hoog", tekst: "Yoğunluk hesabında formülü ters kuruyor: V = m / ρ yerine çarpıyor (18 g / 24 cm³ → 432 yazdı); g/cm³ → kg/m³ için ×1000 yapmıyor (7,8 → 7,8); L ↔ cm³ dönüşümünü karıştırıyor (0,35 L → 35)." },
     { ernst: "mid", tekst: "°C ↔ K dönüşümünde yön/işaret hatası: 0 °C → −273, 4 K → 277, 21 °C → −252. Erime/kaynama noktası K ve °C karışık verilince maddenin halini bulamıyor." },
