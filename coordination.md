@@ -855,7 +855,7 @@ agy: bitince bu bölüme "agy Raporu" ekle, status → REVIEW.
 
 - **Opus denetimi (2026-11-10):** 46–54 + 61–65 Sonnet, 55–60 agy. Teori dışı 1 soru (63: 'proletariaat' → Rode Leger), agy 55/57 open 'Noem twee' → 'één', 55#20 32#20'nin yakın kopyası + anahtar soruda → yeniden yazıldı. gate 18/18, open_check 0, teslim_check temiz; index.html + manifest bağlı.
 
-### TASK-41 · engels H1 + H2: her Part'a 3 grammar + 3 woorden toets (examen_41…64)  [status: REVIEW — agy payı: 53…58 TAMAMLANDI ✅]
+### TASK-41 · engels H1 + H2: her Part'a 3 grammar + 3 woorden toets (examen_41…64)  [status: DONE ✅ — 2026-11-10 Opus denetimi + push (c485091); 2026-11-13 kapılar yeniden çalıştırıldı: gate 16/18 (yalnız eski smoke-test ex-h3-engels-1), open_check engels 0, teslim_check 53 temiz — agy payı: 53…58]
 Kullanıcı isteği (2026-11-10): "İngilizcede 1. ve 2. ünitedeki her bölümün hem gramerinden hem kelimelerinden 3'er test; işi agy ile paylaş, Sonnet'e de ver".
 Kitap = Stepping Stones 3 havo; her chapter **Part one** (A–E) + **Part two** (F–I) + Learning corner. Bölüm = Part.
 
