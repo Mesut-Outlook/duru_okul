@@ -698,3 +698,16 @@ Faz 1 uygulandı.
 ### 2026-11-04 · nederlands: öğretmen notları işlendi + `exact` invul
 - Nederlands Notlar (pptx/docx) → 5 onderwerp (`c7_3_bijvoeglijk`, `c7_9`, `c7_10`, `c7_11`, `c7_werkwoorden_begrippen`) + toets 53–62. Üreteç `tools/gen_nederlands_lesnotities.py`.
 - `havo3/nederlands/js/exams.js → invulGoed`: opsiyonel `exact:true` = yalnız tam eşleşme (spelling'de alt-dizi kuralı `vind`→`vindt`'i doğru sayıyordu). Eski sorular değişmedi. Ayrıntı: `docs/ENGINE_SPEC.md`, `coordination.md`.
+
+
+### 2026-11-13 · Hub UI/UX & Veli/Öğrenci Ana Sayfa İyileştirmeleri
+- `css/style.css` (`?v=7.0`), `index.html`, `js/landing.js` (`?v=6.4`), `js/dashboard.js` (`?v=20261112`), `js/ouder_dashboard.js` (`?v=20261112`) güncellendi.
+- **Görsel hata düzeltmeleri:** Eksik `.cloud-modal-*`, `.cloud-sync-pill` ve `.user-display-pill` stilleri eklendi; `var(--font-kop)` → `var(--font-titel)` düzeltildi; dark mode HAVO 3 kartları hub yeşiliyle (`#0d3225`) hizalandı; `.topbar-in` `1120px` sabitlenerek sekme zıplaması giderildi; Google Fonts `@import` yerine `<link>` kullanıldı.
+- **Öğrenci ana sayfası:** `Deze week` kartına `berekenDagStreak()` ile ardışık gün serisi (`dagen op rij`) eklendi; `Al je vakken` altına `Alle · Talen · Exact · Mens & Maatschappij` alan filtresi eklendi; `Laatst gemaakt` ilk 4 kayıtla kompaktlaştırıldı; iframe açılışına `#vak-loading` ve login'e dark mode + şifre göster/gizle (`#auth-toggle-pass`) eklendi.
+- **Veli paneli:** Alt bölümlere yatay `.ob-bolumtabs` sekme çubuğu eklendi; süreler `dk` birimine çevrildi; `.ob-legenda` katlanabilir `<details>` içine alındı.
+- `node -c` sözdizimi kontrolleri temiz (`coordination.md` içine ayrıntılı log eklendi).
+- **Claude kontrolü (2026-11-13):** bu tur `465387b` ile canlıda; güncel sürümler `style.css?v=7.3` / `landing.js?v=6.5` / `dashboard.js?v=20261112b` /
+  `ouder_dashboard.js?v=20261112c`. Sonradan: "toetsen gemaakt" → "pogingen", veli "Dikkat" bölümü Gelişim analizine taşındı. Ayrıntı `coordination.md` + `js/CLAUDE.md`.
+
+### 2026-11-13 · scheikunde `ex-h3-sch-h2-69#20` open-anahtarı
+- `los` anahtarı sorudaki "oplossen"le eşleşiyordu (alt-dizi) → `zitten los/los van/los tussen/…`. Kural: open anahtarı sorudaki bir kelimenin **parçası** olmasın; `open_check.js` yakalar.

@@ -206,7 +206,7 @@ DURU.registerExamen({
       "type": "open",
       "vraag": "Waarom kun je suiker na het oplossen in water niet meer zien? <i>(Eén korte zin is genoeg.)</i>",
       "sleutelwoorden": [
-        "los/verdeeld/verdelen/tussen/apart"
+        "zitten los/los van/los tussen/verdeeld/verdelen/tussen/apart"
       ],
       "minTreffers": 1,
       "modelantwoord": "De suikermoleculen zitten los tussen de watermoleculen.",

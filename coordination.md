@@ -2371,3 +2371,48 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   - `js/dashboard.js` ve `js/ouder_dashboard.js` içinde `loadDuruAttempts` ve öğrenci raporlama döngülerinde silinen sınav ID'leri filtrelendi.
 
 
+
+
+### 2026-11-13 · Hub UI/UX İyileştirmeleri (agy — Claude kontrolü için)
+**Kapsam:** Öğrenci ana sayfası, veli paneli, bulut modalı, dark mode uyumu, login ekranı ve erişilebilirlik iyileştirmeleri.
+
+**Değiştirilen dosyalar:**
+1. `css/style.css` (`?v=7.0`)
+   - **Eksik stiller eklendi:** `.cloud-modal-overlay`, `.cloud-modal-card`, `.cloud-modal-header`, `.cloud-modal-close`, `.cloud-modal-body`, `.cloud-status-banner` (light + dark mode) ve masaüstü (`min-width: 601px`) `.cloud-sync-pill` / `.user-display-pill` stilleri eklendi.
+   - **Dark mode kart uyumu:** `html.dark` altındaki HAVO 3 kart tokenları (`--h3-kaart: #0d3225`, `--h3-rand: #194d3b`, `--h3-zacht: #94b8a8`) hub'ın orman yeşili paletiyle hizalandı (önceki `#241f2c` morumsu ton kaldırıldı).
+   - **Sekme genişlik sabitleme:** `.topbar-in` tüm sekmelerde `max-width: 1120px` olarak sabitlendi (`body:has(#vakken-view.active) .topbar-in` kaldırıldı); sekmeler arası geçişte topbar sağa/sola zıplamıyor.
+   - **Google Fonts:** `@import` kaldırılıp `index.html` `<head>` içine `<link rel="preconnect">` + `<link>` olarak taşındı.
+   - **Mobil (`<=600px`) & yeni bileşen stilleri:** `.ob-kop` `flex-wrap: wrap` yapıldı; `#vak-loading` (`.vak-loading`), `#login-overlay` dark mode + `.auth-pass-wrap` / `.auth-pass-toggle`, `.hs-getallen--3`, `.hs-filter-rij` / `.hs-filter-pill`, `.ob-bolumtabs` / `.ob-bolumtab` ve `.ob-legenda-det` stilleri eklendi.
+2. `index.html`
+   - `<head>` içine non-blocking Google Fonts `<link>` etiketleri eklendi; `style.css?v=7.0`, `landing.js?v=6.4`, `dashboard.js?v=20261112`, `ouder_dashboard.js?v=20261112` güncellendi.
+   - `#cloud-sync-btn` üzerine `aria-label` eklendi; `.hub-tabs` üzerine `role="tablist"`, `role="tab"` ve `aria-selected` eklendi.
+   - `#iframe-shell` içine `<div id="vak-loading" class="vak-loading" aria-live="polite">Laden…</div>` eklendi.
+   - Login modalında tanımsız `var(--font-kop)` → `var(--font-titel)` düzeltildi; dark mode sınıfları (`.login-card`, `.login-title`, `.login-sub`, `.login-tabs`), `#auth-toggle-pass` (şifre göster/gizle) ve `#auth-pass-label` ("Şifre:") eklendi.
+3. `js/landing.js`
+   - `openInIframe()` / `sluitIframe()` / `frame.load` içine `#vak-loading` göster/gizle eklendi.
+   - `berekenDagStreak()` eklendi ve `Deze week` kartı 3 kutuya çıkarıldı (`toetsen gemaakt`, `gemiddeld cijfer`, `dagen op rij`).
+   - `Laatst gemaakt` listesi `slice(0, 4)` ile daha kompakt hale getirildi.
+   - `renderDomeinFilter()` ile `Al je vakken` altına `Alle · Talen · Exact · Mens & Maatschappij` alan filtresi pill'leri eklendi.
+   - Login'de `#auth-toggle-pass` ve sekme geçişinde `#auth-pass-label` metin güncellemesi eklendi.
+4. `js/dashboard.js`
+   - `initTabs()` içinde `.hub-tab` tıklamalarında `aria-selected` senkronizasyonu eklendi.
+5. `js/ouder_dashboard.js`
+   - `dk()` ve `saDk()` çıktıları `′` yerine `dk` birimine çevrildi (`12 dk`, `1 sa 5 dk`).
+   - `Dersler` tablosu altındaki uzun `.ob-legenda` metni `<details class="ob-legenda-det"><summary>Tablo nasıl okunur?</summary>...</details>` içine alındı.
+   - Alt bölümlerde (`analiz`, `dikkat`, `dersler`, `sure`, `log`) Ana sayfa'ya dönmeden bölümler arası geçiş sağlayan `.ob-bolumtabs` yatay sekme çubuğu eklendi.
+
+**Doğrulama:** `node -c js/landing.js`, `node -c js/dashboard.js`, `node -c js/ouder_dashboard.js` hatasız geçti. Çalışma dizininde commit edilmemiş durumda; canlıya almak / test etmek için commit + push (veya yerelde sert yenileme) bekliyor.
+
+**Claude kontrolü (2026-11-13) — DONE ✅, canlıda.** agy'nin bu turu `465387b` (2026-11-12, görsel birleştirme turu) ile birlikte commit + push edildi;
+sürümler artık `style.css?v=7.3`, `landing.js?v=6.5`, `dashboard.js?v=20261112b`, `ouder_dashboard.js?v=20261112c` (yukarıdaki `?v=` değerleri eskidi).
+- Playwright (uydurma kullanıcı `testbot` / veli `baba`, Firebase regex ile kesik): JS hatası yok, 1280 ve 390px'te taşma yok (açık + koyu). Ayrıca tek tek:
+  şifre göster/gizle (`password → text`), bulut modalı açık + koyu görünür, `#vak-loading` ders yüklenince kapanıyor, alan filtresi, `dagen op rij`,
+  `.ob-bolumtabs`, `dk` birimleri, katlanır legenda ekranda doğrulandı. `test_score_merge.js` + `test_server_merge.py` geçti.
+- agy'nin turundan sonra değişenler (aynı commit): "toetsen gemaakt" → **"pogingen"** (deneme ≠ farklı test); "Deze week" her yerde pazartesiden beri;
+  `.ob-bolumtabs`'ta **"Dikkat" sekmesi yok** — Dikkat listesi Gelişim analizinin ilk kartı oldu (analiz verisi yoksa eski sekme/düğme geri gelir).
+  Ayrıntı: `js/CLAUDE.md` → "Görsel birleştirme turu (2026-11-12)".
+
+### 2026-11-13 · scheikunde `ex-h3-sch-h2-69#20` anahtar düzeltmesi (Claude) ✅
+`open_check`: soru metnini yapıştırmak "goed" alıyordu — anahtar `los`, sorudaki "op**los**sen"in içinde geçiyordu (motor alt-dizi eşleştirir; `losse` de aynı tuzak).
+Yeni anahtar: `zitten los/los van/los tussen/verdeeld/verdelen/tussen/apart` (veri dosyası + `tools/gen_scheikunde_basis.py`). Soru metni, sırası ve modelantwoord
+değişmedi (test Duru tarafından çözülmüş; kayıtlı denemesi etkilenmez). `open_check` 0, `gate.js scheikunde` 18/18.

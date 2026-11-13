@@ -110,7 +110,7 @@ EXAMENS = {
     I("Als suiker in water oplost, ontstaat een heldere ____.", "oplossing", "§2.1."),
     I("In de gasfase bewegen de moleculen met grote ____.", "snelheid", "§2.1."),
     I("Alle moleculen van een ____ stof zijn hetzelfde.", "zuivere|zuiver", "§2.1."),
-    O("Waarom kun je suiker na het oplossen in water niet meer zien?", "los/verdeeld/verdelen/tussen/apart",
+    O("Waarom kun je suiker na het oplossen in water niet meer zien?", "zitten los/los van/los tussen/verdeeld/verdelen/tussen/apart",
       "De suikermoleculen zitten los tussen de watermoleculen.", "Opgave 11."),
 ]),
 (2, 70): ("2.2", "§2.2 Atomen, symbolen en verbindingen", "⚛️", [
