@@ -36,5 +36,10 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "mid", tekst: "Benzer adları karıştırıyor: Volkenbond ↔ Vrede van Versailles, Brest-Litovsk ↔ Versailles, tsaar ↔ Lenin, Marne ↔ Somme." },
     { ernst: "mid", tekst: "Kavramları kendi kelimesiyle yazıyor ama kabul edilmiyor: 'op de bon' (distributiestelsel), 'illegale' (zwarte markt), 'prikkeldraad' (elektrocutie). Yeni testler 46–65 bunlara gidiyor." },
     { ernst: "mid", tekst: "10 Kasım akşamı 10 denemeyi 25 dakikada yaptı (deneme başı 2–3 dk); toets 43'ü üst üste 4 kez çözdü (7→12→12→17/20) — ezber/tahmin olabilir. §1.4 en zayıf: Kemal 'sultan' (doğrusu president), Anatolië, Hongarije, Baltische staten, Poolse Corridor, goudmarken. Herhaling toetsen 66–75 bunlara gidiyor." }
+  ] },
+  natuurkunde: { datum: "2026-11-13", punten: [
+    { ernst: "mid", tekst: "H1 (42 testin 30'u çözüldü, son deneme ort. ~8,1): hız sabitken kuvvetleri topluyor (85 N trapkracht, 25 N rolweerstand → luchtweerstand 60 yerine 110); tek bir kuvvet değişince (rüzgâr kesilir, rolweerstand artar) hızlanma/yavaşlamayı karıştırıyor." },
+    { ernst: "mid", tekst: "Birim ve formülü ters çeviremiyor: 850 g'ı kg'a çevirmeden 8338 N; m = Fz / g yerine çarpıyor (686 N → 6722 kg); a = F / m yerine çarpıyor; t = Δv / a'yı ters bölüyor (4 s yerine 0,25)." },
+    { ernst: "mid", tekst: "Remweg hız karesiyle büyür (2× hız → 4× remweg) kuralını kaçırıyor; remweg = ½ · v · t'de yarıyı unutuyor (9 m yerine 18). Yatay taşımada yerçekiminin iş yapmadığını (W = 0) bilmiyor. Boş bıraktığı sorular çoğunlukla hesap (invul) soruları. Yeni testler 81–85 bunlara gidiyor." }
   ] }
 };

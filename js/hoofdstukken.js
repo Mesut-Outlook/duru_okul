@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-12",
+  "gegenereerd": "2026-11-13",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1827,7 +1827,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-77": 1,
         "ex-h3-natuurkunde-78": 1,
         "ex-h3-natuurkunde-79": 1,
-        "ex-h3-natuurkunde-80": 1
+        "ex-h3-natuurkunde-80": 1,
+        "ex-h3-natuurkunde-81": 1,
+        "ex-h3-natuurkunde-82": 1,
+        "ex-h3-natuurkunde-83": 1,
+        "ex-h3-natuurkunde-84": 1,
+        "ex-h3-natuurkunde-85": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -1909,7 +1914,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-77": ["Toets 77 — §1.4 Veiligheid, Remweg & Stopafstand — Toets E", "2026-11-08", "1.4", "mmmmmmmmmmmwwwwiiiio"],
         "ex-h3-natuurkunde-78": ["Toets 78 — §1.5 Arbeid en Energieomzetting — Toets C", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"],
         "ex-h3-natuurkunde-79": ["Toets 79 — §1.5 Arbeid en Energieomzetting — Toets D", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"],
-        "ex-h3-natuurkunde-80": ["Toets 80 — §1.5 Arbeid en Energieomzetting — Toets E", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"]
+        "ex-h3-natuurkunde-80": ["Toets 80 — §1.5 Arbeid en Energieomzetting — Toets E", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-81": ["Toets 81 — Herhaling H1: Krachten bij constante snelheid en veranderende krachten", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-82": ["Toets 82 — Herhaling H1: Rekenen: eenheden omrekenen en formules omdraaien", "2026-11-13", "mix", "mmmmiiiimmmmmmmwwwwo"],
+        "ex-h3-natuurkunde-83": ["Toets 83 — Herhaling H1: Remweg, stopafstand en veiligheid", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-84": ["Toets 84 — Herhaling H1: Arbeid en diagrammen lezen", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-85": ["Toets 85 — Herhaling H1: Integrale zwakte-toets (alle zwakke punten)", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -1958,7 +1968,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 42,
+        "1": 47,
         "2": 5,
         "3": 5,
         "4": 5,

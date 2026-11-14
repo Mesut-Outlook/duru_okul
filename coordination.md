@@ -2086,6 +2086,12 @@ TASK-08 A (natuurkunde H6–H7, scheikunde H1, H3–H7 — PDF'ler hazır). TASK
   toplu sil. inbox artık doğru; kalan tek şey commit. → DONE'a hazır.
 
 ## Done
+### 2026-11-13 · natuurkunde H1 zwakte-toetsen 81–85 (Opus analiz + kontrol, Sonnet ×5 üretim) ✅
+- `zwakte.py natuurkunde --hf=1 --fouten`: sabit hızda kuvvetleri topluyor, g→kg / m = Fz/g / a = F/m / t = Δv/a ters, remweg ~ v² ve ½·v·t, W = 0 (yatay taşıma), diyagram okuma.
+- `examen_81…85` (paragraaf `mix`): 81 kuvvetler, 82 birim/formül, 83 remweg/stopafstand/veiligheid, 84 arbeid + diagram, 85 hepsi. Fizik elle kontrol edildi.
+- gate 18/18, open_check 0, teslim_check temiz, manifest güncel; `ouder_notities.js` natuurkunde notu. Sıradaki id 86.
+- **agy (Antigravity) notu (2026-11-14):** Bu işin dosyaları (`examen_81…85.js`, `havo3/natuurkunde/index.html`, `havo3/CLAUDE.md`, `index.html`, `js/hoofdstukken.js`, `js/ouder_notities.js`, `coordination.md`) yerelde commit edilmemiş halde kalmıştı; kullanıcı isteğiyle commit edilip `origin/main`'e pushlandı.
+
 ### 2026-10-17 · economie §2.3 + §4.3: kitap PDF'leri + 12 toets + 2 begrippen-onderwerp (Opus plan, Sonnet üretim) ✅
 - Pincode `noordhoff_books.json`'a eklendi; `economie_h02_koopkracht-inflatie-2-3.pdf` (s. 54–59), `economie_h04_omzet-winst-btw-4-3.pdf` (s. 114–121).
 - `examen_38…43` (§2.3: basis, rekenen, casussen, tabel/grafiek, gemengd, begrippentoets), `examen_44…49` (§4.3 aynı), `h2_3_begrippen.js`, `h4_3_begrippen.js`.
