@@ -1838,7 +1838,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-88": 1,
         "ex-h3-natuurkunde-89": 1,
         "ex-h3-natuurkunde-90": 1,
-        "ex-h3-natuurkunde-91": 1
+        "ex-h3-natuurkunde-91": 1,
+        "ex-h3-natuurkunde-92": 1,
+        "ex-h3-natuurkunde-93": 1,
+        "ex-h3-natuurkunde-94": 1,
+        "ex-h3-natuurkunde-95": 1,
+        "ex-h3-natuurkunde-96": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -1931,7 +1936,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-88": ["Toets 88 — Herhaling H1: Constante snelheid en stilstand (Fres = 0 N)", "2026-11-14", "mix", "mmimiwwmmwmimwmmmwwo"],
         "ex-h3-natuurkunde-89": ["Toets 89 — Herhaling H1: Stopafstand en botsen (v, v² en botstijd)", "2026-11-14", "mix", "mmimmiimwwmmwmwimmmo"],
         "ex-h3-natuurkunde-90": ["Toets 90 — Herhaling H1: Arbeid (cm, km en kJ; wanneer is W = 0?)", "2026-11-14", "mix", "mmimimiimwwmmwwimmwo"],
-        "ex-h3-natuurkunde-91": ["Toets 91 — Herhaling H1: Diagrammen lezen ((s,t) en (v,t))", "2026-11-14", "mix", "mmmmmimiwwwmmwmmmiwo"]
+        "ex-h3-natuurkunde-91": ["Toets 91 — Herhaling H1: Diagrammen lezen ((s,t) en (v,t))", "2026-11-14", "mix", "mmmmmimiwwwmmwmmmiwo"],
+        "ex-h3-natuurkunde-92": ["Toets 92 — Herhaling H1: Delen of keer? Eerst de bewerking kiezen", "2026-11-14", "mix", "mmwimmiwmmimimmmwmwo"],
+        "ex-h3-natuurkunde-93": ["Toets 93 — Herhaling H1: Afstand = gemiddelde snelheid × tijd", "2026-11-14", "mix", "miimwmmimwmmmmmwmwmo"],
+        "ex-h3-natuurkunde-94": ["Toets 94 — Herhaling H1: Wat wordt 2×, wat wordt 4×? (remweg, reactie, botsen)", "2026-11-14", "mix", "mmmmiwimwmmmwwmmmmwo"],
+        "ex-h3-natuurkunde-95": ["Toets 95 — Herhaling H1: Constante snelheid en stilstand (krachten aftrekken)", "2026-11-14", "mix", "mmwmmiimmiimmmwmmwmo"],
+        "ex-h3-natuurkunde-96": ["Toets 96 — Herhaling H1: Alles door elkaar (ronde 3)", "2026-11-14", "mix", "mimimmwmmmmmmmmmmmwo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -1980,7 +1990,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 53,
+        "1": 58,
         "2": 5,
         "3": 5,
         "4": 5,
