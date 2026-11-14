@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-13",
+  "gegenereerd": "2026-11-14",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1832,7 +1832,13 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-82": 1,
         "ex-h3-natuurkunde-83": 1,
         "ex-h3-natuurkunde-84": 1,
-        "ex-h3-natuurkunde-85": 1
+        "ex-h3-natuurkunde-85": 1,
+        "ex-h3-natuurkunde-86": 1,
+        "ex-h3-natuurkunde-87": 1,
+        "ex-h3-natuurkunde-88": 1,
+        "ex-h3-natuurkunde-89": 1,
+        "ex-h3-natuurkunde-90": 1,
+        "ex-h3-natuurkunde-91": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -1915,11 +1921,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-78": ["Toets 78 — §1.5 Arbeid en Energieomzetting — Toets C", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"],
         "ex-h3-natuurkunde-79": ["Toets 79 — §1.5 Arbeid en Energieomzetting — Toets D", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"],
         "ex-h3-natuurkunde-80": ["Toets 80 — §1.5 Arbeid en Energieomzetting — Toets E", "2026-11-08", "1.5", "mmmmmmmmmmmwwwwiiiio"],
-        "ex-h3-natuurkunde-81": ["Toets 81 — Herhaling H1: Krachten bij constante snelheid en veranderende krachten", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"],
-        "ex-h3-natuurkunde-82": ["Toets 82 — Herhaling H1: Rekenen: eenheden omrekenen en formules omdraaien", "2026-11-13", "mix", "mmmmiiiimmmmmmmwwwwo"],
-        "ex-h3-natuurkunde-83": ["Toets 83 — Herhaling H1: Remweg, stopafstand en veiligheid", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"],
-        "ex-h3-natuurkunde-84": ["Toets 84 — Herhaling H1: Arbeid en diagrammen lezen", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"],
-        "ex-h3-natuurkunde-85": ["Toets 85 — Herhaling H1: Integrale zwakte-toets (alle zwakke punten)", "2026-11-13", "mix", "mmmmmmmmmmmwwwwiiiio"]
+        "ex-h3-natuurkunde-81": ["Toets 81 — Herhaling H1: Krachten bij constante snelheid en veranderende krachten", "2026-11-14", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-82": ["Toets 82 — Herhaling H1: Rekenen: eenheden omrekenen en formules omdraaien", "2026-11-14", "mix", "mmmmiiiimmmmmmmwwwwo"],
+        "ex-h3-natuurkunde-83": ["Toets 83 — Herhaling H1: Remweg, stopafstand en veiligheid", "2026-11-14", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-84": ["Toets 84 — Herhaling H1: Arbeid en diagrammen lezen", "2026-11-14", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-85": ["Toets 85 — Herhaling H1: Integrale zwakte-toets (alle zwakke punten)", "2026-11-14", "mix", "mmmmmmmmmmmwwwwiiiio"],
+        "ex-h3-natuurkunde-86": ["Toets 86 — Herhaling H1: Afstand bij versnellen en remmen (s = v_gem · t)", "2026-11-14", "mix", "mmimmwwmimiimwmmwmwo"],
+        "ex-h3-natuurkunde-87": ["Toets 87 — Herhaling H1: Delen of vermenigvuldigen? (a = F / m, F = m · a)", "2026-11-14", "mix", "mmimimimwwmimwmmwmwo"],
+        "ex-h3-natuurkunde-88": ["Toets 88 — Herhaling H1: Constante snelheid en stilstand (Fres = 0 N)", "2026-11-14", "mix", "mmimiwwmmwmimwmmmwwo"],
+        "ex-h3-natuurkunde-89": ["Toets 89 — Herhaling H1: Stopafstand en botsen (v, v² en botstijd)", "2026-11-14", "mix", "mmimmiimwwmmwmwimmmo"],
+        "ex-h3-natuurkunde-90": ["Toets 90 — Herhaling H1: Arbeid (cm, km en kJ; wanneer is W = 0?)", "2026-11-14", "mix", "mmimimiimwwmmwwimmwo"],
+        "ex-h3-natuurkunde-91": ["Toets 91 — Herhaling H1: Diagrammen lezen ((s,t) en (v,t))", "2026-11-14", "mix", "mmmmmimiwwwmmwmmmiwo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -1968,7 +1980,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 47,
+        "1": 53,
         "2": 5,
         "3": 5,
         "4": 5,
