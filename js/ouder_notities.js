@@ -37,7 +37,8 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "mid", tekst: "Kavramları kendi kelimesiyle yazıyor ama kabul edilmiyor: 'op de bon' (distributiestelsel), 'illegale' (zwarte markt), 'prikkeldraad' (elektrocutie). Yeni testler 46–65 bunlara gidiyor." },
     { ernst: "mid", tekst: "10 Kasım akşamı 10 denemeyi 25 dakikada yaptı (deneme başı 2–3 dk); toets 43'ü üst üste 4 kez çözdü (7→12→12→17/20) — ezber/tahmin olabilir. §1.4 en zayıf: Kemal 'sultan' (doğrusu president), Anatolië, Hongarije, Baltische staten, Poolse Corridor, goudmarken. Herhaling toetsen 66–75 bunlara gidiyor." }
   ] },
-  natuurkunde: { datum: "2026-11-14", punten: [
+  natuurkunde: { datum: "2026-11-15", punten: [
+    { ernst: "hoog", tekst: "92–96 ve artifact (15 Kasım): diyagramlar zayıf (artifact toets 3× 4,0; s,t ↔ v,t karışıyor, alan yerine 12 : 6 = 2 hesaplıyor) ve arbeid takılı (8 toets 5,5–7: kg'ı kuvvet sanıyor, cm/kJ çevirmiyor, top yukarı-aşağı 'negatief'). Artifact'ta bu iki ders artık adım adım kartlarla anlatılıyor; sitede § başına 2 yeni test (103–112)." },
     { ernst: "hoog", tekst: "İki turdur değişmeyen: a = F / m yerine çarpıyor (87: 90 000 m/s²; m = Fz/g ve F = W/s'de de), mesafede v/t bölüyor ya da ½'yi unutuyor (86, 91, 85). Yaklaşım değişti: test 92 (önce işlemi seç, Sam'in hatası, gerçekçi mi?) ve 93 (önce v_gem, sonra × t; birim mantığı)." },
     { ernst: "mid", tekst: "Remweg hâlâ ×k (3× hız → 3×), arbeid'da ise tersine kare kullanıyor (2× yükseklik → 4×). Sabit hızda/duruşta 'kuvvet yok' diyor ve karşıt kuvvetleri topluyor (900 + 350). Botsen yarı yarıya. Test 94 (2× mı 4× mü, botsen) ve 95 (kuvvetleri çıkar, oranlar); 96 hepsi karışık." },
     { ernst: "laag", tekst: "Arbeid cm/km/kJ oturdu (90: 18/20), eenheden oturdu. Aynı testi 3–4 dk sonra tekrar çözünce +6 puan: ezber; ölçü ilk deneme. Açık sorular hâlâ boş. Artifact'ta formules/afstand/constant/diagram dersleri ve yeni oyunlar henüz açılmadı." }

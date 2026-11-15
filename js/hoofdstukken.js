@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-14",
+  "gegenereerd": "2026-11-15",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -1843,7 +1843,23 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-93": 1,
         "ex-h3-natuurkunde-94": 1,
         "ex-h3-natuurkunde-95": 1,
-        "ex-h3-natuurkunde-96": 1
+        "ex-h3-natuurkunde-96": 1,
+        "ex-h3-natuurkunde-97": 1,
+        "ex-h3-natuurkunde-98": 1,
+        "ex-h3-natuurkunde-99": 1,
+        "ex-h3-natuurkunde-100": 1,
+        "ex-h3-natuurkunde-101": 1,
+        "ex-h3-natuurkunde-102": 1,
+        "ex-h3-natuurkunde-103": 1,
+        "ex-h3-natuurkunde-104": 1,
+        "ex-h3-natuurkunde-105": 1,
+        "ex-h3-natuurkunde-106": 1,
+        "ex-h3-natuurkunde-107": 1,
+        "ex-h3-natuurkunde-108": 1,
+        "ex-h3-natuurkunde-109": 1,
+        "ex-h3-natuurkunde-110": 1,
+        "ex-h3-natuurkunde-111": 1,
+        "ex-h3-natuurkunde-112": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -1941,7 +1957,23 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-93": ["Toets 93 — Herhaling H1: Afstand = gemiddelde snelheid × tijd", "2026-11-14", "mix", "miimwmmimwmmmmmwmwmo"],
         "ex-h3-natuurkunde-94": ["Toets 94 — Herhaling H1: Wat wordt 2×, wat wordt 4×? (remweg, reactie, botsen)", "2026-11-14", "mix", "mmmmiwimwmmmwwmmmmwo"],
         "ex-h3-natuurkunde-95": ["Toets 95 — Herhaling H1: Constante snelheid en stilstand (krachten aftrekken)", "2026-11-14", "mix", "mmwmmiimmiimmmwmmwmo"],
-        "ex-h3-natuurkunde-96": ["Toets 96 — Herhaling H1: Alles door elkaar (ronde 3)", "2026-11-14", "mix", "mimimmwmmmmmmmmmmmwo"]
+        "ex-h3-natuurkunde-96": ["Toets 96 — Herhaling H1: Alles door elkaar (ronde 3)", "2026-11-14", "mix", "mimimmwmmmmmmmmmmmwo"],
+        "ex-h3-natuurkunde-97": ["Toets 97 — Formuletraining: Fz = m · g", "2026-11-15", "mix", "mmimiiwmimwmmwimmiwo"],
+        "ex-h3-natuurkunde-98": ["Toets 98 — Formuletraining: v = s / t", "2026-11-15", "mix", "mmmiiimmwmimwmmiwmio"],
+        "ex-h3-natuurkunde-99": ["Toets 99 — Formuletraining: a = Δv / t", "2026-11-15", "mix", "mmmiimwmimimwwmmiimo"],
+        "ex-h3-natuurkunde-100": ["Toets 100 — Formuletraining: Fres = m · a", "2026-11-15", "mix", "mmmiiimwmimwwmmimmio"],
+        "ex-h3-natuurkunde-101": ["Toets 101 — Formuletraining: W = F · s", "2026-11-15", "mix", "mmiimmimiwimwmmiwmio"],
+        "ex-h3-natuurkunde-102": ["Toets 102 — Formuletraining: s_stop = s_reactie + s_rem", "2026-11-15", "mix", "miimwmmiwmmmmmimiwmo"],
+        "ex-h3-natuurkunde-103": ["Toets 103 — §1.1 Kracht bij beweging — Toets H", "2026-11-15", "1.1", "mwimiwmmmmimwimwmmio"],
+        "ex-h3-natuurkunde-104": ["Toets 104 — §1.1 Kracht bij beweging — Toets I", "2026-11-15", "1.1", "mwiiimimwmmimmwimmwo"],
+        "ex-h3-natuurkunde-105": ["Toets 105 — §1.2 Soorten beweging & Diagrammen — Toets H", "2026-11-15", "1.2", "mmmwmmmmmmiimiwmmmio"],
+        "ex-h3-natuurkunde-106": ["Toets 106 — §1.2 Soorten beweging & Diagrammen — Toets I", "2026-11-15", "1.2", "mmiimimwimimimmwmmio"],
+        "ex-h3-natuurkunde-107": ["Toets 107 — §1.3 Kracht en versnelling — Toets H", "2026-11-15", "1.3", "mimwmimimwmiimmiiwmo"],
+        "ex-h3-natuurkunde-108": ["Toets 108 — §1.3 Kracht en versnelling — Toets I", "2026-11-15", "1.3", "mmimwimimmwiimimwmmo"],
+        "ex-h3-natuurkunde-109": ["Toets 109 — §1.4 Veiligheid, Remweg & Stopafstand — Toets F", "2026-11-15", "1.4", "miimmmwmiiimwmmimmwo"],
+        "ex-h3-natuurkunde-110": ["Toets 110 — §1.4 Veiligheid, Remweg & Stopafstand — Toets G", "2026-11-15", "1.4", "mwmmwmiiiimmmmwmmwmo"],
+        "ex-h3-natuurkunde-111": ["Toets 111 — §1.5 Arbeid en Energieomzetting — Toets F", "2026-11-15", "1.5", "mmiimiiiimmiiwmimwmo"],
+        "ex-h3-natuurkunde-112": ["Toets 112 — §1.5 Arbeid en Energieomzetting — Toets G", "2026-11-15", "1.5", "mmwwmmmwimiimwmimmmo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -1990,7 +2022,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 58,
+        "1": 74,
         "2": 5,
         "3": 5,
         "4": 5,
