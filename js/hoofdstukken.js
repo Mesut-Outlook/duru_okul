@@ -1861,7 +1861,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-111": 1,
         "ex-h3-natuurkunde-112": 1,
         "ex-h3-natuurkunde-113": 1,
-        "ex-h3-natuurkunde-114": 1
+        "ex-h3-natuurkunde-114": 1,
+        "ex-h3-natuurkunde-115": 1,
+        "ex-h3-natuurkunde-116": 1,
+        "ex-h3-natuurkunde-117": 1,
+        "ex-h3-natuurkunde-118": 1,
+        "ex-h3-natuurkunde-119": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -1977,7 +1982,12 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-111": ["Toets 111 — §1.5 Arbeid en Energieomzetting — Toets F", "2026-11-15", "1.5", "mmiimiiiimmiiwmimwmo"],
         "ex-h3-natuurkunde-112": ["Toets 112 — §1.5 Arbeid en Energieomzetting — Toets G", "2026-11-15", "1.5", "mmwwmmmwimiimwmimmmo"],
         "ex-h3-natuurkunde-113": ["Toets 113 — Herhaling: delen of keer? (rekenregel kiezen)", "2026-11-15", "mix", "miwmmimiwimimiiimwmo"],
-        "ex-h3-natuurkunde-114": ["Toets 114 — Herhaling: omrekenen, arbeid en diagrammen", "2026-11-15", "mix", "miwmiimimmimwmmimimo"]
+        "ex-h3-natuurkunde-114": ["Toets 114 — Herhaling: omrekenen, arbeid en diagrammen", "2026-11-15", "mix", "miwmiimimmimwmmimimo"],
+        "ex-h3-natuurkunde-115": ["Toets 115 — Proefwerk H1 (oefenen zoals het echt is) — A", "2026-11-15", "eind", "iimmiiiiwiiiimmowmim"],
+        "ex-h3-natuurkunde-116": ["Toets 116 — Proefwerk H1 (oefenen zoals het echt is) — B", "2026-11-15", "eind", "iimwmiiiiimmwiiiimmo"],
+        "ex-h3-natuurkunde-117": ["Toets 117 — Proefwerk H1 (oefenen zoals het echt is) — C", "2026-11-15", "eind", "miiiwiimiimwiiiimmio"],
+        "ex-h3-natuurkunde-118": ["Toets 118 — Proefwerk H1 (oefenen zoals het echt is) — D", "2026-11-15", "eind", "iiiomiiwmimiiiimwmim"],
+        "ex-h3-natuurkunde-119": ["Toets 119 — Proefwerk H1 (oefenen zoals het echt is) — E", "2026-11-15", "eind", "iiwmiiiimmmiiiiimimo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -2026,7 +2036,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 76,
+        "1": 81,
         "2": 5,
         "3": 5,
         "4": 5,
