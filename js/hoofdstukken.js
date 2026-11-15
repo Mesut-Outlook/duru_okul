@@ -1859,7 +1859,9 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-109": 1,
         "ex-h3-natuurkunde-110": 1,
         "ex-h3-natuurkunde-111": 1,
-        "ex-h3-natuurkunde-112": 1
+        "ex-h3-natuurkunde-112": 1,
+        "ex-h3-natuurkunde-113": 1,
+        "ex-h3-natuurkunde-114": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -1973,7 +1975,9 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-109": ["Toets 109 — §1.4 Veiligheid, Remweg & Stopafstand — Toets F", "2026-11-15", "1.4", "miimmmwmiiimwmmimmwo"],
         "ex-h3-natuurkunde-110": ["Toets 110 — §1.4 Veiligheid, Remweg & Stopafstand — Toets G", "2026-11-15", "1.4", "mwmmwmiiiimmmmwmmwmo"],
         "ex-h3-natuurkunde-111": ["Toets 111 — §1.5 Arbeid en Energieomzetting — Toets F", "2026-11-15", "1.5", "mmiimiiiimmiiwmimwmo"],
-        "ex-h3-natuurkunde-112": ["Toets 112 — §1.5 Arbeid en Energieomzetting — Toets G", "2026-11-15", "1.5", "mmwwmmmwimiimwmimmmo"]
+        "ex-h3-natuurkunde-112": ["Toets 112 — §1.5 Arbeid en Energieomzetting — Toets G", "2026-11-15", "1.5", "mmwwmmmwimiimwmimmmo"],
+        "ex-h3-natuurkunde-113": ["Toets 113 — Herhaling: delen of keer? (rekenregel kiezen)", "2026-11-15", "mix", "miwmmimiwimimiiimwmo"],
+        "ex-h3-natuurkunde-114": ["Toets 114 — Herhaling: omrekenen, arbeid en diagrammen", "2026-11-15", "mix", "miwmiimimmimwmmimimo"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -2022,7 +2026,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 74,
+        "1": 76,
         "2": 5,
         "3": 5,
         "4": 5,
