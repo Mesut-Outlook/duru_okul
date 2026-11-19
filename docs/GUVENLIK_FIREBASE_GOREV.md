@@ -52,7 +52,8 @@ Firebase Console → Realtime Database → Data → ⋮ → Export JSON. Ya da:
 ## Adım 2 — Gerçek çözüm: Firebase Authentication (Google ile giriş)
 - Firebase Console'da Authentication → Google sağlayıcısını aç; Authorized domains'e
   `mesut-outlook.github.io` (ve yerel test için `localhost`) ekle.
-- Kullanıcılar: Duru = eladuruozdemir11@gmail.com, veli = ozdemirmesut@gmail.com.
+- Kullanıcılar: Duru'nun Google hesabı ve veli (Mesut) Google hesabı. (E-postalar repo public olduğu için buradan çıkarıldı;
+  kurallar e-posta değil UID ile yazılacak.)
 - `cloud_sync.js`: Firebase JS SDK (modular, CDN) ile `signInWithPopup` / oturum kalıcılığı;
   her REST çağrısına `?auth=<idToken>` ekle (token yenilemeyi `getIdToken()` ile yap).
   Mevcut merge/push güvenlik mantığını (DURU_MERGE, "okumadan yazma") KORU.
@@ -74,5 +75,23 @@ Firebase Console → Realtime Database → Data → ⋮ → Export JSON. Ya da:
 ## Durum
 - [x] Adım 0 yedek — 2026-11-19, REST ile `~/duru-okul-rtdb-yedek-2026-11-19.json` (1,95 MB; repo dışı). `scores_v2`: yalnız `duru`, `baba`.
 - [x] Adım 1 kurallar deploy edildi — 2026-11-19 (Mesut). Doğrulandı: kök okuma 401, `/test` ve `scores_v2/yabanci` yazma/okuma 401; `scores_v2/duru|baba` ve `scores` okuma 200. İstemci payload'ı her zaman `updatedAt` + dolu `scores` içerir (boşsa push yok) → `.validate` ile uyumlu.
-- [ ] Adım 2 Google girişi + kurallar
+- [~] Adım 2 Google girişi + kurallar — **kod hazır ve yayında (2026-11-19), Mesut'un konsol adımları bekleniyor.**
+  Yapılan: `js/cloud_sync.js` → `FIREBASE_CONFIG` + `initAuth/metToken/koppelGoogle`; Firebase compat SDK 10.14.1
+  (`index.html`, gstatic). `apiKey` boşken auth kapalı = eski davranış (senkron bozulmaz). Bağlı değilken buluta istek
+  gitmez; senkron hapı "Google'a bağlan" olur (Duru: tek dokunuş; veli: pencerede "Google ile bağlan", e-posta + UID görünür).
+  Doğrulama: Playwright + sahte Firebase stub — oturumsuz 0 istek, oturumlu her istek `?auth=TOK`; JS hatası yok;
+  `test_score_merge.js` + `test_server_merge.py` geçti.
+  **Kalan — Mesut (Firebase Console → duru-okul):**
+  1. Authentication → Sign-in method → Google'ı etkinleştir.
+  2. Authentication → Settings → Authorized domains → `mesut-outlook.github.io` ekle (localhost varsayılan var).
+  3. ⚙ Project settings → General → Your apps → web app yoksa ekle (Hosting gerekmez) → `apiKey` + `appId`'yi Claude'a ver
+     (gizli değil, koda açık yazılır).
+  **Kalan — Claude:**
+  4. `apiKey`/`appId`'yi `FIREBASE_CONFIG`'e yaz, `?v=` bump, push. ⚠️ Bu andan itibaren Google'a bağlanmamış cihazlar
+     buluta yazmaz (yerelde kaydeder; bağlanınca büyüyen-birleştirme ile kayıpsız birleşir).
+  **Kalan — Mesut + Duru:** 5. Kendi cihazlarında senkron hapına dokunup Google ile bağlanın.
+     6. Authentication → Users'tan iki UID'yi Claude'a ver.
+  **Kalan — Claude → Mesut:** 7. UID tabanlı kurallar (`scores`: iki hesap okur, kimse yazmaz; `scores_v2/duru`: Duru yazar,
+     Duru + veli okur; `scores_v2/baba|veli|mesut`: yalnız veli; kök kapalı; `newData.exists()` + `.validate` korunur) →
+     Mesut deploy eder → kontrol: bağlı iki cihazda senkron, token'sız okuma 401.
 - [ ] Adım 3 temizlik
