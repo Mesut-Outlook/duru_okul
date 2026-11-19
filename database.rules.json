@@ -1,6 +1,14 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
+    ".read": false,
+    ".write": false,
+    "scores": { ".read": true, ".write": false },
+    "scores_v2": {
+      "$user": {
+        ".read":  "$user.matches(/^(duru|baba|veli|mesut)$/)",
+        ".write": "$user.matches(/^(duru|baba|veli|mesut)$/) && newData.exists()",
+        ".validate": "newData.hasChildren(['updatedAt', 'scores'])"
+      }
+    }
   }
 }
