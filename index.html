@@ -263,6 +263,8 @@
           Duru'nun kendi bilgisayarından/tabletinden yaptığı tüm sınavlar ve kazandığı puanlar bulut üzerinden cihazlarınız arasında otomatik olarak eşitlenir.
         </p>
 
+        <div id="cloud-google-rij" style="display:none;font-size:13px;margin:0 0 14px;line-height:1.5;color:var(--inkt);"></div>
+
         <div style="display:flex;gap:10px;margin-bottom:20px;">
           <button id="cloud-modal-sync-now" class="filter-btn" style="flex:1;padding:12px;font-weight:700;background:var(--hub-gradient);color:#fff;" type="button">
             🔄 Şimdi Senkronize Et
@@ -293,7 +295,10 @@
   <script src="js/ouder_notities.js?v=20261115d"></script>
   <script src="js/ouder_analyse.js?v=20261108"></script>
   <script src="js/ouder_dashboard.js?v=20261112c"></script>
-  <script src="js/cloud_sync.js?v=5.1"></script>
+  <!-- Firebase Auth (compat = gewone script-tag, geen ES modules). Alleen gebruikt als cloud_sync.js een apiKey heeft. -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="js/cloud_sync.js?v=5.2"></script>
 
 </body>
 </html>

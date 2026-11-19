@@ -14,6 +14,76 @@
      GELEZEN, zodat bestaande apparaten hun geschiedenis binnenhalen. */
   var LEGACY_URL   = FIREBASE_BASE + "/scores.json";
   var FIREBASE_URL = LEGACY_URL; // alleen nog voor oude, opgeslagen configuraties
+  /* Google-login (2026-11-19, docs/GUVENLIK_FIREBASE_GOREV.md Adım 2). Lege apiKey = auth uit:
+     dan werkt alles zoals vóór de login (zonder ?auth=). Met apiKey gaat elk verzoek met het
+     ID-token van de ingelogde Google-account; de database-regels beslissen wie wat mag. */
+  var FIREBASE_CONFIG = {
+    apiKey: "",
+    authDomain: "duru-okul.firebaseapp.com",
+    projectId: "duru-okul",
+    databaseURL: FIREBASE_BASE,
+    appId: ""
+  };
+  var auth = null;
+  var authKlaar = Promise.resolve();
+  function initAuth() {
+    if (!FIREBASE_CONFIG.apiKey || !window.firebase || !window.firebase.auth) return;
+    try {
+      window.firebase.initializeApp(FIREBASE_CONFIG);
+      auth = window.firebase.auth();
+    } catch (e) {
+      console.warn("CloudSync: Firebase Auth niet gestart:", e.message);
+      auth = null;
+      return;
+    }
+    // Eerste sync pas na het herstellen van een opgeslagen sessie (anders lijkt
+    // iedereen bij het laden heel even "niet gekoppeld").
+    authKlaar = new Promise(function (klaar) {
+      var eerste = true;
+      auth.onAuthStateChanged(function () {
+        toonGoogleRij();
+        if (eerste) { eerste = false; klaar(); return; }
+        if (auth.currentUser) pullFromCloud(false).then(function () { pushToCloud(true); });
+        else updateStatusUI("error", "Google hesabı bağlı değil");
+      });
+    });
+  }
+  function nietGekoppeld() { return !!auth && !auth.currentUser; }
+  function metToken(url) {
+    if (!auth) return Promise.resolve(url);
+    if (!auth.currentUser) return Promise.reject(new Error("Google hesabı bağlı değil"));
+    return auth.currentUser.getIdToken().then(function (tok) {
+      return url + (url.indexOf("?") === -1 ? "?" : "&") + "auth=" + encodeURIComponent(tok);
+    });
+  }
+  function koppelGoogle() {
+    if (!auth) return Promise.resolve(false);
+    var provider = new window.firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    return auth.signInWithPopup(provider).then(function () { return true; })
+      .catch(function (e) {
+        console.warn("CloudSync: Google-login mislukt:", e.code || e.message);
+        if (e.code !== "auth/popup-closed-by-user" && e.code !== "auth/cancelled-popup-request")
+          showSyncToast("Google girişi başarısız: " + (e.code || e.message));
+        return false;
+      });
+  }
+  function ontkoppelGoogle() { return auth ? auth.signOut() : Promise.resolve(); }
+  function toonGoogleRij() {
+    var rij = document.getElementById("cloud-google-rij");
+    if (!rij) return;
+    if (!auth) { rij.style.display = "none"; return; }
+    rij.style.display = "block";
+    var u = auth.currentUser;
+    rij.innerHTML = u
+      ? "Google: <strong>" + escapeHtml(u.email || "?") + "</strong> <small style='color:var(--grijs-licht);'>(uid " + escapeHtml(u.uid) + ")</small> " +
+        "<button id='cloud-google-uit' class='filter-btn' type='button' style='margin:6px 0 0;padding:6px 12px;'>Google bağlantısını kes</button>"
+      : "Bulut eşitlemesi için Google hesabıyla bağlanın. " +
+        "<button id='cloud-google-aan' class='filter-btn' type='button' style='margin:6px 0 0;padding:6px 12px;'>Google ile bağlan</button>";
+    var aan = document.getElementById("cloud-google-aan"), uit = document.getElementById("cloud-google-uit");
+    if (aan) aan.onclick = function () { koppelGoogle(); };
+    if (uit) uit.onclick = function () { ontkoppelGoogle(); };
+  }
   var STORAGE_KEY_CONFIG = "duru_cloud_sync_config";
   var STORAGE_KEY_LAST_SYNC = "duru_cloud_last_sync";
   var STORAGE_KEY_LAST_REMOTE_TS = "duru_cloud_last_remote_ts";
@@ -96,7 +166,8 @@
     "Aktarım Hatası": "Opslaan mislukt",
     "İnternet bağlandı, eşitleniyor...": "Weer online, synchroniseren…",
     "Henüz yapılmadı": "nog niet",
-    "Duru'nun yeni sınav sonuçları buluttan güncellendi!": "Je nieuwste resultaten zijn binnengehaald!"
+    "Duru'nun yeni sınav sonuçları buluttan güncellendi!": "Je nieuwste resultaten zijn binnengehaald!",
+    "Google hesabı bağlı değil": "Tik om je Google-account te koppelen"
   };
   function isOuder() {
     var u = String(getActiveUser() || "").toLowerCase();
@@ -245,9 +316,10 @@
      samenvoegen onder user_duru_ zonder push (zie restoreScores). */
   var LEERLING = "duru";
   function haalLeerlingOp() {
-    if (!isOuder() || typeof window.restoreScores !== "function") return Promise.resolve(0);
+    if (!isOuder() || typeof window.restoreScores !== "function" || nietGekoppeld()) return Promise.resolve(0);
     var url = getEffectiveUrl().replace(/\/scores_v2\/[^\/?#]*\.json$/, "/scores_v2/" + LEERLING + ".json");
-    return fetch(url + "?t=" + Date.now(), { method: "GET", headers: { "Cache-Control": "no-cache" } })
+    return metToken(url + "?t=" + Date.now())
+      .then(function (u) { return fetch(u, { method: "GET", headers: { "Cache-Control": "no-cache" } }); })
       .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
       .then(function (d) {
         var lijst = d ? (Array.isArray(d) ? d : (d.scores || [])) : [];
@@ -264,13 +336,18 @@
       return Promise.resolve(0);
     }
 
+    if (nietGekoppeld()) {
+      updateStatusUI("error", "Google hesabı bağlı değil");
+      return Promise.resolve(0);
+    }
     var url = getEffectiveUrl();
     if (!silent) updateStatusUI("syncing", "Buluttan çekiliyor...");
     syncState.inFlight = true;
 
     function haal(u) {
       var q = u + (u.indexOf("?") === -1 ? "?t=" : "&t=") + Date.now();
-      return fetch(q, { method: "GET", headers: { "Cache-Control": "no-cache" } })
+      return metToken(q)
+        .then(function (u2) { return fetch(u2, { method: "GET", headers: { "Cache-Control": "no-cache" } }); })
         .then(function (res) {
           if (!res.ok) throw new Error("HTTP " + res.status);
           return res.json();
@@ -345,6 +422,7 @@
       return Promise.resolve(true);
     }
 
+    if (nietGekoppeld()) return Promise.resolve(false);
     var payload = exportLocalDataPayload();
     if (payload.scores.length === 0) return Promise.resolve(false);
 
@@ -364,8 +442,8 @@
 
     updateStatusUI("syncing", "Buluta aktarılıyor...");
 
-    return fetch(url + (url.indexOf("?") === -1 ? "?t=" : "&t=") + Date.now(),
-                 { method: "GET", headers: { "Cache-Control": "no-cache" } })
+    return metToken(url + (url.indexOf("?") === -1 ? "?t=" : "&t=") + Date.now())
+      .then(function (u) { return fetch(u, { method: "GET", headers: { "Cache-Control": "no-cache" } }); })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json();
@@ -388,10 +466,12 @@
         });
         payload.scores = uit;
 
-        return fetch(url, {
-          method: method,
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
+        return metToken(url).then(function (u) {
+          return fetch(u, {
+            method: method,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
         });
       })
       .then(function (res) {
@@ -425,6 +505,8 @@
 
     if (btn) {
       btn.addEventListener("click", function () {
+        // Nog geen Google-account op dit apparaat: één klik = koppelen (leerling én ouder).
+        if (nietGekoppeld()) { koppelGoogle(); return; }
         // Leerling: geen (Turkstalig) instellingenvenster met endpoint-URL's,
         // een klik betekent gewoon "nu opslaan".
         if (!isOuder()) {
@@ -436,6 +518,7 @@
           var cfg = getConfig();
           if (customUrlInput) customUrlInput.value = cfg.endpointUrl || FIREBASE_URL;
           updateStatusUI(syncState.status);
+          toonGoogleRij();
         }
       });
     }
@@ -479,11 +562,12 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    initAuth();
     initCloudSyncModal();
 
     // Sayfa açıldığında iki yönlü otomatik canlı eşitleme
     setTimeout(function () {
-      pullFromCloud(true).then(function () {
+      authKlaar.then(function () { return pullFromCloud(true); }).then(function () {
         var payload = exportLocalDataPayload();
         if (payload.scores && payload.scores.length > 0) {
           pushToCloud(true);
@@ -514,6 +598,8 @@
     getConfig: getConfig,
     saveConfig: saveConfig,
     exportPayload: exportLocalDataPayload,
+    koppelGoogle: koppelGoogle,
+    ontkoppelGoogle: ontkoppelGoogle,
     FIREBASE_URL: FIREBASE_URL
   };
 
