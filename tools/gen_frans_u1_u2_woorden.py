@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Frans U1 + U2 woordentoetsen ex-h3-frans-41…60 (2026-11-19).
+"""Frans U1 + U2 woordentoetsen ex-h3-frans-41…60 + U3 61…70 (2026-11-19).
 
 Bron: Grandes Lignes 3 HAVO, Vocabulaire p. 48–49 (U1) en p. 86–87 (U2), van de boekpagina's
 overgenomen. Wit blok = beide richtingen, blauw blok = alleen FR → NL (boekinstructie).
@@ -83,7 +83,40 @@ U2 = {
        ("polluant(e)","vervuilend",1)],
 }
 BLOK = {"A": "blok A", "B": "blok B", "E": "blok E", "F": "blok F"}
-PAG = {(1, "A"): 48, (1, "B"): 48, (1, "E"): 49, (1, "F"): 49, (2, "A"): 86, (2, "B"): 86, (2, "E"): 87, (2, "F"): 87}
+U3 = {
+ "A": [("la gare","het station"),("le train","de trein"),("le car","de streekbus"),("l'avion (m)","het vliegtuig"),
+       ("la voiture","de auto"),("la direction","de richting"),("les renseignements","de inlichtingen"),
+       ("le départ","het vertrek"),("la destination","de bestemming"),("l'arrivée (v)","de aankomst"),
+       ("la neige","de sneeuw"),("le sandwich","het broodje"),("l'aller-retour (m)","het retourtje"),
+       ("à cause de","vanwege"),("en face de","tegenover"),("dans une heure","over een uur"),
+       ("bienvenue","welkom"),("agréable","prettig"),("seul(e)","alleen"),("je suis désolé(e)","het spijt me"),
+       ("je serai","ik zal zijn"),("il fait froid","het is koud"),("aider","helpen"),("continuer","doorgaan"),
+       ("monter","instappen"),("chercher","ophalen, zoeken"),("demander","vragen"),
+       ("rendre visite à","(iemand) bezoeken"),("descendre","uitstappen"),("entendre","horen")],
+ "B": [("le désert","de woestijn"),("le travail","het werk"),("le centre-ville","het centrum"),
+       ("le quartier","de wijk"),("le gâteau","het gebak"),("le temps libre","de vrije tijd"),
+       ("l'arabe (m)","het Arabisch (taal)"),("marocain(e)","Marokkaans"),("seulement","slechts"),
+       ("sauf","behalve"),("heureusement","gelukkig maar"),("tout","alles"),("au printemps","in het voorjaar"),
+       ("simple","eenvoudig"),("découvrir","ontdekken"),("partir","vertrekken"),
+       ("la pollution","de vervuiling",1),("le sable","het zand",1),("l'avantage (m)","het voordeel",1),
+       ("l'inconvénient (m)","het nadeel",1),("nombreux, -euse","veel, vele",1),("manquer","missen",1),
+       ("vivre","wonen",1),("j'irai","ik zal gaan",1)],
+ "E": [("blaguer","grappen maken"),("j'aurai","ik zal hebben/krijgen"),("la vue (sur)","het uitzicht (op)"),
+       ("les sports d'hiver","de wintersport"),("le vêtement","het kledingstuk"),("le lit","het bed"),
+       ("le patron","de baas"),("à côté (de)","naast"),("moi aussi","ik ook"),("au camping","op de camping"),
+       ("le petit déjeuner","het ontbijt"),("le déjeuner","de lunch"),("le diner","het avondeten"),
+       ("délicieux, -euse","heerlijk"),("mauvais(e)","slecht"),("propre","schoon"),("sale","vies"),
+       ("ridicule","belachelijk")],
+ "F": [("le métier","het beroep"),("la solution","de oplossing"),("la petite annonce","de advertentie"),
+       ("le journal","de krant"),("le rendez-vous","de afspraak"),("la pluie","de regen"),("contre","tegen"),
+       ("tous les ans","ieder jaar"),("avant","voor (tijd)"),("sur","op"),("principal(e)","belangrijkste"),
+       ("recyclable","recyclebaar"),("rester","blijven"),("inventer","bedenken, uitvinden"),("trouver","vinden"),
+       ("ressembler à","lijken op"),
+       ("le vétérinaire","de dierenarts",1),("la qualité","de goede eigenschap",1),("la reine","de koningin",1),
+       ("l'environnement (m)","het milieu",1),("écolo(gique)","milieubewust",1),("construire","bouwen",1),
+       ("voler","vliegen",1),("diminuer","verminderen",1)],
+}
+PAG = {(3, "A"): 124, (3, "B"): 124, (3, "E"): 125, (3, "F"): 125, (1, "A"): 48, (1, "B"): 48, (1, "E"): 49, (1, "F"): 49, (2, "A"): 86, (2, "B"): 86, (2, "E"): 87, (2, "F"): 87}
 
 def woord(t, u, b):
     return {"fr": t[0], "nl": t[1], "blauw": len(t) > 2, "u": u, "b": b}
@@ -211,6 +244,12 @@ EXTRA_NL = {"le conseil": "raad", "pourtant": "toch", "montrer": "tonen", "souve
             "égoïste": "egoistisch|egoïst|egoist", "regarder la télé": "tv kijken|tv-kijken", "discuter": "praten|discussi",
             "faire du fitness": "fitness", "plein (de)": "veel|een hoop", "l'entreprise (v)": "onderneming",
             "l'habitant (m)": "bewoner", "l'épisode (m)": "episode"}
+EXTRA_FR.update({"le diner": "le dîner|dîner|diner", "l'aller-retour (m)": "aller retour|aller-retour",
+                 "le centre-ville": "le centre|centre", "à côté (de)": "a cote", "le petit déjeuner": "petit dejeuner"})
+EXTRA_NL.update({"le car": "bus|touringcar", "le sandwich": "sandwich", "l'aller-retour (m)": "retour",
+                 "le journal": "dagblad", "le patron": "chef|werkgever", "agréable": "aangenaam|fijn",
+                 "heureusement": "gelukkig", "seulement": "alleen", "le diner": "diner|avondmaal",
+                 "les renseignements": "informatie", "la petite annonce": "advertentie|annonce"})
 VERVANG_NL = {"garder (quelqu'un)": "op iemand passen|oppassen|passen op"}
 
 def syn(w, kant):
@@ -261,6 +300,21 @@ VERWAR = [
   "<b>payer</b> = betalen; <b>penser</b> = denken (U1 blok A) — ze beginnen allebei met een p."),
  ("Wat betekent <b>discuter</b> (U2) en welk U1-woord betekent hetzelfde?", ["lachen — rigoler", "kletsen — bavarder", "bellen — appeler", "lezen — lire"], 1,
   "<b>discuter</b> (U2 blok A) en <b>bavarder</b> (U1 blok E) betekenen allebei kletsen."),
+ # U3 (index 10–)
+ ("<i>Je me lave les mains ___ le dîner.</i> (vóór, tijd)", ["devant", "avant", "en face de", "à côté de"], 1,
+  "<b>avant</b> = voor in de tijd (U3 blok F). <b>devant</b> = voor een plek (U1 blok A): <i>devant l'école</i>."),
+ ("<i>J'ai perdu mes clés. Je les ___ partout, mais je ne les ___ pas!</i>", ["cherche — trouve", "trouve — cherche", "demande — entends", "continue — reste"], 0,
+  "<b>chercher</b> = zoeken, <b>trouver</b> = vinden (U3): ik zoek ze overal, maar ik vind ze niet."),
+ ("Wat is het tegenovergestelde van <b>monter</b> (in de trein)?", ["partir", "descendre", "rester", "continuer"], 1,
+  "<b>monter</b> = instappen, <b>descendre</b> = uitstappen (U3 blok A)."),
+ ("<i>Mon pantalon est ___ : je l'ai lavé hier!</i>", ["sale", "propre", "mauvais", "ridicule"], 1,
+  "<b>propre</b> = schoon, <b>sale</b> = vies (U3 blok E). Gewassen = schoon → propre."),
+ ("Welk werkwoord betekent <b>horen</b>?", ["attendre", "entendre", "demander", "rendre visite à"], 1,
+  "<b>entendre</b> = horen (U3 blok A); <b>attendre</b> = wachten (U1 blok A) — één letter verschil."),
+ ("<i>Je ___ à la maison, je ne pars pas.</i> (blijven)", ["pars", "reste", "descends", "trouve"], 1,
+  "<b>rester</b> = blijven, <b>partir</b> = vertrekken (U3)."),
+ ("Wat betekent <b>le car</b>?", ["de auto", "de streekbus", "de trein", "het station"], 1,
+  "<b>le car</b> = de streekbus, niet de auto! De auto = <b>la voiture</b> (U3 blok A)."),
 ]
 
 def verwar(i):
@@ -346,7 +400,7 @@ def schrijf(nr, data):
 def toets(nr, hf, titel, vragen, duur=15):
     assert len(vragen) == 20, (nr, len(vragen))
     return {"id": "ex-h3-frans-%d" % nr, "hoofdstuk": hf,
-            "hoofdstukTitel": {1: "Unité 1 — Poste, like, partage", 2: "Unité 2 — Du temps pour moi"}[hf],
+            "hoofdstukTitel": {1: "Unité 1 — Poste, like, partage", 2: "Unité 2 — Du temps pour moi", 3: "Unité 3 — En route!"}[hf],
             "titel": titel, "vak": "Frans · HAVO 3", "icoon": "🔤", "duurMin": duur, "vragen": vragen}
 
 def main():
@@ -372,5 +426,26 @@ def main():
     schrijf(nr, toets(nr, 2, "Woorden U1 + U2 · gemengd B (met verwarwoorden)",
                       maak(beide, beide, nr * 7, "mix", (5, 7)), 20)); nr += 1
 
+def main_u3():
+    """U3 (2026-11-19): ex-h3-frans-61…70. Los van main(), zodat 41–60 (al gemaakt) nooit herschreven worden."""
+    GEBRUIKT.update(bestaande_vragen())
+    w = {u: {b: [woord(t, u, b) for t in l] for b, l in d.items()} for u, d in ((1, U1), (2, U2), (3, U3))}
+    alle = {u: sum(w[u].values(), []) for u in w}
+    ALLE.extend(alle[1] + alle[2] + alle[3])
+    nr = 61
+    for b in "ABEF":
+        p = PAG[(3, b)]
+        schrijf(nr, toets(nr, 3, "Woorden U3 · p. %d %s · oefenen (FR → NL)" % (p, BLOK[b]),
+                          maak(w[3][b], w[3][b], nr * 7, "frnl"))); nr += 1
+        schrijf(nr, toets(nr, 3, "Woorden U3 · p. %d %s · toets (NL → FR)" % (p, BLOK[b]),
+                          maak(w[3][b], w[3][b], nr * 7, "nlfr"))); nr += 1
+    schrijf(nr, toets(nr, 3, "Woorden U3 · gemengd (alle blokken, beide richtingen)",
+                      maak(alle[3], alle[3], nr * 7, "mix", (11, 12, 13, 16)), 20)); nr += 1
+    drie = alle[1] + alle[2] + alle[3]
+    schrijf(nr, toets(nr, 3, "Woorden U1 + U2 + U3 · gemengd (met verwarwoorden)",
+                      maak(drie, drie, nr * 7, "mix", (10, 14, 15)), 20)); nr += 1
+
 if __name__ == "__main__":
-    main()
+    import sys
+    # 41–60 zijn al gemaakt: standaard alleen U3. `--u1u2` herschrijft 41–60 — NIET doen.
+    main() if "--u1u2" in sys.argv else main_u3()
