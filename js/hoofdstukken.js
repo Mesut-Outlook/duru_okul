@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-19",
+  "gegenereerd": "2026-11-20",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -308,7 +308,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-75": 11,
         "ex-h3-biologie-76": 11,
         "ex-h3-biologie-77": 11,
-        "ex-h3-biologie-78": 11
+        "ex-h3-biologie-78": 11,
+        "ex-h3-biologie-79": 11,
+        "ex-h3-biologie-80": 11,
+        "ex-h3-biologie-81": 11
       },
       "examenInfo": {
         "ex-h3-biologie-1": ["Toets 1 — Levensfasen, Ontwikkeling & Hormonen", "2026-07-21", "", "mmwimmimwimmwimwmioo"],
@@ -388,7 +391,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-biologie-75": ["Toets 75 — H11 gemengd A: proefwerk Voortplanting", "2026-11-09", "mix", "mwmimwomimmwoimwmimw"],
         "ex-h3-biologie-76": ["Toets 76 — H11 gemengd B: proefwerk Voortplanting", "2026-11-09", "mix", "mmoiwmwmimwmomimwmwi"],
         "ex-h3-biologie-77": ["Toets 77 — H11 gemengd C: proefwerk Voortplanting", "2026-11-09", "mix", "wmmimmwmoimwmomwimwi"],
-        "ex-h3-biologie-78": ["Toets 78 — H11 gemengd D: proefwerk Voortplanting", "2026-11-09", "mix", "mimowmwimmimwmwmomwi"]
+        "ex-h3-biologie-78": ["Toets 78 — H11 gemengd D: proefwerk Voortplanting", "2026-11-09", "mix", "mimowmwimmimwmwmomwi"],
+        "ex-h3-biologie-79": ["Toets 79 — Gemengd H10 + H11 (A)", "2026-11-20", "mix", "imwmimmwowwimimwwmmo"],
+        "ex-h3-biologie-80": ["Toets 80 — Gemengd H10 + H11 (B)", "2026-11-20", "mix", "imwmimwmimwimmwwmmoo"],
+        "ex-h3-biologie-81": ["Toets 81 — Gemengd H10 + H11 (C)", "2026-11-20", "mix", "imwmwimwmimomwmwwmio"]
       },
       "onderwerpHoofdstuk": {
         "bio-h10-1-opgroeien": 10,
@@ -401,7 +407,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "10": 5,
-        "11": 73
+        "11": 76
       },
       "aantalOnderwerpen": {
         "10": 2,
@@ -1926,7 +1932,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-116": 1,
         "ex-h3-natuurkunde-117": 1,
         "ex-h3-natuurkunde-118": 1,
-        "ex-h3-natuurkunde-119": 1
+        "ex-h3-natuurkunde-119": 1,
+        "ex-h3-natuurkunde-120": 1,
+        "ex-h3-natuurkunde-121": 1,
+        "ex-h3-natuurkunde-122": 1
       },
       "examenInfo": {
         "ex-h3-natuurkunde-1": ["Toets 1 — Krachten, Resulterende Kracht & Bewegingssoorten", "2026-07-21", "mix", "mmwimimwmimwmimwmioo"],
@@ -2047,7 +2056,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-natuurkunde-116": ["Toets 116 — Proefwerk H1 (oefenen zoals het echt is) — B", "2026-11-15", "eind", "iimwmiiiiimmwiiiimmo"],
         "ex-h3-natuurkunde-117": ["Toets 117 — Proefwerk H1 (oefenen zoals het echt is) — C", "2026-11-15", "eind", "miiiwiimiimwiiiimmio"],
         "ex-h3-natuurkunde-118": ["Toets 118 — Proefwerk H1 (oefenen zoals het echt is) — D", "2026-11-15", "eind", "iiiomiiwmimiiiimwmim"],
-        "ex-h3-natuurkunde-119": ["Toets 119 — Proefwerk H1 (oefenen zoals het echt is) — E", "2026-11-15", "eind", "iiwmiiiimmmiiiiimimo"]
+        "ex-h3-natuurkunde-119": ["Toets 119 — Proefwerk H1 (oefenen zoals het echt is) — E", "2026-11-15", "eind", "iiwmiiiimmmiiiiimimo"],
+        "ex-h3-natuurkunde-120": ["Toets 120 — Gemengd H1 (A)", "2026-11-20", "mix", "iwimimwiimwmmiiwiimo"],
+        "ex-h3-natuurkunde-121": ["Toets 121 — Gemengd H1 (B)", "2026-11-20", "mix", "moiimiwmiwmiiimmwmiw"],
+        "ex-h3-natuurkunde-122": ["Toets 122 — Gemengd H1 (C)", "2026-11-20", "mix", "iwmmiwmmimwmiwwiimio"]
       },
       "onderwerpHoofdstuk": {
         "h1-1-kracht-beweging": 1,
@@ -2096,7 +2108,7 @@ window.DURU_HOOFDSTUKKEN = {
         "h8-5-vloeistofdruk": 8
       },
       "aantalExamens": {
-        "1": 81,
+        "1": 84,
         "2": 5,
         "3": 5,
         "4": 5,
@@ -2212,7 +2224,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-72": 7,
         "ex-h3-nederlands-73": 7,
         "ex-h3-nederlands-74": 7,
-        "ex-h3-nederlands-75": 7
+        "ex-h3-nederlands-75": 7,
+        "ex-h3-nederlands-76": 7,
+        "ex-h3-nederlands-77": 7,
+        "ex-h3-nederlands-78": 7
       },
       "examenInfo": {
         "ex-h3-nederlands-1": ["Toets 1 — Officiële Proeftoets Lezen (Tekst 1 & 2)", "2026-07-21", "mix", "mmmmoomoowimmmmwoiom"],
@@ -2289,7 +2304,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-nederlands-72": ["Toets 72 — Foutentraining B: jouw fouten uit de laatste 10 toetsen", "2026-11-08", "mix", "mmwmmmommwmmwoimiwim"],
         "ex-h3-nederlands-73": ["Toets 73 — Foutentraining C: jouw fouten uit de laatste 10 toetsen", "2026-11-08", "mix", "mmwmmmommwmmwomiwimi"],
         "ex-h3-nederlands-74": ["Toets 74 — Foutentraining D: jouw fouten uit de laatste toetsen", "2026-11-08", "mix", "mmmmmmwwmmmomwmwmwim"],
-        "ex-h3-nederlands-75": ["Toets 75 — Foutentraining E: jouw fouten uit de laatste toetsen", "2026-11-08", "mix", "mmmmmmmmwwmommwmwmim"]
+        "ex-h3-nederlands-75": ["Toets 75 — Foutentraining E: jouw fouten uit de laatste toetsen", "2026-11-08", "mix", "mmmmmmmmwwmommwmwmim"],
+        "ex-h3-nederlands-76": ["Toets 76 — Gemengd: spelling, grammatica en lezen (A)", "2026-11-20", "mix", "mmimmiomiwmwmmmmwmwm"],
+        "ex-h3-nederlands-77": ["Toets 77 — Gemengd: spelling, grammatica en lezen (B)", "2026-11-20", "mix", "mmimmiomiwmwmmmmwmwm"],
+        "ex-h3-nederlands-78": ["Toets 78 — Gemengd: spelling, grammatica en lezen (C)", "2026-11-20", "mix", "mmimmiomiwmwmmmmwmwm"]
       },
       "onderwerpHoofdstuk": {
         "c5-3-samentrekking": 5,
@@ -2312,7 +2330,7 @@ window.DURU_HOOFDSTUKKEN = {
       "aantalExamens": {
         "1": 22,
         "5": 16,
-        "7": 37
+        "7": 40
       },
       "aantalOnderwerpen": {
         "1": 5,
@@ -2455,6 +2473,9 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h2-77": 2,
         "ex-h3-sch-h2-78": 2,
         "ex-h3-sch-h2-79": 2,
+        "ex-h3-sch-h2-80": 2,
+        "ex-h3-sch-h2-81": 2,
+        "ex-h3-sch-h2-82": 2,
         "ex-h3-sch-h3-1": 3,
         "ex-h3-sch-h3-2": 3,
         "ex-h3-sch-h3-3": 3,
@@ -2574,6 +2595,9 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-sch-h2-77": ["Toets 77 — H2 gemengd B (§2.1–§2.4)", "2026-11-11", "mix", "mmmmmmmmmmwwwwwwiiio"],
         "ex-h3-sch-h2-78": ["Toets 78 — H2 gemengd C (§2.1–§2.4)", "2026-11-11", "mix", "mmmmmmmmmmwwwwwwiiio"],
         "ex-h3-sch-h2-79": ["Toets 79 — H2 gemengd D (§2.1–§2.4)", "2026-11-11", "mix", "mmmmmmmmmmwwwwwwiiio"],
+        "ex-h3-sch-h2-80": ["Toets 80 — Gemengd H1 + H2 (A)", "2026-11-20", "mix", "mmmmwiomwimwmmmwmwwi"],
+        "ex-h3-sch-h2-81": ["Toets 81 — Gemengd H1 + H2 (B)", "2026-11-20", "mix", "mmmwwimiommwmwimwmmw"],
+        "ex-h3-sch-h2-82": ["Toets 82 — Gemengd H1 + H2 (C)", "2026-11-20", "mix", "mmwimmwimomwmmwmwimw"],
         "ex-h3-sch-h3-1": ["Toets 1 — 3.1 Reactiekenmerken", "2026-09-23", "3.1", "mmmmmmmmmmmmwwwwiiio"],
         "ex-h3-sch-h3-2": ["Toets 2 — 3.2 Reactievergelijkingen", "2026-09-23", "3.2", "mmmmmmmmmmmwwwwiiiio"],
         "ex-h3-sch-h3-3": ["Toets 3 — 3.3 Massaverhoudingen", "2026-09-23", "3.3", "mmmmmmmmmmwwwwiiiiio"],
@@ -2640,7 +2664,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 59,
-        "2": 30,
+        "2": 33,
         "3": 5,
         "4": 6,
         "5": 6,
@@ -2804,7 +2828,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h1h2-gemengd-2": 2,
         "ex-wiskunde-h1h2-gemengd-3": 2,
         "ex-wiskunde-h1h2-gemengd-4": 2,
-        "ex-wiskunde-h1h2-gemengd-5": 2
+        "ex-wiskunde-h1h2-gemengd-5": 2,
+        "ex-wiskunde-gemengd-20261120-1": 2,
+        "ex-wiskunde-gemengd-20261120-2": 2,
+        "ex-wiskunde-gemengd-20261120-3": 2
       },
       "examenInfo": {
         "ex-wiskunde-h2-1": ["Proeftoets 1 — Verhoudingstabel & Cirkeldiagram", "2026-07-21", "", "mmmmmmmmmmwwwwiiiioo"],
@@ -2934,7 +2961,10 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-wiskunde-h1h2-gemengd-2": ["Proeftoets 125 — Gemengd H1 + H2 (2/5)", "2026-11-07", "mix", "wmimmwmwwiimiimmiwwm"],
         "ex-wiskunde-h1h2-gemengd-3": ["Proeftoets 126 — Gemengd H1 + H2 (3/5)", "2026-11-07", "mix", "miiwwimwmimwiwwwiwii"],
         "ex-wiskunde-h1h2-gemengd-4": ["Proeftoets 127 — Gemengd H1 + H2 (4/5)", "2026-11-07", "mix", "mmwimmmwwiiiiimimmii"],
-        "ex-wiskunde-h1h2-gemengd-5": ["Proeftoets 128 — Gemengd H1 + H2 (5/5)", "2026-11-07", "mix", "wwmwimmimmiwiwiiimim"]
+        "ex-wiskunde-h1h2-gemengd-5": ["Proeftoets 128 — Gemengd H1 + H2 (5/5)", "2026-11-07", "mix", "wwmwimmimmiwiwiiimim"],
+        "ex-wiskunde-gemengd-20261120-1": ["Proeftoets 129 — Gemengd H2 + H1 + herhaling (1/3)", "2026-11-20", "mix", "iiimimiiiiimmmiiimmm"],
+        "ex-wiskunde-gemengd-20261120-2": ["Proeftoets 130 — Gemengd H2 + H1 + herhaling (2/3)", "2026-11-20", "mix", "iiiiimimiiiiiimmmmiw"],
+        "ex-wiskunde-gemengd-20261120-3": ["Proeftoets 131 — Gemengd H2 + H1 + herhaling (3/3)", "2026-11-20", "mix", "iiimmmimiiimmmiimiim"]
       },
       "onderwerpHoofdstuk": {
         "h1-begrippen": 1,
@@ -2952,7 +2982,7 @@ window.DURU_HOOFDSTUKKEN = {
       },
       "aantalExamens": {
         "1": 70,
-        "2": 48,
+        "2": 51,
         "90": 10
       },
       "aantalOnderwerpen": {
