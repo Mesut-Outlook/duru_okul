@@ -167,6 +167,7 @@ BIJNA = [{"intéressant(e)", "passionnant(e)"}, {"sortir", "aller au restaurant"
 def zelfde(p, w):
     """Zelfde betekenis of zelfde Frans woord (drôle/marrant, la tête in U1 én U2, l'argent …)."""
     if any({p["fr"], w["fr"]} <= g for g in BIJNA): return True
+    if {p["fr"], w["fr"]} == {"avant", "devant"}: return False   # voor (tijd) ≠ voor (plaats)
     return bool(set(nl_alts(p["nl"]).split("|")) & set(nl_alts(w["nl"]).split("|")) or
                 set(fr_alts(p["fr"]).split("|")) & set(fr_alts(w["fr"]).split("|")))
 
@@ -215,8 +216,10 @@ def tekst(sjablonen, k, **kw):
         t = sjablonen[(k + i) % len(sjablonen)].format(**kw)
         if t not in GEBRUIKT:
             GEBRUIKT.add(t); return t
-    t = sjablonen[k % len(sjablonen)].format(**kw) + " (Unité %s)" % kw.get("u")
-    if t in GEBRUIKT: t = t[:-1] + ", nog een keer)"
+    basis = sjablonen[k % len(sjablonen)].format(**kw)
+    for extra in (" (Unité %s)" % kw.get("u"), " (Unité %s, nog een keer)" % kw.get("u"), " (herhaling)", " (herhaling 2)", " (herhaling 3)"):
+        if basis + extra not in GEBRUIKT: break
+    t = basis + extra
     GEBRUIKT.add(t); return t
 
 def bron(w):
@@ -315,6 +318,25 @@ VERWAR = [
   "<b>rester</b> = blijven, <b>partir</b> = vertrekken (U3)."),
  ("Wat betekent <b>le car</b>?", ["de auto", "de streekbus", "de trein", "het station"], 1,
   "<b>le car</b> = de streekbus, niet de auto! De auto = <b>la voiture</b> (U3 blok A)."),
+ # herhaling 71–80 (index 17–), nieuwe zinnen — niet letterlijk gelijk aan 59/60/69/70
+ ("<i>Le bus ne vient pas. Je ___ depuis vingt minutes!</i>", ["arrête", "attends", "entends", "oublie"], 1,
+  "<b>attendre</b> = wachten: ik wacht al twintig minuten. <b>arrêter</b> = stoppen (U1 blok B)."),
+ ("<i>___ de parler, s'il te plaît! Je travaille.</i> (stop)", ["Attends", "Arrête", "Aide", "Appelle"], 1,
+  "<b>arrête</b> = stop (arrêter, U1 blok B). <b>attends</b> = wacht (attendre)."),
+ ("<i>Je suis ___ : je me suis levé à cinq heures.</i>", ["mort", "fatigué", "drôle", "heureux"], 1,
+  "<b>fatigué(e)</b> = moe (U2 blok A). Vroeg opstaan → moe."),
+ ("<i>Ce film est ___ : je dors après dix minutes.</i>", ["passionnant", "ennuyeux", "marrant", "intéressant"], 1,
+  "<b>ennuyeux</b> = saai (U2 blok E); <b>passionnant</b> = boeiend."),
+ ("<i>Il ne fait pas ses devoirs, il dort toute la journée. Il est ___.</i>", ["timide", "paresseux", "méchant", "égoïste"], 1,
+  "<b>paresseux</b> = lui (U1 blok E)."),
+ ("<i>Pour aller à Paris, je ___ dans le train à Lille.</i> (instappen)", ["descends", "monte", "reste", "pars"], 1,
+  "<b>monter</b> = instappen, <b>descendre</b> = uitstappen (U3 blok A)."),
+ ("<i>Ma chambre est ___ : il y a des vêtements partout.</i>", ["propre", "sale", "délicieuse", "simple"], 1,
+  "<b>sale</b> = vies, <b>propre</b> = schoon (U3 blok E)."),
+ ("<i>Il y a un café ___ la gare.</i> (tegenover)", ["à cause de", "en face de", "dans une heure", "sauf"], 1,
+  "<b>en face de</b> = tegenover; <b>à cause de</b> = vanwege (U3 blok A)."),
+ ("Welk woord hoort <b>niet</b> bij reizen (U3)?", ["la gare", "le lit", "le départ", "l'arrivée"], 1,
+  "<b>le lit</b> = het bed (U3 blok E). La gare, le départ, l'arrivée horen bij reizen (blok A)."),
 ]
 
 def verwar(i):
@@ -348,7 +370,7 @@ def maak(woorden, pool, seed, richting, extra=()):
             for w in vrij:
                 if soortv == "inv_nlfr" and w["blauw"]: continue
                 al = syn(w, "fr" if soortv == "inv_nlfr" else "nl").split("|")
-                if not kern_ok("|".join(al)) or lekt(verwar_tekst, al): continue
+                if not kern_ok("|".join(al)) or lekt(verwar_tekst, al + [a[:-1] for a in al if len(a) >= 6]): continue  # ook stam: arrêter ~ arrête
                 if soortv == "inv_frnl" and any(len(a.split()) > 2 for a in al): continue  # lange NL-zin: te streng
                 vrij.remove(w); alts += al
                 vragen.append(inv_nlfr(w, k) if soortv == "inv_nlfr" else inv_frnl(w, k)); break
@@ -445,7 +467,26 @@ def main_u3():
     schrijf(nr, toets(nr, 3, "Woorden U1 + U2 + U3 · gemengd (met verwarwoorden)",
                       maak(drie, drie, nr * 7, "mix", (10, 14, 15)), 20)); nr += 1
 
+def main_herhaling():
+    """Herhaling U1–U3 (2026-11-21): ex-h3-frans-71…80. Per unité oefenen / toets / gemengd + U1–U3 eindtoets."""
+    GEBRUIKT.update(bestaande_vragen())
+    w = {u: {b: [woord(t, u, b) for t in l] for b, l in d.items()} for u, d in ((1, U1), (2, U2), (3, U3))}
+    alle = {u: sum(w[u].values(), []) for u in w}
+    ALLE.extend(alle[1] + alle[2] + alle[3])
+    verwar_per_u = {1: (17, 18, 21), 2: (19, 20), 3: (22, 23, 24, 25)}
+    nr = 71
+    for u in (1, 2, 3):
+        schrijf(nr, toets(nr, u, "Woorden U%d · herhaling · oefenen (FR → NL)" % u,
+                          maak(alle[u], alle[u], nr * 11, "frnl"))); nr += 1
+        schrijf(nr, toets(nr, u, "Woorden U%d · herhaling · toets (NL → FR)" % u,
+                          maak(alle[u], alle[u], nr * 11, "nlfr"))); nr += 1
+        schrijf(nr, toets(nr, u, "Woorden U%d · herhaling · gemengd (in zinnen)" % u,
+                          maak(alle[u], alle[u], nr * 11, "mix", verwar_per_u[u]), 20)); nr += 1
+    drie = alle[1] + alle[2] + alle[3]
+    schrijf(nr, toets(nr, 3, "Woorden U1 + U2 + U3 · eindtoets (herhaling)",
+                      maak(drie, drie, nr * 11, "mix"), 20)); nr += 1
+
 if __name__ == "__main__":
     import sys
-    # 41–60 zijn al gemaakt: standaard alleen U3. `--u1u2` herschrijft 41–60 — NIET doen.
-    main() if "--u1u2" in sys.argv else main_u3()
+    # 41–70 zijn al gemaakt: standaard alleen 71–80. `--u1u2` / `--u3` herschrijven oude toetsen — NIET doen.
+    main() if "--u1u2" in sys.argv else main_u3() if "--u3" in sys.argv else main_herhaling()
