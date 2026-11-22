@@ -614,15 +614,15 @@
      exams.js van de vak-sites (alle twaalf identiek). */
   function toonAntwoord(v, antw) {
     if (antw === null || antw === undefined || antw === "") return "<i>(boş bırakmış)</i>";
-    if (v.type === "mc") return escapeHtml(v.opties[antw]);
+    if (v.type === "mc") return escapeInhoud(v.opties[antw]);
     if (v.type === "waaronwaar") return antw === 0 ? "Waar" : "Onwaar";
     return escapeHtml(antw);
   }
   function juisteAntwoord(v) {
-    if (v.type === "mc") return escapeHtml(v.opties[v.antwoord]);
+    if (v.type === "mc") return escapeInhoud(v.opties[v.antwoord]);
     if (v.type === "waaronwaar") return (v.antwoord === true || v.antwoord === "waar" || v.antwoord === 0) ? "Waar" : "Onwaar";
     if (v.type === "invul") return escapeHtml(String(v.antwoord).split("|")[0]);
-    return escapeHtml(v.modelantwoord || "");
+    return escapeInhoud(v.modelantwoord || "");
   }
 
   function renderReview(container) {
@@ -1242,6 +1242,10 @@
     });
   }
 
+  // Zelfde regel als escInhoud() in exams.js: alleen voor toetsinhoud, niet voor leerlingtekst.
+  function escapeInhoud(str) {
+    return escapeHtml(str).replace(/&lt;(\/?su[bp])&gt;/g, "<$1>");
+  }
   function escapeHtml(str) {
     if (!str) return "";
     return String(str)

@@ -82,6 +82,9 @@ eşleşmesi aranır (2026-09-13'ten beri — yoksa `parseFloat("1.000")` = 1 olu
 doğru yazılmış "1.000" reddedilirdi); metin karşılaştırmasında kıvrık apostrof (’) = düz ('), sondaki
 `. ! ? ; :` sayılmaz ("amuse-toi bien" = "amuse-toi bien!"). Eşleşme yoksa sayısal karşılaştırma
 (`parseFloat`, `tolerantie` ya da `max(|beklenen|*0.02, 0.01)`), sayısal değilse normalize edilmiş tam eşleşme.
+**Sınavda HTML:** `vraag` HTML'dir; `opties`/`modelantwoord` escape edilir. İstisna (2026-11-22): scheikunde + natuurkunde
+(`escInhoud`) ve veli incelemesi (`escapeInhoud`) çıplak `<sub>`/`<sup>`'a izin verir. Yeni içerikte şıkta Unicode (H₂O, m³) kullan.
+
 **Sınavda mc şık sırası** (`exams.js → optieVolgorde`, 2026-09-13): her denemede karıştırılır; `antwoorden`
 ve `beoordelingen` **orijinal index**'le saklanır, review şık metnini gösterir → eski denemeler etkilenmez.
 Şıkları birbirine/konuma atıf yapan sorular ("geen van beide", "alle bovenstaande") sabit kalır.

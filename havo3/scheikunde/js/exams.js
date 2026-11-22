@@ -50,6 +50,8 @@
 
   var app = function () { return document.getElementById("app"); };
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  // Alleen voor eigen toetsinhoud: kale <sub>/<sup> (H₂O, m³) mogen door. Wat de leerling typt blijft via esc().
+  function escInhoud(s) { return esc(s).replace(/&lt;(\/?su[bp])&gt;/g, "<$1>"); }
 
   // Proeftoetsen per hoofdstuk. Bron: ex.hoofdstuk + DURU.hoofdstukken — nooit de id
   // (in ex-h3-* is "h3" het niveau). Toetsen zonder bekend hoofdstuk komen onderaan.
@@ -248,7 +250,7 @@
         var letter = v.type === "waaronwaar" ? (idx === 0 ? "✔" : "✗") : String.fromCharCode(65 + pos);
         var sel = gegeven === idx ? " gekozen" : "";
         h += '<button class="optie' + sel + '" onclick="DURU.examenKies(' + idx + ')">' +
-          '<span class="letter">' + letter + '</span><span>' + esc(opt) + '</span></button>';
+          '<span class="letter">' + letter + '</span><span>' + escInhoud(opt) + '</span></button>';
       });
       h += '</div>';
     } else if (v.type === "open") {
@@ -487,15 +489,15 @@
 
   function toonAntwoord(v, antw) {
     if (antw === null || antw === "") return "<i>(niet beantwoord)</i>";
-    if (v.type === "mc") return esc(v.opties[antw]);
+    if (v.type === "mc") return escInhoud(v.opties[antw]);
     if (v.type === "waaronwaar") return antw === 0 ? "Waar" : "Onwaar";
     return esc(antw);
   }
   function juisteAntwoord(v) {
-    if (v.type === "mc") return esc(v.opties[v.antwoord]);
+    if (v.type === "mc") return escInhoud(v.opties[v.antwoord]);
     if (v.type === "waaronwaar") return (v.antwoord === true || v.antwoord === "waar" || v.antwoord === 0) ? "Waar" : "Onwaar";
     if (v.type === "invul") return esc(String(v.antwoord).split("|")[0]);
-    return esc(v.modelantwoord || "");
+    return escInhoud(v.modelantwoord || "");
   }
 
   function reviewItem(v, i, antw, b) {
@@ -508,7 +510,7 @@
     if (v.figuur) h += '<div class="vraag-figuur" style="justify-content:flex-start">' + v.figuur + '</div>';
     h += '<div class="r-rij"><span class="lbl">Jouw antwoord:</span> <span class="jouw ' + (b.status === "goed" ? "goed-tekst" : (b.status === "fout" ? "fout-tekst" : "")) + '">' + toonAntwoord(v, antw) + '</span></div>';
     if (b.status !== "goed") h += '<div class="r-rij"><span class="lbl">Goede antwoord:</span> ' + juisteAntwoord(v) + '</div>';
-    if ((v.type === "open") && v.modelantwoord) h += '<div class="r-rij"><span class="lbl">Voorbeeldantwoord:</span> ' + esc(v.modelantwoord) + '</div>';
+    if ((v.type === "open") && v.modelantwoord) h += '<div class="r-rij"><span class="lbl">Voorbeeldantwoord:</span> ' + escInhoud(v.modelantwoord) + '</div>';
     if (v.uitleg) h += '<div class="r-uitleg">💡 <b>Zo doe je het:</b> ' + v.uitleg + '</div>';
     h += '</div>';
     return h;
