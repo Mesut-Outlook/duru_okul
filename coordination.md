@@ -2422,3 +2422,9 @@ sürümler artık `style.css?v=7.3`, `landing.js?v=6.5`, `dashboard.js?v=2026111
 `open_check`: soru metnini yapıştırmak "goed" alıyordu — anahtar `los`, sorudaki "op**los**sen"in içinde geçiyordu (motor alt-dizi eşleştirir; `losse` de aynı tuzak).
 Yeni anahtar: `zitten los/los van/los tussen/verdeeld/verdelen/tussen/apart` (veri dosyası + `tools/gen_scheikunde_basis.py`). Soru metni, sırası ve modelantwoord
 değişmedi (test Duru tarafından çözülmüş; kayıtlı denemesi etkilenmez). `open_check` 0, `gate.js scheikunde` 18/18.
+
+### 2026-11-22 · scheikunde H2 zwakte-toetsen h2-83…92 (Claude) ✅
+10 test (200 soru), zayıflık analizine göre. `gate` 18/18, `open_check` 0, `teslim_check` temiz, tarayıcıda 390px'te her test 20/20 notlandı.
+Bulgu + düzeltme (kullanıcı onayıyla): mc şıklarında `<sub>`/`<sup>` ham metin görünüyordu (scheikunde 21 test / 43 soru, natuurkunde 4 soru).
+`exams.js → escInhoud()` (bu iki ders) + `ouder_dashboard.js → escapeInhoud()`: yalnız bu iki etiket, yalnız test içeriği; öğrenci metni `esc()`'te kalır.
+Açık (görev DEĞİL, kullanıcı onayı yok): engels 6 soruda `<i>`, nederlands 3 soruda `<b>` şıklarda hâlâ ham görünüyor.
