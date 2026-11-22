@@ -52,5 +52,9 @@ window.DURU_OUDER_NOTITIES = {
     { ernst: "mid", tekst: "Remweg hâlâ ×k (3× hız → 3×), arbeid'da ise tersine kare kullanıyor (2× yükseklik → 4×). Sabit hızda/duruşta 'kuvvet yok' diyor ve karşıt kuvvetleri topluyor (900 + 350). Botsen yarı yarıya. Test 94 (2× mı 4× mü, botsen) ve 95 (kuvvetleri çıkar, oranlar); 96 hepsi karışık." },
     { ernst: "laag", tekst: "Arbeid cm/km/kJ oturdu (90: 18/20), eenheden oturdu. Aynı testi 3–4 dk sonra tekrar çözünce +6 puan: ezber; ölçü ilk deneme. Açık sorular hâlâ boş. Artifact'ta formules/afstand/constant/diagram dersleri ve yeni oyunlar henüz açılmadı." },
     { ernst: "info", tekst: "Proefwerk provası 115–119 ilk denemeler 10–16 / 20; en zayıf §1.2 ve §1.3 (%35 kaçırma), §1.4 (%33). 15 Kasım'dan beri çalışılmadı. Yeni karışık testler 120–122 tüm H1'i (§1.1–§1.5) son hatalara ağırlık vererek tekrar ediyor." }
+  ] },
+  duits: { datum: "2026-11-21", punten: [
+    { ernst: "mid", tekst: "H1'in 42 testinin hepsi çözüldü (son deneme ort. %87). En sık hata: geçmiş zamanda sein ↔ haben karışıyor (yer/durum için 'war' yerine 'hatte', bir şeye sahip olmak için 'hatte' yerine 'war'); werden'de 'du wirst / ihr werdet' yerine wird/werden." },
+    { ernst: "laag", tekst: "Artikel ve çoğullarda küçük hatalar: die Ausblick (der), das Begeisterung (die), die Himmel (der); Flüsse/Bäume'de umlaut yok; 'wärmer' yerine 'heißer'. Kelime: insgesamt, sich auskennen, scheinen ↔ schneien. Yeni testler 73–82 bunlara gidiyor (73 sein/haben, 74 werden + wärmer, 75 artikel/çoğul, 76 sık kaçırılan kelimeler)." }
   ] }
 };

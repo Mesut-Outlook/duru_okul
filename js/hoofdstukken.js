@@ -1,6 +1,6 @@
 /* AUTO-GEGENEREERD door tools/build_hoofdstukken.js — NIET handmatig bewerken. */
 window.DURU_HOOFDSTUKKEN = {
-  "gegenereerd": "2026-11-21",
+  "gegenereerd": "2026-11-22",
   "jaar": "2026-2027",
   "vakken": {
     "aardrijkskunde": {
@@ -525,7 +525,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-duits-69": 1,
         "ex-h3-duits-70": 1,
         "ex-h3-duits-71": 1,
-        "ex-h3-duits-72": 1
+        "ex-h3-duits-72": 1,
+        "ex-h3-duits-73": 1,
+        "ex-h3-duits-74": 1,
+        "ex-h3-duits-75": 1,
+        "ex-h3-duits-76": 1,
+        "ex-h3-duits-77": 1,
+        "ex-h3-duits-78": 1,
+        "ex-h3-duits-79": 1,
+        "ex-h3-duits-80": 1,
+        "ex-h3-duits-81": 1,
+        "ex-h3-duits-82": 1
       },
       "examenInfo": {
         "ex-h3-duits-1": ["Proeftoets 1 — Natuur, Weer & Sein/Haben", "2026-08-20", "", "mmmmmmmmmmwwwwiiiioo"],
@@ -599,7 +609,17 @@ window.DURU_HOOFDSTUKKEN = {
         "ex-h3-duits-69": ["Proeftoets 69 — Werkwoorden & bijvoeglijke naamwoorden uit de Lernliste", "2026-10-09", "", "mmmmmmmmmmwwwwiiiiio"],
         "ex-h3-duits-70": ["Proeftoets 70 — Zinnen vertalen (NL → DE)", "2026-10-09", "", "mmmmmmmmmmwwwwiiiiio"],
         "ex-h3-duits-71": ["Proeftoets 71 — Woorden & grammatica H1 gemengd (3)", "2026-10-09", "", "mmmmmmmmmmwwwwiiiiio"],
-        "ex-h3-duits-72": ["Proeftoets 72 — Eindtoets H1 (3, alles door elkaar)", "2026-10-09", "", "mmmmmmmmmmwwwwiiiiio"]
+        "ex-h3-duits-72": ["Proeftoets 72 — Eindtoets H1 (3, alles door elkaar)", "2026-10-09", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-73": ["Proeftoets 73 — sein of haben? war ↔ hatte", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-74": ["Proeftoets 74 — werden: du wirst, ihr werdet + wärmer", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-75": ["Proeftoets 75 — Lidwoorden & meervouden met umlaut", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-76": ["Proeftoets 76 — Woorden die je vaak mist", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-77": ["Proeftoets 77 — sein, haben & werden door elkaar", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-78": ["Proeftoets 78 — Zinnen vertalen (zwakke punten)", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-79": ["Proeftoets 79 — Weer, maanden & woorden", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-80": ["Proeftoets 80 — Woorden Duits ↔ Nederlands (herhaling)", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-81": ["Proeftoets 81 — Gemengd: zwakke punten (2)", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"],
+        "ex-h3-duits-82": ["Proeftoets 82 — Eindtoets H1 (4, alles door elkaar)", "2026-11-22", "", "mmmmmmmmmmwwwwiiiiio"]
       },
       "onderwerpHoofdstuk": {
         "dui-h1-1": 1,
@@ -628,7 +648,7 @@ window.DURU_HOOFDSTUKKEN = {
         "dui-h6-4": 6
       },
       "aantalExamens": {
-        "1": 42,
+        "1": 52,
         "2": 6,
         "3": 6,
         "4": 6,
